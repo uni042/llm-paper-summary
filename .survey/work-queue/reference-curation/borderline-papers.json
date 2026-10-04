@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T21:40:33+00:00",
-  "record_count": 439,
+  "updated_at": "2026-10-04T21:43:57+00:00",
+  "record_count": 441,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6316,6 +6316,30 @@
       "last_checked_at": "2026-10-04T21:40:32+00:00",
       "linked_from": [],
       "title": "Discovering faster matrix multiplication algorithms with reinforcement learning"
+    },
+    "arXiv:2109.05093": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2109.05093",
+      "identity_tokens": [
+        "arXiv:2109.05093"
+      ],
+      "reason": "自己回帰言語モデルの各復号stepでincremental parserにより不許可tokenを拒否し、SQL等の形式言語制約を保証する推論時decoding方式。推論経路へ直接介入するが、主目的・評価はtext-to-SQLの正しさで速度・メモリ効率化ではないためborderline。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "PICARD: Parsing Incrementally for Constrained Auto-Regressive Decoding from Language Models"
+    },
+    "arXiv:2403.14403": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.14403",
+      "identity_tokens": [
+        "arXiv:2403.14403"
+      ],
+      "reason": "query complexity classifierでno-retrieval、single-step、iterative retrievalを動的選択し、単純queryへの不要な計算overheadを避けるRAG実行制御。推論効率も明示的目標だが主評価はQA accuracyとの両立で、基盤serving/runtime最適化より上位のRAG policyであるためborderline。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Adaptive-RAG: Learning to Adapt Retrieval-Augmented Large Language Models through Question Complexity"
     }
   }
 }

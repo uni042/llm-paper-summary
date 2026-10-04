@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb4a3b5ca03e802b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.02561",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.02561",
+    "identity_tokens": [
+      "arXiv:2306.02561"
+    ],
+    "reason": "複数LLMの候補出力をPairRankerで順位付けし、GenFuserで融合して生成品質を改善するアンサンブル研究。複数モデル実行の品質活用が主目的で、推論コスト・レイテンシ・サービング効率の削減方式ではない。",
+    "first_checked_at": "2026-10-04T21:43:57+00:00",
+    "last_checked_at": "2026-10-04T21:43:57+00:00",
+    "linked_from": [],
+    "title": "LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion"
+  },
+  "processed_at": "2026-10-04T21:43:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb4a3b5ca03e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

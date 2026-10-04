@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T21:42:14+00:00",
-  "record_count": 1349,
+  "updated_at": "2026-10-04T21:43:58+00:00",
+  "record_count": 1364,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18141,11 +18141,13 @@
       "identity_tokens": [
         "arXiv:1908.09791"
       ],
-      "reason": "多数のedge device/制約向けにCNN系sub-networkを一度の学習から選択するOFAとprogressive shrinkingが主題。推論効率は扱うがImageNet/CNN配備で、LLM/Transformer推論を最終適用先としない。",
+      "reason": "trains a once-for-all vision network and selects device-specific subnets; efficient deployment is central but final models/tasks are CNN/mobile vision rather than LLM/Transformer inference.",
       "first_checked_at": "2026-10-04T19:49:58+00:00",
-      "last_checked_at": "2026-10-04T19:49:58+00:00",
-      "linked_from": [],
-      "title": "Once-for-All: Train One Network and Specialize it for Efficient Deployment"
+      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "title": "Once for All: Train One Network and Specialize it for Efficient Deployment"
     },
     "DOI:10.1609/aaai.v38i16.29720": {
       "classification": "unrelated",
@@ -18154,10 +18156,11 @@
         "DOI:10.1609/aaai.v38i16.29720",
         "arXiv:2308.09687"
       ],
-      "reason": "LLMの思考単位をgraphとして構成しreasoning品質とAPI costを改善するprompting/reasoning frameworkで、基盤推論runtime・KV cache・kernel・serving最適化を提案しない。",
+      "reason": "graph-structured prompting improves reasoning quality and can reduce task cost, but does not optimize model runtime, memory, kernels, or serving infrastructure.",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T19:49:58+00:00",
+      "last_checked_at": "2026-10-04T21:43:58+00:00",
       "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md",
         "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
       ],
       "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models"
@@ -18553,9 +18556,9 @@
       "identity_tokens": [
         "arXiv:2204.06125"
       ],
-      "reason": "CLIP画像埋め込みを介した二段階のtext-to-image生成を提案し、diffusion decoderとpriorで画像品質・多様性を改善する画像生成研究。diffusion priorの計算効率にも触れるが、最終適用先は画像生成でLLM推論systemではない。",
+      "reason": "text-conditioned image generation via CLIP latents and diffusion/autoregressive priors; final application is image generation, not LLM inference systems.",
       "first_checked_at": "2026-10-04T20:53:45+00:00",
-      "last_checked_at": "2026-10-04T20:53:45+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
       "linked_from": [
         "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
       ],
@@ -19456,6 +19459,201 @@
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
       "title": "CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows"
+    },
+    "arXiv:1903.09588": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.09588",
+      "identity_tokens": [
+        "arXiv:1903.09588"
+      ],
+      "reason": "BERTをaspect-based sentiment analysisへ適用し、aspectから補助文を構成してsentence-pair classificationとしてfine-tuneするNLPタスク研究。SentiHood/SemEval-2014の精度向上が主目的で、LLM推論ランタイム・メモリ・サービング最適化を扱わない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Utilizing BERT for Aspect-Based Sentiment Analysis via Constructing Auxiliary Sentence"
+    },
+    "arXiv:2306.02561": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02561",
+      "identity_tokens": [
+        "arXiv:2306.02561"
+      ],
+      "reason": "複数LLMの候補出力をPairRankerで順位付けし、GenFuserで融合して生成品質を改善するアンサンブル研究。複数モデル実行の品質活用が主目的で、推論コスト・レイテンシ・サービング効率の削減方式ではない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion"
+    },
+    "arXiv:2306.11698": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.11698",
+      "identity_tokens": [
+        "arXiv:2306.11698"
+      ],
+      "reason": "GPT-4/GPT-3.5をtoxicity、bias、adversarial robustness、privacy、ethics、fairness等で包括評価するtrustworthiness benchmark研究。推論runtimeやservingの性能最適化を提案しない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models"
+    },
+    "arXiv:2305.03726": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.03726",
+      "identity_tokens": [
+        "arXiv:2305.03726"
+      ],
+      "reason": "MIMIC-ITでOpenFlamingo系マルチモーダルモデルをinstruction tuningし、in-context instruction following能力を改善する学習研究。実装のtraining resource削減やHuggingFace統合はあるが、LLM推論runtime最適化が主貢献ではない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Otter: A Multi-Modal Model With In-Context Instruction Tuning"
+    },
+    "DOI:10.1145/3578938": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3578938",
+      "identity_tokens": [
+        "DOI:10.1145/3578938"
+      ],
+      "reason": "modeling・infrastructure・hardwareを含むdeep learning効率化全般のsurveyで、training/deploymentの広い領域を整理する。LLM推論system固有の新方式を提案・評価する論文ではない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better"
+    },
+    "arXiv:1912.12180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.12180",
+      "identity_tokens": [
+        "arXiv:1912.12180"
+      ],
+      "reason": "高次元tensor向けaxial attentionで画像・動画のautoregressive modelingを省メモリ・半並列化する研究だが、最終評価はImageNet画像生成とBAIR videoでありLLM推論systemを対象としない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Axial Attention in Multidimensional Transformers"
+    },
+    "arXiv:1707.08052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.08052",
+      "identity_tokens": [
+        "arXiv:1707.08052"
+      ],
+      "reason": "data-to-document generation用の大規模corpus、extractive evaluation、neural generation baselineを提示するNLG dataset/evaluation研究。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Challenges in Data-to-Document Generation"
+    },
+    "DOI:10.48550/arxiv.2306.11644": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2306.11644",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.11644",
+        "arXiv:2306.11644"
+      ],
+      "reason": "高品質なsynthetic textbook/code dataで小型code language modelを学習し能力を高めるデータ・training研究。小型モデルの効率性は結果としてあるが、推論systemの速度・メモリ・serving最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [],
+      "title": "Textbooks Are All You Need"
+    },
+    "arXiv:2105.01601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.01601",
+      "identity_tokens": [
+        "arXiv:2105.01601"
+      ],
+      "reason": "all-MLP architecture evaluated on image classification; final application is computer vision, not LLM inference.",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "MLP-Mixer: An all-MLP Architecture for Vision"
+    },
+    "arXiv:2202.05262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.05262",
+      "identity_tokens": [
+        "arXiv:2202.05262"
+      ],
+      "reason": "causal tracing and ROME edit factual associations in GPT; objective is model knowledge editing/interpretability, not inference runtime efficiency.",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Locating and Editing Factual Associations in GPT"
+    },
+    "arXiv:1909.08593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.08593",
+      "identity_tokens": [
+        "arXiv:1909.08593"
+      ],
+      "reason": "reward learning and RL fine-tuning from human comparisons improve language behavior; this is a training/alignment method, not inference optimization.",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ],
+      "title": "Fine-Tuning Language Models from Human Preferences"
+    },
+    "arXiv:2109.00859": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.00859",
+      "identity_tokens": [
+        "arXiv:2109.00859"
+      ],
+      "reason": "identifier-aware pretraining for code understanding/generation quality; not LLM serving/runtime optimization.",
+      "first_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ],
+      "title": "CodeT5: Identifier-aware Unified Pre-trained Encoder-Decoder Models for Code Understanding and Generation"
+    },
+    "arXiv:1902.10186": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.10186",
+      "identity_tokens": [
+        "arXiv:1902.10186"
+      ],
+      "reason": "tests whether attention weights are meaningful explanations; interpretability analysis, not inference efficiency.",
+      "first_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.10703-causal-audit-expert-importance.md"
+      ],
+      "title": "Attention is not Explanation"
+    },
+    "arXiv:2201.07207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2201.07207",
+      "identity_tokens": [
+        "arXiv:2201.07207"
+      ],
+      "reason": "uses language models to generate and ground plans for embodied agents; capability/robotics planning rather than inference systems.",
+      "first_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents"
+    },
+    "arXiv:1404.5997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1404.5997",
+      "identity_tokens": [
+        "arXiv:1404.5997"
+      ],
+      "reason": "parallelizes CNN training across multiple GPUs; final application is distributed training of CNNs, a frozen/out-of-scope training topic.",
+      "first_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "One weird trick for parallelizing convolutional neural networks"
     }
   }
 }
