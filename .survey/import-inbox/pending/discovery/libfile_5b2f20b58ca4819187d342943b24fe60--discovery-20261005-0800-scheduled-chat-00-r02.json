@@ -1,0 +1,162 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0800-scheduled-chat-00/r02",
+  "reference_main_sha": "8e5f81d3584459396677f8abc1a9f3c2d8faca84",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1801.01078",
+      "identity_tokens": [
+        "arXiv:1801.01078"
+      ],
+      "title": "Recent Advances in Recurrent Neural Networks",
+      "reason": "RNNの基礎、長期依存学習、各種発展を整理する一般surveyで、LLM推論system固有の新規runtime・serving・memory最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/1801.01078",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でRNN全般のsurveyが主題と確認し、現行LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.11175",
+      "identity_tokens": [
+        "arXiv:2305.11175"
+      ],
+      "title": "VisionLLM: Large Language Model is also an Open-Ended Decoder for Vision-Centric Tasks",
+      "reason": "LLMをopen-ended decoderとしてobject detection等のvision-centric taskを言語instructionで統一するcomputer vision能力研究。COCOで60%超mAP等の視覚task品質が主評価で、推論runtime/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2305.11175",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvision-centric task customizationとCOCO性能が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fi15060192",
+      "identity_tokens": [
+        "DOI:10.3390/fi15060192"
+      ],
+      "title": "ChatGPT and Open-AI Models: A Preliminary Review",
+      "reason": "ChatGPTの歴史、training、応用、利点・課題と47件の関連研究を整理するpreliminary review。LLM推論system固有の速度・memory・serving最適化方式を提案しない。",
+      "source_url": "https://doi.org/10.3390/fi15060192",
+      "body_check": "abstract_screen_only: 出版社一次ページのabstract/本文構成でChatGPT全般のliterature reviewが主題と確認し、推論system対象外と明白なため深読解省略。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2018436.2018443",
+      "identity_tokens": [
+        "DOI:10.1145/2018436.2018443",
+        "DOI:10.1145/2043164.2018443"
+      ],
+      "title": "Better never than late: meeting deadlines in datacenter networks",
+      "reason": "D3はdatacenter network flowのdeadlineに応じて帯域を明示rate-controlし、19-node testbedで短flow latencyやdeadline loadを改善するnetwork transport研究。LLM request scheduling/servingを最終適用先としない。",
+      "source_url": "https://doi.org/10.1145/2043164.2018443",
+      "body_check": "abstract_screen_only: ACM一次abstractでdeadline-aware datacenter transport protocol D3が主題と確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1131",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1131",
+        "arXiv:1909.02027"
+      ],
+      "title": "An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction",
+      "reason": "task-oriented dialogue system向けintent classification/out-of-scope prediction datasetを構築するbenchmark研究で、LLM推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1909.02027",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でintent/OOS benchmark datasetが主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:1909.05840",
+      "identity_tokens": [
+        "arXiv:1909.05840"
+      ],
+      "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
+      "reason": "Q-BERTはlayerごとのHessian感度で2/3/4-bit mixed precisionを割り当て、attention dense matrixをgroup-wise quantizationするBERT推論向け量子化方式。edge inferenceのlatency・memory footprintを問題設定とし、最大13倍のweight圧縮、embedding/activation最大4倍圧縮を2.3%以内の品質低下で実現するため対象内。",
+      "source_url": "https://arxiv.org/abs/1909.05840",
+      "body_check": "full_text_checked: 一次arXiv HTML本文のIntroduction/Method/Experimentを確認。edge inferenceのmemory/latency問題、Hessian-based mixed precision、group-wise attention quantization、SST-2/MNLI/CoNLL-03/SQuADで最大13x weight・4x embedding/activation圧縮を確認。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:1901.10430",
+      "identity_tokens": [
+        "arXiv:1901.10430"
+      ],
+      "title": "Pay Less Attention with Lightweight and Dynamic Convolutions",
+      "reason": "self-attentionをlightweight/dynamic convolutionへ置換し、context長に対する演算量を二次から線形へ落とす生成language architecture。機械翻訳・language modeling・abstractive summarizationでstrong self-attention modelを上回り、より単純で効率的なsequence inferenceを狙うため対象内。",
+      "source_url": "https://arxiv.org/abs/1901.10430",
+      "body_check": "full_text_checked: 一次arXiv HTML本文でdynamic convolution kernelの生成、linear input-length complexity、self-attentionとの計算比較、WMT14/language modeling/summarization評価を確認。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-025-08744-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-08744-2"
+      ],
+      "title": "Mastering diverse control tasks through world models",
+      "reason": "DreamerV3はworld model・actor・criticを用いて150超のreinforcement learning/control taskを単一設定で解く学習algorithm。Atari、robotics、Minecraft等のcontrol能力とdata efficiencyが主題で、LLM推論systemではない。",
+      "source_url": "https://doi.org/10.1038/s41586-025-08744-2",
+      "body_check": "abstract_screen_only: Nature一次ページのabstract/評価対象でworld-model RLと150超control taskが主題と確認し、LLM推論system対象外と明白なため本文深読解省略。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04721",
+      "identity_tokens": [
+        "arXiv:1906.04721"
+      ],
+      "title": "Data-Free Quantization Through Weight Equalization and Bias Correction",
+      "reason": "weight range equalizationとbias correctionでdata-free 8-bit quantizationを行い、MobileNet等の画像分類・segmentation・detectionで精度を維持するCV量子化研究。効率推論は扱うが最終適用先がcomputer visionでLLM/Transformer推論評価がない。",
+      "source_url": "https://arxiv.org/abs/1906.04721",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でMobileNet等computer vision architecture/taskへの8-bit quantizationが最終評価と確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.01390",
+      "identity_tokens": [
+        "arXiv:2308.01390"
+      ],
+      "title": "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models",
+      "reason": "3B–9Bのautoregressive vision-language modelをopen-sourceで再現し、training data/hyperparameterと7 vision-language datasetの能力を評価するtechnical report。推論runtime/serving効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2308.01390",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でFlamingo再現、training、vision-language benchmark品質が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:27:00+09:00",
+      "last_checked_at": "2026-10-05T08:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 28
+    }
+  ]
+}
