@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned",
+      "source_url": "https://arxiv.org/abs/1905.09418",
+      "year": 2019,
+      "published": "2019-05-23",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1643,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-head self-attention is a key component of the Transformer, a state-of-the-art architecture for neural machine translation. In this work we evaluate the contribution made by individual attention heads to the overall performance of the model and analyze the roles played by them in the encoder. We find that the most important and confident heads play consistent and often linguistically-interpretable roles. When pruning heads using a method based on stochastic gates and a differentiable relaxation of the L0 penalty, we observe that specialized heads are last to be pruned. Our novel pruning method removes the vast majority of heads without seriously affecting performance. For example, on the English-Russian WMT dataset, pruning 38 out of 48 encoder heads results in a drop of only 0.15 BLEU.",
+      "identifiers": [
+        "SemanticScholar:07a64686ce8e43ac475a8d820a8a9f1d87989583"
+      ],
+      "semantic_scholar_id": "07a64686ce8e43ac475a8d820a8a9f1d87989583",
+      "canonical_id": "arXiv:1905.09418",
+      "arxiv_id": "1905.09418",
+      "doi": "10.18653/v1/P19-1580",
+      "authors": [
+        "Elena Voita",
+        "David Talbot",
+        "F. Moiseev",
+        "Rico Sennrich",
+        "Ivan Titov"
+      ],
+      "priority": 1653,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1643,
+        "citation_count": 1643,
+        "total": 1653,
+        "is_fresh": false,
+        "freshness_age_days": 2691,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Transformerのattention headを確率的gateとL0 penaltyの微分可能緩和でpruningし、推論時に多数headを除去できるモデル圧縮研究。WMT英露で48 encoder head中38を削除してBLEU低下0.15に抑えるため、attention計算削減へ直接つながる推論圧縮として収録対象。",
+      "library_body_check": "full_text_checked: ACL一次本文でhead importance/specialization分析、hard-concrete系stochastic gateによるL0正則化pruning、encoder/decoder/cross-attention別のpruning実験を確認。英露WMTでは38/48 encoder heads削除で0.15 BLEU低下。主眼は分析だが最終成果に実際のinference-time head pruningを含む。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ab32ed1121ff",
+    "round": "libimp-ab32ed1121ffd991-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ab32ed1121ffd991-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ab32ed1121ffd991-pre01.json",
+    "receipt": "sha256:4208c3cf511ca13fdd0eae74563bdcaad95972c153d1de5254e24e6ba5616f33"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ab32ed1121ff",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
