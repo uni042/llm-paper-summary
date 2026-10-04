@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-04T14:29:27+00:00",
+  "checked_at": "2026-10-04T14:40:54+00:00",
   "summary": {
-    "total": 1580,
-    "complete": 1580,
-    "incomplete": 0
+    "total": 1582,
+    "complete": 1581,
+    "incomplete": 1
   },
   "families": {
     "inference": {
-      "total": 1541,
-      "complete": 1541
+      "total": 1543,
+      "complete": 1542
     },
     "training": {
       "total": 25,
@@ -21,5 +21,11 @@
       "complete": 14
     }
   },
-  "incomplete": []
+  "incomplete": [
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "canonical_id": "DOI:10.1109/hpca53966.2022.00082",
+      "reason": "missing structured reference audit metadata"
+    }
+  ]
 }
