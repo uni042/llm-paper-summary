@@ -26,11 +26,20 @@ class RunLivenessPolicyTests(unittest.TestCase):
             "library-import.yml",
             "forward-citation-sweep.yml",
             "candidate-priority-refresh.yml",
+            "maintenance.yml",
         ):
             with self.subTest(workflow=workflow):
                 self.assertIn(f"dispatch_if_idle {workflow}", scheduler)
         self.assertIn("GITHUB_RUN_NUMBER % 6", scheduler)
         self.assertIn("Library import inbox is empty; skip processor dispatch.", scheduler)
+        self.assertIn('if [ "$GITHUB_EVENT_NAME" = "push" ]; then', scheduler)
+
+        watchdog = (WORKFLOWS / "survey-scheduler-watchdog.yml").read_text(encoding="utf-8")
+        self.assertIn("cron: '13,43 * * * *'", watchdog)
+        self.assertIn("survey-orchestrator.yml/dispatches", watchdog)
+        self.assertIn("survey-scheduler-watchdog.yml/dispatches", watchdog)
+        self.assertIn("sleep 600", watchdog)
+        self.assertIn("group: survey-scheduler-watchdog-main", watchdog)
 
         retired_auto = (
             "survey-claim-fast.yml",
