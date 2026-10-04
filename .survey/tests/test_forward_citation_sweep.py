@@ -236,6 +236,79 @@ lineage: test-lineage
             self.assertEqual(result["completed_cycles"], 1)
             self.assertEqual(len(calls), 2)
 
+
+    def test_forward_pool_drops_candidates_already_present_in_backward_references(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            self.write_fixture(root)
+            paper = root / "papers/inference/test/paper.md"
+            paper.write_text(
+                """---
+canonical_id: arXiv:2401.00001
+arxiv_id: 2401.00001
+title: Seed Paper
+published: 2024-01-15
+lineage: test-lineage
+references:
+  - canonical_id: arXiv:2609.99999
+    title: Shared Candidate
+---
+# Seed Paper
+""",
+                encoding="utf-8",
+            )
+
+            state_path = root / ".survey/work-queue/forward-citation-sweep.json"
+            state_path.parent.mkdir(parents=True, exist_ok=True)
+            state_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 1,
+                        "seeds": {},
+                        "candidates": {
+                            "arXiv:2609.99999": {
+                                "canonical_id": "arXiv:2609.99999",
+                                "arxiv_id": "2609.99999",
+                                "title": "Shared Candidate",
+                            }
+                        },
+                        "candidate_aliases": {
+                            "arXiv:2609.99999": "arXiv:2609.99999"
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            def fake_fetcher(source_url, *, page_size=100, **kwargs):
+                return lambda cursor: {
+                    "records": [
+                        {
+                            "canonical_id": "arXiv:2609.99999",
+                            "arxiv_id": "2609.99999",
+                            "title": "Shared Candidate",
+                        }
+                    ],
+                    "next_cursor": None,
+                }
+
+            with patch.object(
+                forward_citation_sweep.discovery_provider_adapter,
+                "semantic_scholar_fetcher",
+                side_effect=fake_fetcher,
+            ):
+                result = forward_citation_sweep.sweep(
+                    root,
+                    now=dt.datetime(2026, 10, 3, tzinfo=dt.timezone.utc),
+                    sleep_fn=lambda _: None,
+                )
+
+            self.assertEqual(result["candidate_count"], 0)
+            self.assertEqual(result["backward_reference_candidates_removed"], 1)
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            self.assertEqual(state["candidates"], {})
+            self.assertEqual(state["candidate_aliases"], {})
+
     def test_cursor_resumes_until_cycle_completion_then_waits_for_rescan(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
