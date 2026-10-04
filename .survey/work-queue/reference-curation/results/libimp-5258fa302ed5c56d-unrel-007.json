@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5258fa302ed5c56d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1137/0222058",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1137/0222058",
+    "identity_tokens": [
+      "DOI:10.1137/0222058"
+    ],
+    "reason": "文字列検索用suffix arrayの古典アルゴリズムで、投機的復号に引用されてもLLM推論方式そのものではない。",
+    "first_checked_at": "2026-10-04T05:23:39+00:00",
+    "last_checked_at": "2026-10-04T05:23:39+00:00",
+    "linked_from": [],
+    "title": "Suffix arrays: a new method for on-line string searches"
+  },
+  "processed_at": "2026-10-04T05:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5258fa302ed5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

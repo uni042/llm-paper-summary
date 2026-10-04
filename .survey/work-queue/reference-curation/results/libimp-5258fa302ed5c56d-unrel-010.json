@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5258fa302ed5c56d-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/2408776.2408794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/2408776.2408794",
+    "identity_tokens": [
+      "DOI:10.1145/2408776.2408794"
+    ],
+    "reason": "大規模オンラインサービス一般のtail latencyを分析・緩和する研究で、LLM推論サービング固有の方式を提案しない。",
+    "first_checked_at": "2026-10-04T05:23:39+00:00",
+    "last_checked_at": "2026-10-04T05:23:39+00:00",
+    "linked_from": [],
+    "title": "The tail at scale"
+  },
+  "processed_at": "2026-10-04T05:23:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5258fa302ed5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
