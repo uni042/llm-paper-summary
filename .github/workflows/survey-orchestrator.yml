@@ -106,7 +106,10 @@ jobs:
 
           metadata_max_age_seconds=3000
           force_metadata=0
-          if [ "$GITHUB_EVENT_NAME" != "schedule" ]; then
+          # A watchdog-triggered workflow_dispatch is a normal clock tick, not a
+          # request to bypass freshness gates. Only a repository push is treated
+          # as an implementation/configuration change that forces validation.
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
             force_metadata=1
           fi
 
@@ -123,3 +126,35 @@ jobs:
           else
             echo 'Candidate-priority state is still fresh; skip dispatch.'
           fi
+
+          # Daily maintenance must not depend solely on GitHub's best-effort
+          # schedule delivery. After 09:00 JST, dispatch maintenance when today's
+          # successful/attempted maintenance completion is still absent, or when a
+          # durable maintenance request is explicitly pending.
+          maintenance_json="$(gh api \
+            "repos/${GITHUB_REPOSITORY}/contents/.survey/work-queue/maintenance-cycle.json?ref=main" \
+            --jq '.content' 2>/dev/null | base64 -d 2>/dev/null || true)"
+          maintenance_pending="$(jq -r '.maintenance_pending // false' <<< "$maintenance_json" 2>/dev/null || echo false)"
+          maintenance_last_completed="$(jq -r '.last_maintenance_completed_at // empty' <<< "$maintenance_json" 2>/dev/null || true)"
+          today_jst="$(TZ=Asia/Tokyo date +%F)"
+          hour_jst="$(TZ=Asia/Tokyo date +%H)"
+          last_maintenance_day_jst=""
+          if [ -n "$maintenance_last_completed" ]; then
+            last_maintenance_day_jst="$(TZ=Asia/Tokyo date -d "$maintenance_last_completed" +%F 2>/dev/null || true)"
+          fi
+
+          maintenance_due=0
+          if [ "$maintenance_pending" = "true" ]; then
+            maintenance_due=1
+            echo 'Maintenance request is pending.'
+          elif [ $((10#$hour_jst)) -ge 9 ] && [ "$last_maintenance_day_jst" != "$today_jst" ]; then
+            maintenance_due=1
+            echo "Daily maintenance missing for ${today_jst} JST; dispatch recovery."
+          fi
+
+          if [ "$maintenance_due" -eq 1 ]; then
+            dispatch_if_idle maintenance.yml
+          else
+            echo 'Daily maintenance is current; skip dispatch.'
+          fi
+
