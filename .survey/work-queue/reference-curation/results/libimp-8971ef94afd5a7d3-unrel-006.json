@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8971ef94afd5a7d3-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1412.6550",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1412.6550",
+    "identity_tokens": [
+      "arXiv:1412.6550"
+    ],
+    "reason": "教師ネットワークの中間表現をhintとして深く細いstudentを学習する知識蒸留研究。小さく高速なモデルを得る目的はあるが対象は一般DNNで、LLM/Transformer推論システムへの最終適用・評価はない。",
+    "first_checked_at": "2026-10-04T14:28:32+00:00",
+    "last_checked_at": "2026-10-04T14:28:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+    ],
+    "title": "FitNets: Hints for Thin Deep Nets"
+  },
+  "processed_at": "2026-10-04T14:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8971ef94afd5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

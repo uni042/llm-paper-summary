@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df09b1d3b79527ac-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:0811.3171",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:0811.3171",
+    "identity_tokens": [
+      "DOI:10.1103/physrevlett.103.150502",
+      "arXiv:0811.3171"
+    ],
+    "reason": "量子計算機で線形方程式系の解に関する期待値を高速に求める量子アルゴリズム研究で、LLM推論システムを対象としない。",
+    "first_checked_at": "2026-10-04T14:28:32+00:00",
+    "last_checked_at": "2026-10-04T14:28:32+00:00",
+    "linked_from": [],
+    "title": "Quantum algorithm for linear systems of equations"
+  },
+  "processed_at": "2026-10-04T14:28:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df09b1d3b795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
