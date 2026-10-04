@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d57c839110ce88df-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1702.03044",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1702.03044",
+    "identity_tokens": [
+      "arXiv:1702.03044"
+    ],
+    "reason": "事前学習済みCNNをweight partition・group-wise quantization・retrainingの反復で低bit化する画像CNN量子化研究。推論向け低精度化ではあるが、AlexNet/VGG/GoogLeNet/ResNetのImageNet評価に限定され、LLM/Transformer推論への最終適用・評価がない。",
+    "first_checked_at": "2026-10-04T18:55:17+00:00",
+    "last_checked_at": "2026-10-04T18:55:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+    ],
+    "title": "Incremental Network Quantization: Towards Lossless CNNs with Low-Precision Weights"
+  },
+  "processed_at": "2026-10-04T18:55:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d57c839110ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

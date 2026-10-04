@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d57c839110ce88df-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.10511",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.10511",
+    "identity_tokens": [
+      "arXiv:2212.10511"
+    ],
+    "reason": "言語モデルの長尾事実記憶をPopQAで調べ、必要時だけ検索する適応的検索拡張で質問応答精度と推論コストを改善する研究。推論コスト低減は報告するが、主題は知識アクセス方策・検索拡張生成（retrieval-augmented generation; RAG）の能力分析であり、ランタイム、KVキャッシュ、メモリ階層、サービング機構の最適化ではない。",
+    "first_checked_at": "2026-10-04T18:55:17+00:00",
+    "last_checked_at": "2026-10-04T18:55:17+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md"
+    ],
+    "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+  },
+  "processed_at": "2026-10-04T18:55:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d57c839110ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

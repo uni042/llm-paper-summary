@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T16:44:26+00:00",
-  "record_count": 425,
+  "updated_at": "2026-10-04T18:55:17+00:00",
+  "record_count": 429,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6148,6 +6148,54 @@
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
       "title": "A Survey of Transformers"
+    },
+    "arXiv:2606.26488": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26488",
+      "identity_tokens": [
+        "arXiv:2606.26488"
+      ],
+      "reason": "再帰reasoning modelをedgeへ展開するためINT8/INT4、flash-streamed embedding等を評価し、4MB microcontrollerまで縮小する。推論deployment圧縮に直結するが対象modelが一般的LLMより小規模recursive reasoner寄りのためborderline。",
+      "first_checked_at": "2026-10-04T18:55:16+00:00",
+      "last_checked_at": "2026-10-04T18:55:16+00:00",
+      "linked_from": [],
+      "title": "What Survives When You Compress a Recursive Reasoner for the Edge?"
+    },
+    "arXiv:2607.26571": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26571",
+      "identity_tokens": [
+        "arXiv:2607.26571"
+      ],
+      "reason": "H100級GPUのLLM推論energyをprefill/decode、compute、parameter access、KV write、attention readへ分解して推定する分析model。推論system設計に有用だが高速化方式そのものではなく評価・modeling中心のためborderline。",
+      "first_checked_at": "2026-10-04T18:55:16+00:00",
+      "last_checked_at": "2026-10-04T18:55:16+00:00",
+      "linked_from": [],
+      "title": "From Tokens to Watt-hours: Analytical Energy Estimation for LLM Inference on Modern GPUs"
+    },
+    "arXiv:2606.10440": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10440",
+      "identity_tokens": [
+        "arXiv:2606.10440"
+      ],
+      "reason": "分散MLのGPU・networkをcache-line粒度で高忠実度simulationし、inferenceのlatency-sensitive collectiveも対象にする。推論simulation基盤として関連するがLLM専用ではないためborderline。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "ASTRA-sim 3.0: Next-Level Distributed Machine Learning Simulations via High-Fidelity GPU and Infrastructure Modeling"
+    },
+    "arXiv:2608.12875": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12875",
+      "identity_tokens": [
+        "arXiv:2608.12875"
+      ],
+      "reason": "LLMとembedding modelを37 taskでquality・cost・throughput比較し、LLMが最大1431x高価、open LLMが同一GPUで2.5–736x遅い等を分析する。推論cost評価に有用だが新しい推論system方式ではないためborderline。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "The Embedder's Dilemma: LLMs Are Better, but at What Cost?"
     }
   }
 }

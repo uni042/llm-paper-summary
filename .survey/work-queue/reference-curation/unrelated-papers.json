@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T17:57:47+00:00",
-  "record_count": 1210,
+  "updated_at": "2026-10-04T18:55:17+00:00",
+  "record_count": 1225,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -17611,6 +17611,208 @@
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
       "title": "CamemBERT: a Tasty French Language Model"
+    },
+    "arXiv:2607.14530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14530",
+      "identity_tokens": [
+        "arXiv:2607.14530"
+      ],
+      "reason": "xHC/xHC-Flashは18B/28B MoEのresidual-stream expansionを主にpre-training lossとtraining FLOPsで評価するmodel architecture/training研究。kernel/memory traffic最適化もあるが最終目的はLLM pre-training scalingで凍結対象。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "xHC: Expanded Hyper-Connections"
+    },
+    "arXiv:2608.06812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06812",
+      "identity_tokens": [
+        "arXiv:2608.06812"
+      ],
+      "reason": "FP4 Tensor CoreでFP64 DGEMMをOzaki schemeによりemulateする高精度scientific computing研究。GPU kernel技術だがLLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "DGEMM with Ozaki Scheme I/II on FP4 Tensor Cores: A Base-13 E2M1 Limb Representation"
+    },
+    "arXiv:2606.27079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27079",
+      "identity_tokens": [
+        "arXiv:2606.27079"
+      ],
+      "reason": "VLA robot policyのphysical/instruction/perception safetyを66 scenario・5 embodimentで測るdiagnostic benchmark。推論runtime・serving効率化を提案しない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "ForesightSafety-VLA: A Unified Diagnostic Safety Benchmark for Vision-Language-Action Models"
+    },
+    "arXiv:2606.13578": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13578",
+      "identity_tokens": [
+        "arXiv:2606.13578"
+      ],
+      "reason": "科学laboratory向けVLA modelのgrounding/robotics capability研究で、LLM推論runtime・serving・cache/kernel最適化を対象としない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories"
+    },
+    "arXiv:2607.12747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12747",
+      "identity_tokens": [
+        "arXiv:2607.12747"
+      ],
+      "reason": "agentic systemの成功・失敗flowを分析するdiagnostic/evaluation研究で、LLM推論runtimeの高速化、省メモリ化、serving schedulingを提案しない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "Tracing Agentic Failure from the Flow of Success"
+    },
+    "arXiv:2607.07847": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07847",
+      "identity_tokens": [
+        "arXiv:2607.07847"
+      ],
+      "reason": "continual learningでいつparameter更新が必要かを扱う学習理論・適応研究で、LLM推論runtime/serving効率化を対象としない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [],
+      "title": "When Does Continual Learning Require Learning"
+    },
+    "arXiv:2307.06281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.06281",
+      "identity_tokens": [
+        "arXiv:2307.06281"
+      ],
+      "reason": "大規模視覚言語モデル（large vision-language model; VLM）の多面的能力を英中二言語の選択式問題とCircularEvalで評価するベンチマーク研究であり、LLM推論ランタイム、メモリ階層、カーネル、サービング効率化を提案しない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ],
+      "title": "MMBench: Is Your Multi-modal Model an All-around Player?"
+    },
+    "arXiv:2212.10511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10511",
+      "identity_tokens": [
+        "arXiv:2212.10511"
+      ],
+      "reason": "言語モデルの長尾事実記憶をPopQAで調べ、必要時だけ検索する適応的検索拡張で質問応答精度と推論コストを改善する研究。推論コスト低減は報告するが、主題は知識アクセス方策・検索拡張生成（retrieval-augmented generation; RAG）の能力分析であり、ランタイム、KVキャッシュ、メモリ階層、サービング機構の最適化ではない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md"
+      ],
+      "title": "When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories"
+    },
+    "arXiv:2306.14824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.14824",
+      "identity_tokens": [
+        "arXiv:2306.14824"
+      ],
+      "reason": "位置tokenを用いてテキスト表現と画像中のbounding boxを結び付けるマルチモーダル大規模言語モデル（multimodal large language model; MLLM）とGrITデータを提案し、grounding・referring・知覚言語タスクを評価するモデル能力研究。推論システム効率化は対象外。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Kosmos-2: Grounding Multimodal Large Language Models to the World"
+    },
+    "arXiv:1502.05698": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1502.05698",
+      "identity_tokens": [
+        "arXiv:1502.05698"
+      ],
+      "reason": "質問応答システムに必要な基本的推論能力を分離して測る20種のtoy task（後のbAbI）を提案する能力評価・データセット研究で、LLM推論の計算効率や実行基盤を扱わない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ],
+      "title": "Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks"
+    },
+    "arXiv:2305.14992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14992",
+      "identity_tokens": [
+        "arXiv:2305.14992"
+      ],
+      "reason": "LLMを世界モデルと推論agentの双方として用い、モンテカルロ木探索（Monte Carlo Tree Search; MCTS）で推論経路を探索するRAPを提案する推論能力研究。計画・数学・論理推論の精度向上が目的で、推論ランタイムやサービング効率化ではない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ],
+      "title": "Reasoning with Language Model is Planning with World Model"
+    },
+    "arXiv:1702.03044": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1702.03044",
+      "identity_tokens": [
+        "arXiv:1702.03044"
+      ],
+      "reason": "事前学習済みCNNをweight partition・group-wise quantization・retrainingの反復で低bit化する画像CNN量子化研究。推論向け低精度化ではあるが、AlexNet/VGG/GoogLeNet/ResNetのImageNet評価に限定され、LLM/Transformer推論への最終適用・評価がない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+      ],
+      "title": "Incremental Network Quantization: Towards Lossless CNNs with Low-Precision Weights"
+    },
+    "arXiv:1603.07396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1603.07396",
+      "identity_tokens": [
+        "arXiv:1603.07396"
+      ],
+      "reason": "Diagram Parse Graph、LSTM構文解析、attention型diagram QAを用いて図表理解・質問応答を研究するコンピュータビジョン/QA研究で、LLM推論実行効率化を扱わない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md"
+      ],
+      "title": "A Diagram Is Worth A Dozen Images"
+    },
+    "DOI:10.1145/42288.42291": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/42288.42291",
+      "identity_tokens": [
+        "DOI:10.1145/42288.42291"
+      ],
+      "reason": "FORTRAN向け基本線形代数サブルーチン（BLAS）の拡張仕様・実装に関する数値計算基盤研究であり、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md"
+      ],
+      "title": "An extended set of FORTRAN basic linear algebra subprograms"
+    },
+    "arXiv:1808.06866": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.06866",
+      "identity_tokens": [
+        "arXiv:1808.06866"
+      ],
+      "reason": "pruned filterを学習中も更新可能にするSoft Filter PruningでCNN推論を高速化し、ResNet-101で42%以上FLOPsを削減する画像モデル圧縮研究。推論高速化は扱うが対象はCNN画像分類で、LLM/Transformerへの直接適用・評価がない。",
+      "first_checked_at": "2026-10-04T18:55:17+00:00",
+      "last_checked_at": "2026-10-04T18:55:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
+      ],
+      "title": "Soft Filter Pruning for Accelerating Deep Convolutional Neural Networks"
     }
   }
 }
