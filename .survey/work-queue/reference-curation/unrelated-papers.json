@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T13:00:44+00:00",
-  "record_count": 1046,
+  "updated_at": "2026-10-04T13:03:15+00:00",
+  "record_count": 1047,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -982,20 +982,6 @@
       "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
       "source_url": "https://arxiv.org/abs/2408.03314"
     },
-    "arXiv:1808.06226": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1808.06226",
-      "identity_tokens": [
-        "arXiv:1808.06226"
-      ],
-      "reason": "本文の主題はデータセット、モデル能力、一般的学習手法等で、現行LLMシステム最適化への直接的なシステム寄与がない。",
-      "first_checked_at": "2026-09-27T02:28:40+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
-      "linked_from": [
-        "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
-      ],
-      "title": "SentencePiece"
-    },
     "arXiv:1807.02037": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1807.02037",
@@ -1620,20 +1606,6 @@
         ".survey/work-queue/worker-worklist-00.json"
       ],
       "title": "CodeBLEU: a Method for Automatic Evaluation of Code Synthesis"
-    },
-    "arXiv:2007.01282": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2007.01282",
-      "identity_tokens": [
-        "arXiv:2007.01282"
-      ],
-      "reason": "本文を確認し、Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering は学習・能力評価・データセット・一般モデル分析等が主目的で、現行のLLM推論システム効率化への直接寄与がないため無関係と判定。",
-      "first_checked_at": "2026-09-27T04:57:30+09:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
     },
     "arXiv:2006.09503": {
       "classification": "unrelated",
@@ -14019,7 +13991,7 @@
       ],
       "reason": "LLMの思考単位を任意グラフとして生成・集約・評価するプロンプティング／推論戦略研究で、品質とAPIコストは扱うが、モデル実行ランタイムの速度・KVメモリ・カーネル・サービング最適化を提案しない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
       ],
@@ -14033,7 +14005,7 @@
       ],
       "reason": "制約付き任意目的関数の資源配分へ一般化Lagrange乗数法を適用する1963年の数理最適化研究で、LLM KV量子化や推論資源配分への直接適用・評価を行わない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
       ],
@@ -14045,9 +14017,9 @@
       "identity_tokens": [
         "DOI:10.1145/359094.359101"
       ],
-      "reason": "グラフ頂点彩色アルゴリズムの古典研究で、MoE pruningの組合せ最適化に引用されてもLLM推論そのものを対象としない。",
+      "reason": "グラフ頂点彩色のアルゴリズム研究で、MoE pruning等の後続研究に引用されてもLLM推論・モデル実行を直接対象としない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md"
       ],
@@ -14059,9 +14031,9 @@
       "identity_tokens": [
         "DOI:10.1145/152610.152611"
       ],
-      "reason": "大規模databaseのquery evaluation/optimization技法を体系化する古典的database systems研究で、LLM agent workflowや推論servingを対象としない。",
+      "reason": "大規模データベースのquery evaluationとjoin等の実行・最適化技法を体系化するデータベース研究で、LLM agent workflowや推論サービングを直接対象としない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
       ],
@@ -14530,9 +14502,9 @@
       "identity_tokens": [
         "arXiv:2104.08691"
       ],
-      "reason": "凍結した事前学習モデルへ学習可能なsoft promptだけを最適化するパラメータ効率のよい適応・学習手法。主目的はタスク適応性能と学習パラメータ削減であり、LLM推論ランタイム効率化ではない。",
+      "reason": "凍結言語モデルに学習可能なsoft promptを付与するparameter-efficient tuningが主題で、推論サービング・KVキャッシュ・MoE推論・推論カーネル等の実行系最適化を扱わない。",
       "first_checked_at": "2026-10-04T12:52:29+00:00",
-      "last_checked_at": "2026-10-04T12:52:29+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2603.12645-lightmoe-expert-replacing.md"
       ],
@@ -14546,9 +14518,9 @@
         "DOI:10.48550/arxiv.2010.11934",
         "arXiv:2010.11934"
       ],
-      "reason": "101言語のCommon CrawlデータでT5を多言語事前学習し、多言語NLPベンチマーク性能を評価する基盤モデル・学習研究。推論効率化を主目的としない。",
+      "reason": "101言語Common Crawlでの多言語T5事前学習と多言語ベンチマーク性能が主題で、推論サービング・メモリ階層・推論カーネル最適化ではない。",
       "first_checked_at": "2026-09-27T13:32:58+09:00",
-      "last_checked_at": "2026-10-04T12:52:29+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md",
         "worker-worklist-30 discovery_review tail-to-head"
@@ -14681,9 +14653,9 @@
       "identity_tokens": [
         "arXiv:1909.10351"
       ],
-      "reason": "BERTの知識蒸留による小型化とNLU性能を扱うモデル圧縮・学習研究で、LLM推論システムの実行方式を主題としない。",
+      "reason": "BERTから小型studentへ知識を移す二段階Transformer蒸留学習が主題で、推論速度改善は学習済み小型モデルの結果であり現行サーベイの推論実行系最適化範囲ではない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [],
       "title": "TinyBERT: Distilling BERT for Natural Language Understanding"
     },
@@ -14691,12 +14663,15 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2021.eacl-main.74",
       "identity_tokens": [
-        "DOI:10.18653/v1/2021.eacl-main.74"
+        "DOI:10.18653/v1/2021.eacl-main.74",
+        "arXiv:2007.01282"
       ],
-      "reason": "検索器と生成モデルを組み合わせるオープンドメイン質問応答手法の品質改善研究で、RAGサービングやLLM推論ランタイム最適化を提案しない。",
-      "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:53:19+00:00",
-      "linked_from": [],
+      "reason": "open-domain QAでretrieved passagesを生成モデルへ与えて精度を改善する手法が主題で、推論基盤の速度・メモリ・スケジューリング最適化を扱わない。",
+      "first_checked_at": "2026-09-27T04:57:30+09:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
       "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
     },
     "DOI:10.1109/sfcs.1994.365680": {
@@ -14705,9 +14680,9 @@
       "identity_tokens": [
         "DOI:10.1109/sfcs.1994.365680"
       ],
-      "reason": "依存関係を持つ並列マルチスレッド計算の仕事窃取（work stealing）スケジューリングに理論的時間・空間・通信量境界を与える一般並列計算研究で、LLM推論を対象としない。",
+      "reason": "一般的なfully-strict multithreaded computation向けwork-stealing schedulerの理論解析が主題で、LLM推論サービング固有のスケジューリング研究ではない。",
       "first_checked_at": "2026-10-04T12:53:19+00:00",
-      "last_checked_at": "2026-10-04T12:58:18+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
       ],
@@ -15283,6 +15258,45 @@
       "last_checked_at": "2026-10-04T13:00:44+00:00",
       "linked_from": [],
       "title": "Carbon-Aware Computing for Datacenters"
+    },
+    "DOI:10.1162/tacl_a_00276": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00276",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00276"
+      ],
+      "reason": "実検索クエリとWikipediaページから長短回答を注釈したQAデータセット・評価指標の構築が主題で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-04T13:03:15+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
+      "linked_from": [],
+      "title": "Natural Questions: A Benchmark for Question Answering Research"
+    },
+    "DOI:10.18653/v1/d18-2012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-2012",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-2012",
+        "arXiv:1808.06226"
+      ],
+      "reason": "raw textから直接subword modelを学習するtokenizer/detokenizerの設計とNMT検証が主題で、LLM推論実行系の高速化・省メモリ化を扱わない。",
+      "first_checked_at": "2026-09-27T02:28:40+09:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
+      "linked_from": [
+        "scheduled-chat-30 dedicated discovery worklist; tail-to-head"
+      ],
+      "title": "SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing"
+    },
+    "arXiv:1809.08887": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.08887",
+      "identity_tokens": [
+        "arXiv:1809.08887"
+      ],
+      "reason": "text-to-SQL用の大規模cross-domainデータセットとsemantic parsing課題の構築が主題で、LLM推論システム最適化ではない。",
+      "first_checked_at": "2026-10-04T13:03:15+00:00",
+      "last_checked_at": "2026-10-04T13:03:15+00:00",
+      "linked_from": [],
+      "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task"
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d49a1c0ea8866a40-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1809.08887",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1809.08887",
+    "identity_tokens": [
+      "arXiv:1809.08887"
+    ],
+    "reason": "text-to-SQL用の大規模cross-domainデータセットとsemantic parsing課題の構築が主題で、LLM推論システム最適化ではない。",
+    "first_checked_at": "2026-10-04T13:03:15+00:00",
+    "last_checked_at": "2026-10-04T13:03:15+00:00",
+    "linked_from": [],
+    "title": "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task"
+  },
+  "processed_at": "2026-10-04T13:03:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d49a1c0ea886",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
