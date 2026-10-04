@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 11:59:59 JST**
+> 自動生成: **2026-10-04 12:02:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **601** |
-| 未claim Research job | **458** |
-| 直近24hのResearch処理完了 | **40** |
+| 収録候補論文数 | **598** |
+| 未claim Research job | **455** |
+| 直近24hのResearch処理完了 | **43** |
 | 最終Research処理完了 | **10-04 11:29:45 JST** |
 | 最終Discovery探索完了 | **10-04 03:30:00 JST** |
 | 整合性異常 | **0** |
@@ -24,9 +24,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **601** |
+| canonical_id確認済みの一意な候補論文 | **598** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **601** |
+| 非終端Research job合計 | **598** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -35,9 +35,9 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9350** |
-| 処理済み | **2274** |
-| 未処理 | **7076** |
-| 収録済みとして除外 | **989** |
+| 処理済み | **2276** |
+| 未処理 | **7074** |
+| 収録済みとして除外 | **991** |
 | 無関係として除外 | **892** |
 | 微妙として除外 | **393** |
 
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 11:52:54 JST（7分前）** |
+| 最終maintenance完了 | **10-04 11:52:54 JST（9分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **9** |
+| 直近6hのResearch完了 | **10** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
 | 最終Research完了 | **10-04 11:29:45 JST** |
@@ -238,7 +238,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **601** |
+| ready | **598** |
 
 ### 候補の重複・識別情報欠損
 
@@ -258,7 +258,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **1526** |
+| inference/training/survey配下の論文Markdown実体 | **1529** |
 
 ### immutable submissionの未照合
 

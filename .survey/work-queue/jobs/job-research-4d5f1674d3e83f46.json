@@ -32,9 +32,14 @@
   "selection_reason": "エージェント推論の思考ステップ構造をKVキャッシュ圧縮へ直接組み込み、長期推論のメモリ・データ移動量を削減しつつ推論品質を維持するため対象。",
   "semantic_scholar_id": "18d028deb17ac4394d762a4858615a6e6e804cf1",
   "source_url": "https://arxiv.org/abs/2609.22158",
-  "status": "ready",
+  "status": "superseded",
   "title": "StepKV: Step-Aware KV Cache Compression for LLM Agents",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-04T03:02:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.22158-stepkv-step-aware-kv-cache-compression-for-llm-agents.md",
+  "represented_canonical_id": "arXiv:2609.22158",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
