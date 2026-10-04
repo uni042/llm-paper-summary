@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261004-2230-scheduled-chat-30/r02::provider-gap",
+  "reference_main_sha": "f8bcde8fc495bcd13c0713e1fa1d4ed9eda0269a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.372",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.372",
+        "arXiv:1909.10351"
+      ],
+      "title": "TinyBERT: Distilling BERT for Natural Language Understanding",
+      "reason": "Transformer向け知識蒸留でBERTを4層・14.5M parameterへ圧縮し、BERTBASE比7.5倍小型化・9.4倍推論高速化を実測する推論向けモデル圧縮研究。LLM以前のBERT系だがTransformer推論の計算量・model storage削減を最終目的として明示しているため収録対象。",
+      "source_url": "https://arxiv.org/abs/1909.10351",
+      "body_check": "full_text_checked: 一次arXiv HTMLでembedding/hidden state/attention matrix/logitを教師BERTへ合わせるTransformer distillation、general/task-specificの二段階学習、GLUE評価を確認。TinyBERT4は14.5M parameters、1.2B FLOPs、BERTBASE比9.4x speedupで平均77.0対79.5を報告。",
+      "first_checked_at": "2026-10-04T22:47:00+09:00",
+      "last_checked_at": "2026-10-04T22:47:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md"
+      ],
+      "worklist_rank": 16
+    }
+  ],
+  "parent_run_key": "20261004-2230-scheduled-chat-30/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_21246914fb448191b3f2273cdfe3b9d9--discovery-20261004-2230-scheduled-chat-30-r02.json",
+  "provider_gap_ids": [
+    "arXiv:1909.10351"
+  ]
+}
