@@ -1,0 +1,184 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-0245-scheduled-chat-45/r02",
+  "reference_main_sha": "5c6f51da2c1604e672d7d0a9f36b3f96d1653068",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/34.120331",
+      "identity_tokens": [
+        "DOI:10.1109/34.120331"
+      ],
+      "title": "Constrained Restoration and the Recovery of Discontinuities",
+      "reason": "画像復元における不連続性保存を扱う古典的コンピュータビジョン研究で、LLM推論基盤とは無関係。",
+      "source_url": "https://doi.org/10.1109/34.120331",
+      "body_check": "abstract_screen_only: constrained restorationとedge/discontinuity recoveryが主題で、Transformer/LLMの実行効率を扱わない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41746-021-00455-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41746-021-00455-y",
+        "arXiv:2005.12833"
+      ],
+      "title": "Med-BERT: pretrained contextualized embeddings on large-scale structured electronic health records for disease prediction",
+      "reason": "電子健康記録の疾患予測向け事前学習表現モデルで、LLM推論システム効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2005.12833",
+      "body_check": "abstract_screen_only: structured EHR上でBERT型事前学習を行いdisease predictionを評価する医療AI研究。serving/runtime最適化は対象外。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/12.53599",
+      "identity_tokens": [
+        "DOI:10.1109/12.53599"
+      ],
+      "title": "Performance Analysis of k-Ary n-Cube Interconnection Networks",
+      "reason": "並列計算機のk-ary n-cube相互接続網の性能解析で、LLM推論ワークロードを対象としない。",
+      "source_url": "https://doi.org/10.1109/12.53599",
+      "body_check": "abstract_screen_only: network topology・latency・throughput等の一般相互接続網解析が主題で、LLM/Transformer servingへの適用評価はない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.07862-cta-pipelining-a-latency-oriented-spatial-scaling-method-for-multi-gpu-systems.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca.2016.30",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.30",
+        "arXiv:1602.01528"
+      ],
+      "title": "EIE: Efficient Inference Engine on Compressed Deep Neural Network",
+      "reason": "圧縮DNN向け専用推論アクセラレータとして重要だが、AlexNet/VGG等の一般DNNを対象としLLM/Transformer推論が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/1602.01528",
+      "body_check": "本文要旨確認: pruning・weight sharing済みネットワークのsparse matrix-vector multiplicationをSRAM中心に実行し、CPU比189倍/GPU比13倍、600mWを報告。LLM以前のFC層DNN acceleratorで現行サーベイ範囲外。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/bf01584082",
+      "identity_tokens": [
+        "DOI:10.1007/bf01584082"
+      ],
+      "title": "Matroids and the greedy algorithm",
+      "reason": "マトロイドと貪欲法の最適性を扱う組合せ最適化理論で、LLM推論とは無関係。",
+      "source_url": "https://doi.org/10.1007/BF01584082",
+      "body_check": "abstract_screen_only: matroid structureとgreedy algorithmの理論的性質が主題。モデル実行・サービングを扱わない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.12978-seqmoe-predictive-graph-compatible-offloading.md"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/23.589532",
+      "identity_tokens": [
+        "DOI:10.1109/23.589532"
+      ],
+      "title": "Importance of input data normalization for the application of neural networks to complex industrial problems",
+      "reason": "ニューラルネット学習用入力正規化の重要性を扱う産業応用研究で、LLM推論runtime最適化ではない。",
+      "source_url": "https://doi.org/10.1109/23.589532",
+      "body_check": "abstract_screen_only: input normalizationがnetwork training/applicationへ与える影響が主題で、推論メモリ・カーネル・serving方式ではない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md"
+      ],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca45697.2020.00045",
+      "identity_tokens": [
+        "DOI:10.1109/isca45697.2020.00045",
+        "arXiv:1911.02549"
+      ],
+      "title": "MLPerf Inference Benchmark",
+      "reason": "機械学習推論システム一般の標準ベンチマーク手法であり関連基盤技術だが、LLM専用推論方式・最適化を提案する論文ではない。",
+      "source_url": "https://arxiv.org/abs/1911.02549",
+      "body_check": "本文要旨確認: 30超組織・200超実務者によるarchitecture-neutral benchmarkを定義し、初回600超measurements/14組織/30超systemsを報告。代表workloadは一般MLで、LLM推論技術そのものの提案ではない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-024-45563-x",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-024-45563-x"
+      ],
+      "title": "Structured information extraction from scientific text with large language models",
+      "reason": "GPT-3/Llama-2を材料科学テキストの構造化情報抽出へ微調整する応用研究で、LLM推論基盤の効率化ではない。",
+      "source_url": "https://doi.org/10.1038/s41467-024-45563-x",
+      "body_check": "abstract_screen_only: named entity/relation extractionを材料化学3タスクで評価しJSON等のstructured recordsを生成することが主目的。runtime最適化は扱わない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2025.3532853",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3532853"
+      ],
+      "title": "Agentic AI: Autonomous Intelligence for Complex Goals—A Comprehensive Survey",
+      "reason": "エージェントAIの概念・方法・応用・倫理を広く整理する一般サーベイで、LLMエージェント推論サービングの効率化に特化しない。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3532853",
+      "body_check": "abstract_screen_only: autonomy、goal-oriented architectures、RL、applications、ethics/governanceを総合整理するsurvey。agentic serving runtimeやschedulerを主題としない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2026-2603.28239-scin-switch-centric-in-network-llm-inference.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv.2019.00038",
+      "identity_tokens": [
+        "DOI:10.1109/iccv.2019.00038",
+        "arXiv:1905.03696"
+      ],
+      "title": "HAWQ: Hessian AWare Quantization of Neural Networks With Mixed-Precision",
+      "reason": "推論配備を動機とする量子化だが、ResNet/Inception/SqueezeNext等のCNNを対象とする汎用DNN量子化で、LLM推論が最終適用先ではない。",
+      "source_url": "https://arxiv.org/abs/1905.03696",
+      "body_check": "本文要旨確認: Hessian spectrumでlayerごとのprecisionとfine-tuning順を決め、CIFAR-10/ImageNetのCNNを評価。ResNet20で8倍activation compression、SqueezeNextを1MBまで量子化するがLLM対象ではない。",
+      "first_checked_at": "2026-10-04T02:59:00+09:00",
+      "last_checked_at": "2026-10-04T03:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md"
+      ],
+      "worklist_rank": 20
+    }
+  ]
+}
