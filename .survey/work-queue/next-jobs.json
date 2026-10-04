@@ -9,17 +9,17 @@
       "ready": 2
     },
     "research": {
-      "ready": 617,
-      "superseded": 387,
+      "ready": 616,
+      "superseded": 388,
       "deferred": 8,
       "completed": 22,
       "rejected": 1
     }
   },
   "claiming": {
-    "ready_research_audit": 619,
+    "ready_research_audit": 618,
     "actively_claimed": 0,
-    "claimable": 619
+    "claimable": 618
   },
   "next_jobs": [
     {
@@ -121,14 +121,14 @@
       "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete."
     },
     {
-      "job_id": "job-research-f5e6fd6025890d26",
+      "job_id": "job-research-9c1d212f1dc11ae6",
       "type": "research",
       "lane": null,
-      "priority": 549,
-      "canonical_id": "arXiv:2405.16406",
-      "title": "SpinQuant: LLM quantization with learned rotations",
-      "source_url": "https://arxiv.org/abs/2405.16406",
-      "paper_path": "papers/inference/99-other-inference-systems/2024-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+      "priority": 461,
+      "canonical_id": "arXiv:2409.12514",
+      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+      "source_url": "https://arxiv.org/abs/2409.12514",
+      "paper_path": "papers/inference/99-other-inference-systems/2024-2409.12514-tinyvla-toward-fast-data-efficient-vision-language-action-models-for-robotic-manipulation.md",
       "workflow_version": 10,
       "artifact_transport": "structured_record_v10",
       "instructions": "Read the primary source in full. Produce a repository-quality structured research record covering problem, novelty, method, evaluation conditions, key quantitative results, limitations, implementation status, and relation to existing repository lineages. Preserve publication date/status, implementation and source URLs; for an arXiv paper, record its primary and cross-list categories from arXiv. Do not infer missing text from abstracts/search snippets. A technically successful full-text fetch is not sufficient when tables, appendices, or other evidence needed for the five slots are missing; continue through the ordered official full-text routes and use the next route only to fill the missing primary evidence. Follow workflow v10 fixed-slot transport; do not send completed Markdown from Scheduled Chat.",
@@ -149,5 +149,5 @@
       "completion": "Submit 0-5 strong candidates. Empty is valid."
     }
   ],
-  "generated_at": "2026-10-04T07:03:06+00:00"
+  "generated_at": "2026-10-04T07:05:45+00:00"
 }
