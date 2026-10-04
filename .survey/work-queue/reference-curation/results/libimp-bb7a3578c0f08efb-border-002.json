@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb7a3578c0f08efb-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.04517",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.04517",
+    "identity_tokens": [
+      "arXiv:2405.04517"
+    ],
+    "reason": "sLSTM/mLSTMを導入してLSTMを現代的に拡張し、language modelingでTransformer/SSMと比較する効率的sequence architecture研究。推論効率への含意はあるが、worklist段階ではserving/runtimeの直接評価が主目的か不明なため境界扱い。",
+    "first_checked_at": "2026-10-04T20:49:55+00:00",
+    "last_checked_at": "2026-10-04T20:49:55+00:00",
+    "linked_from": [],
+    "title": "xLSTM: Extended Long Short-Term Memory"
+  },
+  "processed_at": "2026-10-04T20:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb7a3578c0f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

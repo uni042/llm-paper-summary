@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e63b5cccf63295bb-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1911.00172",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1911.00172",
+    "identity_tokens": [
+      "arXiv:1911.00172"
+    ],
+    "reason": "事前学習LMの予測とk近傍検索分布を推論時に補間し、外部datastoreを明示的memoryとして使う。推論時retrieval機構に直結するが、主目的はperplexity・domain adaptationでruntime効率化ではないため境界扱い。",
+    "first_checked_at": "2026-10-04T20:49:55+00:00",
+    "last_checked_at": "2026-10-04T20:49:55+00:00",
+    "linked_from": [],
+    "title": "Generalization through Memorization: Nearest Neighbor Language Models"
+  },
+  "processed_at": "2026-10-04T20:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e63b5cccf632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

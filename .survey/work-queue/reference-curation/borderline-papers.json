@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T18:58:57+00:00",
-  "record_count": 433,
+  "updated_at": "2026-10-04T20:49:55+00:00",
+  "record_count": 436,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6244,6 +6244,42 @@
       "last_checked_at": "2026-10-04T18:58:57+00:00",
       "linked_from": [],
       "title": "Architecting the Next Generation of Asynchronous, Distributed GPUs for the AI Era"
+    },
+    "arXiv:2405.04517": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.04517",
+      "identity_tokens": [
+        "arXiv:2405.04517"
+      ],
+      "reason": "sLSTM/mLSTMを導入してLSTMを現代的に拡張し、language modelingでTransformer/SSMと比較する効率的sequence architecture研究。推論効率への含意はあるが、worklist段階ではserving/runtimeの直接評価が主目的か不明なため境界扱い。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "xLSTM: Extended Long Short-Term Memory"
+    },
+    "arXiv:1911.00172": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1911.00172",
+      "identity_tokens": [
+        "arXiv:1911.00172"
+      ],
+      "reason": "事前学習LMの予測とk近傍検索分布を推論時に補間し、外部datastoreを明示的memoryとして使う。推論時retrieval機構に直結するが、主目的はperplexity・domain adaptationでruntime効率化ではないため境界扱い。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Generalization through Memorization: Nearest Neighbor Language Models"
+    },
+    "arXiv:1908.09355": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1908.09355",
+      "identity_tokens": [
+        "arXiv:1908.09355"
+      ],
+      "reason": "BERT teacherの複数中間層から浅いstudentへ知識蒸留し軽量モデルを作る圧縮研究。推論deploymentを軽量化し得るが、論文の要旨上はtraining efficiencyとNLP精度が中心で、推論runtime評価の直接性が弱いため境界扱い。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Patient Knowledge Distillation for BERT Model Compression"
     }
   }
 }

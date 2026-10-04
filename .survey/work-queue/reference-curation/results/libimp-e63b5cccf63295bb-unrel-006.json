@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e63b5cccf63295bb-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1612.01064",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1612.01064",
+    "identity_tokens": [
+      "arXiv:1612.01064"
+    ],
+    "reason": "重みをternary値へ量子化し推論時モデルを約16分の1へ縮小するが、評価対象はResNet/AlexNetの画像分類でありLLM/Transformer推論への最終適用がない。",
+    "first_checked_at": "2026-10-04T20:49:55+00:00",
+    "last_checked_at": "2026-10-04T20:49:55+00:00",
+    "linked_from": [],
+    "title": "Trained Ternary Quantization"
+  },
+  "processed_at": "2026-10-04T20:49:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e63b5cccf632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

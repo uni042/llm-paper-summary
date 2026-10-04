@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T19:49:58+00:00",
-  "record_count": 1267,
+  "updated_at": "2026-10-04T20:49:55+00:00",
+  "record_count": 1279,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18381,6 +18381,150 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
       ],
       "title": "CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models"
+    },
+    "arXiv:2402.00838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00838",
+      "identity_tokens": [
+        "arXiv:2402.00838"
+      ],
+      "reason": "open language modelのtraining data・code・checkpoints等を公開してLLM研究の透明性を高める基盤モデル研究で、推論runtime/serving最適化方式を主貢献としない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "OLMo: Accelerating the Science of Language Models"
+    },
+    "DOI:10.18653/v1/2023.emnlp-main.187": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.187",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.187"
+      ],
+      "reason": "73 APIの実行可能benchmark、tool-use training set、Lynx modelでLLMのplanning/retrieval/API call能力を評価・改善するagent能力研究。推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs"
+    },
+    "DOI:10.1145/3533378": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3533378",
+      "identity_tokens": [
+        "DOI:10.1145/3533378"
+      ],
+      "reason": "産業ML deploymentの各工程で生じる課題をcase studyから整理する一般MLOps surveyで、LLM推論systemの具体的最適化方式を提案しない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Challenges in Deploying Machine Learning: A Survey of Case Studies"
+    },
+    "arXiv:2309.05463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05463",
+      "identity_tokens": [
+        "arXiv:2309.05463"
+      ],
+      "reason": "1.3B phi-1.5をsynthetic textbook-quality dataで学習し、小型モデルのreasoning能力を改善するtraining/data研究。推論runtime/servingの最適化を提案しない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Textbooks Are All You Need II: phi-1.5 technical report"
+    },
+    "arXiv:1911.03584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.03584",
+      "identity_tokens": [
+        "arXiv:1911.03584"
+      ],
+      "reason": "self-attentionがconvolutionを表現できることを理論・vision実験で分析するarchitecture/expressivity研究で、LLM推論効率化を対象としない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "On the Relationship between Self-Attention and Convolutional Layers"
+    },
+    "arXiv:2402.03216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03216",
+      "identity_tokens": [
+        "arXiv:2402.03216"
+      ],
+      "reason": "100超の言語、dense/multi-vector/sparse retrieval、最大8192 tokenを統合する埋め込み・情報検索モデルで、主貢献は自己知識蒸留と検索品質。LLM推論ランタイムやサービング最適化を対象としない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "BGE M3-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation"
+    },
+    "arXiv:2312.06674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.06674",
+      "identity_tokens": [
+        "arXiv:2312.06674"
+      ],
+      "reason": "Llama2-7Bをinstruction tuningしてprompt/responseの安全リスク分類を行うcontent moderation研究。推論時に使うモデルではあるが、速度・メモリ・カーネル・サービング効率化が目的ではない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations"
+    },
+    "arXiv:2404.16821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16821",
+      "identity_tokens": [
+        "arXiv:2404.16821"
+      ],
+      "reason": "InternVL 1.5の視覚encoder、動的高解像度入力、二言語データでマルチモーダル理解能力を改善するモデル研究。動的タイル処理はあるが推論効率化ではなく、18 benchmark中8でSOTAという能力評価が中心。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites"
+    },
+    "arXiv:2311.12793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.12793",
+      "identity_tokens": [
+        "arXiv:2311.12793"
+      ],
+      "reason": "1.2Mの高品質caption datasetとpre-training/SFTでLMM能力を改善するデータ・学習研究。LLaVA/Qwen-VL等のbenchmark改善が主眼で、推論system効率化ではない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "ShareGPT4V: Improving Large Multi-Modal Models with Better Captions"
+    },
+    "arXiv:1612.01064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1612.01064",
+      "identity_tokens": [
+        "arXiv:1612.01064"
+      ],
+      "reason": "重みをternary値へ量子化し推論時モデルを約16分の1へ縮小するが、評価対象はResNet/AlexNetの画像分類でありLLM/Transformer推論への最終適用がない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "Trained Ternary Quantization"
+    },
+    "arXiv:2301.10226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.10226",
+      "identity_tokens": [
+        "arXiv:2301.10226"
+      ],
+      "reason": "生成時にgreen tokenをsoft promotionして検出可能なwatermarkを埋め込む安全性・出所識別研究。推論経路を変更するが、効率化ではなくwatermark検出・robustnessが目的。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "A Watermark for Large Language Models"
+    },
+    "arXiv:2301.13688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.13688",
+      "identity_tokens": [
+        "arXiv:2301.13688"
+      ],
+      "reason": "instruction tuningのtask balancing、prompt mixture、データ構成を分析しFlan-T5の品質と下流fine-tuning効率を改善する学習研究。推論runtime/serving最適化を提案しない。",
+      "first_checked_at": "2026-10-04T20:49:55+00:00",
+      "last_checked_at": "2026-10-04T20:49:55+00:00",
+      "linked_from": [],
+      "title": "The Flan Collection: Designing Data and Methods for Effective Instruction Tuning"
     }
   }
 }
