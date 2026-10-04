@@ -2,6 +2,8 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": null,
   "canonical_id": "DOI:10.18653/v1/2026.acl-long.1926",
+  "citation_count_checked_at": "2026-10-04T10:04:44+00:00",
+  "citation_count_source": "semantic_scholar",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. If full text is unavailable, return blocked with retrieval evidence instead of guessing.",
   "created_at": "2026-09-20T04:05:01+00:00",
   "doi": null,
@@ -16,18 +18,20 @@
     "citation_count": 0,
     "citations": 0,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 95,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
     "total": 0
   },
+  "published": "2026/7",
   "schema_version": 1,
   "selection_reason": "Systematic deployment-oriented study of KV-cache compression failure modes under multi-instruction prompting, including mitigation changes to eviction policies.",
   "source_url": "https://aclanthology.org/2026.acl-long.1926/",
   "status": "ready",
   "title": "The Pitfalls of KV Cache Compression",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "year": 2026
 }
