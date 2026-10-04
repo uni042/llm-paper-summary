@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T22:50:52+00:00",
-  "record_count": 455,
+  "updated_at": "2026-10-04T22:53:06+00:00",
+  "record_count": 454,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6442,20 +6442,6 @@
         "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
       ],
       "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions"
-    },
-    "arXiv:2305.06983": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2305.06983",
-      "identity_tokens": [
-        "arXiv:2305.06983"
-      ],
-      "reason": "FLAREは生成中に次文を予測し、低confidence tokenがある場合だけ検索して再生成するinference-time active RAG。不要retrievalを避ける実行制御を含むが、主評価はknowledge-intensive generation品質でruntime/latency最適化が中心ではないためborderline。",
-      "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-04T21:54:26+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
-      ],
-      "title": "Active Retrieval Augmented Generation"
     },
     "arXiv:1908.08593": {
       "classification": "borderline",

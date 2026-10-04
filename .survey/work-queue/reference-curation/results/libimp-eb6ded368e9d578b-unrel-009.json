@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2201.07207",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2201.07207",
+    "identity_tokens": [
+      "arXiv:2201.07207"
+    ],
+    "reason": "language modelからactionable planを抽出しembodied agentのzero-shot planningへ利用する能力・robotics研究。LLM推論systemの速度・メモリ・serving最適化ではない。",
+    "first_checked_at": "2026-10-04T21:43:58+00:00",
+    "last_checked_at": "2026-10-04T22:53:07+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+    ],
+    "title": "Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents"
+  },
+  "processed_at": "2026-10-04T22:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

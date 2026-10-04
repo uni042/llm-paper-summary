@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb6ded368e9d578b-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.10122",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.10122",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2311.10122",
+      "arXiv:2311.10122"
+    ],
+    "reason": "画像と動画のvisual representationをlanguage feature空間へ整列してmultimodal understanding能力を高めるVLM研究。推論runtime/serving効率化を最終目的としない。",
+    "first_checked_at": "2026-10-04T21:51:06+00:00",
+    "last_checked_at": "2026-10-04T22:53:07+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2026-2603.23914-attention-aware-inference-optimizations-large-vlm-memory-efficient-decoding.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+    ],
+    "title": "Video-LLaVA: Learning United Visual Representation by Alignment Before Projection"
+  },
+  "processed_at": "2026-10-04T22:53:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb6ded368e9d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T22:50:52+00:00",
-  "record_count": 1423,
+  "updated_at": "2026-10-04T22:53:07+00:00",
+  "record_count": 1425,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -18107,20 +18107,6 @@
       ],
       "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering"
     },
-    "arXiv:2112.01488": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2112.01488",
-      "identity_tokens": [
-        "arXiv:2112.01488"
-      ],
-      "reason": "late-interaction情報検索器の残差圧縮でindex容量を6〜10倍削減するretrieval system研究。RAGの構成要素として有用だが、最終適用先はneural IRでLLM推論systemではない。",
-      "first_checked_at": "2026-10-04T19:48:52+00:00",
-      "last_checked_at": "2026-10-04T19:48:52+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
-      ],
-      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction"
-    },
     "arXiv:1908.09791": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1908.09791",
@@ -18928,9 +18914,9 @@
       "identity_tokens": [
         "arXiv:2106.08254"
       ],
-      "reason": "masked image modelingでVision Transformerを自己教師あり事前学習し、ImageNet分類・semantic segmentationの精度を改善する画像表現学習研究で、LLM推論systemを対象としない。",
+      "reason": "masked image modelingでVision Transformerを事前学習し、ImageNet分類とsemantic segmentationの精度を改善するvision表現学習研究。LLM推論system最適化ではない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
       ],
@@ -19020,9 +19006,9 @@
       "identity_tokens": [
         "arXiv:1905.07129"
       ],
-      "reason": "knowledge graphのentity情報を言語表現へ統合してknowledge-driven NLP taskの精度を改善するpre-training/model quality研究で、推論runtime・cache・serving最適化を扱わない。",
+      "reason": "knowledge graph entityを組み込む事前学習で言語表現・knowledge-driven task精度を改善するモデル学習研究で、LLM推論system最適化ではない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md"
       ],
@@ -19034,9 +19020,9 @@
       "identity_tokens": [
         "arXiv:1405.3866"
       ],
-      "reason": "CNN convolution filterの低rank展開でCPU/GPU画像networkを高速化する研究。推論高速化自体は扱うが対象はCNN画像認識でありLLM/Transformer推論への最終適用・評価がない。",
+      "reason": "convolution filterの低rank近似でCNNの画像認識推論を高速化する研究。効率化は扱うが最終適用先はCNN computer visionで、LLM/Transformer推論への適用・評価がない。",
       "first_checked_at": "2026-10-04T21:37:52+00:00",
-      "last_checked_at": "2026-10-04T21:37:52+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
         "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
@@ -19313,9 +19299,9 @@
       "identity_tokens": [
         "arXiv:2010.02502"
       ],
-      "reason": "DDPMと同じ学習目的を保ちながら非Markov型の拡散過程で画像生成samplingを10–50倍高速化する研究だが、最終適用先はdiffusion画像生成でありLLM推論runtime/servingではない。",
+      "reason": "拡散生成モデルの非Markovian生成過程DDIMを導入し、画像生成のsamplingを高速化する研究。最終適用先は画像生成であり、LLM/Transformer推論systemを対象としない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
         "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
@@ -19328,9 +19314,9 @@
       "identity_tokens": [
         "arXiv:2102.12122"
       ],
-      "reason": "progressive shrinking pyramidで高解像度vision featureの計算量を抑え、object detection/segmentationの精度を改善するcomputer vision backbone研究で、LLM推論systemを対象としない。",
+      "reason": "Pyramid Vision Transformerで物体検出・semantic/instance segmentation等のdense vision predictionを改善するcomputer vision研究。計算量削減も画像feature map向けで、LLM推論systemを最終適用先としない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
@@ -19342,9 +19328,9 @@
       "identity_tokens": [
         "arXiv:2204.01691"
       ],
-      "reason": "LLMの高水準task知識とrobot skillのvalue functionを組み合わせ、実環境で実行可能な行動を選ぶrobotics/agent grounding研究で、LLM servingや推論runtime効率化を扱わない。",
+      "reason": "大規模言語モデルの高レベル指示とロボットのaffordance value functionを組み合わせて実世界robot planningを行う研究。最終適用先はroboticsで、LLM serving/runtime効率化を扱わない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
         "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
@@ -19357,9 +19343,9 @@
       "identity_tokens": [
         "arXiv:2111.09883"
       ],
-      "reason": "3B規模vision Transformerを高解像度へscaleするためresidual-post-norm、cosine attention、continuous position bias、SimMIMを導入するvision training/architecture研究で、LLM推論runtimeを対象としない。",
+      "reason": "Swin Transformerを巨大vision model・高解像度入力へscaleするためのnormalizationやattention設計を提案し画像認識性能を評価する。LLM推論system対象外。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
@@ -19371,9 +19357,9 @@
       "identity_tokens": [
         "arXiv:1912.08777"
       ],
-      "reason": "重要文をmaskして生成するgap-sentence generation事前学習でabstractive summarization品質を改善する学習方式研究で、推論runtime・serving・memory効率化を主目的としない。",
+      "reason": "gap-sentence generation事前学習でabstractive summarization品質を改善し12要約datasetで評価する学習・NLP task研究。推論runtime効率化を扱わない。",
       "first_checked_at": "2026-10-04T21:42:14+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
@@ -19386,9 +19372,9 @@
         "DOI:10.18653/v1/2022.acl-long.26",
         "arXiv:2103.10360"
       ],
-      "reason": "autoregressive blank infillingで理解・条件付き生成・無条件生成を単一pretraining frameworkへ統合するモデル学習研究で、推論systemの速度・メモリ・serving最適化を提案しない。",
+      "reason": "autoregressive blank infillingによる汎用事前学習でNLU・条件付き/無条件生成性能を改善するmodel training研究。推論system効率化が主目的ではない。",
       "first_checked_at": "2026-10-04T12:52:28+00:00",
-      "last_checked_at": "2026-10-04T21:42:14+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
@@ -19541,9 +19527,9 @@
       "identity_tokens": [
         "arXiv:2202.05262"
       ],
-      "reason": "causal tracing and ROME edit factual associations in GPT; objective is model knowledge editing/interpretability, not inference runtime efficiency.",
+      "reason": "GPT内の事実知識の局在を因果介入で特定しROMEで編集するmodel editing研究。推論速度・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T21:43:57+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
       ],
@@ -19569,9 +19555,9 @@
       "identity_tokens": [
         "arXiv:2109.00859"
       ],
-      "reason": "identifier-aware pretrainingによるcode understanding/generation品質改善が主題で、LLM推論基盤の速度・メモリ・サービング最適化を扱わない。",
+      "reason": "identifier-aware pretrainingとbimodal generationでcode理解・生成品質を改善する事前学習研究。LLM推論runtime・memory・serving最適化を提案しない。",
       "first_checked_at": "2026-10-04T21:43:57+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
       ],
@@ -19597,9 +19583,9 @@
       "identity_tokens": [
         "arXiv:2201.07207"
       ],
-      "reason": "uses language models to generate and ground plans for embodied agents; capability/robotics planning rather than inference systems.",
+      "reason": "language modelからactionable planを抽出しembodied agentのzero-shot planningへ利用する能力・robotics研究。LLM推論systemの速度・メモリ・serving最適化ではない。",
       "first_checked_at": "2026-10-04T21:43:58+00:00",
-      "last_checked_at": "2026-10-04T21:43:58+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
       ],
@@ -19888,9 +19874,9 @@
         "DOI:10.48550/arxiv.2308.00352",
         "arXiv:2308.00352"
       ],
-      "reason": "The primary abstract describes an LLM-based multi-agent framework for collaborative problem solving and software-engineering benchmarks. Its claimed improvements concern workflow organization, coherence, and reducing agent errors; it does not study LLM inference efficiency, serving systems, or inference-time compression. It is outside this run's stated scope.",
+      "reason": "標準作業手順(SOP)をprompt列へ符号化し、役割分担したLLM agent群でsoftware engineering品質を改善するmulti-agent framework研究。推論runtimeやserving効率化を主目的としない。",
       "first_checked_at": "2026-10-04T21:51:06+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md",
         "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
@@ -19904,7 +19890,7 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md",
         "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
       ],
-      "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework"
+      "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework"
     },
     "arXiv:2311.10122": {
       "classification": "unrelated",
@@ -19913,9 +19899,9 @@
         "DOI:10.48550/arxiv.2311.10122",
         "arXiv:2311.10122"
       ],
-      "reason": "The primary abstract presents a vision-language model that aligns image and video representations before projection into an LLM, and evaluates visual-language task performance. It does not propose or evaluate an LLM serving, inference-efficiency, or inference-time compression technique; the described contribution is model representation/alignment and task performance, outside this run's scope.",
+      "reason": "画像と動画のvisual representationをlanguage feature空間へ整列してmultimodal understanding能力を高めるVLM研究。推論runtime/serving効率化を最終目的としない。",
       "first_checked_at": "2026-10-04T21:51:06+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:07+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
         "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
@@ -19931,9 +19917,9 @@
         "DOI:10.18653/v1/2021.naacl-main.168",
         "arXiv:2103.07191"
       ],
-      "reason": "一次資料の要旨は、小学校4年生以下の算数文章題を対象に、既存NLP solverの浅いヒューリスティックとSVAMP challenge datasetを分析する。貢献は問題解決能力の評価であり、LLM推論の効率化、serving、推論時圧縮を扱わないため対象外。",
+      "reason": "math word problem solverのshortcut/heuristic依存を分析しSVAMP challenge datasetを導入する能力評価研究で、推論system効率化を扱わない。",
       "first_checked_at": "2026-10-04T13:00:43+00:00",
-      "last_checked_at": "2026-10-04T21:51:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2512.13996-dtop-p-dynamic-routing.md"
@@ -19964,9 +19950,9 @@
       "identity_tokens": [
         "arXiv:2302.06476"
       ],
-      "reason": "ChatGPTを20 dataset・7 task categoryでzero-shot評価し能力と限界を分析するevaluation研究で、推論runtime・memory・serving効率化を提案しない。",
+      "reason": "ChatGPTのzero-shot能力を20 NLP dataset・7 task categoryで評価する能力ベンチマーク研究で、推論runtime効率化を扱わない。",
       "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-04T21:54:26+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
       ],
@@ -20325,13 +20311,14 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1906.00300",
       "identity_tokens": [
+        "DOI:10.18653/v1/p19-1612",
         "arXiv:1906.00300",
         "id:arXiv:1906.00300",
         "url:https://arxiv.org/abs/1906.00300"
       ],
-      "reason": "arXiv一次資料の書誌とabstractを確認。提案対象は質問と回答文字列の組からretrieverとreaderを共同学習し、Wikipediaから根拠をlatent retrievalするopen-domain QA手法で、retrieverのpretrainingとQA評価を扱う。abstractはLLM、LLM serving、または推論時効率化を対象としておらず、対象範囲外。",
+      "reason": "retrieverとreaderを弱教師付きで共同学習するopen-domain QA研究で、RAG/LLM推論servingのruntime効率化ではない。",
       "first_checked_at": "2026-10-04T22:16:24+00:00",
-      "last_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
@@ -20523,6 +20510,50 @@
       "last_checked_at": "2026-10-04T22:50:52+00:00",
       "linked_from": [],
       "title": "Beyond English-Centric Multilingual Machine Translation"
+    },
+    "arXiv:2105.08050": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.08050",
+      "identity_tokens": [
+        "arXiv:2105.08050"
+      ],
+      "reason": "gMLP/Spatial Gating UnitがvisionとBERT-style language modelingでTransformerに匹敵することを示すarchitecture研究。推論runtime・kernel・servingの効率化を直接評価しない。",
+      "first_checked_at": "2026-10-04T22:53:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Pay Attention to MLPs"
+    },
+    "DOI:10.18653/v1/2022.naacl-main.272": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.272",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.272",
+        "arXiv:2112.01488"
+      ],
+      "reason": "検索器のlate-interaction表現をresidual compressionし索引spaceを6–10倍削減するinformation retrieval研究。RAG推論基盤そのもののserving最適化ではない。",
+      "first_checked_at": "2026-10-04T19:48:52+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction"
+    },
+    "arXiv:2305.06983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.06983",
+      "identity_tokens": [
+        "arXiv:2305.06983"
+      ],
+      "reason": "生成途中の低信頼tokenを契機に将来文をqueryとしてretrievalを起動するFLAREで知識集約型生成品質を改善するRAG algorithm研究。runtime/serving効率化を最終目的としない。",
+      "first_checked_at": "2026-10-04T22:53:06+00:00",
+      "last_checked_at": "2026-10-04T22:53:06+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "title": "Active Retrieval Augmented Generation"
     }
   }
 }

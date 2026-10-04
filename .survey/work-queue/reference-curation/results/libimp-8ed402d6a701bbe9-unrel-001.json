@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ed402d6a701bbe9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2102.12122",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2102.12122",
+    "identity_tokens": [
+      "arXiv:2102.12122"
+    ],
+    "reason": "Pyramid Vision Transformerで物体検出・semantic/instance segmentation等のdense vision predictionを改善するcomputer vision研究。計算量削減も画像feature map向けで、LLM推論systemを最終適用先としない。",
+    "first_checked_at": "2026-10-04T21:42:14+00:00",
+    "last_checked_at": "2026-10-04T22:53:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+    ],
+    "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions"
+  },
+  "processed_at": "2026-10-04T22:53:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ed402d6a701",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
