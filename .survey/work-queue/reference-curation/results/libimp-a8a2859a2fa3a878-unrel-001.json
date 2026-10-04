@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8a2859a2fa3a878-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1412.6553",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1412.6553",
+    "identity_tokens": [
+      "arXiv:1412.6553",
+      "id:arXiv:1412.6553",
+      "url:https://arxiv.org/abs/1412.6553"
+    ],
+    "reason": "CNN畳み込み層のCP分解とfine-tuningでCPU推論を高速化する画像認識研究で、LLM/Transformer推論を最終適用先としない。",
+    "first_checked_at": "2026-10-04T22:47:25+00:00",
+    "last_checked_at": "2026-10-04T23:31:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Speeding-up Convolutional Neural Networks Using Fine-tuned CP-Decomposition"
+  },
+  "processed_at": "2026-10-04T23:31:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8a2859a2fa3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
