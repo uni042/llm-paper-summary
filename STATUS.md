@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 21:54:23 JST**
+> 自動生成: **2026-10-04 21:55:44 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -49,36 +49,36 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **1578** |
-| provider巡回可能 | **1574** |
+| 収録論文seed台帳 | **1580** |
+| provider巡回可能 | **1576** |
 | provider巡回不能 | **4** |
-| 1周以上完了 | **283** |
-| 巡回中 | **116** |
-| 未巡回 | **1175** |
-| 今回run開始時due | **1321** |
-| 前方引用から保持中の未処理候補 | **14793** |
+| 1周以上完了 | **312** |
+| 巡回中 | **117** |
+| 未巡回 | **1147** |
+| 今回run開始時due | **1293** |
+| 前方引用から保持中の未処理候補 | **15147** |
 | エラー状態保持seed | **13** |
 
-- 初回カバレッジ完了率: **18.0%**
-- state最終更新: **10-04 20:52:38 JST**
+- 初回カバレッジ完了率: **19.8%**
+- state最終更新: **10-04 21:52:35 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
 
 | 指標 | 現在値 |
 |---|---:|
-| maintenance pending | **true** |
-| 最終maintenance完了 | **10-04 18:10:34 JST（3時間43分前）** |
-| 最終maintenance status | **passed** |
-| consistency | **passed** |
-| health | **passed** |
-| health errors / warnings | **0 / 0** |
+| maintenance pending | **false** |
+| 最終maintenance完了 | **10-04 21:55:41 JST（2秒前）** |
+| 最終maintenance status | **issues_found** |
+| consistency | **issues_found** |
+| health | **issues_found** |
+| health errors / warnings | **1 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **27** |
+| GC削除件数 | **12** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
-| quality regressions | **0** |
+| quality regressions | **1** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -88,7 +88,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **25** |
+| 直近6hのResearch完了 | **24** |
 | 直近6hのDiscovery run | **25** |
 | 直近6hのDiscovery本文確認・分類 | **142** |
 | 最終Research完了 | **10-04 18:07:00 JST** |
@@ -237,11 +237,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **320** |
+| 成功result未照合のimmutable submission | **315** |
 | └ Research | **129** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **46** |
+| └ Other/Unknown | **41** |
 
 ### 厳格検証が未成立のcompleted job
 
