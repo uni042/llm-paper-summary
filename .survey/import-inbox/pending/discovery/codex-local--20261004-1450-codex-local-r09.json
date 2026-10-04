@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local",
+  "run_key": "20261004-1450-codex-local-r09",
+  "reference_main_sha": "67978db2b9bd921a821cf0c712e244f7760c1aa9",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.00760",
+      "identity_tokens": [
+        "arXiv:2607.00760"
+      ],
+      "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
+      "reason": "MosaicKV targets long-context LLM inference serving by compressing both the sequence and channel dimensions of the KV cache throughout decode. Its per-vector element selection and segment-specific compression strategies address the accuracy loss from uniform two-dimensional compression, while packed sparse attention and asynchronous CPU/GPU cache management translate compression into serving gains. This is directly in scope for LLM inference and KV-cache optimization.",
+      "source_url": "https://arxiv.org/abs/2607.00760",
+      "body_check": "Read the primary arXiv v1 HTML body: §1–§3 for the KV-cache serving bottleneck, prior one-dimensional methods, and the design goals; §4.1–§4.3 for per-vector channel compression, query-driven sequence selection, and segment-adaptive strategies; §5.1–§5.5 for packed KV representation, PackedAttention, buffering, and incremental strategy generation; §6.1–§6.4, Table 1, Table 2, and Figure 10 for evaluation conditions and results; §7 for limitations. The prototype uses PyTorch/CUDA and is evaluated on one NVIDIA H800 (80 GB): LLaMA-3.1-8B performance, with accuracy also measured on Qwen3-4B and Ministral-3-8B, against uncompressed/FlashAttention or vLLM baselines and Quest, at BF16, 25% channel retention and 10% token selection by default. The paper reports 3x lower KV memory than full cache, up to 16x attention speedup, at 1M context 4.8x lower time-between-tokens and 7.3x throughput versus vLLM, and LongBench accuracy loss of 0.86% on average versus uncompressed. It states H800 memory prevents vLLM and Quest from fitting a 512K-token request at batch 1, while MosaicKV reaches about 1.44M; results beyond tested feasible contexts extrapolate latency/throughput from a subset of attention layers. Limitations stated by the authors: current focus is decode-stage acceleration (prefill acceleration with chunked prefill is future work), and PackedAttention currently uses CUDA cores, which could become limiting if HBM bandwidth ceases to be the bottleneck.",
+      "first_checked_at": "2026-10-04T14:30:36+09:00",
+      "last_checked_at": "2026-10-04T14:30:36+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.23834-minima-kv-mixed-format-paged-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AIoTC71250.2026.11689386",
+      "identity_tokens": [
+        "DOI:10.1109/AIoTC71250.2026.11689386"
+      ],
+      "title": "SLO-Aware Disaggregated LLM Serving Over Heterogeneous Edge-Cloud Clusters",
+      "reason": "本文の対象は、異種edge-cloud間でprefill/decodeを分離してLLMをservingする際の要求配置である。KV cache転送時間を含めたTTFTとTPOTからSLO違反リスクを見積もり、長いpromptはcloud prefillへ、短いprompt・短い出力は可能なら近隣edgeへ配置し、cache affinityで転送を抑える。これはLLM推論servingとdisaggregationのスケジューリングを直接扱うためacceptとする。主な評価は実機ではなく、Llama-2-7B/Llama-3-8BとLMSYS-Chat/LongBench由来workloadを用いた離散イベントシミュレーションである。 著者公開全文は同題名・同著者を掲げるがResearchGate DOIを表示し、worklistのIEEE DOIとの書誌対応は独立確認できていない。内容の対象性は認めるが、canonical identity解決前の確定acceptは保留する。",
+      "source_url": "https://doi.org/10.1109/AIoTC71250.2026.11689386",
+      "body_check": "著者が公開したfull-text (https://www.researchgate.net/publication/408872137_SLO-Aware_Disaggregated_LLM_Serving_over_Heterogeneous_Edge-Cloud_Clusters) を確認: Introduction (§I)、Background and Related Work (§II)、System Design (§III.A–C)、Evaluation (§IV.A–F)、Conclusion (§V)。§IIIではprefill/decode compute、KV転送量・帯域、queue backlogをモデル化し、転送を含むuser-visible TTFTとsteady-state TPOTのリスクを使って配置候補を選ぶ。長promptは高帯域cloudへ、短prompt・短出力のlatency-sensitive要求は可能ならedgeに残し、cache-affinity routingを適用する。§IV.Aは3 cloud nodes (A100-equivalent, 40 GB HBM, 25 Gbps inter-node) と3 edge nodes (T4-equivalent) のdiscrete-event simulation、Llama-2-7B/Llama-3-8BおよびLMSYS-Chat/LongBench-derived workloadを記述する。LongBench-mix、Llama-2-7B、10 req/sのTable IIIはSLO violationがSLO-Oblivious 29.8%からHEC-Serve 17.2%へ低下し、goodputが7.02から8.28 req/sへ上昇したと報告。Table IVのablationではrisk score除去でviolationが25.3%、cache affinity除去で20.8%、edge decode除去で22.1%となる。§IV.Cは12 req/s時のKV転送を7.8から4.0 GB/minへ、§IV.Fはcache-affinity weightを0.2へ上げると転送量は減る一方でSLO violationが微増すると記す。§Vは実機・実workloadで結果が変わり得ること、fitted latency parametersを用いたsimulationが限界であること、dynamic bandwidthの扱いとphysical testbed検証がfuture workであることを明記する。identity caveat: 指定DOI endpoint/IEEE Xplore本文は閲覧できず、利用できた著者投稿full-textページは同じtitle/authorsを掲げる一方でDOI:10.13140/RG.2.2.26904.76804を表示している。したがってworklistのIEEE DOIと当該本文の出版上の対応は独立に照合できていない。本文は候補titleと一致する著者投稿原稿として読解し、DOIの関連を確定したとは扱わない。",
+      "first_checked_at": "2026-10-04T16:20:00+09:00",
+      "last_checked_at": "2026-10-04T16:20:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31023",
+      "identity_tokens": [
+        "arXiv:2606.31023"
+      ],
+      "title": "Certified Speculative Execution for Untrusted AI Agents",
+      "reason": "本文の中心課題は、有限期間のエネルギー管理・電力ユニットコミットメント制御で、未信頼のポリシーまたはLLMが提案する行動列を検証し、安全な区間だけを採用して、残りをLP/MILPベースの信頼済み制御オラクルへ委譲すること。計測する呼び出し削減と壁時計高速化は主に制御オラクルの再求解を省く効果であり、LLMのトークン生成・推論・serving自体を高速化する手法ではない。著者らも§4で speculative decoding との共通点を draft–verify–accept の形に限定し、検証対象はトークン分布ではなく状態遷移の安全性と制御コストだと区別している。したがって本リポジトリのLLM推論、serving、推論時圧縮・効率化の対象外。",
+      "source_url": "https://arxiv.org/abs/2606.31023",
+      "body_check": "一次資料のarXiv HTML本文を確認。§1は hard-constrained sequential control とLP/MILP oracle の問題設定、LLMを任意の未信頼提案元とする位置づけを説明。§2.1–2.5はVerify/value-boundary/oracleによるprefix accept/defer契約、安全性とregret certificate、conformal calibrationを定義。§3.1–3.5はUCI household battery EMS、CityLearn HVAC、48-step unit-commitment MILPでの評価を報告し、6種の凍結LLMを提案元に使うこと、Qwen3-8B条件でoracle呼び出し64.3%削減・平均2.96x episode speedup・regret 0.021・違反0を示す。§4は speculative decoding と同じtoken-level推論高速化ではなく、遷移安全性とfallback-relative costを検証すると明記。§5は結論を制御実行のoracle amortizationとして述べる。評価対象は制御系ベンチマークと制御オラクル費用であり、LLM生成レイテンシやtoken throughputを主指標としていない。",
+      "first_checked_at": "2026-10-04T14:30:26+09:00",
+      "last_checked_at": "2026-10-04T14:30:26+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    }
+  ]
+}
