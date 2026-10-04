@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0100-scheduled-chat-00/r01",
+  "reference_main_sha": "f5aeb8ad1cc4afd172dd7787f17ca9702ceaeb21",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.02502",
+      "identity_tokens": [
+        "arXiv:2010.02502"
+      ],
+      "title": "Denoising Diffusion Implicit Models",
+      "reason": "DDPMと同じ学習目的を保ちながら非Markov型の拡散過程で画像生成samplingを10–50倍高速化する研究だが、最終適用先はdiffusion画像生成でありLLM推論runtime/servingではない。",
+      "source_url": "https://arxiv.org/abs/2010.02502",
+      "body_check": "abstract_screen_only: abstractでDDPM画像生成samplingのwall-clock高速化とlatent interpolationが主題と確認。LLM/Transformer推論system対象外のため本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:03:00+09:00",
+      "last_checked_at": "2026-10-05T01:03:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.12122",
+      "identity_tokens": [
+        "arXiv:2102.12122"
+      ],
+      "title": "Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions",
+      "reason": "progressive shrinking pyramidで高解像度vision featureの計算量を抑え、object detection/segmentationの精度を改善するcomputer vision backbone研究で、LLM推論systemを対象としない。",
+      "source_url": "https://arxiv.org/abs/2102.12122",
+      "body_check": "abstract_screen_only: abstractでPVTをdense vision prediction用backboneとして設計しCOCO等の精度を評価することが主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:04:00+09:00",
+      "last_checked_at": "2026-10-05T01:04:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.01691",
+      "identity_tokens": [
+        "arXiv:2204.01691"
+      ],
+      "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+      "reason": "LLMの高水準task知識とrobot skillのvalue functionを組み合わせ、実環境で実行可能な行動を選ぶrobotics/agent grounding研究で、LLM servingや推論runtime効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2204.01691",
+      "body_check": "abstract_screen_only: abstractでpretrained robot skillsとvalue functionsによるlanguage grounding、mobile manipulatorのlong-horizon task成功が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:05:00+09:00",
+      "last_checked_at": "2026-10-05T01:05:00+09:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.09883",
+      "identity_tokens": [
+        "arXiv:2111.09883"
+      ],
+      "title": "Swin Transformer V2: Scaling Up Capacity and Resolution",
+      "reason": "3B規模vision Transformerを高解像度へscaleするためresidual-post-norm、cosine attention、continuous position bias、SimMIMを導入するvision training/architecture研究で、LLM推論runtimeを対象としない。",
+      "source_url": "https://arxiv.org/abs/2111.09883",
+      "body_check": "abstract_screen_only: abstractでlarge vision modelのtraining stability、resolution transfer、label efficiencyとvision benchmark精度が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:06:00+09:00",
+      "last_checked_at": "2026-10-05T01:06:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.08777",
+      "identity_tokens": [
+        "arXiv:1912.08777"
+      ],
+      "title": "PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization",
+      "reason": "重要文をmaskして生成するgap-sentence generation事前学習でabstractive summarization品質を改善する学習方式研究で、推論runtime・serving・memory効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/1912.08777",
+      "body_check": "abstract_screen_only: 書誌・一次要旨からsummarization向けpretraining objectiveとdownstream ROUGE品質が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:07:00+09:00",
+      "last_checked_at": "2026-10-05T01:07:00+09:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.26",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.26",
+        "arXiv:2103.10360"
+      ],
+      "title": "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
+      "reason": "autoregressive blank infillingで理解・条件付き生成・無条件生成を単一pretraining frameworkへ統合するモデル学習研究で、推論systemの速度・メモリ・serving最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2103.10360",
+      "body_check": "abstract_screen_only: 一次要旨でblank infilling pretraining objectiveとNLP task品質が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:08:00+09:00",
+      "last_checked_at": "2026-10-05T01:08:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.05482",
+      "identity_tokens": [
+        "arXiv:2203.05482"
+      ],
+      "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+      "reason": "複数fine-tuned modelの重み平均で単一modelの精度・robustnessを改善し、ensembleと異なり追加推論costを生じさせない手法だが、主目的はfine-tuning結果のmodel selection/accuracy改善であり推論runtime自体の高速化・省メモリ化ではない。",
+      "source_url": "https://arxiv.org/abs/2203.05482",
+      "body_check": "abstract_screen_only: abstractでhyperparameter sweep後のweight averagingとImageNet等のaccuracy/robustness改善が主題と確認。追加inference costがないことは性質であり推論system最適化ではないため本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:09:00+09:00",
+      "last_checked_at": "2026-10-05T01:09:00+09:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.14217",
+      "identity_tokens": [
+        "arXiv:2205.14217"
+      ],
+      "title": "Diffusion-LM Improves Controllable Text Generation",
+      "reason": "continuous diffusionをlanguage modelへ適用して属性制御text generationを改善する生成model研究で、LLM推論のsampling/runtime高速化やserving効率を最終目的としない。",
+      "source_url": "https://arxiv.org/abs/2205.14217",
+      "body_check": "abstract_screen_only: 一次資料の題名・要旨からdiffusion-based controllable text generationとcontrol qualityが主題と確認。推論system最適化ではないため本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:10:00+09:00",
+      "last_checked_at": "2026-10-05T01:10:00+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2606.02091-dflare.md"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.00652",
+      "identity_tokens": [
+        "arXiv:2107.00652"
+      ],
+      "title": "CSWin Transformer: A General Vision Transformer Backbone with Cross-Shaped Windows",
+      "reason": "cross-shaped window self-attentionでvision backboneの計算量を抑えつつImageNet/COCO/ADE20K性能を改善するcomputer vision研究で、LLM推論systemを対象としない。",
+      "source_url": "https://arxiv.org/abs/2107.00652",
+      "body_check": "abstract_screen_only: abstractでhorizontal/vertical stripe attention、LePE、vision downstream taskの精度/FLOPs評価が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:11:00+09:00",
+      "last_checked_at": "2026-10-05T01:11:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.01852",
+      "identity_tokens": [
+        "arXiv:2007.01852"
+      ],
+      "title": "Language-agnostic BERT Sentence Embedding",
+      "reason": "多言語sentence embeddingをMLM/TLM・dual encoder ranking等で学習し、112言語bitext retrievalやNMT data mining品質を改善する表現学習研究で、LLM推論runtimeを対象としない。",
+      "source_url": "https://arxiv.org/abs/2007.01852",
+      "body_check": "abstract_screen_only: abstractでmultilingual sentence embedding、Tatoeba retrieval accuracy、parallel data削減が主題と確認。本文深読解省略。",
+      "first_checked_at": "2026-10-05T01:12:00+09:00",
+      "last_checked_at": "2026-10-05T01:12:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "worklist_rank": 15
+    }
+  ]
+}
