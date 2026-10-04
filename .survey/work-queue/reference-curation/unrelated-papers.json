@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-04T10:14:14+00:00",
-  "record_count": 968,
+  "updated_at": "2026-10-04T10:16:18+00:00",
+  "record_count": 984,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -9767,21 +9767,6 @@
       ],
       "title": "Consensus in the Age of Blockchains"
     },
-    "arXiv:1712.01208": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1712.01208",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.1712.01208",
-        "arXiv:1712.01208"
-      ],
-      "reason": "B-tree/hash/Bloom等のデータベース索引を学習モデルで置換するDBシステム研究で、LLM推論のexpert prefetchやcache索引を対象としない。",
-      "first_checked_at": "2026-10-03T15:16:50+00:00",
-      "last_checked_at": "2026-10-03T15:16:50+00:00",
-      "linked_from": [
-        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md"
-      ],
-      "title": "The Case for Learned Index Structures"
-    },
     "arXiv:2304.08354": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2304.08354",
@@ -13067,9 +13052,9 @@
       "identity_tokens": [
         "arXiv:2401.18059"
       ],
-      "reason": "�ꎟ������RAPTOR�𒷕���QA������recursive retrieval-augmented generation�Ƃ��Ē񎦂��A���_���ɗv��c���[���當�����������ĉ񓚐��x���グ��B�Ώۂ�retrieval/context selection�ł���LLM�{�̂̎��s�Eserving�E���_�����k�̍œK���ł͂Ȃ��B�v�Z�ʁEtoken cost�̕]����tree�\\�z�H���Ɋւ��邽�߁A�{���E���h�̑ΏۊO�Ɣ��f����B",
+      "reason": "長文書を再帰的に要約・クラスタリングした木から検索してRAGの回答品質を上げるretrieval手法で、推論サービング効率化が主目的ではない。",
       "first_checked_at": "2026-10-04T05:19:24+00:00",
-      "last_checked_at": "2026-10-04T05:19:24+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
       ],
@@ -14120,9 +14105,9 @@
       "identity_tokens": [
         "DOI:10.1145/359094.359101"
       ],
-      "reason": "グラフ頂点彩色のアルゴリズム研究で、MoE pruning等の後続研究に引用されてもLLM推論・モデル実行を直接対象としない。",
+      "reason": "グラフ頂点彩色アルゴリズムの古典研究で、MoE pruningの組合せ最適化に引用されてもLLM推論そのものを対象としない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md"
       ],
@@ -14134,9 +14119,9 @@
       "identity_tokens": [
         "DOI:10.1145/152610.152611"
       ],
-      "reason": "大規模データベースのquery evaluationとjoin等の実行・最適化技法を体系化するデータベース研究で、LLM agent workflowや推論サービングを直接対象としない。",
+      "reason": "大規模databaseのquery evaluation/optimization技法を体系化する古典的database systems研究で、LLM agent workflowや推論servingを対象としない。",
       "first_checked_at": "2026-10-04T09:52:02+00:00",
-      "last_checked_at": "2026-10-04T09:52:02+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
       ],
@@ -14183,6 +14168,248 @@
         "papers/inference/01-offload-hierarchical-memory/2026-2601.17063-flashmoe-ssd-io-cache-replacement.md"
       ],
       "title": "Importance of input data normalization for the application of neural networks to complex industrial problems"
+    },
+    "DOI:10.1016/j.inffus.2023.101861": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2023.101861",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2023.101861"
+      ],
+      "reason": "ChatGPTの多様な下流タスク能力・限界を評価する応用性能研究で、LLM推論システムの速度・メモリ・サービング最適化を提案しない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "ChatGPT: Jack of all trades, master of none"
+    },
+    "DOI:10.1109/cgo51591.2021.9370308": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cgo51591.2021.9370308",
+      "identity_tokens": [
+        "DOI:10.1109/cgo51591.2021.9370308"
+      ],
+      "reason": "多段階中間表現を用いる汎用コンパイラ基盤MLIRの設計研究で、LLM推論カーネルやサービングを最終適用先としない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md"
+      ],
+      "title": "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation"
+    },
+    "DOI:10.1145/128765.128770": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/128765.128770",
+      "identity_tokens": [
+        "DOI:10.1145/128765.128770"
+      ],
+      "reason": "データベースのwrite-ahead loggingとtransaction recoveryを扱うARIESアルゴリズムの研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2602.21140-revivemoe-fast-hardware-failure-recovery.md"
+      ],
+      "title": "ARIES"
+    },
+    "DOI:10.1145/2517349.2522716": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2517349.2522716",
+      "identity_tokens": [
+        "DOI:10.1145/2517349.2522716"
+      ],
+      "reason": "大規模クラスタで短い並列taskを低遅延配置する汎用分散scheduler研究で、LLM推論サービング固有の設計ではない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.03611-block-predictive-load-balancing.md"
+      ],
+      "title": "Sparrow: distributed, low latency scheduling"
+    },
+    "DOI:10.1126/science.adh4451": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1126/science.adh4451",
+      "identity_tokens": [
+        "DOI:10.1126/science.adh4451"
+      ],
+      "reason": "生成AIと創作・芸術の関係、能力・社会的含意を論じる研究で、LLM推論システム効率化を扱わない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Art and the science of generative AI"
+    },
+    "DOI:10.1017/s0305004100034241": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/s0305004100034241",
+      "identity_tokens": [
+        "DOI:10.1017/s0305004100034241"
+      ],
+      "reason": "格子上percolationのcritical probability下界を扱う確率論研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.22157-page-partition-aware-gated-kv-cache-eviction.md"
+      ],
+      "title": "A lower bound for the critical probability in a certain percolation process"
+    },
+    "DOI:10.1145/3123939.3124544": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3123939.3124544",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3124544"
+      ],
+      "reason": "DRAM内でbulk bitwise AND/OR/NOTを実行する汎用in-memory accelerator研究で、LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Ambit: In-Memory Accelerator for Bulk Bitwise Operations Using Commodity DRAM Technology"
+    },
+    "DOI:10.1145/2934872.2934908": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2934872.2934908",
+      "identity_tokens": [
+        "DOI:10.1145/2934872.2934908"
+      ],
+      "reason": "大規模データセンタでcommodity Ethernet上のRDMAを実現・運用するネットワークシステム研究で、LLM推論サービング固有ではない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.21548-dualpath-storage-bandwidth-agentic-inference.md"
+      ],
+      "title": "RDMA over Commodity Ethernet at Scale"
+    },
+    "DOI:10.1145/2485922.2485964": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2485922.2485964",
+      "identity_tokens": [
+        "DOI:10.1145/2485922.2485964"
+      ],
+      "reason": "GPGPUの電力モデルとenergy optimizationを扱う汎用GPU architecture研究で、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md"
+      ],
+      "title": "GPUWattch: enabling energy optimizations in GPGPUs"
+    },
+    "DOI:10.1145/1966445.1966473": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1966445.1966473",
+      "identity_tokens": [
+        "DOI:10.1145/1966445.1966473"
+      ],
+      "reason": "モバイルアプリの実行をdeviceとcloud間で自動partition/migrateして性能・電力を改善する汎用mobile-cloud offloading研究で、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md"
+      ],
+      "title": "CloneCloud: elastic execution between mobile device and cloud"
+    },
+    "DOI:10.1145/290941.291025": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/290941.291025",
+      "identity_tokens": [
+        "DOI:10.1145/290941.291025"
+      ],
+      "reason": "検索結果のquery relevanceとnoveltyを組み合わせる最大限界関連性（Maximal Marginal Relevance; MMR）による文書再順位付け・要約研究で、LLM推論runtime効率化ではない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md"
+      ],
+      "title": "The use of MMR, diversity-based reranking for reordering documents and producing summaries"
+    },
+    "DOI:10.1145/325165.325242": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/325165.325242",
+      "identity_tokens": [
+        "DOI:10.1145/325165.325242"
+      ],
+      "reason": "3次元computer animationの回転をquaternion球面上のsplineで滑らかに補間する研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md"
+      ],
+      "title": "Animating rotation with quaternion curves"
+    },
+    "DOI:10.1109/mcse.2010.69": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mcse.2010.69",
+      "identity_tokens": [
+        "DOI:10.1109/mcse.2010.69"
+      ],
+      "reason": "CPU・GPU等の異種計算資源を共通APIで扱う汎用並列プログラミング標準OpenCLの解説で、LLM推論方式・カーネルを直接提案しない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "OpenCL: A Parallel Programming Standard for Heterogeneous Computing Systems"
+    },
+    "DOI:10.1145/1390156.1390191": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1390156.1390191",
+      "identity_tokens": [
+        "DOI:10.1145/1390156.1390191"
+      ],
+      "reason": "高次元学習でベクトルをL1球へ効率的に射影する最適化アルゴリズム研究で、LLM推論routingやresource allocationは最終適用先ではない。",
+      "first_checked_at": "2026-10-04T10:16:17+00:00",
+      "last_checked_at": "2026-10-04T10:16:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.10907-routerwise-resource-allocation-routing.md"
+      ],
+      "title": "Efficient projections onto the l1-ball for learning in high dimensions"
+    },
+    "arXiv:2301.02111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.02111",
+      "identity_tokens": [
+        "arXiv:2301.02111"
+      ],
+      "reason": "離散audio codec tokenを条件付き言語モデルで生成するVALL-Eの音声合成品質・zero-shot話者適応が主題で、LLM推論システム効率化ではない。",
+      "first_checked_at": "2026-10-04T10:16:18+00:00",
+      "last_checked_at": "2026-10-04T10:16:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md"
+      ],
+      "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers"
+    },
+    "DOI:10.1145/3183713.3196909": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3183713.3196909",
+      "identity_tokens": [
+        "DOI:10.1145/3183713.3196909",
+        "DOI:10.48550/arxiv.1712.01208",
+        "arXiv:1712.01208"
+      ],
+      "reason": "B-treeやhash index等のdatabase indexを学習モデルで置き換えるlearned index研究で、LLM推論のindex/KV管理を対象としない。",
+      "first_checked_at": "2026-10-03T15:16:50+00:00",
+      "last_checked_at": "2026-10-04T10:16:18+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.17949-routebalance-fused-routing-load-balancing.md"
+      ],
+      "title": "The Case for Learned Index Structures"
+    },
+    "DOI:10.1145/146941.146943": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/146941.146943",
+      "identity_tokens": [
+        "DOI:10.1145/146941.146943"
+      ],
+      "reason": "書込みをlogへ順次集約するlog-structured file systemの設計・実装研究で、LLM推論memory serviceやKV cacheを直接対象としない。",
+      "first_checked_at": "2026-10-04T10:16:18+00:00",
+      "last_checked_at": "2026-10-04T10:16:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+      ],
+      "title": "The design and implementation of a log-structured file system"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-808d7e93483cfa30-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.02111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.02111",
+    "identity_tokens": [
+      "arXiv:2301.02111"
+    ],
+    "reason": "離散audio codec tokenを条件付き言語モデルで生成するVALL-Eの音声合成品質・zero-shot話者適応が主題で、LLM推論システム効率化ではない。",
+    "first_checked_at": "2026-10-04T10:16:18+00:00",
+    "last_checked_at": "2026-10-04T10:16:18+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.02640-metronome.md"
+    ],
+    "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers"
+  },
+  "processed_at": "2026-10-04T10:16:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-808d7e93483c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
