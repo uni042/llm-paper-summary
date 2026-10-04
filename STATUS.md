@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-04 19:43:16 JST**
+> 自動生成: **2026-10-04 19:43:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,10 +35,10 @@
 | 指標 | 件数 |
 |---|---:|
 | 構造化references総候補 | **9656** |
-| 処理済み | **2413** |
-| 未処理 | **7243** |
+| 処理済み | **2414** |
+| 未処理 | **7242** |
 | 収録済みとして除外 | **1035** |
-| 無関係として除外 | **990** |
+| 無関係として除外 | **991** |
 | 微妙として除外 | **388** |
 
 - 消化率: **25.0%**
@@ -68,7 +68,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-04 18:10:34 JST（1時間32分前）** |
+| 最終maintenance完了 | **10-04 18:10:34 JST（1時間33分前）** |
 | 最終maintenance status | **passed** |
 | consistency | **passed** |
 | health | **passed** |
@@ -99,8 +99,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - Research: **10-04 18:07:00 JST** / worker — / run 20261004-0800-codex-local-r23 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/20261004-batch-a2--69dc9a82075b27919927e6a4441bbb1084ba186054ae880b8fcf7ffb72404909--rank61-entropy-guided.json
 - Discovery: **10-04 19:30:00 JST** / worker scheduled-chat-30 / run 20261004-1930-scheduled-chat-30/r02
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_ad042b7137808191ac2b98ba19f835e8--discovery-20261004-1930-scheduled-chat-30-r02-partial.json
+  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_ad042b7137808191ac2b98ba19f835e8--discovery-20261004-1930-scheduled-chat-30-r02-partial.json
 
 ## 件数サマリー（旧immutable transport診断）
 
