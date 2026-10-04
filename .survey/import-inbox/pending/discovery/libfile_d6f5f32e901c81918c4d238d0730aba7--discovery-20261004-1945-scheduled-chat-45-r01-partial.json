@@ -1,0 +1,60 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261004-1945-scheduled-chat-45/r01",
+  "reference_main_sha": "4a28059e5b8d1d13638daf45988b5b3ffc5c16d9",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccv51070.2023.00371",
+      "identity_tokens": [
+        "DOI:10.1109/iccv51070.2023.00371",
+        "arXiv:2304.02643"
+      ],
+      "title": "Segment Anything",
+      "reason": "画像セグメンテーション用のpromptable modelとSA-1Bデータセットが主題で、LLM推論・サービング・KVキャッシュ・MoE推論最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2304.02643",
+      "body_check": "abstract_screen_only: abstractで画像segmentation専用研究と明白なため本文読解省略",
+      "first_checked_at": "2026-10-04T19:45:00+09:00",
+      "last_checked_at": "2026-10-04T19:45:00+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+      ],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d16-1264",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d16-1264",
+        "arXiv:1606.05250"
+      ],
+      "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+      "reason": "Wikipedia記事に対する10万件超の読解QAデータセット構築・評価が主題で、LLM推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1606.05250",
+      "body_check": "abstract_screen_only: dataset/reading-comprehension研究と明白なため本文読解省略",
+      "first_checked_at": "2026-10-04T19:45:00+09:00",
+      "last_checked_at": "2026-10-04T19:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.550",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.550",
+        "arXiv:2004.04906"
+      ],
+      "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "reason": "open-domain QA向けdual-encoder dense passage retrievalの精度改善が主題で、LLM inference servingやmemory/compute最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2004.04906",
+      "body_check": "abstract_screen_only: QA retrieval研究と明白なため本文読解省略",
+      "first_checked_at": "2026-10-04T19:45:00+09:00",
+      "last_checked_at": "2026-10-04T19:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    }
+  ]
+}
