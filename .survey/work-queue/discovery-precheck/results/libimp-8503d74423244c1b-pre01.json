@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8503d74423244c1b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8503d7442324",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/d19-1633"
+  ],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f6611e14e3ab879d4181502b77cf2fd5c882a13c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T21:41:23.258943+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/d19-1633",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+      "source_url": "https://doi.org/10.18653/v1/D19-1633",
+      "year": 2019,
+      "published": "2019-04-01",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 758,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most machine translation systems generate text autoregressively from left to right. We, instead, use a masked language modeling objective to train a model to predict any subset of the target words, conditioned on both the input text and a partially masked target translation. This approach allows for efficient iterative decoding, where we first predict all of the target words non-autoregressively, and then repeatedly mask out and regenerate the subset of words that the model is least confident about. By applying this strategy for a constant number of iterations, our model improves state-of-the-art performance levels for non-autoregressive and parallel decoding translation models by over 4 BLEU on average. It is also able to reach within about 1 BLEU point of a typical left-to-right transformer model, while decoding significantly faster.",
+      "identifiers": [
+        "SemanticScholar:5efadc9019ce3378a0eb6c8f939cdde6c8918b1e"
+      ],
+      "semantic_scholar_id": "5efadc9019ce3378a0eb6c8f939cdde6c8918b1e",
+      "doi": "10.18653/v1/D19-1633",
+      "canonical_id": "DOI:10.18653/v1/D19-1633",
+      "authors": [
+        "Marjan Ghazvininejad",
+        "Omer Levy",
+        "Yinhan Liu",
+        "Luke Zettlemoyer"
+      ],
+      "priority": 768,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 758,
+        "citation_count": 758,
+        "total": 768,
+        "is_fresh": false,
+        "freshness_age_days": 2743,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.18653/v1/d19-1633",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/d19-1633",
+        "id:SemanticScholar:5efadc9019ce3378a0eb6c8f939cdde6c8918b1e",
+        "title:maskpredict parallel decoding of conditional masked language models",
+        "url:https://doi.org/10.18653/v1/D19-1633"
+      ],
+      "record": {
+        "title": "Mask-Predict: Parallel Decoding of Conditional Masked Language Models",
+        "source_url": "https://doi.org/10.18653/v1/D19-1633",
+        "year": 2019,
+        "published": "2019-04-01",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 758,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most machine translation systems generate text autoregressively from left to right. We, instead, use a masked language modeling objective to train a model to predict any subset of the target words, conditioned on both the input text and a partially masked target translation. This approach allows for efficient iterative decoding, where we first predict all of the target words non-autoregressively, and then repeatedly mask out and regenerate the subset of words that the model is least confident about. By applying this strategy for a constant number of iterations, our model improves state-of-the-art performance levels for non-autoregressive and parallel decoding translation models by over 4 BLEU on average. It is also able to reach within about 1 BLEU point of a typical left-to-right transformer model, while decoding significantly faster.",
+        "identifiers": [
+          "SemanticScholar:5efadc9019ce3378a0eb6c8f939cdde6c8918b1e"
+        ],
+        "semantic_scholar_id": "5efadc9019ce3378a0eb6c8f939cdde6c8918b1e",
+        "doi": "10.18653/v1/D19-1633",
+        "canonical_id": "DOI:10.18653/v1/D19-1633",
+        "authors": [
+          "Marjan Ghazvininejad",
+          "Omer Levy",
+          "Yinhan Liu",
+          "Luke Zettlemoyer"
+        ],
+        "priority": 768,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 758,
+          "citation_count": 758,
+          "total": 768,
+          "is_fresh": false,
+          "freshness_age_days": 2743,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e42381c5713656872fbcb380e42ff2edc6481b8682a29442ef72c706089ee36f",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
