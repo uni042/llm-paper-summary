@@ -1,0 +1,459 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a007e4209e1d55b6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a007e4209e1d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.07707",
+    "arXiv:2401.03868",
+    "arXiv:2606.18394",
+    "arXiv:2608.01078"
+  ],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "da0dbc4084fadb0c1020ec064c732231392cb3dd",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-04T05:21:27.277982+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.07707",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2401.03868",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.18394",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01078",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+      "source_url": "https://arxiv.org/abs/2401.03868",
+      "year": 2024,
+      "published": "2024-01-08",
+      "venue": "Symposium on Field Programmable Gate Arrays",
+      "citation_count": 175,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0× higher energy efficiency and 1.8× better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2× higher throughput using the latest Versal VHK158 FPGA.",
+      "identifiers": [
+        "SemanticScholar:3695739b3a8b0e92b8ae90081124d098ae33b15c"
+      ],
+      "semantic_scholar_id": "3695739b3a8b0e92b8ae90081124d098ae33b15c",
+      "canonical_id": "arXiv:2401.03868",
+      "arxiv_id": "2401.03868",
+      "doi": "10.1145/3626202.3637562",
+      "authors": [
+        "Shulin Zeng",
+        "Jun Liu",
+        "Guohao Dai",
+        "Xinhao Yang",
+        "Tianyu Fu",
+        "Hong-Yi Wang",
+        "Wenheng Ma",
+        "Hanbo Sun",
+        "Shi-Yao Li",
+        "Zi-Xiao Huang",
+        "Yadong Dai",
+        "Jin-Tao Li",
+        "Zehao Wang",
+        "Ruoyu Zhang",
+        "Kairui Wen",
+        "Xue-Fei Ning",
+        "Yu Wang"
+      ],
+      "priority": 175,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 175,
+        "citation_count": 175,
+        "total": 175,
+        "is_fresh": false,
+        "freshness_age_days": 1000,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
+      "source_url": "https://arxiv.org/abs/2606.18394",
+      "year": 2026,
+      "published": "2026-06-16",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model's autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
+      "identifiers": [
+        "SemanticScholar:46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50"
+      ],
+      "semantic_scholar_id": "46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50",
+      "canonical_id": "arXiv:2606.18394",
+      "arxiv_id": "2606.18394",
+      "doi": "10.48550/arXiv.2606.18394",
+      "authors": [
+        "Lanxiang Hu",
+        "Zhao-Xiang Feng",
+        "Yulun Wu",
+        "Hao-Ran Yuan",
+        "Yujie Zhao",
+        "Yuanpan Qian",
+        "Bo-Jun Wang",
+        "Pengfei Zhao",
+        "Da-Xin Jiang",
+        "Yi-Bo Zhu",
+        "T. Rosing",
+        "Hao Zhang"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MatFormer: Nested Transformer for Elastic Inference",
+      "source_url": "https://arxiv.org/abs/2310.07707",
+      "year": 2023,
+      "published": "2023-10-11",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 95,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Foundation models are applied in a broad spectrum of settings with different inference constraints, from massive multi-accelerator clusters to resource-constrained standalone mobile devices. However, the substantial costs associated with training these models often limit the number of unique model sizes that can be offered. Consequently, practitioners are compelled to select a model that may not be optimally aligned with their specific latency and cost requirements. We present MatFormer, a novel Transformer architecture designed to provide elastic inference across diverse deployment constraints. MatFormer achieves this by incorporating a nested Feed Forward Network (FFN) block structure within a standard Transformer model. During training, we optimize the parameters of multiple nested FFN blocks with varying sizes, enabling the extraction of hundreds of accurate smaller models without incurring additional computational costs. We empirically validate the efficacy of MatFormer across different model classes (decoders and encoders) and modalities (language and vision), demonstrating its potential for real-world deployment. We show that a 850M decoder-only MatFormer language model (MatLM) allows us to extract multiple smaller models spanning from 582M to 850M parameters, each exhibiting better validation loss and one-shot downstream evaluations than independently trained counterparts. Furthermore, we observe that smaller encoders extracted from a universal MatFormer-based ViT (MatViT) encoder preserve the metric-space structure for adaptive large-scale retrieval. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from MatFormer can lead to significant reduction in inference latency. Project website: https://devvrit.github.io/matformer/",
+      "identifiers": [
+        "SemanticScholar:eac59779da7262968a9043985e7cd933c00247a5"
+      ],
+      "semantic_scholar_id": "eac59779da7262968a9043985e7cd933c00247a5",
+      "canonical_id": "arXiv:2310.07707",
+      "arxiv_id": "2310.07707",
+      "doi": "10.48550/arXiv.2310.07707",
+      "authors": [
+        "Devvrit Devvrit",
+        "Kaifeng Chen",
+        "Tim Dettmers",
+        "Inderjit S. Dhillon",
+        "Ali Farhadi",
+        "Hannaneh Hajishirzi",
+        "Prateek Jain",
+        "S. Kakade",
+        "Sneha Kudugunta",
+        "Aditya Kusupati",
+        "Yulia Tsvetkov"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 95,
+        "citation_count": 95,
+        "total": 105,
+        "is_fresh": false,
+        "freshness_age_days": 1089,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Attend to Your Own Thoughts: Breaking the Barrier for Post-Training Quantization of Reasoning LLMs through the Lens of 1.58-Bit Quantization",
+      "source_url": "https://arxiv.org/abs/2608.01078",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose ScaleQ-1.58, a scalable ternary post-training quantization (PTQ) framework for reasoning LLMs. Its core insight stems from an empirical finding: although modern LLMs are typically trained to exhibit chain-of-thought reasoning capabilities, in the PTQ regime, even the latest CAT-Q method based on learning-based differentiable ternarization still leads to performance collapse on challenging mathematics and coding tasks when using conventional calibration schemes that ignore the model's reasoning process. Driven by this finding, we introduce a simple calibration approach, Attend to Your Own Thoughts (AYOT), where reasoning traces and final answers generated by the pre-trained high-precision target LLM on a proper set of calibration samples are used as the context input during the ternarization process, along with the corresponding questions. ScaleQ-1.58 is formed by simply integrating AYOT with CAT-Q, which demonstrates several scaling properties: (1) with only 4M calibration tokens, Qwen3-1.7B ternarized by ScaleQ-1.58 reaches over 90.52% of the performance of the prior best BitNet b1.58 2B4T averaged over 4 mathematics and coding tasks, and our ternary Qwen3-4B shows an absolute gain of 8.97%, while requiring 1,000,000x fewer calibration tokens for quantization; (2) ScaleQ-1.58 generalizes well to both dense and MoE architectures, with performance improving as model scale increases (up to 235B parameters); (3) ScaleQ-1.58 demonstrates strong generalization across tasks of varying difficulty levels, including mathematics, coding and scientific logic reasoning, as well as commonsense reasoning and basic language generation; (4) its performance continues to improve as the number of calibration tokens increases. Notably, AYOT also exhibits strong generalization ability across other quantization bit-widths. Code will be available at https://github.com/IntelChina-AI/BitTern.",
+      "identifiers": [
+        "SemanticScholar:a55223d277dc4217464caec5e0adc874f329782e"
+      ],
+      "semantic_scholar_id": "a55223d277dc4217464caec5e0adc874f329782e",
+      "canonical_id": "arXiv:2608.01078",
+      "arxiv_id": "2608.01078",
+      "authors": [
+        "Shi-Geng Wang",
+        "Chao Li",
+        "Yangyuxuan Kang",
+        "Jia-Wei Fan",
+        "An-Bang Yao"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.03868",
+      "identity_tokens": [
+        "id:DOI:10.1145/3626202.3637562",
+        "id:SemanticScholar:3695739b3a8b0e92b8ae90081124d098ae33b15c",
+        "id:arXiv:2401.03868",
+        "title:flightllm efficient large language model inference with a complete mapping flow on fpgas",
+        "url:https://arxiv.org/abs/2401.03868"
+      ],
+      "record": {
+        "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
+        "source_url": "https://arxiv.org/abs/2401.03868",
+        "year": 2024,
+        "published": "2024-01-08",
+        "venue": "Symposium on Field Programmable Gate Arrays",
+        "citation_count": 175,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based Large Language Models (LLMs) have made a significant impact on various domains. However, LLMs' efficiency suffers from both heavy computation and memory overheads. Compression techniques like sparsification and quantization are commonly used to mitigate the gap between LLM's computation/memory overheads and hardware capacity. However, existing GPU and transformer-based accelerators cannot efficiently process compressed LLMs, due to the following unresolved challenges: low computational efficiency, underutilized memory bandwidth, and large compilation overheads. This paper proposes FlightLLM, enabling efficient LLMs inference with a complete mapping flow on FPGAs. In FlightLLM, we highlight an innovative solution that the computation and memory overhead of LLMs can be solved by utilizing FPGA-specific resources (e.g., DSP48 and heterogeneous memory hierarchy). We propose a configurable sparse DSP chain to support different sparsity patterns with high computation efficiency. Second, we propose an always-on-chip decode scheme to boost memory bandwidth with mixed-precision support. Finally, to make FlightLLM available for real-world LLMs, we propose a length adaptive compilation method to reduce the compilation overhead. Implemented on the Xilinx Alveo U280 FPGA, FlightLLM achieves 6.0× higher energy efficiency and 1.8× better cost efficiency against commercial GPUs (e.g., NVIDIA V100S) on modern LLMs (e.g., LLaMA2-7B) using vLLM and SmoothQuant under the batch size of one. FlightLLM beats NVIDIA A100 GPU with 1.2× higher throughput using the latest Versal VHK158 FPGA.",
+        "identifiers": [
+          "SemanticScholar:3695739b3a8b0e92b8ae90081124d098ae33b15c"
+        ],
+        "semantic_scholar_id": "3695739b3a8b0e92b8ae90081124d098ae33b15c",
+        "canonical_id": "arXiv:2401.03868",
+        "arxiv_id": "2401.03868",
+        "doi": "10.1145/3626202.3637562",
+        "authors": [
+          "Shulin Zeng",
+          "Jun Liu",
+          "Guohao Dai",
+          "Xinhao Yang",
+          "Tianyu Fu",
+          "Hong-Yi Wang",
+          "Wenheng Ma",
+          "Hanbo Sun",
+          "Shi-Yao Li",
+          "Zi-Xiao Huang",
+          "Yadong Dai",
+          "Jin-Tao Li",
+          "Zehao Wang",
+          "Ruoyu Zhang",
+          "Kairui Wen",
+          "Xue-Fei Ning",
+          "Yu Wang"
+        ],
+        "priority": 175,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 175,
+          "citation_count": 175,
+          "total": 175,
+          "is_fresh": false,
+          "freshness_age_days": 1000,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.18394",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.18394",
+        "id:SemanticScholar:46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50",
+        "id:arXiv:2606.18394",
+        "title:jetspec breaking the scaling ceiling of speculative decoding with parallel tree drafting",
+        "url:https://arxiv.org/abs/2606.18394"
+      ],
+      "record": {
+        "title": "JetSpec: Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting",
+        "source_url": "https://arxiv.org/abs/2606.18394",
+        "year": 2026,
+        "published": "2026-06-16",
+        "venue": "arXiv.org",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates autoregressive Large Language Models (LLMs) by drafting multiple tokens and verifying them in parallel, but it faces a scaling limitation: increasing the draft budget improves speed only when acceptance remains high and drafting overhead stays low. This ceiling has been difficult to break because prior head-based SD methods face a causality-efficiency dilemma. Autoregressive drafters produce path-conditioned candidates that are effective for tree speculative decoding with higher acceptance length, but their drafting cost grows with tree depth. Bidirectional block-diffusion drafters generate all positions in one pass, but their branch-agnostic marginals can form individually plausible yet mutually inconsistent trees, wasting budget and reducing acceptance. We propose JetSpec, a head-based SD framework that combines one-forward drafting efficiency with branch-wise causal conditioning. JetSpec trains a causal parallel draft head over fused hidden states from the frozen target model, producing candidate trees whose scores align with the target model's autoregressive factorization. This enables JetSpec to convert larger draft budgets into longer accepted prefixes and higher end-to-end speedup. Across math, coding, and chat benchmarks on dense and MoE Qwen3 models, JetSpec consistently outperforms bidirectional-head and tree-based SD baselines. On H100 GPUs, JetSpec achieves up to 9.64x speedup on MATH-500 and 4.58x on open-ended conversational workloads, with further latency gains demonstrated through vLLM integration under realistic serving loads. Our code and models are available at https://github.com/hao-ai-lab/JetSpec.",
+        "identifiers": [
+          "SemanticScholar:46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50"
+        ],
+        "semantic_scholar_id": "46d0dea62ebafe8cfdf84179fe8eac1d3ecd8f50",
+        "canonical_id": "arXiv:2606.18394",
+        "arxiv_id": "2606.18394",
+        "doi": "10.48550/arXiv.2606.18394",
+        "authors": [
+          "Lanxiang Hu",
+          "Zhao-Xiang Feng",
+          "Yulun Wu",
+          "Hao-Ran Yuan",
+          "Yujie Zhao",
+          "Yuanpan Qian",
+          "Bo-Jun Wang",
+          "Pengfei Zhao",
+          "Da-Xin Jiang",
+          "Yi-Bo Zhu",
+          "T. Rosing",
+          "Hao Zhang"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 113,
+          "is_fresh": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.07707",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.07707",
+        "id:SemanticScholar:eac59779da7262968a9043985e7cd933c00247a5",
+        "id:arXiv:2310.07707",
+        "title:matformer nested transformer for elastic inference",
+        "url:https://arxiv.org/abs/2310.07707"
+      ],
+      "record": {
+        "title": "MatFormer: Nested Transformer for Elastic Inference",
+        "source_url": "https://arxiv.org/abs/2310.07707",
+        "year": 2023,
+        "published": "2023-10-11",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 95,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Foundation models are applied in a broad spectrum of settings with different inference constraints, from massive multi-accelerator clusters to resource-constrained standalone mobile devices. However, the substantial costs associated with training these models often limit the number of unique model sizes that can be offered. Consequently, practitioners are compelled to select a model that may not be optimally aligned with their specific latency and cost requirements. We present MatFormer, a novel Transformer architecture designed to provide elastic inference across diverse deployment constraints. MatFormer achieves this by incorporating a nested Feed Forward Network (FFN) block structure within a standard Transformer model. During training, we optimize the parameters of multiple nested FFN blocks with varying sizes, enabling the extraction of hundreds of accurate smaller models without incurring additional computational costs. We empirically validate the efficacy of MatFormer across different model classes (decoders and encoders) and modalities (language and vision), demonstrating its potential for real-world deployment. We show that a 850M decoder-only MatFormer language model (MatLM) allows us to extract multiple smaller models spanning from 582M to 850M parameters, each exhibiting better validation loss and one-shot downstream evaluations than independently trained counterparts. Furthermore, we observe that smaller encoders extracted from a universal MatFormer-based ViT (MatViT) encoder preserve the metric-space structure for adaptive large-scale retrieval. Finally, we showcase that speculative decoding with the accurate and consistent submodels extracted from MatFormer can lead to significant reduction in inference latency. Project website: https://devvrit.github.io/matformer/",
+        "identifiers": [
+          "SemanticScholar:eac59779da7262968a9043985e7cd933c00247a5"
+        ],
+        "semantic_scholar_id": "eac59779da7262968a9043985e7cd933c00247a5",
+        "canonical_id": "arXiv:2310.07707",
+        "arxiv_id": "2310.07707",
+        "doi": "10.48550/arXiv.2310.07707",
+        "authors": [
+          "Devvrit Devvrit",
+          "Kaifeng Chen",
+          "Tim Dettmers",
+          "Inderjit S. Dhillon",
+          "Ali Farhadi",
+          "Hannaneh Hajishirzi",
+          "Prateek Jain",
+          "S. Kakade",
+          "Sneha Kudugunta",
+          "Aditya Kusupati",
+          "Yulia Tsvetkov"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 95,
+          "citation_count": 95,
+          "total": 105,
+          "is_fresh": false,
+          "freshness_age_days": 1089,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01078",
+      "identity_tokens": [
+        "id:SemanticScholar:a55223d277dc4217464caec5e0adc874f329782e",
+        "id:arXiv:2608.01078",
+        "title:attend to your own thoughts breaking the barrier for posttraining quantization of reasoning llms through the lens of 158bit quantization",
+        "url:https://arxiv.org/abs/2608.01078"
+      ],
+      "record": {
+        "title": "Attend to Your Own Thoughts: Breaking the Barrier for Post-Training Quantization of Reasoning LLMs through the Lens of 1.58-Bit Quantization",
+        "source_url": "https://arxiv.org/abs/2608.01078",
+        "year": 2026,
+        "published": "2026-08-02",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose ScaleQ-1.58, a scalable ternary post-training quantization (PTQ) framework for reasoning LLMs. Its core insight stems from an empirical finding: although modern LLMs are typically trained to exhibit chain-of-thought reasoning capabilities, in the PTQ regime, even the latest CAT-Q method based on learning-based differentiable ternarization still leads to performance collapse on challenging mathematics and coding tasks when using conventional calibration schemes that ignore the model's reasoning process. Driven by this finding, we introduce a simple calibration approach, Attend to Your Own Thoughts (AYOT), where reasoning traces and final answers generated by the pre-trained high-precision target LLM on a proper set of calibration samples are used as the context input during the ternarization process, along with the corresponding questions. ScaleQ-1.58 is formed by simply integrating AYOT with CAT-Q, which demonstrates several scaling properties: (1) with only 4M calibration tokens, Qwen3-1.7B ternarized by ScaleQ-1.58 reaches over 90.52% of the performance of the prior best BitNet b1.58 2B4T averaged over 4 mathematics and coding tasks, and our ternary Qwen3-4B shows an absolute gain of 8.97%, while requiring 1,000,000x fewer calibration tokens for quantization; (2) ScaleQ-1.58 generalizes well to both dense and MoE architectures, with performance improving as model scale increases (up to 235B parameters); (3) ScaleQ-1.58 demonstrates strong generalization across tasks of varying difficulty levels, including mathematics, coding and scientific logic reasoning, as well as commonsense reasoning and basic language generation; (4) its performance continues to improve as the number of calibration tokens increases. Notably, AYOT also exhibits strong generalization ability across other quantization bit-widths. Code will be available at https://github.com/IntelChina-AI/BitTern.",
+        "identifiers": [
+          "SemanticScholar:a55223d277dc4217464caec5e0adc874f329782e"
+        ],
+        "semantic_scholar_id": "a55223d277dc4217464caec5e0adc874f329782e",
+        "canonical_id": "arXiv:2608.01078",
+        "arxiv_id": "2608.01078",
+        "authors": [
+          "Shi-Geng Wang",
+          "Chao Li",
+          "Yangyuxuan Kang",
+          "Jia-Wei Fan",
+          "An-Bang Yao"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v1",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "freshness_age_days": 63,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:9bbe5a9f2bb990dce1a32bc169dcb820c2337a95d1abe80e854d070091ebe2de",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
