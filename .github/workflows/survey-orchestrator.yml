@@ -66,6 +66,30 @@ jobs:
           import_backlog=$((research_pending + discovery_pending + discovery_waiting))
           echo "Library import backlog: research=${research_pending}, discovery_pending=${discovery_pending}, discovery_waiting=${discovery_waiting}"
 
+          # GitHub scheduled delivery is best-effort and may skip several nominal
+          # ten-minute ticks. Never infer elapsed time from GITHUB_RUN_NUMBER.
+          # Use the last durable state-changing commit as the clock instead.
+          path_is_stale() {
+            local path="$1"
+            local max_age_seconds="$2"
+            local updated_at updated_epoch now_epoch
+            updated_at="$(gh api \
+              "repos/${GITHUB_REPOSITORY}/commits?path=${path}&sha=main&per_page=1" \
+              --jq '.[0].commit.committer.date // empty' 2>/dev/null || true)"
+            if [ -z "$updated_at" ]; then
+              return 0
+            fi
+            updated_epoch="$(date -u -d "$updated_at" +%s 2>/dev/null || true)"
+            if [ -z "$updated_epoch" ]; then
+              return 0
+            fi
+            now_epoch="$(date -u +%s)"
+            [ $((now_epoch - updated_epoch)) -ge "$max_age_seconds" ]
+          }
+
+          # Empty-inbox recovery is useful but does not need to share the metadata
+          # cadence. Keep the legacy hourly-equivalent behavior only for this cheap
+          # recovery lane; real work starts immediately whenever backlog exists.
           recovery_tick=0
           if [ $((GITHUB_RUN_NUMBER % 6)) -eq 0 ]; then
             recovery_tick=1
@@ -80,16 +104,22 @@ jobs:
             echo 'Library import inbox is empty; skip processor dispatch.'
           fi
 
-          # Push/manual events are sparse and should always pass through the
-          # workers' own durable ~50-minute freshness gates. Scheduled ticks are
-          # reduced to roughly hourly to avoid ten-minute no-op workflow runs.
-          metadata_tick="$recovery_tick"
+          metadata_max_age_seconds=3000
+          force_metadata=0
           if [ "$GITHUB_EVENT_NAME" != "schedule" ]; then
-            metadata_tick=1
+            force_metadata=1
           fi
-          if [ "$metadata_tick" -eq 1 ]; then
+
+          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/forward-citation-sweep.json" "$metadata_max_age_seconds"; then
+            echo 'Forward-citation state is due by durable wall-clock age.'
             dispatch_if_idle forward-citation-sweep.yml
+          else
+            echo 'Forward-citation state is still fresh; skip dispatch.'
+          fi
+
+          if [ "$force_metadata" -eq 1 ] || path_is_stale ".survey/work-queue/candidate-priority-cache.json" "$metadata_max_age_seconds"; then
+            echo 'Candidate-priority state is due by durable wall-clock age.'
             dispatch_if_idle candidate-priority-refresh.yml
           else
-            echo 'Metadata/citation refresh is not checked on this scheduler tick.'
+            echo 'Candidate-priority state is still fresh; skip dispatch.'
           fi
