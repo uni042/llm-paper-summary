@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8afde13f52740e9b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2110.05722",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2110.05722",
+    "identity_tokens": [
+      "arXiv:2110.05722"
+    ],
+    "reason": "LightSeq2はTransformer modelsのaccelerated training systemであり、学習専用の効率化が主題。",
+    "first_checked_at": "2026-10-05T14:16:15+00:00",
+    "last_checked_at": "2026-10-05T14:16:15+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+    ],
+    "title": "LightSeq2: Accelerated Training for Transformer-Based Models on GPUs"
+  },
+  "processed_at": "2026-10-05T14:16:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8afde13f5274",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:13:43+00:00",
-  "record_count": 5454,
+  "updated_at": "2026-10-05T14:16:16+00:00",
+  "record_count": 5471,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -79252,6 +79252,250 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
       ],
       "title": "Wings: Learning Multimodal LLMs without Text-only Forgetting"
+    },
+    "DOI:10.3390/info15120792": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info15120792",
+      "identity_tokens": [
+        "DOI:10.3390/info15120792"
+      ],
+      "reason": "tourism review sentiment classificationのaccuracy比較であり、LLM inference optimizationを扱わない。",
+      "first_checked_at": "2026-10-05T14:16:13+00:00",
+      "last_checked_at": "2026-10-05T14:16:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+      ],
+      "title": "Leveraging Large Language Models in Tourism: A Comparative Study of the Latest GPT Omni Models and BERT NLP for Customer Review Classification and Sentiment Analysis"
+    },
+    "arXiv:2409.04267": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.04267",
+      "identity_tokens": [
+        "arXiv:2409.04267"
+      ],
+      "reason": "domain-specific foundation modelsのcustomization surveyで、特定のLLM serving/inference efficiency研究ではない。",
+      "first_checked_at": "2026-10-05T14:16:13+00:00",
+      "last_checked_at": "2026-10-05T14:16:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "An overview of domain-specific foundation model: key technologies, applications and challenges"
+    },
+    "DOI:10.1109/tnnls.2023.3347227": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnnls.2023.3347227",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2023.3347227"
+      ],
+      "reason": "industrial remaining-useful-life time-series prediction向け軽量Transformerであり、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "A Lightweight Group Transformer-Based Time Series Reduction Network for Edge Intelligence and Its Application in Industrial RUL Prediction"
+    },
+    "DOI:10.48550/arxiv.2406.02536": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2406.02536",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.02536",
+        "arXiv:2406.02536"
+      ],
+      "reason": "一次arXiv abstractを直接確認。提案はhidden-stateの一次元scaleでlong-context position bias/QA精度を改善する手法で、推論効率・runtime/memory削減を扱わない。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Mitigate Position Bias in Large Language Models via Scaling a Single Dimension"
+    },
+    "arXiv:2504.13112": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.13112",
+      "identity_tokens": [
+        "arXiv:2504.13112"
+      ],
+      "reason": "Hadamard productのdeep learning-wide surveyで、LLM inferenceへの個別新規寄与/serving評価が示されない。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Hadamard Product in Deep Learning: Introduction, Advances and Challenges"
+    },
+    "DOI:10.1109/tifs.2025.3581103": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tifs.2025.3581103",
+      "identity_tokens": [
+        "DOI:10.1109/tifs.2025.3581103"
+      ],
+      "reason": "差分プライバシーdata selectionとtrustworthy quantizationを扱うLLM fine-tuning/security研究で、主眼はtraining/trustworthinessでありserving efficiencyの評価ではない。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Hardening LLM Fine-Tuning: From Differentially Private Data Selection to Trustworthy Model Quantization"
+    },
+    "arXiv:2410.04960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04960",
+      "identity_tokens": [
+        "arXiv:2410.04960"
+      ],
+      "reason": "Segment Anything image segmentation modelのefficient variant surveyであり、LLM推論対象外。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "On Efficient Variants of Segment Anything Model: A Survey"
+    },
+    "arXiv:2407.06794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06794",
+      "identity_tokens": [
+        "arXiv:2407.06794"
+      ],
+      "reason": "vision transformerのpost-training quantization methodであり、LLMではなくcomputer vision modelが対象。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "Towards Accurate Post-Training Quantization of Vision Transformers via Error Reduction"
+    },
+    "arXiv:2406.11633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11633",
+      "identity_tokens": [
+        "arXiv:2406.11633"
+      ],
+      "reason": "multimodal LLMのtraining/testing dataset benchmark paperで、dataset構築が主題。",
+      "first_checked_at": "2026-10-05T14:16:14+00:00",
+      "last_checked_at": "2026-10-05T14:16:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ],
+      "title": "DocGenome: An Open Large-scale Scientific Document Benchmark for Training and Testing Multi-modal Large Language Models"
+    },
+    "arXiv:2308.11793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.11793",
+      "identity_tokens": [
+        "arXiv:2308.11793"
+      ],
+      "reason": "NeRF novel-view synthesisでMixture-of-View-Expertsを使うcomputer vision研究で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Enhancing NeRF akin to Enhancing LLMs: Generalizable NeRF Transformer with Mixture-of-View-Experts"
+    },
+    "arXiv:2110.05722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.05722",
+      "identity_tokens": [
+        "arXiv:2110.05722"
+      ],
+      "reason": "LightSeq2はTransformer modelsのaccelerated training systemであり、学習専用の効率化が主題。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "LightSeq2: Accelerated Training for Transformer-Based Models on GPUs"
+    },
+    "arXiv:2407.18158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18158",
+      "identity_tokens": [
+        "arXiv:2407.18158"
+      ],
+      "reason": "compression-based generalization boundを理論分析する研究で、圧縮を評価技法として使いLLM runtime efficiencyを改善するものではない。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "Unlocking Tokens as Data Points for Generalization Bounds on Larger Language Models"
+    },
+    "DOI:10.1109/isca59077.2024.00052": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca59077.2024.00052",
+      "identity_tokens": [
+        "DOI:10.1109/isca59077.2024.00052"
+      ],
+      "reason": "Near-DRAM processingのcross-bank communication/load balancing platformで、LLM/Transformer inferenceへの実験は示されない。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures"
+    },
+    "arXiv:2310.10176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10176",
+      "identity_tokens": [
+        "arXiv:2310.10176"
+      ],
+      "reason": "ChatGPTのintent-discovery能力評価が主題であり、inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T14:16:16+00:00",
+      "last_checked_at": "2026-10-05T14:16:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Large Language Models Meet Open-World Intent Discovery and Recognition: An Evaluation of ChatGPT"
+    },
+    "arXiv:2202.03356": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.03356",
+      "identity_tokens": [
+        "arXiv:2202.03356"
+      ],
+      "reason": "collective communication network topology optimizationの一般HPC研究で、LLM servingの評価/手法ではない。",
+      "first_checked_at": "2026-10-05T14:16:16+00:00",
+      "last_checked_at": "2026-10-05T14:16:16+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "Efficient Direct-Connect Topologies for Collective Communications"
+    },
+    "arXiv:2604.14141": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14141",
+      "identity_tokens": [
+        "arXiv:2604.14141"
+      ],
+      "reason": "streaming 3D reconstruction transformerのefficiency研究で、対象は3D foundation modelではなくLLMではない。",
+      "first_checked_at": "2026-10-05T14:16:16+00:00",
+      "last_checked_at": "2026-10-05T14:16:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction"
+    },
+    "arXiv:2505.19797": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19797",
+      "identity_tokens": [
+        "arXiv:2505.19797"
+      ],
+      "reason": "multiple small LMsをrepeated sampling/votingで組合せ回答qualityを向上するmethod。推論費用を下げる研究ではなく、反復呼出しを利用する。",
+      "first_checked_at": "2026-10-05T14:16:16+00:00",
+      "last_checked_at": "2026-10-05T14:16:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "The Avengers: A Simple Recipe for Uniting Smaller Language Models to Challenge Proprietary Giants"
     }
   }
 }

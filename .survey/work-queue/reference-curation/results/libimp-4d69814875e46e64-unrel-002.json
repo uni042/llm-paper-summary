@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4d69814875e46e64-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tifs.2025.3581103",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tifs.2025.3581103",
+    "identity_tokens": [
+      "DOI:10.1109/tifs.2025.3581103"
+    ],
+    "reason": "差分プライバシーdata selectionとtrustworthy quantizationを扱うLLM fine-tuning/security研究で、主眼はtraining/trustworthinessでありserving efficiencyの評価ではない。",
+    "first_checked_at": "2026-10-05T14:16:14+00:00",
+    "last_checked_at": "2026-10-05T14:16:14+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "Hardening LLM Fine-Tuning: From Differentially Private Data Selection to Trustworthy Model Quantization"
+  },
+  "processed_at": "2026-10-05T14:16:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4d69814875e4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

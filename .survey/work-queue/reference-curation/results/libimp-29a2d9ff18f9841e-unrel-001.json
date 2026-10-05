@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29a2d9ff18f9841e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/info15120792",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/info15120792",
+    "identity_tokens": [
+      "DOI:10.3390/info15120792"
+    ],
+    "reason": "tourism review sentiment classificationのaccuracy比較であり、LLM inference optimizationを扱わない。",
+    "first_checked_at": "2026-10-05T14:16:13+00:00",
+    "last_checked_at": "2026-10-05T14:16:13+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+    ],
+    "title": "Leveraging Large Language Models in Tourism: A Comparative Study of the Latest GPT Omni Models and BERT NLP for Customer Review Classification and Sentiment Analysis"
+  },
+  "processed_at": "2026-10-05T14:16:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29a2d9ff18f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

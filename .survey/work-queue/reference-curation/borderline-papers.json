@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:13:43+00:00",
-  "record_count": 1820,
+  "updated_at": "2026-10-05T14:16:15+00:00",
+  "record_count": 1823,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28114,6 +28114,48 @@
         "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
       ],
       "title": "Efficient Inference for Large Language Model-based Generative Recommendation"
+    },
+    "DOI:10.1145/3649219": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3649219",
+      "identity_tokens": [
+        "DOI:10.1145/3649219"
+      ],
+      "reason": "関連評価はBERT/GPT-2とspecialized acceleratorに限られ、一次本文でsystem boundaryやmodel/throughput/quality条件を検証できないためborderline。",
+      "first_checked_at": "2026-10-05T14:16:13+00:00",
+      "last_checked_at": "2026-10-05T14:16:13+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "H3D-Transformer: A Heterogeneous 3D (H3D) Computing Platform for Transformer Model Acceleration on Edge Devices"
+    },
+    "arXiv:2510.05520": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.05520",
+      "identity_tokens": [
+        "arXiv:2510.05520"
+      ],
+      "reason": "context managementの関連可能性はあるが、本文の主評価はtask performanceで、効率利得と追加呼出しの損益が確認できないためborderline。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "CAM: A Constructivist View of Agentic Memory for LLM-Based Reading Comprehension"
+    },
+    "arXiv:2302.04542": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.04542",
+      "identity_tokens": [
+        "arXiv:2302.04542"
+      ],
+      "reason": "効率的attentionという基礎接点はあるが、本文のlanguage experimentsは従来のTransformer task中心でLLM-scale serving relevanceが弱いためborderline。",
+      "first_checked_at": "2026-10-05T14:16:15+00:00",
+      "last_checked_at": "2026-10-05T14:16:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Efficient Attention via Control Variates"
     }
   }
 }
