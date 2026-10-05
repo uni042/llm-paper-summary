@@ -1,0 +1,85 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-2100-scheduled-chat-00/r03",
+  "reference_main_sha": "9f12f4919285e53d8a6a9ae49bbf75ddf7e52220",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3132747.3132780",
+      "identity_tokens": [
+        "DOI:10.1145/3132747.3132780"
+      ],
+      "title": "ZygOS: Achieving Low Tail Latency for Microsecond-scale Networked Tasks",
+      "reason": "μs級network task向けにwork-conserving scheduler、shared-memory queue、multi-queue NIC、IPIでcore間負荷を再配分しtail latencyを抑えるOS/dataplane研究。LLM serving schedulingの基礎として強く関連するが、評価はSilo/TPC-C等でLLM専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/3132747.3132780",
+      "body_check": "full_text_relevance_review: 著者公開一次PDFでwork-conserving scheduling、shared-memory data structures、multi-queue NIC、IPI、99th-percentile SLO、Silo/TPC-C評価を確認。LLM専用評価がないためborderline。",
+      "first_checked_at": "2026-10-05T21:47:00+09:00",
+      "last_checked_at": "2026-10-05T21:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02355",
+      "identity_tokens": [
+        "arXiv:2410.02355"
+      ],
+      "title": "AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models",
+      "reason": "LLMのknowledge editingでparameter perturbationを保存知識のnull spaceへ射影し、sequential editing時の知識破壊を抑える研究。モデル知識更新の正確性が主目的で、推論runtime・memory・serving効率化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2410.02355",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でknowledge editing、null-space projection、preserved knowledge、editing performanceが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:47:00+09:00",
+      "last_checked_at": "2026-10-05T21:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.12067",
+      "identity_tokens": [
+        "arXiv:2502.12067"
+      ],
+      "title": "TokenSkip: Controllable Chain-of-Thought Compression in LLMs",
+      "reason": "長いCoTがautoregressive decoding latencyを線形に増やす問題に対し、重要度の低いreasoning tokenを選択的にskipして推論長を制御する。Qwen2.5-14B-InstructのGSM8Kでreasoning tokenを313から181へ40%削減し性能低下0.4%未満で、test-time compute/latency削減を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2502.12067",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でCoT lengthとinference latencyの関係、semantic token importance、controllable token skipping、GSM8Kで40% token削減・<0.4%性能低下を確認。",
+      "first_checked_at": "2026-10-05T21:47:00+09:00",
+      "last_checked_at": "2026-10-05T21:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 80
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3123939.3123982",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3123982"
+      ],
+      "title": "Bit-Pragmatic Deep Neural Network Computing",
+      "reason": "runtimeでzero bit由来の無効積を計算せず、bit-serial/parallel混合演算でDNN inference acceleratorの性能・energy効率を改善するarchitecture研究。推論hardware最適化として関連するが、評価対象はCNN convolutionでLLM/Transformerではないためborderline。",
+      "source_url": "https://arxiv.org/abs/1610.06920",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でzero product term skipping、hybrid bit-parallel/bit-serial processing、DaDianNao比2.6–3.1x performance、energy efficiency改善を確認。LLM専用評価がないためborderline。",
+      "first_checked_at": "2026-10-05T21:47:00+09:00",
+      "last_checked_at": "2026-10-05T21:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 81
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3307650.3322237",
+      "identity_tokens": [
+        "DOI:10.1145/3307650.3322237"
+      ],
+      "title": "FloatPIM: In-Memory Acceleration of Deep Neural Network Training with High Precision",
+      "reason": "fully-digital PIMでfloating-point CNN training/testingをmemory内実行しdata movementを削減する。testingでもGPU比324.8倍speedup等を報告しPIM推論hardwareの基礎として関連するが、対象はCNN/ImageNetでLLM/Transformer推論専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/3307650.3322237",
+      "body_check": "full_text_relevance_review: 著者公開一次abstractでdigital PIM、floating-point support、neighbor-memory communication、CNN training/testing、testing時GPU比324.8x speedupと297.9x energy efficiencyを確認。LLM専用でないためborderline。",
+      "first_checked_at": "2026-10-05T21:47:00+09:00",
+      "last_checked_at": "2026-10-05T21:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 82
+    }
+  ]
+}
