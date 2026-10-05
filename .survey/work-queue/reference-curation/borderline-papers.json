@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:02:43+00:00",
-  "record_count": 1261,
+  "updated_at": "2026-10-05T09:05:35+00:00",
+  "record_count": 1267,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19389,6 +19389,100 @@
         "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
       ],
       "title": "ContextMaster: Interactive Multi-Shot Video Creation via Fixed-Budget Sparse Context Routing"
+    },
+    "arXiv:2608.05240": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05240",
+      "identity_tokens": [
+        "arXiv:2608.05240"
+      ],
+      "reason": "推論時量子化を扱うが、本文の主張は現行GPU serving accelerationではなく、仮想的な量子readoutでの再構成risk優位。実用推論効率への適合が弱いためborderline。",
+      "first_checked_at": "2026-10-05T09:05:32+00:00",
+      "last_checked_at": "2026-10-05T09:05:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization"
+    },
+    "DOI:10.1145/3816440.3818527": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816440.3818527",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818527"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "L2Mersit: A Scaling-Free Sub-8-bit Data Format for On-Device Reliable Large Language Model Serving"
+    },
+    "DOI:10.1145/3816440.3818561": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816440.3818561",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818561"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "EdgeVLA: A Heterogeneous Edge VLA Accelerator with Iteration-Aware Low-Rank Approximation for Embodied AI"
+    },
+    "DOI:10.1145/3816440.3818573": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816440.3818573",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818573"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "MVP: A Mobile 3D-Stacked VLM Accelerator for Efficient Video Understanding by Leveraging Dynamic Sparse Attention Patterns"
+    },
+    "DOI:10.1145/3816440.3818578": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816440.3818578",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818578"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Codebook-Based Acceleration for Ternary Language Model Inference"
+    },
+    "DOI:10.1145/3816440.3818586": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816440.3818586",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818586"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ],
+      "title": "HotBa: A Heterogeneous Mamba Accelerator with Δ-Guided Early Rejection for Speculative Decoding"
     }
   }
 }

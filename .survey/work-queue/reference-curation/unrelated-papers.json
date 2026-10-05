@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:02:43+00:00",
-  "record_count": 4066,
+  "updated_at": "2026-10-05T09:05:36+00:00",
+  "record_count": 4080,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -59212,6 +59212,208 @@
         "papers/inference/99-other-inference-systems/2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md"
       ],
       "title": "Hardware Design and Security in the Era of Chiplets and LLMs"
+    },
+    "arXiv:2608.05104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05104",
+      "identity_tokens": [
+        "arXiv:2608.05104"
+      ],
+      "reason": "Deep neural networks have shown impressive success in NLP tasks owing to their complex structure and huge number of edges. Achieving state-of-the-art performance in natural language processing with a large pre-trained model such as BERT is expensive and time-consuming, carries a large carbon footprint, and is difficult to realize on machines with minimal computational capability. This creates a barrier to training complex models for resource-constrained languages such as Bengali. However, in a complex neural model, not all edges are equally impactful, and the contributions of some of them can be neglected. Pruning promises to reduce the memory footprint of regular networks, shorten the training time of ever-growing networks, and increase inference efficiency without sacrificing comparable performance. In this work, we introduce BnBERT-iPET, a sparse few-shot language modeling approach for Bengali, and experimentally show that a lightweight few-shot-learned language model retaining only 10% of the edges of an initial model such as BERT can perform neck and neck with much larger models on challenging tasks for a resource-constrained language such as Bengali. By learning from few shots through iterative pattern exploiting training and achieving 90% sparsity with the Lottery Ticket Hypothesis pruning technique, our pruned BnBERT-iPET model proves to be a tough competitor to state-of-the-art language models such as Bangla Electra, Indic-BERT, and XLM-RoBERTa on downstream tasks over standard benchmark datasets of the Bengali language.",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "BnBERT-iPET: Sparse Few-Shot Language Modeling for Bengali via Lottery Ticket Pruning"
+    },
+    "arXiv:2608.05127": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05127",
+      "identity_tokens": [
+        "arXiv:2608.05127"
+      ],
+      "reason": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, rely on high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propose Subsampled Stochastic TurboQuant (SSTQ), a framework that combines a bounded Kashin representation, data-independent coordinate subsampling, and privacy-aware one-dimensional quantization. SSTQ includes two variants: (1) a Flat Randomized Response variant that is unbiased and, for a fixed codebook bit-width, frame redundancy, and dimension-independent Kashin level, achieves reconstruction MSE that scales linearly with the ambient dimension $d$, while using only $\\lceil \\log_2 N \\rceil + b$ bits per message. Here, $N = \\Theta(d)$ denotes the frame size in the Kashin transform and $b$ is the codebook bit-width; and (2) a metric-aware truncated-Laplace variant that removes the exponential dependence on bit-width at the cost of a non-vanishing bias. We also derive a convex uniform-surrogate codebook objective whose worst-case codebook-dependent upper bound improves from $O(4^b)$ to $O(2^b)$. Experiments on synthetic regression, Fashion-MNIST, and CIFAR-10 compare the per-message privacy-utility and uplink-communication trade-offs of SSTQ with those of established baselines, demonstrating favorable utility and communication efficiency.",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant"
+    },
+    "arXiv:2608.05137": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05137",
+      "identity_tokens": [
+        "arXiv:2608.05137"
+      ],
+      "reason": "SmartMage routes modalities and experts for 3D-scene MLLM tasks. Table 5 reports training time per iteration falling from 91.61/125.2s to 47.44s, while inference TTFT/E2E (112.5/538.2ms) is comparable to baselines (115/527 and 135/551.6ms).",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md"
+      ],
+      "title": "SmartMage: Dynamic Modality Orchestration for 3D Scene Understanding"
+    },
+    "arXiv:2608.05228": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05228",
+      "identity_tokens": [
+        "arXiv:2608.05228"
+      ],
+      "reason": "The\"decompose-then-verify\"paradigm for LLM factuality evaluation faces a fundamental trade-off: atomic facts, i.e., one sentence conveying one unit of information, often omit essential context, while broader statements lack the granularity needed for precise assessment. To address this, we introduce TriQua, a framework that flexibly models facts based on their complexity. Simple claims are extracted as standard triples, while complex claims are represented as hyperrelational facts by attaching auxiliary contextual qualifiers. This adaptive structure preserves the necessary context for accurate retrieval and verification without sacrificing atomicity. Furthermore, TriQua's verification process directly annotates concrete errors within specific triples and qualifiers, providing fine-grained explainability for error detection. Alongside the framework, we propose TriQuaScore to quantify the factuality of these structured fact units. Empirical evaluations show that TriQuaScore strongly aligns with human annotated factuality scores, TriQua achieves robust decomposition quality, and outperforms existing decomposition-based frameworks in evidence-based fact verification.",
+      "first_checked_at": "2026-10-05T09:05:33+00:00",
+      "last_checked_at": "2026-10-05T09:05:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TriQua: Reconciling Granularity and Context in Factuality Evaluation"
+    },
+    "DOI:10.1002/widm.70122": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/widm.70122",
+      "identity_tokens": [
+        "DOI:10.1002/widm.70122"
+      ],
+      "reason": "Large language models (LLMs) generate fluent text but remain vulnerable to hallucinations, outdated knowledge, weak provenance, and costly model updates in knowledge‐intensive settings. Retrieval‐augmented generation (RAG) addresses these limitations by grounding generation in external evidence retrieved at inference time. This Advanced Review presents a PRISMA‐guided synthesis of 91 studies published between January 2020 and December 2025. It traces the evolution of RAG from early retrieve‐then‐generate pipelines to a broader design space that includes sparse, dense, and hybrid retrieval; multi‐stage reranking; evidence fusion; retrieval‐aware pre‐training; non‐parametric memory; iterative and agentic workflows; GraphRAG; multimodal RAG; multilingual retrieval; and privacy‐preserving deployment. The review examines how retrieval granularity, indexing, reranking, context construction, and retriever‐generator integration affect recall, precision, latency, robustness, and governance. It also compares explicit retrieval with long‐context prompting, vector‐based retrieval with graph‐based retrieval, and fixed pipelines with adaptive or agentic architectures. Domain requirements shape these choices: healthcare systems require evidence quality and privacy protection; legal and policy applications prioritize authoritative sources and citation fidelity; enterprise systems require freshness and access control; and educational systems must combine factual grounding with pedagogically appropriate explanations. Evaluation remains a central challenge. End‐task accuracy alone does not capture retrieval quality, faithfulness, attribution, calibration, abstention, efficiency, or resilience to prompt injection and knowledge‐base poisoning. The review therefore synthesizes current evaluation practices, promotes reproducibility‐oriented reporting through RAG Cards, and identifies open research directions for secure, efficient, transparent, and domain‐aware RAG systems.",
+      "first_checked_at": "2026-10-05T09:05:34+00:00",
+      "last_checked_at": "2026-10-05T09:05:34+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Retrieval‐Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020–2025)"
+    },
+    "DOI:10.1145/3816440.3818516": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816440.3818516",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818516"
+      ],
+      "reason": "The demand for efficient training of Transformer language models is rapidly increasing, yet the resource-intensive attention mechanism severely bottlenecks the process. Previous attempts to fuse attention operations managed to reduce off-chip memory access, thereby improving memory bandwidth. Unfortunately, these techniques are impractical in restricted environments, as they exhibit resource utilization that scales with model dimensions and do not consider the entire training dataflow. To address this, we propose operation fusion for the attention training dataflow using local safe softmax and model-independent tiling. By taking both the forward and the backward passes into account, local safe softmax reduces I/O access under small-cache conditions. Furthermore, model-independent tiling ensures that the required on-chip memory footprint remains independent of model dimensions, enabling scalability across diverse models. Software simulations and hardware evaluation show that our method reduces off-chip access, on-chip memory usage, FLOPs, training runtime, and energy cost compared to conventional approaches, confirming its suitability for efficiently training attention in resource-restricted hardware.",
+      "first_checked_at": "2026-10-05T09:05:34+00:00",
+      "last_checked_at": "2026-10-05T09:05:34+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Fusing the Attention Training Dataflow with Local Safe Softmax and Model-Independent Tiling"
+    },
+    "DOI:10.1145/3816440.3818526": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816440.3818526",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818526"
+      ],
+      "reason": "As demand for personalized AI grows, on-device large language model (LLM) training is increasingly pursued to preserve data privacy and enable real-time adaptation. However, existing training optimization techniques primarily target discrete memory systems, where CPU and GPU reside in separate memory spaces connected via PCIe. These approaches are not directly applicable to edge devices with unified memory systems, where CPU and GPU share the same physical memory. Applying offloading on such platforms introduces redundant data copies without any memory savings. In this paper, we propose LayUp, a layer-wise training optimization framework for edge devices with unified memory architectures. We analyze how memory allocation methods affect training performance across tensor types and apply allocation strategies suited to unified memory. By parallelizing GPU-side backward propagation with CPU-side layer-wise parameter updates via zero-copy shared memory, LayUp achieves up to 24.1% speedup and 6.1% energy reduction compared to baseline GPU-only training for GPT-2 models on the NVIDIA Jetson Orin NX, while conventional offloading increases latency by up to 81.7%. A double-buffered gradient management scheme reduces gradient memory by up to 86.4% and overall model memory by up to 10.8% for GPT-2 Large, enabling training where both baseline and offloading run out of memory. Our implementation is available at https://github.com/aica-ssu/LayUp.",
+      "first_checked_at": "2026-10-05T09:05:34+00:00",
+      "last_checked_at": "2026-10-05T09:05:34+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2508.06978-ssd-moe-offloading-energy-efficiency.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+      ],
+      "title": "LayUp: Layer-wise Parallelization for Energy-Efficient Edge LLM Training Exploiting Unified Memory Characteristics"
+    },
+    "arXiv:2608.05246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05246",
+      "identity_tokens": [
+        "arXiv:2608.05246"
+      ],
+      "reason": "Existing personalized LLM benchmarks primarily rely on textual personas or isolated behavioral signals, providing limited evaluation of cross-domain behavioral personalization, where responses must be grounded in heterogeneous daily-life activities. To address this gap, we introduce LUNAR, the first benchmark for evaluating how LLMs personalize responses from longitudinal app interaction histories across universal daily-life domains, including clothing, food, housing, and mobility. To support scalable benchmark construction while mitigating data sparsity and privacy concerns, LUNAR uses a multi-stage coarse-to-fine synthesis pipeline grounded in real-world behavioral patterns. Fidelity analyses show closer alignment with real behavioral distributions than other synthetic benchmarks. Experiments on 19 mainstream LLMs show that access to behavioral logs is necessary but not sufficient for deep personalization: neither more context nor larger models guarantees better performance; effective personalization depends on selecting and integrating relevant evidence across domains. Direct retrieval of fine-grained behavioral records consistently outperforms compressed memory, while stronger personalization can come at the cost of privacy protection. These findings identify evidence selection, cross-domain integration, and privacy control as key challenges for personalized LLMs.",
+      "first_checked_at": "2026-10-05T09:05:34+00:00",
+      "last_checked_at": "2026-10-05T09:05:34+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "LUNAR: Benchmarking Personalized Large Language Models on UNiversal User BehAvioR Logs"
+    },
+    "arXiv:2608.05472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05472",
+      "identity_tokens": [
+        "arXiv:2608.05472"
+      ],
+      "reason": "Multi-head attention combines an input-dependent softmax routing with an input-independent linear value projection, so the per-sample operator mapping aggregated values to outputs is the same for every input set. We study the consequences of this asymmetry for permutation-invariant set targets. We introduce the Transformation Degrees of Freedom (TDOF) of a target operator, a complexity measure counting the input-dependent directions an exact representation requires, and present a depth-separation analysis showing that context-rigid attention needs depth proportional to the target's TDOF, whereas a single layer with a context-adaptive value family can represent the same target. Building on this analysis, we propose Matrix Zonotopic Attention (MZAttn), which replaces the fixed value projection with a context-adaptive matrix-zonotope family: a centre matrix plus a sum of generator matrices weighted by input-dependent gates. The construction reduces to standard multi-head attention at initialisation, preserves permutation equivariance, and admits a data-driven reachability interpretation. Experiments on a range of set-prediction tasks are consistent with the TDOF prediction that the architectural advantage is selective: it appears on targets that depend on the input set in a high-rank, sparsely combinatorial way, and is small on aggregate-statistic targets where parameter-matched standard attention is already competitive.",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Matrix Zonotopic Attention: A Context-Adaptive Value Projection for Set Transformers"
+    },
+    "arXiv:2608.06424": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06424",
+      "identity_tokens": [
+        "arXiv:2608.06424"
+      ],
+      "reason": "Speech recordings often contain missing, corrupted, or incorrect regions that must be reconstructed or modified without re-synthesizing the entire utterance. Speech inpainting restores missing segments, whereas speech editing replaces spoken content according to an edited transcript. Both tasks require the generated speech to express the intended words while remaining consistent with the surrounding speaker identity, prosody, timing, and recording conditions. Discrete diffusion is particularly well suited to these tasks because it can iteratively refine masked tokens while jointly conditioning on both left and right acoustic context. We introduce SIEDD, a discrete diffusion framework for text-guided speech inpainting and editing over hierarchical codec tokens. Its core architecture, HiCoDD, follows the RVQ generation order by representing previously generated codebooks as clean, committed acoustic context and applying diffusion only to the current refinement codebook. This separation enables leakage-free joint training while matching sequential coarse-to-fine inference. The model further combines phoneme-level conditioning, span-localized classifier-free guidance, and duration prediction to support both fixed-duration inpainting and variable-duration text edits. On the RealEdit benchmark, SIEDD achieves the best overall speech-editing performance among the evaluated methods. It also outperforms the evaluated autoregressive baselines across all speech-inpainting settings, on both single and multiple gaps. These results demonstrate that explicitly modeling the codec hierarchy substantially improves context-preserving speech reconstruction and editing. See our full code at https://github.com/iftachShoham/SIEDD.",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Multi Codec Discrete Diffusion Model for Text Guided Speech Inpainting and Editing"
+    },
+    "arXiv:2608.16930": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16930",
+      "identity_tokens": [
+        "arXiv:2608.16930"
+      ],
+      "reason": "Existing multi-task learning methods rely on hard sharing, multiple paths or experts, adaptive sharing, and dynamic expansion. However, their capacity changes are usually constrained by predefined structures or triggered by task boundaries and conflict signals. This raises a fundamental question: can a network start from exact single-path computation and grow a new independent path only when persistent optimization evidence appears? We propose the Emergent Modular Atomic Network (EMAN), an optimization-driven framework for exposing an antisymmetric growth direction through latent relative phases without instantiating a second path, and for monitoring multiple decision signals during training to transform local optimization evidence into a structural decision. EMAN materializes two equal-capacity independent paths only after certification. EMAN adaptively allocates shared and task-specific representation capacity to accommodate varying task requirements. Extensive experiments on controlled rank settings, PASCAL-Context, and NYUv2 validate its effectiveness, achieving improved performance at a competitive computational cost.",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "EMAN: Optimization-Driven Capacity Growth through Path Emergence in Multi-Task Learning"
+    },
+    "arXiv:2609.20844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20844",
+      "identity_tokens": [
+        "arXiv:2609.20844"
+      ],
+      "reason": "Deepresearch (DR) agents interact with real-world web environments through multi-turn search and visit, causing their contexts to grow rapidly over time. We observe that, even after DR Agentic Reinforcement Learning (DR-RL), 61.6% of the model's remaining prediction errors can still be attributed to insufficient long-context understanding, including longcontext hallucination and failures in cross-document evidence integration. It motivates us to further break the bottleneck of DR-RL by strengthening the model's long-context ability. However, effective LongContext training requires more than simply increasing context length. To bridge the data gap, we propose `DR Rollouts to LongContext-QA (DR-to-Long)'. The method repurposes DR-RL trajectories, which naturally contain search histories, visited webpages, evidence snippets, and final-answer supervision. It then replaces the compact snippets and webpage summaries in each trajectory with the full contents of their corresponding URLs, producing substantially longer multi-document contexts while preserving the original evidence relationships. Building on DR-to-Long, we introduce DLD (DR ->LongQA ->DR)-RL. DLD-RL first performs a short DR-RL stage to collect rollout trajectories, which are then converted into LongQA instances at zero annotation cost. The model is subsequently optimized with LongQA-RL to strengthen LongContext ability, followed by full DR-RL to continue improving its DR capability. Experiments show that DLD-RL outperforms standard DR-RL by 7.3% on three Deepresearch benchmarks and improves performance by 13.5% on three long-context benchmarks.",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Boosting Deepresearch and LongContext Ability with Self-Generated Deepresearch Rollouts Traces"
+    },
+    "DOI:10.1145/3816440.3818581": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816440.3818581",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818581"
+      ],
+      "reason": "Multimodal AI (MMAI) systems are becoming integral to safety-critical edge applications, from autonomous driving and robotics to smart healthcare and surveillance, where real-time perception must operate under stringent energy and compute constraints. These systems comprise distinct sensing units, such as cameras, microphones, and inertial sensors, each forming a separate subsystem with unique capabilities and constraints. As environments evolve, modality relevance shifts and redundancy emerges, requiring dynamic adaptation to maintain quality of service while extending system lifetime. Existing methods optimize individual subsystems or static inference paths, lacking responsiveness to contextual changes; coordinating adaptation across these heterogeneous subsystems remains essential yet largely unexplored. We introduce COSMOS, a runtime framework for distributed multimodal edge nodes. Its central contribution is a closed-loop control structure that uses predicted semantic context and measured temporal stability to jointly govern modality activation, inference frequency, and subsystemlevel approximation. COSMOS instantiates this control loop through three mechanisms: Scene/State-aware Modality Selection (SMS), Temporal Locality-driven Decision and Regulation (TLDR), and modality-aware Design Space Exploration (DSE). The DSE heuristic coordinates compute, audio preprocessing, sensing, memory, and communication knobs under a unified energy-quality objective. Validated on an FPGA-MCU prototype (Intel Agilex-5 primary + ESP32 auxiliary) for Audio-Visual Event Localization, COSMOS extends system lifetime by 7.73× with <5% accuracy loss, achieving up to 1.77× primary and 3.01× auxiliary energy savings across six transformer backbones.",
+      "first_checked_at": "2026-10-05T09:05:35+00:00",
+      "last_checked_at": "2026-10-05T09:05:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "COSMOS: Designing Energy-Efficient Context-Aware Multimodal Cognitive Systems"
+    },
+    "DOI:10.1145/3816440.3818582": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816440.3818582",
+      "identity_tokens": [
+        "DOI:10.1145/3816440.3818582"
+      ],
+      "reason": "Distributed compute-in-memory (CIM) architectures are emerging as a path towards energy-efficient and highly parallel edge-class deep neural network (DNN) inference. However, the lack of a flexible, unified digital periphery limits the ability of distributed CIM systems to support integer-quantized DNN inference schemes, activation functions, and scalable tile-to-tile dataflow. We present CIM-FLEX, an integer-only periphery architecture that enables each CIM tile to autonomously perform partial-sum rescaling, asymmetric activation processing, and lightweight programmable activation functions. CIM-FLEX also supports mixed-precision integer multiply-and-accumulate (MAC) by decomposing higher-precision operations into uniform-precision partial MACs, without modifying existing CIM primitives. CIM-FLEX enables flexible tile-to-tile dataflow across distributed CIM tiles, exposing a tradeoff between parallel output generation and energy efficiency, where deeper accumulation chains reduce concurrent periphery utilization and improve overall efficiency. Numerical studies and TFLite-based LUT activation experiments validate a high signal-to-noise ratio (~30 dB) for programmable activation functions, and a 14 nm CMOS implementation shows a 0.012 mm2 area for the CIM-FLEX.",
+      "first_checked_at": "2026-10-05T09:05:36+00:00",
+      "last_checked_at": "2026-10-05T09:05:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures"
     }
   }
 }

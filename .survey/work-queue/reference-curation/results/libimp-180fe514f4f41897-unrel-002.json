@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-180fe514f4f41897-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05127",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05127",
+    "identity_tokens": [
+      "arXiv:2608.05127"
+    ],
+    "reason": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, rely on high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propose Subsampled Stochastic TurboQuant (SSTQ), a framework that combines a bounded Kashin representation, data-independent coordinate subsampling, and privacy-aware one-dimensional quantization. SSTQ includes two variants: (1) a Flat Randomized Response variant that is unbiased and, for a fixed codebook bit-width, frame redundancy, and dimension-independent Kashin level, achieves reconstruction MSE that scales linearly with the ambient dimension $d$, while using only $\\lceil \\log_2 N \\rceil + b$ bits per message. Here, $N = \\Theta(d)$ denotes the frame size in the Kashin transform and $b$ is the codebook bit-width; and (2) a metric-aware truncated-Laplace variant that removes the exponential dependence on bit-width at the cost of a non-vanishing bias. We also derive a convex uniform-surrogate codebook objective whose worst-case codebook-dependent upper bound improves from $O(4^b)$ to $O(2^b)$. Experiments on synthetic regression, Fashion-MNIST, and CIFAR-10 compare the per-message privacy-utility and uplink-communication trade-offs of SSTQ with those of established baselines, demonstrating favorable utility and communication efficiency.",
+    "first_checked_at": "2026-10-05T09:05:33+00:00",
+    "last_checked_at": "2026-10-05T09:05:33+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+    ],
+    "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant"
+  },
+  "processed_at": "2026-10-05T09:05:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-180fe514f4f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
