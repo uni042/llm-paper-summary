@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-01-part-02-30945e4dafa0",
+  "reference_main_sha": "205a8db249ac7bd68c69d64fb27f9d2dff87cfb6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2026.3696694",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3696694"
+      ],
+      "title": "Feature Map Compression for Split Learning in Mobile Wireless Environment: Theory and Practice",
+      "reason": "Split learning feature-map compression is a collaborative model-training/communication method, not inference-time LLM efficiency.",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3696694",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMC.2026.3697502",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3697502"
+      ],
+      "title": "CALSI: Context-Aware Layer Skipping Inference for On-Device LLM Serving",
+      "reason": "Abstract makes a strong in-scope claim, but required primary body evidence could not be obtained; keep borderline instead of treating abstract claims as confirmed.",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3697502",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2026.3701045",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3701045"
+      ],
+      "title": "Communication-Efficient Federated Learning Based on a Two-Stage Adaptive Basis Matrix for Gradient Compression",
+      "reason": "Federated gradient compression reduces training communication; training-only efficiency is outside scope.",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3701045",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3719351",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2026.3719351"
+      ],
+      "title": "SynergyScale: Optimizing Offloading and Task Partitioning for Efficient Model Training",
+      "reason": "SynergyScale optimizes DNN training offloading and throughput; training-only scope.",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3719351",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TSMC.2026.3706520",
+      "identity_tokens": [
+        "DOI:10.1109/TSMC.2026.3706520"
+      ],
+      "title": "DecoVAD: Divide-and-Conquer Multimodal Learning for Video Anomaly Detection",
+      "reason": "Video anomaly detection system combines vision screening and semantic VAD components; it is application-specific vision efficiency, not LLM inference/serving.",
+      "source_url": "https://doi.org/10.1109/TSMC.2026.3706520",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    }
+  ]
+}
