@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1759a9f0f5372200-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tmc.2026.3676689",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tmc.2026.3676689",
+    "identity_tokens": [
+      "DOI:10.1109/tmc.2026.3676689"
+    ],
+    "reason": "候補は明確に近いが、一次本文に到達できず、要旨からだけでは方式・評価・限界を十分に監査できないためborderline。",
+    "first_checked_at": "2026-10-05T07:43:40+00:00",
+    "last_checked_at": "2026-10-05T07:43:40+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "E<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"feng-ieq1-3676689.gif\"/></alternatives></inline-formula>LLM: Structure-Guided Efficient Inference for LLMs in Distributed Edge"
+  },
+  "processed_at": "2026-10-05T07:43:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1759a9f0f537",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
