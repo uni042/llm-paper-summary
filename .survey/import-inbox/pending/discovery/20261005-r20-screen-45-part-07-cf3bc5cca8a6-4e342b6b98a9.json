@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-45-part-07-cf3bc5cca8a6",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17535",
+      "identity_tokens": [
+        "arXiv:2609.17535"
+      ],
+      "title": "DANTINOX: A Unified Framework for Multi-Paradigm Language Modeling",
+      "reason": "profiling frameworkでlatency/throughput/energyを比較するが、8M/6.6M級の小型backbone、fp32、実装サイズ差に基づく限定条件。一般的LLM-serving最適化や特定効率手法を主張するよりcomparative framework寄り。",
+      "source_url": "https://arxiv.org/abs/2609.17535",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09080",
+      "identity_tokens": [
+        "arXiv:2607.09080"
+      ],
+      "title": "GeoTrace: Geometry-Aware Trajectory Token Compression for Video Large Language Models",
+      "reason": "一次本文を取得できず、abstract-onlyでは評価・限界を確定できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2607.09080",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09328",
+      "identity_tokens": [
+        "arXiv:2607.09328"
+      ],
+      "title": "WildTrace: Benchmarking Natural Evidence Trails in Long-Context Reasoning",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.09328",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09415",
+      "identity_tokens": [
+        "arXiv:2607.09415"
+      ],
+      "title": "Self-Guided Test-Time Training for Long-Context LLMs",
+      "reason": "質問関連spanを選びTTTの訓練対象を絞る。LongBench-v2/Proで品質向上する一方、本文では選択/学習追加コストに対する実runtime/FLOPs削減を定量化できず、selector自身が全contextを読む。効率効果は未確立。",
+      "source_url": "https://arxiv.org/abs/2607.09415",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09967",
+      "identity_tokens": [
+        "arXiv:2607.09967"
+      ],
+      "title": "Learning in Curved Weight Space:Exponential-Linear Weight Reparameterization for Improved Optimization",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.09967",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
