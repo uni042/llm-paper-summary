@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:23:24+00:00",
-  "record_count": 2528,
+  "updated_at": "2026-10-05T04:27:52+00:00",
+  "record_count": 2542,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -36643,6 +36643,206 @@
         "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
       ],
       "title": "Ready2Blend: From Natural-Language Instructions to Composable Alignment Prompts"
+    },
+    "arXiv:2609.39551": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39551",
+      "identity_tokens": [
+        "arXiv:2609.39551"
+      ],
+      "reason": "RankEvolve is an auto-research harness for ranking-model evolution; no LLM inference-efficiency method is stated.",
+      "first_checked_at": "2026-10-05T04:27:50+00:00",
+      "last_checked_at": "2026-10-05T04:27:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "RankEvolve: A Reliable Multi-Agent Auto-Research Harness for Evolving Ranking Models"
+    },
+    "arXiv:2609.39566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39566",
+      "identity_tokens": [
+        "arXiv:2609.39566"
+      ],
+      "reason": "Agentic learning targets longitudinal medical reasoning evidence gathering; no inference cost or serving optimization is stated.",
+      "first_checked_at": "2026-10-05T04:27:50+00:00",
+      "last_checked_at": "2026-10-05T04:27:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "From Given to Gathered Evidence: Agentic Learning for Longitudinal Medical Reasoning"
+    },
+    "arXiv:2609.39604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39604",
+      "identity_tokens": [
+        "arXiv:2609.39604"
+      ],
+      "reason": "Cellular-automata world-model diagnosis concerns learned dynamics, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:27:50+00:00",
+      "last_checked_at": "2026-10-05T04:27:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Why Do Conventional World Models Fail to Learn Cellular Automata?"
+    },
+    "arXiv:2609.39645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39645",
+      "identity_tokens": [
+        "arXiv:2609.39645"
+      ],
+      "reason": "SEPAL improves answer quality/reliability in LLM collaboration, but the abstract gives no concrete compute/latency/memory efficiency result.",
+      "first_checked_at": "2026-10-05T04:27:50+00:00",
+      "last_checked_at": "2026-10-05T04:27:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration"
+    },
+    "arXiv:2609.39662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39662",
+      "identity_tokens": [
+        "arXiv:2609.39662"
+      ],
+      "reason": "Typographic attacks evaluate VLM image-forgery detector robustness; no inference optimization is proposed.",
+      "first_checked_at": "2026-10-05T04:27:50+00:00",
+      "last_checked_at": "2026-10-05T04:27:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Typographic Attack Against VLM-based AI-generated Image Detection"
+    },
+    "arXiv:2609.39681": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39681",
+      "identity_tokens": [
+        "arXiv:2609.39681"
+      ],
+      "reason": "MC-PanDA++ concerns panoptic segmentation/domain adaptation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MC-PanDA++: Simpler, Stronger, and More Robust Domain-Adaptive Panoptic Segmentation"
+    },
+    "arXiv:2609.39763": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39763",
+      "identity_tokens": [
+        "arXiv:2609.39763"
+      ],
+      "reason": "DiffWAM accelerates a robot-navigation world-action model, outside language-model inference/serving.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md"
+      ],
+      "title": "DiffWAM: A Fast and Efficient Navigation World Action Model"
+    },
+    "arXiv:2609.39813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39813",
+      "identity_tokens": [
+        "arXiv:2609.39813"
+      ],
+      "reason": "Backward-State Policy modifies low-precision policy training; its stated scope is training, without an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Backward-State Policy Is Part of the Learning Algorithm"
+    },
+    "arXiv:2609.39445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39445",
+      "identity_tokens": [
+        "arXiv:2609.39445"
+      ],
+      "reason": "Raw-routed adapters address time-series foundation-model routing/training, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Raw-Routed Mixture of Adapters: A Causal Intervention for Routing Collapse in Time Series Foundation Models"
+    },
+    "arXiv:2609.39478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39478",
+      "identity_tokens": [
+        "arXiv:2609.39478"
+      ],
+      "reason": "Small-model self-confidence is an evaluation/calibration study, not an inference optimization.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Also Small Models Can Reasonably Self-Evaluate Their Confidence"
+    },
+    "arXiv:2609.39484": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39484",
+      "identity_tokens": [
+        "arXiv:2609.39484"
+      ],
+      "reason": "CAMOS is a multimodal clinical time-series model, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "CAMOS: Coupled Oscillatory State-Space Model for Multimodal Clinical Time-Series"
+    },
+    "arXiv:2609.39827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39827",
+      "identity_tokens": [
+        "arXiv:2609.39827"
+      ],
+      "reason": "Synthetic pre-pretraining studies training token efficiency/grammatical priors, not runtime inference efficiency.",
+      "first_checked_at": "2026-10-05T04:27:52+00:00",
+      "last_checked_at": "2026-10-05T04:27:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Synthetic Pre-pretraining Survives Scale, but Not as a Grammatical Prior"
+    },
+    "arXiv:2609.39846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39846",
+      "identity_tokens": [
+        "arXiv:2609.39846"
+      ],
+      "reason": "RoleCapBench and Injection study role-capability alignment at inference prompting, not reducing inference cost.",
+      "first_checked_at": "2026-10-05T04:27:52+00:00",
+      "last_checked_at": "2026-10-05T04:27:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "When a Kindergartener Solves Calculus: Measuring Capability Leakage in Role-Prompted Reasoning Models"
+    },
+    "arXiv:2609.39870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39870",
+      "identity_tokens": [
+        "arXiv:2609.39870"
+      ],
+      "reason": "Magic-W0 is a robot world-action foundation model for physical intelligence, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:27:52+00:00",
+      "last_checked_at": "2026-10-05T04:27:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Magic-W0: A Structured World-Action Foundation Model for Physical Intelligence"
     }
   }
 }

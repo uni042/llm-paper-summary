@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:23:24+00:00",
-  "record_count": 866,
+  "updated_at": "2026-10-05T04:27:51+00:00",
+  "record_count": 870,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -12878,6 +12878,62 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators"
+    },
+    "arXiv:2609.39777": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39777",
+      "identity_tokens": [
+        "arXiv:2609.39777"
+      ],
+      "reason": "The proposed efficiency evidence is confined to this graph-learning multi-agent benchmark and does not establish a generally reusable LLM serving improvement; scope fit remains weak.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "title": "GraphMAS: A Systematic Benchmark of Multi-Agent Coordination for Graph Learning"
+    },
+    "arXiv:2609.39788": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39788",
+      "identity_tokens": [
+        "arXiv:2609.39788"
+      ],
+      "reason": "The primary contribution is a security/safety analysis and the efficiency values are a communication-cost trade-off, not a proposed general inference optimization; scope fit is adjacent.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Safety of Latent Communication in Multi-Agent Systems"
+    },
+    "arXiv:2609.39514": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39514",
+      "identity_tokens": [
+        "arXiv:2609.39514"
+      ],
+      "reason": "The primary task and model are embodied VLA control, and energy is estimated under the stated calculation rather than measured as LLM serving energy; scope fit is weak.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Spike-driven Vision-Language-Action Model"
+    },
+    "arXiv:2609.39526": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39526",
+      "identity_tokens": [
+        "arXiv:2609.39526"
+      ],
+      "reason": "This is an inference-time efficiency result for embodied VLA robot action generation, not language-model inference or serving; keep borderline due adjacent multimodal model scope.",
+      "first_checked_at": "2026-10-05T04:27:51+00:00",
+      "last_checked_at": "2026-10-05T04:27:51+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Discrete Forcing: Infusing Discrete Guidance into Continuous Denoising for Few-Step Action Experts"
     }
   }
 }
