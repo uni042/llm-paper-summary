@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-92-part-04-4d115433a4f1",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:d73247905abdea4edc7ff23f8152e6c1bcee8ce1",
+      "identity_tokens": [
+        "SemanticScholar:d73247905abdea4edc7ff23f8152e6c1bcee8ce1"
+      ],
+      "title": "SCoMoE: Efficient Mixtures of Experts with Structured Communication",
+      "reason": "一次資料のabstractはSCoMoEの対象をMoE学習時のall-to-all通信ボトルネックと明記しており、推論時の効率化ではない。",
+      "source_url": "https://www.semanticscholar.org/paper/d73247905abdea4edc7ff23f8152e6c1bcee8ce1",
+      "first_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "last_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09488",
+      "identity_tokens": [
+        "arXiv:2603.09488"
+      ],
+      "title": "Streaming Autoregressive Video Generation via Diagonal Distillation",
+      "reason": "一次要旨は動画生成向けautoregressive diffusion modelの蒸留であり、LLMのテキスト推論とは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/2603.09488",
+      "first_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "last_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09341",
+      "identity_tokens": [
+        "arXiv:2602.09341"
+      ],
+      "title": "Auditing Multi-Agent LLM Reasoning Trees Outperforms Majority Vote and LLM-as-Judge",
+      "reason": "一次要旨のAgentAuditorは複数LLMの推論木を監査・集約して回答品質を改善する研究で、推論コスト/serving効率化を主張していない。",
+      "source_url": "https://arxiv.org/abs/2602.09341",
+      "first_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "last_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01011",
+      "identity_tokens": [
+        "arXiv:2602.01011"
+      ],
+      "title": "Multi-Agent Teams Hold Experts Back",
+      "reason": "一次要旨は自己組織化LLMチームの協調と性能を調べる研究で、推論実行の効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2602.01011",
+      "first_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "last_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01077",
+      "identity_tokens": [
+        "arXiv:2602.01077"
+      ],
+      "title": "PISA: Piecewise Sparse Attention Is Wiser for Efficient Diffusion Transformers",
+      "reason": "一次要旨のPISAは画像・動画生成用Diffusion Transformerのattention高速化であり、LLM inferenceを対象にしない。",
+      "source_url": "https://arxiv.org/abs/2602.01077",
+      "first_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "last_checked_at": "2026-10-05T12:22:30.150767+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    }
+  ]
+}
