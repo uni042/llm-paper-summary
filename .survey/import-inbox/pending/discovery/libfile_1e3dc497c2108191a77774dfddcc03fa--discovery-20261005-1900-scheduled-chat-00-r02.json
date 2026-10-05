@@ -1,0 +1,160 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1900-scheduled-chat-00/r02",
+  "reference_main_sha": "547e456a69ab60e0ac3d301072e8dad7f246af62",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2602.12670",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.12670"
+      ],
+      "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+      "reason": "agent Skillsという手続き知識packageが多様なtaskの成功率をどれだけ改善するかを測るbenchmark研究。複数agent harnessと多数trajectoryを評価するが、serving runtime・scheduler・KV cache・memory・latency最適化を提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2602.12670",
+      "body_check": "abstract_screen_only: 一次論文情報でSkillsの有無によるagent task pass rateを測るbenchmark設計が主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 85
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.17887",
+      "identity_tokens": [
+        "arXiv:2403.17887"
+      ],
+      "title": "The Unreasonable Ineffectiveness of the Deeper Layers",
+      "reason": "open-weight LLMでlayer similarityに基づき連続blockを削除し、軽量なQLoRA healingを行うlayer pruningを評価する。最大で層の約半分を削除しても複数QA benchmarkで性能劣化が小さく、著者は推論memoryとlatency改善を実配備上の効果として示すためLLM推論圧縮の対象内。",
+      "source_url": "https://arxiv.org/abs/2403.17887",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でlayer-similarity based block pruning、QLoRA healing、最大約半数layer削除時のbenchmark評価、inference memory/latency改善という実用上の含意を確認。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.03160",
+      "identity_tokens": [
+        "arXiv:2504.03160"
+      ],
+      "title": "DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments",
+      "reason": "open webを探索するdeep-research agentをreinforcement learningで学習し、knowledge-intensive QAのF1/モデル評価を改善する研究。主貢献はagent trainingとtask qualityで、agent serving runtime・memory・latency効率化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2504.03160",
+      "body_check": "abstract_screen_only: 一次論文情報でreal-world web environment上のRL trainingとmulti-hop QA性能が主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 89
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02977",
+      "identity_tokens": [
+        "arXiv:2409.02977"
+      ],
+      "title": "Large Language Model-Based Agents for Software Engineering: A Survey",
+      "reason": "ソフトウェア工学におけるLLM agent研究をplanning・memory・perception・action等の観点で体系化するsurvey。既存agentの能力・応用を整理するもので、推論runtime・serving効率化の新規system方式を提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2409.02977",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM-based agents for software engineeringのsystematic surveyとopen challengesが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.16941",
+      "identity_tokens": [
+        "arXiv:2509.16941"
+      ],
+      "title": "SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?",
+      "reason": "長期間・複雑なsoftware engineering issueを解くagent能力を評価するbenchmarkで、public/held-out/commercial repository群のresolve rateを測定する。agent servingのlatency・throughput・memory最適化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2509.16941",
+      "body_check": "abstract_screen_only: 一次論文情報でlong-horizon software engineering benchmark、agent/model resolve rate、human augmentation ablationが主題と確認し、推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.18547",
+      "identity_tokens": [
+        "arXiv:2412.18547"
+      ],
+      "title": "Token-Budget-Aware LLM Reasoning",
+      "reason": "CoTが不要に長くtoken costを増やす問題に対し、問題ごとのreasoning complexityからtoken budgetを動的推定しpromptで推論長を制御する。少量の性能低下でreasoning token costを削減するtest-time compute制御を直接扱うため対象内。",
+      "source_url": "https://arxiv.org/abs/2412.18547",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でtoken elasticity、problem-specific token budget estimation、budget-guided reasoning、CoT token costとaccuracy trade-off評価を確認。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.06666",
+      "identity_tokens": [
+        "arXiv:2409.06666"
+      ],
+      "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
+      "reason": "Llama-3.1-8Bを核にspeech encoder/adaptor/LLM/streaming speech decoderを統合し、textとspeechを同時生成する。非自己回帰streaming decoderとchunked playbackでresponse latencyを最短226 msまで抑え、real-time speech LLM推論latencyを直接扱うため対象内。",
+      "source_url": "https://arxiv.org/abs/2409.06666",
+      "body_check": "full_text_relevance_review: 一次論文情報でspeech encoder/adaptor、Llama-3.1-8B、CTC-based non-autoregressive streaming speech decoder、simultaneous text/speech generation、226 ms response latencyを確認。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.25140",
+      "identity_tokens": [
+        "arXiv:2509.25140"
+      ],
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "reason": "agentの成功・失敗trajectoryから再利用可能なreasoning memoryを抽出し、test timeに検索して次のinteractionへ投入する。WebArenaではNo Memoryより成功率を改善しつつ平均interaction stepも9.7から8.3へ減らすなど、agentic inferenceで外部memory再利用により実行step効率を改善するため対象内。",
+      "source_url": "https://arxiv.org/abs/2509.25140",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でexperience-to-memory extraction/retrieval loop、memory-aware test-time scaling、web/software-engineering benchmark、ReasoningBankによるeffectiveness/efficiency改善を確認。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12451",
+      "identity_tokens": [
+        "arXiv:2402.12451"
+      ],
+      "title": "The Revolution of Multimodal Large Language Models: A Survey",
+      "reason": "視覚系MLLMのarchitecture、multimodal alignment、training technique、dataset、benchmark、計算要件を包括的に整理するsurvey。推論効率に触れるが、runtime・memory・serving最適化の新規方式を提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2402.12451",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvisual MLLMのarchitecture/training/application/benchmarkを整理するsurveyが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.15956",
+      "identity_tokens": [
+        "arXiv:2404.15956"
+      ],
+      "title": "A Survey on Visual Mamba",
+      "reason": "Mamba/SSMをcomputer visionへ適用する研究をarchitecture・convolution/recurrence/attention拡張・vision application別に整理するsurvey。hardware-aware designを解説するが、LLM推論systemの新規最適化方式を提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2404.15956",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でVisual Mamba/SSMのcomputer-vision surveyが主題と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T19:32:00+09:00",
+      "last_checked_at": "2026-10-05T19:32:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 120
+    }
+  ]
+}
