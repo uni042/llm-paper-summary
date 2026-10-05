@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-022f8e1d698d2300-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1609.09548",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1609.09548",
+    "identity_tokens": [
+      "arXiv:1609.09548"
+    ],
+    "reason": "一次要旨はsparsest cut/spreading metricsによる階層クラスタリング近似。LLM推論対象外。",
+    "first_checked_at": "2026-10-05T01:05:55+00:00",
+    "last_checked_at": "2026-10-05T01:05:55+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.13692-prefix-sharing-sorting-problem.md"
+    ],
+    "title": "Approximate Hierarchical Clustering via Sparsest Cut and Spreading Metrics"
+  },
+  "processed_at": "2026-10-05T01:05:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-022f8e1d698d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

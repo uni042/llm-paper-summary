@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:03:26+00:00",
-  "record_count": 498,
+  "updated_at": "2026-10-05T01:05:55+00:00",
+  "record_count": 507,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -7155,6 +7155,165 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.06709-mell-multi-gpu-kv-cache-management.md"
       ],
       "title": "PowerNap"
+    },
+    "arXiv:2412.19823": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.19823",
+      "identity_tokens": [
+        "arXiv:2412.19823"
+      ],
+      "reason": "主題はネットワーク管理へのLLM応用。推論効率は課題・将来方向の一部で、推論/serving技術の定量比較研究ではない。",
+      "first_checked_at": "2026-10-05T01:05:54+00:00",
+      "last_checked_at": "2026-10-05T01:05:54+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md"
+      ],
+      "title": "A Survey on Large Language Models for Communication, Network, and Service Management: Application Insights, Challenges, and Future Directions"
+    },
+    "arXiv:2607.15178": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.15178",
+      "identity_tokens": [
+        "arXiv:2607.15178"
+      ],
+      "reason": "本文はreasoning性能を目的とする変更で、標準Transformerより推論を安く/速くする手法ではない。cost測定はあるがscope貢献は境界的。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "T^2MLR: Transformer with Temporal Middle-Layer Recurrence"
+    },
+    "DOI:10.1007/s11227-026-08909-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08909-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08909-4"
+      ],
+      "reason": "本文は購読制限で評価条件・限界を確認できず、abstractだけでは効率効果の一般性を判断できない。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Resource-efficient mathematical problem solving with lower-capacity language models via knowledge-enhanced iterative reasoning"
+    },
+    "DOI:10.1145/3830418.3843857": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843857",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843857"
+      ],
+      "reason": "ACM一次掲載ページからabstract本文を取得できず、titleから推定しない。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction"
+    },
+    "DOI:10.1145/3830418.3843872": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843872",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843872"
+      ],
+      "reason": "ACM一次掲載ページからabstract本文を取得できず、titleから推定しない。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "TensorDex: A Compact, Tensor-Centric Storage System for Modern AI Models"
+    },
+    "DOI:10.1145/3830418.3843884": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843884",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843884"
+      ],
+      "reason": "ACM一次掲載ページからabstract本文を取得できず、一次screen不能。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Wavel: A Fast and Efficient Compilation System for Wafer-Scale Accelerators"
+    },
+    "DOI:10.1145/3830418.3843913": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3830418.3843913",
+      "identity_tokens": [
+        "DOI:10.1145/3830418.3843913"
+      ],
+      "reason": "ACM一次掲載ページからabstract本文を取得できず、一次screen不能。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14489-towards-high-goodput-llm-serving-with-prefill-decode-multiplexing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Beyond Utilization: Energy-Conscious GPU Sharing for Inference Serving"
+    },
+    "DOI:10.1109/sc.2014.21": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sc.2014.21",
+      "identity_tokens": [
+        "DOI:10.1109/sc.2014.21"
+      ],
+      "reason": "DOI resolver/IEEE掲載先から一次abstract本文を取得できず、用途をtitleから推定しない。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+      ],
+      "title": "Scalable Kernel Fusion for Memory-Bound GPU Applications"
+    },
+    "arXiv:2304.04947": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2304.04947",
+      "identity_tokens": [
+        "arXiv:2304.04947"
+      ],
+      "reason": "本文はencoder-heavy用途を対象とし、decoder-only autoregressive token generationへ現routingを直接適用できないと明記。LLM生成推論への適合が弱いためborderline。",
+      "first_checked_at": "2026-10-05T01:05:55+00:00",
+      "last_checked_at": "2026-10-05T01:05:55+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "Conditional Adapters: Parameter-efficient Transfer Learning with Fast Inference"
     }
   }
 }
