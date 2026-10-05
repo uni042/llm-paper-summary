@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f7e1b838b470768-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1903.05662",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1903.05662",
+    "identity_tokens": [
+      "arXiv:1903.05662"
+    ],
+    "reason": "activation-quantized neural networkの学習で使うstraight-through estimatorのcoarse gradientがなぜ最適化に有効かを理論解析するtraining/optimization研究。CIFAR-10でtraining stabilityを検証するが、推論runtime・LLM量子化deploymentが主題ではない。",
+    "first_checked_at": "2026-10-05T16:12:48+00:00",
+    "last_checked_at": "2026-10-05T16:12:48+00:00",
+    "linked_from": [],
+    "title": "Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets"
+  },
+  "processed_at": "2026-10-05T16:12:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f7e1b838b47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

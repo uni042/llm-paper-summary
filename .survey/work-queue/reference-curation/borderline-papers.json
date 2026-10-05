@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:07:16+00:00",
-  "record_count": 2050,
+  "updated_at": "2026-10-05T16:12:52+00:00",
+  "record_count": 2053,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -2567,12 +2567,13 @@
         "DOI:10.48550/arxiv.2308.07633",
         "arXiv:2308.07633"
       ],
-      "reason": "量子化・枝刈り・蒸留等を体系化する圧縮サーベイで対象領域には近いが、新規一次システム研究ではない。",
+      "reason": "LLM圧縮を量子化・枝刈り・知識蒸留などに分類し、評価指標も整理するsurvey。推論memory/compute削減へ直接関連するが、新規圧縮方式やruntimeの実装評価ではないためborderline。",
       "first_checked_at": "2026-09-27T10:28:09+09:00",
-      "last_checked_at": "2026-09-30T09:47:28+00:00",
+      "last_checked_at": "2026-10-05T16:12:52+00:00",
       "linked_from": [
         "worker-worklist-30 discovery_review rank 158"
       ],
+      "borderline_recheck_count": 0,
       "title": "A Survey on Model Compression for Large Language Models"
     },
     "arXiv:2310.05175": {
@@ -31669,33 +31670,15 @@
       "identity_tokens": [
         "arXiv:2110.02037"
       ],
-      "reason": "自己回帰拡散モデル（Autoregressive Diffusion Models; ARDM）は因果マスク不要で、テスト時に生成budgetへ適応可能な並列生成を行い、discrete diffusionより少ないstepで同等性能へ到達する。生成推論効率へ直接関係するが、最終評価は一般的な高次元離散データとlossless compressionで現代LLM/Transformer推論system専用ではないためborderline。",
+      "reason": "order-agnostic autoregressive/discrete diffusionを統合し、test timeにgeneration budgetへ合わせて並列生成step数を調整できる。text8で1000-step discrete diffusion相当を250 stepで達成するが、汎用離散生成modelが主対象で現代LLM serving/runtimeの直接評価ではないためborderline。",
       "first_checked_at": "2026-10-05T16:03:30+00:00",
-      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:12:50+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
         "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
       ],
       "borderline_recheck_count": 0,
       "title": "Autoregressive Diffusion Models"
-    },
-    "DOI:10.1145/3445814.3446714": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3445814.3446714",
-      "identity_tokens": [
-        "DOI:10.1145/3445814.3446714",
-        "arXiv:2101.09355"
-      ],
-      "reason": "サーバーレス関数snapshotの作成・復元・storage I/Oを実測し、snapshot機構を最適化するsystems研究。LLM serverless materializationやagent sandbox checkpointへ直接応用可能だが、原論文は汎用serverless functionを最終対象としLLM推論評価がないためborderline。",
-      "first_checked_at": "2026-10-05T16:03:30+00:00",
-      "last_checked_at": "2026-10-05T16:03:30+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
-      ],
-      "borderline_recheck_count": 0,
-      "title": "Benchmarking, Analysis, and Optimization of Serverless Function Snapshots"
     },
     "arXiv:1903.04611": {
       "classification": "borderline",
@@ -31722,6 +31705,61 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CACTI 7: New Tools for Interconnect Exploration in Innovative Off-Chip Memories"
+    },
+    "DOI:10.1145/2939672.2945397": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "reason": "計算graph型deep-learning toolkitで、automatic differentiation、recurrent-loop inference/execution、memory sharing、multi-server parallelization等のruntime機構を扱う。推論runtimeとして関連するが、一般DNN toolkitでLLM/Transformer生成推論への直接評価がないためborderline。",
+      "first_checked_at": "2026-10-05T16:12:44+00:00",
+      "last_checked_at": "2026-10-05T16:12:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
+    },
+    "arXiv:2503.16419": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.16419",
+      "identity_tokens": [
+        "arXiv:2503.16419"
+      ],
+      "reason": "LLMの冗長な推論tokenによる計算overheadを対象に、model/output/prompt-basedなefficient reasoning手法を体系化するsurvey。推論cost/latencyに直接関連するが新規runtime/system方式を提案・評価する原著ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:12:47+00:00",
+      "last_checked_at": "2026-10-05T16:12:47+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models"
+    },
+    "arXiv:1902.06822": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.06822",
+      "identity_tokens": [
+        "arXiv:1902.06822"
+      ],
+      "reason": "weights/activationsのMMSE量子化、hardware-aware partitioning、複数low-precision tensorによりINT4推論を可能にするdeployment向け量子化研究。推論効率を明示的に狙うが、評価対象が汎用DNNでLLM/Transformer推論への直接適用がないためborderline。",
+      "first_checked_at": "2026-10-05T16:12:48+00:00",
+      "last_checked_at": "2026-10-05T16:12:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Low-bit Quantization of Neural Networks for Efficient Inference"
+    },
+    "arXiv:2505.06708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.06708",
+      "identity_tokens": [
+        "arXiv:2505.06708"
+      ],
+      "reason": "SDPA出力へhead-specific sigmoid gateを追加し、query-dependent sparse gatingでattention sinkを抑えlong-context extrapolationを改善するLLM attention研究。15B MoE/1.7B denseで大規模評価するが、主要評価は学習安定性・能力・長文脈性能で、推論latency/memory/serving効率を直接最適化・benchmarkするsystem研究ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:12:52+00:00",
+      "last_checked_at": "2026-10-05T16:12:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a6f757add2f618a9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3445814.3446714",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3445814.3446714",
+    "identity_tokens": [
+      "DOI:10.1145/3445814.3446714",
+      "arXiv:2101.09355"
+    ],
+    "reason": "serverless function snapshotのcold-startをpage working-set prefetchで3.7x削減するREAPを提案するsystem研究だが、LLM/Transformer推論を最終適用先とせず一般serverless infrastructureが対象。",
+    "first_checked_at": "2026-10-05T16:12:51+00:00",
+    "last_checked_at": "2026-10-05T16:12:51+00:00",
+    "linked_from": [],
+    "title": "Benchmarking, Analysis, and Optimization of Serverless Function Snapshots"
+  },
+  "processed_at": "2026-10-05T16:12:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6f757add2f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

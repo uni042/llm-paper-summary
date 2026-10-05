@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-148b0fe0d5b3c43a-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44336-024-00009-2",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44336-024-00009-2",
+    "identity_tokens": [
+      "DOI:10.1007/s44336-024-00009-2"
+    ],
+    "reason": "LLM multi-agent systemsをprofile、perception、self-action、mutual interaction、evolutionのworkflowで整理し、problem-solving/world simulationの応用と課題を総説するsurvey。system architectureや効率課題への言及はあるが、独自のLLM推論runtime/serving最適化手法・定量評価を提案しない。",
+    "first_checked_at": "2026-10-05T16:00:02+00:00",
+    "last_checked_at": "2026-10-05T16:12:47+00:00",
+    "linked_from": [],
+    "title": "A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges"
+  },
+  "processed_at": "2026-10-05T16:12:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-148b0fe0d5b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f7e1b838b470768-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2212.08410",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2212.08410",
+    "identity_tokens": [
+      "arXiv:2212.08410"
+    ],
+    "reason": "大規模teacherから小型language modelへreasoning能力を移すdistillation/training研究で、主評価はreasoning task accuracy。小型化への動機はあるが推論runtime・serving方式の最適化を主貢献としない。",
+    "first_checked_at": "2026-10-05T16:12:49+00:00",
+    "last_checked_at": "2026-10-05T16:12:49+00:00",
+    "linked_from": [],
+    "title": "Teaching Small Language Models to Reason"
+  },
+  "processed_at": "2026-10-05T16:12:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f7e1b838b47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

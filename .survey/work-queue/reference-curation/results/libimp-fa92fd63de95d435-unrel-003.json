@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa92fd63de95d435-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.15272",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.15272",
+    "identity_tokens": [
+      "arXiv:2308.15272"
+    ],
+    "reason": "LLMを用いてAndroid UI上のtaskを自動化するmobile agent研究で、アプリ操作成功率・agent能力が最終適用先。LLM推論runtime・memory・serving最適化を提案しない。",
+    "first_checked_at": "2026-10-05T16:12:52+00:00",
+    "last_checked_at": "2026-10-05T16:12:52+00:00",
+    "linked_from": [],
+    "title": "AutoDroid: LLM-powered Task Automation in Android"
+  },
+  "processed_at": "2026-10-05T16:12:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa92fd63de95",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

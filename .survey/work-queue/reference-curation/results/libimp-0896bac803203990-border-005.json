@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0896bac803203990-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/2939672.2945397",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/2939672.2945397",
+    "identity_tokens": [
+      "DOI:10.1145/2939672.2945397"
+    ],
+    "reason": "計算graph型deep-learning toolkitで、automatic differentiation、recurrent-loop inference/execution、memory sharing、multi-server parallelization等のruntime機構を扱う。推論runtimeとして関連するが、一般DNN toolkitでLLM/Transformer生成推論への直接評価がないためborderline。",
+    "first_checked_at": "2026-10-05T16:12:44+00:00",
+    "last_checked_at": "2026-10-05T16:12:44+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
+  },
+  "processed_at": "2026-10-05T16:12:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0896bac80320",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
