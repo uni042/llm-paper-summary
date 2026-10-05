@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79a3a4eb10d94fec-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.01618",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.01618",
+    "identity_tokens": [
+      "arXiv:2505.01618"
+    ],
+    "reason": "Compute-efficient parameterizations for LLM training are explicitly training-only. Primary abstract: We study compute efficiency of LLM training when using different parameterizations, i.e., rules for adjusting model and optimizer hyperparameters (HPs) as model size changes. Some parameterizations fail to transfer optimal base HPs (such as learning rate) across changes in model depth, requiring practitioners to either re-tune these HPs as they scale up (expensive), or accept sub-optimal training when re-tuning is prohibitive. Even when they achieve HP transfer, we develop th",
+    "first_checked_at": "2026-10-05T12:28:02+00:00",
+    "last_checked_at": "2026-10-05T12:28:02+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+    ],
+    "title": "Don't be lazy: CompleteP enables compute-efficient deep transformers"
+  },
+  "processed_at": "2026-10-05T12:28:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79a3a4eb10d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

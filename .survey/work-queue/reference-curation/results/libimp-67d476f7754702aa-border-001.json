@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d476f7754702aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.09955",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.09955",
+    "identity_tokens": [
+      "arXiv:2408.09955"
+    ],
+    "reason": "LLM-call batching and parallelism are present, but the evidence is application-level multi-agent scaling rather than isolated inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T12:28:00+00:00",
+    "last_checked_at": "2026-10-05T12:28:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+    ],
+    "title": "MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs"
+  },
+  "processed_at": "2026-10-05T12:28:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d476f77547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

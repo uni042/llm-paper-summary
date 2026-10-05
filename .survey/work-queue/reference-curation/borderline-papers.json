@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:24:54+00:00",
-  "record_count": 1630,
+  "updated_at": "2026-10-05T12:28:00+00:00",
+  "record_count": 1631,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25325,6 +25325,21 @@
         "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
       ],
       "title": "Edge-Cloud Collaborative Computing on Distributed Intelligence and Model Optimization: A Survey"
+    },
+    "arXiv:2408.09955": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.09955",
+      "identity_tokens": [
+        "arXiv:2408.09955"
+      ],
+      "reason": "LLM-call batching and parallelism are present, but the evidence is application-level multi-agent scaling rather than isolated inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T12:28:00+00:00",
+      "last_checked_at": "2026-10-05T12:28:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs"
     }
   }
 }

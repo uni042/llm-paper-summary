@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d476f7754702aa-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.14457",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.14457",
+    "identity_tokens": [
+      "arXiv:2409.14457"
+    ],
+    "reason": "Survey covers agent cooperation, security and privacy, not inference/serving performance optimization. Primary abstract: With the rapid advancement of large models (LMs), the development of general-purpose intelligent agents powered by LMs has become a reality. It is foreseeable that in the near future, LM-driven general AI agents will serve as essential tools in production tasks, capable of autonomous communication and collaboration without human intervention. This paper investigates scenarios involving the autonomous collaboration of future LM agents. We review the current state of LM agents,",
+    "first_checked_at": "2026-10-05T12:28:01+00:00",
+    "last_checked_at": "2026-10-05T12:28:01+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+      "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+    ],
+    "title": "Large Model-Based Agents: State-of-the-Art, Cooperation Paradigms, Security and Privacy, and Future Trends"
+  },
+  "processed_at": "2026-10-05T12:28:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d476f77547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

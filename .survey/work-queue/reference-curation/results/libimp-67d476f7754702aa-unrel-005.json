@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-67d476f7754702aa-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.06448",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.06448",
+    "identity_tokens": [
+      "arXiv:2404.06448"
+    ],
+    "reason": "Federated PEFT pipeline targets LLM training/communication cost; inference latency is unchanged per abstract. Primary abstract: Recently, there has been a surge in the development of advanced intelligent generative content (AIGC), especially large language models (LLMs). For many downstream tasks, it is necessary to fine-tune LLMs using private data. While federated learning offers a promising privacy-preserving solution to LLM fine-tuning, the substantial size of an LLM, combined with high computational and communication demands, makes it hard to apply to handle downstream tasks. More importantly, pr",
+    "first_checked_at": "2026-10-05T12:28:01+00:00",
+    "last_checked_at": "2026-10-05T12:28:01+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+      "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+    ],
+    "title": "Automated Federated Pipeline for Parameter-Efficient Fine-Tuning of Large Language Models"
+  },
+  "processed_at": "2026-10-05T12:28:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-67d476f77547",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

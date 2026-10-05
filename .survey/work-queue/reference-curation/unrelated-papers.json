@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:24:55+00:00",
-  "record_count": 4934,
+  "updated_at": "2026-10-05T12:28:03+00:00",
+  "record_count": 4953,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -71795,6 +71795,277 @@
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
       "title": "Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning"
+    },
+    "arXiv:2407.03203": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.03203",
+      "identity_tokens": [
+        "arXiv:2407.03203"
+      ],
+      "reason": "Training pipeline makes LLMs theorem-proving experts; no inference efficiency contribution. Primary abstract: Proving mathematical theorems using computer-verifiable formal languages like Lean significantly impacts mathematical reasoning. One approach to formal theorem proving involves generating complete proofs using Large Language Models (LLMs) based on Natural Language (NL) proofs. However, due to the scarcity of aligned NL and Formal Language (FL) theorem-proving data most modern LLMs exhibit suboptimal performance.This scarcity results in a paucity of methodologies for training",
+      "first_checked_at": "2026-10-05T12:28:00+00:00",
+      "last_checked_at": "2026-10-05T12:28:00+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md"
+      ],
+      "title": "TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts"
+    },
+    "arXiv:2309.10952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10952",
+      "identity_tokens": [
+        "arXiv:2309.10952"
+      ],
+      "reason": "LLM document extraction/localization capability work; abstract does not claim inference efficiency. Primary abstract: Large Language Models (LLM) have revolutionized Natural Language Processing (NLP), improving state-of-the-art and exhibiting emergent capabilities across various tasks. However, their application in extracting information from visually rich documents, which is at the core of many document processing workflows and involving the extraction of key entities from semi-structured documents, has not yet been successful. The main obstacles to adopting LLMs for this task include the a",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ],
+      "title": "LMDX: Language Model-based Document Information Extraction and Localization"
+    },
+    "arXiv:2409.14457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14457",
+      "identity_tokens": [
+        "arXiv:2409.14457"
+      ],
+      "reason": "Survey covers agent cooperation, security and privacy, not inference/serving performance optimization. Primary abstract: With the rapid advancement of large models (LMs), the development of general-purpose intelligent agents powered by LMs has become a reality. It is foreseeable that in the near future, LM-driven general AI agents will serve as essential tools in production tasks, capable of autonomous communication and collaboration without human intervention. This paper investigates scenarios involving the autonomous collaboration of future LM agents. We review the current state of LM agents,",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+      ],
+      "title": "Large Model-Based Agents: State-of-the-Art, Cooperation Paradigms, Security and Privacy, and Future Trends"
+    },
+    "arXiv:2404.06448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06448",
+      "identity_tokens": [
+        "arXiv:2404.06448"
+      ],
+      "reason": "Federated PEFT pipeline targets LLM training/communication cost; inference latency is unchanged per abstract. Primary abstract: Recently, there has been a surge in the development of advanced intelligent generative content (AIGC), especially large language models (LLMs). For many downstream tasks, it is necessary to fine-tune LLMs using private data. While federated learning offers a promising privacy-preserving solution to LLM fine-tuning, the substantial size of an LLM, combined with high computational and communication demands, makes it hard to apply to handle downstream tasks. More importantly, pr",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "title": "Automated Federated Pipeline for Parameter-Efficient Fine-Tuning of Large Language Models"
+    },
+    "arXiv:2410.18252": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.18252",
+      "identity_tokens": [
+        "arXiv:2410.18252"
+      ],
+      "reason": "Asynchronous RLHF accelerates training runs, not deployed model inference. Primary abstract: The dominant paradigm for RLHF is online and on-policy RL: synchronously generating from the large language model (LLM) policy, labelling with a reward model, and learning using feedback on the LLM's own outputs. While performant, this paradigm is computationally inefficient. Inspired by classical deep RL literature, we propose separating generation and learning in RLHF. This enables asynchronous generation of new samples while simultaneously training on old samples, leading",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "Asynchronous RLHF: Faster and More Efficient Off-Policy RL for Language Models"
+    },
+    "arXiv:2410.23771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23771",
+      "identity_tokens": [
+        "arXiv:2410.23771"
+      ],
+      "reason": "LongPPL evaluates long-context quality and LongCE fine-tunes models; not inference efficiency. Primary abstract: Handling long-context inputs is crucial for large language models (LLMs) in tasks such as extended conversations, document summarization, and many-shot in-context learning. While recent approaches have extended the context windows of LLMs and employed perplexity (PPL) as a standard evaluation metric, PPL has proven unreliable for assessing long-context capabilities. The underlying cause of this limitation has remained unclear. In this work, we provide a comprehensive explanat",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "What is Wrong with Perplexity for Long-context Language Modeling?"
+    },
+    "arXiv:2408.16737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.16737",
+      "identity_tokens": [
+        "arXiv:2408.16737"
+      ],
+      "reason": "Optimizes synthetic data generation and LLM fine-tuning under training budget; not inference serving. Primary abstract: Training on high-quality synthetic data from strong language models (LMs) is a common strategy to improve the reasoning performance of LMs. In this work, we revisit whether this strategy is compute-optimal under a fixed inference budget (e.g., FLOPs). To do so, we investigate the trade-offs between generating synthetic data using a stronger but more expensive (SE) model versus a weaker but cheaper (WC) model. We evaluate the generated data across three key metrics: coverage,",
+      "first_checked_at": "2026-10-05T12:28:01+00:00",
+      "last_checked_at": "2026-10-05T12:28:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling"
+    },
+    "arXiv:2502.11528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11528",
+      "identity_tokens": [
+        "arXiv:2502.11528"
+      ],
+      "reason": "Survey concerns model personalization by prompts, adapters and alignment, not inference efficiency. Primary abstract: Large Language Models (LLMs) excel in handling general knowledge tasks, yet they struggle with user-specific personalization, such as understanding individual emotions, writing styles, and preferences. Personalized Large Language Models (PLLMs) tackle these challenges by leveraging individual user data, such as user profiles, historical dialogues, content, and interactions, to deliver responses that are contextually relevant and tailored to each user's specific needs. This is",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "A Survey of Personalized Large Language Models: Progress and Future Directions"
+    },
+    "arXiv:2505.01618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01618",
+      "identity_tokens": [
+        "arXiv:2505.01618"
+      ],
+      "reason": "Compute-efficient parameterizations for LLM training are explicitly training-only. Primary abstract: We study compute efficiency of LLM training when using different parameterizations, i.e., rules for adjusting model and optimizer hyperparameters (HPs) as model size changes. Some parameterizations fail to transfer optimal base HPs (such as learning rate) across changes in model depth, requiring practitioners to either re-tune these HPs as they scale up (expensive), or accept sub-optimal training when re-tuning is prohibitive. Even when they achieve HP transfer, we develop th",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "Don't be lazy: CompleteP enables compute-efficient deep transformers"
+    },
+    "arXiv:2410.15999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15999",
+      "identity_tokens": [
+        "arXiv:2410.15999"
+      ],
+      "reason": "SpARE intervenes at inference to control factual-source selection/answer quality, not reduce compute, latency or memory. Primary abstract: Large language models (LLMs) can store a significant amount of factual knowledge in their parameters. However, their parametric knowledge may conflict with the information provided in the context -- this phenomenon, known as \\emph{context-memory knowledge conflicts}, can lead to undesirable model behaviour, such as reliance on outdated or incorrect information. Analysing the internal activations of LLMs, we find that they can internally register the signals of knowledge confl",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ],
+      "title": "Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering"
+    },
+    "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7",
+      "identity_tokens": [
+        "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7"
+      ],
+      "reason": "The primary USENIX paper presents FwdLLM as a BP-free federated fine-tuning system; perturbed forward inference replaces backpropagation within training.",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "FwdLLM: Efficient Federated Finetuning of Large Language Models with Perturbed Inferences"
+    },
+    "arXiv:2503.21411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21411",
+      "identity_tokens": [
+        "arXiv:2503.21411"
+      ],
+      "reason": "Survey concerns LLM application roles in transportation systems, not inference/serving efficiency. Primary abstract: Modern transportation systems face pressing challenges due to increasing demand, dynamic environments, and heterogeneous information integration. The rapid evolution of Large Language Models (LLMs) offers transformative potential to address these challenges. Extensive knowledge and high-level capabilities derived from pretraining evolve the default role of LLMs as text generators to become versatile, knowledge-driven task solvers for intelligent transportation systems. This s",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "Exploring the Roles of Large Language Models in Reshaping Transportation Systems: A Survey, Framework, and Roadmap"
+    },
+    "arXiv:2202.04557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.04557",
+      "identity_tokens": [
+        "arXiv:2202.04557"
+      ],
+      "reason": "Universal Hopfield networks/associative memory theory, not LLM inference. Primary abstract: A large number of neural network models of associative memory have been proposed in the literature. These include the classical Hopfield networks (HNs), sparse distributed memories (SDMs), and more recently the modern continuous Hopfield networks (MCHNs), which possess close links with self-attention in machine learning. In this paper, we propose a general framework for understanding the operation of such memory networks as a sequence of three operations: similarity, separati",
+      "first_checked_at": "2026-10-05T12:28:02+00:00",
+      "last_checked_at": "2026-10-05T12:28:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Universal Hopfield Networks: A General Framework for Single-Shot Associative Memory Models"
+    },
+    "DOI:10.14778/3547305.3547313": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3547305.3547313",
+      "identity_tokens": [
+        "DOI:10.14778/3547305.3547313"
+      ],
+      "reason": "Primary full text confirms the evaluated workload is DeepSpeech speech recognition and supplies no LLM-serving evidence.",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Optimizing Inference Serving on Serverless Platforms"
+    },
+    "arXiv:2408.04693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.04693",
+      "identity_tokens": [
+        "arXiv:2408.04693"
+      ],
+      "reason": "Profiles LLM fine-tuning and estimates training/cloud fine-tuning cost; training-only. Primary abstract: Due to the cost-prohibitive nature of training Large Language Models (LLMs), fine-tuning has emerged as an attractive alternative for specializing LLMs for specific tasks using limited compute resources in a cost-effective manner. In this paper, we characterize sparse Mixture of Experts (MoE) based LLM fine-tuning to understand their accuracy and runtime performance on a single GPU. Our evaluation provides unique insights into the training efficacy of sparse and dense version",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Understanding the Performance and Estimating the Cost of LLM Fine-Tuning"
+    },
+    "arXiv:2401.14295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.14295",
+      "identity_tokens": [
+        "arXiv:2401.14295"
+      ],
+      "reason": "Survey/taxonomy of structured prompting for reasoning quality; no inference cost, latency or memory result. Primary abstract: The field of natural language processing (NLP) has witnessed significant progress in recent years, with a notable focus on improving large language models’ (LLM) performance through innovative prompting techniques. Among these, prompt engineering coupled with structures has emerged as a promising paradigm, with designs such as Chain-of-Thought, Tree of Thoughts, or Graph of Thoughts, in which the overall LLM reasoning is guided by a structure such as a graph. As illustrated w",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Demystifying Chains, Trees, and Graphs of Thoughts"
+    },
+    "arXiv:2305.18415": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18415",
+      "identity_tokens": [
+        "arXiv:2305.18415"
+      ],
+      "reason": "Geometric transformer for 3D physical data and robotics, not LLM inference. Primary abstract: Problems involving geometric data arise in physics, chemistry, robotics, computer vision, and many other fields. Such data can take numerous forms, for instance points, direction vectors, translations, or rotations, but to date there is no single architecture that can be applied to such a wide variety of geometric types while respecting their symmetries. In this paper we introduce the Geometric Algebra Transformer (GATr), a general-purpose architecture for geometric data. GAT",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Geometric Algebra Transformer"
+    },
+    "arXiv:2505.16400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16400",
+      "identity_tokens": [
+        "arXiv:2505.16400"
+      ],
+      "reason": "RL recipe for math/code model training; no deployed inference optimization. Primary abstract: Despite recent progress in large-scale reinforcement learning (RL) for reasoning, the training recipe for building high-performing reasoning models remains elusive. Key implementation details of frontier models, such as DeepSeek-R1, including data curation strategies and RL training recipe, are often omitted. Moreover, recent research indicates distillation remains more effective than RL for smaller models. In this work, we demonstrate that large-scale RL can significantly en",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "AceReason-Nemotron: Advancing Math and Code Reasoning through Reinforcement Learning"
+    },
+    "arXiv:2402.05859": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05859",
+      "identity_tokens": [
+        "arXiv:2402.05859"
+      ],
+      "reason": "PHATGOOSE routes among adapter experts to improve zero-shot generalization; abstract reports no inference-efficiency objective or measurements. Primary abstract: Recently, there has been a widespread proliferation of\"expert\"language models that are specialized to a specific task or domain through parameter-efficient fine-tuning. How can we recycle large collections of expert language models to improve zero-shot generalization to unseen tasks? In this work, we propose Post-Hoc Adaptive Tokenwise Gating Over an Ocean of Specialized Experts (PHATGOOSE), which learns to route among specialized modules that were produced through parameter-",
+      "first_checked_at": "2026-10-05T12:28:03+00:00",
+      "last_checked_at": "2026-10-05T12:28:03+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Learning to Route Among Specialized Experts for Zero-Shot Generalization"
     }
   }
 }
