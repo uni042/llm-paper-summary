@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-50-part-05-60a50eeddc1f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.yjoc.2026.100132",
+      "identity_tokens": [
+        "DOI:10.1016/j.yjoc.2026.100132"
+      ],
+      "title": "The Authenticity Gap: Why Generative AI Cannot Replicate Human Creativity",
+      "reason": "The paper discusses limits of generative AI and human creativity, not an inference/serving efficiency method.",
+      "source_url": "https://doi.org/10.1016/j.yjoc.2026.100132",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-59736-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-59736-9"
+      ],
+      "title": "A transformer and large-kernel convolution-based detection model for Red Turpentine Beetle infestation in pine trees",
+      "reason": "The Transformer/convolution model detects pine beetle infestation in UAV imagery; it is a vision application with no LLM inference/serving contribution.",
+      "source_url": "https://doi.org/10.1038/s41598-026-59736-9",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1049/ein2.70031",
+      "identity_tokens": [
+        "DOI:10.1049/ein2.70031"
+      ],
+      "title": "Why Computing–Electricity Coordination Has Not Scaled in Practice",
+      "reason": "The paper analyzes computing-electricity coordination and policy/incentive barriers for data centers; it does not present an LLM inference/serving method or evaluation.",
+      "source_url": "https://doi.org/10.1049/ein2.70031",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bib/bbag378",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbag378"
+      ],
+      "title": "LipiDetective: a deep learning model for the identification of molecular lipid species in tandem mass spectra",
+      "reason": "LipiDetective applies a deep model to lipid identification from mass spectra; the abstract provides no language-model inference/serving efficiency contribution.",
+      "source_url": "https://doi.org/10.1093/bib/bbag378",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag320",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag320"
+      ],
+      "title": "KLaR: fusing knowledge graphs and language models for biomedical target discovery",
+      "reason": "KLaR uses language-model representations for biomedical target discovery/link prediction; this is a task-specific application, not an inference-efficiency or serving contribution.",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btag320",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
