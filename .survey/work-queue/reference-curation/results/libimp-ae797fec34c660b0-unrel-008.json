@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae797fec34c660b0-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1806.00187",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1806.00187",
+    "identity_tokens": [
+      "arXiv:1806.00187"
+    ],
+    "reason": "低精度とlarge-batch分散学習でNMT trainingを約5倍高速化し128 GPUで学習時間を短縮するtraining system研究。最終評価が学習速度であり推論runtime最適化ではない。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T02:59:44+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Scaling Neural Machine Translation"
+  },
+  "processed_at": "2026-10-05T02:59:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae797fec34c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

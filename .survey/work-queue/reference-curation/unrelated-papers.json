@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:57:04+00:00",
-  "record_count": 2090,
+  "updated_at": "2026-10-05T02:59:44+00:00",
+  "record_count": 2105,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -21097,9 +21097,9 @@
       "identity_tokens": [
         "arXiv:2410.13720"
       ],
-      "reason": "Abstract introduces media foundation models for video generation; no LLM inference-efficiency or serving contribution.",
+      "reason": "30B Transformerを含む動画・音声生成foundation model群で、並列化・推論最適化も含むが最終適用先はmedia generationでありLLM推論systemではない。",
       "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
       ],
@@ -21111,9 +21111,9 @@
       "identity_tokens": [
         "DOI:10.1162/tacl_a_00407"
       ],
-      "reason": "Abstract studies calibration and knowing/uncertainty in language models for question answering; no efficiency or serving focus.",
+      "reason": "T5/BART/GPT-2のQA確信度calibrationを分析しfine-tuningやpost-hoc補正で信頼度を改善する評価・信頼性研究。推論runtime効率化を提案しない。",
       "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
       ],
@@ -21392,9 +21392,9 @@
       "identity_tokens": [
         "arXiv:1806.00187"
       ],
-      "reason": "arXiv要旨はneural machine translationをreduced precision/large batchesで高速にtrainingするGPU scalingを報告する。",
+      "reason": "低精度とlarge-batch分散学習でNMT trainingを約5倍高速化し128 GPUで学習時間を短縮するtraining system研究。最終評価が学習速度であり推論runtime最適化ではない。",
       "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
@@ -26730,9 +26730,9 @@
       "identity_tokens": [
         "arXiv:2503.13657"
       ],
-      "reason": "multi-agent LLM system failureの分類・分析が主題で、効率化手法の提案/評価ではない。",
+      "reason": "複数LLMエージェントの実行traceを分析し14種のfailure mode taxonomyとMAST-Dataを構築する信頼性・評価研究。system designを扱うが、推論ランタイムの速度・メモリ・スループット最適化が主目的ではない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
         "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
@@ -30212,6 +30212,206 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "Selection Integrity for LLM Graph Memory: An Accumulability Criterion for Information-Flow-Blind Retrieval"
+    },
+    "arXiv:2606.10949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10949",
+      "identity_tokens": [
+        "arXiv:2606.10949"
+      ],
+      "reason": "memory-model sycophancy evaluation/mitigationでefficiency対象外。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Recalling Too Well: Sycophancy Evaluation and Mitigation in Memory-Augmented Models"
+    },
+    "arXiv:2606.11275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11275",
+      "identity_tokens": [
+        "arXiv:2606.11275"
+      ],
+      "reason": "RoVE attention representation/qualityでinference efficiency evidenceなし。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "RoVE: Rotary Value Embeddings Attention for Relative Position-dependent Value Pathways"
+    },
+    "arXiv:2606.09174": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09174",
+      "identity_tokens": [
+        "arXiv:2606.09174"
+      ],
+      "reason": "chart generation harness/workflowでserving efficiencyでない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md"
+      ],
+      "title": "Demonstrating chart-plot: Closing the Last Mile of Academic Chart Generation"
+    },
+    "arXiv:2606.09461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09461",
+      "identity_tokens": [
+        "arXiv:2606.09461"
+      ],
+      "reason": "multimodal memory benchmarkでinference cost-saving methodでない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "H2HMem: A Multimodal Memory Benchmark for Agents in Human-Human Interactions"
+    },
+    "arXiv:2606.09630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09630",
+      "identity_tokens": [
+        "arXiv:2606.09630"
+      ],
+      "reason": "VLA recovery success-rate improvementでserving efficiencyでない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "ReCoVLA: VLM-Guided Reward Compilation for Failure Recovery in Vision-Language-Action Policies"
+    },
+    "arXiv:2606.12384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12384",
+      "identity_tokens": [
+        "arXiv:2606.12384"
+      ],
+      "reason": "agent policy optimization/trainingでinference-time efficiencyでない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "APPO: Agentic Procedural Policy Optimization"
+    },
+    "arXiv:2606.12403": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12403",
+      "identity_tokens": [
+        "arXiv:2606.12403"
+      ],
+      "reason": "VLA action steering/qualityが主題。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "World Pilot: Steering Vision-Language-Action Models with World-Action Priors"
+    },
+    "arXiv:2606.10544": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10544",
+      "identity_tokens": [
+        "arXiv:2606.10544"
+      ],
+      "reason": "AI infrastructure sustainability roadmapでruntime technique/measurementではない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "From Stacks to Circuits: A Regenerative Socio-Technical Roadmap for AI Infrastructure within Planetary Boundaries"
+    },
+    "DOI:10.1109/micro.2016.7783723": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2016.7783723",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783723"
+      ],
+      "reason": "疎なニューラルネットワーク向け専用アクセラレータで、圧縮DNNの不規則な疎行列計算を高速化する汎用ハードウェア研究。LLM/Transformer推論を最終適用先とせず、LLM固有の推論評価がない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [],
+      "title": "Cambricon-X: An accelerator for sparse neural networks"
+    },
+    "DOI:10.1145/3282307": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3282307",
+      "identity_tokens": [
+        "DOI:10.1145/3282307"
+      ],
+      "reason": "汎用計算機アーキテクチャの潮流、domain-specific architecture、セキュリティ等を論じる展望論文で、LLM推論システムの具体的最適化方式を提案・評価しない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [],
+      "title": "A new golden age for computer architecture"
+    },
+    "DOI:10.1038/s41591-024-03141-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41591-024-03141-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-024-03141-0"
+      ],
+      "reason": "Virchowを用いた病理画像のpan-cancer検出・biomarker予測が主題で、最終適用先は臨床計算病理。LLM推論ランタイム・メモリ・サービング最適化ではない。",
+      "first_checked_at": "2026-10-05T02:59:43+00:00",
+      "last_checked_at": "2026-10-05T02:59:43+00:00",
+      "linked_from": [],
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection"
+    },
+    "DOI:10.1145/42201.42203": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/42201.42203",
+      "identity_tokens": [
+        "DOI:10.1145/42201.42203"
+      ],
+      "reason": "複数データベースquery間で共通処理を共有する古典的query optimization研究で、LLM推論やagentic servingを最終適用先としない。",
+      "first_checked_at": "2026-10-05T02:59:44+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
+      "linked_from": [],
+      "title": "Multiple-query optimization"
+    },
+    "DOI:10.1109/hpca.2018.00059": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00059",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00059"
+      ],
+      "reason": "Facebookの大規模ML workloadとdatacenter infrastructureを特徴づける一般ML基盤研究で、LLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-05T02:59:44+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
+      "linked_from": [],
+      "title": "Applied Machine Learning at Facebook: A Datacenter Infrastructure Perspective"
+    },
+    "DOI:10.1145/2749469.2749475": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2749469.2749475",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2749475"
+      ],
+      "reason": "latency-critical serviceとbest-effort batch taskを同一serverへ安全にcolocateしてresource efficiencyを高めるdatacenter resource management研究。LLM推論固有のserving方式ではない。",
+      "first_checked_at": "2026-10-05T02:59:44+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
+      "linked_from": [],
+      "title": "Heracles: Improving resource efficiency at scale"
+    },
+    "arXiv:2606.16774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16774",
+      "identity_tokens": [
+        "arXiv:2606.16774"
+      ],
+      "reason": "agent skill-tree/task solving qualityでmodel inference optimizationでない。",
+      "first_checked_at": "2026-10-05T02:59:44+00:00",
+      "last_checked_at": "2026-10-05T02:59:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "OpenClaw-Skill: Collective Skill Tree Search for Agentic Large Language Models"
     }
   }
 }
