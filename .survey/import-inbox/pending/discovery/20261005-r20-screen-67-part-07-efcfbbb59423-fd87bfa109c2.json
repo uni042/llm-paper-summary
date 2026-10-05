@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-67-part-07-efcfbbb59423",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12684",
+      "identity_tokens": [
+        "arXiv:2602.12684"
+      ],
+      "title": "Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time Execution",
+      "reason": "Real-time VLA execution is an adjacent domain, but transfer to general LLM serving remains uncertain.",
+      "source_url": "https://arxiv.org/abs/2602.12684",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20722",
+      "identity_tokens": [
+        "arXiv:2508.20722"
+      ],
+      "title": "rStar2-Agent: Agentic Reasoning Technical Report",
+      "reason": "Agentic reinforcement learning trains a reasoning model; training-focused.",
+      "source_url": "https://arxiv.org/abs/2508.20722",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02795",
+      "identity_tokens": [
+        "arXiv:2505.02795"
+      ],
+      "title": "HSplitLoRA: A Heterogeneous Split Parameter-Efficient Fine-Tuning Framework for Large Language Models",
+      "reason": "Heterogeneous split PEFT framework addresses federated fine-tuning costs, not inference.",
+      "source_url": "https://arxiv.org/abs/2505.02795",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.09856",
+      "identity_tokens": [
+        "arXiv:2412.09856"
+      ],
+      "title": "LinGen: Towards High-Resolution Minute-Length Text-to-Video Generation with Linear Computational Complexity",
+      "reason": "Linear-complexity text-to-video diffusion generation, outside LLM serving.",
+      "source_url": "https://arxiv.org/abs/2412.09856",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.16705",
+      "identity_tokens": [
+        "arXiv:2306.16705"
+      ],
+      "title": "NNQS-Transformer: An Efficient and Scalable Neural Network Quantum States Approach for Ab Initio Quantum Chemistry",
+      "reason": "Neural quantum states for ab-initio chemistry, unrelated to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2306.16705",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    }
+  ]
+}
