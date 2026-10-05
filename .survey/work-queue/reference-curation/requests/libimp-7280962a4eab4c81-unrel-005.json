@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-7280962a4eab4c81-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.19924",
+  "reason": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+  "title": "The Life of a Token: from Words to Bits on the Wire",
+  "identity_tokens": [
+    "arXiv:2609.19924"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+    "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+    "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+    "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7280962a4eab",
+  "source_precheck_request_id": null
+}

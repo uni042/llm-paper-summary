@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-618bea176647b821-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.19729",
+  "reason": "Autoregressive (AR) video generation degrades over long horizons due to an overlooked train-inference discrepancy we term KV eviction mismatch: models train on short clips where all context frames reside in the KV cache, but at inference, memory constraints force distant frames to be evicted from the KV cache - removing context the model was conditioned on. Rather than simulating eviction via context truncation - which discards temporal information the model still needs and degrades motion coherence - we keep the context but while progressively reducing the influence of distant frames, making their eventual eviction negligible. To guide this design, we introduce the positional response $R( \\Delta, \\, t_{\\text{denoise}})$, a perturbation-based sensitivity measure revealing that context influence decays steeply with temporal distance and varies systematically across denoising steps. Motivated by this analysis, we propose Recency Forcing, which applies a non-positive, timestep-dependent bias, termed Temporal Response Bias (TRB), on pre-softmax attention logits derived directly from $R$, closing the train-inference gap without modifying context length or training objectives. We further introduce Biased Attention Reparameterization (BAR), an exact reformulation that moves the bias outside the softmax, making TRB a standard FlashAttention call at zero overhead. Recency Forcing operates in both training-free mode and training-based mode. Experiments on VBench and VBench-Long demonstrate state-of-the-art long-horizon generation quality at no additional inference cost.",
+  "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation",
+  "identity_tokens": [
+    "arXiv:2609.19729"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-618bea176647",
+  "source_precheck_request_id": null
+}

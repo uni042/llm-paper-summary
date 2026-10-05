@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d121090dc4c1c647-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3847108",
+  "reason": "Retrieval-augmented generation (RAG) has attracted significant attention for enhancing large language models (LLMs) in domain-specific and knowledge-intensive tasks by utilizing external documents retrieved by retrievers. However, LLMs often struggle to determine which retrieved documents are relevant and how they relate to one another. We argue that this difficulty arises from a semantic gap between retrievers and LLMs due to differences in their training objectives and architectures. Existing methods either align retrievers and LLMs through costly fine-tuning or feedback signals, but they still do not explicitly strengthen document relationship modeling during generation. This paper proposes ConRAG, a novel enhanced RAG framework to establish an information connection between retrievers and LLMs in RAG, thereby enhancing relationship modeling of LLMs. Specifically, ConRAG employs a lightweight Con-Former model, placed between a retriever and an LLM to capture and transmit semantic information. Then, a semantics injection strategy is employed to integrate the semantic information into the LLM's generation. Accordingly, we employ three tasks for feature modeling and alignment: two relationship modeling tasks to consolidate the local and global perceptions of document relevance and one generative alignment task to facilitate the interpretation of LLM. Notably, ConRAG is suitable for low-resource scenarios where LLMs and retrievers are frozen. Further analysis shows that retriever-derived information helps the LLM better identify relevant evidence and model relationships among documents, leading to more effective generation. The source code is available at https://github.com/yefd/ConRAG.",
+  "title": "Enabling Retriever-LLM Connection Across the Semantic Gap in Retrieval-Augmented Generation",
+  "identity_tokens": [
+    "DOI:10.1145/3847108"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d121090dc4c1",
+  "source_precheck_request_id": null
+}
