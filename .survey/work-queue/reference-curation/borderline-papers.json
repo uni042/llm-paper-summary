@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:32:18+00:00",
-  "record_count": 1755,
+  "updated_at": "2026-10-05T13:35:19+00:00",
+  "record_count": 1761,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27166,6 +27166,92 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
       ],
       "title": "Adaptive Request Scheduling and Load Balancing for Edge Deployed Large Language Models"
+    },
+    "DOI:10.1109/tnnls.2024.3513912": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2024.3513912",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2024.3513912"
+      ],
+      "reason": "sequence modelの計算効率とLLM benchmarkを主張しており関連可能性はあるが、一次本文未確認のため具体的なLLM推論適用・測定を検証できない。",
+      "first_checked_at": "2026-10-05T13:35:16+00:00",
+      "last_checked_at": "2026-10-05T13:35:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Weird-Net: Weighted Relative Distance Attention for Efficient and Robust Sequence Processing"
+    },
+    "DOI:10.1109/bigdata62323.2024.10825662": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bigdata62323.2024.10825662",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata62323.2024.10825662"
+      ],
+      "reason": "LLM serving時の電力分析は対象に近いが、本文未確認で測定内容・再現性・改善可能性を判断できないためborderline。",
+      "first_checked_at": "2026-10-05T13:35:16+00:00",
+      "last_checked_at": "2026-10-05T13:35:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "An Empirical Study on the Power Consumption of LLMs with Different GPU Platforms"
+    },
+    "arXiv:2412.06867": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.06867",
+      "identity_tokens": [
+        "arXiv:2412.06867"
+      ],
+      "reason": "一般的weight compressionとlanguage taskを扱うものの、対象LLM servingへの実証的接続が限定的でborderline。",
+      "first_checked_at": "2026-10-05T13:35:17+00:00",
+      "last_checked_at": "2026-10-05T13:35:17+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Lossless Model Compression via Joint Low-Rank Factorization Optimization"
+    },
+    "DOI:10.1145/3708657.3708747": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3708657.3708747",
+      "identity_tokens": [
+        "DOI:10.1145/3708657.3708747"
+      ],
+      "reason": "RAG retrieval configurationと資源制約の比較は隣接するが、本文を確認できず効率化の新規性・推論コスト測定が不明なためborderline。",
+      "first_checked_at": "2026-10-05T13:35:17+00:00",
+      "last_checked_at": "2026-10-05T13:35:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "title": "Evaluating Sparse and Dense Retrieval in Retrieval-Augmented Generation Systems: A Study"
+    },
+    "arXiv:2602.20669": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20669",
+      "identity_tokens": [
+        "arXiv:2602.20669"
+      ],
+      "reason": "The paper integrates domain-specialized small LMs with microscopy tools for a scientific control application. Full text describes deterministic control and task-specific deployment but does not establish a general inference-serving efficiency technique or comparative systems evaluation.",
+      "first_checked_at": "2026-10-05T13:35:19+00:00",
+      "last_checked_at": "2026-10-05T13:35:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Integrating Domain-Specialized Language Models with AI Measurement Tools for Deterministic Atomic-Resolution Experimentation"
+    },
+    "arXiv:2602.20934": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20934",
+      "identity_tokens": [
+        "arXiv:2602.20934"
+      ],
+      "reason": "AgentOS maps OS concepts to context management and coordination, but the primary text is a conceptual framework without empirical inference-efficiency evaluation; token-efficiency language is architectural advocacy rather than measured evidence.",
+      "first_checked_at": "2026-10-05T13:35:19+00:00",
+      "last_checked_at": "2026-10-05T13:35:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Architecting AgentOS: From Token-Level Context to Emergent System-Level Intelligence"
     }
   }
 }

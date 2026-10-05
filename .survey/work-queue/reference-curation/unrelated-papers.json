@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:32:17+00:00",
-  "record_count": 5277,
+  "updated_at": "2026-10-05T13:35:19+00:00",
+  "record_count": 5290,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -76714,6 +76714,190 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Discrete Diffusion for Single-Cell Gene Expression Modeling"
+    },
+    "DOI:10.48550/arxiv.2412.13292": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2412.13292",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.13292",
+        "arXiv:2412.13292"
+      ],
+      "reason": "全文のアルゴリズムと評価を確認し、提案は推論時計算を節約するより回答qualityを改善するsampling戦略と判定。",
+      "first_checked_at": "2026-10-05T13:35:16+00:00",
+      "last_checked_at": "2026-10-05T13:35:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Hint Marginalization for Improved Reasoning in Large Language Models"
+    },
+    "arXiv:2412.08946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08946",
+      "identity_tokens": [
+        "arXiv:2412.08946"
+      ],
+      "reason": "MoSLDはmulti-task learning用のparameter-efficient LoRA tuning手法で、学習・適応コストが対象。",
+      "first_checked_at": "2026-10-05T13:35:16+00:00",
+      "last_checked_at": "2026-10-05T13:35:16+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "MoSLD: An Extremely Parameter-Efficient Mixture-of-Shared LoRAs for Multi-Task Learning"
+    },
+    "arXiv:2412.07216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.07216",
+      "identity_tokens": [
+        "arXiv:2412.07216"
+      ],
+      "reason": "FedLPSはheterogeneous federated learningのtraining sparse customization手法で、LLM servingではない。",
+      "first_checked_at": "2026-10-05T13:35:16+00:00",
+      "last_checked_at": "2026-10-05T13:35:16+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Learnable Sparse Customization in Heterogeneous Edge Computing"
+    },
+    "arXiv:2411.15871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15871",
+      "identity_tokens": [
+        "arXiv:2411.15871"
+      ],
+      "reason": "DHelixはdistributed LLM trainingの通信効率化が対象で、推論工程ではない。",
+      "first_checked_at": "2026-10-05T13:35:17+00:00",
+      "last_checked_at": "2026-10-05T13:35:17+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md"
+      ],
+      "title": "Hiding Communication Cost in Distributed LLM Training via Micro-batch Co-execution"
+    },
+    "arXiv:2411.15664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15664",
+      "identity_tokens": [
+        "arXiv:2411.15664"
+      ],
+      "reason": "全文がreview reportであることを確認。一次研究の効率化論文ではないためunrelatedとし、引用される原著は必要なら個別に追跡する。",
+      "first_checked_at": "2026-10-05T13:35:17+00:00",
+      "last_checked_at": "2026-10-05T13:35:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ],
+      "title": "Enabling Efficient Serverless Inference Serving for LLM (Large Language Model) in the Cloud"
+    },
+    "arXiv:2411.15224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15224",
+      "identity_tokens": [
+        "arXiv:2411.15224"
+      ],
+      "reason": "ProDiaLはMambaモデルのparameter-efficient fine-tuning手法で、推論時の効率化は要旨の主張対象外。",
+      "first_checked_at": "2026-10-05T13:35:17+00:00",
+      "last_checked_at": "2026-10-05T13:35:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Parameter Efficient Mamba Tuning via Projector-targeted Diagonal-centric Linear Transformation"
+    },
+    "DOI:10.1109/tcsi.2025.3615631": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2025.3615631",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2025.3615631"
+      ],
+      "reason": "STAR-PIM repairs faulty arithmetic units and studies inference reliability/yield; its abstract reports small power/latency overhead as a reliability cost, not an efficiency optimization.",
+      "first_checked_at": "2026-10-05T13:35:18+00:00",
+      "last_checked_at": "2026-10-05T13:35:18+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "title": "STAR-PIM: Self-Test and Repair Structure for Processing-in-Memory With Adder Tree-Based MAC"
+    },
+    "DOI:10.1109/tcsvt.2025.3615166": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3615166",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3615166"
+      ],
+      "reason": "Dual-Net is a hyperspectral anomaly-detection network; its vision-task contribution is outside LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:35:18+00:00",
+      "last_checked_at": "2026-10-05T13:35:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Dual-Net: Dual Visual Spectral Affinity Monitoring Network for Hyperspectral Anomaly Detection"
+    },
+    "arXiv:2603.00825": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00825",
+      "identity_tokens": [
+        "arXiv:2603.00825"
+      ],
+      "reason": "COMBAT is a diffusion-transformer world model trained for a fighting-game agent; real-time world-model inference is not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T13:35:18+00:00",
+      "last_checked_at": "2026-10-05T13:35:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "COMBAT: Conditional World Models for Behavioral Agent Training"
+    },
+    "DOI:10.1109/tmi.2026.3668773": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmi.2026.3668773",
+      "identity_tokens": [
+        "DOI:10.1109/tmi.2026.3668773"
+      ],
+      "reason": "DeReF is a multimodal cancer-survival prediction architecture; it does not address LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T13:35:18+00:00",
+      "last_checked_at": "2026-10-05T13:35:18+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Decouple, Reorganize, and Fuse: A Multimodal Framework for Cancer Survival Prediction"
+    },
+    "arXiv:2602.21633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21633",
+      "identity_tokens": [
+        "arXiv:2602.21633"
+      ],
+      "reason": "Self-Correcting VLA is a robotics action-refinement/control method; fewer task steps are not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T13:35:19+00:00",
+      "last_checked_at": "2026-10-05T13:35:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+      ],
+      "title": "Self-Correcting VLA: Online Action Refinement via Sparse World Imagination"
+    },
+    "arXiv:2603.18017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18017",
+      "identity_tokens": [
+        "arXiv:2603.18017"
+      ],
+      "reason": "RoPE-ID targets long-context accuracy/generalization through positional-embedding changes; the abstract does not propose inference acceleration, serving, or compression.",
+      "first_checked_at": "2026-10-05T13:35:19+00:00",
+      "last_checked_at": "2026-10-05T13:35:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "Frayed RoPE and Long Inputs: A Geometric Perspective"
+    },
+    "arXiv:2602.19633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19633",
+      "identity_tokens": [
+        "arXiv:2602.19633"
+      ],
+      "reason": "TAPE improves agent planning success using tools, constrained decoding, and replanning; the abstract reports task quality, not efficiency gains.",
+      "first_checked_at": "2026-10-05T13:35:19+00:00",
+      "last_checked_at": "2026-10-05T13:35:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents"
     }
   }
 }
