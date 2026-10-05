@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e8b9638484659a3a-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.14992",
+  "reason": "Recently, the rapid development of large language models (LLMs) has reshaped software engineering by enabling autonomous code agents that plan, execute, and utilize external tools iteratively to tackle complex tasks. Beyond achieving functional correctness, these agents must faithfully follow process instructions and constraints throughout the development lifecycle. However, existing benchmarks typically focus on final functional correctness or confine instruction-following evaluation to single-turn, general chat or simple code generation scenarios, leaving instruction-following in multi-turn agentic coding underexplored. To bridge this gap, we propose MTAC-IFBench, a comprehensive benchmark for this critical capability. It features multi-turn progressive software development instructions with diverse constraints spanning 6 primary and 18 secondary categories. With an average of 7.04 turns and 91.33 constraints per instance, it poses a rigorous challenge to current LLMs. To make the evaluation reliable, we construct a checklist for each constraint and functional requirement, and integrate verification scripts and judge agents to verify each checklist item. MTAC-IFBench identifies significant deficiencies in existing code agents in multi-turn instruction-following, with their performance degrading rapidly as the interaction session grows longer.",
+  "title": "MTAC-IFBench: Benchmarking Instruction-Following in Multi-Turn Agentic Coding",
+  "identity_tokens": [
+    "arXiv:2609.14992"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b963848465",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e8b9638484659a3a-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.14978",
+  "reason": "Transformers have shown promising performance in LLMs due to their outstanding scalability, several studies have investigated the scalability of Transformers for industrial recommendation. They typically rely on a single ranking model to optimize both sparse and dense parameters from scratch, resulting in substantial computational resource consumption and slow convergence. Fortunately, the pre-training models offer an effective solution to the above issues by providing favorable initialization of both sparse and dense parameters for the subsequent ranking. However, they still face two major limitations: (1) Since the input features used in pre-training and ranking are usually inconsistent, directly transferring dense parameters from pre-training to ranking may lead to negative transfer. (2) Multi-epoch training during the ranking process may result in the overfitting of sparse parameters, while freezing the sparse parameters limits their adaptability to the ranking objectives. To this end, we propose a Scaling Transformer for Industrial Recommendation via Transferable Generative Pre-training, termed LazFormer. Specifically, we first present a generative pre-training module to autoregressively generate sequential features, providing favorable initialization of both sparse and dense parameters for the subsequent ranking. To solve the negative transfer of dense parameters, we propose a transferable residual adapter that injects additional ranking-specific features into ranking in a residual manner. Moreover, a request-aware ranking module integrates long-sequence compression, hybrid sparse attention, and a request-aware paradigm to efficiently model users'long sequences. Besides, we further propose an asymmetric multi-epoch training strategy that resets sparse parameters while continuously accumulating dense parameters across epochs, alleviating the overfitting of sparse parameters.",
+  "title": "LazFormer: Scaling Transformers for Industrial Recommendation via Transferable Generative Pre-training",
+  "identity_tokens": [
+    "arXiv:2609.14978"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b963848465",
+  "source_precheck_request_id": null
+}
