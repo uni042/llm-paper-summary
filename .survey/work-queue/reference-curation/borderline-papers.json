@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:18:56+00:00",
-  "record_count": 1983,
+  "updated_at": "2026-10-05T15:22:02+00:00",
+  "record_count": 1993,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30689,6 +30689,162 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DTCRS: Dynamic Tree Construction for Recursive Summarization"
+    },
+    "arXiv:2505.00985": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.00985",
+      "identity_tokens": [
+        "arXiv:2505.00985"
+      ],
+      "reason": "独立した推論時手法または再現可能なserving評価が中心ではなく、提案は幅広く概念的。inference surveyへの適合度は弱い。",
+      "first_checked_at": "2026-10-05T15:21:54+00:00",
+      "last_checked_at": "2026-10-05T15:21:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Position: Enough of Scaling LLMs! Lets Focus on Downscaling"
+    },
+    "arXiv:2505.21364": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.21364",
+      "identity_tokens": [
+        "arXiv:2505.21364"
+      ],
+      "reason": "MxDはLLM dense MLPをsparse layer-level mixtureへ分解するが、焦点はinterpretability/approximation。",
+      "first_checked_at": "2026-10-05T15:21:56+00:00",
+      "last_checked_at": "2026-10-05T15:21:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Interpretability Without Sacrifice: Faithful Dense Layer Decomposition with Mixture of Decoders"
+    },
+    "arXiv:2505.19959": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19959",
+      "identity_tokens": [
+        "arXiv:2505.19959"
+      ],
+      "reason": "MiniLongBenchはbenchmarkを圧縮してLLM評価コストを削減するが、model inference mechanism自体は改善しない。",
+      "first_checked_at": "2026-10-05T15:21:56+00:00",
+      "last_checked_at": "2026-10-05T15:21:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MiniLongBench: The Low-cost Long Context Understanding Benchmark for Large Language Models"
+    },
+    "arXiv:2310.12126": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.12126",
+      "identity_tokens": [
+        "arXiv:2310.12126"
+      ],
+      "reason": "early-exit/conditional-computeは隣接するが、確認した実験はBERT等encoderのclassificationで、decoder-only LLM generation/servingではない。対象との距離を解消する証拠がないためborderline。",
+      "first_checked_at": "2026-10-05T15:21:57+00:00",
+      "last_checked_at": "2026-10-05T15:21:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SHARCS: Efficient Transformers through Routing with Dynamic Width Sub-networks"
+    },
+    "arXiv:2412.07380": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.07380",
+      "identity_tokens": [
+        "arXiv:2412.07380"
+      ],
+      "reason": "推論ensembleの品質・first-token遅延改善は対象scopeに接するが、単一model比のserving efficiencyが明確でなく、追加model実行の負荷も残る。",
+      "first_checked_at": "2026-10-05T15:21:58+00:00",
+      "last_checked_at": "2026-10-05T15:21:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpecEM: Training-Free LLM Ensembling via Iterative Drafting, Verification, and Online Feedback"
+    },
+    "arXiv:2507.00449": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00449",
+      "identity_tokens": [
+        "arXiv:2507.00449"
+      ],
+      "reason": "SSMへcontext-dependent sparse attentionを足しsub-quadratic long-context computationを狙うが、実serving speed/memory evidenceが薄い。",
+      "first_checked_at": "2026-10-05T15:22:00+00:00",
+      "last_checked_at": "2026-10-05T15:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Overcoming Long-Context Limitations of State-Space Models via Context-Dependent Sparse Attention"
+    },
+    "arXiv:2506.00479": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00479",
+      "identity_tokens": [
+        "arXiv:2506.00479"
+      ],
+      "reason": "LVLM acceleration benchmarkでありadjacentだが、一般LLM servingへの直接性は弱い。",
+      "first_checked_at": "2026-10-05T15:22:00+00:00",
+      "last_checked_at": "2026-10-05T15:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EffiVLM-BENCH: A Comprehensive Benchmark for Evaluating Training-Free Acceleration in Large Vision-Language Models"
+    },
+    "arXiv:2505.24593": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24593",
+      "identity_tokens": [
+        "arXiv:2505.24593"
+      ],
+      "reason": "MoE attribution論文のlayer efficiencyはperformance gain指標で、runtime efficiencyとは異なる。",
+      "first_checked_at": "2026-10-05T15:22:00+00:00",
+      "last_checked_at": "2026-10-05T15:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Decoding Knowledge Attribution in Mixture-of-Experts: A Framework of Basic-Refinement Collaboration and Efficiency Analysis"
+    },
+    "DOI:10.1109/tmc.2025.3608303": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2025.3608303",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2025.3608303"
+      ],
+      "reason": "出版社のIEEE Xplore/DOI本文URLを開いたが本文を取得できず、検索でも検証可能な一次著者版PDFを確認できなかった。要旨のみで効率主張・数値・限界を確定できない。",
+      "first_checked_at": "2026-10-05T15:22:02+00:00",
+      "last_checked_at": "2026-10-05T15:22:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Joint Inference Offloading and Model Caching for Small and Large Language Model Collaboration"
+    },
+    "arXiv:2512.22386": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22386",
+      "identity_tokens": [
+        "arXiv:2512.22386"
+      ],
+      "reason": "この論文のLLMはnear-line/offline reasoning pathで使われ、online servingの中心は推薦用encoder-decoder model。LLM inference optimizationではなく産業推薦システムが主題なので対象scopeとのfitは弱い。",
+      "first_checked_at": "2026-10-05T15:22:02+00:00",
+      "last_checked_at": "2026-10-05T15:22:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OxygenREC: An Instruction-Following Generative Framework for E-commerce Recommendation"
     }
   }
 }

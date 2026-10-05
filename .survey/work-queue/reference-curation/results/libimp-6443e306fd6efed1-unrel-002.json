@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6443e306fd6efed1-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.24133",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.24133",
+    "identity_tokens": [
+      "arXiv:2602.24133"
+    ],
+    "reason": "一次要旨は3D point-cloud object trackingの検出精度/FPSを扱う視覚認識研究で、LLM推論の対象外。",
+    "first_checked_at": "2026-10-05T15:21:59+00:00",
+    "last_checked_at": "2026-10-05T15:21:59+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md"
+    ],
+    "title": "FocusTrack: One-Stage Focus-and-Suppress Framework for 3D Point Cloud Object Tracking"
+  },
+  "processed_at": "2026-10-05T15:21:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6443e306fd6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
