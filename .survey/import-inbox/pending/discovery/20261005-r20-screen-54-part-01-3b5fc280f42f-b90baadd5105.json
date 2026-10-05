@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-54-part-01-3b5fc280f42f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00083",
+      "identity_tokens": [
+        "arXiv:2607.00083"
+      ],
+      "title": "Harnessing the Latent Space: From Steering Vectors to Model Calibrators for Control and Trust",
+      "reason": "Primary abstract reviewed: Language models have changed from unreliable text generators to highly-capable large models with trillions of parameters. Capability increases come hand-in-hand with increases in scale, making understanding the internal representations of models more challenging. Since millions of users increasing rely on language models to interact with external tools or make decisions in medium or high-stakes scenarios, we need to establish control over model behavior and know when to trust [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2607.00083",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00170",
+      "identity_tokens": [
+        "arXiv:2607.00170"
+      ],
+      "title": "Scaling Up Thermodynamic AI Models",
+      "reason": "Primary abstract reviewed: Thermodynamic computing devices based on the Ising model show great promise for low-power AI inference and edge computing, but scalable methods for training large models for such hardware remain limited. Prior theory shows that the time-averaged behavior of high-temperature Gibbs-sampled Ising systems can implement feed-forward neural inference. We turn this theoretical correspondence into a scalable and purely backpropagation-based algorithm for training deep convolutional n [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2607.00170",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00208",
+      "identity_tokens": [
+        "arXiv:2607.00208"
+      ],
+      "title": "SLIM-RL: Risk-Budgeted Random-Masking RL for Diffusion LLMs Without Trajectory Slicing",
+      "reason": "Primary abstract reviewed: Reinforcement learning for diffusion large language models (dLLMs) has largely moved to trajectory-aware methods. The current state of the art, TraceRL, holds that random masking is mismatched with the model's inference trajectory, and it reconstructs that trajectory during training by slicing each rollout into up to K/s trajectory-aligned training samples, a cost that grows with the block size K. We show that this mismatch can be mitigated without reconstructing the trajecto [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2607.00208",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18284",
+      "identity_tokens": [
+        "arXiv:2607.18284"
+      ],
+      "title": "Compressing What Matters: Neuron Importance Meets Data-Aware Low Rank Approximation for Language Model Compression",
+      "reason": "本文確認の対象はBERT系encoder圧縮とGLUE精度で、decoder LLM inference/serving効率の寄与ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2607.18284",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18285",
+      "identity_tokens": [
+        "arXiv:2607.18285"
+      ],
+      "title": "Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring",
+      "reason": "Primary abstract reviewed: We present E-SpecFormer (Edge Spectrum monitoring Transformer) for end-to-end automatic modulation and covert channel (CC) recognition. We introduce LiTAN (Linear Tanh Attention Network), a Softmax- and LayerNorm-free attention mechanism that reduces complexity while increasing accuracy in RF tasks. E-SpecFormer is parameterized in four scalable variants (Nano, Small, Medium, Large) to accommodate diverse hardware constraints. Using the RadioML2018 dataset for modulation reco [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2607.18285",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
