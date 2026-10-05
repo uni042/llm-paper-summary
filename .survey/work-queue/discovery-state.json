@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-05T16:44:29+00:00",
-  "last_run_key": "library-import-e4269d7dff18",
-  "last_round": "libimp-e4269d7dff185d6c-pre01",
+  "updated_at": "2026-10-05T16:48:21+00:00",
+  "last_run_key": "library-import-ed63500ed5e0",
+  "last_round": "libimp-ed63500ed5e0b2c4-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,24 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
-      "round": "adaptive-max-r11-buddymoe-followup",
-      "axis": "explicit user request: forward citations of Adaptive Expert Computation / Compression seed arXiv:2511.10054 (expert redundancy / memory-constrained acceleration)",
-      "query_summary": "BuddyMoE forward citationsの未収録3件から本ページに直接関連するMELINOEを選定。",
-      "candidate_count": 1,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 1,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 1,
-      "accepted_count": 1,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "router consistency / expert reuseへ進む",
-      "source_submission": "work-queue/submissions/manual-user-adaptive-max-20260920-r11.json"
-    },
     {
       "run_key": "manual-user-adaptive-max-2026-09-20-seeds",
       "round": "adaptive-max-r12-remoe-followup",
@@ -12230,6 +12212,40 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-ed63500ed5e0b2c4-pre01",
+      "precheck_request_id": "libimp-ed63500ed5e0b2c4-pre01",
+      "run_key": "library-import-ed63500ed5e0",
+      "round": "libimp-ed63500ed5e0b2c4-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-ed63500ed5e0b2c4-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-ed63500ed5e0b2c4-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20601,16 +20617,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-e4269d7dff18",
-      "rounds": 140,
-      "candidate_count": 405,
+      "last_run_key": "library-import-ed63500ed5e0",
+      "rounds": 141,
+      "candidate_count": 406,
       "duplicate_filtered_count": 105,
-      "novel_candidate_count": 300,
+      "novel_candidate_count": 301,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 297,
-      "accepted_count": 297,
-      "duplicate_ratio": 0.25925925925925924,
-      "final_duplicate_ratio": 0.01,
+      "post_final_dedupe_count": 298,
+      "accepted_count": 298,
+      "duplicate_ratio": 0.25862068965517243,
+      "final_duplicate_ratio": 0.009966777408637873,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
