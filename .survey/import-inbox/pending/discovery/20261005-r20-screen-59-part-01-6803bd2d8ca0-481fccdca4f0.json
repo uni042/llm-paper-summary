@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-59-part-01-6803bd2d8ca0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17566",
+      "identity_tokens": [
+        "arXiv:2606.17566"
+      ],
+      "title": "AoiZora: Topology-Aware Auto-Parallel Optimization for Inference of Diffusion Transformers",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17566. Abstract summary: Video diffusion has quickly grown into a key generative serving workload, yet producing each clip demands many denoising iterations over large spatio-temporal latents, which puts low-latency inference out of reach on a single device. A denoising step is therefore typically distributed across multiple accelerators, and TPU sub-sl Out of scope: Video-diffusion TPU denoising optimizer, outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.17566",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17631",
+      "identity_tokens": [
+        "arXiv:2606.17631"
+      ],
+      "title": "Better Queries, Cheaper Attention: Adapting Transformers for Efficient Sparse Reconstruction",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17631. Abstract summary: Query-based transformer decoders are effective for object reconstruction from sparse scientific sensor measurements, but their scalability to high-multiplicity data is limited by fixed, input-independent query sets and costly decoder cross-attention. We introduce a geometry-aware dynamic-query decoder that couples input-conditio Out of scope: Charged-particle detector reconstruction, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2606.17631",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17650",
+      "identity_tokens": [
+        "arXiv:2606.17650"
+      ],
+      "title": "MambaCount: Efficient Text-guided Open-vocabulary Object Counting with Spatial Sparse State Space Duality Block",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17650. Abstract summary: Text-guided Open-vocabulary Object Counting (TOOC) aims to estimate the number of objects described by text prompts, which is particularly challenging in dense scenes with large scale variations. Existing TOOC approaches predominantly rely on Transformers, whose quadratic complexity with respect to image resolution limits their Out of scope: Visual object-counting task, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2606.17650",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.17872",
+      "identity_tokens": [
+        "arXiv:2606.17872"
+      ],
+      "title": "AnchorKV: Safety-Aware KV Cache Compression via Soft Penalty with a Refusal Anchor",
+      "reason": "Safety behavior of KV compression, not a demonstrated inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2606.17872",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18056",
+      "identity_tokens": [
+        "arXiv:2606.18056"
+      ],
+      "title": "ConSA: Controllable Sparsity in Hybrid Attention via Learnable Allocation",
+      "reason": "Plausible inference design, but checked cost evidence is training FLOPs only.",
+      "source_url": "https://arxiv.org/abs/2606.18056",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    }
+  ]
+}
