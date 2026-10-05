@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:05:35+00:00",
-  "record_count": 1267,
+  "updated_at": "2026-10-05T09:08:32+00:00",
+  "record_count": 1274,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19483,6 +19483,126 @@
         "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
       ],
       "title": "HotBa: A Heterogeneous Mamba Accelerator with Δ-Guided Early Rejection for Speculative Decoding"
+    },
+    "DOI:10.1145/3820441.3820447": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3820447",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3820447"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md"
+      ],
+      "title": "Fine-Grained Energy Accounting in Production LLM Serving"
+    },
+    "DOI:10.1145/3820441.3820466": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3820466",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3820466"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "title": "RAG on the Decentralized Web: An Empirical Study of Akash and Golem"
+    },
+    "DOI:10.1145/3820441.3820475": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3820475",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3820475"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
+      ],
+      "title": "SprayCast: Congestion-Adaptive Native Multicast for Dynamic Sparse All-to-All Communication"
+    },
+    "DOI:10.1145/3820441.3821231": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820441.3821231",
+      "identity_tokens": [
+        "DOI:10.1145/3820441.3821231"
+      ],
+      "reason": "推論効率への関連性は残る一方、一次本文を取得できず評価条件・限界を確認できないため証拠不足としてborderline。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Rethinking MoE Routing for Commodity GPUs"
+    },
+    "DOI:10.3389/frai.2026.1892739": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/frai.2026.1892739",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1892739"
+      ],
+      "reason": "KV budget推定に関連するものの、本文の実装は分析/計測と選択的truncationにとどまり、最適化sparse-attention kernelとend-to-end servingは将来課題。効率改善の証拠が限定的。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.01518-infinipot-infinite-context-processing-on-memory-constrained-llms.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+        "papers/inference/13-sparse-attention/2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "AdaK: adaptive KV cache budget estimation framework for analyzing long-context large language model inference"
+    },
+    "arXiv:2608.03148": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03148",
+      "identity_tokens": [
+        "arXiv:2608.03148"
+      ],
+      "reason": "RAG文脈選択には関連するが、本文の主要指標はevidence rank-1精度で、推論token/latency/resource savingsおよびselector overheadを測定していない。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Lightweight Chunk Selection for Mobile Retrieval-Augmented Generation"
+    },
+    "arXiv:2608.03228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03228",
+      "identity_tokens": [
+        "arXiv:2608.03228"
+      ],
+      "reason": "KV retrieval indexとして関連するが、本文で確認できるのは4K contextでのrecall評価で、end-to-end generation qualityやinference cost/latencyの効果が未確認。",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "SAKI: Score-Aware Low-Rank Key Indexing with Random-Matrix Noise Correction for KV Retrieval"
     }
   }
 }

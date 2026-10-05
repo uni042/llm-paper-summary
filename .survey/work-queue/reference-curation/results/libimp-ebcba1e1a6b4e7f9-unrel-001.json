@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ebcba1e1a6b4e7f9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.47852/bonviewjdsis62027770",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.47852/bonviewjdsis62027770",
+    "identity_tokens": [
+      "DOI:10.47852/bonviewjdsis62027770"
+    ],
+    "reason": "With the advancement of technology, multi-channel time series prediction tasks have become a focal point of research. However, due to the complex and intertwined correlations between channels, it is challenging to model their interactions accurately and flexibly. Furthermore, most existing methods typically model data from either the time domain or frequency domain alone, leading to inefficient utilization of information. To overcome these challenges, we introduce MCCWT-Net, a multi-channel time series forecasting framework built upon the wavelet transform. Unlike transformer-based models, MCCWT-Net does not rely on self-attention mechanisms, resulting in a more efficient training process. The wavelet transform, when applied in the frequency domain, can be used to extract and reflect features with predictability (such as periodicity) and act as a filter to reduce noise, instead of relying solely on raw historical data. Our model incorporates a specific number of channels and, while modeling long-term features, effectively captures inter-channel correlation information in the frequency domain through wavelet transform, combining it with information from the time domain. Experimental results demonstrate that our model achieves advanced performance across multiple datasets.\n \nReceived: 27 September 2025 | Revised: 18 March 2026 | Accepted: 27 March 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe ETT dataset was acquired at https://github.com/zhouhaoyi/ETDataset. The Exchange dataset was acquired at https://github.com/thuml/Autoformer. The Weather dataset was acquired at https://www.bgc-jena.mpg.de/wetter/. The Traffic dataset was acquired at http://pems.dot.ca.gov/. The Electricity dataset was acquired at https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014.\n \nAuthor Contribution Statement\nHanyu Jiang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data curation, Writing – original draft, Writing – review & editing, Visualization, Project administration, Funding acquisition. Zhichao Zheng: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Supervision.",
+    "first_checked_at": "2026-10-05T09:08:32+00:00",
+    "last_checked_at": "2026-10-05T09:08:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Time Series Prediction Network for Modeling Channel Correlation Based on Wavelet Transform"
+  },
+  "processed_at": "2026-10-05T09:08:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ebcba1e1a6b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

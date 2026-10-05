@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:05:36+00:00",
-  "record_count": 4080,
+  "updated_at": "2026-10-05T09:08:32+00:00",
+  "record_count": 4093,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -59414,6 +59414,196 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "CIM-FLEX: An Integer-Only Flexible Periphery for Distributed Compute-In-Memory Architectures"
+    },
+    "arXiv:2608.03559": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03559",
+      "identity_tokens": [
+        "arXiv:2608.03559"
+      ],
+      "reason": "In multimodal crack segmentation for industrial facilities, the key challenge is preventing missing modalities from degrading pixel-level performance while maintaining low computational cost. Existing methods struggle to address semantic degradation caused by missing modalities. We propose Compass, a lightweight network for robust crack segmentation under arbitrary missing modalities. Compass comprises Degradation Simulation Distillation (DSD), Needle Block, and Evidential Topology-Preserving Fusion (ETPF). DSD constructs a degradation simulation stream that mimics more severe missing conditions and performs reciprocal distillation with the original stream, decoupling complete perception from degradation adaptation. Within DSD, Feature-Aware Prototype Transmitter (FAPT) performs modality agnostic prototype-guided feature completion to maintain semantic integrity under incomplete modality conditions. As a lightweight backbone, Needle injects crack-direction cues into WKV modulation and combines connectivity-aware gating with anisotropic context probing for structure-aware modeling. ETPF fuses multimodal features via Dempster-Shafer evidential combination with uncertainty-gated decoding, preserving crack topology while suppressing unreliable features. Experiments on three datasets demonstrate state-of-the-art (SOTA) performance under diverse missing modality scenarios. Even with 90\\% depth modality missing on CrackDepth, Compass achieves F1 of 0.8216 and mIoU of 0.8434 with only 2.58M parameters. The code is available at https://github.com/Karl1109/Compass.",
+      "first_checked_at": "2026-10-05T09:08:30+00:00",
+      "last_checked_at": "2026-10-05T09:08:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Compass: Degradation-Simulated Reciprocal Learning with Lightweight Needle RWKV for Multimodal Crack Segmentation under Missing Modalities"
+    },
+    "arXiv:2608.03769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03769",
+      "identity_tokens": [
+        "arXiv:2608.03769"
+      ],
+      "reason": "Masked diffusion language models (MDLMs) enable parallel generation and bidirectional context modeling, but their positional context differs fundamentally from that of autoregressive (AR) models. Whereas AR decoding exposes a contiguous prefix, MDLM denoising produces dynamic, non-contiguous configurations of revealed and masked tokens. Conventional positional encodings such as RoPE capture sequence order and pairwise displacement but remain insensitive to this evolving token-availability structure. To address this limitation, we propose MDLMPE, a positional encoding designed specifically for masked diffusion. To the best of our knowledge, MDLMPE is the first method to make positional representations explicitly aware of the changing revealed/masked configuration. It represents token availability as a binary sequence, applies distance-aware Gaussian weighting, and projects the resulting pattern through a cosine basis to obtain distribution-aware positional features. These features are added to token embeddings and mapped by a lightweight MLP to angular offsets that modulate the standard RoPE phases. Extensive experiments on LLaDA and DREAM demonstrate that MDLMPE generally outperforms conventional positional encoding methods across supervised fine-tuning, pretraining, zero-shot evaluation, and block-diffusion settings. Further ablations show that the complete combination of availability state, Gaussian locality, spectral basis, and embedding injection yields the strongest result. These results establish the evolving token-availability distribution as a useful positional signal for masked diffusion language models.",
+      "first_checked_at": "2026-10-05T09:08:30+00:00",
+      "last_checked_at": "2026-10-05T09:08:30+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ],
+      "title": "MDLMPE: Distribution Aware Positional Encoding for Masked Diffusion Language Models"
+    },
+    "arXiv:2608.03791": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03791",
+      "identity_tokens": [
+        "arXiv:2608.03791"
+      ],
+      "reason": "Vision-Language Models (VLMs), like Large Language Models (LLMs), may memorize sensitive, copyrighted, or harmful knowledge from their pretraining corpora. Removing such knowledge is essential for building trustworthy AI systems. However, existing studies primarily focus on forgetting within individual modalities. Although recent work has begun to explore cross-modal consistency in unlearning, the cross-modal transfer of real-world knowledge unlearning remains insufficiently studied. To address this gap, we introduce UNLINK-VL, a real-world benchmark for cross-modal knowledge unlearning in VLMs. Under a post-hoc unlearning setting in which the original forget and retain corpora are unavailable, UNLINK-VL selects visually identifiable real-world entities as unlearning targets and associates them with corresponding images and one-hop and multi-hop facts derived from Wikidata. The benchmark comprises four complementary subsets that evaluate direct forgetting of target knowledge, the propagation of forgetting through relational knowledge, the preservation of related non-target knowledge, and robustness to semantically equivalent queries. We train models under text-only and multimodal unlearning settings and evaluate forgetting effectiveness and retained utility across textual, visual, and cross-modal scenarios. Extensive experiments reveal a pronounced asymmetry in cross-modal transfer: multimodal unlearning remains effective under textual evaluation, whereas text-only unlearning transfers poorly to visual and cross-modal scenarios. Meanwhile, the evaluated methods largely preserve the models'general capabilities. These findings demonstrate that relying solely on intra-modal evaluation, particularly text-only evaluation, may substantially overestimate the effectiveness of knowledge unlearning in VLMs, underscoring the need for cross-modal unlearning and evaluation.",
+      "first_checked_at": "2026-10-05T09:08:30+00:00",
+      "last_checked_at": "2026-10-05T09:08:30+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Does Forgetting Transfer Across Modalities? A Real-World Benchmark for Cross-Modal Knowledge Unlearning Evaluation"
+    },
+    "arXiv:2608.03796": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03796",
+      "identity_tokens": [
+        "arXiv:2608.03796"
+      ],
+      "reason": "Small language models are often the only option for deployment under tight latency, cost, and on-premises constraints, but they are rarely trained from scratch: a compressed model is usually recovered through knowledge distillation (KD). This recovery step largely decides the final quality, yet it is expensive. We present a practitioner's study of how to make distillation training efficient, organised around two systems contributions. First, we show that offline KD (caching the teacher's top-$K$ logits once and training the student against the cache) matches online distillation at near-identical training loss while removing the teacher from memory, running about 29\\% faster per iteration, and reaching up to 41\\% higher throughput on a single H200 GPU. Second, we introduce a \\emph{fused, chunked KL loss} that never materialises the full vocabulary-sized logit tensor, making peak memory linear in the sequence length. This removes the memory spike that otherwise caps context length and lets us train at four times the context (32{,}768 tokens) on a single GPU. A separate output-head-only toy benchmark isolates the loss kernel and confirms its memory and iteration-rate scaling from 4K to 256K tokens. Together these make large-scale healing and hundreds of ablations affordable. We also report supporting ablations on loss design and sequence packing. We release our chunked-loss implementation: https://github.com/CompactifAI/Full-Chunked-KL-Loss.",
+      "first_checked_at": "2026-10-05T09:08:30+00:00",
+      "last_checked_at": "2026-10-05T09:08:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Efficient Knowledge Distillation for LLMs: Offline Top-K Logits and a Fused Chunked KL Loss"
+    },
+    "arXiv:2608.03833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03833",
+      "identity_tokens": [
+        "arXiv:2608.03833"
+      ],
+      "reason": "AI agents are expected to play an increasingly important role in future decision-making systems. In this paper, we consider collaborative systems composed of heterogeneous multi-agent systems (MAS), where their members have different capabilities and operating costs. We study how agents can delegate tasks to one another so that certain research tasks can be completed effectively under resource-constrained scenarios. We first develop a multi-agent reinforcement learning-based (MARL) delegation training that enables agents to make sequential delegation decisions while minimizing the total execution cost. We then extend this approach to MARL with prescribed delegation topologies. Furthermore, we introduce two new frameworks for collaboration and delegation in multi-agent systems. The first framework proposes that an agent's policy depends not only on the current state of the underlying Markov decision process but also on the interaction history, including previous joint actions. This history-dependent formulation can improve coordination even in fully observable environments, where conventional MARL methods typically restrict policies to depend only on the current state. The second framework proposes a novel, potentially multi-dimensional monetary mechanism to facilitate the collaboration and delegation for MAS.",
+      "first_checked_at": "2026-10-05T09:08:30+00:00",
+      "last_checked_at": "2026-10-05T09:08:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "History Matters: Meta-policy Delegation with Heterogeneous Multi-agent Reinforcement Learning"
+    },
+    "arXiv:2608.03311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03311",
+      "identity_tokens": [
+        "arXiv:2608.03311"
+      ],
+      "reason": "Enterprise compliance management requires rapid adaptation to evolving regulatory frameworks (e.g., DORA, AI RMF, FedRAMP) and tight remediation SLAs. Traditional static orchestrators often fail in hybrid cloud environments where event-driven assessments demand that automation code adapt to runtime context in seconds. This paper presents lessons learned from evaluating six large language models for AI-driven workflow generation in a production enterprise platform, benchmarked across 29 real-world IT automation scenarios, two generation pipeline architectures, and eight independent runs per prompt-model-pipeline configuration (2,784 runs total). Our initial pipeline used monolithic workflow generation, achieving 31.5-82.8% structural success rates (JSON schema validity and correct UI rendering), with most models struggling on complex JSON generation. We developed a redesigned piecewise pipeline that decomposes workflow construction into variable scaffolding, base block assembly, and nested block generation, raising structural success to 74.1-97.8% across all models. We analyze production tradeoffs including cost (USD 0.008-0.20 per workflow), latency (under 50s for interactive use), and model selection. Piecewise decomposition enables smaller models (e.g., mistral-small at 95.7% structural success and USD 0.01 per workflow) to reach production viability, removing dependency on expensive frontier models. While mistral-medium-2505 and gpt-oss-120b achieved the highest structural success (96.1% and 97.8%), mistral-medium-2505 carries a 19x cost premium versus mistral-small. Our deployment lessons highlight the need to separate structural validity from semantic correctness (logical fulfillment of user intent) and provide a solution for model-agnostic, scalable automation in cloud engineering.",
+      "first_checked_at": "2026-10-05T09:08:31+00:00",
+      "last_checked_at": "2026-10-05T09:08:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Evaluating LLM Trade-offs for Enterprise Automation: Lessons from Workflow Generation in a Production Enterprise Platform"
+    },
+    "arXiv:2608.03392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03392",
+      "identity_tokens": [
+        "arXiv:2608.03392"
+      ],
+      "reason": "Large language models are increasingly embedded in software engineering workflows as coding agents that can inspect repositories, invoke tools, execute tests, debug failures, and generate patches. Yet most existing coding agents remain largely static after deployment, even though software development is a dynamic, feedback-rich process in which repositories evolve, dependencies change, tests fail, and repair attempts leave reusable experience. This tension has motivated a growing body of work on self-evolving coding agents, where the agent improves its future behavior by persistently updating its framework, memory, skills and tools, components, workflow and topology, or environment and context from prior coding interactions. In this survey, we provide a structured synthesis of this emerging area. We first define the concept of self-evolving coding agents and distinguish it from conventional coding agents and general self-evolving agents. We then develop a taxonomy centered on the targets of evolution, complemented by two orthogonal perspectives: when evolution occurs and which code-specific signals drive it. We further examine the benchmarks used to measure the effect of evolution and related coding products. Across the literature, we find that executable feedback, repository-level context, and coding trajectories make software engineering a natural domain for agent self-evolution, but also introduce challenges in feedback reliability, benchmark overfitting, reversibility, system complexity, safety, cost, and generalization. By organizing existing work around these dimensions, this survey aims to clarify the conceptual boundaries of self-evolving coding agents and provide a foundation for designing more adaptive, reliable, and software-aware agentic systems.",
+      "first_checked_at": "2026-10-05T09:08:31+00:00",
+      "last_checked_at": "2026-10-05T09:08:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Self-Evolving Coding Agents"
+    },
+    "arXiv:2608.03403": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03403",
+      "identity_tokens": [
+        "arXiv:2608.03403"
+      ],
+      "reason": "The performance bottleneck of agents is increasingly shifting from model capability to the robustness of their execution processes. Tools play a central role as the primary interface through which agents interact with external environments, yet existing methods rarely focus on ensuring robust tool use across diverse runtime conditions. To address this problem, we propose ExpG, a mechanism that builds and refines adaptive guidance capturing each tool's capability boundaries and best practices, thereby enabling agents to use tools more robustly and effectively. ExpG consists of three phases: (1) experience acquisition, which analyzes tool invocation quality from historical execution trajectories, producing structured learnable experiences through multi-aspect attribution; (2) experience distillation, which keeps the experience pool effective by filtering unhelpful experiences, selecting representative ones with an equivalence-class-based method, and summarizing them into generalizable guidance; and (3) experience reuse, which applies the guidance adaptively during future task solving. Extensive experiments show that ExpG brings consistent improvements across the tool selection, tool calling, and response generation tasks, enabling smaller agents to outperform larger ones that do not use ExpG. Moreover, ExpG achieves particularly strong gains in challenging settings, suggesting a promising path toward more robust tool use. Our code, experiments, and results are available.",
+      "first_checked_at": "2026-10-05T09:08:31+00:00",
+      "last_checked_at": "2026-10-05T09:08:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance"
+    },
+    "arXiv:2608.03480": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03480",
+      "identity_tokens": [
+        "arXiv:2608.03480"
+      ],
+      "reason": "The adoption of large pre-trained multilingual models for neural machine translation (MNMT) faces a major challenge: excessive memory and computational consumption due to overly large vocabularies and embedding layers. Although existing compression methods like pruning, quantization and knowledge distillation reduce parameter redundancy, they mainly preserve the structure of the original vocabulary, thereby leaving a major source of inefficiency unresolved. We propose in this paper a general optimization framework that combines a vocabulary pruning method with a targeted fine-tuning protocol for MNMT models. We evaluate the proposed framework using three models (M2M100, NLLB-200, mBART-50) on the English-Arabic language pair. Our approach reduces the vocabulary size from over 128,000 to approximately 10,000 tokens, enabling a 60% memory saving without any loss in performance. Results show that optimized multilingual models can match or exceed the performance of dedicated bilingual baselines. In particular, the pruned and fine-tuned M2M100 model achieves a competitive BLEU score of 42.04 (against 44.59 for the OPUS-MTen- ar bilingual model) while it significantly outperforms it on the COMET metric (0.8730 vs 0.7911) revealing superior semantic adequacy and fluency.",
+      "first_checked_at": "2026-10-05T09:08:31+00:00",
+      "last_checked_at": "2026-10-05T09:08:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Efficient Multilingual Neural Machine Translation via Corpus-Driven Vocabulary Pruning: An English-Arabic Case Study"
+    },
+    "arXiv:2608.03537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03537",
+      "identity_tokens": [
+        "arXiv:2608.03537"
+      ],
+      "reason": "Modern deep learning workloads increasingly comprise heterogeneous computation graphs that combine compute-intensive operators with memory-intensive subgraphs. Existing deep learning compilers typically optimize these operator classes separately, creating rigid fusion boundaries that limit cross-operator optimization and on-chip data reuse. We observe that downstream memory-intensive operations can execute concurrently with compute-intensive operators, allowing their execution to be hidden behind computation; however, automatically exploiting this opportunity poses new compilation challenges. In this paper, we present ComFuse, an automated GPU compilation system that employs a novel operator fusion strategy to generate high-performance kernels for complex graph structures comprising compute-intensive operators and dependency-rich, memory-intensive elementwise-reduction subgraphs. ComFuse further supports the fusion of back-to-back GEMM (B2BGEMM) patterns, extending its applicability to more complex compute-memory interaction patterns. Additionally, it automatically lowers high-level tensor subprograms into optimized fused kernels, reducing the need for manual kernel engineering. Experimental results show that the fused kernels generated by ComFuse outperform those produced by TorchInductor across post-norm workloads and various complex computation scenarios, while supporting more flexible fusion patterns.",
+      "first_checked_at": "2026-10-05T09:08:31+00:00",
+      "last_checked_at": "2026-10-05T09:08:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "ComFuse: Fusing Complex Memory-Intensive Subgraphs with Compute-Intensive Kernels For Modern GPU Architectures"
+    },
+    "DOI:10.47852/bonviewjdsis62027770": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.47852/bonviewjdsis62027770",
+      "identity_tokens": [
+        "DOI:10.47852/bonviewjdsis62027770"
+      ],
+      "reason": "With the advancement of technology, multi-channel time series prediction tasks have become a focal point of research. However, due to the complex and intertwined correlations between channels, it is challenging to model their interactions accurately and flexibly. Furthermore, most existing methods typically model data from either the time domain or frequency domain alone, leading to inefficient utilization of information. To overcome these challenges, we introduce MCCWT-Net, a multi-channel time series forecasting framework built upon the wavelet transform. Unlike transformer-based models, MCCWT-Net does not rely on self-attention mechanisms, resulting in a more efficient training process. The wavelet transform, when applied in the frequency domain, can be used to extract and reflect features with predictability (such as periodicity) and act as a filter to reduce noise, instead of relying solely on raw historical data. Our model incorporates a specific number of channels and, while modeling long-term features, effectively captures inter-channel correlation information in the frequency domain through wavelet transform, combining it with information from the time domain. Experimental results demonstrate that our model achieves advanced performance across multiple datasets.\n \nReceived: 27 September 2025 | Revised: 18 March 2026 | Accepted: 27 March 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe ETT dataset was acquired at https://github.com/zhouhaoyi/ETDataset. The Exchange dataset was acquired at https://github.com/thuml/Autoformer. The Weather dataset was acquired at https://www.bgc-jena.mpg.de/wetter/. The Traffic dataset was acquired at http://pems.dot.ca.gov/. The Electricity dataset was acquired at https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014.\n \nAuthor Contribution Statement\nHanyu Jiang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data curation, Writing – original draft, Writing – review & editing, Visualization, Project administration, Funding acquisition. Zhichao Zheng: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Supervision.",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Time Series Prediction Network for Modeling Channel Correlation Based on Wavelet Transform"
+    },
+    "arXiv:2608.02995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02995",
+      "identity_tokens": [
+        "arXiv:2608.02995"
+      ],
+      "reason": "Modern large language models (LLMs) exhibit activation sparsity, wherein only a subset of their neurons is activated for given input tokens. Researchers have leveraged this property to optimize LLM serving systems by omitting weight accesses and computations pertaining to inactive neurons. Unfortunately, however, such optimizations create input-dependent weight accesses, which can be leaked over side channels. We present SparSEEty, a new token extraction attack that exploits input-dependent neuron weight accesses introduced by sparsity-exploiting LLM serving systems. SparSEEty first constructs a neuron-activation oracle using neuron weight access side channels during LLM inference, and then inverts the activation traces to reconstruct the input tokens, forming an end-to-end token extraction attack. We instantiate SparSEEty against an LLM serving system protected inside an Intel TDX confidential virtual machine (CVM), addressing three key challenges: (i) constructing a neuron-activation oracle using a combination of side channels exposed by CVMs, (ii) reducing inference-time overheads of neuron activation monitoring for covertness, and (iii) accurately inverting partial binary activation traces back to tokens. Our evaluation shows that SparSEEty can reconstruct both prompt and response tokens with consistently high BLEU scores (>0.95) across various models and datasets, while incurring monitoring overheads of 3.7% to 7.2%.",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels"
+    },
+    "arXiv:2608.03172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03172",
+      "identity_tokens": [
+        "arXiv:2608.03172"
+      ],
+      "reason": "Structure-preserving de-identification replaces protected health information (PHI) with realistic same-type surrogates --\"Anna S.\"becomes\"Maria S.\", not [NAME] -- so that clinical text stays fluent and downstream tools keep working. But this only helps if the substitution does not itself corrupt the signal those tools rely on. We ask a narrow, testable question: on the spans a de-identifier actually masks, can downstream PHI detectors still find the surrogate? We introduce a paired, multi-detector evaluation protocol that (i) scores utility only on masked spans, decoupling coverage from utility; (ii) uses equivalence testing (TOST) rather than null-hypothesis significance testing, which is uninformative at our sample size (57k paired spans); and (iii) builds a surrogate-failure typology separating fixable generator defects from intrinsic detector limits. Across 11 detectors, 7 benchmarks, and 7 languages (1,750 documents), recall on masked spans moves from 76.1% to 74.9% -- a change our equivalence test shows is statistically equivalent to zero within a +/-2-point margin (p ~ 3e-9), with detector ranking preserved. The residual loss does not reflect detectors getting worse at PHI: it concentrates in malformed and out-of-distribution surrogates (truncation Chicago ->Illino, salience loss Cedars-Sinai ->Vidant). A redaction floor and an open-source surrogate baseline indicate the effect is a property of well-formed substitution, not of one tool. We release the evaluation subsets, scoring code, and an interactive dashboard at https://custodianai.pages.dev so the protocol can audit any structure-preserving transform.",
+      "first_checked_at": "2026-10-05T09:08:32+00:00",
+      "last_checked_at": "2026-10-05T09:08:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Surrogate Substitution Preserves PHI Detectability: A Multi-Detector Equivalence Study"
     }
   }
 }
