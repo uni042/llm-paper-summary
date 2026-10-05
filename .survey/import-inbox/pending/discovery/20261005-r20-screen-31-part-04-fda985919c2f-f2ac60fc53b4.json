@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-31-part-04-fda985919c2f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818136",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818136"
+      ],
+      "title": "ActivationBackdoor: Backdooring Large Language Models in Collaborative Inference via Intermediate Activations",
+      "reason": "Collaborative inference enables cost-effective deployment of large language models by partitioning layers across multiple participants and forwarding intermediate activations between participants in a pipeline, but these transmitted activations also create a new attack surface: a malicious participant can manipulate intermediate activations during inference. Prior work on collaborative inference attacks has largely focused on privacy leakage, leaving the backdoor threat insufficiently explored. Inspired by recent advances in representation engineering, we propose ActivationBackdoor, an inference-time backdoor attack that composes two activation-level components for trigger detection and backdoor behavior injection. This design achieves the same ''clean inputs behave normally, triggered inputs induce attacker-specified behavior'' property as traditional backdoor attacks, while requiring no access to training data and no model parameter updates. Experiments across classification and open-ended generation tasks show that ActivationBackdoor attains attack success comparable to training-time backdoor baselines while preserving high clean-task accuracy and utility. Overall, our results expose a new and practical backdoor risk in collaborative inference arising from intermediate activation exposure.",
+      "source_url": "https://doi.org/10.1145/3770855.3818136",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818144",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818144"
+      ],
+      "title": "EPMD: A Framework for LLM-Enhanced Ad Auctions",
+      "reason": "The integration of Large Language Models (LLMs) to dynamically enhance ad creatives offers significant market value but presents a formidable mechanism design challenge. This interaction is characterized by a tri-level optimization problem where the platform, as a Stackelberg leader, must determine an optimal investment policy while anticipating the strategic responses of both advertisers and their budget-constrained auto-bidding agents. To address this, we theoretically deconstruct the strategic hierarchy and prove that creative enhancement can endogenously align advertiser incentives via the monotonicity of market outcomes relative to bid pacing multipliers. This insight allows us to collapse the intractable tri-level hierarchy into a more manageable bilevel optimization task. We then introduce the Equilibrium-Predictive Mechanism Design (EPMD) framework, which employs a novel dual-network architecture consisting of an Investment Policy Network (IPN) and an Equilibrium Prediction Network (EPN). This design enables the platform to learn optimal resource allocation and the market's equilibrium mapping simultaneously in an efficient, end-to-end manner. Empirical evaluations using real-world datasets and GPT-4o-based enhancement demonstrate that EPMD increases platform revenue by up to +1.11% while ensuring market stability and incentive alignment, providing the first tractable solution for this new class of generative advertising problems.",
+      "source_url": "https://doi.org/10.1145/3770855.3818144",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818155",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818155"
+      ],
+      "title": "Adaptive Geometry Routing for Vision-Language Understanding",
+      "reason": "Vision language models face a fundamental geometry trade-off: Euclidean representations excel at instance-level discrimination, while hyperbolic representations naturally encode semantic hierarchies. Hybrid training is challenging because one geometry may dominate early, leaving the other under-trained failure mode we term geometry dominance. We introduce Adaptive Geometry Routing (AGR), a framework that addresses this via a novel four-phase training curriculum : (1) Isolation hyperbolic-only training stabilizes hierarchical structure; (2) Shadow router learns mixing patterns using only hyperbolic signals; (3) Soft Launch Euclidean scores gradually become visible; (4) Adaptive full dual-geometry routing. This phased coordination of router activation (?) and Euclidean visibility (?) prevents early dominance while enabling data-driven geometry selection. Built on a shared backbone with lightweight LoRA-adapted heads and bounded residual corrections, AGR discovers that hyperbolic geometry is preferred by default (85% weight), with routing adapting semantically abstract queries route more hyperbolic, attribute-rich queries shift toward Euclidean. On ViT-B, AGR achieves 38.8% COCO T2I R@5 (+6.5pp over MERU), 64.7% Flickr30K I2T R@5 (+11.3pp), and 32.6% ImageNet accuracy (+9.3pp), demonstrating that phased curriculum training enables stable hybrid geometry learning for vision-language understanding.",
+      "source_url": "https://doi.org/10.1145/3770855.3818155",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818196",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818196"
+      ],
+      "title": "Semantic Association vs. Position: Which Information Do Attention Heads Prefer?",
+      "reason": "In large language models (LLMs), attention heads generally encode both semantic association information (SAI) and positional information (PI). This raises a fundamental interpretability question: Which does each attention head relatively prefer, SAI or PI? To address this question, based on theoretical analysis and derivations, we propose a unified relative-preference measurement method. We also define two types of high-preference heads: SAI-preference heads and PI-preference heads. Specifically, we formalize the problem and restrict the research object to attention heads in RoPE-based LLMs (covering single-head/multi-head). We further derive a theoretical expression of the relative-preference measure by introducing an SAI-reduction mask. However, the expression involves an unknown function and lacks directly usable labeled datasets to learn it. For computation, we design an estimator of SAI-preference to approximate the theoretical expression and derive a sufficient condition for the maximum of the estimator. Finally, we propose a unified and computable relative-preference measurement method. In experiments, we present computed results and visualizations of information preference across multiple RoPE-based LLMs. We provide two interpretable applications. (1) We reveal interpretable layer-wise distribution patterns of the two types of high-preference heads. (2) We visualize and analyze the interpretable intervention effects of pruning high-preference heads. Then, we conduct intervention experiments on multiple datasets under a small budget and further find that there exists a certain type of high-preference head that can be pruned to yield a positive or at least non-negative gain on a given dataset in most cases.",
+      "source_url": "https://doi.org/10.1145/3770855.3818196",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818467",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818467"
+      ],
+      "title": "RecCompl: Efficient Model Compilation for Industrial Scale Recommendation Models with PyTorch 2",
+      "reason": "Deep Learning Recommendation Models (DLRMs) play a key role to power real-world recommendation and ranking, yet their growing complexity has made production deployment increasingly challenging. While PyTorch 2 (PT2) offers promising performance and productivity gains through automated model compilation, its initial release lacked critical features needed for DLRM adoption. In this work, we present RecCompl, a comprehensive model compilation system that enables efficient model compilation of industrial scale DLRMs with PT2. RecCompl addresses key compatibility issues by extending operator coverage, minimizing graph breaks, avoiding unnecessary recompilation, and generalizing graph transformation. Besides, to meet the high requirement on model exploration, we introduce a configuration-based user interface that decouples compilation settings from model code, allowing fine-grained control without intrusive changes. Despite these improvements, efficiency gaps remain in achieving a production-ready compilation system. To close them, we introduce systematic designs and engineering optimizations that enhance compilation time, memory management, and online deployment reliability. RecCompl is widely adopted, and delivers up to 60% higher training throughput while achieving substantially lower compilation latency, consistent performance across varying memory budgets, and stable online deployment.",
+      "source_url": "https://doi.org/10.1145/3770855.3818467",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
