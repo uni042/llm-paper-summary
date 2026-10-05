@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-78-part-08-bbae02f04297",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14447",
+      "identity_tokens": [
+        "arXiv:2409.14447"
+      ],
+      "title": "ParvaGPU: Efficient Spatial GPU Sharing for Large-Scale DNN Inference in Cloud Environments",
+      "reason": "ParvaGPU addresses generic DNN GPU sharing and SLO/resource allocation; the primary abstract does not identify an LLM inference workload or LLM-specific method.",
+      "source_url": "https://arxiv.org/abs/2409.14447",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12396",
+      "identity_tokens": [
+        "arXiv:2408.12396"
+      ],
+      "title": "Cross-Domain Foundation Model Adaptation: Pioneering Computer Vision Models for Geophysical Data Analysis",
+      "reason": "This paper adapts computer-vision foundation models to geophysical analysis; its cost reduction is for model development/fine-tuning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2408.12396",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03291",
+      "identity_tokens": [
+        "arXiv:2408.03291"
+      ],
+      "title": "DopQ-ViT: Towards Distribution-Friendly and Outlier-Aware Post-Training Quantization for Vision Transformers",
+      "reason": "DopQ-ViT is post-training quantization for vision transformers, not language models.",
+      "source_url": "https://arxiv.org/abs/2408.03291",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04045",
+      "identity_tokens": [
+        "arXiv:2504.04045"
+      ],
+      "title": "A Survey of Pathology Foundation Model: Progress and Future Directions",
+      "reason": "This is a survey of pathology vision foundation models, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2504.04045",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNSM.2024.3419151",
+      "identity_tokens": [
+        "DOI:10.1109/TNSM.2024.3419151"
+      ],
+      "title": "Meta-Governance: Blockchain-Driven Metaverse Platform for Mitigating Misbehavior Using Smart Contract and AI",
+      "reason": "Meta-Governance applies AI to metaverse behavior governance; no LLM inference-efficiency contribution is described.",
+      "source_url": "https://doi.org/10.1109/TNSM.2024.3419151",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
