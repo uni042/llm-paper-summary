@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-31-part-09-fda985919c2f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07616",
+      "identity_tokens": [
+        "arXiv:2608.07616"
+      ],
+      "title": "HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers",
+      "reason": "Vision transformers face significant computational overheads in high-resolution dense prediction due to the quadratic complexity of self-attention. Linear attention offers efficiency but sacrifices local context modeling. We propose \\textbf{HSMLA (Hierarchical Softmax Multi-scale Linear Attention)}, which combines ReLU-based linear attention for global context, selective softmax refinement for critical local features, and multi-scale token representations via depthwise convolutions. HSMLA achieves superior accuracy-efficiency trade-offs: up to $4.2\\times$ inference-time speedup across dense prediction tasks, $87.3%$ Dice with $3.2\\times$ speedup on CT organ segmentation, and $94.2%$ AUC with $4.1\\times$ speedup on pathology WSI.",
+      "source_url": "https://arxiv.org/abs/2608.07616",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14691",
+      "identity_tokens": [
+        "arXiv:2608.14691"
+      ],
+      "title": "The Quantum Shortcut: Complex Phase-State Dynamics Reduce the Optimization Steps of Sequence Models",
+      "reason": "Sequence models are conventionally distinguished by their backbone, the mechanism that routes information across positions, such as attention or recurrence. This paper varies a choice that is prior to the backbone and shared by nearly all current models: the \\emph{substrate}, the number system in which the hidden state is represented together with the form of the map from state to prediction. The prevailing substrate is a real-valued state with an affine--softmax readout; we study a complex-valued alternative drawn from the mathematics of quantum theory, in which information is carried by the phases of the state and scores are quadratic Born forms. Prior work proved an idealized version of this substrate representationally stronger than any real model with a linear readout; we ask whether it also trains faster. Relaxing the two properties that block deployment, exact unitarity and the Born vocabulary readout, we instantiate it in the Mamba state-space model and an attention-based Transformer. At 253M parameters, matched to within $0.02\\%$ and trained under one fixed protocol on three byte-level corpora, the complex models reach every measured validation loss in approximately one third (state-space) and one half (attention) of the optimization steps of their real counterparts. The two backbones then diverge. Once the learning-rate warmup ends, the state-space advantage continues to widen, from $0.321$ to $0.354$ bits per character on OpenWebText and from $0.368$ to $0.396$ on FineWeb, which an artifact of the warmup ramp would not do; the attention advantage instead decays toward zero on every corpus, and is therefore an effect of early training.",
+      "source_url": "https://arxiv.org/abs/2608.14691",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1063/5.0328951",
+      "identity_tokens": [
+        "DOI:10.1063/5.0328951"
+      ],
+      "title": "Demonstration of machine-learning-based control for femtosecond-level pulse-shaping applications",
+      "reason": "Advancements in laser-based secondary radiation sources are being made by controlling the pulse shape of ultrafast, high-power laser systems away from its best-compressed level (shortest duration). Pulse shaping at the femtosecond level relies on control over a combination of both the laser spectral intensity and phase. Devices such as an acousto-optic programmable dispersive filter are often used at high power (>1 TW) laser facilities to affect the spectral phase while largely preserving the spectral intensity and overall laser power. Using this type of controllable hardware, multiple machine-learning-based models were trained on experimental data. This was performed to capture all nonlinearities in the amplification process and to predict upstream laser input parameters needed to produce a specific output pulse shape at TW-level peak powers. Comparisons of algorithm performance are given for a variety of models and training dataset sizes, along with the results of experiments demonstrating the ability to produce a custom-defined pulse shape using dispersion-coefficient control, the first step toward arbitrary pulse-shaping control at the femtosecond level for high-power laser applications.",
+      "source_url": "https://doi.org/10.1063/5.0328951",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AANN71145.2026.11709067",
+      "identity_tokens": [
+        "DOI:10.1109/AANN71145.2026.11709067"
+      ],
+      "title": "Post-Training Low-Bit Quantization for Edge-Sensor Neural Inference",
+      "reason": "packetに一次要旨がなく、DOI/IEEE Xploreの一次資料本文も取得できなかった。タイトルだけでは対象性を推測せずborderlineに分類。試行: DOI resolverおよびIEEE Xplore document URL (retrieval internal error)。",
+      "source_url": "https://doi.org/10.1109/AANN71145.2026.11709067",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AANN71145.2026.11709383",
+      "identity_tokens": [
+        "DOI:10.1109/AANN71145.2026.11709383"
+      ],
+      "title": "Query-Aware Adaptive Document Compression for Efficient RAG Context Allocation",
+      "reason": "packetに一次要旨がなく、DOI/IEEE Xploreの一次資料本文も取得できなかった。タイトルだけでは対象性を推測せずborderlineに分類。試行: DOI resolverおよびIEEE Xplore document URL (retrieval internal error)。",
+      "source_url": "https://doi.org/10.1109/AANN71145.2026.11709383",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    }
+  ]
+}
