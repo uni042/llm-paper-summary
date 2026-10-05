@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-01-part-02-546492433cc3",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28958",
+      "identity_tokens": [
+        "arXiv:2606.28958"
+      ],
+      "title": "When Latent Agents Lie: KV-Cache Integrity in Multi-Agent LLM Collaboration",
+      "reason": "Primary abstract studies integrity attacks/detection for shared KV cache in multi-agent collaboration; its focus is security, not cache optimization or inference speed.",
+      "source_url": "https://arxiv.org/abs/2606.28958",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27153",
+      "identity_tokens": [
+        "arXiv:2606.27153"
+      ],
+      "title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead",
+      "reason": "Primary abstract concerns distributed Muon optimizer training overhead; this is training-only efficiency, explicitly outside scope.",
+      "source_url": "https://arxiv.org/abs/2606.27153",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22984",
+      "identity_tokens": [
+        "arXiv:2606.22984"
+      ],
+      "title": "Scalable Physics-Inspired Transformers for Spin Glasses",
+      "reason": "Primary abstract concerns physics-inspired transformers for spin-glass sampling and combinatorial optimization, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2606.22984",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744255.3811741",
+      "identity_tokens": [
+        "DOI:10.1145/3744255.3811741"
+      ],
+      "title": "Assessing the Sustainability of LLM Inference through Energy–Accuracy Analysis",
+      "reason": "The candidate title and packet abstract describe empirical LLM inference energy/accuracy analysis, but the primary DOI record could not be fetched (HTTP 403) and no author-hosted primary full text was located in the attempted searches.",
+      "source_url": "https://doi.org/10.1145/3744255.3811741",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19271",
+      "identity_tokens": [
+        "arXiv:2606.19271"
+      ],
+      "title": "TurboServe: Serving Streaming Video Generation Efficiently and Economically",
+      "reason": "Primary abstract concerns streaming video generation session serving; it explicitly describes a video-generation workload rather than LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2606.19271",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.07903-hexgen-2.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.04203-cascadia-cascade-serving-routing-deployment.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2509.26182-parallax-decentralized-heterogeneous-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2505.05286-hexgen-flow-optimizing-llm-inference-request-scheduling-for-agentic-text.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    }
+  ]
+}
