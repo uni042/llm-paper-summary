@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:30:37+00:00",
-  "record_count": 2560,
+  "updated_at": "2026-10-05T04:33:30+00:00",
+  "record_count": 2573,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -37103,6 +37103,197 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "Science or Slop?: Benchmarking and Mitigating Scientific Slop in AI-Generated Papers"
+    },
+    "arXiv:2610.00541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00541",
+      "identity_tokens": [
+        "arXiv:2610.00541"
+      ],
+      "reason": "Random Recursive Models are an alternative reasoning architecture; the abstract’s parameter/compute discussion concerns non-LLM models and does not establish LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T04:33:28+00:00",
+      "last_checked_at": "2026-10-05T04:33:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Random Recursive Models"
+    },
+    "arXiv:2610.00544": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00544",
+      "identity_tokens": [
+        "arXiv:2610.00544"
+      ],
+      "reason": "Memorizon concerns training world models beyond context windows, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T04:33:28+00:00",
+      "last_checked_at": "2026-10-05T04:33:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Memorizon: Training World Models Beyond Their Context Window"
+    },
+    "arXiv:2610.00564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00564",
+      "identity_tokens": [
+        "arXiv:2610.00564"
+      ],
+      "reason": "The paper studies attention kernels for learning maps between heavy-tailed measures; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T04:33:28+00:00",
+      "last_checked_at": "2026-10-05T04:33:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Attention Kernels for Learning Maps Between Heavy-Tailed Measures"
+    },
+    "arXiv:2610.00569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00569",
+      "identity_tokens": [
+        "arXiv:2610.00569"
+      ],
+      "reason": "Residual-quantized tokenization is applied to collider-event generation, a physics modeling task rather than LLM serving.",
+      "first_checked_at": "2026-10-05T04:33:28+00:00",
+      "last_checked_at": "2026-10-05T04:33:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Scaling Collider Event Generation with Residual-Quantized Tokens"
+    },
+    "DOI:10.3389/frai.2026.1848075": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1848075",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1848075"
+      ],
+      "reason": "Kidney/tumor segmentation and training-stage MedSAM feature guidance; medical image task, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:33:29+00:00",
+      "last_checked_at": "2026-10-05T04:33:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Prior-Enhanced Axial TransUNet: integrating MedSAM priors and sparse region-aware attention for kidney-tumor segmentation"
+    },
+    "DOI:10.3390/aerospace13100895": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/aerospace13100895",
+      "identity_tokens": [
+        "DOI:10.3390/aerospace13100895"
+      ],
+      "reason": "Monocular satellite 3D reconstruction and pose estimation; computer-vision application, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:33:29+00:00",
+      "last_checked_at": "2026-10-05T04:33:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "On-Orbit 3D Reconstruction and Pose Measurement of Space Non-Cooperative Satellites Using Monocular Vision"
+    },
+    "arXiv:2610.00738": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00738",
+      "identity_tokens": [
+        "arXiv:2610.00738"
+      ],
+      "reason": "Q-MINO stabilizes quantization-aware training optimization; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T04:33:29+00:00",
+      "last_checked_at": "2026-10-05T04:33:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Q-MINO: A Minimal-Norm Method for Quantization-Aware Training"
+    },
+    "arXiv:2610.00746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00746",
+      "identity_tokens": [
+        "arXiv:2610.00746"
+      ],
+      "reason": "MEG-Mamba is a domain-specific neural activity foundation model; reported efficiency is pretraining, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:33:29+00:00",
+      "last_checked_at": "2026-10-05T04:33:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MEG-Mamba: A Scalable State-Space Foundation Model for Magnetoencephalography"
+    },
+    "arXiv:2610.00819": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00819",
+      "identity_tokens": [
+        "arXiv:2610.00819"
+      ],
+      "reason": "PI-AMFM performs biomedical signal mode decomposition; outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:33:29+00:00",
+      "last_checked_at": "2026-10-05T04:33:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PI-AMFM: Permutation-Invariant Learning for Variable-Cardinality AM-FM Mode Decomposition in Biomedical Signal Analysis"
+    },
+    "arXiv:2610.00661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00661",
+      "identity_tokens": [
+        "arXiv:2610.00661"
+      ],
+      "reason": "Stepwise risk-sensitive GRPO optimizes diffusion-language-model reinforcement learning; training-only optimization is out of scope.",
+      "first_checked_at": "2026-10-05T04:33:30+00:00",
+      "last_checked_at": "2026-10-05T04:33:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Exploring More, Reasoning Better: Stepwise Risk-Sensitive GRPO for Diffusion Language Models"
+    },
+    "arXiv:2610.00663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00663",
+      "identity_tokens": [
+        "arXiv:2610.00663"
+      ],
+      "reason": "Backdoor containment proposes expert quarantine/shutdown for safety; its focus is attack containment rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T04:33:30+00:00",
+      "last_checked_at": "2026-10-05T04:33:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Backdoor Containment via Expert Quarantine and Shutdown in LLMs"
+    },
+    "arXiv:2610.00685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00685",
+      "identity_tokens": [
+        "arXiv:2610.00685"
+      ],
+      "reason": "Backdoor purification is a LoRA model-safety method, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T04:33:30+00:00",
+      "last_checked_at": "2026-10-05T04:33:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Backdoor Purification for LoRA-Tuned LLMs via Null-Space Projection"
+    },
+    "arXiv:2610.00687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00687",
+      "identity_tokens": [
+        "arXiv:2610.00687"
+      ],
+      "reason": "Leto accelerates recovery during LLM training after hardware failure; training-system recovery is outside inference scope.",
+      "first_checked_at": "2026-10-05T04:33:30+00:00",
+      "last_checked_at": "2026-10-05T04:33:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Leto: Fast In-Place Recovery for LLM Training on Surviving Hardware"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56414007ae4fa078-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/aerospace13100895",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/aerospace13100895",
+    "identity_tokens": [
+      "DOI:10.3390/aerospace13100895"
+    ],
+    "reason": "Monocular satellite 3D reconstruction and pose estimation; computer-vision application, not LLM inference.",
+    "first_checked_at": "2026-10-05T04:33:29+00:00",
+    "last_checked_at": "2026-10-05T04:33:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "On-Orbit 3D Reconstruction and Pose Measurement of Space Non-Cooperative Satellites Using Monocular Vision"
+  },
+  "processed_at": "2026-10-05T04:33:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56414007ae4f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
