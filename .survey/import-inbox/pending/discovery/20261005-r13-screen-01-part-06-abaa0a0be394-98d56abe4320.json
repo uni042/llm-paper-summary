@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-01-part-06-abaa0a0be394",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jml.2019.104047",
+      "identity_tokens": [
+        "DOI:10.1016/j.jml.2019.104047"
+      ],
+      "title": "How many words do we read per minute? A review and meta-analysis of reading rate",
+      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
+      "source_url": "https://doi.org/10.1016/j.jml.2019.104047",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.14565",
+      "identity_tokens": [
+        "arXiv:2306.14565"
+      ],
+      "title": "Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning",
+      "reason": "Abstract focuses on instruction tuning to mitigate multimodal hallucination, a training intervention rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2306.14565",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.12900",
+      "identity_tokens": [
+        "arXiv:2301.12900"
+      ],
+      "title": "DepGraph: Towards Any Structural Pruning",
+      "reason": "一般Transformerへ適用可能なpruning frameworkだが、実測scopeは画像/graph/分類およびLSTMでLLM推論への適用根拠がない。target model実験が新規に必要なため本文だけからResearch適合を明確化できずborderline。",
+      "source_url": "https://arxiv.org/abs/2301.12900",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.07416",
+      "identity_tokens": [
+        "arXiv:1803.07416"
+      ],
+      "title": "Tensor2Tensor for Neural Machine Translation",
+      "reason": "Abstract introduces a deep-learning library and neural machine translation models, with no LLM inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/1803.07416",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/77726.255132",
+      "identity_tokens": [
+        "DOI:10.1145/77726.255132"
+      ],
+      "title": "The Tera computer system",
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "source_url": "https://doi.org/10.1145/77726.255132",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
+      ]
+    }
+  ]
+}
