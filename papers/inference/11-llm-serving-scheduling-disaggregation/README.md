@@ -958,6 +958,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   LLM推論サーバーは常にGPUを最高周波数で動かせば遅延を抑えやすいが、要求到着率、バッチサイズ、KVキャッシュ占有量によって必要性能は時々刻々変わる。throttLL’eMは、次の反復でのKVキャッシュ使用量とバッチサイズを予測し、それらを機械学習の性能モデルへ与えて、SLOを満たせる最低側のGPU動作点を選ぶ。
 
+- **2024-12 · [Efficiently Serving LLM Reasoning Programs with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：5  
+  Certaindexで途中回答の収束度を測り、Dynasorが簡単な推論を早く止めて難問へ計算を再配分し、固定予算の推論プログラムを問い合わせ単位・配信単位で動的化する。
+
 - **2025-09 · [Amoeba: Runtime Tensor Parallel Transformation for LLM Inference Services](2025-2509.19729-gyges-cross-instance-parallelism-transformation.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   要求長に応じて稼働中インスタンスをTP1↔TP2↔TP4へ変換し、KVページ配置と重み境界を事前整列して再計算なしで並列度を変えることで、短文時の高処理量と長文対応を両立する方式。
@@ -973,10 +977,6 @@
 - **2025-03 · [Niyama: Breaking the Silos of LLM Inference Serving](2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md)**  
   実装：[✓](https://github.com/microsoft/sarathi-serve/tree/niyama_asplos2026) ・ リポジトリ内被引用：4  
   対話・コード補完・要約などを「対話型」「バッチ型」の別GPU群へ固定せず、要求ごとの細かなサービス品質（Quality of Service; QoS）期限を同じGPUプールで扱う配信系。Niyamaはデコード要求の締切余裕を見ながらプリフィルの分割サイズを動的に変え、期限優先と残り仕事量優先を混ぜ、過負荷時には少数要求だけを低優先度へ降格する。
-
-- **2024-12 · [Efficiently Serving LLM Reasoning Programs with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：4  
-  Certaindexで途中回答の収束度を測り、Dynasorが簡単な推論を早く止めて難問へ計算を再配分し、固定予算の推論プログラムを問い合わせ単位・配信単位で動的化する。
 
 - **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
   実装：[✓](https://github.com/SPEAR-UIC/PARS) ・ リポジトリ内被引用：3  
