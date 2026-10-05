@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d455c041821a2f6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32401",
+    "identity_tokens": [
+      "arXiv:2609.32401"
+    ],
+    "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+    "first_checked_at": "2026-10-05T05:22:51+00:00",
+    "last_checked_at": "2026-10-05T05:22:51+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Shared Worlds, Private Minds: Structured Memory for Long-Form Writing as World Creation"
+  },
+  "processed_at": "2026-10-05T05:22:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d455c041821",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

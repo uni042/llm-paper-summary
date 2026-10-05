@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:19:28+00:00",
-  "record_count": 2837,
+  "updated_at": "2026-10-05T05:22:53+00:00",
+  "record_count": 2853,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -41264,6 +41264,240 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
       ],
       "title": "RapidGEMM: An Efficient Tile-agnostic GEMM for Mixture-of-Experts Training"
+    },
+    "arXiv:2609.32398": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32398",
+      "identity_tokens": [
+        "arXiv:2609.32398"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:22:51+00:00",
+      "last_checked_at": "2026-10-05T05:22:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Function Over Form: Distributional Orthogonalization in Mixture-of-Experts with Replica Expert Mechanism"
+    },
+    "arXiv:2609.32401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32401",
+      "identity_tokens": [
+        "arXiv:2609.32401"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:22:51+00:00",
+      "last_checked_at": "2026-10-05T05:22:51+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Shared Worlds, Private Minds: Structured Memory for Long-Form Writing as World Creation"
+    },
+    "arXiv:2609.32434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32434",
+      "identity_tokens": [
+        "arXiv:2609.32434"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:22:51+00:00",
+      "last_checked_at": "2026-10-05T05:22:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "From Latents to Wires: Surgical Post-Editing on Large Language Models"
+    },
+    "arXiv:2609.32444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32444",
+      "identity_tokens": [
+        "arXiv:2609.32444"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:22:51+00:00",
+      "last_checked_at": "2026-10-05T05:22:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It"
+    },
+    "arXiv:2609.32447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32447",
+      "identity_tokens": [
+        "arXiv:2609.32447"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:51+00:00",
+      "last_checked_at": "2026-10-05T05:22:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Length-Independent State Tracking Under a Parallel Scan"
+    },
+    "arXiv:2609.32197": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32197",
+      "identity_tokens": [
+        "arXiv:2609.32197"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md"
+      ],
+      "title": "SparSP: Exploiting Communication Sparsity for Sequence-Parallel Video DiTs"
+    },
+    "arXiv:2609.32198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32198",
+      "identity_tokens": [
+        "arXiv:2609.32198"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Agents as Software: A Programming Languages Agenda for Agent Reliability"
+    },
+    "arXiv:2609.32363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32363",
+      "identity_tokens": [
+        "arXiv:2609.32363"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DiffPTS: Rethinking Diffusion ELBO for Probabilistic Time Series Forecasting"
+    },
+    "arXiv:2609.32391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32391",
+      "identity_tokens": [
+        "arXiv:2609.32391"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SCLATE: a Substrate for Continual-Learning Agent Training and Evaluation"
+    },
+    "arXiv:2609.32178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32178",
+      "identity_tokens": [
+        "arXiv:2609.32178"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Analytic-Walk Rotary Positional Encodings for Graphs"
+    },
+    "arXiv:2609.32185": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32185",
+      "identity_tokens": [
+        "arXiv:2609.32185"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Contamination, Prior, or Evidence? Decomposing and Training Evidence Use in Whole-Slide Vision-Language Models"
+    },
+    "arXiv:2609.32189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32189",
+      "identity_tokens": [
+        "arXiv:2609.32189"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "ScopeIF: Improving Scope-Aware Precise Instruction-Following in Large Language Models via Graded Reward Modeling"
+    },
+    "arXiv:2609.32193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32193",
+      "identity_tokens": [
+        "arXiv:2609.32193"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:22:52+00:00",
+      "last_checked_at": "2026-10-05T05:22:52+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Devol-ONE: One Autoregressive Mixture of Transformers to Unify Vision-Language-Action and Latent World Modeling"
+    },
+    "arXiv:2609.32100": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32100",
+      "identity_tokens": [
+        "arXiv:2609.32100"
+      ],
+      "reason": "LLM attentionのtraining scaling law分析。効率化手法もinference評価もなく学習解析が対象。",
+      "first_checked_at": "2026-10-05T05:22:53+00:00",
+      "last_checked_at": "2026-10-05T05:22:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Emergent One-Third Scaling Law as Attention Tries to Concentrate"
+    },
+    "arXiv:2609.32102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32102",
+      "identity_tokens": [
+        "arXiv:2609.32102"
+      ],
+      "reason": "Mamba representation/workspaceの解釈・steering分析で、推論効率化・serving性能を扱わない。",
+      "first_checked_at": "2026-10-05T05:22:53+00:00",
+      "last_checked_at": "2026-10-05T05:22:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Residual Streams Read, Recurrent States Remember: The Global Workspace in Mamba Models"
+    },
+    "arXiv:2609.32124": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32124",
+      "identity_tokens": [
+        "arXiv:2609.32124"
+      ],
+      "reason": "fine-tuning時のweight freezing/retention手法で、学習・adaptationが対象。",
+      "first_checked_at": "2026-10-05T05:22:53+00:00",
+      "last_checked_at": "2026-10-05T05:22:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "What Should We Freeze? Guarded Freezing: Connectivity Shapes the Fine-Tuning of Pretrained Models"
     }
   }
 }
