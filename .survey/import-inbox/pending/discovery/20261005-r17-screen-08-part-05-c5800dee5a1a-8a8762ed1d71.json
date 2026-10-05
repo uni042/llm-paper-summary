@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-08-part-05-c5800dee5a1a",
+  "reference_main_sha": "779b87e2a74d421eab58598de1d09f9c0e3beeed",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MCOM.001.2500262",
+      "identity_tokens": [
+        "DOI:10.1109/MCOM.001.2500262"
+      ],
+      "title": "Toward Efficient Orchestration of GenAI Workloads in Modern Container Clouds",
+      "reason": "本文はLLM inference KPI/クラウドorchestrationを論じる一方、検証はAI collective通信を中心としLLM servingの測定を今後の指標として挙げる。対象性はインフラ隣接で確定しにくい。",
+      "source_url": "https://doi.org/10.1109/MCOM.001.2500262",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3629537",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2025.3629537"
+      ],
+      "title": "LORA: A Latency-Oriented Recurrent Architecture for Large Language Model on Multi-FPGA Platform With Communication Optimization",
+      "reason": "題名・要旨上はmulti-FPGAでLLM latencyを下げるarchitectureと読めるが、primary full textにアクセスできず測定条件/寄与を確認できない。",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3629537",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCC.2026.3689897",
+      "identity_tokens": [
+        "DOI:10.1109/TCC.2026.3689897"
+      ],
+      "title": "Causality-Aware Graph Mixture of Experts for Accurate Multi-Cloud Workload Prediction",
+      "reason": "マルチクラウドのworkloadを予測するgraph mixture-of-expertsであり、LLM serving/inferenceの効率化ではない。",
+      "source_url": "https://doi.org/10.1109/TCC.2026.3689897",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCC.2026.3712315",
+      "identity_tokens": [
+        "DOI:10.1109/TCC.2026.3712315"
+      ],
+      "title": "MAP: GPU Resource Planning for Multi-Agent Systems With Stochastic and Verbose Outputs",
+      "reason": "要旨上はstochastic/verbose LLM-agent outputsを考慮するGPU resource planningで候補性があるが、primary full textを得られず具体的なserving method・評価条件を確認できない。",
+      "source_url": "https://doi.org/10.1109/TCC.2026.3712315",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.15921-spin-heterogeneous-speculative-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2026.3657229",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3657229"
+      ],
+      "title": "FedShieldLLM: Measurement, Detection and Protection of Privacy Leakage in Federated LLMs",
+      "reason": "Federated LLMのプライバシー漏えい測定・検知・保護が主題で、推論効率化を扱わない。",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3657229",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ]
+    }
+  ]
+}
