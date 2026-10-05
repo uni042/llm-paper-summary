@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（299本）
+## 自動生成の論文一覧（301本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1192,6 +1192,10 @@
   実装：✓ ・ リポジトリ内被引用：17  
   注意行列を保存せず安定な逐次ソフトマックス集約とチャンク化で厳密な自己注意を計算し、16,384トークン推論時の注意メモリを59倍削減する。
 
+- **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  GLaM（Generalist Language モデル）は、密モデルの全パラメータを毎トークン実行する代わりに、混合専門家モデル（MoE）のルータで一部専門家だけを活性化することで、総モデル容量と実際の計算量を分離する。最大構成は1.2兆パラメータでGPT-3の約7倍の総パラメータを持つが、論文は推論FLOPsをGPT-3の約半分と報告する。
+
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
@@ -1219,4 +1223,10 @@
 - **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   Transformerの多頭自己注意は同じ層に複数の注意ヘッドを置くが、全ヘッドが同じ程度に必要とは限らない。本論文はニューラル機械翻訳を対象に、各ヘッドが最終予測へどれだけ寄与するか、どのような言語的役割を持つか、そしてヘッド単位で削除しても品質を維持できるかを一つの実験系で調べる。
+
+### 10年前（2016-11〜2017-10）
+
+- **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：120  
+  各入力に対して全専門家を実行せず、学習可能なゲートが上位少数だけを選択することで、総容量を大きくしながら一例あたりの計算を限定する。論文は最大1370億パラメータのモデルを構築し、現代のGPUクラスタ上で計算効率の低下を小さく抑えつつ、従来より1000倍超のモデル容量を扱えると報告する。
 <!-- survey:auto:end -->
