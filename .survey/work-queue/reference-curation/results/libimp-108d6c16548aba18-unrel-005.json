@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-108d6c16548aba18-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.04108",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.04108",
+    "identity_tokens": [
+      "arXiv:2609.04108"
+    ],
+    "reason": "Reinforcement learning with verifiable rewards (RLVR) and on-policy distillation (OPD) have emerged as two dominant methods for post-training reasoning LLMs. Prior work uses OPD's dense token-level supervision to complement the sparse RL reward, fusing the two signals within a single step: either as a \\emph{weighted-additive combination} or a \\emph{teacher-modulated rescaling} of the RL advantage. In this paper, we show that a simple two-stage scheme, OPD-then-RL, consistentl",
+    "first_checked_at": "2026-10-05T05:58:48+00:00",
+    "last_checked_at": "2026-10-05T05:58:48+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR"
+  },
+  "processed_at": "2026-10-05T05:58:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-108d6c16548a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

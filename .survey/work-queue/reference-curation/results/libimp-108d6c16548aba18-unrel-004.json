@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-108d6c16548aba18-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.22504",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.22504",
+    "identity_tokens": [
+      "arXiv:2606.22504"
+    ],
+    "reason": "Coding agents often receive broad tool access for an entire task, even when a resource is needed only for one subgoal. We call this gap lingering authority: a temporary resource/effect capability remains exposed after the episode that justified it has closed. PORTICO is a reference monitor for revocable capabilities exposed to the planner. It compiles an explicit task contract into initial capabilities, grant rules, trusted closure predicates, and global deny rules. A request",
+    "first_checked_at": "2026-10-05T05:58:48+00:00",
+    "last_checked_at": "2026-10-05T05:58:48+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+    ],
+    "title": "Lingering Authority: Revocable Resource-and-Effect Capabilities for Coding Agents"
+  },
+  "processed_at": "2026-10-05T05:58:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-108d6c16548a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

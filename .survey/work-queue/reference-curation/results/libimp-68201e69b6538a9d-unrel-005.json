@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68201e69b6538a9d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.24401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.24401",
+    "identity_tokens": [
+      "arXiv:2609.24401"
+    ],
+    "reason": "Structured pruning is a model compression technique that is used to reduce the computational cost of deploying deep neural networks on resource-constrained devices. Popular methods of pruning rely on opaque heuristics or weight-based criteria that give no indication as to the structural dependencies in the network. To address these limitations we present Artificial Structure Function Search (ASF-S): a novel structured pruning framework. ASF-S utilizes Principle Gradient Importance (PGI): a novel prune-candidate selection criteria that is inspired by structure-function relationships in the brain. By ensuring the pruned structure of the model respects topographical organization of the output layer, we define Artificial Functional Connectivity (AFC) for artificial neural networks. AFC provides evidence to demonstrate that accurate smaller networks can be found using careful prune candidate selection criteria. We present results for PGI as a selection criterion and for ASF-S as a pruning framework against recent benchmarks, demonstrating that our method yields model variants with 70\\% parameter reduction, that can recover baseline accuracy without re-training the pruned layers.",
+    "first_checked_at": "2026-10-05T05:58:49+00:00",
+    "last_checked_at": "2026-10-05T05:58:49+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+    ],
+    "title": "Artificial Structure Function Search: Preserving Artificial Functional Connectivity for Structured Pruning"
+  },
+  "processed_at": "2026-10-05T05:58:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68201e69b653",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

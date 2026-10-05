@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:56:37+00:00",
-  "record_count": 3046,
+  "updated_at": "2026-10-05T05:58:50+00:00",
+  "record_count": 3065,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -44374,6 +44374,280 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Edge AI and Federated Learning in Smart City Engineering: A Cross-Domain Review of Architectures, Applications, and Deployment Challenges in Transportation, Environmental, and Building Systems"
+    },
+    "arXiv:2609.04172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04172",
+      "identity_tokens": [
+        "arXiv:2609.04172"
+      ],
+      "reason": "On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on a single query. One-shot OPD keeps improving for hundreds of steps and recovers most of full-data OPD's gain across task domains and model families. We explain this result through the states visited d",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example"
+    },
+    "arXiv:2608.24696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24696",
+      "identity_tokens": [
+        "arXiv:2608.24696"
+      ],
+      "reason": "Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from sparse task-level feedback, while OPD provides dense token-level guidance but ignores trajectory correctness, limiting its performance to that of the teacher. Combining them is a promising direction: OPD supplies dense supervisory signals, while RLVR provides task-level correctness.",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "On-policy Distillation with Verifiable Reward"
+    },
+    "arXiv:2606.26524": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26524",
+      "identity_tokens": [
+        "arXiv:2606.26524"
+      ],
+      "reason": "Agentic systems increasingly act through third-party skills, allowing model-generated decisions to affect files, communication channels, and cyber-physical devices. These skills often include natural-language specifications that define access permissions, disclosure limits, execution privileges, and required preconditions. Although such specifications describe the intended boundaries of skill behavior, they do not by themselves provide executable runtime enforcement. Enforcin",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills"
+    },
+    "arXiv:2606.22504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22504",
+      "identity_tokens": [
+        "arXiv:2606.22504"
+      ],
+      "reason": "Coding agents often receive broad tool access for an entire task, even when a resource is needed only for one subgoal. We call this gap lingering authority: a temporary resource/effect capability remains exposed after the episode that justified it has closed. PORTICO is a reference monitor for revocable capabilities exposed to the planner. It compiles an explicit task contract into initial capabilities, grant rules, trusted closure predicates, and global deny rules. A request",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "Lingering Authority: Revocable Resource-and-Effect Capabilities for Coding Agents"
+    },
+    "arXiv:2609.04108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04108",
+      "identity_tokens": [
+        "arXiv:2609.04108"
+      ],
+      "reason": "Reinforcement learning with verifiable rewards (RLVR) and on-policy distillation (OPD) have emerged as two dominant methods for post-training reasoning LLMs. Prior work uses OPD's dense token-level supervision to complement the sparse RL reward, fusing the two signals within a single step: either as a \\emph{weighted-additive combination} or a \\emph{teacher-modulated rescaling} of the RL advantage. In this paper, we show that a simple two-stage scheme, OPD-then-RL, consistentl",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR"
+    },
+    "arXiv:2609.24411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24411",
+      "identity_tokens": [
+        "arXiv:2609.24411"
+      ],
+      "reason": "Egocentric video offers a scalable source of physical interaction experience, yet translating it into robot-executable knowledge and enabling continual adaptation remain challenging. We introduce Zeva-Ego, a unified framework that learns physical priors from human experience and evolves through robot interaction. An Action-Centric Encoder (ACE) converts egocentric visual transitions into action-centered supervision for VLA mid-training, while In-Context Causal Learning (ICCL) enables parameter-free adaptation from action-effect feedback at deployment. Scaling Ego data to 10K hours improves RoboTwin success from 63.8% to 75.3%, matching 2K hours of robot demonstrations (74.7%), corresponding to an empirical data ratio of roughly 4-5:1. With accumulated interaction experience, ICCL further improves success from 58% to 89% within four attempts without parameter updates. These results demonstrate a scalable path toward embodied intelligence that learns from human experience and continuously improves through its own interaction.",
+      "first_checked_at": "2026-10-05T05:58:48+00:00",
+      "last_checked_at": "2026-10-05T05:58:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Zeva-Ego: Egocentric Mid-Training with In-Context Causal Learning for Robot Manipulation"
+    },
+    "arXiv:2609.24440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24440",
+      "identity_tokens": [
+        "arXiv:2609.24440"
+      ],
+      "reason": "The quadratic scaling of Transformer self-attention has driven the adoption of sub-quadratic Selective State Space Models (SSMs) like Mamba, which compress past context into a fixed-size recurrent hidden state. This strict informational bottleneck raises a foundational question for mechanistic interpretability: do SSMs and Transformers learn fundamentally distinct latent representations? In this work, we employ Sparse Autoencoders (SAEs) to conduct a large-scale, feature-level correspondence analysis between Mamba-130m and Pythia-70m over a 10-million token corpus. Contrary to hypotheses predicting widespread architectural divergence, we find no evidence of systematic representational divergence between architectures: across the observed Jaccard distribution, 99.98% of Mamba features cluster toward the upper alignment boundary, providing preliminary feature-level support for the Universality Hypothesis. We further identify and qualitatively characterize this microscopic fraction (0.02%) of diverging features, finding patterns consistent with the hypothesis that the recurrent bottleneck selectively limits the parsing of rigid syntax rather than broad semantic ontology. We demonstrate that while Pythia's unconstrained attention permits the monosemantic decomposition of distinct formatting edge-cases, Mamba is forced to compress unrelated syntactical anomalies into polysemantic\"junk drawer\"neurons to preserve state capacity. Collectively, these results suggest that architectural routing mechanisms may have negligible impact on core semantic understanding, with representational divergence confined to extreme structural margins.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Comparing Latent Concept Formation in State Space Models and Transformers via Sparse Autoencoders"
+    },
+    "arXiv:2609.24494": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24494",
+      "identity_tokens": [
+        "arXiv:2609.24494"
+      ],
+      "reason": "Accurate monocular depth estimation serves as a core enabler for single camera scene understanding. However, existing self-supervised monocular depth estimation methods generally suffer from the bottleneck of inefficient cross-scale information interaction and difficulty in balancing local and global spatial modeling. In this paper, we propose CMambaDepth, a self-supervised framework that achieves efficient multi-scale feature fusion and fine-grained contextual modeling via channel-wise selective state propagation. Specifically, Bidirectional Channel Mamba (Bi-CMamba) aligns encoder features across scales and enables bidirectional information exchange among ordered scale groups. Unidirectional Channel Mamba (Uni-CMamba) progressively aggregates decoder features and retains fine-grained scale groups through a group selection mechanism for subsequent fusion. Furthermore, a Hybrid Attention Module (HAM) is introduced to combine large-kernel local context and Manhattan self-attention for complementary spatial modeling. Experimental results demonstrate that our method achieves highly competitive performance. Specifically, our model achieves an AbsRel of 0.094 and an RMSE of 4.156 on KITTI, and an AbsRel of 0.140 on DDAD. In the zero-shot cross-dataset generalization test on NYUv2, it attains an AbsRel of 0.232, outperforming the baseline RA-Depth by 7.2%.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "CMAMBADEPTH: Self-supervised Monocular Depth Estimation with Channel Mamba and Hybrid Attention"
+    },
+    "arXiv:2609.24635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24635",
+      "identity_tokens": [
+        "arXiv:2609.24635"
+      ],
+      "reason": "When a language model reads an operation such as\"Swap the contents of Box F and Box B\", its forward pass writes keys and values for those tokens into the KV cache. Prior work on entity tracking establishes what models use: bindings are resolved at query time rather than stored as explicit latent state. We ask what they write at the operation span and how it is accessed. We split a forward pass into a frozen writer and a reader: the writer's cache is recomputed without gradients, while the reader sees only the instruction and operation tokens, with all state descriptions hidden, and is trained in isolation. Anything the reader recovers was therefore already present in the unmodified cache. On a synthetic boxes task, a base reader recovers $\\leq 0.06$ of queried bindings against $0.75$--$1.00$ after training, and recoverability tracks the operation's read/write footprint. We find two modes of access. Across Llama-3.1-8B and Mistral-7B, operation-span transplants causally redirect which visible state is read even when the two worlds hold identical values, revealing a routing record. Isolation training preserves routing and adds direct access to the payload, the value the operation read, from the single operand-name token in a narrow mid-depth band (layers 12--15 of 32 in Llama-3.1-8B, 14--17 in Mistral-7B) --- the same site that holds the routing record. The same recipe extends to further operations, ToMi and GSM8K, but is bounded by training coverage and costs open-book accuracy. Operation tokens thus leave localized, causally recoverable records that support both routing and direct payload access, though the model that writes them reads mainly the address they carry and not the value.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Written as a Record, Read as an Address: What a Forward Pass Leaves in an Operation's KV Cache"
+    },
+    "arXiv:2609.24657": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24657",
+      "identity_tokens": [
+        "arXiv:2609.24657"
+      ],
+      "reason": "Language models can be adapted by changing the computations applied to individual tokens. Quantum circuits offer one such approach, but evaluating wider circuits inside a large model can be computationally demanding. Here we introduce HyperQ, which adds token-conditioned quantum residual branches to a frozen masked-diffusion language model. A quantum residual branch is a module in each transformer block that reads a token's hidden state, emits the coordinates of that token's circuit, executes it, and adds the measured values back through a residual connection. The backbone remains frozen, and only the added branches are trained. Within each branch, a lightweight circuit hypernetwork emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure. The required expectation values have an exact classical expression whose evaluation cost grows linearly with the qubit count, enabling circuits from 16 to 64 qubits to be trained within a 1.1-billion-parameter backbone. Across downstream benchmarks, increasing circuit width raises the average score from 47.65 to 54.30. At 64 qubits, HyperQ exceeds the backbone and its low-rank-adapted counterpart by 4.71 and 3.67 points, respectively. HyperQ is fine-tuned on 20,000 prompt-response pairs, compared with 200,000 for the classical baselines. These findings support token-conditioned circuit emission as a tractable architectural approach to quantum-augmented language modelling.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models"
+    },
+    "arXiv:2609.24312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24312",
+      "identity_tokens": [
+        "arXiv:2609.24312"
+      ],
+      "reason": "Analog video transmission (VTX) remains widespread in FPV drones due to low latency, weight and low cost. However analog VTX suffers from complex spatially structured image degradation which differ fundamentally from digital image corruption (e.g. AWGN) used in standard training augmentation. This work shows that this type of noise severely degrades the accuracy of Depth Anything 3 (DA3), a state-of-the-art feed forward visual geometry foundation model. To address this gap, we present AnalogDepth, a parameter-efficient training pipeline that adapts DA3 to analog FPV imagery using student-teacher knowledge distillation with Low-Rank Adaptation (LoRA) injected into the DINOv2 backbone. Rather than synthesizing noise analytically, we build a noise bank from static FPV recordings under diverse conditions and compare real-noise injection against PSD-matched Gaussian synthesis and AWGN as baselines. Experiments on six real FPV flight sequences across three indoor scenes show that training with our noise bank consistently reduces per-frame depth RMSE and 3D reconstruction Chamfer distance compared to the pretrained DA3 baseline and both Gaussian noise variants. These results demonstrate that replicating the spatial structure of real analog transmission noise is critical for effective adaptation.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "AnalogDepth: Multi-view Geometry from FPV drones under Analog Video Transmission"
+    },
+    "arXiv:2609.24337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24337",
+      "identity_tokens": [
+        "arXiv:2609.24337"
+      ],
+      "reason": "While Mamba-based models have shown strong potential for long sequence modeling, adapting them to vision is challenging due to the requirement of local neighborhood correlations and multi-directional spatial contexts for visual understanding. In this paper, we present LiAuto-MindViT, a novel hybrid vision backbone that synergizes the strengths of CNNs, Mamba, and Transformers. The core of our design is the Adaptive Bidirectional Mamba (ABM), which eliminates the directional bias of unidirectional SSMs through bidirectional selective scanning with learnable alpha blending, enabling content-adaptive directional fusion without the overhead of exhaustive multi-path routing. To further accelerate inference, we propose a deployment-friendly Reparameterized ConvSE (RepConvSE) module that leverages structural reparameterization to reduce latency and memory access overhead. Extensive experiments demonstrate that LiAuto-MindViT achieves state-of-the-art performance on image classification, object detection, and semantic segmentation while enabling efficient inference through reparameterization.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "LiAuto-MindViT: A Hybrid Vision Backbone with Adaptive Bidirectional Mamba"
+    },
+    "arXiv:2609.24338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24338",
+      "identity_tokens": [
+        "arXiv:2609.24338"
+      ],
+      "reason": "An Intraoperative Hypotension (IOH) event is a frequent complication during administration of general anaesthesia with serious downstream consequences, yet clinical management remains reactive and not predictive. Existing predictive models, however, ignore drug infusion history as a valuable signal for prediction despite its direct pharmacological relevance. Our model achieves an Area Under the Receiver Operating Characteristic curve (AUROC) of 0.7360 and an Area Under the Precision-Recall Curve (AUPRC) of 0.1794, representing a 2.73-fold lift over the random guessing AUPRC baseline (0.0657), with the removal of propofol and remifentanil effect-site concentrations resulting in a 13.9% AUPRC drop compared to the full model. This is consistent with the hypothesis that pharmacokinetic trajectories encode impending haemodynamic changes before they manifest in the Mean Arterial Pressure (MAP). Additionally, this paper shows that training without lead-gap filtering degraded AUROC by 16.7%, empirically confirming that unfiltered models learn to detect ongoing hypotension rather than predict future events. Finally, a Mamba-based architecture achieves the aforementioned high prediction performance while maintaining a constant memory footprint across a range of sequence lengths, unlike the quadratic VRAM overhead typical of vanilla Transformers, making it the more practical choice for continuous intraoperative deployment.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Pharmacokinetic State Space Models for Unbiased Prediction of Haemodynamic Collapse"
+    },
+    "arXiv:2609.24370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24370",
+      "identity_tokens": [
+        "arXiv:2609.24370"
+      ],
+      "reason": "Self-attention is central to modern Transformer architectures, but its dense dot-product formulation makes it difficult to identify which internal directions are structurally important and which can be modified without disrupting the model. SVD-Inspired Attention (SVDA) addresses part of this problem by introducing a learned diagonal spectrum into the query-key score interaction, making latent attention directions explicitly inspectable through indicators such as spectral entropy, effective rank, sparsity, alignment, selectivity, and perturbation response. This paper examines the transition from diagnostic interpretation to operational intervention. A diagnosis--intervention--verification framework is proposed, and one intervention is evaluated: spectral energy retention in the attention-score pathway. Across FashionMNIST, CIFAR-10, CIFAR-100, and Food-101, the $\\rho=0.90$ prescription removes 24.5--53.7\\% of score directions, reduces parameters by 2.6--4.3\\%, and reduces estimated MACs by 2.8--5.4\\%. The paired mean accuracy change of the dimension-reduced model ranges from $-0.03$ to $+0.05$ percentage points over three seeds. These results support SVDA as an intrinsically interpretable attention mechanism whose learned spectrum exposes an operational coordinate system for deterministic and verifiable modification of attention-score formation.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Prescriptive SVD-Inspired Attention via Spectral Energy Retention"
+    },
+    "arXiv:2609.24401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24401",
+      "identity_tokens": [
+        "arXiv:2609.24401"
+      ],
+      "reason": "Structured pruning is a model compression technique that is used to reduce the computational cost of deploying deep neural networks on resource-constrained devices. Popular methods of pruning rely on opaque heuristics or weight-based criteria that give no indication as to the structural dependencies in the network. To address these limitations we present Artificial Structure Function Search (ASF-S): a novel structured pruning framework. ASF-S utilizes Principle Gradient Importance (PGI): a novel prune-candidate selection criteria that is inspired by structure-function relationships in the brain. By ensuring the pruned structure of the model respects topographical organization of the output layer, we define Artificial Functional Connectivity (AFC) for artificial neural networks. AFC provides evidence to demonstrate that accurate smaller networks can be found using careful prune candidate selection criteria. We present results for PGI as a selection criterion and for ASF-S as a pruning framework against recent benchmarks, demonstrating that our method yields model variants with 70\\% parameter reduction, that can recover baseline accuracy without re-training the pruned layers.",
+      "first_checked_at": "2026-10-05T05:58:49+00:00",
+      "last_checked_at": "2026-10-05T05:58:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "title": "Artificial Structure Function Search: Preserving Artificial Functional Connectivity for Structured Pruning"
+    },
+    "arXiv:2609.24763": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24763",
+      "identity_tokens": [
+        "arXiv:2609.24763"
+      ],
+      "reason": "Recent years have witnessed a growing interest in AI-aided Kalman filters. While emerging methodologies, such as KalmanNet, were shown to facilitate tracking in partially known state-space models, they are not directly applicable when the underlying dynamics is unknown. To overcome this limitation, we extend the KalmanNet philosophy to the unknown-dynamics regime by developing blind Kalman filtering frameworks that learn both the predictor and the correction gain from data, assuming that the state-evolution function and the noise statistics are both unavailable. To this end, we first introduce a task-aware neural Kalman filtering framework, Blind-KalmanNet, which carries the learning principle of the Kalman gain into the prediction step through a two-head neural architecture that jointly learns a state-dependent linear surrogate and the Kalman gain from data. Building on this formulation, we then develop our main framework, Koopman-aided Blind-KalmanNet, which incorporates Koopman operator theory to lift the unknown dynamics into a latent space where the state evolves linearly. The lifted linear predictor integrates seamlessly into the Blind-KalmanNet structure: the pre-trained deep Koopman network serves as a globally structured predictor, augmented by the task-aware residual surrogate and the learned Kalman gain inherited from Blind-KalmanNet. Extensive experiments demonstrate that the proposed frameworks achieve competitive performance against baselines, with Koopman-aided Blind-KalmanNet attaining the best accuracy across all considered settings.",
+      "first_checked_at": "2026-10-05T05:58:50+00:00",
+      "last_checked_at": "2026-10-05T05:58:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Neural Kalman Filtering for Unknown Dynamics: Task-Aware Learning with a Koopman Backbone"
+    },
+    "arXiv:2609.24802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24802",
+      "identity_tokens": [
+        "arXiv:2609.24802"
+      ],
+      "reason": "Graph message passing offers a common way to express learning algorithms, physical simulations, and numerical solvers. Efficient execution depends on interaction structure and data movement, which can be obscured when a program is expressed as a sequence of tensor operations. On memory-constrained systems such as laptops, materializing connectivity and intermediate messages can also exhaust device memory. We present Tiga, a just-in-time compiler that separates the definition of a message-passing program from how its interactions are traversed, computed, and stored. Tiga preserves graph relations and reducer algebra in a multi-level intermediate representation, enabling traversal specialization, fusion of relation generation with aggregation, and reverse-mode automatic differentiation. Backend-specific lowering targets CPUs and GPUs. Its runtime extends execution beyond device-memory capacity by streaming graph partitions from disk through host memory with page-sized device staging buffers; partition ownership and halo exchange extend the same programming model to distributed execution. A Python interface interoperates with ordinary PyTorch tensors and autograd for forward and backward computation. Numerical checks validate outputs and gradients for differentiable workloads. A differentiated geometric workload characterizes the memory--time tradeoff of fused forward and backward execution. Evaluation against matched Torch and PyTorch Geometric baselines demonstrates reduced runtime and device-memory use for generated-relation workloads, while offloaded forward execution processes billion-edge graphs on a single memory-limited GPU. Measurements on heterogeneous devices further characterize the communication and load-balance costs of distributed execution.",
+      "first_checked_at": "2026-10-05T05:58:50+00:00",
+      "last_checked_at": "2026-10-05T05:58:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Tiga: Compiling Graph Message Passing at Scale"
+    },
+    "arXiv:2609.24882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24882",
+      "identity_tokens": [
+        "arXiv:2609.24882"
+      ],
+      "reason": "Hybrid AI-physics climate modeling aims to improve coarse (~100km-resolution) Earth system models by learning to parameterize subgrid processes from high-fidelity data. However, this so far mostly involves local-in-time, diagnostic parameterizations, in which the subgrid state depends only on the current coarse state with no memory of previous states, which is unrealistic for processes such as convection that have intrinsic persistence. To address this, we enhance local-in-time parameterizations by learning prognostic variables that compactly carry important, additional past information where no explicit sub-grid information is available. First we compress past information into a low-dimensional latent space using an autoencoder, which then informs a neural network trained to parameterize targeted subgrid-scale processes. We then replace the autoencoder with symbolic equations that govern the time evolution of the latent variables, yielding additional prognostic memory variables that can be integrated alongside the resolved atmospheric state. We evaluate this approach on two systems: the Lorenz-96 model (online) and surface precipitation from high-resolution atmospheric simulations (offline). A forced multivariate linear ordinary differential equation recovers most of the added value achieved by the autoencoder-based approach in both experiments. Benchmarked against diagnostic parameterizations without memory, our memory-informed approach improves climate statistics and temporal structure, including a realistic diurnal cycle of tropical land precipitation.",
+      "first_checked_at": "2026-10-05T05:58:50+00:00",
+      "last_checked_at": "2026-10-05T05:58:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Learning Prognostic Variables for AI Convective Parameterizations via Symbolic Distillation"
+    },
+    "arXiv:2609.25411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25411",
+      "identity_tokens": [
+        "arXiv:2609.25411"
+      ],
+      "reason": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+      "first_checked_at": "2026-10-05T05:58:50+00:00",
+      "last_checked_at": "2026-10-05T05:58:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis"
     }
   }
 }
