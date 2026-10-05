@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-57-part-05-b35170733e46",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.55092/aiplus20260003",
+      "identity_tokens": [
+        "DOI:10.55092/aiplus20260003"
+      ],
+      "title": "Small Language Models: opportunities and obstacles",
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "source_url": "https://doi.org/10.55092/aiplus20260003",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.7717/peerj-cs.3964",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.3964"
+      ],
+      "title": "Bridging FinOps practice and machine learning research: a systematic review of cloud cost optimization",
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "source_url": "https://doi.org/10.7717/peerj-cs.3964",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22325",
+      "identity_tokens": [
+        "arXiv:2606.22325"
+      ],
+      "title": "All Routes Lead to Collapse",
+      "reason": "Primary abstract reviewed: Attention sinks, representation collapse, and norm stratification are treated as transformer-specific pathologies. We show they are not specific to attention: they are what content-based routing does under a fixed similarity metric. We give a reframing identity: softmax attention is Boltzmann-weighted aggregation over Euclidean distances with constant key norms, so its score om… This is a analysis of transformer representation/routing or retrieval-head mechanisms, not a system/algorithm contribution to inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.22325",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22471",
+      "identity_tokens": [
+        "arXiv:2606.22471"
+      ],
+      "title": "Scalable Multi-Task Data Generation via Reinforcement Learning for Language-Conditioned Bimanual Dexterous Manipulation",
+      "reason": "Primary abstract reviewed: A key bottleneck in training generalist policies for bimanual dexterous manipulation is the lack of large-scale, high-quality datasets. Synthetic data generation in simulation provides a scalable alternative to human video demonstrations by overcoming challenges such as morphology mismatch, missing physical interactions, and the generation of robot actions. However, existing ap… This is a application/model-method paper for forecasting, image generation, robotics, telemetry, or image compression rather than LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.22471",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22482",
+      "identity_tokens": [
+        "arXiv:2606.22482"
+      ],
+      "title": "NeutronSparse: Coordinating Heterogeneous Engines for Sparse Matrix Multiplication on NPUs",
+      "reason": "Primary abstract reviewed: Sparse matrix–matrix multiplication (SpMM) is a fundamental data operation for large-scale sparse data processing. With NPUs increasingly deployed in data centers for their performance and energy efficiency, accelerating SpMM on these platforms is a natural choice. However, high-performance SpMM on NPUs poses a data management challenge, as irregular sparsity demands efficient … This is a VLSI clock-mesh analysis, FPGA arithmetic, or generic sparse matrix multiplication rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.22482",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
