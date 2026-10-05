@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-96-part-03-62eb3b165e8b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08223",
+      "identity_tokens": [
+        "arXiv:2503.08223"
+      ],
+      "title": "Will LLMs Scaling Hit the Wall? Breaking Barriers via Distributed Resources on Massive Edge Devices",
+      "reason": "The primary abstract identifies distributed/federated training of LLMs on edge devices as the central subject, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2503.08223",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04543",
+      "identity_tokens": [
+        "arXiv:2503.04543"
+      ],
+      "title": "Keeping Yourself is Important in Downstream Tuning Multimodal Large Language Model",
+      "reason": "The abstract studies downstream multimodal-model tuning and specialization, a training-time objective rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2503.04543",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.20126",
+      "identity_tokens": [
+        "arXiv:2502.20126"
+      ],
+      "title": "FlexiDiT: Your Diffusion Transformer Can Easily Generate High-Quality Samples with Less Compute",
+      "reason": "The abstract is about compute-adaptive image/video diffusion transformers; it is not an LLM inference/serving contribution.",
+      "source_url": "https://arxiv.org/abs/2502.20126",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.18002",
+      "identity_tokens": [
+        "arXiv:2503.18002"
+      ],
+      "title": "Neuromorphic Principles for Efficient Large Language Models on Intel Loihi 2",
+      "reason": "Loihi 2 throughput/energy figures are explicitly preliminary estimates from an unoptimized mapping; the 370M model requires 31 chips, so evidence is not robust for a deployable inference comparison.",
+      "source_url": "https://arxiv.org/abs/2503.18002",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.06604",
+      "identity_tokens": [
+        "arXiv:2502.06604"
+      ],
+      "title": "Do we really have to filter out random noise in pre-training data for language models?",
+      "reason": "The abstract studies pretraining-data noise and language-model training quality, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.06604",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
