@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r23-screen-01-part-05-aa0bbeec4ec1",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v35i4.16421",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v35i4.16421"
+      ],
+      "title": "Non-Autoregressive Coarse-to-Fine Video Captioning",
+      "reason": "要旨は動画captioningの非自己回帰生成で、タスク特化でありLLM serving/汎用推論効率ではない。",
+      "source_url": "https://doi.org/10.1609/aaai.v35i4.16421",
+      "first_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "last_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02542",
+      "identity_tokens": [
+        "arXiv:2502.02542"
+      ],
+      "title": "OverThink: Slowdown Attacks on Reasoning LLMs",
+      "reason": "context-injected decoys increase reasoning tokens (abstract reports up to 13x/46x/12x); studies attack/mitigation, not optimization.",
+      "source_url": "https://arxiv.org/abs/2502.02542",
+      "first_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "last_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.03079",
+      "identity_tokens": [
+        "arXiv:2002.03079"
+      ],
+      "title": "Blank Language Models",
+      "reason": "要旨はblank filling/text editing向けiterative language modelと効率的学習を提案するが推論時cost改善を主張しない。",
+      "source_url": "https://arxiv.org/abs/2002.03079",
+      "first_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "last_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.02215",
+      "identity_tokens": [
+        "arXiv:1911.02215"
+      ],
+      "title": "Guiding Non-Autoregressive Neural Machine Translation Decoding with Reordering Information",
+      "reason": "要旨はneural machine translation専用の非自己回帰decodingで、LLM推論/servingへの具体的接続やlinked lineageなし。",
+      "source_url": "https://arxiv.org/abs/1911.02215",
+      "first_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "last_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.08024",
+      "identity_tokens": [
+        "arXiv:2002.08024"
+      ],
+      "title": "Non-Autoregressive Dialog State Tracking",
+      "reason": "要旨はtask-oriented dialogue state trackingのslot-value生成で、汎用LLM推論/serving手法でなくlinked lineageなし。",
+      "source_url": "https://arxiv.org/abs/2002.08024",
+      "first_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "last_checked_at": "2026-10-05T22:49:00.372767+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    }
+  ]
+}
