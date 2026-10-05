@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-81-part-03-e387493fce56",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01231",
+      "identity_tokens": [
+        "arXiv:2410.01231"
+      ],
+      "title": "Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search",
+      "reason": "The contribution is approximate-nearest-neighbor proximity-graph index construction; RAG retrieval is application context, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.01231",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.14088",
+      "identity_tokens": [
+        "arXiv:2407.14088"
+      ],
+      "title": "Impact of Model Size on Fine-tuned LLM Performance in Data-to-Text Generation: A State-of-the-Art Investigation",
+      "reason": "Studies model size effects for fine-tuned data-to-text generation; no inference/serving-efficiency method is proposed.",
+      "source_url": "https://arxiv.org/abs/2407.14088",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CAI59869.2024.00108",
+      "identity_tokens": [
+        "DOI:10.1109/CAI59869.2024.00108"
+      ],
+      "title": "Performance Analysis of Llama 2 Among Other LLMs",
+      "reason": "The primary article is plausibly relevant to LLM performance/inference, but its methods and evaluation could not be verified without full text.",
+      "source_url": "https://doi.org/10.1109/CAI59869.2024.00108",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2024.3350661",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2024.3350661"
+      ],
+      "title": "Quantization and Hardware Architecture Co-Design for Matrix-Vector Multiplications of Large Language Models",
+      "reason": "The primary article is plausibly relevant to LLM performance/inference, but its methods and evaluation could not be verified without full text.",
+      "source_url": "https://doi.org/10.1109/TCSI.2024.3350661",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620665.3640390",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640390"
+      ],
+      "title": "Optimizing Dynamic-Shape Neural Networks on Accelerators via On-the-Fly Micro-Kernel Polymerization",
+      "reason": "Optimizes dynamic-shape neural-network operators on accelerators; abstract does not identify an LLM inference/serving contribution.",
+      "source_url": "https://doi.org/10.1145/3620665.3640390",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    }
+  ]
+}
