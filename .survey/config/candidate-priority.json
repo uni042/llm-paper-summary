@@ -1,10 +1,12 @@
 {
   "schema_version": 1,
-  "policy_name": "candidate-priority-v1",
+  "policy_name": "candidate-priority-v2",
   "freshness": {
     "enabled": true,
-    "max_age_days": 120,
-    "score": 100,
+    "window_mode": "rolling_months",
+    "months": 12,
+    "score": 10,
+    "cited_score": 100,
     "year_only_is_fresh": false
   },
   "prestigious_venue": {
