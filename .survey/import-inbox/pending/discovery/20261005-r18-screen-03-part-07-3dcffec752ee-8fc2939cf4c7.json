@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-03-part-07-3dcffec752ee",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00717",
+      "identity_tokens": [
+        "arXiv:2610.00717"
+      ],
+      "title": "Sequential Functional Structured Tucker Compression for Large Language Model Attentions",
+      "reason": "Attention compression is in-scope in principle, but the available evidence establishes quality under compression rather than deployed inference savings; mark borderline until runtime benefit is shown.",
+      "source_url": "https://arxiv.org/abs/2610.00717",
+      "first_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "last_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00738",
+      "identity_tokens": [
+        "arXiv:2610.00738"
+      ],
+      "title": "Q-MINO: A Minimal-Norm Method for Quantization-Aware Training",
+      "reason": "Q-MINO stabilizes quantization-aware training optimization; training-only efficiency is outside scope.",
+      "source_url": "https://arxiv.org/abs/2610.00738",
+      "first_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "last_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00746",
+      "identity_tokens": [
+        "arXiv:2610.00746"
+      ],
+      "title": "MEG-Mamba: A Scalable State-Space Foundation Model for Magnetoencephalography",
+      "reason": "MEG-Mamba is a domain-specific neural activity foundation model; reported efficiency is pretraining, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2610.00746",
+      "first_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "last_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00819",
+      "identity_tokens": [
+        "arXiv:2610.00819"
+      ],
+      "title": "PI-AMFM: Permutation-Invariant Learning for Variable-Cardinality AM-FM Mode Decomposition in Biomedical Signal Analysis",
+      "reason": "PI-AMFM performs biomedical signal mode decomposition; outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2610.00819",
+      "first_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "last_checked_at": "2026-10-05T04:03:44.471045+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
