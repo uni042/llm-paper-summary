@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09280898d0c0c8f0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.20215",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.20215",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2503.20215",
+      "arXiv:2503.20215"
+    ],
+    "reason": "エンドツーエンドのマルチモーダル基盤モデルで、音声・視覚encoderのblock-wise processing、Thinker-Talker、sliding-window DiTによりstreaming入力/音声出力と初回パケット遅延低減を意図する。推論機構には直接関係するが、主評価はモデル能力・音声品質であり、汎用LLM推論runtime/servingの速度・メモリ効率を主目的とするsystem論文ではないためborderline。",
+    "first_checked_at": "2026-10-05T16:00:00+00:00",
+    "last_checked_at": "2026-10-05T16:00:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Qwen2.5-Omni Technical Report"
+  },
+  "processed_at": "2026-10-05T16:00:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09280898d0c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
