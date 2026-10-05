@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-02-part-04-ee156e3406df",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17911",
+      "identity_tokens": [
+        "arXiv:2608.17911"
+      ],
+      "title": "CABLE: Extending the Reach of Memory Retrieval via Complementary Antecedent-Based Linking and Expansion",
+      "reason": "本文§3–§4はretriever-complementary linksでlong-term memoryの回収範囲とQA judge scoresを改善するが、retrieval latency、memory size、token cost削減を示さない。 主評価は回答quality（LoCoMo/MA-LongMemEval）であり、対象の推論効率/servingコストへの関与が確認できない。",
+      "source_url": "https://arxiv.org/abs/2608.17911",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16551",
+      "identity_tokens": [
+        "arXiv:2608.16551"
+      ],
+      "title": "What to Remember, What to Reveal: Privacy-Aware Memory for Conversational Agents",
+      "reason": "本文§4.1はinference costをtotal token usageとして測定するが、論文の主目的・比較はprivate-value exposureとpersonalization utilityで、token削減/serving accelerationは示さない。 効率関連証拠はtoken usage指標に限られ、推論効率最適化を目的とした手法/latency評価ではない。",
+      "source_url": "https://arxiv.org/abs/2608.16551",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16647",
+      "identity_tokens": [
+        "arXiv:2608.16647"
+      ],
+      "title": "Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models",
+      "reason": "一次要旨はon-policy distillationのgeneralization/training behaviorを扱う学習研究で、inference-serving efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2608.16647",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17148",
+      "identity_tokens": [
+        "arXiv:2608.17148"
+      ],
+      "title": "Authorization Before Context: A Model-Neutral Audience Boundary Against Cross-Audience Memory Leakage in Agentic Systems",
+      "reason": "一次要旨はagent memory privacy boundary/security invariantの提案・synthetic auditで、inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2608.17148",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15522",
+      "identity_tokens": [
+        "arXiv:2608.15522"
+      ],
+      "title": "Efficient Audio-Visual Generation via Synchrony-Aware Cross-Modal Sparse Attention",
+      "reason": "一次要旨はaudio-visual diffusion generationのsynchrony-aware sparsificationであり、language model servingの対象外。",
+      "source_url": "https://arxiv.org/abs/2608.15522",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    }
+  ]
+}
