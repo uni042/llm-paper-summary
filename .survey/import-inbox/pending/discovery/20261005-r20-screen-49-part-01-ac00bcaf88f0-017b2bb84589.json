@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-49-part-01-ac00bcaf88f0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01208",
+      "identity_tokens": [
+        "arXiv:2607.01208"
+      ],
+      "title": "Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation",
+      "reason": "一次abstractはcartridge distillationによるLLM内のstealth bias検出を扱い、inference cost/efficiency改善は目的でない。",
+      "source_url": "https://arxiv.org/abs/2607.01208",
+      "first_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "last_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01313",
+      "identity_tokens": [
+        "arXiv:2607.01313"
+      ],
+      "title": "Black-Box Inference of LLM Architectural Properties with Restrictive API Access",
+      "reason": "一次abstractは制限APIからLLMのarchitecture特性をblack-box推定する分析・測定であり、推論を効率化する手法ではない。",
+      "source_url": "https://arxiv.org/abs/2607.01313",
+      "first_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "last_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01394",
+      "identity_tokens": [
+        "arXiv:2607.01394"
+      ],
+      "title": "The Wiola Architecture for Efficient Small Language Models",
+      "reason": "architectureの効率性を主張するものの、今回確認した本文箇所は設計と理論complexity中心で、実推論効率の定量根拠が不足するためborderline。関連範囲の測定有無を追加確認する価値はあるが、現時点で効率手法として採択する証拠が足りない。",
+      "source_url": "https://arxiv.org/abs/2607.01394",
+      "first_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "last_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01455",
+      "identity_tokens": [
+        "arXiv:2607.01455"
+      ],
+      "title": "Token Geometry",
+      "reason": "一次abstractはembedding optimizer/Token Geometryの最適化で、training時のparameter learningを扱い、推論時の計算・memory削減ではない。",
+      "source_url": "https://arxiv.org/abs/2607.01455",
+      "first_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "last_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01464",
+      "identity_tokens": [
+        "arXiv:2607.01464"
+      ],
+      "title": "Comparing Architectures for Supervised Political Scaling",
+      "reason": "一次abstractはsupervised political scalingのarchitecture比較で、LLM serving/inference efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.01464",
+      "first_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "last_checked_at": "2026-10-05T09:49:10.869391+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
