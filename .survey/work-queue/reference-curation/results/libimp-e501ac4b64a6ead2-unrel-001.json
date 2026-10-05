@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e501ac4b64a6ead2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jiot.2026.3701221",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jiot.2026.3701221",
+    "identity_tokens": [
+      "DOI:10.1109/jiot.2026.3701221"
+    ],
+    "reason": "産業IoTのfederated transformer learning、通信、energy適応を扱う学習/IoT frameworkで、LLM inference/servingではない。",
+    "first_checked_at": "2026-10-05T08:33:06+00:00",
+    "last_checked_at": "2026-10-05T08:33:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "FedTransformer-Edge: A Unified Framework for Resource-Adaptive Federated Transformer Learning With Cross-Modal Attention in Heterogeneous IIoT Networks"
+  },
+  "processed_at": "2026-10-05T08:33:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e501ac4b64a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

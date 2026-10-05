@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:30:21+00:00",
-  "record_count": 1199,
+  "updated_at": "2026-10-05T08:33:05+00:00",
+  "record_count": 1200,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18368,6 +18368,20 @@
         "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
       ],
       "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving"
+    },
+    "arXiv:2608.14927": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14927",
+      "identity_tokens": [
+        "arXiv:2608.14927"
+      ],
+      "reason": "The paper measures inference-token cost and collaboration policies, but its contribution is agent workflow routing and does not improve serving efficiency; a concrete runtime follow-up is unclear.",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "LLMs Can Predict Failure Risk, But Struggle to Predict Which Collaboration Protocol Pays Off: Cost-Aware Protocol Routing Across Reasoning Tasks"
     }
   }
 }

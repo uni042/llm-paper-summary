@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:30:21+00:00",
-  "record_count": 3878,
+  "updated_at": "2026-10-05T08:33:07+00:00",
+  "record_count": 3895,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -56483,6 +56483,244 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Animated Pictures for Slide Presentations: From the Shallows to the Depths of a Domain-Specific Language (Functional Pearl)"
+    },
+    "arXiv:2608.14492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14492",
+      "identity_tokens": [
+        "arXiv:2608.14492"
+      ],
+      "reason": "The Muon optimizer shows clear benefits versus alternatives when pretraining neural networks. However, it is used less frequently for parameter-efficient fine-tuning (PEFT). One potential reason is that the most common PEFT method, LoRA, does not naturally combine with Muon since it is not mathematically possible to orthogonalize the weight update given by a low-rank parameterization. In this paper, we address this issue by approximating the solution to a relaxed Muon objective in the low-rank setting via linearization and then least-squares. We provide an efficient implementation that uses matmul operations only, as opposed to more complex linear algebra decomposition routines. Our method, sMuon (small Muon), performs favourably across SFT and a ReLoRA pretraining experiment. While results are model- and eval-dependent, we find overall that using Muon for low-rank fine-tuning provides moderate performance improvements.",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Approximate Muon with low-rank adapters"
+    },
+    "arXiv:2608.14929": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14929",
+      "identity_tokens": [
+        "arXiv:2608.14929"
+      ],
+      "reason": "Open-weight language models are fine-tuned, quantized, pruned, and merged, yet their provenance is often undocumented. We study data-free white-box lineage verification: can weights alone reveal whether two compatible model checkpoints share ancestry? Residual training produces a shared identity-aligned component in branch products, so this structure alone cannot establish ancestry. We remove it and compare checkpoint-specific structure across residual blocks, yielding a symmetric lineage score calibrated against independent checkpoints. On residual-MLP and GPT-2 benchmarks, the score separates fine-tuned, LoRA-merged, pruned, and quantized descendants from independent and distilled models (AUROC=1.0), distinguishing weight ancestry from behavioral similarity. Under function-preserving checkpoint laundering experiments, weight-space baselines lose margin or fail; our score remains unchanged and runs 76x faster than the nearest robust baseline on GPT-2. The projection-pairing signal appears across six language-model families and beyond, and a case study correctly identifies 3 related and 7 unrelated LLaMA-2 public checkpoints. Collectively, these results establish a passive, data-free provenance signal for compatible open-weight language-model checkpoints",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Training Leaves Traces: Centered Residual Signatures for Language Model Lineage Verification"
+    },
+    "arXiv:2608.24921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24921",
+      "identity_tokens": [
+        "arXiv:2608.24921"
+      ],
+      "reason": "Graph RAG connects facts no single passage states, but implementations pay three times: in infrastructure, keeping vector store, graph database and document store in sync; in quality, because a pipeline that never refuses extractor output stores edges asserting nothing; and over time, because a graph that only accumulates treats superseded and current facts alike. post-graph-rag is an open-source engine addressing all three. Chunks with embeddings, a canonical entity graph and community summaries live in one PostgreSQL database, with pgvector for search and edge tables for traversal. Extraction output is validated before writing: vague predicates, pronominal names and bare quantities are rejected, predicates normalise onto an optional vocabulary, and entities resolve to one vertex per canonical name. A bi-temporal layer records when a relation held and when the system believed it, superseding incompatible earlier assertions from document order. Against LightRAG on three corpora with extraction and embedding models fixed, it builds a denser and more queryable graph, and supersedes relationships where a baseline with no temporal model supersedes none. On LongMemEval, 500 questions of long-horizon chat memory, it scores 94.0 percent with gemini-3.6-flash against 71.2 for Zep's gpt-4o and 60.2 for full context, leading on all six question types. The largest single contribution is temporal grounding in the prompt: carrying each relation's validity period through to synthesis moves temporal reasoning from 0.496 to 0.881, ablated paired on one graph per instance. On ECT-QA, earnings-call transcripts restating every metric each quarter, it scores 0.807 under that benchmark's own protocol against 0.599, 0.406 and 0.405 published for TG-RAG, LightRAG and GraphRAG. Code: post-graph-rag https://github.com/crajah/post-graph-rag; post-graph https://github.com/crajah/post-graph",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "post-graph-rag: A PostgreSQL-Native Bi-Temporal Graph RAG Engine with Temporal Grounding at Synthesis"
+    },
+    "arXiv:2608.28646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28646",
+      "identity_tokens": [
+        "arXiv:2608.28646"
+      ],
+      "reason": "Large language models (LLMs) can generate plausible-sounding ETF portfolios while silently violating basic KYC-style constraints on risk, fees, and diversification. This is especially problematic in agentic multi-turn advisory systems, where each draft recommendation can become an action unless guarded by an auditable enforcement layer. We study a model-agnostic, asset-agnostic post-generation guardrail pipeline: (i) enforce a strict JSON allocation schema, (ii) validate allocations against numeric caps, and (iii) when violations occur, deterministically project the output to the nearest feasible portfolio via a convex quadratic program (QCQP). We introduce BiasMix-Finance (Mini), a compact stress-test benchmark for constrained decision-making under biased LLM generations, with a 16-ETF universe, three investor profiles, and eight bias prompts. Across three models and three inference modes (direct, critique, self-consistency), first-pass generations violate at least one cap in 47.6-85.7% of test cases (67.2% pooled), but the convex projection layer reduces final feasibility violations to 0% while requiring only a small correction distance (test pooled median D=||w*-w0||_2=0.066), indicating that the guardrail typically preserves the intent of the original allocation. We report violation rates and correction distances with confidence intervals, and paired model comparisons with multiple-testing correction. To support reproducibility, we release the dataset, prompts, caps, and code in our public GitHub repository.",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "BiasMix-Finance: Post-Generation KYC Guardrails for LLM Portfolio Advice"
+    },
+    "DOI:10.3390/electronics15163643": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15163643",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15163643"
+      ],
+      "reason": "機械アンラーニングのscoping reviewであり、LLM inference efficiencyを主題とした一次研究でない。",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Machine Unlearning Across AI Systems: A Scoping Review of Evidence, Evaluation, and Deployment Contexts"
+    },
+    "DOI:10.3390/info17080783": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info17080783",
+      "identity_tokens": [
+        "DOI:10.3390/info17080783"
+      ],
+      "reason": "音楽教育agentのmemory-grounded回答品質を評価する研究であり、要旨の指標はjudge accuracy・memory use・poisoning耐性で、inference cost/latency/resource reductionを検証していない。",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "From Retrieval to Faithful Memory Use: Context-Grounded Evidence Chains for Music Education Agents"
+    },
+    "arXiv:2608.13883": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13883",
+      "identity_tokens": [
+        "arXiv:2608.13883"
+      ],
+      "reason": "agent memory backendのマルチセッション成功率比較で、要旨自身がcost-matchedでないsystem comparisonと明記し、inference cost/efficiencyを測定していない。",
+      "first_checked_at": "2026-10-05T08:33:05+00:00",
+      "last_checked_at": "2026-10-05T08:33:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "MemoryLake on MemoryArena: A Matched Study of Agent Memory Backends"
+    },
+    "arXiv:2608.13911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13911",
+      "identity_tokens": [
+        "arXiv:2608.13911"
+      ],
+      "reason": "Federated multimodal medical AI faces modality heterogeneity at both the client and sample levels: clients may systematically lack access to specific modality types, while individual records within the same client may contain different partial modality subsets. Sparse Mixture-of-Experts (MoE) architectures are a promising remedy for modality-adaptive computation, but their use in federated learning is fragile under cross-client modality heterogeneity, where locally learned routing policies can diverge across clients and drive experts toward incompatible specializations. Different clients may assign the same observed modality configuration to different experts, or train similarly indexed experts on different missing-modality configurations, causing standard aggregation to misalign or overwrite the expert specialization that sparse MoEs are intended to learn. To address this challenge, we propose MedMix, a semantic-alignment framework for federated multimodal sparse MoEs that coordinates cross-client routing and expert specialization using modality context. At the client side, MedMix uses modality-context-aware routing to guide expert selection using each token's modality identity, position, and incompleteness context. Across clients, it uses consensus-guided routing alignment to construct server-side consensus anchors for shared modality patterns and align local routing distributions across clients. Complementing these routing mechanisms, client-adaptive expert aggregation leverages client-specific modality-pattern prototypes to match and aggregate functionally similar experts across clients. Experiments on real-world multimodal medical datasets show that MedMix achieves the best average F1 across diverse modality heterogeneity and modality incompleteness settings, with especially clear gains under severe heterogeneity.",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MedMix: Specialization-Consistent Federated Sparse MoEs under Modality Heterogeneity"
+    },
+    "arXiv:2608.13932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13932",
+      "identity_tokens": [
+        "arXiv:2608.13932"
+      ],
+      "reason": "Iterative Generative Models (IGMs) span autoregressive and diffusion paradigms, and hybrid variants that couple them can achieve remarkable image-generation fidelity. However, their iterative inference incurs substantial computational overhead, making Post-training Quantization (PTQ) appealing for acceleration, while directly applying vanilla PTQ to hybrid IGMs can trigger model collapse. By analyzing these failures, we identify two critical challenges: Excessive Outliers (EOs) in the activations create an irreconcilable trade-off between preserving normal precision and covering EOs, resulting in severe degradation in generation quality; Amplified Anomalies (AAs) arising unpredictably from minor quantization errors, create a mismatch between calibration and inference, thus iteratively triggering model collapse. To address these challenges, we introduce HyGenQ, a PTQ framework for hybrid IGMs. HyGenQ comprises Hierarchical Cluster Decoupling (HCD) and Scaling Recalibration (SR). HCD identifies and decouples outlier channels via a multi-stage clustering process, effectively isolating EOs while maintaining normal value precision, thereby alleviating performance degradation. SR scales AAs beyond Gaussian Bound, thereby avoiding model collapse caused by aggressive truncation. Extensive experiments demonstrate that HyGenQ successfully quantizes representative hybrid IGMs to 8-bit precision (W8A8), significantly outperforming existing baselines and validating its robustness across different model families.",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Post-training Quantization for Hybrid Iterative Generative Models"
+    },
+    "arXiv:2608.14011": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14011",
+      "identity_tokens": [
+        "arXiv:2608.14011"
+      ],
+      "reason": "Generative recommendation autoregressively generates the semantic IDs of the target item, unifying preference modeling and index retrieval within the shared token space. Recent attempts have introduced Multi-Token Prediction (MTP) into this field, yet they primarily inherit its efficiency merit, leaving its potential as dense supervision unexplored. Unlocking this potential hinges on whether future behaviors qualify as informative supervision. Our analysis reveals that future behaviors carry a semantic echo of the current one far above that of random pairs, which nevertheless decays along horizons under intent transitions, making them informative yet order-dependent signals. Motivated by this, we propose EchoRec, which empowers MTP with cycle-consistent holistic preference alignment across multi-horizon for generative recommendation. It comprises two synergistic modules. Horizon-aware Preference Generation (HPG) sequentially chains lightweight auxiliary branches upon the base recommender, where each branch conditions on its predecessor to respect preference evolution. Verifiable Holistic-Preference Alignment (VHA) further consolidates them into the holistic preference and echoes it back through cycle-consistent projectors to suppress spurious alignment, with theoretical guarantees that exclude the rank-collapse form of spurious alignment under an invertible transport, enabling the holistic preference to be retained in the decoding representation. All auxiliary components serve as disposable scaffolding discarded at inference, introducing negligible online serving overhead. Extensive experiments on three datasets demonstrate the superiority of our EchoRec, together with its naturally acquired multi-item generation ability. Our code and datasets will be available upon acceptance.",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "EchoRec: Multi-Item Prediction-Empowered Generative Recommendation via Cycle-Consistent Preference Alignment"
+    },
+    "arXiv:2608.14043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14043",
+      "identity_tokens": [
+        "arXiv:2608.14043"
+      ],
+      "reason": "Diffusion Transformers (DiTs) have become the dominant paradigm for high-fidelity video generation, yet their ability to perform high-level semantic planning remains limited. While hybrid architectures integrating MLLMs with diffusion backbones have shown strong advantages in image synthesis, such designs remain underexplored in video generation, where existing approaches often treat MLLMs primarily as frozen feature encoders rather than semantic generators. To fill this gap, we systematically study how an MLLM should be integrated with a DiT for video generation by answering three questions: what intermediate representation should bridge the MLLM and DiT, how the MLLM should generate it, and how the DiT should incorporate it during diffusion rendering. Our analysis reveals three key findings: (1) discrete semantic visual tokens produced by an EMA-based tokenizer provide a stable and expressive interface, (2) autoregressive causal modeling is effective for generating these tokens, and (3) explicit visual-token conditioning is more effective than prompt refinement or latent bridging. Based on these findings, we propose BiVidGen, a hybrid framework where an MLLM first generates semantic visual tokens and a DiT renders videos conditioned on both text and these tokens via multi-layer cross-attention. Extensive experiments show that BiVidGen improves semantic alignment and temporal coherence over a fine-tuned DiT baseline, achieving stronger performance on VBench-Long. These results demonstrate that explicit MLLM-based visual planning provides an effective intermediate interface for text-to-video generation beyond text-only conditioning.",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Beyond Text Conditioning: A Systematic Study of MLLM-DiT Fusion for Video Generation"
+    },
+    "arXiv:2608.14149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14149",
+      "identity_tokens": [
+        "arXiv:2608.14149"
+      ],
+      "reason": "Recent training-free post-training quantization methods restore model accuracy through closed-form residual compensation. To constrain additional model storage overhead, several existing methods gate layer selection by goodness-of-fit, retaining only those layers whose compensation yields a positive residual fit score and discarding the rest. In this paper, we show that, under the low-bit W4A4 setting, this gating mechanism fails to distinguish poorly predictable quantization error from numerical solver failure. Rank-deficient input activations yield severely ill-conditioned or numerically singular Gram matrices, causing the closed-form solver to become unstable and produce spuriously negative fit scores. Consequently, existing goodness-of-fit gates misclassify affected layers as uncompensable and discard them. Many of these discarded layers can nevertheless provide substantial error recovery when their compensation is computed using a numerically stable solver. To address this problem, we propose a parameter-free truncated pseudoinverse solver which removes collapsed directions prior to inversion. On ViT-B with the W4A4 setting, our training-free method achieves 81.42\\% top-1 accuracy, outperforming prior post-training methods and fine-tuning-based baselines. Combined with joint low-rank and quantization compression, the proposed method reaches a deployable operating point of 80.26\\% accuracy at 54.7 MB, providing a well-balanced trade-off between model size and accuracy.",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "QuaSAR: Quantization Compensation via Stable Activation-Aware Rank Truncation"
+    },
+    "DOI:10.1109/jiot.2026.3701221": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3701221",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3701221"
+      ],
+      "reason": "産業IoTのfederated transformer learning、通信、energy適応を扱う学習/IoT frameworkで、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "FedTransformer-Edge: A Unified Framework for Resource-Adaptive Federated Transformer Learning With Cross-Modal Attention in Heterogeneous IIoT Networks"
+    },
+    "DOI:10.1109/jiot.2026.3702943": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3702943",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3702943"
+      ],
+      "reason": "IoT crowd analyticsのcontainer autoscalingおよびvision forecastingであり、LLM推論モデルの効率化ではない。",
+      "first_checked_at": "2026-10-05T08:33:06+00:00",
+      "last_checked_at": "2026-10-05T08:33:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.19559-heteroscale-coordinated-autoscaling.md"
+      ],
+      "title": "Edge-VisForeCast: Energy-Efficient Predictive Autoscaling for Containerized Crowd Analytics on Constrained IoT Edge Clusters"
+    },
+    "DOI:10.1109/jiot.2026.3704665": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3704665",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3704665"
+      ],
+      "reason": "AIデータセンター間の分散model trainingとpipeline parallelismの最適化が対象で、inferenceでない。",
+      "first_checked_at": "2026-10-05T08:33:07+00:00",
+      "last_checked_at": "2026-10-05T08:33:07+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Execution-Delay-Balanced Pipeline-Parallelism-Based Distributed Model Training for Artificial Intelligence Data Centers Interconnected by Optical Networks"
+    },
+    "DOI:10.1109/jsen.2026.3708008": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jsen.2026.3708008",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2026.3708008"
+      ],
+      "reason": "電子鼻のodor reasoning systemで、CoT/蒸留/RAGによる精度・解釈性を扱うがLLM推論効率の証拠はない。",
+      "first_checked_at": "2026-10-05T08:33:07+00:00",
+      "last_checked_at": "2026-10-05T08:33:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "InferNose: A Bio-Inspired Electronic Nose System Using Chain-of-Thought for Olfactory Reasoning"
+    },
+    "DOI:10.17559/tv-20240906001971": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.17559/tv-20240906001971",
+      "identity_tokens": [
+        "DOI:10.17559/tv-20240906001971"
+      ],
+      "reason": "GPT-2のセルビア語転移学習とタスク精度が中心で、効率は将来課題として言及されるのみ。",
+      "first_checked_at": "2026-10-05T08:33:07+00:00",
+      "last_checked_at": "2026-10-05T08:33:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Harnessing Advanced Transfer Learning Techniques in GPT-2 for Real-World Multilingual Applications"
     }
   }
 }

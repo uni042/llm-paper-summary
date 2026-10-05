@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-873c14bff1b3e4c8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.14043",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.14043",
+    "identity_tokens": [
+      "arXiv:2608.14043"
+    ],
+    "reason": "Diffusion Transformers (DiTs) have become the dominant paradigm for high-fidelity video generation, yet their ability to perform high-level semantic planning remains limited. While hybrid architectures integrating MLLMs with diffusion backbones have shown strong advantages in image synthesis, such designs remain underexplored in video generation, where existing approaches often treat MLLMs primarily as frozen feature encoders rather than semantic generators. To fill this gap, we systematically study how an MLLM should be integrated with a DiT for video generation by answering three questions: what intermediate representation should bridge the MLLM and DiT, how the MLLM should generate it, and how the DiT should incorporate it during diffusion rendering. Our analysis reveals three key findings: (1) discrete semantic visual tokens produced by an EMA-based tokenizer provide a stable and expressive interface, (2) autoregressive causal modeling is effective for generating these tokens, and (3) explicit visual-token conditioning is more effective than prompt refinement or latent bridging. Based on these findings, we propose BiVidGen, a hybrid framework where an MLLM first generates semantic visual tokens and a DiT renders videos conditioned on both text and these tokens via multi-layer cross-attention. Extensive experiments show that BiVidGen improves semantic alignment and temporal coherence over a fine-tuned DiT baseline, achieving stronger performance on VBench-Long. These results demonstrate that explicit MLLM-based visual planning provides an effective intermediate interface for text-to-video generation beyond text-only conditioning.",
+    "first_checked_at": "2026-10-05T08:33:06+00:00",
+    "last_checked_at": "2026-10-05T08:33:06+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Beyond Text Conditioning: A Systematic Study of MLLM-DiT Fusion for Video Generation"
+  },
+  "processed_at": "2026-10-05T08:33:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-873c14bff1b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

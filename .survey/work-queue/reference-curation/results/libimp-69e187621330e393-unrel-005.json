@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69e187621330e393-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.28646",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.28646",
+    "identity_tokens": [
+      "arXiv:2608.28646"
+    ],
+    "reason": "Large language models (LLMs) can generate plausible-sounding ETF portfolios while silently violating basic KYC-style constraints on risk, fees, and diversification. This is especially problematic in agentic multi-turn advisory systems, where each draft recommendation can become an action unless guarded by an auditable enforcement layer. We study a model-agnostic, asset-agnostic post-generation guardrail pipeline: (i) enforce a strict JSON allocation schema, (ii) validate allocations against numeric caps, and (iii) when violations occur, deterministically project the output to the nearest feasible portfolio via a convex quadratic program (QCQP). We introduce BiasMix-Finance (Mini), a compact stress-test benchmark for constrained decision-making under biased LLM generations, with a 16-ETF universe, three investor profiles, and eight bias prompts. Across three models and three inference modes (direct, critique, self-consistency), first-pass generations violate at least one cap in 47.6-85.7% of test cases (67.2% pooled), but the convex projection layer reduces final feasibility violations to 0% while requiring only a small correction distance (test pooled median D=||w*-w0||_2=0.066), indicating that the guardrail typically preserves the intent of the original allocation. We report violation rates and correction distances with confidence intervals, and paired model comparisons with multiple-testing correction. To support reproducibility, we release the dataset, prompts, caps, and code in our public GitHub repository.",
+    "first_checked_at": "2026-10-05T08:33:05+00:00",
+    "last_checked_at": "2026-10-05T08:33:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "BiasMix-Finance: Post-Generation KYC Guardrails for LLM Portfolio Advice"
+  },
+  "processed_at": "2026-10-05T08:33:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69e187621330",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

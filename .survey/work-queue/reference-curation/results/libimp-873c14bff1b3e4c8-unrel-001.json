@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-873c14bff1b3e4c8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.13911",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.13911",
+    "identity_tokens": [
+      "arXiv:2608.13911"
+    ],
+    "reason": "Federated multimodal medical AI faces modality heterogeneity at both the client and sample levels: clients may systematically lack access to specific modality types, while individual records within the same client may contain different partial modality subsets. Sparse Mixture-of-Experts (MoE) architectures are a promising remedy for modality-adaptive computation, but their use in federated learning is fragile under cross-client modality heterogeneity, where locally learned routing policies can diverge across clients and drive experts toward incompatible specializations. Different clients may assign the same observed modality configuration to different experts, or train similarly indexed experts on different missing-modality configurations, causing standard aggregation to misalign or overwrite the expert specialization that sparse MoEs are intended to learn. To address this challenge, we propose MedMix, a semantic-alignment framework for federated multimodal sparse MoEs that coordinates cross-client routing and expert specialization using modality context. At the client side, MedMix uses modality-context-aware routing to guide expert selection using each token's modality identity, position, and incompleteness context. Across clients, it uses consensus-guided routing alignment to construct server-side consensus anchors for shared modality patterns and align local routing distributions across clients. Complementing these routing mechanisms, client-adaptive expert aggregation leverages client-specific modality-pattern prototypes to match and aggregate functionally similar experts across clients. Experiments on real-world multimodal medical datasets show that MedMix achieves the best average F1 across diverse modality heterogeneity and modality incompleteness settings, with especially clear gains under severe heterogeneity.",
+    "first_checked_at": "2026-10-05T08:33:06+00:00",
+    "last_checked_at": "2026-10-05T08:33:06+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "MedMix: Specialization-Consistent Federated Sparse MoEs under Modality Heterogeneity"
+  },
+  "processed_at": "2026-10-05T08:33:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-873c14bff1b3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
