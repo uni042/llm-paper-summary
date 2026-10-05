@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-33-part-08-9aa9e0416668",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03559",
+      "identity_tokens": [
+        "arXiv:2608.03559"
+      ],
+      "title": "Compass: Degradation-Simulated Reciprocal Learning with Lightweight Needle RWKV for Multimodal Crack Segmentation under Missing Modalities",
+      "reason": "In multimodal crack segmentation for industrial facilities, the key challenge is preventing missing modalities from degrading pixel-level performance while maintaining low computational cost. Existing methods struggle to address semantic degradation caused by missing modalities. We propose Compass, a lightweight network for robust crack segmentation under arbitrary missing modalities. Compass comprises Degradation Simulation Distillation (DSD), Needle Block, and Evidential Topology-Preserving Fusion (ETPF). DSD constructs a degradation simulation stream that mimics more severe missing conditions and performs reciprocal distillation with the original stream, decoupling complete perception from degradation adaptation. Within DSD, Feature-Aware Prototype Transmitter (FAPT) performs modality agnostic prototype-guided feature completion to maintain semantic integrity under incomplete modality conditions. As a lightweight backbone, Needle injects crack-direction cues into WKV modulation and combines connectivity-aware gating with anisotropic context probing for structure-aware modeling. ETPF fuses multimodal features via Dempster-Shafer evidential combination with uncertainty-gated decoding, preserving crack topology while suppressing unreliable features. Experiments on three datasets demonstrate state-of-the-art (SOTA) performance under diverse missing modality scenarios. Even with 90\\% depth modality missing on CrackDepth, Compass achieves F1 of 0.8216 and mIoU of 0.8434 with only 2.58M parameters. The code is available at https://github.com/Karl1109/Compass.",
+      "source_url": "https://arxiv.org/abs/2608.03559",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03769",
+      "identity_tokens": [
+        "arXiv:2608.03769"
+      ],
+      "title": "MDLMPE: Distribution Aware Positional Encoding for Masked Diffusion Language Models",
+      "reason": "Masked diffusion language models (MDLMs) enable parallel generation and bidirectional context modeling, but their positional context differs fundamentally from that of autoregressive (AR) models. Whereas AR decoding exposes a contiguous prefix, MDLM denoising produces dynamic, non-contiguous configurations of revealed and masked tokens. Conventional positional encodings such as RoPE capture sequence order and pairwise displacement but remain insensitive to this evolving token-availability structure. To address this limitation, we propose MDLMPE, a positional encoding designed specifically for masked diffusion. To the best of our knowledge, MDLMPE is the first method to make positional representations explicitly aware of the changing revealed/masked configuration. It represents token availability as a binary sequence, applies distance-aware Gaussian weighting, and projects the resulting pattern through a cosine basis to obtain distribution-aware positional features. These features are added to token embeddings and mapped by a lightweight MLP to angular offsets that modulate the standard RoPE phases. Extensive experiments on LLaDA and DREAM demonstrate that MDLMPE generally outperforms conventional positional encoding methods across supervised fine-tuning, pretraining, zero-shot evaluation, and block-diffusion settings. Further ablations show that the complete combination of availability state, Gaussian locality, spectral basis, and embedding injection yields the strongest result. These results establish the evolving token-availability distribution as a useful positional signal for masked diffusion language models.",
+      "source_url": "https://arxiv.org/abs/2608.03769",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03791",
+      "identity_tokens": [
+        "arXiv:2608.03791"
+      ],
+      "title": "Does Forgetting Transfer Across Modalities? A Real-World Benchmark for Cross-Modal Knowledge Unlearning Evaluation",
+      "reason": "Vision-Language Models (VLMs), like Large Language Models (LLMs), may memorize sensitive, copyrighted, or harmful knowledge from their pretraining corpora. Removing such knowledge is essential for building trustworthy AI systems. However, existing studies primarily focus on forgetting within individual modalities. Although recent work has begun to explore cross-modal consistency in unlearning, the cross-modal transfer of real-world knowledge unlearning remains insufficiently studied. To address this gap, we introduce UNLINK-VL, a real-world benchmark for cross-modal knowledge unlearning in VLMs. Under a post-hoc unlearning setting in which the original forget and retain corpora are unavailable, UNLINK-VL selects visually identifiable real-world entities as unlearning targets and associates them with corresponding images and one-hop and multi-hop facts derived from Wikidata. The benchmark comprises four complementary subsets that evaluate direct forgetting of target knowledge, the propagation of forgetting through relational knowledge, the preservation of related non-target knowledge, and robustness to semantically equivalent queries. We train models under text-only and multimodal unlearning settings and evaluate forgetting effectiveness and retained utility across textual, visual, and cross-modal scenarios. Extensive experiments reveal a pronounced asymmetry in cross-modal transfer: multimodal unlearning remains effective under textual evaluation, whereas text-only unlearning transfers poorly to visual and cross-modal scenarios. Meanwhile, the evaluated methods largely preserve the models'general capabilities. These findings demonstrate that relying solely on intra-modal evaluation, particularly text-only evaluation, may substantially overestimate the effectiveness of knowledge unlearning in VLMs, underscoring the need for cross-modal unlearning and evaluation.",
+      "source_url": "https://arxiv.org/abs/2608.03791",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03796",
+      "identity_tokens": [
+        "arXiv:2608.03796"
+      ],
+      "title": "Efficient Knowledge Distillation for LLMs: Offline Top-K Logits and a Fused Chunked KL Loss",
+      "reason": "Small language models are often the only option for deployment under tight latency, cost, and on-premises constraints, but they are rarely trained from scratch: a compressed model is usually recovered through knowledge distillation (KD). This recovery step largely decides the final quality, yet it is expensive. We present a practitioner's study of how to make distillation training efficient, organised around two systems contributions. First, we show that offline KD (caching the teacher's top-$K$ logits once and training the student against the cache) matches online distillation at near-identical training loss while removing the teacher from memory, running about 29\\% faster per iteration, and reaching up to 41\\% higher throughput on a single H200 GPU. Second, we introduce a \\emph{fused, chunked KL loss} that never materialises the full vocabulary-sized logit tensor, making peak memory linear in the sequence length. This removes the memory spike that otherwise caps context length and lets us train at four times the context (32{,}768 tokens) on a single GPU. A separate output-head-only toy benchmark isolates the loss kernel and confirms its memory and iteration-rate scaling from 4K to 256K tokens. Together these make large-scale healing and hundreds of ablations affordable. We also report supporting ablations on loss design and sequence packing. We release our chunked-loss implementation: https://github.com/CompactifAI/Full-Chunked-KL-Loss.",
+      "source_url": "https://arxiv.org/abs/2608.03796",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03833",
+      "identity_tokens": [
+        "arXiv:2608.03833"
+      ],
+      "title": "History Matters: Meta-policy Delegation with Heterogeneous Multi-agent Reinforcement Learning",
+      "reason": "AI agents are expected to play an increasingly important role in future decision-making systems. In this paper, we consider collaborative systems composed of heterogeneous multi-agent systems (MAS), where their members have different capabilities and operating costs. We study how agents can delegate tasks to one another so that certain research tasks can be completed effectively under resource-constrained scenarios. We first develop a multi-agent reinforcement learning-based (MARL) delegation training that enables agents to make sequential delegation decisions while minimizing the total execution cost. We then extend this approach to MARL with prescribed delegation topologies. Furthermore, we introduce two new frameworks for collaboration and delegation in multi-agent systems. The first framework proposes that an agent's policy depends not only on the current state of the underlying Markov decision process but also on the interaction history, including previous joint actions. This history-dependent formulation can improve coordination even in fully observable environments, where conventional MARL methods typically restrict policies to depend only on the current state. The second framework proposes a novel, potentially multi-dimensional monetary mechanism to facilitate the collaboration and delegation for MAS.",
+      "source_url": "https://arxiv.org/abs/2608.03833",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
