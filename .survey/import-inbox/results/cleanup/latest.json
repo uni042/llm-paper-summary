@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-05T14:28:09+00:00",
+  "updated_at": "2026-10-05T15:37:24+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -2729,6 +2729,22 @@
       "record_count": 5,
       "run_key": "20261005-r20-screen-72-part-01-be9b740dfb0d",
       "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-b33dde6b060b--20261005-r20-screen-72-part-01-be9b740dfb0d-ecdd0934f451.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-2a33efd9d3c4--file_00000000f8bc81f5b1232f5489f7b9d0--discovery-20261005-0900-scheduled-chat-00-r01.json",
+      "processed_at": "2026-10-05T15:37:24+00:00",
+      "record_count": 10,
+      "run_key": "20261005-0900-scheduled-chat-00/r01",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-2a33efd9d3c4--file_00000000f8bc81f5b1232f5489f7b9d0--discovery-20261005-0900-scheduled-chat-00-r01.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-97e63b837ca8--libfile_053b7941eda08191b0b3efba78189509--discovery-20261005-1100-scheduled-chat-00-r04-partial.json",
+      "processed_at": "2026-10-05T15:37:24+00:00",
+      "record_count": 6,
+      "run_key": "20261005-1100-scheduled-chat-00/r04",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-97e63b837ca8--libfile_053b7941eda08191b0b3efba78189509--discovery-20261005-1100-scheduled-chat-00-r04-partial.json"
     }
   ]
 }
