@@ -35,10 +35,15 @@
   "selection_reason": "Q-BERTはlayerごとのHessian感度で2/3/4-bit mixed precisionを割り当て、attention dense matrixをgroup-wise quantizationするBERT推論向け量子化方式。edge inferenceのlatency・memory footprintを問題設定とし、最大13倍のweight圧縮、embedding/activation最大4倍圧縮を2.3%以内の品質低下で実現するため対象内。",
   "semantic_scholar_id": "745e4b36a1759177871288cae51fbae0b873b5e5",
   "source_url": "https://arxiv.org/abs/1909.05840",
-  "status": "ready",
+  "status": "superseded",
   "title": "Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-05T22:17:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+  "represented_canonical_id": "arXiv:1909.05840",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

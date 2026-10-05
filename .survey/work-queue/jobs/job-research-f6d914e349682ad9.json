@@ -35,10 +35,15 @@
   "selection_reason": "fine-tuned BERTのweightをternary化し、approximation/loss-aware ternarizationとknowledge distillationで低bit化の精度低下を抑える。GLUE/SQuADでfull-precision相当の性能を保ちながら14.9倍小型化し、resource-constrained deploymentを直接目的とするため推論向け量子化・圧縮として対象内。",
   "semantic_scholar_id": "097210dc65924f8ce59523faf444e635523dc714",
   "source_url": "https://arxiv.org/abs/2009.12812",
-  "status": "ready",
+  "status": "superseded",
   "title": "TernaryBERT: Distillation-aware Ultra-low Bit BERT",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-05T22:17:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md",
+  "represented_canonical_id": "arXiv:2009.12812",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

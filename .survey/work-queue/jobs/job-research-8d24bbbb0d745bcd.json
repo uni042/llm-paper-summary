@@ -35,10 +35,15 @@
   "selection_reason": "multi-head self-attention relation distillationでBERT/RoBERTa/XLM-Rを小型studentへ圧縮し、online servingの計算資源・latency制約を狙う。22MモデルでBERT_BASE比5.3倍、66Mモデルで2倍のspeedupを示すため推論向け圧縮として対象内。",
   "semantic_scholar_id": "b5b006dc558cb7fbd532d67e989173b536e8ac80",
   "source_url": "https://arxiv.org/abs/2012.15828",
-  "status": "ready",
+  "status": "superseded",
   "title": "MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers",
   "type": "research",
   "venue": "Findings",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-05T22:17:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md",
+  "represented_canonical_id": "arXiv:2012.15828",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

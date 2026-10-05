@@ -35,10 +35,15 @@
   "selection_reason": "自己回帰依存を外し、初期draftを並列生成した後に反復的にrefineするconditional non-autoregressive sequence model。Transformer実装でmachine translation/image captioningのdecodingを大幅高速化し、autoregressive counterpartに近い品質を維持するため、並列復号による推論高速化として対象内。",
   "semantic_scholar_id": "9c5c89199114858eafbe50b46d77d38ffd03b28a",
   "source_url": "https://arxiv.org/abs/1802.06901",
-  "status": "ready",
+  "status": "superseded",
   "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2018
+  "year": 2018,
+  "superseded_at": "2026-10-05T22:17:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+  "represented_canonical_id": "arXiv:1802.06901",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-98bb4a6f4557063d-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2606.29983",
+  "reason": "The learned RL-Halting policy is trained by sampling loop depth and supervising the selected depth. Experiments are synthetic algorithmic length-generalization tasks; the main benefit is lower OOD variance and stability across inference-time loop counts, not demonstrated reductions to LLM serving cost or latency. Authors explicitly frame stopping as a training-time design choice and note learned schedules can stabilize a suboptimal computation.",
+  "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+  "identity_tokens": [
+    "arXiv:2606.29983"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98bb4a6f4557",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
