@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5b3ef2bb71b6b61-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.11110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.11110",
+    "identity_tokens": [
+      "arXiv:2501.11110"
+    ],
+    "reason": "Math reasoning framework targets answer quality, not serving resource use.",
+    "first_checked_at": "2026-10-05T12:52:56+00:00",
+    "last_checked_at": "2026-10-05T12:52:56+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md"
+    ],
+    "title": "Chain-of-Reasoning: Towards Unified Mathematical Reasoning in Large Language Models via a Multi-Paradigm Perspective"
+  },
+  "processed_at": "2026-10-05T12:52:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5b3ef2bb71b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

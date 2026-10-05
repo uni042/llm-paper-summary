@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:49:59+00:00",
-  "record_count": 5053,
+  "updated_at": "2026-10-05T12:52:57+00:00",
+  "record_count": 5068,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -73497,6 +73497,217 @@
         "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
       ],
       "title": "AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement"
+    },
+    "DOI:10.3390/computers12100198": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/computers12100198",
+      "identity_tokens": [
+        "DOI:10.3390/computers12100198"
+      ],
+      "reason": "Distributed computing continuum survey (cloud/fog/edge/IoT/mobile); no LLM inference/serving study.",
+      "first_checked_at": "2026-10-05T12:52:54+00:00",
+      "last_checked_at": "2026-10-05T12:52:54+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "Exploring the Potential of Distributed Computing Continuum Systems"
+    },
+    "arXiv:2308.00255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00255",
+      "identity_tokens": [
+        "arXiv:2308.00255"
+      ],
+      "reason": "Dynamic early exiting is for Vision Transformers in image recognition, not language-model inference.",
+      "first_checked_at": "2026-10-05T12:52:54+00:00",
+      "last_checked_at": "2026-10-05T12:52:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "LGViT: Dynamic Early Exiting for Accelerating Vision Transformer"
+    },
+    "arXiv:2108.05818": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.05818",
+      "identity_tokens": [
+        "arXiv:2108.05818"
+      ],
+      "reason": "PatrickStar reduces hardware memory requirements for parallel pre-trained-model training only.",
+      "first_checked_at": "2026-10-05T12:52:54+00:00",
+      "last_checked_at": "2026-10-05T12:52:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Parallel Training of Pre-Trained Models via Chunk-Based Dynamic Memory Management"
+    },
+    "arXiv:2502.07218": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07218",
+      "identity_tokens": [
+        "arXiv:2502.07218"
+      ],
+      "reason": "LUNAR studies selective LLM knowledge unlearning; its stated 20x efficiency is fewer unlearning parameter updates, not serving efficiency.",
+      "first_checked_at": "2026-10-05T12:52:54+00:00",
+      "last_checked_at": "2026-10-05T12:52:54+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "LUNAR: LLM Unlearning via Neural Activation Redirection"
+    },
+    "arXiv:2411.09009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.09009",
+      "identity_tokens": [
+        "arXiv:2411.09009"
+      ],
+      "reason": "Cut Cross-Entropy reduces training-time loss-computation memory; the abstract explicitly measures training footprint.",
+      "first_checked_at": "2026-10-05T12:52:54+00:00",
+      "last_checked_at": "2026-10-05T12:52:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Cut Your Losses in Large-Vocabulary Language Models"
+    },
+    "DOI:10.1007/s41742-024-00668-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s41742-024-00668-5",
+      "identity_tokens": [
+        "DOI:10.1007/s41742-024-00668-5"
+      ],
+      "reason": "Systematic review surveys AI applications for sustainability/SDGs, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A systematic review of current AI techniques used in the context of the SDGs"
+    },
+    "arXiv:2312.07360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.07360",
+      "identity_tokens": [
+        "arXiv:2312.07360"
+      ],
+      "reason": "Diffusion image synthesis acceleration, outside LLM serving.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Boosting Latent Diffusion with Flow Matching"
+    },
+    "arXiv:2312.01678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01678",
+      "identity_tokens": [
+        "arXiv:2312.01678"
+      ],
+      "reason": "Jellyfish applies an LLM to data preprocessing; it does not optimize LLM inference.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "title": "Jellyfish: A Large Language Model for Data Preprocessing"
+    },
+    "arXiv:2312.00374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00374",
+      "identity_tokens": [
+        "arXiv:2312.00374"
+      ],
+      "reason": "Plugin trojaning/security study, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "The Philosopher's Stone: Trojaning Plugins of Large Language Models"
+    },
+    "arXiv:2502.06042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.06042",
+      "identity_tokens": [
+        "arXiv:2502.06042"
+      ],
+      "reason": "Fine-tuning forgetting/retention study, training-time scope.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Scaling Laws for Forgetting during Finetuning with Pretraining Data Injection"
+    },
+    "arXiv:2501.11110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.11110",
+      "identity_tokens": [
+        "arXiv:2501.11110"
+      ],
+      "reason": "Math reasoning framework targets answer quality, not serving resource use.",
+      "first_checked_at": "2026-10-05T12:52:56+00:00",
+      "last_checked_at": "2026-10-05T12:52:56+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md"
+      ],
+      "title": "Chain-of-Reasoning: Towards Unified Mathematical Reasoning in Large Language Models via a Multi-Paradigm Perspective"
+    },
+    "arXiv:2505.19190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19190",
+      "identity_tokens": [
+        "arXiv:2505.19190"
+      ],
+      "reason": "Multimodal mixture-of-experts is proposed for modality interaction/fusion, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:52:56+00:00",
+      "last_checked_at": "2026-10-05T12:52:56+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "I2MoE: Interpretable Multimodal Interaction-aware Mixture-of-Experts"
+    },
+    "arXiv:2406.07592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07592",
+      "identity_tokens": [
+        "arXiv:2406.07592"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.07592. Abstract summary: Recent sequence modeling approaches using selective state space sequence models, referred to as Mamba models, have seen a surge of interest. These models allow efficient processing of long sequences in linear time and are rapidly being adopted in a wide range of applications such as language modeling, demonstrating promising performance.  Out of scope: Mamba explainability algorithm; efficient Mamba is context, not the contribution.",
+      "first_checked_at": "2026-10-05T12:52:57+00:00",
+      "last_checked_at": "2026-10-05T12:52:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "MambaLRP: Explaining Selective State Space Sequence Models"
+    },
+    "arXiv:2603.01229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01229",
+      "identity_tokens": [
+        "arXiv:2603.01229"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2603.01229. Abstract summary: Robotic manipulation policies have made rapid progress in recent years, yet most existing approaches give limited consideration to memory capabilities. Consequently, they struggle to solve tasks that require reasoning over historical observations and maintaining task-relevant information over time, which are common requirements in real-wo Out of scope: Robotic manipulation memory benchmark, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:52:57+00:00",
+      "last_checked_at": "2026-10-05T12:52:57+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "RMBench: Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design"
+    },
+    "arXiv:2507.16812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.16812",
+      "identity_tokens": [
+        "arXiv:2507.16812"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2507.16812. Abstract summary: Scientific reasoning is critical for developing AI scientists and supporting human researchers in advancing the frontiers of natural science discovery. However, the open-source community has primarily focused on mathematics and coding while neglecting the scientific domain, largely due to the absence of open, large-scale, high-quality, ve Out of scope: Scientific reasoning training dataset and tuned models, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:52:57+00:00",
+      "last_checked_at": "2026-10-05T12:52:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "MegaScience: Pushing the Frontiers of Post-Training Datasets for Science Reasoning"
     }
   }
 }

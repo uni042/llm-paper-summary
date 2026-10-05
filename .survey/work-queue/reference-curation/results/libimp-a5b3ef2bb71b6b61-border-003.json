@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5b3ef2bb71b6b61-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.01025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.01025",
+    "identity_tokens": [
+      "arXiv:2509.01025"
+    ],
+    "reason": "Masked-diffusion generation is adjacent, but the full text does not identify a measurable serving-efficiency contribution; fit remains weak.",
+    "first_checked_at": "2026-10-05T12:52:56+00:00",
+    "last_checked_at": "2026-10-05T12:52:56+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+    ],
+    "title": "Any-Order Flexible Length Masked Diffusion"
+  },
+  "processed_at": "2026-10-05T12:52:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5b3ef2bb71b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

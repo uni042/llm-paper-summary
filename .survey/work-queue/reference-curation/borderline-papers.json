@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:49:59+00:00",
-  "record_count": 1666,
+  "updated_at": "2026-10-05T12:52:57+00:00",
+  "record_count": 1671,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25851,6 +25851,77 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
       ],
       "title": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation"
+    },
+    "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2",
+      "identity_tokens": [
+        "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2"
+      ],
+      "reason": "The official abstract is highly relevant, but I could not retrieve the primary body to check the evaluation conditions, comparison tables, or limitations; therefore final classification remains borderline.",
+      "first_checked_at": "2026-10-05T12:52:55+00:00",
+      "last_checked_at": "2026-10-05T12:52:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs"
+    },
+    "arXiv:2509.01025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.01025",
+      "identity_tokens": [
+        "arXiv:2509.01025"
+      ],
+      "reason": "Masked-diffusion generation is adjacent, but the full text does not identify a measurable serving-efficiency contribution; fit remains weak.",
+      "first_checked_at": "2026-10-05T12:52:56+00:00",
+      "last_checked_at": "2026-10-05T12:52:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Any-Order Flexible Length Masked Diffusion"
+    },
+    "arXiv:2504.17119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.17119",
+      "identity_tokens": [
+        "arXiv:2504.17119"
+      ],
+      "reason": "It treats inference efficiency but only in a narrow healthcare SLM context, leaving transfer to general LLM serving uncertain.",
+      "first_checked_at": "2026-10-05T12:52:56+00:00",
+      "last_checked_at": "2026-10-05T12:52:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "The Rise of Small Language Models in Healthcare: A Comprehensive Survey"
+    },
+    "arXiv:2412.04692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.04692",
+      "identity_tokens": [
+        "arXiv:2412.04692"
+      ],
+      "reason": "Routing has possible resource implications but no measured inference-efficiency benefit.",
+      "first_checked_at": "2026-10-05T12:52:56+00:00",
+      "last_checked_at": "2026-10-05T12:52:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Smoothie: Label Free Language Model Routing"
+    },
+    "DOI:10.1109/tvlsi.2023.3337777": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tvlsi.2023.3337777",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2023.3337777"
+      ],
+      "reason": "Transformer inference hardware evidence exists, but applicability is limited to specialized CIM hardware and older BERT/GPT-2 models.",
+      "first_checked_at": "2026-10-05T12:52:57+00:00",
+      "last_checked_at": "2026-10-05T12:52:57+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer"
     }
   }
 }
