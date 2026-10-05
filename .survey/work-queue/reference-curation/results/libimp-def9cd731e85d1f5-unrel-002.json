@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-def9cd731e85d1f5-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.27523",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.27523",
+    "identity_tokens": [
+      "arXiv:2607.27523"
+    ],
+    "reason": "要旨はfinancial RAGのreranking精度・factual consistency評価が中心で、LLM serving/inference効率改善を示さない。",
+    "first_checked_at": "2026-10-05T09:50:21+00:00",
+    "last_checked_at": "2026-10-05T09:50:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "Hierarchical Reranking for Scalable Financial RAG System"
+  },
+  "processed_at": "2026-10-05T09:50:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-def9cd731e85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

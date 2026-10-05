@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:47:43+00:00",
-  "record_count": 4244,
+  "updated_at": "2026-10-05T09:50:21+00:00",
+  "record_count": 4260,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -61807,6 +61807,239 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
       ],
       "title": "Queries Knew More Than We Thought: Uncovering Latent Knowledge in Segmentation Models"
+    },
+    "arXiv:2607.26955": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26955",
+      "identity_tokens": [
+        "arXiv:2607.26955"
+      ],
+      "reason": "Minimax-optimal rates for multivariate distribution estimation are known to suffer from the curse of dimensionality. We propose a sparse Bayesian network approach in which each conditional probability is estimated using sparsity-aware conditional mean methods. The resulting estimator, \\textit{BAyesian Network Distribution regression} (BAND), handles mixed data types in high-dimensional time series and achieves polynomial total variation convergence rates while allowing the feature dimension to grow polynomially with the sample size. These rates are substantially faster than the classical optimal rates for multivariate histogram density estimators that lack sparsity. Empirical evaluations show that BAND performs competitively for data sampling and confidence region forecasting against a range of state-of-the-art benchmarks.",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Breaking the Curse with BAND: Nonparametric Distribution Estimation in High Dimensions"
+    },
+    "arXiv:2607.26988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26988",
+      "identity_tokens": [
+        "arXiv:2607.26988"
+      ],
+      "reason": "What types of decision problems can a causally masked, finite-precision transformer solve for inputs of arbitrary length? Existing answers often rely on idealized arithmetic, but under finite precision, rounding and evaluation order can change what information attention retains and therefore what the model can compute. We develop an algebraic formalization that derives expressivity directly from the model's implemented dynamics. Its central object is its memory; the finite internal state computed by attention that summarizes the information from the prefix available to all future queries. Each attention head updates its own state independently within a layer, while layers compose hierarchically, providing a uniform route from model assumptions to expressivity bounds. Applying this method to transformers without positional embeddings, we obtain an expressivity hierarchy governed by the attention type under specific numerical semantics. Width-one sliding-window attention supports bounded-suffix memory, while a modified form of soft attention supports irreversible, checklist-like state, and combining the two mechanisms provides an interplay of both. Ordinary left-to-right floating-point soft attention can realize more expressive memory operations than any of the above. Algebraically, the four cases correspond to definite, R-trivial, locally R-trivial, and aperiodic semigroups. Under an explicit free-wiring assumption, all four bounds are tight.",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "A Compositional Theory of Causally Masked Transformers"
+    },
+    "arXiv:2607.27475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27475",
+      "identity_tokens": [
+        "arXiv:2607.27475"
+      ],
+      "reason": "In modern recommendation systems, retrieval serves as a primary stage responsible for filtering billions of candidate items down to thousands prior to refined ranking. To make this massive search effective and efficient, the system relies on ranking accuracy and indexing efficiency. However, these two objectives are traditionally misaligned: while the former optimizes for the alignment between ranking predictions and user behavior, the latter optimizes for a structural grouping of item representations which enables fast search among billions of candidates. Thus, despite extensive efforts to scale up interaction modeling for retrieval, they remain fundamentally limited by the structural misalignment between the ranking objectives and the proximity-learned index. In this work, we address this long-standing dichotomy by proposing a new holistic retrieval framework, OneShot. It is an end-to-end, in-model index learning framework that natively aligns index learning with ranking objectives. Using this joint learning as a structural foundation, OneShot pushes the boundaries of retrieval expressiveness by scaling interaction modeling with neural scoring beyond the persistent dot-product bottleneck. OneShot is fully deployed in Instagram's industrial short-video recommendation system, driving significant wins in user daily sessions, engagement, and time-spent. Additionally, OneShot achieves a $20\\%$ recall gain at the operational ranking volume and a 10x efficiency improvement at an equivalent recall level.",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "OneShot: Index-in-Ranking with Neural Scoring for Large-Scale Retrieval"
+    },
+    "DOI:10.1038/s41598-025-23795-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-23795-1",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-23795-1"
+      ],
+      "reason": "要旨はacupoint image localization用Mamba/DETRでタスク時間10.05msを報告するが、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Efficient real-time acupoint detection using a hybrid model combining mamba and transformer architectures"
+    },
+    "DOI:10.3390/jmse14151392": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jmse14151392",
+      "identity_tokens": [
+        "DOI:10.3390/jmse14151392"
+      ],
+      "reason": "要旨はmaritime terminal truck turnaround time predictionの運用モデル比較で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "A Data-Driven Framework for Predicting Truck Turnaround Times in Maritime Terminals: Flow-Aware Models"
+    },
+    "DOI:10.3847/1538-4365/ae7b24": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3847/1538-4365/ae7b24",
+      "identity_tokens": [
+        "DOI:10.3847/1538-4365/ae7b24"
+      ],
+      "reason": "要旨は天文学画像のSAM source-extraction適応と検出精度で、LLM serving効率ではない。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "EAA: Adapting the Segment Anything Model for Perception-driven Astronomical Source Extraction"
+    },
+    "arXiv:2607.25196": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25196",
+      "identity_tokens": [
+        "arXiv:2607.25196"
+      ],
+      "reason": "要旨はMLLM contrastive decodingのobject hallucination/visual grounding精度の再現性研究で、推論効率を目的・評価していない。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Rethinking CD: A Reproducibility Study and Extension on the Ineffectiveness of Contrastive Decoding at Mitigating Object Hallucinations in MLLMs"
+    },
+    "arXiv:2607.25376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25376",
+      "identity_tokens": [
+        "arXiv:2607.25376"
+      ],
+      "reason": "要旨はBayesian neural networkのlikelihood distributionとMLP regression/training timeの研究で、LLM推論効率対象外。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Rethinking Likelihood distributions: Student's t Likelihood Boosts Bayesian Neural Network Performance"
+    },
+    "arXiv:2607.25451": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25451",
+      "identity_tokens": [
+        "arXiv:2607.25451"
+      ],
+      "reason": "要旨はLLM quantization下のverbatim memorization/privacy評価で、効率改善手法ではない。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Bits and Memories: Measuring Verbatim Extraction Across LLM Quantization"
+    },
+    "arXiv:2607.25529": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25529",
+      "identity_tokens": [
+        "arXiv:2607.25529"
+      ],
+      "reason": "要旨はimage classification neural-network neuronsの重要度評価で、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Are the High-weight Neurons the Important Ones in Image Classification Neural Networks?"
+    },
+    "arXiv:2607.25651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25651",
+      "identity_tokens": [
+        "arXiv:2607.25651"
+      ],
+      "reason": "要旨はdeep-learning compiler frontend bugのLLM-assisted empirical studyで、compiler efficiencyやLLM serving改善の研究ではない。",
+      "first_checked_at": "2026-10-05T09:50:20+00:00",
+      "last_checked_at": "2026-10-05T09:50:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Demystifying Deep Learning Compiler Frontend Bugs: An LLM-Aided Empirical Study"
+    },
+    "arXiv:2607.27497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27497",
+      "identity_tokens": [
+        "arXiv:2607.27497"
+      ],
+      "reason": "要旨はpast experienceからprefix weightsを合成するagent skill adaptationが主題で、推論serving効率の成果ではない。",
+      "first_checked_at": "2026-10-05T09:50:21+00:00",
+      "last_checked_at": "2026-10-05T09:50:21+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SkillSmith: Learning to Compose Parametric Skills and Textual Knowledge"
+    },
+    "arXiv:2607.27523": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27523",
+      "identity_tokens": [
+        "arXiv:2607.27523"
+      ],
+      "reason": "要旨はfinancial RAGのreranking精度・factual consistency評価が中心で、LLM serving/inference効率改善を示さない。",
+      "first_checked_at": "2026-10-05T09:50:21+00:00",
+      "last_checked_at": "2026-10-05T09:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Hierarchical Reranking for Scalable Financial RAG System"
+    },
+    "arXiv:2609.20269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20269",
+      "identity_tokens": [
+        "arXiv:2609.20269"
+      ],
+      "reason": "要旨はsequence-mixer構成のtraining/evaluation loss差を調べる研究で、inference-time efficiencyの方法・評価ではない。",
+      "first_checked_at": "2026-10-05T09:50:21+00:00",
+      "last_checked_at": "2026-10-05T09:50:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Placement Is Free, Composition Is Not: The Latin Square as a Provably-Balanced Construction for Heterogeneous Sequence-Mixer Stacks"
+    },
+    "arXiv:2609.20278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20278",
+      "identity_tokens": [
+        "arXiv:2609.20278"
+      ],
+      "reason": "要旨はTransformer positional/structural addressingの表現力診断で、servingやinference efficiencyを評価していない。",
+      "first_checked_at": "2026-10-05T09:50:21+00:00",
+      "last_checked_at": "2026-10-05T09:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Labeled Incidence Structures for Native Transformer Modeling of Text, Knowledge Graphs, and Hypergraphs"
+    },
+    "DOI:10.1002/advs.202514899": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.202514899",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202514899"
+      ],
+      "reason": "要旨の対象はdrug resistance mutation predictionと生物医学分類精度であり、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T09:50:21+00:00",
+      "last_checked_at": "2026-10-05T09:50:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Deep Contrastive Learning for High‐Throughput Prediction of Drug Resistance Mutations from Sequences"
     }
   }
 }

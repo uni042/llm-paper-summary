@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:47:42+00:00",
-  "record_count": 1331,
+  "updated_at": "2026-10-05T09:50:19+00:00",
+  "record_count": 1333,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -20502,6 +20502,35 @@
         "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
       ],
       "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval"
+    },
+    "DOI:10.3390/info17080736": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/info17080736",
+      "identity_tokens": [
+        "DOI:10.3390/info17080736"
+      ],
+      "reason": "一次要旨はonline LLM expert routingとrouting accuracyを報告するが、routing/serving efficiencyの実測が要旨で確認できず、一次本文取得も失敗。関連性と寄与を判定する根拠が不足。",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "An Expert Routing Method Based on Positive Sample Semantic Distribution via BGMM-LSE"
+    },
+    "arXiv:2607.25157": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25157",
+      "identity_tokens": [
+        "arXiv:2607.25157"
+      ],
+      "reason": "一次本文§4.10 Inference Efficiency（Table 6）を確認。GPT-2 Medium、256 tokensでは8-step diffusion 1,800 tok/sだがPPL 35.4、32-stepは450 tok/s/PPL 28.7でKV-cached ARの1,120 tok/s/PPL 28.9より遅い。本文自ら「unconditional speed advantageではない」と限定。推論効率の比較資料として近接するが、主貢献はARからdiffusionへのattention adaptationであり対象手法としての寄与は弱い。",
+      "first_checked_at": "2026-10-05T09:50:19+00:00",
+      "last_checked_at": "2026-10-05T09:50:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "PreDiff-LM: Pretrained Discrete Masked Diffusion Language Modeling with Hybrid Attention"
     }
   }
 }

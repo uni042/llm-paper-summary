@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af0bc805630ae4e7-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.25651",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.25651",
+    "identity_tokens": [
+      "arXiv:2607.25651"
+    ],
+    "reason": "要旨はdeep-learning compiler frontend bugのLLM-assisted empirical studyで、compiler efficiencyやLLM serving改善の研究ではない。",
+    "first_checked_at": "2026-10-05T09:50:20+00:00",
+    "last_checked_at": "2026-10-05T09:50:20+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Demystifying Deep Learning Compiler Frontend Bugs: An LLM-Aided Empirical Study"
+  },
+  "processed_at": "2026-10-05T09:50:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af0bc805630a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

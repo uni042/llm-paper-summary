@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-def9cd731e85d1f5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/advs.202514899",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/advs.202514899",
+    "identity_tokens": [
+      "DOI:10.1002/advs.202514899"
+    ],
+    "reason": "要旨の対象はdrug resistance mutation predictionと生物医学分類精度であり、LLM inferenceではない。",
+    "first_checked_at": "2026-10-05T09:50:21+00:00",
+    "last_checked_at": "2026-10-05T09:50:21+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+    ],
+    "title": "Deep Contrastive Learning for High‐Throughput Prediction of Drug Resistance Mutations from Sequences"
+  },
+  "processed_at": "2026-10-05T09:50:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-def9cd731e85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
