@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-43-part-04-f4e19bdf4c3b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5753/sbcup.2026.22352",
+      "identity_tokens": [
+        "DOI:10.5753/sbcup.2026.22352"
+      ],
+      "title": "Deploying Language Models on Android-Based Edge Devices: A Practical Evaluation Pipeline",
+      "reason": "The primary DOI/publisher endpoint and the official SBC proceedings article route were inaccessible to this reader; a secondary abstract listing was available, but no primary PDF/body sections could be verified.",
+      "source_url": "https://doi.org/10.5753/sbcup.2026.22352",
+      "first_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "last_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5753/wperformance.2026.23603",
+      "identity_tokens": [
+        "DOI:10.5753/wperformance.2026.23603"
+      ],
+      "title": "CAGE: An Evaluation Framework for Cache-Augmented Generation Models",
+      "reason": "The primary SBC proceedings DOI endpoint returned no accessible full text/PDF; search surfaced metadata/abstract only, so test configuration, metrics, and limitations could not be checked.",
+      "source_url": "https://doi.org/10.5753/wperformance.2026.23603",
+      "first_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "last_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.61424/jcsit.v3i1.953",
+      "identity_tokens": [
+        "DOI:10.61424/jcsit.v3i1.953"
+      ],
+      "title": "Enterprise LLM Router: Learning Quality–Capacity–Capability Trade-offs from 2026 Model Metadata",
+      "reason": "The router predicts model quality/capacity from provider metadata and explicitly abstains where price/latency/deployment evidence is absent; it does not measure or improve model inference/serving efficiency.",
+      "source_url": "https://doi.org/10.61424/jcsit.v3i1.953",
+      "first_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "last_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16562",
+      "identity_tokens": [
+        "arXiv:2607.16562"
+      ],
+      "title": "AirMoE: Statistic-Augmented Over-the-Air MoE for Collaborative Intelligence",
+      "reason": "The full text frames the method as wireless cloud–edge MoE with a cloud pretrained large-model backbone and distributed client experts, but its exemplar/evaluation is semantic segmentation and it optimizes wireless feature-routing/aggregation, not LLM inference or LLM serving.",
+      "source_url": "https://arxiv.org/abs/2607.16562",
+      "first_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "last_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16848",
+      "identity_tokens": [
+        "arXiv:2607.16848"
+      ],
+      "title": "Beyond Memory Leaderboards: Evaluating Scientific Memory as Budgeted Context Restoration",
+      "reason": "This is an evaluation/benchmark contribution. Context budget is relevant to inference resource use, but the checked results do not quantify runtime or serving savings from the proposed protocol.",
+      "source_url": "https://arxiv.org/abs/2607.16848",
+      "first_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "last_checked_at": "2026-10-05T09:38:20.383730+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
