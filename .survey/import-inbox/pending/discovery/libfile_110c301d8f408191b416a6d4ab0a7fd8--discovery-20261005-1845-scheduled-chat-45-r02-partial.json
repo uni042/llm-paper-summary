@@ -1,0 +1,27 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1845-scheduled-chat-45/r02",
+  "reference_main_sha": "547e456a69ab60e0ac3d301072e8dad7f246af62",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.17884",
+      "identity_tokens": [
+        "arXiv:2607.17884"
+      ],
+      "title": "ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding",
+      "reason": "拡散型マルチモーダルLLM（diffusion MLLM）の復号で時間的不安定tokenと視覚的groundingの弱いtokenをtraining-freeにvetoし、追加generation costなしで精度を最大9%改善する。拡散LLM推論の復号方式として対象内。",
+      "source_url": "https://arxiv.org/abs/2607.17884",
+      "body_check": "full_text_relevance_review: arXiv一次資料でsecond-order Taylor prediction、image-attention massによるtoken veto、追加training/generation costなしのdecode policyを確認。",
+      "first_checked_at": "2026-10-05T19:00:00+09:00",
+      "last_checked_at": "2026-10-05T19:00:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "worklist_rank": 412
+    }
+  ]
+}
