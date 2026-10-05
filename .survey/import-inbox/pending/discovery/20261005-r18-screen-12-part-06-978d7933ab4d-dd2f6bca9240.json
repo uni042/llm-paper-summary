@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-12-part-06-978d7933ab4d",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33843",
+      "identity_tokens": [
+        "arXiv:2609.33843"
+      ],
+      "title": "Laya as a Typed Probabilistic Assessor: An Independent Reproduction and a Preregistered Study of Calibration and Selective Escalation",
+      "reason": "Selective escalation is related to cascades, but the paper cannot measure an end-to-end cascade because no escalation target was run; weak efficiency evidence.",
+      "source_url": "https://arxiv.org/abs/2609.33843",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33898",
+      "identity_tokens": [
+        "arXiv:2609.33898"
+      ],
+      "title": "No Free Efficiency: Revisiting the Trade-off Between Training Efficiency and Model Vulnerability",
+      "reason": "Examines security vulnerability tradeoffs of training efficiency; training-only.",
+      "source_url": "https://arxiv.org/abs/2609.33898",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33915",
+      "identity_tokens": [
+        "arXiv:2609.33915"
+      ],
+      "title": "Training Witnesses: Trusting the Training without Trusting the Trainer",
+      "reason": "Certifies model training/data/evaluation with fingerprints; training provenance, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.33915",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33916",
+      "identity_tokens": [
+        "arXiv:2609.33916"
+      ],
+      "title": "Validating Memory-Optimal Transformer Kernels on Real Hardware: From Formal Derivation to Measured Performance Across Two HPC Clusters",
+      "reason": "It includes real decode measurements, but its main performance contribution and comparisons are narrow and do not establish an inference-serving improvement over existing kernels.",
+      "source_url": "https://arxiv.org/abs/2609.33916",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33927",
+      "identity_tokens": [
+        "arXiv:2609.33927"
+      ],
+      "title": "Optimizing the Phi-2 Small Language Model for Real-time Chatbot Applications Using Parameter-Efficient Fine-Tuning (PEFT) with QLoRA Quantization",
+      "reason": "PEFT/QLoRA fine-tuning for Phi-2 chatbot deployment; the proposed optimization is model adaptation/training.",
+      "source_url": "https://arxiv.org/abs/2609.33927",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    }
+  ]
+}
