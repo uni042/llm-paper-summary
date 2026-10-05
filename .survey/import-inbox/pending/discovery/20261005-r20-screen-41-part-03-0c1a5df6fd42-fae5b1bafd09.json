@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-41-part-03-0c1a5df6fd42",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21446",
+      "identity_tokens": [
+        "arXiv:2607.21446"
+      ],
+      "title": "KroQuant: Kronecker-Structured Block Transforms for Efficient Post-Training Quantization of Diffusion Transformers",
+      "reason": "KroQuant targets image-generation Diffusion Transformers (DiTs), not language-model inference/serving.",
+      "source_url": "https://arxiv.org/abs/2607.21446",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21447",
+      "identity_tokens": [
+        "arXiv:2607.21447"
+      ],
+      "title": "RUMBA: Russian User Memory Benchmark",
+      "reason": "RUMBA contributes a benchmark for long-term conversational memory and reports no inference-efficiency intervention.",
+      "source_url": "https://arxiv.org/abs/2607.21447",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21467",
+      "identity_tokens": [
+        "arXiv:2607.21467"
+      ],
+      "title": "CLUIE: Clustering-Aware Recurrent Propagation with Local Structural Compensation for Underwater Image Enhancement",
+      "reason": "CLUIE is an underwater-image-enhancement method, outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2607.21467",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21585",
+      "identity_tokens": [
+        "arXiv:2607.21585"
+      ],
+      "title": "Expanding Flow Maps",
+      "reason": "Expanding Flow Maps concerns flow-map generative modeling and does not identify an LLM inference/serving efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2607.21585",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.21672",
+      "identity_tokens": [
+        "arXiv:2607.21672"
+      ],
+      "title": "Pixels for Programs? A Cross-Provider Case Study of Input-Token Accounting for Source Code as Text and Images",
+      "reason": "It explicitly does not measure semantic fidelity, task accuracy, latency, monetary cost or coding-agent efficiency. Token-accounting reductions alone do not establish a usable inference/serving-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2607.21672",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    }
+  ]
+}
