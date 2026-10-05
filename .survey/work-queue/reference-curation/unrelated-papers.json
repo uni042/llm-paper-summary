@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T16:24:21+00:00",
-  "record_count": 6405,
+  "updated_at": "2026-10-05T16:29:37+00:00",
+  "record_count": 6414,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -20961,9 +20961,9 @@
       "identity_tokens": [
         "arXiv:2401.01313"
       ],
-      "reason": "Abstract surveys hallucination mitigation techniques for LLMs; the focus is reliability, not inference efficiency or serving.",
+      "reason": "RAG、knowledge retrieval、CoVe等32超のhallucination mitigation技法をtaxonomy化するsurvey。LLM品質・安全性が主題で、推論runtime・memory hierarchy・serving効率化の新規方式を提案しない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T16:29:34+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md"
       ],
@@ -20975,9 +20975,9 @@
       "identity_tokens": [
         "arXiv:2001.04063"
       ],
-      "reason": "Abstract presents future n-gram prediction for sequence-to-sequence pretraining; its contribution is training/prediction quality, not inference efficiency or serving.",
+      "reason": "future n-gram predictionとn-stream self-attentionをpre-training objectiveとして導入し、summarization/question generationの品質を改善するsequence-to-sequence事前学習研究。複数future token予測は行うが、推論時並列復号・latency削減を主貢献として評価しない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T16:29:34+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
       ],
@@ -21137,11 +21137,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/p19-1424",
       "identity_tokens": [
-        "DOI:10.18653/v1/p19-1424"
+        "DOI:10.18653/v1/p19-1424",
+        "arXiv:1906.02059"
       ],
-      "reason": "Abstract presents neural legal judgment prediction in English; no LLM inference-efficiency or serving contribution.",
+      "reason": "ECHR case datasetを構築し、hierarchical BERT等でviolation classification・multi-label classification・case importance predictionを評価するlegal NLP能力研究。長文制約へのarchitecture対応はあるが、推論runtime・memory・serving効率化が主目的ではない。",
       "first_checked_at": "2026-10-05T00:58:25+00:00",
-      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T16:29:34+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
@@ -21510,9 +21511,9 @@
         "DOI:10.48550/arxiv.2305.07759",
         "arXiv:2305.07759"
       ],
-      "reason": "arXiv要旨はGPT-3.5/4生成のTinyStoriesで10M未満の小型LMをtraining/evaluationする方法を扱う。",
+      "reason": "GPT-3.5/GPT-4で生成したTinyStoriesを用い、1000万parameter未満や1 Transformer blockの小型LMでも流暢な物語を学習できるかを検証するdataset・training・能力研究。小型化自体は扱うが、推論runtime・memory・serving最適化方式を提案・評価しない。",
       "first_checked_at": "2026-10-05T01:03:26+00:00",
-      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T16:29:33+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
         "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
@@ -21526,9 +21527,9 @@
       "identity_tokens": [
         "arXiv:1605.06065"
       ],
-      "reason": "arXiv要旨はfew-shot/one-shot learningのためmemory-augmented neural networkと外部memory accessを扱う。",
+      "reason": "Neural Turing Machine型の外部memoryとleast-recently-used accessを用いてone-shot classificationを学習するmeta-learning研究。推論時memory機構は持つが、目的はfew-shot学習能力でありLLM推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T01:03:26+00:00",
-      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T16:29:33+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
       ],
@@ -21540,9 +21541,9 @@
       "identity_tokens": [
         "arXiv:2410.02713"
       ],
-      "reason": "arXiv要旨はsynthetic video instruction datasetとLLaVA-Videoのinstruction tuningを提案しvideo benchmark性能を評価する。",
+      "reason": "LLaVA-Video-178Kというsynthetic video instruction datasetを構築し、video LMMを学習して各種video benchmark性能を改善するdata/training研究。推論runtime・token削減・serving最適化が主貢献ではない。",
       "first_checked_at": "2026-10-05T01:03:26+00:00",
-      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T16:29:33+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
         "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
@@ -23105,31 +23106,15 @@
       ],
       "title": "StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems"
     },
-    "arXiv:2111.05754": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2111.05754",
-      "identity_tokens": [
-        "arXiv:2111.05754"
-      ],
-      "reason": "一次要旨はlanguage modelをsparseにpretrainする手法が中心で、効率化の主張はtraining/deployment可能性に関するもので推論serving評価がない。",
-      "first_checked_at": "2026-10-05T01:28:57+00:00",
-      "last_checked_at": "2026-10-05T01:28:57+00:00",
-      "linked_from": [
-        "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
-        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
-        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
-      ],
-      "title": "Prune Once for All: Sparse Pre-Trained Language Models"
-    },
     "arXiv:1905.13678": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1905.13678",
       "identity_tokens": [
         "arXiv:1905.13678"
       ],
-      "reason": "一次要旨は一般neural networkのsparsityをtraining時に学ぶ方法で、LLM推論の対象外。",
+      "reason": "pruning後も性能を維持できるようtraining中に低重要度weight/unitを選択的dropoutする学習手法。疎model生成への基礎技術だが、LLM/Transformer推論や実hardwareでのruntime効率を最終評価しない。",
       "first_checked_at": "2026-10-05T01:28:57+00:00",
-      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T16:29:35+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
       ],
@@ -23286,28 +23271,13 @@
       "identity_tokens": [
         "arXiv:2402.01822"
       ],
-      "reason": "一次要旨はLLM guardrailsの設計と評価を扱い、inference efficiencyの寄与を示さない。",
+      "reason": "LLM入出力の安全性・policy遵守を保証するguardrail設計・評価を扱う安全性研究。追加推論処理は伴うが、主目的は安全性・制御性であり、推論runtime・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-05T01:28:58+00:00",
-      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T16:29:36+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
       ],
       "title": "Building Guardrails for Large Language Models"
-    },
-    "arXiv:2512.24695": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.24695",
-      "identity_tokens": [
-        "arXiv:2512.24695"
-      ],
-      "reason": "一次要旨はNested Learningによる学習/architectureの見方を扱い、LLM serving効率の具体的手法を提示しない。",
-      "first_checked_at": "2026-10-05T01:28:58+00:00",
-      "last_checked_at": "2026-10-05T01:28:58+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
-        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
-      ],
-      "title": "Nested Learning: The Illusion of Deep Learning Architectures"
     },
     "arXiv:2202.02643": {
       "classification": "unrelated",
@@ -25890,9 +25860,9 @@
       "identity_tokens": [
         "arXiv:2411.12372"
       ],
-      "reason": "Open LLM pretraining dataset curation/analysis, not inference efficiency.",
+      "reason": "open LLM向けpretraining datasetとdata pipelineを構築・公開するtraining-data研究。推論runtime・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-05T02:07:09+00:00",
-      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T16:29:37+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2026-2609.06161-all-for-1-bit.md",
         "papers/inference/99-other-inference-systems/2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md"
@@ -92713,6 +92683,139 @@
       "last_checked_at": "2026-10-05T16:24:21+00:00",
       "linked_from": [],
       "title": "Evaluation Metrics For Language Models"
+    },
+    "arXiv:2410.02355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02355",
+      "identity_tokens": [
+        "arXiv:2410.02355"
+      ],
+      "reason": "LLMのknowledge editingでparameter perturbationを保存知識のnull spaceへ射影し、sequential editing時の知識破壊を抑える研究。モデル知識更新の正確性が主目的で、推論runtime・memory・serving効率化ではないためunrelated。",
+      "first_checked_at": "2026-10-05T16:29:32+00:00",
+      "last_checked_at": "2026-10-05T16:29:32+00:00",
+      "linked_from": [],
+      "title": "AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models"
+    },
+    "DOI:10.1147/rd.282.0135": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1147/rd.282.0135",
+      "identity_tokens": [
+        "DOI:10.1147/rd.282.0135"
+      ],
+      "reason": "arithmetic codingの原理を解説する汎用lossless data compression研究で、LLM/Transformer推論を最終適用先とせず、推論runtime・KV cache・serving評価もない。",
+      "first_checked_at": "2026-10-05T16:29:33+00:00",
+      "last_checked_at": "2026-10-05T16:29:33+00:00",
+      "linked_from": [],
+      "title": "An Introduction to Arithmetic Coding"
+    },
+    "DOI:10.18653/v1/p18-1008": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p18-1008",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p18-1008",
+        "arXiv:1804.09849"
+      ],
+      "reason": "RNN・CNN・Transformer由来のmodeling/training技法を組み合わせ、WMT翻訳品質を改善するNMT architecture/training研究。推論latency・memory・serving最適化を最終評価としない。",
+      "first_checked_at": "2026-10-05T16:29:34+00:00",
+      "last_checked_at": "2026-10-05T16:29:34+00:00",
+      "linked_from": [],
+      "title": "The Best of Both Worlds: Combining Recent Advances in Neural Machine Translation"
+    },
+    "arXiv:2309.11235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11235",
+      "identity_tokens": [
+        "arXiv:2309.11235"
+      ],
+      "reason": "mixed-quality SFT dataをcoarse-grained rewardとして利用するC-RLFTでopen-source LLMのalignment能力を改善する学習研究。単段のRL-free supervised learningが主貢献で、推論runtime・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T16:29:35+00:00",
+      "last_checked_at": "2026-10-05T16:29:35+00:00",
+      "linked_from": [],
+      "title": "OpenChat: Advancing Open-source Language Models with Mixed-Quality Data"
+    },
+    "DOI:10.18653/v1/p19-1284": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1284",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1284"
+      ],
+      "reason": "text classifierが予測根拠となる短いrationaleをbinary latent maskで選択し、L0 penaltyをgradient-basedに最適化するinterpretability研究。LLM推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T16:29:36+00:00",
+      "last_checked_at": "2026-10-05T16:29:36+00:00",
+      "linked_from": [],
+      "title": "Interpretable Neural Predictions with Differentiable Binary Variables"
+    },
+    "arXiv:2002.12410": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.12410",
+      "identity_tokens": [
+        "arXiv:2002.12410"
+      ],
+      "reason": "distributed SGDの通信bottleneckをbiased gradient compressionで軽減し、収束率とerror feedbackを理論解析するdistributed training研究。推論通信・servingではなく学習専用のため対象外。",
+      "first_checked_at": "2026-10-05T16:29:36+00:00",
+      "last_checked_at": "2026-10-05T16:29:36+00:00",
+      "linked_from": [],
+      "title": "On Biased Compression for Distributed Learning"
+    },
+    "arXiv:2307.10928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.10928",
+      "identity_tokens": [
+        "arXiv:2307.10928"
+      ],
+      "reason": "LLM応答をfine-grained alignment skill setで評価するevaluation framework/benchmark研究。モデル品質の診断が主目的で、推論runtime・memory・serving最適化を提案しない。",
+      "first_checked_at": "2026-10-05T16:29:36+00:00",
+      "last_checked_at": "2026-10-05T16:29:36+00:00",
+      "linked_from": [],
+      "title": "FLASK: Fine-grained Language Model Evaluation based on Alignment Skill Sets"
+    },
+    "arXiv:1911.02727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.02727",
+      "identity_tokens": [
+        "arXiv:1911.02727"
+      ],
+      "reason": "非自己回帰機械翻訳（non-autoregressive machine translation; NAT）におけるsequence-level knowledge distillationの効果を分析し、training targetの複雑性と性能の関係を調べる学習研究。NAT自体は高速復号に関係するが本論文の主貢献はdistillation/training分析で、推論system最適化ではない。",
+      "first_checked_at": "2026-10-05T16:29:37+00:00",
+      "last_checked_at": "2026-10-05T16:29:37+00:00",
+      "linked_from": [],
+      "title": "Understanding Knowledge Distillation in Non-autoregressive Machine Translation"
+    },
+    "arXiv:2204.05832": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.05832",
+      "identity_tokens": [
+        "arXiv:2204.05832"
+      ],
+      "reason": "encoder-only/decoder-only/encoder-decoder architectureとpretraining objectiveを比較しzero-shot generalization性能を分析するpretraining/modeling研究。推論効率化を最終評価としない。",
+      "first_checked_at": "2026-10-05T16:29:37+00:00",
+      "last_checked_at": "2026-10-05T16:29:37+00:00",
+      "linked_from": [],
+      "title": "What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization?"
+    },
+    "arXiv:2308.08469": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.08469",
+      "identity_tokens": [
+        "arXiv:2308.08469"
+      ],
+      "reason": "pretrained LLMをtime-series forecastingへalignment/fine-tuningし、少量dataで予測性能を高める応用・training研究。最終適用先は時系列予測でLLM推論system効率化ではない。",
+      "first_checked_at": "2026-10-05T16:29:37+00:00",
+      "last_checked_at": "2026-10-05T16:29:37+00:00",
+      "linked_from": [],
+      "title": "LLM4TS: Aligning Pre-Trained LLMs as Data-Efficient Time-Series Forecasters"
+    },
+    "arXiv:2404.13628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13628",
+      "identity_tokens": [
+        "arXiv:2404.13628"
+      ],
+      "reason": "複数LoRA expertをrouterで組み合わせてmulti-task parameter-efficient fine-tuning性能を高めるMoLE研究。expert routingは扱うが対象はLoRA fine-tuning/能力統合で、MoE推論runtime・expert cache・serving最適化ではない。",
+      "first_checked_at": "2026-10-05T16:29:37+00:00",
+      "last_checked_at": "2026-10-05T16:29:37+00:00",
+      "linked_from": [],
+      "title": "Mixture of LoRA Experts"
     }
   }
 }

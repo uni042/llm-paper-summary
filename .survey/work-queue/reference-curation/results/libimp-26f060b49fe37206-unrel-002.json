@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-26f060b49fe37206-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.02355",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.02355",
+    "identity_tokens": [
+      "arXiv:2410.02355"
+    ],
+    "reason": "LLMのknowledge editingでparameter perturbationを保存知識のnull spaceへ射影し、sequential editing時の知識破壊を抑える研究。モデル知識更新の正確性が主目的で、推論runtime・memory・serving効率化ではないためunrelated。",
+    "first_checked_at": "2026-10-05T16:29:32+00:00",
+    "last_checked_at": "2026-10-05T16:29:32+00:00",
+    "linked_from": [],
+    "title": "AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models"
+  },
+  "processed_at": "2026-10-05T16:29:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26f060b49fe3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

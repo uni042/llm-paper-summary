@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:24:20+00:00",
-  "record_count": 2048,
+  "updated_at": "2026-10-05T16:29:36+00:00",
+  "record_count": 2052,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6671,20 +6671,6 @@
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md"
       ],
       "title": "Findings of the 2016 Conference on Machine Translation"
-    },
-    "DOI:10.1147/rd.282.0135": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1147/rd.282.0135",
-      "identity_tokens": [
-        "DOI:10.1147/rd.282.0135"
-      ],
-      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
-      "first_checked_at": "2026-10-05T00:55:42+00:00",
-      "last_checked_at": "2026-10-05T00:55:42+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md"
-      ],
-      "title": "An Introduction to Arithmetic Coding"
     },
     "arXiv:1802.06901": {
       "classification": "borderline",
@@ -31422,9 +31408,9 @@
       "identity_tokens": [
         "DOI:10.1145/3132747.3132780"
       ],
-      "reason": "microsecond-scale network task向けにshared-memory data structure、multi-queue NIC、IPIを使うwork-conserving schedulerでcore間負荷を再配分しtail latencyを抑えるOS/runtime研究。LLM servingのSLO schedulingに機構上強く関連するが、評価先は汎用RPC/in-memory databaseでLLM推論専用ではないためborderline。",
+      "reason": "μs級network task向けにwork-conserving scheduler、shared-memory queue、multi-queue NIC、IPIでcore間負荷を再配分しtail latencyを抑えるOS/dataplane研究。LLM serving schedulingの基礎として強く関連するが、評価はSilo/TPC-C等でLLM専用ではないためborderline。",
       "first_checked_at": "2026-10-05T15:48:47+00:00",
-      "last_checked_at": "2026-10-05T15:48:47+00:00",
+      "last_checked_at": "2026-10-05T16:29:32+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ZygOS: Achieving Low Tail Latency for Microsecond-scale Networked Tasks"
@@ -31461,9 +31447,9 @@
       "identity_tokens": [
         "DOI:10.1109/sc.2008.5214359"
       ],
-      "reason": "GPU上のGEMM・LU・QR・CholeskyをblockingとCPU/GPU協調で最適化し、GEMMをvendor実装比最大60%高速化するほかGPU memory systemのcache/TLB latencyも測定する。LLM kernel最適化の基礎に強く関連するが、対象は汎用dense linear algebraでLLM/Transformer推論専用ではないため境界扱い。",
+      "reason": "GPUのGEMM/LU/QR/Choleskyをblocking、CPU-GPU heterogeneity、memory-system測定で最適化し、vendor GEMM比最大60%高速化などを示す。LLM kernelの基礎演算最適化に直結するが、論文自体は汎用dense linear algebraでLLM/Transformer推論評価がないためborderline。",
       "first_checked_at": "2026-10-05T15:55:18+00:00",
-      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T16:29:33+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Benchmarking GPUs to tune dense linear algebra"
@@ -31671,6 +31657,71 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "The structural simulation toolkit"
+    },
+    "DOI:10.1145/3123939.3123982": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3123939.3123982",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3123982"
+      ],
+      "reason": "runtimeでzero bit由来の無効積を計算せず、bit-serial/parallel混合演算でDNN inference acceleratorの性能・energy効率を改善するarchitecture研究。推論hardware最適化として関連するが、評価対象はCNN convolutionでLLM/Transformerではないためborderline。",
+      "first_checked_at": "2026-10-05T16:29:32+00:00",
+      "last_checked_at": "2026-10-05T16:29:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Bit-Pragmatic Deep Neural Network Computing"
+    },
+    "DOI:10.1145/3307650.3322237": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3307650.3322237",
+      "identity_tokens": [
+        "DOI:10.1145/3307650.3322237"
+      ],
+      "reason": "fully-digital PIMでfloating-point CNN training/testingをmemory内実行しdata movementを削減する。testingでもGPU比324.8倍speedup等を報告しPIM推論hardwareの基礎として関連するが、対象はCNN/ImageNetでLLM/Transformer推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:29:32+00:00",
+      "last_checked_at": "2026-10-05T16:29:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FloatPIM: In-Memory Acceleration of Deep Neural Network Training with High Precision"
+    },
+    "arXiv:2111.05754": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.05754",
+      "identity_tokens": [
+        "arXiv:2111.05754"
+      ],
+      "reason": "weight pruningとdistillationを統合して疎なBERT系pretrained modelを作り、下流taskへsparsityを維持したまま転移し、8-bit量子化も併用してBERT-Large encoderで40倍compressionを達成する。deployment効率化へ直結するが、主要方式がtraining-time pruning/distillationでLLM生成推論のruntime評価が弱いためborderline。",
+      "first_checked_at": "2026-10-05T16:29:35+00:00",
+      "last_checked_at": "2026-10-05T16:29:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Prune Once for All: Sparse Pre-Trained Language Models"
+    },
+    "arXiv:2512.24695": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24695",
+      "identity_tokens": [
+        "arXiv:2512.24695"
+      ],
+      "reason": "深層networkを複数時間尺度のnested optimizationとして再解釈し、architectureとlearning dynamicsの関係を扱う理論・学習枠組み。推論systemへの含意はあり得るが、worklist情報と一次資料上の主目的はtraining/architecture理解であり、LLM推論runtimeの直接最適化とは言い切れないためborderline。",
+      "first_checked_at": "2026-10-05T16:29:35+00:00",
+      "last_checked_at": "2026-10-05T16:29:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures"
+    },
+    "arXiv:2402.01032": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.01032",
+      "identity_tokens": [
+        "arXiv:2402.01032"
+      ],
+      "reason": "Transformerとstate space modelのcopying能力をsynthetic taskと言語modelで比較し、attentionがretrieval/copyingで優位になる条件を分析するarchitecture研究。長文脈推論architecture選択に関連するが、runtime・memory・serving効率を直接最適化・評価する論文ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:29:36+00:00",
+      "last_checked_at": "2026-10-05T16:29:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Repeat After Me: Transformers are Better than State Space Models at Copying"
     }
   }
 }

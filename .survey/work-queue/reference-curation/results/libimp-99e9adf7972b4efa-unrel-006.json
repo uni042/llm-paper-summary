@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99e9adf7972b4efa-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2204.05832",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2204.05832",
+    "identity_tokens": [
+      "arXiv:2204.05832"
+    ],
+    "reason": "encoder-only/decoder-only/encoder-decoder architectureとpretraining objectiveを比較しzero-shot generalization性能を分析するpretraining/modeling研究。推論効率化を最終評価としない。",
+    "first_checked_at": "2026-10-05T16:29:37+00:00",
+    "last_checked_at": "2026-10-05T16:29:37+00:00",
+    "linked_from": [],
+    "title": "What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization?"
+  },
+  "processed_at": "2026-10-05T16:29:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99e9adf7972b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
