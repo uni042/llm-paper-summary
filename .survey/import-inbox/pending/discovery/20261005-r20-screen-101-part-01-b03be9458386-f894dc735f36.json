@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-101-part-01-b03be9458386",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13095",
+      "identity_tokens": [
+        "arXiv:2512.13095"
+      ],
+      "title": "ADHint: Adaptive Hints with Difficulty Priors for Reinforcement Learning",
+      "reason": "ADHintはRL post-trainingで推論trajectoryを教えるhintとsample efficiencyを扱う学習手法で、推論時の効率化を示すものではない。",
+      "source_url": "https://arxiv.org/abs/2512.13095",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app152312698",
+      "identity_tokens": [
+        "DOI:10.3390/app152312698"
+      ],
+      "title": "Wavelet-Enhanced Transformer for Adaptive Multi-Period Time Series Forecasting",
+      "reason": "対象は複数周期の時系列予測であり、LLM推論効率化ではない。",
+      "source_url": "https://doi.org/10.3390/app152312698",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21622",
+      "identity_tokens": [
+        "arXiv:2511.21622"
+      ],
+      "title": "On the Origin of Algorithmic Progress in AI",
+      "reason": "AIのalgorithmic progressによる効率改善を歴史的に分析する研究で、LLM training FLOPs効率が主題でありservingの改善策ではない。",
+      "source_url": "https://arxiv.org/abs/2511.21622",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17490",
+      "identity_tokens": [
+        "arXiv:2511.17490"
+      ],
+      "title": "Video-R4: Reinforcing Text-Rich Video Reasoning with Visual Rumination",
+      "reason": "Video-R4はtext-rich video QAのvisual rumination/認識能力を改善する研究で、LLM推論効率化の寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2511.17490",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12214",
+      "identity_tokens": [
+        "arXiv:2511.12214"
+      ],
+      "title": "ViTE: Virtual Graph Trajectory Expert Router for Pedestrian Trajectory Prediction",
+      "reason": "対象はpedestrian trajectory prediction用のvirtual graph expert routingで、LLM推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2511.12214",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ]
+    }
+  ]
+}
