@@ -73,6 +73,10 @@ def _validate_request(path: Path, payload: Any) -> dict[str, Any]:
     if title is not None and not isinstance(title, str):
         raise RequestValidationError("title must be a string when provided")
 
+    reconsidered = payload.get("reconsidered_from_borderline", False)
+    if not isinstance(reconsidered, bool):
+        raise RequestValidationError("reconsidered_from_borderline must be boolean when provided")
+
     return {
         **payload,
         "request_id": request_id,
@@ -82,6 +86,7 @@ def _validate_request(path: Path, payload: Any) -> dict[str, Any]:
         "title": title.strip() if isinstance(title, str) and title.strip() else None,
         "identity_tokens": _string_list(payload, "identity_tokens"),
         "linked_from": _string_list(payload, "linked_from"),
+        "reconsidered_from_borderline": reconsidered,
     }
 
 
@@ -148,6 +153,7 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
             borderline_path,
             **kwargs,
             unrelated_path=unrelated_path,
+            reconsidered_from_borderline=request["reconsidered_from_borderline"],
         )
 
     result = {
@@ -165,6 +171,8 @@ def process_request(repo_root: Path, request_path: Path) -> dict[str, Any]:
         "scheduled_slot": request.get("scheduled_slot"),
         "actual_invocation_start": request.get("actual_invocation_start"),
         "source_precheck_request_id": request.get("source_precheck_request_id"),
+        "reconsidered_from_borderline": request["reconsidered_from_borderline"],
+        "borderline_recheck_count": row.get("borderline_recheck_count"),
         "next_action": "CONTINUE_DISCOVERY_EVALUATION",
         "instructions": (
             "The canonical relevance ledger is updated. Continue the current Discovery "
