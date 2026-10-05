@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-10-part-05-388b2b93526c",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35639",
+      "identity_tokens": [
+        "arXiv:2609.35639"
+      ],
+      "title": "GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation",
+      "reason": "GPU物理simulationのcoding-agent benchmarkで、LLM自体のserving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.35639",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35663",
+      "identity_tokens": [
+        "arXiv:2609.35663"
+      ],
+      "title": "Late Attention Layers Alone Can Copy Entity Tokens, but Not Without Attending to Their Context",
+      "reason": "entity token copyingとattention機構の解析であり、効率化の方法/測定がない。",
+      "source_url": "https://arxiv.org/abs/2609.35663",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35664",
+      "identity_tokens": [
+        "arXiv:2609.35664"
+      ],
+      "title": "MS-GLA: Multi-Scale Gated Linear Attention for Addressing Representational Bottlenecks via Multi-Temporal Resolution",
+      "reason": "線形注意機構として推論可能性はあるが、本文の実験は品質比較中心で、latency/FLOPs/memory/throughputの改善を示さず効率面の適合が弱い。",
+      "source_url": "https://arxiv.org/abs/2609.35664",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35673",
+      "identity_tokens": [
+        "arXiv:2609.35673"
+      ],
+      "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching",
+      "reason": "画像retouching向けflow-matching制御が主題でLLM推論効率対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35673",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35699",
+      "identity_tokens": [
+        "arXiv:2609.35699"
+      ],
+      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
+      "reason": "RL後のdistillation defense頑健性を扱うセキュリティ研究である。",
+      "source_url": "https://arxiv.org/abs/2609.35699",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    }
+  ]
+}
