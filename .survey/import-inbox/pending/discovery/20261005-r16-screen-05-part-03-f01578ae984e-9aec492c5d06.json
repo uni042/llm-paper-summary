@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-05-part-03-f01578ae984e",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.19338",
+      "identity_tokens": [
+        "arXiv:2607.19338"
+      ],
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+      "reason": "The potentially relevant abstract cannot be substantiated because the withdrawn primary manuscript and PDF are unavailable; keep it borderline rather than infer method/evaluation details.",
+      "source_url": "https://arxiv.org/abs/2607.19338",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17620",
+      "identity_tokens": [
+        "arXiv:2607.17620"
+      ],
+      "title": "PoLoRA: A Preconditioned Orthogonalized LoRA Optimizer",
+      "reason": "The primary abstract proposes a LoRA optimizer for parameter-efficient model fine-tuning; it targets training rather than inference.",
+      "source_url": "https://arxiv.org/abs/2607.17620",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17762",
+      "identity_tokens": [
+        "arXiv:2607.17762"
+      ],
+      "title": "Autonomous Discovery of Wireless Communications Algorithms",
+      "reason": "The primary abstract uses LLM-driven evolutionary search to discover wireless-communication algorithms; the LLM is an algorithm-discovery tool, not the inference system being optimized.",
+      "source_url": "https://arxiv.org/abs/2607.17762",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21636",
+      "identity_tokens": [
+        "arXiv:2607.21636"
+      ],
+      "title": "Measuring the Dependency Gap: Diagnosing Inter-Column Fidelity in Tabular Generative Models",
+      "reason": "The primary abstract evaluates fidelity metrics for synthetic tabular data, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2607.21636",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16972",
+      "identity_tokens": [
+        "arXiv:2607.16972"
+      ],
+      "title": "Training Continuous Chain of Thought Models: A Tale of Two Regimes",
+      "reason": "The primary abstract proposes direct supervision for continuous chain-of-thought model training and faster training; it does not optimize inference/serving.",
+      "source_url": "https://arxiv.org/abs/2607.16972",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
