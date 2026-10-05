@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-30-part-05-f9060d594784",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08003",
+      "identity_tokens": [
+        "arXiv:2608.08003"
+      ],
+      "title": "The Spectral Neuron",
+      "reason": "The paper introduces an interpretable spectral-neuron model family, unrelated to LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.08003",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08036",
+      "identity_tokens": [
+        "arXiv:2608.08036"
+      ],
+      "title": "Compiling and Benchmarking Task-State Horizons for Embodied Agents",
+      "reason": "RoboGraph benchmarks embodied-agent task-state tracking and success, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.08036",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08067",
+      "identity_tokens": [
+        "arXiv:2608.08067"
+      ],
+      "title": "DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects",
+      "reason": "DialectS2S develops low-resource speech-dialogue adaptation/data construction and quality, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.08067",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08167",
+      "identity_tokens": [
+        "arXiv:2608.08167"
+      ],
+      "title": "Wiener Representation Filtering for VLM Hallucination Suppression",
+      "reason": "The method reduces VLM hallucination while explicitly preserving the model’s original inference speed; the contribution is quality/safety rather than efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.08167",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08188",
+      "identity_tokens": [
+        "arXiv:2608.08188"
+      ],
+      "title": "Quantization Degradation in Large Language Models: A Signal-Noise Perspective",
+      "reason": "Quantization is related to deployment, but the paper does not test an efficiency technique or system metric, making its fit weak.",
+      "source_url": "https://arxiv.org/abs/2608.08188",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ]
+    }
+  ]
+}
