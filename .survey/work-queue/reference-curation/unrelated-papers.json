@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:16:16+00:00",
-  "record_count": 5471,
+  "updated_at": "2026-10-05T14:18:54+00:00",
+  "record_count": 5488,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -79496,6 +79496,249 @@
         "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
       ],
       "title": "The Avengers: A Simple Recipe for Uniting Smaller Language Models to Challenge Proprietary Giants"
+    },
+    "arXiv:2312.01279": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01279",
+      "identity_tokens": [
+        "arXiv:2312.01279"
+      ],
+      "reason": "The abstract accelerates Shapley-value explanation computation for generated text; this is interpretability tooling, not LLM generation/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:18:51+00:00",
+      "last_checked_at": "2026-10-05T14:18:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "TextGenSHAP: Scalable Post-hoc Explanations in Text Generation with Long Documents"
+    },
+    "arXiv:2603.03269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03269",
+      "identity_tokens": [
+        "arXiv:2603.03269"
+      ],
+      "reason": "3D geometric reconstruction with hybrid memory is not an LLM inference or serving method.",
+      "first_checked_at": "2026-10-05T14:18:51+00:00",
+      "last_checked_at": "2026-10-05T14:18:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory"
+    },
+    "arXiv:2512.15716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15716",
+      "identity_tokens": [
+        "arXiv:2512.15716"
+      ],
+      "reason": "Video generation with spatial memory targets generative-video capability, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T14:18:51+00:00",
+      "last_checked_at": "2026-10-05T14:18:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Spatia: Video Generation with Updatable Spatial Memory"
+    },
+    "arXiv:2509.25541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.25541",
+      "identity_tokens": [
+        "arXiv:2509.25541"
+      ],
+      "reason": "Gamified self-play improves VLM self-improvement/training; no inference-time efficiency contribution is stated.",
+      "first_checked_at": "2026-10-05T14:18:51+00:00",
+      "last_checked_at": "2026-10-05T14:18:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "title": "Vision-Zero: Scalable VLM Self-Improvement via Strategic Gamified Self-Play"
+    },
+    "arXiv:2503.01776": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01776",
+      "identity_tokens": [
+        "arXiv:2503.01776"
+      ],
+      "reason": "sparse codingでembedding representationのretrieval speedを改善するが、LLM token generation/servingではなくembedding retrievalが対象。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "Beyond Matryoshka: Revisiting Sparse Coding for Adaptive Representation"
+    },
+    "arXiv:2410.04691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04691",
+      "identity_tokens": [
+        "arXiv:2410.04691"
+      ],
+      "reason": "implicit pattern tasksでICLとfine-tuningを比較する能力/mechanism studyで、推論時efficiencyを直接改善しない。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ],
+      "title": "Deeper Insights Without Updates: The Power of In-Context Learning Over Fine-Tuning"
+    },
+    "arXiv:2406.10777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.10777",
+      "identity_tokens": [
+        "arXiv:2406.10777"
+      ],
+      "reason": "RoseLoRAのsparse low-rank updateはknowledge editing/fine-tuningの parameter-efficient method。inference runtimeの削減は示されない。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "RoseLoRA: Row and Column-wise Sparse Low-rank Adaptation of Pre-trained Language Model for Knowledge Editing and Fine-tuning"
+    },
+    "arXiv:2403.13269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.13269",
+      "identity_tokens": [
+        "arXiv:2403.13269"
+      ],
+      "reason": "AFLoRAはLoRA fine-tuning計算/parametersを削減するtraining methodで、inference serving最適化ではない。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "AFLoRA: Adaptive Freezing of Low Rank Adaptation in Parameter Efficient Fine-Tuning of Large Models"
+    },
+    "arXiv:2401.16421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.16421",
+      "identity_tokens": [
+        "arXiv:2401.16421"
+      ],
+      "reason": "bilevel positional encodingによるlength extrapolation/qualityが主題であり、推論効率の測定や手法を提示しない。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "Two Stones Hit One Bird: Bilevel Positional Encoding for Better Length Extrapolation"
+    },
+    "arXiv:2405.16411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16411",
+      "identity_tokens": [
+        "arXiv:2405.16411"
+      ],
+      "reason": "tensor attentionのbackward gradientを高速化するtraining algorithm/theoryで、training専用。",
+      "first_checked_at": "2026-10-05T14:18:52+00:00",
+      "last_checked_at": "2026-10-05T14:18:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Training Tensor Attention Efficiently: From Cubic to Almost Linear Time"
+    },
+    "arXiv:2403.14729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14729",
+      "identity_tokens": [
+        "arXiv:2403.14729"
+      ],
+      "reason": "general DNNをtraining時にpruneする方法で、LLM inference servingを扱わない。",
+      "first_checked_at": "2026-10-05T14:18:53+00:00",
+      "last_checked_at": "2026-10-05T14:18:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch"
+    },
+    "arXiv:2309.05973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05973",
+      "identity_tokens": [
+        "arXiv:2309.05973"
+      ],
+      "reason": "GPT-2のtargeted ablationによるundesirable behavior削除が主題で、inference cost/performance improvementではない。",
+      "first_checked_at": "2026-10-05T14:18:53+00:00",
+      "last_checked_at": "2026-10-05T14:18:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Circuit Breaking: Removing Model Behaviors with Targeted Ablation"
+    },
+    "arXiv:2505.18132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18132",
+      "identity_tokens": [
+        "arXiv:2505.18132"
+      ],
+      "reason": "large vision modelsによるgait recognition representation分析で、LLM inferenceとは別領域。",
+      "first_checked_at": "2026-10-05T14:18:53+00:00",
+      "last_checked_at": "2026-10-05T14:18:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "BiggerGait: Unlocking Gait Recognition with Layer-wise Representations from Large Vision Models"
+    },
+    "arXiv:2503.01478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01478",
+      "identity_tokens": [
+        "arXiv:2503.01478"
+      ],
+      "reason": "RAG retrieval utilityをsemantic perplexityで評価する手法で、retrieval/generation model inference efficiencyが貢献ではない。",
+      "first_checked_at": "2026-10-05T14:18:53+00:00",
+      "last_checked_at": "2026-10-05T14:18:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction"
+    },
+    "arXiv:2504.10499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.10499",
+      "identity_tokens": [
+        "arXiv:2504.10499"
+      ],
+      "reason": "The survey covers graph-based RAG design and functionality, without an inference-efficiency contribution in the abstract.",
+      "first_checked_at": "2026-10-05T14:18:54+00:00",
+      "last_checked_at": "2026-10-05T14:18:54+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "title": "Graph-Based Approaches and Functionalities in Retrieval-Augmented Generation: A Comprehensive Survey"
+    },
+    "arXiv:2503.23367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.23367",
+      "identity_tokens": [
+        "arXiv:2503.23367"
+      ],
+      "reason": "FastVAR is a visual autoregressive image-generation method, outside the LLM serving scope.",
+      "first_checked_at": "2026-10-05T14:18:54+00:00",
+      "last_checked_at": "2026-10-05T14:18:54+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ],
+      "title": "FastVAR: Linear Visual Autoregressive Modeling Via Cached Token Pruning"
+    },
+    "arXiv:2502.13783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13783",
+      "identity_tokens": [
+        "arXiv:2502.13783"
+      ],
+      "reason": "This is a survey of LLM-based recommendation systems and trends, not an inference/serving efficiency study.",
+      "first_checked_at": "2026-10-05T14:18:54+00:00",
+      "last_checked_at": "2026-10-05T14:18:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
+      ],
+      "title": "Generative Large Recommendation Models: Emerging Trends in LLMs for Recommendation"
     }
   }
 }

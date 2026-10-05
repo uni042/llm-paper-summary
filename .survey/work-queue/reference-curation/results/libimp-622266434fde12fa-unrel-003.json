@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-622266434fde12fa-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.15716",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.15716",
+    "identity_tokens": [
+      "arXiv:2512.15716"
+    ],
+    "reason": "Video generation with spatial memory targets generative-video capability, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T14:18:51+00:00",
+    "last_checked_at": "2026-10-05T14:18:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "Spatia: Video Generation with Updatable Spatial Memory"
+  },
+  "processed_at": "2026-10-05T14:18:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-622266434fde",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

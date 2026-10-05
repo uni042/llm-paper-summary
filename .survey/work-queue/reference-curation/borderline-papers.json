@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:16:15+00:00",
-  "record_count": 1823,
+  "updated_at": "2026-10-05T14:18:54+00:00",
+  "record_count": 1826,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28156,6 +28156,50 @@
         "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
       ],
       "title": "Efficient Attention via Control Variates"
+    },
+    "DOI:10.1145/3711896.3736563": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3711896.3736563",
+      "identity_tokens": [
+        "DOI:10.1145/3711896.3736563"
+      ],
+      "reason": "The primary abstract suggests possible deployment/inference relevance, but the publisher full text could not be inspected; the survey’s actual efficiency coverage is unresolved.",
+      "first_checked_at": "2026-10-05T14:18:50+00:00",
+      "last_checked_at": "2026-10-05T14:18:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "A Survey on Small Language Models in the Era of Large Language Models: Architecture, Capabilities, and Trustworthiness"
+    },
+    "arXiv:2507.14675": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.14675",
+      "identity_tokens": [
+        "arXiv:2507.14675"
+      ],
+      "reason": "Document-level multimodal inference shows a concrete latency comparison, but the work is narrowly specialized and does not establish a general LLM serving method.",
+      "first_checked_at": "2026-10-05T14:18:53+00:00",
+      "last_checked_at": "2026-10-05T14:18:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Docopilot: Improving Multimodal Models for Document-Level Understanding"
+    },
+    "DOI:10.1016/j.ipm.2025.104078": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104078",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104078"
+      ],
+      "reason": "The primary abstract emphasizes translation quality and adaptation; sparse expert activation suggests possible inference efficiency, but no quantitative serving evidence is available and full text was inaccessible.",
+      "first_checked_at": "2026-10-05T14:18:54+00:00",
+      "last_checked_at": "2026-10-05T14:18:54+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Overcoming language barriers via machine translation with sparse Mixture-of-Experts fusion of large language models"
     }
   }
 }
