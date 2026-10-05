@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9c6808d9b862795-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33295",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33295",
+    "identity_tokens": [
+      "arXiv:2609.33295"
+    ],
+    "reason": "実運用agent traceからagent behavior benchmarkを生成する自動化で、推論効率を改善する手法ではない。",
+    "first_checked_at": "2026-10-05T23:50:07+00:00",
+    "last_checked_at": "2026-10-05T23:50:07+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+    ],
+    "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces"
+  },
+  "processed_at": "2026-10-05T23:50:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9c6808d9b86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

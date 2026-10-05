@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T23:27:25+00:00",
-  "record_count": 2106,
+  "updated_at": "2026-10-05T23:50:02+00:00",
+  "record_count": 2110,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32496,6 +32496,68 @@
       ],
       "borderline_recheck_count": 0,
       "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute"
+    },
+    "DOI:10.1016/j.knosys.2026.116920": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116920",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116920"
+      ],
+      "reason": "一次出版社abstractはvision-language分類prompt learningのカテゴリtext-encoding計算を削減するが、LLM生成inferenceとの接点が弱く、記事本文が取得できないため適用範囲を確定できない。",
+      "first_checked_at": "2026-10-05T23:50:02+00:00",
+      "last_checked_at": "2026-10-05T23:50:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Decoupling and aligning: A new paradigm for Computationally Efficient Prompt Learning"
+    },
+    "DOI:10.1016/j.nexres.2026.102326": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.nexres.2026.102326",
+      "identity_tokens": [
+        "DOI:10.1016/j.nexres.2026.102326"
+      ],
+      "reason": "一次DOI https://doi.org/10.1016/j.nexres.2026.102326 にアクセスできず、出版社本文/abstractも確認できないため、題名からの推測で除外せずborderlineとした。",
+      "first_checked_at": "2026-10-05T23:50:02+00:00",
+      "last_checked_at": "2026-10-05T23:50:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic transformers with embedded agent modules for continual and independent post-deployment learning via static routing and parameter modularization"
+    },
+    "DOI:10.1109/tcad.2026.3660201": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2026.3660201",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2026.3660201"
+      ],
+      "reason": "題名はLLM robotics acceleratorと直接関連するが、一次IEEE本文へアクセスできず、評価・実装条件を確認できない。二次要旨だけで最終評価できないためborderline。",
+      "first_checked_at": "2026-10-05T23:50:02+00:00",
+      "last_checked_at": "2026-10-05T23:50:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoboPIM: A ReRAM-Based Accelerator for LLM-Based Robotics Applications via Dynamic Task Slicing"
+    },
+    "arXiv:2609.40016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.40016",
+      "identity_tokens": [
+        "arXiv:2609.40016"
+      ],
+      "reason": "incremental BPE探索の最悪時probe数は大きく減る一方、実語彙ではcomplete-updateが0.3–13.1%遅く平均throughput向上なし。tokenizer最悪時挙動とLLM servingへの実効性が未確定。",
+      "first_checked_at": "2026-10-05T23:50:02+00:00",
+      "last_checked_at": "2026-10-05T23:50:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Component-Weighted Centroid Search for Exact Incremental BPE"
     }
   }
 }
