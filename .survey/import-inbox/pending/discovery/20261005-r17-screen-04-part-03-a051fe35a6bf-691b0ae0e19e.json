@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-04-part-03-a051fe35a6bf",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03987",
+      "identity_tokens": [
+        "arXiv:2608.03987"
+      ],
+      "title": "Realified tensor networks: quantum circuit simulation on real-valued matrix accelerators",
+      "reason": "Primary abstract: Tensor-network contraction simulates quantum circuits, but modern matrix accelerators (NPUs, TPUs) expose only real GEMM pipelines, so the complex networks of quantum simulation must be reconstructed in software. We resolve the mismatch by a realification rewr Quantum-circuit simulation is outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2608.03987",
+      "first_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "last_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01676",
+      "identity_tokens": [
+        "arXiv:2608.01676"
+      ],
+      "title": "Understanding Sparse Attention Selectivity in Long-Context Foundation Models via Counterfactual Evaluation",
+      "reason": "Sparse serving is the context but contribution is auditing/measurement, so fit to efficiency improvement scope is indirect.",
+      "source_url": "https://arxiv.org/abs/2608.01676",
+      "first_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "last_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md",
+        "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02059",
+      "identity_tokens": [
+        "arXiv:2608.02059"
+      ],
+      "title": "MIEScore: Human-Aligned Evaluation for Multi-Source Image Editing",
+      "reason": "Primary abstract: Recent advances in unified multimodal models have significantly improved text-guided image editing abilities. In particular, models such as Nano-Banana-Pro and GPT-Image-2 demonstrate emerging capabilities in multi-source image editing (MIE), including tasks s Image-editing evaluation benchmark, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.02059",
+      "first_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "last_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02564",
+      "identity_tokens": [
+        "arXiv:2608.02564"
+      ],
+      "title": "Pairwise-Independent Dithering for Single-Stage Hadamard Quantization",
+      "reason": "Primary abstract: Quantizing high-dimensional vectors is fundamental to similarity search, distributed learning, and model compression. Feng, Indyk, Kapralov, Krachun, and Prokhorov established sharp guarantees for an unbiased dithered quantizer based on a randomized Hadamard t Vector quantization for similarity search/distributed learning, not LLM weights/KV.",
+      "source_url": "https://arxiv.org/abs/2608.02564",
+      "first_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "last_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02569",
+      "identity_tokens": [
+        "arXiv:2608.02569"
+      ],
+      "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
+      "reason": "Primary abstract: The efficiency of a datacenter rests on its control plane policies. Designing these policies is increasingly hard: the hardware-software stack grows fast, the design space is vast and interdependent, and prototyping a single policy takes months. Agentic AI pro Agentic generation of datacenter control policies is not inference-serving optimization.",
+      "source_url": "https://arxiv.org/abs/2608.02569",
+      "first_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "last_checked_at": "2026-10-05T03:18:53.048347+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ]
+    }
+  ]
+}
