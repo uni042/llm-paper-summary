@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-05-part-07-02a73da4b950",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19203",
+      "identity_tokens": [
+        "arXiv:2609.19203"
+      ],
+      "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
+      "reason": "関連概念はあるがposition paperに留まり、具体的inference-efficiency evidenceがない。",
+      "source_url": "https://arxiv.org/abs/2609.19203",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19204",
+      "identity_tokens": [
+        "arXiv:2609.19204"
+      ],
+      "title": "REACT: A Fully Spiking State-Space Model for Real-Time Event-Driven Temporal Perception",
+      "reason": "一次要旨: Robotic systems operating in dynamic environments require visual perception that evolves continuously with the incoming sensory stream. Event cameras provide microsecond temporal resolution and asynchronous sensing, but most learning-based methods accumulate events into frames or temporal bins, introducing an integration delay that can limit fast reaction. Here we propose REACT, a fully spiking state-space model for event-driv",
+      "source_url": "https://arxiv.org/abs/2609.19204",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19206",
+      "identity_tokens": [
+        "arXiv:2609.19206"
+      ],
+      "title": "Programming In-Storage Computing with Located, Stateful Dataflow",
+      "reason": "一次要旨: In-storage computing (ISC) reduces host--storage data movement by executing computation inside computational storage devices (CSDs). For multi-stage applications, realizing these benefits requires coordinating data placement, I/O--compute overlap, and device-resident state across the workflow, yet existing interfaces lack a unified abstraction for these decisions. We present Epic, an NVMe-based ISC stack that provides this abs",
+      "source_url": "https://arxiv.org/abs/2609.19206",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19213",
+      "identity_tokens": [
+        "arXiv:2609.19213"
+      ],
+      "title": "Layer-wise Curriculum Learning for Efficient LLM Compression",
+      "reason": "一次要旨: In this paper, we introduce layer-wise curriculum learning for efficient LLM compression. The proposed method facilitates the knowledge transfer from the teacher model to the student model, utilizing a curriculum learning approach that begins with easier optimization tasks and progressively tackles harder ones. In order to adopt the layer-wise learning in LLM compression, we partition the whole model into multiple segments con",
+      "source_url": "https://arxiv.org/abs/2609.19213",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19225",
+      "identity_tokens": [
+        "arXiv:2609.19225"
+      ],
+      "title": "Making Local Government Contracts Legible: A Computational Pipeline for Classifying and Mapping Intergovernmental Service Agreements",
+      "reason": "一次要旨: Interlocal agreements are one of the primary instruments through which local governments formalize collaboration for public service delivery, yet the institutional and financial content encoded in these contracts has remained inaccessible to systematic analysis at scale. This paper introduces an end-to-end computational pipeline for classifying intergovernmental agreements by institutional form and extracting financial relatio",
+      "source_url": "https://arxiv.org/abs/2609.19225",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
