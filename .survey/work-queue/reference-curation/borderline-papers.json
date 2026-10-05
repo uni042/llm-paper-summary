@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:21:54+00:00",
-  "record_count": 1831,
+  "updated_at": "2026-10-05T14:25:03+00:00",
+  "record_count": 1843,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28271,6 +28271,189 @@
         "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
       ],
       "title": "Mem-α: Learning Memory Construction via Reinforcement Learning"
+    },
+    "arXiv:2312.12832": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.12832",
+      "identity_tokens": [
+        "arXiv:2312.12832"
+      ],
+      "reason": "Smaller-model distillation may lower inference cost, but the paper’s inspected results focus on training/distillation and reasoning quality without matched serving-efficiency measurements.",
+      "first_checked_at": "2026-10-05T14:24:57+00:00",
+      "last_checked_at": "2026-10-05T14:24:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Turning Dust into Gold: Distilling Complex Reasoning Capabilities from LLMs by Leveraging Negative Data"
+    },
+    "arXiv:2409.13035": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.13035",
+      "identity_tokens": [
+        "arXiv:2409.13035"
+      ],
+      "reason": "The demonstrated gain is primarily task quality at similar compression and latency, so an inference-efficiency advantage is not established.",
+      "first_checked_at": "2026-10-05T14:24:58+00:00",
+      "last_checked_at": "2026-10-05T14:24:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TACO-RL: Task Aware Prompt Compression Optimization with Reinforcement Learning"
+    },
+    "arXiv:2409.05227": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.05227",
+      "identity_tokens": [
+        "arXiv:2409.05227"
+      ],
+      "reason": "Relevant hardware efficiency mechanism, but the evaluated workloads and bit-serial hardware setting do not establish applicability to current LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:24:58+00:00",
+      "last_checked_at": "2026-10-05T14:24:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BBS: Bi-Directional Bit-Level Sparsity for Deep Learning Acceleration"
+    },
+    "arXiv:2509.05614": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.05614",
+      "identity_tokens": [
+        "arXiv:2509.05614"
+      ],
+      "reason": "Measured acceleration is tied to a narrow VLA action-generation setting and simulation; general LLM inference transfer is not demonstrated.",
+      "first_checked_at": "2026-10-05T14:24:59+00:00",
+      "last_checked_at": "2026-10-05T14:24:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.06319-asynchronous-kv-cache-prefetching.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SpecPrune-VLA: Accelerating Vision-Language-Action Models via Action-Aware Self-Speculative Pruning"
+    },
+    "arXiv:2505.09214": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.09214",
+      "identity_tokens": [
+        "arXiv:2505.09214"
+      ],
+      "reason": "Potentially relevant edge inference scheduling, but evidence is simulation-based and the model/wireless assumptions are not tied to a practical LLM serving deployment.",
+      "first_checked_at": "2026-10-05T14:24:59+00:00",
+      "last_checked_at": "2026-10-05T14:24:59+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Larger the Merrier? Efficient Large AI Model Inference in Wireless Edge Networks"
+    },
+    "DOI:10.1109/tmc.2025.3590723": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2025.3590723",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2025.3590723"
+      ],
+      "reason": "Exact DOI primary source retrieval failed; packet abstract is null. Search results returned a different semantic-communication record, which was excluded as non-identical.",
+      "first_checked_at": "2026-10-05T14:24:59+00:00",
+      "last_checked_at": "2026-10-05T14:24:59+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge Large AI Model Agent-Empowered Cognitive Multimodal Semantic Communication"
+    },
+    "arXiv:2505.22038": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.22038",
+      "identity_tokens": [
+        "arXiv:2505.22038"
+      ],
+      "reason": "The paper has a measured VLM latency/cache benefit, but scope is specialized to visual-token pruning and measured latency improvement is modest.",
+      "first_checked_at": "2026-10-05T14:25:01+00:00",
+      "last_checked_at": "2026-10-05T14:25:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Balanced Token Pruning: Accelerating Vision Language Models Beyond Local Optimization"
+    },
+    "DOI:10.48550/arxiv.2409.01071": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2409.01071",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2409.01071",
+        "arXiv:2409.01071"
+      ],
+      "reason": "Efficiency evidence is confined to a specialized video LVLM architecture and visual-context workload.",
+      "first_checked_at": "2026-10-05T14:25:02+00:00",
+      "last_checked_at": "2026-10-05T14:25:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges"
+    },
+    "DOI:10.1145/3458817.3476138": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3458817.3476138",
+      "identity_tokens": [
+        "DOI:10.1145/3458817.3476138"
+      ],
+      "reason": "The abstract suggests GPU attention acceleration for BERT-family models, but without primary full text the mechanism, evaluation, and applicability cannot be confirmed.",
+      "first_checked_at": "2026-10-05T14:25:02+00:00",
+      "last_checked_at": "2026-10-05T14:25:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "E.T.: Re-Thinking Self-Attention for Transformer Models on GPUs"
+    },
+    "arXiv:2405.20935": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.20935",
+      "identity_tokens": [
+        "arXiv:2405.20935"
+      ],
+      "reason": "Useful compression/accuracy evidence, but direct deployment efficiency measurements or a serving method are absent.",
+      "first_checked_at": "2026-10-05T14:25:03+00:00",
+      "last_checked_at": "2026-10-05T14:25:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Effective Interplay between Sparsity and Quantization: From Theory to Practice"
+    },
+    "arXiv:2512.15258": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15258",
+      "identity_tokens": [
+        "arXiv:2512.15258"
+      ],
+      "reason": "The efficiency work is specific to an onboard aerial VLA stack and simulator tasks; transfer to general LLM serving is uncertain.",
+      "first_checked_at": "2026-10-05T14:25:03+00:00",
+      "last_checked_at": "2026-10-05T14:25:03+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VLA-AN: An Efficient and Onboard Vision-Language-Action Framework for Aerial Navigation in Complex Environments"
+    },
+    "arXiv:2511.10138": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.10138",
+      "identity_tokens": [
+        "arXiv:2511.10138"
+      ],
+      "reason": "The paper is a specialized recommendation application and reports unchanged latency rather than an inference-efficiency improvement.",
+      "first_checked_at": "2026-10-05T14:25:03+00:00",
+      "last_checked_at": "2026-10-05T14:25:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GPR: Towards a Generative Pre-trained One-Model Paradigm for Large-Scale Advertising Recommendation"
     }
   }
 }
