@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:51:54+00:00",
-  "record_count": 2677,
+  "updated_at": "2026-10-05T04:53:52+00:00",
+  "record_count": 2695,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -38847,6 +38847,272 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "MambaGLA-NPC: a 3D framework integrating CNN and state space models for robust multi-center nasopharyngeal carcinoma segmentation"
+    },
+    "arXiv:2609.34442": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34442",
+      "identity_tokens": [
+        "arXiv:2609.34442"
+      ],
+      "reason": "Develops deep unlearning to remove model knowledge; not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:53:51+00:00",
+      "last_checked_at": "2026-10-05T04:53:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Making LLMs Truly Forget: Deep Unlearning by Searching, Selecting, and Severing Knowledge Paths"
+    },
+    "arXiv:2609.34449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34449",
+      "identity_tokens": [
+        "arXiv:2609.34449"
+      ],
+      "reason": "Learns sharing/specialization in dense language models through training; no inference-time serving optimization.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "CORTEX: Learning to Share and Specialize in Dense Language Models"
+    },
+    "arXiv:2609.34457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34457",
+      "identity_tokens": [
+        "arXiv:2609.34457"
+      ],
+      "reason": "Abstract-domain verification for GPT models; formal verification rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "ZonoGPT: Towards An Abstract Domain for Verifying Large GPT Models"
+    },
+    "arXiv:2609.34467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34467",
+      "identity_tokens": [
+        "arXiv:2609.34467"
+      ],
+      "reason": "Vision-language-action policy learning for robotics; not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Alignment-Guided Flow Transformer for Efficient Vision-Language-Action Policy Learning"
+    },
+    "arXiv:2609.34392": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34392",
+      "identity_tokens": [
+        "arXiv:2609.34392"
+      ],
+      "reason": "Presents organizational-agent capabilities/workflows without a concrete LLM inference-efficiency result.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Org-Agent: Beyond Personal Assistants Towards Organizational Agents"
+    },
+    "arXiv:2609.34409": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34409",
+      "identity_tokens": [
+        "arXiv:2609.34409"
+      ],
+      "reason": "Introduces a state-space classifier for irregular time-series data; not an LLM inference/serving system.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MASCIT: A Mask-Aware State Space Classifier for Naturally Irregular Time Series"
+    },
+    "arXiv:2609.34415": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34415",
+      "identity_tokens": [
+        "arXiv:2609.34415"
+      ],
+      "reason": "Runtime oversight/circuit breaking for agent safety; safety control rather than inference cost/throughput optimization.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PROACT-Agent: Progressive Runtime Oversight and Active Circuit-breaking for Real-Time Safety"
+    },
+    "arXiv:2609.34420": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34420",
+      "identity_tokens": [
+        "arXiv:2609.34420"
+      ],
+      "reason": "Automates hybrid parallelism for graph-transformer training; training-only optimization.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "MegaGraph: Towards Efficient Training of Large-Scale Graph Transformers with Automated Hybrid Parallelism"
+    },
+    "arXiv:2609.34422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34422",
+      "identity_tokens": [
+        "arXiv:2609.34422"
+      ],
+      "reason": "Post-trains coding-agent memory for long-horizon task performance; no inference-efficiency evidence.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Coding Agent Memory Post-training: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via Reinforcement Learning"
+    },
+    "arXiv:2609.34286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34286",
+      "identity_tokens": [
+        "arXiv:2609.34286"
+      ],
+      "reason": "Tactile-conditioned video world-model prediction for manipulation; no LLM inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Dexterous Tactile World Model"
+    },
+    "arXiv:2609.34318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34318",
+      "identity_tokens": [
+        "arXiv:2609.34318"
+      ],
+      "reason": "Dynamic context parallelism scheduler optimizes large-scale long-context training; training-only throughput/bubble reduction.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "HyDra: Demystifying and Taming Dynamic Context Parallelism at Production Scale"
+    },
+    "arXiv:2609.34325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34325",
+      "identity_tokens": [
+        "arXiv:2609.34325"
+      ],
+      "reason": "Dynamic token pruning applies to Vision Transformers, not LLM/LVLM inference.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "DORA: Dynamic Online Reinforcement Agent for Token Pruning in Vision Transformers"
+    },
+    "arXiv:2609.34327": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34327",
+      "identity_tokens": [
+        "arXiv:2609.34327"
+      ],
+      "reason": "Trains small reasoning models to use knowledge beyond parametric memory; training capability focus, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge"
+    },
+    "arXiv:2609.34334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34334",
+      "identity_tokens": [
+        "arXiv:2609.34334"
+      ],
+      "reason": "Offloads collective communication for distributed model training; training-only systems contribution.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "HOCCL: Offloading Collective Communication from GPU Cores to Accelerate Distributed Training"
+    },
+    "arXiv:2609.34366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34366",
+      "identity_tokens": [
+        "arXiv:2609.34366"
+      ],
+      "reason": "Compares harness/model scale and document-reading strategies; evaluation study, not inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "When Harness Beats Scale, and When Reading Beats Both"
+    },
+    "arXiv:2609.34372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34372",
+      "identity_tokens": [
+        "arXiv:2609.34372"
+      ],
+      "reason": "Internalizes personality in agent memory for behavior consistency; no inference cost/latency optimization is presented.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "PersMem: Internalizing Personality into Dual-Pathway Memory for LLM Agents"
+    },
+    "arXiv:2609.34376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34376",
+      "identity_tokens": [
+        "arXiv:2609.34376"
+      ],
+      "reason": "Schedules evidence acquisition for assurance-aware distributed systems; no LLM inference/serving efficiency method.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Before Agents Act: Assurance-Aware Semantic Scheduling for Evidence Acquisition in Distributed Systems"
+    },
+    "arXiv:2609.34386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34386",
+      "identity_tokens": [
+        "arXiv:2609.34386"
+      ],
+      "reason": "Studies vocabulary sparsification during on-policy distillation; a training-time study.",
+      "first_checked_at": "2026-10-05T04:53:52+00:00",
+      "last_checked_at": "2026-10-05T04:53:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "title": "Look Before You Select: Rethinking Vocabulary Sparsification in On-Policy Distillation"
     }
   }
 }

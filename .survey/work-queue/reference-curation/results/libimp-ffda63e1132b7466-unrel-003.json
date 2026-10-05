@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffda63e1132b7466-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34372",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34372",
+    "identity_tokens": [
+      "arXiv:2609.34372"
+    ],
+    "reason": "Internalizes personality in agent memory for behavior consistency; no inference cost/latency optimization is presented.",
+    "first_checked_at": "2026-10-05T04:53:52+00:00",
+    "last_checked_at": "2026-10-05T04:53:52+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "PersMem: Internalizing Personality into Dual-Pathway Memory for LLM Agents"
+  },
+  "processed_at": "2026-10-05T04:53:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffda63e1132b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

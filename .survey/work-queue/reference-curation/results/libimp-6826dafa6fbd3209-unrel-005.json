@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6826dafa6fbd3209-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34327",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34327",
+    "identity_tokens": [
+      "arXiv:2609.34327"
+    ],
+    "reason": "Trains small reasoning models to use knowledge beyond parametric memory; training capability focus, not inference efficiency.",
+    "first_checked_at": "2026-10-05T04:53:52+00:00",
+    "last_checked_at": "2026-10-05T04:53:52+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Knowing When Thinking Is Not Enough: Teaching Small Reasoning Models to Reason Beyond Their Parametric Knowledge"
+  },
+  "processed_at": "2026-10-05T04:53:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6826dafa6fbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
