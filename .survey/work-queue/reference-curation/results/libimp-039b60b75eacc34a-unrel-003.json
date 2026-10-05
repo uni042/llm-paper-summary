@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-039b60b75eacc34a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11913",
+    "identity_tokens": [
+      "arXiv:2607.11913"
+    ],
+    "reason": "HGNP is an evolutionary agent-programming method evaluated on Tileworld; it is not LLM inference/serving work.",
+    "first_checked_at": "2026-10-05T10:40:59+00:00",
+    "last_checked_at": "2026-10-05T10:40:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+    ],
+    "title": "Towards Self-Evolving Agents: A Human-Inspired Adaptive Exploration-Exploitation Framework for Genetic Network Programming"
+  },
+  "processed_at": "2026-10-05T10:40:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-039b60b75eac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

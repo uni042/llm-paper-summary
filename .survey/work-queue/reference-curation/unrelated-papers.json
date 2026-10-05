@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:38:48+00:00",
-  "record_count": 4486,
+  "updated_at": "2026-10-05T10:41:01+00:00",
+  "record_count": 4502,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -65348,6 +65348,234 @@
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "Steering Optimisation Trajectories in Diffusion Representation Learning"
+    },
+    "arXiv:2607.03801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03801",
+      "identity_tokens": [
+        "arXiv:2607.03801"
+      ],
+      "reason": "The work evaluates fine-tuning paradigms for multiple-choice task quality; it is training-focused and reports no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Punching Above Their Weight: Classification-Head Fine-Tuning of Tiny Language Models (TLMs) for Verifiable Multiple-Choice Tasks"
+    },
+    "arXiv:2607.07718": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07718",
+      "identity_tokens": [
+        "arXiv:2607.07718"
+      ],
+      "reason": "LLT targets PDE neural-operator learning and reports training-iteration efficiency, not language-model inference/serving.",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "LLT: Local Linear Transformer for PDE Operator Learning"
+    },
+    "arXiv:2607.11913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11913",
+      "identity_tokens": [
+        "arXiv:2607.11913"
+      ],
+      "reason": "HGNP is an evolutionary agent-programming method evaluated on Tileworld; it is not LLM inference/serving work.",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "title": "Towards Self-Evolving Agents: A Human-Inspired Adaptive Exploration-Exploitation Framework for Genetic Network Programming"
+    },
+    "arXiv:2607.21623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21623",
+      "identity_tokens": [
+        "arXiv:2607.21623"
+      ],
+      "reason": "EaaS is a platform for AI evaluation and monitoring; its microservice latency is for monitoring services, not LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+      ],
+      "title": "Cloud-Native Evaluation-as-a-Service: A Microservices Architecture for Scalable AI Monitoring with Conformal Guarantees"
+    },
+    "arXiv:2607.03229": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03229",
+      "identity_tokens": [
+        "arXiv:2607.03229"
+      ],
+      "reason": "一次要旨はMLLM trainingのpipeline scheduling/MFU改善。inferenceではなく大規模分散trainingが対象。",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "HyperParallel-Mpipe: A Composable Algebra System for Optimizing MLLM Training over Supernode Clusters"
+    },
+    "arXiv:2607.05439": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05439",
+      "identity_tokens": [
+        "arXiv:2607.05439"
+      ],
+      "reason": "一次要旨はprotein diffusion model RFdiffusion 3のmulti-GPU inference。LLM推論ではない。",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Design-CP: Context Parallelism for Design of Protein Nanoparticles"
+    },
+    "DOI:10.1093/nar/gkag706": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nar/gkag706",
+      "identity_tokens": [
+        "DOI:10.1093/nar/gkag706"
+      ],
+      "reason": "一次要旨はsingle-cell virtual-cell modelのbiological accuracy/generalization研究で、LLM推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "scDifformer: diffusion-based post-training for virtual cell modeling across large-scale single-cell data"
+    },
+    "DOI:10.1145/3811318": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3811318",
+      "identity_tokens": [
+        "DOI:10.1145/3811318"
+      ],
+      "reason": "一次要旨はcomputer graphicsのneural quadrature/sampling-integrationでありLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:40:59+00:00",
+      "last_checked_at": "2026-10-05T10:40:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Neural Quadrature Rule and Autoregressive Adaptive Sampling"
+    },
+    "DOI:10.1080/10910344.2026.2680402": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/10910344.2026.2680402",
+      "identity_tokens": [
+        "DOI:10.1080/10910344.2026.2680402"
+      ],
+      "reason": "一次要旨はmillingの工具摩耗を画像・信号で監視しKAN/Reformerで予測する製造工程研究で、LLM推論を扱わない。",
+      "first_checked_at": "2026-10-05T10:41:00+00:00",
+      "last_checked_at": "2026-10-05T10:41:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "An integrated real-time tool wear monitoring and prediction framework with autonomous in-situ machine vision-based labeling"
+    },
+    "arXiv:2607.02845": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02845",
+      "identity_tokens": [
+        "arXiv:2607.02845"
+      ],
+      "reason": "一次要旨はmulti-view robotic manipulationの視覚attention設計とRLBench success/training-timeを扱い、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T10:41:00+00:00",
+      "last_checked_at": "2026-10-05T10:41:00+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Differential Amplifier-Inspired AmpAttention for Multi-View Robotic Manipulation"
+    },
+    "arXiv:2607.02945": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02945",
+      "identity_tokens": [
+        "arXiv:2607.02945"
+      ],
+      "reason": "一次要旨の評価対象は推薦・ranking用途のindustrial-scale modelsで、LLM推論やservingではない。",
+      "first_checked_at": "2026-10-05T10:41:00+00:00",
+      "last_checked_at": "2026-10-05T10:41:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Optimus: A Generic Operator-Level PyTorch Model Transformation Framework"
+    },
+    "arXiv:2607.02990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02990",
+      "identity_tokens": [
+        "arXiv:2607.02990"
+      ],
+      "reason": "一次要旨はgeospatial mineral-exploration向けgraph embeddings/representation learningで、LLM推論効率でない。",
+      "first_checked_at": "2026-10-05T10:41:00+00:00",
+      "last_checked_at": "2026-10-05T10:41:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "MABLE: Masked Autoencoding with Bi-Lipschitz Decoding for Embeddings and Graph Metric Learning"
+    },
+    "arXiv:2607.03065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03065",
+      "identity_tokens": [
+        "arXiv:2607.03065"
+      ],
+      "reason": "一次要旨の主題はRL post-training updateのspectral editingとmodel merging。training/post-trainingモデル品質であり、inference-time performance/serving評価ではない。",
+      "first_checked_at": "2026-10-05T10:41:00+00:00",
+      "last_checked_at": "2026-10-05T10:41:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Spectral Rewiring for Exploration, Purification, and Model Merging"
+    },
+    "DOI:10.1145/3803437.3805531": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3803437.3805531",
+      "identity_tokens": [
+        "DOI:10.1145/3803437.3805531"
+      ],
+      "reason": "The paper studies migrating retail microservices into a multi-agent application architecture, not optimizing LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:41:01+00:00",
+      "last_checked_at": "2026-10-05T10:41:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ],
+      "title": "Complexity-Ranked Iterative Refactoring from Microservices to LLM-based Multi-Agent Systems"
+    },
+    "DOI:10.3390/make8070197": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/make8070197",
+      "identity_tokens": [
+        "DOI:10.3390/make8070197"
+      ],
+      "reason": "The work forecasts marine fisheries production using conventional ML/XAI and is unrelated to LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T10:41:01+00:00",
+      "last_checked_at": "2026-10-05T10:41:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Explainable AI-Driven Machine Learning for Forecasting Marine Fisheries Production Using Environmental Predictors"
+    },
+    "arXiv:2607.03784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03784",
+      "identity_tokens": [
+        "arXiv:2607.03784"
+      ],
+      "reason": "HetDPT accelerates vision Transformers on image/segmentation tasks, not LLM/VLM inference or serving.",
+      "first_checked_at": "2026-10-05T10:41:01+00:00",
+      "last_checked_at": "2026-10-05T10:41:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Rethinking Depth Pruning for Vision Transformers: A Heterogeneity-Aware Perspective"
     }
   }
 }
