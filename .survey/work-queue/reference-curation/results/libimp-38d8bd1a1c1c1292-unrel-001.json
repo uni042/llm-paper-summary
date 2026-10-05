@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-38d8bd1a1c1c1292-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.00458",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.00458",
+    "identity_tokens": [
+      "arXiv:2505.00458"
+    ],
+    "reason": "Memory-centric computing addresses general computer and memory-system design across applications, not specifically LLM inference/serving.",
+    "first_checked_at": "2026-10-05T14:34:46+00:00",
+    "last_checked_at": "2026-10-05T14:34:46+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "Memory-Centric Computing: Solving Computing’s Memory Problem"
+  },
+  "processed_at": "2026-10-05T14:34:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-38d8bd1a1c1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

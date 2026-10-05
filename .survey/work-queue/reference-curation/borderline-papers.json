@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:32:02+00:00",
-  "record_count": 1858,
+  "updated_at": "2026-10-05T14:34:49+00:00",
+  "record_count": 1869,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28696,6 +28696,175 @@
       ],
       "borderline_recheck_count": 0,
       "title": "KBLaM: Knowledge Base augmented Language Model"
+    },
+    "arXiv:2401.03411": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.03411",
+      "identity_tokens": [
+        "arXiv:2401.03411"
+      ],
+      "reason": "The work is specialized to multi-page DocVQA and document encoders rather than general LLM serving; compression results are architecture/task dependent.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GRAM: Global Reasoning for Multi-Page VQA"
+    },
+    "arXiv:2508.00890": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.00890",
+      "identity_tokens": [
+        "arXiv:2508.00890"
+      ],
+      "reason": "The method optimizes an allocation search process, not online serving latency itself; the paper assumes static task stages and acknowledges dynamic real tasks as an open limit.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AgentTTS: Large Language Model Agent for Test-time Compute-optimal Scaling Strategy in Complex Tasks"
+    },
+    "arXiv:2406.10903": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.10903",
+      "identity_tokens": [
+        "arXiv:2406.10903"
+      ],
+      "reason": "It is a broad review/overview and its method summaries are not a unified controlled comparison; the reader would need to select and reproduce a specific primary method.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Invited: New Solutions on LLM Acceleration, Optimization, and Application"
+    },
+    "arXiv:2502.09720": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.09720",
+      "identity_tokens": [
+        "arXiv:2502.09720"
+      ],
+      "reason": "The inspected primary experiments emphasize perplexity/accuracy retention and do not establish end-to-end serving latency or throughput improvement for the proposed configuration.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NestQuant: Nested Lattice Quantization for Matrix Products and LLMs"
+    },
+    "arXiv:2502.00641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00641",
+      "identity_tokens": [
+        "arXiv:2502.00641"
+      ],
+      "reason": "Although deployment on edge devices motivates the study, the reported evidence is quality-focused, so an inference-efficiency contribution is not established.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating Small Language Models for News Summarization: Implications and Factors Influencing Performance"
+    },
+    "arXiv:2603.29919": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.29919",
+      "identity_tokens": [
+        "arXiv:2603.29919"
+      ],
+      "reason": "The saved tokens are specialized to skill/instruction context packaging; the study does not measure general model serving latency, throughput, or system-level cost.",
+      "first_checked_at": "2026-10-05T14:34:46+00:00",
+      "last_checked_at": "2026-10-05T14:34:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkillReducer: Optimizing LLM Agent Skills for Token Efficiency"
+    },
+    "arXiv:2410.17770": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.17770",
+      "identity_tokens": [
+        "arXiv:2410.17770"
+      ],
+      "reason": "The contribution is representational analysis/guidance rather than a demonstrated inference-compression method; no serving latency, throughput, or memory savings are established.",
+      "first_checked_at": "2026-10-05T14:34:47+00:00",
+      "last_checked_at": "2026-10-05T14:34:47+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Small Singular Values Matter: A Random Matrix Analysis of Transformer Models"
+    },
+    "arXiv:2407.15504": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.15504",
+      "identity_tokens": [
+        "arXiv:2407.15504"
+      ],
+      "reason": "Natural-language test data consists of ten short prompts with four queries each, and the work does not establish end-to-end serving latency/cost improvements on realistic long contexts.",
+      "first_checked_at": "2026-10-05T14:34:47+00:00",
+      "last_checked_at": "2026-10-05T14:34:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fundamental Limits of Prompt Compression: A Rate-Distortion Framework for Black-Box Language Models"
+    },
+    "arXiv:2508.01875": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.01875",
+      "identity_tokens": [
+        "arXiv:2508.01875"
+      ],
+      "reason": "Results target streaming video understanding and specific video benchmarks/model/hardware; general text LLM serving gains are not demonstrated.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StreamAgent: Towards Anticipatory Agents for Streaming Video Understanding"
+    },
+    "arXiv:2412.16953": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16953",
+      "identity_tokens": [
+        "arXiv:2412.16953"
+      ],
+      "reason": "The measured reduction is specific to structured logical reasoning and search steps; transfer to broader LLM inference cost is uncertain.",
+      "first_checked_at": "2026-10-05T14:34:49+00:00",
+      "last_checked_at": "2026-10-05T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Aristotle: Mastering Logical Reasoning with A Logic-Complete Decompose-Search-Resolve Framework"
+    },
+    "DOI:10.1007/s11227-024-06563-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-024-06563-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-024-06563-2"
+      ],
+      "reason": "Packet contains no abstract and the DOI primary page could not be retrieved in this screen; without primary abstract/full text the approximate-multiplier paper cannot be assessed for LLM-inference relevance.",
+      "first_checked_at": "2026-10-05T14:34:49+00:00",
+      "last_checked_at": "2026-10-05T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Balancing precision and efficiency: an approximate multiplier with built-in error compensation for error-resilient applications"
     }
   }
 }

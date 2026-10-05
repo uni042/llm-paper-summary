@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:32:02+00:00",
-  "record_count": 5575,
+  "updated_at": "2026-10-05T14:34:50+00:00",
+  "record_count": 5603,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -80996,6 +80996,411 @@
         "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
       ],
       "title": "ByteSized32: A Corpus and Challenge Task for Generating Task-Specific World Models Expressed as Text Games"
+    },
+    "DOI:10.1145/3695053.3731045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3695053.3731045",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731045"
+      ],
+      "reason": "The topology co-design improves wafer-scale LLM training performance; training-only efficiency is out of scope.",
+      "first_checked_at": "2026-10-05T14:34:43+00:00",
+      "last_checked_at": "2026-10-05T14:34:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "title": "PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer"
+    },
+    "arXiv:2506.03133": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03133",
+      "identity_tokens": [
+        "arXiv:2506.03133"
+      ],
+      "reason": "PoLAR improves low-rank fine-tuning optimization and convergence, which is training efficiency rather than inference/serving.",
+      "first_checked_at": "2026-10-05T14:34:43+00:00",
+      "last_checked_at": "2026-10-05T14:34:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "PoLAR: Polar-Decomposed Low-Rank Adapter Representation"
+    },
+    "arXiv:2505.23194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23194",
+      "identity_tokens": [
+        "arXiv:2505.23194"
+      ],
+      "reason": "The paper studies LoRA initialization and fine-tuning dynamics, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T14:34:43+00:00",
+      "last_checked_at": "2026-10-05T14:34:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Beyond Zero Initialization: Investigating the Impact of Non-Zero Initialization on LoRA Fine-Tuning Dynamics"
+    },
+    "arXiv:2505.17761": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17761",
+      "identity_tokens": [
+        "arXiv:2505.17761"
+      ],
+      "reason": "SLiCEs reports a training-step speedup for sequence-model tasks; the abstract does not establish LLM inference or serving gains.",
+      "first_checked_at": "2026-10-05T14:34:43+00:00",
+      "last_checked_at": "2026-10-05T14:34:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Structured Linear CDEs: Maximally Expressive and Parallel-in-Time Sequence Models"
+    },
+    "DOI:10.1186/s40537-024-00928-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40537-024-00928-3",
+      "identity_tokens": [
+        "DOI:10.1186/s40537-024-00928-3"
+      ],
+      "reason": "The distilled student is a bidirectional LSTM. The deployment/speedup claim applies to a non-LLM student architecture, outside this LLM-inference scope.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Xai-driven knowledge distillation of large language models for efficient deployment on low-resource devices"
+    },
+    "DOI:10.48550/arxiv.2404.15381": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2404.15381",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.15381",
+        "arXiv:2404.15381"
+      ],
+      "reason": "The survey concerns federated foundation-model training, aggregation, and communication; its efficiency focus is not inference serving.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "Advances and Open Challenges in Federated Learning with Foundation Models"
+    },
+    "arXiv:2507.00217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.00217",
+      "identity_tokens": [
+        "arXiv:2507.00217"
+      ],
+      "reason": "CrossPipe optimizes cross-datacenter pipeline schedules for LLM training only.",
+      "first_checked_at": "2026-10-05T14:34:44+00:00",
+      "last_checked_at": "2026-10-05T14:34:44+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "CrossPipe: Towards Optimal Pipeline Schedules for Cross-Datacenter Training"
+    },
+    "arXiv:2505.18129": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18129",
+      "identity_tokens": [
+        "arXiv:2505.18129"
+      ],
+      "reason": "One RL to See Them All is a unified post-training RL method for VLMs; its contribution is training and task performance.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "One RL to See Them All: Visual Triple Unified Reinforcement Learning"
+    },
+    "arXiv:2502.11569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11569",
+      "identity_tokens": [
+        "arXiv:2502.11569"
+      ],
+      "reason": "ThinkSLM benchmarks reasoning capability and compression effects on accuracy; it does not develop or evaluate inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Towards Reasoning Ability of Small Language Models"
+    },
+    "arXiv:2502.07737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07737",
+      "identity_tokens": [
+        "arXiv:2502.07737"
+      ],
+      "reason": "Next Block Prediction accelerates video generation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ],
+      "title": "Next Block Prediction: Video Generation via Semi-Autoregressive Modeling"
+    },
+    "arXiv:2407.10061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.10061",
+      "identity_tokens": [
+        "arXiv:2407.10061"
+      ],
+      "reason": "InfiniMotion is a long-motion generation system; its model and efficiency target motion/video generation rather than LLM inference.",
+      "first_checked_at": "2026-10-05T14:34:45+00:00",
+      "last_checked_at": "2026-10-05T14:34:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "InfiniMotion: Mamba Boosts Memory in Transformer for Arbitrary Long Motion Generation"
+    },
+    "arXiv:2505.00458": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00458",
+      "identity_tokens": [
+        "arXiv:2505.00458"
+      ],
+      "reason": "Memory-centric computing addresses general computer and memory-system design across applications, not specifically LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:34:46+00:00",
+      "last_checked_at": "2026-10-05T14:34:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Memory-Centric Computing: Solving Computing’s Memory Problem"
+    },
+    "DOI:10.1016/j.futures.2024.103453": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.futures.2024.103453",
+      "identity_tokens": [
+        "DOI:10.1016/j.futures.2024.103453"
+      ],
+      "reason": "The paper studies future academic work and AI adoption, not model inference efficiency.",
+      "first_checked_at": "2026-10-05T14:34:46+00:00",
+      "last_checked_at": "2026-10-05T14:34:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "The future of work of academics in the age of Artificial Intelligence: State-of-the-art and a research roadmap"
+    },
+    "arXiv:2507.02782": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02782",
+      "identity_tokens": [
+        "arXiv:2507.02782"
+      ],
+      "reason": "The recurrent-model paper improves long-context generalization using training interventions; its efficiency claim concerns training steps, not inference/serving.",
+      "first_checked_at": "2026-10-05T14:34:46+00:00",
+      "last_checked_at": "2026-10-05T14:34:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Understanding and Improving Length Generalization in Recurrent Models"
+    },
+    "SemanticScholar:2d3c9275310f9dfbb02aa3ec2e52f348f410fe4c": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:2d3c9275310f9dfbb02aa3ec2e52f348f410fe4c",
+      "identity_tokens": [
+        "SemanticScholar:2d3c9275310f9dfbb02aa3ec2e52f348f410fe4c"
+      ],
+      "reason": "The paper targets GPU execution for distributed deep-learning training, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:34:46+00:00",
+      "last_checked_at": "2026-10-05T14:34:46+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "ARK: GPU-driven Code Execution for Distributed Deep Learning"
+    },
+    "DOI:10.1109/jiot.2025.3582636": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2025.3582636",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3582636"
+      ],
+      "reason": "RailVoxelDet is a 3-D LiDAR object detector for railway perception; its inference time is for that vision task, not LLMs.",
+      "first_checked_at": "2026-10-05T14:34:47+00:00",
+      "last_checked_at": "2026-10-05T14:34:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "RailVoxelDet: A Lightweight 3-D Object Detection Method for Railway Transportation Driven by Onboard LiDAR Data"
+    },
+    "arXiv:2509.06932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.06932",
+      "identity_tokens": [
+        "arXiv:2509.06932"
+      ],
+      "reason": "LLaDA-VLA is a diffusion vision-language-action model for robot policy learning; the abstract focuses adaptation and robot task quality, not language-model serving efficiency.",
+      "first_checked_at": "2026-10-05T14:34:47+00:00",
+      "last_checked_at": "2026-10-05T14:34:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ],
+      "title": "LLaDA-VLA: Vision Language Diffusion Action Models"
+    },
+    "arXiv:2508.06811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.06811",
+      "identity_tokens": [
+        "arXiv:2508.06811"
+      ],
+      "reason": "This is an empirical study of Hugging Face model-family metadata and fine-tuning lineages, not inference optimization.",
+      "first_checked_at": "2026-10-05T14:34:47+00:00",
+      "last_checked_at": "2026-10-05T14:34:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md"
+      ],
+      "title": "Anatomy of a Machine Learning Ecosystem: 2 Million Models on Hugging Face"
+    },
+    "arXiv:2501.00658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00658",
+      "identity_tokens": [
+        "arXiv:2501.00658"
+      ],
+      "reason": "The paper analyzes SSM quality/representation bottlenecks and proposes polarization for recall/generalization; it does not establish an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing"
+    },
+    "arXiv:2410.07054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07054",
+      "identity_tokens": [
+        "arXiv:2410.07054"
+      ],
+      "reason": "The intervention edits LLM components to reduce translation errors and preserve quality; the abstract does not propose reducing inference cost, latency, or resource use.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "title": "Mitigating the Language Mismatch and Repetition Issues in LLM-based Machine Translation via Model Editing"
+    },
+    "arXiv:2410.00487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.00487",
+      "identity_tokens": [
+        "arXiv:2410.00487"
+      ],
+      "reason": "SELF-PARAM integrates information into model parameters through a training objective to improve memory/retention; this is not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Self-Updatable Large Language Models by Integrating Context into Model Parameters"
+    },
+    "DOI:10.1126/science.adv7434": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1126/science.adv7434",
+      "identity_tokens": [
+        "DOI:10.1126/science.adv7434"
+      ],
+      "reason": "LightGen accelerates semantic vision generation on an all-optical chip; it is a vision-generation hardware result, not LLM serving.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+      ],
+      "title": "All-optical synthesis chip for large-scale intelligent semantic vision generation."
+    },
+    "DOI:10.48550/arxiv.2510.24476": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2510.24476",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.24476",
+        "arXiv:2510.24476"
+      ],
+      "reason": "The survey addresses hallucination mitigation through RAG, reasoning, and agents; it is not focused on inference efficiency.",
+      "first_checked_at": "2026-10-05T14:34:48+00:00",
+      "last_checked_at": "2026-10-05T14:34:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "Mitigating Hallucination in Large Language Models (LLMs): An Application-Oriented Survey on RAG, Reasoning, and Agentic Systems"
+    },
+    "DOI:10.1186/s12916-025-04348-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s12916-025-04348-9",
+      "identity_tokens": [
+        "DOI:10.1186/s12916-025-04348-9"
+      ],
+      "reason": "The review covers LLM uses in clinical-trial workflows and their challenges, not inference/serving optimization.",
+      "first_checked_at": "2026-10-05T14:34:49+00:00",
+      "last_checked_at": "2026-10-05T14:34:49+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "Large language models in clinical trials: applications, technical advances, and future directions"
+    },
+    "DOI:10.1109/tccn.2025.3558992": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tccn.2025.3558992",
+      "identity_tokens": [
+        "DOI:10.1109/tccn.2025.3558992"
+      ],
+      "reason": "The survey examines GenAI and 6G mobile-service integration broadly, not LLM inference efficiency as a technical focus.",
+      "first_checked_at": "2026-10-05T14:34:49+00:00",
+      "last_checked_at": "2026-10-05T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "title": "A Survey of Integrating Generative Artificial Intelligence and 6G Mobile Services: Architectures, Solutions, Technologies and Outlooks"
+    },
+    "arXiv:2501.15369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15369",
+      "identity_tokens": [
+        "arXiv:2501.15369"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2501.15369. Primary abstract describes a mobile hybrid vision network evaluated on ImageNet, COCO, and ADE20k; it is not a language model.",
+      "first_checked_at": "2026-10-05T14:34:49+00:00",
+      "last_checked_at": "2026-10-05T14:34:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "title": "iFormer: Integrating ConvNet and Transformer for Mobile Application"
+    },
+    "arXiv:2412.17153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.17153",
+      "identity_tokens": [
+        "arXiv:2412.17153"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.17153. Primary abstract concerns one-step sampling for image autoregressive generation and evaluates image-generation FID, not language-model inference.",
+      "first_checked_at": "2026-10-05T14:34:50+00:00",
+      "last_checked_at": "2026-10-05T14:34:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "Distilled Decoding 1: One-step Sampling of Image Auto-regressive Models with Flow Matching"
+    },
+    "arXiv:2412.04062": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04062",
+      "identity_tokens": [
+        "arXiv:2412.04062"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.04062. Primary abstract accelerates autoregressive visual/image generation using spatial locality; the target is image generation rather than LLM inference.",
+      "first_checked_at": "2026-10-05T14:34:50+00:00",
+      "last_checked_at": "2026-10-05T14:34:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "ZipAR: Parallel Autoregressive Image Generation through Spatial Locality"
     }
   }
 }
