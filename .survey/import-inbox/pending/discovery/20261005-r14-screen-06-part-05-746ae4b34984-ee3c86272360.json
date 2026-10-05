@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-06-part-05-746ae4b34984",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.09699",
+      "identity_tokens": [
+        "arXiv:2211.09699"
+      ],
+      "title": "PromptCap: Prompt-Guided Task-Aware Image Captioning",
+      "reason": "一次要旨はVQA向けtask-aware image captioning。LLM推論効率を対象としない。",
+      "source_url": "https://arxiv.org/abs/2211.09699",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.08770",
+      "identity_tokens": [
+        "arXiv:1802.08770"
+      ],
+      "title": "A Walk with SGD",
+      "reason": "一次要旨はSGD training dynamics/theory。",
+      "source_url": "https://arxiv.org/abs/1802.08770",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.03742",
+      "identity_tokens": [
+        "arXiv:2110.03742"
+      ],
+      "title": "Beyond Distillation: Task-level Mixture-of-Experts for Efficient Inference",
+      "reason": "効率手法は実在するがmultilingual neural machine translation固有で、LLM servingへの転移根拠が弱い。",
+      "source_url": "https://arxiv.org/abs/2110.03742",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.06823-emoe.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.19781-task-aware-expert-merging-online.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+        "papers/inference/12-moe-parallelism-communication/2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/b98835",
+      "identity_tokens": [
+        "DOI:10.1007/b98835"
+      ],
+      "title": "Principal Component Analysis",
+      "reason": "Springer一次ページでPrincipal Component Analysisの書籍と確認。LLM推論対象外。",
+      "source_url": "https://doi.org/10.1007/b98835",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04248",
+      "identity_tokens": [
+        "arXiv:2402.04248"
+      ],
+      "title": "Can Mamba Learn How to Learn? A Comparative Study on In-Context Learning Tasks",
+      "reason": "一次要旨はMamba/Transformerのin-context learning能力比較。推論効率method/metricはない。",
+      "source_url": "https://arxiv.org/abs/2402.04248",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    }
+  ]
+}
