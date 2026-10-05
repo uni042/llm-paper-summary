@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d21f00b8463e7a89-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18077",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18077",
+    "identity_tokens": [
+      "arXiv:2609.18077"
+    ],
+    "reason": "一次要旨: Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architect",
+    "first_checked_at": "2026-10-05T06:29:33+00:00",
+    "last_checked_at": "2026-10-05T06:29:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes"
+  },
+  "processed_at": "2026-10-05T06:29:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d21f00b8463e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:26:38+00:00",
-  "record_count": 3247,
+  "updated_at": "2026-10-05T06:29:33+00:00",
+  "record_count": 3259,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -47286,6 +47286,179 @@
         "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
       ],
       "title": "Fingerprinting Multimodal Large Language Models"
+    },
+    "arXiv:2609.21157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21157",
+      "identity_tokens": [
+        "arXiv:2609.21157"
+      ],
+      "reason": "Large Language Model (LLM) agents are increasingly being explored for chip design, but most existing approaches operate directly at RTL. We ask whether agents can design better chips by leveraging higher-level abstractions. We compare Direct RTL Design, Agent-based HLS Design, Post-Compiler HLS Refinement, and Post-HLS RTL Refinement, and combine Agent-based HLS Design with Post-HLS RTL Refinement as Agent-based HLS with RTL Refinement (AHRR). We use FPGAs as a practical, easy-to-deploy platform for end-to-end evaluation, but note that the design-flow tradeoffs we study are largely independent of the target technology. Across a diverse 11-tasks benchmark suite, AHRR achieves a 2.6$\\times$ geometric-mean speedup over Direct RTL Design across our benchmark suite. Case studies show that HLS distills design knowledge into abstractions that agents can leverage, while RTL refinement recovers lower-level optimization opportunities. Together, these results make AHRR a promising workflow for agentic chip design. The code and evaluation artifacts are available at https://github.com/ZijD/AHRR.",
+      "first_checked_at": "2026-10-05T06:29:31+00:00",
+      "last_checked_at": "2026-10-05T06:29:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md"
+      ],
+      "title": "Can Agents Design Better Chips with a Higher Level Abstraction?"
+    },
+    "DOI:10.1007/s00530-026-02664-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-026-02664-5",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-026-02664-5"
+      ],
+      "reason": "出版社の一次要旨: SMG-Mambaはtext-guided medical image segmentationを対象とし、bottleneck cross-attentionで計算負担を抑える。LLM推論ではない。",
+      "first_checked_at": "2026-10-05T06:29:31+00:00",
+      "last_checked_at": "2026-10-05T06:29:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SMG-Mamba: selective multimodal gating mamba with semantic alignment for medical segmentation"
+    },
+    "DOI:10.1016/j.neunet.2026.109645": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109645",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109645"
+      ],
+      "reason": "一次要旨: Remote sensing image segmentation serves as a fundamental step in connecting raw data with high-level vision understanding. However, single-modality inputs, such as optical or SAR imagery, often provide incomplete semantics, thereby limiting segmentation accuracy. While recent state space models (e.g., Mamba) have shown strong performance in unimodal segmentation by modeling long-range dependencies efficiently, their potential",
+      "first_checked_at": "2026-10-05T06:29:31+00:00",
+      "last_checked_at": "2026-10-05T06:29:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MNet: A Mamba-based teacher-student-decoder framework for multimodal remote sensing segmentation."
+    },
+    "DOI:10.1145/3838177.3841720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3838177.3841720",
+      "identity_tokens": [
+        "DOI:10.1145/3838177.3841720"
+      ],
+      "reason": "一次要旨: In serverless computing, optimizing performance and cost is challenging due to the large configuration space in the presence of time-varying workloads and rapidly scaling infrastructure. Human-driven optimization is fundamentally limited in this setting: it is too slow for the short control timescales of serverless platforms, prohibitively expensive at scale, and unable to continuously explore high-dimensional configuration sp",
+      "first_checked_at": "2026-10-05T06:29:31+00:00",
+      "last_checked_at": "2026-10-05T06:29:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md"
+      ],
+      "title": "FunPilot: Runtime Performance Diagnosis and Remediation for Serverless Applications with LLMs"
+    },
+    "DOI:10.1145/3838177.3841727": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3838177.3841727",
+      "identity_tokens": [
+        "DOI:10.1145/3838177.3841727"
+      ],
+      "reason": "一次要旨: RL-based LLM post-training increasingly disaggregates rollout and training across separate GPU resources, but static GPU partitioning can suffer from pipeline bubbles under long-tail rollout latency. We present LiveResize, a runtime GPU reallocation system that dynamically switches GPUs between rollout and training to balance stage execution times without changing RL semantics. LiveResize decomposes resizing into fine-grained",
+      "first_checked_at": "2026-10-05T06:29:31+00:00",
+      "last_checked_at": "2026-10-05T06:29:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "LiveResize: Runtime GPU Reallocation for Disaggregated LLM Post-Training"
+    },
+    "arXiv:2609.21038": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21038",
+      "identity_tokens": [
+        "arXiv:2609.21038"
+      ],
+      "reason": "Induced pluripotent stem cell (iPSC) culture increasingly relies on segmentation foundation models, yet deployment on laboratory CPUs and edge hardware requires compression schemes that are both efficient and auditable. We present a deployment-oriented evaluation of compressed Cellpose-SAM using a pre-specified retention criterion: the 95% cluster-bootstrap interval of mean change from FP32 must remain above a fixed -0.02 margin for every imaging modality. On a stratified 176-field panel spanning BBBC038 nuclei, BBBC039 U2OS fluorescence, and NIST iPSC images across density regimes, weight-only W8A16 preserves instance F1 across all modalities. A sensitivity-guided mixed W4/W8 scheme, using four INT8 exceptions, achieves a 6.76x reduction in weight storage with no observed catastrophic failures (0/176 fields), matching W8A16 at this sample size. In contrast, ternary weight-only quantization achieves 12.08x compression but fails catastrophically on 169/176 fields. These results demonstrate that compression should be evaluated by modality-stratified downstream retention rather than single-number accuracy, and establish a reproducible protocol for auditing compressed foundation models in regulated stem-cell imaging.",
+      "first_checked_at": "2026-10-05T06:29:32+00:00",
+      "last_checked_at": "2026-10-05T06:29:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Retention-Constrained Post-Training Quantization of Cellpose-SAM for Stem Cell Microscopy"
+    },
+    "arXiv:2609.21058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21058",
+      "identity_tokens": [
+        "arXiv:2609.21058"
+      ],
+      "reason": "Language models can now write GPU kernels that outperform PyTorch. We evaluate five model configurations on KernelBench level 1 and find that a frontier model produces correct kernels for 91.1% of problems and independently verified speedups on 22 of 56, including three convolutions, with a median of 1.235x. Open-weights models are far behind: the best reaches 30.4% correct with three verified speedups and solves zero convolutions. We then ask a question the literature does not: what fraction of a real model's wall clock do such kernels govern? Profiling seven workloads across three domains, we find the addressable fraction ranges from 8.9% to 58.2%. On transformers, 80-86% of runtime is spent in cuBLAS GEMM and FlashAttention, bounding realistic end-to-end improvement at roughly 1%, and the fraction shrinks with model scale. On recommenders it is 58.2%, concentrated in a single embedding kernel. We introduce DLRM-Bench, 12 recommender kernel problems in KernelBench format, and measure a 41.7% win rate at a 1.552x median there, projecting 8.63% end-to-end. Separately, we show that KernelBench's correctness check (torch.allclose with an absolute tolerance) is satisfied by a tensor of zeros on 4 of 60 level-1 problems. Two kernels in our own results exploited this before we detected them, including one scored at 283x that wrote 0.3% of its output buffer. We propose scale-invariant replacements and release all 879 evaluations.",
+      "first_checked_at": "2026-10-05T06:29:32+00:00",
+      "last_checked_at": "2026-10-05T06:29:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "How Much of a Real Workload Can LLM-Generated GPU Kernels Actually Reach?"
+    },
+    "arXiv:2609.21061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21061",
+      "identity_tokens": [
+        "arXiv:2609.21061"
+      ],
+      "reason": "Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, background clutter, and human-in-the-loop assessment. We adapt DINOv3 Vision Transformer (ViT) models to underwater SAS ATR using a three-stage parameter-efficient framework. Stage 1 uses Low-Rank Adaptation (LoRA) while freezing the ViT backbone, bridging the gap between natural-image pretraining and underwater acoustic propagation. Stage 2 uses hard-negative mining to strengthen the decision boundary against acoustic mimics, including rocks and sediment formations resembling man-made targets. Stage 3 uses Supervised Contrastive Learning (SupCon) to separate target and clutter representations. We evaluate at-sea SAS data using a mission-level geographic split, compare all arms at 85 percent test recall, and repeat each comparison over three random seeds. LoRA accounts for the primary effect, increasing area under the precision-recall curve (AUPRC) from 0.300 to 0.679 +/- 0.027 using the same frozen backbone. Rank 4 achieves this result while training only 0.26 percent of weights. Neither refinement stage exceeds its matched control: hard-negative mining changes AUPRC by -0.0045 +/- 0.0119 versus an equal-size random curriculum, and SupCon changes AUPRC by +0.0002 +/- 0.0096 versus the preceding stage. These null results indicate that mining occurred on data the encoder had already fit and that supervised stages had already imposed most target-clutter geometry. One efficient adaptation stage is sufficient; stacked refinement is not.",
+      "first_checked_at": "2026-10-05T06:29:32+00:00",
+      "last_checked_at": "2026-10-05T06:29:32+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers"
+    },
+    "arXiv:2609.21113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21113",
+      "identity_tokens": [
+        "arXiv:2609.21113"
+      ],
+      "reason": "Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly understood. To address this, we investigate how fine-tuning alters internal representations in LLMs, including attention patterns and layer-wise activations, and examine whether these changes are linked to task-relevant components identified by EAP (e.g., attention heads and logit-level activations) that drive task performance. We find that EAP-identified components are concentrated within specific layers, indicating a degree of functional localisation in how models internalise task-specific behavior. Notably, the distribution of these components across layers is largely uncorrelated with the layers undergoing the most substantial representational changes during fine-tuning. Furthermore, we observe that overlap in EAP-identified components across tasks does not translate into cross-task performance transfer if the tasks are different in nature (e.g. classification vs. generative tasks). More specifically, fine-tuning on one task can lead to a degradation of performance on another when the two tasks exhibit a high degree of overlap in their EAP-identified components.",
+      "first_checked_at": "2026-10-05T06:29:32+00:00",
+      "last_checked_at": "2026-10-05T06:29:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models"
+    },
+    "DOI:10.3389/frai.2026.1952159": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1952159",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1952159"
+      ],
+      "reason": "一次要旨: Introduction This paper introduces a new hybrid deep learning architecture, which is named GINet, to accurately and efficiently classify gastrointestinal (GI) diseases using endoscopic images. Automated diagnosis is not an easy task due to the visual similarity among GI conditions and the class imbalance.   Method To overcome these challenges, the proposed model is based on EfficientNetV2 for powerful feature extraction, suppo",
+      "first_checked_at": "2026-10-05T06:29:33+00:00",
+      "last_checked_at": "2026-10-05T06:29:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba-based state-space modeling with window attention for explainable multi-class gastrointestinal disease diagnosis in endoscopic images."
+    },
+    "arXiv:2609.18066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18066",
+      "identity_tokens": [
+        "arXiv:2609.18066"
+      ],
+      "reason": "一次要旨: Private large language model (LLM) fine-tuning is increasingly important for organizations that need to adapt models using sensitive data, but it often exceeds the memory capacity of commodity datacenter accelerators. Apple Silicon offers a different design point through large unified memory and lower complete-system cost, while recent Apple software support enables distributed execution over RDMA-over-Thunderbolt (TB). This p",
+      "first_checked_at": "2026-10-05T06:29:33+00:00",
+      "last_checked_at": "2026-10-05T06:29:33+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Towards Training Private LLMs: Exploring Fine-Tuning Language Models on Apple Silicon with RDMA over Thunderbolt"
+    },
+    "arXiv:2609.18077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18077",
+      "identity_tokens": [
+        "arXiv:2609.18077"
+      ],
+      "reason": "一次要旨: Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architect",
+      "first_checked_at": "2026-10-05T06:29:33+00:00",
+      "last_checked_at": "2026-10-05T06:29:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes"
     }
   }
 }

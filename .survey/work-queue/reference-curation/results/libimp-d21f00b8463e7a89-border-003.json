@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d21f00b8463e7a89-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.17985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.17985",
+    "identity_tokens": [
+      "arXiv:2609.17985"
+    ],
+    "reason": "agent interaction frictionのbenchmarkとしては近接するが、主要な推論compute・latency・costを除外しスコープ適合性が弱い。",
+    "first_checked_at": "2026-10-05T06:29:32+00:00",
+    "last_checked_at": "2026-10-05T06:29:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+    ],
+    "title": "RideWay: Benchmarking Efficient Task Completion for Tool-Using Language Agents"
+  },
+  "processed_at": "2026-10-05T06:29:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d21f00b8463e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

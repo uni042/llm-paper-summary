@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d21f00b8463e7a89-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18066",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18066",
+    "identity_tokens": [
+      "arXiv:2609.18066"
+    ],
+    "reason": "一次要旨: Private large language model (LLM) fine-tuning is increasingly important for organizations that need to adapt models using sensitive data, but it often exceeds the memory capacity of commodity datacenter accelerators. Apple Silicon offers a different design point through large unified memory and lower complete-system cost, while recent Apple software support enables distributed execution over RDMA-over-Thunderbolt (TB). This p",
+    "first_checked_at": "2026-10-05T06:29:33+00:00",
+    "last_checked_at": "2026-10-05T06:29:33+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Towards Training Private LLMs: Exploring Fine-Tuning Language Models on Apple Silicon with RDMA over Thunderbolt"
+  },
+  "processed_at": "2026-10-05T06:29:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d21f00b8463e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

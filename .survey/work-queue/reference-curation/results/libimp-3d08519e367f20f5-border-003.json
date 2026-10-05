@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d08519e367f20f5-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1080/15481603.2026.2727781",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1080/15481603.2026.2727781",
+    "identity_tokens": [
+      "DOI:10.1080/15481603.2026.2727781"
+    ],
+    "reason": "一次要旨なし。DOI primary sourceを取得しようとしたがreaderがアクセス不能を返した。",
+    "first_checked_at": "2026-10-05T06:29:31+00:00",
+    "last_checked_at": "2026-10-05T06:29:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Reliable Sar oil-spill segmentation for marine monitoring Via self-supervised denoising and lightweight wavelet–state-space modeling"
+  },
+  "processed_at": "2026-10-05T06:29:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d08519e367f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

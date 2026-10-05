@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b7a6613afe474bcf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21038",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21038",
+    "identity_tokens": [
+      "arXiv:2609.21038"
+    ],
+    "reason": "Induced pluripotent stem cell (iPSC) culture increasingly relies on segmentation foundation models, yet deployment on laboratory CPUs and edge hardware requires compression schemes that are both efficient and auditable. We present a deployment-oriented evaluation of compressed Cellpose-SAM using a pre-specified retention criterion: the 95% cluster-bootstrap interval of mean change from FP32 must remain above a fixed -0.02 margin for every imaging modality. On a stratified 176-field panel spanning BBBC038 nuclei, BBBC039 U2OS fluorescence, and NIST iPSC images across density regimes, weight-only W8A16 preserves instance F1 across all modalities. A sensitivity-guided mixed W4/W8 scheme, using four INT8 exceptions, achieves a 6.76x reduction in weight storage with no observed catastrophic failures (0/176 fields), matching W8A16 at this sample size. In contrast, ternary weight-only quantization achieves 12.08x compression but fails catastrophically on 169/176 fields. These results demonstrate that compression should be evaluated by modality-stratified downstream retention rather than single-number accuracy, and establish a reproducible protocol for auditing compressed foundation models in regulated stem-cell imaging.",
+    "first_checked_at": "2026-10-05T06:29:32+00:00",
+    "last_checked_at": "2026-10-05T06:29:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "Retention-Constrained Post-Training Quantization of Cellpose-SAM for Stem Cell Microscopy"
+  },
+  "processed_at": "2026-10-05T06:29:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b7a6613afe47",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
