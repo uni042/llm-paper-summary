@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-33-part-07-9aa9e0416668",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03311",
+      "identity_tokens": [
+        "arXiv:2608.03311"
+      ],
+      "title": "Evaluating LLM Trade-offs for Enterprise Automation: Lessons from Workflow Generation in a Production Enterprise Platform",
+      "reason": "Enterprise compliance management requires rapid adaptation to evolving regulatory frameworks (e.g., DORA, AI RMF, FedRAMP) and tight remediation SLAs. Traditional static orchestrators often fail in hybrid cloud environments where event-driven assessments demand that automation code adapt to runtime context in seconds. This paper presents lessons learned from evaluating six large language models for AI-driven workflow generation in a production enterprise platform, benchmarked across 29 real-world IT automation scenarios, two generation pipeline architectures, and eight independent runs per prompt-model-pipeline configuration (2,784 runs total). Our initial pipeline used monolithic workflow generation, achieving 31.5-82.8% structural success rates (JSON schema validity and correct UI rendering), with most models struggling on complex JSON generation. We developed a redesigned piecewise pipeline that decomposes workflow construction into variable scaffolding, base block assembly, and nested block generation, raising structural success to 74.1-97.8% across all models. We analyze production tradeoffs including cost (USD 0.008-0.20 per workflow), latency (under 50s for interactive use), and model selection. Piecewise decomposition enables smaller models (e.g., mistral-small at 95.7% structural success and USD 0.01 per workflow) to reach production viability, removing dependency on expensive frontier models. While mistral-medium-2505 and gpt-oss-120b achieved the highest structural success (96.1% and 97.8%), mistral-medium-2505 carries a 19x cost premium versus mistral-small. Our deployment lessons highlight the need to separate structural validity from semantic correctness (logical fulfillment of user intent) and provide a solution for model-agnostic, scalable automation in cloud engineering.",
+      "source_url": "https://arxiv.org/abs/2608.03311",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03392",
+      "identity_tokens": [
+        "arXiv:2608.03392"
+      ],
+      "title": "Self-Evolving Coding Agents",
+      "reason": "Large language models are increasingly embedded in software engineering workflows as coding agents that can inspect repositories, invoke tools, execute tests, debug failures, and generate patches. Yet most existing coding agents remain largely static after deployment, even though software development is a dynamic, feedback-rich process in which repositories evolve, dependencies change, tests fail, and repair attempts leave reusable experience. This tension has motivated a growing body of work on self-evolving coding agents, where the agent improves its future behavior by persistently updating its framework, memory, skills and tools, components, workflow and topology, or environment and context from prior coding interactions. In this survey, we provide a structured synthesis of this emerging area. We first define the concept of self-evolving coding agents and distinguish it from conventional coding agents and general self-evolving agents. We then develop a taxonomy centered on the targets of evolution, complemented by two orthogonal perspectives: when evolution occurs and which code-specific signals drive it. We further examine the benchmarks used to measure the effect of evolution and related coding products. Across the literature, we find that executable feedback, repository-level context, and coding trajectories make software engineering a natural domain for agent self-evolution, but also introduce challenges in feedback reliability, benchmark overfitting, reversibility, system complexity, safety, cost, and generalization. By organizing existing work around these dimensions, this survey aims to clarify the conceptual boundaries of self-evolving coding agents and provide a foundation for designing more adaptive, reliable, and software-aware agentic systems.",
+      "source_url": "https://arxiv.org/abs/2608.03392",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03403",
+      "identity_tokens": [
+        "arXiv:2608.03403"
+      ],
+      "title": "Towards Robust Tool Use in Agents via Experience-Driven Adaptive Guidance",
+      "reason": "The performance bottleneck of agents is increasingly shifting from model capability to the robustness of their execution processes. Tools play a central role as the primary interface through which agents interact with external environments, yet existing methods rarely focus on ensuring robust tool use across diverse runtime conditions. To address this problem, we propose ExpG, a mechanism that builds and refines adaptive guidance capturing each tool's capability boundaries and best practices, thereby enabling agents to use tools more robustly and effectively. ExpG consists of three phases: (1) experience acquisition, which analyzes tool invocation quality from historical execution trajectories, producing structured learnable experiences through multi-aspect attribution; (2) experience distillation, which keeps the experience pool effective by filtering unhelpful experiences, selecting representative ones with an equivalence-class-based method, and summarizing them into generalizable guidance; and (3) experience reuse, which applies the guidance adaptively during future task solving. Extensive experiments show that ExpG brings consistent improvements across the tool selection, tool calling, and response generation tasks, enabling smaller agents to outperform larger ones that do not use ExpG. Moreover, ExpG achieves particularly strong gains in challenging settings, suggesting a promising path toward more robust tool use. Our code, experiments, and results are available.",
+      "source_url": "https://arxiv.org/abs/2608.03403",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03480",
+      "identity_tokens": [
+        "arXiv:2608.03480"
+      ],
+      "title": "Efficient Multilingual Neural Machine Translation via Corpus-Driven Vocabulary Pruning: An English-Arabic Case Study",
+      "reason": "The adoption of large pre-trained multilingual models for neural machine translation (MNMT) faces a major challenge: excessive memory and computational consumption due to overly large vocabularies and embedding layers. Although existing compression methods like pruning, quantization and knowledge distillation reduce parameter redundancy, they mainly preserve the structure of the original vocabulary, thereby leaving a major source of inefficiency unresolved. We propose in this paper a general optimization framework that combines a vocabulary pruning method with a targeted fine-tuning protocol for MNMT models. We evaluate the proposed framework using three models (M2M100, NLLB-200, mBART-50) on the English-Arabic language pair. Our approach reduces the vocabulary size from over 128,000 to approximately 10,000 tokens, enabling a 60% memory saving without any loss in performance. Results show that optimized multilingual models can match or exceed the performance of dedicated bilingual baselines. In particular, the pruned and fine-tuned M2M100 model achieves a competitive BLEU score of 42.04 (against 44.59 for the OPUS-MTen- ar bilingual model) while it significantly outperforms it on the COMET metric (0.8730 vs 0.7911) revealing superior semantic adequacy and fluency.",
+      "source_url": "https://arxiv.org/abs/2608.03480",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03537",
+      "identity_tokens": [
+        "arXiv:2608.03537"
+      ],
+      "title": "ComFuse: Fusing Complex Memory-Intensive Subgraphs with Compute-Intensive Kernels For Modern GPU Architectures",
+      "reason": "Modern deep learning workloads increasingly comprise heterogeneous computation graphs that combine compute-intensive operators with memory-intensive subgraphs. Existing deep learning compilers typically optimize these operator classes separately, creating rigid fusion boundaries that limit cross-operator optimization and on-chip data reuse. We observe that downstream memory-intensive operations can execute concurrently with compute-intensive operators, allowing their execution to be hidden behind computation; however, automatically exploiting this opportunity poses new compilation challenges. In this paper, we present ComFuse, an automated GPU compilation system that employs a novel operator fusion strategy to generate high-performance kernels for complex graph structures comprising compute-intensive operators and dependency-rich, memory-intensive elementwise-reduction subgraphs. ComFuse further supports the fusion of back-to-back GEMM (B2BGEMM) patterns, extending its applicability to more complex compute-memory interaction patterns. Additionally, it automatically lowers high-level tensor subprograms into optimized fused kernels, reducing the need for manual kernel engineering. Experimental results show that the fused kernels generated by ComFuse outperform those produced by TorchInductor across post-norm workloads and various complex computation scenarios, while supporting more flexible fusion patterns.",
+      "source_url": "https://arxiv.org/abs/2608.03537",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
