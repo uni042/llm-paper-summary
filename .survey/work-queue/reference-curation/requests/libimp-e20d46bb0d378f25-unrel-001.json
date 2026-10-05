@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e20d46bb0d378f25-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.05246",
+  "reason": "Existing personalized LLM benchmarks primarily rely on textual personas or isolated behavioral signals, providing limited evaluation of cross-domain behavioral personalization, where responses must be grounded in heterogeneous daily-life activities. To address this gap, we introduce LUNAR, the first benchmark for evaluating how LLMs personalize responses from longitudinal app interaction histories across universal daily-life domains, including clothing, food, housing, and mobility. To support scalable benchmark construction while mitigating data sparsity and privacy concerns, LUNAR uses a multi-stage coarse-to-fine synthesis pipeline grounded in real-world behavioral patterns. Fidelity analyses show closer alignment with real behavioral distributions than other synthetic benchmarks. Experiments on 19 mainstream LLMs show that access to behavioral logs is necessary but not sufficient for deep personalization: neither more context nor larger models guarantees better performance; effective personalization depends on selecting and integrating relevant evidence across domains. Direct retrieval of fine-grained behavioral records consistently outperforms compressed memory, while stronger personalization can come at the cost of privacy protection. These findings identify evidence selection, cross-domain integration, and privacy control as key challenges for personalized LLMs.",
+  "title": "LUNAR: Benchmarking Personalized Large Language Models on UNiversal User BehAvioR Logs",
+  "identity_tokens": [
+    "arXiv:2608.05246"
+  ],
+  "linked_from": [
+    "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e20d46bb0d37",
+  "source_precheck_request_id": null
+}

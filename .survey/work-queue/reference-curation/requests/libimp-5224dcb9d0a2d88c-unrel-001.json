@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5224dcb9d0a2d88c-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1002/widm.70122",
+  "reason": "Large language models (LLMs) generate fluent text but remain vulnerable to hallucinations, outdated knowledge, weak provenance, and costly model updates in knowledge‐intensive settings. Retrieval‐augmented generation (RAG) addresses these limitations by grounding generation in external evidence retrieved at inference time. This Advanced Review presents a PRISMA‐guided synthesis of 91 studies published between January 2020 and December 2025. It traces the evolution of RAG from early retrieve‐then‐generate pipelines to a broader design space that includes sparse, dense, and hybrid retrieval; multi‐stage reranking; evidence fusion; retrieval‐aware pre‐training; non‐parametric memory; iterative and agentic workflows; GraphRAG; multimodal RAG; multilingual retrieval; and privacy‐preserving deployment. The review examines how retrieval granularity, indexing, reranking, context construction, and retriever‐generator integration affect recall, precision, latency, robustness, and governance. It also compares explicit retrieval with long‐context prompting, vector‐based retrieval with graph‐based retrieval, and fixed pipelines with adaptive or agentic architectures. Domain requirements shape these choices: healthcare systems require evidence quality and privacy protection; legal and policy applications prioritize authoritative sources and citation fidelity; enterprise systems require freshness and access control; and educational systems must combine factual grounding with pedagogically appropriate explanations. Evaluation remains a central challenge. End‐task accuracy alone does not capture retrieval quality, faithfulness, attribution, calibration, abstention, efficiency, or resilience to prompt injection and knowledge‐base poisoning. The review therefore synthesizes current evaluation practices, promotes reproducibility‐oriented reporting through RAG Cards, and identifies open research directions for secure, efficient, transparent, and domain‐aware RAG systems.",
+  "title": "Retrieval‐Augmented Generation for Large Language Models: Evolution, Architectures, Applications, and Challenges (2020–2025)",
+  "identity_tokens": [
+    "DOI:10.1002/widm.70122"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5224dcb9d0a2",
+  "source_precheck_request_id": null
+}

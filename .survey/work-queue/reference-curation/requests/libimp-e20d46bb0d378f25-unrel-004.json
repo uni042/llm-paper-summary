@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e20d46bb0d378f25-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.16930",
+  "reason": "Existing multi-task learning methods rely on hard sharing, multiple paths or experts, adaptive sharing, and dynamic expansion. However, their capacity changes are usually constrained by predefined structures or triggered by task boundaries and conflict signals. This raises a fundamental question: can a network start from exact single-path computation and grow a new independent path only when persistent optimization evidence appears? We propose the Emergent Modular Atomic Network (EMAN), an optimization-driven framework for exposing an antisymmetric growth direction through latent relative phases without instantiating a second path, and for monitoring multiple decision signals during training to transform local optimization evidence into a structural decision. EMAN materializes two equal-capacity independent paths only after certification. EMAN adaptively allocates shared and task-specific representation capacity to accommodate varying task requirements. Extensive experiments on controlled rank settings, PASCAL-Context, and NYUv2 validate its effectiveness, achieving improved performance at a competitive computational cost.",
+  "title": "EMAN: Optimization-Driven Capacity Growth through Path Emergence in Multi-Task Learning",
+  "identity_tokens": [
+    "arXiv:2608.16930"
+  ],
+  "linked_from": [
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e20d46bb0d37",
+  "source_precheck_request_id": null
+}

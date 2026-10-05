@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e20d46bb0d378f25-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.20844",
+  "reason": "Deepresearch (DR) agents interact with real-world web environments through multi-turn search and visit, causing their contexts to grow rapidly over time. We observe that, even after DR Agentic Reinforcement Learning (DR-RL), 61.6% of the model's remaining prediction errors can still be attributed to insufficient long-context understanding, including longcontext hallucination and failures in cross-document evidence integration. It motivates us to further break the bottleneck of DR-RL by strengthening the model's long-context ability. However, effective LongContext training requires more than simply increasing context length. To bridge the data gap, we propose `DR Rollouts to LongContext-QA (DR-to-Long)'. The method repurposes DR-RL trajectories, which naturally contain search histories, visited webpages, evidence snippets, and final-answer supervision. It then replaces the compact snippets and webpage summaries in each trajectory with the full contents of their corresponding URLs, producing substantially longer multi-document contexts while preserving the original evidence relationships. Building on DR-to-Long, we introduce DLD (DR ->LongQA ->DR)-RL. DLD-RL first performs a short DR-RL stage to collect rollout trajectories, which are then converted into LongQA instances at zero annotation cost. The model is subsequently optimized with LongQA-RL to strengthen LongContext ability, followed by full DR-RL to continue improving its DR capability. Experiments show that DLD-RL outperforms standard DR-RL by 7.3% on three Deepresearch benchmarks and improves performance by 13.5% on three long-context benchmarks.",
+  "title": "Boosting Deepresearch and LongContext Ability with Self-Generated Deepresearch Rollouts Traces",
+  "identity_tokens": [
+    "arXiv:2609.20844"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e20d46bb0d37",
+  "source_precheck_request_id": null
+}
