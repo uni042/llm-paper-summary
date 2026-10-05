@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:36:00+00:00",
-  "record_count": 1667,
+  "updated_at": "2026-10-05T01:38:40+00:00",
+  "record_count": 1679,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -24047,6 +24047,179 @@
         "papers/inference/05-speculative-decoding-moe/2026-2609.00355-glance-vlm-speculative-decoding.md"
       ],
       "title": "ALLaVA: Harnessing GPT4V-Synthesized Data for Lite Vision-Language Models"
+    },
+    "arXiv:2404.16014": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16014",
+      "identity_tokens": [
+        "arXiv:2404.16014"
+      ],
+      "reason": "一次要旨はinterpretability向けgated sparse autoencoderの辞書学習を扱い、LLM serving/inference最適化ではない。",
+      "first_checked_at": "2026-10-05T01:38:39+00:00",
+      "last_checked_at": "2026-10-05T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md"
+      ],
+      "title": "Improving Dictionary Learning with Gated Sparse Autoencoders"
+    },
+    "arXiv:2402.18659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18659",
+      "identity_tokens": [
+        "arXiv:2402.18659"
+      ],
+      "reason": "一次要旨はLLMとゲームの応用・研究動向surveyであり、推論効率が主題ではない。",
+      "first_checked_at": "2026-10-05T01:38:39+00:00",
+      "last_checked_at": "2026-10-05T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Large Language Models and Games: A Survey and Roadmap"
+    },
+    "arXiv:2306.00802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.00802",
+      "identity_tokens": [
+        "arXiv:2306.00802"
+      ],
+      "reason": "一次要旨はTransformerをmemoryの観点から解釈する理論的論考であり、実用推論効率改善手法ではない。",
+      "first_checked_at": "2026-10-05T01:38:39+00:00",
+      "last_checked_at": "2026-10-05T01:38:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.36322-periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression.md"
+      ],
+      "title": "Birth of a Transformer: A Memory Viewpoint"
+    },
+    "arXiv:2004.04494": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.04494",
+      "identity_tokens": [
+        "arXiv:2004.04494"
+      ],
+      "reason": "一次要旨はmulti-turn dialogue reasoning datasetを提示する。推論効率改善手法ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "title": "MuTual: A Dataset for Multi-Turn Dialogue Reasoning"
+    },
+    "DOI:10.1145/3394486.3403280": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3394486.3403280",
+      "identity_tokens": [
+        "DOI:10.1145/3394486.3403280"
+      ],
+      "reason": "一次要旨はPinterestの推薦向けmulti-modal user embedding frameworkを扱う。対象は推薦で、LLM推論/serving効率ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "PinnerSage: Multi-Modal User Embedding Framework for Recommendations at Pinterest"
+    },
+    "arXiv:2211.16750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.16750",
+      "identity_tokens": [
+        "arXiv:2211.16750"
+      ],
+      "reason": "一次要旨は一般的なscore-based continuous-time discrete diffusion modelを扱う。LLM inference/servingの効率化が示された研究ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Score-based Continuous-time Discrete Diffusion Models"
+    },
+    "arXiv:2110.15191": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.15191",
+      "identity_tokens": [
+        "arXiv:2110.15191"
+      ],
+      "reason": "一次要旨はunsupervised reinforcement learningのbenchmarkを提示する。LLM推論・serving最適化ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "URLB: Unsupervised Reinforcement Learning Benchmark"
+    },
+    "DOI:10.18653/v1/2021.acl-long.155": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.155",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.155"
+      ],
+      "reason": "一次要旨は機械翻訳向けnon-autoregressive Transformerを提案する。LLM推論/servingよりNMTモデル・翻訳品質の研究である。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "title": "Glancing Transformer for Non-Autoregressive Neural Machine Translation"
+    },
+    "arXiv:2307.01379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.01379",
+      "identity_tokens": [
+        "arXiv:2307.01379"
+      ],
+      "reason": "一次要旨はfree-form LLM回答の予測不確実性を定量化する研究であり、推論効率改善が目的ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models"
+    },
+    "DOI:10.1145/3545176": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3545176",
+      "identity_tokens": [
+        "DOI:10.1145/3545176"
+      ],
+      "reason": "一次書誌・要旨は長文要約のdataset/model/metricに関するsurveyで、推論効率手法の提案ではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "An Empirical Survey on Long Document Summarization: Datasets, Models, and Metrics"
+    },
+    "DOI:10.18653/v1/d18-1336": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1336",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1336"
+      ],
+      "reason": "一次要旨はCTCを用いるnon-autoregressive neural machine translationを扱う。LLM inference/servingの対象外。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "title": "End-to-End Non-Autoregressive Neural Machine Translation with Connectionist Temporal Classification"
+    },
+    "arXiv:2407.06508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06508",
+      "identity_tokens": [
+        "arXiv:2407.06508"
+      ],
+      "reason": "一次要旨はpathology foundation modelの臨床benchmarkで、推論効率改善手法を提案・評価するものではない。",
+      "first_checked_at": "2026-10-05T01:38:40+00:00",
+      "last_checked_at": "2026-10-05T01:38:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A clinical benchmark of public self-supervised pathology foundation models"
     }
   }
 }

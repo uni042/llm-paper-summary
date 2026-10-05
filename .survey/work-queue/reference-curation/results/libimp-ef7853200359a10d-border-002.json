@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef7853200359a10d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.05983",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.05983",
+    "identity_tokens": [
+      "arXiv:2410.05983"
+    ],
+    "reason": "長文LLM/RAGに関連するが主な成果は回答品質で、推論コストやserving efficiencyの実測・改善を示さないためborderline。",
+    "first_checked_at": "2026-10-05T01:38:40+00:00",
+    "last_checked_at": "2026-10-05T01:38:40+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md"
+    ],
+    "title": "Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs in RAG"
+  },
+  "processed_at": "2026-10-05T01:38:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef7853200359",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

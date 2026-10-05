@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef7853200359a10d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1610.09027",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1610.09027",
+    "identity_tokens": [
+      "arXiv:1610.09027"
+    ],
+    "reason": "sparse memory accessの効率結果はあるが、LLM/language model実験を確認できず、2016年の汎用memory-augmented RNN研究で直接適用性が弱いためborderline。",
+    "first_checked_at": "2026-10-05T01:38:40+00:00",
+    "last_checked_at": "2026-10-05T01:38:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes"
+  },
+  "processed_at": "2026-10-05T01:38:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef7853200359",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

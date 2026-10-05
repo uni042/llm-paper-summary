@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e55f4d78bc9fa01-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2212.10554",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2212.10554",
+    "identity_tokens": [
+      "arXiv:2212.10554"
+    ],
+    "reason": "KV reuseと長文推論に隣接する一方、主貢献はcontext-length extrapolationで効率削減の根拠がなく、追加推論costも報告されるためborderline。",
+    "first_checked_at": "2026-10-05T01:38:39+00:00",
+    "last_checked_at": "2026-10-05T01:38:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "A Length-Extrapolatable Transformer"
+  },
+  "processed_at": "2026-10-05T01:38:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e55f4d78bc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

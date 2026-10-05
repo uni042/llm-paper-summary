@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e77251af63e3fa4e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.10981",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.10981",
+    "identity_tokens": [
+      "arXiv:2404.10981"
+    ],
+    "reason": "関連するRAG efficiency文献を見つける入口にはなるが、一次貢献がsurveyで独自の手法・比較結果を持たないためborderline。",
+    "first_checked_at": "2026-10-05T01:38:40+00:00",
+    "last_checked_at": "2026-10-05T01:38:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+    ],
+    "title": "A Survey on Retrieval-Augmented Text Generation for Large Language Models"
+  },
+  "processed_at": "2026-10-05T01:38:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e77251af63e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
