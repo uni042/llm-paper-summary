@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-87-part-02-d22c8c005629",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19660",
+      "identity_tokens": [
+        "arXiv:2504.19660"
+      ],
+      "title": "Mixture of Experts for Decentralized Generative AI and Reinforcement Learning in Wireless Networks: A Comprehensive Survey",
+      "reason": "The survey covers MoE applications in wireless communications and network resource optimization; it is not about LLM inference or serving systems.",
+      "source_url": "https://arxiv.org/abs/2504.19660",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21210",
+      "identity_tokens": [
+        "arXiv:2503.21210"
+      ],
+      "title": "Toward Generalizable Forgery Detection and Reasoning",
+      "reason": "FakeReasoning addresses AI-image forgery detection using multimodal models; the abstract reports detection/reasoning quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2503.21210",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10568",
+      "identity_tokens": [
+        "arXiv:2503.10568"
+      ],
+      "title": "Autoregressive Image Generation with Randomized Parallel Decoding",
+      "reason": "ARPG concerns visual autoregressive image generation and parallel image-token order; the target is image generation, outside the LLM inference survey scope.",
+      "source_url": "https://arxiv.org/abs/2503.10568",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12982",
+      "identity_tokens": [
+        "arXiv:2502.12982"
+      ],
+      "title": "Sailor2: Sailing in South-East Asia with Inclusive Multilingual LLMs",
+      "reason": "Sailor2 is a multilingual model family produced through large-scale continued pretraining; the abstract concerns training and language quality, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2502.12982",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.09888",
+      "identity_tokens": [
+        "arXiv:2502.09888"
+      ],
+      "title": "Climber: Toward Efficient Scaling Laws for Large Recommendation Models",
+      "reason": "Climber studies scaling laws for large recommendation models; its target workload is recommendation rather than LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2502.09888",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ]
+    }
+  ]
+}
