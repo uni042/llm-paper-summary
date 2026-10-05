@@ -1,0 +1,71 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-0945-scheduled-chat-45/r02",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03393",
+      "identity_tokens": [
+        "arXiv:2307.03393"
+      ],
+      "title": "Exploring the Potential of Large Language Models (LLMs) in Learning on Graphs",
+      "reason": "LLMをgraph node classificationのenhancer/predictorとして利用しGNNと組み合わせるgraph machine learning能力研究。推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2307.03393",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgraph learning/node classificationが最終評価先と確認し、推論system対象外のため本文深読解省略。",
+      "first_checked_at": "2026-10-05T10:05:00+09:00",
+      "last_checked_at": "2026-10-05T10:05:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mse.2007.44",
+      "identity_tokens": [
+        "DOI:10.1109/mse.2007.44"
+      ],
+      "title": "FreePDK: An Open-Source Variation-Aware Design Kit",
+      "reason": "45nm向けvariation-aware Process Design Kitとlayout/extraction deckを提供するVLSI設計・教育研究で、LLM推論systemを最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/MSE.2007.44",
+      "body_check": "abstract_screen_only: 一次書誌要旨でopen-source PDK、CMOS design rule、statistical circuit analysisが主題と確認し対象外。",
+      "first_checked_at": "2026-10-05T10:06:00+09:00",
+      "last_checked_at": "2026-10-05T10:06:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3704435",
+      "identity_tokens": [
+        "DOI:10.1145/3704435",
+        "arXiv:2304.08354"
+      ],
+      "title": "Tool Learning with Foundation Models",
+      "reason": "foundation modelによるtool useのtaxonomy、training、evaluation、open problemを体系化するsurveyで、agent capabilityが主題。推論runtime・tool-call scheduling・serving効率化の新方式ではない。",
+      "source_url": "https://arxiv.org/abs/2304.08354",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtool learning frameworkと18 tool評価が主題と確認し、推論system対象外のため本文深読解省略。",
+      "first_checked_at": "2026-10-05T10:07:00+09:00",
+      "last_checked_at": "2026-10-05T10:07:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3123939.3123977",
+      "identity_tokens": [
+        "DOI:10.1145/3123939.3123977"
+      ],
+      "title": "DRISA: A DRAM-based Reconfigurable In-Situ Accelerator",
+      "reason": "DRAM bitline内Boolean演算とin-situ data movementで汎用DNN/CNNを高速化するprocessing-in-memory architecture。評価対象はCNNで、LLM/Transformer推論への適用・評価がない。",
+      "source_url": "https://doi.org/10.1145/3123939.3123977",
+      "body_check": "abstract_screen_only: IEEE一次要旨でDRAM-based accelerator、CNN case study、ASIC/GPU比較が主題と確認し、現行LLM推論system対象外のため本文深読解省略。",
+      "first_checked_at": "2026-10-05T10:08:00+09:00",
+      "last_checked_at": "2026-10-05T10:08:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 51
+    }
+  ]
+}
