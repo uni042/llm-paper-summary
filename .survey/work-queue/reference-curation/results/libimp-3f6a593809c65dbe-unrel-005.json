@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f6a593809c65dbe-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27291",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27291",
+    "identity_tokens": [
+      "arXiv:2609.27291"
+    ],
+    "reason": "Neural network size is usually chosen before training, separating architecture selection from weight optimization. We introduce the Neurogenesis Network (NGN), a differentiable parameterization for learning how many ordered structural components a model should use. For each ordered component group, one learnable boundary selects an active prefix while the model parameters are trained. The boundary can grow from a compact initialization and can be deployed by discarding components beyond the lear",
+    "first_checked_at": "2026-10-05T05:44:53+00:00",
+    "last_checked_at": "2026-10-05T05:44:53+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "NGN: Learning Neural Network Size as a Differentiable Count"
+  },
+  "processed_at": "2026-10-05T05:44:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f6a593809c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:41:29+00:00",
-  "record_count": 2965,
+  "updated_at": "2026-10-05T05:44:53+00:00",
+  "record_count": 2979,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -43156,6 +43156,212 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "TomoMamba: a two-stage model with state-space cross-slice propagation for breast cancer diagnosis in digital breast tomosynthesis"
+    },
+    "arXiv:2609.27297": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27297",
+      "identity_tokens": [
+        "arXiv:2609.27297"
+      ],
+      "reason": "Agentic science envisions many autonomous agents investigating concurrently while building on a shared, evolving body of scientific knowledge. This requires a knowledge foundation that supports high-concurrency access, preserves traceable and reusable reasoning, and grows incrementally. We propose the Large Knowledge Model (LKM), a growing, agent-native knowledge foundation that provides a general representation of scientific knowledge across disciplines. LKM organizes the scientific literature",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Large Knowledge Model: A Knowledge Foundation for Agentic Science at Scale"
+    },
+    "arXiv:2609.27306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27306",
+      "identity_tokens": [
+        "arXiv:2609.27306"
+      ],
+      "reason": "Conventional score-based diffusion models learn scores without representing normalized densities, whereas tractable normalized models support both sampling and direct likelihood evaluation. A recent tensor-network approach provides such a representation but is largely restricted to low-dimensional lattices. Here we introduce a discrete diffusion model that parameterizes normalized probability distributions using variational autoregressive networks. Explicit Markov jump operators govern the forwa",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Discrete Diffusion Models via Evolving Variational Autoregressive Networks"
+    },
+    "arXiv:2609.27411": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27411",
+      "identity_tokens": [
+        "arXiv:2609.27411"
+      ],
+      "reason": "Machine fault diagnosis from vibration requires learning from scarce labelled fault recordings while meeting the computational constraints of edge devices for local inference. We introduce DualRes, a compact oscillatory state-space model that combines two complementary spectral views of vibration, capturing rapid changes and fine frequency structure. Time-aligned views are processed by selective oscillatory memory, which learns how long to retain temporal patterns. The encoder contains 39,528 pa",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "When Labels Are Scarce: An Oscillatory State Space Model for Vibration Diagnosis"
+    },
+    "arXiv:2609.27248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27248",
+      "identity_tokens": [
+        "arXiv:2609.27248"
+      ],
+      "reason": "Next-token prediction has enabled highly fluent autoregressive language models, but it represents global structure only indirectly through sequential factorization. In contrast, high-fidelity autoencoders have become a standard primitive in image generation, enabling generative models to operate over continuous latent spaces; text lacks a comparably faithful continuous representation. We propose LLMAE, a method for repurposing a pretrained decoder-only language model as a continuous text autoenc",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Repurposing Pre-trained LLMs as High Fidelity Continuous Text Autoencoders"
+    },
+    "arXiv:2609.27262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27262",
+      "identity_tokens": [
+        "arXiv:2609.27262"
+      ],
+      "reason": "Production customer-support systems often require LLMs to support multiple skills, such as intent classification, question answering, summarization, or tool-use decisions. A central deployment question is whether these skills should be handled by separate task-specialist models or by a single model trained through multi-task training, sequential updates, or model merging. We study this question using thirteen models spanning five families (Qwen3, Qwen3.5, Gemma-3, Llama-3.1, and Mistral) from 0.",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Can One Adapted Model Do It All? Fine-Tuning Strategy Selection for Customer Support LLMs"
+    },
+    "arXiv:2609.27291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27291",
+      "identity_tokens": [
+        "arXiv:2609.27291"
+      ],
+      "reason": "Neural network size is usually chosen before training, separating architecture selection from weight optimization. We introduce the Neurogenesis Network (NGN), a differentiable parameterization for learning how many ordered structural components a model should use. For each ordered component group, one learnable boundary selects an active prefix while the model parameters are trained. The boundary can grow from a compact initialization and can be deployed by discarding components beyond the lear",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "NGN: Learning Neural Network Size as a Differentiable Count"
+    },
+    "arXiv:2609.27545": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27545",
+      "identity_tokens": [
+        "arXiv:2609.27545"
+      ],
+      "reason": "Wavelength-division multiplexing (WDM) is pivotal for expanding the capacity and functionality of photonic systems, from communications to computing. However, on-chip implementation for broadband operation is fundamentally limited by the narrow free spectral range (FSR) and inefficient drop transmission of conventional optical microcavities. Here, we transcend this limit with a scalable integrated WDM processing platform based on cascaded dual-sided coupled Fabry-P\\'erot add-drop resonators. Thi",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Programmable and scalable on-chip WDM processing platform enabled by cascaded FSR-free resonators"
+    },
+    "arXiv:2609.27564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27564",
+      "identity_tokens": [
+        "arXiv:2609.27564"
+      ],
+      "reason": "The brain does not rely on a single type of neuron to perform all kinds of tasks; instead, it designs different neurons for different tasks. The concept of task-based neurons represents a paradigm shift compared to task-based architectures. It argues that solving a specific problem requires customized neurons, as task-based neurons capture useful prior knowledge from task-related data. To facilitate the use of task-based neurons in scientific research and industrial applications, we introduce TN",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "TNLearn: An Open Source Python Package for Task-based Neurons"
+    },
+    "arXiv:2609.27639": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27639",
+      "identity_tokens": [
+        "arXiv:2609.27639"
+      ],
+      "reason": "Online discussion of political and gender-related issues is often heated, and when opinions in a network draw closer, the convergence is readily taken as genuine consensus. Whether it carries a cost is a question existing methods cannot answer: coevolutionary opinion formation games measure the Price of Anarchy (PoA) of agents that update by numerical rules, while simulations with large language model (LLM) agents report only descriptive indices. We introduce the Hybrid Coevolutionary Opinion Ga",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Agent-based Modeling: Equilibrium, Echo Chambers, and Efficiency in Hybrid Coevolutionary Opinion Games"
+    },
+    "arXiv:2609.27996": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27996",
+      "identity_tokens": [
+        "arXiv:2609.27996"
+      ],
+      "reason": "Privacy-sensitive organizations may run large language models (LLMs) in restricted or air-gapped environments while exporting selected diagnostic artifacts. We show that a compromised runtime component can hide sensitive information in intermediate activations that are allowed to leave the restricted environment. An offline observer can recover this information with a simple linear decoder. The attack requires no model retraining or weight modification, no attacker-controlled egress, and no cont",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams"
+    },
+    "arXiv:2609.28053": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28053",
+      "identity_tokens": [
+        "arXiv:2609.28053"
+      ],
+      "reason": "Mixture-of-Experts (MoE) training requires global load balance to prevent expert under-utilization and local balance for efficient expert-parallel execution. Existing distributed Quantile Balancing (QB) uses shard-dependent or approximate global quantiles, while token-independent expert biases cannot ensure microbatch-level balance. We introduce Exact Quantile Balancing (EQB), which computes exact global-batch BF16 quantiles with negligible communication, and Load-Error Injection (LEI), which in",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Exact Quantile Balancing and Load-Error Injection for Mixture-of-Experts"
+    },
+    "arXiv:2609.28117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28117",
+      "identity_tokens": [
+        "arXiv:2609.28117"
+      ],
+      "reason": "In this paper, we introduce a gradient-based head attribution strategy where the Token-level Max-Margin loss is backpropagated to the attention maps. This framework enables a large-scale causal analysis of attention heads, making it suitable for LLMs. We evaluate our method on the task of disambiguation in Context-aware Machine Translation, where we analyze 50 phenomena across 4 models and 4 language directions. We empirically show the alignment of our method with the effects of increasing the a",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Scaling Attention Head Analysis via Gradient-Based Attribution in Context-Aware Machine Translation"
+    },
+    "arXiv:2609.28179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28179",
+      "identity_tokens": [
+        "arXiv:2609.28179"
+      ],
+      "reason": "GPU robotics lacks the reusable numerical infrastructure of mature CPU stacks, instead relying on compiler frameworks that introduce overhead or repeatedly reimplementing numerical libraries. To address this, we introduce GLASS (GPU Linear Algebra Simple Subroutines), a header-only CUDA C++ library that provides thread-, warp-, block-, and NVIDIA-backed implementations of robotics-scale linear algebra and geometric computations under one composable device API. GLASS treats implementation choice,",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "GLASS: Architecture-Tuned, Composable, Device-Side Linear Algebra for Edge Robotics and Beyond"
+    },
+    "arXiv:2609.28256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28256",
+      "identity_tokens": [
+        "arXiv:2609.28256"
+      ],
+      "reason": "Vision-Language-Action models provide a strong foundation for general-purpose robot control, yet a vast majority of policies do not preserve and leverage episode-level information beyond the current observation. This limitation is consequential in history-dependent manipulation tasks that depend on information available only in past observations. Retaining past observations in context can aid in recovering this information, but at the significant cost of ever-growing, bloated context and inferen",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "MemBodied: Recurrent Associative Memory for Vision-Language-Action Models"
     }
   }
 }

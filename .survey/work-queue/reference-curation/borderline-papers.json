@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:41:29+00:00",
-  "record_count": 980,
+  "updated_at": "2026-10-05T05:44:53+00:00",
+  "record_count": 986,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14875,6 +14875,101 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "A Modeling Effort for Medium-Range Weather Prediction over India with a Modified Pangu-Weather Architecture"
+    },
+    "arXiv:2609.27367": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27367",
+      "identity_tokens": [
+        "arXiv:2609.27367"
+      ],
+      "reason": "LLM inferenceの検証可能性を扱うが、主対象はproof生成・監査コストで、推論自体の速度/メモリ/serving効率を改善する仕事ではない。",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Seal, Then Sample: Sampled Layerwise Proofs for Verifiable LLM Inference from GPT-2 to 70B"
+    },
+    "arXiv:2609.27437": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27437",
+      "identity_tokens": [
+        "arXiv:2609.27437"
+      ],
+      "reason": "LLM系Mambaのprogrammable kernel実装だが、報告されたMamba-130Mの0.345 tok/sは同じ実装環境のCPU/GPU baselineとの比較がなく、効率向上を示せない。",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba-Family State-Space Model Kernels on a Programmable CGLA"
+    },
+    "arXiv:2609.27220": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27220",
+      "identity_tokens": [
+        "arXiv:2609.27220"
+      ],
+      "reason": "推論時のdiffusion-LM軌跡修復ではあるが、精度改善中心で、推論時間・計算量を抑える効率化の効果が確認できない。",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "LOCKR: A Hidden-State Trajectory-Guided Planner for Detecting and Repairing Stable-but-Wrong Lock-In in Diffusion Language Models"
+    },
+    "arXiv:2609.27279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27279",
+      "identity_tokens": [
+        "arXiv:2609.27279"
+      ],
+      "reason": "長期エージェント記憶の文脈圧縮は関連するが、検索/E2E時間はMEMORA 5.7秒に対してEnSIMem 14.4秒で遅く、token差も会計条件が異なるため効率寄与が弱い。",
+      "first_checked_at": "2026-10-05T05:44:52+00:00",
+      "last_checked_at": "2026-10-05T05:44:52+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory"
+    },
+    "arXiv:2609.28006": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28006",
+      "identity_tokens": [
+        "arXiv:2609.28006"
+      ],
+      "reason": "KV cache設計に関連するが、小規模126M/2K条件でのlikelihood差が中心。GQAやlayer-sharingよりcacheが大きく長いrequestのlatencyも高く、実serving効率が弱い。",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Shared Global KV with Layer-Specific Local History"
+    },
+    "arXiv:2609.28064": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28064",
+      "identity_tokens": [
+        "arXiv:2609.28064"
+      ],
+      "reason": "実行時latencyに応じてcomputeを配分する効率手法だが、対象は自動運転のworld-action model/NAVSIMで、一般的LLM inference/servingへの適合が弱い。",
+      "first_checked_at": "2026-10-05T05:44:53+00:00",
+      "last_checked_at": "2026-10-05T05:44:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "SlackDrive: Reclaiming Runtime Slack for Adaptive Driving Inference"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f6a593809c65dbe-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.27279",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.27279",
+    "identity_tokens": [
+      "arXiv:2609.27279"
+    ],
+    "reason": "長期エージェント記憶の文脈圧縮は関連するが、検索/E2E時間はMEMORA 5.7秒に対してEnSIMem 14.4秒で遅く、token差も会計条件が異なるため効率寄与が弱い。",
+    "first_checked_at": "2026-10-05T05:44:52+00:00",
+    "last_checked_at": "2026-10-05T05:44:52+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "EnSIMem: Entity-Structured Indexing for Long-Term Agent Memory"
+  },
+  "processed_at": "2026-10-05T05:44:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f6a593809c6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
