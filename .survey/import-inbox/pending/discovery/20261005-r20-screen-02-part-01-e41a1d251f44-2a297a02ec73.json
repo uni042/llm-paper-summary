@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-02-part-01-e41a1d251f44",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25192",
+      "identity_tokens": [
+        "arXiv:2609.25192"
+      ],
+      "title": "FinFIRST: Benchmarking Search Agents for Financial Information Retrieval, Sourcing and Traceability",
+      "reason": "Financial search is a highly demanding task for LLM agents, requiring not only a correct final answer but also temporally valid information retrieval, authoritative source selection, entity and period alignment, unit and definition consistency, and verifiable evidence for all conclusions. Existing benchmarks predominantly evaluate only the final answer, making it difficult to localize errors or assess whether an answer is well-founded. To address this gap, we introduce FinFIRST (Financial Information Retrieval, Sourcing and Traceability), the first financial benchmark to jointly evaluate answers and supporting evidence through atomic rubrics. FinFIRST comprises 123 expert-authored tasks spanning a graduated difficulty spectrum, constructed from aggregate patterns of real-world financial scenarios through an 18-field taxonomy, a six-axis coverage blueprint, a registry of 138 financial sources, contributions from over 50 finance experts, and a six-stage quality-control pipeline. Each task is accompanied by an evidence-grounded reference package decomposed into atomic criteria across three dimensions: raw-information acquisition, source verification, and computation and answer formation. We evaluate 15 model configurations under a unified tool setting. Claude-Opus-5 achieves the highest atomic score of 87.59%, while GPT-5.6-Sol attains the highest strict pass rate of 71.54%. Computation and answer formation consistently lag behind raw-information acquisition across systems. FinFIRST retains final-answer correctness as the primary objective while making the supporting research process measurable, verifiable, and diagnosable.",
+      "source_url": "https://arxiv.org/abs/2609.25192",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25463",
+      "identity_tokens": [
+        "arXiv:2609.25463"
+      ],
+      "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions",
+      "reason": "Reasoning-oriented reinforcement learning enables large language models to solve mathematical, coding, and other multi-step tasks, but shifts a substantial portion of the training cost to rollout, where trajectories are generated for policy updates. Efficient rollout mechanisms are therefore essential to reduce this cost while maintaining the freshness, consistency, and statistical validity of training data. This survey provides a systematic taxonomy of recent research on rollout efficiency for reasoning-oriented reinforcement learning, classifying existing approaches from both mechanism and bottleneck perspectives. Based on this taxonomy, we analyze how different technique families address distinct sources of rollout inefficiency, examine opportunities and potential conflicts for combining them, identify gaps in the evaluation and reporting of efficiency gains, and discuss open challenges and future research directions.",
+      "source_url": "https://arxiv.org/abs/2609.25463",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26829",
+      "identity_tokens": [
+        "arXiv:2609.26829"
+      ],
+      "title": "Balancing Generality and Specialization: A Survey on AI Datacenter Hardware Architecture",
+      "reason": "Rapidly growing AI workloads are driving large investments in AI datacenters. This survey classifies industrial AI accelerators into four architectural categories and compares their compute and memory organizations. It examines how node-, rack-, and pod-scale interconnects support collective communication, and traces architectural evolution across accelerator generations. The analysis connects advances in arithmetic throughput with changes in precision, data delivery, execution coordination, communication, power delivery, and cooling. It also discusses future design challenges arising from workload diversity, data movement, infrastructure constraints, and model evolution, showing how the trade-off between generality and specialization extends from individual accelerators to datacenter-scale systems. GitHub: github.com/Yufeng98/AI-datacenter",
+      "source_url": "https://arxiv.org/abs/2609.26829",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44458-026-00152-5",
+      "identity_tokens": [
+        "DOI:10.1038/s44458-026-00152-5"
+      ],
+      "title": "Artificial intelligence data centers could reach one percent of global electricity demand by 2030",
+      "reason": "The rapid growth of generative artificial intelligence is increasing global electricity demand and placing new pressure on power systems. Here we show that electricity use by data centers built for artificial intelligence could rise from about 118 terawatt-hours in 2024 to between 239 and 295 terawatt-hours by 2030, or about 1% of global electricity demand. New computing infrastructure is highly concentrated in North America, Western Europe, and the Asia-Pacific, which together account for more than 90% of projected computing capacity. Some regions, including Oregon, Ireland, and Iowa, face greater pressure from concentrated data-center loads, whereas larger systems such as Texas can absorb new demand more effectively. These results indicate that artificial intelligence infrastructure is becoming a structural part of power-system dynamics. The study combines large language model analysis of corporate, policy, and media sources with scenario-based projections of future electricity demand. AI data centers could consume 239 to 295 terawatt hours by 2030, about 1% of global electricity demand, with capacity concentrated in North America, Western Europe and Asia-Pacific, according to a framework combining large language model analysis and electricity demand scenarios",
+      "source_url": "https://doi.org/10.1038/s44458-026-00152-5",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/aeaacb",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/aeaacb"
+      ],
+      "title": "Multimodal semantic weather-aware Mamba: a dual-path framework for EV charging occupancy forecasting",
+      "reason": "The rapid growth of electric-vehicle (EV) charging infrastructure increases the need for accurate short-term occupancy forecasting. Existing methods mainly rely on historical numerical signals and often represent weather as raw physical variables, which may fail to capture the behavioral implications of adverse conditions such as heavy rain or strong wind. This paper proposes WeMamba, a weather-semantic spatiotemporal forecasting framework for EV charging occupancy prediction. WeMamba converts historical meteorological observations into natural-language prompts and encodes them with a frozen GPT-2 backbone to obtain semantic weather representations. The weather semantics are adaptively aligned with occupancy and price features, propagated over the charging graph, and modeled by a dual-path Mamba encoder that captures both short-window spectral fluctuations and temporal dynamics. Experiments on the Shenzhen EV charging dataset show that WeMamba achieves the best average RMSE and MAE among 18 baselines, with a 19.18% average MAE reduction over the strongest competing method. Ablation studies further confirm the effectiveness of weather-semantic encoding, graph propagation, and dual-path temporal modeling.",
+      "source_url": "https://doi.org/10.1088/2631-8695/aeaacb",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
