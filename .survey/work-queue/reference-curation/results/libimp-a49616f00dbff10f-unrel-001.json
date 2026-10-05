@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a49616f00dbff10f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10969",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10969",
+    "identity_tokens": [
+      "arXiv:2609.10969"
+    ],
+    "reason": "Primary abstract focuses on safety and transactional integrity of agent commit gates, not inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T03:08:04+00:00",
+    "last_checked_at": "2026-10-05T03:08:04+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+    ],
+    "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures"
+  },
+  "processed_at": "2026-10-05T03:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a49616f00dbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

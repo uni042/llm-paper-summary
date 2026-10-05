@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:05:21+00:00",
-  "record_count": 2135,
+  "updated_at": "2026-10-05T03:08:05+00:00",
+  "record_count": 2148,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -30861,6 +30861,197 @@
         "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
       ],
       "title": "Replan, Repair, or Edit? A Unified Empirical Evaluation of Travel Agents for Itinerary Revision under Resource Disruptions"
+    },
+    "arXiv:2609.12814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12814",
+      "identity_tokens": [
+        "arXiv:2609.12814"
+      ],
+      "reason": "要旨: Linear attention and state-space models provide linear-time sequence modeling, but their recurrent memory remains a second-order tensor (a matrix), limiting the order of interactions that can be represented in the state. We introduce the RunningTensor, which generalizes this memory to an order-$o$ tensor, updated by a。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:03+00:00",
+      "last_checked_at": "2026-10-05T03:08:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "RunningTensor: Generalizing Linear Attention to Higher-Order Recurrent States"
+    },
+    "DOI:10.1145/3845811": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3845811",
+      "identity_tokens": [
+        "DOI:10.1145/3845811"
+      ],
+      "reason": "Primary abstract focuses on EEG-to-Mel speech reconstruction.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "DA2Mel: A Dual-Dynamic Adaptive Network for EEG-to-Mel Spectrogram Reconstruction"
+    },
+    "arXiv:2609.08258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08258",
+      "identity_tokens": [
+        "arXiv:2609.08258"
+      ],
+      "reason": "Primary abstract focuses on memory revocation enforcement and agent safety.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Revoked but Still Authoritative: An Empirical Study of Revocation Enforcement in Agent-Memory Systems"
+    },
+    "arXiv:2609.08368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08368",
+      "identity_tokens": [
+        "arXiv:2609.08368"
+      ],
+      "reason": "Primary abstract focuses on production post-training/RL infrastructure.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Miles v0.1: Production-Level Post-Training"
+    },
+    "arXiv:2609.10969": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10969",
+      "identity_tokens": [
+        "arXiv:2609.10969"
+      ],
+      "reason": "Primary abstract focuses on safety and transactional integrity of agent commit gates, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ],
+      "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures"
+    },
+    "arXiv:2609.11042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11042",
+      "identity_tokens": [
+        "arXiv:2609.11042"
+      ],
+      "reason": "Primary abstract focuses on reinforcement-learning post-training of a terminal-use agent.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks"
+    },
+    "arXiv:2609.11655": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11655",
+      "identity_tokens": [
+        "arXiv:2609.11655"
+      ],
+      "reason": "Primary abstract focuses on Muon optimizer stability during model training.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training"
+    },
+    "arXiv:2609.09929": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09929",
+      "identity_tokens": [
+        "arXiv:2609.09929"
+      ],
+      "reason": "Primary abstract focuses on ASR data curation and Whisper speech transcription.",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Source-Adaptive Data Curation for Bilingual NVV-Aware ASR"
+    },
+    "arXiv:2609.14928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14928",
+      "identity_tokens": [
+        "arXiv:2609.14928"
+      ],
+      "reason": "要旨: Data-driven materials development requires the collection of large amounts of high-quality materials data. Full autonomy of materials experiments is anticipated, but its technical hurdles are high and its adoption remains limited. In this study, we constructed a simple, easy-to-deploy automated experimentation。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform"
+    },
+    "arXiv:2609.15972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15972",
+      "identity_tokens": [
+        "arXiv:2609.15972"
+      ],
+      "reason": "要旨: As language models become more capable, long-term collaboration in learning, reasoning, and decision-making calls for a deeper understanding of the people they serve. Yet training such human-aware language models faces a fundamental supervision gap because current datasets for LLM assistant training contain few if any。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:04+00:00",
+      "last_checked_at": "2026-10-05T03:08:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Mind2Dialogue: Training Human-Aware Language Models by Simulating User Mental States"
+    },
+    "arXiv:2609.16183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16183",
+      "identity_tokens": [
+        "arXiv:2609.16183"
+      ],
+      "reason": "要旨: Fixed-state recurrences--linear attention and state-space models--are reported to lag behind attention on associative recall, but whole-architecture comparisons cannot say which ingredient is responsible. We decompose masked multi-query recall at a fixed state budget along three single-knob axes: a short causal。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:05+00:00",
+      "last_checked_at": "2026-10-05T03:08:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Anatomy of Associative Recall in Fixed-State Recurrences: A Matched-State Decomposition, an Interference Wall, and a Curriculum That Breaks It"
+    },
+    "arXiv:2609.14257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14257",
+      "identity_tokens": [
+        "arXiv:2609.14257"
+      ],
+      "reason": "要旨: Semantic text watermarks encode signals in meaning rather than surface token choices, offering robustness to paraphrasing and other semantic-preserving edits. Existing semantic watermarking methods are primarily designed for autoregressive language models (ARLMs), where completed candidate units can be generated and。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:05+00:00",
+      "last_checked_at": "2026-10-05T03:08:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "DenMark: Robust Semantic Watermarking for Diffusion Language Models"
+    },
+    "arXiv:2609.14754": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14754",
+      "identity_tokens": [
+        "arXiv:2609.14754"
+      ],
+      "reason": "要旨: Causal claims about large language model (LLM) internals rest on measurements. Those might include a projection, a cosine, an ablation delta, or an interchange patch among others. These measurements fail in specific, diagnosable ways that return a plausible number instead of an error, so a broken instrument can easily。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "first_checked_at": "2026-10-05T03:08:05+00:00",
+      "last_checked_at": "2026-10-05T03:08:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Calibrating Interpretability Instruments Before Trusting Their Verdicts"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab6aa8c7dfdc767a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14928",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14928",
+    "identity_tokens": [
+      "arXiv:2609.14928"
+    ],
+    "reason": "要旨: Data-driven materials development requires the collection of large amounts of high-quality materials data. Full autonomy of materials experiments is anticipated, but its technical hurdles are high and its adoption remains limited. In this study, we constructed a simple, easy-to-deploy automated experimentation。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:08:04+00:00",
+    "last_checked_at": "2026-10-05T03:08:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Quantitative control and recording of materials-synthesis processes using an automated experimentation platform"
+  },
+  "processed_at": "2026-10-05T03:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab6aa8c7dfdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

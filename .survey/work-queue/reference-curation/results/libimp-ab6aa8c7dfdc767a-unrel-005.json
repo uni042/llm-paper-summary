@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab6aa8c7dfdc767a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14754",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14754",
+    "identity_tokens": [
+      "arXiv:2609.14754"
+    ],
+    "reason": "要旨: Causal claims about large language model (LLM) internals rest on measurements. Those might include a projection, a cosine, an ablation delta, or an interchange patch among others. These measurements fail in specific, diagnosable ways that return a plausible number instead of an error, so a broken instrument can easily。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:08:05+00:00",
+    "last_checked_at": "2026-10-05T03:08:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Calibrating Interpretability Instruments Before Trusting Their Verdicts"
+  },
+  "processed_at": "2026-10-05T03:08:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab6aa8c7dfdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
