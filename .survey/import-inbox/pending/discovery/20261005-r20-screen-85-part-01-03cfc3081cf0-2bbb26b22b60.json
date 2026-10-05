@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-85-part-01-03cfc3081cf0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06951",
+      "identity_tokens": [
+        "arXiv:2401.06951"
+      ],
+      "title": "E^2-LLM: Efficient and Extreme Length Extension of Large Language Models",
+      "reason": "長文脈対応の位置は学習時のcontext extensionで、追加学習コストを扱う。推論/serving効率化の方式・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2401.06951",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18513",
+      "identity_tokens": [
+        "arXiv:2305.18513"
+      ],
+      "title": "SlimFit: Memory-Efficient Fine-Tuning of Transformer-based Models Using Training Dynamics",
+      "reason": "Transformerのfine-tuning中にtraining dynamicsを使ってメモリを削減する手法で、学習時効率化が対象。",
+      "source_url": "https://arxiv.org/abs/2305.18513",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.acl-demo.58",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.acl-demo.58"
+      ],
+      "title": "DeepPavlov Dream: Platform for Building Generative AI Assistants",
+      "reason": "生成AI assistant構築プラットフォームの紹介であり、LLM推論機構やserving効率の評価を行わない。",
+      "source_url": "https://doi.org/10.18653/v1/2023.acl-demo.58",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.findings-acl.812",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.findings-acl.812"
+      ],
+      "title": "Causal Intervention for Mitigating Name Bias in Machine Reading Comprehension",
+      "reason": "MRCの固有名詞biasを因果介入で軽減するロバスト性研究で、推論コスト/効率化が主題でない。",
+      "source_url": "https://doi.org/10.18653/v1/2023.findings-acl.812",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.10505",
+      "identity_tokens": [
+        "arXiv:2205.10505"
+      ],
+      "title": "A Study on Transformer Configuration and Training Objective",
+      "reason": "Transformerのconfigurationとtraining objectiveを理論・実験的に比較する学習研究。",
+      "source_url": "https://arxiv.org/abs/2205.10505",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ]
+    }
+  ]
+}
