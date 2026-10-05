@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-02-part-01-ee156e3406df",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22876",
+      "identity_tokens": [
+        "arXiv:2608.22876"
+      ],
+      "title": "The Mask Is Not the Model: Auditing Prefix Invariance in Attention, State-Space, and Hybrid Sequence Models",
+      "reason": "一次要旨はcausality/prefix-invariance auditとbug localizationを扱い、LLM推論・serving効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2608.22876",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23551",
+      "identity_tokens": [
+        "arXiv:2608.23551"
+      ],
+      "title": "ConvergeFlow: Language Flow with Provable Convergence to Token Embeddings",
+      "reason": "本文の推論節はflow ODEを数値積分して生成する設計を示すが、sampling step削減や実測latency/throughputなど推論効率の優位性は確認できない。 主張はtoken embeddingへの収束性と言語モデリング性能。効率比較またはserving実測がなく、対象効率範囲との関係は限定的。",
+      "source_url": "https://arxiv.org/abs/2608.23551",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22368",
+      "identity_tokens": [
+        "arXiv:2608.22368"
+      ],
+      "title": "DiD It in 87 Minutes: A Label-Free Softmax-to-Linear Adaptation of Vision Transformers for Object Detection",
+      "reason": "一次要旨は物体検出用ViT backboneのattention変換であり、LLM/VLM serving workloadではない。",
+      "source_url": "https://arxiv.org/abs/2608.22368",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22007",
+      "identity_tokens": [
+        "arXiv:2608.22007"
+      ],
+      "title": "The Communication Map of a Transformer",
+      "reason": "一次要旨はTransformer内部communication mapによるmechanistic interpretabilityを扱い、推論システム効率化が主題でない。",
+      "source_url": "https://arxiv.org/abs/2608.22007",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22067",
+      "identity_tokens": [
+        "arXiv:2608.22067"
+      ],
+      "title": "DELE-w0.5: Inferring Action from Future Latent State for Robotic Manipulation",
+      "reason": "一次要旨はrobot manipulation用world-action modelのaction predictionを扱い、LLM inference/servingではない。",
+      "source_url": "https://arxiv.org/abs/2608.22067",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
