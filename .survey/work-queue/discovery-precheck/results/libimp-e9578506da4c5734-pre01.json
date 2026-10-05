@@ -1,0 +1,163 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e9578506da4c5734-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e9578506da4c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2312.07104",
+    "arXiv:2403.06764"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2fe7f858f84da5324e7bb122876ca91ca04bd76d",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T16:16:47.667314+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2312.07104",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2312.07104"
+    },
+    {
+      "requested_id": "arXiv:2403.06764",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2403.06764",
+      "year": 2024,
+      "published": "2024-03-11",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 732,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this study, we identify the inefficient attention phenomena in Large Vision-Language Models (LVLMs), notably within prominent models like LLaVA-1.5, QwenVL-Chat and Video-LLaVA. We find out that the attention computation over visual tokens is of extreme inefficiency in the deep layers of popular LVLMs, suggesting a need for a sparser approach compared to textual data handling. To this end, we introduce FastV, a versatile plug-and-play method designed to optimize computational efficiency by learning adaptive attention patterns in early layers and pruning visual tokens in subsequent ones. Our evaluations demonstrate FastV's ability to dramatically reduce computational costs (e.g., a 45 reduction in FLOPs for LLaVA-1.5-13B) without sacrificing performance in a wide range of image and video understanding tasks. The computational efficiency and performance trade-off of FastV are highly customizable and pareto-efficient. It can compress the FLOPs of a 13B-parameter model to achieve a lower budget than that of a 7B-parameter model, while still maintaining superior performance. We believe FastV has practical values for deployment of LVLMs in edge devices and commercial models. Code is released at https://github.com/pkunlp-icler/FastV.",
+      "identifiers": [
+        "SemanticScholar:3421d12d98956c36c5d39c0ef023b378b6922068"
+      ],
+      "semantic_scholar_id": "3421d12d98956c36c5d39c0ef023b378b6922068",
+      "canonical_id": "arXiv:2403.06764",
+      "arxiv_id": "2403.06764",
+      "doi": "10.48550/arXiv.2403.06764",
+      "authors": [
+        "Liang Chen",
+        "Haozhe Zhao",
+        "Tianyu Liu",
+        "Shuai Bai",
+        "Jun-Yang Lin",
+        "Chang Zhou",
+        "Bao-Bao Chang"
+      ],
+      "priority": 732,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 732,
+        "citation_count": 732,
+        "total": 732,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 938,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2403.06764",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2403.06764",
+        "id:SemanticScholar:3421d12d98956c36c5d39c0ef023b378b6922068",
+        "id:arXiv:2403.06764",
+        "title:an image is worth 12 tokens after layer 2 plugandplay inference acceleration for large visionlanguage models",
+        "url:https://arxiv.org/abs/2403.06764"
+      ],
+      "record": {
+        "title": "An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2403.06764",
+        "year": 2024,
+        "published": "2024-03-11",
+        "venue": "European Conference on Computer Vision",
+        "citation_count": 732,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this study, we identify the inefficient attention phenomena in Large Vision-Language Models (LVLMs), notably within prominent models like LLaVA-1.5, QwenVL-Chat and Video-LLaVA. We find out that the attention computation over visual tokens is of extreme inefficiency in the deep layers of popular LVLMs, suggesting a need for a sparser approach compared to textual data handling. To this end, we introduce FastV, a versatile plug-and-play method designed to optimize computational efficiency by learning adaptive attention patterns in early layers and pruning visual tokens in subsequent ones. Our evaluations demonstrate FastV's ability to dramatically reduce computational costs (e.g., a 45 reduction in FLOPs for LLaVA-1.5-13B) without sacrificing performance in a wide range of image and video understanding tasks. The computational efficiency and performance trade-off of FastV are highly customizable and pareto-efficient. It can compress the FLOPs of a 13B-parameter model to achieve a lower budget than that of a 7B-parameter model, while still maintaining superior performance. We believe FastV has practical values for deployment of LVLMs in edge devices and commercial models. Code is released at https://github.com/pkunlp-icler/FastV.",
+        "identifiers": [
+          "SemanticScholar:3421d12d98956c36c5d39c0ef023b378b6922068"
+        ],
+        "semantic_scholar_id": "3421d12d98956c36c5d39c0ef023b378b6922068",
+        "canonical_id": "arXiv:2403.06764",
+        "arxiv_id": "2403.06764",
+        "doi": "10.48550/arXiv.2403.06764",
+        "authors": [
+          "Liang Chen",
+          "Haozhe Zhao",
+          "Tianyu Liu",
+          "Shuai Bai",
+          "Jun-Yang Lin",
+          "Chang Zhou",
+          "Bao-Bao Chang"
+        ],
+        "priority": 732,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 732,
+          "citation_count": 732,
+          "total": 732,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 938,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5cc2a5740be8bb76200f5eb3c1a15bcf75f1977b1816607678fb48fbbf7bf463",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

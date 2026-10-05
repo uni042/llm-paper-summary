@@ -1,0 +1,148 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-a68d87b247c88798-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-a68d87b247c8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2101.01321"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2fe7f858f84da5324e7bb122876ca91ca04bd76d",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T16:17:18.368079+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2101.01321",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "I-BERT: Integer-only BERT Quantization",
+      "source_url": "https://arxiv.org/abs/2101.01321",
+      "year": 2021,
+      "published": "2021-01-05",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 487,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer based models, like BERT and RoBERTa, have achieved state-of-the-art results in many Natural Language Processing tasks. However, their memory footprint, inference latency, and power consumption are prohibitive efficient inference at the edge, and even at the data center. While quantization can be a viable solution for this, previous work on quantizing Transformer based models use floating-point arithmetic during inference, which cannot efficiently utilize integer-only logical units such as the recent Turing Tensor Cores, or traditional integer-only ARM processors. In this work, we propose I-BERT, a novel quantization scheme for Transformer based models that quantizes the entire inference with integer-only arithmetic. Based on lightweight integer-only approximation methods for nonlinear operations, e.g., GELU, Softmax, and Layer Normalization, I-BERT performs an end-to-end integer-only BERT inference without any floating point calculation. We evaluate our approach on GLUE downstream tasks using RoBERTa-Base/Large. We show that for both cases, I-BERT achieves similar (and slightly higher) accuracy as compared to the full-precision baseline. Furthermore, our preliminary implementation of I-BERT shows a speedup of 2.4-4.0x for INT8 inference on a T4 GPU system as compared to FP32 inference. The framework has been developed in PyTorch and has been open-sourced.",
+      "identifiers": [
+        "SemanticScholar:d06bda5e759c8e8569754d8f7235cf1a9a1e9985"
+      ],
+      "semantic_scholar_id": "d06bda5e759c8e8569754d8f7235cf1a9a1e9985",
+      "canonical_id": "arXiv:2101.01321",
+      "arxiv_id": "2101.01321",
+      "authors": [
+        "Sehoon Kim",
+        "A. Gholami",
+        "Z. Yao",
+        "Michael W. Mahoney",
+        "K. Keutzer"
+      ],
+      "priority": 497,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 487,
+        "citation_count": 487,
+        "total": 497,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2099,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2101.01321",
+      "identity_tokens": [
+        "id:SemanticScholar:d06bda5e759c8e8569754d8f7235cf1a9a1e9985",
+        "id:arXiv:2101.01321",
+        "title:ibert integeronly bert quantization",
+        "url:https://arxiv.org/abs/2101.01321"
+      ],
+      "record": {
+        "title": "I-BERT: Integer-only BERT Quantization",
+        "source_url": "https://arxiv.org/abs/2101.01321",
+        "year": 2021,
+        "published": "2021-01-05",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 487,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer based models, like BERT and RoBERTa, have achieved state-of-the-art results in many Natural Language Processing tasks. However, their memory footprint, inference latency, and power consumption are prohibitive efficient inference at the edge, and even at the data center. While quantization can be a viable solution for this, previous work on quantizing Transformer based models use floating-point arithmetic during inference, which cannot efficiently utilize integer-only logical units such as the recent Turing Tensor Cores, or traditional integer-only ARM processors. In this work, we propose I-BERT, a novel quantization scheme for Transformer based models that quantizes the entire inference with integer-only arithmetic. Based on lightweight integer-only approximation methods for nonlinear operations, e.g., GELU, Softmax, and Layer Normalization, I-BERT performs an end-to-end integer-only BERT inference without any floating point calculation. We evaluate our approach on GLUE downstream tasks using RoBERTa-Base/Large. We show that for both cases, I-BERT achieves similar (and slightly higher) accuracy as compared to the full-precision baseline. Furthermore, our preliminary implementation of I-BERT shows a speedup of 2.4-4.0x for INT8 inference on a T4 GPU system as compared to FP32 inference. The framework has been developed in PyTorch and has been open-sourced.",
+        "identifiers": [
+          "SemanticScholar:d06bda5e759c8e8569754d8f7235cf1a9a1e9985"
+        ],
+        "semantic_scholar_id": "d06bda5e759c8e8569754d8f7235cf1a9a1e9985",
+        "canonical_id": "arXiv:2101.01321",
+        "arxiv_id": "2101.01321",
+        "authors": [
+          "Sehoon Kim",
+          "A. Gholami",
+          "Z. Yao",
+          "Michael W. Mahoney",
+          "K. Keutzer"
+        ],
+        "priority": 497,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 487,
+          "citation_count": 487,
+          "total": 497,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2099,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e4bdb09622651353d9f5701eba4687510b023a87744dee8e021a15be1606eb64",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
