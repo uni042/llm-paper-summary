@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b30e0495666b8e5-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2511.21631",
+  "reason": "Qwen3-VLはdense 2B/4B/8B/32BとMoE 30B-A3B/235B-A22Bを含み、256Kのマルチモーダル長文脈とlatency-quality trade-offを明示するため推論効率との接点はある。しかし主要貢献はinterleaved-MRoPE、DeepStack、text-based time alignmentによるVLM能力・品質向上で、runtime、serving、memory階層やkernel最適化そのものを主題としないためborderline。",
+  "title": "Qwen3-VL Technical Report",
+  "identity_tokens": [
+    "DOI:10.48550/arxiv.2511.21631",
+    "arXiv:2511.21631"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b30e0495666",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
