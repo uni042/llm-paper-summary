@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-60-part-07-b2ad8fbf98df",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13795",
+      "identity_tokens": [
+        "arXiv:2606.13795"
+      ],
+      "title": "DiPOD: Diffusion Policy Optimization without Drifting Apart",
+      "reason": "Diffusion-policy gradient optimization is a training/post-training stability method, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.13795",
+      "first_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "last_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13886",
+      "identity_tokens": [
+        "arXiv:2606.13886"
+      ],
+      "title": "PhysVLA: Towards Physically-Grounded VLA for Embodied Robotic Manipulation",
+      "reason": "Physically grounded VLA manipulation framework changes robot control behavior at inference, but does not optimize LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.13886",
+      "first_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "last_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-74209-3",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-74209-3"
+      ],
+      "title": "T2Pdecoder enables protein-centric analyses from transcriptomic data",
+      "reason": "Protein abundance prediction from transcriptomics is a biological prediction task, not LLM inference.",
+      "source_url": "https://doi.org/10.1038/s41467-026-74209-3",
+      "first_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "last_checked_at": "2026-10-05T10:18:59.062064+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
