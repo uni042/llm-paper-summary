@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be70f86ca4aa9143-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.12211",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.12211",
+    "identity_tokens": [
+      "arXiv:2503.12211"
+    ],
+    "reason": "LLM/decoder workloadやLLM serving評価を確認できず、測定は非CUDA最適化PyTorch実装も含むcompute-bound条件に限られる。LLM向け演算最適化への転用可能性が残るためborderline。",
+    "first_checked_at": "2026-10-05T13:13:27+00:00",
+    "last_checked_at": "2026-10-05T13:13:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md"
+    ],
+    "title": "Changing Base Without Losing Pace: A GPU-Efficient Alternative to MatMul in DNNs"
+  },
+  "processed_at": "2026-10-05T13:13:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be70f86ca4aa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

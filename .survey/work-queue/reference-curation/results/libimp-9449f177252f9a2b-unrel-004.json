@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9449f177252f9a2b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.11008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.11008",
+    "identity_tokens": [
+      "arXiv:2502.11008"
+    ],
+    "reason": "LLMの反実仮想推論能力を測るbenchmarkと推論手順の品質評価で、推論効率が対象でない。",
+    "first_checked_at": "2026-10-05T13:13:26+00:00",
+    "last_checked_at": "2026-10-05T13:13:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "CounterBench: Evaluating and Improving Counterfactual Reasoning in Large Language Models"
+  },
+  "processed_at": "2026-10-05T13:13:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9449f177252f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

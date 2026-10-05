@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:10:50+00:00",
-  "record_count": 1708,
+  "updated_at": "2026-10-05T13:13:28+00:00",
+  "record_count": 1714,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26473,6 +26473,92 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
       ],
       "title": "On Large Language Model Based Joint Source Channel Coding for Semantic Communication"
+    },
+    "arXiv:2503.10665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.10665",
+      "identity_tokens": [
+        "arXiv:2503.10665"
+      ],
+      "reason": "二次surveyかつ主対象はmultimodal vision-language modelsで、LLM inference servingを直接実装・測定した研究ではない。周辺技術の参考価値にとどまるためborderline。",
+      "first_checked_at": "2026-10-05T13:13:26+00:00",
+      "last_checked_at": "2026-10-05T13:13:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Small Vision-Language Models: A Survey on Compact Architectures and Techniques"
+    },
+    "arXiv:2407.09685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09685",
+      "identity_tokens": [
+        "arXiv:2407.09685"
+      ],
+      "reason": "Task-specific molecular model/drafting strategy; transfer to general LLMs uncertain.",
+      "first_checked_at": "2026-10-05T13:13:27+00:00",
+      "last_checked_at": "2026-10-05T13:13:27+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ],
+      "title": "Accelerating the inference of string generation-based chemical reaction models for industrial applications"
+    },
+    "arXiv:2504.03668": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03668",
+      "identity_tokens": [
+        "arXiv:2504.03668"
+      ],
+      "reason": "論文自身が§5をExpected Resultsとしており、実装を使った比較実験・測定結果は提示されない。効果は提案設計上の期待であり、実運用でのlatency/throughput改善を実証したものではない。",
+      "first_checked_at": "2026-10-05T13:13:27+00:00",
+      "last_checked_at": "2026-10-05T13:13:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "Intelligent Orchestration of Distributed Large Foundation Model Inference at the Edge"
+    },
+    "arXiv:2503.12211": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.12211",
+      "identity_tokens": [
+        "arXiv:2503.12211"
+      ],
+      "reason": "LLM/decoder workloadやLLM serving評価を確認できず、測定は非CUDA最適化PyTorch実装も含むcompute-bound条件に限られる。LLM向け演算最適化への転用可能性が残るためborderline。",
+      "first_checked_at": "2026-10-05T13:13:27+00:00",
+      "last_checked_at": "2026-10-05T13:13:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md"
+      ],
+      "title": "Changing Base Without Losing Pace: A GPU-Efficient Alternative to MatMul in DNNs"
+    },
+    "arXiv:2503.11224": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11224",
+      "identity_tokens": [
+        "arXiv:2503.11224"
+      ],
+      "reason": "二次surveyであり、新規の推論方式・serving実装・比較実験は本候補自体の寄与ではない。対象との関連はefficient sequence-model backgroundに限られる。",
+      "first_checked_at": "2026-10-05T13:13:28+00:00",
+      "last_checked_at": "2026-10-05T13:13:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Technologies on Effectiveness and Efficiency: A Survey of State Spaces Models"
+    },
+    "arXiv:2503.11513": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11513",
+      "identity_tokens": [
+        "arXiv:2503.11513"
+      ],
+      "reason": "対象はvideo tokenizer・video generationであり、自然言語LLMのinference/servingやKV/context圧縮ではない。マルチモーダル生成への隣接性はあるが、対象との距離があるためborderline。",
+      "first_checked_at": "2026-10-05T13:13:28+00:00",
+      "last_checked_at": "2026-10-05T13:13:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "HiTVideo: Hierarchical Tokenizers for Enhancing Text-to-Video Generation with Autoregressive Large Language Models"
     }
   }
 }
