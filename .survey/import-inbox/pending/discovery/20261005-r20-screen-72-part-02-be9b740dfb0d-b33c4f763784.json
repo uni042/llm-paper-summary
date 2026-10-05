@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-72-part-02-be9b740dfb0d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.20935",
+      "identity_tokens": [
+        "arXiv:2405.20935"
+      ],
+      "title": "Effective Interplay between Sparsity and Quantization: From Theory to Practice",
+      "reason": "Useful compression/accuracy evidence, but direct deployment efficiency measurements or a serving method are absent.",
+      "source_url": "https://arxiv.org/abs/2405.20935",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.10460",
+      "identity_tokens": [
+        "arXiv:2306.10460"
+      ],
+      "title": "Instant Soup: Cheap Pruning Ensembles in A Single Pass Can Draw Lottery Tickets from Large Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2306.10460. Primary abstract concerns one-shot pruning-ensemble/lottery-ticket selection and training cost, not deployment inference performance.",
+      "source_url": "https://arxiv.org/abs/2306.10460",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.02031",
+      "identity_tokens": [
+        "arXiv:2305.02031"
+      ],
+      "title": "A Systematic Study of Knowledge Distillation for Natural Language Generation with Pseudo-Target Training",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.02031. Primary abstract evaluates pseudo-target knowledge-distillation training for NLG; inference efficiency is not the contribution.",
+      "source_url": "https://arxiv.org/abs/2305.02031",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.15258",
+      "identity_tokens": [
+        "arXiv:2512.15258"
+      ],
+      "title": "VLA-AN: An Efficient and Onboard Vision-Language-Action Framework for Aerial Navigation in Complex Environments",
+      "reason": "The efficiency work is specific to an onboard aerial VLA stack and simulator tasks; transfer to general LLM serving is uncertain.",
+      "source_url": "https://arxiv.org/abs/2512.15258",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2505.07858-scaling-laws-for-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.10138",
+      "identity_tokens": [
+        "arXiv:2511.10138"
+      ],
+      "title": "GPR: Towards a Generative Pre-trained One-Model Paradigm for Large-Scale Advertising Recommendation",
+      "reason": "The paper is a specialized recommendation application and reports unchanged latency rather than an inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2511.10138",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    }
+  ]
+}
