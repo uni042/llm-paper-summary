@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6118f725dc9dd34-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.13062",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.13062",
+    "identity_tokens": [
+      "arXiv:2607.13062"
+    ],
+    "reason": "The work concerns quantum error-correction decoding and speculative decoder latency, not language-model inference or serving.",
+    "first_checked_at": "2026-10-05T10:36:35+00:00",
+    "last_checked_at": "2026-10-05T10:36:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "The verifier side of speculative window decoding: a predictability bracket, a machine-checked blast-radius bound, and a decoder-agnostic recover loop"
+  },
+  "processed_at": "2026-10-05T10:36:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6118f725dc9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

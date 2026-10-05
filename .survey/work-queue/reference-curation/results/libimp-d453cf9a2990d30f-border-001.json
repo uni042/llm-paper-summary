@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d453cf9a2990d30f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/siu71813.2026.11637009",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/siu71813.2026.11637009",
+    "identity_tokens": [
+      "DOI:10.1109/siu71813.2026.11637009"
+    ],
+    "reason": "The title suggests quantization of biomedical VLMs, potentially in scope, but primary evidence for inference efficiency, measurements and quality trade-offs was unavailable.",
+    "first_checked_at": "2026-10-05T10:36:35+00:00",
+    "last_checked_at": "2026-10-05T10:36:35+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Rotational Post-Training Quantization for Biomedical Vision-Language Models"
+  },
+  "processed_at": "2026-10-05T10:36:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d453cf9a2990",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

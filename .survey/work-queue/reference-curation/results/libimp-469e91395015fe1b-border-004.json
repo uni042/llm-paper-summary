@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-469e91395015fe1b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.06145",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.06145",
+    "identity_tokens": [
+      "arXiv:2607.06145"
+    ],
+    "reason": "the primary work is a formal complexity definition without empirical prompt-shortening, quality, or serving-resource evaluation, so operational fit is currently speculative.",
+    "first_checked_at": "2026-10-05T10:36:34+00:00",
+    "last_checked_at": "2026-10-05T10:36:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+      "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+    ],
+    "title": "Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs"
+  },
+  "processed_at": "2026-10-05T10:36:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-469e91395015",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

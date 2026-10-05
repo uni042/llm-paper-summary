@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:34:22+00:00",
-  "record_count": 1415,
+  "updated_at": "2026-10-05T10:36:35+00:00",
+  "record_count": 1421,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -21850,6 +21850,137 @@
         "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
       ],
       "title": "Resample or Reroute? Recoverable Stopping Debt Without Identified Action Selection"
+    },
+    "arXiv:2607.05876": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05876",
+      "identity_tokens": [
+        "arXiv:2607.05876"
+      ],
+      "reason": "the paper itself says the residual sweep and key validation campaign are still pending; the current case study is partly analytical and insufficient for a validated serving result.",
+      "first_checked_at": "2026-10-05T10:36:33+00:00",
+      "last_checked_at": "2026-10-05T10:36:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.07265-xshare-inbatch-expert-sharing.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2601.08800-mixserve-hybrid-tp-ep-fused-communication.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+        "papers/inference/15-inference-simulation-emulation/2026-2601.06288-aiconfigurator-multi-framework-llm-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Think Before You Grid-Search: Floor-First Triage for LLM Serving"
+    },
+    "arXiv:2607.06145": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.06145",
+      "identity_tokens": [
+        "arXiv:2607.06145"
+      ],
+      "reason": "the primary work is a formal complexity definition without empirical prompt-shortening, quality, or serving-resource evaluation, so operational fit is currently speculative.",
+      "first_checked_at": "2026-10-05T10:36:34+00:00",
+      "last_checked_at": "2026-10-05T10:36:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+      ],
+      "title": "Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs"
+    },
+    "DOI:10.1109/siu71813.2026.11636380": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/siu71813.2026.11636380",
+      "identity_tokens": [
+        "DOI:10.1109/siu71813.2026.11636380"
+      ],
+      "reason": "IEEE DOI/publisher full text could not be retrieved in this check; the official Istanbul Technical University publication page supplies the abstract, but methods, benchmark setup and limitations could not be inspected.",
+      "first_checked_at": "2026-10-05T10:36:34+00:00",
+      "last_checked_at": "2026-10-05T10:36:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "G-AdaKV: Cross-Layer Dynamic KV Cache Management for Efficient Large Language Model Inference"
+    },
+    "DOI:10.1109/siu71813.2026.11636617": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/siu71813.2026.11636617",
+      "identity_tokens": [
+        "DOI:10.1109/siu71813.2026.11636617"
+      ],
+      "reason": "The title suggests hierarchical memory benchmarking for long-context multi-agent systems, but without the primary abstract or full text relevance and measured efficiency cannot be established.",
+      "first_checked_at": "2026-10-05T10:36:35+00:00",
+      "last_checked_at": "2026-10-05T10:36:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "CEMA Memory Fabric: Benchmarking Hierarchical Memory for Long-Context Multi-Agent Systems"
+    },
+    "DOI:10.1109/siu71813.2026.11637009": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/siu71813.2026.11637009",
+      "identity_tokens": [
+        "DOI:10.1109/siu71813.2026.11637009"
+      ],
+      "reason": "The title suggests quantization of biomedical VLMs, potentially in scope, but primary evidence for inference efficiency, measurements and quality trade-offs was unavailable.",
+      "first_checked_at": "2026-10-05T10:36:35+00:00",
+      "last_checked_at": "2026-10-05T10:36:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Rotational Post-Training Quantization for Biomedical Vision-Language Models"
+    },
+    "DOI:10.1145/3829079": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3829079",
+      "identity_tokens": [
+        "DOI:10.1145/3829079"
+      ],
+      "reason": "The ACM Digital Library primary article route returned HTTP 403 in this check, so the survey chapters, coverage and synthesis could not be checked beyond the abstract.",
+      "first_checked_at": "2026-10-05T10:36:35+00:00",
+      "last_checked_at": "2026-10-05T10:36:35+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Generative AI at the Edge: A Comprehensive Survey of Architectures, Hardware and Applications"
     }
   }
 }
