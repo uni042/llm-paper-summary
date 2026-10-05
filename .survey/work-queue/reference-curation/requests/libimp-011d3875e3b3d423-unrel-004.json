@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-011d3875e3b3d423-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3817911",
+  "reason": "Parameter-efficient fine-tuning (PEFT) has become a standard approach for adapting large language models to downstream tasks. However, most existing PEFT methods rely on uniform and static adaptations, without accounting for the structured heterogeneity of attention across dimensions, heads, layers, and input tokens. In practice, attention representations exhibit non-uniform behavior, and positional encoding mechanisms such as rotary positional embeddings (RoPE) induce dimension-dependent positional structure, making uniform adaptation suboptimal. In this work, we propose DyPAM (Dynamic Positional Attention Modulation), a PEFT method that adapts how positional information contributes to attention by operating directly on the query and key representations. DyPAM combines input-conditioned, dimension-wise modulation with head-wise and layer-wise structural modulation, performing fine-grained adaptation of positional attention aligned with the RoPE-induced structure without modifying the pretrained backbone. Extensive experiments on mathematical and commonsense reasoning benchmarks across multiple backbone models demonstrate that DyPAM consistently outperforms existing strong PEFT baselines. The code is available for reproducibility at https://github.com/Beihang-BIGSCity/DyPAM.",
+  "title": "Dynamic Positional Attention Modulation for Parameter-Efficient Fine-Tuning of Large Language Models",
+  "identity_tokens": [
+    "DOI:10.1145/3770855.3817911"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-011d3875e3b3",
+  "source_precheck_request_id": null
+}
