@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-17-part-02-1ac053552bb2",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TSE.2026.3703637",
+      "identity_tokens": [
+        "DOI:10.1109/TSE.2026.3703637"
+      ],
+      "title": "LongTest: Test Prioritization for Long Text Files",
+      "reason": "一次要旨はlong-text classificationのDNNテスト入力優先付けを扱う。LLM inference/servingの効率化ではない。",
+      "source_url": "https://doi.org/10.1109/TSE.2026.3703637",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3703379",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2026.3703379"
+      ],
+      "title": "EVA: Efficient Token Compression Co-Optimization With Heterogeneous CIM Architecture for Video LLM Acceleration",
+      "reason": "直接関連だが、IEEE一次本文が取得できず、要旨にある数値・方式の実験条件と限界を確認できない。",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3703379",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3706101",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2026.3706101"
+      ],
+      "title": "A Custom Hardware Accelerator for Softmax Function With Parallel Online Normalization",
+      "reason": "関連するLLM推論hardwareだが、一次本文が取得できず、system efficiencyの効果や評価境界を監査できない。",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3706101",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3706708",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2026.3706708"
+      ],
+      "title": "A High-Performance and Low-Resource Reconfigurable Hardware Implementation for Softmax in Transformer",
+      "reason": "関連候補だが、一次本文が取得できず、測定構成・accuracy・hardware条件の確認ができない。",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3706708",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TVLSI.2026.3712452",
+      "identity_tokens": [
+        "DOI:10.1109/TVLSI.2026.3712452"
+      ],
+      "title": "ME-MoD: Algorithm-Hardware-Dataflow Co-Design for Memory Efficient Mixture-of-Depth-Based Vision Transformer Accelerator",
+      "reason": "一次要旨ではMixture-of-Depthsを使うVision Transformer inference acceleratorを評価しており、LLM/VLMではなくvision-only transformerが対象。",
+      "source_url": "https://doi.org/10.1109/TVLSI.2026.3712452",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    }
+  ]
+}
