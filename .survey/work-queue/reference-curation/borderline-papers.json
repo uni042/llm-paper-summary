@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:25:05+00:00",
-  "record_count": 693,
+  "updated_at": "2026-10-05T02:27:31+00:00",
+  "record_count": 694,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10130,6 +10130,20 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation"
+    },
+    "arXiv:2607.27372": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27372",
+      "identity_tokens": [
+        "arXiv:2607.27372"
+      ],
+      "reason": "Language models appear in training experiments, but measured acceleration is for non-language control; direct LLM serving benefit is not established.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Explorative Modeling: Unlocking a Third Pretraining Axis and End-to-End Generation"
     }
   }
 }

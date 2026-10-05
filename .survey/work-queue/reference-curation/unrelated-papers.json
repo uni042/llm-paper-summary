@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:25:06+00:00",
-  "record_count": 1928,
+  "updated_at": "2026-10-05T02:27:32+00:00",
+  "record_count": 1943,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -27852,6 +27852,226 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
       ],
       "title": "Harmful Fine-tuning Attacks and Defenses for Large Language Models: A Survey"
+    },
+    "arXiv:2607.28272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28272",
+      "identity_tokens": [
+        "arXiv:2607.28272"
+      ],
+      "reason": "MemHarness: Memory Is Reconstructed, Not Replayed: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "MemHarness: Memory Is Reconstructed, Not Replayed"
+    },
+    "arXiv:2607.28611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28611",
+      "identity_tokens": [
+        "arXiv:2607.28611"
+      ],
+      "reason": "Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Chimera: Designing and Chinchilla-Scaling Hybrid Visual Diffusion Transformers"
+    },
+    "arXiv:2607.26807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26807",
+      "identity_tokens": [
+        "arXiv:2607.26807"
+      ],
+      "reason": "Route by Kinematics, Act by Observation: Kinematics-Supervised Expert Routing in MoE-Augmented VLA: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Route by Kinematics, Act by Observation: Kinematics-Supervised Expert Routing in MoE-Augmented VLA"
+    },
+    "arXiv:2607.19653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19653",
+      "identity_tokens": [
+        "arXiv:2607.19653"
+      ],
+      "reason": "PerfAgent: Profiler-Guided Iterative Refinement for Repository-Level Code Optimization: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "PerfAgent: Profiler-Guided Iterative Refinement for Repository-Level Code Optimization"
+    },
+    "arXiv:2607.20125": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20125",
+      "identity_tokens": [
+        "arXiv:2607.20125"
+      ],
+      "reason": "HeadCast: Casting Attention Heads for Efficient Autoregressive Video Generation: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md"
+      ],
+      "title": "HeadCast: Casting Attention Heads for Efficient Autoregressive Video Generation"
+    },
+    "arXiv:2607.17624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17624",
+      "identity_tokens": [
+        "arXiv:2607.17624"
+      ],
+      "reason": "Can Transformers Really Do It All? On the Compatibility of Inductive Biases Across Tasks: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "Can Transformers Really Do It All? On the Compatibility of Inductive Biases Across Tasks"
+    },
+    "DOI:10.1109/tip.2026.3712351": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3712351",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3712351"
+      ],
+      "reason": "MLAE: Masked LoRA Experts for Parameter-Efficient Fine-Tuning: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "MLAE: Masked LoRA Experts for Parameter-Efficient Fine-Tuning"
+    },
+    "arXiv:2607.16872": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16872",
+      "identity_tokens": [
+        "arXiv:2607.16872"
+      ],
+      "reason": "Trace-Based On-Policy Distillation for Masked Diffusion Language Models: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "title": "Trace-Based On-Policy Distillation for Masked Diffusion Language Models"
+    },
+    "arXiv:2607.15714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15714",
+      "identity_tokens": [
+        "arXiv:2607.15714"
+      ],
+      "reason": "AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning"
+    },
+    "arXiv:2608.01857": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01857",
+      "identity_tokens": [
+        "arXiv:2608.01857"
+      ],
+      "reason": "Primary abstract concerns a direction-aware forecasting loss for time-series models, unrelated to LLM inference/serving.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Beyond Magnitude and Shape: A Direction-Aware Loss for Time Series Forecasting"
+    },
+    "arXiv:2608.13331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13331",
+      "identity_tokens": [
+        "arXiv:2608.13331"
+      ],
+      "reason": "Primary abstract develops an RL-trained paper-replication scientist agent and task benchmark; efficiency concerns training/agent performance, not inference serving.",
+      "first_checked_at": "2026-10-05T02:27:31+00:00",
+      "last_checked_at": "2026-10-05T02:27:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Training AI Scientists to Replicate Research"
+    },
+    "arXiv:2608.13505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13505",
+      "identity_tokens": [
+        "arXiv:2608.13505"
+      ],
+      "reason": "Primary abstract introduces a scientific agentic foundation-model series and its pre-/post-training pipeline; it does not present a focused inference-efficiency method.",
+      "first_checked_at": "2026-10-05T02:27:32+00:00",
+      "last_checked_at": "2026-10-05T02:27:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Intern-S2-Preview: Scientific Agentic Foundation Model"
+    },
+    "DOI:10.1145/3789240.3829110": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829110",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829110"
+      ],
+      "reason": "Candidate title/abstract concern profiling accelerator-chiplet network topology, latency, bandwidth, and congestion generally. No LLM inference/serving method or LLM-specific evaluation is described.",
+      "first_checked_at": "2026-10-05T02:27:32+00:00",
+      "last_checked_at": "2026-10-05T02:27:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Understanding and Profiling the Accelerator Chiplet Network Using PingPoint"
+    },
+    "arXiv:2608.03624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03624",
+      "identity_tokens": [
+        "arXiv:2608.03624"
+      ],
+      "reason": "本文確認により、主たる貢献が対象範囲外または対象の推論/serving効率を改善する証拠がないと判断。",
+      "first_checked_at": "2026-10-05T02:27:32+00:00",
+      "last_checked_at": "2026-10-05T02:27:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "LoopMTP: A looped transformer guided by latent multi-token prediction"
+    },
+    "arXiv:2608.04003": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04003",
+      "identity_tokens": [
+        "arXiv:2608.04003"
+      ],
+      "reason": "Primary abstract evaluates persistent experience and recursive self-improvement in personal agents; the contribution is a benchmark/training intervention, not inference-serving efficiency.",
+      "first_checked_at": "2026-10-05T02:27:32+00:00",
+      "last_checked_at": "2026-10-05T02:27:32+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "PAST-Bench: Benchmarking the Foundations of Recursive Self-Improvement in Personal Agents"
     }
   }
 }
