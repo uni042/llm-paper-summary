@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f6f7f9e2c5c82f8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.07921",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.07921",
+    "identity_tokens": [
+      "arXiv:2608.07921"
+    ],
+    "reason": "Spectral analysis of transformer weights studies learned structure and possible future pruning, not a tested LLM inference-efficiency method.",
+    "first_checked_at": "2026-10-05T08:49:35+00:00",
+    "last_checked_at": "2026-10-05T08:49:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Spectral Outliers Reveal Dominant Learned Structure in Transformer Attention"
+  },
+  "processed_at": "2026-10-05T08:49:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f6f7f9e2c5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

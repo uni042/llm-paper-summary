@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:47:11+00:00",
-  "record_count": 3982,
+  "updated_at": "2026-10-05T08:49:37+00:00",
+  "record_count": 3996,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -57988,6 +57988,205 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "Hidden Language Consistency Phenomena in Reasoning LLMs"
+    },
+    "arXiv:2608.10021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10021",
+      "identity_tokens": [
+        "arXiv:2608.10021"
+      ],
+      "reason": "This is a broad position-encoding survey; it discusses computational/KV-cache properties but proposes no inference-efficiency method or serving result.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Position Encoding in Transformers: From Absolute and Relative Methods to Rotary Position Embeddings and Long-Context Scaling"
+    },
+    "arXiv:2608.07921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07921",
+      "identity_tokens": [
+        "arXiv:2608.07921"
+      ],
+      "reason": "Spectral analysis of transformer weights studies learned structure and possible future pruning, not a tested LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Spectral Outliers Reveal Dominant Learned Structure in Transformer Attention"
+    },
+    "arXiv:2608.08003": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08003",
+      "identity_tokens": [
+        "arXiv:2608.08003"
+      ],
+      "reason": "The paper introduces an interpretable spectral-neuron model family, unrelated to LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "The Spectral Neuron"
+    },
+    "arXiv:2608.08036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08036",
+      "identity_tokens": [
+        "arXiv:2608.08036"
+      ],
+      "reason": "RoboGraph benchmarks embodied-agent task-state tracking and success, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Compiling and Benchmarking Task-State Horizons for Embodied Agents"
+    },
+    "arXiv:2608.08067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08067",
+      "identity_tokens": [
+        "arXiv:2608.08067"
+      ],
+      "reason": "DialectS2S develops low-resource speech-dialogue adaptation/data construction and quality, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects"
+    },
+    "arXiv:2608.08167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08167",
+      "identity_tokens": [
+        "arXiv:2608.08167"
+      ],
+      "reason": "The method reduces VLM hallucination while explicitly preserving the model’s original inference speed; the contribution is quality/safety rather than efficiency.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Wiener Representation Filtering for VLM Hallucination Suppression"
+    },
+    "arXiv:2608.08477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08477",
+      "identity_tokens": [
+        "arXiv:2608.08477"
+      ],
+      "reason": "This is a narrow cybersecurity vision-language model/visual-grounding evaluation, not an LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "VectraYX-Vision-1B: A Sub-2B Spanish/LATAM Cybersecurity Vision-Language Model, and What Limits Its Visual Grounding"
+    },
+    "arXiv:2608.08536": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08536",
+      "identity_tokens": [
+        "arXiv:2608.08536"
+      ],
+      "reason": "Graph-neural circuit localization is an interpretability benchmark for transformer behavior, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Can Graph Learning Learn Circuits?"
+    },
+    "arXiv:2608.08575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08575",
+      "identity_tokens": [
+        "arXiv:2608.08575"
+      ],
+      "reason": "CDGC-Net is a 3D medical-image segmentation architecture; its parameter/FLOP comparison concerns vision segmentation, not LLMs.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "CDGC-Net: 3D Medical Image Segmentation with Cooperative Dual-Scale Self-Attention and Grouped Channel Modeling"
+    },
+    "arXiv:2608.08618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08618",
+      "identity_tokens": [
+        "arXiv:2608.08618"
+      ],
+      "reason": "RAG-based industrial-device configuration is an application pipeline; the reported device-task runtime does not optimize LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "RAG-Based Auto-Configuration for Industrial Fieldbus Devices"
+    },
+    "arXiv:2608.08740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08740",
+      "identity_tokens": [
+        "arXiv:2608.08740"
+      ],
+      "reason": "The method reduces memory/runtime of activation-checkpointing knapsack solving for model training, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:49:37+00:00",
+      "last_checked_at": "2026-10-05T08:49:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Memory-Efficient Activation Checkpointing with Sliding Window and Hirschberg's Algorithm for 0/1 Knapsack Solving in PyTorch"
+    },
+    "arXiv:2608.08853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08853",
+      "identity_tokens": [
+        "arXiv:2608.08853"
+      ],
+      "reason": "FDAA is a post-compute expert-aggregation head trained to improve MoE language-model quality; the paper does not target runtime inference efficiency.",
+      "first_checked_at": "2026-10-05T08:49:37+00:00",
+      "last_checked_at": "2026-10-05T08:49:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Beyond Routing: Decoupling Expert Dispatch and Aggregation in Sparse Mixture-of-Experts"
+    },
+    "arXiv:2608.08922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08922",
+      "identity_tokens": [
+        "arXiv:2608.08922"
+      ],
+      "reason": "This is theoretical analysis of self-attention dynamics and attractors, not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:49:37+00:00",
+      "last_checked_at": "2026-10-05T08:49:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Clustered Attractor Manifolds and Dynamical Condensation in Self-Attention"
+    },
+    "arXiv:2608.08961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08961",
+      "identity_tokens": [
+        "arXiv:2608.08961"
+      ],
+      "reason": "This benchmark compares gradient/activation strategies for transformer training, so its efficiency scope is training-only.",
+      "first_checked_at": "2026-10-05T08:49:37+00:00",
+      "last_checked_at": "2026-10-05T08:49:37+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Gradient Under Microscope: Benchmarking Resource Utilization of Memory-Efficient Gradient Computation Methods"
     }
   }
 }

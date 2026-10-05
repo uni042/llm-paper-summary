@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbf58a58bf79f9dd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.08922",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.08922",
+    "identity_tokens": [
+      "arXiv:2608.08922"
+    ],
+    "reason": "This is theoretical analysis of self-attention dynamics and attractors, not an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T08:49:37+00:00",
+    "last_checked_at": "2026-10-05T08:49:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Clustered Attractor Manifolds and Dynamical Condensation in Self-Attention"
+  },
+  "processed_at": "2026-10-05T08:49:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbf58a58bf79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

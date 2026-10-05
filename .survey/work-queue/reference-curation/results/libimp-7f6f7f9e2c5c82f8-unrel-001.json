@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f6f7f9e2c5c82f8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.10021",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.10021",
+    "identity_tokens": [
+      "arXiv:2608.10021"
+    ],
+    "reason": "This is a broad position-encoding survey; it discusses computational/KV-cache properties but proposes no inference-efficiency method or serving result.",
+    "first_checked_at": "2026-10-05T08:49:35+00:00",
+    "last_checked_at": "2026-10-05T08:49:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Position Encoding in Transformers: From Absolute and Relative Methods to Rotary Position Embeddings and Long-Context Scaling"
+  },
+  "processed_at": "2026-10-05T08:49:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f6f7f9e2c5c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

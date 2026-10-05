@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:47:09+00:00",
-  "record_count": 1228,
+  "updated_at": "2026-10-05T08:49:37+00:00",
+  "record_count": 1234,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18834,6 +18834,114 @@
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
       "title": "Hand-Written PTX Tensor-Core GEMM Kernels: A Multi-Precision Study on NVIDIA L4"
+    },
+    "arXiv:2609.26173": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26173",
+      "identity_tokens": [
+        "arXiv:2609.26173"
+      ],
+      "reason": "The topic is LLM deployment quantization, but measured contribution is diagnostic quality analysis without an efficiency result; fit to serving-efficiency scope is weak.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "title": "Component Type, Not Reconstruction Error, Predicts Attention Quantization Sensitivity"
+    },
+    "DOI:10.1109/mipr70517.2026.00041": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mipr70517.2026.00041",
+      "identity_tokens": [
+        "DOI:10.1109/mipr70517.2026.00041"
+      ],
+      "reason": "Candidate packet contains no abstract; attempted primary DOI page could not be retrieved. Title alone suggests an advertising-prediction topic but is insufficient for a primary-source scope decision.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Modeling Video Ads with Structured Semantics for CTR Prediction"
+    },
+    "arXiv:2608.07911": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07911",
+      "identity_tokens": [
+        "arXiv:2608.07911"
+      ],
+      "reason": "The evaluation guidance is relevant to MoE serving, but deployment efficiency remains unmeasured and no tested caching policy is shown to improve actual inference latency.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2510.10302-sp-moe-speculative-decoding-and-prefetching-for-accelerating-moe-based-model-inf.md",
+        "papers/inference/99-other-inference-systems/2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md"
+      ],
+      "title": "Reproducible Evaluation of MoE Expert Caching: Replay Semantics, Workload Contamination, and Operating Regimes"
+    },
+    "arXiv:2608.08188": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08188",
+      "identity_tokens": [
+        "arXiv:2608.08188"
+      ],
+      "reason": "Quantization is related to deployment, but the paper does not test an efficiency technique or system metric, making its fit weak.",
+      "first_checked_at": "2026-10-05T08:49:35+00:00",
+      "last_checked_at": "2026-10-05T08:49:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "Quantization Degradation in Large Language Models: A Signal-Noise Perspective"
+    },
+    "arXiv:2608.08528": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08528",
+      "identity_tokens": [
+        "arXiv:2608.08528"
+      ],
+      "reason": "The topic is LLM inference spend, but the paper mainly describes a future operating framework rather than validated efficiency results; it is a weak-fit/longer-term follow-up.",
+      "first_checked_at": "2026-10-05T08:49:36+00:00",
+      "last_checked_at": "2026-10-05T08:49:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Task-to-Model Optimization for Enterprise LLM Coding Assistants: A Data-Driven Framework for Cost-Optimal Routing"
+    },
+    "arXiv:2608.08650": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08650",
+      "identity_tokens": [
+        "arXiv:2608.08650"
+      ],
+      "reason": "It contains relevant MoE serving background, but the contribution is primarily a broad survey and pretraining analysis rather than inference-efficiency research.",
+      "first_checked_at": "2026-10-05T08:49:37+00:00",
+      "last_checked_at": "2026-10-05T08:49:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "The Evolution of Mixture-of-Experts Architectures in Large Language Models: Routing, Topology, Load Balancing, and Expert Parallelism"
     }
   }
 }
