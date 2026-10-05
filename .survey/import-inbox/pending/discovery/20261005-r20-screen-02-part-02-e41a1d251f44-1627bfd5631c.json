@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-02-part-02-e41a1d251f44",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3125769",
+      "identity_tokens": [
+        "DOI:10.1117/12.3125769"
+      ],
+      "title": "An LLM-based framework for personalized feedback generation and adaptive optimization in EFL writing",
+      "reason": "Large language models, with their powerful natural language understanding and sequence generation capabilities, are gradually becoming a core component of automated educational feedback systems. However, their application in English as a Foreign Language (EFL) writing still faces challenges such as coarse intervention granularity and homogeneous feedback. This study proposes an adaptive EFL writing feedback generation framework that combines a dual-stream generative network, low-rank adaptation, and proximal policy optimization. Experiments were conducted on a longitudinal subset of the EF-Cambridge Open Language Database containing 17,859 essays written by 1,280 EFL learners. From this corpus, 2,500 expert-authored essay–feedback pairs were constructed and divided at the learner level into training, validation, and test sets in a ratio of 8:1:1, corresponding to 2,000, 250, and 250 pairs, respectively. The feedback generator was initialized from the Llama-2-7B-32K-Instruct checkpoint and trained on an eight-NVIDIA H100 GPU cluster. The system supported a maximum context length of 24,576 tokens. Under a batch size of 1 and a concurrency level of 1, the mean inter-token latency remained below 20 ms under the specified inference protocol. The normalized validation BLEU4 convergence ratio reached 99%, where this percentage represents convergence relative to the best validation checkpoint rather than an absolute BLEU-4 score. In a blind evaluation of all 250 test instances by three EFL experts, the pedagogical acceptability index reached 92.8%.",
+      "source_url": "https://doi.org/10.1117/12.3125769",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3845607",
+      "identity_tokens": [
+        "DOI:10.1145/3845607"
+      ],
+      "title": "Hermes \\({}^{+}\\) : Adaptive Memory-Efficient Pipeline Inference for Large Models on Edge Devices",
+      "reason": "The abstract describes a potentially relevant LLM inference memory/pipeline method, but primary full-text design, evaluated model configurations and latency/memory measurements could not be checked; retain as borderline until the ACM paper is available.",
+      "source_url": "https://doi.org/10.1145/3845607",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10470-td-pipe-temporally-disaggregated-pipeline-parallelism-architecture-for-h.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0358224",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0358224"
+      ],
+      "title": "SpectralTCN: A multi-resolution wavelet gating network for vibration-based structural damage detection",
+      "reason": "Vibration-based structural health monitoring (SHM) detects damage by identifying subtle changes in a structure’s dynamic response. Deep learning models have shown strong potential for automating this classification task. However, most existing architectures share a key limitation: they either process signals purely in the time domain, or apply a global frequency-domain transform that discards information about when each frequency component occurs. This is a serious drawback, because structural damage typically manifests as short, localised events confined to specific frequency bands. This paper proposes SpectralTCN, a temporal convolutional network augmented with a Wavelet Gating Module (WGM) that performs learnable, data-dependent multi-resolution filtering within each convolutional block. The WGM decomposes intermediate features via the Discrete Wavelet Transform (DWT) into physically interpretable sub-bands corresponding to distinct structural vibration modes, applies input-adaptive sigmoid gates independently at each decomposition level, and reconstructs the filtered signal via the Inverse DWT (IDWT) with a learnable residual connection initialised to zero. Unlike FFT-based approaches, the DWT simultaneously preserves both time and frequency information, enabling the network to detect both the timing and the spectral location of damage-induced anomalies. Combined with Generalized Mean (GeM) pooling and large-kernel causal depthwise convolutions, SpectralTCN is evaluated on two benchmark datasets: the Z24 Bridge benchmark and a finite element model (FEM)-derived dataset of the My Thuan cable-stayed bridge. Experiments against 10 baseline models and 4 ablation variants, evaluated via stratified 5-fold cross-validation, demonstrate the effectiveness and generalisation capability of the proposed approach: SpectralTCN attains the highest mean accuracy on both benchmarks (92.2% on Z24 and 92.1% on My Thuan) and outperforms the strongest baseline in the 5-fold cross-validation protocol. In addition, the proposed architecture operates on short, streaming acceleration windows with a purely convolutional backbone of moderate computational cost, making SpectralTCN suit",
+      "source_url": "https://doi.org/10.1371/journal.pone.0358224",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54097/ct35c812",
+      "identity_tokens": [
+        "DOI:10.54097/ct35c812"
+      ],
+      "title": "A Review of All-in-One Image Restoration Techniques",
+      "reason": "Image restoration (IR) refers to the process of eliminating image degradations—such as noise, blur, and weather effects like rain or haze—while enhancing visual quality. Traditional IR methods typically target specific types of degradation, which limits their effectiveness in real-world scenarios involving complex distortions. To address this challenge, the All-in-One Image Restoration (AiOIR) paradigm has emerged, offering a unified framework adept at resolving multiple degradation types. These innovative models integrate degradation-specific adaptive learning with cross-task knowledge sharing, significantly enhancing their flexibility and versatility. This paper systematically reviews existing AiOIR techniques and provides an in-depth analysis of their innovations in architectural evolution and feature learning paradigms. To advance this dynamic field, we present a comprehensive and profound review of AiOIR technologies. The narrative structure of this article is organized as follows: first, we elaborate on the foundational concepts of AiOIR; second, we systematically categorize and review mainstream cutting-edge designs based on key factors such as prior features and generalization capability; building upon this, we highlight the core technological advancements in the field; finally, we critically evaluate the bottlenecks and challenges encountered by current models and identify future research directions, with the aim of inspiring broader academic exploration and innovation.",
+      "source_url": "https://doi.org/10.54097/ct35c812",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.09.02.749017",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.02.749017"
+      ],
+      "title": "EvSpark: Lossless Speculative Decoding for Hybrid DNA Foundation Models",
+      "reason": "EvSpark reports a compelling speculative-decoding speedup, but only for a hybrid DNA foundation model (Evo2), not a natural-language LLM. Applicability to the repository scope is uncertain and primary full-text methods/limits remain unavailable.",
+      "source_url": "https://doi.org/10.64898/2026.09.02.749017",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
+      ]
+    }
+  ]
+}
