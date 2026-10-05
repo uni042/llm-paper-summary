@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-83-part-04-247aa70f59f8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05913",
+      "identity_tokens": [
+        "arXiv:2402.05913"
+      ],
+      "title": "Efficient Stagewise Pretraining via Progressive Subnetworks",
+      "reason": "BERT/UL2 pretrainingを速めるprogressive subnetwork trainingで、training-only efficiency。",
+      "source_url": "https://arxiv.org/abs/2402.05913",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.09542",
+      "identity_tokens": [
+        "arXiv:2312.09542"
+      ],
+      "title": "Marathon: A Race Through the Realm of Long Context with Large Language Models",
+      "reason": "long-context LLMの理解・reasoning benchmarkで、モデル効率の提案/評価ではない。",
+      "source_url": "https://arxiv.org/abs/2312.09542",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13999",
+      "identity_tokens": [
+        "arXiv:2305.13999"
+      ],
+      "title": "Towards A Unified View of Sparse Feed-Forward Network in Pretraining Large Language Model",
+      "reason": "LLM pretrainingのsparse feed-forward architecturesを統一分析するtraining/scaling study。inference efficiencyを直接改善しない。",
+      "source_url": "https://arxiv.org/abs/2305.13999",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/GAIIS69281.2026.11519206",
+      "identity_tokens": [
+        "DOI:10.1109/GAIIS69281.2026.11519206"
+      ],
+      "title": "DeepServeCB: SLO-Aware and Cost-Aware Elastic Scheduling for Serverless Multi-Tenant LLM Inference",
+      "reason": "serverless multi-tenant LLM inference schedulerで、abstractはSLO/cost-aware contextual banditとP99 latency削減を主張するが、一次本文を取得できなかった。",
+      "source_url": "https://doi.org/10.1109/GAIIS69281.2026.11519206",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21019",
+      "identity_tokens": [
+        "arXiv:2603.21019"
+      ],
+      "title": "SkillProbe: Security Auditing for Emerging Agent Skill Marketplaces via Multi-Agent Collaboration",
+      "reason": "agent skill marketplaceのsecurity auditing/robustness研究で、inference/serving efficiency対象外。",
+      "source_url": "https://arxiv.org/abs/2603.21019",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ]
+    }
+  ]
+}
