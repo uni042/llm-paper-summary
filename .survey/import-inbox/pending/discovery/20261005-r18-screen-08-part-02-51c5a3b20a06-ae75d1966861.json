@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-08-part-02-51c5a3b20a06",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34334",
+      "identity_tokens": [
+        "arXiv:2609.34334"
+      ],
+      "title": "HOCCL: Offloading Collective Communication from GPU Cores to Accelerate Distributed Training",
+      "reason": "Offloads collective communication for distributed model training; training-only systems contribution.",
+      "source_url": "https://arxiv.org/abs/2609.34334",
+      "first_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "last_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34366",
+      "identity_tokens": [
+        "arXiv:2609.34366"
+      ],
+      "title": "When Harness Beats Scale, and When Reading Beats Both",
+      "reason": "Compares harness/model scale and document-reading strategies; evaluation study, not inference-efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2609.34366",
+      "first_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "last_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34372",
+      "identity_tokens": [
+        "arXiv:2609.34372"
+      ],
+      "title": "PersMem: Internalizing Personality into Dual-Pathway Memory for LLM Agents",
+      "reason": "Internalizes personality in agent memory for behavior consistency; no inference cost/latency optimization is presented.",
+      "source_url": "https://arxiv.org/abs/2609.34372",
+      "first_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "last_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34376",
+      "identity_tokens": [
+        "arXiv:2609.34376"
+      ],
+      "title": "Before Agents Act: Assurance-Aware Semantic Scheduling for Evidence Acquisition in Distributed Systems",
+      "reason": "Schedules evidence acquisition for assurance-aware distributed systems; no LLM inference/serving efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.34376",
+      "first_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "last_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34386",
+      "identity_tokens": [
+        "arXiv:2609.34386"
+      ],
+      "title": "Look Before You Select: Rethinking Vocabulary Sparsification in On-Policy Distillation",
+      "reason": "Studies vocabulary sparsification during on-policy distillation; a training-time study.",
+      "source_url": "https://arxiv.org/abs/2609.34386",
+      "first_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "last_checked_at": "2026-10-05T04:22:14.003831+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ]
+    }
+  ]
+}
