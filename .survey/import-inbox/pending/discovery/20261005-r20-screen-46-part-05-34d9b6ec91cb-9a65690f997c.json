@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-46-part-05-34d9b6ec91cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.07144",
+      "identity_tokens": [
+        "arXiv:2607.07144"
+      ],
+      "title": "Fractal KV-Cache Archives: Lossless Symbolic Storage with In-Place Retrieval for Long-Context LLM Inference",
+      "reason": "KV-archive approach is directly adjacent, but reviewed results use GPT-2 at 1024 tokens and incur sizeable perplexity degradation (e.g. +11.2% at a selected 36x compression point), leaving production-scale usefulness unclear.",
+      "source_url": "https://arxiv.org/abs/2607.07144",
+      "first_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "last_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07494",
+      "identity_tokens": [
+        "arXiv:2607.07494"
+      ],
+      "title": "GeoFP8: Geometry-Aware FP8 Gradient Compression for Distributed LLM Training",
+      "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+      "source_url": "https://arxiv.org/abs/2607.07494",
+      "first_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "last_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07554",
+      "identity_tokens": [
+        "arXiv:2607.07554"
+      ],
+      "title": "RubriQ: Rubric-Guided Group Relative Policy Optimization for Constraint-Aware Quantum Circuit Synthesis",
+      "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+      "source_url": "https://arxiv.org/abs/2607.07554",
+      "first_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "last_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.07557",
+      "identity_tokens": [
+        "arXiv:2607.07557"
+      ],
+      "title": "PALS: Percentile-Aware Layerwise Sparsity for LLM Pruning",
+      "reason": "pruning scope fits, but the reviewed evaluation reports perplexity/accuracy rather than measured inference latency, throughput, or memory savings; concrete serving benefit remains unresolved.",
+      "source_url": "https://arxiv.org/abs/2607.07557",
+      "first_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "last_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07744",
+      "identity_tokens": [
+        "arXiv:2607.07744"
+      ],
+      "title": "PERFOPT-Bench: Evaluating Coding Agents on Software Performance Optimization",
+      "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+      "source_url": "https://arxiv.org/abs/2607.07744",
+      "first_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "last_checked_at": "2026-10-05T09:43:13.455925+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ]
+    }
+  ]
+}
