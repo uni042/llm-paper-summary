@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc21adc7d2456d75-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.19852",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.19852",
+    "identity_tokens": [
+      "arXiv:2506.19852"
+    ],
+    "reason": "一次要旨は長尺動画拡散モデルの疎注意を扱い、LLM推論システム対象ではない。",
+    "first_checked_at": "2026-10-05T12:39:25+00:00",
+    "last_checked_at": "2026-10-05T12:39:25+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+    ],
+    "title": "Radial Attention: O(n log n) Sparse Attention with Energy Decay for Long Video Generation"
+  },
+  "processed_at": "2026-10-05T12:39:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc21adc7d245",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

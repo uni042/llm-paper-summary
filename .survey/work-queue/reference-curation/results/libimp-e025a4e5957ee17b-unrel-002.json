@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e025a4e5957ee17b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.06011",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.06011",
+    "identity_tokens": [
+      "arXiv:2410.06011"
+    ],
+    "reason": "一次要旨はText-to-SQLの研究をまとめる応用サーベイであり、推論効率への言及は課題列挙にとどまり、効率化手法・評価の主題ではない。",
+    "first_checked_at": "2026-10-05T12:39:23+00:00",
+    "last_checked_at": "2026-10-05T12:39:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+    ],
+    "title": "Large Language Model Enhanced Text-to-SQL Generation: A Survey"
+  },
+  "processed_at": "2026-10-05T12:39:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e025a4e5957e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

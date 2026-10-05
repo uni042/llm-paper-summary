@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:35:29+00:00",
-  "record_count": 5002,
+  "updated_at": "2026-10-05T12:39:25+00:00",
+  "record_count": 5019,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -72767,6 +72767,255 @@
         "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
       ],
       "title": "Scalable, Detailed and Mask-Free Universal Photometric Stereo"
+    },
+    "arXiv:2401.02412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.02412",
+      "identity_tokens": [
+        "arXiv:2401.02412"
+      ],
+      "reason": "一次要旨は基盤モデル合成による能力拡張とタスク品質が主題で、推論/サービング効率の寄与を示していない。",
+      "first_checked_at": "2026-10-05T12:39:22+00:00",
+      "last_checked_at": "2026-10-05T12:39:22+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "LLM Augmented LLMs: Expanding Capabilities through Composition"
+    },
+    "arXiv:2310.13897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.13897",
+      "identity_tokens": [
+        "arXiv:2310.13897"
+      ],
+      "reason": "一次要旨はTransformerの形式言語認識能力に関する理論研究で、システム効率が対象ではない。",
+      "first_checked_at": "2026-10-05T12:39:22+00:00",
+      "last_checked_at": "2026-10-05T12:39:22+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Masked Hard-Attention Transformers Recognize Exactly the Star-Free Languages"
+    },
+    "arXiv:2502.04194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04194",
+      "identity_tokens": [
+        "arXiv:2502.04194"
+      ],
+      "reason": "一次要旨はinstruction-tuningデータ選定と微調整品質を扱い、推論時効率ではなく学習データ/訓練の研究。",
+      "first_checked_at": "2026-10-05T12:39:22+00:00",
+      "last_checked_at": "2026-10-05T12:39:22+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "The Best Instruction-Tuning Data are Those That Fit"
+    },
+    "DOI:10.3390/s25061666": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s25061666",
+      "identity_tokens": [
+        "DOI:10.3390/s25061666"
+      ],
+      "reason": "一次要旨は重要インフラ保護での生成AI/LLM応用・ベンチマーク・課題のレビューであり、推論効率化システムを提示していない。",
+      "first_checked_at": "2026-10-05T12:39:23+00:00",
+      "last_checked_at": "2026-10-05T12:39:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "Generative AI and LLMs for Critical Infrastructure Protection: Evaluation Benchmarks, Agentic AI, Challenges, and Opportunities"
+    },
+    "arXiv:2501.00365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00365",
+      "identity_tokens": [
+        "arXiv:2501.00365"
+      ],
+      "reason": "一次要旨は基盤モデルのLoRA適応技術をまとめるレビューで、推論サービングでなく主にパラメータ効率的な微調整が対象。",
+      "first_checked_at": "2026-10-05T12:39:23+00:00",
+      "last_checked_at": "2026-10-05T12:39:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "title": "Low-Rank Adaptation for Foundation Models: A Comprehensive Review"
+    },
+    "arXiv:2410.06011": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06011",
+      "identity_tokens": [
+        "arXiv:2410.06011"
+      ],
+      "reason": "一次要旨はText-to-SQLの研究をまとめる応用サーベイであり、推論効率への言及は課題列挙にとどまり、効率化手法・評価の主題ではない。",
+      "first_checked_at": "2026-10-05T12:39:23+00:00",
+      "last_checked_at": "2026-10-05T12:39:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "Large Language Model Enhanced Text-to-SQL Generation: A Survey"
+    },
+    "arXiv:2502.01563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01563",
+      "identity_tokens": [
+        "arXiv:2502.01563"
+      ],
+      "reason": "一次要旨は注意のQ/K活性値と文脈知識理解・量子化の関係を分析するもので、効率化手法の提案や推論性能評価が主題ではない。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "Massive Values in Self-Attention Modules are the Key to Contextual Knowledge Understanding"
+    },
+    "arXiv:2410.03355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03355",
+      "identity_tokens": [
+        "arXiv:2410.03355"
+      ],
+      "reason": "一次要旨は画像生成の視覚的自己回帰モデルを高速化する研究で、言語モデル推論対象ではない。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
+      ],
+      "title": "LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding"
+    },
+    "arXiv:2312.06786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.06786",
+      "identity_tokens": [
+        "arXiv:2312.06786"
+      ],
+      "reason": "一次要旨は線形専門家混合による時系列予測精度を扱い、LLM推論システムを対象としていない。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "Mixture-of-Linear-Experts for Long-term Time Series Forecasting"
+    },
+    "arXiv:2505.21318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21318",
+      "identity_tokens": [
+        "arXiv:2505.21318"
+      ],
+      "reason": "一次要旨は化学推論ベンチマークと段階的操作の評価であり、推論効率化の手法ではない。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Beyond Chemical QA: Evaluating LLM's Chemical Reasoning with Modular Chemical Operations"
+    },
+    "arXiv:2405.19237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19237",
+      "identity_tokens": [
+        "arXiv:2405.19237"
+      ],
+      "reason": "一次要旨は拡散モデルからの危険概念除去・重み剪定であり、LLMサービング効率の研究ではない。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning"
+    },
+    "arXiv:2510.22200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22200",
+      "identity_tokens": [
+        "arXiv:2510.22200"
+      ],
+      "reason": "一次要旨は13.6B拡散Transformerによる長尺動画生成で、LLM推論/サービングとは異なる生成モデル領域。",
+      "first_checked_at": "2026-10-05T12:39:24+00:00",
+      "last_checked_at": "2026-10-05T12:39:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "LongCat-Video Technical Report"
+    },
+    "arXiv:2505.16192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16192",
+      "identity_tokens": [
+        "arXiv:2505.16192"
+      ],
+      "reason": "一次要旨はVLMの領域認識と視覚的chain-of-thoughtの品質改善が主題で、推論効率の貢献を示していない。",
+      "first_checked_at": "2026-10-05T12:39:25+00:00",
+      "last_checked_at": "2026-10-05T12:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "VLM-R3: Region Recognition, Reasoning, and Refinement for Enhanced Multimodal Chain-of-Thought"
+    },
+    "arXiv:2406.05223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05223",
+      "identity_tokens": [
+        "arXiv:2406.05223"
+      ],
+      "reason": "一次要旨はLLMのパラメータ効率的な適応・忘却抑制を扱うファインチューニング手法で、推論/サービング効率の研究ではない。",
+      "first_checked_at": "2026-10-05T12:39:25+00:00",
+      "last_checked_at": "2026-10-05T12:39:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "CorDA: Context-Oriented Decomposition Adaptation of Large Language Models"
+    },
+    "DOI:10.52202/075280-0386": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/075280-0386",
+      "identity_tokens": [
+        "DOI:10.52202/075280-0386"
+      ],
+      "reason": "一次要旨のblockwise parallel方式は長文脈モデルの学習時メモリ制約への対処であり、主題は訓練効率で推論サービングではない。",
+      "first_checked_at": "2026-10-05T12:39:25+00:00",
+      "last_checked_at": "2026-10-05T12:39:25+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Blockwise Parallel Transformers for Large Context Models"
+    },
+    "arXiv:2508.17445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.17445",
+      "identity_tokens": [
+        "arXiv:2508.17445"
+      ],
+      "reason": "本文のTreePOはRL post-trainingでのtree-based on-policy rollout/advantage estimationを扱う。報告されたGPU-hour節約はsampling design/training過程の費用で、配置済みLLMの推論・serving効率評価ではない。",
+      "first_checked_at": "2026-10-05T12:39:25+00:00",
+      "last_checked_at": "2026-10-05T12:39:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
+      ],
+      "title": "TreePO: Bridging the Gap of Policy Optimization and Efficacy and Inference Efficiency with Heuristic Tree-based Modeling"
+    },
+    "arXiv:2506.19852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19852",
+      "identity_tokens": [
+        "arXiv:2506.19852"
+      ],
+      "reason": "一次要旨は長尺動画拡散モデルの疎注意を扱い、LLM推論システム対象ではない。",
+      "first_checked_at": "2026-10-05T12:39:25+00:00",
+      "last_checked_at": "2026-10-05T12:39:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "Radial Attention: O(n log n) Sparse Attention with Energy Decay for Long Video Generation"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e737785c1bb979f4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.21318",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.21318",
+    "identity_tokens": [
+      "arXiv:2505.21318"
+    ],
+    "reason": "一次要旨は化学推論ベンチマークと段階的操作の評価であり、推論効率化の手法ではない。",
+    "first_checked_at": "2026-10-05T12:39:24+00:00",
+    "last_checked_at": "2026-10-05T12:39:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "Beyond Chemical QA: Evaluating LLM's Chemical Reasoning with Modular Chemical Operations"
+  },
+  "processed_at": "2026-10-05T12:39:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e737785c1bb9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e737785c1bb979f4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.22200",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.22200",
+    "identity_tokens": [
+      "arXiv:2510.22200"
+    ],
+    "reason": "一次要旨は13.6B拡散Transformerによる長尺動画生成で、LLM推論/サービングとは異なる生成モデル領域。",
+    "first_checked_at": "2026-10-05T12:39:24+00:00",
+    "last_checked_at": "2026-10-05T12:39:24+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
+    "title": "LongCat-Video Technical Report"
+  },
+  "processed_at": "2026-10-05T12:39:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e737785c1bb9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
