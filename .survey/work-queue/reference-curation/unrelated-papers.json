@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:51:07+00:00",
-  "record_count": 3370,
+  "updated_at": "2026-10-05T06:54:07+00:00",
+  "record_count": 3385,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -49108,6 +49108,231 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "AGENTQ: Quantization-Conditioned Backdoor Attacks on LLM Agents"
+    },
+    "arXiv:2609.13582": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13582",
+      "identity_tokens": [
+        "arXiv:2609.13582"
+      ],
+      "reason": "A clinical agent benchmark can report the same verdict on identical inputs while the agent files a materially different order on each run. Such agents order tests, request medications and place referrals, yet benchmarks typically score one run per task and rarely ask whether identical inputs produce identical actions; MedAgentBench, the benchmark we use, scores a single attempt and says so. To measure this gap we introduce\"same-input rerun\", which replays a task with every input held fixed and compares the orders rather than the score, with six reliability metrics, and apply it to 1000 MedAgentBench runs across 50 tasks from its five write-capable families, two open-weight models below ten billion parameters quantised to four bits, and two temperatures. The study establishes that action-level divergence exists and can pass unrecorded by the score, not that any rate generalises. Under the 8B model at temperature 0.7, all 43 ordering groups emit a different set of orders across five identical runs, 26 emit the order on some runs and not others, and 28 record a different coded value, dose or analyte. In 22 of those 43 the benchmark reports the same failing verdict for materially different behaviour, as it does for all 10 divergent groups of the 4B model at 0.7. Orders also reach different endpoints across runs, one of which the record server rejects while the agent is told it succeeded. These findings motivate repeated-run evaluation, action-level stability reporting and execution-faithful environment feedback in clinical-agent benchmarks.",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Same Patient, Different Order: Action-Level Reliability of Clinical LLM Agents Under Repeated Runs"
+    },
+    "arXiv:2609.19167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19167",
+      "identity_tokens": [
+        "arXiv:2609.19167"
+      ],
+      "reason": "As AI systems evolve into personalized digital companions, a central capability is reasoning over a user's long-term personal history: not merely storing past events, but tracking longitudinal experiences and evolving preferences. Progress here is bottlenecked by evaluation, existing long-term memory benchmarks are largely synthetic and text-only, they overlook the visual records that anchor everyday human memory, lack the authentic and causally connected longitudinal data that real personalization demands, and consequently remain confined to shallow factual recall. We introduce ReaLMem (Real-world Long-term Multimodal Memory), the first benchmark built from authentic multi-year personal visual archives, paired with first-person subjective annotations. ReaLMem evaluates models across three cognitive tiers of increasing difficulty: factual recall, persona inference, and predictive personalization. We further propose ChronoProfiler, a temporal-weighting profiling module that computes temporal stability scores for user attributes and applies them as a salience prior, resolving conflicts among temporally inconsistent preferences and helping models compound multiple co-active preferences in complex personalized decisions. Extensive evaluation of frontier multimodal large language models (MLLMs) and memory systems on ReaLMem reveals predictive personalization as a consistent ceiling, exposes clear performance gaps and bottlenecks between MLLMs and memory systems, and shows that high-quality, temporally informed representations substantially improve personalization. Together, ReaLMem and ChronoProfiler provide an authentic testbed and a simple, effective mechanism for long-term personalization, laying a foundation for future research on lifelong AI companions.",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "To Memories and Beyond: From Remembering to Knowing You across Long-Term Multimodal Personal Archives"
+    },
+    "DOI:10.1088/1402-4896/aea64e": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1402-4896/aea64e",
+      "identity_tokens": [
+        "DOI:10.1088/1402-4896/aea64e"
+      ],
+      "reason": "This paper studies a spatial sliding-window attention mechanism for learning solution operators of partial differential equations in a data-driven setting. The mechanism is formulated as an explicit spatial-locality bias that retains only nearby interactions and avoids materializing the full spatial score matrix. We derive an output perturbation bound governed by the discarded off-window score energy and establish a separate conditional residual-stability estimate under a discrete inf–sup assumption. Experiments on the one-dimensional Burgers equation and the two-dimensional Navier–Stokes equations compare sliding-window attention with an explicit dense spatial-score control and established operator-learning baselines. Separate fixed-weight forward and gradient tests confirm that the explicit dense and standard reassociated evaluations of unmasked Galerkin attention agree to floating-point precision. A two-dimensional feasibility test further shows that the standard reassociated implementation runs at both tested resolutions. Overall, the results reveal a problem- and resolution-dependent trade-off between prediction accuracy and computational resource utilization. The sliding-window mechanism is thus best interpreted as a controllable spatial-locality mechanism rather than a uniformly more efficient replacement for standard Galerkin attention.",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Spatial sliding-window attention for learning solution operators of partial differential equations"
+    },
+    "arXiv:2609.10937": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10937",
+      "identity_tokens": [
+        "arXiv:2609.10937"
+      ],
+      "reason": "Agentic search and automated optimization of GPU kernels are powerful tools for large language model inference. Their effectiveness, however, depends not on the sophistication of the search itself, but on the clarity of the optimization problem being solved. We provide an application-first approach that drives a hierarchical code generation tool from operator specifi cation down to GPU instructions, and show that a clearly defined computational model makes the optimization problem tractable.",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "The Art of Closed-Formula Defaults: Search-Free Code Generation for Tensor Operators"
+    },
+    "arXiv:2609.13031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13031",
+      "identity_tokens": [
+        "arXiv:2609.13031"
+      ],
+      "reason": "一次要旨: With the recent rise and adoption of tabular foundation models, optimizing their inference performance becomes an emerging field for efficiency research. While the models are architecturally similar to transformer-based large language models (LLMs), the size and serving patterns differ significantly. We show that the focus should be on the attention calculation and less on weight or KV cache quantization, which are m",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Attention Quantization for Tabular Foundation Models"
+    },
+    "arXiv:2609.13058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13058",
+      "identity_tokens": [
+        "arXiv:2609.13058"
+      ],
+      "reason": "一次要旨: Reinforcement learning (RL) has become central to post-training of large language models. Recent advances in RL for Mixture-of-Experts (MoE) models have primarily focused on improving optimization stability and training efficiency, while treating the expert selection as a fixed component. Since routing determines the sparse computation paths that induce output distributions, expert selection offers an additional sour",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Expert-Space Exploration in MoE Reinforcement Learning"
+    },
+    "arXiv:2609.13060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13060",
+      "identity_tokens": [
+        "arXiv:2609.13060"
+      ],
+      "reason": "一次要旨: Diffusion Language Models (DLMs) offer promising parallel generation capabilities but lag behind autoregressive models in complex reasoning and tool-use tasks. While Reinforcement Learning (RL) has recently been applied to enhance DLMs, standard RL approaches suffer from an exploration bottleneck. To address this, we inject reasoning priors from a stronger teacher model to guide RL exploration. In this paper, we intr",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "CanvasAnneal: Curriculum Reinforcement Learning for Diffusion Language Models"
+    },
+    "arXiv:2609.13356": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13356",
+      "identity_tokens": [
+        "arXiv:2609.13356"
+      ],
+      "reason": "一次要旨: In this work, we present ZGCM-1, a fully open 7B dense foundation model trained from scratch with extreme data, system, and algorithmic efficiency. ZGCM-1 is founded on a core premise: compact models cannot passively memorize the open web, but can overcome parametric capacity limits by coupling deliberate internal thinking with active external tool use. To support this paradigm across a 256K context, we develop an en",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search"
+    },
+    "arXiv:2609.13395": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13395",
+      "identity_tokens": [
+        "arXiv:2609.13395"
+      ],
+      "reason": "一次要旨: Mixture-of-Experts (MoE) has become a widely adopted architecture for Large Language Models (LLMs), as it improves model capacity while limiting computational overhead through sparse expert activation. This property makes MoE-based LLMs particularly attractive for resource-constrained distributed environments. However, federated fine-tuning of MoE-based LLMs remains challenging under heterogeneous client data. Since",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md"
+      ],
+      "title": "Task-Aware Federated Fine-Tuning for MoE-based Large Language Models"
+    },
+    "arXiv:2609.13544": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13544",
+      "identity_tokens": [
+        "arXiv:2609.13544"
+      ],
+      "reason": "一次要旨: Deep neural networks (DNNs) are widely adopted in various fields, driving an emerging trend in developing software stacks associated with DNN training systems. For example, many codes have been ported across different frameworks or developed to leverage the computing power of GPUs or domain-specific accelerators. However, validating a kernel implementation in DNN training is time-consuming and generally requires mass",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "PEAT: Pseudo-Error Assessment for GPU Kernel Validation in DNN Training"
+    },
+    "arXiv:2609.13577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13577",
+      "identity_tokens": [
+        "arXiv:2609.13577"
+      ],
+      "reason": "一次要旨: This study compares framework suitability across three classes of enterprise generative AI applications: a documentation-based development assistant, an email and inquiry automation system, and an Oracle-to-PostgreSQL migration tool. The analysis evaluates component boundaries, orchestration, policy retrieval or reasoning, model integration, deterministic validation, persistence, observability, and operational effici",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Comparative Framework Analysis for Enterprise Generative AI Applications: Chatbot, Automation, and Oracle-to-PostgreSQL Migration"
+    },
+    "arXiv:2609.12754": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12754",
+      "identity_tokens": [
+        "arXiv:2609.12754"
+      ],
+      "reason": "一次要旨: Data-product discovery searches a full lake even when workloads revisit related products and regions. Repetition permits contracted search, but similarity cannot justify a route because one omitted asset invalidates a conjunctive product. We study when serving experience can safely reduce this work. Evolving Discovery Memory records source-labelled query--product--region evidence above a fixed regional index. SafeLak",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ],
+      "title": "Learning the Lake: Reliable Experience for Adaptive Data Product Discovery"
+    },
+    "arXiv:2609.12815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12815",
+      "identity_tokens": [
+        "arXiv:2609.12815"
+      ],
+      "reason": "一次要旨: We present BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25$^\\circ$ global resolution able to accurately quantify both aleatoric and epistemic uncertainty. To overcome the associated computational bottlenecks, we devise an orthogonal 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, enabling us to fully lev",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling"
+    },
+    "arXiv:2609.12851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12851",
+      "identity_tokens": [
+        "arXiv:2609.12851"
+      ],
+      "reason": "一次要旨: Medical benchmarks are dominated by single-turn, multiple-choice clinical cases that poorly reflect real consultations. Practically, clinicians elicit evidence interactively and patient communication varies widely. We introduce MedRoundsQA, a multi-turn diagnostic benchmark derived from 1,387 board-exam cases across 17 specialties. Each case is converted into a structured 24-slot clinical record, and then instantiate",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "MedRoundsQA: A Persona and Difficulty Aware Evaluation for Multi-Turn Medical Consultations"
+    },
+    "arXiv:2609.12855": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12855",
+      "identity_tokens": [
+        "arXiv:2609.12855"
+      ],
+      "reason": "一次要旨: Decoder-only text-to-speech (TTS) models scale efficiently but remain prone to content hallucinations that arise from weak text-speech alignment during autoregressive generation. We find that robustness is governed by a non-monotone relation to the sharpness of the alignment-bearing attention heads: a moderate degree is best, whereas over-sharpening is no better than the unaligned backbone and even less robust. Guide",
+      "first_checked_at": "2026-10-05T06:54:07+00:00",
+      "last_checked_at": "2026-10-05T06:54:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS"
     }
   }
 }

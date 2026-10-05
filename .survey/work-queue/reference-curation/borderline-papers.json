@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:51:07+00:00",
-  "record_count": 1028,
+  "updated_at": "2026-10-05T06:54:06+00:00",
+  "record_count": 1031,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15682,6 +15682,48 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)"
+    },
+    "arXiv:2609.31641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31641",
+      "identity_tokens": [
+        "arXiv:2609.31641"
+      ],
+      "reason": "一次本文まで確認したが、理論対象は汎用量子化行列積で、LLMモデル/推論測定はない。LLM PTQへの直接適用可能性と実行時rounding overheadが未確定で、現段階では適合範囲が弱い。",
+      "first_checked_at": "2026-10-05T06:54:05+00:00",
+      "last_checked_at": "2026-10-05T06:54:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Product-Aware Deterministic Rounding for Quantized Matrix Multiplication"
+    },
+    "arXiv:2609.13470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13470",
+      "identity_tokens": [
+        "arXiv:2609.13470"
+      ],
+      "reason": "non-interactive SLM orchestration is cost-motivated, but the paper is a routing-behavior probe without measured inference-cost reduction; insufficient for concrete followup. Borderline.(",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "OrchSLM: Probing the Dynamics of Small Language Model Orchestration"
+    },
+    "arXiv:2609.12896": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.12896",
+      "identity_tokens": [
+        "arXiv:2609.12896"
+      ],
+      "reason": "single-adapter storage/routing overhead is an inference-relevant motivation, yet its evidence here is mainly trained task performance and interaction counts, not serving efficiency; weak fit goes to borderline.",
+      "first_checked_at": "2026-10-05T06:54:06+00:00",
+      "last_checked_at": "2026-10-05T06:54:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md"
+      ],
+      "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents"
     }
   }
 }

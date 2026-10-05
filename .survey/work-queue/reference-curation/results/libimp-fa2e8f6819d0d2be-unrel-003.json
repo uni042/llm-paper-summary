@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fa2e8f6819d0d2be-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12851",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12851",
+    "identity_tokens": [
+      "arXiv:2609.12851"
+    ],
+    "reason": "一次要旨: Medical benchmarks are dominated by single-turn, multiple-choice clinical cases that poorly reflect real consultations. Practically, clinicians elicit evidence interactively and patient communication varies widely. We introduce MedRoundsQA, a multi-turn diagnostic benchmark derived from 1,387 board-exam cases across 17 specialties. Each case is converted into a structured 24-slot clinical record, and then instantiate",
+    "first_checked_at": "2026-10-05T06:54:06+00:00",
+    "last_checked_at": "2026-10-05T06:54:06+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "MedRoundsQA: A Persona and Difficulty Aware Evaluation for Multi-Turn Medical Consultations"
+  },
+  "processed_at": "2026-10-05T06:54:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fa2e8f6819d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
