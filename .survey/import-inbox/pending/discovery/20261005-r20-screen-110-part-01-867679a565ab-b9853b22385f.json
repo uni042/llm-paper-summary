@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-110-part-01-867679a565ab",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.16839",
+      "identity_tokens": [
+        "arXiv:2602.16839"
+      ],
+      "title": "Training Large Reasoning Models Efficiently via Progressive Thought Encoding",
+      "reason": "The principal efficiency contribution is for RL training; serving latency/throughput is not separately quantified.",
+      "source_url": "https://arxiv.org/abs/2602.16839",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15756",
+      "identity_tokens": [
+        "arXiv:2602.15756"
+      ],
+      "title": "A Note on Non-Composability of Layerwise Approximate Verification for Neural Inference",
+      "reason": "The note gives a counterexample about composability of approximate layerwise verification; it concerns inference proof correctness, not inference efficiency/compression.",
+      "source_url": "https://arxiv.org/abs/2602.15756",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14386",
+      "identity_tokens": [
+        "arXiv:2602.14386"
+      ],
+      "title": "Beyond Token-Level Policy Gradients for Complex Reasoning with Large Language Models",
+      "reason": "The work changes policy-gradient action granularity for complex reasoning during LLM training; it does not optimize inference.",
+      "source_url": "https://arxiv.org/abs/2602.14386",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14469",
+      "identity_tokens": [
+        "arXiv:2602.14469"
+      ],
+      "title": "Measuring and Mitigating Post-hoc Rationalization in Reverse Chain-of-Thought Generation",
+      "reason": "The paper studies post-hoc rationalization and train/inference mismatch in reasoning traces; it targets reliability, not efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.14469",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15136",
+      "identity_tokens": [
+        "arXiv:2602.15136"
+      ],
+      "title": "Universal priors: solving empirical Bayes via Bayesian inference and pretraining",
+      "reason": "This theoretical paper explains empirical Bayes performance from pretraining; it describes no inference/serving/compression optimization.",
+      "source_url": "https://arxiv.org/abs/2602.15136",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
