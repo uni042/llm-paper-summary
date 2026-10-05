@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2311.17043",
+      "year": 2023,
+      "published": "2023-11-28",
+      "venue": "European Conference on Computer Vision",
+      "citation_count": 679,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we present a novel method to tackle the token generation challenge in Vision Language Models (VLMs) for video and image understanding, called LLaMA-VID. Current VLMs, while proficient in tasks like image captioning and visual question answering, face computational burdens when processing long videos due to the excessive visual tokens. LLaMA-VID addresses this issue by representing each frame with two distinct tokens, namely context token and content token. The context token encodes the overall image context based on user input, whereas the content token encapsulates visual cues in each frame. This dual-token strategy significantly reduces the overload of long videos while preserving critical information. Generally, LLaMA-VID empowers existing frameworks to support hour-long videos and pushes their upper limit with an extra context token. It is proved to surpass previous methods on most of video- or image-based benchmarks. Code is available https://github.com/dvlab-research/LLaMA-VID}{https://github.com/dvlab-research/LLaMA-VID",
+      "identifiers": [
+        "SemanticScholar:486c2df78cbb770a90a55f7fa3fe19102fba2c24"
+      ],
+      "semantic_scholar_id": "486c2df78cbb770a90a55f7fa3fe19102fba2c24",
+      "canonical_id": "arXiv:2311.17043",
+      "arxiv_id": "2311.17043",
+      "doi": "10.48550/arXiv.2311.17043",
+      "authors": [
+        "Yanwei Li",
+        "Cheng-Yao Wang",
+        "Jiaya Jia"
+      ],
+      "priority": 679,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 679,
+        "citation_count": 679,
+        "total": 679,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1042,
+        "matched_prestigious_venue": null
+      },
+      "reason": "各動画frameをcontext tokenとcontent tokenの2 tokenで表現し、長動画VLMで過剰になるvisual tokenを圧縮して計算負荷を抑える。hour-long videoを扱える長文脈multimodal inferenceのtoken/compute削減を主要機構とするため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv本文/PDF情報でdual-token representation、context/content token、長動画のvisual-token overload削減、hour-long video対応を確認。推論時token削減が主要機構のためaccept。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-154987dbaa55",
+    "round": "libimp-154987dbaa556578-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-154987dbaa556578-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-154987dbaa556578-pre01.json",
+    "receipt": "sha256:57f6f93d97bfd40c5ab9dbf75e289985fac1a8d504266dd15eb807674c7c6640"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-154987dbaa55",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
