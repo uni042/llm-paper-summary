@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-09-part-03-ed1c0707af66",
+  "reference_main_sha": "839a3d00616035c532022cf1a08c604da8f0f3ef",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26978",
+      "identity_tokens": [
+        "arXiv:2606.26978"
+      ],
+      "title": "To Run or Not to Run: Analyzing the Cost-Effectiveness of Code Execution in LLM-Based Program Repair",
+      "reason": "対象はagentic program-repair workflowのtool execution policyで、model runtime/serving/inference kernel等の効率化ではない。LLM calls/tokensへ波及する間接効果に留まり、対象範囲との接続が弱い。",
+      "source_url": "https://arxiv.org/abs/2606.26978",
+      "first_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "last_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27069",
+      "identity_tokens": [
+        "arXiv:2606.27069"
+      ],
+      "title": "Towards Explainable Adjudicative Variance: Quantifying Judicial Discretion via Gated Multi-Task Learning",
+      "reason": "司法判断の差異を説明するマルチタスク学習であり、LLM推論システムの研究ではない。",
+      "source_url": "https://arxiv.org/abs/2606.27069",
+      "first_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "last_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27567",
+      "identity_tokens": [
+        "arXiv:2606.27567"
+      ],
+      "title": "On the Inseparability of Instructions and Data in Shared-Embedding Sequence Models",
+      "reason": "共有埋め込み系列モデルの指示・データ分離に関する安全性・理論分析で、推論効率やservingの研究ではない。",
+      "source_url": "https://arxiv.org/abs/2606.27567",
+      "first_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "last_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3707616",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3707616"
+      ],
+      "title": "LoRASculpt: Harmonious Low-Rank Adaptation for Multimodal Large Language Models",
+      "reason": "マルチモーダルLLMのLoRA適応方法であり、要旨で扱う効率は訓練・適応で、推論時の効率化ではない。",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3707616",
+      "first_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "last_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25361",
+      "identity_tokens": [
+        "arXiv:2606.25361"
+      ],
+      "title": "Memory Makes the Difference: Evaluating How Different Memory Roles Shape Conversational Agents",
+      "reason": "会話エージェントのメモリ役割を比較する性能評価で、推論効率またはserving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2606.25361",
+      "first_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "last_checked_at": "2026-10-05T03:33:26.602274+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
