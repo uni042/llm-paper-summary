@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-71-part-06-635aea8c170c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25911",
+      "identity_tokens": [
+        "arXiv:2509.25911"
+      ],
+      "title": "Mem-α: Learning Memory Construction via Reinforcement Learning",
+      "reason": "The work compresses agent memory, but the inspected evidence is token-budget and task quality rather than serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.25911",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3768156",
+      "identity_tokens": [
+        "DOI:10.1145/3768156"
+      ],
+      "title": "Large Language Models in Document Intelligence: A Comprehensive Survey, Recent Advances, Challenges, and Future Trends",
+      "reason": "The survey covers document-intelligence applications and trends, with no abstract evidence of inference efficiency as its contribution.",
+      "source_url": "https://doi.org/10.1145/3768156",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23858",
+      "identity_tokens": [
+        "arXiv:2506.23858"
+      ],
+      "title": "VMoBA: Mixture-of-Block Attention for Video Diffusion Models",
+      "reason": "VMoBA targets video diffusion model attention and generation, outside the LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2506.23858",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14822",
+      "identity_tokens": [
+        "arXiv:2502.14822"
+      ],
+      "title": "A Survey of Model Architectures in Information Retrieval",
+      "reason": "The survey classifies information-retrieval model architectures, not LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.14822",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05741",
+      "identity_tokens": [
+        "arXiv:2502.05741"
+      ],
+      "title": "Linear Attention Modeling for Learned Image Compression",
+      "reason": "Linear attention is applied to learned image compression, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2502.05741",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    }
+  ]
+}
