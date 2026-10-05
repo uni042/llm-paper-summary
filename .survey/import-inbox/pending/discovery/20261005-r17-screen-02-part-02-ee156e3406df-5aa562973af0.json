@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-02-part-02-ee156e3406df",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21199",
+      "identity_tokens": [
+        "arXiv:2608.21199"
+      ],
+      "title": "Tydra: An Efficient Hybrid Model for Tabular Data",
+      "reason": "一次要旨はtabular in-context foundation model Tydraの表データ予測であり、LLM推論系の効率化対象ではない。",
+      "source_url": "https://arxiv.org/abs/2608.21199",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21338",
+      "identity_tokens": [
+        "arXiv:2608.21338"
+      ],
+      "title": "Efficient Event Generation for High-Multiplicity LHC Processes: An End-to-End GPU Workflow with Normalizing Flows",
+      "reason": "一次要旨は高エネルギー物理のGPU event generation/normalizing flowsであり、language model inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2608.21338",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19567",
+      "identity_tokens": [
+        "arXiv:2608.19567"
+      ],
+      "title": "Block3D: Efficient Text-to-3D Generation via Block-Wise Diffusion",
+      "reason": "一次要旨はtext-to-3D diffusion生成の高速化で、対象モデル/servingはLLMでない。",
+      "source_url": "https://arxiv.org/abs/2608.19567",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20123",
+      "identity_tokens": [
+        "arXiv:2608.20123"
+      ],
+      "title": "Discrete Diffusion Inference-Time Control with Nested Sequential Monte Carlo",
+      "reason": "本文§4はnested SMCでtoxicity/fluencyのsteering qualityが改善する結果を示す一方、比較は品質指標中心で推論時間・追加計算budgetの優位性を示さない。 粒子数やsampling configurationに依存するcompute-intensive制御で、効率最適化が寄与の中心ではない。実servingコストは未評価。",
+      "source_url": "https://arxiv.org/abs/2608.20123",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18474",
+      "identity_tokens": [
+        "arXiv:2608.18474"
+      ],
+      "title": "OmniAlign: A Unified Multilingual Aligner for Word and Sentence Alignment",
+      "reason": "一次要旨はmultilingual word/sentence alignment用encoder modelであり、LLM inference/servingの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.18474",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
