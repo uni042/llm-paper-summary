@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:43:41+00:00",
-  "record_count": 1125,
+  "updated_at": "2026-10-05T07:45:46+00:00",
+  "record_count": 1129,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17187,6 +17187,68 @@
         "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
       ],
       "title": "A High-Performance and Low-Resource Reconfigurable Hardware Implementation for Softmax in Transformer"
+    },
+    "arXiv:2608.30226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30226",
+      "identity_tokens": [
+        "arXiv:2608.30226"
+      ],
+      "reason": "本文で確認できた主結果は圧縮後のperplexityとtask accuracyで、推論latency、throughput、serving memoryの直接測定を確認できない。効率面の効果が間接的なためborderline。",
+      "first_checked_at": "2026-10-05T07:45:44+00:00",
+      "last_checked_at": "2026-10-05T07:45:44+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "LaMoC: Loss-Aware Modular Compression for LLMs"
+    },
+    "DOI:10.24963/ijcai.2026/639": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.24963/ijcai.2026/639",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/639"
+      ],
+      "reason": "明確な推論latency候補だが、一次本文にアクセスできず手法・benchmark・latency測定条件を確認できない。",
+      "first_checked_at": "2026-10-05T07:45:45+00:00",
+      "last_checked_at": "2026-10-05T07:45:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Grammar-State Aware Beam Search for Enhancing Structural Diversity in LLM Generation"
+    },
+    "DOI:10.24963/ijcai.2026/859": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.24963/ijcai.2026/859",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/859"
+      ],
+      "reason": "Surveyの主題はagentic LLMのtest-time compute scalingであり、推論中の計算資源配分には関連するが、推論/servingコストを下げる効率化より性能向上のために計算を増やす研究の整理が中心。対象適合性が弱いためborderline。",
+      "first_checked_at": "2026-10-05T07:45:45+00:00",
+      "last_checked_at": "2026-10-05T07:45:45+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "A Review on Test-Time Scaling for Agentic Large Language Models"
+    },
+    "arXiv:2608.30427": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30427",
+      "identity_tokens": [
+        "arXiv:2608.30427"
+      ],
+      "reason": "本文の主要効率 evidence はspeculative decodeのper-cycle committed-token数であり、チェックした範囲で一般的なserving stackのwall-clock latency/throughput測定を確認できない。運用効率への結び付きがproxy依存のためborderline。",
+      "first_checked_at": "2026-10-05T07:45:46+00:00",
+      "last_checked_at": "2026-10-05T07:45:46+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ],
+      "title": "Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding"
     }
   }
 }

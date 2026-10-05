@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cb293cb7b4a6155-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30376",
+    "identity_tokens": [
+      "arXiv:2608.30376"
+    ],
+    "reason": "一次要旨はKathleen recurrent sequence modelのassociative memory/recall能力を評価し、LLM serving efficiencyやruntime optimizationを扱っていない。",
+    "first_checked_at": "2026-10-05T07:45:45+00:00",
+    "last_checked_at": "2026-10-05T07:45:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "Kathleen Remembers: Length-Invariant One-Shot Recall Without Attention"
+  },
+  "processed_at": "2026-10-05T07:45:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cb293cb7b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

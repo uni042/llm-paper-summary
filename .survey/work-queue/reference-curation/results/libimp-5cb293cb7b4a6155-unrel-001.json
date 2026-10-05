@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cb293cb7b4a6155-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/s26185794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/s26185794",
+    "identity_tokens": [
+      "DOI:10.3390/s26185794"
+    ],
+    "reason": "一次要旨は音声sensor前処理とcloud LLMを含む制御pipeline safety case studyで、LLM inference efficiencyは研究対象でない。",
+    "first_checked_at": "2026-10-05T07:45:44+00:00",
+    "last_checked_at": "2026-10-05T07:45:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Preprocessing and Capability–Risk Coupling in an Event-Synchronized Dual-Frontend Speech Sensor System"
+  },
+  "processed_at": "2026-10-05T07:45:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cb293cb7b4a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
