@@ -35,10 +35,15 @@
   "selection_reason": "Transformer系大規模言語表現をFPGAへ載せるため、block-circulant matrixによるweight圧縮と専用accelerator architectureを共同設計する。model size最大16倍削減、CPU比27.07倍性能・81倍energy efficiency、GPU比最大8.80倍energy efficiencyを報告し、Transformer推論hardware accelerationを直接扱うため対象内。",
   "semantic_scholar_id": "7c6c31412c5dad22543bb71e31620e8868d644a3",
   "source_url": "https://arxiv.org/abs/2007.08563",
-  "status": "ready",
+  "status": "superseded",
   "title": "FTRANS: energy-efficient acceleration of transformers using FPGA",
   "type": "research",
   "venue": "International Symposium on Low Power Electronics and Design",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-05T22:22:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md",
+  "represented_canonical_id": "arXiv:2007.08563",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

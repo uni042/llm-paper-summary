@@ -35,10 +35,15 @@
   "selection_reason": "複数future timestepを並列予測し、scoring modelで検証された最長prefixだけを採用するblockwise parallel decodingを提案する。self-attention modelでgreedy decoder比iteration最大2倍削減を品質低下なしで達成し、wall-clockで最大4倍高速化しており、後の投機的復号（speculative decoding）に直結する推論高速化研究のため対象内。",
   "semantic_scholar_id": "5e04881e91bff952d102d967c4ffb498ec30d4af",
   "source_url": "https://arxiv.org/abs/1811.03115",
-  "status": "ready",
+  "status": "superseded",
   "title": "Blockwise Parallel Decoding for Deep Autoregressive Models",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2018
+  "year": 2018,
+  "superseded_at": "2026-10-05T22:22:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+  "represented_canonical_id": "arXiv:1811.03115",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
