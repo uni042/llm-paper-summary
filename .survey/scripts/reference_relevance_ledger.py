@@ -154,6 +154,17 @@ def mark(
     return row
 
 
+def clear_borderline(
+    path: Path,
+    *,
+    canonical_id: str,
+    identity_tokens: list[str] | None = None,
+) -> bool:
+    """Remove a borderline exclusion after a reconsidered candidate is promoted."""
+    _canonical, tokens = _identity_set(canonical_id, identity_tokens)
+    return _remove_matching(path, classification="borderline", tokens=tokens)
+
+
 def mark_unrelated(
     path: Path,
     *,
