@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-01-part-01-a8337c921e62",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2607.27231",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2607.27231"
+      ],
+      "title": "KernelGenBench: A Multi-Source and Multi-Chip Benchmark for LLM-based Kernel Generation",
+      "reason": "It is primarily a benchmark/evaluation of code-generating agents, not a serving optimization method or deployable inference-kernel result; relevance is adjacent.",
+      "source_url": "https://doi.org/10.48550/arXiv.2607.27231",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/843",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/843"
+      ],
+      "title": "VLAs Are Confined yet Capable of Generalizing to Novel Tasks",
+      "reason": "要旨は「Vision-language-action models (VLAs) often achieve high performance on demonstrated tasks but struggle significantly when required to extrapolate, recombining skills used in different tasks in novel ways. For instance, VLAs might successfully put the cream cheese in the bowl and put the bowl on top of the cabinet, yet still」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/843",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30478",
+      "identity_tokens": [
+        "arXiv:2608.30478"
+      ],
+      "title": "Agents in the Large: Perception-Centered Architecture for Persistent Agents",
+      "reason": "要旨は「Cognitive language agents have achieved substantial progress by equipping language models with memory, tools, and decision-making procedures, enabling agents to reason and act in interactive environments. Existing frameworks largely cast these agents as systems for solving user-specified, bounded tasks. An increasingly」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.30478",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30692",
+      "identity_tokens": [
+        "arXiv:2608.30692"
+      ],
+      "title": "Can Video World Models Track Unobserved World States?",
+      "reason": "要旨は「Video world models are increasingly used as simulators, but visual fidelity alone does not show that a model maintains the hidden state of the world. We examine this difference with an action-conditioned video Shell Game, a visual analogue of $S_5$ state tracking that separates visual rendering from compositing the unobserved」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.30692",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29678",
+      "identity_tokens": [
+        "arXiv:2608.29678"
+      ],
+      "title": "Diachronic Hypergraphs for Orchestrated Multi-Agent Multimodal Memory Curation",
+      "reason": "The paper establishes bounded context construction, but the inspected evidence does not isolate inference-time token/latency savings; efficiency relevance remains uncertain.",
+      "source_url": "https://arxiv.org/abs/2608.29678",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
