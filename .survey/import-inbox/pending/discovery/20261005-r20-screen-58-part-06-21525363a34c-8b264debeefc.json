@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-58-part-06-21525363a34c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18587",
+      "identity_tokens": [
+        "arXiv:2606.18587"
+      ],
+      "title": "Dual Dimensionality for Local and Global Attention",
+      "reason": "Although targeting attention/KV representation, current implementation doubles KV memory and does not demonstrate serving-memory reduction or end-to-end inference gain.",
+      "source_url": "https://arxiv.org/abs/2606.18587",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.06219-skvq-sliding-window-key-and-value-cache-quantization-for-large-language-models.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18710",
+      "identity_tokens": [
+        "arXiv:2606.18710"
+      ],
+      "title": "Image Prompt Reconstruction Attacks on Distributed MLLM Inference Frameworks",
+      "reason": "Image-prompt reconstruction attack on distributed multimodal inference, a security attack rather than efficiency/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2606.18710",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18875",
+      "identity_tokens": [
+        "arXiv:2606.18875"
+      ],
+      "title": "Efficient Financial Language Understanding via Distillation with Synthetic Data",
+      "reason": "Compact students suggest deployment relevance, but results do not measure inference efficiency and are restricted to financial-sentiment classification.",
+      "source_url": "https://arxiv.org/abs/2606.18875",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19088",
+      "identity_tokens": [
+        "arXiv:2606.19088"
+      ],
+      "title": "ReSiReg: Towards Spatially Consistent Semantics in Language-Conditioned Robotic Tasks",
+      "reason": "Spatially consistent semantics for language-conditioned robotics, focused on task quality rather than inference systems.",
+      "source_url": "https://arxiv.org/abs/2606.19088",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19150",
+      "identity_tokens": [
+        "arXiv:2606.19150"
+      ],
+      "title": "Complementary Attention Head Pruning for Efficient Transformers",
+      "reason": "Full text evaluates attention-head pruning on BERT-Base/Large for SST-5 classification. Results concern classification accuracy/head retention, not decoder-LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.19150",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    }
+  ]
+}
