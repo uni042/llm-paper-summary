@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:27:18+00:00",
-  "record_count": 4623,
+  "updated_at": "2026-10-05T11:29:40+00:00",
+  "record_count": 4631,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -67311,6 +67311,122 @@
         "papers/training/01-training-offload-memory-systems/2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md"
       ],
       "title": "Collaborative Resource Co-Optimization for Disaggregated Deep Learning Training"
+    },
+    "DOI:10.1109/lca.2026.3711652": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lca.2026.3711652",
+      "identity_tokens": [
+        "DOI:10.1109/lca.2026.3711652"
+      ],
+      "reason": "要旨の主対象はLLM/MoEの学習・fine-tuning・RL rolloutまたはtraining通信であり、inference-time optimization/servingではない。 Primary abstract: As large language models (LLMs) grow in size, they are trained on an increasing number of GPUs, making training time heavily tied to network communication. To scale LLMs further, recent models adopt Mixture-of-Experts (MoE) architectures, which make communication even more demanding and interleave small token messages with large activation and gradient messa",
+      "first_checked_at": "2026-10-05T11:29:39+00:00",
+      "last_checked_at": "2026-10-05T11:29:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2511.15076-gpu-initiated-networking-for-nccl.md"
+      ],
+      "title": "HyGIN: Hybrid CPU/GPU-Initiated Communication for Mixture-of-Experts Training"
+    },
+    "DOI:10.1109/main71116.2026.11622389": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/main71116.2026.11622389",
+      "identity_tokens": [
+        "DOI:10.1109/main71116.2026.11622389"
+      ],
+      "reason": "Queueing/game-theoretic analysis of request rates, congestion and Pigouvian pricing in generic shared computation; no LLM inference is studied.",
+      "first_checked_at": "2026-10-05T11:29:39+00:00",
+      "last_checked_at": "2026-10-05T11:29:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md"
+      ],
+      "title": "Strategic Demand and Congestion Pricing in Shared Computation Systems"
+    },
+    "DOI:10.1109/mlmc69743.2026.11686812": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mlmc69743.2026.11686812",
+      "identity_tokens": [
+        "DOI:10.1109/mlmc69743.2026.11686812"
+      ],
+      "reason": "Underwater salient-object detection with multimodal MoE/Transformer is a vision application, not LLM inference.",
+      "first_checked_at": "2026-10-05T11:29:39+00:00",
+      "last_checked_at": "2026-10-05T11:29:39+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Learning Hybrid Mixture of Experts Network and Frequency-aware Transformer for Underwater Salient Object Detection"
+    },
+    "DOI:10.1109/pesgm58988.2026.11693533": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/pesgm58988.2026.11693533",
+      "identity_tokens": [
+        "DOI:10.1109/pesgm58988.2026.11693533"
+      ],
+      "reason": "Data-center demand response and grid frequency regulation, rather than language-model inference.",
+      "first_checked_at": "2026-10-05T11:29:39+00:00",
+      "last_checked_at": "2026-10-05T11:29:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "A Data-Driven Semi-Analytic Approach for Optimal Control of Data Centers as Grid-Interactive Loads"
+    },
+    "DOI:10.1109/qsw72780.2026.00025": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/qsw72780.2026.00025",
+      "identity_tokens": [
+        "DOI:10.1109/qsw72780.2026.00025"
+      ],
+      "reason": "GPU decoder for quantum LDPC error-correction simulations, not language-model inference.",
+      "first_checked_at": "2026-10-05T11:29:40+00:00",
+      "last_checked_at": "2026-10-05T11:29:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Pêlαγos: An Adaptive GPU Decoder for Error Correction Simulations of Quantum LDPC Codes"
+    },
+    "DOI:10.1109/spcom71105.2026.11623026": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/spcom71105.2026.11623026",
+      "identity_tokens": [
+        "DOI:10.1109/spcom71105.2026.11623026"
+      ],
+      "reason": "Whisper fine-tuning for children’s ASR evaluates adaptation quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T11:29:40+00:00",
+      "last_checked_at": "2026-10-05T11:29:40+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Adapting Whisper Models Using LoHA for Robust Recognition of Children's Speech"
+    },
+    "DOI:10.1109/sse72781.2026.00012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sse72781.2026.00012",
+      "identity_tokens": [
+        "DOI:10.1109/sse72781.2026.00012"
+      ],
+      "reason": "Accelerator backend debugging locates compile/runtime/numerical failures and reduces debugging effort, not inference cost or latency.",
+      "first_checked_at": "2026-10-05T11:29:40+00:00",
+      "last_checked_at": "2026-10-05T11:29:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "DeepView: A Generalizable Debugging Methodology for Enabling Large Language Models on Emerging AI Accelerators"
+    },
+    "DOI:10.1109/sse72781.2026.00022": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sse72781.2026.00022",
+      "identity_tokens": [
+        "DOI:10.1109/sse72781.2026.00022"
+      ],
+      "reason": "FitRAG focuses on feedback conversion, LoRA training and adapter lifecycle; efficiency claims concern adaptation/service quality, not inference.",
+      "first_checked_at": "2026-10-05T11:29:40+00:00",
+      "last_checked_at": "2026-10-05T11:29:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "FitRAG: Self-Improving LLM-Based Services through Feedback-Driven Adapter Lifecycle Management"
     }
   }
 }
