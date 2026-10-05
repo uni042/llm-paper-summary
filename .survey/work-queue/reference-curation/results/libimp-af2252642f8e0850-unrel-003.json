@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af2252642f8e0850-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05141",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05141",
+    "identity_tokens": [
+      "arXiv:2608.05141"
+    ],
+    "reason": "Primary abstract: Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora, however, are dominated by books, academic articles, and co Mid-training code data/context modeling is training-only.",
+    "first_checked_at": "2026-10-05T03:28:30+00:00",
+    "last_checked_at": "2026-10-05T03:28:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling"
+  },
+  "processed_at": "2026-10-05T03:28:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af2252642f8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

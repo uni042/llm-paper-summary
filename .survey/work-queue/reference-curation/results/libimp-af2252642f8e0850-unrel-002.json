@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af2252642f8e0850-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05088",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05088",
+    "identity_tokens": [
+      "arXiv:2608.05088"
+    ],
+    "reason": "Primary abstract: Muon has recently emerged as a promising alternative to AdamW for language model pretraining by orthogonalizing momentum matrices using Newton-Schulz iterations. Although Muon mitigates gradient anisotropy, it does not explicitly account for the curvature geom The optimizer targets model pretraining wall-clock/memory, not inference.",
+    "first_checked_at": "2026-10-05T03:28:30+00:00",
+    "last_checked_at": "2026-10-05T03:28:30+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "MALT: Lightweight Curvature-Aware Muon via Diagonal Preconditioning"
+  },
+  "processed_at": "2026-10-05T03:28:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af2252642f8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

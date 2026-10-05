@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af2252642f8e0850-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.03335",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.03335",
+    "identity_tokens": [
+      "arXiv:2608.03335"
+    ],
+    "reason": "Primary abstract: Video diffusion transformers (vDiTs) generate high quality but pay quadratic self-attention cost, making inference prohibitive at video-token scales. The challenge is input-adaptive sparsity: selecting critical Q/K/V tokens with negligible overhead and executi Video diffusion transformer generation is not LLM inference.",
+    "first_checked_at": "2026-10-05T03:28:30+00:00",
+    "last_checked_at": "2026-10-05T03:28:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+      "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+    ],
+    "title": "SPADE: An Input-Adaptive Sparse Attention Engine for Fast Video Diffusion Models Inference"
+  },
+  "processed_at": "2026-10-05T03:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af2252642f8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

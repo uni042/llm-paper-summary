@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71ba48adf83b1878-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.artmed.2026.103515",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.artmed.2026.103515",
+    "identity_tokens": [
+      "DOI:10.1016/j.artmed.2026.103515"
+    ],
+    "reason": "Primary abstract: Foundation models (FMs) pretrained with self-supervised objectives on heterogeneous ICU data have capabilities which supersede siloed, single-task predictive analytic paradigms. Here we present a framework for applying FMs in intensive care and a roadmap for s ICU foundation-model perspective has no efficiency contribution.",
+    "first_checked_at": "2026-10-05T03:28:30+00:00",
+    "last_checked_at": "2026-10-05T03:28:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "A perspective on foundation models in intensive care medicine."
+  },
+  "processed_at": "2026-10-05T03:28:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71ba48adf83b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
