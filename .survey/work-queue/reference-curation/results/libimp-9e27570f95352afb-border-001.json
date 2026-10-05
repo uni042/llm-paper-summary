@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e27570f95352afb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.10244",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.10244",
+    "identity_tokens": [
+      "arXiv:2607.10244"
+    ],
+    "reason": "S4D等とsequence length 1K–8Kでthroughput/memoryを比較し、per-token recurrenceの計算特性を論じる。SSM/general sequence modelの研究で、LLM benchmarkまたはLLM serving評価は確認できず適用は間接的。",
+    "first_checked_at": "2026-10-05T10:28:49+00:00",
+    "last_checked_at": "2026-10-05T10:28:49+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "DSSMs: State Space Models with Explicit Memory via Delay Differential Equations"
+  },
+  "processed_at": "2026-10-05T10:28:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e27570f9535",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
