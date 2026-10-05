@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b2c88a78ad6ce589-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.11375",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.11375",
+    "identity_tokens": [
+      "arXiv:2311.11375"
+    ],
+    "reason": "ASR transcription errorに対するspoken language understanding robustnessのtraining methodで、推論効率ではない。",
+    "first_checked_at": "2026-10-05T14:13:42+00:00",
+    "last_checked_at": "2026-10-05T14:13:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "ML-LMCL: Mutual Learning and Large-Margin Contrastive Learning for Improving ASR Robustness in Spoken Language Understanding"
+  },
+  "processed_at": "2026-10-05T14:13:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b2c88a78ad6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

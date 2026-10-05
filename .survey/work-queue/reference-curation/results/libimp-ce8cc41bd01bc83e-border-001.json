@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce8cc41bd01bc83e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.11919",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.11919",
+    "identity_tokens": [
+      "arXiv:2412.11919"
+    ],
+    "reason": "RetroLLM reduces input tokens versus multi-step RAG but is slower than Naive RAG in query latency; no broad serving speedup is established.",
+    "first_checked_at": "2026-10-05T14:13:43+00:00",
+    "last_checked_at": "2026-10-05T14:13:43+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+    ],
+    "title": "RetroLLM: Empowering Large Language Models to Retrieve Fine-grained Evidence within Generation"
+  },
+  "processed_at": "2026-10-05T14:13:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce8cc41bd01b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

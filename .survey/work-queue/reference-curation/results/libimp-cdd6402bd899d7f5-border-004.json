@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cdd6402bd899d7f5-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.08767",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.08767",
+    "identity_tokens": [
+      "arXiv:2502.08767"
+    ],
+    "reason": "Generated tokens decrease slightly but measured inference latency rises (Llama-3.1-8B average +17.8%); not a net efficiency gain.",
+    "first_checked_at": "2026-10-05T14:13:43+00:00",
+    "last_checked_at": "2026-10-05T14:13:43+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+    ],
+    "title": "SelfElicit: Your Language Model Secretly Knows Where is the Relevant Evidence"
+  },
+  "processed_at": "2026-10-05T14:13:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cdd6402bd899",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

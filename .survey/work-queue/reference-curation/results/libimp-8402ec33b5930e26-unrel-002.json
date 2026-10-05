@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8402ec33b5930e26-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.14052",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.14052",
+    "identity_tokens": [
+      "arXiv:2508.14052"
+    ],
+    "reason": "financial question answeringのagentic retrieval benchmarkで、retrieval task qualityを測る研究。",
+    "first_checked_at": "2026-10-05T14:13:41+00:00",
+    "last_checked_at": "2026-10-05T14:13:41+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+    ],
+    "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering"
+  },
+  "processed_at": "2026-10-05T14:13:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8402ec33b593",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

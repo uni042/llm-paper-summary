@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:10:43+00:00",
-  "record_count": 5443,
+  "updated_at": "2026-10-05T14:13:43+00:00",
+  "record_count": 5454,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -79096,6 +79096,162 @@
         "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
       ],
       "title": "Learning Pattern-Specific Experts for Time Series Forecasting Under Patch-level Distribution Shift"
+    },
+    "arXiv:2509.20021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.20021",
+      "identity_tokens": [
+        "arXiv:2509.20021"
+      ],
+      "reason": "Embodied AI/LLM/world-model領域のfeature surveyであり、LLM inference/serving efficiencyの具体的研究ではない。",
+      "first_checked_at": "2026-10-05T14:13:41+00:00",
+      "last_checked_at": "2026-10-05T14:13:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ],
+      "title": "Embodied AI: From LLMs to World Models [Feature]"
+    },
+    "arXiv:2508.14052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.14052",
+      "identity_tokens": [
+        "arXiv:2508.14052"
+      ],
+      "reason": "financial question answeringのagentic retrieval benchmarkで、retrieval task qualityを測る研究。",
+      "first_checked_at": "2026-10-05T14:13:41+00:00",
+      "last_checked_at": "2026-10-05T14:13:41+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering"
+    },
+    "arXiv:2506.17419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17419",
+      "identity_tokens": [
+        "arXiv:2506.17419"
+      ],
+      "reason": "multi-step agent decision uncertainty estimation methodであり、効率化手法ではない。",
+      "first_checked_at": "2026-10-05T14:13:41+00:00",
+      "last_checked_at": "2026-10-05T14:13:41+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md"
+      ],
+      "title": "UProp: Investigating the Uncertainty Propagation of LLMs in Multi-Step Agentic Decision-Making"
+    },
+    "arXiv:2405.20131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20131",
+      "identity_tokens": [
+        "arXiv:2405.20131"
+      ],
+      "reason": "一次要旨はlanguage modelのcounting/generalization能力とinductive biasを分析する研究で、推論実行効率の改善手法を提案しない。",
+      "first_checked_at": "2026-10-05T14:13:42+00:00",
+      "last_checked_at": "2026-10-05T14:13:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Language Models Need Inductive Biases to Count Inductively"
+    },
+    "arXiv:2403.00108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00108",
+      "identity_tokens": [
+        "arXiv:2403.00108"
+      ],
+      "reason": "LoRA配布エコシステムにおけるbackdoor攻撃/安全性が主題で、推論コストや効率化を扱わない。",
+      "first_checked_at": "2026-10-05T14:13:42+00:00",
+      "last_checked_at": "2026-10-05T14:13:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "LoRATK: LoRA Once, Backdoor Everywhere in the Share-and-Play Ecosystem"
+    },
+    "arXiv:2311.11375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.11375",
+      "identity_tokens": [
+        "arXiv:2311.11375"
+      ],
+      "reason": "ASR transcription errorに対するspoken language understanding robustnessのtraining methodで、推論効率ではない。",
+      "first_checked_at": "2026-10-05T14:13:42+00:00",
+      "last_checked_at": "2026-10-05T14:13:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "ML-LMCL: Mutual Learning and Large-Margin Contrastive Learning for Improving ASR Robustness in Spoken Language Understanding"
+    },
+    "arXiv:2602.13035": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13035",
+      "identity_tokens": [
+        "arXiv:2602.13035"
+      ],
+      "reason": "temperature policyをRLVR training trajectoryから学習する研究。decoding policy自体の最適化が主題だが、推論資源/時間削減が成果として示されない。",
+      "first_checked_at": "2026-10-05T14:13:42+00:00",
+      "last_checked_at": "2026-10-05T14:13:42+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
+      ],
+      "title": "Look Inward to Explore Outward: Learning Temperature Policy from LLM Internal States via Hierarchical RL"
+    },
+    "arXiv:2501.11211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.11211",
+      "identity_tokens": [
+        "arXiv:2501.11211"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2501.11211. Ditto accelerates iterative image diffusion, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:13:43+00:00",
+      "last_checked_at": "2026-10-05T14:13:43+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Ditto: Accelerating Diffusion Model via Temporal Value Similarity"
+    },
+    "arXiv:2406.19113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19113",
+      "identity_tokens": [
+        "arXiv:2406.19113"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.19113. MegIS accelerates metagenomic sequence search, outside LLM inference.",
+      "first_checked_at": "2026-10-05T14:13:43+00:00",
+      "last_checked_at": "2026-10-05T14:13:43+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "MegIS: High-Performance, Energy-Efficient, and Low-Cost Metagenomic Analysis with In-Storage Processing"
+    },
+    "arXiv:2406.17245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17245",
+      "identity_tokens": [
+        "arXiv:2406.17245"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.17245. MIGU targets continual-learning updates/training, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T14:13:43+00:00",
+      "last_checked_at": "2026-10-05T14:13:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md"
+      ],
+      "title": "Unlocking Continual Learning Abilities in Language Models"
+    },
+    "arXiv:2406.03496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03496",
+      "identity_tokens": [
+        "arXiv:2406.03496"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.03496. Wings addresses multimodal training and text-only forgetting, not inference efficiency.",
+      "first_checked_at": "2026-10-05T14:13:43+00:00",
+      "last_checked_at": "2026-10-05T14:13:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "title": "Wings: Learning Multimodal LLMs without Text-only Forgetting"
     }
   }
 }
