@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-70-part-06-8cea9c406175",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.13112",
+      "identity_tokens": [
+        "arXiv:2504.13112"
+      ],
+      "title": "Hadamard Product in Deep Learning: Introduction, Advances and Challenges",
+      "reason": "Hadamard productのdeep learning-wide surveyで、LLM inferenceへの個別新規寄与/serving評価が示されない。",
+      "source_url": "https://arxiv.org/abs/2504.13112",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIFS.2025.3581103",
+      "identity_tokens": [
+        "DOI:10.1109/TIFS.2025.3581103"
+      ],
+      "title": "Hardening LLM Fine-Tuning: From Differentially Private Data Selection to Trustworthy Model Quantization",
+      "reason": "差分プライバシーdata selectionとtrustworthy quantizationを扱うLLM fine-tuning/security研究で、主眼はtraining/trustworthinessでありserving efficiencyの評価ではない。",
+      "source_url": "https://doi.org/10.1109/TIFS.2025.3581103",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04960",
+      "identity_tokens": [
+        "arXiv:2410.04960"
+      ],
+      "title": "On Efficient Variants of Segment Anything Model: A Survey",
+      "reason": "Segment Anything image segmentation modelのefficient variant surveyであり、LLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/2410.04960",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06794",
+      "identity_tokens": [
+        "arXiv:2407.06794"
+      ],
+      "title": "Towards Accurate Post-Training Quantization of Vision Transformers via Error Reduction",
+      "reason": "vision transformerのpost-training quantization methodであり、LLMではなくcomputer vision modelが対象。",
+      "source_url": "https://arxiv.org/abs/2407.06794",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11633",
+      "identity_tokens": [
+        "arXiv:2406.11633"
+      ],
+      "title": "DocGenome: An Open Large-scale Scientific Document Benchmark for Training and Testing Multi-modal Large Language Models",
+      "reason": "multimodal LLMのtraining/testing dataset benchmark paperで、dataset構築が主題。",
+      "source_url": "https://arxiv.org/abs/2406.11633",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ]
+    }
+  ]
+}
