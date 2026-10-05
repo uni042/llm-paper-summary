@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ae772ee77f9bc8fa-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.26621",
+  "reason": "The paper studies output divergence across BF16/FP16/FP32 and adds a gated FP32 output-head recomputation to improve decoding agreement, at an added latency below 4% for tested batch sizes. Its objective is precision correctness, with extra inference work, rather than inference efficiency.",
+  "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+  "identity_tokens": [
+    "arXiv:2609.26621"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+    "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae772ee77f9b",
+  "source_precheck_request_id": null
+}
