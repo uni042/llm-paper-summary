@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-06-part-06-3d73cc7098f5",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38385",
+      "identity_tokens": [
+        "arXiv:2609.38385"
+      ],
+      "title": "Fine-Tuning Diffusion Language Models with Context Selection and Target Weighting",
+      "reason": "GoldiMask changes diffusion-LM supervised fine-tuning and improves training/task outcomes; the method is training-only.",
+      "source_url": "https://arxiv.org/abs/2609.38385",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38391",
+      "identity_tokens": [
+        "arXiv:2609.38391"
+      ],
+      "title": "Team MSU GenText-Forensics Challenge 2026 Technical Report",
+      "reason": "The GenText-Forensics report is a challenge solution for document forgery detection using VLMs; task pipeline efficiency is not the contribution.",
+      "source_url": "https://arxiv.org/abs/2609.38391",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38406",
+      "identity_tokens": [
+        "arXiv:2609.38406"
+      ],
+      "title": "Evaluating Whether LLMs Can Reliably Connect the DOTs?",
+      "reason": "This is a narrative-infilling benchmark study of LLM task capability, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.38406",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38426",
+      "identity_tokens": [
+        "arXiv:2609.38426"
+      ],
+      "title": "LoopVL: Recurrent Visual Intelligence",
+      "reason": "LoopVL is a recurrent VLM architecture trained for visual-language reasoning; it does not target LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38426",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38440",
+      "identity_tokens": [
+        "arXiv:2609.38440"
+      ],
+      "title": "Monotonicity-Guided Semantic Alignment for Zero-shot Multispeaker Image-to-Speech Synthesis",
+      "reason": "MGSA is an image-to-speech synthesis method using blockwise diffusion; it is outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2609.38440",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    }
+  ]
+}
