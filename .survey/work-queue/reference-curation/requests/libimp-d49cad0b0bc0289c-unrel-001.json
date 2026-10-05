@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d49cad0b0bc0289c-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.20086",
+  "reason": "Long-term multivariate time series plays a significant role in many application areas such as power systems, trading, etc. However, their accurate prediction is quite difficult for conventional forecasting methods as they often exhibit high dimensionality and complex relationships. Recent works show that transformer-based approaches are quite effective for long-term forecasting thanks to their attention mechanism. However, in the presence of complex high-dimensional inputs, they show evidence of oversmoothing, limited capacity, and opacity. To this end, this paper introduces SETTer, a transformer-based model that addresses these challenges by incorporating novel techniques for decoupled self-attention and hybrid masking. The proposed techniques enable SETTer to effectively capture the dominant short- and long-term patterns across the temporal and channel dimensions. In addition, we enrich the model layers with simple explainable structures that indicate the discriminative pattern of SETTer. We show that with a single-layer transformer architecture, SETTer can effectively model long-term dependencies in the presence of varying data complexities. Extensive experiments on real-word benchmark datasets for long-term multivariate time series forecasting demonstrate that SETTer outperforms state-of-the-art models in 88% of the scenarios.",
+  "title": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting",
+  "identity_tokens": [
+    "arXiv:2609.20086"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+    "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d49cad0b0bc0",
+  "source_precheck_request_id": null
+}
