@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-19-part-07-33e9e03f1a59",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27964",
+      "identity_tokens": [
+        "arXiv:2608.27964"
+      ],
+      "title": "AERA: Adaptive Evidence Residual Allocation for Efficient Test-Time Reasoning",
+      "reason": "adaptive computeは対象に近いが、token countのみから運用効率を推定できず、本文も実効latency savingsを未証明としているためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.27964",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27978",
+      "identity_tokens": [
+        "arXiv:2608.27978"
+      ],
+      "title": "PhyMamba: Physics-Modulated Mamba for Robust Battery Health Prognostics",
+      "reason": "battery prognostics向けMambaでLLMと無関係。",
+      "source_url": "https://arxiv.org/abs/2608.27978",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28009",
+      "identity_tokens": [
+        "arXiv:2608.28009"
+      ],
+      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection",
+      "reason": "AI生成文検出model/benchmarkで、LLM inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2608.28009",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28078",
+      "identity_tokens": [
+        "arXiv:2608.28078"
+      ],
+      "title": "Task-State Adaptation with Prototype Memory for Multi-Task Dense Prediction",
+      "reason": "vision dense predictionのmulti-task adaptationでLLMとは別領域。",
+      "source_url": "https://arxiv.org/abs/2608.28078",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28158",
+      "identity_tokens": [
+        "arXiv:2608.28158"
+      ],
+      "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees",
+      "reason": "agentic RLのrollout-tree training高速化で学習専用。",
+      "source_url": "https://arxiv.org/abs/2608.28158",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    }
+  ]
+}
