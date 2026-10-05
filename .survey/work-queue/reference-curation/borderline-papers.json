@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:48:10+00:00",
-  "record_count": 464,
+  "updated_at": "2026-10-05T00:50:54+00:00",
+  "record_count": 469,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6661,6 +6661,76 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
       ],
       "title": "Better never than late: meeting deadlines in datacenter networks"
+    },
+    "DOI:10.1016/j.jml.2019.104047": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jml.2019.104047",
+      "identity_tokens": [
+        "DOI:10.1016/j.jml.2019.104047"
+      ],
+      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
+      "first_checked_at": "2026-10-05T00:50:53+00:00",
+      "last_checked_at": "2026-10-05T00:50:53+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md"
+      ],
+      "title": "How many words do we read per minute? A review and meta-analysis of reading rate"
+    },
+    "arXiv:2301.12900": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.12900",
+      "identity_tokens": [
+        "arXiv:2301.12900"
+      ],
+      "reason": "一般Transformerへ適用可能なpruning frameworkだが、実測scopeは画像/graph/分類およびLSTMでLLM推論への適用根拠がない。target model実験が新規に必要なため本文だけからResearch適合を明確化できずborderline。",
+      "first_checked_at": "2026-10-05T00:50:53+00:00",
+      "last_checked_at": "2026-10-05T00:50:53+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
+      ],
+      "title": "DepGraph: Towards Any Structural Pruning"
+    },
+    "DOI:10.1145/77726.255132": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/77726.255132",
+      "identity_tokens": [
+        "DOI:10.1145/77726.255132"
+      ],
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "first_checked_at": "2026-10-05T00:50:53+00:00",
+      "last_checked_at": "2026-10-05T00:50:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
+      ],
+      "title": "The Tera computer system"
+    },
+    "DOI:10.1109/12.48862": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/12.48862",
+      "identity_tokens": [
+        "DOI:10.1109/12.48862"
+      ],
+      "reason": "IEEE Xplore requires a JavaScript robot check for this DOI page, preventing retrieval of its primary abstract.",
+      "first_checked_at": "2026-10-05T00:50:54+00:00",
+      "last_checked_at": "2026-10-05T00:50:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
+      ],
+      "title": "Executing a Program on the MIT Tagged-Token Dataflow Architecture"
+    },
+    "DOI:10.1109/jproc.2020.2976475": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jproc.2020.2976475",
+      "identity_tokens": [
+        "DOI:10.1109/jproc.2020.2976475"
+      ],
+      "reason": "Official IEEE DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:50:54+00:00",
+      "last_checked_at": "2026-10-05T00:50:54+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md"
+      ],
+      "title": "Model Compression and Hardware Acceleration for Neural Networks: A Comprehensive Survey"
     }
   }
 }
