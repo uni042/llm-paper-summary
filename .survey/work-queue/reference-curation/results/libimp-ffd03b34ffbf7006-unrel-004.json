@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ffd03b34ffbf7006-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.30692",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.30692",
+    "identity_tokens": [
+      "arXiv:2608.30692"
+    ],
+    "reason": "要旨は「Video world models are increasingly used as simulators, but visual fidelity alone does not show that a model maintains the hidden state of the world. We examine this difference with an action-conditioned video Shell Game, a visual analogue of $S_5$ state tracking that separates visual rendering from compositing the unobserved」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+    "first_checked_at": "2026-10-05T03:12:17+00:00",
+    "last_checked_at": "2026-10-05T03:12:17+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Can Video World Models Track Unobserved World States?"
+  },
+  "processed_at": "2026-10-05T03:12:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ffd03b34ffbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

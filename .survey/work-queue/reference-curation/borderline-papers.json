@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:10:26+00:00",
-  "record_count": 733,
+  "updated_at": "2026-10-05T03:12:17+00:00",
+  "record_count": 738,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10814,6 +10814,81 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
       ],
       "title": "Latency-Constrained Dependency-Aware Heterogeneous Multimodal LLM Agents Placement at Edge"
+    },
+    "DOI:10.1109/tmc.2026.3697118": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2026.3697118",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3697118"
+      ],
+      "reason": "Primary IEEE abstract describes layer-granularity idle-layer unloading on GPUs and up to 39.6% performance gain; full article inaccessible. No body to inspect workload/baselines/39.6% metric.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Efficient Layer-Granularity Unloading for LLMs in Edge Computing"
+    },
+    "DOI:10.1109/tvt.2026.3682257": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tvt.2026.3682257",
+      "identity_tokens": [
+        "DOI:10.1109/tvt.2026.3682257"
+      ],
+      "reason": "Primary abstract reports decentralized LLM inference scheduling with lower latency; author manuscript fetch returned 502. No full text; model/workload assumptions and comparisons unverified.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Decentralized LLM Deployment in Mobile Edge Computing Networks"
+    },
+    "arXiv:2608.28150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28150",
+      "identity_tokens": [
+        "arXiv:2608.28150"
+      ],
+      "reason": "This is a complexity characterization, not an inference-time approximation/serving optimization implementation; direct efficiency benefit is not established.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Intrinsic Interaction Geometry Controls the Low-Rank Complexity of Softmax Attention"
+    },
+    "DOI:10.48550/arxiv.2607.27231": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2607.27231",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.27231",
+        "arXiv:2607.27231"
+      ],
+      "reason": "It is primarily a benchmark/evaluation of code-generating agents, not a serving optimization method or deployable inference-kernel result; relevance is adjacent.",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+      ],
+      "title": "KernelGenBench: A Multi-Source and Multi-Chip Benchmark for LLM-based Kernel Generation"
+    },
+    "arXiv:2608.29678": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29678",
+      "identity_tokens": [
+        "arXiv:2608.29678"
+      ],
+      "reason": "The paper establishes bounded context construction, but the inspected evidence does not isolate inference-time token/latency savings; efficiency relevance remains uncertain.",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Diachronic Hypergraphs for Orchestrated Multi-Agent Multimodal Memory Curation"
     }
   }
 }

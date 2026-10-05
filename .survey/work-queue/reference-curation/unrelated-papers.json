@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:10:26+00:00",
-  "record_count": 2160,
+  "updated_at": "2026-10-05T03:12:17+00:00",
+  "record_count": 2175,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -31223,6 +31223,223 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "FSMT: Frequency-Spatial Mixture-of-Experts Hyperspectral Object Tracking"
+    },
+    "DOI:10.1109/tdsc.2026.3712350": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tdsc.2026.3712350",
+      "identity_tokens": [
+        "DOI:10.1109/tdsc.2026.3712350"
+      ],
+      "reason": "Primary abstract concerns adversarial jailbreak generation, not efficiency.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "A Multi-Stage Adversarial Framework for Compact and Effective Jailbreaking of Large Language Models"
+    },
+    "DOI:10.1109/tia.2026.3689464": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tia.2026.3689464",
+      "identity_tokens": [
+        "DOI:10.1109/tia.2026.3689464"
+      ],
+      "reason": "Primary IEEE abstract concerns data-center grid flexibility/workload shedding, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
+      ],
+      "title": "Flexibility-Enhanced Operation of Internet Data Centers With Operator-User Collaboration: A Bilevel Stackelberg Game Approach"
+    },
+    "DOI:10.1109/tkde.2026.3698793": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2026.3698793",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2026.3698793"
+      ],
+      "reason": "Primary abstract concerns database index advising, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "GenIA: Generative Index Advisor for Dynamic Workloads and Data"
+    },
+    "arXiv:2608.27922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27922",
+      "identity_tokens": [
+        "arXiv:2608.27922"
+      ],
+      "reason": "要旨は「Autoregressive video diffusion models enable streaming generation through sliding-window attention, but each generated block is conditioned on previously generated content, causing appearance and motion errors to propagate recursively over time. Historical key-value (KV) memory preserves earlier subject and scene states and」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md"
+      ],
+      "title": "DensityKV: Density-Guided KV Cache Compression for Long Video Generation"
+    },
+    "arXiv:2608.28205": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28205",
+      "identity_tokens": [
+        "arXiv:2608.28205"
+      ],
+      "reason": "要旨は「Pruning visual foundation models has attracted considerable attention. However, existing methods focus on rigid point-to-point token alignment on a single dataset for pruning, suffering from two limitations: i) robustness degradation, and ii) task-specificity deficiency. To address these limitations, we propose a task-specific」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Cut-ViT: Task-Specific Model Pruning via Gram Anchoring Subspace Consistency"
+    },
+    "arXiv:2608.28232": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28232",
+      "identity_tokens": [
+        "arXiv:2608.28232"
+      ],
+      "reason": "要旨は「Scientists increasingly want to drive research software by natural-language request, but fluent output helps only if it becomes a correct machine-readable artifact. We introduce HEPToolBench, a benchmark of 28 collider-simulation tasks scored by deterministic, task-specific scorers, plus a three-task structured-debugging」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "HEPToolBench 1.2: Testing How Reliably Language Models Can Drive Particle Physics Software"
+    },
+    "arXiv:2608.26822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26822",
+      "identity_tokens": [
+        "arXiv:2608.26822"
+      ],
+      "reason": "要旨は「The National Oceanic and Atmospheric Administration (NOAA) employs independent prediction systems for distinct forecast products. While some separation is practical, we argue that combining short- and medium-range weather into a single prediction system would provide the public with a useful distillation of global weather and」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Bridging short- and medium-range weather forecasting with machine learning"
+    },
+    "arXiv:2608.29831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29831",
+      "identity_tokens": [
+        "arXiv:2608.29831"
+      ],
+      "reason": "要旨は「Localizing issue-relevant code regions is a critical step in automated software engineering. However, due to their reliance on sparse trajectory-level signals, existing methods cannot identify which per-turn actions are effective and often discover correct code regions during exploration but fail to commit them. To address」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents"
+    },
+    "arXiv:2608.29208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29208",
+      "identity_tokens": [
+        "arXiv:2608.29208"
+      ],
+      "reason": "要旨は「Vision-Language-Action (VLA) models, built upon Vision-Language Models (VLMs), have significantly enhanced robotic capabilities by leveraging internet-scale knowledge and multimodal reasoning. However, the intensive computational overhead of VLAs constrains on-device deployment, hindering real-time responses to environmental」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models"
+    },
+    "arXiv:2608.29296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29296",
+      "identity_tokens": [
+        "arXiv:2608.29296"
+      ],
+      "reason": "要旨は「Larger batches reduce the variance of stochastic gradients per update and are therefore often expected to accelerate training. Yet whether this statistical benefit translates into lower wall-clock time-to-target remains unclear, because each update consumes more samples and may take longer to execute. We study this tradeoff in」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:16+00:00",
+      "last_checked_at": "2026-10-05T03:12:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "When Do Larger Batches Help Scale LLM Reinforcement Learning?"
+    },
+    "arXiv:2608.29362": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29362",
+      "identity_tokens": [
+        "arXiv:2608.29362"
+      ],
+      "reason": "要旨は「Sparse computations are fundamental to scientific computing, graph analytics, and machine learning, yet their performance is highly sensitive to the diverse sparsity and patterns. This is because cache reuse, memory coalescing, and load balancing depend critically on the sparsity patterns. This work gives the first known」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Spectral Analysis for Sparse Matrix Computation: Insights and Potential"
+    },
+    "arXiv:2608.27808": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27808",
+      "identity_tokens": [
+        "arXiv:2608.27808"
+      ],
+      "reason": "要旨は「Self-report is the cheapest oversight channel a deployer has, and on capable computer-use agents (CUAs) it fails precisely where oversight matters. On 361 OSWorld tasks our pipeline, a read-only feasibility gate, a planner, and a GUI executor, reaches a mean task score of 82.9, above the 72.4 human reference, yet 64 of its 71」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "CURA: Certified Runtime Alarms for Computer-Use Agents"
+    },
+    "DOI:10.24963/ijcai.2026/843": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2026/843",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/843"
+      ],
+      "reason": "要旨は「Vision-language-action models (VLAs) often achieve high performance on demonstrated tasks but struggle significantly when required to extrapolate, recombining skills used in different tasks in novel ways. For instance, VLAs might successfully put the cream cheese in the bowl and put the bowl on top of the cabinet, yet still」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "VLAs Are Confined yet Capable of Generalizing to Novel Tasks"
+    },
+    "arXiv:2608.30478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30478",
+      "identity_tokens": [
+        "arXiv:2608.30478"
+      ],
+      "reason": "要旨は「Cognitive language agents have achieved substantial progress by equipping language models with memory, tools, and decision-making procedures, enabling agents to reason and act in interactive environments. Existing frameworks largely cast these agents as systems for solving user-specified, bounded tasks. An increasingly」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Agents in the Large: Perception-Centered Architecture for Persistent Agents"
+    },
+    "arXiv:2608.30692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30692",
+      "identity_tokens": [
+        "arXiv:2608.30692"
+      ],
+      "reason": "要旨は「Video world models are increasingly used as simulators, but visual fidelity alone does not show that a model maintains the hidden state of the world. We examine this difference with an action-conditioned video Shell Game, a visual analogue of $S_5$ state tracking that separates visual rendering from compositing the unobserved」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:12:17+00:00",
+      "last_checked_at": "2026-10-05T03:12:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Can Video World Models Track Unobserved World States?"
     }
   }
 }
