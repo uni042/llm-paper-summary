@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-04-part-04-d0f195462420",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36587",
+      "identity_tokens": [
+        "arXiv:2609.36587"
+      ],
+      "title": "Learned Reporting Preferences in RLVR Can Conflict with the Current Request",
+      "reason": "Studies reporting-preference behavior induced by RLVR training; training/evaluation study, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36587",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36601",
+      "identity_tokens": [
+        "arXiv:2609.36601"
+      ],
+      "title": "SAKI: Maximal-Coupling-Routed Teacher Supervision for On-Policy Distillation",
+      "reason": "On-policy distillation supervision allocation and rollout construction; training-only method.",
+      "source_url": "https://arxiv.org/abs/2609.36601",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36608",
+      "identity_tokens": [
+        "arXiv:2609.36608"
+      ],
+      "title": "Act First, Reason Later: Accelerating On-Policy Distillation for Multi-Turn Agents via Reference-Conditioned Inverse Dynamics",
+      "reason": "Act-first rollouts accelerate on-policy distillation data collection; training throughput, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36608",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36636",
+      "identity_tokens": [
+        "arXiv:2609.36636"
+      ],
+      "title": "What Makes Recurrence Effective in Looped Language Models?",
+      "reason": "The operational-efficiency connection is indirect; the paper is mainly an empirical analysis of reasoning quality under extra recurrent compute.",
+      "source_url": "https://arxiv.org/abs/2609.36636",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36687",
+      "identity_tokens": [
+        "arXiv:2609.36687"
+      ],
+      "title": "MyoCodec: A Streaming Neural Codec for Electromyography",
+      "reason": "Streaming neural codec for electromyography biosignals; not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.36687",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
