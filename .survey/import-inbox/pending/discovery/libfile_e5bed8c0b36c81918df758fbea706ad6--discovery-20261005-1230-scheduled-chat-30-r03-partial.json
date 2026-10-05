@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1230-scheduled-chat-30/r03",
+  "reference_main_sha": "c3e45cccb9e41efcae0eb7f9739011783acb2408",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.12592",
+      "identity_tokens": [
+        "arXiv:2005.12592"
+      ],
+      "title": "GECToR -- Grammatical Error Correction: Tag, Not Rewrite",
+      "reason": "Transformer encoderによるtoken taggingで文法誤り訂正を高速化しseq2seq比最大10倍の推論速度を示すが、最終適用先は特定NLPタスクのGECであり、LLM推論runtime/servingの汎用最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2005.12592",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でGEC sequence tagger、CoNLL/BEA精度、seq2seq GEC比最大10x inference speedが主題と確認。特定タスクモデルでLLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T13:01:00+09:00",
+      "last_checked_at": "2026-10-05T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.05131",
+      "identity_tokens": [
+        "arXiv:2205.05131"
+      ],
+      "title": "UL2: Unifying Language Learning Paradigms",
+      "reason": "Mixture-of-Denoisersで複数pre-training objectiveを統合し20BモデルのNLP・in-context learning能力を改善するpre-training/model研究。推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2205.05131",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でunified pre-training objective、20B scaling、50 NLP tasks/MMLU等の能力評価が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T13:01:00+09:00",
+      "last_checked_at": "2026-10-05T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16040",
+      "identity_tokens": [
+        "arXiv:2409.16040"
+      ],
+      "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts",
+      "reason": "sparse MoEでtime-series forecasting foundation modelのactivated computeを抑え、2.4Bまでscaleする研究。inference cost削減は扱うが最終適用先は時系列予測で、言語モデル/LLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/2409.16040",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でTime-300B、decoder-only autoregressive time-series forecasting、sparse MoEによるforecasting compute削減が主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T13:01:00+09:00",
+      "last_checked_at": "2026-10-05T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07339",
+      "identity_tokens": [
+        "arXiv:2401.07339"
+      ],
+      "title": "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+      "reason": "外部toolを統合したLLM agentでrepo-level code generationの正確性を改善するagent capability研究。CodeAgentBenchで18.1〜250%の性能改善を評価するが、agentic inference runtime/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2401.07339",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で5 programming tools、4 agent strategies、CodeAgentBench/HumanEvalのcode-generation能力評価が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T13:01:00+09:00",
+      "last_checked_at": "2026-10-05T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/widm.1507",
+      "identity_tokens": [
+        "DOI:10.1002/widm.1507",
+        "arXiv:2301.11047"
+      ],
+      "title": "A Systematic Review of Green AI",
+      "reason": "98研究を対象にAIのcarbon footprint、hyperparameter tuning、benchmarking等を整理するGreen AI systematic review。多くがtraining・画像・algorithm-agnosticで、LLM推論runtime/serving効率化に特化したsurveyではない。",
+      "source_url": "https://arxiv.org/abs/2301.11047",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で98 primary studiesのGreen AI review、training中心・image data中心・energy sustainabilityが主題と確認。LLM推論system固有surveyではないため本文未読。",
+      "first_checked_at": "2026-10-05T13:01:00+09:00",
+      "last_checked_at": "2026-10-05T13:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    }
+  ]
+}
