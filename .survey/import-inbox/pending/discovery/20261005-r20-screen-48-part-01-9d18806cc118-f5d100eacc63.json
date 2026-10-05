@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-48-part-01-9d18806cc118",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/10910344.2026.2680402",
+      "identity_tokens": [
+        "DOI:10.1080/10910344.2026.2680402"
+      ],
+      "title": "An integrated real-time tool wear monitoring and prediction framework with autonomous in-situ machine vision-based labeling",
+      "reason": "一次要旨はmillingの工具摩耗を画像・信号で監視しKAN/Reformerで予測する製造工程研究で、LLM推論を扱わない。",
+      "source_url": "https://doi.org/10.1080/10910344.2026.2680402",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02845",
+      "identity_tokens": [
+        "arXiv:2607.02845"
+      ],
+      "title": "Differential Amplifier-Inspired AmpAttention for Multi-View Robotic Manipulation",
+      "reason": "一次要旨はmulti-view robotic manipulationの視覚attention設計とRLBench success/training-timeを扱い、LLM inference対象外。",
+      "source_url": "https://arxiv.org/abs/2607.02845",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02945",
+      "identity_tokens": [
+        "arXiv:2607.02945"
+      ],
+      "title": "Optimus: A Generic Operator-Level PyTorch Model Transformation Framework",
+      "reason": "一次要旨の評価対象は推薦・ranking用途のindustrial-scale modelsで、LLM推論やservingではない。",
+      "source_url": "https://arxiv.org/abs/2607.02945",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02990",
+      "identity_tokens": [
+        "arXiv:2607.02990"
+      ],
+      "title": "MABLE: Masked Autoencoding with Bi-Lipschitz Decoding for Embeddings and Graph Metric Learning",
+      "reason": "一次要旨はgeospatial mineral-exploration向けgraph embeddings/representation learningで、LLM推論効率でない。",
+      "source_url": "https://arxiv.org/abs/2607.02990",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03065",
+      "identity_tokens": [
+        "arXiv:2607.03065"
+      ],
+      "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
+      "reason": "一次要旨の主題はRL post-training updateのspectral editingとmodel merging。training/post-trainingモデル品質であり、inference-time performance/serving評価ではない。",
+      "source_url": "https://arxiv.org/abs/2607.03065",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    }
+  ]
+}
