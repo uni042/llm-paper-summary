@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-40-part-01-f08880fa5586",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.24692",
+      "identity_tokens": [
+        "arXiv:2607.24692"
+      ],
+      "title": "Denial of Deadline: Network-Driven Accuracy Collapse in Distributed Inference Pipelines",
+      "reason": "ネットワーク依存inference servingへの隣接性はあるがLLM推論への直接性が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2607.24692",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24960",
+      "identity_tokens": [
+        "arXiv:2607.24960"
+      ],
+      "title": "Fast, accurate, and differentiable: a neural-network surrogate for NRSur7dq4 precessing binary black hole waveforms",
+      "reason": "一次要旨は重力波形surrogate modelingとwaveform mismatch評価で、LLM inference/servingではない。",
+      "source_url": "https://arxiv.org/abs/2607.24960",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25068",
+      "identity_tokens": [
+        "arXiv:2607.25068"
+      ],
+      "title": "How Often Should a Recommender Call an LLM? Value-Weighted Routing, Monitoring, and Seasonal Robustness",
+      "reason": "一次本文取得不能のため、abstract-onlyで推測せずborderline。",
+      "source_url": "https://arxiv.org/abs/2607.25068",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-026-10742-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10742-0"
+      ],
+      "title": "Transformer Models and their Cross-Domain Applications: A Systematic Review",
+      "reason": "packetにprimary abstractがなく、DOI一次ページを開いたがInternal Errorで内容を取得できなかった。",
+      "source_url": "https://doi.org/10.1007/s11831-026-10742-0",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/vehicles8080172",
+      "identity_tokens": [
+        "DOI:10.3390/vehicles8080172"
+      ],
+      "title": "A Hybrid Physics-Augmented Neural Network for Dynamic System Modeling with Partially Known Dynamics",
+      "reason": "一次要旨は部分既知力学を扱うphysics-augmented dynamic-system modelingであり、LLM inference効率と無関係。",
+      "source_url": "https://doi.org/10.3390/vehicles8080172",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    }
+  ]
+}
