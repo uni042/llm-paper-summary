@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-47-part-03-dca02cbe420d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04774",
+      "identity_tokens": [
+        "arXiv:2607.04774"
+      ],
+      "title": "MARLIN: De Novo Molecular Structure Elucidation from Tandem Mass Spectra without a Ground-Truth Formula",
+      "reason": "MARLIN is a molecular-structure generation/application model; the abstract does not present inference efficiency or serving evidence.",
+      "source_url": "https://arxiv.org/abs/2607.04774",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05095",
+      "identity_tokens": [
+        "arXiv:2607.05095"
+      ],
+      "title": "FAST: A Holistic Framework for Optimizing Memory-I/O, Computation, and Sampling in Temporal GNN Training",
+      "reason": "FAST targets temporal graph neural network training and its sampling/I/O/computation pipeline, outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2607.05095",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05319",
+      "identity_tokens": [
+        "arXiv:2607.05319"
+      ],
+      "title": "Steering Optimisation Trajectories in Diffusion Representation Learning",
+      "reason": "The work studies optimization trajectories in diffusion representation learning, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2607.05319",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05583",
+      "identity_tokens": [
+        "arXiv:2607.05583"
+      ],
+      "title": "ResonatorLM: Causal Resonant Field Mixing for Efficient Long-Context Language Modeling",
+      "reason": "Despite a potentially relevant long-context architecture, the primary evidence is a small custom-scale setup and does not establish competitive inference quality or efficiency at practical language-model sizes; resolving that gap requires a substantial scale-up study.",
+      "source_url": "https://arxiv.org/abs/2607.05583",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09759",
+      "identity_tokens": [
+        "arXiv:2607.09759"
+      ],
+      "title": "ReflectWorld-MM: An Entity-Oriented Multimodal Memory System for Open-Ended Video Streams",
+      "reason": "The bounded-memory design is adjacent to efficient multimodal inference, but its primary evaluation does not demonstrate an inference/serving efficiency outcome; fit remains weak until compute/token/latency costs are measured.",
+      "source_url": "https://arxiv.org/abs/2607.09759",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
