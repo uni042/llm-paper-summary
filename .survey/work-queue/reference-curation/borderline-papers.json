@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:07:41+00:00",
-  "record_count": 1804,
+  "updated_at": "2026-10-05T14:10:42+00:00",
+  "record_count": 1811,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27877,6 +27877,104 @@
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
       "title": "Vision-centric Token Compression in Large Language Model"
+    },
+    "arXiv:2501.01709": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.01709",
+      "identity_tokens": [
+        "arXiv:2501.01709"
+      ],
+      "reason": "This single-encoder distillation is for VLM visual encoders; no direct LLM-service inference latency/throughput is reported in checked body.",
+      "first_checked_at": "2026-10-05T14:10:39+00:00",
+      "last_checked_at": "2026-10-05T14:10:39+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ],
+      "title": "MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders"
+    },
+    "DOI:10.1016/j.neucom.2024.127468": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2024.127468",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2024.127468"
+      ],
+      "reason": "Primary abstract is available, but full text could not be retrieved; review-level synthesis cannot establish paper-specific method/evaluation.",
+      "first_checked_at": "2026-10-05T14:10:40+00:00",
+      "last_checked_at": "2026-10-05T14:10:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Sparsity in transformers: A systematic literature review"
+    },
+    "DOI:10.1145/3611643.3616302": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3611643.3616302",
+      "identity_tokens": [
+        "DOI:10.1145/3611643.3616302"
+      ],
+      "reason": "Study concerns code-generation models and laptop/mid-size-server deployment; transfer to general LLM serving is uncertain.",
+      "first_checked_at": "2026-10-05T14:10:40+00:00",
+      "last_checked_at": "2026-10-05T14:10:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Towards Greener Yet Powerful Code Generation via Quantization: An Empirical Study"
+    },
+    "arXiv:2406.00800": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.00800",
+      "identity_tokens": [
+        "arXiv:2406.00800"
+      ],
+      "reason": "MagR is PTQ preprocessing; it reports perplexity/quantization quality but no direct latency, throughput, or energy gain attributable to MagR itself.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md"
+      ],
+      "title": "MagR: Weight Magnitude Reduction for Enhancing Post-Training Quantization"
+    },
+    "arXiv:2512.03024": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.03024",
+      "identity_tokens": [
+        "arXiv:2512.03024"
+      ],
+      "reason": "This is an inference-energy measurement benchmark rather than an optimization method.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference"
+    },
+    "arXiv:2512.00891": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.00891",
+      "identity_tokens": [
+        "arXiv:2512.00891"
+      ],
+      "reason": "Gains target streaming VideoLLMs and video-token/ViT processing; text LLM inference applicability is not shown.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md"
+      ],
+      "title": "Accelerating Streaming Video Large Language Models via Hierarchical Token Compression"
+    },
+    "arXiv:2510.14560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14560",
+      "identity_tokens": [
+        "arXiv:2510.14560"
+      ],
+      "reason": "Compression is tightly scoped to egocentric streaming VideoLLM interaction; general LLM inference transfer is uncertain.",
+      "first_checked_at": "2026-10-05T14:10:42+00:00",
+      "last_checked_at": "2026-10-05T14:10:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "Eyes Wide Open: Ego Proactive Video-LLM for Streaming Video"
     }
   }
 }

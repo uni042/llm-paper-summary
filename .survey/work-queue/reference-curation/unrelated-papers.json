@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:07:41+00:00",
-  "record_count": 5430,
+  "updated_at": "2026-10-05T14:10:43+00:00",
+  "record_count": 5443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -78912,6 +78912,190 @@
         "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
       ],
       "title": "A Quantum Circuit-Based Compression Perspective for Parameter-Efficient Learning"
+    },
+    "arXiv:2509.23653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23653",
+      "identity_tokens": [
+        "arXiv:2509.23653"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.23653. Self-reflective remasking focuses on diffusion language-model quality, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T14:10:39+00:00",
+      "last_checked_at": "2026-10-05T14:10:39+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ],
+      "title": "Don't Settle Too Early: Self-Reflective Remasking for Diffusion Language Models"
+    },
+    "DOI:10.3390/info16090723": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info16090723",
+      "identity_tokens": [
+        "DOI:10.3390/info16090723"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.3390/info16090723. Machine-translation survey, not an LLM inference optimization.",
+      "first_checked_at": "2026-10-05T14:10:39+00:00",
+      "last_checked_at": "2026-10-05T14:10:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+      ],
+      "title": "Machine Translation in the Era of Large Language Models:A Survey of Historical and Emerging Problems"
+    },
+    "arXiv:2501.07861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07861",
+      "identity_tokens": [
+        "arXiv:2501.07861"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2501.07861. ReARTeR improves RAG reasoning quality via post-training/test-time search; no inference-efficiency gain claimed.",
+      "first_checked_at": "2026-10-05T14:10:40+00:00",
+      "last_checked_at": "2026-10-05T14:10:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "ReARTeR: Retrieval-Augmented Reasoning with Trustworthy Process Rewarding"
+    },
+    "DOI:10.1145/3704905": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3704905",
+      "identity_tokens": [
+        "DOI:10.1145/3704905"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3704905. Automated program refinement focuses on correctness of generated code, not inference efficiency.",
+      "first_checked_at": "2026-10-05T14:10:40+00:00",
+      "last_checked_at": "2026-10-05T14:10:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Automated Program Refinement: Guide and Verify Code Large Language Model with Refinement Calculus"
+    },
+    "arXiv:2410.16377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16377",
+      "identity_tokens": [
+        "arXiv:2410.16377"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.16377. Models inference scaling/accuracy with repeated attempts and prompting cost; no cost-lowering optimization.",
+      "first_checked_at": "2026-10-05T14:10:40+00:00",
+      "last_checked_at": "2026-10-05T14:10:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "title": "A Simple Model of Inference Scaling Laws"
+    },
+    "arXiv:2312.01712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01712",
+      "identity_tokens": [
+        "arXiv:2312.01712"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2312.01712. JUNO optimizes ANN search in vector databases, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "JUNO: Optimizing High-Dimensional Approximate Nearest Neighbour Search with Sparsity-Aware Algorithm and Ray-Tracing Core Mapping"
+    },
+    "arXiv:2303.12914": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.12914",
+      "identity_tokens": [
+        "arXiv:2303.12914"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2303.12914. TRON is a photonic accelerator for BERT/vision transformers; abstract does not establish LLM generation-serving applicability.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "TRON: Transformer Neural Network Acceleration with Non-Coherent Silicon Photonics"
+    },
+    "arXiv:2410.03777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03777",
+      "identity_tokens": [
+        "arXiv:2410.03777"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.03777. Studies ensemble accuracy/quality for LLMs, not reducing inference cost.",
+      "first_checked_at": "2026-10-05T14:10:41+00:00",
+      "last_checked_at": "2026-10-05T14:10:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Determine-Then-Ensemble: Necessity of Top-k Union for Large Language Model Ensembling"
+    },
+    "arXiv:2309.13850": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.13850",
+      "identity_tokens": [
+        "arXiv:2309.13850"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2309.13850. Statistical analysis of sparse softmax MoE gating, not a concrete inference optimization with runtime results.",
+      "first_checked_at": "2026-10-05T14:10:42+00:00",
+      "last_checked_at": "2026-10-05T14:10:42+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Statistical Perspective of Top-K Sparse Softmax Gating Mixture of Experts"
+    },
+    "arXiv:2502.12913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12913",
+      "identity_tokens": [
+        "arXiv:2502.12913"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.12913. GSQ-Tuning targets quantized on-device fine-tuning/training, not inference serving.",
+      "first_checked_at": "2026-10-05T14:10:42+00:00",
+      "last_checked_at": "2026-10-05T14:10:42+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+      ],
+      "title": "GSQ-Tuning: Group-Shared Exponents Integer in Fully Quantized Training for LLMs On-Device Fine-tuning"
+    },
+    "arXiv:2412.15238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15238",
+      "identity_tokens": [
+        "arXiv:2412.15238"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.15238. Dipper improves ensemble reasoning diversity/quality; ensembling adds computation and no efficiency gain is claimed.",
+      "first_checked_at": "2026-10-05T14:10:42+00:00",
+      "last_checked_at": "2026-10-05T14:10:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ],
+      "title": "Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning tasks"
+    },
+    "arXiv:2412.00383": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00383",
+      "identity_tokens": [
+        "arXiv:2412.00383"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.00383. Unified Parameter-Efficient Unlearning is outside inference-efficiency scope.",
+      "first_checked_at": "2026-10-05T14:10:43+00:00",
+      "last_checked_at": "2026-10-05T14:10:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md"
+      ],
+      "title": "Unified Parameter-Efficient Unlearning for LLMs"
+    },
+    "arXiv:2410.09836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09836",
+      "identity_tokens": [
+        "arXiv:2410.09836"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.09836. Addresses time-series forecasting under distribution shift, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:10:43+00:00",
+      "last_checked_at": "2026-10-05T14:10:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Learning Pattern-Specific Experts for Time Series Forecasting Under Patch-level Distribution Shift"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9ad7217925b4a202-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.03024",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.03024",
+    "identity_tokens": [
+      "arXiv:2512.03024"
+    ],
+    "reason": "This is an inference-energy measurement benchmark rather than an optimization method.",
+    "first_checked_at": "2026-10-05T14:10:41+00:00",
+    "last_checked_at": "2026-10-05T14:10:41+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference"
+  },
+  "processed_at": "2026-10-05T14:10:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9ad7217925b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

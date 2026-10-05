@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-68faed7b449588fe-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.01709",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.01709",
+    "identity_tokens": [
+      "arXiv:2501.01709"
+    ],
+    "reason": "This single-encoder distillation is for VLM visual encoders; no direct LLM-service inference latency/throughput is reported in checked body.",
+    "first_checked_at": "2026-10-05T14:10:39+00:00",
+    "last_checked_at": "2026-10-05T14:10:39+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+    ],
+    "title": "MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders"
+  },
+  "processed_at": "2026-10-05T14:10:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-68faed7b4495",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
