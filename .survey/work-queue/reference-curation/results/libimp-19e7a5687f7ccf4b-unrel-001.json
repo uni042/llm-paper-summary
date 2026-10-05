@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-19e7a5687f7ccf4b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.00371",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.00371",
+    "identity_tokens": [
+      "arXiv:2402.00371"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2402.00371. Abstract summary: Social media bot detection has always been an arms race between advancements in machine learning bot detectors and adversarial bot strategies to evade detection. In this work, we bring the arms race to the next level by investigating the opportunities and risks of state-of-the-art large language models (LLMs) in social bot detec Out of scope: Social bot detection accuracy/security evaluation, not inference efficiency.",
+    "first_checked_at": "2026-10-05T12:30:31+00:00",
+    "last_checked_at": "2026-10-05T12:30:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "What Does the Bot Say? Opportunities and Risks of Large Language Models in Social Media Bot Detection"
+  },
+  "processed_at": "2026-10-05T12:30:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19e7a5687f7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b3fe53cc73225bb-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.00993",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.00993",
+    "identity_tokens": [
+      "arXiv:2407.00993"
+    ],
+    "reason": "Mobile-Bench evaluates LLM mobile-agent capabilities/UI workflow, not model inference/serving efficiency. Primary abstract: With the remarkable advancements of large language models (LLMs), LLM-based agents have become a research hotspot in human-computer interaction. However, there is a scarcity of benchmarks available for LLM-based mobile agents. Benchmarking these agents generally faces three main challenges: (1) The inefficiency of UI-only operations imposes limitations to task evaluation. (2) Specific instructions within a singular application lack adequacy for assessing the multi-dimensional",
+    "first_checked_at": "2026-10-05T12:30:32+00:00",
+    "last_checked_at": "2026-10-05T12:30:32+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+    ],
+    "title": "Mobile-Bench: An Evaluation Benchmark for LLM-based Mobile Agents"
+  },
+  "processed_at": "2026-10-05T12:30:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b3fe53cc732",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

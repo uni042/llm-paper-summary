@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:28:00+00:00",
-  "record_count": 1631,
+  "updated_at": "2026-10-05T12:30:31+00:00",
+  "record_count": 1633,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25340,6 +25340,35 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
       ],
       "title": "MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs"
+    },
+    "arXiv:2507.00672": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00672",
+      "identity_tokens": [
+        "arXiv:2507.00672"
+      ],
+      "reason": "Relevant edge/LLM systems overview, but it is a broad survey rather than a concrete inference-efficiency method/evaluation.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Toward Edge General Intelligence With Multiple-Large Language Model (Multi-LLM): Architecture, Trust, and Orchestration"
+    },
+    "arXiv:2405.13873": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13873",
+      "identity_tokens": [
+        "arXiv:2405.13873"
+      ],
+      "reason": "There is a direct cost result, but it is tied to one specialized KG-QA workflow rather than a general inference system.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering"
     }
   }
 }

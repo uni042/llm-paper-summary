@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-19e7a5687f7ccf4b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3570361.3592505",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3570361.3592505",
+    "identity_tokens": [
+      "DOI:10.1145/3570361.3592505"
+    ],
+    "reason": "Primary abstract reviewed at https://doi.org/10.1145/3570361.3592505. Abstract summary: Transformer-based pre-trained models have revolutionized NLP for superior performance and generality. Fine-tuning pre-trained models for downstream tasks often requires private data, for which federated learning is the de-facto approach (i.e., FedNLP). However, our measurements show that FedNLP is prohibitively slow due to the l Out of scope: Federated fine-tuning and convergence speed are training costs, not inference.",
+    "first_checked_at": "2026-10-05T12:30:31+00:00",
+    "last_checked_at": "2026-10-05T12:30:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "title": "Efficient Federated Learning for Modern NLP"
+  },
+  "processed_at": "2026-10-05T12:30:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-19e7a5687f7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

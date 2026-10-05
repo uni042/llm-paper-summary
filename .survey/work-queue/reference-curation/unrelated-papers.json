@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:28:03+00:00",
-  "record_count": 4953,
+  "updated_at": "2026-10-05T12:30:33+00:00",
+  "record_count": 4969,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -72066,6 +72066,233 @@
         "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
       ],
       "title": "Learning to Route Among Specialized Experts for Zero-Shot Generalization"
+    },
+    "arXiv:2402.00371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00371",
+      "identity_tokens": [
+        "arXiv:2402.00371"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2402.00371. Abstract summary: Social media bot detection has always been an arms race between advancements in machine learning bot detectors and adversarial bot strategies to evade detection. In this work, we bring the arms race to the next level by investigating the opportunities and risks of state-of-the-art large language models (LLMs) in social bot detec Out of scope: Social bot detection accuracy/security evaluation, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "What Does the Bot Say? Opportunities and Risks of Large Language Models in Social Media Bot Detection"
+    },
+    "DOI:10.1145/3570361.3592505": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3570361.3592505",
+      "identity_tokens": [
+        "DOI:10.1145/3570361.3592505"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3570361.3592505. Abstract summary: Transformer-based pre-trained models have revolutionized NLP for superior performance and generality. Fine-tuning pre-trained models for downstream tasks often requires private data, for which federated learning is the de-facto approach (i.e., FedNLP). However, our measurements show that FedNLP is prohibitively slow due to the l Out of scope: Federated fine-tuning and convergence speed are training costs, not inference.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Efficient Federated Learning for Modern NLP"
+    },
+    "arXiv:2410.01699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01699",
+      "identity_tokens": [
+        "arXiv:2410.01699"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.01699. Abstract summary: The current large auto-regressive models can generate high-quality, high-resolution images, but these models require hundreds or even thousands of steps of next-token prediction during inference, resulting in substantial time consumption. In existing studies, Jacobi decoding, an iterative parallel decoding algorithm, has been us Out of scope: Autoregressive text-to-image generation is a visual-generation workload, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding"
+    },
+    "arXiv:2410.11761": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11761",
+      "identity_tokens": [
+        "arXiv:2410.11761"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.11761. Abstract summary: Despite the progress made by multimodal large language models (MLLMs) in computational pathology, they remain limited by a predominant focus on patch-level analysis, missing essential contextual information at the whole-slide level. The lack of large-scale instruction datasets and the gigapixel scale of whole slide images (WSIs) Out of scope: Whole-slide pathology VLM dataset/assistant capability work, no serving efficiency claim.",
+      "first_checked_at": "2026-10-05T12:30:31+00:00",
+      "last_checked_at": "2026-10-05T12:30:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding"
+    },
+    "arXiv:2404.02657": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.02657",
+      "identity_tokens": [
+        "arXiv:2404.02657"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2404.02657. Abstract summary: Kullback-Leiber divergence has been widely used in Knowledge Distillation (KD) to compress Large Language Models (LLMs). Contrary to prior assertions that reverse Kullback-Leibler (RKL) divergence is mode-seeking and thus preferable over the mean-seeking forward Kullback-Leibler (FKL) divergence, this study empirically and theor Out of scope: Knowledge-distillation objective analysis/training, not inference runtime.",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "title": "Rethinking Kullback-Leibler Divergence in Knowledge Distillation for Large Language Models"
+    },
+    "arXiv:2308.12216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12216",
+      "identity_tokens": [
+        "arXiv:2308.12216"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2308.12216. Abstract summary: Vision Transformer has demonstrated impressive success across various vision tasks. However, its heavy computation cost, which grows quadratically with respect to the token sequence length, largely limits its power in handling large feature maps. To alleviate the computation cost, previous works rely on either fine-grained self- Out of scope: Vision Transformer token reallocation for image tasks.",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "SG-Former: Self-guided Transformer with Evolving Token Reallocation"
+    },
+    "arXiv:2603.03596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03596",
+      "identity_tokens": [
+        "arXiv:2603.03596"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2603.03596. Abstract summary: Conventionally, memory in end-to-end robotic learning involves inputting a sequence of past observations into the learned policy. However, in complex multi-stage real-world tasks, the robot's memory must represent past events at multiple levels of granularity: from long-term memory that captures abstracted semantic concepts (e.g Out of scope: Robotic VLA embodied-memory architecture, no LLM serving efficiency result.",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models"
+    },
+    "arXiv:2408.03717": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03717",
+      "identity_tokens": [
+        "arXiv:2408.03717"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2408.03717. Abstract summary: Infrared small target detection faces the inherent challenge of precisely localizing dim targets amidst complex background clutter. Traditional approaches struggle to balance detection precision and false alarm rates. To break this dilemma, we propose SeRankDet, a deep network that achieves high accuracy beyond the conventional Out of scope: Infrared image target detection model, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Pick of the Bunch: Detecting Infrared Small Targets Beyond Hit-Miss Trade-Offs via Selective Rank-Aware Attention"
+    },
+    "arXiv:2407.00993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.00993",
+      "identity_tokens": [
+        "arXiv:2407.00993"
+      ],
+      "reason": "Mobile-Bench evaluates LLM mobile-agent capabilities/UI workflow, not model inference/serving efficiency. Primary abstract: With the remarkable advancements of large language models (LLMs), LLM-based agents have become a research hotspot in human-computer interaction. However, there is a scarcity of benchmarks available for LLM-based mobile agents. Benchmarking these agents generally faces three main challenges: (1) The inefficiency of UI-only operations imposes limitations to task evaluation. (2) Specific instructions within a singular application lack adequacy for assessing the multi-dimensional",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Mobile-Bench: An Evaluation Benchmark for LLM-based Mobile Agents"
+    },
+    "arXiv:2404.12096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.12096",
+      "identity_tokens": [
+        "arXiv:2404.12096"
+      ],
+      "reason": "LongEmbed extends embedding model input length and evaluates retrieval quality; not LLM generation efficiency. Primary abstract: Embedding models play a pivotal role in modern NLP applications such as document retrieval. However, existing embedding models are limited to encoding short documents of typically 512 tokens, restrained from application scenarios requiring long inputs. This paper explores context window extension of existing embedding models, pushing their input length to a maximum of 32,768. We begin by evaluating the performance of existing embedding models using our newly constructed LongE",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "LongEmbed: Extending Embedding Models for Long Context Retrieval"
+    },
+    "arXiv:2407.09709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.09709",
+      "identity_tokens": [
+        "arXiv:2407.09709"
+      ],
+      "reason": "GOFA combines GNN/LLM for graph-language modeling and task capability; no inference efficiency claim. Primary abstract: Foundation models, such as Large Language Models (LLMs) or Large Vision Models (LVMs), have emerged as one of the most powerful tools in the respective fields. However, unlike text and image data, graph data do not have a definitive structure, posing great challenges to developing a Graph Foundation Model (GFM). For example, current attempts at designing general graph models either transform graph data into a language format for LLM-based prediction or still train a GNN model",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "GOFA: A Generative One-For-All Model for Joint Graph Language Modeling"
+    },
+    "arXiv:2406.16778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16778",
+      "identity_tokens": [
+        "arXiv:2406.16778"
+      ],
+      "reason": "Edge pruning finds faithful GPT-2 interpretability circuits; pruning is for analysis, not deployed-model inference. Primary abstract: The path to interpreting a language model often proceeds via analysis of circuits -- sparse computational subgraphs of the model that capture specific aspects of its behavior. Recent work has automated the task of discovering circuits. Yet, these methods have practical limitations, as they rely either on inefficient search algorithms or inaccurate approximations. In this paper, we frame automated circuit discovery as an optimization problem and propose *Edge Pruning* as an ef",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Finding Transformer Circuits with Edge Pruning"
+    },
+    "arXiv:2307.02764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.02764",
+      "identity_tokens": [
+        "arXiv:2307.02764"
+      ],
+      "reason": "Confidence deferral is evaluated for generic classifier cascades, not LLM inference. Primary abstract: Cascades are a classical strategy to enable inference cost to vary adaptively across samples, wherein a sequence of classifiers are invoked in turn. A deferral rule determines whether to invoke the next classifier in the sequence, or to terminate prediction. One simple deferral rule employs the confidence of the current classifier, e.g., based on the maximum predicted softmax probability. Despite being oblivious to the structure of the cascade -- e.g., not modelling the error",
+      "first_checked_at": "2026-10-05T12:30:32+00:00",
+      "last_checked_at": "2026-10-05T12:30:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "When Does Confidence-Based Cascade Deferral Suffice?"
+    },
+    "arXiv:2506.22084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22084",
+      "identity_tokens": [
+        "arXiv:2506.22084"
+      ],
+      "reason": "Theoretical connection between Transformers and GNNs without an inference optimization. Primary abstract: We establish connections between the Transformer architecture, originally introduced for natural language processing, and Graph Neural Networks (GNNs) for representation learning on graphs. We show how Transformers can be viewed as message passing GNNs operating on fully connected graphs of tokens, where the self-attention mechanism capture the relative importance of all tokens w.r.t. each-other, and positional encodings provide hints about sequential ordering or structure. T",
+      "first_checked_at": "2026-10-05T12:30:33+00:00",
+      "last_checked_at": "2026-10-05T12:30:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Transformers are Graph Neural Networks"
+    },
+    "arXiv:2105.11905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.11905",
+      "identity_tokens": [
+        "arXiv:2105.11905"
+      ],
+      "reason": "Adapter-based cross-lingual ASR fine-tuning is not LLM inference. Primary abstract: Cross-lingual speech adaptation aims to solve the problem of leveraging multiple rich-resource languages to build models for a low-resource target language. Since the low-resource language has limited training data, speech recognition models can easily overfit. Adapter is a versatile module that can be plugged into Transformer for parameter-efficient learning. In this paper, we propose to use adapters for parameter-efficient cross-lingual speech adaptation. Based on our previ",
+      "first_checked_at": "2026-10-05T12:30:33+00:00",
+      "last_checked_at": "2026-10-05T12:30:33+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "Exploiting Adapters for Cross-Lingual Low-Resource Speech Recognition"
+    },
+    "arXiv:2502.05173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05173",
+      "identity_tokens": [
+        "arXiv:2502.05173"
+      ],
+      "reason": "Video rotary embedding improves video understanding/retrieval quality; no efficiency contribution is claimed. Primary abstract: While Rotary Position Embedding (RoPE) and its variants are widely adopted for their long-context capabilities, the extension of the 1D RoPE to video, with its complex spatio-temporal structure, remains an open challenge. This work first introduces a comprehensive analysis that identifies four key characteristics essential for the effective adaptation of RoPE to video, which have not been fully considered in prior work. As part of our analysis, we introduce a challenging V-NI",
+      "first_checked_at": "2026-10-05T12:30:33+00:00",
+      "last_checked_at": "2026-10-05T12:30:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "VideoRoPE: What Makes for Good Video Rotary Position Embedding?"
     }
   }
 }
