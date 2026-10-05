@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:44:25+00:00",
-  "record_count": 1563,
+  "updated_at": "2026-10-05T11:46:58+00:00",
+  "record_count": 1566,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24272,6 +24272,53 @@
         "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
       ],
       "title": "Smaller Models, Unexpected Costs: Trade-offs in LLM Quantization for Automated Program Repair"
+    },
+    "arXiv:2606.25342": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25342",
+      "identity_tokens": [
+        "arXiv:2606.25342"
+      ],
+      "reason": "The primary paper is a position/theory argument and gives no concrete evaluated inference method; implementation and measured memory/runtime tradeoffs remain unresolved.",
+      "first_checked_at": "2026-10-05T11:46:56+00:00",
+      "last_checked_at": "2026-10-05T11:46:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention"
+    },
+    "arXiv:2606.24747": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24747",
+      "identity_tokens": [
+        "arXiv:2606.24747"
+      ],
+      "reason": "The primary study targets compressed deployment, but its results do not measure runtime/resource savings; that missing evidence leaves scope fit borderline.",
+      "first_checked_at": "2026-10-05T11:46:57+00:00",
+      "last_checked_at": "2026-10-05T11:46:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Scaling Laws for Task-Specific LLM Distillation"
+    },
+    "DOI:10.36079/lamintang.ijai-01301.1050": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.36079/lamintang.ijai-01301.1050",
+      "identity_tokens": [
+        "DOI:10.36079/lamintang.ijai-01301.1050"
+      ],
+      "reason": "The publisher exposed the primary abstract, but the PDF link failed with “Cache miss” at https://lamintang.org/journal/index.php/ijai/article/view/1050/666; no secondary full text was used.",
+      "first_checked_at": "2026-10-05T11:46:58+00:00",
+      "last_checked_at": "2026-10-05T11:46:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "Capability-Specific Degradation Patterns in Quantized Small Language Models"
     }
   }
 }

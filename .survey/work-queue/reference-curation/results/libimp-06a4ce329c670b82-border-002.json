@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-06a4ce329c670b82-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.25342",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.25342",
+    "identity_tokens": [
+      "arXiv:2606.25342"
+    ],
+    "reason": "The primary paper is a position/theory argument and gives no concrete evaluated inference method; implementation and measured memory/runtime tradeoffs remain unresolved.",
+    "first_checked_at": "2026-10-05T11:46:56+00:00",
+    "last_checked_at": "2026-10-05T11:46:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention"
+  },
+  "processed_at": "2026-10-05T11:46:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-06a4ce329c67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
