@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:22:02+00:00",
-  "record_count": 3831,
+  "updated_at": "2026-10-05T08:25:07+00:00",
+  "record_count": 3849,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -55814,6 +55814,263 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Communication Reduction via Semantic-Based Encoding in DMPC Using LSTMs"
+    },
+    "DOI:10.64898/2026.08.13.744387": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.08.13.744387",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.13.744387"
+      ],
+      "reason": "Primary abstract concerns a genome-sequence expression-prediction model, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Pretraining Enhances Megabase-Scale Gene Expression Prediction with GeneUnet"
+    },
+    "arXiv:2608.16070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16070",
+      "identity_tokens": [
+        "arXiv:2608.16070"
+      ],
+      "reason": "Primary abstract develops an efficient ocean-forecasting model, not language-model inference.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "OceanLight: Efficient Global Ocean Forecasting via Geometry-Adaptive Unstructured Mesh Representation"
+    },
+    "arXiv:2608.16104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16104",
+      "identity_tokens": [
+        "arXiv:2608.16104"
+      ],
+      "reason": "Primary abstract optimizes a text-to-image rectified-flow generator, outside LLM inference.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Nexus: Structured Synergy for Efficient Text-to-Image Generation using Rectified Flow Model"
+    },
+    "arXiv:2608.16168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16168",
+      "identity_tokens": [
+        "arXiv:2608.16168"
+      ],
+      "reason": "Primary abstract proposes personalization memory for LLM agents and reports task accuracy, but no inference cost, latency, token, or serving efficiency benefit.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "QUMem: Personalized Memory for Query-Conditioned User-State Inference in LLM Agents"
+    },
+    "arXiv:2608.17597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17597",
+      "identity_tokens": [
+        "arXiv:2608.17597"
+      ],
+      "reason": "Primary abstract presents an agent-harness safety benchmark, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "HarnessRisk: A Lifecycle-Oriented Benchmark for Agent Harness Safety"
+    },
+    "arXiv:2608.17641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17641",
+      "identity_tokens": [
+        "arXiv:2608.17641"
+      ],
+      "reason": "Primary abstract presents Triton GPU kernels for reinforcement-learning credit assignment, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "rl-triton: High-Performance Triton GPU Kernels for Reinforcement Learning Credit Assignment"
+    },
+    "arXiv:2608.17657": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17657",
+      "identity_tokens": [
+        "arXiv:2608.17657"
+      ],
+      "reason": "Primary abstract prunes Vision Transformers for edge vision tasks, not language models.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Denoised Variance-Based Pruning with Optimal Brain Bias Compensation"
+    },
+    "arXiv:2608.17756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17756",
+      "identity_tokens": [
+        "arXiv:2608.17756"
+      ],
+      "reason": "Primary abstract proposes diagnostic evaluation for LLM agent memory; it claims no resource-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:25:05+00:00",
+      "last_checked_at": "2026-10-05T08:25:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "D$^2$ACCI: A Dual-Loop Diagnostic Protocol for Evidence-Preserving Agent Memory"
+    },
+    "arXiv:2608.17849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17849",
+      "identity_tokens": [
+        "arXiv:2608.17849"
+      ],
+      "reason": "Primary abstract optimizes split federated learning resource allocation for training, outside inference scope.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md"
+      ],
+      "title": "Efficient Resource Optimization for Split Federated Learning"
+    },
+    "arXiv:2608.18183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18183",
+      "identity_tokens": [
+        "arXiv:2608.18183"
+      ],
+      "reason": "Primary abstract accelerates visual on-policy distillation rollouts during student training; the efficiency target is training-time.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Accelerating Visual On-Policy Distillation with Batched Speculative Jacobi Rollouts"
+    },
+    "arXiv:2608.18232": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18232",
+      "identity_tokens": [
+        "arXiv:2608.18232"
+      ],
+      "reason": "Primary abstract develops an economic principal-agent contract model for technology/effort choice, not an LLM serving optimization.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Contracting for LLM Delegation: Moral Hazard in Technology and Effort Choice"
+    },
+    "arXiv:2608.28649": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28649",
+      "identity_tokens": [
+        "arXiv:2608.28649"
+      ],
+      "reason": "Primary abstract evaluates LLM identification of e-commerce conversion touchpoints, an application capability study rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Can Large Language Models Identify Meaningful Touchpoints in Conversion Attribution?"
+    },
+    "DOI:10.21105/joss.10698": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21105/joss.10698",
+      "identity_tokens": [
+        "DOI:10.21105/joss.10698"
+      ],
+      "reason": "Primary JOSS paper describes a computational-chemistry workflow driver for molecular ensembles, calculators, geometry optimization and transition-state search; it is not an LLM inference tool.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "FIRECODE: A Computational Chemistry Workflow Driver and Modular Hub"
+    },
+    "arXiv:2608.17896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17896",
+      "identity_tokens": [
+        "arXiv:2608.17896"
+      ],
+      "reason": "Primary abstract studies dynamic compression in recurrent networks in a controlled function-reuse task, without LLM/serving evidence; its stated tradeoff spends more compute to reduce recurrent-state memory.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Dynamic Compression in Recurrent Networks"
+    },
+    "arXiv:2608.17979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17979",
+      "identity_tokens": [
+        "arXiv:2608.17979"
+      ],
+      "reason": "Primary abstract introduces an authorship-verification benchmark under distribution shift, unrelated to inference systems.",
+      "first_checked_at": "2026-10-05T08:25:07+00:00",
+      "last_checked_at": "2026-10-05T08:25:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "When Writing Style Drifts: Benchmarking Authorship Verification under Distribution Shifts in Genre, Time and the AI-Era"
+    },
+    "arXiv:2608.17995": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17995",
+      "identity_tokens": [
+        "arXiv:2608.17995"
+      ],
+      "reason": "Primary abstract targets token selection in diffusion-transformer video generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:25:07+00:00",
+      "last_checked_at": "2026-10-05T08:25:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "AViTS: Adaptive Spatiotemporal Token Selection for Efficient Dynamic-Resolution Generation"
+    },
+    "arXiv:2608.18026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18026",
+      "identity_tokens": [
+        "arXiv:2608.18026"
+      ],
+      "reason": "Primary abstract introduces a neural sparse mixer for tabular regression, not a language model.",
+      "first_checked_at": "2026-10-05T08:25:07+00:00",
+      "last_checked_at": "2026-10-05T08:25:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "TabNSM: Neural Sparse Mixer for Tabular Regression"
+    },
+    "arXiv:2608.18034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18034",
+      "identity_tokens": [
+        "arXiv:2608.18034"
+      ],
+      "reason": "Primary abstract presents an agentic academic-survey automation workflow, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:25:07+00:00",
+      "last_checked_at": "2026-10-05T08:25:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Deep Academic Survey: Stateful Agentic Closed-Loop Paradigm for Academic Survey Automation"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f05f9a4c9b4ad88-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.17995",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.17995",
+    "identity_tokens": [
+      "arXiv:2608.17995"
+    ],
+    "reason": "Primary abstract targets token selection in diffusion-transformer video generation, not LLM inference.",
+    "first_checked_at": "2026-10-05T08:25:07+00:00",
+    "last_checked_at": "2026-10-05T08:25:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "AViTS: Adaptive Spatiotemporal Token Selection for Efficient Dynamic-Resolution Generation"
+  },
+  "processed_at": "2026-10-05T08:25:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f05f9a4c9b4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

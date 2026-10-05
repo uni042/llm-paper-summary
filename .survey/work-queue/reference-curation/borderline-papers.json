@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:22:01+00:00",
-  "record_count": 1188,
+  "updated_at": "2026-10-05T08:25:06+00:00",
+  "record_count": 1190,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18194,6 +18194,37 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "ArborMem: Navigating Interaction States with Memory Forests"
+    },
+    "arXiv:2608.16033": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16033",
+      "identity_tokens": [
+        "arXiv:2608.16033"
+      ],
+      "reason": "It diagnoses allocation gaps but provides no validated online policy or demonstrated serving-cost reduction; the oracle is offline and uses observed outcomes.",
+      "first_checked_at": "2026-10-05T08:25:04+00:00",
+      "last_checked_at": "2026-10-05T08:25:04+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets"
+    },
+    "arXiv:2608.18182": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18182",
+      "identity_tokens": [
+        "arXiv:2608.18182"
+      ],
+      "reason": "Small encoder NLP models rather than generative LLM serving; results depend on Intel CPU generation, batching, and native-stack implementation, so scope fit is adjacent.",
+      "first_checked_at": "2026-10-05T08:25:06+00:00",
+      "last_checked_at": "2026-10-05T08:25:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Efficient INT8 Inference of Small NLP Models on Server CPUs with PyTorch Native Stack"
     }
   }
 }

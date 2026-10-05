@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3752484f940040c0-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.16033",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.16033",
+    "identity_tokens": [
+      "arXiv:2608.16033"
+    ],
+    "reason": "It diagnoses allocation gaps but provides no validated online policy or demonstrated serving-cost reduction; the oracle is offline and uses observed outcomes.",
+    "first_checked_at": "2026-10-05T08:25:04+00:00",
+    "last_checked_at": "2026-10-05T08:25:04+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+    ],
+    "title": "$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets"
+  },
+  "processed_at": "2026-10-05T08:25:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3752484f9400",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
