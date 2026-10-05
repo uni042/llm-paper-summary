@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ebb558a1f2425e6-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01817",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01817",
+    "identity_tokens": [
+      "arXiv:2607.01817"
+    ],
+    "reason": "long-sequence attention parallelizationは技術的に隣接するが、一次本文のend-to-end実証対象はWan2.2 DiT video generationで、LLM inferenceへの直接適合性が弱い。",
+    "first_checked_at": "2026-10-05T10:43:42+00:00",
+    "last_checked_at": "2026-10-05T10:43:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+    ],
+    "title": "HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention"
+  },
+  "processed_at": "2026-10-05T10:43:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ebb558a1f24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

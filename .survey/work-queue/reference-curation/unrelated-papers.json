@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:41:01+00:00",
-  "record_count": 4502,
+  "updated_at": "2026-10-05T10:43:44+00:00",
+  "record_count": 4516,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -65576,6 +65576,204 @@
         "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
       ],
       "title": "Rethinking Depth Pruning for Vision Transformers: A Heterogeneity-Aware Perspective"
+    },
+    "arXiv:2607.02437": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02437",
+      "identity_tokens": [
+        "arXiv:2607.02437"
+      ],
+      "reason": "一次要旨はhydrologic time-series forecasting modelで、LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T10:43:41+00:00",
+      "last_checked_at": "2026-10-05T10:43:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Extreme Adaptive Transformer for Time Series Forecasting"
+    },
+    "arXiv:2607.02497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02497",
+      "identity_tokens": [
+        "arXiv:2607.02497"
+      ],
+      "reason": "一次要旨はpanoramic referring segmentation/VLM active perceptionのtask accuracy研究で、LLM inference optimizationを示さない。",
+      "first_checked_at": "2026-10-05T10:43:41+00:00",
+      "last_checked_at": "2026-10-05T10:43:41+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Seek to Segment: Active Perception for Panoramic Referring Segmentation"
+    },
+    "arXiv:2607.02674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02674",
+      "identity_tokens": [
+        "arXiv:2607.02674"
+      ],
+      "reason": "一次要旨はMLLMを使った3D facial expression synthesisで、inference efficiencyやserving optimizationを扱わない。",
+      "first_checked_at": "2026-10-05T10:43:41+00:00",
+      "last_checked_at": "2026-10-05T10:43:41+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "EmoteGPT: 3D Human Facial Expressions from Natural Language Descriptions"
+    },
+    "arXiv:2607.02746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02746",
+      "identity_tokens": [
+        "arXiv:2607.02746"
+      ],
+      "reason": "一次要旨はphysics向けKeras-to-C++ neural network code generationと非LLM推論比較。対象のLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:43:41+00:00",
+      "last_checked_at": "2026-10-05T10:43:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "CodeJeNN: A simple C++ neural network generator for physics applications"
+    },
+    "arXiv:2607.15296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15296",
+      "identity_tokens": [
+        "arXiv:2607.15296"
+      ],
+      "reason": "一次要旨はshuffle-exchange networkの組合せ数学的counterexampleで、機械学習推論ではない。",
+      "first_checked_at": "2026-10-05T10:43:41+00:00",
+      "last_checked_at": "2026-10-05T10:43:41+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "Bene\\v{s} and Shuffle-Exchange Counterexamples"
+    },
+    "arXiv:2607.01646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01646",
+      "identity_tokens": [
+        "arXiv:2607.01646"
+      ],
+      "reason": "一次要旨はLLM trainingのfault tolerance/checkpointing/hot-swap overhead。inferenceではない。",
+      "first_checked_at": "2026-10-05T10:43:42+00:00",
+      "last_checked_at": "2026-10-05T10:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "PHOENIX: Resilient LLM Training with Hot-Swapping via Zero-Overhead Checkpoint"
+    },
+    "arXiv:2607.01678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01678",
+      "identity_tokens": [
+        "arXiv:2607.01678"
+      ],
+      "reason": "一次要旨はLLM pretraining distributed optimizer/sparse communication。学習専用効率化のため対象外。",
+      "first_checked_at": "2026-10-05T10:43:42+00:00",
+      "last_checked_at": "2026-10-05T10:43:42+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "SCAPE: Accurate and Efficient LLM Training with Extreme Sparse Communication"
+    },
+    "arXiv:2607.01701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01701",
+      "identity_tokens": [
+        "arXiv:2607.01701"
+      ],
+      "reason": "一次要旨はtext-to-video diffusion modelのtraining schedulingで、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:43:42+00:00",
+      "last_checked_at": "2026-10-05T10:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training"
+    },
+    "arXiv:2607.02074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02074",
+      "identity_tokens": [
+        "arXiv:2607.02074"
+      ],
+      "reason": "一次要旨はautonomous-driving LiDAR 3D detection robustness analysisで、LLM推論対象外。",
+      "first_checked_at": "2026-10-05T10:43:42+00:00",
+      "last_checked_at": "2026-10-05T10:43:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Comprehensive Robustness Analysis of LiDAR-based 3D Object Detection in Autonomous Driving"
+    },
+    "arXiv:2607.19390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19390",
+      "identity_tokens": [
+        "arXiv:2607.19390"
+      ],
+      "reason": "一次要旨はmLSTM recurrent memoryのrecall学習/optimization分析で、効率化はtraining scaffoldを対象とする。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "The Orthogonalized Read Is a Removable Training Scaffold for Recurrent Memory"
+    },
+    "arXiv:2607.24797": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24797",
+      "identity_tokens": [
+        "arXiv:2607.24797"
+      ],
+      "reason": "一次要旨はdecoder-only LLMのreading/writing representation研究。推論速度・serving・resource最適化を主題としない。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Reading Without a Reader: Large Language Models Collapse Reading and Writing into a Single Entangled Code"
+    },
+    "DOI:10.24018/ejece.2026.10.4.70441": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24018/ejece.2026.10.4.70441",
+      "identity_tokens": [
+        "DOI:10.24018/ejece.2026.10.4.70441"
+      ],
+      "reason": "一次要旨はMCP/Skills agent context quality・task completionのsimulation比較で、model inference efficiency/latency/throughputやserving optimizationを示さない。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Context Rot: Why MCP is Breaking in Production and How the Skills Architecture Fixes It"
+    },
+    "DOI:10.1186/s12859-026-06546-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s12859-026-06546-5",
+      "identity_tokens": [
+        "DOI:10.1186/s12859-026-06546-5"
+      ],
+      "reason": "一次要旨はpopulation-genomics用Python data processing toolのparse/filter速度比較で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T10:43:44+00:00",
+      "last_checked_at": "2026-10-05T10:43:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SNPio: a Python interface for population genomic data processing"
+    },
+    "DOI:10.64898/2026.07.02.736195": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.02.736195",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.02.736195"
+      ],
+      "reason": "一次要旨はbiological morphogenesis simulation/design frameworkであり、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:43:44+00:00",
+      "last_checked_at": "2026-10-05T10:43:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Differentiable Design for Morphogenesis I: Simulation and Simulacra"
     }
   }
 }

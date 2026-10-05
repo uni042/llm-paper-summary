@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:41:01+00:00",
-  "record_count": 1430,
+  "updated_at": "2026-10-05T10:43:44+00:00",
+  "record_count": 1436,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -22114,6 +22114,92 @@
         "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
       ],
       "title": "Carbon-Taxed Transformers: Efficient, Accurate, and Sustainable LLMs"
+    },
+    "arXiv:2607.01817": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.01817",
+      "identity_tokens": [
+        "arXiv:2607.01817"
+      ],
+      "reason": "long-sequence attention parallelizationは技術的に隣接するが、一次本文のend-to-end実証対象はWan2.2 DiT video generationで、LLM inferenceへの直接適合性が弱い。",
+      "first_checked_at": "2026-10-05T10:43:42+00:00",
+      "last_checked_at": "2026-10-05T10:43:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "HCMS: Head-Chunked Multi-Stream Pipeline for Communication-Computation Overlap in Long-Sequence Parallel Attention"
+    },
+    "arXiv:2608.12350": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12350",
+      "identity_tokens": [
+        "arXiv:2608.12350"
+      ],
+      "reason": "LLM使用energyと回答品質を比較する関連テーマだが、commercial server energyは応答時間からの理論推定であり実測でなく、測定もactive inference timeのみ。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "From Caveman to Expert Analyst: Energy Consumption of Variable LLM Tasks"
+    },
+    "arXiv:2609.11936": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11936",
+      "identity_tokens": [
+        "arXiv:2609.11936"
+      ],
+      "reason": "Llama-8B inferenceの本文評価は32K prefillで最大1.6%改善に留まり、chunking overheadや効果分離の困難も記載。packet abstractと一次arXiv abstractのDGX Spark値も2%対20%で不一致し、強い再現性根拠にできない。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "One Simple Trick for Improving the Performance of Energy-Limited Local Inference and Training"
+    },
+    "DOI:10.1145/3828726": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3828726",
+      "identity_tokens": [
+        "DOI:10.1145/3828726"
+      ],
+      "reason": "Transformer edge architectureとして対象隣接性はあるが、一次本文を取得できずLLM benchmarkの有無とinference-system評価を確認できない。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "ET: An Energy Efficient Edge Transformer Architecture"
+    },
+    "DOI:10.3389/friot.2026.1886609": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/friot.2026.1886609",
+      "identity_tokens": [
+        "DOI:10.3389/friot.2026.1886609"
+      ],
+      "reason": "local SLM deployment infrastructureとの隣接性はあるが、primary本文取得不能で、要旨上も教育/ガバナンスの概念分析であり、inference-performance evidenceが不明。",
+      "first_checked_at": "2026-10-05T10:43:43+00:00",
+      "last_checked_at": "2026-10-05T10:43:43+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Conceptualising local AI infrastructure using small language models (SLMs) for primary education"
+    },
+    "DOI:10.61784/jcsee3146": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.61784/jcsee3146",
+      "identity_tokens": [
+        "DOI:10.61784/jcsee3146"
+      ],
+      "reason": "LLM inference architectureに直接言及するが、5頁のnarrative surveyで独自system・quantitative evaluationがなく、Discovery対象としての技術的新規性/効率寄与が弱い。",
+      "first_checked_at": "2026-10-05T10:43:44+00:00",
+      "last_checked_at": "2026-10-05T10:43:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "THE EVOLUTION OF LARGE MODEL INFERENCE ARCHITECTURES: FROM CENTRALIZED CLOUDS TO DECENTRALIZED ON-DEVICE INTELLIGENCE"
     }
   }
 }
