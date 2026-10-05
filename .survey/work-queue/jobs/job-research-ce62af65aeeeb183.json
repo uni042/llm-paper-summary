@@ -35,10 +35,15 @@
   "selection_reason": "LLM推論の対象である動画対応VLLMについて、入力される大量の視覚tokenによる計算・メモリ負荷を推論時のtoken圧縮で下げる研究である。学習不要の二段階方式を提案し、複数の動画QA・動画説明ベンチマークでLLaVA-OneVisionを評価しているため、推論効率化の対象に該当する。過剰なpruningでは精度が低下することも報告されており、適用範囲は動画VLLMの視覚token処理である。",
   "semantic_scholar_id": "449df67152b7368b45126a675af53632e157ee87",
   "source_url": "https://arxiv.org/abs/2411.15024",
-  "status": "ready",
+  "status": "superseded",
   "title": "DyCoke : Dynamic Compression of Tokens for Fast Video Large Language Models",
   "type": "research",
   "venue": "Computer Vision and Pattern Recognition",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T22:37:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+  "represented_canonical_id": "arXiv:2411.15024",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

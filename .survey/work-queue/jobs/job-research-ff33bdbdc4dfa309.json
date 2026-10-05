@@ -28,10 +28,15 @@
   "selection_reason": "PBKV predicts future agent invocations and uses them conservatively for KV-cache eviction/prefetch in dynamic workflows. Three workflow benchmarks show speedups over LRU and KVFlow.",
   "semantic_scholar_id": "7c3f0c81f211389018224415f7cfdf78682728e0",
   "source_url": "https://arxiv.org/abs/2605.06472",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Serving for Dynamic Agent Workflows with Prediction-based KV-Cache Management",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-05T22:37:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md",
+  "represented_canonical_id": "arXiv:2605.06472",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "複数task-specific LLM間で全層KV cacheを共有し、multi-model/agentic servingのprefill再計算とcache explosionを抑える推論システム研究で直接対象。",
   "semantic_scholar_id": "e9ca610521067c3270e3283809ba6d4d15c13d03",
   "source_url": "https://arxiv.org/abs/2603.13281",
-  "status": "ready",
+  "status": "superseded",
   "title": "ICaRus: Identical Cache Reuse for Efficient Multi Model Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-05T22:37:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md",
+  "represented_canonical_id": "arXiv:2603.13281",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
