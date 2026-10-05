@@ -225,25 +225,25 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：27  
   重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
 
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：4  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
-  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：10  
   モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: an intermediate language and compiler for tiled neural network computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：50  
   CUDAのスレッド単位ではなく、静的形状の多次元部分配列「タイル（tile）」をプログラムの基本単位にする。Triton-C→Triton-IR→Triton-JITのコンパイル経路で、メモリ合体アクセス、共有メモリ利用、タイル階層化などをコンパイラへ移し、GTX 1070上の行列積ではcuBLASと概ね同等、一部でデバイスピークの90%以上を達成する。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
@@ -253,6 +253,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   通常の数値安定softmaxは、まず入力最大値を求め、次にexp(x-max)の和を求め、最後に各要素を正規化する。この安全な実装は同じベクトルを複数回メモリから読む。本論文は最大値と指数和を同じ走査で更新するオンライン正規化子（online normalizer）を導入し、古典的softmaxと数学的に同じ結果を保ちながらメモリアクセスを減らす。
 <!-- survey:auto:end -->
