@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:15:33+00:00",
-  "record_count": 2482,
+  "updated_at": "2026-10-05T04:18:36+00:00",
+  "record_count": 2499,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35948,6 +35948,251 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
       ],
       "title": "Efficient Mixture-of-Experts Training With Pipelining Optimization"
+    },
+    "DOI:10.1109/tkde.2026.3717305": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2026.3717305",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2026.3717305"
+      ],
+      "reason": "Abstract is time-series forecasting/classification/anomaly/imputation architecture; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "RWKV-TS+: Adaptive Long-Range Prompt for Multiple Time Series Tasks"
+    },
+    "DOI:10.1109/tmc.2026.3684121": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3684121",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3684121"
+      ],
+      "reason": "Abstract proposes federated foundation-model co-tuning, adapter/distillation and aggregation for training; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "FedKD: A Fine-Grained Parameter-Efficient Federated Co-Tuning Framework With Knowledge Decoupling for Large and Small Foundation Models"
+    },
+    "DOI:10.1109/tmc.2026.3686394": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3686394",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3686394"
+      ],
+      "reason": "Abstract studies wireless MAC spectrum-sharing decisions; its ML inference is a small networking component, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Hi-MAC: An Intelligent MAC for Heterogeneous Wireless Network"
+    },
+    "DOI:10.1109/tmc.2026.3690491": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3690491",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3690491"
+      ],
+      "reason": "Large-model-assisted RL optimizes wireless MEC task-offloading energy/delay; the target efficiency is network task allocation, not LLM serving.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Optimizing Task Offloading in NOMA-Enhanced MEC Systems via Large Model-Assisted Reinforcement Learning"
+    },
+    "DOI:10.1109/tmc.2026.3696603": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3696603",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3696603"
+      ],
+      "reason": "Hybrid-float FPGA inference is evaluated on CNNs and BERT; it is general DNN/mobile acceleration without an LLM serving or generation study.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "title": "DRL-Enabled Polymorphic Acceleration Framework for Flexible and Energy-Efficient Hybrid-Float Deep Learning Inference in Mobile Computing"
+    },
+    "DOI:10.1145/3832119": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832119",
+      "identity_tokens": [
+        "DOI:10.1145/3832119"
+      ],
+      "reason": "Model supply-chain dependency recovery/security, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "TensorLock: Recovering Model Dependency for Model Supply Chain"
+    },
+    "DOI:10.1145/3832223": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832223",
+      "identity_tokens": [
+        "DOI:10.1145/3832223"
+      ],
+      "reason": "Empirical study/design for vulnerability detection quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Rethinking Mixture-of-Experts for Vulnerability Detection: An Empirical Study and Improved Design"
+    },
+    "DOI:10.1145/3832234": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832234",
+      "identity_tokens": [
+        "DOI:10.1145/3832234"
+      ],
+      "reason": "Code editing strategy selection evaluates agent productivity/quality, not inference cost/serving.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "No One-Size-Fits-All: Adaptive Code Editing with Feature-Based Strategy Selection"
+    },
+    "DOI:10.1145/3832269": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832269",
+      "identity_tokens": [
+        "DOI:10.1145/3832269"
+      ],
+      "reason": "Text-to-SQL paper targets SQL query execution bottlenecks/efficiency, not the language model inference system.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Cracking Query Bottlenecks: Towards Efficiency-Oriented Text-to-SQL Generation"
+    },
+    "DOI:10.1145/3832282": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832282",
+      "identity_tokens": [
+        "DOI:10.1145/3832282"
+      ],
+      "reason": "Experience paper evaluates LLMs on unit-test evolution and does not propose or measure inference efficiency.",
+      "first_checked_at": "2026-10-05T04:18:35+00:00",
+      "last_checked_at": "2026-10-05T04:18:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "On the Evaluation of Large Language Models in Unit Test Evolution (Experience Paper)"
+    },
+    "DOI:10.1109/tmc.2026.3696694": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3696694",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3696694"
+      ],
+      "reason": "Split learning feature-map compression is a collaborative model-training/communication method, not inference-time LLM efficiency.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "title": "Feature Map Compression for Split Learning in Mobile Wireless Environment: Theory and Practice"
+    },
+    "DOI:10.1109/tmc.2026.3701045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3701045",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3701045"
+      ],
+      "reason": "Federated gradient compression reduces training communication; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Communication-Efficient Federated Learning Based on a Two-Stage Adaptive Basis Matrix for Gradient Compression"
+    },
+    "DOI:10.1109/tpds.2026.3719351": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpds.2026.3719351",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2026.3719351"
+      ],
+      "reason": "SynergyScale optimizes DNN training offloading and throughput; training-only scope.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md",
+        "papers/training/01-training-offload-memory-systems/2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md"
+      ],
+      "title": "SynergyScale: Optimizing Offloading and Task Partitioning for Efficient Model Training"
+    },
+    "DOI:10.1109/tsmc.2026.3706520": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tsmc.2026.3706520",
+      "identity_tokens": [
+        "DOI:10.1109/tsmc.2026.3706520"
+      ],
+      "reason": "Video anomaly detection system combines vision screening and semantic VAD components; it is application-specific vision efficiency, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "DecoVAD: Divide-and-Conquer Multimodal Learning for Video Anomaly Detection"
+    },
+    "DOI:10.1109/tte.2026.3707653": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tte.2026.3707653",
+      "identity_tokens": [
+        "DOI:10.1109/tte.2026.3707653"
+      ],
+      "reason": "Conditional SNN-LSTM estimates EV battery state and optimizes embedded power; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Low-Energy Battery-State Estimation for EVs Using Hybrid SNN-LSTM for Heterogeneous System-on-Chip Architectures"
+    },
+    "DOI:10.1145/3832096": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832096",
+      "identity_tokens": [
+        "DOI:10.1145/3832096"
+      ],
+      "reason": "Automated code-review quality/alignment work, with no inference-efficiency result.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "E4R-Reviewer: Effective and Explainable Automated Code Review via End-to-End Reasoning-Guided Alignment"
+    },
+    "DOI:10.1145/3832117": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832117",
+      "identity_tokens": [
+        "DOI:10.1145/3832117"
+      ],
+      "reason": "Agentic training for debugger use and code repair; interaction-quality/efficiency is not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T04:18:36+00:00",
+      "last_checked_at": "2026-10-05T04:18:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "SWE-PDB: Teaching LLMs to Leverage Debugging Tools via Agentic Training"
     }
   }
 }

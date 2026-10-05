@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0040fa68904d7e0e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tmc.2026.3690491",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tmc.2026.3690491",
+    "identity_tokens": [
+      "DOI:10.1109/tmc.2026.3690491"
+    ],
+    "reason": "Large-model-assisted RL optimizes wireless MEC task-offloading energy/delay; the target efficiency is network task allocation, not LLM serving.",
+    "first_checked_at": "2026-10-05T04:18:35+00:00",
+    "last_checked_at": "2026-10-05T04:18:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Optimizing Task Offloading in NOMA-Enhanced MEC Systems via Large Model-Assisted Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T04:18:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0040fa68904d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
