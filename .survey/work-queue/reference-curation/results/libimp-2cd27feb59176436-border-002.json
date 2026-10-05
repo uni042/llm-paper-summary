@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2cd27feb59176436-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2006.06762",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2006.06762",
+    "identity_tokens": [
+      "arXiv:2006.06762"
+    ],
+    "reason": "Ansorは一般DNN tensor program compiler/auto-tunerで、CPU/GPU kernelおよびend-to-end DNNを評価し、workload例にはBERTも含む。一方、LLM autoregressive decodeやLLM servingの測定はなく、BERTを含む汎用compilerという間接適用可能性だけでは対象内と確定できないためborderline。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T01:01:01+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+    ],
+    "title": "Ansor : Generating High-Performance Tensor Programs for Deep Learning"
+  },
+  "processed_at": "2026-10-05T01:01:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2cd27feb5917",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

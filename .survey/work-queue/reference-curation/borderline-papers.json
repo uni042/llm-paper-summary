@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:58:26+00:00",
-  "record_count": 488,
+  "updated_at": "2026-10-05T01:01:02+00:00",
+  "record_count": 495,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -7014,6 +7014,105 @@
         "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
       ],
       "title": "The Faiss Library"
+    },
+    "arXiv:2006.06762": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.06762",
+      "identity_tokens": [
+        "arXiv:2006.06762"
+      ],
+      "reason": "Ansorは一般DNN tensor program compiler/auto-tunerで、CPU/GPU kernelおよびend-to-end DNNを評価し、workload例にはBERTも含む。一方、LLM autoregressive decodeやLLM servingの測定はなく、BERTを含む汎用compilerという間接適用可能性だけでは対象内と確定できないためborderline。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+      ],
+      "title": "Ansor : Generating High-Performance Tensor Programs for Deep Learning"
+    },
+    "arXiv:2408.08921": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.08921",
+      "identity_tokens": [
+        "arXiv:2408.08921"
+      ],
+      "reason": "GraphRAG surveyはretrieval/generation構成、評価法、効率化の研究課題を整理し、retrieved contextのcompressionによるinference acceleration等をfuture directionとして述べる。既存提案のserving効率を実証する一次研究ではなく、survey自体に具体的な改善測定がないためborderline。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "title": "Graph Retrieval-Augmented Generation: A Survey"
+    },
+    "DOI:10.1145/2749469.2749475": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2749469.2749475",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2749475"
+      ],
+      "reason": "指定ACM DOIのprimary publisher pageをこの取得手段から利用できず、usable abstractを得られなかった。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Heracles: Improving resource efficiency at scale"
+    },
+    "DOI:10.14778/3303753.3303754": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3303753.3303754",
+      "identity_tokens": [
+        "DOI:10.14778/3303753.3303754"
+      ],
+      "reason": "NSGは汎用approximate nearest-neighbor graph search/indexであり、本文の評価はSIFT/GIST/RAND/GAUSS等のvector datasetにおけるrecall、memory、search性能である。RAG検索への基盤としての隣接性はあるが、LLM/RAG workloadやend-to-end serving効果は評価していないためborderline。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ],
+      "title": "Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph"
+    },
+    "DOI:10.1145/3282307": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3282307",
+      "identity_tokens": [
+        "DOI:10.1145/3282307"
+      ],
+      "reason": "指定ACM DOIを開いたがprimary pageを取得できず、usable abstractを確認できなかった。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md"
+      ],
+      "title": "A new golden age for computer architecture"
+    },
+    "DOI:10.1145/42201.42203": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/42201.42203",
+      "identity_tokens": [
+        "DOI:10.1145/42201.42203"
+      ],
+      "reason": "指定ACM DOIを開いたがprimary publisher recordを取得できず、usable abstractを確認できなかった。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ],
+      "title": "Multiple-query optimization"
+    },
+    "DOI:10.1162/neco.1992.4.1.131": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1162/neco.1992.4.1.131",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1992.4.1.131"
+      ],
+      "reason": "指定MIT Press DOIを開いたがprimary sourceを取得できず、usable abstractを確認できなかった。",
+      "first_checked_at": "2026-10-05T01:01:02+00:00",
+      "last_checked_at": "2026-10-05T01:01:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks"
     }
   }
 }
