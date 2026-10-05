@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-50-part-04-60a50eeddc1f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.scib.2026.07.036",
+      "identity_tokens": [
+        "DOI:10.1016/j.scib.2026.07.036"
+      ],
+      "title": "Closing the loop with generative AI and automated experimentation in electrochemical energy innovation.",
+      "reason": "The primary abstract is a review/proposal for generative AI and automated experimentation in electrochemical research; it does not evaluate LLM inference or serving efficiency.",
+      "source_url": "https://doi.org/10.1016/j.scib.2026.07.036",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103834",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103834"
+      ],
+      "title": "GraphDelta: A distributed incremental framework for efficient dynamic graph computing in edge intelligence",
+      "reason": "GraphDelta optimizes distributed dynamic graph computing at the edge, not LLM inference/serving.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103834",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103925",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103925"
+      ],
+      "title": "Mini-MDP: Revisiting the accuracy–complexity tradeoff in memory dependence prediction",
+      "reason": "Mini-MDP concerns processor memory-dependence prediction and its accuracy/complexity trade-off, not language-model inference.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103925",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103933",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103933"
+      ],
+      "title": "VMOC: MLIR-based memory optimization for CNN deployment on vector accelerators",
+      "reason": "VMOC optimizes CNN deployment on vector accelerators; it is outside the LLM inference/serving scope.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103933",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103945",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103945"
+      ],
+      "title": "A Survey of Softmax Acceleration: From Algorithms and Function Realization to System and Hardware Optimization",
+      "reason": "The primary text is relevant background for attention/softmax optimization, but it does not provide a focused LLM inference result or concrete contribution suitable for a Research implementation handoff.",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103945",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    }
+  ]
+}
