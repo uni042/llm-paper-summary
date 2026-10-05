@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-10-part-07-388b2b93526c",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36058",
+      "identity_tokens": [
+        "arXiv:2609.36058"
+      ],
+      "title": "ABC: Advantage-Based Control Variates for Reinforcement Learning with Verifiable Rewards",
+      "reason": "verifiable-reward強化学習のcontrol variatesによるtraining variance削減が主題。",
+      "source_url": "https://arxiv.org/abs/2609.36058",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36069",
+      "identity_tokens": [
+        "arXiv:2609.36069"
+      ],
+      "title": "The Uneven Decline of Collective Knowledge Production: Evidence from Stack Overflow After Generative AI",
+      "reason": "Stack Overflowでの知識生産と生成AIの社会的影響を分析する研究。",
+      "source_url": "https://arxiv.org/abs/2609.36069",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36074",
+      "identity_tokens": [
+        "arXiv:2609.36074"
+      ],
+      "title": "GEM-KMeans: Memory-Efficient and Accurate Clustering on Massive Scale with GPU Optimization",
+      "reason": "GPU最適化による大規模クラスタリングが主題で、LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2609.36074",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36104",
+      "identity_tokens": [
+        "arXiv:2609.36104"
+      ],
+      "title": "An Exact Generate - Transform Decomposition of Small-LLM Team Scaling Across Orchestration Architectures",
+      "reason": "複数LLM呼出しのquality/cost scaling分析であり、費用削減を目的とした具体的な効率化手法ではない。accuracyの伸びもtask/architecture依存。",
+      "source_url": "https://arxiv.org/abs/2609.36104",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36116",
+      "identity_tokens": [
+        "arXiv:2609.36116"
+      ],
+      "title": "Dyad: Extending Large Language Models with Native Typed Decision-Making",
+      "reason": "typed action scoringを効率的に拡張する設計意図はあるが、本文実験は主にagent task qualityで、latency・throughput・token・memory比較の証拠がない。",
+      "source_url": "https://arxiv.org/abs/2609.36116",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
