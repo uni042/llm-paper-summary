@@ -1,0 +1,98 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-20-part-03-28aa75873904",
+  "reference_main_sha": "c2906cd5d56fba2e688066c8ce9467ae8f42d253",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23979",
+      "identity_tokens": [
+        "arXiv:2609.23979"
+      ],
+      "title": "AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models",
+      "reason": "Attention encoder-decoder (AED) Speech Foundation Models achieve strong ASR performance but can generate acoustically unsupported text when inputs contain no speech, weak acoustic evidence, or unreliable transcription. We propose AURA: Activation-editing with Uncertainty-Routed Adaptation, an ultra-efficient representation-editing method that freezes the pretrained model and applies sparse scale-and-shift edits to decoder cross-attention heads. AURA dynamically routes edits using cross-attention uncertainty features that capture over-concentration, diffuse attention, and abrupt frame shifts. We evaluate AURA on four datasets spanning non-speech hallucination and speech grounding stressors, including imperfect-label child speech, imperfect-label adult speech, and disfluent speech. On non-speech audio, AURA reduces hallucination rate from 89.18% to 1.94% without prior hallucination-head identification. On imperfect-label corpora, AURA approaches LoRA WER while using roughly 500x fewer trainable parameters. Sensitivity analysis and qualitative cross-attention examples are consistent with AURA's uncertainty-routed editing behavior, supporting dynamic activation editing as a practical path for grounding AED speech models.",
+      "source_url": "https://arxiv.org/abs/2609.23979",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24049",
+      "identity_tokens": [
+        "arXiv:2609.24049"
+      ],
+      "title": "U-PEN Mamba: Progressive Expansion with Selective State-Space Modeling for Efficient Retinal Vessel Segmentation",
+      "reason": "Accurate retinal vessel segmentation is important for computer-aided ophthalmic analysis, yet thin vessels, low contrast, and severe foreground-background imbalance remain challenging for encoder-decoder networks. This paper presents U-PEN Mamba, a U-shaped retinal vessel segmentation architecture that couples progressive nonlinear feature expansion with selective state-space modeling. The proposed network enriches local vessel responses with progressive expansion, models long-range spatial dependencies through a Mamba Global Context (MGC) block with linear sequence complexity, and uses attention-based decoder fusion to recover fine vascular boundaries. We evaluate U-PEN Mamba on CHASE DB1 and DRIVE using a consistent patch-based preprocessing pipeline and compare it with convolutional, attention-based, transformer-based, and Mamba-based segmentation baselines. U-PEN Mamba obtains the best mean intersection over union among the compared methods, achieving 0.8394 on CHASE DB1 and 0.8221 on DRIVE, with Dice scores of 0.8187 and 0.8078, respectively, using 21.6M trainable parameters. Ablation studies show that the MGC block contributes the largest gain over the U-Net baseline, while projection dimension and state size provide practical accuracy-efficiency control. These results indicate that selective state-space modeling is a promising global-context mechanism for parameter-efficient retinal vessel segmentation. Code is available at: https://github.com/areyesan/UPEN_Mamba.",
+      "source_url": "https://arxiv.org/abs/2609.24049",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24084",
+      "identity_tokens": [
+        "arXiv:2609.24084"
+      ],
+      "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models",
+      "reason": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+      "source_url": "https://arxiv.org/abs/2609.24084",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24089",
+      "identity_tokens": [
+        "arXiv:2609.24089"
+      ],
+      "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention",
+      "reason": "高速化評価はあるが、中心は高階勾配計算で、inference scopeとの接続が弱い。Appendixではtest-time training等に触れるものの、推論servingの実証ではない。",
+      "source_url": "https://arxiv.org/abs/2609.24089",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24189",
+      "identity_tokens": [
+        "arXiv:2609.24189"
+      ],
+      "title": "A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation",
+      "reason": "Vision-language navigation requires embodied agents to navigate environments using natural language instructions and visual observations. Existing approaches typically decompose navigation into sequential language-guided decisions or rely on online exploration without prior environmental knowledge. Scene graph representations offer compact semantic memory but remain decoupled from downstream navigation, which still depends on dense metric maps. To close this gap, we propose an object--path graph that unifies open-vocabulary semantic reasoning with topological navigation. The proposed representation jointly supports semantic grounding, graph-based localization, and navigation within a single lightweight topological framework. Building on this graph, we introduce a navigation strategy that combines global path planning with local inter-node execution through lightweight node localization and semantic visual servoing, enabling navigation directly over the graph without dense metric reconstruction. Experiments on HM3D and Replica demonstrate competitive performance in open-vocabulary object grounding through the proposed hierarchical graph structure, while achieving effective navigation performance. Real-world robot experiments further validate the practicality of the proposed framework.",
+      "source_url": "https://arxiv.org/abs/2609.24189",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
