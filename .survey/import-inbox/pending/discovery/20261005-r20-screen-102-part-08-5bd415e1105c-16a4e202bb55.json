@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-102-part-08-5bd415e1105c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09685",
+      "identity_tokens": [
+        "arXiv:2407.09685"
+      ],
+      "title": "Accelerating the inference of string generation-based chemical reaction models for industrial applications",
+      "reason": "Task-specific molecular model/drafting strategy; transfer to general LLMs uncertain.",
+      "source_url": "https://arxiv.org/abs/2407.09685",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3649476.3660380",
+      "identity_tokens": [
+        "DOI:10.1145/3649476.3660380"
+      ],
+      "title": "IRET: Incremental Resolution Enhancing Transformer",
+      "reason": "Primary abstract: Image-based Vision Transformer pruning, not LLM inference.",
+      "source_url": "https://doi.org/10.1145/3649476.3660380",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18897",
+      "identity_tokens": [
+        "arXiv:2405.18897"
+      ],
+      "title": "MLAE: Masked LoRA Experts for Visual Parameter-Efficient Fine-Tuning",
+      "reason": "Primary abstract: Visual parameter-efficient fine-tuning, training/quality result.",
+      "source_url": "https://arxiv.org/abs/2405.18897",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16800",
+      "identity_tokens": [
+        "arXiv:2405.16800"
+      ],
+      "title": "TAGA: Text-Attributed Graph Self-Supervised Learning by Synergizing Graph and Text Mutual Transformations",
+      "reason": "Primary abstract: Graph representation learning, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2405.16800",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.03372",
+      "identity_tokens": [
+        "arXiv:2405.03372"
+      ],
+      "title": "Snake Learning: A Communication- and Computation-Efficient Distributed Learning Framework for 6G",
+      "reason": "Primary abstract: 6G distributed learning/training efficiency, not inference.",
+      "source_url": "https://arxiv.org/abs/2405.03372",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+      ]
+    }
+  ]
+}
