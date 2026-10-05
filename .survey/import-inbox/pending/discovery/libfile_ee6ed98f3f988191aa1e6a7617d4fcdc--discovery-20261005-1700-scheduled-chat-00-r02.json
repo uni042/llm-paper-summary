@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1700-scheduled-chat-00/r02",
+  "reference_main_sha": "bc26fd85002b4cc3145ff6843a321f289be73b41",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.12885",
+      "identity_tokens": [
+        "arXiv:1810.12885"
+      ],
+      "title": "ReCoRD: Bridging the Gap between Human and Machine Commonsense Reading Comprehension",
+      "reason": "commonsense reasoningを必要とするmachine reading comprehension dataset ReCoRDを構築し、人間とmodelの能力差を測るbenchmark研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1810.12885",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でMRC dataset/benchmarkとhuman-machine gap評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/782814.782855",
+      "identity_tokens": [
+        "DOI:10.1145/782814.782855"
+      ],
+      "title": "High performance RDMA-based MPI implementation over InfiniBand",
+      "reason": "InfiniBand RDMAをsmall/control messageまで利用するMPI通信設計でlatency・bandwidth・host overheadを改善するHPC通信研究。分散LLM推論の基礎技術としては関連するが、最終評価はMPI/NAS benchmarkでLLM/Transformer推論を対象としないため現行凍結範囲ではunrelated。",
+      "source_url": "https://doi.org/10.1145/782814.782855",
+      "body_check": "abstract_screen_only: 論文要旨でRDMA-based MPI、6.8us small-message latency、24% latency reduction、104%超bandwidth向上、NAS Parallel Benchmarksが主評価と確認し、LLM推論専用でないため深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.09305",
+      "identity_tokens": [
+        "arXiv:1810.09305"
+      ],
+      "title": "WikiHow: A Large Scale Text Summarization Dataset",
+      "reason": "23万超のarticle-summary pairからなるabstractive summarization datasetを構築し既存modelのbaselineを評価するdataset研究。推論system効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1810.09305",
+      "body_check": "abstract_screen_only: 一次arXiv書誌・要旨でWikiHow summarization dataset構築とbaseline評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.07736",
+      "identity_tokens": [
+        "arXiv:2302.07736"
+      ],
+      "title": "Is ChatGPT better than Human Annotators? Potential and Limitations of ChatGPT in Explaining Implicit Hate Speech",
+      "reason": "implicit hate speech検出の自然言語説明をChatGPTに生成させ、人間annotationと比較するexplainability/user-study研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2302.07736",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でimplicit hate speech explanationとhuman comparisonが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2168836.2168847",
+      "identity_tokens": [
+        "DOI:10.1145/2168836.2168847"
+      ],
+      "title": "Jockey: guaranteed job latency in data parallel clusters",
+      "reason": "data-parallel clusterでjob内部依存をsimulatorにより予測し、進捗に応じてresource allocationを動的制御してlatency SLOを満たすscheduler。LLM servingのSLO-aware schedulingに機構的に強く関連するが、評価先はMicrosoft Cosmos/SCOPEのdata-processing jobでLLM推論専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/2168836.2168847",
+      "body_check": "full_text_checked: Microsoft Researchの著者版全文でsimulator-based remaining-time prediction、dynamic resource allocation、production Cosmos cluster、SLO達成率・prediction error・resource impact評価を確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mitp.2017.9",
+      "identity_tokens": [
+        "DOI:10.1109/mitp.2017.9"
+      ],
+      "title": "Technologies for 5G Networks: Challenges and Opportunities",
+      "reason": "5G networkの候補技術・network paradigm・課題を整理するtelecommunications review。LLM/Transformer推論runtime・memory・servingを最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/MITP.2017.9",
+      "body_check": "abstract_screen_only: 一次書誌と公開版冒頭で5G network technology/challenges reviewが主題と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3452296.3472923",
+      "identity_tokens": [
+        "DOI:10.1145/3452296.3472923"
+      ],
+      "title": "A variegated look at 5G in the wild: performance, power, and QoE implications",
+      "reason": "商用5GのmmWave/low-band、NSA/SA、RRC等がsmartphoneのthroughput・power・video/web QoEへ与える影響を実測するmobile-network measurement研究。LLM推論system効率化ではない。",
+      "source_url": "https://doi.org/10.1145/3452296.3472923",
+      "body_check": "abstract_screen_only: 著者公開ページの要旨でcommercial 5G performance/power/QoE measurementとvideo/web applicationが主題と確認し、LLM推論対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2478/pralin-2018-0002",
+      "identity_tokens": [
+        "DOI:10.2478/pralin-2018-0002"
+      ],
+      "title": "Training Tips for the Transformer Model",
+      "reason": "Transformer NMTのbatch size、learning rate、warmup、multi-GPU、checkpoint averaging等がtraining quality・memory・training timeへ与える影響を整理するtraining実務研究。推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1804.00247",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtraining parameters、multi-GPU、training stability/timeが主題と確認し、現行推論サーベイ範囲外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.14762",
+      "identity_tokens": [
+        "arXiv:2402.14762"
+      ],
+      "title": "MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues",
+      "reason": "multi-turn dialogue能力を4208 turns・1388 dialogues・13 tasksで細粒度評価するLLM benchmark。能力評価が目的で、latency・throughput・memory等の推論system評価ではない。",
+      "source_url": "https://arxiv.org/abs/2402.14762",
+      "body_check": "abstract_screen_only: 一次arXiv/ACL要旨でmulti-turn dialogue ability taxonomyと21 LLMの能力評価が主題と確認し、推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1223",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1223"
+      ],
+      "title": "Adaptively Sparse Transformers",
+      "reason": "softmaxをalpha-entmaxへ置換し、headごとにcontext-dependent sparsityを学習してattentionのinterpretabilityとhead diversityを改善する研究。正確にzero weightを作るが、主貢献・評価はmachine translationの精度・解釈性であり、sparse kernelやruntime/memory削減を実装・評価しない。",
+      "source_url": "https://arxiv.org/abs/1909.00015",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でalpha-entmax、learnable alpha、interpretability/head diversity、translation accuracyが主題と確認し、推論system効率化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:46:00+09:00",
+      "last_checked_at": "2026-10-05T17:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 64
+    }
+  ]
+}
