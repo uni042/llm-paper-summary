@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2525c83f58b0f30-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.00641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.00641",
+    "identity_tokens": [
+      "arXiv:2107.00641"
+    ],
+    "reason": "局所・大域interactionを階層的に扱うvision Transformer向けattentionで、最終評価は画像認識・検出等のcomputer vision。LLM推論system対象外。",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T02:49:33+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+    ],
+    "title": "Focal Self-attention for Local-Global Interactions in Vision Transformers"
+  },
+  "processed_at": "2026-10-05T02:49:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2525c83f58b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

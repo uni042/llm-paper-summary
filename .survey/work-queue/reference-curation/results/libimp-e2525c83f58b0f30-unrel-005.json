@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2525c83f58b0f30-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.03387",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.03387",
+    "identity_tokens": [
+      "arXiv:2502.03387"
+    ],
+    "reason": "少量の高品質reasoning dataで数学reasoning能力を引き出すsupervised fine-tuning研究で、推論runtime・test-time compute削減を主貢献としない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T02:49:33+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+    ],
+    "title": "LIMO: Less is More for Reasoning"
+  },
+  "processed_at": "2026-10-05T02:49:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2525c83f58b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:45:28+00:00",
-  "record_count": 2069,
+  "updated_at": "2026-10-05T02:49:33+00:00",
+  "record_count": 2075,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -21210,9 +21210,9 @@
       "identity_tokens": [
         "arXiv:2405.05941"
       ],
-      "reason": "Abstract evaluates robot manipulation policies in simulation; the subject is robotics policy evaluation, not LLM inference efficiency.",
+      "reason": "robot manipulation policyをsimulationで評価するrobotics benchmark/methodology研究で、LLM推論system効率化を対象としない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
       ],
@@ -21224,9 +21224,9 @@
       "identity_tokens": [
         "arXiv:2306.09212"
       ],
-      "reason": "Abstract introduces CMMLU as a Chinese language-understanding benchmark; it does not address inference efficiency or serving.",
+      "reason": "67分野の中国語LLM知識・reasoningを測るbenchmarkを構築し18モデルを評価する研究。推論runtime・memory・serving最適化を提案しない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md",
         "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md",
@@ -21246,9 +21246,9 @@
       "identity_tokens": [
         "arXiv:1904.03711"
       ],
-      "reason": "Abstract presents a learned database query optimizer; it is not about LLM inference efficiency or serving.",
+      "reason": "database query plan optimizationをdeep reinforcement learningで学習するDBMS研究で、LLM推論やagentic servingを最終適用先としない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
       ],
@@ -21260,9 +21260,9 @@
       "identity_tokens": [
         "arXiv:2107.00641"
       ],
-      "reason": "Abstract proposes focal self-attention for vision transformers and evaluates visual recognition; it is not an LLM inference/serving contribution.",
+      "reason": "局所・大域interactionを階層的に扱うvision Transformer向けattentionで、最終評価は画像認識・検出等のcomputer vision。LLM推論system対象外。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
       ],
@@ -21274,9 +21274,9 @@
       "identity_tokens": [
         "arXiv:2012.07463"
       ],
-      "reason": "Abstract presents diff pruning for parameter-efficient transfer learning; its contribution is fine-tuning/training efficiency rather than inference-time efficiency.",
+      "reason": "task固有差分parameterを疎化してparameter-efficient transfer learningを行うfine-tuning研究。学習・適応が主目的で推論runtime最適化ではない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [
         "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
       ],
@@ -21288,13 +21288,13 @@
       "identity_tokens": [
         "arXiv:2308.05374"
       ],
-      "reason": "Abstract surveys alignment evaluation for trustworthy LLMs; it does not focus on inference-time efficiency or serving.",
+      "reason": "LLM alignment・trustworthinessの評価軸とガイドラインを整理するsurveyで、推論runtime・memory・serving最適化の新方式を提案しない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
       ],
-      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment"
+      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models Alignment"
     },
     "arXiv:2303.10130": {
       "classification": "unrelated",
@@ -21302,9 +21302,9 @@
       "identity_tokens": [
         "arXiv:2303.10130"
       ],
-      "reason": "Abstract estimates labor-market exposure to language-model capabilities; no inference-efficiency or serving contribution.",
+      "reason": "LLMが職業taskへ与える労働市場影響を推定する経済・社会分析研究で、推論system効率化を扱わない。",
       "first_checked_at": "2026-10-05T00:55:44+00:00",
-      "last_checked_at": "2026-10-05T00:55:44+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md"
@@ -21317,9 +21317,9 @@
       "identity_tokens": [
         "arXiv:1903.00089"
       ],
-      "reason": "Abstract presents massively multilingual neural machine translation; no LLM inference-efficiency or serving contribution is identified.",
+      "reason": "大規模多言語NMTのtraining・translation quality・zero-shot transferを扱うモデル/学習研究で、LLM推論runtime・serving最適化を主目的としない。",
       "first_checked_at": "2026-10-05T00:55:44+00:00",
-      "last_checked_at": "2026-10-05T00:55:44+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
       ],
@@ -26757,9 +26757,9 @@
       "identity_tokens": [
         "arXiv:2502.03387"
       ],
-      "reason": "reasoning性能を少量のtraining dataで得るLIMOはtraining data efficiencyが主題で、inference efficiencyではない。",
+      "reason": "少量の高品質reasoning dataで数学reasoning能力を引き出すsupervised fine-tuning研究で、推論runtime・test-time compute削減を主貢献としない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
@@ -29927,6 +29927,85 @@
         "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
       ],
       "title": "SSD: Spatially Speculative Decoding Accelerates Autoregressive Image Generation"
+    },
+    "arXiv:2606.20786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20786",
+      "identity_tokens": [
+        "arXiv:2606.20786"
+      ],
+      "reason": "Processing-in-DRAMのsecurity benefits/challengesを扱うhardware security survey/overviewで、LLM inferenceを対象にしていない。",
+      "first_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "Memory-Centric Computing: Security Benefits and Challenges of Processing-in-DRAM"
+    },
+    "arXiv:2606.19491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19491",
+      "identity_tokens": [
+        "arXiv:2606.19491"
+      ],
+      "reason": "LayerNorm transformerのFisher/covariance dead directionをforward-pass-onlyで診断する理論・診断研究で、推論効率の手法ではない。",
+      "first_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Algebraic Dead Directions in LayerNorm Transformers: A Forward-Pass-Only Diagnostic at LLM Scale"
+    },
+    "arXiv:2402.12289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arXiv:2402.12289"
+      ],
+      "reason": "VLMでscene description・analysis・hierarchical planningを行い自動運転を改善し、production vehicleへ展開する応用研究。計算負荷への言及はあるが最終適用先はautonomous drivingで、LLM推論system効率化ではない。",
+      "first_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "linked_from": [],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+    },
+    "DOI:10.1145/215399.215427": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/215399.215427",
+      "identity_tokens": [
+        "DOI:10.1145/215399.215427"
+      ],
+      "reason": "長messageを扱う並列計算communication cost modelを提案する古典的parallel computing研究で、LLM推論systemを最終適用先としない。",
+      "first_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "linked_from": [],
+      "title": "LogGP: incorporating long messages into the LogP model—one step closer towards a realistic model for parallel computation"
+    },
+    "arXiv:1507.06149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1507.06149",
+      "identity_tokens": [
+        "arXiv:1507.06149"
+      ],
+      "reason": "類似neuronをdata-freeにpruneしてMNIST/AlexNet等を圧縮するが、最終評価はcomputer vision DNNでLLM/Transformer推論への適用・評価がない。",
+      "first_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "linked_from": [],
+      "title": "Data-free Parameter Pruning for Deep Neural Networks"
+    },
+    "DOI:10.52202/075280-2997": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/075280-2997",
+      "identity_tokens": [
+        "DOI:10.52202/075280-2997"
+      ],
+      "reason": "言語モデルがAPI callを自己教師ありで学びtool-use能力を獲得するtraining/agent capability研究。外部toolを推論時に使うが、速度・memory・serving効率化が主目的ではない。",
+      "first_checked_at": "2026-10-05T02:49:33+00:00",
+      "last_checked_at": "2026-10-05T02:49:33+00:00",
+      "linked_from": [],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
     }
   }
 }

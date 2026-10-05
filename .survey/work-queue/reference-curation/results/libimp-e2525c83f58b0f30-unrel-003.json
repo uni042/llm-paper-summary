@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2525c83f58b0f30-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2012.07463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2012.07463",
+    "identity_tokens": [
+      "arXiv:2012.07463"
+    ],
+    "reason": "task固有差分parameterを疎化してparameter-efficient transfer learningを行うfine-tuning研究。学習・適応が主目的で推論runtime最適化ではない。",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T02:49:33+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+    ],
+    "title": "Parameter-Efficient Transfer Learning with Diff Pruning"
+  },
+  "processed_at": "2026-10-05T02:49:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2525c83f58b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

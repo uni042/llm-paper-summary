@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6e363f7f718ffe6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.12289",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.12289",
+    "identity_tokens": [
+      "arXiv:2402.12289"
+    ],
+    "reason": "VLMでscene description・analysis・hierarchical planningを行い自動運転を改善し、production vehicleへ展開する応用研究。計算負荷への言及はあるが最終適用先はautonomous drivingで、LLM推論system効率化ではない。",
+    "first_checked_at": "2026-10-05T02:49:32+00:00",
+    "last_checked_at": "2026-10-05T02:49:32+00:00",
+    "linked_from": [],
+    "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-05T02:49:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6e363f7f718",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
