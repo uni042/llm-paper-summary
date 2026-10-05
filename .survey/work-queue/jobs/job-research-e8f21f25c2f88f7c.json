@@ -35,10 +35,15 @@
   "selection_reason": "標準self-attentionの系列長二乗計算・memoryをNyström近似でO(n)へ下げ、長系列で実測memory/time削減を示す効率的attention研究。LLM以前のTransformer研究だが推論計算・memory削減へ直接つながるため収録対象。",
   "semantic_scholar_id": "6fa1cfc4f97f03a8485692418c7aa1a06c574a85",
   "source_url": "https://arxiv.org/abs/2102.03902",
-  "status": "ready",
+  "status": "superseded",
   "title": "Nyströmformer: A Nystöm-based Algorithm for Approximating Self-Attention",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-05T23:07:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md",
+  "represented_canonical_id": "arXiv:2102.03902",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
