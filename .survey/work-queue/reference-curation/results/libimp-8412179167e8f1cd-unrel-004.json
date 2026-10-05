@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8412179167e8f1cd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10994-026-07142-7",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10994-026-07142-7",
+    "identity_tokens": [
+      "DOI:10.1007/s10994-026-07142-7"
+    ],
+    "reason": "The publisher abstract describes a federated-LLM survey focused on decentralized training, training compute, communication overhead, personalization, and security; no inference-serving contribution is established.",
+    "first_checked_at": "2026-10-05T09:11:23+00:00",
+    "last_checked_at": "2026-10-05T09:11:23+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Federated Learning for Large Language Models: Opportunities, Challenges, and Open Research Directions"
+  },
+  "processed_at": "2026-10-05T09:11:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8412179167e8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:08:32+00:00",
-  "record_count": 1274,
+  "updated_at": "2026-10-05T09:11:22+00:00",
+  "record_count": 1275,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19603,6 +19603,22 @@
         "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
       ],
       "title": "SAKI: Score-Aware Low-Rank Key Indexing with Random-Matrix Noise Correction for KV Retrieval"
+    },
+    "arXiv:2608.01614": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01614",
+      "identity_tokens": [
+        "arXiv:2608.01614"
+      ],
+      "reason": "Borderline because a linear-complexity VLM bridge is potentially relevant, but the paper does not establish a measured serving/inference efficiency gain or a sufficiently broad deployment result.",
+      "first_checked_at": "2026-10-05T09:11:22+00:00",
+      "last_checked_at": "2026-10-05T09:11:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Linear Multi-Timescale Retention as a Memory-Efficient Vision-Language Bridge"
     }
   }
 }

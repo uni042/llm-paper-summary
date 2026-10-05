@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ec46c81b96d3417-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.03887",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.03887",
+    "identity_tokens": [
+      "arXiv:2608.03887"
+    ],
+    "reason": "The primary abstract evaluates regularization during LoRA fine-tuning and retention after task transfer; its cost is training-step overhead, outside inference-only scope.",
+    "first_checked_at": "2026-10-05T09:11:21+00:00",
+    "last_checked_at": "2026-10-05T09:11:21+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Omega-S: A Functional Resilience Index for LLM Fine-Tuning"
+  },
+  "processed_at": "2026-10-05T09:11:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ec46c81b96d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
