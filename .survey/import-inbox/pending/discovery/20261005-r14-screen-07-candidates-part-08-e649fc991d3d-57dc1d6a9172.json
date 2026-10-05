@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-07-candidates-part-08-e649fc991d3d",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1336",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1336"
+      ],
+      "title": "End-to-End Non-Autoregressive Neural Machine Translation with Connectionist Temporal Classification",
+      "reason": "一次要旨はCTCを用いるnon-autoregressive neural machine translationを扱う。LLM inference/servingの対象外。",
+      "source_url": "https://arxiv.org/abs/1811.04719",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.05983",
+      "identity_tokens": [
+        "arXiv:2410.05983"
+      ],
+      "title": "Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs in RAG",
+      "reason": "長文LLM/RAGに関連するが主な成果は回答品質で、推論コストやserving efficiencyの実測・改善を示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.05983",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1610.09027",
+      "identity_tokens": [
+        "arXiv:1610.09027"
+      ],
+      "title": "Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes",
+      "reason": "sparse memory accessの効率結果はあるが、LLM/language model実験を確認できず、2016年の汎用memory-augmented RNN研究で直接適用性が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/1610.09027",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06508",
+      "identity_tokens": [
+        "arXiv:2407.06508"
+      ],
+      "title": "A clinical benchmark of public self-supervised pathology foundation models",
+      "reason": "一次要旨はpathology foundation modelの臨床benchmarkで、推論効率改善手法を提案・評価するものではない。",
+      "source_url": "https://arxiv.org/abs/2407.06508",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/qomex.2012.6263888",
+      "identity_tokens": [
+        "DOI:10.1109/qomex.2012.6263888"
+      ],
+      "title": "Waiting times in quality of experience for web based services",
+      "reason": "一次IEEE DOIページを開いたが、対象論文の要旨本文を取得できなかった。一次資料の内容は推測しない。",
+      "source_url": "https://doi.org/10.1109/QoMEX.2012.6263888",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md"
+      ]
+    }
+  ]
+}
