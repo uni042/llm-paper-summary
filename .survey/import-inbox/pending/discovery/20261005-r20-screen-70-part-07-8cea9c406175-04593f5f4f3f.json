@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-70-part-07-8cea9c406175",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16411",
+      "identity_tokens": [
+        "arXiv:2405.16411"
+      ],
+      "title": "Training Tensor Attention Efficiently: From Cubic to Almost Linear Time",
+      "reason": "tensor attentionのbackward gradientを高速化するtraining algorithm/theoryで、training専用。",
+      "source_url": "https://arxiv.org/abs/2405.16411",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14729",
+      "identity_tokens": [
+        "arXiv:2403.14729"
+      ],
+      "title": "Auto- Train-Once: Controller Network Guided Automatic Network Pruning from Scratch",
+      "reason": "general DNNをtraining時にpruneする方法で、LLM inference servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2403.14729",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05973",
+      "identity_tokens": [
+        "arXiv:2309.05973"
+      ],
+      "title": "Circuit Breaking: Removing Model Behaviors with Targeted Ablation",
+      "reason": "GPT-2のtargeted ablationによるundesirable behavior削除が主題で、inference cost/performance improvementではない。",
+      "source_url": "https://arxiv.org/abs/2309.05973",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18132",
+      "identity_tokens": [
+        "arXiv:2505.18132"
+      ],
+      "title": "BiggerGait: Unlocking Gait Recognition with Layer-wise Representations from Large Vision Models",
+      "reason": "large vision modelsによるgait recognition representation分析で、LLM inferenceとは別領域。",
+      "source_url": "https://arxiv.org/abs/2505.18132",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01478",
+      "identity_tokens": [
+        "arXiv:2503.01478"
+      ],
+      "title": "SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction",
+      "reason": "RAG retrieval utilityをsemantic perplexityで評価する手法で、retrieval/generation model inference efficiencyが貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2503.01478",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    }
+  ]
+}
