@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:07:54+00:00",
-  "record_count": 1167,
+  "updated_at": "2026-10-05T08:10:25+00:00",
+  "record_count": 1172,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17856,6 +17856,84 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "Agentopia on a Consumer GPU: A Reduced-Scale Long-Horizon Port with an 8B Model"
+    },
+    "arXiv:2608.23806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23806",
+      "identity_tokens": [
+        "arXiv:2608.23806"
+      ],
+      "reason": "This is embedding-encoder serving rather than generative LLM inference; throughput is a single-run, environment-specific result and does not isolate sparse activation. Scope fit is weak.",
+      "first_checked_at": "2026-10-05T08:10:24+00:00",
+      "last_checked_at": "2026-10-05T08:10:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ],
+      "title": "Giga-Embeddings: Mixture-of-Experts Encoders for High-Throughput Text Embeddings"
+    },
+    "arXiv:2608.22975": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22975",
+      "identity_tokens": [
+        "arXiv:2608.22975"
+      ],
+      "reason": "This is an embodied multimodal evaluation and access-structured perception study rather than an LLM-serving optimization; budget and quality findings have narrow benchmark scope.",
+      "first_checked_at": "2026-10-05T08:10:25+00:00",
+      "last_checked_at": "2026-10-05T08:10:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Budget-Constrained Embodied Perception: Four Resource Walls and a Pre-Registered Evaluation of Access-Structured Perception on Open Models at less than 31B"
+    },
+    "arXiv:2608.23144": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23144",
+      "identity_tokens": [
+        "arXiv:2608.23144"
+      ],
+      "reason": "The method repairs quality under added storage; it does not demonstrate a further inference-latency or memory reduction compared with the quantized base, so its efficiency contribution is weak.",
+      "first_checked_at": "2026-10-05T08:10:25+00:00",
+      "last_checked_at": "2026-10-05T08:10:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "Activation-Weighted Seeded Residual Coding for Low-Bit LLM Weight Repair"
+    },
+    "arXiv:2608.23252": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23252",
+      "identity_tokens": [
+        "arXiv:2608.23252"
+      ],
+      "reason": "The gains target evidence coverage/recall, not reduced inference cost; orchestration adds rounds/generations and the paper does not establish a cost-matched efficiency improvement.",
+      "first_checked_at": "2026-10-05T08:10:25+00:00",
+      "last_checked_at": "2026-10-05T08:10:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "The Laws of Context Allocation: Causal Measurement and Closed-Loop Orchestration in Generative Search"
+    },
+    "arXiv:2608.22963": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22963",
+      "identity_tokens": [
+        "arXiv:2608.22963"
+      ],
+      "reason": "The pipeline adds summary/reconstruction and a separately fine-tuned summarizer; end-to-end inference compute/latency including those calls is not established, so token reduction alone leaves efficiency unclear.",
+      "first_checked_at": "2026-10-05T08:10:25+00:00",
+      "last_checked_at": "2026-10-05T08:10:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Buried in Textual Debt: Context Pruning with Visual Evidence Preservation for MLLM Agents"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fbaa9a72bcd13ac-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.23252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.23252",
+    "identity_tokens": [
+      "arXiv:2608.23252"
+    ],
+    "reason": "The gains target evidence coverage/recall, not reduced inference cost; orchestration adds rounds/generations and the paper does not establish a cost-matched efficiency improvement.",
+    "first_checked_at": "2026-10-05T08:10:25+00:00",
+    "last_checked_at": "2026-10-05T08:10:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "The Laws of Context Allocation: Causal Measurement and Closed-Loop Orchestration in Generative Search"
+  },
+  "processed_at": "2026-10-05T08:10:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fbaa9a72bcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
