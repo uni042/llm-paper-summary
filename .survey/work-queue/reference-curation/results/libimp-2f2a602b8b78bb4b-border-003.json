@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f2a602b8b78bb4b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.knosys.2026.116564",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.knosys.2026.116564",
+    "identity_tokens": [
+      "DOI:10.1016/j.knosys.2026.116564"
+    ],
+    "reason": "The method is intended to reduce deployment compute/memory, but the primary article does not demonstrate inference/serving efficiency on hardware. The evidence remains too weak for a Research handoff until a sparse-runtime evaluation establishes practical gains.",
+    "first_checked_at": "2026-10-05T10:53:06+00:00",
+    "last_checked_at": "2026-10-05T10:53:06+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "NOVA: Noise-to-variation guided pruning of large language models"
+  },
+  "processed_at": "2026-10-05T10:53:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f2a602b8b78",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
