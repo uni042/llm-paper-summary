@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-59-part-02-6803bd2d8ca0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18324",
+      "identity_tokens": [
+        "arXiv:2606.18324"
+      ],
+      "title": "Why SWAVE May Not Be All You Need:A Concept-Evolution Retrospective on Complex-Valued Recurrent Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18324. Abstract summary: SWave is a complex-valued recurrent language model (169.26M parameters, D=384, L=16, T=2048) trained on FineWeb-Edu using 2xH100 NVL. It was designed around three founding premises: that representing language as complex waves rather than real-valued numbers enables richer information encoding; that a Cayley-parameterised unitary Out of scope: Recurrent LM retrospective/training; no inference-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2606.18324",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18381",
+      "identity_tokens": [
+        "arXiv:2606.18381"
+      ],
+      "title": "SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18381. Abstract summary: Retrieval-augmented generation (RAG) systems must balance retrieval granularity with contextual coherence, a challenge that existing methods address through LLM-guided chunking, single-level context expansion, or hierarchical summarization. These approaches variously depend on costly LLM calls during indexing or retrieval, limit Out of scope: RAG retrieval/tree construction and answer quality, no serving optimization.",
+      "source_url": "https://arxiv.org/abs/2606.18381",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18389",
+      "identity_tokens": [
+        "arXiv:2606.18389"
+      ],
+      "title": "Want Better Synthetic Data? Steer It: Activation Steering for Low-Resource Language Generation",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18389. Abstract summary: Large language models (LLMs) have become an effective tool for synthetic data generation, including for low-resource languages, where generated data can improve downstream task performance. Current best-performing approaches typically rely on few-shot prompting with target-language examples, which increases inference costs and m Out of scope: Synthetic low-resource language data generation/training.",
+      "source_url": "https://arxiv.org/abs/2606.18389",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18400",
+      "identity_tokens": [
+        "arXiv:2606.18400"
+      ],
+      "title": "CloakLM: Obfuscating GPU Memory Layout to Mitigate Model Ex-filtration for Serving",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18400. Abstract summary: Large foundation models deployed on third-party and shared accelerator infrastructure face a practical risk of model exfiltration that existing defenses do not fully address. In common serving deployments, model providers control the VM or bare-metal serving stack but not the surrounding hardware substrate. The host to GPU inter Out of scope: GPU memory-layout obfuscation for model-exfiltration defense.",
+      "source_url": "https://arxiv.org/abs/2606.18400",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18406",
+      "identity_tokens": [
+        "arXiv:2606.18406"
+      ],
+      "title": "CoreMem: Riemannian Retrieval and Fisher-Guided Distillation for Long-Term Memory in Dialogue Agents",
+      "reason": "Task-specific dialogue context compression, with budget- and model-dependent results.",
+      "source_url": "https://arxiv.org/abs/2606.18406",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    }
+  ]
+}
