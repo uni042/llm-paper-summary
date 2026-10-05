@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f7d5d61037b7420-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.05885",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.05885",
+    "identity_tokens": [
+      "arXiv:2602.05885"
+    ],
+    "reason": "The paper trains LLMs to generate Triton kernels and studies RL for kernel-code quality/reward hacking. Its target is code-generation training, not optimization of LLM inference or serving.",
+    "first_checked_at": "2026-10-05T14:55:39+00:00",
+    "last_checked_at": "2026-10-05T14:55:39+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Dr. Kernel: Reinforcement Learning Done Right for Triton Kernel Generations"
+  },
+  "processed_at": "2026-10-05T14:55:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f7d5d61037b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

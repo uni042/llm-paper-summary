@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bffc1de8aae361b8-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.03014",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.03014",
+    "identity_tokens": [
+      "arXiv:2507.03014"
+    ],
+    "reason": "The paper fingerprints models for ownership/copyright protection; no inference-efficiency method is proposed.",
+    "first_checked_at": "2026-10-05T14:55:40+00:00",
+    "last_checked_at": "2026-10-05T14:55:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "Intrinsic Fingerprint of LLMs: Continue Training is NOT All You Need to Steal A Model!"
+  },
+  "processed_at": "2026-10-05T14:55:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bffc1de8aae3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

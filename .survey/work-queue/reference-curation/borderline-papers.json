@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:53:04+00:00",
-  "record_count": 1916,
+  "updated_at": "2026-10-05T14:55:44+00:00",
+  "record_count": 1925,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29612,6 +29612,157 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Optimal Quantization for Matrix Multiplication"
+    },
+    "arXiv:2409.03384": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.03384",
+      "identity_tokens": [
+        "arXiv:2409.03384"
+      ],
+      "reason": "The review is broader than LLM inference/serving and does not provide a clearly bounded LLM-specific contribution; value for the target survey is uncertain.",
+      "first_checked_at": "2026-10-05T14:55:37+00:00",
+      "last_checked_at": "2026-10-05T14:55:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Acceleration of LLMs: A comprehensive survey and comparison"
+    },
+    "DOI:10.1109/cisce69494.2026.11504752": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cisce69494.2026.11504752",
+      "identity_tokens": [
+        "DOI:10.1109/cisce69494.2026.11504752"
+      ],
+      "reason": "No primary full-text sections were accessible in this review; do not infer performance or quality results from the abstract.",
+      "first_checked_at": "2026-10-05T14:55:39+00:00",
+      "last_checked_at": "2026-10-05T14:55:39+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TokenPool-Scheduler: Token-Level GPU Pooling and Resource Slicing for Multi-Model Co-Location"
+    },
+    "arXiv:2503.11486": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11486",
+      "identity_tokens": [
+        "arXiv:2503.11486"
+      ],
+      "reason": "The survey’s demonstrated emphasis includes model development/training costs; direct coverage of inference/serving efficiency is not sufficiently specific for a concrete Research follow-up based on this screen.",
+      "first_checked_at": "2026-10-05T14:55:40+00:00",
+      "last_checked_at": "2026-10-05T14:55:40+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of DeepSeek Models' Key Innovative Techniques"
+    },
+    "arXiv:2312.11750": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.11750",
+      "identity_tokens": [
+        "arXiv:2312.11750"
+      ],
+      "reason": "The HTML full-text endpoint returned an internal error; only the primary abstract was accessible. Keep borderline until primary full text can be reviewed.",
+      "first_checked_at": "2026-10-05T14:55:41+00:00",
+      "last_checked_at": "2026-10-05T14:55:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Heterogeneous Chiplet Architecture for Accelerating End-to-End Transformer Models"
+    },
+    "DOI:10.1145/3666025.3699355": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3666025.3699355",
+      "identity_tokens": [
+        "DOI:10.1145/3666025.3699355"
+      ],
+      "reason": "The ACM DOI source returned HTTP 403 in the available reader; no primary full-text section or quantitative serving outcome was accessible. Keep as borderline pending primary-text access.",
+      "first_checked_at": "2026-10-05T14:55:41+00:00",
+      "last_checked_at": "2026-10-05T14:55:41+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LiteMoE: Customizing On-device LLM Serving via Proxy Submodel Tuning"
+    },
+    "arXiv:2506.00744": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00744",
+      "identity_tokens": [
+        "arXiv:2506.00744"
+      ],
+      "reason": "Relevant architecture/inference adjacency, but no measured serving-efficiency gain.",
+      "first_checked_at": "2026-10-05T14:55:43+00:00",
+      "last_checked_at": "2026-10-05T14:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Blending Complementary Memory Systems in Hybrid Quadratic-Linear Transformers"
+    },
+    "arXiv:2501.10658": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.10658",
+      "identity_tokens": [
+        "arXiv:2501.10658"
+      ],
+      "reason": "The hardware direction is adjacent, but an LLM serving evaluation is missing.",
+      "first_checked_at": "2026-10-05T14:55:43+00:00",
+      "last_checked_at": "2026-10-05T14:55:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LUT-DLA: Lookup Table as Efficient Extreme Low-Bit Deep Learning Accelerator"
+    },
+    "SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53",
+      "identity_tokens": [
+        "SemanticScholar:5b269727dd4ecd8aa013950bd6f7b15ab80eaf53"
+      ],
+      "reason": "The paper concerns ternary expert choice in MoE, but without full text its inference/serving relevance is unverified.",
+      "first_checked_at": "2026-10-05T14:55:44+00:00",
+      "last_checked_at": "2026-10-05T14:55:44+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TC-MoE: Augmenting Mixture of Experts with Ternary Expert Choice"
+    },
+    "arXiv:2412.06289": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.06289",
+      "identity_tokens": [
+        "arXiv:2412.06289"
+      ],
+      "reason": "Potential serving scalability is discussed, but measured inference benefit is absent.",
+      "first_checked_at": "2026-10-05T14:55:44+00:00",
+      "last_checked_at": "2026-10-05T14:55:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity"
     }
   }
 }
