@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-30-part-08-f9060d594784",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817626",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817626"
+      ],
+      "title": "OrionInfer: Low-Overhead Parallelism Switching and Live Migration for Efficient LLM Serving",
+      "reason": "The abstract is strongly relevant, but required primary-body results are unavailable; retain as borderline until full-text access permits verification.",
+      "source_url": "https://doi.org/10.1145/3770855.3817626",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.08784-slos-serve-multi-slo-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817650",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817650"
+      ],
+      "title": "Think Less, Act Warranted: Efficient Tool-Integrated Reasoning via Dual-Efficiency Regularization",
+      "reason": "The efficiency objective is relevant, but primary full-text evidence is required to establish actual inference savings and accuracy tradeoffs.",
+      "source_url": "https://doi.org/10.1145/3770855.3817650",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817657",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817657"
+      ],
+      "title": "Pick Up Where You Left Off: An Efficient Solution for Continuous Vector Similarity Search",
+      "reason": "Retrieval efficiency is adjacent to RAG, but relation to LLM-serving efficiency is weak and the primary full text is unavailable.",
+      "source_url": "https://doi.org/10.1145/3770855.3817657",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817661",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817661"
+      ],
+      "title": "HeimdaLLM: Efficient Cloud-assisted Federated Fine-tuning with Zeroth-Order Rectification for LLMs",
+      "reason": "HeimdaLLM optimizes federated fine-tuning/convergence and client training memory/communication, which is training-only efficiency.",
+      "source_url": "https://doi.org/10.1145/3770855.3817661",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md"
+      ]
+    }
+  ]
+}
