@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-03-part-04-5d5d7626fef6",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27216",
+      "identity_tokens": [
+        "arXiv:2609.27216"
+      ],
+      "title": "KATOsuper: Surrogate-accelerated neural topology optimization with sensitivity-consistent Fourier neural operators",
+      "reason": "Fourier neural operator surrogateによるneural topology optimizationが対象であり、LLM推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2609.27216",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18094",
+      "identity_tokens": [
+        "arXiv:2609.18094"
+      ],
+      "title": "Agora: Git as Shared Memory for Collective AutoResearch",
+      "reason": "Gitを共有記憶とするAutoResearch agentのcoordinationが主題。LLM inference-cost/latency削減の証拠がない。",
+      "source_url": "https://arxiv.org/abs/2609.18094",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18374",
+      "identity_tokens": [
+        "arXiv:2609.18374"
+      ],
+      "title": "Decoupling Vision, Language, and Action for Efficient Multi-Task Robot Policies",
+      "reason": "VLA multi-task robot policyのvision/language/action構成を扱う。推論効率の明確な貢献が抄録にない。",
+      "source_url": "https://arxiv.org/abs/2609.18374",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16053",
+      "identity_tokens": [
+        "arXiv:2609.16053"
+      ],
+      "title": "Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents",
+      "reason": "retrieval-driven memory reconsolidationでagent記憶/回答品質を扱う。一次本文にtoken/推論cost低減の提案または評価を確認できず、効率を中心目的としない。",
+      "source_url": "https://arxiv.org/abs/2609.16053",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10632",
+      "identity_tokens": [
+        "arXiv:2609.10632"
+      ],
+      "title": "Numbat: Building and Verifying a Self-Contained Machine-Learning Stack",
+      "reason": "self-contained ML stackの実演はYOLO/CV系で、LLM inference optimizationとは異なる。",
+      "source_url": "https://arxiv.org/abs/2609.10632",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
