@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-95-part-04-d371abb690b1",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25730",
+      "identity_tokens": [
+        "arXiv:2603.25730"
+      ],
+      "title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference",
+      "reason": "The primary abstract studies autoregressive video diffusion generation and long-video sampling; despite KV-cache management and inference wording, this is video-generation diffusion rather than LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2603.25730",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19173",
+      "identity_tokens": [
+        "arXiv:2603.19173"
+      ],
+      "title": "SOL-ExecBench: Speed-of-Light Benchmarking for Real-World GPU Kernels Against Hardware Limits",
+      "reason": "The primary abstract introduces a benchmark for generated CUDA-kernel optimization against hardware limits; it is not a method or evaluation of LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.19173",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16459",
+      "identity_tokens": [
+        "arXiv:2603.16459"
+      ],
+      "title": "DynHD: Hallucination Detection for Diffusion Large Language Models via Denoising Dynamics Deviation Learning",
+      "reason": "The primary abstract addresses hallucination detection in diffusion LLM outputs, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.16459",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23361",
+      "identity_tokens": [
+        "arXiv:2602.23361"
+      ],
+      "title": "VGG-T3: Offline Feed-Forward 3D Reconstruction at Scale",
+      "reason": "The primary abstract concerns feed-forward 3D reconstruction and its geometric KV representation, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.23361",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11865",
+      "identity_tokens": [
+        "arXiv:2602.11865"
+      ],
+      "title": "Intelligent AI Delegation",
+      "reason": "The primary abstract studies AI-agent task delegation and coordination, not model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.11865",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    }
+  ]
+}
