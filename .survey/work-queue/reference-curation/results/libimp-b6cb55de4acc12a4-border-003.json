@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6cb55de4acc12a4-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.08407",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.08407",
+    "identity_tokens": [
+      "arXiv:2607.08407"
+    ],
+    "reason": "primary body describes an optical delay-line proposal and modeled 70B/10,000-accelerator case study, not a measured hardware deployment; major assumptions require validation.",
+    "first_checked_at": "2026-10-05T10:34:22+00:00",
+    "last_checked_at": "2026-10-05T10:34:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+    ],
+    "title": "Who Needs DRAM? We Have Fiber"
+  },
+  "processed_at": "2026-10-05T10:34:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6cb55de4acc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

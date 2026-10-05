@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43e88bccb1e126ce-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.07554",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.07554",
+    "identity_tokens": [
+      "arXiv:2607.07554"
+    ],
+    "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+    "first_checked_at": "2026-10-05T10:34:21+00:00",
+    "last_checked_at": "2026-10-05T10:34:21+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "RubriQ: Rubric-Guided Group Relative Policy Optimization for Constraint-Aware Quantum Circuit Synthesis"
+  },
+  "processed_at": "2026-10-05T10:34:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43e88bccb1e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
