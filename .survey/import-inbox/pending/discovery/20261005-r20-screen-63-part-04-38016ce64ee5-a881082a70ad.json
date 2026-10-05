@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-63-part-04-38016ce64ee5",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15999",
+      "identity_tokens": [
+        "arXiv:2410.15999"
+      ],
+      "title": "Steering Knowledge Selection Behaviours in LLMs via SAE-Based Representation Engineering",
+      "reason": "SpARE intervenes at inference to control factual-source selection/answer quality, not reduce compute, latency or memory. Primary abstract: Large language models (LLMs) can store a significant amount of factual knowledge in their parameters. However, their parametric knowledge may conflict with the information provided in the context -- this phenomenon, known as \\emph{context-memory knowledge conflicts}, can lead to undesirable model behaviour, such as reliance on outdated or incorrect information. Analysing the internal activations of LLMs, we find that they can internally register the signals of knowledge confl",
+      "source_url": "https://arxiv.org/abs/2410.15999",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7",
+      "identity_tokens": [
+        "SemanticScholar:1466559a2a97e00fa8e722530a0e3dec8e3088a7"
+      ],
+      "title": "FwdLLM: Efficient Federated Finetuning of Large Language Models with Perturbed Inferences",
+      "reason": "The primary USENIX paper presents FwdLLM as a BP-free federated fine-tuning system; perturbed forward inference replaces backpropagation within training.",
+      "source_url": "https://www.semanticscholar.org/paper/1466559a2a97e00fa8e722530a0e3dec8e3088a7",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21411",
+      "identity_tokens": [
+        "arXiv:2503.21411"
+      ],
+      "title": "Exploring the Roles of Large Language Models in Reshaping Transportation Systems: A Survey, Framework, and Roadmap",
+      "reason": "Survey concerns LLM application roles in transportation systems, not inference/serving efficiency. Primary abstract: Modern transportation systems face pressing challenges due to increasing demand, dynamic environments, and heterogeneous information integration. The rapid evolution of Large Language Models (LLMs) offers transformative potential to address these challenges. Extensive knowledge and high-level capabilities derived from pretraining evolve the default role of LLMs as text generators to become versatile, knowledge-driven task solvers for intelligent transportation systems. This s",
+      "source_url": "https://arxiv.org/abs/2503.21411",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.04557",
+      "identity_tokens": [
+        "arXiv:2202.04557"
+      ],
+      "title": "Universal Hopfield Networks: A General Framework for Single-Shot Associative Memory Models",
+      "reason": "Universal Hopfield networks/associative memory theory, not LLM inference. Primary abstract: A large number of neural network models of associative memory have been proposed in the literature. These include the classical Hopfield networks (HNs), sparse distributed memories (SDMs), and more recently the modern continuous Hopfield networks (MCHNs), which possess close links with self-attention in machine learning. In this paper, we propose a general framework for understanding the operation of such memory networks as a sequence of three operations: similarity, separati",
+      "source_url": "https://arxiv.org/abs/2202.04557",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3547305.3547313",
+      "identity_tokens": [
+        "DOI:10.14778/3547305.3547313"
+      ],
+      "title": "Optimizing Inference Serving on Serverless Platforms",
+      "reason": "Primary full text confirms the evaluated workload is DeepSpeech speech recognition and supplies no LLM-serving evidence.",
+      "source_url": "https://doi.org/10.14778/3547305.3547313",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    }
+  ]
+}
