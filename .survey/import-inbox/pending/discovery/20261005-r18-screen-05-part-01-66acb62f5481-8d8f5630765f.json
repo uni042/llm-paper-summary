@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-05-part-01-66acb62f5481",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36959",
+      "identity_tokens": [
+        "arXiv:2609.36959"
+      ],
+      "title": "Cobalt: Leveraging Expert Co-activation for Efficient Distributed MoE Training",
+      "reason": "Cobaltの寄与はMoE expert parallelismの配置・通信最適化を含む分散training frameworkであり、効率改善は学習時に限定される。",
+      "source_url": "https://arxiv.org/abs/2609.36959",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37001",
+      "identity_tokens": [
+        "arXiv:2609.37001"
+      ],
+      "title": "Parameterized Stripe Attention for Efficient Video Generation",
+      "reason": "PSAはHunyuanVideo/WanのDiffusion Transformerによるvideo generation attentionを最適化する。対象は動画拡散推論で、LLM inference/servingではない。",
+      "source_url": "https://arxiv.org/abs/2609.37001",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37007",
+      "identity_tokens": [
+        "arXiv:2609.37007"
+      ],
+      "title": "RVQ Position Aware Speculative Decoding for On Device Text to Speech",
+      "reason": "効率改善はQwen3-TTSのon-device codec-token generationに特化し、測定対象はRVQ inner loop。general text LLM servingへの転移は未確認。",
+      "source_url": "https://arxiv.org/abs/2609.37007",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37040",
+      "identity_tokens": [
+        "arXiv:2609.37040"
+      ],
+      "title": "Selecting The Most Informative Tokens in Natural Language Autoencoders",
+      "reason": "自然言語autoencoderの監査用説明位置を選び、説明生成コストを抑える研究であり、LLMの通常推論/servingを効率化する手法ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37040",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37066",
+      "identity_tokens": [
+        "arXiv:2609.37066"
+      ],
+      "title": "Beyond Compression: Diagnosing How Post-Training Changes Mathematical Reasoning",
+      "reason": "本文はpost-training後の数学推論特性とsampling costの分析であり、推論時の効率化method/systemを提案していない。",
+      "source_url": "https://arxiv.org/abs/2609.37066",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
