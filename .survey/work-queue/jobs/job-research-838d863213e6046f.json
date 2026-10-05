@@ -35,10 +35,15 @@
   "selection_reason": "長動画MLLMのcontext制約に対し、DINOv2類似度によるframe削減、text-query guided selective feature reduction、inter-frame similarityによるspatial token pruningを段階適用する。本文では1fpsの1時間動画を8k contextへ収めるため平均2 token/frameまで圧縮し、長動画推論の入力token・context負荷を直接削減するため対象内。",
   "semantic_scholar_id": "d83e2f9b24ec92f5ff07420b665f07ff200e149a",
   "source_url": "https://arxiv.org/abs/2410.17434",
-  "status": "ready",
+  "status": "superseded",
   "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T22:48:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+  "represented_canonical_id": "arXiv:2410.17434",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

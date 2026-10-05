@@ -32,9 +32,14 @@
   "selection_reason": "重複context blockのindex・並べ替え・重複除去でKV再利用を拡張しprefill latencyを最大3倍短縮するため、prefix/KV cache再利用とlong-context serving系統へ直接接続する。",
   "semantic_scholar_id": "55e8ff688d13948dfbb496af1b565057f5ba5114",
   "source_url": "https://www.semanticscholar.org/paper/55e8ff688d13948dfbb496af1b565057f5ba5114",
-  "status": "ready",
+  "status": "superseded",
   "title": "ContextPilot: Fast Long-Context Inference via Context Reuse",
   "type": "research",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-05T22:48:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md",
+  "represented_canonical_id": "arXiv:2511.03475",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

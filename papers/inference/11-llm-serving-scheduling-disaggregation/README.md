@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（313本）
+## 自動生成の論文一覧（315本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -105,6 +105,10 @@
 - **2025-11 · [Pre-Attention Expert Prediction and Prefetching for Mixture-of-Experts Large Language Models](2025-2511.10676-pre-attention-expert-prediction-and-prefetching-for-mixture-of-experts-l.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   そのため演算量を抑えられるが、選択後に必要な重みがGPUに載っていない場合はストレージまたはホストメモリから転送する必要がある。従来の予測方式は前層の状態から次層の選択を予測するため、層をまたぐ変化が誤りになり、最初の層では参照できる前層出力もない。
+
+- **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  ContextPilotはこの制約を推論エンジン側の新しい注意機構で解くのではなく、エンジンへ渡す文脈の構成を変えて既存の接頭辞キャッシュを命中させる。論文はプリフィル遅延を最大約3倍削減し、推論品質を維持または長文脈条件で改善できると報告する。
 
 - **2025-11 · [Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments](2024-2411.17741-chameleon-adapter-caching-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1199,6 +1203,10 @@
 - **2024-04 · [LoongServe: Efficiently Serving Long-Context Large Language Models with Elastic Sequence Parallelism](2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md)**  
   実装：[✓](https://github.com/LoongServe/LoongServe) ・ リポジトリ内被引用：15  
   LoongServeは固定したテンソル並列度や、プリフィル/デコードを固定GPU群へ分ける方式では、この時間変動へ追従できず、計算資源の遊休、KVキャッシュ移送、GPUメモリ断片化が起きると指摘する。1M トークン入力ではKVキャッシュだけで488GBになり得る例を示し、長文脈ではこの不整合が支配的になる。
+
+- **2024-03 · [Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference](2024-2403.20306-towards-greener-llms-bringing-energy-efficiency-to-the-forefront-of-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  LLMサービングはGPU台数を増やせば性能を上げやすいが、データセンターでは電力供給自体が設備拡張の制約になる。本研究は「最速の構成」を探すのではなく、要求されるサービス水準目標（Service-Level Objective; SLO）を満たしたうえで、1要求または1tokenを処理するエネルギーを小さくする観点からLLM推論を分析する。
 
 - **2023-11 · [HexGen: Generative Inference of Large Language Model over Heterogeneous Environment](2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：9  

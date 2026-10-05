@@ -35,10 +35,15 @@
   "selection_reason": "隠れ状態自体を学習モデルとし、推論系列上で自己教師あり更新するTest-Time Training layerを提案する。TTT-Linear/TTT-MLPは系列長に対して線形計算量で、125M〜1.3B規模の言語モデル評価において長文脈性能を維持し、予備的システム最適化後のTTT-Linearは8K文脈でTransformerより高速となるため対象内。",
   "semantic_scholar_id": "35ab93f41115e860bee5e202b71061addfd0fd5d",
   "source_url": "https://arxiv.org/abs/2407.04620",
-  "status": "ready",
+  "status": "superseded",
   "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T22:48:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md",
+  "represented_canonical_id": "arXiv:2407.04620",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
