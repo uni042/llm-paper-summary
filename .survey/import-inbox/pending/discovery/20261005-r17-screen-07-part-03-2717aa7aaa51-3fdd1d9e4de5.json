@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-07-part-03-2717aa7aaa51",
+  "reference_main_sha": "b4a253086852b0d3f001749a4d38519ec3f1e709",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10803",
+      "identity_tokens": [
+        "arXiv:2607.10803"
+      ],
+      "title": "Weight-Adjusted Gradients Reveal Parameter Importance and Failure Modes in LLMs",
+      "reason": "WAG analyzes parameter importance and potential uses in quantization/experts, but the abstract does not propose or evaluate inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.10803",
+      "first_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "last_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10134",
+      "identity_tokens": [
+        "arXiv:2607.10134"
+      ],
+      "title": "LeRoPE: Learnable RoPE Frequencies Improve Language Modeling",
+      "reason": "LeRoPE’s gains are obtained by training language models from scratch; it is a training/modeling contribution, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.10134",
+      "first_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "last_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.10387",
+      "identity_tokens": [
+        "arXiv:2607.10387"
+      ],
+      "title": "GigaChat Audio: Time-aware Large Audio Language Model",
+      "reason": "This audio LLM measures compute-cost trade-offs for temporal-marker/tokenization choices, but does not establish an inference-efficiency method or serving speedup.",
+      "source_url": "https://arxiv.org/abs/2607.10387",
+      "first_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "last_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09287",
+      "identity_tokens": [
+        "arXiv:2607.09287"
+      ],
+      "title": "Super-Tuning: From Activation-Aware Pruning to Sparse Fine-Tuning",
+      "reason": "Super/Supra are parameter-efficient fine-tuning methods; training efficiency is outside scope.",
+      "source_url": "https://arxiv.org/abs/2607.09287",
+      "first_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "last_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fmars.2026.1672904",
+      "identity_tokens": [
+        "DOI:10.3389/fmars.2026.1672904"
+      ],
+      "title": "Environmental DNA as a tool for ecosystem monitoring and conservation biology",
+      "reason": "Environmental DNA ecosystem monitoring review; unrelated to LLM inference.",
+      "source_url": "https://doi.org/10.3389/fmars.2026.1672904",
+      "first_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "last_checked_at": "2026-10-05T03:23:42.578869+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
