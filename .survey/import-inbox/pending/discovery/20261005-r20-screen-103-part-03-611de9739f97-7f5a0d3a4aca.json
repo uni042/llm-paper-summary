@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-103-part-03-611de9739f97",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.18475",
+      "identity_tokens": [
+        "arXiv:2501.18475"
+      ],
+      "title": "CLoQ: Enhancing Fine-Tuning of Quantized LLMs via Calibrated LoRA Initialization",
+      "reason": "量子化LLMのLoRA初期化・fine-tuning品質を改善する手法で、学習時の適応が主題であり推論実行コストの低減が要旨にない。",
+      "source_url": "https://arxiv.org/abs/2501.18475",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0317042",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0317042"
+      ],
+      "title": "Enhancing semantical text understanding with fine-tuned large language models: A case study on Quora Question Pair duplicate identification",
+      "reason": "Quora重複質問分類でLLM fine-tuning手法の精度を比較するタスク研究で、推論効率化を扱わない。",
+      "source_url": "https://doi.org/10.1371/journal.pone.0317042",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.05554",
+      "identity_tokens": [
+        "arXiv:2501.05554"
+      ],
+      "title": "LLMQuoter: Enhancing RAG Capabilities Through Efficient Quote Extraction From Large Contexts",
+      "reason": "本文の確認範囲ではfull-context比のaccuracy改善はあっても、context token削減量、end-to-end inference latency/cost、serving throughputが定量比較されていない。推論効率の直接証拠が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2501.05554",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2501.03905",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2501.03905"
+      ],
+      "title": "mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training",
+      "reason": "Mixture-of-Expertsモデルの分散training fabricで、要旨もtrainingの効率・scaleに限定されている。",
+      "source_url": "https://doi.org/10.48550/arXiv.2501.03905",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3605110",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3605110"
+      ],
+      "title": "Make Large Language Models Efficient: A Review",
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3605110",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md"
+      ]
+    }
+  ]
+}
