@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:17:27+00:00",
-  "record_count": 1878,
+  "updated_at": "2026-10-05T02:20:13+00:00",
+  "record_count": 1896,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -27121,6 +27121,264 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md"
       ],
       "title": "MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback"
+    },
+    "arXiv:2009.06489": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.06489",
+      "identity_tokens": [
+        "arXiv:2009.06489"
+      ],
+      "reason": "Hardware Lottery is a research-incentive essay, not an inference mechanism or system evaluation.",
+      "first_checked_at": "2026-10-05T02:20:11+00:00",
+      "last_checked_at": "2026-10-05T02:20:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "The hardware lottery"
+    },
+    "arXiv:2402.18679": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18679",
+      "identity_tokens": [
+        "arXiv:2402.18679"
+      ],
+      "reason": "Data Interpreter improves agent workflow and reasoning task performance, not inference latency/memory/compression.",
+      "first_checked_at": "2026-10-05T02:20:11+00:00",
+      "last_checked_at": "2026-10-05T02:20:11+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.08182-select-n-slo-aware-memory-offloading.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "title": "Data Interpreter: An LLM Agent For Data Science"
+    },
+    "arXiv:2111.12293": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.12293",
+      "identity_tokens": [
+        "arXiv:2111.12293"
+      ],
+      "reason": "PTQ4ViT is for vision transformer/ImageNet quantization, not LLM inference.",
+      "first_checked_at": "2026-10-05T02:20:11+00:00",
+      "last_checked_at": "2026-10-05T02:20:11+00:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "PTQ4ViT: Post-training Quantization for Vision Transformers with Twin Uniform Quantization"
+    },
+    "arXiv:2403.02901": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.02901",
+      "identity_tokens": [
+        "arXiv:2403.02901"
+      ],
+      "reason": "Survey of process-oriented text summarization, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T02:20:11+00:00",
+      "last_checked_at": "2026-10-05T02:20:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md"
+      ],
+      "title": "A Comprehensive Survey on Process-Oriented Automatic Text Summarization with Exploration of LLM-Based Methods"
+    },
+    "arXiv:2009.08553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.08553",
+      "identity_tokens": [
+        "arXiv:2009.08553"
+      ],
+      "reason": "GAR improves retrieval/QA relevance and accuracy; abstract gives no inference-cost reduction objective.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ],
+      "title": "Generation-Augmented Retrieval for Open-Domain Question Answering"
+    },
+    "arXiv:2002.11054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.11054",
+      "identity_tokens": [
+        "arXiv:2002.11054"
+      ],
+      "reason": "MLIR compiler infrastructure for extensible heterogeneous compilation, not LLM-specific serving efficiency.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ],
+      "title": "MLIR: A Compiler Infrastructure for the End of Moore's Law"
+    },
+    "arXiv:1704.05119": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.05119",
+      "identity_tokens": [
+        "arXiv:1704.05119"
+      ],
+      "reason": "RNN pruning during initial training and model-size reduction; no LLM inference scope.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Exploring Sparsity in Recurrent Neural Networks"
+    },
+    "arXiv:2405.17935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17935",
+      "identity_tokens": [
+        "arXiv:2405.17935"
+      ],
+      "reason": "Survey of LLM tool-learning paradigms, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Tool learning with large language models: a survey"
+    },
+    "arXiv:2002.03932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.03932",
+      "identity_tokens": [
+        "arXiv:2002.03932"
+      ],
+      "reason": "Embedding pretraining and large-scale document retrieval, not generative LLM inference.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ],
+      "title": "Pre-training Tasks for Embedding-based Large-scale Retrieval"
+    },
+    "arXiv:2410.06158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06158",
+      "identity_tokens": [
+        "arXiv:2410.06158"
+      ],
+      "reason": "Robot manipulation video-language-action model and policy performance, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+      ],
+      "title": "GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation"
+    },
+    "DOI:10.1109/micro.2006.30": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2006.30",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2006.30"
+      ],
+      "reason": "General system runtime phase prediction for dynamic power management, not LLM inference; abstract checked through institutional publication record.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "title": "Live, Runtime Phase Monitoring and Prediction on Real Systems with Application to Dynamic Power Management"
+    },
+    "DOI:10.18653/v1/p19-1500": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1500",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1500"
+      ],
+      "reason": "Hierarchical Transformer for multi-document summary quality, not inference-time LLM compression/serving.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Hierarchical Transformers for Multi-Document Summarization"
+    },
+    "DOI:10.1145/3387514.3405882": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3387514.3405882",
+      "identity_tokens": [
+        "DOI:10.1145/3387514.3405882"
+      ],
+      "reason": "Primary abstract/PDF studies operational 5G coverage, throughput, latency, and phone energy; it is network measurement, not LLM inference.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md"
+      ],
+      "title": "Understanding Operational 5G: A First Measurement Study on Its Coverage, Performance and Energy Consumption"
+    },
+    "arXiv:2308.07134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.07134",
+      "identity_tokens": [
+        "arXiv:2308.07134"
+      ],
+      "reason": "Uses LLMs for graph learning; abstract concerns graph-task capability, not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ],
+      "title": "Language is All a Graph Needs"
+    },
+    "arXiv:1806.08159": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1806.08159",
+      "identity_tokens": [
+        "arXiv:1806.08159"
+      ],
+      "reason": "RDMA network/NIC design for datacenters, not LLM inference.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "Revisiting network support for RDMA"
+    },
+    "DOI:10.1145/2307636.2307648": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2307636.2307648",
+      "identity_tokens": [
+        "DOI:10.1145/2307636.2307648"
+      ],
+      "reason": "FALCON predicts/prelaunches mobile apps to reduce app-start delay; this is OS app startup rather than LLM model inference. Abstract checked via Microsoft Research publication page.",
+      "first_checked_at": "2026-10-05T02:20:12+00:00",
+      "last_checked_at": "2026-10-05T02:20:12+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md"
+      ],
+      "title": "Fast app launching for mobile devices using predictive user context"
+    },
+    "arXiv:2411.10109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10109",
+      "identity_tokens": [
+        "arXiv:2411.10109"
+      ],
+      "reason": "LLM agents simulate individual behaviors from self-reports; no serving-efficiency contribution.",
+      "first_checked_at": "2026-10-05T02:20:13+00:00",
+      "last_checked_at": "2026-10-05T02:20:13+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md",
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+      ],
+      "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals"
+    },
+    "arXiv:2308.03188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.03188",
+      "identity_tokens": [
+        "arXiv:2308.03188"
+      ],
+      "reason": "Survey of LLM self-correction strategies for output quality/faithfulness, not serving efficiency.",
+      "first_checked_at": "2026-10-05T02:20:13+00:00",
+      "last_checked_at": "2026-10-05T02:20:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2609.02897-margins-not-windows-training-free-per-step-lossy-speculative-decoding.md"
+      ],
+      "title": "Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies"
     }
   }
 }

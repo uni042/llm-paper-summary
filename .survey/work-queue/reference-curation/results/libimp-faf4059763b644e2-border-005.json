@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf4059763b644e2-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1902.09113",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1902.09113",
+    "identity_tokens": [
+      "arXiv:1902.09113"
+    ],
+    "reason": "Star topologyでattention complexityをO(n²)からO(n)へ削減。本文の評価はmasked summation、SST、SNLI、CoNLL等で、causal decoder/LLM serving latencyは測定しない。効率的Transformerの隣接研究だがLLM推論への直接適用根拠が限定的。",
+    "first_checked_at": "2026-10-05T02:20:12+00:00",
+    "last_checked_at": "2026-10-05T02:20:12+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
+    "title": "Star-Transformer"
+  },
+  "processed_at": "2026-10-05T02:20:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf4059763b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

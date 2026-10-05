@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-faf4059763b644e2-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.10109",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.10109",
+    "identity_tokens": [
+      "arXiv:2411.10109"
+    ],
+    "reason": "LLM agents simulate individual behaviors from self-reports; no serving-efficiency contribution.",
+    "first_checked_at": "2026-10-05T02:20:13+00:00",
+    "last_checked_at": "2026-10-05T02:20:13+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md",
+      "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+    ],
+    "title": "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals"
+  },
+  "processed_at": "2026-10-05T02:20:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-faf4059763b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
