@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-11-part-05-53225347f9f2",
+  "reference_main_sha": "6d500013a9a75faa34205e40b590cfb80817666f",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00940",
+      "identity_tokens": [
+        "arXiv:2610.00940"
+      ],
+      "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning",
+      "reason": "推論時reasoningの質を改善するmulti-path planning法だが、要旨に同品質での推論compute・latency・memory削減の主張がない。",
+      "source_url": "https://arxiv.org/abs/2610.00940",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00952",
+      "identity_tokens": [
+        "arXiv:2610.00952"
+      ],
+      "title": "A Matched-Budget Audit Framework for Recaptioned Image-Text Supervision Distributions",
+      "reason": "recaptioned image-text supervision distributionの監査枠組みで、LLM推論最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00952",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00964",
+      "identity_tokens": [
+        "arXiv:2610.00964"
+      ],
+      "title": "RPTune: Learned Context Curation for LLM Catalog Search",
+      "reason": "本文・要旨でtoken数、prompt length削減、latency、costなど推論効率の比較が見当たらず、主張はtask accuracy改善。context curationの効率効果が実証されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.00964",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00977",
+      "identity_tokens": [
+        "arXiv:2610.00977"
+      ],
+      "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications",
+      "reason": "web applicationのaccess-control脆弱性をLLM agentで検出するセキュリティ応用であり、LLM runtime効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2610.00977",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00979",
+      "identity_tokens": [
+        "arXiv:2610.00979"
+      ],
+      "title": "RISED: RubrIcs for agentic multi-environment Selection and sElf-Distillation",
+      "reason": "multi-environment LLM agentのselection/self-distillation訓練を扱い、推論時最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00979",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    }
+  ]
+}
