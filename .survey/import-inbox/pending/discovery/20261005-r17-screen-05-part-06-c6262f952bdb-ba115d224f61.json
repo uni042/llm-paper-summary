@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-05-part-06-c6262f952bdb",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24368",
+      "identity_tokens": [
+        "arXiv:2607.24368"
+      ],
+      "title": "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory",
+      "reason": "Agent memoryのimplicit-association盲点を測るベンチマークで、効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2607.24368",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26175",
+      "identity_tokens": [
+        "arXiv:2608.26175"
+      ],
+      "title": "Lost in Compression: A Controlled Cross-Lingual Audit of Extractive Prompt Compressors",
+      "reason": "圧縮の多言語信頼性監査として関連するが、新規推論圧縮法やserving効果を提案しておらず、手順対象への貢献が不確か。",
+      "source_url": "https://arxiv.org/abs/2608.26175",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23444",
+      "identity_tokens": [
+        "arXiv:2607.23444"
+      ],
+      "title": "Isolated but Exposed: Persistence-Based Memory Extraction Attack on LLM Agents",
+      "reason": "Agent memory extractionの攻撃・脅威評価であり、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.23444",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.23806",
+      "identity_tokens": [
+        "arXiv:2607.23806"
+      ],
+      "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
+      "reason": "効率効果の測定はあるが、対象は既に解決・検証された反復可能問題であり、一次本文で方式のarchitecture/algorithm/configurationを非公開としているため、研究可能な推論機構を判断・追跡できない。",
+      "source_url": "https://arxiv.org/abs/2607.23806",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23227",
+      "identity_tokens": [
+        "arXiv:2607.23227"
+      ],
+      "title": "INT8 Quantization Makes ARM Edge Inference Dispatch-Invariant",
+      "reason": "ARM上のINT8 dispatch-invarianceを扱うkernel/numerical stability研究で、要旨の対象はCNN/edge kernelでありLLM servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.23227",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    }
+  ]
+}
