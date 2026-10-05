@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:56:24+00:00",
-  "record_count": 647,
+  "updated_at": "2026-10-05T01:59:06+00:00",
+  "record_count": 651,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9432,6 +9432,64 @@
         "papers/inference/99-other-inference-systems/2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md"
       ],
       "title": "World Model on Million-Length Video And Language With Blockwise RingAttention"
+    },
+    "DOI:10.1109/ojcoms.2024.3456549": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ojcoms.2024.3456549",
+      "identity_tokens": [
+        "DOI:10.1109/ojcoms.2024.3456549"
+      ],
+      "reason": "一次IEEE DOIページ https://doi.org/10.1109/OJCOMS.2024.3456549 は書誌ページまで到達したが、abstract本文を提示せず確認できなかった。",
+      "first_checked_at": "2026-10-05T01:59:04+00:00",
+      "last_checked_at": "2026-10-05T01:59:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md"
+      ],
+      "title": "LLM-Based Edge Intelligence: A Comprehensive Survey on Architectures, Applications, Security and Trustworthiness"
+    },
+    "arXiv:2608.02602": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02602",
+      "identity_tokens": [
+        "arXiv:2608.02602"
+      ],
+      "reason": "Continuous-latent diffusion LM uses parallel denoising and may be relevant to inference architecture, but full text reports generation quality and sampling steps without latency/throughput or inference-cost measurements. Difficult to establish an efficiency contribution.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling"
+    },
+    "arXiv:2502.14786": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.14786",
+      "identity_tokens": [
+        "arXiv:2502.14786"
+      ],
+      "reason": "Vision-language encoder family offers model-size cost/performance choices, but its contribution/evaluation is vision representation/training rather than LLM serving; scope is adjacent and weak.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
+      ],
+      "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
+    },
+    "DOI:10.1109/access.2024.3389497": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2024.3389497",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3389497"
+      ],
+      "reason": "Broad GPT technology/application/challenges review, not a focused inference-efficiency contribution; full text could not be retrieved.",
+      "first_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md"
+      ],
+      "title": "GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad8db69f42f71ab6-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.07895",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.07895",
+    "identity_tokens": [
+      "arXiv:2303.07895"
+    ],
+    "reason": "一次要旨はin-context learningの理論的learnabilityを分析する研究で、実行時効率化/servingではない。",
+    "first_checked_at": "2026-10-05T01:59:05+00:00",
+    "last_checked_at": "2026-10-05T01:59:05+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+    ],
+    "title": "The Learnability of In-Context Learning"
+  },
+  "processed_at": "2026-10-05T01:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad8db69f42f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

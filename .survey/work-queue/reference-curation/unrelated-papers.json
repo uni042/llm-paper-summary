@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:56:24+00:00",
-  "record_count": 1760,
+  "updated_at": "2026-10-05T01:59:06+00:00",
+  "record_count": 1776,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25375,6 +25375,236 @@
         "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
       ],
       "title": "Benchmarking Cognitive Biases in Large Language Models as Evaluators"
+    },
+    "DOI:10.1145/3508360": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3508360",
+      "identity_tokens": [
+        "DOI:10.1145/3508360"
+      ],
+      "reason": "arXiv一次要旨はserverless computing architectureのsurveyで、LLM inferenceに特化した研究ではない。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "The Serverless Computing Survey: A Technical Primer for Design Architecture"
+    },
+    "arXiv:2303.15375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.15375",
+      "identity_tokens": [
+        "arXiv:2303.15375"
+      ],
+      "reason": "一次要旨はCXL-ready systems/devicesを使うCXL memoryの測定研究で、LLM推論やLLM workloadの評価が確認できない。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "title": "Demystifying CXL Memory with Genuine CXL-Ready Systems and Devices"
+    },
+    "arXiv:2311.17311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17311",
+      "identity_tokens": [
+        "arXiv:2311.17311"
+      ],
+      "reason": "一次要旨は複数CoT生成を集約するLLM self-consistency手法で、推論効率削減を目的とせずサンプル複数化を扱う。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06914-taper-regulating-branch-parallelism.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "Universal Self-Consistency for Large Language Model Generation"
+    },
+    "arXiv:2205.00445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.00445",
+      "identity_tokens": [
+        "arXiv:2205.00445"
+      ],
+      "reason": "一次資料は外部知識源・discrete reasoningを接続するMRKL architectureを説明し、serving性能・推論効率評価を目的としない。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15241-local-contiguous-on-device-agent-learning.md"
+      ],
+      "title": "MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning"
+    },
+    "arXiv:2610.00926": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00926",
+      "identity_tokens": [
+        "arXiv:2610.00926"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2610.00926: Surveys end-to-end autonomous driving training data, strategies and platforms; its subject and contribution are training ecosystem, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "A Survey on End-to-End Autonomous Driving Training From the Perspectives of Data, Strategy, and Platform"
+    },
+    "arXiv:2609.22452": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22452",
+      "identity_tokens": [
+        "arXiv:2609.22452"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2609.22452: Introduces a benchmark for long-context spoken-language-model understanding and evaluates accuracy/recency effects; it does not propose or evaluate inference efficiency.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Vox-Infinity: Benchmarking the Limits of Long-Context Spoken Language Models"
+    },
+    "arXiv:2608.24053": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24053",
+      "identity_tokens": [
+        "arXiv:2608.24053"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2608.24053: Reports multimodal embedding models, training stages, retrieval benchmarks and deployments; not an LLM generation inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report"
+    },
+    "arXiv:2608.16721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16721",
+      "identity_tokens": [
+        "arXiv:2608.16721"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2608.16721: Routes agentic text-to-image generation workflows to reduce image-generation cost/latency. Despite explicit inference-efficiency gains, scope is image generation rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "GenRouter: Unified Workflow Routing for Agentic Image Generation"
+    },
+    "arXiv:2608.10915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10915",
+      "identity_tokens": [
+        "arXiv:2608.10915"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2608.10915: Presents a human-centered agentic-AI paradigm, memory and intervention framework; no inference-time compression or efficiency contribution.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "ComBodied Agents: a New Paradigm of Human-Centric Agentic AI"
+    },
+    "arXiv:2607.24953": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24953",
+      "identity_tokens": [
+        "arXiv:2607.24953"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2607.24953: Explicitly focuses on FP4 LLM training stability and training precision efficiency; training-only scope.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "Stable FP4 Training via Transposition-Invariant Block Quantization"
+    },
+    "arXiv:2607.12893": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12893",
+      "identity_tokens": [
+        "arXiv:2607.12893"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2607.12893: Introduces a benchmark for lifecycle memory-operation correctness and failure diagnosis. It does not propose memory compaction or measure inference resource efficiency.",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "MemOps: Benchmarking Lifecycle Memory Operations in Long-Horizon Conversations"
+    },
+    "arXiv:2303.06296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.06296",
+      "identity_tokens": [
+        "arXiv:2303.06296"
+      ],
+      "reason": "一次資料はattention entropy collapseを防ぐTransformer training安定化を扱い、学習専用である。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+      ],
+      "title": "Stabilizing Transformer Training by Preventing Attention Entropy Collapse"
+    },
+    "arXiv:2303.07895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.07895",
+      "identity_tokens": [
+        "arXiv:2303.07895"
+      ],
+      "reason": "一次要旨はin-context learningの理論的learnabilityを分析する研究で、実行時効率化/servingではない。",
+      "first_checked_at": "2026-10-05T01:59:05+00:00",
+      "last_checked_at": "2026-10-05T01:59:05+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "title": "The Learnability of In-Context Learning"
+    },
+    "arXiv:2503.14476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14476",
+      "identity_tokens": [
+        "arXiv:2503.14476"
+      ],
+      "reason": "DAPO is RLHF policy optimization and an open RL system: training-stage contribution, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
+      ],
+      "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale"
+    },
+    "arXiv:2303.00566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.00566",
+      "identity_tokens": [
+        "arXiv:2303.00566"
+      ],
+      "reason": "Survey concerns structured pruning for deep CNNs, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+      ],
+      "title": "Structured Pruning for Deep Convolutional Neural Networks: A Survey"
+    },
+    "arXiv:2003.02245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.02245",
+      "identity_tokens": [
+        "arXiv:2003.02245"
+      ],
+      "reason": "Transformer-based data augmentation for NLP training, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Data Augmentation using Pre-trained Transformer Models"
     }
   }
 }

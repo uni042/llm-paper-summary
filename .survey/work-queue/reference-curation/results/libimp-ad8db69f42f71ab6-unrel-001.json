@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad8db69f42f71ab6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2303.06296",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2303.06296",
+    "identity_tokens": [
+      "arXiv:2303.06296"
+    ],
+    "reason": "一次資料はattention entropy collapseを防ぐTransformer training安定化を扱い、学習専用である。",
+    "first_checked_at": "2026-10-05T01:59:05+00:00",
+    "last_checked_at": "2026-10-05T01:59:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+    ],
+    "title": "Stabilizing Transformer Training by Preventing Attention Entropy Collapse"
+  },
+  "processed_at": "2026-10-05T01:59:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad8db69f42f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
