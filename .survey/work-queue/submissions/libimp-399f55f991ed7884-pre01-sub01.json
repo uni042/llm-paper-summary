@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding",
+      "source_url": "https://arxiv.org/abs/2607.17884",
+      "year": 2026,
+      "published": "2026-07-20",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision Language Models (VLMs) achieve strong reasoning with Chain-of-Thought (CoT) prompting but incur high sequential-generation cost, error accumulation, and limited self-correction. Diffusion Multimodal Large Language Models (dMLLMs) unmask tokens in an order-agnostic process, improving efficiency and enabling iterative refinement, yet their reasoning and how to enhance it remain underexplored. We propose a training-free method, Spatio-Temporal Token Veto (ST-Veto), which leverages the ability to observe all token positions at each diffusion step. Rather than relying only on current-step confidence, ST-Veto vetoes temporally unstable tokens via second-order Taylor prediction of confidence dynamics and filters weakly grounded tokens using image-attention mass, swapping them with safer candidates. Across multiple dMLLMs and multimodal reasoning benchmarks, ST-Veto consistently outperforms standard decoding policies and prior VLM reasoning methods, improving accuracy by up to 9% with no additional training or generation cost. Analyses show that ST-Veto steers generation toward higher-confidence, better-grounded paths.",
+      "identifiers": [
+        "SemanticScholar:2b713bcbb0837a5c35baf1660d30a6ae27aa65d1"
+      ],
+      "semantic_scholar_id": "2b713bcbb0837a5c35baf1660d30a6ae27aa65d1",
+      "canonical_id": "arXiv:2607.17884",
+      "arxiv_id": "2607.17884",
+      "doi": "10.48550/arXiv.2607.17884",
+      "authors": [
+        "Keuntae Kim",
+        "Beomseok Lee",
+        "Hyunwoo Kim",
+        "Yongsuk Choi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 77,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散型マルチモーダルLLM（diffusion MLLM）の復号で時間的不安定tokenと視覚的groundingの弱いtokenをtraining-freeにvetoし、追加generation costなしで精度を最大9%改善する。拡散LLM推論の復号方式として対象内。",
+      "library_body_check": "full_text_relevance_review: arXiv一次資料でsecond-order Taylor prediction、image-attention massによるtoken veto、追加training/generation costなしのdecode policyを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-399f55f991ed",
+    "round": "libimp-399f55f991ed7884-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-399f55f991ed7884-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-399f55f991ed7884-pre01.json",
+    "receipt": "sha256:1f09ed620b6b7c5436638729acf112770a0d106c05b2731347b44e9845c88cf5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-399f55f991ed",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

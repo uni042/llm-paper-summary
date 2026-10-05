@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "cosFormer: Rethinking Softmax in Attention",
+      "source_url": "https://arxiv.org/abs/2202.08791",
+      "year": 2022,
+      "published": "2022-02-17",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 351,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has shown great successes in natural language processing, computer vision, and audio processing. As one of its core components, the softmax attention helps to capture long-range dependencies yet prohibits its scale-up due to the quadratic space and time complexity to the sequence length. Kernel methods are often adopted to reduce the complexity by approximating the softmax operator. Nevertheless, due to the approximation errors, their performances vary in different tasks/corpus and suffer crucial performance drops when compared with the vanilla softmax attention. In this paper, we propose a linear transformer called cosFormer that can achieve comparable or better accuracy to the vanilla transformer in both casual and cross attentions. cosFormer is based on two key properties of softmax attention: i). non-negativeness of the attention matrix; ii). a non-linear re-weighting scheme that can concentrate the distribution of the attention matrix. As its linear substitute, cosFormer fulfills these properties with a linear operator and a cosine-based distance re-weighting mechanism. Extensive experiments on language modeling and text understanding tasks demonstrate the effectiveness of our method. We further examine our method on long sequences and achieve state-of-the-art performance on the Long-Range Arena benchmark. The source code is available at https://github.com/OpenNLPLab/cosFormer.",
+      "identifiers": [
+        "SemanticScholar:c49ac1f916d6d2edeb187e6619c8d23acd95eb21"
+      ],
+      "semantic_scholar_id": "c49ac1f916d6d2edeb187e6619c8d23acd95eb21",
+      "canonical_id": "arXiv:2202.08791",
+      "arxiv_id": "2202.08791",
+      "authors": [
+        "Zhen Qin",
+        "Weixuan Sun",
+        "Huicai Deng",
+        "Dongxu Li",
+        "Yunshen Wei",
+        "Baohong Lv",
+        "Jun-Jie Yan",
+        "Lingpeng Kong",
+        "Yiran Zhong"
+      ],
+      "priority": 361,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 351,
+        "citation_count": 351,
+        "total": 361,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1691,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "softmax attentionの二次計算量を避けるため、非負性とcosine距離再重み付けを用いる線形attentionを提案する。因果・cross attentionの双方を線形化し、長系列で時間・空間計算量を削減するTransformer推論効率化へ直接関係するためaccept。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でsoftmax attentionのquadratic time/space問題、linear operator、cosine-based re-weighting、causal/cross attention、long-sequence評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a0260679bc25",
+    "round": "libimp-a0260679bc257d27-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a0260679bc257d27-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a0260679bc257d27-pre01.json",
+    "receipt": "sha256:2fcb1d6ccf0726ba687908897f7e9ce033c36b45062cb96a2a1adc3dccd28a71"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a0260679bc25",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

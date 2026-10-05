@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+      "source_url": "https://arxiv.org/abs/2112.07916",
+      "year": 2021,
+      "published": "2021-12-15",
+      "venue": "NAACL-HLT",
+      "citation_count": 429,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work has shown that either (1) increasing the input length or (2) increasing model size can improve the performance of Transformer-based neural models. In this paper, we present a new model, called LongT5, with which we explore the effects of scaling both the input length and model size at the same time. Specifically, we integrated attention ideas from long-input transformers (ETC), and adopted pre-training strategies from summarization pre-training (PEGASUS) into the scalable T5 architecture. The result is a new attention mechanism we call {\\em Transient Global} (TGlobal), which mimics ETC's local/global attention mechanism, but without requiring additional side-inputs. We are able to achieve state-of-the-art results on several summarization tasks and outperform the original T5 models on question answering tasks.",
+      "identifiers": [
+        "SemanticScholar:3dfb1f50f2a34a699c339dabaa6f9b3a977973de"
+      ],
+      "semantic_scholar_id": "3dfb1f50f2a34a699c339dabaa6f9b3a977973de",
+      "canonical_id": "arXiv:2112.07916",
+      "arxiv_id": "2112.07916",
+      "doi": "10.18653/v1/2022.findings-naacl.55",
+      "authors": [
+        "Mandy Guo",
+        "Joshua Ainslie",
+        "David C. Uthus",
+        "Santiago Ontañón",
+        "Jianmo Ni",
+        "Yun-Hsuan Sung",
+        "Yinfei Yang"
+      ],
+      "priority": 429,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 429,
+        "citation_count": 429,
+        "total": 429,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1755,
+        "matched_prestigious_venue": null
+      },
+      "reason": "T5 encoderのfull attentionをlocal/TGlobal sparse attentionへ置換し、長入力でattention計算・memoryを抑えつつsummarization/QA性能を改善する。長文脈Transformerの効率的attention architectureとして推論計算量に直接関係するため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv本文情報でlocal attentionとTransient Global attention、長入力scaling、T5との計算・memory効率比較、summarization/QA評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ecb00746520d",
+    "round": "libimp-ecb00746520dbed7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ecb00746520dbed7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ecb00746520dbed7-pre01.json",
+    "receipt": "sha256:74ed1caed174b0349e921c5d7f5b2d0ee225d89891a86eefbb9adc8c411406c5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ecb00746520d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
