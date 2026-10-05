@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-34-part-07-930b86182a6c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02582",
+      "identity_tokens": [
+        "arXiv:2608.02582"
+      ],
+      "title": "ACEM: A Cost Estimation Model for Agentic Software Engineering",
+      "reason": "ACEM estimates token/HITL/infrastructure costs in agentic software engineering; it is a cost-estimation framework, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2608.02582",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02689",
+      "identity_tokens": [
+        "arXiv:2608.02689"
+      ],
+      "title": "Stuck on\"A\": Diagnosing and Repairing Interface Injury in Attention-to-KDA Linearization of a 0.6B Language Model",
+      "reason": "Borderline because the linear-attention conversion is an inference-memory design, but this paper’s evidence establishes a quality failure diagnosis rather than a usable efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2608.02689",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02712",
+      "identity_tokens": [
+        "arXiv:2608.02712"
+      ],
+      "title": "Don't Regenerate, Debug: A Domain-Specific Agent for Repairing Near-Miss Hardware Operators",
+      "reason": "Borderline because the task-level token-efficiency result is relevant to LLM inference expenditure, but the mechanism and scope are application-specific agent repair rather than inference-system efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.02712",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02829",
+      "identity_tokens": [
+        "arXiv:2608.02829"
+      ],
+      "title": "Wiring Beats Blending: Structure-Aware Compensation for Transformer Downscaling",
+      "reason": "Borderline because a smaller converted checkpoint could matter to inference resource use, but no inference efficiency result is measured and the demonstrated advantage is during continued pretraining.",
+      "source_url": "https://arxiv.org/abs/2608.02829",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02940",
+      "identity_tokens": [
+        "arXiv:2608.02940"
+      ],
+      "title": "When Compression Scores Cannot Decide: Information Boundaries for Group-Robust LLM Pruning",
+      "reason": "Borderline because the topic is LLM pruning but this work primarily studies when compression scores support quality/risk decisions, without demonstrating deployed inference savings.",
+      "source_url": "https://arxiv.org/abs/2608.02940",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ]
+    }
+  ]
+}
