@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r22-screen-01-part-07-1c4aeff91781",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18541",
+      "identity_tokens": [
+        "arXiv:2607.18541"
+      ],
+      "title": "What Governs Decode Throughput in Absolute-Offset GPU LZ77? A Work-Granularity Mechanism and an Encode-Time Min-Match-Length Lever",
+      "reason": "This paper analyzes GPU LZ77 lossless decompression. It attributes throughput to average match length and adjusts the encoder minimum-match-length to improve compression ratio and the decode kernel; measurements are H100/device-resident generic data. It explicitly excludes entropy/host transfer timing and is not LLM weights, activations, KV cache, or serving compression. The corrupted lineage text does not establish a technical bridge.",
+      "source_url": "https://arxiv.org/abs/2607.18541",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05743",
+      "identity_tokens": [
+        "arXiv:2607.05743"
+      ],
+      "title": "The Balkanization of Execution-Security Research for AI Coding Agents: Isolation, Access Control, and Time-of-Check-to-Time-of-Use Vulnerabilities",
+      "reason": "The SoK closely overlaps the linked agent execution-security lineage, but its subject is isolation/access-control/TOCTOU taxonomy and defenses rather than LLM inference, serving, or inference-time efficiency. Whether the repository accepts this adjacent security literature is a scope question; no performance or serving contribution is claimed.",
+      "source_url": "https://arxiv.org/abs/2607.05743",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03362",
+      "identity_tokens": [
+        "arXiv:2607.03362"
+      ],
+      "title": "HGenPush: A Heterogeneous Generative Recommendation Architecture for Industrial Push Notification Systems",
+      "reason": "The abstract describes an industrial generative recommendation architecture; it does not identify LLM inference/serving efficiency as its contribution.",
+      "source_url": "https://arxiv.org/abs/2607.03362",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cmpb.2026.109541",
+      "identity_tokens": [
+        "DOI:10.1016/j.cmpb.2026.109541"
+      ],
+      "title": "Medical question answering: A comprehensive multimodal and LLM-driven survey",
+      "reason": "The paper is a medical QA survey of multimodal/LLM applications, not a concrete inference or serving optimization.",
+      "source_url": "https://doi.org/10.1016/j.cmpb.2026.109541",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3672720",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2026.3672720"
+      ],
+      "title": "MLO TTLM Optimization for IEEE 802.11bn IoT Networks Through Federated Learning Supported Transformer-Based Correlation Estimation",
+      "reason": "The primary abstract is a federated-learning transformer for Wi-Fi 8 link mapping/IoT network performance, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3672720",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
