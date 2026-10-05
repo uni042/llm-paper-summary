@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27752cc2d1a79666-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.22661",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.22661",
+    "identity_tokens": [
+      "arXiv:2602.22661"
+    ],
+    "reason": "diffusion language modelingを標準化するsoftware frameworkで、推論効率改善を要旨に示さない。",
+    "first_checked_at": "2026-10-05T14:49:20+00:00",
+    "last_checked_at": "2026-10-05T14:49:20+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "dLLM: Simple Diffusion Language Modeling"
+  },
+  "processed_at": "2026-10-05T14:49:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27752cc2d1a7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
