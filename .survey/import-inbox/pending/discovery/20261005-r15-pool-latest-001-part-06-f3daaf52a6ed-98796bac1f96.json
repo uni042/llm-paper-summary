@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-001-part-06-f3daaf52a6ed",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.12017",
+      "identity_tokens": [
+        "arXiv:2212.12017"
+      ],
+      "title": "OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization",
+      "reason": "OPT-IML is instruction meta-learning/training, not inference/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2212.12017",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.17419",
+      "identity_tokens": [
+        "arXiv:2502.17419"
+      ],
+      "title": "From System 1 to System 2: A Survey of Reasoning Large Language Models",
+      "reason": "Reasoning-LLM survey discusses inference-time reasoning but is a broad taxonomy, not a specific efficiency method with serving measurements.",
+      "source_url": "https://arxiv.org/abs/2502.17419",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.06175-vecinfer-efficient-llm-inference-with-low-bit-kv-cache-via-outlier-suppr.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.03741",
+      "identity_tokens": [
+        "arXiv:1906.03741"
+      ],
+      "title": "BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization",
+      "reason": "BIGPATENT is an abstractive summarization dataset, not an inference method.",
+      "source_url": "https://arxiv.org/abs/1906.03741",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05592",
+      "identity_tokens": [
+        "arXiv:2503.05592"
+      ],
+      "title": "R1-Searcher: Incentivizing the Search Capability in LLMs via Reinforcement Learning",
+      "reason": "R1-Searcher uses RL to train search capability; not inference cost/latency optimization.",
+      "source_url": "https://arxiv.org/abs/2503.05592",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08426",
+      "identity_tokens": [
+        "arXiv:2406.08426"
+      ],
+      "title": "Next-Generation Database Interfaces: A Survey of LLM-Based Text-to-SQL",
+      "reason": "Survey of LLM-based text-to-SQL interfaces; capability area, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2406.08426",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ]
+    }
+  ]
+}
