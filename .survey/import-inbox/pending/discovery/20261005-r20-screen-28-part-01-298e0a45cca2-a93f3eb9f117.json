@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-28-part-01-298e0a45cca2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12099",
+      "identity_tokens": [
+        "arXiv:2608.12099"
+      ],
+      "title": "RT-SEMamba: Real-Time Speech Enhancement Mamba via Progressive Knowledge Distillation",
+      "reason": "We present RT-SEMamba, a fully causal speech enhancement (SE) model built upon causal time-frequency Mamba blocks. Unlike Transformer-based architectures that rely on a growing key-value cache, Mamba propagates a fixed-size recurrent state per layer, enabling memory- and bandwidth-efficient long-form inference. We further introduce a progressive knowledge distillation (KD) strategy that compresses an 8-layer teacher into a shallow 1-layer student by jointly distilling complex spectral outputs and intermediate representations. On Voicebank-DEMAND, the 8-layer RT-SEMamba achieves 3.32 PESQ with a 25 ms algorithmic latency constraint, and the distilled 1-layer student improves over a naive 1-layer baseline from 3.06 to 3.18 PESQ while preserving the same steady-state RTF, delivering a 2.64x speedup over the teacher. These results demonstrate that state-space models with progressive KD provide a competitive quality-latency trade-off for real-time SE.",
+      "source_url": "https://arxiv.org/abs/2608.12099",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12146",
+      "identity_tokens": [
+        "arXiv:2608.12146"
+      ],
+      "title": "RoutePack: Expert Placement and Attention-Aware Data Packing for MoE Reinforcement Learning",
+      "reason": "Training Mixture-of-Experts (MoE) models for reinforcement learning (RL) couples two load-balancing problems: sequence composition determines dense attention work in each data-parallel microbatch, while token routing determines sparse expert work on expert-parallel ranks. Optimizing either alone can shift the bottleneck to the other. In MoE RL, rollout-time routing replay exposes every sample's sequence length and layer-wise expert demand before its training step. We present RoutePack, a hierarchical planner that coordinates state-consistent, layer-wise expert rerouting with joint attention- and expert-aware data packing over an optimizer-step window. RoutePack first places experts independently at each MoE layer using aggregate routing demand. It then packs samples into the smallest certified, or best-known feasible, number of token-capped execution rows and optimizes their DP layout with a projected EDP-shard-aware objective. The objective combines a window-normalized linear-quadratic attention proxy with per-layer physical EP-rank peaks and minimizes the accumulated cost of the slowest EDP shard. Parallel population annealing searches fixed-row feasible layouts while preserving sample coverage, capacity, nonempty cells, equal microbatch counts, and communicator topology. State-consistent materialization preserves logical top-k routing and existing MoE kernels without microbatch-level expert replication. Across Ling-3.0-Tiny and Ling-3.0-Flash, expert rerouting improves mean trainer-measured token throughput by 3.80% and 10.50%, while routing-aware packing adds another 4.86% and 3.98%, respectively. Overall, RoutePack improves throughput by 8.85% and 14.89% over the baseline.",
+      "source_url": "https://arxiv.org/abs/2608.12146",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2503.04398-semantic-parallelism.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12219",
+      "identity_tokens": [
+        "arXiv:2608.12219"
+      ],
+      "title": "ScreenShot: A Foundation Model for Few-Shot Combination Drug Screening",
+      "reason": "Treating patients with combinations of drugs reduces the risk of resistance to any individual drug. Finding effective combinations is difficult because the large search space makes combinatorial screens prohibitively expensive, time consuming, and often technically infeasible. Predictive models can fill this gap, yet existing methods typically require molecular profiling of each sample and per-cohort training, limiting their applicability when time and tissue are scarce. To address this challenge, we introduce ScreenShot, a hierarchical transformer pretrained on 40 drug screening datasets covering 3,700 drugs and 6,000 biological samples, whose architecture mirrors the nested structure of screening data. Given a few-shot context of observations from a new patient, ScreenShot predicts the response of the sample to combination therapies through in-context learning, operating directly on functional measurements with no fine-tuning and no molecular profiling. On four held-out datasets, ScreenShot outperforms all baselines in both prediction accuracy and identification of selectively effective treatments. ScreenShot's internal representations are directly useful for experimental design: we use them to drive a weighted k-means++ active learning strategy that selects which experiments to run, achieving the same hit detection as uniform screening with a third of the budget. Source code and interactive dashboard: https://github.com/tansey-lab/screenshot.",
+      "source_url": "https://arxiv.org/abs/2608.12219",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12239",
+      "identity_tokens": [
+        "arXiv:2608.12239"
+      ],
+      "title": "HAMP-LIC: Hessian-Aware Mixed-Precision Post-Training Quantization for Learned Image Compression",
+      "reason": "Use this plain-text version for the arXiv abstract field: Learned image compression (LIC) models achieve strong rate-distortion performance but are hindered by high computational complexity and encoding-decoding mismatches across heterogeneous hardware platforms. Uniform fixed-precision quantization alleviates these issues but suffers severe quality degradation at low bit widths because it ignores differences in the quantization sensitivities of individual layers. To enable efficient and accurate low-bit deployment of pretrained LIC models, we propose HAMP-LIC, a Hessian-aware mixed-precision post-training quantization (PTQ) framework with a four-stage optimization strategy. First, block-wise sensitivity is estimated from the Hessian trace to capture second-order importance. Second, a task-aware refinement module adjusts these sensitivities by jointly considering quantization distortion and rate-distortion performance. Third, guided by the refined sensitivity profile, bit widths are allocated under a global model-size constraint to balance efficiency and reconstruction quality. Finally, block-wise reconstruction using a small calibration set further suppresses quantization error. Experiments on representative LIC models, including Minnen2018 and Cheng2020, demonstrate that HAMP-LIC achieves up to 4.85x model compression with as little as 0.59% BD-rate loss. It consistently outperforms existing fixed- and mixed-precision PTQ methods across multiple datasets while completely eliminating cross-platform encoding-decoding errors.",
+      "source_url": "https://arxiv.org/abs/2608.12239",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12259",
+      "identity_tokens": [
+        "arXiv:2608.12259"
+      ],
+      "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting",
+      "reason": "Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables such deployment without retraining. However, reliable activation quantization requires calibration: activation ranges are estimated from historical data before deployment and then remain fixed during future inference. The importance of this deployment choice for financial forecasting remains poorly understood. We present a systematic study of activation calibration for PTQ in cross-sectional volatility forecasting on the S&P 500. Our evaluation covers seven representative neural architectures, eight walk-forward test years (2018-2025), and 560 trained models. We find that activation calibration has little effect at 8 bits but becomes the primary determinant of predictive performance at 4 bits. Under default absolute-maximum (abs-max) calibration, static 4-bit quantization of both weights and activations removes 11-62% of the full-precision mean information coefficient in affected architectures. Replacing abs-max with percentile calibration recovers 53-94% of this degradation in the four most affected architectures. The preferred activation range also varies across market periods. Narrow ranges improve resolution under typical market conditions but lose part of their advantage when test-period market dispersion exceeds the calibration history. These findings show that activation calibration is a first-class deployment decision for reliable 4-bit PTQ in financial forecasting. When substantial degradation remains, 8-bit activations or weight-only 4-bit quantization provide more robust deployment choices.",
+      "source_url": "https://arxiv.org/abs/2608.12259",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
