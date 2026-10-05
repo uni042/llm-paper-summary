@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1a57ca79fbc742a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.23536",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.23536",
+    "identity_tokens": [
+      "arXiv:2609.23536"
+    ],
+    "reason": "要旨: CUDA Graphs eliminate launch overheads by replaying tensor operations over static virtual addresses. However, FP8 pipeline training continuously alters the scaling states, microbatches, and deferred backward tasks that those fixed addresses represent. Split-backward schedules (e.g., 1F1B, Zero-Bubble) decouple。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:05:21+00:00",
+    "last_checked_at": "2026-10-05T03:05:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Explicit State and Resource Contracts for Low-Precision Pipeline Parallel Training under Captured Graphs"
+  },
+  "processed_at": "2026-10-05T03:05:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1a57ca79fbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
