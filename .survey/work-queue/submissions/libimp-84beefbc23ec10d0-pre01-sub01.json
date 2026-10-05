@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing",
+      "source_url": "https://arxiv.org/abs/2005.14187",
+      "year": 2020,
+      "published": "2020-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 298,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are ubiquitous in Natural Language Processing (NLP) tasks, but they are difficult to be deployed on hardware due to the intensive computation. To enable low-latency inference on resource-constrained hardware platforms, we propose to design Hardware-Aware Transformers (HAT) with neural architecture search. We first construct a large design space with arbitrary encoder-decoder attention and heterogeneous layers. Then we train a SuperTransformer that covers all candidates in the design space, and efficiently produces many SubTransformers with weight sharing. Finally, we perform an evolutionary search with a hardware latency constraint to find a specialized SubTransformer dedicated to run fast on the target hardware. Extensive experiments on four machine translation tasks demonstrate that HAT can discover efficient models for different hardware (CPU, GPU, IoT device). When running WMT’14 translation task on Raspberry Pi-4, HAT can achieve 3× speedup, 3.7× smaller size over baseline Transformer; 2.7× speedup, 3.6× smaller size over Evolved Transformer with 12,041× less search cost and no performance loss. HAT is open-sourced at https://github.com/mit-han-lab/hardware-aware-transformers.",
+      "identifiers": [
+        "SemanticScholar:ef8d788a904ed66bd8e30ffa69bc3ea1fe57dda7"
+      ],
+      "semantic_scholar_id": "ef8d788a904ed66bd8e30ffa69bc3ea1fe57dda7",
+      "canonical_id": "arXiv:2005.14187",
+      "arxiv_id": "2005.14187",
+      "doi": "10.18653/v1/2020.acl-main.686",
+      "authors": [
+        "Hanrui Wang",
+        "Zhanghao Wu",
+        "Zhijian Liu",
+        "Han Cai",
+        "Ligeng Zhu",
+        "Chuang Gan",
+        "Song Han"
+      ],
+      "priority": 308,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 298,
+        "citation_count": 298,
+        "total": 308,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2321,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Hardware-Aware TransformersはSuperTransformerのweight sharingとhardware latency constraint付きevolutionary searchでtarget CPU/GPU/IoT向けSubTransformerを選び、低遅延推論を直接最適化する。WMT'14でRaspberry Pi 4上baseline Transformer比3倍高速・3.7倍小型、Evolved Transformer比2.7倍高速・3.6倍小型を性能低下なしで報告するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文情報でarbitrary encoder-decoder attention/heterogeneous layers、SuperTransformer weight sharing、hardware-latency-constrained evolutionary search、CPU/GPU/IoT評価とRaspberry Pi 4上3x speedup・3.7x size reductionを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Chain of Draft: Thinking Faster by Writing Less",
+      "source_url": "https://arxiv.org/abs/2502.18600",
+      "year": 2025,
+      "published": "2025-02-25",
+      "venue": "arXiv.org",
+      "citation_count": 305,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in solving complex reasoning tasks through mechanisms like Chain-of-Thought (CoT) prompting, which emphasizes verbose, step-by-step reasoning. However, humans typically employ a more efficient strategy: drafting concise intermediate thoughts that capture only essential information. In this work, we propose Chain of Draft (CoD), a novel paradigm inspired by human cognitive processes, where LLMs generate minimalistic yet informative intermediate reasoning outputs while solving tasks. By reducing verbosity and focusing on critical insights, CoD matches or surpasses CoT in accuracy while using as little as only 7.6% of the tokens, significantly reducing cost and latency across various reasoning tasks. Our code and data are available at https://github.com/sileix/chain-of-draft.",
+      "identifiers": [
+        "SemanticScholar:56a9aa8825b6c6441b0d22b9bc04852e1af80852"
+      ],
+      "semantic_scholar_id": "56a9aa8825b6c6441b0d22b9bc04852e1af80852",
+      "canonical_id": "arXiv:2502.18600",
+      "arxiv_id": "2502.18600",
+      "doi": "10.48550/arXiv.2502.18600",
+      "authors": [
+        "Silei Xu",
+        "Wen-Hao Xie",
+        "Lingxiao Zhao",
+        "Pengcheng He"
+      ],
+      "priority": 305,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 305,
+        "citation_count": 305,
+        "total": 305,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 587,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Chain of Draftは冗長なChain-of-Thoughtの中間推論を最小限のdraftへ圧縮し、reasoning accuracyを維持しながら生成token数を削減する推論方式。複数reasoning taskでCoTと同等以上の精度を保ちつつ最少7.6%のtokenで解き、costとlatencyを直接削減するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文ページでminimalistic intermediate reasoning、CoT比較、accuracy維持、最少7.6% tokenおよびcost/latency低減を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-84beefbc23ec",
+    "round": "libimp-84beefbc23ec10d0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-84beefbc23ec10d0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-84beefbc23ec10d0-pre01.json",
+    "receipt": "sha256:86b0adc634879020f14357f68bae9bd68e8391e9f1d83266b072324f8593316f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-84beefbc23ec",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

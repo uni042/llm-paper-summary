@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Blockwise Parallel Decoding for Deep Autoregressive Models",
+      "source_url": "https://arxiv.org/abs/1811.03115",
+      "year": 2018,
+      "published": "2018-11-01",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 430,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep autoregressive sequence-to-sequence models have demonstrated impressive performance across a wide variety of tasks in recent years. While common architecture classes such as recurrent, convolutional, and self-attention networks make different trade-offs between the amount of computation needed per layer and the length of the critical path at training time, generation still remains an inherently sequential process. To overcome this limitation, we propose a novel blockwise parallel decoding scheme in which we make predictions for multiple time steps in parallel then back off to the longest prefix validated by a scoring model. This allows for substantial theoretical improvements in generation speed when applied to architectures that can process output sequences in parallel. We verify our approach empirically through a series of experiments using state-of-the-art self-attention models for machine translation and image super-resolution, achieving iteration reductions of up to 2x over a baseline greedy decoder with no loss in quality, or up to 7x in exchange for a slight decrease in performance. In terms of wall-clock time, our fastest models exhibit real-time speedups of up to 4x over standard greedy decoding.",
+      "identifiers": [
+        "SemanticScholar:5e04881e91bff952d102d967c4ffb498ec30d4af"
+      ],
+      "semantic_scholar_id": "5e04881e91bff952d102d967c4ffb498ec30d4af",
+      "canonical_id": "arXiv:1811.03115",
+      "arxiv_id": "1811.03115",
+      "authors": [
+        "Mitchell Stern",
+        "Noam Shazeer",
+        "Jakob Uszkoreit"
+      ],
+      "priority": 440,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 430,
+        "citation_count": 430,
+        "total": 440,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2895,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "複数future timestepを並列予測し、scoring modelで検証された最長prefixだけを採用するblockwise parallel decodingを提案する。self-attention modelでgreedy decoder比iteration最大2倍削減を品質低下なしで達成し、wall-clockで最大4倍高速化しており、後の投機的復号（speculative decoding）に直結する推論高速化研究のため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文情報でparallel future prediction、longest validated prefixへのbackoff、machine translation/image super-resolution評価、quality維持時最大2x iteration reduction・wall-clock最大4x speedupを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a5f3d9bcba1d",
+    "round": "libimp-a5f3d9bcba1de46f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a5f3d9bcba1de46f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a5f3d9bcba1de46f-pre01.json",
+    "receipt": "sha256:3386920a37734ef701d2a2e2fe9a4ec2dbb75490a7df5c0fd595442294350b6a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a5f3d9bcba1d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

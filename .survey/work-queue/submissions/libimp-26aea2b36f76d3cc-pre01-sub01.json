@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Lite Transformer with Long-Short Range Attention",
+      "source_url": "https://arxiv.org/abs/2004.11886",
+      "year": 2020,
+      "published": "2020-04-24",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 404,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has become ubiquitous in natural language processing (e.g., machine translation, question answering); however, it requires enormous amount of computations to achieve high performance, which makes it not suitable for mobile applications since mobile phones are tightly constrained by the hardware resources and battery. In this paper, we investigate the mobile setting (under 500M Mult-Adds) for NLP tasks to facilitate the deployment on the edge devices. We present Long-Short Range Attention (LSRA), where one group of heads specializes in the local context modeling (by convolution) while another group captures the long-distance relationship (by attention). Based on this primitive, we design Lite Transformer that is tailored for the mobile NLP application. Our Lite Transformer demonstrates consistent improvement over the transformer on three well-established language tasks: machine translation, abstractive summarization, and language modeling. It outperforms the transformer on WMT’14 English-French by 1.2 BLEU under 500M Mult-Adds and 1.7 BLEU under 100M Mult-Adds, and reduces the computation of transformer base model by 2.5x. Further, with general techniques, our Lite Transformer achieves 18.2x model size compression. For language modeling, our Lite Transformer also achieves 3.8 lower perplexity than the transformer around 500M Mult-Adds. Without the costly architecture search that requires more than 250 GPU years, our Lite Transformer outperforms the AutoML-based Evolved Transformer by 0.5 higher BLEU under the mobile setting.",
+      "identifiers": [
+        "SemanticScholar:8af925f4edf45131b5b6fed8aa655089d58692fa"
+      ],
+      "semantic_scholar_id": "8af925f4edf45131b5b6fed8aa655089d58692fa",
+      "canonical_id": "arXiv:2004.11886",
+      "arxiv_id": "2004.11886",
+      "authors": [
+        "Zhanghao Wu",
+        "Zhijian Liu",
+        "Ji Lin",
+        "Yu-Jun Lin",
+        "Song Han"
+      ],
+      "priority": 414,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 404,
+        "citation_count": 404,
+        "total": 414,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2355,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "モバイルNLP向けにLong-Short Range Attention (LSRA)を設計し、attentionとconvolutionへ長距離・局所文脈を分担させて推論計算量を削減する。本文はmobile inferenceを明示し、500M Mult-Adds制約、Transformer base比2.5倍の計算削減、pruning/quantization併用18.2倍model-size圧縮を評価するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文でmobile efficient inference、LSRA二分岐、500M Mult-Adds制約、ARM Cortex-A72想定、Transformer base比2.5x計算削減、18.2x model-size compressionを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+      "source_url": "https://arxiv.org/abs/2410.17434",
+      "year": 2024,
+      "published": "2024-10-22",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 385,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown promising progress in understanding and analyzing video content. However, processing long videos remains a significant challenge constrained by LLM's context size. To address this limitation, we propose LongVU, a spatiotemporal adaptive compression mechanism thats reduces the number of video tokens while preserving visual details of long videos. Our idea is based on leveraging cross-modal query and inter-frame dependencies to adaptively reduce temporal and spatial redundancy in videos. Specifically, we leverage DINOv2 features to remove redundant frames that exhibit high similarity. Then we utilize text-guided cross-modal query for selective frame feature reduction. Further, we perform spatial token reduction across frames based on their temporal dependencies. Our adaptive compression strategy effectively processes a large number of frames with little visual information loss within given context length. Our LongVU consistently surpass existing methods across a variety of video understanding benchmarks, especially on hour-long video understanding tasks such as VideoMME and MLVU. Given a light-weight LLM, our LongVU also scales effectively into a smaller size with state-of-the-art video understanding performance.",
+      "identifiers": [
+        "SemanticScholar:d83e2f9b24ec92f5ff07420b665f07ff200e149a"
+      ],
+      "semantic_scholar_id": "d83e2f9b24ec92f5ff07420b665f07ff200e149a",
+      "canonical_id": "arXiv:2410.17434",
+      "arxiv_id": "2410.17434",
+      "doi": "10.48550/arXiv.2410.17434",
+      "authors": [
+        "Xiaoqian Shen",
+        "Yun-Yang Xiong",
+        "Changsheng Zhao",
+        "Lemeng Wu",
+        "Jun Chen",
+        "Chenchen Zhu",
+        "Zechun Liu",
+        "Fanyi Xiao",
+        "Bala Varadarajan",
+        "Florian Bordes",
+        "Zhuang Liu",
+        "Hu Xu",
+        "Hyunwoo J. Kim",
+        "Bilge Soran",
+        "Raghuraman Krishnamoorthi",
+        "Mohamed Elhoseiny",
+        "Vikas Chandra"
+      ],
+      "priority": 395,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 385,
+        "citation_count": 385,
+        "total": 395,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 713,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "長動画MLLMのcontext制約に対し、DINOv2類似度によるframe削減、text-query guided selective feature reduction、inter-frame similarityによるspatial token pruningを段階適用する。本文では1fpsの1時間動画を8k contextへ収めるため平均2 token/frameまで圧縮し、長動画推論の入力token・context負荷を直接削減するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTML本文で3段spatiotemporal compression、8k context、1fps hour-long video、平均2 tokens/frame、DINOv2 window J=8とcross-modal query/STC処理を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-26aea2b36f76",
+    "round": "libimp-26aea2b36f76d3cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-26aea2b36f76d3cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-26aea2b36f76d3cc-pre01.json",
+    "receipt": "sha256:10f0cd77df3a4cb68bb6e0fd53e7380314df2e9498277f520d4d34959e4b1696"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-26aea2b36f76",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

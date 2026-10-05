@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Block Pruning For Faster Transformers",
+      "source_url": "https://arxiv.org/abs/2109.04838",
+      "year": 2021,
+      "published": "2021-09-10",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 275,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-training has improved model accuracy for both classification and generation tasks at the cost of introducing much larger and slower models. Pruning methods have proven to be an effective way of reducing model size, whereas distillation methods are proven for speeding up inference. We introduce a block pruning approach targeting both small and fast models. Our approach extends structured methods by considering blocks of any size and integrates this structure into the movement pruning paradigm for fine-tuning. We find that this approach learns to prune out full components of the underlying model, such as attention heads. Experiments consider classification and generation tasks, yielding among other results a pruned model that is a 2.4x faster, 74% smaller BERT on SQuAD v1, with a 1% drop on F1, competitive both with distilled models in speed and pruned models in size.",
+      "identifiers": [
+        "SemanticScholar:01b1293ddea9bcd6df1185b0b934503de01d6561"
+      ],
+      "semantic_scholar_id": "01b1293ddea9bcd6df1185b0b934503de01d6561",
+      "canonical_id": "arXiv:2109.04838",
+      "arxiv_id": "2109.04838",
+      "doi": "10.18653/v1/2021.emnlp-main.829",
+      "authors": [
+        "François Lagunas",
+        "Ella Charlaix",
+        "Victor Sanh",
+        "Alexander M. Rush"
+      ],
+      "priority": 285,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 275,
+        "citation_count": 275,
+        "total": 285,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1851,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "movement pruningを任意サイズのblockへ拡張し、attention head等の構造単位を削除して小型・高速Transformerを作る。BERT on SQuAD v1で74%小型化・2.4倍高速化をF1低下1%で達成し、Transformer推論速度を直接評価するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文ページでblock structured movement pruning、attention-head pruning、classification/generation評価、BERT 2.4x speedup・74% smaller・1% F1 dropを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Training Language Models to Reason Efficiently",
+      "source_url": "https://arxiv.org/abs/2502.04463",
+      "year": 2025,
+      "published": "2025-02-06",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 270,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Scaling model size and training data has led to great advances in the performance of Large Language Models (LLMs). However, the diminishing returns of this approach necessitate alternative methods to improve model capabilities, particularly in tasks requiring advanced reasoning. Large reasoning models, which leverage long chain-of-thoughts, bring unprecedented breakthroughs in problem-solving capabilities but at a substantial deployment cost associated to longer generations. Reducing inference costs is crucial for the economic feasibility, user experience, and environmental sustainability of these models. In this work, we propose to train large reasoning models to reason efficiently. More precisely, we use reinforcement learning (RL) to train reasoning models to dynamically allocate inference-time compute based on task complexity. Our method incentivizes models to minimize unnecessary computational overhead while maintaining accuracy, thereby achieving substantial efficiency gains. It enables the derivation of a family of reasoning models with varying efficiency levels, controlled via a single hyperparameter. Experiments on two open-weight large reasoning models demonstrate significant reductions in inference cost while preserving most of the accuracy.",
+      "identifiers": [
+        "SemanticScholar:03fa0740512a47758940415a6b3c1a635d9aca98"
+      ],
+      "semantic_scholar_id": "03fa0740512a47758940415a6b3c1a635d9aca98",
+      "canonical_id": "arXiv:2502.04463",
+      "arxiv_id": "2502.04463",
+      "doi": "10.48550/arXiv.2502.04463",
+      "authors": [
+        "Daman Arora",
+        "Andrea Zanette"
+      ],
+      "priority": 280,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 270,
+        "citation_count": 270,
+        "total": 280,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 606,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "reinforcement learningでtask complexityに応じてinference-time computeを動的配分し、長いChain-of-Thought由来のdeployment costを削減する。二つのopen-weight reasoning modelでaccuracyの大半を維持しつつinference costを大幅削減し、単一hyperparameterでefficiency levelを制御するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文ページで長いCoTのdeployment cost、RLによるdynamic inference-compute allocation、不要計算削減、二つのopen-weight reasoning modelでのinference-cost reductionを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+      "source_url": "https://arxiv.org/abs/2406.11816",
+      "year": 2024,
+      "published": "2024-06-16",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 274,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Large Language Models (LLMs) have been en-hanced with vision capabilities, enabling them to compre-hend images, videos, and interleaved vision-language con-tent. However, the learning methods of these large multi-modal models (LMMs) typically treat videos as predeter-mined clips, rendering them less effective and efficient at handling streaming video inputs. In this paper, we pro-pose a novel Learning-In- Video-Stream (LIVE) framework, which enables temporally aligned, long-context, and real-time dialogue within a continuous video stream. Our LIVE framework comprises comprehensive approaches to achieve video streaming dialogue, encompassing: (1) a training ob-jective designed to perform language modeling for contin-uous streaming inputs, (2) a data generation scheme that converts offline temporal annotations into a streaming di-alogue format, and (3) an optimized inference pipeline to speed up interactive chat in real-world video streams. With our LIVE framework, we develop a simplified model called VideoLLM-online and demonstrate its significant advan-tages in processing streaming videos. For instance, our VideoLLM-online-7B model can operate at over 10 FPS on an A100 GPU for a 5-minute video clip from Ego4D narration. Moreover, VideoLLM-online also showcases state-of-the-art performance on public offline video bench-marks, such as recognition, captioning, and forecasting. The code, model, data, and demo have been made available at showlab.github. iolvideollm-online.",
+      "identifiers": [
+        "SemanticScholar:d019f8a137f62cd2c08ef42be54bbb980a8362f2"
+      ],
+      "semantic_scholar_id": "d019f8a137f62cd2c08ef42be54bbb980a8362f2",
+      "canonical_id": "arXiv:2406.11816",
+      "arxiv_id": "2406.11816",
+      "doi": "10.1109/CVPR52733.2024.01742",
+      "authors": [
+        "Joya Chen",
+        "Zhao-Yang Lv",
+        "Shiwei Wu",
+        "Kevin Qinghong Lin",
+        "Chenan Song",
+        "Di-Fei Gao",
+        "Jia-Wei Liu",
+        "Ziteng Gao",
+        "Dongxing Mao",
+        "M. Shou"
+      ],
+      "priority": 274,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 274,
+        "citation_count": 274,
+        "total": 274,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 841,
+        "matched_prestigious_venue": null
+      },
+      "reason": "連続video stream上でtemporal alignment・long context・real-time dialogueを実現するLIVE frameworkに、実環境stream向けmodel responseを高速化するoptimized inference pipelineを含む。Llama-2/3ベースVideoLLM-onlineがA100で5分videoのstreaming dialogueを平均10 FPS超で処理し、online multimodal LLM推論pipelineを直接扱うため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文ページでLIVEのstreaming training/data/inference pipeline、real-time continuous video dialogue、optimized inference pipeline、A100で5-minute clip >10 FPSを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3b3e81dbcaa1",
+    "round": "libimp-3b3e81dbcaa1700d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3b3e81dbcaa1700d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3b3e81dbcaa1700d-pre01.json",
+    "receipt": "sha256:758c7acf8c1d959c524838cd1920e85f595a4eaaed0113a91acbf6fbaf5859f3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3b3e81dbcaa1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
