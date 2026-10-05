@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-76-part-07-269b48ab9a62",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.00308",
+      "identity_tokens": [
+        "arXiv:2411.00308"
+      ],
+      "title": "GPT for Games: An Updated Scoping Review (2020–2024)",
+      "reason": "This scoping review surveys GPT applications in games; it does not address inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.00308",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.20553",
+      "identity_tokens": [
+        "arXiv:2410.20553"
+      ],
+      "title": "SPICEPilot: Navigating SPICE Code Generation and Simulation with AI Guidance",
+      "reason": "SPICEPilot is a circuit-generation dataset and benchmark for LLM code generation, focused on capability/accuracy rather than model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.20553",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01192",
+      "identity_tokens": [
+        "arXiv:2409.01192"
+      ],
+      "title": "SSD4Rec: A Structured State Space Duality Model for Efficient Sequential Recommendation",
+      "reason": "SSD4Rec is a Mamba-based sequential recommendation model; its task and evaluation are recommender systems, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2409.01192",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICCCWorkshops62562.2024.10693742",
+      "identity_tokens": [
+        "DOI:10.1109/ICCCWorkshops62562.2024.10693742"
+      ],
+      "title": "Edge and Terminal Cooperation Enabled LLM Deployment Optimization in Wireless Network",
+      "reason": "The abstract indicates a direct LLM edge/terminal inference optimization, but the primary full text was inaccessible after checking the DOI and IEEE Xplore record; method and experimental evidence therefore remain unverified.",
+      "source_url": "https://doi.org/10.1109/ICCCWorkshops62562.2024.10693742",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2024/474",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2024/474"
+      ],
+      "title": "HyQ: Hardware-Friendly Post-Training Quantization for CNN-Transformer Hybrid Networks",
+      "reason": "HyQ quantizes CNN-transformer hybrid vision models for image classification and FPGA resource reduction; it is not an LLM inference/serving method.",
+      "source_url": "https://doi.org/10.24963/ijcai.2024/474",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    }
+  ]
+}
