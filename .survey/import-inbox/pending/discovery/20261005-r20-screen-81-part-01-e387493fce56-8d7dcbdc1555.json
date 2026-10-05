@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-81-part-01-e387493fce56",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05665",
+      "identity_tokens": [
+        "arXiv:2602.05665"
+      ],
+      "title": "Graph-based Agent Memory: Taxonomy, Techniques, and Applications",
+      "reason": "Adjacent to agent memory/retrieval, but no direct inference/serving efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2602.05665",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26599/tst.2025.9010166",
+      "identity_tokens": [
+        "DOI:10.26599/tst.2025.9010166"
+      ],
+      "title": "Efficient Inference for Edge Large Language Models: A Survey",
+      "reason": "A relevant edge-inference survey is plausible, but its full text was inaccessible and evidence cannot be verified.",
+      "source_url": "https://doi.org/10.26599/tst.2025.9010166",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23292",
+      "identity_tokens": [
+        "arXiv:2509.23292"
+      ],
+      "title": "Learning How to Use Tools, Not Just When: Pattern-Aware Tool-Integrated Reasoning",
+      "reason": "Studies how tools are applied during tool-integrated reasoning to improve reasoning behavior; it does not propose inference or serving cost reduction.",
+      "source_url": "https://arxiv.org/abs/2509.23292",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+        "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10399",
+      "identity_tokens": [
+        "arXiv:2508.10399"
+      ],
+      "title": "Large Model Empowered Embodied AI: A Survey on Decision-Making and Embodied Learning",
+      "reason": "A broad embodied-AI decision-making and learning survey, not LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2508.10399",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18623",
+      "identity_tokens": [
+        "arXiv:2506.18623"
+      ],
+      "title": "Efficient and Robust Speaker Diarization via Structured Pruning of Self-Supervised Models",
+      "reason": "Structured pruning compresses self-supervised speaker-diarization models; the target is audio diarization rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2506.18623",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
