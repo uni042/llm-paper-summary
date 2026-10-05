@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:10:31+00:00",
-  "record_count": 1952,
+  "updated_at": "2026-10-05T15:13:01+00:00",
+  "record_count": 1961,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30190,6 +30190,147 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Treeformer: Dense Gradient Trees for Efficient Attention Computation"
+    },
+    "arXiv:2403.07965": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.07965",
+      "identity_tokens": [
+        "arXiv:2403.07965"
+      ],
+      "reason": "Potential background value is clear, but broad coverage and lack of focused LLM-serving evidence make its fit weak for the target survey.",
+      "first_checked_at": "2026-10-05T15:12:56+00:00",
+      "last_checked_at": "2026-10-05T15:12:56+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Conditional computation in neural networks: Principles and research trends"
+    },
+    "arXiv:2312.15230": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.15230",
+      "identity_tokens": [
+        "arXiv:2312.15230"
+      ],
+      "reason": "The resulting sparse model may be used for inference compression, but practical runtime gains are not established in the checked paper sections.",
+      "first_checked_at": "2026-10-05T15:12:56+00:00",
+      "last_checked_at": "2026-10-05T15:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PERP: Rethinking the Prune-Retrain Paradigm in the Era of LLMs"
+    },
+    "arXiv:2312.09084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.09084",
+      "identity_tokens": [
+        "arXiv:2312.09084"
+      ],
+      "reason": "Adjacent low-power language-model hardware may be informative, but the model class and task-performance scale fall outside the direct LLM inference scope.",
+      "first_checked_at": "2026-10-05T15:12:56+00:00",
+      "last_checked_at": "2026-10-05T15:12:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Language Modeling on a SpiNNaker2 Neuromorphic Chip"
+    },
+    "DOI:10.1145/3524059.3532372": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3524059.3532372",
+      "identity_tokens": [
+        "DOI:10.1145/3524059.3532372"
+      ],
+      "reason": "abstract上はTransformer NLP inference batching効率化で接点がある一方、LLM固有の実証と適用条件を確認できず、本文取得もできなかった。",
+      "first_checked_at": "2026-10-05T15:12:57+00:00",
+      "last_checked_at": "2026-10-05T15:12:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Handling heavy-tailed input of transformer inference on GPUs"
+    },
+    "arXiv:2508.01699": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.01699",
+      "identity_tokens": [
+        "arXiv:2508.01699"
+      ],
+      "reason": "LLM MoE推論の接点はあるが、動画temporal-grounding固有の品質評価であり、対象surveyへの効率貢献の一般性/実速度が明確でない。",
+      "first_checked_at": "2026-10-05T15:12:58+00:00",
+      "last_checked_at": "2026-10-05T15:12:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Timeexpert: an Expert-Guided Video Llm for Video Temporal Grounding"
+    },
+    "arXiv:2504.05646": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05646",
+      "identity_tokens": [
+        "arXiv:2504.05646"
+      ],
+      "reason": "sequence-model memory efficiencyに接点はあるが、既存LLM inference/compressionの方法やserving測定ではなく、対象surveyとの関連は弱い。",
+      "first_checked_at": "2026-10-05T15:12:59+00:00",
+      "last_checked_at": "2026-10-05T15:12:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lattice: Learning to Efficiently Compress the Memory"
+    },
+    "DOI:10.1109/iccc62479.2024.10681712": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccc62479.2024.10681712",
+      "identity_tokens": [
+        "DOI:10.1109/iccc62479.2024.10681712"
+      ],
+      "reason": "Keep borderline until the conference paper/full primary text can be accessed; no method or evaluation details are inferred beyond the primary abstract.",
+      "first_checked_at": "2026-10-05T15:12:59+00:00",
+      "last_checked_at": "2026-10-05T15:12:59+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoLLM: A Collaborative LLM Inference Framework for Resource-Constrained Devices"
+    },
+    "arXiv:2503.11698": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11698",
+      "identity_tokens": [
+        "arXiv:2503.11698"
+      ],
+      "reason": "Hardware-level LLM relevance is plausible, but no LLM-specific serving workload or comparable inference metrics are established.",
+      "first_checked_at": "2026-10-05T15:13:00+00:00",
+      "last_checked_at": "2026-10-05T15:13:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Comparison of the Cerebras Wafer-Scale Integration Technology with Nvidia GPU-based Systems for Artificial Intelligence"
+    },
+    "arXiv:2510.02091": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.02091",
+      "identity_tokens": [
+        "arXiv:2510.02091"
+      ],
+      "reason": "pruning適用時のquality評価には関係するが、主貢献はLLM layerの行動分析で、inference効率化の方法・resource tradeoff自体は報告していない。",
+      "first_checked_at": "2026-10-05T15:13:01+00:00",
+      "last_checked_at": "2026-10-05T15:13:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Demystifying the Roles of LLM Layers in Retrieval, Knowledge, and Reasoning"
     }
   }
 }

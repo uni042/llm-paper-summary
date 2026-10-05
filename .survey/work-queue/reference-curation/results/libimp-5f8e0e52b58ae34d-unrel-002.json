@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f8e0e52b58ae34d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.04213",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.04213",
+    "identity_tokens": [
+      "arXiv:2506.04213"
+    ],
+    "reason": "video diffusion transformerの条件付け・推論を高速化する研究で、言語モデルの推論対象ではない。",
+    "first_checked_at": "2026-10-05T15:12:58+00:00",
+    "last_checked_at": "2026-10-05T15:12:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+    ],
+    "title": "FullDiT2: Efficient In-Context Conditioning for Video Diffusion Transformers"
+  },
+  "processed_at": "2026-10-05T15:12:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f8e0e52b58a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

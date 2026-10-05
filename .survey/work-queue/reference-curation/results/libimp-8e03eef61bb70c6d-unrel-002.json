@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e03eef61bb70c6d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.04501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.04501",
+    "identity_tokens": [
+      "arXiv:2410.04501"
+    ],
+    "reason": "The work applies LLMs to suicide-content detection and reports classification F1/accuracy; the contribution is an application model, not inference optimization.",
+    "first_checked_at": "2026-10-05T15:13:00+00:00",
+    "last_checked_at": "2026-10-05T15:13:00+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "title": "Leveraging Large Language Models for Suicide Detection on Social Media with Limited Labels"
+  },
+  "processed_at": "2026-10-05T15:13:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e03eef61bb7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

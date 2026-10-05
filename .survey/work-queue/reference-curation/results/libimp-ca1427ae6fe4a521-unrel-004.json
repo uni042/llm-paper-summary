@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca1427ae6fe4a521-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.13476",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.13476",
+    "identity_tokens": [
+      "arXiv:2411.13476"
+    ],
+    "reason": "The abstract addresses RoPE numerical behavior and AnchorAttention speedups during long-context training; its stated improvement is training-time only.",
+    "first_checked_at": "2026-10-05T15:13:01+00:00",
+    "last_checked_at": "2026-10-05T15:13:01+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "When Precision Meets Position: BFloat16 Breaks Down RoPE in Long-Context Training"
+  },
+  "processed_at": "2026-10-05T15:13:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca1427ae6fe4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

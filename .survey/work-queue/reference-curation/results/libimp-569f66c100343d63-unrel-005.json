@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-569f66c100343d63-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.04456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.04456",
+    "identity_tokens": [
+      "arXiv:2507.04456"
+    ],
+    "reason": "binarized neural networkによるvideo mattingの精度とresource削減が対象。",
+    "first_checked_at": "2026-10-05T15:12:58+00:00",
+    "last_checked_at": "2026-10-05T15:12:58+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "BiVM: Accurate Binarized Neural Network for Efficient Video Matting"
+  },
+  "processed_at": "2026-10-05T15:12:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-569f66c10034",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
