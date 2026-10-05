@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-04T23:27:41+00:00",
-  "record_count": 454,
+  "updated_at": "2026-10-05T00:17:55+00:00",
+  "record_count": 455,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6521,6 +6521,20 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "A Survey on the Memory Mechanism of Large Language Model based Agents"
+    },
+    "DOI:10.3115/v1/w14-3302": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3115/v1/w14-3302",
+      "identity_tokens": [
+        "DOI:10.3115/v1/w14-3302"
+      ],
+      "reason": "The official ACL record identifies this item as workshop proceedings but provides no abstract for screening.",
+      "first_checked_at": "2026-10-05T00:17:55+00:00",
+      "last_checked_at": "2026-10-05T00:17:55+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md"
+      ],
+      "title": "Findings of the 2014 Workshop on Statistical Machine Translation"
     }
   }
 }
