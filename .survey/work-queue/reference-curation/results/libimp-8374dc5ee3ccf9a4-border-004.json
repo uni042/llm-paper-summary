@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8374dc5ee3ccf9a4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.08550",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.08550",
+    "identity_tokens": [
+      "arXiv:2609.08550"
+    ],
+    "reason": "It is an agent-memory quality architecture with higher measured query latency, not an inference-efficiency improvement; the abstract’s retrieval-space reduction does not translate to demonstrated runtime savings.",
+    "first_checked_at": "2026-10-05T07:01:07+00:00",
+    "last_checked_at": "2026-10-05T07:01:07+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "CreaMem: A Scene-Aware Memory Architecture for Personalized Agents"
+  },
+  "processed_at": "2026-10-05T07:01:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8374dc5ee3cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

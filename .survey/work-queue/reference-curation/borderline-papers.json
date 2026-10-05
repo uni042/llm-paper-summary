@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:58:58+00:00",
-  "record_count": 1035,
+  "updated_at": "2026-10-05T07:01:07+00:00",
+  "record_count": 1040,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15790,6 +15790,79 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
       ],
       "title": "I/O Lower-Bound Theory and Reinforcement Learning for Efficient Neural Network Inference Optimization"
+    },
+    "arXiv:2609.08574": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08574",
+      "identity_tokens": [
+        "arXiv:2609.08574"
+      ],
+      "reason": "This is a diagnostic study rather than an efficiency technique, and its pilot does not substantiate behavior at advertised million-token context.",
+      "first_checked_at": "2026-10-05T07:01:06+00:00",
+      "last_checked_at": "2026-10-05T07:01:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Do New Attention Mechanisms Actually Fix Attention Sinks at Million-Token Context?"
+    },
+    "arXiv:2609.09085": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.09085",
+      "identity_tokens": [
+        "arXiv:2609.09085"
+      ],
+      "reason": "No quantization or inference-efficiency method is evaluated; the stated application is future architecture understanding.",
+      "first_checked_at": "2026-10-05T07:01:06+00:00",
+      "last_checked_at": "2026-10-05T07:01:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention"
+    },
+    "arXiv:2609.08550": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08550",
+      "identity_tokens": [
+        "arXiv:2609.08550"
+      ],
+      "reason": "It is an agent-memory quality architecture with higher measured query latency, not an inference-efficiency improvement; the abstract’s retrieval-space reduction does not translate to demonstrated runtime savings.",
+      "first_checked_at": "2026-10-05T07:01:07+00:00",
+      "last_checked_at": "2026-10-05T07:01:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "CreaMem: A Scene-Aware Memory Architecture for Personalized Agents"
+    },
+    "arXiv:2609.08183": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08183",
+      "identity_tokens": [
+        "arXiv:2609.08183"
+      ],
+      "reason": "No cost/latency/throughput outcome or routing-policy efficiency comparison is reported. The serving-time router is context for the training pipeline, so inference-efficiency fit is weak.",
+      "first_checked_at": "2026-10-05T07:01:07+00:00",
+      "last_checked_at": "2026-10-05T07:01:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness"
+    },
+    "arXiv:2609.08279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08279",
+      "identity_tokens": [
+        "arXiv:2609.08279"
+      ],
+      "reason": "It is an audit/evaluation method, not a new memory-compression or serving optimization; one main benchmark/readers and specified policy classes limit generalization.",
+      "first_checked_at": "2026-10-05T07:01:07+00:00",
+      "last_checked_at": "2026-10-05T07:01:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "What Eviction Destroys: A Restore-Counterfactual Audit of Forgetting in Agent Memory"
     }
   }
 }

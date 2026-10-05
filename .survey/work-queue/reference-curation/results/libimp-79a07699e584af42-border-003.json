@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79a07699e584af42-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.09085",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.09085",
+    "identity_tokens": [
+      "arXiv:2609.09085"
+    ],
+    "reason": "No quantization or inference-efficiency method is evaluated; the stated application is future architecture understanding.",
+    "first_checked_at": "2026-10-05T07:01:06+00:00",
+    "last_checked_at": "2026-10-05T07:01:06+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention"
+  },
+  "processed_at": "2026-10-05T07:01:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79a07699e584",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
