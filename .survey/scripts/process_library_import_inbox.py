@@ -963,6 +963,14 @@ def create_accept_pipeline(
     counts = {"allowed": 0, "filtered": 0, "submitted": 0}
 
     for batch_index, batch in enumerate(batches, 1):
+        reconsider_identifiers = sorted(
+            ident
+            for ident in batch
+            if any(
+                record.get("origin") == "borderline_reconsideration"
+                for record in id_to_records.get(ident, [])
+            )
+        )
         request_id = candidate_request_id(token, batch_index)
         request_path = repo_root / PRECHECK_REQUESTS / f"{request_id}.json"
         result_path = repo_root / PRECHECK_RESULTS / f"{request_id}.json"
@@ -977,6 +985,7 @@ def create_accept_pipeline(
             "provider": "candidate_id_lookup",
             "source_url": "identifier://approved-public-apis",
             "identifiers": batch,
+            "reconsider_identifiers": reconsider_identifiers,
         }
         write_json_if_absent(request_path, request)
 
