@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-91-part-01-50aefc973cb0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02800",
+      "identity_tokens": [
+        "arXiv:2504.02800"
+      ],
+      "title": "A Survey of Large Language Models in Mental Health Disorder Detection on Social Media",
+      "reason": "SNS投稿からの精神疾患検出にLLMを適用する調査で、推論/serving効率改善が主題でない。",
+      "source_url": "https://arxiv.org/abs/2504.02800",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.18150",
+      "identity_tokens": [
+        "arXiv:2503.18150"
+      ],
+      "title": "LongDiff: Training-Free Long Video Generation in One Go",
+      "reason": "動画拡散モデルによる長尺動画生成の時間整合性改善。LLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2503.18150",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13319",
+      "identity_tokens": [
+        "arXiv:2503.13319"
+      ],
+      "title": "MagicDistillation: Weak-to-Strong Video Distillation for Large-Scale Few-Step Synthesis",
+      "reason": "動画拡散の蒸留・生成効率を扱い、LLM対象でない。",
+      "source_url": "https://arxiv.org/abs/2503.13319",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13572",
+      "identity_tokens": [
+        "arXiv:2503.13572"
+      ],
+      "title": "VeriContaminated: Assessing LLM-Driven Verilog Coding for Data Contamination",
+      "reason": "LLM生成Verilogのbenchmark contamination評価で、推論効率化は扱わない。",
+      "source_url": "https://arxiv.org/abs/2503.13572",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08195",
+      "identity_tokens": [
+        "arXiv:2503.08195"
+      ],
+      "title": "Dialogue Injection Attack: Jailbreaking LLMs Through Context Manipulation",
+      "reason": "LLM jailbreak攻撃手法で、serving/inference efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2503.08195",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md"
+      ]
+    }
+  ]
+}
