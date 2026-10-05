@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:12:52+00:00",
-  "record_count": 2053,
+  "updated_at": "2026-10-05T16:19:13+00:00",
+  "record_count": 2050,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6623,20 +6623,6 @@
       ],
       "title": "How many words do we read per minute? A review and meta-analysis of reading rate"
     },
-    "DOI:10.1109/12.48862": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/12.48862",
-      "identity_tokens": [
-        "DOI:10.1109/12.48862"
-      ],
-      "reason": "IEEE Xplore requires a JavaScript robot check for this DOI page, preventing retrieval of its primary abstract.",
-      "first_checked_at": "2026-10-05T00:50:54+00:00",
-      "last_checked_at": "2026-10-05T00:50:54+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
-      ],
-      "title": "Executing a Program on the MIT Tagged-Token Dataflow Architecture"
-    },
     "DOI:10.1109/jproc.2020.2976475": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/jproc.2020.2976475",
@@ -6685,20 +6671,6 @@
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md"
       ],
       "title": "Findings of the 2016 Conference on Machine Translation"
-    },
-    "DOI:10.1109/wacv48630.2021.00357": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
-      "identity_tokens": [
-        "DOI:10.1109/wacv48630.2021.00357"
-      ],
-      "reason": "The method reduces attention memory and computation, but the full text evaluates only vision tasks and does not test language models, causal attention, or LLM inference.",
-      "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
-      ],
-      "title": "Efficient Attention: Attention with Linear Complexities"
     },
     "DOI:10.1147/rd.282.0135": {
       "classification": "borderline",
@@ -9200,50 +9172,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Catalyzer: Sub-millisecond Startup for Serverless Computing with Initialization-less Booting"
-    },
-    "arXiv:2410.21276": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2410.21276",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2410.21276",
-        "arXiv:2410.21276"
-      ],
-      "reason": "System card gives API latency/pricing but no reproducible serving optimization mechanism; opaque product-level context, not a transferable method.",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22572-dynamic-experts-search.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
-        "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
-        "papers/inference/07-kv-cache-optimization-compression/2026-2603.11504-longflow-efficient-kv-cache-compression-for-reasoning-models.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md",
-        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
-        "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
-        "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
-        "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
-      ],
-      "title": "GPT-4o System Card"
-    },
-    "arXiv:2503.20314": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2503.20314",
-      "identity_tokens": [
-        "arXiv:2503.20314"
-      ],
-      "reason": "Wan reports video-diffusion inference memory but is not an LLM; transfer to LLM inference is uncertain.",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2603.28768-craft-cost-aware-expert-replication.md",
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
-        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
-      ],
-      "title": "Wan: Open and Advanced Large-Scale Video Generative Models"
     },
     "arXiv:2409.16040": {
       "classification": "borderline",
@@ -31712,9 +31640,9 @@
       "identity_tokens": [
         "DOI:10.1145/2939672.2945397"
       ],
-      "reason": "計算graph型deep-learning toolkitで、automatic differentiation、recurrent-loop inference/execution、memory sharing、multi-server parallelization等のruntime機構を扱う。推論runtimeとして関連するが、一般DNN toolkitでLLM/Transformer生成推論への直接評価がないためborderline。",
+      "reason": "CNTKは計算グラフ型の深層学習ツールキットで、再帰ループ推論・実行、メモリ共有、複数GPUサーバ並列化などruntime機構を含む。推論runtimeの基礎として関連するが、対象は汎用DNN（speech/image/text）でLLM/Transformer推論専用ではないためborderline。",
       "first_checked_at": "2026-10-05T16:12:44+00:00",
-      "last_checked_at": "2026-10-05T16:12:44+00:00",
+      "last_checked_at": "2026-10-05T16:19:08+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
@@ -31741,9 +31669,9 @@
       "identity_tokens": [
         "arXiv:1902.06822"
       ],
-      "reason": "weights/activationsのMMSE量子化、hardware-aware partitioning、複数low-precision tensorによりINT4推論を可能にするdeployment向け量子化研究。推論効率を明示的に狙うが、評価対象が汎用DNNでLLM/Transformer推論への直接適用がないためborderline。",
+      "reason": "重み・活性化をMMSE基準でINT4へ量子化し、再学習なしで制約ハードウェアへ展開する推論向け量子化研究。メモリ帯域・計算・電力削減に直結するが、本文評価はImageNet上のCNN等の一般DNNでありLLM/Transformer推論を対象としないため境界扱い。",
       "first_checked_at": "2026-10-05T16:12:48+00:00",
-      "last_checked_at": "2026-10-05T16:12:48+00:00",
+      "last_checked_at": "2026-10-05T16:19:08+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Low-bit Quantization of Neural Networks for Efficient Inference"
@@ -31760,6 +31688,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free"
+    },
+    "DOI:10.1145/1964218.1964225": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1964218.1964225",
+      "identity_tokens": [
+        "DOI:10.1145/1964218.1964225"
+      ],
+      "reason": "Structural Simulation Toolkit (SST)は大規模計算機アーキテクチャを構成要素で組み立て、並列離散事象シミュレーションする基盤。推論システムのsimulation/emulation研究へ利用可能だが、論文自体は汎用HPC/architecture simulatorでLLM推論を最終適用先としないためborderline。",
+      "first_checked_at": "2026-10-05T16:19:09+00:00",
+      "last_checked_at": "2026-10-05T16:19:09+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The structural simulation toolkit"
     }
   }
 }

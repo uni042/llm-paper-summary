@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91a69307d5246408-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.12856",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.12856",
+    "identity_tokens": [
+      "arXiv:2307.12856"
+    ],
+    "reason": "WebAgentは自然言語指示を分解し、長いHTMLを要約してPython programを生成し実Web操作を行うagent能力研究。MiniWoB/Mind2Webでtask successを評価するが、agent serving runtime・scheduler・KV cache・memory効率化を扱わない。",
+    "first_checked_at": "2026-10-05T16:19:09+00:00",
+    "last_checked_at": "2026-10-05T16:19:09+00:00",
+    "linked_from": [],
+    "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis"
+  },
+  "processed_at": "2026-10-05T16:19:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91a69307d524",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

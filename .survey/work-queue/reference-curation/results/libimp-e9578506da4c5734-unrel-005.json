@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9578506da4c5734-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1506.02075",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1506.02075",
+    "identity_tokens": [
+      "arXiv:1506.02075"
+    ],
+    "reason": "100k質問datasetとMemory Networksを用い、multitask/transfer learningでlarge-scale simple QAのevidence retrievalと回答精度を研究する学習・能力研究。推論runtimeやserving最適化を提案しない。",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T16:19:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Large-scale Simple Question Answering with Memory Networks"
+  },
+  "processed_at": "2026-10-05T16:19:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9578506da4c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
