@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-74-part-06-3d0c7ade126b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40537-024-00928-3",
+      "identity_tokens": [
+        "DOI:10.1186/s40537-024-00928-3"
+      ],
+      "title": "Xai-driven knowledge distillation of large language models for efficient deployment on low-resource devices",
+      "reason": "The distilled student is a bidirectional LSTM. The deployment/speedup claim applies to a non-LLM student architecture, outside this LLM-inference scope.",
+      "source_url": "https://doi.org/10.1186/s40537-024-00928-3",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2404.15381",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2404.15381"
+      ],
+      "title": "Advances and Open Challenges in Federated Learning with Foundation Models",
+      "reason": "The survey concerns federated foundation-model training, aggregation, and communication; its efficiency focus is not inference serving.",
+      "source_url": "https://doi.org/10.48550/arXiv.2404.15381",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.03411",
+      "identity_tokens": [
+        "arXiv:2401.03411"
+      ],
+      "title": "GRAM: Global Reasoning for Multi-Page VQA",
+      "reason": "The work is specialized to multi-page DocVQA and document encoders rather than general LLM serving; compression results are architecture/task dependent.",
+      "source_url": "https://arxiv.org/abs/2401.03411",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.00890",
+      "identity_tokens": [
+        "arXiv:2508.00890"
+      ],
+      "title": "AgentTTS: Large Language Model Agent for Test-time Compute-optimal Scaling Strategy in Complex Tasks",
+      "reason": "The method optimizes an allocation search process, not online serving latency itself; the paper assumes static task stages and acknowledges dynamic real tasks as an open limit.",
+      "source_url": "https://arxiv.org/abs/2508.00890",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.00217",
+      "identity_tokens": [
+        "arXiv:2507.00217"
+      ],
+      "title": "CrossPipe: Towards Optimal Pipeline Schedules for Cross-Datacenter Training",
+      "reason": "CrossPipe optimizes cross-datacenter pipeline schedules for LLM training only.",
+      "source_url": "https://arxiv.org/abs/2507.00217",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ]
+    }
+  ]
+}
