@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-03-part-08-f9ffdc682d1b",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacvw60836.2024.00106",
+      "identity_tokens": [
+        "DOI:10.1109/wacvw60836.2024.00106"
+      ],
+      "title": "A Survey on Multimodal Large Language Models for Autonomous Driving",
+      "reason": "arXiv要旨はautonomous driving/transportation/map systems向けmultimodal LLMのsurveyで、tools/datasets/challengesを整理する。",
+      "source_url": "https://arxiv.org/abs/2311.12320",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.10077",
+      "identity_tokens": [
+        "arXiv:1912.10077"
+      ],
+      "title": "Are Transformers universal approximators of sequence-to-sequence functions?",
+      "reason": "arXiv要旨はTransformerのsequence-to-sequence関数に対するuniversal approximation propertyを証明し、簡易attention alternativesを評価する。",
+      "source_url": "https://arxiv.org/abs/1912.10077",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3447579",
+      "identity_tokens": [
+        "DOI:10.1145/3447579"
+      ],
+      "title": "Competitive caching with machine learned advice",
+      "reason": "本文はrequest-sequence cachingでmachine-learned adviceを用いるonline eviction strategyの理論保証とBerkeley/CitiBike trace評価を扱う。LLM KV cache、prompt cache、model-serving workloadへの適用や実測はなく、一般cache policyとの概念的隣接に留まるためborderline。",
+      "source_url": "https://arxiv.org/abs/1802.05399",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08916",
+      "identity_tokens": [
+        "arXiv:2206.08916"
+      ],
+      "title": "Unified-IO: A Unified Model for Vision, Language, and Multi-Modal Tasks",
+      "reason": "arXiv要旨は90以上のvision/language datasetで学習した統合multimodal model Unified-IOとtask性能を報告する。",
+      "source_url": "https://arxiv.org/abs/2206.08916",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-024-4235-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4235-6"
+      ],
+      "title": "OCRBench: on the hidden mystery of OCR in large multimodal models",
+      "reason": "arXiv要旨はGPT-4/Gemini等のmultimodal model OCR能力を測る29-dataset OCRBenchを提案する。",
+      "source_url": "https://arxiv.org/abs/2305.07895",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.04454-phase-aware-expert-merging.md",
+        "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+      ]
+    }
+  ]
+}
