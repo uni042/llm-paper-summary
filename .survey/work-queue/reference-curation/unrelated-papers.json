@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:17:40+00:00",
-  "record_count": 3191,
+  "updated_at": "2026-10-05T06:20:30+00:00",
+  "record_count": 3209,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -46440,6 +46440,266 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "Optimizers for Diffusion Models: A Controlled Benchmark"
+    },
+    "arXiv:2609.21543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21543",
+      "identity_tokens": [
+        "arXiv:2609.21543"
+      ],
+      "reason": "一次要旨: Does a general vision--language model acquire specialized OCR ability by developing a new reading circuit or by reusing an existing mechanism? We address this question in the setting of full-sequence OCR, rather than local-answer retrieval. Using an evidence-grounded protocol with held-out causal interventions, we identify sparse and stable OCR-head sets in",
+      "first_checked_at": "2026-10-05T06:20:28+00:00",
+      "last_checked_at": "2026-10-05T06:20:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "From Retrieval to Recognition:How Vision--Language Models Become OCR Specialists"
+    },
+    "arXiv:2609.21548": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21548",
+      "identity_tokens": [
+        "arXiv:2609.21548"
+      ],
+      "reason": "一次要旨: Sequential recommendation aims to predict the next item a user will interact with based on their historical behavior. Advances in Transformers have significantly improved sequential recommendation but are still limited by cost efficiency. Although State Space Models (SSMs) have recently enabled efficient long-range modeling, most existing methods encode each",
+      "first_checked_at": "2026-10-05T06:20:28+00:00",
+      "last_checked_at": "2026-10-05T06:20:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Dual-Interest Sequential Product Recommendation With Multi-Granular SSM"
+    },
+    "arXiv:2609.21550": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21550",
+      "identity_tokens": [
+        "arXiv:2609.21550"
+      ],
+      "reason": "一次要旨: Auto-bidding is central to computational advertising, where strategies must maximize advertisers'conversion value under economic constraints. It has evolved from rule-based controllers to reinforcement learning and generative methods such as Decision Transformer (DT). Yet these methods increasingly mismatch the prevailing optimized cost-per-X (oCPX) paradigm",
+      "first_checked_at": "2026-10-05T06:20:28+00:00",
+      "last_checked_at": "2026-10-05T06:20:28+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "OneBid: A Unified Auto-Bidding Foundation Model for Diverse oCPX Advertising Scenarios"
+    },
+    "arXiv:2609.21594": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21594",
+      "identity_tokens": [
+        "arXiv:2609.21594"
+      ],
+      "reason": "一次要旨: Declarative SPMD programming uses tensor sharding descriptions to drive distributed execution, separating parallelization from model code. However, the evaluated PyTorch DTensor stack dispatches every operator below autograd, incurring repeated dispatch and metadata costs, while lacking an inexpensive end-to-end validation path. Existing FSDP and distributed",
+      "first_checked_at": "2026-10-05T06:20:28+00:00",
+      "last_checked_at": "2026-10-05T06:20:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "HyperParallel-FSDP: Topology-Aware Fully Sharded Training with Layout-Driven Muon on Ascend SuperPods"
+    },
+    "arXiv:2609.21712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21712",
+      "identity_tokens": [
+        "arXiv:2609.21712"
+      ],
+      "reason": "一次要旨: Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low",
+      "first_checked_at": "2026-10-05T06:20:28+00:00",
+      "last_checked_at": "2026-10-05T06:20:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation"
+    },
+    "arXiv:2609.22005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22005",
+      "identity_tokens": [
+        "arXiv:2609.22005"
+      ],
+      "reason": "一次要旨: Softmax attention has two structural gaps. A head cannot abstain, because its weights sum to one, so it outputs something even when nothing is relevant. Nor can it filter what it reads, because its output is a weighted average of value vectors, passing interference as faithfully as signal. We call these missing primitives abstention and noise filtering. Rece",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Abstention and Noise Filtering: Two Missing Primitives of Softmax Attention"
+    },
+    "arXiv:2609.22043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22043",
+      "identity_tokens": [
+        "arXiv:2609.22043"
+      ],
+      "reason": "一次要旨: Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little attention. When the memory store contains conflicting positions, standard retrieval-augmented generation (RAG) blindly injects memories and amplifies hallucinations:",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency"
+    },
+    "arXiv:2609.22083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22083",
+      "identity_tokens": [
+        "arXiv:2609.22083"
+      ],
+      "reason": "一次要旨: We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities.",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "MintAct: A Unified Visual Agent for Digital Environments"
+    },
+    "arXiv:2609.22086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22086",
+      "identity_tokens": [
+        "arXiv:2609.22086"
+      ],
+      "reason": "一次要旨: Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external proc",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design"
+    },
+    "arXiv:2609.21391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21391",
+      "identity_tokens": [
+        "arXiv:2609.21391"
+      ],
+      "reason": "一次要旨: Neural Radiance Fields (NeRF) have attracted extensive attention in recent years due to their strong capability for high-quality 3D reconstruction and novel view synthesis from multi-view images. Existing methods usually rely on high-quality sharp inputs, while real-world image acquisition is highly susceptible to blur degradation, which severely affects the",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "WS-NeRF: A Mamba-Driven World-State-Aware Adaptive Deblurring Neural Radiance Field"
+    },
+    "arXiv:2609.21502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21502",
+      "identity_tokens": [
+        "arXiv:2609.21502"
+      ],
+      "reason": "一次要旨: Recent 3D foundation models enable generalizable geometric reasoning from RGB images but remain limited in persistent memory, scalability, and renderable scene modeling. We present a memory-centric 3D foundation model for scalable robotic localization, reconstruction, and Gaussian rendering. Its core is an adaptive world memory mechanism that combines transf",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Adaptive World Memory 3D Foundation Model for Scalable 3D Mapping, Localization, and Rendering"
+    },
+    "arXiv:2609.21509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21509",
+      "identity_tokens": [
+        "arXiv:2609.21509"
+      ],
+      "reason": "一次要旨: When language models reason in chain-of-thought or exchange free-text intermediates, they serialize structured information into natural language. How much tree-structured compositional content survives this bottleneck? We propose a round-trip protocol that answers this question empirically for tree-structured expressions. A generator converts a procedurally",
+      "first_checked_at": "2026-10-05T06:20:29+00:00",
+      "last_checked_at": "2026-10-05T06:20:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "The Communication Bottleneck: A Round-Trip Study of Tree-Structured Expression Serialization in Language Models"
+    },
+    "arXiv:2609.21515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21515",
+      "identity_tokens": [
+        "arXiv:2609.21515"
+      ],
+      "reason": "一次要旨: Third-party adapters for open-weight language models ship as opaque weight matrices; a recipient cannot check whether an adapter hides a backdoor without trusting the publisher or inspecting the weights, the publisher's core asset. For one important class (payloads placed where a safety monitor is structurally blind), detection is unsound as a defense: every",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "ServeGuard: Verifiable, Bounded-Residual Confinement of Operator-Invisible Channels Without Revealing the Certified Read Factor"
+    },
+    "arXiv:2609.21753": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21753",
+      "identity_tokens": [
+        "arXiv:2609.21753"
+      ],
+      "reason": "一次要旨: Contact-rich manipulation requires policies to generate precise actions by reasoning over contact forces, robot configurations, and interaction histories beyond visual observations. Existing methods passively condition on force feedback rather than actively predicting future contact dynamics, limiting their ability to generate high-precision actions. To addr",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "PSR: Predictive Sensorimotor Representation Learning for Contact-Rich Manipulation"
+    },
+    "arXiv:2609.21780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21780",
+      "identity_tokens": [
+        "arXiv:2609.21780"
+      ],
+      "reason": "一次要旨: 3D object detection from LiDAR point clouds faces a fundamental dilemma: voxel-based methods achieve efficiency at the cost of geometric quantization, while point-based methods preserve fidelity but suffer from prohibitive computational bottlenecks. Specifically, point-based architectures are crippled by slow downsampling strategies (e.g., FPS) and expensive",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PointLAM: Local Attentive Mamba for Efficient Point-based 3D Object Detection"
+    },
+    "arXiv:2609.21813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21813",
+      "identity_tokens": [
+        "arXiv:2609.21813"
+      ],
+      "reason": "一次要旨: In classification-oriented adaptive sensing, posterior samples characterize uncertainty at the current measurement state and can serve two roles: they may guide the next sensing direction, while their class labels provide votes for the candidate classes and determine whether sensing should continue. We focus on the stopping layer that turns these votes into",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "How Many Posterior Samples? Calibrated Stopping for Adaptive Sensing"
+    },
+    "arXiv:2609.21815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21815",
+      "identity_tokens": [
+        "arXiv:2609.21815"
+      ],
+      "reason": "一次要旨: Adaptive optimization methods such as AdaGrad and Adam are widely used in modern deep neural network training, but their adaptive scaling is primarily designed for vector-valued parameters and does not explicitly exploit matrix structure. Recent matrix-aware optimizers demonstrate the benefits of structured optimization, yet a general theoretical framework f",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Matrix AdaGrad: Row-wise and Column-wise Adaptive Subgradient Methods"
+    },
+    "arXiv:2609.21888": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21888",
+      "identity_tokens": [
+        "arXiv:2609.21888"
+      ],
+      "reason": "一次要旨: Detecting pretraining data in large language models is challenging because high likelihood can reflect either training exposure or strong generalization. In the joint space of prediction loss and predictive entropy, a likelihood-only detector uses a horizontal boundary and can mistake predictable non-members for members. Motivated by this, we introduce an in",
+      "first_checked_at": "2026-10-05T06:20:30+00:00",
+      "last_checked_at": "2026-10-05T06:20:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Detecting Pretraining Data in Large Language Models from a Free-Energy Perspective"
     }
   }
 }

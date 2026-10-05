@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90f32f3b9118e420-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.22005",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.22005",
+    "identity_tokens": [
+      "arXiv:2609.22005"
+    ],
+    "reason": "一次要旨: Softmax attention has two structural gaps. A head cannot abstain, because its weights sum to one, so it outputs something even when nothing is relevant. Nor can it filter what it reads, because its output is a weighted average of value vectors, passing interference as faithfully as signal. We call these missing primitives abstention and noise filtering. Rece",
+    "first_checked_at": "2026-10-05T06:20:29+00:00",
+    "last_checked_at": "2026-10-05T06:20:29+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+    ],
+    "title": "Abstention and Noise Filtering: Two Missing Primitives of Softmax Attention"
+  },
+  "processed_at": "2026-10-05T06:20:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90f32f3b9118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90f32f3b9118e420-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.21960",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.21960",
+    "identity_tokens": [
+      "arXiv:2609.21960"
+    ],
+    "reason": "本文の解析・数値例は固定step数でfactorization errorを最適化し、Markov/exchangeable synthetic targetが中心。masked discrete diffusion推論のcall-cost tradeoffには接点があるが、LLM/text workloadや実生成の品質・速度評価を確認できず、対象適合が弱い。",
+    "first_checked_at": "2026-10-05T06:20:29+00:00",
+    "last_checked_at": "2026-10-05T06:20:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Schedule optimization for tau-leaping in masked discrete diffusion"
+  },
+  "processed_at": "2026-10-05T06:20:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90f32f3b9118",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

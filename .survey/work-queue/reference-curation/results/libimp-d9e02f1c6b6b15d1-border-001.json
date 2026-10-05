@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9e02f1c6b6b15d1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.21383",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.21383",
+    "identity_tokens": [
+      "arXiv:2609.21383"
+    ],
+    "reason": "本文分析はcompleted trajectoriesに対するretrospective margin/depth診断が中心。prefixから将来更新を予測する実験はretrospective comparatorを下回り、早期終了policyや推論計算削減は実証されず、改善可能性が未確定。",
+    "first_checked_at": "2026-10-05T06:20:29+00:00",
+    "last_checked_at": "2026-10-05T06:20:29+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+    ],
+    "title": "Prediction Dynamics in Depth-Recurrent Language Models"
+  },
+  "processed_at": "2026-10-05T06:20:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9e02f1c6b6b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
