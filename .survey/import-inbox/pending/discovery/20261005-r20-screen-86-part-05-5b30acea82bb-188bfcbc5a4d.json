@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-86-part-05-5b30acea82bb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01915",
+      "identity_tokens": [
+        "arXiv:2403.01915"
+      ],
+      "title": "xT: Nested Tokenization for Larger Context in Large Images",
+      "reason": "xT studies nested tokenization for large images/vision context rather than LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2403.01915",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12399",
+      "identity_tokens": [
+        "arXiv:2402.12399"
+      ],
+      "title": "Turn Waste into Worth: Rectifying Top-k Router of MoE",
+      "reason": "Although the mechanism could affect inference, the paper does not establish end-to-end serving performance or measured latency/throughput gains.",
+      "source_url": "https://arxiv.org/abs/2402.12399",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-2134",
+      "identity_tokens": [
+        "DOI:10.52202/079017-2134"
+      ],
+      "title": "FM-Delta: Lossless Compression for Storing Massive Fine-tuned Foundation Models",
+      "reason": "FM-Delta losslessly compresses stored fine-tuned model artifacts; storage compression is not inference-time model compression/efficiency.",
+      "source_url": "https://doi.org/10.52202/079017-2134",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.18481",
+      "identity_tokens": [
+        "arXiv:2310.18481"
+      ],
+      "title": "MOSEL: Inference Serving Using Dynamic Modality Selection",
+      "reason": "The evaluated system is generic multimodal inference, not clearly LLM generative serving; fit to this survey scope is adjacent rather than direct.",
+      "source_url": "https://arxiv.org/abs/2310.18481",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14567",
+      "identity_tokens": [
+        "arXiv:2305.14567"
+      ],
+      "title": "Memory Efficient Neural Processes via Constant Memory Attention Block",
+      "reason": "This concerns memory-efficient neural processes, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2305.14567",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    }
+  ]
+}
