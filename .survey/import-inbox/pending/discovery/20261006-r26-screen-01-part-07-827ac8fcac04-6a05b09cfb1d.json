@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r26-screen-01-part-07-827ac8fcac04",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18752",
+      "identity_tokens": [
+        "arXiv:2609.18752"
+      ],
+      "title": "QMSR: Query-Conditioned Mask-wise Expert Routing for Robust Open-Vocabulary Underwater Object Retrieval",
+      "reason": "underwater visual retrieval用query-conditioned image enhancement expert routerであり、LLM inference servingと接続しない。",
+      "source_url": "https://arxiv.org/abs/2609.18752",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19076",
+      "identity_tokens": [
+        "arXiv:2609.19076"
+      ],
+      "title": "Double descent is the principle of least action",
+      "reason": "double-descentをstatistical mechanicsで説明する理論論文で、inference system最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.19076",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19363",
+      "identity_tokens": [
+        "arXiv:2609.19363"
+      ],
+      "title": "Directions That Don't Drift: Stiefel Manifold Routing for Transformer Attention",
+      "reason": "CIFAR patch benchmarkのattention Q/K Stiefel-manifold optimizerであり、attention routingの学習法であってLLM inference systemの高速化を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.19363",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28506",
+      "identity_tokens": [
+        "arXiv:2609.28506"
+      ],
+      "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
+      "reason": "time-series forecasting向けfrozen router/foundation-model benchmarkであり、paper abstractが明示するようにagentもLLMも使わず、LLM servingと無関係。",
+      "source_url": "https://arxiv.org/abs/2609.28506",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01157-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01157-9"
+      ],
+      "title": "REMP: A transformer with role-specific experts and multi-scale positional encoding for autonomous multi-UAV air combat",
+      "reason": "multi-UAV air combat向けmulti-agent reinforcement learning architectureであり、LLM inference efficiencyが対象でない。",
+      "source_url": "https://doi.org/10.1007/s44443-026-01157-9",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
