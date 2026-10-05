@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:37:19+00:00",
-  "record_count": 708,
+  "updated_at": "2026-10-05T02:39:43+00:00",
+  "record_count": 712,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10371,6 +10371,75 @@
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
       "title": "Context Compaction Theory"
+    },
+    "DOI:10.1109/tmc.2026.3667591": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2026.3667591",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3667591"
+      ],
+      "reason": "本文が必要な直接関連候補だがDOI full textを取得できず、手法/evaluation/limitationsを確認できない。",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "EdgeSD: Efficient Speculative Decoding With Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks"
+    },
+    "DOI:10.1109/tmc.2026.3667619": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmc.2026.3667619",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3667619"
+      ],
+      "reason": "DOI本文を取得できずlatency comparison detailsを検証できないためborderline。",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ],
+      "title": "P4LLM: Protecting Embedding Privacy Against Model Inversion Attacks for EaaS LLM Serving via Token-Wise Partition and Perturbation"
+    },
+    "arXiv:2607.27230": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.27230",
+      "identity_tokens": [
+        "arXiv:2607.27230"
+      ],
+      "reason": "The architecture may carry into inference, but its measured contribution here is training quality and training throughput rather than an inference-time optimization.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Multi-Head Attention Residuals"
+    },
+    "arXiv:2607.18745": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.18745",
+      "identity_tokens": [
+        "arXiv:2607.18745"
+      ],
+      "reason": "Quantized matrix products are used in LLM inference, but evidence is limited to synthetic products and a compact vision classifier; deployment relevance and transform-copy cost for LLM kernels remain unshown.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Contraction-Gauge Preconditioning for Quantized Matrix Multiplication"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1ebc766e01dec35c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00455",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00455",
+    "identity_tokens": [
+      "arXiv:2608.00455"
+    ],
+    "reason": "online RLのtraining-to-inference policy weight synchronization overheadで学習専用効率化。",
+    "first_checked_at": "2026-10-05T02:39:43+00:00",
+    "last_checked_at": "2026-10-05T02:39:43+00:00",
+    "linked_from": [
+      "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+    ],
+    "title": "AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T02:39:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1ebc766e01de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

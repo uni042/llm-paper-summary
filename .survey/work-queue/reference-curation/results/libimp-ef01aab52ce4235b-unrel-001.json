@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef01aab52ce4235b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00337",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00337",
+    "identity_tokens": [
+      "arXiv:2608.00337"
+    ],
+    "reason": "robot policy/action chunk schedulingでLLM対象外。",
+    "first_checked_at": "2026-10-05T02:39:44+00:00",
+    "last_checked_at": "2026-10-05T02:39:44+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+    ],
+    "title": "Action Chunk Scheduling for Batched Robot Policy Serving"
+  },
+  "processed_at": "2026-10-05T02:39:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef01aab52ce4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

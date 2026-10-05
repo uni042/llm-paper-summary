@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:37:19+00:00",
-  "record_count": 2007,
+  "updated_at": "2026-10-05T02:39:44+00:00",
+  "record_count": 2023,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -29010,6 +29010,243 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Tevatron Meets Megatron: Expert-Parallel LLM Reranker Training on an Academic Budget"
+    },
+    "arXiv:2608.00418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00418",
+      "identity_tokens": [
+        "arXiv:2608.00418"
+      ],
+      "reason": "Boolean extrapolationに対する学習時attention prior研究で効率化ではない。",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Mask-Based Priors Are More Persistent than Query-Key Initializations"
+    },
+    "arXiv:2608.00455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00455",
+      "identity_tokens": [
+        "arXiv:2608.00455"
+      ],
+      "reason": "online RLのtraining-to-inference policy weight synchronization overheadで学習専用効率化。",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "AReaL-DTE: Sparse Policy-Weight Transfer for Online Agentic Reinforcement Learning"
+    },
+    "DOI:10.1109/tce.2026.3667507": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tce.2026.3667507",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2026.3667507"
+      ],
+      "reason": "医療用multimodal edge classifierでGPT-style componentは含むがLLM inference研究ではない。",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "CardioGPT-ViT: Explainable Deep Learning Models With Multimodal Data for Coronary Artery Disease and Heart Failure on Edge Consumer Devices"
+    },
+    "arXiv:2607.23777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23777",
+      "identity_tokens": [
+        "arXiv:2607.23777"
+      ],
+      "reason": "The primary abstract proposes scaling weight decay and reports faster convergence to validation loss during MoE pretraining; contribution is training optimization.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Scale Weight Decay and Train Better"
+    },
+    "DOI:10.1145/3833875": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3833875",
+      "identity_tokens": [
+        "DOI:10.1145/3833875"
+      ],
+      "reason": "The primary abstract describes privacy-preserving edge/cloud video analytics, frame transformations and split-layer scheduling, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "A Privacy-preserving Edge-cloud Video Analytics System via Policy-based Frame Transformation"
+    },
+    "arXiv:2607.21553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21553",
+      "identity_tokens": [
+        "arXiv:2607.21553"
+      ],
+      "reason": "The primary abstract optimizes a video diffusion transformer for video generation; the workload is generative video diffusion rather than LLM inference.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation"
+    },
+    "arXiv:2607.21670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21670",
+      "identity_tokens": [
+        "arXiv:2607.21670"
+      ],
+      "reason": "The primary abstract studies discrete action-token learning for visuomotor/robot policies; it does not concern LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Ordered Action Tokens for Visuomotor Policy Learning"
+    },
+    "arXiv:2607.20709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20709",
+      "identity_tokens": [
+        "arXiv:2607.20709"
+      ],
+      "reason": "The primary abstract presents a model-agnostic Python object-oriented framework for agent development; its contribution is software-agent construction, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "NVIDIA-labs OO Agents: Native Python Object-Oriented Agents"
+    },
+    "arXiv:2607.18816": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18816",
+      "identity_tokens": [
+        "arXiv:2607.18816"
+      ],
+      "reason": "The primary abstract studies agent execution-trail representation, trust/reuse and debugging; it does not propose LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "AgentTrails: Towards Trust and Reuse for Agentic Tasks"
+    },
+    "arXiv:2607.18859": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18859",
+      "identity_tokens": [
+        "arXiv:2607.18859"
+      ],
+      "reason": "The primary abstract proposes multi-agent software issue repair strategy exploration; it focuses coding-task success/exploration rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+      ],
+      "title": "PhoenixRepair: Rethinking Repair Strategy Exploration in Software Agents"
+    },
+    "arXiv:2607.19161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19161",
+      "identity_tokens": [
+        "arXiv:2607.19161"
+      ],
+      "reason": "The primary abstract evaluates scoring rules for machine-learned probabilistic weather forecasting; it is not an LLM inference topic.",
+      "first_checked_at": "2026-10-05T02:39:43+00:00",
+      "last_checked_at": "2026-10-05T02:39:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "On the sensitivity of machine-learned probabilistic weather forecast models to scale-aware scoring rules"
+    },
+    "arXiv:2608.00337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00337",
+      "identity_tokens": [
+        "arXiv:2608.00337"
+      ],
+      "reason": "robot policy/action chunk schedulingでLLM対象外。",
+      "first_checked_at": "2026-10-05T02:39:44+00:00",
+      "last_checked_at": "2026-10-05T02:39:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "Action Chunk Scheduling for Batched Robot Policy Serving"
+    },
+    "arXiv:2607.28405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28405",
+      "identity_tokens": [
+        "arXiv:2607.28405"
+      ],
+      "reason": "World Action Model quantizationでLLM対象外。",
+      "first_checked_at": "2026-10-05T02:39:44+00:00",
+      "last_checked_at": "2026-10-05T02:39:44+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "QuantWAMs: Calibrating at the Right Granularity for World Action Models"
+    },
+    "arXiv:2607.25614": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25614",
+      "identity_tokens": [
+        "arXiv:2607.25614"
+      ],
+      "reason": "external parametric memoryによるdomain adaptationで推論効率が主題でない。",
+      "first_checked_at": "2026-10-05T02:39:44+00:00",
+      "last_checked_at": "2026-10-05T02:39:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "MemSFT: Mitigating Alignment Tax with an External Parametric Memory"
+    },
+    "arXiv:2607.24372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24372",
+      "identity_tokens": [
+        "arXiv:2607.24372"
+      ],
+      "reason": "LLM output randomness/reproducibility reportingで効率化ではない。",
+      "first_checked_at": "2026-10-05T02:39:44+00:00",
+      "last_checked_at": "2026-10-05T02:39:44+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Randomness in large language models: What researchers need to know (and report)"
+    },
+    "arXiv:2607.24377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24377",
+      "identity_tokens": [
+        "arXiv:2607.24377"
+      ],
+      "reason": "video diffusion MXFP4 attention quantizationでlanguage modelではない。",
+      "first_checked_at": "2026-10-05T02:39:44+00:00",
+      "last_checked_at": "2026-10-05T02:39:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention"
     }
   }
 }
