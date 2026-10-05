@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f21e4dbc7dfce78-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19206",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19206",
+    "identity_tokens": [
+      "arXiv:2609.19206"
+    ],
+    "reason": "一次要旨: In-storage computing (ISC) reduces host--storage data movement by executing computation inside computational storage devices (CSDs). For multi-stage applications, realizing these benefits requires coordinating data placement, I/O--compute overlap, and device-resident state across the workflow, yet existing interfaces lack a unified abstraction for these decisions. We present Epic, an NVMe-based ISC stack that provides this abs",
+    "first_checked_at": "2026-10-05T06:36:02+00:00",
+    "last_checked_at": "2026-10-05T06:36:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
+      "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
+      "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md"
+    ],
+    "title": "Programming In-Storage Computing with Located, Stateful Dataflow"
+  },
+  "processed_at": "2026-10-05T06:36:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f21e4dbc7df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:33:18+00:00",
-  "record_count": 3276,
+  "updated_at": "2026-10-05T06:36:04+00:00",
+  "record_count": 3290,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -47708,6 +47708,218 @@
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "Playing log(N)-Questions over Wikipedia Abstracts: How Per-Round Errors Compound Under Information Asymmetry"
+    },
+    "arXiv:2609.19204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19204",
+      "identity_tokens": [
+        "arXiv:2609.19204"
+      ],
+      "reason": "一次要旨: Robotic systems operating in dynamic environments require visual perception that evolves continuously with the incoming sensory stream. Event cameras provide microsecond temporal resolution and asynchronous sensing, but most learning-based methods accumulate events into frames or temporal bins, introducing an integration delay that can limit fast reaction. Here we propose REACT, a fully spiking state-space model for event-driv",
+      "first_checked_at": "2026-10-05T06:36:02+00:00",
+      "last_checked_at": "2026-10-05T06:36:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "REACT: A Fully Spiking State-Space Model for Real-Time Event-Driven Temporal Perception"
+    },
+    "arXiv:2609.19206": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19206",
+      "identity_tokens": [
+        "arXiv:2609.19206"
+      ],
+      "reason": "一次要旨: In-storage computing (ISC) reduces host--storage data movement by executing computation inside computational storage devices (CSDs). For multi-stage applications, realizing these benefits requires coordinating data placement, I/O--compute overlap, and device-resident state across the workflow, yet existing interfaces lack a unified abstraction for these decisions. We present Epic, an NVMe-based ISC stack that provides this abs",
+      "first_checked_at": "2026-10-05T06:36:02+00:00",
+      "last_checked_at": "2026-10-05T06:36:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md",
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md"
+      ],
+      "title": "Programming In-Storage Computing with Located, Stateful Dataflow"
+    },
+    "arXiv:2609.19213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19213",
+      "identity_tokens": [
+        "arXiv:2609.19213"
+      ],
+      "reason": "一次要旨: In this paper, we introduce layer-wise curriculum learning for efficient LLM compression. The proposed method facilitates the knowledge transfer from the teacher model to the student model, utilizing a curriculum learning approach that begins with easier optimization tasks and progressively tackles harder ones. In order to adopt the layer-wise learning in LLM compression, we partition the whole model into multiple segments con",
+      "first_checked_at": "2026-10-05T06:36:02+00:00",
+      "last_checked_at": "2026-10-05T06:36:02+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Layer-wise Curriculum Learning for Efficient LLM Compression"
+    },
+    "arXiv:2609.19225": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19225",
+      "identity_tokens": [
+        "arXiv:2609.19225"
+      ],
+      "reason": "一次要旨: Interlocal agreements are one of the primary instruments through which local governments formalize collaboration for public service delivery, yet the institutional and financial content encoded in these contracts has remained inaccessible to systematic analysis at scale. This paper introduces an end-to-end computational pipeline for classifying intergovernmental agreements by institutional form and extracting financial relatio",
+      "first_checked_at": "2026-10-05T06:36:02+00:00",
+      "last_checked_at": "2026-10-05T06:36:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Making Local Government Contracts Legible: A Computational Pipeline for Classifying and Mapping Intergovernmental Service Agreements"
+    },
+    "arXiv:2610.00170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00170",
+      "identity_tokens": [
+        "arXiv:2610.00170"
+      ],
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "first_checked_at": "2026-10-05T06:36:03+00:00",
+      "last_checked_at": "2026-10-05T06:36:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "On-Device Commercial Intent Retrieval Under Size, Latency, and Privacy Constraints: A 3 MiB Retrieval System with Typed Egress Boundaries"
+    },
+    "DOI:10.1088/1402-4896/aea89c": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1402-4896/aea89c",
+      "identity_tokens": [
+        "DOI:10.1088/1402-4896/aea89c"
+      ],
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "first_checked_at": "2026-10-05T06:36:03+00:00",
+      "last_checked_at": "2026-10-05T06:36:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "State–increment mamba neural network for wavefront prediction in adaptive optics"
+    },
+    "DOI:10.25195/ijci.v52i2.855": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25195/ijci.v52i2.855",
+      "identity_tokens": [
+        "DOI:10.25195/ijci.v52i2.855"
+      ],
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "first_checked_at": "2026-10-05T06:36:03+00:00",
+      "last_checked_at": "2026-10-05T06:36:03+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "CADSA: Content-Aware Dynamic Sparse Attention for Lightweight and Energy-Efficient Edge AI with Sub-Quadratic Complexity"
+    },
+    "DOI:10.3389/fpls.2026.1935123": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2026.1935123",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2026.1935123"
+      ],
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "first_checked_at": "2026-10-05T06:36:03+00:00",
+      "last_checked_at": "2026-10-05T06:36:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Full shuffle and p-rectified semi-inner powerful IoU-based chili pepper flower recognition with environment-aware YOLO11"
+    },
+    "arXiv:2609.19502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19502",
+      "identity_tokens": [
+        "arXiv:2609.19502"
+      ],
+      "reason": "一次要旨: Agents can now externalize experience into memory, consolidating historical traces into semantic knowledge and procedural shortcuts that persist between sessions. Such memory is typically private to a single agent. We argue that agentic memory benefits from being collective, because trustworthy knowledge of the shared environment---the data sources, services, and tools agents depend on---cannot be established by any single age",
+      "first_checked_at": "2026-10-05T06:36:03+00:00",
+      "last_checked_at": "2026-10-05T06:36:03+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Reputation as Community Memory for the Agentic Web"
+    },
+    "arXiv:2609.19242": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19242",
+      "identity_tokens": [
+        "arXiv:2609.19242"
+      ],
+      "reason": "一次要旨: Block diffusion language models (BDLMs) combine autoregressive dependencies across blocks with parallel denoising within blocks, but long-context training is constrained by distributed attention communication and activation memory. Conventional context parallelism (CP) shards the combined clean-plus-corrupted sequence by position, communicating shared clean K/V together with block-specific corrupted K/V and their gradients. We",
+      "first_checked_at": "2026-10-05T06:36:04+00:00",
+      "last_checked_at": "2026-10-05T06:36:04+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "Block Parallelism For Efficient Distributed Long-Context Diffusion Language Model Training"
+    },
+    "arXiv:2609.19376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19376",
+      "identity_tokens": [
+        "arXiv:2609.19376"
+      ],
+      "reason": "一次要旨: Analytical performance models --- derivations of throughput or speedup from hardware parameters --- make claims independently verifiable and expose binding constraints, yet rarely accompany architecture papers because building one by hand takes weeks of expert effort. We present Rosetta, a multi-agent LLM pipeline that automatically generates first-principles analytical models from research paper PDFs. Given a paper as sole in",
+      "first_checked_at": "2026-10-05T06:36:04+00:00",
+      "last_checked_at": "2026-10-05T06:36:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Rosetta: Automating First-Principles Performance Modeling Using Multi-Agent LLMs"
+    },
+    "arXiv:2609.19384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19384",
+      "identity_tokens": [
+        "arXiv:2609.19384"
+      ],
+      "reason": "一次要旨: Scaling deep learning faces critical bottlenecks: data exhaustion, exponential training costs, and resource concentration. Model merging combines pre-trained checkpoints without gradient descent, offering orders-of-magnitude savings versus retraining. Combining independently trained vision models is difficult when their architectures and parameter shapes differ. Existing weight-space merging methods generally assume aligned, s",
+      "first_checked_at": "2026-10-05T06:36:04+00:00",
+      "last_checked_at": "2026-10-05T06:36:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Riemannian--Lorentz Fusion of Vision Transformers and State-Space Models"
+    },
+    "arXiv:2609.19387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19387",
+      "identity_tokens": [
+        "arXiv:2609.19387"
+      ],
+      "reason": "一次要旨: Agents are increasingly asked to design hardware, and increasingly reported to succeed. Such reports establish that a design improved; they cannot establish why. An agent that improves an accelerator may be reasoning about the machine, or may be searching competently over knobs whose meaning it never recovers -- and only the first transfers to the next architecture. Existing evaluations cannot tell the two apart, because they",
+      "first_checked_at": "2026-10-05T06:36:04+00:00",
+      "last_checked_at": "2026-10-05T06:36:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "title": "Do AI Agents Understand Computer Architecture?"
+    },
+    "arXiv:2609.19425": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19425",
+      "identity_tokens": [
+        "arXiv:2609.19425"
+      ],
+      "reason": "一次要旨: Tool-augmented large language model (LLM) agents fail in a way no tool-selection or tool-security method addresses: they call tools that do not exist and pass arguments no schema declares. Existing defenses either pick the right tool (selection) or constrain what an agent may do with real tools (gating), both of which presuppose the emitted call refers to a real tool at all. We show this is a structural blind spot: a hallucina",
+      "first_checked_at": "2026-10-05T06:36:04+00:00",
+      "last_checked_at": "2026-10-05T06:36:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents"
     }
   }
 }

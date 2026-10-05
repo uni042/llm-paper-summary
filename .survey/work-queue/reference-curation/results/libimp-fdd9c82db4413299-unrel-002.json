@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fdd9c82db4413299-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19376",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19376",
+    "identity_tokens": [
+      "arXiv:2609.19376"
+    ],
+    "reason": "一次要旨: Analytical performance models --- derivations of throughput or speedup from hardware parameters --- make claims independently verifiable and expose binding constraints, yet rarely accompany architecture papers because building one by hand takes weeks of expert effort. We present Rosetta, a multi-agent LLM pipeline that automatically generates first-principles analytical models from research paper PDFs. Given a paper as sole in",
+    "first_checked_at": "2026-10-05T06:36:04+00:00",
+    "last_checked_at": "2026-10-05T06:36:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Rosetta: Automating First-Principles Performance Modeling Using Multi-Agent LLMs"
+  },
+  "processed_at": "2026-10-05T06:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdd9c82db441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

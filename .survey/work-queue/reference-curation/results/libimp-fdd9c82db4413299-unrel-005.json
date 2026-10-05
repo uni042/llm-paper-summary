@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fdd9c82db4413299-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19425",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19425",
+    "identity_tokens": [
+      "arXiv:2609.19425"
+    ],
+    "reason": "一次要旨: Tool-augmented large language model (LLM) agents fail in a way no tool-selection or tool-security method addresses: they call tools that do not exist and pass arguments no schema declares. Existing defenses either pick the right tool (selection) or constrain what an agent may do with real tools (gating), both of which presuppose the emitted call refers to a real tool at all. We show this is a structural blind spot: a hallucina",
+    "first_checked_at": "2026-10-05T06:36:04+00:00",
+    "last_checked_at": "2026-10-05T06:36:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents"
+  },
+  "processed_at": "2026-10-05T06:36:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fdd9c82db441",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
