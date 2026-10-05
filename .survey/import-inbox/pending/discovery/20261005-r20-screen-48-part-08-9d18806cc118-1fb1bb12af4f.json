@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-48-part-08-9d18806cc118",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00601",
+      "identity_tokens": [
+        "arXiv:2607.00601"
+      ],
+      "title": "\"Don't Say It!\": Constraints, Compliance, and Communication when Language Models Play Taboo",
+      "reason": "一次要旨はTaboo gameでのLLM constraint-following能力分析で、inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2607.00601",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00774",
+      "identity_tokens": [
+        "arXiv:2607.00774"
+      ],
+      "title": "Soft Mixture-of-Recursions: Going Deeper with Recursive Vision Transformers",
+      "reason": "一次要旨はVision Transformerのrepresentation/accuracy/parameter efficiencyに関する画像モデル研究で、LLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2607.00774",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00839",
+      "identity_tokens": [
+        "arXiv:2607.00839"
+      ],
+      "title": "Rethinking Multi-Label Image Classification With Deep Learning: Taxonomy, Challenge, and Outlook",
+      "reason": "一次要旨はmulti-label image classificationのsurveyで、LLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2607.00839",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00852",
+      "identity_tokens": [
+        "arXiv:2607.00852"
+      ],
+      "title": "Recovering Input Text from Hidden States: Study of Gradient-Based Inversion of Decoder-Only Language Models",
+      "reason": "一次要旨はGPT-2 hidden-state inversion/privacy analysisで、token reconstruction/accuracyの分析が主題。高速手法比較は研究対象の一部に過ぎず推論最適化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2607.00852",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01002",
+      "identity_tokens": [
+        "arXiv:2607.01002"
+      ],
+      "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+      "reason": "一次要旨はLLM attention headのretrieval behavior解釈・ablationで、inference runtime/resource optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2607.01002",
+      "first_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "last_checked_at": "2026-10-05T09:49:28.202492+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ]
+    }
+  ]
+}
