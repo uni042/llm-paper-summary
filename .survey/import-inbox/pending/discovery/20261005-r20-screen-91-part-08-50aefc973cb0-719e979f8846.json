@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-91-part-08-50aefc973cb0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.21364",
+      "identity_tokens": [
+        "arXiv:2505.21364"
+      ],
+      "title": "Towards Interpretability Without Sacrifice: Faithful Dense Layer Decomposition with Mixture of Decoders",
+      "reason": "MxDはLLM dense MLPをsparse layer-level mixtureへ分解するが、焦点はinterpretability/approximation。",
+      "source_url": "https://arxiv.org/abs/2505.21364",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19959",
+      "identity_tokens": [
+        "arXiv:2505.19959"
+      ],
+      "title": "MiniLongBench: The Low-cost Long Context Understanding Benchmark for Large Language Models",
+      "reason": "MiniLongBenchはbenchmarkを圧縮してLLM評価コストを削減するが、model inference mechanism自体は改善しない。",
+      "source_url": "https://arxiv.org/abs/2505.19959",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
