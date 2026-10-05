@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4bed0108f1a63c3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.05647",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.05647",
+    "identity_tokens": [
+      "arXiv:2506.05647"
+    ],
+    "reason": "Primary abstract: We study gradient-based data attribution, aiming to identify which training examples most influence a given output.",
+    "first_checked_at": "2026-10-05T13:46:41+00:00",
+    "last_checked_at": "2026-10-05T13:46:41+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+    ],
+    "title": "Learning to Weight Parameters for Training Data Attribution"
+  },
+  "processed_at": "2026-10-05T13:46:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4bed0108f1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

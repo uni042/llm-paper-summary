@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0597ea37f55580b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3746231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3746231",
+    "identity_tokens": [
+      "DOI:10.1145/3746231"
+    ],
+    "reason": "Primary abstract: Driven by the increasing demands of machine learning, heterogeneous systems combining CPUs and GPUs have emerged as the dominant architecture for parallel computing in recent years.",
+    "first_checked_at": "2026-10-05T13:46:40+00:00",
+    "last_checked_at": "2026-10-05T13:46:40+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Performance Implications of Pipelining the Data Transfer in CPU-GPU Heterogeneous Systems"
+  },
+  "processed_at": "2026-10-05T13:46:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0597ea37f55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
