@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:16:07+00:00",
-  "record_count": 5194,
+  "updated_at": "2026-10-05T13:19:04+00:00",
+  "record_count": 5205,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -75516,6 +75516,169 @@
         "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
       ],
       "title": "MLLM-LLaVA-FL: Multimodal Large Language Model Assisted Federated Learning"
+    },
+    "arXiv:2509.03117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.03117",
+      "identity_tokens": [
+        "arXiv:2509.03117"
+      ],
+      "reason": "System prompts are critical for shaping the behavior and output quality of large language model (LLM)-based applications, driving substantial investment in optimizing highquality prompts beyond traditional handcrafted designs. However, as system prompts become valuable intellectual property, they are increasingly vulnerable to prompt theft and unauthorized use, highlighting the urgent need for effective copyright auditing, especially watermarking. Existing methods rely on verifying subtle logit distribution shifts triggered by a query. We observe that this logit-dependent verification framework is impractical in real-world content-only settings, primarily because (1) random sampling makes content-level generation unstable for verification, and (2) stronger instructions needed for content-level signals compromise prompt fidelity. To overcome these challenges, we propose PromptCOS, the first content-only system prompt copyright auditing method based on content-level output similarity. PromptCOS achieves watermark stability by designing a cyclic output signal as the conditional instruction's target. It preserves prompt fidelity by injecting a small set of auxiliary tokens to encode the watermark, leaving the main prompt untouched. Furthermore, to ensure robustness against malicious removal, we optimize cover tokens, i.e., critical tokens in the original prompt, to ensure that removing auxiliary tokens causes severe performance degradation. Experimental results show that PromptCOS achieves high effectiveness (99.3% average watermark similarity), strong distinctiveness (60.8% higher than the best baseline), high fidelity (accuracy degradation no greater than 0.6%), robustness (resilience against four potential attack categories), and high computational efficiency (up to 98.1% cost saving).",
+      "first_checked_at": "2026-10-05T13:19:02+00:00",
+      "last_checked_at": "2026-10-05T13:19:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "PromptCOS: Towards Content-Only System Prompt Copyright Auditing for LLMs"
+    },
+    "arXiv:2509.01082": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.01082",
+      "identity_tokens": [
+        "arXiv:2509.01082"
+      ],
+      "reason": "Probabilistic programming offers a powerful framework for modeling uncertainty, yet statistical model discovery in this domain entails navigating an immense search space under strict domain-specific constraints. When small language models are tasked with generating probabilistic programs, they frequently produce outputs that suffer from both syntactic and semantic errors, such as flawed inference constructs. Motivated by probabilistic programmers'domain expertise and debugging strategies, we introduce RefineStat, a language model--driven framework that enforces semantic constraints ensuring synthesized programs contain valid distributions and well-formed parameters, and then applies diagnostic-aware refinement by resampling prior or likelihood components whenever reliability checks fail. We evaluate RefineStat on multiple probabilistic-programming code-generation tasks using smaller language models (SLMs) and find that it produces programs that are both syntactically sound and statistically reliable, often matching or surpassing those from closed-source large language models (e.g., OpenAI o3).",
+      "first_checked_at": "2026-10-05T13:19:02+00:00",
+      "last_checked_at": "2026-10-05T13:19:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "REFINESTAT: Efficient Exploration for Probabilistic Program Synthesis"
+    },
+    "DOI:10.1145/3718958.3750467": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3718958.3750467",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750467"
+      ],
+      "reason": "Training large language models (LLMs) generates diverse coflows within a cluster, requiring optimized scheduling to enhance communication-computation overlap and minimize training time. Existing schedulers inadequately handle contention both across and within coflows, resulting in suboptimal performance. We present Hermod, a comprehensive coflow scheduler that orchestrates all coflow types for LLM training. The key insight behind Hermod is that coflows can be uniquely characterized by three model factors—microbatch ID, coflow type, and layer ID—enabling optimal scheduling decisions. Leveraging this insight, Hermod applies model-factor-driven inter-coflow priority scheduling aligned with the LLM training DAG. Preliminary simulation results show potential for performance improvements.",
+      "first_checked_at": "2026-10-05T13:19:02+00:00",
+      "last_checked_at": "2026-10-05T13:19:02+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "Coflow Scheduling for LLM Training"
+    },
+    "DOI:10.1145/3718958.3750496": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3718958.3750496",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750496"
+      ],
+      "reason": "A Virtual Private Cloud (VPC) that enables both RDMA and TCP provides advantages for both tenants and cloud providers. It serves the flexible demands of RDMA and TCP of tenant applications while delivering a cost-effective solution compared to the construction of two distinct overlay networks. In this study, we introduce Jakiro, an innovative framework of vNIC design that supports both RDMA and TCP within ByteDance Cloud. Jakiro holds the capability to support fundamental VPC features such as QoS, security groups, etc., for both RDMA and TCP streams while maintaining compatibility with applications and intra-host RDMA optimization techniques. We benchmark Jakiro's performance using basic test cases and real-world high-performance computing applications and distributed machine learning training. The results indicate that the RDMA performance of Jakiro is close to that of the physical RDMA. Concurrently, Jakiro guarantees a weighted fair QoS between RDMA and TCP. Jakiro has been deployed in ByteDance Cloud for one year, we share our critical design and deployment decisions, as well as experiences and lessons from production.",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ],
+      "title": "ByteDance Jakiro: Enabling RDMA and TCP over Virtual Private Cloud"
+    },
+    "arXiv:2508.12969": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12969",
+      "identity_tokens": [
+        "arXiv:2508.12969"
+      ],
+      "reason": "The computational demands of self-attention mechanisms pose a critical challenge for transformer-based video generation, particularly in synthesizing ultra-long sequences. Current approaches, such as factorized attention and fixed sparse patterns, fail to fully exploit the inherent spatio-temporal redundancies in video data. Through systematic analysis of video diffusion transformers (DiT), we uncover a key insight: Attention matrices exhibit structured, yet heterogeneous sparsity patterns, where specialized heads dynamically attend to distinct spatiotemporal regions (e.g., local pattern, cross-shaped pattern, or global pattern). Existing sparse attention methods either impose rigid constraints or introduce significant overhead, limiting their effectiveness. To address this, we propose Compact Attention, a hardware-aware acceleration framework featuring three innovations: 1) Adaptive tiling strategies that approximate diverse spatial interaction patterns via dynamic tile grouping, 2) Temporally varying windows that adjust sparsity levels based on frame proximity, and 3) An automated configuration search algorithm that optimizes sparse patterns while preserving critical attention pathways. Our method achieves 1.6~2.5x acceleration in attention computation on single-GPU setups while maintaining comparable visual quality with full-attention baselines. This work provides a principled approach to unlocking efficient long-form video generation through structured sparsity exploitation. Project Page: https://yo-ava.github.io/Compact-Attention.github.io/",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "Compact Attention: Exploiting Structured Spatio-Temporal Sparsity for Fast Video Generation"
+    },
+    "arXiv:2508.05065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.05065",
+      "identity_tokens": [
+        "arXiv:2508.05065"
+      ],
+      "reason": "Continual Semantic Segmentation (CSS) requires learning new classes without forgetting previously acquired knowledge, addressing the fundamental challenge of catastrophic forgetting in dense prediction tasks. However, existing CSS methods typically employ single-stage encoder-decoder architectures where segmentation masks and class labels are tightly coupled, leading to interference between old and new class learning and suboptimal retention-plasticity balance. We introduce DecoupleCSS, a novel two-stage framework for CSS. By decoupling class-aware detection from class-agnostic segmentation, DecoupleCSS enables more effective continual learning, preserving past knowledge while learning new classes. The first stage leverages pre-trained text and image encoders, adapted using LoRA, to encode class-specific information and generate location-aware prompts. In the second stage, the Segment Anything Model (SAM) is employed to produce precise segmentation masks, ensuring that segmentation knowledge is shared across both new and previous classes. This approach improves the balance between retention and adaptability in CSS, achieving state-of-the-art performance across a variety of challenging tasks.",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Decoupling Continual Semantic Segmentation"
+    },
+    "DOI:10.1093/brain/awaf285": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/brain/awaf285",
+      "identity_tokens": [
+        "DOI:10.1093/brain/awaf285"
+      ],
+      "reason": "Neurological disorders result from the complex and poorly understood contributions of many cell types, essential for uncovering mechanisms behind these disorders and identifying specific therapeutic targets. Single-nucleus technologies have advanced brain disease research, but remain limited by their low nuclear transcriptional coverage, high cost, and technical complexity. To address this, we applied a transformer-based deep learning model that restores cell type-specific investigation transcriptional programs from bulk RNA-seq, significantly outperforming previous methods. This enables large-scale and cost-effective investigation of cell type-specific transcriptomes in complex and heterogeneous phenotypes such as cognitive resilience or brain resistance to Alzheimer’s disease. Our analysis identified astrocytes as the major cell mediator of Alzheimer’s disease resilience across cerebral cortex regions, while excitatory neurons and oligodendrocyte progenitor cells emerged as the major cell mediators of resistance, maintaining synaptic function and preserving neuron health. Finally, we show that our approach could restore the whole tissue transcriptome, offering an unbiased framework for exploring cell-specific functions beyond single nucleus data.",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Deep learning-based cell type profiles reveal signatures of Alzheimer’s disease resilience and resistance"
+    },
+    "arXiv:2508.02192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02192",
+      "identity_tokens": [
+        "arXiv:2508.02192"
+      ],
+      "reason": "Recent learned image compression (LIC) leverages Mamba-style state-space models (SSMs) for global receptive fields with linear complexity. However, the standard Mamba adopts content-agnostic, predefined raster (or multi-directional) scans under strict causality. This rigidity hinders its ability to effectively eliminate redundancy between tokens that are content-correlated but spatially distant. We introduce Content-Aware Mamba (CAM), an SSM that dynamically adapts its processing to the image content. Specifically, CAM overcomes prior limitations with two novel mechanisms. First, it replaces the rigid scan with a content-adaptive token permutation strategy to prioritize interactions between content-similar tokens regardless of their location. Second, it overcomes the sequential dependency by injecting sample-specific global priors into the state-space model, which effectively mitigates the strict causality without multi-directional scans. These innovations enable CAM to better capture global redundancy while preserving computational efficiency. Our Content-Aware Mamba-based LIC model (CMIC) achieves state-of-the-art rate-distortion performance, surpassing VTM-21.0 by 15.91%, 21.34%, and 17.58% in BD-rate on the Kodak, Tecnick, and CLIC datasets, respectively. Code will be released at https://github.com/UnoC-727/CMIC.",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Content-Aware Mamba for Learned Image Compression"
+    },
+    "arXiv:2508.02304": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02304",
+      "identity_tokens": [
+        "arXiv:2508.02304"
+      ],
+      "reason": "Neural Radiance Fields (NeRF) offer significant promise for generating photorealistic images and videos. However, existing mainstream neural rendering models often fall short in meeting the demands for immediacy and power efficiency in practical applications. Specifically, these models frequently exhibit irregular access patterns and substantial computational overhead, leading to undesirable inference latency and high power consumption. Computing-in-memory (CIM), an emerging computational paradigm, has the potential to address these access bottlenecks and reduce the power consumption associated with model execution. To bridge the gap between model performance and real-world scene requirements, we propose an algorithm-architecture co-design approach, abbreviated as ASDR, a CIM-based accelerator supporting efficient neural rendering. At the algorithmic level, we propose two rendering optimization schemes: (1) Dynamic sampling by online sensing of the rendering difficulty of different pixels, thus reducing access memory and computational overhead. (2) Reducing MLP overhead by decoupling and approximating the volume rendering of color and density. At the architecture level, we design an efficient ReRAM-based CIM architecture with efficient data mapping and reuse microarchitecture. Experiments demonstrate that our design can achieve up to 9.55× and 69.75× speedup over state-of-the-art NeRF accelerators and Xavier NX GPU in graphics rendering tasks with only 0.1 PSNR loss.",
+      "first_checked_at": "2026-10-05T13:19:04+00:00",
+      "last_checked_at": "2026-10-05T13:19:04+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "ASDR: Exploiting Adaptive Sampling and Data Reuse for CIM-based Instant Neural Rendering"
+    },
+    "arXiv:2508.02932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02932",
+      "identity_tokens": [
+        "arXiv:2508.02932"
+      ],
+      "reason": "Low-Rank Adaptation (LoRA) has gained popularity as a fine-tuning approach for Large Language Models (LLMs) due to its low resource requirements and good performance. While numerous studies have investigated ways to improve LoRA serving efficiency by serving multiple LoRAs concurrently, existing methods assume that a wide range of LoRA adapters are available for serving. In our work, we conduct extensive empirical studies to show that current LoRA training paradigms do not efficiently utilize hardware resources and incur high overhead to obtain a performant LoRA adapter. Leveraging these insights, we propose PLoRA, which automatically orchestrates concurrent LoRA fine-tuning jobs under given hardware and model constraints and develops performant kernels to improve training efficiency. Across a range of LLMs and LoRA configurations, PLoRA improves training throughput by up to 12.8x and reduces the overall fine-tuning makespan by up to 7.52x compared to existing approaches.",
+      "first_checked_at": "2026-10-05T13:19:04+00:00",
+      "last_checked_at": "2026-10-05T13:19:04+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "PLoRA: Efficient Concurrent LoRA Training for Large Language Models"
+    },
+    "arXiv:2408.03506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03506",
+      "identity_tokens": [
+        "arXiv:2408.03506"
+      ],
+      "reason": "高品質dataでLLM pretraining期間・計算を減らす技術報告で、training専用。",
+      "first_checked_at": "2026-10-05T13:19:04+00:00",
+      "last_checked_at": "2026-10-05T13:19:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "1.5-Pints Technical Report: Pretraining in Days, Not Months - Your Language Model Thrives on Quality Data"
     }
   }
 }

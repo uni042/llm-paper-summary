@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:16:06+00:00",
-  "record_count": 1722,
+  "updated_at": "2026-10-05T13:19:04+00:00",
+  "record_count": 1728,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26676,6 +26676,91 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
       ],
       "title": "Efficient Driving Behavior Narration and Reasoning on Edge Device Using Large Language Models"
+    },
+    "DOI:10.1007/s10278-025-01659-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10278-025-01659-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10278-025-01659-4"
+      ],
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "first_checked_at": "2026-10-05T13:19:01+00:00",
+      "last_checked_at": "2026-10-05T13:19:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Implementing a Resource-Light and Low-Code Large Language Model System for Information Extraction from Mammography Reports: A Pilot Study"
+    },
+    "DOI:10.1016/j.future.2025.108120": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2025.108120",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2025.108120"
+      ],
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "first_checked_at": "2026-10-05T13:19:01+00:00",
+      "last_checked_at": "2026-10-05T13:19:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "title": "SEMQ: Efficient non-uniform quantization with sensitivity-based error minimization for large language models"
+    },
+    "DOI:10.1007/s10994-025-06859-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10994-025-06859-1",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-025-06859-1"
+      ],
+      "reason": "Packet has no primary abstract and publisher primary abstract/full text could not be retrieved. Third-party snippets were not used.",
+      "first_checked_at": "2026-10-05T13:19:02+00:00",
+      "last_checked_at": "2026-10-05T13:19:02+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "EchoRAG: a framework for enhancing language models with graph-RAG and in-context learning"
+    },
+    "DOI:10.1145/3764944.3764967": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3764944.3764967",
+      "identity_tokens": [
+        "DOI:10.1145/3764944.3764967"
+      ],
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Fair, Practical, and Efficient Carbon Accounting for LLM Serving"
+    },
+    "arXiv:2508.14170": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14170",
+      "identity_tokens": [
+        "arXiv:2508.14170"
+      ],
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "first_checked_at": "2026-10-05T13:19:03+00:00",
+      "last_checked_at": "2026-10-05T13:19:03+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Comparing energy consumption and accuracy in text classification inference"
+    },
+    "arXiv:2409.01495": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.01495",
+      "identity_tokens": [
+        "arXiv:2409.01495"
+      ],
+      "reason": "本文はpreliminary ICL effectivenessを中心にし、KV footprint/latency/throughputやbaseline比のinference cost削減を定量化していない。compressionへの関連はあるが効率の証拠が弱いためborderline。",
+      "first_checked_at": "2026-10-05T13:19:04+00:00",
+      "last_checked_at": "2026-10-05T13:19:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "The Compressor-Retriever Architecture for Language Model OS"
     }
   }
 }
