@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-00886217ddad4f00-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1911.12018",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1911.12018",
+    "identity_tokens": [
+      "arXiv:1911.12018"
+    ],
+    "reason": "Non-autoregressive iterative refinement concerns video-captioning models; it does not target LLM inference/serving.",
+    "first_checked_at": "2026-10-05T23:27:20+00:00",
+    "last_checked_at": "2026-10-05T23:27:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "Non-Autoregressive Video Captioning with Iterative Refinement"
+  },
+  "processed_at": "2026-10-05T23:27:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-00886217ddad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

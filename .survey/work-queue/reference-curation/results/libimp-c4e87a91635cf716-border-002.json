@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4e87a91635cf716-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.02491",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.02491",
+    "identity_tokens": [
+      "arXiv:2610.02491"
+    ],
+    "reason": "The sufficient-compute map supports routing/drafting experiments but needs a known reference sequence and exhaustive model panel; a usable controller without that oracle input remains unresolved.",
+    "first_checked_at": "2026-10-05T23:27:25+00:00",
+    "last_checked_at": "2026-10-05T23:27:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute"
+  },
+  "processed_at": "2026-10-05T23:27:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4e87a91635c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T22:59:37+00:00",
-  "record_count": 6548,
+  "updated_at": "2026-10-05T23:27:27+00:00",
+  "record_count": 6578,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -94641,6 +94641,428 @@
         "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
       ],
       "title": "DART: Input-Difficulty-AwaRe Adaptive Threshold for Early-Exit DNNs"
+    },
+    "arXiv:1911.12018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.12018",
+      "identity_tokens": [
+        "arXiv:1911.12018"
+      ],
+      "reason": "Non-autoregressive iterative refinement concerns video-captioning models; it does not target LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:20+00:00",
+      "last_checked_at": "2026-10-05T23:27:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Non-Autoregressive Video Captioning with Iterative Refinement"
+    },
+    "DOI:10.1109/o-cocosda46868.2019.9060847": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/o-cocosda46868.2019.9060847",
+      "identity_tokens": [
+        "DOI:10.1109/o-cocosda46868.2019.9060847"
+      ],
+      "reason": "Code-switch speech recognition/translation targets ASR and translation quality, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T23:27:20+00:00",
+      "last_checked_at": "2026-10-05T23:27:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Recognition and translation of code-switching speech utterances"
+    },
+    "arXiv:2502.07862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07862",
+      "identity_tokens": [
+        "arXiv:2502.07862"
+      ],
+      "reason": "Adaptive multimodal sensor fusion targets variable-noise/resource sensing, without an LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T23:27:20+00:00",
+      "last_checked_at": "2026-10-05T23:27:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "ADMN: A Layer-Wise Adaptive Multimodal Network for Dynamic Input Noise and Compute Resources"
+    },
+    "DOI:10.1038/s41467-025-63453-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-63453-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-63453-8"
+      ],
+      "reason": "Optical-computing spatial complexity is hardware physics/design analysis, not an LLM inference method.",
+      "first_checked_at": "2026-10-05T23:27:20+00:00",
+      "last_checked_at": "2026-10-05T23:27:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "The spatial complexity of optical computing: toward space-efficient design"
+    },
+    "arXiv:2509.23127": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23127",
+      "identity_tokens": [
+        "arXiv:2509.23127"
+      ],
+      "reason": "Statistical inference for gradient-boosting regression is outside LLM inference scope.",
+      "first_checked_at": "2026-10-05T23:27:21+00:00",
+      "last_checked_at": "2026-10-05T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Statistical Inference for Gradient Boosting Regression"
+    },
+    "DOI:10.1007/s11227-025-07385-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-025-07385-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-07385-6"
+      ],
+      "reason": "Springer primary abstract describes LSTM/filter-based personalized sequence recommendation and recommendation quality, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:21+00:00",
+      "last_checked_at": "2026-10-05T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Hybrid personalized sequence recommendation based on LSTM and filter enhancement"
+    },
+    "arXiv:2409.06980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.06980",
+      "identity_tokens": [
+        "arXiv:2409.06980"
+      ],
+      "reason": "Pansharpening image-fusion model fine-tuning is a computer-vision task unrelated to LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:21+00:00",
+      "last_checked_at": "2026-10-05T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "PanAdapter: Two-Stage Fine-Tuning with Spatial-Spectral Priors Injecting for Pansharpening"
+    },
+    "arXiv:1807.10854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1807.10854",
+      "identity_tokens": [
+        "arXiv:1807.10854"
+      ],
+      "reason": "Broad survey of deep learning in NLP, not a concrete LLM inference-efficiency or serving method.",
+      "first_checked_at": "2026-10-05T23:27:21+00:00",
+      "last_checked_at": "2026-10-05T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "A Survey of the Usages of Deep Learning in Natural Language Processing"
+    },
+    "arXiv:2506.06844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06844",
+      "identity_tokens": [
+        "arXiv:2506.06844"
+      ],
+      "reason": "PEFT transfer across evolving base-model updates concerns adaptation compatibility, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Adapt Once, Thrive with Updates: Transferable Parameter-Efficient Fine-Tuning on Evolving Base Models"
+    },
+    "arXiv:2505.12523": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12523",
+      "identity_tokens": [
+        "arXiv:2505.12523"
+      ],
+      "reason": "General energy-aware deep learning for constrained IoT/mobile hardware; no LLM inference or serving method appears in its abstract.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Energy-Aware Deep Learning on Resource-Constrained Hardware"
+    },
+    "arXiv:2506.05713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05713",
+      "identity_tokens": [
+        "arXiv:2506.05713"
+      ],
+      "reason": "Progressive LoRA strategy improves fine-tuning/training, not inference-time cost or serving.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Come Together, But Not Right Now: A Progressive Strategy to Boost Low-Rank Adaptation"
+    },
+    "arXiv:2303.17161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.17161",
+      "identity_tokens": [
+        "arXiv:2303.17161"
+      ],
+      "reason": "Tree tokenization accelerates semantic parsing in encoder-decoder task models, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "TreePiece: Faster Semantic Parsing via Tree Tokenization"
+    },
+    "arXiv:2502.11115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11115",
+      "identity_tokens": [
+        "arXiv:2502.11115"
+      ],
+      "reason": "Boosted model probability estimates generated-output quality; no inference efficiency/resource reduction mechanism is proposed.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Are Generative Models Underconfident? Better Quality Estimation with Boosted Model Probability"
+    },
+    "arXiv:2610.03546": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03546",
+      "identity_tokens": [
+        "arXiv:2610.03546"
+      ],
+      "reason": "EEG foundation-model adapter generation targets biomedical multimodal transfer, not LLM inference.",
+      "first_checked_at": "2026-10-05T23:27:23+00:00",
+      "last_checked_at": "2026-10-05T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "ZeroMAG: Zero-Shot Multimodal Adapter Generation for Plug-and-Play EEG Foundation Models"
+    },
+    "arXiv:2610.01418": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01418",
+      "identity_tokens": [
+        "arXiv:2610.01418"
+      ],
+      "reason": "Spiking neural-network MoE studies event-driven computation, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:23+00:00",
+      "last_checked_at": "2026-10-05T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "SpikeMoE: Brain-Inspired Competitive Routing for Flexible Spiking Mixture-of-Experts"
+    },
+    "arXiv:2610.01495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01495",
+      "identity_tokens": [
+        "arXiv:2610.01495"
+      ],
+      "reason": "Routing-entropy uncertainty audit studies vision transformers, not an LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T23:27:23+00:00",
+      "last_checked_at": "2026-10-05T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Auditing Routing Entropy as an Uncertainty Signal in Attention-Residual Transformers"
+    },
+    "arXiv:2610.01921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01921",
+      "identity_tokens": [
+        "arXiv:2610.01921"
+      ],
+      "reason": "The linked MoE/router topic was checked in the primary text; it studies cross-lingual alignment training, with no inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-05T23:27:23+00:00",
+      "last_checked_at": "2026-10-05T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.28042-translation-specialist-expert-pruning.md",
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Cross-Lingual Alignment for Decoder-Only Models using MoE Routers"
+    },
+    "arXiv:2610.02910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02910",
+      "identity_tokens": [
+        "arXiv:2610.02910"
+      ],
+      "reason": "Identifies safety-sensitive experts in sparse MoE LLMs to preserve safety; abstract gives no efficiency/serving improvement.",
+      "first_checked_at": "2026-10-05T23:27:24+00:00",
+      "last_checked_at": "2026-10-05T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Frequency Is Not Sensitivity Identifying Safety-Sensitive Experts in Sparse MoE LLM"
+    },
+    "arXiv:2610.03109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03109",
+      "identity_tokens": [
+        "arXiv:2610.03109"
+      ],
+      "reason": "Characterizes marginal attention-space structure across LMs; no resource-reduction or serving method.",
+      "first_checked_at": "2026-10-05T23:27:24+00:00",
+      "last_checked_at": "2026-10-05T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Emergent Structure in the Marginal Attention Space of Language Models"
+    },
+    "arXiv:2610.03265": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03265",
+      "identity_tokens": [
+        "arXiv:2610.03265"
+      ],
+      "reason": "MoE neural-operator PDE pretraining is outside LLM inference scope.",
+      "first_checked_at": "2026-10-05T23:27:24+00:00",
+      "last_checked_at": "2026-10-05T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "SPEAR: A Spectral-Disentangled MoE Neural Operator with Knowledge-Guided Expert Aggregation for Large-Scale PDE Pretraining"
+    },
+    "arXiv:2610.03369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03369",
+      "identity_tokens": [
+        "arXiv:2610.03369"
+      ],
+      "reason": "MoE reinforcement-learning policies for cryptocurrency order execution concern financial control/training, not LLM serving.",
+      "first_checked_at": "2026-10-05T23:27:24+00:00",
+      "last_checked_at": "2026-10-05T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Mixture-of-Experts for Cryptocurrency Order Execution: Training Stability, Tail Risk, and Failure Modes"
+    },
+    "arXiv:2610.02013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02013",
+      "identity_tokens": [
+        "arXiv:2610.02013"
+      ],
+      "reason": "Adaptive equivariant computation for interatomic potentials is a scientific simulation model, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:25+00:00",
+      "last_checked_at": "2026-10-05T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "BranchIP: Learning Adaptive Equivariant Computation for Interatomic Potentials"
+    },
+    "arXiv:2610.02568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02568",
+      "identity_tokens": [
+        "arXiv:2610.02568"
+      ],
+      "reason": "Lineage link was checked in the primary text; PlurPO is social-sycophancy preference post-training, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T23:27:25+00:00",
+      "last_checked_at": "2026-10-05T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Mitigating Social Sycophancy via Pluralistic Preference Optimization"
+    },
+    "arXiv:2610.02584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02584",
+      "identity_tokens": [
+        "arXiv:2610.02584"
+      ],
+      "reason": "Dense all-experts-active FFN granularity study does not reduce LLM inference computation or memory.",
+      "first_checked_at": "2026-10-05T23:27:25+00:00",
+      "last_checked_at": "2026-10-05T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Dense Mixture-of-Experts as a Reparameterized Wide FFN: A Granularity Sweep at Fixed Compute"
+    },
+    "arXiv:2610.02593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02593",
+      "identity_tokens": [
+        "arXiv:2610.02593"
+      ],
+      "reason": "Fisher-guided continual-pretraining data selection is a training-only contribution excluded by scope.",
+      "first_checked_at": "2026-10-05T23:27:26+00:00",
+      "last_checked_at": "2026-10-05T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Fisher-Guided Submodular Data Selection for Continual Pre-Training of Large Language Models"
+    },
+    "DOI:10.1007/s41870-024-02287-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s41870-024-02287-x",
+      "identity_tokens": [
+        "DOI:10.1007/s41870-024-02287-x"
+      ],
+      "reason": "Springer primary abstract describes attention NMT for Digaru-English and translation quality; no LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T23:27:26+00:00",
+      "last_checked_at": "2026-10-05T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Attention-based neural machine translation with quality analysis on low-resource Digaru-English Pairs"
+    },
+    "arXiv:2410.09823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09823",
+      "identity_tokens": [
+        "arXiv:2410.09823"
+      ],
+      "reason": "Zeroth-order optimizer reduces memory/computation for LLM fine-tuning; this is training-time optimization, excluded by scope.",
+      "first_checked_at": "2026-10-05T23:27:26+00:00",
+      "last_checked_at": "2026-10-05T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Simultaneous Computation and Memory Efficient Zeroth-Order Optimizer for Fine-Tuning Large Language Models"
+    },
+    "arXiv:1910.01289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.01289",
+      "identity_tokens": [
+        "arXiv:1910.01289"
+      ],
+      "reason": "ASR quality estimation predicts speech recognition errors and does not improve LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:26+00:00",
+      "last_checked_at": "2026-10-05T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Neural Zero-Inflated Quality Estimation Model For Automatic Speech Recognition System"
+    },
+    "arXiv:2610.02701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02701",
+      "identity_tokens": [
+        "arXiv:2610.02701"
+      ],
+      "reason": "MoE Particle Transformers study particle-physics model routing/capacity, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T23:27:26+00:00",
+      "last_checked_at": "2026-10-05T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Conditional Capacity and Routing in Mixture-of-Experts Particle Transformers"
+    },
+    "arXiv:2610.02907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02907",
+      "identity_tokens": [
+        "arXiv:2610.02907"
+      ],
+      "reason": "Sparse interaction experts are analyzed in ResNets; no LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T23:27:27+00:00",
+      "last_checked_at": "2026-10-05T23:27:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Do ResNets Route? Sparse Interaction Experts in Residual Networks"
     }
   }
 }

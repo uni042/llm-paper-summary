@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T22:59:34+00:00",
-  "record_count": 2100,
+  "updated_at": "2026-10-05T23:27:25+00:00",
+  "record_count": 2106,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32406,6 +32406,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit"
+    },
+    "arXiv:2501.15674": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.15674",
+      "identity_tokens": [
+        "arXiv:2501.15674"
+      ],
+      "reason": "TensorLLM compresses attention weights in LLMs, but inspected full-text evaluation centers on compression and task quality, without established serving latency/throughput or deployed memory gains.",
+      "first_checked_at": "2026-10-05T23:27:19+00:00",
+      "last_checked_at": "2026-10-05T23:27:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TensorLLM: Tensorising Multi-Head Attention for Enhanced Reasoning and Compression in LLMs"
+    },
+    "DOI:10.1145/3726302.3729962": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3726302.3729962",
+      "identity_tokens": [
+        "DOI:10.1145/3726302.3729962"
+      ],
+      "reason": "Cross-encoder early exit is adjacent to language-model inference, but inaccessible full text prevents checking model, evaluation, limits, or a concrete corpus connection.",
+      "first_checked_at": "2026-10-05T23:27:21+00:00",
+      "last_checked_at": "2026-10-05T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Re-ranking with Cross-encoders via Early Exit"
+    },
+    "arXiv:2610.01917": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01917",
+      "identity_tokens": [
+        "arXiv:2610.01917"
+      ],
+      "reason": "MoLE improves VLM reasoning quality but its own inference-cost test shows slower inference and slightly higher FLOPs/memory, so it does not establish inference-efficiency improvement.",
+      "first_checked_at": "2026-10-05T23:27:22+00:00",
+      "last_checked_at": "2026-10-05T23:27:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoLE: Mixture of Latent Experts for Complementary Visual Reasoning"
+    },
+    "arXiv:2610.03415": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.03415",
+      "identity_tokens": [
+        "arXiv:2610.03415"
+      ],
+      "reason": "RailWave is adjacent to MoE communication but primary evaluation uses training workloads only, with no inference-serving evidence.",
+      "first_checked_at": "2026-10-05T23:27:24+00:00",
+      "last_checked_at": "2026-10-05T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RailWave: Adaptive Spatial and Temporal Scheduling for Expert-Parallel Communication"
+    },
+    "DOI:10.1016/j.knosys.2026.116702": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116702",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116702"
+      ],
+      "reason": "Publisher abstract suggests generic early-exit routing but full text and its applicability to LLM inference/DeeBERT linkage could not be verified.",
+      "first_checked_at": "2026-10-05T23:27:25+00:00",
+      "last_checked_at": "2026-10-05T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When to stop: Learned routing and risk control for early exit networks"
+    },
+    "arXiv:2610.02491": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02491",
+      "identity_tokens": [
+        "arXiv:2610.02491"
+      ],
+      "reason": "The sufficient-compute map supports routing/drafting experiments but needs a known reference sequence and exhaustive model panel; a usable controller without that oracle input remains unresolved.",
+      "first_checked_at": "2026-10-05T23:27:25+00:00",
+      "last_checked_at": "2026-10-05T23:27:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute"
     }
   }
 }
