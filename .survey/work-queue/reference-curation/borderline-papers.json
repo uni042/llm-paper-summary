@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:28:35+00:00",
-  "record_count": 2013,
+  "updated_at": "2026-10-05T15:31:29+00:00",
+  "record_count": 2028,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31161,6 +31161,239 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Soft-Masked Diffusion Language Models"
+    },
+    "arXiv:2510.21961": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.21961",
+      "identity_tokens": [
+        "arXiv:2510.21961"
+      ],
+      "reason": "Authors caution step count does not represent underlying compute; NFE is only competitive and per-step optimization is future work. Masked diffusion rather than conventional AR serving.",
+      "first_checked_at": "2026-10-05T15:31:21+00:00",
+      "last_checked_at": "2026-10-05T15:31:21+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parallel Sampling from Masked Diffusion Models via Conditional Independence Testing"
+    },
+    "arXiv:2510.03574": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03574",
+      "identity_tokens": [
+        "arXiv:2510.03574"
+      ],
+      "reason": "Despite efficiency framing, main method adds test-time computation; reported latency grows 3.33x and peak memory 1.9x. VLM/task/model-specific; weak fit to inference efficiency optimization.",
+      "first_checked_at": "2026-10-05T15:31:21+00:00",
+      "last_checked_at": "2026-10-05T15:31:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Test-Time Scaling for Small Vision-Language Models"
+    },
+    "DOI:10.18653/v1/2024.nlp4science-1.17": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2024.nlp4science-1.17",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.nlp4science-1.17"
+      ],
+      "reason": "Primary text uses Mamba in a scientific hypothesis-generation application and reports preliminary quality comparisons, not inference performance; efficiency relevance is motivational rather than measured.",
+      "first_checked_at": "2026-10-05T15:31:23+00:00",
+      "last_checked_at": "2026-10-05T15:31:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Scientific Hypothesis Generation with Mamba"
+    },
+    "arXiv:2507.09665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09665",
+      "identity_tokens": [
+        "arXiv:2507.09665"
+      ],
+      "reason": "Quantization is only the compression setting; efficiency outcomes are not measured. Retained borderline as adjacent compression evidence.",
+      "first_checked_at": "2026-10-05T15:31:24+00:00",
+      "last_checked_at": "2026-10-05T15:31:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Is Quantization a Deal-Breaker? Empirical Insights From Large Code Models"
+    },
+    "arXiv:2503.18002": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.18002",
+      "identity_tokens": [
+        "arXiv:2503.18002"
+      ],
+      "reason": "Loihi 2 throughput/energy figures are explicitly preliminary estimates from an unoptimized mapping; the 370M model requires 31 chips, so evidence is not robust for a deployable inference comparison.",
+      "first_checked_at": "2026-10-05T15:31:24+00:00",
+      "last_checked_at": "2026-10-05T15:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neuromorphic Principles for Efficient Large Language Models on Intel Loihi 2"
+    },
+    "arXiv:2407.07093": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.07093",
+      "identity_tokens": [
+        "arXiv:2407.07093"
+      ],
+      "reason": "Binarization targets lower storage/compute but reported evidence is model quality and incomplete training progress, not inference runtime/energy; 7B results are not final.",
+      "first_checked_at": "2026-10-05T15:31:26+00:00",
+      "last_checked_at": "2026-10-05T15:31:26+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation"
+    },
+    "arXiv:2504.10816": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.10816",
+      "identity_tokens": [
+        "arXiv:2504.10816"
+      ],
+      "reason": "Full text finds 4-bit quantization harms retrieval quality and, without custom kernels, slows inference versus optimized BF16; its sparse retrieval focus is adjacent to RAG but does not establish LLM-serving speed improvement.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CSPLADE: Learned Sparse Retrieval with Causal Language Models"
+    },
+    "arXiv:2504.07081": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.07081",
+      "identity_tokens": [
+        "arXiv:2504.07081"
+      ],
+      "reason": "Full text evaluates generated validity/quality and parallel test-time inference procedures but does not quantify total compute, energy, or latency. Monte Carlo follower populations leave efficiency versus extra test-time compute unresolved.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Self-Steering Language Models"
+    },
+    "DOI:10.1109/jssc.2025.3545731": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2025.3545731",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2025.3545731"
+      ],
+      "reason": "Supplied title/abstract indicate a transformer edge accelerator with inference capability, but do not establish evaluated LLM-serving behavior.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MINOTAUR: A Posit-Based 0.42–0.50-TOPS/W Edge Transformer Inference and Training Accelerator"
+    },
+    "DOI:10.1145/3746709.3746773": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3746709.3746773",
+      "identity_tokens": [
+        "DOI:10.1145/3746709.3746773"
+      ],
+      "reason": "Supplied abstract describes a broad survey including Transformer quantization, but LLM-specific inference coverage is not established.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey On Neural Network Quantization"
+    },
+    "arXiv:2508.10824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.10824",
+      "identity_tokens": [
+        "arXiv:2508.10824"
+      ],
+      "reason": "No new or consistently quantified LLM inference/serving optimization; broad across Transformer classes and neuroscience.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory-Augmented Transformers: A Systematic Review from Neuroscience Principles to Enhanced Model Architectures"
+    },
+    "DOI:10.1109/coins65080.2025.11125797": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/coins65080.2025.11125797",
+      "identity_tokens": [
+        "DOI:10.1109/coins65080.2025.11125797"
+      ],
+      "reason": "Primary abstract suggests plausible relevance, but the primary full text could not be obtained; no final scope decision is justified from abstract alone.",
+      "first_checked_at": "2026-10-05T15:31:27+00:00",
+      "last_checked_at": "2026-10-05T15:31:27+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-NPU: Towards Efficient Foundation Model Inference on Low-Power Neural Processing Units"
+    },
+    "DOI:10.1016/j.rser.2025.116218": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.rser.2025.116218",
+      "identity_tokens": [
+        "DOI:10.1016/j.rser.2025.116218"
+      ],
+      "reason": "Packet abstract is absent; DOI publisher fetch returned 403 Forbidden. A secondary bibliographic abstract was not treated as primary evidence, so scope cannot be resolved.",
+      "first_checked_at": "2026-10-05T15:31:28+00:00",
+      "last_checked_at": "2026-10-05T15:31:28+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond automation: Unveiling the potential of agentic intelligence"
+    },
+    "DOI:10.1145/3795154.3795363": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3795154.3795363",
+      "identity_tokens": [
+        "DOI:10.1145/3795154.3795363"
+      ],
+      "reason": "Primary abstract suggests plausible relevance, but the primary full text could not be obtained; no final scope decision is justified from abstract alone.",
+      "first_checked_at": "2026-10-05T15:31:28+00:00",
+      "last_checked_at": "2026-10-05T15:31:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashServe: Cost-Efficient Serverless Inference Scheduling for Large Language Models via Tiered Memory Management and Predictive Autoscaling"
+    },
+    "DOI:10.1109/jssc.2025.3554699": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2025.3554699",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2025.3554699"
+      ],
+      "reason": "Primary abstract suggests plausible relevance, but the primary full text could not be obtained; no final scope decision is justified from abstract alone.",
+      "first_checked_at": "2026-10-05T15:31:29+00:00",
+      "last_checked_at": "2026-10-05T15:31:29+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "C-Transformer: An Energy-Efficient Homogeneous DNN-Transformer/SNN-Transformer Processor for Large Language Models"
     }
   }
 }

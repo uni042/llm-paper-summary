@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a630863378d718c1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.01043",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.01043",
+    "identity_tokens": [
+      "arXiv:2505.01043"
+    ],
+    "reason": "The abstract concerns low-precision LLM training; the stated efficiency target is training, outside this inference-focused screen.",
+    "first_checked_at": "2026-10-05T15:31:27+00:00",
+    "last_checked_at": "2026-10-05T15:31:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+      "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+    ],
+    "title": "Low-Precision Training of Large Language Models: Methods, Challenges, and Opportunities"
+  },
+  "processed_at": "2026-10-05T15:31:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a630863378d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

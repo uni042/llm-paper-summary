@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8628f416cfcbed7d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.14389",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.14389",
+    "identity_tokens": [
+      "arXiv:2410.14389"
+    ],
+    "reason": "The abstract studies representation surgery for model merging and multi-task learning, not inference efficiency.",
+    "first_checked_at": "2026-10-05T15:31:25+00:00",
+    "last_checked_at": "2026-10-05T15:31:25+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+    ],
+    "title": "SurgeryV2: Bridging the Gap Between Model Merging and Multi-Task Learning with Deep Representation Surgery"
+  },
+  "processed_at": "2026-10-05T15:31:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8628f416cfcb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

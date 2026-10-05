@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b765b5e0c4416cd-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.07093",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.07093",
+    "identity_tokens": [
+      "arXiv:2407.07093"
+    ],
+    "reason": "Binarization targets lower storage/compute but reported evidence is model quality and incomplete training progress, not inference runtime/energy; 7B results are not final.",
+    "first_checked_at": "2026-10-05T15:31:26+00:00",
+    "last_checked_at": "2026-10-05T15:31:26+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "FBI-LLM: Scaling Up Fully Binarized LLMs from Scratch via Autoregressive Distillation"
+  },
+  "processed_at": "2026-10-05T15:31:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b765b5e0c44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
