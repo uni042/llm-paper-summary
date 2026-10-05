@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261006-0630-scheduled-chat-30/r01-prescreen",
+  "reference_main_sha": "c6509dc6d2f43d2b27d7fd91c0404250e64f0cd7",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2008.12260",
+      "identity_tokens": [
+        "arXiv:2008.12260"
+      ],
+      "title": "Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning",
+      "reason": "深層学習training jobのcluster schedulingをgoodputで最適化する研究で、主目的・評価対象が学習スループットとGPU cluster割当であり、LLM inference/serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2008.12260",
+      "body_check": "abstract_screen_only: タイトル・要旨・書誌情報からtraining cluster schedulerが主対象と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-06T06:44:00+09:00",
+      "last_checked_at": "2026-10-06T06:44:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 23
+    }
+  ]
+}
