@@ -1,0 +1,108 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-09-part-05-e8d267ac0881",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35110",
+      "identity_tokens": [
+        "arXiv:2609.35110"
+      ],
+      "title": "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge",
+      "reason": "一次本文はMiniMax-H3をvideo diffusion generation pipelineとして扱い、resolution stages間のlatent mappingとkernel/system optimizationで動画生成を高速化する。LLM inference/servingの候補ではない。",
+      "source_url": "https://arxiv.org/abs/2609.35110",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35115",
+      "identity_tokens": [
+        "arXiv:2609.35115"
+      ],
+      "title": "DuplexCadence: Exact State and Execution from a Speech Model's Declared Timelines",
+      "reason": "評価はfull-duplex speech synthesis/model pipelineのtimeline-specific stateと小演算に強く依存し、general LLM servingやtext-only generationへの外挿は不明。",
+      "source_url": "https://arxiv.org/abs/2609.35115",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35117",
+      "identity_tokens": [
+        "arXiv:2609.35117"
+      ],
+      "title": "Tool Mediation Alters Refusal Mechanisms in Large Language Models",
+      "reason": "tool-mediated interactionsによるLLM refusal behavior分析で、効率化研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.35117",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35140",
+      "identity_tokens": [
+        "arXiv:2609.35140"
+      ],
+      "title": "AReaL-TIK: Stateful Agentic Optimization of Unified RL Kernels through an Optimization IR",
+      "reason": "RL post-trainingのunified GPU kernel optimizationを扱うが、training/rollout throughput改善が対象で inference servingではない。",
+      "source_url": "https://arxiv.org/abs/2609.35140",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35158",
+      "identity_tokens": [
+        "arXiv:2609.35158"
+      ],
+      "title": "PEARL: Adaptive Prefill-Decode Execution with Elasticity for Agentic Reinforcement Learning",
+      "reason": "agentic reinforcement-learningのrollout/training GPU schedulingとthroughput改善で、学習工程専用。",
+      "source_url": "https://arxiv.org/abs/2609.35158",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md"
+      ]
+    }
+  ]
+}
