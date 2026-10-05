@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e41718d635a4d2f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.64898/2026.08.01.742212",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.64898/2026.08.01.742212",
+    "identity_tokens": [
+      "DOI:10.64898/2026.08.01.742212"
+    ],
+    "reason": "Whole-exome case-control studies contain rare and common variation, yet analytical methods usually partition the frequency spectrum, discard positional context, or depend on fixed annotations. We present SIEVE, a deep-learning framework for interpretable variant and gene prioritisation. It reads every observed exonic variant without a frequency filter, represents genomic position through self-attention, and calibrates attributions against a permuted-label null. Across coronary artery disease, early-onset myocardial infarction and Crohn’s disease, discrimination matches the liability-threshold expectation for each trait, while recovery of catalogued associations rises with annotation depth. Against burden testing, single-variant association and polygenic scoring, SIEVE recovers overlapping but largely distinct candidates.",
+    "first_checked_at": "2026-10-05T09:02:41+00:00",
+    "last_checked_at": "2026-10-05T09:02:41+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "SIEVE: Sparse Interpretable Exome Variant Explainer"
+  },
+  "processed_at": "2026-10-05T09:02:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e41718d635a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

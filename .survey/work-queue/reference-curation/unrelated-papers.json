@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:00:22+00:00",
-  "record_count": 4050,
+  "updated_at": "2026-10-05T09:02:43+00:00",
+  "record_count": 4066,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -58979,6 +58979,239 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "Unified Agent: Managing Interactions across Devices"
+    },
+    "DOI:10.3389/frobt.2026.1905578": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frobt.2026.1905578",
+      "identity_tokens": [
+        "DOI:10.3389/frobt.2026.1905578"
+      ],
+      "reason": "The rapid advancement of Large Language Models (LLMs) has led to significant progress in Artificial Intelligence (AI), ushering in a new era of human-centered AI (HAI). Intelligent agents powered by LLMs provide new opportunities for realizing HAI. However, existing LLM-based embodied agents often lack online planning capabilities and may generate actions involving objects that are not present in the current environment. In this paper, we propose a closed-loop framework for planning and evaluation of a vision-language model-based robotic manipulation agent operating in tabletop object rearrangement and manipulation tasks. These tasks require a robot to interpret high-level natural language commands and perform multi-step actions such as stacking objects, sorting objects by category or attribute, placing objects into target containers, and organizing mixed desktop scenes. The proposed architecture consists of a human–robot speech interaction module, a vision–language agent module (including a planner, translator, and evaluator), and an action execution module. Within this framework, the vision–language planner decomposes high-level instructions into executable task steps via Chain-of-Objects Reasoning, enabling a deeper understanding of the visual environment, including spatial relationships and object attributes. Meanwhile, the task evaluator monitors execution outcomes and provides result-oriented feedback, allowing the system to replan when errors occur. Experimental results show that, compared with baseline methods, the proposed agent improves the average task success rate by approximately 20% in both simulation and real-world environments, significantly enhancing its ability to execute complex natural language instructions. This work demonstrates the potential of closed-loop vision-language planning for human-centered robotic manipulation. Code: https://github.com/subforpaper/PFEA.",
+      "first_checked_at": "2026-10-05T09:02:41+00:00",
+      "last_checked_at": "2026-10-05T09:02:41+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "PFEA: a VLM-based high-level natural language planning and feedback embodied agent for human-centered AI"
+    },
+    "DOI:10.64898/2026.08.01.742212": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.08.01.742212",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.01.742212"
+      ],
+      "reason": "Whole-exome case-control studies contain rare and common variation, yet analytical methods usually partition the frequency spectrum, discard positional context, or depend on fixed annotations. We present SIEVE, a deep-learning framework for interpretable variant and gene prioritisation. It reads every observed exonic variant without a frequency filter, represents genomic position through self-attention, and calibrates attributions against a permuted-label null. Across coronary artery disease, early-onset myocardial infarction and Crohn’s disease, discrimination matches the liability-threshold expectation for each trait, while recovery of catalogued associations rises with annotation depth. Against burden testing, single-variant association and polygenic scoring, SIEVE recovers overlapping but largely distinct candidates.",
+      "first_checked_at": "2026-10-05T09:02:41+00:00",
+      "last_checked_at": "2026-10-05T09:02:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "SIEVE: Sparse Interpretable Exome Variant Explainer"
+    },
+    "arXiv:2608.04333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04333",
+      "identity_tokens": [
+        "arXiv:2608.04333"
+      ],
+      "reason": "Large language model (LLM) configuration evaluation is challenging due to limited evaluation budgets, varying costs, and multiple competing objectives. In this paper, we formulate LLM configuration evaluation as a cost-aware multi-objective bandit problem, where each configuration evaluation incurs a configuration-dependent cost and yields a noisy vector-valued outcome. Under this framework, we study two fundamental problems: online configuration selection and Pareto configuration identification. For online configuration selection, we propose a hypervolume-based UCB algorithm that optimizes an optimistic hypervolume-per-cost index. We establish a budgeted regret bound of order $O\\bigl(\\sum_{i\\ne i^\\star}\\frac{\\log B}{\\Delta_i}\\bigr)$, where $B$ is the evaluation budget, $i^\\star$ is the optimal configuration in terms of hypervolume efficiency, and $\\Delta_i$ is the corresponding efficiency gap of configuration $i$. This bound retains the logarithmic budget dependence of classical single-objective budgeted bandits. For fixed-budget Pareto identification, we develop a cost-aware empirical gap elimination algorithm and prove that its error probability is of order $O\\bigl(\\exp(-\\frac{B}{H_{\\mu,c}})\\bigr)$, where $H_{\\mu,c}$ is a cost-aware Pareto identification complexity depending on configuration costs and Pareto classification gaps. This error probability decays exponentially with the evaluation budget and recovers the standard Pareto set identification guarantee when all configuration costs are identical. Experiments on LLM configuration evaluation tasks demonstrate that the proposed framework enables efficient online decision-making and accurate cost-aware Pareto identification under limited budgets.",
+      "first_checked_at": "2026-10-05T09:02:41+00:00",
+      "last_checked_at": "2026-10-05T09:02:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Cost-Aware Multi-Objective Bandits: Theory and Application to Budgeted LLM Configuration Evaluation"
+    },
+    "arXiv:2608.04339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04339",
+      "identity_tokens": [
+        "arXiv:2608.04339"
+      ],
+      "reason": "Large language models are increasingly used for information seeking, yet semantically equivalent questions phrased in different ways can receive answers of considerably different quality. System prompts are widely employed to steer response behavior, but they are typically optimized for average-case quality, so some question phrasings may still receive incomplete or low-quality answers. To address this, we formulate a constrained mixed-strategy GroupDRO framework for system-prompt selection. Instead of optimizing the system-prompt text, the framework assigns weights to system prompts in an existing pool to minimize the worst-case information-quality loss across evaluation metrics and groups, while constraining the mean loss to stay close to that of average-based selection. Because pool generation and selection are decoupled, the method applies to any system-prompt pool and can leverage an ensemble of complementary system prompts rather than a single one. Across five LLMs on two bilingual medical and consumer-finance benchmarks, the constrained method reduces the Overall Mean, Worst 25% Mean, and Worst by 13.1%, 13.2%, and 13.7% on average relative to no mitigation while keeping overall quality close to Average selection. Its multi-prompt weights reveal complementarity across metric-group pairs. Code and data are available at https://github.com/Rainxu09/equitable-system-prompt-selection.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Equitable System-Prompt Selection via Constrained Mixed-Strategy GroupDRO"
+    },
+    "arXiv:2608.04368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04368",
+      "identity_tokens": [
+        "arXiv:2608.04368"
+      ],
+      "reason": "Multimodal temporal data are inherently irregular and uneven in information density, yet most models rely on uniform discretization, leading to inefficient representations. We propose \\textbf{EvtGraph}, a unified framework that aligns computation with temporal salience under explicit budget constraints. EvtGraph reparameterizes sequences into event-level tokens via event-adaptive compression (EAMC), selects a compact subset with a node budget (NBC), and performs temporally constrained sparse graph reasoning (T2SG). This transforms dense sequences into structured computation over salient events, reducing complexity while preserving critical transitions. We show that this design provides a practical mechanism for allocating representational capacity under a fixed budget, yielding a consistent performance--efficiency trade-off, where a small budget is often sufficient in practice. Experiments on multimodal clinical (MIMIC-IV + CXR) and cross-domain benchmarks demonstrate that EvtGraph outperforms both Transformer-based and recurrent baselines while significantly improving efficiency. These results suggest that budget-constrained event-centric representation provides a general paradigm for learning from high-redundancy temporal data.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "EvtGraph: Event-Adaptive Compression for Sparse Temporal Graph Learning in Multimodal Time Series"
+    },
+    "arXiv:2608.04488": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04488",
+      "identity_tokens": [
+        "arXiv:2608.04488"
+      ],
+      "reason": "Despite rapid advances in large language models (LLMs), deploying and personalizing them on resource-constrained devices remains impractical due to high VRAM, time, and energy costs. Parameter-Efficient Fine-Tuning (PEFT) of Small Language Models (SLMs) offers a promising alternative, yet few studies compare PEFT methods across architectures using both general and personalization benchmarks while accounting for energy consumption. We compare five fine-tuning approaches (Full Fine-Tuning, LoRA, LoRA+, QLoRA, and BitFit) on four SLMs from two families (Transformer-based: TinyLlama-1.1B, Qwen3-1.7B; SSM-based: Mamba-1.4B, Mamba-2-1.3B) across three GLUE tasks (SST-2, QNLI, STS-B) and three LaMP personalization tasks (LaMP-1, LaMP-2, LaMP-3). Each configuration is evaluated with the energy-focused NetScore-E and the memory-focused NetScore-M, the two variants that reflect the constraints binding on-device deployment. Methods are selected with a strict energy-first rule (highest NetScore-E, ties broken by NetScore#). LoRA+ achieves the highest NetScore-E in 19 of 24 configurations and the highest NetScore-M in 13 of 24, and is the selected method in 18 of 24. QLoRA, available only for the Transformer models, cuts peak finetuning VRAM by up to 3.9x relative to LoRA and therefore takes the best NetScore-M in 5 of the 12 Transformer configurations, although its de-quantization overhead leaves it selected in only one of them once energy decides. BitFit and full fine-tuning are almost never competitive on either variant, and TinyLlama-1.1B leads the energy-focused NetScore-E on five of the six benchmarks and the memory-focused NetScore-M on four. These results show that compact SLMs paired with PEFT provide a practical, energy-aware path to personalized on-device deployment, with the optimal method set by the dominant constraint: LoRA+ for energy and QLoRA for memory.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Energy- and Memory-Efficient PEFT Methods for Personalized On-Device SLMs on Consumer GPUs"
+    },
+    "arXiv:2608.04505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04505",
+      "identity_tokens": [
+        "arXiv:2608.04505"
+      ],
+      "reason": "This technical report presents K-EXAONE 2.0, an open-weight multilingual foundation model developed by LG AI Research as a step in our effort toward global frontier-scale foundation models. Rather than training from scratch, we upcycle K-EXAONE and expand its architecture, yielding a Mixture-of-Experts (MoE) model with 750B total parameters and approximately 37B activated per token---more than three times the capacity of its predecessor. K-EXAONE 2.0 supports context lengths of up to 256K tokens and expands multilingual coverage from six to ten languages. Its training pipeline combines continual pre-training, difficulty-focused mid-training, and post-training to strengthen reasoning, agentic coding, multilingual capability, and safety grounded in Korean sociocultural contexts. Across nine evaluation categories selected to reflect the conditions of practical use, K-EXAONE 2.0 improves over K-EXAONE and remains competitive with open-weight models, showing its largest gains in agentic coding and long-context understanding and its clearest strengths in long-context retrieval and safety. Released under the Apache 2.0 license, K-EXAONE 2.0 enables the wider AI ecosystem to evaluate, deploy, adapt, and build upon it, while marking the beginning---rather than the endpoint---of our challenge toward the global frontier.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ],
+      "title": "K-EXAONE 2.0 Technical Report"
+    },
+    "arXiv:2608.04630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04630",
+      "identity_tokens": [
+        "arXiv:2608.04630"
+      ],
+      "reason": "Acquiring channel state information (CSI) with manageable overhead has been essential to provide high-performance communication services, which is extremely challenging in the emerging sixth generation (6G) mobile network. Channel extrapolation has been proposed to infer complete CSI using a small portion of known CSI, its performance can be dramatically enhanced by artificial intelligence (AI). However, AI-driven channel extrapolation suffers from poor generalization across scenarios and high computational complexity, which is common in the broad research of AI and large language models. Inspired by the modular function of human brain, we propose a configurable AI-driven framework to achieve generalizable and computational efficient channel extrapolation from a modular perspective. We propose a three-stage framework, consisting of experts emergent, experts construction and experts selection. This framework assumes that CSI correlations can be captured by a small number of specialized functional modules (experts) that are activated differently across scenarios. Such modularity emerges in the experts emergent stage via pre-training using CSI data covering comprehensive scenarios. The neurons with similar weight-space patterns are grouped as experts in the experts construction stage. A lightweight gating function is added to control the routing of experts and is fine-tuned for each scenario in the experts selection stage. Simulation results demonstrate that the proposed three-stage framework reduce the channel extrapolation error and computational complexities dramatically by $1.1-19.1$ db and $38$ \\%, respectively. In addition, attributed to the proposed experts emergent and section modules, the proposed framework outperforms its counterpart mix-of-expert model dramatically in terms of channel extrapolation performance.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Generalizable and Computational Efficient Channel Extrapolation for 6G: A Configurable AI-Driven Framework Built from a Modular Perspective"
+    },
+    "arXiv:2608.04695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04695",
+      "identity_tokens": [
+        "arXiv:2608.04695"
+      ],
+      "reason": "Federated adaptation of time-series foundation models (TSFMs) is attractive for building energy forecasting because meter data are private, distributed, and highly non-IID. However, a single parameter-sharing strategy is unlikely to serve all pretrained TSFMs or building clients: fully shared adapters can suppress building-specific temporal behavior, while fully local adaptation discards cross-building transfer. We propose a personalized federated sparse adaptation framework with a heterogeneous temporal mixture-of-experts (MoE) adapter placed after the pretrained TSFM representation. A sequence-level router maps each 168-hour context window to a top-$k$ subset of experts specialized for periodicity, long-range interactions, local variation, trend-residual structure, and multi-resolution behavior. We compare global FL, local training, and personalized FL variants with globally shared or client-private expert banks. Across 50 buildings and three TSFM backbones, personalization consistently outperforms Global FL-MoE and Local MoE, while the best sparse-adaptation strategy varies by backbone and metric. Routing behavior further reveals client-level expert specialization, expert concentration, and near-uniform routing across backbones, showing that federated TSFM adaptation should be both client-aware and backbone-aware.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Personalized Federated Sparse Adaptation of Time-Series Foundation Models"
+    },
+    "arXiv:2608.04746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04746",
+      "identity_tokens": [
+        "arXiv:2608.04746"
+      ],
+      "reason": "LLM agents that persist across sessions accumulate stored memories whose validity varies enormously by content type, yet existing memory architectures treat all memories as equally persistent and systematically contaminate retrieved context with outdated facts. We show that per-memory, type-conditioned temporal decay, a property of western scrub jay episodic memory, can be operationalized as an auto-classified coefficient $\\pi_i$ in an external LLM-agent memory store, yielding ScrubJay-MEM: each memory is encoded as a jointly-bound What--Where--When tuple with an estimated perishability $\\pi_i$ and utility horizon $\\tau_i$, retrieved by query-adaptive scoring, and revised retroactively at $O(1)$ LLM calls per update. We introduce the Temporal Generalization Test (TGT), a benchmark with held-out retention intervals and a Generalization Gap (GenGap) metric. On TGT, ScrubJay-MEM is the only retrieval-based system with substantially positive GenGap ($+0.108$); on MemoryAgentBench EventQA-64k it improves F1 by $+2.66$ over Mem0 and $+3.09$ over Qwen3-Embedding-4B under a llm backbone. A decay ablation collapses GenGap by $5.7\\times$, establishing type-conditioned decay as necessary for the result. Gains narrow under stronger backbones and reverse on fact-consolidation tasks, scoping the contribution to temporal reasoning over perishable facts.",
+      "first_checked_at": "2026-10-05T09:02:42+00:00",
+      "last_checked_at": "2026-10-05T09:02:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems"
+    },
+    "arXiv:2608.04407": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04407",
+      "identity_tokens": [
+        "arXiv:2608.04407"
+      ],
+      "reason": "Memory-efficient matrix optimizers such as Sinkhorn gradient descent remove most AdamW optimizer state for dense Transformer matrices, but direct application to Mixture-of-Experts (MoE) training is unreliable. We study this failure in a controlled 110M-parameter nanowhale DeepSeek-style MoE pretraining setting. A SAGE/Sinkhorn hybrid reduces optimizer state from 0.883GB to 0.331GB but degrades evaluation loss to 3.8265, far above the AdamW baselines observed in the same setup (3.58--3.64 across the seeds we study). We show that routed MoE expert matrices are the dominant failure point: their gradients are conditional, temporally varying, and poorly served by stateless Sinkhorn normalization. We propose MESH, a hidden-momentum Sinkhorn update for MoE experts. MESH restores a temporal first-moment signal through the gradient-buffer lifecycle, without storing the expert first moment as optimizer state. MESH is an optional block-preconditioned variant that adds a coarse neuron/block inverse-RMS multiplier. Across ablations, temporal smoothing before matrix normalization is the primary causal ingredient; block/neuron preconditioning can improve the memory-quality frontier, but is not established as universally necessary. In two additional seeds, MESH and MESH-B reduce optimizer-state memory by 62.5\\% and peak PyTorch CUDA allocation by about 12.6\\% relative to AdamW, with a modest evaluation-loss gap. Full-state diagnostic variants recover AdamW-like performance in ablations, supporting the conclusion that MoE experts need temporal smoothing, but not necessarily full coordinate-wise AdamW state.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MESH: Memory-Efficient Sinkhorn Optimization for Mixture-of-Experts Training"
+    },
+    "arXiv:2608.04448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04448",
+      "identity_tokens": [
+        "arXiv:2608.04448"
+      ],
+      "reason": "Diffusion transformers deliver strong image generation, but their training cost grows superlinearly with resolution. Recent work justifies training or sampling at reduced resolution on a spectral premise: at high noise, a downscaled latent preserves almost the full surviving signal. Whether a downscaled step also preserves the native training gradient signal, however, has remained unresolved. We reduce how that signal changes under downscaling to two terms: a noise-dependent term governed by the downscale ratio, which decays at high noise as the spectral premise predicts, and a \\sigma-independent floor governed by the target grid's absolute token count, carried by the compute graph itself and removed by no noise level. The measured (route, \\sigma) map corroborates the account and uncovers structure the spectral picture cannot express: on the 1024->768 route, a window (0.65<\\sigma<0.95), predicted by no spectral criterion at any tolerance, where the downscaled gradient stays within a small margin of the native one. Training LoRA adapters with downscaled steps restricted to the routes and noise windows the map validates reduces training time by 14.6% at a fixed step budget while remaining near-native in weight space. Code is available at https://github.com/sorryhyun/anima_lora.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "When does training on downscaled images yield the same gradients?"
+    },
+    "arXiv:2608.04450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04450",
+      "identity_tokens": [
+        "arXiv:2608.04450"
+      ],
+      "reason": "Training and serving large language models (LLMs) rely heavily on high-performance GPU communication, yet implementing efficient GPU communication primitives requires deep expertise in GPU architectures, networking hardware, and distributed communication patterns, making them particularly challenging for code generation models. We present CommBench, a comprehensive benchmark for GPU communication programming, consisting of over 100 expert-curated tasks spanning point-to-point communication, collective operations, expert-parallel communication, compute--communication fusion, and communication utility functions, with reference implementations either written by GPU communication experts or distilled from production codebases. We further introduce a cheat-resistant evaluation framework that automatically compiles, executes, and validates generated code on multi-GPU systems, and a unified metric that jointly measures functional correctness and communication performance. Evaluating leading frontier and open-source code generation models on both intra-node NVLink and inter-node RDMA platforms reveals that even the strongest model, GPT-5.5, correctly implements and achieves competitive performance on only 30.7\\% of the benchmark tasks. Our results expose a substantial gap between current LLMs and expert-written GPU communication code, establishing CommBench as a challenging benchmark for advancing AI-assisted systems programming.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
+      ],
+      "title": "CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?"
+    },
+    "arXiv:2608.04464": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04464",
+      "identity_tokens": [
+        "arXiv:2608.04464"
+      ],
+      "reason": "Harmonized System (HS) code prediction (HSP) from commodity text is essential to international trade, and its importance continues to grow in port logistics. Recently, large language models (LLMs) have been actively investigated for this task, owing especially to their strong language-understanding capabilities. However, their high computational cost limits deployment in constrained environments such as container terminals. Small language models (SLMs) offer a practical alternative, but their smaller scale makes them prone to generating invalid HS codes and to overlooking the hierarchical semantics between commodity text and HS codes. To address these limitations, this study proposes TRIE-HSA, which combines trie-constrained token prediction with hierarchy-aware semantic alignment (HSA). This framework constrains the SLM to predict only valid digits under the HS taxonomy and aligns commodity text representations with the hierarchical structure of HS codes. In extensive experiments on data collected from an operational container terminal, TRIE-HSA improved average HS6 accuracy by 49.96% over zero-shot inference and exceeded the strongest task-specific benchmark by 11.94%. These results demonstrate that accurate and structurally valid HSP is achievable with fewer than 10 billion parameters. Therefore, TRIE-HSA offers a practical basis for deployment of HSP in port logistics operations that cannot support large scale LLMs.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Trie Constraints and Hierarchy-Aware Semantic Alignment for HS Code Prediction with Small Language Models"
+    },
+    "arXiv:2608.04809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04809",
+      "identity_tokens": [
+        "arXiv:2608.04809"
+      ],
+      "reason": "In industrial recommendation systems, the re-ranking stage balances business objectives and diversity for sequence-level optimization while modeling contextual information. However, constrained by fixed upstream supply, existing methods fail to deliver further effectiveness gains, especially under low-quality supply. To overcome this, re-ranking can actively balance immediate and exploratory value, for instance, by prioritizing exploratory exposure under low-quality supply to preserve browsing potential and facilitate serendipitous conversions. Therefore, we propose a Dual Exploration-Driven Generative Re-Ranking (DEGR) method. DEGR adopts a hybrid supervised-reinforcement exploration and optimization paradigm, guided by an exploratory reward model that adaptively balances immediate and exploratory value. The hybrid optimization paradigm integrates three key components: supervised learning, exploration diversity constraint, and adaptive reward-weighted ORPO for preference optimization. Through this dual exploration, the generator ultimately acts as an adaptive cross-request contextual bridge. Offline and online experiments indicate that DEGR outperforms SOTA methods, achieving improvements of up to 1.22% UCTR and 0.20% PV in the JD E-commerce recommendation system.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "DEGR: Dual Exploration-Driven Generative Re-Ranking for Adaptive Cross-Request Context Bridging"
+    },
+    "arXiv:2608.05063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05063",
+      "identity_tokens": [
+        "arXiv:2608.05063"
+      ],
+      "reason": "The semiconductor industry is undergoing a dual revolution: the shift toward heterogeneous 2.5D chiplet systems and the integration of Large Language Models (LLMs) into Electronic Design Automation (EDA) flows. While these paradigms offer unprecedented benefits in yield, modularity, design productivity, etc., they radically expand the hardware attack surface. This paper provides a unified analysis of these frontiers, ranging from attacks on chiplet systems (including hardware stacks for LLM acceleration) across architectural, logical, and physical levels, to various exploits against LLM-driven EDA pipelines. To secure chiplet systems, we review a powerful defense approach that leverages 2.5D split manufacturing and active interposers for physically isolated Root of Trust (RoT) architectures. To secure LLM-driven EDA pipelines, we first identify native threats and then review state-of-the-art defense techniques. Finally, we discuss how LLM systems can advance hardware security efforts for modern systems, including chiplets.",
+      "first_checked_at": "2026-10-05T09:02:43+00:00",
+      "last_checked_at": "2026-10-05T09:02:43+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md"
+      ],
+      "title": "Hardware Design and Security in the Era of Chiplets and LLMs"
     }
   }
 }
