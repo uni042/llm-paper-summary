@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-104-part-09-2895ef787856",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10035",
+      "identity_tokens": [
+        "arXiv:2506.10035"
+      ],
+      "title": "FastFLUX: Pruning FLUX with Block-wise Replacement and Sandwich Training",
+      "reason": "Recent advancements in text-to-image (T2I) generation have led to the emergence of highly expressive models such as diffusion transformers (DiTs), exemplified by FLUX. However, their massive parameter sizes lead to slow inference, high memory usage, and poor deployability. Existing acceleration methods (e.g., single-step distillation and attention pruning) often suffer from significant performance degradation and incur substantial training costs. To address these limitations, we propose FastFLUX, an architecture-level pruning framework designed to enhance the inference efficiency of FLUX. At its core is the Block-wise Replacement with Linear Layers (BRLL) method, which replaces structurally complex residual branches in ResBlocks with lightweight linear layers while preserving the original shortcut connections for stability. Furthermore, we introduce Sandwich Training (ST), a localized fine-tuning strategy that leverages LoRA to supervise neighboring blocks, mitigating performance drops caused by structural replacement. Experiments show that our FastFLUX maintains high image quality under both qualitative and quantitative evaluations, while significantly improving inference speed, even with 20% of the hierarchy pruned.",
+      "source_url": "https://arxiv.org/abs/2506.10035",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.11111",
+      "identity_tokens": [
+        "arXiv:2506.11111"
+      ],
+      "title": "Evaluating and Improving Robustness in Large Language Models: A Survey and Future Directions",
+      "reason": "Large Language Models (LLMs) have gained enormous attention in recent years due to their capability of understanding and generating natural languages. With the rapid development and wild-range applications (e.g., Agents, Embodied Intelligence), the robustness of LLMs has received increased attention. As the core brain of many AI applications, the robustness of LLMs requires that models should not only generate consistent contents, but also ensure the correctness and stability of generated content when dealing with unexpeted application scenarios (e.g., toxic prompts, limited noise domain data, outof-distribution (OOD) applications, etc). In this survey paper, we conduct a thorough review of the robustness of LLMs, aiming to provide a comprehensive terminology of concepts and methods around this field and facilitate the community. Specifically, we first give a formal definition of LLM robustness and present the collection protocol of this survey paper. Then, based on the types of perturbated inputs, we organize this survey from the following perspectives: 1) Adversarial Robustness: tackling the problem that prompts are manipulated intentionally, such as noise prompts, long context, data attack, etc; 2) OOD Robustness: dealing with the unexpected real-world application scenarios, such as OOD detection, zero-shot transferring, hallucinations, etc; 3) Evaluation of Robustness: summarizing the new evaluation datasets, metrics, and tools for verifying the robustness of LLMs. After reviewing the representative work from each perspective, we discuss and highlight future opportunities and research directions in this field. Meanwhile, we also organize related works and provide an easy-to-search project (https://github.com/zhangkunzk/Awesome-LLM-Robustness-papers) to support the community.",
+      "source_url": "https://arxiv.org/abs/2506.11111",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06607",
+      "identity_tokens": [
+        "arXiv:2506.06607"
+      ],
+      "title": "Training-Free Tokenizer Transplantation via Orthogonal Matching Pursuit",
+      "reason": "We present a training-free method to transplant tokenizers in pretrained large language models (LLMs) by reconstructing unseen token embeddings via Orthogonal Matching Pursuit (OMP). Specifically, we approximate each out-of-vocabulary token as a sparse linear combination of shared tokens, in two phases: first, compute each new token's representation in the donor embedding space with a small dictionary of shared anchor tokens, then transfer these same sparse coefficients back into the base model's embedding space. On two challenging cross-tokenizer tasks--Llama$\\to$Mistral NeMo (12B) and Qwen$\\to$Llama (1B)--we show that OMP achieves best zero-shot preservation of the base model's performance across multiple benchmarks, while other zero-shot approaches degrade significantly. Compared to baselines (zero-init, mean-init, and existing approaches like WECHSEL, FOCUS, ZETT), OMP consistently achieves the best overall performance, effectively bridging large tokenizer discrepancies without gradient updates. Our analysis further identifies mismatched numerical tokenization schemes as a critical challenge for preserving mathematical reasoning capabilities. This technique enables direct reuse of pretrained model weights with new tokenizers, facilitating cross-tokenizer knowledge distillation, speculative decoding, ensembling, merging, and domain-specific vocabulary adaptations. We integrate our method into the open-source mergekit-tokensurgeon tool for post hoc vocabulary realignment.",
+      "source_url": "https://arxiv.org/abs/2506.06607",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17249",
+      "identity_tokens": [
+        "arXiv:2506.17249"
+      ],
+      "title": "Improving Prediction Certainty Estimation for Reliable Early Exiting via Null Space Projection",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://arxiv.org/abs/2506.17249",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    }
+  ]
+}
