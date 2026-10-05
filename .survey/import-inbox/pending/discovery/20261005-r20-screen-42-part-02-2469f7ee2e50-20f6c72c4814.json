@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-42-part-02-2469f7ee2e50",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18730",
+      "identity_tokens": [
+        "arXiv:2607.18730"
+      ],
+      "title": "Dual Attention Residuals",
+      "reason": "一次要旨はTransformer残差経路の表現・学習を扱い、推論時の効率指標を評価しない。",
+      "source_url": "https://arxiv.org/abs/2607.18730",
+      "first_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "last_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18759",
+      "identity_tokens": [
+        "arXiv:2607.18759"
+      ],
+      "title": "Relative Positions Generalize, Absolute Positions Memorize: An Implicit-Bias Account of Length Generalization in Attention",
+      "reason": "一次要旨は位置encodingの長さ外挿理論と学習結果を扱い、serving効率を測定しない。",
+      "source_url": "https://arxiv.org/abs/2607.18759",
+      "first_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "last_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18819",
+      "identity_tokens": [
+        "arXiv:2607.18819"
+      ],
+      "title": "In-Context Learning for Wound Classification with Small Multimodal Language Models",
+      "reason": "一次要旨は創傷画像分類に対するretrieval-based ICLの分類性能が主題で、LLMシステム効率ではない。",
+      "source_url": "https://arxiv.org/abs/2607.18819",
+      "first_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "last_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18821",
+      "identity_tokens": [
+        "arXiv:2607.18821"
+      ],
+      "title": "VirtualSet: Typed Ontology Worlds as an LLM Generation Target for Grounded Queries and Guarded Decisions",
+      "reason": "一次要旨はLLMのontology出力・guarded decision correctnessが中心で、inference efficiencyを評価しない。",
+      "source_url": "https://arxiv.org/abs/2607.18821",
+      "first_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "last_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18897",
+      "identity_tokens": [
+        "arXiv:2607.18897"
+      ],
+      "title": "Thinking Fast, Thinking Slow: Adaptive Multimodal Transformer-based Sensor Fusion for Depth Estimation on Ultra-low-power MCUs",
+      "reason": "一次要旨はMCU上のdepth-estimation sensor fusionと電力/精度適応で、LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2607.18897",
+      "first_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "last_checked_at": "2026-10-05T07:39:09.832870+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    }
+  ]
+}
