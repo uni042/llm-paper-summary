@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f62720604b1f0234-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11519",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11519",
+    "identity_tokens": [
+      "arXiv:2608.11519"
+    ],
+    "reason": "Full self-attention is a strong token mixer for PDE surrogates on irregular domains, but its quadratic cost limits its use on large problems. Latent-space attention methods such as PerceiverIO, Transolver, and FLARE (Fast Low-rank Attention Routing Engine) avoid that cost by routing attention among $N$ tokens through $M\\ll N$ learned latents. They compress by dot-product matching of the input tokens against $M$ learned query tokens or projection weights: once trained, the same learned templates serve every input. We remove this restriction with FLARE++, a low-rank attention architecture with input-conditioned routing queries. FLARE++ uses FLARE's own encoder to map the $N$ input tokens to $M$ query tokens, which correct the learned queries. The adapted queries then determine how that same input is compressed and redistributed. This preserves FLARE's explicit low-rank factorization and linear $\\mathcal O(NM)$ complexity, and expresses the complete routing operation with standard scaled dot-product attention (SDPA) calls alone. We also provide a multi-GPU context-parallel implementation that shards input tokens across devices without ever gathering the full token sequence on one of them. FLARE++ reduces FLARE's error by $25\\%$ on average across five standard PDE benchmarks, achieving the lowest errors among the efficient models compared. The gains persist on industrial-scale DrivAerML aerodynamics and on Long Range Arena, where average accuracy rises by $3.5\\%$ over fixed-query FLARE. Code is available at https://github.com/vpuri3/FLARE.py.",
+    "first_checked_at": "2026-10-05T08:35:29+00:00",
+    "last_checked_at": "2026-10-05T08:35:29+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "FLARE++: Low-rank attention with dynamic attention routing"
+  },
+  "processed_at": "2026-10-05T08:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f62720604b1f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

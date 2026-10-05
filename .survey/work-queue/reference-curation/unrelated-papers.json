@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:33:07+00:00",
-  "record_count": 3895,
+  "updated_at": "2026-10-05T08:35:29+00:00",
+  "record_count": 3911,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -56721,6 +56721,242 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "Harnessing Advanced Transfer Learning Techniques in GPT-2 for Real-World Multilingual Applications"
+    },
+    "DOI:10.1371/journal.pone.0354894": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0354894",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0354894"
+      ],
+      "reason": "Existing deceptive alignment detection schemes generally follow a three-step strategy: auto-labeling, supervised fine-tuning (SFT), and proximal policy optimization (PPO). In which, the detection is treated as a simple binary classification and rely on heavyweight teacher models for Chain-of-Thought (CoT) annotation, limiting discrimination of nuanced deceptive strategies and creating an oracle dependency that prevents autonomous operation. This paper introduces contrastive representation learning, rather than learning a hard decision boundary (BCE loss), our lightweight monitor (0.1% parameters) projects CoT hidden states into a structured semantic space where deceptive and safe reasoning form separable manifolds. Through Triplet Loss optimization, the monitor captures gradual deceptive transitions, from surface hedging to fundamental objective substitution, that elude binary classifiers. Evaluation on Sycophancy subset of DeceptionBench confirms that contrastive learning outperforms BCE classification by 2.33pp Deception Tendency Rate (DTR, lower better, 39.29% vs. 36.96%). This establishes a geometric foundation for self-supervised deception detection, transforming CoT transparency from vulnerability into forensic evidence.",
+      "first_checked_at": "2026-10-05T08:35:27+00:00",
+      "last_checked_at": "2026-10-05T08:35:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ],
+      "title": "Contrastive representation learning for self-supervised deception detection in edge LLMs"
+    },
+    "DOI:10.3390/math14162941": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math14162941",
+      "identity_tokens": [
+        "DOI:10.3390/math14162941"
+      ],
+      "reason": "Deep neural networks increasingly convert street-level imagery into quantitative measures of urban perception, but the cost of transformer backbones limits repeated inference over city-scale image collections. This study proposes an optimized Sparse Attention Regularized Transformer with a Low-Rank constraint (SART-LR), a Siamese vision transformer in which softmax is replaced by learnable α-entmax attention and the attention and feed-forward projections are directly factorized. The evaluation assigns each Place Pulse 2.0 image to exactly one of the training, validation, or test partitions, thereby preventing the same image from entering multiple partitions through different comparisons. All models are tuned with an equal, architecture-specific validation budget and evaluated over five seeds. Under this image-disjoint evaluation, SART-LR reaches an average pairwise accuracy of 72.6%, 2.1 percentage points above ViT-B/16 and 1.2 points above Swin-T. The explicit layer-wise derivation gives 2.97 million trainable parameters, a 5.0-fold reduction relative to the depth- and width-matched dense backbone and a 29.1-fold difference from ViT-B/16; the latter comparison is reported only as an end-to-end model total because the architectures differ. Five repeated city-level folds give a cross-city accuracy of 67.0±1.3%, corresponding to a 5.6-point decrease from the image-disjoint result. Paired tests indicate that the advantage over Swin-T varies by attribute, and analyses stratified by rater agreement show lower accuracy for ambiguous comparisons. These findings support an accuracy–efficiency benefit on Place Pulse 2.0, while the absence of an independent urban-perception dataset and the geographic imbalance of the 56-city sample limit external-validity claims.",
+      "first_checked_at": "2026-10-05T08:35:27+00:00",
+      "last_checked_at": "2026-10-05T08:35:27+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Optimized Sparse Attention Regularized Transformer with Low-Rank Constraint for Efficient Urban Landscape Perception Modeling"
+    },
+    "arXiv:2608.12700": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12700",
+      "identity_tokens": [
+        "arXiv:2608.12700"
+      ],
+      "reason": "Systems that generate GPU kernels with language models report high correctness rates. Those rates come from a single loose test: run the kernel on a few random inputs at one fixed shape and accept it if the output is close to a reference. A kernel can pass that test and still be silently wrong. It can return an ordinary number where the true answer is a NaN or an infinity, differ from run to run, break when the shape changes, or accumulate in fp16 where the reference keeps an fp32 total. We build the instrument that checks correctness properly: a contract-grade verifier of twelve adversarial gates, each a property a correct kernel must satisfy, several of them tolerance-free, so no choice of threshold can explain a failure away. Aimed outward, the verifier audits 2,638 machine-generated kernels that a public system's own harness had already accepted as correct. It finds 39.5% broken beyond any tolerance argument and 62.1% carrying at least one violation. The field's standard test accepts 1,487 kernels the verifier rejects, against only 14 the other way. We defend the finding four independent ways: a 7/7 positive control, a threshold-calibration sweep, 98.5% agreement with the reference benchmark's own correctness code, and a stratified hand-audit. Aimed inward, the verifier judges a kernel of our own: the first native Blackwell tcgen05 training backward for the gated-linear-recurrence (GDN) family, including the reverse-state stage the field still runs on a fallback. We establish its correctness independently, against a double-precision oracle, and train five family members through it. The correctness signal behind reported progress in kernel generation is far weaker than the numbers suggest, and a set of tolerance-free contracts would close most of the gap.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family"
+    },
+    "arXiv:2608.12715": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12715",
+      "identity_tokens": [
+        "arXiv:2608.12715"
+      ],
+      "reason": "Generative speech enhancement faces three gaps: spectral models capture harmonic structure but often disrupt phase, waveform models preserve phase but miss harmonics, and Schr\\\"odinger Bridges (SB) shorten transport from noise to clean speech but leave inference cost only loosely tied to training. We propose HybridSB-MoE, a dual-domain framework that fills these gaps through three contributions unified by a single asymmetric design principle. (i) Asymmetric uncertainty fusion: The spectral path captures epistemic uncertainty via expert disagreement, while the waveform bridge models aleatoric variance through stochastic dynamics. We fuse them asymmetrically, allowing the mixing weight to adapt to distinct error regimes rather than average predictions. (ii) Heterogeneous MoE with top-k=2 routing across five distinct architectural archetypes, where architectural diversity makes the epistemic signal indicate which inductive bias fails rather than small perturbations among similar experts. (iii) Discretization bound (Theorem 1): path-consistency and trajectory regularizers together bound the K-step bridge sampling error in 2-Wasserstein distance at rate K-alpha, making small-K inference an objective-level guarantee rather than an empirical claim. On VoiceBank+DEMAND, HybridSB-MoE outperforms diffusion- and SB-based baselines at their step budgets while remaining competitive with consistency-distilled few-step methods.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "HybridSB-MoE: Dual-Domain Schr\\\"odinger Bridges with Scene-Adaptive Expert Routing for Speech Enhancement"
+    },
+    "arXiv:2608.12780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12780",
+      "identity_tokens": [
+        "arXiv:2608.12780"
+      ],
+      "reason": "Diffusion Transformers (DiTs) incur quadratic self-attention cost over spatiotemporal tokens. Existing training-free sparse attention methods often construct sparse masks from block-level or cluster-level proxy scores, which can obscure fine-grained differences among keys and miss high contribution keys under aggressive sparsity. Moreover, such proxy scores may yield overly concentrated softmax distributions, causing Top-$p$ to retain too few keys for some query clusters. Although a fixed Top-$k$ minimum alleviates this failure mode, a shared value cannot adapt to variations across heads and inputs. To address both limitations, we propose SCOPE, a training-free sparse attention framework that combines 3D-RoPE-aligned key subspace clustering with online per-head Top-$k$ estimation for efficient video-DiT inference. SCOPE partitions post-RoPE keys into temporal, height, and width subspaces, clusters them independently, and aggregates the corresponding centroid scores through lookup tables to obtain per key proxy scores for each query cluster. Building on existing hybrid Top-$p$/fixed Top-$k$ selection, SCOPE derives a head-specific Top-$k$ value online by averaging the initial retained key counts within each head, weighted by query cluster size, and selects additional keys only for query clusters whose initial retained key counts fall below this value. Sparse attention is then computed over the selected original keys and values. Across six model--task configurations, SCOPE consistently outperforms existing training-free baselines in both fidelity and latency, achieving up to a $1.99\\times$ end-to-end speedup on 720p HunyuanVideo with $28.46$ dB PSNR relative to dense attention.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+      ],
+      "title": "SCOPE: Subspace Clustering with Online Per-Head Top-K Estimation for Sparse Video Attention"
+    },
+    "arXiv:2608.13168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13168",
+      "identity_tokens": [
+        "arXiv:2608.13168"
+      ],
+      "reason": "As large language models (LLMs) are increasingly applied for emotional companionship, evaluating their behavior and capabilities in intimate relationships has become a pressing issue. However, existing assessments primarily characterize general personality traits, providing limited insight into model behavior within intimate and emotionally sensitive contexts. Therefore, we introduce adult attachment theory into LLM evaluation and use the Experiences in Close Relationships-Revised (ECR-R) scale to characterize attachment anxiety and avoidance. To evaluate emotional companionship capabilities of LLMs in realistic interaction scenarios, we present an emotional companionship benchmark, ECBench, spanning four scenarios including emotional support, collaborative tasks, conflict resolution, and social guidance, across friendship and romantic relationships. ECBench is utilized to assess model behavior using 11 dialogue-quality metrics and three evaluation methods. We evaluate the attachment tendencies of 32 LLMs and select representative models to investigate how these tendencies manifest in contextualized multi-turn interactions and whether they can be shaped through prompting. Our study provides a theoretical lens from psychology, along with practical tools to understand and select LLMs for emotional companionship.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Which LLM Is Your Ideal Companion? Evaluating Emotional Companion Capabilities of LLMs Based on Adult Attachment Theory"
+    },
+    "arXiv:2608.13315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13315",
+      "identity_tokens": [
+        "arXiv:2608.13315"
+      ],
+      "reason": "We study a large language model (LLM) service in which a provider chooses a per-token price and a default reasoning-token allocation, while a user may accept the default, customize the allocation, or exit. Larger allocations can improve accuracy but increase token cost and latency. We model this interaction as a Stackelberg game and derive the user's unique optimal customized allocation in closed form. For any price, the acceptable defaults form either an empty set or a compact interval. We characterize the provider's optimal default through a three-regime rule, reduce equilibrium computation to a one-dimensional price optimization, and prove the existence of the equilibrium. We further show that defaults affect the implemented reasoning allocation only when users value the convenience of avoiding customization; otherwise, every service-providing outcome implements the user's optimal customized allocation. Experiments with two compact open-weight reasoning models on five mathematics and science benchmarks support the accuracy-token model and show how model and task characteristics determine equilibrium prices, defaults, and reasoning allocations.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Keep, Customize, or Exit: Default Design and Token Pricing in LLM Reasoning Services"
+    },
+    "arXiv:2608.13662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13662",
+      "identity_tokens": [
+        "arXiv:2608.13662"
+      ],
+      "reason": "Coding agents have become the primary means of generating new code in many software projects, and the resulting velocity of changes makes keeping track of the reasons behind those changes challenging. This paper introduces MOOSEDev, a system designed to give coding agents structured, ontology-grounded project memory. The system captures architectural decisions, lessons, constraints, and rationales in a knowledge graph exposed to agents via a Model Context Protocol (MCP) interface. Records carry lifecycle status, provenance, and supersession links, queryable via MOOSE, a proprietary neurosymbolic engine that treats the symbolic layer as the primary reasoning substrate. We compared MOOSEDev against a production vector-memory tool on a neutral public corpus of 835 typed records. MOOSEDev returned the expected answer set essentially in full (0.98-1.00) on supersession, set-completeness, and negation questions, whereas the baseline's top-k retrieval surfaced between 6% and 27%. Conversely, relevance recall and token cost were largely equivalent between the two systems. We also describe a temporal commit-history bootstrap of our own codebase, a pre-registered live trial, and lessons learned.",
+      "first_checked_at": "2026-10-05T08:35:28+00:00",
+      "last_checked_at": "2026-10-05T08:35:28+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Ontology-Grounded Project Memory for Coding Agents"
+    },
+    "arXiv:2608.13668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13668",
+      "identity_tokens": [
+        "arXiv:2608.13668"
+      ],
+      "reason": "Linear attention keeps a state of fixed size. At long context, many stored items share this state, and interference between them degrades retrieval. Gated DeltaNet-2 (GDN-2), like every delta-rule model before it, derives its erase vector from the key of the current token. However, the interference in its reads is measured through the query, and the erase step cannot reach it. We introduce the Query-derived Erase Direction (QED). QED adds a second erase direction derived from the query and orthogonal to the key. In the fast-weight view, a key-directed delta edit cannot change the key-orthogonal part of a read. It uses the editable part to cancel old-state content measured along the query. It also improves retrieval at every length past the training window, and it about doubles the usable context length on S-NIAH-1.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "The Query Knows What to Forget: A Second Erase Direction for Linear Attention"
+    },
+    "arXiv:2608.13681": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13681",
+      "identity_tokens": [
+        "arXiv:2608.13681"
+      ],
+      "reason": "Translating C code into safe, idiomatic Rust is a longstanding software-engineering goal because it can eliminate entire classes of memory-safety vulnerabilities while preserving the functional behavior of legacy systems. Large language models (LLMs) have shown promise for this task but typically underperform when applied off-the-shelf, since general-purpose pretraining rarely emphasizes idiomatic Rust generation, cross-language semantic equivalence, or the ability to reason about and repair compiler/runtime feedback. In this report we describe a three-stage fine-tuning curriculum applied to Qwen3-27B that is designed to progressively specialize the model for the C-to-Rust (C2Rust) translation task: (1) continued pretraining on Rust-centric corpora to strengthen the model's prior over idiomatic Rust syntax and standard-library usage; (2) supervised fine-tuning (SFT) on the microsoft/Verus_Training_Data dataset to instill debugging and self-repair behavior over Rust code; and (3) task-specific SFT on paired C/Rust solutions derived from LeetCode problems to teach direct semantic translation. We evaluate the resulting model using the agentic, static-analysis-guided verification framework of SACTOR, which performs structure-aware, two-phase (unidiomatic to idiomatic) translation with foreign-function-interface (FFI)-based end-to-end (E2E) testing. We report success rate, idiomaticity (Clippy lint counts, unsafe-code fraction), and failure-mode analyses, and compare our fine-tuned model against baseline Qwen3-27B and other LLMs evaluated under the same framework.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Fine-Tuning Qwen3-27B for C-to-Rust Code Translation: A Three-Stage Curriculum of Pretraining, Debugging-Aware SFT, and Task-Specific SFT"
+    },
+    "arXiv:2608.13757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13757",
+      "identity_tokens": [
+        "arXiv:2608.13757"
+      ],
+      "reason": "Multi-engine AI accelerators such as AWS Trainium comprise specialized compute engines that execute in parallel, and the compiler must synchronize the data dependencies between them. For straight-line code this is simple: each dependency reduces to waiting for a threshold count of instruction completions, which the compiler computes statically. Loops admit no such static threshold; a simple solution inserts all-engine barriers at iteration boundaries, resetting synchronization state so each loop body can be treated as straight-line, at the cost of parallelism. We present a barrier-free synchronization algorithm that instead enforces each dependency precisely across structured control flow with arbitrarily nested, dynamically bounded loops. The key idea is to compute dynamic thresholds at runtime from tracked loop iteration counts. We implemented it as a compiler backend pass at the AWS Neuron ISA level. On a suite of ML kernels, it reduces latency 10-45% relative to the barrier-based baseline, achieves a 3.3x speedup on a synchronization-bound microbenchmark, and often matches or exceeds hand-tuned manual allocation. Issuing a consumer too early violates its dependency, while issuing too late unnecessarily stalls execution. We formally characterize the minimum synchronization required for correctness and verify in the Lean proof assistant, via bisimulation, that our algorithm meets this criterion.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md"
+      ],
+      "title": "A Barrier-Free Synchronization Algorithm for Multi-Engine AI Accelerators"
+    },
+    "arXiv:2608.13773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13773",
+      "identity_tokens": [
+        "arXiv:2608.13773"
+      ],
+      "reason": "Neural networks are increasingly deployed in high-stakes applications with growing privacy leakage concerns. We show that this privacy leakage can occur even in the absence of representation imbalances that lead to traditional dataset biases. This poses significant privacy risks when deploying models that process sensitive attributes. In this context, we propose CutClean, a privacy-aware pruning method that allows to reduce privacy information flow through the network, while increasing its sparsity. Our approach employs auxiliary linear privacy heads placed at each network's block to quantify information leakage, and further applies increasing levels of sparsity to remove the private attribute leakage, measured in terms of the accuracy of the privacy head attached to the last block. Experiments on synthetic and real-world datasets demonstrate that our approach effectively minimizes private information flow while achieving high sparsity rates and preserving classification target accuracy.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "CutClean: Neural Network Pruning for Privacy-Preserving Inference"
+    },
+    "DOI:10.1038/s44287-026-00319-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44287-026-00319-1",
+      "identity_tokens": [
+        "DOI:10.1038/s44287-026-00319-1"
+      ],
+      "reason": "The automobile is undergoing a dramatic transformation — from a conventional mode of transportation to an intelligent, interconnected terminal within the Internet of Everything. As driving functions progressively shift from human drivers to onboard AI systems, vehicles are becoming intelligent agents operating in complex, safety-critical environments. In this transition, autonomous driving chips are emerging as a key determinant of whether safe, scalable and commercially viable autonomy can be achieved. We argue that the future of autonomous driving will be shaped by a widening gap between rapidly growing computational demands and the physical limits of conventional chip technologies. Closing this gap requires a paradigm shift from isolated hardware or software innovation towards holistic hardware–software codesign. This Perspective examines how increasingly stringent requirements for safety, real-time intelligence and cost are reshaping the design of autonomous driving chips, and discusses the challenges of sustaining performance growth as conventional scaling approaches slow down. Particular attention is given to emerging opportunities in advanced materials, logic and memory technologies, heterogeneous monolithic three-dimensional integration and domain-specific architectures. By connecting developments across semiconductor technology and autonomous driving algorithms, we discuss the key technological bottlenecks, design trade-offs and cross-disciplinary innovations that are likely to shape the next generation of intelligent computing platforms for autonomous systems.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Autonomous driving chips"
+    },
+    "arXiv:2608.11519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11519",
+      "identity_tokens": [
+        "arXiv:2608.11519"
+      ],
+      "reason": "Full self-attention is a strong token mixer for PDE surrogates on irregular domains, but its quadratic cost limits its use on large problems. Latent-space attention methods such as PerceiverIO, Transolver, and FLARE (Fast Low-rank Attention Routing Engine) avoid that cost by routing attention among $N$ tokens through $M\\ll N$ learned latents. They compress by dot-product matching of the input tokens against $M$ learned query tokens or projection weights: once trained, the same learned templates serve every input. We remove this restriction with FLARE++, a low-rank attention architecture with input-conditioned routing queries. FLARE++ uses FLARE's own encoder to map the $N$ input tokens to $M$ query tokens, which correct the learned queries. The adapted queries then determine how that same input is compressed and redistributed. This preserves FLARE's explicit low-rank factorization and linear $\\mathcal O(NM)$ complexity, and expresses the complete routing operation with standard scaled dot-product attention (SDPA) calls alone. We also provide a multi-GPU context-parallel implementation that shards input tokens across devices without ever gathering the full token sequence on one of them. FLARE++ reduces FLARE's error by $25\\%$ on average across five standard PDE benchmarks, achieving the lowest errors among the efficient models compared. The gains persist on industrial-scale DrivAerML aerodynamics and on Long Range Arena, where average accuracy rises by $3.5\\%$ over fixed-query FLARE. Code is available at https://github.com/vpuri3/FLARE.py.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "FLARE++: Low-rank attention with dynamic attention routing"
+    },
+    "arXiv:2608.11618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11618",
+      "identity_tokens": [
+        "arXiv:2608.11618"
+      ],
+      "reason": "Diffusion-based generative video compression has emerged as a promising paradigm to improve perceptual quality, where latent frames are required to be encoded efficiently while serving as denoising conditions. However, existing methods neither carefully design reference and quality structures during latent coding nor account for the impact of frame-level quality variation on denoising procedure, which limits coding efficiency and aggravates artifact propagation during generative reconstruction. In this paper, we propose GVCHR, Generative Video Compression based on Hierarchical Referencing. The key idea is to organize latent frames hierarchically, where the selected high-quality references benefit both latent coding and generative reconstruction. In latent coding, GVCHR couples a hierarchical reference structure with a hierarchical quality structure, assigning more bits to lower-layer frames that are reused more frequently as references. Built on this design, we introduce Hierarchical Temporal Context Mining to exploits complementary short- and long-term temporal context for effective latent coding. In generative reconstruction, the coding-side hierarchy is incorporated into a Hierarchical Attentive Adapter which is attached to a video diffusion transformer. This adapter uses hierarchical attention to restrict each latent frame to attend only to the same- or lower-layer references, thereby reducing artifact propagation during denoising. Experiments validate GVCHR on multiple benchmarks. Compared with the previous state-of-the-art method, GVCHR achieves 50.5% and 54.0% BD-rate gains in terms of LPIPS and DISTS, respectively, while also delivering clearly improved visual quality.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Generative Video Compression Based on Hierarchical Referencing"
+    },
+    "arXiv:2608.11654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11654",
+      "identity_tokens": [
+        "arXiv:2608.11654"
+      ],
+      "reason": "Despite the wide deployment of memory in large-model agents, there is no unified formal account of what a memory is or when it is optimal. This paper takes a first step toward this account. The central idea is that memory is a basis, knowledge is its span, and answerability is a coverage problem: an agent stores events extracted from a material; a generation operator turns any event set into the knowledge it entails; and a query is answerable exactly when some single item in the span covers it. The optimal memory is then the capacity-constrained maximizer of expected coverage, and its value traces a utility--capacity frontier, the common yardstick on which memory systems can be compared. Next, we consider noise in the memory and discuss coverage versus precision under it: a memory may store false claims, so the write policy must infer the truth of what it stores. Drawing an analogy with biological memory, which is formed continuously through ongoing experience, we formalize the continual agent-memory problem in a sequential MDP that covers multiple levels, where memory is the state, writing is the action, and the utility settled at query time is the delayed reward that drives learning. To make the framework concrete, we instantiate it on Homer's \\emph{Odyssey}, turning the frontier, the compression zone, and the divergence of coverage from precision into concrete numbers. Finally, we position existing systems within the framework, making ``how good is a memory''measurable and recasting the open problems of constructing and learning agent memory as concrete research questions.",
+      "first_checked_at": "2026-10-05T08:35:29+00:00",
+      "last_checked_at": "2026-10-05T08:35:29+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Towards a Formal Definition of Agent Memory: Basis, Span, Optimality, and the Sequential Memory Problem"
     }
   }
 }

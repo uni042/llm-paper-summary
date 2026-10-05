@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-288a5773e662cb2f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1371/journal.pone.0354894",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1371/journal.pone.0354894",
+    "identity_tokens": [
+      "DOI:10.1371/journal.pone.0354894"
+    ],
+    "reason": "Existing deceptive alignment detection schemes generally follow a three-step strategy: auto-labeling, supervised fine-tuning (SFT), and proximal policy optimization (PPO). In which, the detection is treated as a simple binary classification and rely on heavyweight teacher models for Chain-of-Thought (CoT) annotation, limiting discrimination of nuanced deceptive strategies and creating an oracle dependency that prevents autonomous operation. This paper introduces contrastive representation learning, rather than learning a hard decision boundary (BCE loss), our lightweight monitor (0.1% parameters) projects CoT hidden states into a structured semantic space where deceptive and safe reasoning form separable manifolds. Through Triplet Loss optimization, the monitor captures gradual deceptive transitions, from surface hedging to fundamental objective substitution, that elude binary classifiers. Evaluation on Sycophancy subset of DeceptionBench confirms that contrastive learning outperforms BCE classification by 2.33pp Deception Tendency Rate (DTR, lower better, 39.29% vs. 36.96%). This establishes a geometric foundation for self-supervised deception detection, transforming CoT transparency from vulnerability into forensic evidence.",
+    "first_checked_at": "2026-10-05T08:35:27+00:00",
+    "last_checked_at": "2026-10-05T08:35:27+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+    ],
+    "title": "Contrastive representation learning for self-supervised deception detection in edge LLMs"
+  },
+  "processed_at": "2026-10-05T08:35:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-288a5773e662",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
