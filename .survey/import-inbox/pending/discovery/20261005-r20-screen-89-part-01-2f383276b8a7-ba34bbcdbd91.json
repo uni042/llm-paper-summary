@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-89-part-01-2f383276b8a7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11698",
+      "identity_tokens": [
+        "arXiv:2503.11698"
+      ],
+      "title": "A Comparison of the Cerebras Wafer-Scale Integration Technology with Nvidia GPU-based Systems for Artificial Intelligence",
+      "reason": "Hardware-level LLM relevance is plausible, but no LLM-specific serving workload or comparable inference metrics are established.",
+      "source_url": "https://arxiv.org/abs/2503.11698",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.07756",
+      "identity_tokens": [
+        "arXiv:2503.07756"
+      ],
+      "title": "Short-Term Load Forecasting for AI-Data Center",
+      "reason": "The abstract proposes short-term electricity-load forecasting for AI data centers with conventional forecasting models; this is facility load prediction, not an LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2503.07756",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10419",
+      "identity_tokens": [
+        "arXiv:2502.10419"
+      ],
+      "title": "A Hybrid Swarm Intelligence Approach for Optimizing Multimodal Large Language Models Deployment in Edge-Cloud-based Federated Learning Environments",
+      "reason": "The abstract centers on federated training, edge fine-tuning, device selection and transmission of model updates; the efficiency results concern training communication/participation, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2502.10419",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.13476",
+      "identity_tokens": [
+        "arXiv:2411.13476"
+      ],
+      "title": "When Precision Meets Position: BFloat16 Breaks Down RoPE in Long-Context Training",
+      "reason": "The abstract addresses RoPE numerical behavior and AnchorAttention speedups during long-context training; its stated improvement is training-time only.",
+      "source_url": "https://arxiv.org/abs/2411.13476",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10670",
+      "identity_tokens": [
+        "arXiv:2411.10670"
+      ],
+      "title": "IntentGPT: Few-shot Intent Discovery with Large Language Models",
+      "reason": "IntentGPT is a prompt-based intent-discovery method evaluated on classification benchmarks; the abstract does not claim inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.10670",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    }
+  ]
+}
