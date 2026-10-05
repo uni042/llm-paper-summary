@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-10-part-03-388b2b93526c",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35551",
+      "identity_tokens": [
+        "arXiv:2609.35551"
+      ],
+      "title": "BaRe-Mem: Bayesian Reliability Memory for Robust and Adaptive Agent Consultation",
+      "reason": "agent consultationの信頼性・適応性が主題で、効率化指標を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.35551",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35560",
+      "identity_tokens": [
+        "arXiv:2609.35560"
+      ],
+      "title": "WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon",
+      "reason": "対話的world modelの制御・長期horizon拡張が主題である。",
+      "source_url": "https://arxiv.org/abs/2609.35560",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35561",
+      "identity_tokens": [
+        "arXiv:2609.35561"
+      ],
+      "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
+      "reason": "自律的なmodel improvementの実験設計を扱い、推論効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2609.35561",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35586",
+      "identity_tokens": [
+        "arXiv:2609.35586"
+      ],
+      "title": "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing",
+      "reason": "一次本文では計算上の対象はLLM向けanalog IMCだが、実証された時間短縮はclipping calibrationのみ。serving inferenceのenergy/latency改善は未計測で、主題との適合は限定的。",
+      "source_url": "https://arxiv.org/abs/2609.35586",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35587",
+      "identity_tokens": [
+        "arXiv:2609.35587"
+      ],
+      "title": "Hardware-Aware Features for CUTLASS Kernel Selection",
+      "reason": "CUTLASS GEMM kernelの選択regretは改善するが、LLM workloadまたはend-to-end serving性能への効果は本文で確認できず、GPU kernel選択一般の結果に留まる。",
+      "source_url": "https://arxiv.org/abs/2609.35587",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    }
+  ]
+}
