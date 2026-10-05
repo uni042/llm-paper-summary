@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-59-part-03-6803bd2d8ca0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816713.3819786",
+      "identity_tokens": [
+        "DOI:10.1145/3816713.3819786"
+      ],
+      "title": "Evidence Retention Is Not Sufficient for Answerability: A Diagnostic Study of Context Budgeting for Small Language Model RAG",
+      "reason": "Abstract suggests relevance, but article body unavailable and diagnostic scope cannot be verified.",
+      "source_url": "https://doi.org/10.1145/3816713.3819786",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16112",
+      "identity_tokens": [
+        "arXiv:2606.16112"
+      ],
+      "title": "Scaling Adaptive Depth with Norm-Agnostic Residual Networks",
+      "reason": "Measured contribution is primarily training/pretraining; inference benefit unresolved.",
+      "source_url": "https://arxiv.org/abs/2606.16112",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16281",
+      "identity_tokens": [
+        "arXiv:2606.16281"
+      ],
+      "title": "Who Should Lead Decoding Now? Tracking Reliable Trajectories for Ensembling Masked Diffusion Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16281. Abstract summary: Masked Diffusion Language Models (MDLMs) have emerged as a distinct paradigm for sequence generation. As MDLMs become diverse in capabilities and knowledge coverage, an important question is how to combine their knowledge. Toward this, we first investigate the unique decoding dynamics of MDLMs. We find that successful generation Out of scope: Masked-diffusion ensemble targets output quality, not runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.16281",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16317",
+      "identity_tokens": [
+        "arXiv:2606.16317"
+      ],
+      "title": "Training-free sparse attention based on cumulative energy filtering",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16317. Abstract summary: Sparse attention accelerates Diffusion Transformers (DiTs) for video generation by computing only the important tokens while skipping the rest. The token selection strategy is key to balancing sparsity and accuracy. We formulate the token filtering process as a dual-goal optimization problem: maximizing sparsity and minimizing a Out of scope: Video Diffusion Transformer sparse attention, not language inference.",
+      "source_url": "https://arxiv.org/abs/2606.16317",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16384",
+      "identity_tokens": [
+        "arXiv:2606.16384"
+      ],
+      "title": "Mixtures of Subspaces for Bandwidth Efficient Context Parallel Training",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16384. Abstract summary: Pretraining language models with extended context windows enhances their ability to leverage rich information during generation. Existing methods split input sequences into chunks, broadcast them across multiple devices, and compute attention block by block which incurs significant communication overhead. While feasible in high- Out of scope: Context-parallel pretraining communication compression.",
+      "source_url": "https://arxiv.org/abs/2606.16384",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    }
+  ]
+}
