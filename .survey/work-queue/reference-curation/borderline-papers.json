@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:11:22+00:00",
-  "record_count": 1275,
+  "updated_at": "2026-10-05T09:13:51+00:00",
+  "record_count": 1280,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19619,6 +19619,86 @@
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
       ],
       "title": "Linear Multi-Timescale Retention as a Memory-Efficient Vision-Language Bridge"
+    },
+    "arXiv:2608.02689": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02689",
+      "identity_tokens": [
+        "arXiv:2608.02689"
+      ],
+      "reason": "Borderline because the linear-attention conversion is an inference-memory design, but this paper’s evidence establishes a quality failure diagnosis rather than a usable efficiency gain.",
+      "first_checked_at": "2026-10-05T09:13:49+00:00",
+      "last_checked_at": "2026-10-05T09:13:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Stuck on\"A\": Diagnosing and Repairing Interface Injury in Attention-to-KDA Linearization of a 0.6B Language Model"
+    },
+    "arXiv:2608.02712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02712",
+      "identity_tokens": [
+        "arXiv:2608.02712"
+      ],
+      "reason": "Borderline because the task-level token-efficiency result is relevant to LLM inference expenditure, but the mechanism and scope are application-specific agent repair rather than inference-system efficiency.",
+      "first_checked_at": "2026-10-05T09:13:49+00:00",
+      "last_checked_at": "2026-10-05T09:13:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Don't Regenerate, Debug: A Domain-Specific Agent for Repairing Near-Miss Hardware Operators"
+    },
+    "arXiv:2608.02829": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02829",
+      "identity_tokens": [
+        "arXiv:2608.02829"
+      ],
+      "reason": "Borderline because a smaller converted checkpoint could matter to inference resource use, but no inference efficiency result is measured and the demonstrated advantage is during continued pretraining.",
+      "first_checked_at": "2026-10-05T09:13:49+00:00",
+      "last_checked_at": "2026-10-05T09:13:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Wiring Beats Blending: Structure-Aware Compensation for Transformer Downscaling"
+    },
+    "arXiv:2608.02940": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02940",
+      "identity_tokens": [
+        "arXiv:2608.02940"
+      ],
+      "reason": "Borderline because the topic is LLM pruning but this work primarily studies when compression scores support quality/risk decisions, without demonstrating deployed inference savings.",
+      "first_checked_at": "2026-10-05T09:13:49+00:00",
+      "last_checked_at": "2026-10-05T09:13:49+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "title": "When Compression Scores Cannot Decide: Information Boundaries for Group-Robust LLM Pruning"
+    },
+    "arXiv:2608.02415": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02415",
+      "identity_tokens": [
+        "arXiv:2608.02415"
+      ],
+      "reason": "Borderline because its routing-classifier overhead is measured but actual serving-level compute or latency savings from routing are not established.",
+      "first_checked_at": "2026-10-05T09:13:51+00:00",
+      "last_checked_at": "2026-10-05T09:13:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Training-Free versus Training-Based Intent Classification in LLMs: Accuracy, Robustness, and Failure Modes"
     }
   }
 }
