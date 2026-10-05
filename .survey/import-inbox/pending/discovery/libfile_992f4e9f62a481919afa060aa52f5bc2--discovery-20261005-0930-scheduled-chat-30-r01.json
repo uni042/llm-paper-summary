@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0930-scheduled-chat-30/r01",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.21276",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.21276",
+        "arXiv:2410.21276"
+      ],
+      "title": "GPT-4o System Card",
+      "reason": "GPT-4oのtext/audio/image/video能力、speech-to-speech、安全性評価と社会的影響をまとめるsystem card。音声応答232 ms最短・平均320 msやAPI高速化を報告するが、推論runtime・memory・serving最適化の方式を提案・評価する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2410.21276",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でend-to-end omni modelの能力・安全性評価が主題と確認。速度値はモデル特性であり推論system手法ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20314",
+      "identity_tokens": [
+        "arXiv:2503.20314"
+      ],
+      "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+      "reason": "diffusion transformer、VAE、video pre-training、data curationで動画生成品質を高めるvideo foundation model研究。1.3B版が8.19 GB VRAMで動作する効率性は報告するが、LLM/Transformer推論systemの最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2503.20314",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvideo generation model、1.3B/14B構成、生成benchmarkとconsumer GPU適合性が主題と確認。LLM inference system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/079017-2000",
+      "identity_tokens": [
+        "DOI:10.52202/079017-2000",
+        "arXiv:2312.07104"
+      ],
+      "title": "SGLang: Efficient Execution of Structured Language Model Programs",
+      "reason": "複数LLM callを含むlanguage-model program向けにfrontendとruntimeを共同設計し、RadixAttentionによるKV cache再利用、compressed FSMによる複数token constrained decoding、API speculative executionを導入する。Llama/Mixtral/LLaVA等で既存推論system比最大6.4倍throughput、最大3.7倍latency短縮を示し、LLM serving/runtime効率を直接改善するため対象内。",
+      "source_url": "https://arxiv.org/abs/2312.07104",
+      "body_check": "full_text_checked: 一次arXiv HTMLのIntroduction、RadixAttention、compressed FSM、API speculative execution、Evaluationを確認。A10G/A100、7B〜70B、vLLM等との比較、最大6.4x throughput・3.7x latency reduction、cache hit 50〜99%を確認。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.03368",
+      "identity_tokens": [
+        "arXiv:1909.03368"
+      ],
+      "title": "Designing and Interpreting Probes with Control Tasks",
+      "reason": "ELMo等の表現に言語情報が符号化されているかをcontrol taskとselectivityで診断するinterpretability/probing研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1909.03368",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でPOS/dependency probing、control task、selectivity評価が主題と確認。推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
+      "identity_tokens": [
+        "DOI:10.1109/wacv48630.2021.00357",
+        "arXiv:1812.01243"
+      ],
+      "title": "Efficient Attention: Attention with Linear Complexities",
+      "reason": "dot-product attentionを線形複雑度へ変形する一般attention研究だが、実証対象はMS-COCOのobject detection/instance segmentationとScene Flowのstereo depthで、LLM/Transformer生成推論への最終適用・評価がない。",
+      "source_url": "https://arxiv.org/abs/1812.01243",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でlinear-complexity attentionの最終評価がcomputer visionの検出・segmentation・depth estimationであることを確認。現行LLM推論system範囲外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1506.02075",
+      "identity_tokens": [
+        "arXiv:1506.02075"
+      ],
+      "title": "Large-scale Simple Question Answering with Memory Networks",
+      "reason": "100k質問datasetとMemory Networksを用い、multitask/transfer learningでlarge-scale simple QAのevidence retrievalと回答精度を研究する学習・能力研究。推論runtimeやserving最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1506.02075",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でQA dataset、multitask/transfer learning、Memory Networksの回答性能が主題と確認。推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2403.06764",
+      "identity_tokens": [
+        "arXiv:2403.06764"
+      ],
+      "title": "An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models",
+      "reason": "FastVは浅層で得たattention scoreによりlayer K以降のvisual tokenを直接pruneし、attentionだけでなくFFN計算も削減する学習不要のLVLM推論高速化。LLaVA-1.5-13Bでlayer 2以降50%のimage tokenを削除して平均性能を維持し、約45% FLOPs削減を報告するため対象内。",
+      "source_url": "https://arxiv.org/abs/2403.06764",
+      "body_check": "full_text_checked: 一次arXiv PDFのIntroduction、FastV方式、計算量、評価箇所を確認。深層でimage-token attention efficiencyが低下する観測、K層でattention scoreによりR%をrank/prune、LLaVA/Qwen-VL/Video-LLaVA評価、13Bで45% FLOPs削減とlatency比較を確認。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1305.0445",
+      "identity_tokens": [
+        "arXiv:1305.0445"
+      ],
+      "title": "Deep Learning of Representations: Looking Forward",
+      "reason": "深層表現学習の将来課題として大規模化、最適化、sampling/inference、disentanglementを論じる展望論文。効率的inferenceへの言及はあるが、LLM推論systemの具体的方式・runtime評価を提案しない。",
+      "source_url": "https://arxiv.org/abs/1305.0445",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdeep representation learningの研究課題・将来方向を論じるposition/survey的内容と確認。LLM推論system固有研究ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.04807",
+      "identity_tokens": [
+        "arXiv:2003.04807"
+      ],
+      "title": "Efficient Intent Detection with Dual Sentence Encoders",
+      "reason": "USE/ConveRT等のdual sentence encoderで少量データのintent detectionを高精度・低学習コスト化する応用NLP研究。単一CPUで数分のtraining効率を報告するが、LLM推論runtime・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2003.04807",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でfew-shot intent detection、training efficiency、dataset公開が主題と確認。推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.09509",
+      "identity_tokens": [
+        "arXiv:2203.09509"
+      ],
+      "title": "ToxiGen: A Large-Scale Machine-Generated Dataset for Adversarial and Implicit Hate Speech Detection",
+      "reason": "274k件の暗黙的toxicity datasetをLM生成し、hate-speech detectorのfine-tuningと評価を行うdataset/safety研究。推論runtime・memory・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2203.09509",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdataset generation、human evaluation、toxicity classifier fine-tuningが主題と確認。推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:45:00+09:00",
+      "last_checked_at": "2026-10-05T09:45:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    }
+  ]
+}
