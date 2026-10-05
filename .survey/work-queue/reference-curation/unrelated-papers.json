@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:36:48+00:00",
-  "record_count": 3578,
+  "updated_at": "2026-10-05T07:39:05+00:00",
+  "record_count": 3592,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -52141,6 +52141,203 @@
         "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
       ],
       "title": "InfoMamba: Recovering information lost in hidden-state compression"
+    },
+    "DOI:10.1016/j.patcog.2026.114985": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2026.114985",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2026.114985"
+      ],
+      "reason": "一次要旨はLLMでcaption学習用の合成テキストを生成する手法。計算削減は画像生成を省くデータ合成工程に関するもので、LLM推論効率の改善を評価していない。",
+      "first_checked_at": "2026-10-05T07:39:04+00:00",
+      "last_checked_at": "2026-10-05T07:39:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "title": "Text-only synthesis for zero-shot visual captioning"
+    },
+    "DOI:10.1016/j.patter.2026.101644": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patter.2026.101644",
+      "identity_tokens": [
+        "DOI:10.1016/j.patter.2026.101644"
+      ],
+      "reason": "一次要旨はLLMを用いた科学分析の再現性ガイドラインを扱い、モデル推論の計算・メモリ・serving効率を改善する技法ではない。",
+      "first_checked_at": "2026-10-05T07:39:04+00:00",
+      "last_checked_at": "2026-10-05T07:39:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Designing reproducible large-language-model-assisted scientific analyses"
+    },
+    "DOI:10.1016/j.seta.2026.105238": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.seta.2026.105238",
+      "identity_tokens": [
+        "DOI:10.1016/j.seta.2026.105238"
+      ],
+      "reason": "一次要旨は建物エネルギー需要予測と資産情報支援に対するVLMのシナリオ評価で、推論効率の手法提案・評価を主題としていない。",
+      "first_checked_at": "2026-10-05T07:39:04+00:00",
+      "last_checked_at": "2026-10-05T07:39:04+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A scenario-based digital-twin assessment of vision–language models for building energy demand forecasting and automated asset intelligence"
+    },
+    "DOI:10.1016/j.sysarc.2026.104001": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.104001",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.104001"
+      ],
+      "reason": "一次要旨はVision Transformer向けpost-training quantizationの調査であり、LLMを対象としていない。",
+      "first_checked_at": "2026-10-05T07:39:04+00:00",
+      "last_checked_at": "2026-10-05T07:39:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "A survey on post-training quantization for Vision Transformers: Failure modes and deployment constraints"
+    },
+    "DOI:10.1016/j.sysarc.2026.104020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.104020",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.104020"
+      ],
+      "reason": "一次要旨はedge-hosted LLMのprivacy unlearningをattack-aware preference optimizationで実施し、効率値は更新時間/再学習コスト。推論/serving効率の最適化が主目的ではない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Towards robust privacy unlearning in edge-hosted large language models via attack-aware preference optimization"
+    },
+    "DOI:10.1016/j.tre.2026.105011": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.tre.2026.105011",
+      "identity_tokens": [
+        "DOI:10.1016/j.tre.2026.105011"
+      ],
+      "reason": "一次要旨はAISデータを用いた船舶到着時刻予測フレームワークで、評価対象は予測精度でありLLM推論/serving効率ではない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Development of a dynamic deep learning framework for the prediction of vessel arrival time to port"
+    },
+    "DOI:10.1038/s43018-026-01220-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s43018-026-01220-4",
+      "identity_tokens": [
+        "DOI:10.1038/s43018-026-01220-4"
+      ],
+      "reason": "一次要旨はwhole-slide pathology画像とLLMを組み合わせる診断支援アプリケーション・性能評価で、LLM inference効率化手法を主張していない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "SlideChat is a multimodal generative artificial intelligence assistant for whole-slide computational pathology across cancer types"
+    },
+    "DOI:10.1016/j.softx.2026.102954": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.softx.2026.102954",
+      "identity_tokens": [
+        "DOI:10.1016/j.softx.2026.102954"
+      ],
+      "reason": "一次要旨はComputer Science Ontologyに基づく文書トピック注釈ソフトウェアの改良で、LLM inference/servingを扱わない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "CSO Classifier 4.0: Software for efficient ontology-based topic annotation in computer science"
+    },
+    "DOI:10.1016/j.sysarc.2026.103896": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103896",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103896"
+      ],
+      "reason": "一次要旨はHBM-PIM上のSpMVカーネルを高速化するソフトウェア/ハードウェア設計で、LLM推論を対象としていない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "SparsePIM+: Accelerating SpMV on HBM-based PIM via logic-die accumulators with opportunistic TSV utilization"
+    },
+    "DOI:10.1016/j.sysarc.2026.103898": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103898",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103898"
+      ],
+      "reason": "一次要旨はDeiT/ViT-Huge等のvision transformerを対象にしたFPGA accelerator。言語モデル推論への適用や評価は示されない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "MDS-ViT: A multi-data stream FPGA-based vision transformer accelerator"
+    },
+    "DOI:10.1063/5.0345177": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1063/5.0345177",
+      "identity_tokens": [
+        "DOI:10.1063/5.0345177"
+      ],
+      "reason": "一次要旨はairfoil CFD流れ場を予測するwavelet-aligned U-Net surrogateであり、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "High-gradient-aware wavelet-aligned U-Net for airfoil Reynolds-averaged Navier–Stokes flow-field prediction"
+    },
+    "DOI:10.1093/bib/bbag456": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bib/bbag456",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbag456"
+      ],
+      "reason": "一次要旨は知識グラフを用いた抗菌薬耐性のmulti-hop LLM reasoningフレームワーク。対象アプリの推論品質・説明性で、推論資源効率の改善を述べない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "AResKGLM: a graph-grounded language-model framework for interpretable multi-hop antimicrobial resistance reasoning"
+    },
+    "DOI:10.1093/bioinformatics/btag668": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag668",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag668"
+      ],
+      "reason": "一次要旨は腫瘍ゲノムでの選択を受けるmultigenic modulesの統計的同定で、LLM推論に関係しない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Identifying multigenic modules under selection in the tumor genome"
+    },
+    "DOI:10.1109/acit69831.2026.11700205": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/acit69831.2026.11700205",
+      "identity_tokens": [
+        "DOI:10.1109/acit69831.2026.11700205"
+      ],
+      "reason": "一次要旨はtool利用、memory、自己改善を備えるAI agentのpilot設計で、モデル選択を含むがLLM推論効率/servingコストを改善する評価は示さない。",
+      "first_checked_at": "2026-10-05T07:39:05+00:00",
+      "last_checked_at": "2026-10-05T07:39:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "AI Agent with Model Selection, Tool Synthesis, and Proactive Knowledge Base Management"
     }
   }
 }

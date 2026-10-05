@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5d0b0a647e432a7a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.softx.2026.102764",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.softx.2026.102764",
+    "identity_tokens": [
+      "DOI:10.1016/j.softx.2026.102764"
+    ],
+    "reason": "一次abstractはLLM推論/serving効率との関連可能性を示すが、一次本文の必要な手法・評価・限界節を取得できず、根拠あるacceptができないためborderline_listに分類。再確認条件は出版社/著者公開の一次full textが取得可能になること。",
+    "first_checked_at": "2026-10-05T07:39:05+00:00",
+    "last_checked_at": "2026-10-05T07:39:05+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "OfflineRealtimeTranslator: A fully offline android application for Russian-to-Chinese simultaneous interpretation using on-device LLM inference"
+  },
+  "processed_at": "2026-10-05T07:39:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5d0b0a647e43",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
