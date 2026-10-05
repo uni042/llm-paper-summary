@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-09-part-04-393c411de82d",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41591-026-04638-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-026-04638-6"
+      ],
+      "title": "Limited benchmarks constrain the conclusions of a general-purpose versus clinical AI comparison.",
+      "reason": "Primary Nature Medicine abstract critiques a clinical AI benchmark comparison.",
+      "source_url": "https://doi.org/10.1038/s41591-026-04638-6",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02094",
+      "identity_tokens": [
+        "arXiv:2609.02094"
+      ],
+      "title": "MASkills: Continual Skills Optimization for Multi-Agent LLM Systems",
+      "reason": "Primary abstract focuses on continual skill optimization and capability improvement.",
+      "source_url": "https://arxiv.org/abs/2609.02094",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02404",
+      "identity_tokens": [
+        "arXiv:2609.02404"
+      ],
+      "title": "Evidence for Shared Routing Geometry and Dynamics in Sparse Mixture-of-Experts",
+      "reason": "MoE router-geometry analysis predicts routing states, but does not measure runtime, FLOPs, or serving throughput. No live router replacement or measured efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.02404",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02702",
+      "identity_tokens": [
+        "arXiv:2609.02702"
+      ],
+      "title": "Trace as State: Reasoning Traces as Conditional States for Long-Context Transformers",
+      "reason": "Primary abstract focuses on long-context reasoning quality through trace placement.",
+      "source_url": "https://arxiv.org/abs/2609.02702",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02730",
+      "identity_tokens": [
+        "arXiv:2609.02730"
+      ],
+      "title": "CORAL: An LLM-Native Harness for Production Recommender Systems",
+      "reason": "Primary abstract optimizes recommender-system behavior and serving cost, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.02730",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
