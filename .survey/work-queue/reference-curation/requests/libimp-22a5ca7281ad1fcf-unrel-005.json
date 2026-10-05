@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-22a5ca7281ad1fcf-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/JCC72984.2026.00073",
+  "reason": "要旨の主対象はLLM/MoEの学習・fine-tuning・RL rolloutまたはtraining通信であり、inference-time optimization/servingではない。 Primary abstract: Reinforcement learning post-training is critical for improving the reasoning capability of large language models, yet its end-to-end efficiency is often dominated by rollout. In our setting, actor-side rollout accounts for up to 82% of iteration time and becomes the dominant training bottleneck. This inefficiency arises from two system-level effects: long-ta",
+  "title": "ReclaimRL: Efficient Tail-Batched RL Rollout via Waste Reduction and Rebalancing",
+  "identity_tokens": [
+    "DOI:10.1109/JCC72984.2026.00073"
+  ],
+  "linked_from": [
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-22a5ca7281ad",
+  "source_precheck_request_id": null
+}
