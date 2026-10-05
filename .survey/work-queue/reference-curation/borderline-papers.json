@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:48:51+00:00",
-  "record_count": 2043,
+  "updated_at": "2026-10-05T15:55:18+00:00",
+  "record_count": 2048,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31630,6 +31630,71 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ZygOS: Achieving Low Tail Latency for Microsecond-scale Networked Tasks"
+    },
+    "DOI:10.1145/291069.291026": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/291069.291026",
+      "identity_tokens": [
+        "DOI:10.1145/291069.291026"
+      ],
+      "reason": "disk内にprocessor/memoryを持たせapplication-specific codeをdata近傍で実行し、hostはcoordination/scheduling/results統合へ寄せるnear-data processing方式。LLMのSSD/NVMe offload・near-storage推論に機構的に直結する基礎研究だが、評価workloadはdata warehouse・image processing・satellite processingでLLM推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T15:55:16+00:00",
+      "last_checked_at": "2026-10-05T15:55:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Active disks: programming model, algorithms and evaluation"
+    },
+    "arXiv:2401.15947": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.15947",
+      "identity_tokens": [
+        "arXiv:2401.15947"
+      ],
+      "reason": "soft routerで各tokenをtop-k expertだけへdispatchし、inactive expertを停止して総parameter数を増やしつつactivated parameterと計算量を固定するsparse LVLM。deployment計算効率へ直接関係するが、本文評価は主にvisual understanding/hallucination精度とactivated parameter数で、latency・throughput・memoryのsystem実測がないためborderline。",
+      "first_checked_at": "2026-10-05T15:55:17+00:00",
+      "last_checked_at": "2026-10-05T15:55:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models"
+    },
+    "DOI:10.1109/sc.2008.5214359": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sc.2008.5214359",
+      "identity_tokens": [
+        "DOI:10.1109/sc.2008.5214359"
+      ],
+      "reason": "GPU上のGEMM・LU・QR・CholeskyをblockingとCPU/GPU協調で最適化し、GEMMをvendor実装比最大60%高速化するほかGPU memory systemのcache/TLB latencyも測定する。LLM kernel最適化の基礎に強く関連するが、対象は汎用dense linear algebraでLLM/Transformer推論専用ではないため境界扱い。",
+      "first_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking GPUs to tune dense linear algebra"
+    },
+    "DOI:10.1145/3447993.3483278": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3447993.3483278",
+      "identity_tokens": [
+        "DOI:10.1145/3447993.3483278"
+      ],
+      "reason": "Federated Learningで各deviceがstructured pruningにより小さなpersonalized subnetworkを学習し、通信量を3.48倍削減するとともにdevice inferenceを1.83倍高速化・energyを1.8倍節約する。推論効率を直接評価するが、対象は汎用mobile DNN/FLでLLM/Transformerではないため境界扱い。",
+      "first_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Hermes: an efficient federated learning framework for heterogeneous mobile clients"
+    },
+    "DOI:10.1145/3241539.3241563": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3241539.3241563",
+      "identity_tokens": [
+        "DOI:10.1145/3241539.3241563"
+      ],
+      "reason": "連続mobile visionでvideo temporal localityを入力側で検出し、model内部へ再利用可能領域を伝播して中間計算をcache再利用する。実機で推論実行時間を平均18%・最大47%削減しenergyを平均20%削減するが、最終適用先はmobile deep visionでLLM/Transformerではないため境界扱い。",
+      "first_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DeepCache: Principled Cache for Mobile Deep Vision"
     }
   }
 }

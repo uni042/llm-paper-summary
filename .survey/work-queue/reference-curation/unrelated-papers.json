@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T15:48:52+00:00",
-  "record_count": 6329,
+  "updated_at": "2026-10-05T15:55:22+00:00",
+  "record_count": 6345,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25677,9 +25677,9 @@
       "identity_tokens": [
         "arXiv:2411.04368"
       ],
-      "reason": "SimpleQA is a factuality benchmark, not an inference/serving method.",
+      "reason": "SimpleQAを提案し、短いfact-seeking質問への正答・誤答・未回答を測るfactuality benchmark研究。推論runtime・memory・serving効率化を提案しない。",
       "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T15:55:21+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
         "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md",
@@ -25693,9 +25693,9 @@
       "identity_tokens": [
         "arXiv:2305.17144"
       ],
-      "reason": "Ghost in the Minecraft studies general agent capability/memory, not inference efficiency.",
+      "reason": "LLMとtext knowledge/memoryでMinecraft agentのplanning能力を高め、ObtainDiamond等の成功率を改善するagent capability研究。推論serving/runtime効率化を主目的としない。",
       "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T15:55:21+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md",
         "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
@@ -25709,13 +25709,13 @@
       "identity_tokens": [
         "arXiv:2007.01045"
       ],
-      "reason": "DAPPLE is a pipelined data-parallel method for training large models, outside inference scope.",
+      "reason": "data parallelismとpipeline parallelismを組み合わせる大規模DNN training frameworkで、planner/runtimeによりtraining throughputとtraining memoryを改善する。最終適用先が学習専用。",
       "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T15:55:22+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
       ],
-      "title": "DAPPLE: a pipelined data parallel approach for training large models"
+      "title": "DAPPLE: A Pipelined Data Parallel Approach for Training Large Models"
     },
     "arXiv:2411.04468": {
       "classification": "unrelated",
@@ -91732,6 +91732,198 @@
       "last_checked_at": "2026-10-05T15:48:52+00:00",
       "linked_from": [],
       "title": "A corpus-driven approach to formulaic language in English: multi-word patterns in speech and writing"
+    },
+    "arXiv:2301.08745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.08745",
+      "identity_tokens": [
+        "arXiv:2301.08745"
+      ],
+      "reason": "ChatGPT/GPT-4の機械翻訳品質、prompt、multilingual robustness、pivot promptingを評価する能力研究。主指標は翻訳品質と誤りであり、推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-05T15:55:17+00:00",
+      "last_checked_at": "2026-10-05T15:55:17+00:00",
+      "linked_from": [],
+      "title": "Is ChatGPT A Good Translator? Yes With GPT-4 As The Engine"
+    },
+    "arXiv:2205.05131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.05131",
+      "identity_tokens": [
+        "arXiv:2205.05131"
+      ],
+      "reason": "Mixture-of-Denoisersとmode switchingで複数のpre-training paradigmを統合し、20B modelのNLP能力を改善する学習研究。主貢献はpre-training objectiveとdownstream/zero-shot性能であり、推論runtime・memory・serving最適化ではない。",
+      "first_checked_at": "2026-10-05T15:55:17+00:00",
+      "last_checked_at": "2026-10-05T15:55:17+00:00",
+      "linked_from": [],
+      "title": "UL2: Unifying Language Learning Paradigms"
+    },
+    "arXiv:2006.15222": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.15222",
+      "identity_tokens": [
+        "arXiv:2006.15222"
+      ],
+      "reason": "BERT/ALBERT/XLNet型protein language modelのattentionがprotein folding、binding site、biophysical propertyをどう表現するかを解析するinterpretability研究。最終適用先がprotein modelingで、LLM推論system効率化ではない。",
+      "first_checked_at": "2026-10-05T15:55:17+00:00",
+      "last_checked_at": "2026-10-05T15:55:17+00:00",
+      "linked_from": [],
+      "title": "BERTology Meets Biology: Interpreting Attention in Protein Language Models"
+    },
+    "arXiv:2202.10447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.10447",
+      "identity_tokens": [
+        "arXiv:2202.10447"
+      ],
+      "reason": "Gated Attention Unitとlinear attention approximationで長系列Transformerを効率化するが、一次要旨で報告する主要高速化はWiki-40B/PG-19/C4上のtraining speedupであり、現行凍結範囲の学習効率が中心。LLM生成推論runtimeの直接評価を主貢献としない。",
+      "first_checked_at": "2026-10-05T15:55:17+00:00",
+      "last_checked_at": "2026-10-05T15:55:17+00:00",
+      "linked_from": [],
+      "title": "Transformer Quality in Linear Time"
+    },
+    "arXiv:2402.00157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00157",
+      "identity_tokens": [
+        "arXiv:2402.00157"
+      ],
+      "reason": "数学推論LLMの問題種別、dataset、解法、評価、課題を整理するsurvey。reasoning能力の体系化が目的で、推論runtime・token削減・memory・serving効率化の新規system方式を提案しない。",
+      "first_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "linked_from": [],
+      "title": "Large Language Models for Mathematical Reasoning: Progresses and Challenges"
+    },
+    "DOI:10.1093/nargab/lqae150": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nargab/lqae150",
+      "identity_tokens": [
+        "DOI:10.1093/nargab/lqae150"
+      ],
+      "reason": "ProtT5をprotein sequenceと3Di structure token間の翻訳へfine-tuneし、protein structure関連taskを高速化する生命科学研究。高速化の最終適用先はprotein解析であり、LLM推論runtime・memory・serving systemではない。",
+      "first_checked_at": "2026-10-05T15:55:18+00:00",
+      "last_checked_at": "2026-10-05T15:55:18+00:00",
+      "linked_from": [],
+      "title": "Bilingual language model for protein sequence and structure"
+    },
+    "arXiv:1909.01315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.01315",
+      "identity_tokens": [
+        "arXiv:1909.01315"
+      ],
+      "reason": "Deep Graph Library (DGL) はグラフを中心抽象として疎・不規則なグラフ構造を扱い、演算融合と自動バッチ化でGNN実行を高速化する汎用グラフ深層学習基盤。評価対象はGNNとその派生であり、LLM/Transformer推論サービングを最終適用先としないため対象外。",
+      "first_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "linked_from": [],
+      "title": "Deep Graph Library: Towards Efficient and Scalable Deep Learning on Graphs"
+    },
+    "DOI:10.18653/v1/2020.findings-emnlp.217": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.217",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.findings-emnlp.217"
+      ],
+      "reason": "future n-gram predictionとn-stream self-attentionで次の複数tokenを同時予測するが、目的はsequence-to-sequence事前学習を改善しsummarization/question generation品質を上げること。標準推論互換で、推論latency・throughput・memory削減を評価しないため対象外。",
+      "first_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "linked_from": [],
+      "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
+    },
+    "arXiv:2401.13919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.13919",
+      "identity_tokens": [
+        "arXiv:2401.13919"
+      ],
+      "reason": "大規模マルチモーダルモデルを用いて実Webサイトを操作するWeb agentと評価benchmarkを構築し、15サイトでtask success rate 59.1%を報告する能力研究。agent runtimeのlatency、scheduler、KV cache、memory効率化は扱わないため対象外。",
+      "first_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "linked_from": [],
+      "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models"
+    },
+    "arXiv:2303.10512": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10512",
+      "identity_tokens": [
+        "arXiv:2303.10512"
+      ],
+      "reason": "SVD形式のlow-rank updateに重要度スコアを与え、fine-tuning時のparameter budgetをweight matrix間で適応配分するPEFT研究。評価はGLUE、QA、NLG等のfine-tuning性能で、推論runtime・memory・serving最適化を目的としないため対象外。",
+      "first_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "linked_from": [],
+      "title": "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning"
+    },
+    "arXiv:2004.08900": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.08900",
+      "identity_tokens": [
+        "arXiv:2004.08900"
+      ],
+      "reason": "大規模NLPモデルのtraining costとその要因を概説する短いsurveyで、対象はtraining experimentの経済性・予算。推論runtime、serving、memory hierarchyの最適化方式を提案しないため対象外。",
+      "first_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "linked_from": [],
+      "title": "The Cost of Training NLP Models: A Concise Overview"
+    },
+    "arXiv:2002.08307": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.08307",
+      "identity_tokens": [
+        "arXiv:2002.08307"
+      ],
+      "reason": "BERTのpre-training中weight pruningがtransfer learningへ与える影響を調べ、30〜40% pruning等の精度特性を評価する圧縮研究。deployment動機はあるが、対象はBERT encoderでLLM生成推論runtime/servingの方式・評価ではない。",
+      "first_checked_at": "2026-10-05T15:55:20+00:00",
+      "last_checked_at": "2026-10-05T15:55:20+00:00",
+      "linked_from": [],
+      "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
+    },
+    "DOI:10.1109/ccgrid.2011.22": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ccgrid.2011.22",
+      "identity_tokens": [
+        "DOI:10.1109/ccgrid.2011.22"
+      ],
+      "reason": "AWS/Google App Engineの長期traceからcloud service性能変動を分析し、科学計算等への影響をsimulationする一般cloud dependability研究。LLM serving固有の方式・評価ではない。",
+      "first_checked_at": "2026-10-05T15:55:20+00:00",
+      "last_checked_at": "2026-10-05T15:55:20+00:00",
+      "linked_from": [],
+      "title": "On the Performance Variability of Production Cloud Services"
+    },
+    "arXiv:2510.04618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04618",
+      "identity_tokens": [
+        "arXiv:2510.04618"
+      ],
+      "reason": "ACEはagent contextをgeneration/reflection/curationで進化させ、agent/finance benchmark性能とadaptation latency/rollout costを改善するcontext adaptation研究。推論runtime、KV cache、serving scheduler等の実行基盤最適化が主要貢献ではない。",
+      "first_checked_at": "2026-10-05T15:55:21+00:00",
+      "last_checked_at": "2026-10-05T15:55:21+00:00",
+      "linked_from": [],
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
+    },
+    "DOI:10.1145/3240765.3240801": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3240765.3240801",
+      "identity_tokens": [
+        "DOI:10.1145/3240765.3240801"
+      ],
+      "reason": "AlexNet/ZF/VGG16/YOLO向けFPGA DNN acceleratorを自動生成するhardware/compiler研究。latency/BRAM/throughput改善は大きいがLLM/Transformer推論への適用・評価がない。",
+      "first_checked_at": "2026-10-05T15:55:21+00:00",
+      "last_checked_at": "2026-10-05T15:55:21+00:00",
+      "linked_from": [],
+      "title": "DNNBuilder: an Automated Tool for Building High-Performance DNN Hardware Accelerators for FPGAs"
+    },
+    "DOI:10.1145/1534530.1534544": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1534530.1534544",
+      "identity_tokens": [
+        "DOI:10.1145/1534530.1534544"
+      ],
+      "reason": "NAND SSDのwrite amplificationをover-provisioning、garbage collection、wear levelingの観点から解析するstorage研究。LLM offloadへの基礎引用ではあるがLLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-05T15:55:21+00:00",
+      "last_checked_at": "2026-10-05T15:55:21+00:00",
+      "linked_from": [],
+      "title": "Write amplification analysis in flash-based solid state drives"
     }
   }
 }
