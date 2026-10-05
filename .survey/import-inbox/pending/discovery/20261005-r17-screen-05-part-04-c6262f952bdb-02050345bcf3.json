@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-05-part-04-c6262f952bdb",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27958",
+      "identity_tokens": [
+        "arXiv:2607.27958"
+      ],
+      "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems",
+      "reason": "マルチagent memoryの信頼性・オンライン更新を扱い、推論コスト/速度の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2607.27958",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28070",
+      "identity_tokens": [
+        "arXiv:2607.28070"
+      ],
+      "title": "CCFormer: Efficient Cross-Field Interaction and Hierarchical Sequence Compression for Industrial Recommendation at Tencent",
+      "reason": "産業推薦のcross-field interaction/sequence compressionであり、LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2607.28070",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28196",
+      "identity_tokens": [
+        "arXiv:2607.28196"
+      ],
+      "title": "Fidelity Is Not Safety: Gently-Compressed LLMs Pass Every Data-Free Quality Guard Yet Invent Procedure Steps in Agentic Execution",
+      "reason": "圧縮モデルのagent safety監査として関連するが、推論効率を改善する方法・測定はなく、効率化スコープへの寄与が確定しない。",
+      "source_url": "https://arxiv.org/abs/2607.28196",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28308",
+      "identity_tokens": [
+        "arXiv:2607.28308"
+      ],
+      "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing",
+      "reason": "MoE routingのexpert表現重複を解析する研究で、要旨に推論時効率化手法・評価が示されない。",
+      "source_url": "https://arxiv.org/abs/2607.28308",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2506.23266-sub-moe-subspace-expert-merging.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26455",
+      "identity_tokens": [
+        "arXiv:2607.26455"
+      ],
+      "title": "ForgetBench: Benchmarking Forgetting Dynamics of Long-Term Parametric Memory in Language Models",
+      "reason": "長期parametric memoryのforgetting dynamicsを測るベンチマークで、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.26455",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ]
+    }
+  ]
+}
