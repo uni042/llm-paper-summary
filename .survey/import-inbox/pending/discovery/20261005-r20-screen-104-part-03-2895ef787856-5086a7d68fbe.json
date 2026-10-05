@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-104-part-03-2895ef787856",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.05065",
+      "identity_tokens": [
+        "arXiv:2508.05065"
+      ],
+      "title": "Decoupling Continual Semantic Segmentation",
+      "reason": "Continual Semantic Segmentation (CSS) requires learning new classes without forgetting previously acquired knowledge, addressing the fundamental challenge of catastrophic forgetting in dense prediction tasks. However, existing CSS methods typically employ single-stage encoder-decoder architectures where segmentation masks and class labels are tightly coupled, leading to interference between old and new class learning and suboptimal retention-plasticity balance. We introduce DecoupleCSS, a novel two-stage framework for CSS. By decoupling class-aware detection from class-agnostic segmentation, DecoupleCSS enables more effective continual learning, preserving past knowledge while learning new classes. The first stage leverages pre-trained text and image encoders, adapted using LoRA, to encode class-specific information and generate location-aware prompts. In the second stage, the Segment Anything Model (SAM) is employed to produce precise segmentation masks, ensuring that segmentation knowledge is shared across both new and previous classes. This approach improves the balance between retention and adaptability in CSS, achieving state-of-the-art performance across a variety of challenging tasks.",
+      "source_url": "https://arxiv.org/abs/2508.05065",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/brain/awaf285",
+      "identity_tokens": [
+        "DOI:10.1093/brain/awaf285"
+      ],
+      "title": "Deep learning-based cell type profiles reveal signatures of Alzheimer’s disease resilience and resistance",
+      "reason": "Neurological disorders result from the complex and poorly understood contributions of many cell types, essential for uncovering mechanisms behind these disorders and identifying specific therapeutic targets. Single-nucleus technologies have advanced brain disease research, but remain limited by their low nuclear transcriptional coverage, high cost, and technical complexity. To address this, we applied a transformer-based deep learning model that restores cell type-specific investigation transcriptional programs from bulk RNA-seq, significantly outperforming previous methods. This enables large-scale and cost-effective investigation of cell type-specific transcriptomes in complex and heterogeneous phenotypes such as cognitive resilience or brain resistance to Alzheimer’s disease. Our analysis identified astrocytes as the major cell mediator of Alzheimer’s disease resilience across cerebral cortex regions, while excitatory neurons and oligodendrocyte progenitor cells emerged as the major cell mediators of resistance, maintaining synaptic function and preserving neuron health. Finally, we show that our approach could restore the whole tissue transcriptome, offering an unbiased framework for exploring cell-specific functions beyond single nucleus data.",
+      "source_url": "https://doi.org/10.1093/brain/awaf285",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02192",
+      "identity_tokens": [
+        "arXiv:2508.02192"
+      ],
+      "title": "Content-Aware Mamba for Learned Image Compression",
+      "reason": "Recent learned image compression (LIC) leverages Mamba-style state-space models (SSMs) for global receptive fields with linear complexity. However, the standard Mamba adopts content-agnostic, predefined raster (or multi-directional) scans under strict causality. This rigidity hinders its ability to effectively eliminate redundancy between tokens that are content-correlated but spatially distant. We introduce Content-Aware Mamba (CAM), an SSM that dynamically adapts its processing to the image content. Specifically, CAM overcomes prior limitations with two novel mechanisms. First, it replaces the rigid scan with a content-adaptive token permutation strategy to prioritize interactions between content-similar tokens regardless of their location. Second, it overcomes the sequential dependency by injecting sample-specific global priors into the state-space model, which effectively mitigates the strict causality without multi-directional scans. These innovations enable CAM to better capture global redundancy while preserving computational efficiency. Our Content-Aware Mamba-based LIC model (CMIC) achieves state-of-the-art rate-distortion performance, surpassing VTM-21.0 by 15.91%, 21.34%, and 17.58% in BD-rate on the Kodak, Tecnick, and CLIC datasets, respectively. Code will be released at https://github.com/UnoC-727/CMIC.",
+      "source_url": "https://arxiv.org/abs/2508.02192",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02304",
+      "identity_tokens": [
+        "arXiv:2508.02304"
+      ],
+      "title": "ASDR: Exploiting Adaptive Sampling and Data Reuse for CIM-based Instant Neural Rendering",
+      "reason": "Neural Radiance Fields (NeRF) offer significant promise for generating photorealistic images and videos. However, existing mainstream neural rendering models often fall short in meeting the demands for immediacy and power efficiency in practical applications. Specifically, these models frequently exhibit irregular access patterns and substantial computational overhead, leading to undesirable inference latency and high power consumption. Computing-in-memory (CIM), an emerging computational paradigm, has the potential to address these access bottlenecks and reduce the power consumption associated with model execution. To bridge the gap between model performance and real-world scene requirements, we propose an algorithm-architecture co-design approach, abbreviated as ASDR, a CIM-based accelerator supporting efficient neural rendering. At the algorithmic level, we propose two rendering optimization schemes: (1) Dynamic sampling by online sensing of the rendering difficulty of different pixels, thus reducing access memory and computational overhead. (2) Reducing MLP overhead by decoupling and approximating the volume rendering of color and density. At the architecture level, we design an efficient ReRAM-based CIM architecture with efficient data mapping and reuse microarchitecture. Experiments demonstrate that our design can achieve up to 9.55× and 69.75× speedup over state-of-the-art NeRF accelerators and Xavier NX GPU in graphics rendering tasks with only 0.1 PSNR loss.",
+      "source_url": "https://arxiv.org/abs/2508.02304",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02932",
+      "identity_tokens": [
+        "arXiv:2508.02932"
+      ],
+      "title": "PLoRA: Efficient Concurrent LoRA Training for Large Language Models",
+      "reason": "Low-Rank Adaptation (LoRA) has gained popularity as a fine-tuning approach for Large Language Models (LLMs) due to its low resource requirements and good performance. While numerous studies have investigated ways to improve LoRA serving efficiency by serving multiple LoRAs concurrently, existing methods assume that a wide range of LoRA adapters are available for serving. In our work, we conduct extensive empirical studies to show that current LoRA training paradigms do not efficiently utilize hardware resources and incur high overhead to obtain a performant LoRA adapter. Leveraging these insights, we propose PLoRA, which automatically orchestrates concurrent LoRA fine-tuning jobs under given hardware and model constraints and develops performant kernels to improve training efficiency. Across a range of LLMs and LoRA configurations, PLoRA improves training throughput by up to 12.8x and reduces the overall fine-tuning makespan by up to 7.52x compared to existing approaches.",
+      "source_url": "https://arxiv.org/abs/2508.02932",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    }
+  ]
+}
