@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:59:34+00:00",
-  "record_count": 2434,
+  "updated_at": "2026-10-05T04:02:21+00:00",
+  "record_count": 2446,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35259,6 +35259,176 @@
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
       "title": "Beyond Final Accuracy: Auditing Communication in LLM Multi-Agent Systems"
+    },
+    "arXiv:2610.01103": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01103",
+      "identity_tokens": [
+        "arXiv:2610.01103"
+      ],
+      "reason": "audio-language modelを使う抑うつ検出応用で、推論効率やserving systemを扱わない。",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "ParaCalib: Semantically Calibrated Paralinguistic Modeling for Depression Detection"
+    },
+    "arXiv:2610.01105": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01105",
+      "identity_tokens": [
+        "arXiv:2610.01105"
+      ],
+      "reason": "小型recurrent architectureをalgorithmic sequence taskで評価する研究で、LLM inference/servingの対象ではない。",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Extreme Length Generalization in a Compact Recurrent Architecture for One-Shot Exploration"
+    },
+    "arXiv:2610.01323": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01323",
+      "identity_tokens": [
+        "arXiv:2610.01323"
+      ],
+      "reason": "Multi-turn safety training objective; evaluates safety/utility rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "TRACE: Trajectory Return Attribution and Contrastive Erasure for Multi-Turn Safety"
+    },
+    "arXiv:2610.01344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01344",
+      "identity_tokens": [
+        "arXiv:2610.01344"
+      ],
+      "reason": "RL for interplanetary spacecraft transfers, outside language-model inference/serving.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Reachability-Informed Reinforcement Learning for Multi-Impulse Interplanetary Transfers"
+    },
+    "arXiv:2610.01353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01353",
+      "identity_tokens": [
+        "arXiv:2610.01353"
+      ],
+      "reason": "Rhetorical-pattern analysis of AI-generated research introductions, not LLM systems efficiency.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Does AI-Generated Scientific Text Follow Human Argumentation Patterns? A CARS-Based Comparison of Research Article Introductions"
+    },
+    "arXiv:2610.01451": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01451",
+      "identity_tokens": [
+        "arXiv:2610.01451"
+      ],
+      "reason": "Multi-agent LLM health-check interpretation application; abstract gives no inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "A Multi-Agent LLM Framework for Personalized Health Checkup Interpretation and Guidance"
+    },
+    "arXiv:2610.01553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01553",
+      "identity_tokens": [
+        "arXiv:2610.01553"
+      ],
+      "reason": "Structured prediction for patent prior-art search; no LLM inference/serving optimization.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "From Rules to Neural Graphs: Scalable Structured Prediction for Patent Prior Art Search"
+    },
+    "arXiv:2610.01153": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01153",
+      "identity_tokens": [
+        "arXiv:2610.01153"
+      ],
+      "reason": "LOOMはlooped MoEのresidual stability/loop間expert diversityを訓練し、100M–1.7Bモデルのtraining/near-iso-FLOP quality scalingを評価する。 本文の結果は学習設定でのPPL/zero-shot accuracyであり、looped inference throughput、latency、memory efficiencyの実測を示していない。extra loopsは追加推論FLOPsを要するため対象の効率貢献を確認できない。",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts"
+    },
+    "arXiv:2610.01172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01172",
+      "identity_tokens": [
+        "arXiv:2610.01172"
+      ],
+      "reason": "Learning-rate scaling and optimizer behavior for hybrid Transformer-SSM training; no inference/serving method or measurement.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures"
+    },
+    "arXiv:2610.01177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01177",
+      "identity_tokens": [
+        "arXiv:2610.01177"
+      ],
+      "reason": "Token attribution/interpretability analysis of diffusion-LM generation, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Temporally-Resolved Token Attribution Reveals the Generation Dynamics of Diffusion Language Models"
+    },
+    "arXiv:2610.01182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01182",
+      "identity_tokens": [
+        "arXiv:2610.01182"
+      ],
+      "reason": "ASR encoder compression for wake-word detection is speech recognition, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Toward Elastic Speech Inference: Training-Free Wake-Word Detection from Pretrained ASR"
+    },
+    "arXiv:2610.01282": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01282",
+      "identity_tokens": [
+        "arXiv:2610.01282"
+      ],
+      "reason": "Trustworthy DataOps/MLOps review for transportation/logistics, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:02:21+00:00",
+      "last_checked_at": "2026-10-05T04:02:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Trustworthy Data- and ML-Ops for Intelligent Transportation Systems and Logistics"
     }
   }
 }

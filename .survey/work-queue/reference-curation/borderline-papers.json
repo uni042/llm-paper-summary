@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:59:33+00:00",
-  "record_count": 809,
+  "updated_at": "2026-10-05T04:02:20+00:00",
+  "record_count": 813,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11995,6 +11995,65 @@
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
       "title": "OR for AI That Does OR: Routing LLMs up the Escalator inside the OSCAR Framework"
+    },
+    "arXiv:2610.01054": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01054",
+      "identity_tokens": [
+        "arXiv:2610.01054"
+      ],
+      "reason": "本文はquality・mechanistic resultsが中心で、同じtaskの複数queryに対するdemonstration prefill削減、latency、token/FLOP/memoryを直接測定していない。効率効果は論文中でも将来利用の可能性として述べられる。",
+      "first_checked_at": "2026-10-05T04:02:19+00:00",
+      "last_checked_at": "2026-10-05T04:02:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Capturing In-Context Learning Dynamics with Task Operators"
+    },
+    "arXiv:2610.01058": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01058",
+      "identity_tokens": [
+        "arXiv:2610.01058"
+      ],
+      "reason": "著者自身がboard-level Raspberry Pi energy estimateとcircuit-level CiM simulation energyは絶対値を直接比較できないと述べる。主貢献は安全filterでありLLM inference本体の効率でなく、CiM hardwareはsimulated。",
+      "first_checked_at": "2026-10-05T04:02:19+00:00",
+      "last_checked_at": "2026-10-05T04:02:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "MOMAT: Mixture of Multiple Atlases for Low-Power Jailbreak Defense of Quantized LLMs"
+    },
+    "arXiv:2610.01110": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01110",
+      "identity_tokens": [
+        "arXiv:2610.01110"
+      ],
+      "reason": "新たなmodel inference/serving optimization mechanismではなくtask-level candidate selection/cost audit。measured API price and task-specific replay results do not establish runtime throughput or system efficiency. Relevance is adjacent rather than a clear engine/system contribution.",
+      "first_checked_at": "2026-10-05T04:02:19+00:00",
+      "last_checked_at": "2026-10-05T04:02:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "How Much Can Language Models Gain from Test-Time Computation?"
+    },
+    "arXiv:2610.01235": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01235",
+      "identity_tokens": [
+        "arXiv:2610.01235"
+      ],
+      "reason": "The suggested runtime-control reduction is unmeasured, so an efficiency contribution cannot be established from this evidence.",
+      "first_checked_at": "2026-10-05T04:02:20+00:00",
+      "last_checked_at": "2026-10-05T04:02:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Harness Annealing: Learning to Act with Less External Control"
     }
   }
 }
