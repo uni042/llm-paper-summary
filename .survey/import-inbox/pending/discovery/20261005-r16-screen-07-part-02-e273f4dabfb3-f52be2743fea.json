@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-07-part-02-e273f4dabfb3",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16774",
+      "identity_tokens": [
+        "arXiv:2606.16774"
+      ],
+      "title": "OpenClaw-Skill: Collective Skill Tree Search for Agentic Large Language Models",
+      "reason": "agent skill-tree/task solving qualityでmodel inference optimizationでない。",
+      "source_url": "https://arxiv.org/abs/2606.16774",
+      "first_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "last_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22614",
+      "identity_tokens": [
+        "arXiv:2607.22614"
+      ],
+      "title": "DynaResize: Runtime GPU Reallocation for Disaggregated LLM Post-Training",
+      "reason": "GPU reallocationはRL post-trainingのrollout/trainingでありinference対象外。",
+      "source_url": "https://arxiv.org/abs/2607.22614",
+      "first_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "last_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14703",
+      "identity_tokens": [
+        "arXiv:2606.14703"
+      ],
+      "title": "Gaze Heads: How VLMs Look at What They Describe",
+      "reason": "VLM attention interpretability/steeringでefficiency結果なし。",
+      "source_url": "https://arxiv.org/abs/2606.14703",
+      "first_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "last_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15008",
+      "identity_tokens": [
+        "arXiv:2606.15008"
+      ],
+      "title": "Security Engineering of OpenClaw: Analyzing Attack Surface Expansion and Trust-Boundary Violations",
+      "reason": "OpenClaw security/attack-surface analysisでefficiency対象外。",
+      "source_url": "https://arxiv.org/abs/2606.15008",
+      "first_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "last_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.12841",
+      "identity_tokens": [
+        "arXiv:2606.12841"
+      ],
+      "title": "TimeROME-DLM: Temporal Causal Tracing and Low-Rank Inference-Time Knowledge Editing for Masked Diffusion Language Models",
+      "reason": "MDLMのinference-time knowledge editingに特化する。編集構築のcost比較はあるが、一般の生成/serving効率改善を対象とせずscope適合は限定的。",
+      "source_url": "https://arxiv.org/abs/2606.12841",
+      "first_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "last_checked_at": "2026-10-05T02:33:22.144765+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    }
+  ]
+}
