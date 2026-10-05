@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-10-part-01-aaca12aeb945",
+  "reference_main_sha": "89ecb1e8c461c748ff1f2f90bfd365f652325aef",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19857",
+      "identity_tokens": [
+        "arXiv:2606.19857"
+      ],
+      "title": "Large Language Models Do Not Always Need Readable Language",
+      "reason": "The paper demonstrates a context-overhead probe but expressly does not establish a competitive, broadly useful compression system. Keep borderline pending evidence of practical task and serving benefit.",
+      "source_url": "https://arxiv.org/abs/2606.19857",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20138",
+      "identity_tokens": [
+        "arXiv:2606.20138"
+      ],
+      "title": "Learning to Prompt: Improving Student Engagement with Adaptive LLM-based High-School Tutoring",
+      "reason": "The abstract evaluates adaptive prompting and student engagement in high-school tutoring; its efficiency measure is fewer tutoring turns, not LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.20138",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20246",
+      "identity_tokens": [
+        "arXiv:2606.20246"
+      ],
+      "title": "Finetuning Vision-Language-Action Models Requires Fewer Layers Than You Think",
+      "reason": "This is compression and real-time inference of vision-language-action robot policies, outside the LLM inference/serving target.",
+      "source_url": "https://arxiv.org/abs/2606.20246",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20381",
+      "identity_tokens": [
+        "arXiv:2606.20381"
+      ],
+      "title": "Rethinking Shrinkage Bias in LLM FP4 Pretraining: Geometric Origin, Systemic Impact, and UFP4 Recipe",
+      "reason": "The contribution is an FP4 pretraining recipe and training stability; training-only efficiency is outside this screen.",
+      "source_url": "https://arxiv.org/abs/2606.20381",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.15.732063",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.15.732063"
+      ],
+      "title": "Elucidating the Design Space of Generative Models for Single-Cell Perturbation Prediction",
+      "reason": "The paper models single-cell perturbation prediction, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.64898/2026.06.15.732063",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
