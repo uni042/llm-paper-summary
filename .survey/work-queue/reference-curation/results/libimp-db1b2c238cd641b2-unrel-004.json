@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db1b2c238cd641b2-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02774",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02774",
+    "identity_tokens": [
+      "arXiv:2609.02774"
+    ],
+    "reason": "Retrieval-Augmented Code Generation (RACG) improves LLM-based software development by retrieving external code artifacts, documentation, and patches, and incorporating them into the generation context. This reliance on external knowledge introduces a critical trust boundary: poisoned artifacts can influence generated code without modifying the underlying LLM. Prior work shows that selecting existing vulnerable examples can increase the general vulnerability rate of RACG outpu",
+    "first_checked_at": "2026-10-05T06:03:36+00:00",
+    "last_checked_at": "2026-10-05T06:03:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation"
+  },
+  "processed_at": "2026-10-05T06:03:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db1b2c238cd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

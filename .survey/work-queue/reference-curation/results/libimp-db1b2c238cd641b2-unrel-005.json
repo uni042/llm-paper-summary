@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db1b2c238cd641b2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.31119",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.31119",
+    "identity_tokens": [
+      "arXiv:2608.31119"
+    ],
+    "reason": "Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipelines, however, draw the question and the criteria from the same content, so the reward can be earned by paraphrase. The rubric is further compressed into a single scalar per rollout. We introduce Paper",
+    "first_checked_at": "2026-10-05T06:03:36+00:00",
+    "last_checked_at": "2026-10-05T06:03:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "PaperGym: Rubric-Centered Evolution for Research-Plan Generation"
+  },
+  "processed_at": "2026-10-05T06:03:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db1b2c238cd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

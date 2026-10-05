@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:01:09+00:00",
-  "record_count": 3084,
+  "updated_at": "2026-10-05T06:03:37+00:00",
+  "record_count": 3103,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -44914,6 +44914,272 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "Mismatch Matters: On-Policy Distillation Beyond Token Agreement"
+    },
+    "arXiv:2608.17800": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17800",
+      "identity_tokens": [
+        "arXiv:2608.17800"
+      ],
+      "reason": "Recent advances in Large Language Models(LLMs) and agents have substantially improved the ability of AI systems to execute complex tasks. Yet existing benchmarks largely rely on researcher-selected tasks, leaving uncertain whether such progress extends to the work that real-world users actually demand from AI systems. We introduce \\textbf{StartupBench}, an E2E agent benchmark grounded in market-validated AI startup products. Rather than defining tasks from pre-defined assumpt",
+      "first_checked_at": "2026-10-05T06:03:35+00:00",
+      "last_checked_at": "2026-10-05T06:03:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "StartupBench: Benchmarking General-Purpose Agents on Market-Validated End-to-End Workflows"
+    },
+    "arXiv:2608.15930": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15930",
+      "identity_tokens": [
+        "arXiv:2608.15930"
+      ],
+      "reason": "Foundation GUI agents can automate complex digital tasks, but deployment is hindered by scarce and biased training data, ambiguous prompts, and unreliable execution. Routine workflows rely on user-specific tools and tacit conventions, so unstated instructions can produce arbitrary variations across runs. We present UI-Mate, a foundation GUI agent that integrates an environment-grounded training stack with in-context demonstration learning. UI-Mate makes three contributions: A",
+      "first_checked_at": "2026-10-05T06:03:35+00:00",
+      "last_checked_at": "2026-10-05T06:03:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ],
+      "title": "UI-Mate: Advancing Open-Weight Foundation GUI Agents with In-Context Demonstrations"
+    },
+    "arXiv:2608.09253": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09253",
+      "identity_tokens": [
+        "arXiv:2608.09253"
+      ],
+      "reason": "LLM agents are increasingly equipped with skills to perform complex tasks through multi-step reasoning and tool use. Although skills provide reusable procedural knowledge, agents may still execute them unreliably. Even when an agent has demonstrated the capability to complete tasks under the guidance of a skill, it may fail to do so consistently across similar tasks or repeated runs due to deviations from the skill procedure or incorrect execution of individual steps. Such in",
+      "first_checked_at": "2026-10-05T06:03:35+00:00",
+      "last_checked_at": "2026-10-05T06:03:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SkillSentry: Reliable Skill Execution for LLM Agents via Runtime Assurance"
+    },
+    "arXiv:2608.08570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08570",
+      "identity_tokens": [
+        "arXiv:2608.08570"
+      ],
+      "reason": "Rejection sampling fine-tuning (RFT) is widely used to train code agents by generating trajectories on verifiable software engineering tasks, retaining those that pass the tests, and fine-tuning on the successful rollouts. However, even strong code agents repeatedly fail on a substantial fraction of such tasks, and standard RFT simply discards these failures. The discarded samples are precisely the hardest and most informative ones, drawn from verifiable instances that are co",
+      "first_checked_at": "2026-10-05T06:03:35+00:00",
+      "last_checked_at": "2026-10-05T06:03:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "FailForge: Distilling Procedural Competence from Persistent Failures into Code Agents"
+    },
+    "arXiv:2608.04682": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04682",
+      "identity_tokens": [
+        "arXiv:2608.04682"
+      ],
+      "reason": "Coding agents powered by large language models (LLMs) are increasingly adopted in software engineering (SWE) scenarios, capable of fixing a specific bug in large-scale codebase. However, existing SWE benchmarks typically assume that high-quality issue reports with detailed information are always available, which is easily violated in practice due to the complexity of report acquisition and curation. To address this, we introduce Active-SWE, a benchmark for evaluating coding a",
+      "first_checked_at": "2026-10-05T06:03:35+00:00",
+      "last_checked_at": "2026-10-05T06:03:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Active-SWE: Benchmarking Coding Agents for Proactive Bug Fixing without Issue Reports"
+    },
+    "arXiv:2608.04783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04783",
+      "identity_tokens": [
+        "arXiv:2608.04783"
+      ],
+      "reason": "The integration of Large Language Models (LLMs) into software engineering has shifted the focus from function-level generation to repository-scale assistance. However, existing benchmarks largely rely on bug reports from GitHub Issues, which often allow models to bypass genuine understanding via pattern matching on error logs. This misalignment under-measures Edit Bias, which refers to premature generation, where models prematurely propose code modifications instead of unders",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "RepoProbe: Benchmarking Architecture-Aware Repository Comprehension with Checklists"
+    },
+    "arXiv:2608.05102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05102",
+      "identity_tokens": [
+        "arXiv:2608.05102"
+      ],
+      "reason": "Long-horizon search agents must make multiple sequential actions (steps) to search, retrieve, verify, and integrate evidence to reach a final answer. However, existing methods for training these agents typically treat all steps within a trajectory uniformly during both supervised fine-tuning (SFT) and reinforcement learning (RL), failing to distinguish useful actions from erroneous or redundant ones. In this paper, we propose Answer-Backtracked Credit Assignment (ABC), a fine",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ABSeeker: Training Long-Horizon Search Agents via Answer-Backtracked Credit Assignment"
+    },
+    "arXiv:2608.05245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05245",
+      "identity_tokens": [
+        "arXiv:2608.05245"
+      ],
+      "reason": "Reusable skills, which encapsulate the procedural knowledge required to solve real-world professional tasks, offer LLM-based agents a path toward self-evolution in expert domains. Existing self-evolving skill methods construct skills internally from the model's parametric knowledge or trajectories, and are therefore bounded by what the model already knows. However, the domain conventions and standard procedures underlying professional skills often lie beyond this boundary and",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Search2Skill: Skill Distillation Beyond Knowledge Boundaries Via Rubric-Based Reinforcement Learning"
+    },
+    "arXiv:2608.03054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03054",
+      "identity_tokens": [
+        "arXiv:2608.03054"
+      ],
+      "reason": "Spoken emotional dialogue requires a model to understand a user's spoken input and generate a response that is both semantically appropriate and emotionally expressive. This is challenging because communicative intent may be stated explicitly in lexical content or conveyed more implicitly through paralinguistic cues, which can complement or diverge from the words themselves. However, two limitations constrain progress in this area: the scarcity of benchmarks that distinguish",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Towards More Expressive Spoken LLMs: Fine-Grained Intent Benchmarking and Acoustic-Lexical Decoupled Policy Optimization"
+    },
+    "arXiv:2609.20784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20784",
+      "identity_tokens": [
+        "arXiv:2609.20784"
+      ],
+      "reason": "Multi-turn agents trained with reinforcement learning (RL) receive a single scalar reward per trajectory, which motivates self on-policy distillation (OPD) to supply dense token-level supervision from a self-teacher with privileged task skills, letting a skill-free student internalize them. This recipe, however, is undermined by two findings in agentic tasks: privileged information alone does not always make a teacher reliable, and the benefit of teacher supervision is stage-",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "RetireOPD: Self-Retiring On-Policy Distillation for Agentic Reinforcement Learning"
+    },
+    "arXiv:2609.14193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14193",
+      "identity_tokens": [
+        "arXiv:2609.14193"
+      ],
+      "reason": "On-policy distillation (OPD) has become a standard component of frontier post-training pipelines, yet how much its training data actually contributes has gone largely unexamined. On the two teacher--student pairings most common in practice, we find OPD almost indifferent to its data: eight prompts already match a 17k-problem dataset, and three independently built datasets whose difficulty and teacher--student KL differ several-fold produce nearly indistinguishable training cu",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Data-free On-policy Distillation"
+    },
+    "arXiv:2609.08211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08211",
+      "identity_tokens": [
+        "arXiv:2609.08211"
+      ],
+      "reason": "Real-world Multi-Objective Reinforcement Learning (MORL) often suffers from sparse rewards, reward conflicts, and late-stage reward tug-of-war, causing traditional linear scalarization to experience severe metric oscillations. To address optimization conflicts among multiple objectives in real-world deployment scenarios, we propose Multi-Marginal Preference Optimization (MMPO), a fine-grained framework that intervenes at the data, gradient, and constraint levels rather than r",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "A Better Spur Should Start From Each Objective"
+    },
+    "arXiv:2609.02774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02774",
+      "identity_tokens": [
+        "arXiv:2609.02774"
+      ],
+      "reason": "Retrieval-Augmented Code Generation (RACG) improves LLM-based software development by retrieving external code artifacts, documentation, and patches, and incorporating them into the generation context. This reliance on external knowledge introduces a critical trust boundary: poisoned artifacts can influence generated code without modifying the underlying LLM. Prior work shows that selecting existing vulnerable examples can increase the general vulnerability rate of RACG outpu",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CodePoisonRAG: Knowledge Poisoning Attacks on Retrieval-Augmented Code Generation"
+    },
+    "arXiv:2608.31119": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.31119",
+      "identity_tokens": [
+        "arXiv:2608.31119"
+      ],
+      "reason": "Research planning is the decisive capability of AI scientists. Yet a research plan admits no verifiable answer, so reinforcement learning lacks the environment it requires: tasks paired with a critic. Rubrics extracted from scientific papers can supply the critic. Existing pipelines, however, draw the question and the criteria from the same content, so the reward can be earned by paraphrase. The rubric is further compressed into a single scalar per rollout. We introduce Paper",
+      "first_checked_at": "2026-10-05T06:03:36+00:00",
+      "last_checked_at": "2026-10-05T06:03:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PaperGym: Rubric-Centered Evolution for Research-Plan Generation"
+    },
+    "arXiv:2608.30047": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30047",
+      "identity_tokens": [
+        "arXiv:2608.30047"
+      ],
+      "reason": "Recent AI systems promise autonomous scientific discovery, claiming to discover algorithms and produce research papers, yet understanding whether they exhibit creativity, the capacity to produce solutions that are both novel and useful, remains an open question. We present a framework for evaluating multi-turn LLM research agents'creativity using ML engineering tasks as a testbed, through three dimensions: P-Creativity (psychological novelty: novel relative to the agent's own",
+      "first_checked_at": "2026-10-05T06:03:37+00:00",
+      "last_checked_at": "2026-10-05T06:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Can LLM Agents Discover? Evaluating Creativity on ML Engineering Tasks"
+    },
+    "arXiv:2608.27960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27960",
+      "identity_tokens": [
+        "arXiv:2608.27960"
+      ],
+      "reason": "On-policy distillation (OPD) has recently emerged as a popular post-training paradigm for large language models (LLMs), providing an efficient way to transfer the knowledge and capabilities of teacher models into student models. However, teacher guidance on student-generated prefixes is not always reliable. Training should optimize the model to generate responses that are more likely to be correct, or equivalently, to get higher outcome rewards. But during OPD, the teacher mo",
+      "first_checked_at": "2026-10-05T06:03:37+00:00",
+      "last_checked_at": "2026-10-05T06:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "When Teacher Guidance Misleads: Reward-Aligned On-Policy Distillation"
+    },
+    "arXiv:2608.27448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27448",
+      "identity_tokens": [
+        "arXiv:2608.27448"
+      ],
+      "reason": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asy",
+      "first_checked_at": "2026-10-05T06:03:37+00:00",
+      "last_checked_at": "2026-10-05T06:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TTPO: Test-Time Policy Optimization"
+    },
+    "arXiv:2608.25939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25939",
+      "identity_tokens": [
+        "arXiv:2608.25939"
+      ],
+      "reason": "Large language models (LLMs) have shown promise for automated unit test generation, but existing evaluations largely rely on standalone settings and a narrow set of programming languages, overestimating real-world readiness. We introduce XREPOTEST, a multilingual repository-level benchmark for unit test generation spanning five underexplored languages: Rust, Go, Julia, PHP, and Ruby. XREPOTEST evaluates tests under realistic repository constraints using a containerized execut",
+      "first_checked_at": "2026-10-05T06:03:37+00:00",
+      "last_checked_at": "2026-10-05T06:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "XREPOTEST: Benchmarking Multilingual Repository-Level Unit Test Generation for Large Language Models"
+    },
+    "arXiv:2608.24987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24987",
+      "identity_tokens": [
+        "arXiv:2608.24987"
+      ],
+      "reason": "Multi-teacher on-policy distillation (MOPD) distills several domain-expert teachers into a single student by minimizing per-domain reverse-KL divergence on the student's own rollouts. Existing approaches typically fix the per-domain data mixture before training, overlooking the fact that different domains converge at substantially different rates: some plateau early while others continue to improve throughout the training budget. A fixed mixture therefore wastes compute on fa",
+      "first_checked_at": "2026-10-05T06:03:37+00:00",
+      "last_checked_at": "2026-10-05T06:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "D$^3$-MOPD: Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation"
     }
   }
 }
