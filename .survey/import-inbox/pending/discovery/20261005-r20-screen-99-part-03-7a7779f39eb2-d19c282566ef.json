@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-99-part-03-7a7779f39eb2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02882",
+      "identity_tokens": [
+        "arXiv:2506.02882"
+      ],
+      "title": "GaRA-SAM: Robustifying Segment Anything Model with Gated-Rank Adaptation",
+      "reason": "GaRA-SAM adapts Segment Anything for robustness to image corruption; its domain and contribution are vision segmentation, not LLM inference/compression.",
+      "source_url": "https://arxiv.org/abs/2506.02882",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICMLCN64995.2025.11139372",
+      "identity_tokens": [
+        "DOI:10.1109/ICMLCN64995.2025.11139372"
+      ],
+      "title": "A Bandit-Based Approach to Scheduling LLM Requests in Cloud-Edge Systems",
+      "reason": "Unable to inspect the primary full text: the DOI/IEEE Xplore document endpoint did not load in this run. Abstract alone does not provide enough details on baselines, workload, metrics, or limitations for a concrete Research handoff.",
+      "source_url": "https://doi.org/10.1109/ICMLCN64995.2025.11139372",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.05893",
+      "identity_tokens": [
+        "arXiv:2505.05893"
+      ],
+      "title": "LightNobel: Improving Sequence Length Limitation in Protein Structure Prediction Model via Adaptive Activation Quantization",
+      "reason": "LightNobel quantizes activations for protein-structure prediction models; this is a biological application-specific model, not an LLM deployment method.",
+      "source_url": "https://arxiv.org/abs/2505.05893",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.20451",
+      "identity_tokens": [
+        "arXiv:2504.20451"
+      ],
+      "title": "Team ACK at SemEval-2025 Task 2: Beyond Word-for-Word Machine Translation for English-Korean Pairs",
+      "reason": "The work compares machine-translation quality and error types; it proposes no LLM inference/serving/compression optimization.",
+      "source_url": "https://arxiv.org/abs/2504.20451",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.03460",
+      "identity_tokens": [
+        "arXiv:2503.03460"
+      ],
+      "title": "Visualising Policy-Reward Interplay to Inform Zeroth-Order Preference Optimisation of Large Language Models",
+      "reason": "ZOPrO is zeroth-order preference optimization for training/fine-tuning LLMs, not inference-time optimization.",
+      "source_url": "https://arxiv.org/abs/2503.03460",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    }
+  ]
+}
