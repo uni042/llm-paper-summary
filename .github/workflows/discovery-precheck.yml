@@ -205,7 +205,7 @@ jobs:
             foreground_failures=0
 
             # Foreground worker prechecks are independent after the shared identity
-            # snapshot is built. Run up to four concurrently; the batch processor
+            # snapshot is built. Run up to six concurrently; the batch processor
             # serializes only the short preload claim/bank mutation section.
             #
             # A normal-search Semantic Scholar provider failure is not a run stop:
