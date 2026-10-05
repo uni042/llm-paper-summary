@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-04-part-01-7727c2c856bf",
+  "reference_main_sha": "0da36907e7a5938a23576cdfd20c0757c7f1e848",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/inf2.70191",
+      "identity_tokens": [
+        "DOI:10.1002/inf2.70191"
+      ],
+      "title": "<scp>3D</scp>\n                    integration of\n                    <scp>2D</scp>\n                    electronics for\n                    <scp>AI</scp>\n                    hardware",
+      "reason": "\n \n The relentless demand for faster, smaller and more energy‐efficient integrated circuits has pushed the semiconductor industry to the performance, power and area (PPA) wall, where interconnect delay and energy dissipation dominate system efficiency. While 2.5D and TSV‐based 3D integration offer partial relief, they suffer from long interconnects, thermal hotspots and reliability concerns. Monolithic 3D integration (M3DI) provides a transformative TSV‐free paradigm, enabling nanoscale vertical interconnects between front‐end‐of‐line logic and back‐end‐of‐line memory tiers, thereby maximizing PPA efficiency and reducing latency. Here we demonstrate M3DI of two‐dimensional (2D) electronics, integrating single‐crystalline MoS\n 2\n field‐effect transistors with nanocrystalline WS\n 2\n memristors in a vertically stacked 1T1R architecture. These atomically thin devices are BEOL‐compatible and scalable, offering uniform threshold and Ion/Ioff distributions for logic, and stable filamentary switching with narrow SET/RESET variability for memory. The resulting arrays achieve ultra‐dense integration, reproducible operation and low‐latency performance within a compact footprint. Beyond binary switching, the M3DI‐1T1R chip exhibits synaptic functionalities including multistate non‐volatile memory, spike‐timing‐dependent plasticity and array‐level uniformity, essential for neuromorphic and AI hardware. This work establishes 2D‐material‐based M3DI as a compelling foundation for next‐generation intelligent and energy‐efficient computing systems beyond CMOS scaling and von Neumann architectures.\n \n \n \n \n image\n \n \n",
+      "source_url": "https://doi.org/10.1002/inf2.70191",
+      "first_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "last_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-02108-z",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02108-z"
+      ],
+      "title": "Multimodal content generation and enhancement for smart imaging",
+      "reason": "With the rapid development of deep learning technology, multimodal content generation has shown substantial application potential in fields such as medical imaging, industrial inspection, and creative design. However, existing methods face semantic gap problems in cross-modal feature fusion and struggle to simultaneously guarantee generation quality and semantic consistency. This work addresses the task of multimodal-conditioned image quality enhancement: given a reference image, a text description, and pixel-level semantic labels as joint conditions, the goal is to generate an output image that simultaneously achieves higher pixel-level fidelity, stronger text-image semantic alignment, and improved perceptual realism compared to existing single- or dual-modal approaches. This task is distinct from image fusion (no text or label input) and from pure text-to-image generation (no reference image), and requires the model to exploit complementary information across all three modalities. In response to these challenges, this work proposes a novel multimodal content generation and enhancement framework MCGE-Net, achieving high-quality intelligent imaging generation through three core innovations: hierarchical cross-modal attention mechanism (HCMA), dynamic feature alignment module (DFA), and multi-scale enhancement network (MSEN). The HCMA achieves deep fusion of different modal features at both fine-grained and coarse-grained levels, effectively capturing local correspondences and global semantic associations, with a learnable gating parameter that dynamically balances the two levels on a per-sample basis. The DFA narrows the cross-modal semantic gap through an instance-adaptive weight generation mechanism, significantly improving multimodal consistency. The MSEN adopts a pyramid structure to perform channel-attention-guided feature enhancement at multiple scales, balancing overall structure and local details. Comprehensive experiments on the MIID-50K dataset (50,000 image-text-label triplets covering medical imaging, natural scenes, and industrial inspection) and on the public MS-COCO 2017 benchmark demonstrate that MCGE-Net outperforms state-of-the-art methods including ControlNet across all evaluation metrics, achieving PSNR 32.1 dB, SSIM 0.903, FID 24.8, and Semantic Consistency 89.5% on MIID-50K, and FID 20.4 and CLIP-Score 33.8 on MS-COCO 2017. All improvements over the strongest baseline are statistically significant (p < 0.001, Bonferroni-corrected). MCGE-Net also maintains competitive inference efficiency (1.23 s per sample), substantially faster than diffusion-based methods such as Stable Diffusion (2.34 s) and Imagen (2.67 s). Ablation experiments validate the effectiveness of each module, cross-scenario generalization experiments confirm the robustness of the method, and a user study with 50 professional participants further validates the visual quality of generated content. Failure case analysis identifies three characteristic limitations (semantic drift on long-tail categories, scale-boundary artifacts, and label-boundary blur), providing concrete directions for future work. Preliminary results suggest potential applicability in medical imaging enhancement, industrial visual inspection, and content creation, though domain-specific validation remains necessary before deployment in safety-critical settings.",
+      "source_url": "https://doi.org/10.1007/s44163-026-02108-z",
+      "first_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "last_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3847108",
+      "identity_tokens": [
+        "DOI:10.1145/3847108"
+      ],
+      "title": "Enabling Retriever-LLM Connection Across the Semantic Gap in Retrieval-Augmented Generation",
+      "reason": "Retrieval-augmented generation (RAG) has attracted significant attention for enhancing large language models (LLMs) in domain-specific and knowledge-intensive tasks by utilizing external documents retrieved by retrievers. However, LLMs often struggle to determine which retrieved documents are relevant and how they relate to one another. We argue that this difficulty arises from a semantic gap between retrievers and LLMs due to differences in their training objectives and architectures. Existing methods either align retrievers and LLMs through costly fine-tuning or feedback signals, but they still do not explicitly strengthen document relationship modeling during generation. This paper proposes ConRAG, a novel enhanced RAG framework to establish an information connection between retrievers and LLMs in RAG, thereby enhancing relationship modeling of LLMs. Specifically, ConRAG employs a lightweight Con-Former model, placed between a retriever and an LLM to capture and transmit semantic information. Then, a semantics injection strategy is employed to integrate the semantic information into the LLM's generation. Accordingly, we employ three tasks for feature modeling and alignment: two relationship modeling tasks to consolidate the local and global perceptions of document relevance and one generative alignment task to facilitate the interpretation of LLM. Notably, ConRAG is suitable for low-resource scenarios where LLMs and retrievers are frozen. Further analysis shows that retriever-derived information helps the LLM better identify relevant evidence and model relationships among documents, leading to more effective generation. The source code is available at https://github.com/yefd/ConRAG.",
+      "source_url": "https://doi.org/10.1145/3847108",
+      "first_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "last_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.47852/bonviewjdsis620210441",
+      "identity_tokens": [
+        "DOI:10.47852/bonviewjdsis620210441"
+      ],
+      "title": "REIGN: Regime-Enhanced Intelligent Granger Network for Nonstationary Causal Discovery",
+      "reason": "Causal discovery in nonstationary multivariate financial time series is a fundamental challenge. Classical algorithms, such as Peter–Clark (PC) algorithm and Peter–Clark momentary conditional independence (PCMCI+), assume stationarity and fail in realworld environments characterized by market regime shifts and structural breaks,yielding spurious edges and structurally inconsistent causal graphs. To address this, we propose the Regime-Enhanced Intelligent Granger Network (REIGN), a novel causal discovery framework specifically engineered for nonstationary time series. REIGN integrates three synergistic capabilities: (i) data-driven regime segmentation via Pruned Exact Linear Time changepoint detection, partitioning the series into locally stationary windows; (ii) zero-shot large language model prior injection to constrain the neural search space using domain knowledge; and (iii) a coarse-to-fine MessagePassing Graph Neural Network that optimizes a continuous directed acyclic graph-constrained adjacency matrix via an augmented Lagrangian objective. Regime-specific models are then aggregated through a confidence-weighted ensemble to yield a consistent global summary graph. Empirical evaluation on a nonstationary Vector Autoregressive benchmark demonstrates REIGN’s superiority. REIGN achieves an Optimal F1 score of 0.529, substantially outperforming PCMCI+ (F1 = 0 .415) and PC (F1 = 0 .214) in structural edge recovery. Furthermore, REIGN dominates across the area under the receiver operating characteristic curve (AUROC; 0.513 vs 0.406) and the area under the precision–recall curve (AUPR; 0.400 vs 0.338) metrics, establishing a robust new benchmark for neural time-series causal discovery in nonstationary environments.\n \nReceived: 18 May 2026 | Revised: 29 June 2026 | Accepted: 20 July 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe data that support the findings of this study are openly available on GitHub at https://github.com/vinhqdang/ REIGN_Regime-Enhanced-Intelligent-Granger-Network.\n \nAuthor Contribution Statement\nQuang-Vinh Dang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Writing – original draft, Supervision, Project administration. Minh Ngoc Dinh: Validation, Formal analysis, Writing – review & editing, Supervision, Project administration. Dat Le: Validation, Investigation, Resources, Writing – review & editing. Dinh-Minh Nguyen: Conceptualization, Software, Data curation, Visualization.",
+      "source_url": "https://doi.org/10.47852/bonviewjdsis620210441",
+      "first_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "last_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.17.752279",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.17.752279"
+      ],
+      "title": "Conditional Generation and Inpainting of Non-Coding RNA Sequences with Masked Discrete Diffusion",
+      "reason": "Designing functional non-coding RNA (ncRNA) is fundamental to synthetic biology and RNA therapeutics, yet generative modelling for ncRNA has received far less attention than protein design. We present RNA-MDLM, a framework that extends Masked Discrete Language Models (MDLM) to the conditional generation and inpainting of ncRNA. We make two additions: first, conditioning on RNA-type representations from a pretrained RNA language model, and second, a modified classifier-free guidance scheme (Mod-CFG) that interpolates among conditional, unconditional, and random-sequence probabilities for better control. We also introduce REPAINT GAMES, a benchmark of seven structured masking tasks to probe a model’s performance on sequence patterns, structural motifs, and base-pairing per RNA type. Our model is trained on 4.6 million ncRNA sequences spanning six evaluable classes. It produces sequences whose composition and folding statistics closely match natural RNAs. Through extensive ablation studies, we find that the embedding-conditioned model achieves the best balance of structural fidelity, biological novelty, and inpainting accuracy, and its class label steers generation far more strongly than a plain label baseline. We further show that a model trained on a smaller, class-balanced subset can appear more realistic mainly by copying abundant natural sequences rather than learning their rules. We also benchmark against a masked-diffusion model and a family-specific VAE on ribozyme families, and find that a type-conditioned model like ours and a perfamily model are solving different tasks, which must be accounted for in a fair comparison. We will release the code and the trained models.",
+      "source_url": "https://doi.org/10.64898/2026.09.17.752279",
+      "first_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "last_checked_at": "2026-10-05T05:20:11.411067+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
