@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-05-part-02-02a73da4b950",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3838177.3841735",
+      "identity_tokens": [
+        "DOI:10.1145/3838177.3841735"
+      ],
+      "title": "Congestion-Aware Serving of Agentic LLM Applications",
+      "reason": "関連可能性は高いが本文の取得不能により微妙へ送る。",
+      "source_url": "https://doi.org/10.1145/3838177.3841735",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.15524-hydraserve-serverless-cold-start.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1952159",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1952159"
+      ],
+      "title": "Mamba-based state-space modeling with window attention for explainable multi-class gastrointestinal disease diagnosis in endoscopic images.",
+      "reason": "一次要旨: Introduction This paper introduces a new hybrid deep learning architecture, which is named GINet, to accurately and efficiently classify gastrointestinal (GI) diseases using endoscopic images. Automated diagnosis is not an easy task due to the visual similarity among GI conditions and the class imbalance.   Method To overcome these challenges, the proposed model is based on EfficientNetV2 for powerful feature extraction, suppo",
+      "source_url": "https://doi.org/10.3389/frai.2026.1952159",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.17985",
+      "identity_tokens": [
+        "arXiv:2609.17985"
+      ],
+      "title": "RideWay: Benchmarking Efficient Task Completion for Tool-Using Language Agents",
+      "reason": "agent interaction frictionのbenchmarkとしては近接するが、主要な推論compute・latency・costを除外しスコープ適合性が弱い。",
+      "source_url": "https://arxiv.org/abs/2609.17985",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18066",
+      "identity_tokens": [
+        "arXiv:2609.18066"
+      ],
+      "title": "Towards Training Private LLMs: Exploring Fine-Tuning Language Models on Apple Silicon with RDMA over Thunderbolt",
+      "reason": "一次要旨: Private large language model (LLM) fine-tuning is increasingly important for organizations that need to adapt models using sensitive data, but it often exceeds the memory capacity of commodity datacenter accelerators. Apple Silicon offers a different design point through large unified memory and lower complete-system cost, while recent Apple software support enables distributed execution over RDMA-over-Thunderbolt (TB). This p",
+      "source_url": "https://arxiv.org/abs/2609.18066",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18077",
+      "identity_tokens": [
+        "arXiv:2609.18077"
+      ],
+      "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+      "reason": "一次要旨: Open-source video generative models ship almost exclusively as PyTorch/CUDA reference implementations. This leaves Cloud TPU pods without a production-ready inference path, despite offering large, cost-effective accelerator memory pools ideal for long-sequence spatiotemporal attention. We present vidax, an open-source JAX/Flax inference engine and zero-copy PyTorch-to-JAX weight translator for modern video generation architect",
+      "source_url": "https://arxiv.org/abs/2609.18077",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
