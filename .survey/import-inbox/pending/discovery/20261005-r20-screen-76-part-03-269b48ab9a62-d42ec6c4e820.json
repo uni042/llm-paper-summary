@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-76-part-03-269b48ab9a62",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1014",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1014"
+      ],
+      "title": "Evaluating the Long-Term Memory of Large Language Models",
+      "reason": "The primary abstract presents LOCCO as a dataset/benchmark for long-term memory retention and rehearsal in LLMs; it does not concern inference efficiency or serving.",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-acl.1014",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:180e8815a8528162d4b950d769bd8eac037ddafe",
+      "identity_tokens": [
+        "SemanticScholar:180e8815a8528162d4b950d769bd8eac037ddafe"
+      ],
+      "title": "Mastering Task Arithmetic: τJp as a Key Indicator for Weight Disentanglement",
+      "reason": "The primary abstract concerns task-vector model editing, interference, and avoiding coefficient tuning; it does not optimize LLM inference/serving performance.",
+      "source_url": "https://www.semanticscholar.org/paper/180e8815a8528162d4b950d769bd8eac037ddafe",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:3a5894a7b82336d2dc99ebf797bda294d24759b8",
+      "identity_tokens": [
+        "SemanticScholar:3a5894a7b82336d2dc99ebf797bda294d24759b8"
+      ],
+      "title": "MambaExtend: A Training-Free Approach to Improve Long Context Extension of Mamba",
+      "reason": "The primary ICLR abstract presents training-free Mamba context-length extension by calibrating discretization scales (up to 32× context) and reports perplexity; it does not claim inference-cost reduction.",
+      "source_url": "https://www.semanticscholar.org/paper/3a5894a7b82336d2dc99ebf797bda294d24759b8",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04727",
+      "identity_tokens": [
+        "arXiv:2410.04727"
+      ],
+      "title": "Forgetting Curve: A Reliable Method for Evaluating Memorization Capability for Long-Context Models",
+      "reason": "The paper proposes a benchmark/method to evaluate memorization in long-context models, not a model-serving or inference optimization.",
+      "source_url": "https://arxiv.org/abs/2410.04727",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.13191",
+      "identity_tokens": [
+        "arXiv:2308.13191"
+      ],
+      "title": "Chunk, Align, Select: A Simple Long-sequence Processing Method for Transformers",
+      "reason": "The tested models/tasks are encoder-style long-text processing rather than decoder-only LLM generation; transfer to current LLM serving is not established.",
+      "source_url": "https://arxiv.org/abs/2308.13191",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    }
+  ]
+}
