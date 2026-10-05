@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-18-part-04-18136faedc09",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27545",
+      "identity_tokens": [
+        "arXiv:2609.27545"
+      ],
+      "title": "Programmable and scalable on-chip WDM processing platform enabled by cascaded FSR-free resonators",
+      "reason": "Wavelength-division multiplexing (WDM) is pivotal for expanding the capacity and functionality of photonic systems, from communications to computing. However, on-chip implementation for broadband operation is fundamentally limited by the narrow free spectral range (FSR) and inefficient drop transmission of conventional optical microcavities. Here, we transcend this limit with a scalable integrated WDM processing platform based on cascaded dual-sided coupled Fabry-P\\'erot add-drop resonators. Thi",
+      "source_url": "https://arxiv.org/abs/2609.27545",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27564",
+      "identity_tokens": [
+        "arXiv:2609.27564"
+      ],
+      "title": "TNLearn: An Open Source Python Package for Task-based Neurons",
+      "reason": "The brain does not rely on a single type of neuron to perform all kinds of tasks; instead, it designs different neurons for different tasks. The concept of task-based neurons represents a paradigm shift compared to task-based architectures. It argues that solving a specific problem requires customized neurons, as task-based neurons capture useful prior knowledge from task-related data. To facilitate the use of task-based neurons in scientific research and industrial applications, we introduce TN",
+      "source_url": "https://arxiv.org/abs/2609.27564",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27639",
+      "identity_tokens": [
+        "arXiv:2609.27639"
+      ],
+      "title": "Agent-based Modeling: Equilibrium, Echo Chambers, and Efficiency in Hybrid Coevolutionary Opinion Games",
+      "reason": "Online discussion of political and gender-related issues is often heated, and when opinions in a network draw closer, the convergence is readily taken as genuine consensus. Whether it carries a cost is a question existing methods cannot answer: coevolutionary opinion formation games measure the Price of Anarchy (PoA) of agents that update by numerical rules, while simulations with large language model (LLM) agents report only descriptive indices. We introduce the Hybrid Coevolutionary Opinion Ga",
+      "source_url": "https://arxiv.org/abs/2609.27639",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27996",
+      "identity_tokens": [
+        "arXiv:2609.27996"
+      ],
+      "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams",
+      "reason": "Privacy-sensitive organizations may run large language models (LLMs) in restricted or air-gapped environments while exporting selected diagnostic artifacts. We show that a compromised runtime component can hide sensitive information in intermediate activations that are allowed to leave the restricted environment. An offline observer can recover this information with a simple linear decoder. The attack requires no model retraining or weight modification, no attacker-controlled egress, and no cont",
+      "source_url": "https://arxiv.org/abs/2609.27996",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28006",
+      "identity_tokens": [
+        "arXiv:2609.28006"
+      ],
+      "title": "Shared Global KV with Layer-Specific Local History",
+      "reason": "KV cache設計に関連するが、小規模126M/2K条件でのlikelihood差が中心。GQAやlayer-sharingよりcacheが大きく長いrequestのlatencyも高く、実serving効率が弱い。",
+      "source_url": "https://arxiv.org/abs/2609.28006",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
