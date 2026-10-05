@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-151-300-part-04-222056507d8d",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.17416",
+      "identity_tokens": [
+        "arXiv:2502.17416"
+      ],
+      "title": "Reasoning with Latent Thoughts: On the Power of Looped Transformers",
+      "reason": "Parameter reduction alone does not establish lower inference FLOPs, latency or serving cost.",
+      "source_url": "https://arxiv.org/abs/2502.17416",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.05112",
+      "identity_tokens": [
+        "arXiv:2311.05112"
+      ],
+      "title": "A Survey of Large Language Models in Medicine: Progress, Application, and Challenge",
+      "reason": "Medical LLM survey focuses applications/challenges, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2311.05112",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.12313",
+      "identity_tokens": [
+        "arXiv:2403.12313"
+      ],
+      "title": "Improving LoRA in Privacy-preserving Federated Learning",
+      "reason": "Federated LoRA training/communication efficiency, not inference.",
+      "source_url": "https://arxiv.org/abs/2403.12313",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.00282",
+      "identity_tokens": [
+        "arXiv:2404.00282"
+      ],
+      "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods",
+      "reason": "LLM-enhanced RL survey, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2404.00282",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.11985",
+      "identity_tokens": [
+        "arXiv:2002.11985"
+      ],
+      "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT",
+      "reason": "Decoder extensions are mentioned but detailed methods and measurements are BERT encoder-focused.",
+      "source_url": "https://aclanthology.org/2021.tacl-1.63/",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    }
+  ]
+}
