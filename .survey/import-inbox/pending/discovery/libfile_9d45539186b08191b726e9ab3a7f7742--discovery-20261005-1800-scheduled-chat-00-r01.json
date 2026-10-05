@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1800-scheduled-chat-00/r01",
+  "reference_main_sha": "f19160848187c7810dd47fcb1a3195e1fbb7f83b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.coling-main.419",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.coling-main.419"
+      ],
+      "title": "CLUE: A Chinese Language Understanding Evaluation Benchmark",
+      "reason": "中国語自然言語理解の9タスクをまとめた評価ベンチマークで、事前学習済み中国語モデルの能力比較が主目的。推論ランタイム、メモリ階層、サービング最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2004.05986",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で中国語NLU benchmark構築と9モデルの能力評価が主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.06822",
+      "identity_tokens": [
+        "arXiv:1902.06822"
+      ],
+      "title": "Low-bit Quantization of Neural Networks for Efficient Inference",
+      "reason": "重み・活性化をMMSE基準でINT4へ量子化し、再学習なしで制約ハードウェアへ展開する推論向け量子化研究。メモリ帯域・計算・電力削減に直結するが、本文評価はImageNet上のCNN等の一般DNNでありLLM/Transformer推論を対象としないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/1902.06822",
+      "body_check": "full_text_checked: 一次arXiv本文でlayer-wise MMSE量子化、kernel-wise partitioning、複数low-precision tensor、INT4 weights/activations、ImageNet評価、FP32比平均top-1 3%・top-5 1.7%低下を確認。LLM専用評価がないためborderline。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w17-4418",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w17-4418"
+      ],
+      "title": "Results of the WNUT2017 Shared Task on Novel and Emerging Entity Recognition",
+      "reason": "新規・希少な固有表現をnoisy textから検出・分類する共有タスクとデータセットの評価報告。LLM推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://aclanthology.org/W17-4418/",
+      "body_check": "abstract_screen_only: ACL Anthology一次要旨でnovel/emerging entity recognition shared taskと参加system評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit",
+      "reason": "CNTKは計算グラフ型の深層学習ツールキットで、再帰ループ推論・実行、メモリ共有、複数GPUサーバ並列化などruntime機構を含む。推論runtimeの基礎として関連するが、対象は汎用DNN（speech/image/text）でLLM/Transformer推論専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/2939672.2945397",
+      "body_check": "full_text_checked: KDD一次tutorial PDFでtraining/evaluating DNNs、automatic differentiation、recurrent-loop inference/execution、memory sharing、multi-server parallelizationを確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.09577",
+      "identity_tokens": [
+        "arXiv:1909.09577"
+      ],
+      "title": "NeMo: a toolkit for building AI applications using Neural Modules",
+      "reason": "Neural Moduleを組み合わせるAIアプリ構築ツールキットで、ASR/NLP module、分散学習、mixed precisionを提供する。主眼はモデル構築・再利用・学習基盤で、LLM推論サービングのruntime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1909.09577",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でneural-module composition、ASR/NLP、distributed training、mixed precisionが主題と確認し、推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.12856",
+      "identity_tokens": [
+        "arXiv:2307.12856"
+      ],
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis",
+      "reason": "WebAgentは自然言語指示を分解し、長いHTMLを要約してPython programを生成し実Web操作を行うagent能力研究。MiniWoB/Mind2Webでtask successを評価するが、agent serving runtime・scheduler・KV cache・memory効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2307.12856",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でplanning、HTML summarization、program synthesisとWeb automation success rateが主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.04444",
+      "identity_tokens": [
+        "arXiv:1808.04444"
+      ],
+      "title": "Character-Level Language Modeling with Deeper Self-Attention",
+      "reason": "64層Transformerで文字単位言語モデルのbits-per-characterを改善し、補助損失の有効性を分析するモデル品質研究。推論runtime・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1808.04444",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でcharacter-level LM、64-layer Transformer、text8/enwik8精度とauxiliary lossが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1073/pnas.1907367117",
+      "identity_tokens": [
+        "DOI:10.1073/pnas.1907367117"
+      ],
+      "title": "Emergent linguistic structure in artificial neural networks trained by self-supervision",
+      "reason": "自己教師あり言語モデル内部に統語構造・照応関係が創発することをattention headとstructural probeで解析する解釈研究。推論性能・ランタイム・メモリ・サービング効率化を目的としない。",
+      "source_url": "https://doi.org/10.1073/pnas.1907367117",
+      "body_check": "abstract_screen_only: PNAS一次本文abstractでBERT等の言語表現におけるsyntax/coreferenceの創発構造解析が主題と確認し、推論system対象外のため深読解を省略。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1964218.1964225",
+      "identity_tokens": [
+        "DOI:10.1145/1964218.1964225"
+      ],
+      "title": "The structural simulation toolkit",
+      "reason": "Structural Simulation Toolkit (SST)は大規模計算機アーキテクチャを構成要素で組み立て、並列離散事象シミュレーションする基盤。推論システムのsimulation/emulation研究へ利用可能だが、論文自体は汎用HPC/architecture simulatorでLLM推論を最終適用先としないためborderline。",
+      "source_url": "https://doi.org/10.1145/1964218.1964225",
+      "body_check": "full_text_checked: SST公式資料と論文書誌でmodular component model、parallel discrete-event simulation、CPU/cache/memory/networkを含むsystem simulationと大規模scale-outを確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.04697",
+      "identity_tokens": [
+        "arXiv:2503.04697"
+      ],
+      "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning",
+      "reason": "Length Controlled Policy Optimization (LCPO)で指定長に従うreasoning modelを学習し、推論時のChain-of-Thought長を直接制御して計算コストと精度を連続的に配分する。短い推論モデル（SRM）も導出し、同じ推論長で1.5B L1がGPT-4oを上回る例を報告しており、test-time compute削減を直接扱うため対象内。",
+      "source_url": "https://arxiv.org/abs/2503.04697",
+      "body_check": "full_text_checked: 一次arXiv本文でLCPOのaccuracy+length-constraint objective、prompt指定length、test-time compute/accuracy trade-off、Short Reasoning Models、1.5B L1対GPT-4oのequal-reasoning-length結果を確認。",
+      "first_checked_at": "2026-10-05T18:12:00+09:00",
+      "last_checked_at": "2026-10-05T18:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 38
+    }
+  ]
+}
