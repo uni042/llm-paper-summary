@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:54:47+00:00",
-  "record_count": 1787,
+  "updated_at": "2026-10-05T13:57:29+00:00",
+  "record_count": 1790,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27633,6 +27633,51 @@
         "papers/inference/10-kv-cache-offload-recomputation/2025-2506.03296-apex-asynchronous-parallel-cpu-gpu-execution-for-online-llm-inference-on-constrained-gpus.md"
       ],
       "title": "Execution-Centric Characterization of FP8 Matrix Cores, Asynchronous Execution, and Structured Sparsity on AMD MI300A"
+    },
+    "arXiv:2602.01547": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01547",
+      "identity_tokens": [
+        "arXiv:2602.01547"
+      ],
+      "reason": "Compression is for a specialized SER application and the inspected body does not report general LLM serving latency.",
+      "first_checked_at": "2026-10-05T13:57:28+00:00",
+      "last_checked_at": "2026-10-05T13:57:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Attention-weighted Centered Kernel Alignment for Knowledge Distillation in Large Audio-Language Models Applied to Speech Emotion Recognition"
+    },
+    "DOI:10.1145/3768585": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3768585",
+      "identity_tokens": [
+        "DOI:10.1145/3768585"
+      ],
+      "reason": "要旨では推論/servingに関連するが、一次出版社の全文取得に失敗し、関連節・評価・限界を確認できない。内容を推測しない。",
+      "first_checked_at": "2026-10-05T13:57:29+00:00",
+      "last_checked_at": "2026-10-05T13:57:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "JUNO++: Optimizing ANNS and Enabling Efficient Sparse Attention in LLM via Ray Tracing Core"
+    },
+    "arXiv:2602.04101": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04101",
+      "identity_tokens": [
+        "arXiv:2602.04101"
+      ],
+      "reason": "The body does not isolate or quantify end-to-end inference-cost/latency savings; the system-level efficiency relevance remains weak.",
+      "first_checked_at": "2026-10-05T13:57:29+00:00",
+      "last_checked_at": "2026-10-05T13:57:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Interfaze: The Future of AI is built on Task-Specific Small Models"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7a48d98e6990098-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.12635",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.12635",
+    "identity_tokens": [
+      "arXiv:2509.12635"
+    ],
+    "reason": "RoPEの位置バイアス/位置符号化理論。推論計算効率やservingを扱わない。",
+    "first_checked_at": "2026-10-05T13:57:29+00:00",
+    "last_checked_at": "2026-10-05T13:57:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "Positional Encoding via Token-Aware Phase Attention"
+  },
+  "processed_at": "2026-10-05T13:57:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7a48d98e699",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

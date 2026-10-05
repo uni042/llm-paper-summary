@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-73dda72ff50bbf4b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.01547",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.01547",
+    "identity_tokens": [
+      "arXiv:2602.01547"
+    ],
+    "reason": "Compression is for a specialized SER application and the inspected body does not report general LLM serving latency.",
+    "first_checked_at": "2026-10-05T13:57:28+00:00",
+    "last_checked_at": "2026-10-05T13:57:28+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "title": "Attention-weighted Centered Kernel Alignment for Knowledge Distillation in Large Audio-Language Models Applied to Speech Emotion Recognition"
+  },
+  "processed_at": "2026-10-05T13:57:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73dda72ff50b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

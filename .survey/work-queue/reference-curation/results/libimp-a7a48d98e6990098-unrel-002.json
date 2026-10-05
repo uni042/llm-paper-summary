@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a7a48d98e6990098-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.7717/peerj-cs.3202",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.7717/peerj-cs.3202",
+    "identity_tokens": [
+      "DOI:10.7717/peerj-cs.3202"
+    ],
+    "reason": "長文のsemantic textual similarity手法。LLM推論基盤ではない。",
+    "first_checked_at": "2026-10-05T13:57:29+00:00",
+    "last_checked_at": "2026-10-05T13:57:29+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "A method for semantic textual similarity on long texts"
+  },
+  "processed_at": "2026-10-05T13:57:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a7a48d98e699",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
