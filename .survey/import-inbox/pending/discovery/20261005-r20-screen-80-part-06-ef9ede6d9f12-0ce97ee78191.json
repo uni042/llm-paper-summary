@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-80-part-06-ef9ede6d9f12",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14067",
+      "identity_tokens": [
+        "arXiv:2410.14067"
+      ],
+      "title": "Provable Benefits of Complex Parameterizations for Structured State Space Models",
+      "reason": "SSMの複素parameterizationを理論解析する研究。",
+      "source_url": "https://arxiv.org/abs/2410.14067",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04798",
+      "identity_tokens": [
+        "arXiv:2410.04798"
+      ],
+      "title": "DAPE V2: Process Attention Score as Feature Map for Length Extrapolation",
+      "reason": "DAPE V2でTransformer length extrapolationと性能を改善するが、推論効率化が主題でない。",
+      "source_url": "https://arxiv.org/abs/2410.04798",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.08506",
+      "identity_tokens": [
+        "arXiv:2408.08506"
+      ],
+      "title": "Ex3: Automatic Novel Writing by Extracting, Excelsior and Expanding",
+      "reason": "LLM fine-tuningとtree expansionを用いた長編小説生成の品質研究。",
+      "source_url": "https://arxiv.org/abs/2408.08506",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16528",
+      "identity_tokens": [
+        "arXiv:2405.16528"
+      ],
+      "title": "LoQT: Low-Rank Adapters for Quantized Pretraining",
+      "reason": "量子化済みLLMのpre-trainingを省メモリ化するtraining手法。",
+      "source_url": "https://arxiv.org/abs/2405.16528",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00622",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00622"
+      ],
+      "title": "Removing Backdoors in Pre-trained Models by Regularized Continual Pre-training",
+      "reason": "continual pre-trainingでbackdoorを除去するsecurity/training研究。",
+      "source_url": "https://doi.org/10.1162/tacl_a_00622",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    }
+  ]
+}
