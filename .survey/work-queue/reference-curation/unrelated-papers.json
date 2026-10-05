@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:58:45+00:00",
-  "record_count": 4288,
+  "updated_at": "2026-10-05T10:01:02+00:00",
+  "record_count": 4301,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -62440,6 +62440,193 @@
         "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
       ],
       "title": "A Hybrid Physics-Augmented Neural Network for Dynamic System Modeling with Partially Known Dynamics"
+    },
+    "DOI:10.21105/jcon.00206": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21105/jcon.00206",
+      "identity_tokens": [
+        "DOI:10.21105/jcon.00206"
+      ],
+      "reason": "一次要旨はJulia上のportable multi-GPU BLAS libraryであり、LLM workload/servingへの適用は示されない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "XK.jl: Composable and Portable Multi-GPU BLAS in Julia"
+    },
+    "DOI:10.48550/arxiv.2607.23539": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2607.23539",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.23539",
+        "arXiv:2607.23539"
+      ],
+      "reason": "一次要旨はAI agentによるprivacy/anonymityとdiscriminationの研究で、inference cost/performanceを評価しない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ],
+      "title": "Private Again: AI Agents Restore Anonymity - Foreclosing Discrimination and Its Proof"
+    },
+    "arXiv:2607.23067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23067",
+      "identity_tokens": [
+        "arXiv:2607.23067"
+      ],
+      "reason": "一次要旨はcontrastive layer selectionでfactuality/TruthfulQAの改善を報告するが、計算量・latency・serving costの低減が目的/評価ではない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Attention-Guided Layer Selection for Contrastive Decoding in Large Language Models"
+    },
+    "arXiv:2607.23136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23136",
+      "identity_tokens": [
+        "arXiv:2607.23136"
+      ],
+      "reason": "一次要旨はhyperspectral image fusionをRaspberry Piへ実装するimage-processing optimizationであり、LLM inferenceとは無関係。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Optimized Embedded Implementation of Hyperspectral-Multispectral Image Fusion on Raspberry Pi"
+    },
+    "arXiv:2607.28670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28670",
+      "identity_tokens": [
+        "arXiv:2607.28670"
+      ],
+      "reason": "一次要旨はfrozen MoEのrouting-dependence theory/pilotで、task-level inference efficiency gainを示していない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Hierarchical Copula-Gumbel-Top-K Routing: Two-Sided Dependence Control for Frozen Mixture-of-Experts at Fixed Per-Token Routing Laws"
+    },
+    "DOI:10.1145/3831251": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3831251",
+      "identity_tokens": [
+        "DOI:10.1145/3831251"
+      ],
+      "reason": "一次要旨はcloth-changing person re-identificationのvision frameworkで、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Multi-Level Semantic-Guided Framework for Cloth-Changing Person Re-Identification"
+    },
+    "arXiv:2607.21978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21978",
+      "identity_tokens": [
+        "arXiv:2607.21978"
+      ],
+      "reason": "一次要旨はMoE LoRA parameter-efficient fine-tuningとdownstream accuracyを扱う。efficiencyはtraining/adaptationで、inference performance最適化ではない。",
+      "first_checked_at": "2026-10-05T10:01:01+00:00",
+      "last_checked_at": "2026-10-05T10:01:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "MoE2-LoRA: When MoE Models Meet MoE-style Low-Rank Adaptation"
+    },
+    "arXiv:2607.22098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22098",
+      "identity_tokens": [
+        "arXiv:2607.22098"
+      ],
+      "reason": "一次要旨はreasoning-trace denoisingによるhallucination detection accuracyが主題で、inference cost/latency改善を示さない。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "Reasoning Denoiser: Denoising Reasoning Traces for Hallucination Detection in Large Reasoning Models"
+    },
+    "arXiv:2607.22157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22157",
+      "identity_tokens": [
+        "arXiv:2607.22157"
+      ],
+      "reason": "一次要旨はdeployment feedbackによるagent continual learning/task successで、LLM inference execution efficiencyは対象でない。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Learning on the Job: Continual Learning from Deployment Feedback for Frozen-Weights Agents"
+    },
+    "arXiv:2607.22173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22173",
+      "identity_tokens": [
+        "arXiv:2607.22173"
+      ],
+      "reason": "一次要旨はabdominal CTのbowel-obstruction detection/localization医療画像taskで、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Bowel Obstruction Detection and Localization on Abdominal CT with Deep Learning"
+    },
+    "arXiv:2607.22448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22448",
+      "identity_tokens": [
+        "arXiv:2607.22448"
+      ],
+      "reason": "一次要旨はagent pipelineのinformation-omission attributionを測るbenchmarkであり、inference efficiency手法ではない。context-length/quantizationとのomission関連は品質挙動の分析。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md"
+      ],
+      "title": "Where Facts Go Missing: A Layerwise Taxonomy and Per-Layer Attribution of Information Omission in Air-Gapped LLMAgent Pipelines"
+    },
+    "arXiv:2607.22489": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22489",
+      "identity_tokens": [
+        "arXiv:2607.22489"
+      ],
+      "reason": "一次要旨はLoRA fine-tuningのcompute/time/memory削減を主題とし、serving/inference時の効率は扱わない。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "kappa-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating"
+    },
+    "arXiv:2607.22837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22837",
+      "identity_tokens": [
+        "arXiv:2607.22837"
+      ],
+      "reason": "一次要旨はdecoding-time logit biasでtask quality adaptationを目的とするが、inference latency/cost/throughputの改善を示さない。",
+      "first_checked_at": "2026-10-05T10:01:02+00:00",
+      "last_checked_at": "2026-10-05T10:01:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Frustratingly Simple Black-Box Adaptation of Language Models via Logit Bias"
     }
   }
 }

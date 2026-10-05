@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aef242accf164b9d-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.22837",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.22837",
+    "identity_tokens": [
+      "arXiv:2607.22837"
+    ],
+    "reason": "一次要旨はdecoding-time logit biasでtask quality adaptationを目的とするが、inference latency/cost/throughputの改善を示さない。",
+    "first_checked_at": "2026-10-05T10:01:02+00:00",
+    "last_checked_at": "2026-10-05T10:01:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Frustratingly Simple Black-Box Adaptation of Language Models via Logit Bias"
+  },
+  "processed_at": "2026-10-05T10:01:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aef242accf16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
