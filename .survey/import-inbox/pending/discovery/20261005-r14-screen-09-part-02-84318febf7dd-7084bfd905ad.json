@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-09-part-02-84318febf7dd",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.findings-acl.426",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.findings-acl.426"
+      ],
+      "title": "\"Low-Resource\" Text Classification: A Parameter-Free Classification Method with Compressors",
+      "reason": "ACL Anthologyの一次要旨は圧縮器を用いる低資源text classification methodを扱う。LLM inference/servingの効率化ではない。",
+      "source_url": "https://aclanthology.org/2023.findings-acl.426/",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.14769",
+      "identity_tokens": [
+        "arXiv:2004.14769"
+      ],
+      "title": "Conditional Augmentation for Aspect Term Extraction via Masked Sequence-to-Sequence Generation",
+      "reason": "一次要旨はaspect term extractionのためのconditional augmentationとmasked seq2seq generationを提案するタスク特化NLP研究。LLM推論効率の評価ではない。",
+      "source_url": "https://arxiv.org/abs/2004.14769",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18206",
+      "identity_tokens": [
+        "arXiv:2606.18206"
+      ],
+      "title": "Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers",
+      "reason": "適応計算に関係する設計はあるが、評価は言語モデル・LLM推論でなく、停止機構の効率もbatch実装上は実現していない。今回のLLM推論範囲との直接性が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.18206",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06500",
+      "identity_tokens": [
+        "arXiv:2310.06500"
+      ],
+      "title": "MetaAgents: Large Language Model Based Agents for Decision-Making on Teaming",
+      "reason": "一次要旨はLLM multi-agentによるteam decision makingを扱うが、推論効率・serving最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2310.06500",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/277851.277942",
+      "identity_tokens": [
+        "DOI:10.1145/277851.277942"
+      ],
+      "title": "Task assignment in a distributed system (extended abstract): improving performance by unbalancing load",
+      "reason": "候補packetに記載された一次資料URLを取得経路で開いたが、一次要旨を確認できなかった。検索snippetや題名から内容を推測せず、候補由来のID/title/URLのみ保持。",
+      "source_url": "https://doi.org/10.1145/277851.277942",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.17741-chameleon-adapter-caching-scheduling.md"
+      ]
+    }
+  ]
+}
