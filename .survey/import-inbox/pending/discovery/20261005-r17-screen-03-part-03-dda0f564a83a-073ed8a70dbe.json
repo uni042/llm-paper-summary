@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-03-part-03-dda0f564a83a",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10952",
+      "identity_tokens": [
+        "arXiv:2608.10952"
+      ],
+      "title": "Multiple Scale Latents for Learned Image Compression",
+      "reason": "The abstract is about multi-scale latents for image compression, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.10952",
+      "first_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "last_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829124",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829124"
+      ],
+      "title": "Dynamic Compute and Network Orchestration for Disaggregated RL",
+      "reason": "The work optimizes disaggregated reinforcement-learning generation/training orchestration; the stated workload is post-training, outside inference-serving efficiency scope.",
+      "source_url": "https://doi.org/10.1145/3789240.3829124",
+      "first_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "last_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829152",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829152"
+      ],
+      "title": "Connecting 100K+ GPUs: Building the Communication Stack for Large-Scale LLM Training",
+      "reason": "The work describes communication infrastructure for large-scale LLM training; training startup/network/memory optimization is outside inference scope.",
+      "source_url": "https://doi.org/10.1145/3789240.3829152",
+      "first_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "last_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829200",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829200"
+      ],
+      "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving",
+      "reason": "No body-level method, evaluation conditions, or limitations could be verified, so it cannot be advanced from the abstract alone.",
+      "source_url": "https://doi.org/10.1145/3789240.3829200",
+      "first_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "last_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.08.05.743059",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.05.743059"
+      ],
+      "title": "Neural prediction decorrelation reveals that adversarial robustness substantially improves DNN prediction accuracy across the entire human auditory cortex",
+      "reason": "The paper studies neural encoding-model prediction accuracy in the human auditory cortex, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.64898/2026.08.05.743059",
+      "first_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "last_checked_at": "2026-10-05T03:09:40.418953+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
