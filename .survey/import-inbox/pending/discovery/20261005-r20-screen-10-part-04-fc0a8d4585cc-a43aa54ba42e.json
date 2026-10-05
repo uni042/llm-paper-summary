@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-10-part-04-fc0a8d4585cc",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08391",
+      "identity_tokens": [
+        "arXiv:2609.08391"
+      ],
+      "title": "From Coordinates to Candidate Regions: Temporal Change Localization via Region Selection in Remote Sensing Multimodal LLMs",
+      "reason": "arXiv abstract proposes region-selection output for remote-sensing localization; its contribution is task formulation/training and localization quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.08391",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08418",
+      "identity_tokens": [
+        "arXiv:2609.08418"
+      ],
+      "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+      "reason": "arXiv abstract focuses on cyber-model post-training data collection, teacher sampling and trajectory quality; the cost discussion is training/data generation, not deployed inference.",
+      "source_url": "https://arxiv.org/abs/2609.08418",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08443",
+      "identity_tokens": [
+        "arXiv:2609.08443"
+      ],
+      "title": "SequenceO1: End-to-End Ultra-Long (100K) Sequence Modeling in Recommendation with Low-Rank Caching",
+      "reason": "The abstract concerns long-sequence recommendation modeling and low-rank caching; it does not describe an LLM or LLM serving/inference method.",
+      "source_url": "https://arxiv.org/abs/2609.08443",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08550",
+      "identity_tokens": [
+        "arXiv:2609.08550"
+      ],
+      "title": "CreaMem: A Scene-Aware Memory Architecture for Personalized Agents",
+      "reason": "It is an agent-memory quality architecture with higher measured query latency, not an inference-efficiency improvement; the abstract’s retrieval-space reduction does not translate to demonstrated runtime savings.",
+      "source_url": "https://arxiv.org/abs/2609.08550",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08558",
+      "identity_tokens": [
+        "arXiv:2609.08558"
+      ],
+      "title": "Personalizing LLM Agent Memory Using Biometrics",
+      "reason": "arXiv abstract proposes biometric-gated personalized memory retrieval for shared agents, with owner-separation accuracy as the outcome; it does not address inference cost or latency.",
+      "source_url": "https://arxiv.org/abs/2609.08558",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
