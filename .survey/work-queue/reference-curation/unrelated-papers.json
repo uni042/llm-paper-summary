@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:59:06+00:00",
-  "record_count": 1776,
+  "updated_at": "2026-10-05T02:01:51+00:00",
+  "record_count": 1789,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25605,6 +25605,206 @@
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
       "title": "Data Augmentation using Pre-trained Transformer Models"
+    },
+    "arXiv:2310.03716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03716",
+      "identity_tokens": [
+        "arXiv:2310.03716"
+      ],
+      "reason": "RLHF response-length correlation/reward bias analysis; training/reward-modeling scope.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+      ],
+      "title": "A Long Way to Go: Investigating Length Correlations in RLHF"
+    },
+    "DOI:10.1145/3161602": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3161602",
+      "identity_tokens": [
+        "DOI:10.1145/3161602"
+      ],
+      "reason": "Survey of spatio-temporal data mining, outside LLM inference and serving.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Spatio-Temporal Data Mining"
+    },
+    "DOI:10.18653/v1/w17-4912": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w17-4912",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w17-4912"
+      ],
+      "reason": "Neural generation conditioned on linguistic style; not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Controlling Linguistic Style Aspects in Neural Language Generation"
+    },
+    "arXiv:2110.06296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.06296",
+      "identity_tokens": [
+        "arXiv:2110.06296"
+      ],
+      "reason": "Permutation invariance/linear mode connectivity in neural-network optimization; no LLM-serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+      ],
+      "title": "The Role of Permutation Invariance in Linear Mode Connectivity of Neural Networks"
+    },
+    "arXiv:2402.17193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.17193",
+      "identity_tokens": [
+        "arXiv:2402.17193"
+      ],
+      "reason": "Scaling analysis of LLM fine-tuning; training-stage scope.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2606.15453-spatio-temporal-expert-prefetching.md"
+      ],
+      "title": "When Scaling Meets LLM Finetuning: The Effect of Data, Model and Finetuning Method"
+    },
+    "DOI:10.18653/v1/2020.emnlp-main.574": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.574",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.574"
+      ],
+      "reason": "Attention vector-norm analysis for transformer interpretability; no inference-efficiency method.",
+      "first_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ],
+      "title": "Attention Is Not Only a Weight: Analyzing Transformers with Vector Norms"
+    },
+    "arXiv:1808.10583": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.10583",
+      "identity_tokens": [
+        "arXiv:1808.10583"
+      ],
+      "reason": "AISHELL-2 is a Mandarin ASR corpus/dataset, not an inference optimization.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md"
+      ],
+      "title": "AISHELL-2: Transforming Mandarin ASR Research Into Industrial Scale"
+    },
+    "arXiv:2102.04803": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.04803",
+      "identity_tokens": [
+        "arXiv:2102.04803"
+      ],
+      "reason": "DetCo is self-supervised object-detection representation learning, not LLM inference.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md"
+      ],
+      "title": "DetCo: Unsupervised Contrastive Learning for Object Detection"
+    },
+    "arXiv:2307.03601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03601",
+      "identity_tokens": [
+        "arXiv:2307.03601"
+      ],
+      "reason": "GPT4RoI instruction-tunes an LLM for region-of-interest visual understanding; capability/tuning work.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest"
+    },
+    "arXiv:2401.05561": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.05561",
+      "identity_tokens": [
+        "arXiv:2401.05561"
+      ],
+      "reason": "TrustLLM is a trustworthiness evaluation benchmark/framework, not an inference optimization.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "TrustLLM: Trustworthiness in Large Language Models"
+    },
+    "arXiv:2501.14249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.14249",
+      "identity_tokens": [
+        "arXiv:2501.14249"
+      ],
+      "reason": "Humanity’s Last Exam is an expert-level question benchmark, not an inference optimization.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.15127-agentsysbench.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+        "papers/inference/99-other-inference-systems/2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md"
+      ],
+      "title": "A benchmark of expert-level academic questions to assess AI capabilities"
+    },
+    "arXiv:2502.02737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02737",
+      "identity_tokens": [
+        "arXiv:2502.02737"
+      ],
+      "reason": "SmolLM2 studies data-centric pretraining/training of small language models, not inference optimization.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.05711-omnimoe-atomic-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2609.09338-osprey-target-agnostic-pretraining-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md",
+        "papers/inference/16-weight-quantization-compression/2025-2509.16989-ptqtp-post-training-quantization-to-trit-planes-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2605.20706-llamaweb.md",
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "title": "SmolLM2: When Smol Goes Big - Data-Centric Training of a Small Language Model"
+    },
+    "DOI:10.18653/v1/d16-1159": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d16-1159",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d16-1159"
+      ],
+      "reason": "ACL primary record concerns whether string-based neural MT learns source syntax; not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Does String-Based Neural MT Learn Source Syntax?"
     }
   }
 }
