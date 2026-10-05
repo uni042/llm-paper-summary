@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1731-scheduled-chat-30/r02",
+  "reference_main_sha": "9504953aac82c2b7bc0fe63d55a1713ad06f71ee",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.05300",
+      "identity_tokens": ["arXiv:2307.05300"],
+      "title": "Unleashing the Emergent Cognitive Synergy in Large Language Models: A Task-Solving Agent through Multi-Persona Self-Collaboration",
+      "reason": "単一LLMに複数personaを動的に演じさせてmulti-turn self-collaborationを行い、複雑taskのproblem-solving能力とhallucinationを改善するprompting/agent capability研究。主要評価はTrivia Creative Writing、Codenames、Logic Grid Puzzleのtask performanceで、agentic inference runtime・scheduling・memory・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2307.05300",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でSolo Performance Prompting、dynamic multi-persona self-collaboration、3 taskでのproblem-solving/hallucination評価が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": ["papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md", "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"],
+      "worklist_rank": 62
+    }
+  ]
+}
