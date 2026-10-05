@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TokenSkip: Controllable Chain-of-Thought Compression in LLMs",
+      "source_url": "https://arxiv.org/abs/2502.12067",
+      "year": 2025,
+      "published": "2025-02-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 287,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) has been proven effective in enhancing the reasoning capabilities of large language models (LLMs). Recent advancements, such as OpenAI's o1 and DeepSeek-R1, suggest that scaling up the length of CoT sequences during inference could further boost LLM reasoning performance. However, due to the autoregressive nature of LLM decoding, longer CoT outputs lead to a linear increase in inference latency, adversely affecting user experience, particularly when the CoT exceeds 10,000 tokens. To address this limitation, we analyze the semantic importance of tokens within CoT outputs and reveal that their contributions to reasoning vary. Building on this insight, we propose TokenSkip, a simple yet effective approach that enables LLMs to selectively skip less important tokens, allowing for controllable CoT compression. Extensive experiments across various models and tasks demonstrate the effectiveness of TokenSkip in reducing CoT token usage while preserving strong reasoning performance. Notably, when applied to Qwen2.5-14B-Instruct, TokenSkip reduces reasoning tokens by 40% (from 313 to 181) on GSM8K, with less than a 0.4% performance drop. We release our code and checkpoints in https://github.com/hemingkx/TokenSkip.",
+      "identifiers": [
+        "SemanticScholar:79be1c87f3b9e047e10912c5a707c87a69c5dc05"
+      ],
+      "semantic_scholar_id": "79be1c87f3b9e047e10912c5a707c87a69c5dc05",
+      "canonical_id": "arXiv:2502.12067",
+      "arxiv_id": "2502.12067",
+      "doi": "10.48550/arXiv.2502.12067",
+      "authors": [
+        "He-Ming Xia",
+        "Yong-Qi Li",
+        "Chak Tou Leong",
+        "Wenjie Wang",
+        "Wenjie Li"
+      ],
+      "priority": 297,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 287,
+        "citation_count": 287,
+        "total": 297,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 595,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "長いCoTがautoregressive decoding latencyを線形に増やす問題に対し、重要度の低いreasoning tokenを選択的にskipして推論長を制御する。Qwen2.5-14B-InstructのGSM8Kでreasoning tokenを313から181へ40%削減し性能低下0.4%未満で、test-time compute/latency削減を直接扱うためaccept。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でCoT lengthとinference latencyの関係、semantic token importance、controllable token skipping、GSM8Kで40% token削減・<0.4%性能低下を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-26f060b49fe3",
+    "round": "libimp-26f060b49fe37206-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-26f060b49fe37206-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-26f060b49fe37206-pre01.json",
+    "receipt": "sha256:dbacdfd97947341e9376ba335763c00446718ab2c4402358fd478e056aca7659"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-26f060b49fe3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

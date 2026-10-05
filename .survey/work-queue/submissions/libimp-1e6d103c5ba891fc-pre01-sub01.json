@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "year": 2024,
+      "published": "2024-02-19",
+      "venue": "Conference on Robot Learning",
+      "citation_count": 616,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A primary hurdle of autonomous driving in urban environments is understanding complex and long-tail scenarios, such as challenging road conditions and delicate human behaviors. We introduce DriveVLM, an autonomous driving system leveraging Vision-Language Models (VLMs) for enhanced scene understanding and planning capabilities. DriveVLM integrates a unique combination of reasoning modules for scene description, scene analysis, and hierarchical planning. Furthermore, recognizing the limitations of VLMs in spatial reasoning and heavy computational requirements, we propose DriveVLM-Dual, a hybrid system that synergizes the strengths of DriveVLM with the traditional autonomous driving pipeline. Experiments on both the nuScenes dataset and our SUP-AD dataset demonstrate the efficacy of DriveVLM and DriveVLM-Dual in handling complex and unpredictable driving conditions. Finally, we deploy the DriveVLM-Dual on a production vehicle, verifying it is effective in real-world autonomous driving environments.",
+      "identifiers": [
+        "SemanticScholar:758c2dc290c037a6f211ec503beee70abe2d1197"
+      ],
+      "semantic_scholar_id": "758c2dc290c037a6f211ec503beee70abe2d1197",
+      "canonical_id": "arXiv:2402.12289",
+      "arxiv_id": "2402.12289",
+      "doi": "10.48550/arXiv.2402.12289",
+      "authors": [
+        "Xiao-Yu Tian",
+        "Junru Gu",
+        "Bai-Lin Li",
+        "Yi-Cheng Liu",
+        "Chenxu Hu",
+        "Yang Wang",
+        "Kun Zhan",
+        "Peng Jia",
+        "Xian-Peng Lang",
+        "Hang Zhao"
+      ],
+      "priority": 616,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 616,
+        "citation_count": 616,
+        "total": 616,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 959,
+        "matched_prestigious_venue": null
+      },
+      "reason": "量産車OrinX上で大規模VLMを実時間動作させるため、visual token圧縮・speculative sampling・slow-fast非同期構成を組み合わせる。VLM推論のdeployment最適化を実機で評価しており対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv本文への導線と本文内容を確認し、DriveVLM-Dualのslow-fast構成、LDPNetv2によるvisual token削減、speculative sampling、量産車OrinX上のreal-time deploymentを確認。推論効率化が実配備成立の主要要素のためaccept。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1e6d103c5ba8",
+    "round": "libimp-1e6d103c5ba891fc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1e6d103c5ba891fc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1e6d103c5ba891fc-pre01.json",
+    "receipt": "sha256:8a8dccb19de8a05bf650891d7162fd368b8394ad32da376975330f1bd7916f5b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1e6d103c5ba8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TernaryBERT: Distillation-aware Ultra-low Bit BERT",
+      "source_url": "https://arxiv.org/abs/2009.12812",
+      "year": 2020,
+      "published": "2020-09-27",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 244,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based pre-training models like BERT have achieved remarkable performance in many natural language processing tasks.However, these models are both computation and memory expensive, hindering their deployment to resource-constrained devices. In this work, we propose TernaryBERT, which ternarizes the weights in a fine-tuned BERT model. Specifically, we use both approximation-based and loss-aware ternarization methods and empirically investigate the ternarization granularity of different parts of BERT. Moreover, to reduce the accuracy degradation caused by the lower capacity of low bits, we leverage the knowledge distillation technique in the training process. Experiments on the GLUE benchmark and SQuAD show that our proposed TernaryBERT outperforms the other BERT quantization methods, and even achieves comparable performance as the full-precision model while being 14.9x smaller.",
+      "identifiers": [
+        "SemanticScholar:097210dc65924f8ce59523faf444e635523dc714"
+      ],
+      "semantic_scholar_id": "097210dc65924f8ce59523faf444e635523dc714",
+      "canonical_id": "arXiv:2009.12812",
+      "arxiv_id": "2009.12812",
+      "doi": "10.18653/v1/2020.emnlp-main.37",
+      "authors": [
+        "Wei Zhang",
+        "Lu Hou",
+        "Yichun Yin",
+        "Li-Feng Shang",
+        "Xiao Chen",
+        "Xin Jiang",
+        "Qun Liu"
+      ],
+      "priority": 254,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 244,
+        "citation_count": 244,
+        "total": 254,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2199,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "fine-tuned BERTのweightをternary化し、approximation/loss-aware ternarizationとknowledge distillationで低bit化の精度低下を抑える。GLUE/SQuADでfull-precision相当の性能を保ちながら14.9倍小型化し、resource-constrained deploymentを直接目的とするため推論向け量子化・圧縮として対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文情報でternary weights、distillation-aware training、GLUE/SQuAD評価、14.9x model-size reductionとresource-constrained deployment目的を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-99e9adf7972b",
+    "round": "libimp-99e9adf7972b4efa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-99e9adf7972b4efa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-99e9adf7972b4efa-pre01.json",
+    "receipt": "sha256:db223d4735323e16ae262be22a081724e5d73d6a941ec1d3d6ac81c826f0214c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-99e9adf7972b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

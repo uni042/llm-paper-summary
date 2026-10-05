@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement",
+      "source_url": "https://arxiv.org/abs/1802.06901",
+      "year": 2018,
+      "published": "2018-02-19",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 505,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a conditional non-autoregressive neural sequence model based on iterative refinement. The proposed model is designed based on the principles of latent variable models and denoising autoencoders, and is generally applicable to any sequence generation task. We extensively evaluate the proposed model on machine translation (En-De and En-Ro) and image caption generation, and observe that it significantly speeds up decoding while maintaining the generation quality comparable to the autoregressive counterpart.",
+      "identifiers": [
+        "SemanticScholar:9c5c89199114858eafbe50b46d77d38ffd03b28a"
+      ],
+      "semantic_scholar_id": "9c5c89199114858eafbe50b46d77d38ffd03b28a",
+      "canonical_id": "arXiv:1802.06901",
+      "arxiv_id": "1802.06901",
+      "doi": "10.18653/v1/D18-1149",
+      "authors": [
+        "Jason Lee",
+        "Elman Mansimov",
+        "Kyunghyun Cho"
+      ],
+      "priority": 515,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 505,
+        "citation_count": 505,
+        "total": 515,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 3150,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "自己回帰依存を外し、初期draftを並列生成した後に反復的にrefineするconditional non-autoregressive sequence model。Transformer実装でmachine translation/image captioningのdecodingを大幅高速化し、autoregressive counterpartに近い品質を維持するため、並列復号による推論高速化として対象内。",
+      "library_body_check": "full_text_checked: ACL Anthology一次論文ページと一次arXiv記録で、latent-variable/denoising-autoencoderに基づくiterative refinement、machine translationとimage captioningでのdecoding speedup、autoregressive品質との比較を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-33b46e41a58d",
+    "round": "libimp-33b46e41a58d5d27-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-33b46e41a58d5d27-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-33b46e41a58d5d27-pre01.json",
+    "receipt": "sha256:efc74be2629dec5f0bfca3d9023a97c024933f3ac24eb30bda42e300bd9b72d0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-33b46e41a58d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

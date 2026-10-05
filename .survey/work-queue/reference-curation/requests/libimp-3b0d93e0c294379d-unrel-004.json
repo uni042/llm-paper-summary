@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3b0d93e0c294379d-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.18653/v1/2021.acl-long.378",
+  "reason": "pretrained modelを固定しtask-specific diff vectorだけをsparseに学習・保存するparameter-efficient transfer learning研究。multi-task storageは削減するが主目的はfine-tuning/transferで推論runtime・servingではない。",
+  "title": "Parameter-Efficient Transfer Learning with Diff Pruning",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2021.acl-long.378",
+    "arXiv:2012.07463"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b0d93e0c294",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
