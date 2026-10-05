@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-04-part-06-d0f195462420",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36781",
+      "identity_tokens": [
+        "arXiv:2609.36781"
+      ],
+      "title": "Aperture: Merge-Consistent Rotary States for Compressed Tokens",
+      "reason": "The paper establishes a positional representation property, but the reviewed evaluation does not show net task-quality benefit or serving-speed measurement.",
+      "source_url": "https://arxiv.org/abs/2609.36781",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36802",
+      "identity_tokens": [
+        "arXiv:2609.36802"
+      ],
+      "title": "EasyPPO: Stabilizing the Critic Is Key",
+      "reason": "Stabilizes the PPO critic during RL training; training stability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36802",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36828",
+      "identity_tokens": [
+        "arXiv:2609.36828"
+      ],
+      "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models",
+      "reason": "Quantization can generally reduce deployment cost, but this paper evaluates calibration quality rather than an efficiency gain attributable to its method.",
+      "source_url": "https://arxiv.org/abs/2609.36828",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36842",
+      "identity_tokens": [
+        "arXiv:2609.36842"
+      ],
+      "title": "Does the VGGT Family Need All Its Layers?",
+      "reason": "Prunes layers in geometric vision models; non-LLM vision application.",
+      "source_url": "https://arxiv.org/abs/2609.36842",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36879",
+      "identity_tokens": [
+        "arXiv:2609.36879"
+      ],
+      "title": "SKILLLITE: Evidence-Guided Malicious Skill Auditing with Compact LLMs",
+      "reason": "Security auditing of agent skills with compact LLMs; detection application, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.36879",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    }
+  ]
+}
