@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-84-part-07-40b12f54b7db",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.04104",
+      "identity_tokens": [
+        "arXiv:2408.04104"
+      ],
+      "title": "Hardware-Assisted Virtualization of Neural Processing Units for Cloud Platforms",
+      "reason": "Full text confirms strong general ML-inference systems results, but the work is not LLM-specific and transfer to LLM serving is not established; keep as borderline for scope fit.",
+      "source_url": "https://arxiv.org/abs/2408.04104",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03942",
+      "identity_tokens": [
+        "arXiv:2403.03942"
+      ],
+      "title": "The Heuristic Core: Understanding Subnetwork Generalization in Pretrained Language Models",
+      "reason": "The paper studies subnetwork mechanisms behind pretrained language-model generalization; it is an interpretability/generalization analysis, not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2403.03942",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
