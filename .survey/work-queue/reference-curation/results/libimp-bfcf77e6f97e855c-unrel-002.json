@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfcf77e6f97e855c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.19058",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.19058",
+    "identity_tokens": [
+      "arXiv:2607.19058"
+    ],
+    "reason": "一次要旨はMoE optimizer state配置によるtraining memory最適化で訓練時対象。",
+    "first_checked_at": "2026-10-05T10:09:49+00:00",
+    "last_checked_at": "2026-10-05T10:09:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Where Should Optimizer State Live? Tiered State Allocation for Memory-Efficient Mixture-of-Experts Training"
+  },
+  "processed_at": "2026-10-05T10:09:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfcf77e6f97e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

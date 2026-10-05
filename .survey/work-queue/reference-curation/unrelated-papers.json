@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:07:16+00:00",
-  "record_count": 4331,
+  "updated_at": "2026-10-05T10:09:50+00:00",
+  "record_count": 4345,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -63099,6 +63099,207 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Validity-Aware Multi-Level Autotuning for Efficient Tensor Program Generation"
+    },
+    "arXiv:2607.18730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18730",
+      "identity_tokens": [
+        "arXiv:2607.18730"
+      ],
+      "reason": "一次要旨はTransformer残差経路の表現・学習を扱い、推論時の効率指標を評価しない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Dual Attention Residuals"
+    },
+    "arXiv:2607.18759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18759",
+      "identity_tokens": [
+        "arXiv:2607.18759"
+      ],
+      "reason": "一次要旨は位置encodingの長さ外挿理論と学習結果を扱い、serving効率を測定しない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Relative Positions Generalize, Absolute Positions Memorize: An Implicit-Bias Account of Length Generalization in Attention"
+    },
+    "arXiv:2607.18819": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18819",
+      "identity_tokens": [
+        "arXiv:2607.18819"
+      ],
+      "reason": "一次要旨は創傷画像分類に対するretrieval-based ICLの分類性能が主題で、LLMシステム効率ではない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "In-Context Learning for Wound Classification with Small Multimodal Language Models"
+    },
+    "arXiv:2607.18821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18821",
+      "identity_tokens": [
+        "arXiv:2607.18821"
+      ],
+      "reason": "一次要旨はLLMのontology出力・guarded decision correctnessが中心で、inference efficiencyを評価しない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "VirtualSet: Typed Ontology Worlds as an LLM Generation Target for Grounded Queries and Guarded Decisions"
+    },
+    "arXiv:2607.18897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18897",
+      "identity_tokens": [
+        "arXiv:2607.18897"
+      ],
+      "reason": "一次要旨はMCU上のdepth-estimation sensor fusionと電力/精度適応で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Thinking Fast, Thinking Slow: Adaptive Multimodal Transformer-based Sensor Fusion for Depth Estimation on Ultra-low-power MCUs"
+    },
+    "arXiv:2607.18961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18961",
+      "identity_tokens": [
+        "arXiv:2607.18961"
+      ],
+      "reason": "一次要旨はLLM出力の文法分析とneurosymbolic liftingであり、効率の方法・評価ではない。",
+      "first_checked_at": "2026-10-05T10:09:48+00:00",
+      "last_checked_at": "2026-10-05T10:09:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar"
+    },
+    "arXiv:2607.19058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19058",
+      "identity_tokens": [
+        "arXiv:2607.19058"
+      ],
+      "reason": "一次要旨はMoE optimizer state配置によるtraining memory最適化で訓練時対象。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Where Should Optimizer State Live? Tiered State Allocation for Memory-Efficient Mixture-of-Experts Training"
+    },
+    "arXiv:2607.19270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19270",
+      "identity_tokens": [
+        "arXiv:2607.19270"
+      ],
+      "reason": "一次要旨は交通assignment向けGNNの空間汎化で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "GUIDED Network-Agnostic Feature Initialization for Spatial Transferability in GNN-based Models"
+    },
+    "arXiv:2607.19317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19317",
+      "identity_tokens": [
+        "arXiv:2607.19317"
+      ],
+      "reason": "一次要旨はinterpretability toolkitによるcircuit discovery/evaluation/interventionで効率改善を実測しない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "CircuitKIT : Circuit Discovery, Evaluation, and Application Toolkit for Mechanistic Interpretability"
+    },
+    "arXiv:2607.19490": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19490",
+      "identity_tokens": [
+        "arXiv:2607.19490"
+      ],
+      "reason": "一次要旨はpeer-to-peer LLM inferenceのmalicious node integrityを扱う安全性研究。trusted recomputationは追加計算コストで、効率改善が目的ではない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md"
+      ],
+      "title": "Integrity of peer-to-peer distributed LLM inference under malicious nodes"
+    },
+    "DOI:10.52497/jitipee.v10i1.416": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52497/jitipee.v10i1.416",
+      "identity_tokens": [
+        "DOI:10.52497/jitipee.v10i1.416"
+      ],
+      "reason": "一次要旨は産業flowsheet生成のためのモデルfine-tuningと生成品質が主題であり、学習時手法でLLM inference/serving効率ではない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Spécialisation d'un modèle de langage pour la génération de gammes opératoires industrielles multi-étapes : injection d'un référentiel d'équipements par fine-tuning sur données structurées"
+    },
+    "arXiv:2607.18625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18625",
+      "identity_tokens": [
+        "arXiv:2607.18625"
+      ],
+      "reason": "一次要旨はVision MambaとCNNの視覚表現・分類比較で、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Norm or Direction? Decoding Vision Mambas for High-Resolution Vision"
+    },
+    "arXiv:2607.18629": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18629",
+      "identity_tokens": [
+        "arXiv:2607.18629"
+      ],
+      "reason": "一次要旨はEMG-to-speech合成と音声品質が主題で、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T10:09:49+00:00",
+      "last_checked_at": "2026-10-05T10:09:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "CS-ETS: Chaos-Inspired Samba-Based EMG-To-Speech Synthesis with Nonlinear Chaotic Losses"
+    },
+    "DOI:10.1186/s12864-026-12965-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s12864-026-12965-8",
+      "identity_tokens": [
+        "DOI:10.1186/s12864-026-12965-8"
+      ],
+      "reason": "The paper evaluates interpretability of single-cell foundation models for biological prediction, outside LLM inference-efficiency scope.",
+      "first_checked_at": "2026-10-05T10:09:50+00:00",
+      "last_checked_at": "2026-10-05T10:09:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Systematic evaluation of single-cell foundation model interpretability: attention-derived edge scores add no incremental value over gene-level features for perturbation-target prediction"
     }
   }
 }
