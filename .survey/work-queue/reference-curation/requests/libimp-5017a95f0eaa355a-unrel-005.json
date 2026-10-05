@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5017a95f0eaa355a-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.3389/fcomp.2026.1817034",
+  "reason": "Full text evaluates TinyKGI as a quantized knowledge-gap classifier for VQA, including Jetson Nano CPU inference. INT8 classifier is 3.645 ms vs 6.105 ms and 337.23 KB vs 1325.91 KB, but this measures the small task classifier, not the VQA/LLM generation backbone or serving.",
+  "title": "Identifying knowledge gaps on the edge for visual question answering",
+  "identity_tokens": [
+    "DOI:10.3389/fcomp.2026.1817034"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5017a95f0eaa",
+  "source_precheck_request_id": null
+}
