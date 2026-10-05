@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e370b4dfbbcf968-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3789240.3828738",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3789240.3828738",
+    "identity_tokens": [
+      "DOI:10.1145/3789240.3828738"
+    ],
+    "reason": "要旨にはLLM推論/AI推論の資源・性能課題との明確な関連があるが、一次本文を取得できず機構・評価・限界を検証できなかったためborderlineとする。",
+    "first_checked_at": "2026-10-05T08:42:12+00:00",
+    "last_checked_at": "2026-10-05T08:42:12+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+    ],
+    "title": "GPU-Centric Stateless LLM Serving With GIGANETS"
+  },
+  "processed_at": "2026-10-05T08:42:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e370b4dfbbc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

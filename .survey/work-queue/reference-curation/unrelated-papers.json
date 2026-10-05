@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:40:22+00:00",
-  "record_count": 3940,
+  "updated_at": "2026-10-05T08:42:13+00:00",
+  "record_count": 3952,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -57384,6 +57384,180 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Agentic Instruction Data Selection: Let DataMaster Interpret Your Intent"
+    },
+    "DOI:10.1145/3789240.3829134": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829134",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829134"
+      ],
+      "reason": "Theseus adapts GPU collective-communication schedules to runtime conditions but does not focus on LLM inference or measure model-serving efficiency.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "Theseus: Runtime-Adaptive GPU Collective Communication with Hot-Swappable Schedules"
+    },
+    "DOI:10.1145/3789240.3829136": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829136",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829136"
+      ],
+      "reason": "GeoOrchestra addresses geographically distributed LLM training, not inference or serving.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md"
+      ],
+      "title": "GeoOrchestra: Orchestrating Heterogeneous Geo-Distributed Training with Network-Aware Scheduling"
+    },
+    "DOI:10.1145/3789240.3829178": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829178",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829178"
+      ],
+      "reason": "HyNA targets MoE training communication and training tail latency, not inference.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "HyNA: Taming Tail Latency in MoE Training with Hybrid Switch Silicon"
+    },
+    "arXiv:2608.11134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11134",
+      "identity_tokens": [
+        "arXiv:2608.11134"
+      ],
+      "reason": "We propose a comprehensive framework for solving overlapping-generations (OLG) models in continuous time with both idiosyncratic and aggregate risk. Our general characterization of equilibrium through the master equation operates on the joint distribution over the continuous idiosyncratic states, age and wealth. Our computational strategy is to take a finite-dimensional representation of this distribution as an input of a neural net which in turn outputs a finite-difference representation of the (conditional) value function. This idea can be applied generally to heterogeneous agent models with aggregate risk, and we call it finite-difference neural operator. Our method combines advantages from modern neural nets and traditional finite-difference methods: It is grid-free in the high-dimensional distribution, and retains control on boundary conditions in low-dimensional state variables. Moreover, our method is able to enforce shape constraints. We showcase its flexibility by solving a continuous-time OLG model with aggregate risk alone where we characterize the distribution by its supporting function; and to an OLG model with both types of risk.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Mastering Stochastic OLG Models in Continuous Time"
+    },
+    "arXiv:2608.11173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11173",
+      "identity_tokens": [
+        "arXiv:2608.11173"
+      ],
+      "reason": "The attention mechanism forms the foundation of many modern AI models such as the Transformer. In one subclass of problems where attention is used, inputs and outputs are bound to the probability simplex so that all outputs sum to one. In this setting, softmax attention admits an exact, component-by-component quantum realization. Attention scores are Hadamard-test statistics on block-encoded projections of amplitude-encoded inputs. The exponential softmax is the interior of a cosine-squared family generated by Born-rule measurement under an exact bijection, whose boundary expresses sparse attention with exact zeros at finite parameter values. The softmax temperature is a repetition count where post-selected measurement rounds realize discretized inverse temperature exactly. Value aggregation is a deterministic column-loading channel that dilates the column-stochastic value matrix. The gated residual is the preparation angle of a single ancilla, with the additive identity at a mixing angle of {\\pi}/2. Every learnable parameter is a rotation-gate angle. The composed layer is exact in the infinite-shot limit with one measure-and-reload step per attention score; a fully-coherent variant is {\\epsilon}-approximate via quantum singular value transformation in the infinite depth limit. The algebraic core is machine-checked in Lean 4.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "A Quantum Roadmap for Softmax Attention: Exact Born-Rule Analogs for Softmax Attention on the Probability Simplex"
+    },
+    "arXiv:2608.11352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11352",
+      "identity_tokens": [
+        "arXiv:2608.11352"
+      ],
+      "reason": "Sign language translation has achieved strong results with Transformer architectures, yet recent improvements largely rely on scaling model capacity at the cost of increased computation. We propose a parameter-efficient alternative that improves expressiveness without increasing model size. Rather than scaling capacity, we focus on enhancing the update dynamics of iterative refinement decoders, where each refinement step corresponds to one internal decoder iteration that progressively improves the latent representation before translation generation. We reinterpret residual refinement updates from an Ordinary Differential Equation (ODE) perspective and replace them with higher-order numerical integration schemes, namely Runge--Kutta methods (RK-2 and RK-4). These methods perform multiple function evaluations within each refinement step to produce more accurate and stable representation updates without adding decoder parameters. To the best of our knowledge, this is the first application of ODE-inspired update dynamics to sign language translation. RK-2 achieves 22.96 BLEU-4 on the PHOENIX-2014-T test set and 19.34 BLEU-4 on the CSL-Daily test set, outperforming the IPSLT baseline on both benchmarks, with fewer decoder layers and refinement iterations on CSL-Daily. These results suggest that stronger refinement dynamics can improve translation performance under parameter-efficient decoder designs, providing a complementary alternative to conventional model scaling.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "ODE-Based Transformer Decoders for Iterative Sign Language Translation"
+    },
+    "arXiv:2608.11427": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11427",
+      "identity_tokens": [
+        "arXiv:2608.11427"
+      ],
+      "reason": "How much feature rank does comparison require in kernel attention? On Min-IP over $m$-bit tokens, rank one solves every sequence of length at most two exactly. At length three, the minimum feature rank of one normalized nonnegative kernel-attention head is $2^{\\Theta(m)}$ for error strictly below $1/2$ on every input, even with arbitrary finite-dimensional tokenwise values and query-dependent affine readouts. Dense softmax solves this three-token task with $m$-dimensional scores and temperature constant in $m$. For every fixed number of heads $H$, the minimum total feature rank is $2^{\\Theta_H(m)}$ for the same error guarantee at exact length $H+2$ in one attention layer with affine mixing. These bounds also hold with position-dependent maps and a final causal query. For one head with polynomial readout of fixed degree at most $D$, rank one suffices at exact length $D+1$, while exact length $D+2$ requires exponential feature rank. With unrestricted exact-real decoding, a scalar rank-one construction solves the task at every finite length. This motivates a separate bound on total communication for deterministic models with finite-alphabet cross-token channels and any number of heads and layers. In this setting, correctness up to length $n$ requires $\\Omega(n\\log m)$ bits over a range of lengths that grows exponentially with $m$.",
+      "first_checked_at": "2026-10-05T08:42:12+00:00",
+      "last_checked_at": "2026-10-05T08:42:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Three Tokens Force Exponential Feature Rank in Nonnegative Kernel Attention"
+    },
+    "DOI:10.1145/3789240.3822612": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3822612",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3822612"
+      ],
+      "reason": "ChromaTile is a position-paper proposal for optical network switching across AI interconnects; it does not establish a concrete LLM inference/serving workload or LLM-specific evaluation.",
+      "first_checked_at": "2026-10-05T08:42:13+00:00",
+      "last_checked_at": "2026-10-05T08:42:13+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Slow-And-Wide Transceivers Shouldn’t Be Color Blind"
+    },
+    "DOI:10.1145/3789240.3828736": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3828736",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3828736"
+      ],
+      "reason": "Ampel schedules communication for ML training data-center workloads; its stated target is training iteration time, outside inference scope.",
+      "first_checked_at": "2026-10-05T08:42:13+00:00",
+      "last_checked_at": "2026-10-05T08:42:13+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Ampel: Scheduling at the Network Cut in ML Training"
+    },
+    "arXiv:2608.14712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14712",
+      "identity_tokens": [
+        "arXiv:2608.14712"
+      ],
+      "reason": "Each row of a transformer's attention matrix is a probability distribution over tokens, and in trained models most of that probability lands on a single \\emph{sink} token, usually the first. Standard tools for comparing attention rows (cosine similarity, Jensen--Shannon divergence, Shannon entropy) therefore hinge on a choice papers rarely report: keep the sink, or drop it and renormalize. This choice can reverse conclusions. On ten pretrained models from five families, 17--47% of verdicts about which of two heads is more similar flip with the convention, and the most prominent structure in a standard BERT head-clustering pipeline is an artifact of it. The reason is that one-number summaries mix two questions: how much attention the sink takes, and how the rest is divided among the content tokens. Treating rows as compositional data separates them exactly: the Aitchison distance splits orthogonally into a sink term and a content term, entropy splits by an exact identity, and the content distance is characterized by invariances the transformer itself possesses. The separation matters in practice: most measured entropy collapse during training is the sink growing, not attention sharpening (30% of the drop at 70M parameters, 95% at 1B, 79% at 1.4B), and pruning heads with the wrong channel can inflate perplexity more than a hundredfold. We map where each convention is safe, test a frozen out-of-sample predictor (one confirmation, one abstention, one failure), and release code regenerating every number.",
+      "first_checked_at": "2026-10-05T08:42:13+00:00",
+      "last_checked_at": "2026-10-05T08:42:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Which Question Is Your Attention Metric Answering? Attention Rows as Compositional Data"
+    },
+    "DOI:10.1007/s11831-026-10720-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11831-026-10720-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10720-6"
+      ],
+      "reason": "Large Language Models (LLMs) have emerged as a transformative technology in artificial intelligence, significantly advancing natural language understanding, generation, and reasoning capabilities. This survey reviews the evolution of language models from early statistical approaches to modern Transformer-based architectures and summarizes key developments, including attention mechanisms, scaling laws, alignment techniques, and efficient inference methods. The paper further explores the growing impact of LLMs on everyday life and a wide range of application domains, including healthcare, finance, education, agriculture, marketing, software engineering, and scientific research. To provide a systematic perspective, LLM applications are categorized according to their maturity level and integration across major artificial intelligence subfields, such as natural language processing, multimodal learning, intelligent decision support, autonomous agents, and knowledge-based systems. The survey highlights how these models enhance automation, data-driven decision-making, personalized services, and human–AI interaction across both consumer and industrial environments. Despite their remarkable capabilities, LLMs face several critical challenges, including high computational costs, limited interpretability, hallucinations, privacy and security risks, ethical concerns, and environmental sustainability issues. Existing mitigation approaches and recent advancements are reviewed to assess their effectiveness and limitations. Finally, the paper outlines key future research directions, including trustworthy and explainable AI, efficient model architectures, domain-specific adaptation, multimodal intelligence, and human-centered alignment. This survey provides a comprehensive overview of the current landscape, challenges, and future prospects of LLMs, serving as a valuable reference for researchers and practitioners.",
+      "first_checked_at": "2026-10-05T08:42:13+00:00",
+      "last_checked_at": "2026-10-05T08:42:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "The Versatility of Large Language Models: A Comprehensive Review and Structured Survey of Architectures, Applications, Challenges, and Future Trajectories"
+    },
+    "DOI:10.1117/12.3122642": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3122642",
+      "identity_tokens": [
+        "DOI:10.1117/12.3122642"
+      ],
+      "reason": "Accurate brain tumor segmentation from 3D multimodal MRI remains challenging due to structural heterogeneity and discontinuous tumor regions. We propose ZigGate3D, a 3D encoder–decoder network with a gated tri-branch spatial mixing (GTSM) module. GTSM captures long-range dependencies via forward and reverse zigzag scanning within slices and inter-slice modeling along the z-direction, followed by adaptive gated fusion. An ET-aware auxiliary loss is further introduced to improve small and imbalanced enhancing tumor segmentation. Experimental results on the BraTS dataset show that ZigGate3D achieves Dice scores of 87.44%, 93.91%, and 94.97% for ET (enhancing tumor), TC (tumor core), and WT (whole tumor), respectively, with corresponding HD95 values of 2.58 mm, 3.68 mm, and 4.62 mm. The results demonstrate the effectiveness of the proposed method for multimodal 3D brain tumor segmentation.",
+      "first_checked_at": "2026-10-05T08:42:13+00:00",
+      "last_checked_at": "2026-10-05T08:42:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "ZigGate3D: gated tri-branch spatial mixing for brain tumor segmentation"
     }
   }
 }

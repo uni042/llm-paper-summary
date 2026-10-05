@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46d21a1ceed43c44-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11427",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11427",
+    "identity_tokens": [
+      "arXiv:2608.11427"
+    ],
+    "reason": "How much feature rank does comparison require in kernel attention? On Min-IP over $m$-bit tokens, rank one solves every sequence of length at most two exactly. At length three, the minimum feature rank of one normalized nonnegative kernel-attention head is $2^{\\Theta(m)}$ for error strictly below $1/2$ on every input, even with arbitrary finite-dimensional tokenwise values and query-dependent affine readouts. Dense softmax solves this three-token task with $m$-dimensional scores and temperature constant in $m$. For every fixed number of heads $H$, the minimum total feature rank is $2^{\\Theta_H(m)}$ for the same error guarantee at exact length $H+2$ in one attention layer with affine mixing. These bounds also hold with position-dependent maps and a final causal query. For one head with polynomial readout of fixed degree at most $D$, rank one suffices at exact length $D+1$, while exact length $D+2$ requires exponential feature rank. With unrestricted exact-real decoding, a scalar rank-one construction solves the task at every finite length. This motivates a separate bound on total communication for deterministic models with finite-alphabet cross-token channels and any number of heads and layers. In this setting, correctness up to length $n$ requires $\\Omega(n\\log m)$ bits over a range of lengths that grows exponentially with $m$.",
+    "first_checked_at": "2026-10-05T08:42:12+00:00",
+    "last_checked_at": "2026-10-05T08:42:12+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Three Tokens Force Exponential Feature Rank in Nonnegative Kernel Attention"
+  },
+  "processed_at": "2026-10-05T08:42:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46d21a1ceed4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
