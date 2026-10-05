@@ -40,7 +40,7 @@ CANDIDATE_ID_SOURCE = "identifier://approved-public-apis"
 CANDIDATE_ID_MAX_ITEMS = 100
 _CANDIDATE_ID_REQUEST_KEYS = {
     "schema_version", "operation", "request_id", "collector_id", "run_key", "axis",
-    "target_unseen", "provider", "source_url", "identifiers",
+    "target_unseen", "provider", "source_url", "identifiers", "reconsider_identifiers",
 }
 
 # Batch precheck threads may share one checkout. Preload adoption mutates claim/bank
@@ -183,12 +183,32 @@ def _validate_candidate_id_request(request: dict[str, Any]) -> dict[str, Any]:
         normalized.append(canonical)
     if len(set(normalized)) != len(normalized):
         raise DiscoveryPrecheckRequestError("identifiers must not contain duplicates")
+
+    raw_reconsider = request.get("reconsider_identifiers", [])
+    if raw_reconsider is None:
+        raw_reconsider = []
+    if not isinstance(raw_reconsider, list) or any(not isinstance(value, str) or not value.strip() for value in raw_reconsider):
+        raise DiscoveryPrecheckRequestError("reconsider_identifiers must be a list of normalized stable ID strings")
+    reconsider: list[str] = []
+    for value in raw_reconsider:
+        try:
+            canonical, _provider = discovery_provider_adapter._explicit_identifier(value)
+        except discovery_provider_adapter.DiscoveryProviderError as exc:
+            raise DiscoveryPrecheckRequestError(str(exc)) from exc
+        if value.strip() != canonical:
+            raise DiscoveryPrecheckRequestError(f"reconsider identifier must use its normalized form: {canonical}")
+        reconsider.append(canonical)
+    if len(set(reconsider)) != len(reconsider):
+        raise DiscoveryPrecheckRequestError("reconsider_identifiers must not contain duplicates")
+    if not set(reconsider).issubset(set(normalized)):
+        raise DiscoveryPrecheckRequestError("reconsider_identifiers must be a subset of identifiers")
     out.update({
         "schema_version": SCHEMA_VERSION,
         "mode": "explicit_identifiers",
         "provider": CANDIDATE_ID_PROVIDER,
         "source_url": CANDIDATE_ID_SOURCE,
         "identifiers": normalized,
+        "reconsider_identifiers": reconsider,
         "target_unseen": len(normalized),
     })
     return out
@@ -257,6 +277,7 @@ def _process_explicit_identifiers(
         lookups,
         snapshot_dir=snapshot_dir,
         rejection_ledger_path=rejection_ledger_path,
+        reconsider_identifiers=set(request.get("reconsider_identifiers") or []),
     )
     candidate_statuses = []
     results = []
@@ -293,6 +314,7 @@ def _process_explicit_identifiers(
         "provider": request["provider"],
         "source_url": request["source_url"],
         "candidate_ids": request["identifiers"],
+        "reconsider_identifiers": request.get("reconsider_identifiers") or [],
         "candidate_statuses": candidate_statuses,
         "allowed_records": allowed,
         "snapshot_source_commit": source_commit,
@@ -309,6 +331,7 @@ def _process_explicit_identifiers(
         "source_url": request["source_url"],
         "mode": "explicit_identifiers",
         "identifiers": request["identifiers"],
+        "reconsider_identifiers": request.get("reconsider_identifiers") or [],
         "target_unseen": request["target_unseen"],
         "page_size": None,
         "pages_fetched": 1,

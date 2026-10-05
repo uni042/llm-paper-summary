@@ -85,6 +85,39 @@ class ReferenceRelevanceFastLaneTest(unittest.TestCase):
         self.assertNotIn("arXiv:2609.90001", unrelated["records"])
         self.assertIn("arXiv:2609.90001", borderline["records"])
 
+    def test_reconsidered_borderline_increments_only_on_explicit_recheck(self) -> None:
+        self._request(
+            "req-borderline-first",
+            operation="mark_borderline",
+            reason="initial borderline",
+        )
+        processor.process_pending(self.root)
+
+        ledger_path = self.root / ".survey/work-queue/reference-curation/borderline-papers.json"
+        first = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(first["records"]["arXiv:2609.90001"]["borderline_recheck_count"], 0)
+
+        self._request(
+            "req-borderline-duplicate",
+            operation="mark_borderline",
+            reason="ordinary duplicate classification",
+        )
+        processor.process_pending(self.root)
+        duplicate = json.loads(ledger_path.read_text(encoding="utf-8"))
+        self.assertEqual(duplicate["records"]["arXiv:2609.90001"]["borderline_recheck_count"], 0)
+
+        self._request(
+            "req-borderline-recheck",
+            operation="mark_borderline",
+            reason="reconsidered and still borderline",
+            reconsidered_from_borderline=True,
+        )
+        processor.process_pending(self.root)
+        rechecked = json.loads(ledger_path.read_text(encoding="utf-8"))
+        row = rechecked["records"]["arXiv:2609.90001"]
+        self.assertEqual(row["borderline_recheck_count"], 1)
+        self.assertIn("last_reconsidered_at", row)
+
     def test_invalid_request_is_isolated_from_valid_sibling(self) -> None:
         bad = {
             "schema_version": 1,

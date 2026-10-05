@@ -155,6 +155,29 @@ class CandidatePriorityTest(unittest.TestCase):
             0,
         )
 
+    def test_priority_refresh_candidate_set_includes_borderline_records(self):
+        import json
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ledger = root / ".survey/work-queue/reference-curation/borderline-papers.json"
+            ledger.parent.mkdir(parents=True)
+            ledger.write_text(json.dumps({
+                "schema_version": 1,
+                "classification": "borderline",
+                "records": {
+                    "arXiv:2609.77777": {
+                        "canonical_id": "arXiv:2609.77777",
+                        "identity_tokens": ["arXiv:2609.77777"],
+                        "title": "Borderline candidate",
+                    }
+                },
+            }), encoding="utf-8")
+            rows = refresh_candidate_priority._candidate_records(root)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]["_lookup_id"], "arXiv:2609.77777")
+
     def test_weights_are_configuration_driven(self):
         policy = self.policy()
         policy["freshness"]["score"] = 7

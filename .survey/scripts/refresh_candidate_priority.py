@@ -95,6 +95,16 @@ def _candidate_records(root: Path) -> list[dict[str, Any]]:
     if isinstance(candidates, dict):
         rows.extend(dict(row) for row in candidates.values() if isinstance(row, dict))
 
+    borderline = _read(root / reference_pool.DEFAULT_BORDERLINE_LEDGER, {})
+    borderline_records = borderline.get("records") if isinstance(borderline, dict) else None
+    if isinstance(borderline_records, dict):
+        for key, value in borderline_records.items():
+            if not isinstance(value, dict):
+                continue
+            row = dict(value)
+            row.setdefault("canonical_id", str(key))
+            rows.append(row)
+
     deduped: dict[str, dict[str, Any]] = {}
     for row in rows:
         ident = _preferred_identifier(row)

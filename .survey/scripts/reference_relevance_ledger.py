@@ -96,6 +96,7 @@ def mark(
     linked_from: list[str] | None = None,
     opposite_path: Path | None = None,
     opposite_classification: str | None = None,
+    reconsidered_from_borderline: bool = False,
 ) -> dict[str, Any]:
     canonical, tokens = _identity_set(canonical_id, identity_tokens)
     payload = _load(path, classification=classification)
@@ -114,6 +115,12 @@ def mark(
     first_checked = old.get("first_checked_at") or _now()
     source_paths = set(old.get("linked_from") or [])
     source_paths.update(linked_from or [])
+    try:
+        borderline_recheck_count = max(int(old.get("borderline_recheck_count") or 0), 0)
+    except (TypeError, ValueError):
+        borderline_recheck_count = 0
+    if classification == "borderline" and reconsidered_from_borderline:
+        borderline_recheck_count += 1
 
     row = {
         "classification": classification,
@@ -124,6 +131,12 @@ def mark(
         "last_checked_at": _now(),
         "linked_from": sorted(str(v) for v in source_paths if str(v).strip()),
     }
+    if classification == "borderline":
+        row["borderline_recheck_count"] = borderline_recheck_count
+        if reconsidered_from_borderline:
+            row["last_reconsidered_at"] = row["last_checked_at"]
+        elif old.get("last_reconsidered_at"):
+            row["last_reconsidered_at"] = old["last_reconsidered_at"]
     if title or old.get("title"):
         row["title"] = str(title or old.get("title")).strip()
 
@@ -141,6 +154,17 @@ def mark(
             tokens=set(row["identity_tokens"]),
         )
     return row
+
+
+def clear_borderline(
+    path: Path,
+    *,
+    canonical_id: str,
+    identity_tokens: list[str] | None = None,
+) -> bool:
+    """Remove a borderline exclusion after a reconsidered candidate is promoted."""
+    _canonical, tokens = _identity_set(canonical_id, identity_tokens)
+    return _remove_matching(path, classification="borderline", tokens=tokens)
 
 
 def mark_unrelated(
@@ -175,6 +199,7 @@ def mark_borderline(
     identity_tokens: list[str] | None = None,
     linked_from: list[str] | None = None,
     unrelated_path: Path | None = None,
+    reconsidered_from_borderline: bool = False,
 ) -> dict[str, Any]:
     return mark(
         path,
@@ -186,6 +211,7 @@ def mark_borderline(
         linked_from=linked_from,
         opposite_path=unrelated_path,
         opposite_classification="unrelated" if unrelated_path is not None else None,
+        reconsidered_from_borderline=reconsidered_from_borderline,
     )
 
 
@@ -204,6 +230,8 @@ def main() -> int:
         cmd.add_argument("--title")
         cmd.add_argument("--reason", default=default_reason)
         cmd.add_argument("--source-path", action="append", default=[])
+        if name == "mark-borderline":
+            cmd.add_argument("--reconsidered-from-borderline", action="store_true")
     args = ap.parse_args()
 
     root = Path(args.root).resolve()
@@ -232,6 +260,7 @@ def main() -> int:
             identity_tokens=args.identity_token,
             linked_from=args.source_path,
             unrelated_path=unrelated_path if ledger == borderline_path else None,
+            reconsidered_from_borderline=bool(args.reconsidered_from_borderline),
         )
         label = "微妙"
     else:

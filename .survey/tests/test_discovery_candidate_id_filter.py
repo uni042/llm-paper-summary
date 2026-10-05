@@ -57,12 +57,17 @@ class DiscoveryCandidateIdFilterTests(unittest.TestCase):
             encoding="utf-8",
         )
 
-    def _classify(self, rows):
+    def _classify(self, rows, *, reconsider_identifiers=None):
         classify = getattr(discovery_search_filter, "classify_explicit_identifier_lookups", None)
         self.assertTrue(callable(classify), "explicit identifier classifier is missing")
         if not callable(classify):
             return None
-        return classify(rows, snapshot_dir=self.snapshot, rejection_ledger_path=self.rejections)
+        return classify(
+            rows,
+            snapshot_dir=self.snapshot,
+            rejection_ledger_path=self.rejections,
+            reconsider_identifiers=set(reconsider_identifiers or []),
+        )
 
     @staticmethod
     def _found(canonical_id: str, title: str, **extra):
@@ -107,6 +112,27 @@ class DiscoveryCandidateIdFilterTests(unittest.TestCase):
 
         self.assertEqual(outcomes[0]["status"], "filtered_by_snapshot")
         self.assertEqual(outcomes[0]["filter_reason"], "rejection_ledger")
+
+    def test_reconsidered_identifier_bypasses_rejection_ledger_only(self) -> None:
+        identity = "arXiv:2609.20033"
+        self._write_snapshot()
+        self._write_rejections({"id:" + identity: {"identity_tokens": ["id:" + identity]}})
+
+        outcomes = self._classify(
+            [self._found(identity, "Previously borderline")],
+            reconsider_identifiers={identity},
+        )
+        if outcomes is None:
+            return
+        self.assertEqual(outcomes[0]["status"], "allowed")
+
+        self._write_snapshot(tokens={"id:" + identity})
+        outcomes = self._classify(
+            [self._found(identity, "Now represented")],
+            reconsider_identifiers={identity},
+        )
+        self.assertEqual(outcomes[0]["status"], "filtered_by_snapshot")
+        self.assertEqual(outcomes[0]["filter_reason"], "identity_token")
 
     def test_unseen_identity_remains_allowed(self) -> None:
         identity = "arXiv:2609.20004"

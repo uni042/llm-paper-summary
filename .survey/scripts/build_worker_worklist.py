@@ -27,6 +27,8 @@ import research_job_reconciliation
 
 DEFAULT_RESEARCH_LIMIT = 200
 DEFAULT_DISCOVERY_LIMIT = 500
+DEFAULT_BORDERLINE_REFILL_TARGET = 600
+DEFAULT_BORDERLINE_REPEAT_PENALTY = 100_000_000
 WORKERS = ("00", "30", "45")
 
 
@@ -100,6 +102,89 @@ def _score_row(
 ) -> dict[str, Any]:
     enriched = candidate_priority.merge_cached_metadata(row, cache)
     return candidate_priority.apply_priority(enriched, repo_root=root, config=config)
+
+
+def _borderline_policy(config: dict[str, Any]) -> tuple[int, int]:
+    raw = config.get("borderline_reconsideration")
+    if not isinstance(raw, dict):
+        raw = {}
+    try:
+        refill_target = max(int(raw.get("refill_target", DEFAULT_BORDERLINE_REFILL_TARGET)), 0)
+    except (TypeError, ValueError):
+        refill_target = DEFAULT_BORDERLINE_REFILL_TARGET
+    try:
+        repeat_penalty = max(int(raw.get("repeat_penalty", DEFAULT_BORDERLINE_REPEAT_PENALTY)), 0)
+    except (TypeError, ValueError):
+        repeat_penalty = DEFAULT_BORDERLINE_REPEAT_PENALTY
+    return refill_target, repeat_penalty
+
+
+def _source_url_from_canonical(canonical_id: Any) -> str | None:
+    canonical = str(canonical_id or "").strip()
+    if canonical.startswith("arXiv:"):
+        return "https://arxiv.org/abs/" + canonical.split(":", 1)[1]
+    if canonical.startswith("DOI:"):
+        return "https://doi.org/" + canonical.split(":", 1)[1]
+    if canonical.startswith("OpenReview:"):
+        return "https://openreview.net/forum?id=" + canonical.split(":", 1)[1]
+    return None
+
+
+def _borderline_reconsideration_candidates(
+    root: Path,
+    *,
+    cache: dict[str, Any],
+    config: dict[str, Any],
+) -> list[dict[str, Any]]:
+    ledger = _read(root / reference_pool.DEFAULT_BORDERLINE_LEDGER, {})
+    records = ledger.get("records") if isinstance(ledger, dict) else None
+    if not isinstance(records, dict):
+        return []
+
+    represented = {
+        identifier
+        for paper in citation_graph.load_records(root)
+        for identifier in paper.identifiers
+    }
+    unrelated = reference_pool._load_ledger_tokens(
+        root / reference_pool.DEFAULT_UNRELATED_LEDGER,
+        label="unrelated-paper",
+    )
+    _refill_target, repeat_penalty = _borderline_policy(config)
+    rows: list[dict[str, Any]] = []
+    for key, raw in records.items():
+        if not isinstance(raw, dict):
+            continue
+        row = dict(raw)
+        row.setdefault("canonical_id", str(key))
+        tokens = _worklist_identity_tokens(row)
+        if tokens and (tokens.intersection(represented) or tokens.intersection(unrelated)):
+            continue
+        if not row.get("source_url"):
+            source_url = _source_url_from_canonical(row.get("canonical_id"))
+            if source_url:
+                row["source_url"] = source_url
+        scored = _score_row(row, root=root, cache=cache, config=config)
+        try:
+            recheck_count = max(int(row.get("borderline_recheck_count") or 0), 0)
+        except (TypeError, ValueError):
+            recheck_count = 0
+        base_priority = int(scored.get("priority") or 0)
+        penalty = recheck_count * repeat_penalty
+        scored["priority"] = base_priority - penalty
+        breakdown = dict(scored.get("priority_breakdown") or {})
+        breakdown["base_total"] = base_priority
+        breakdown["borderline_recheck_count"] = recheck_count
+        breakdown["borderline_recheck_penalty"] = -penalty
+        breakdown["total"] = scored["priority"]
+        scored["priority_breakdown"] = breakdown
+        scored["source_kind"] = "borderline_reconsideration"
+        scored["origin"] = "borderline_reconsideration"
+        scored["borderline_recheck_count"] = recheck_count
+        rows.append(scored)
+
+    rows.sort(key=_priority_sort_key)
+    return _dedupe_rows_by_identity(rows)
 
 
 def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[dict[str, Any]]]:
@@ -204,12 +289,28 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     rows.sort(key=_priority_sort_key)
     rows = _dedupe_rows_by_identity(rows)
 
+    refill_target, _repeat_penalty = _borderline_policy(config)
+    if not rows and refill_target > 0:
+        seen: set[str] = set()
+        for row in rows:
+            seen.update(_worklist_identity_tokens(row))
+        for row in _borderline_reconsideration_candidates(root, cache=cache, config=config):
+            if len(rows) >= refill_target:
+                break
+            tokens = _worklist_identity_tokens(row)
+            if tokens and seen.intersection(tokens):
+                continue
+            seen.update(tokens)
+            rows.append(row)
+
     out: list[dict[str, Any]] = []
     for source_rank, row in enumerate(rows, start=1):
         out.append(
             {
                 "source_rank": source_rank,
                 "source_kind": row.get("source_kind"),
+                "origin": row.get("origin"),
+                "borderline_recheck_count": row.get("borderline_recheck_count"),
                 "priority": row.get("priority"),
                 "priority_breakdown": row.get("priority_breakdown"),
                 "canonical_id": row.get("canonical_id"),
@@ -358,7 +459,8 @@ def build(
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
-                "Process both Research and Discovery rows from rank 1 upward. rank 1 has the highest current configurable importance score; do not reverse the list and do not reserve a forced-aging quota.",
+                "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
+                "Process both Research and Discovery rows from rank 1 upward. rank 1 has the highest current configurable importance score; ordinary Discovery rows stay ahead of refill rows, while refill rows are ordered by the same score minus the configured repeated-borderline penalty.",
             ],
             "research_audit": {
                 "ready_total": research_ready,

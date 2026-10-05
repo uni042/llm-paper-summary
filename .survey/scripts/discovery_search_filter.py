@@ -149,6 +149,7 @@ def filter_search_batch(
     provider_has_more: bool = False,
     unseen_before_batch: int = 0,
     include_record_outcomes: bool = False,
+    reconsideration_tokens: set[str] | None = None,
 ) -> dict[str, Any]:
     """Filter one provider result page before candidate evaluation.
 
@@ -167,6 +168,7 @@ def filter_search_batch(
     manifest = _load_manifest(snapshot_dir)
     resolver = _load_represented_resolver(snapshot_dir, manifest)
     rejection_tokens = _load_rejection_tokens(snapshot_dir, rejection_ledger_path)
+    reconsideration_tokens = set(reconsideration_tokens or set())
     cache: dict[str, set[str]] = {}
     unseen: list[dict[str, Any]] = []
     duplicate_tokens: list[str] = []
@@ -215,7 +217,8 @@ def filter_search_batch(
             })
             continue
 
-        rejected_match = next(iter(sorted(tokens & rejection_tokens)), None)
+        bypass_rejection = bool(tokens and tokens.intersection(reconsideration_tokens))
+        rejected_match = None if bypass_rejection else next(iter(sorted(tokens & rejection_tokens)), None)
         if rejected_match:
             rejection_filtered_tokens.append(rejected_match)
             record_outcomes.append({
@@ -286,6 +289,7 @@ def classify_explicit_identifier_lookups(
     *,
     snapshot_dir: Path,
     rejection_ledger_path: Path | None = None,
+    reconsider_identifiers: set[str] | None = None,
 ) -> list[dict[str, Any]]:
     """Apply the current authoritative exclusion sources to exact-ID lookup rows.
 
@@ -295,6 +299,11 @@ def classify_explicit_identifier_lookups(
     if not isinstance(lookup_rows, list) or any(not isinstance(row, dict) for row in lookup_rows):
         raise TypeError("lookup_rows must be a list of objects")
 
+    reconsider_identifiers = {
+        normalized
+        for value in (reconsider_identifiers or set())
+        if (normalized := paper_identity.safe_norm_id(value))
+    }
     output: list[dict[str, Any] | None] = [None] * len(lookup_rows)
     filter_records: list[dict[str, Any]] = []
     filter_positions: list[int] = []
@@ -331,11 +340,17 @@ def classify_explicit_identifier_lookups(
         output[index] = base
 
     if filter_records:
+        filter_reconsideration_tokens: set[str] = set()
+        for position, record in zip(filter_positions, filter_records):
+            requested = paper_identity.safe_norm_id(lookup_rows[position].get("requested_id"))
+            if requested and requested in reconsider_identifiers:
+                filter_reconsideration_tokens.update(paper_identity.identity_tokens(record))
         filtered = filter_search_batch(
             filter_records,
             snapshot_dir=snapshot_dir,
             rejection_ledger_path=rejection_ledger_path,
             include_record_outcomes=True,
+            reconsideration_tokens=filter_reconsideration_tokens,
         )
         for record_outcome in filtered["record_outcomes"]:
             index = filter_positions[record_outcome["record_index"]]
