@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dd3e623af710674-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35750",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35750",
+    "identity_tokens": [
+      "arXiv:2609.35750"
+    ],
+    "reason": "agentic reinforcement learningのKV-stream compactionにおけるtraining throughput改善が主題で、推論servingではない。",
+    "first_checked_at": "2026-10-05T05:04:07+00:00",
+    "last_checked_at": "2026-10-05T05:04:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T05:04:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dd3e623af71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

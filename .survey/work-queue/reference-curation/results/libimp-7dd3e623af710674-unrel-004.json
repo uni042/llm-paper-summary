@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dd3e623af710674-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35759",
+    "identity_tokens": [
+      "arXiv:2609.35759"
+    ],
+    "reason": "長編story生成のnarrative state tracking手法で、推論効率を主張・評価しない。",
+    "first_checked_at": "2026-10-05T05:04:07+00:00",
+    "last_checked_at": "2026-10-05T05:04:07+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "Scaling Long-Form Story Generation via Narrative State Tracking"
+  },
+  "processed_at": "2026-10-05T05:04:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dd3e623af71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:01:49+00:00",
-  "record_count": 2747,
+  "updated_at": "2026-10-05T05:04:08+00:00",
+  "record_count": 2762,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -39928,6 +39928,231 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md"
       ],
       "title": "TopoEP: Topology-Aware Load Balancing for Expert-Parallel MoE Training"
+    },
+    "arXiv:2609.35745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35745",
+      "identity_tokens": [
+        "arXiv:2609.35745"
+      ],
+      "reason": "linear vision transformerの初期化/蒸留を扱い、効率はtrainingを対象にしLLM推論ではない。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Copy the Same, Distill the Difference: Initializing Linear Vision Transformers"
+    },
+    "arXiv:2609.35750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35750",
+      "identity_tokens": [
+        "arXiv:2609.35750"
+      ],
+      "reason": "agentic reinforcement learningのKV-stream compactionにおけるtraining throughput改善が主題で、推論servingではない。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning"
+    },
+    "arXiv:2609.35751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35751",
+      "identity_tokens": [
+        "arXiv:2609.35751"
+      ],
+      "reason": "looped MoEのpretraining loss/computeを扱うtraining研究である。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "How to Loop MoE: Flatten the Experts, Untie the Attention"
+    },
+    "arXiv:2609.35759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35759",
+      "identity_tokens": [
+        "arXiv:2609.35759"
+      ],
+      "reason": "長編story生成のnarrative state tracking手法で、推論効率を主張・評価しない。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Scaling Long-Form Story Generation via Narrative State Tracking"
+    },
+    "arXiv:2609.35551": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35551",
+      "identity_tokens": [
+        "arXiv:2609.35551"
+      ],
+      "reason": "agent consultationの信頼性・適応性が主題で、効率化指標を示さない。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "BaRe-Mem: Bayesian Reliability Memory for Robust and Adaptive Agent Consultation"
+    },
+    "arXiv:2609.35560": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35560",
+      "identity_tokens": [
+        "arXiv:2609.35560"
+      ],
+      "reason": "対話的world modelの制御・長期horizon拡張が主題である。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "WorldPlay2: Extending Real-Time Interactive World Models in Control and Horizon"
+    },
+    "arXiv:2609.35561": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35561",
+      "identity_tokens": [
+        "arXiv:2609.35561"
+      ],
+      "reason": "自律的なmodel improvementの実験設計を扱い、推論効率化が主題ではない。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement"
+    },
+    "arXiv:2609.35593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35593",
+      "identity_tokens": [
+        "arXiv:2609.35593"
+      ],
+      "reason": "3D vision transformerのattention手法でありLLM推論対象外。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "ReSS: Residual-Restoring Sparse Attention for 3D Vision Transformers"
+    },
+    "arXiv:2609.35620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35620",
+      "identity_tokens": [
+        "arXiv:2609.35620"
+      ],
+      "reason": "graph transformerの理論的graph-limit解析であり、serving効率評価がない。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Attention Graphons: A Graph Limit Perspective on Graph Transformers"
+    },
+    "arXiv:2609.35630": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35630",
+      "identity_tokens": [
+        "arXiv:2609.35630"
+      ],
+      "reason": "Transformer内部のactivation/文章生成挙動を解析する研究で、推論効率化手法を提示しない。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Which the Eye Fears: Writing with Read-Blindness Explains Massive Activations in Transformers"
+    },
+    "arXiv:2609.35634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35634",
+      "identity_tokens": [
+        "arXiv:2609.35634"
+      ],
+      "reason": "ECG時系列denoising向けstate-space modelであり、LLM対象外。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DR-net-Mamba: Selective State-Space Modeling for Long-Range ECG Time-Series Denoising"
+    },
+    "arXiv:2609.35639": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35639",
+      "identity_tokens": [
+        "arXiv:2609.35639"
+      ],
+      "reason": "GPU物理simulationのcoding-agent benchmarkで、LLM自体のserving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation"
+    },
+    "arXiv:2609.35663": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35663",
+      "identity_tokens": [
+        "arXiv:2609.35663"
+      ],
+      "reason": "entity token copyingとattention機構の解析であり、効率化の方法/測定がない。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Late Attention Layers Alone Can Copy Entity Tokens, but Not Without Attending to Their Context"
+    },
+    "arXiv:2609.35673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35673",
+      "identity_tokens": [
+        "arXiv:2609.35673"
+      ],
+      "reason": "画像retouching向けflow-matching制御が主題でLLM推論効率対象外。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md"
+      ],
+      "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching"
+    },
+    "arXiv:2609.35699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35699",
+      "identity_tokens": [
+        "arXiv:2609.35699"
+      ],
+      "reason": "RL後のdistillation defense頑健性を扱うセキュリティ研究である。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Distillation Defenses Easily Break After Reinforcement Learning"
     }
   }
 }

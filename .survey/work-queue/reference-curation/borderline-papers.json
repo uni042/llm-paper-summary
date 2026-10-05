@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:58:58+00:00",
-  "record_count": 911,
+  "updated_at": "2026-10-05T05:04:08+00:00",
+  "record_count": 916,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13675,6 +13675,84 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models"
+    },
+    "arXiv:2609.35769": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35769",
+      "identity_tokens": [
+        "arXiv:2609.35769"
+      ],
+      "reason": "可変depth servingを可能にする点は推論budgetとの接点がある一方、実証されたcost削減の中心はtrainingで、本文はinference時に追加処理なしとする。推論効率の研究としては適合が弱い。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Telescopic Language Models"
+    },
+    "arXiv:2609.35586": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35586",
+      "identity_tokens": [
+        "arXiv:2609.35586"
+      ],
+      "reason": "一次本文では計算上の対象はLLM向けanalog IMCだが、実証された時間短縮はclipping calibrationのみ。serving inferenceのenergy/latency改善は未計測で、主題との適合は限定的。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing"
+    },
+    "arXiv:2609.35587": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35587",
+      "identity_tokens": [
+        "arXiv:2609.35587"
+      ],
+      "reason": "CUTLASS GEMM kernelの選択regretは改善するが、LLM workloadまたはend-to-end serving性能への効果は本文で確認できず、GPU kernel選択一般の結果に留まる。",
+      "first_checked_at": "2026-10-05T05:04:07+00:00",
+      "last_checked_at": "2026-10-05T05:04:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Hardware-Aware Features for CUTLASS Kernel Selection"
+    },
+    "arXiv:2609.35609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35609",
+      "identity_tokens": [
+        "arXiv:2609.35609"
+      ],
+      "reason": "本文の主目的はmasked diffusionの制約付きsamplingにおけるtrajectory bias補正で、SMC/denoiser計算を要する。推論効率向上は示されない。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models"
+    },
+    "arXiv:2609.35664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35664",
+      "identity_tokens": [
+        "arXiv:2609.35664"
+      ],
+      "reason": "線形注意機構として推論可能性はあるが、本文の実験は品質比較中心で、latency/FLOPs/memory/throughputの改善を示さず効率面の適合が弱い。",
+      "first_checked_at": "2026-10-05T05:04:08+00:00",
+      "last_checked_at": "2026-10-05T05:04:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "MS-GLA: Multi-Scale Gated Linear Attention for Addressing Representational Bottlenecks via Multi-Temporal Resolution"
     }
   }
 }
