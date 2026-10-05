@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:38:57+00:00",
-  "record_count": 976,
+  "updated_at": "2026-10-05T05:41:29+00:00",
+  "record_count": 980,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14812,6 +14812,69 @@
         "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
       ],
       "title": "Return or Revise? Learning When Revision Helps Retrieval-Augmented QA"
+    },
+    "DOI:10.1145/3837101": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3837101",
+      "identity_tokens": [
+        "DOI:10.1145/3837101"
+      ],
+      "reason": "要旨は直接関連するが一次本文を取得できず、条件・比較・限界を確認できないため微妙へ回す。",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md"
+      ],
+      "title": "Buoy: Efficient and Effective Cache Replacement for Prefix Caching"
+    },
+    "DOI:10.1145/3837104": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3837104",
+      "identity_tokens": [
+        "DOI:10.1145/3837104"
+      ],
+      "reason": "要旨は直接関連するが一次本文を取得できず、圧縮/遅延の測定条件と品質tradeoffを確認できないため微妙へ回す。",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "CatKV: Accelerating Position-Independent Caching with Context-Adaptive KV Cache Compression"
+    },
+    "DOI:10.1007/s11432-026-5082-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-026-5082-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5082-0"
+      ],
+      "reason": "The candidate packet contains no primary abstract for this DOI and the record has no verifiable primary-source finding. Scope fit could not be established from the available primary evidence, so classify as borderline.",
+      "first_checked_at": "2026-10-05T05:41:29+00:00",
+      "last_checked_at": "2026-10-05T05:41:29+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "title": "Agent-defined architecture: make 6G a conversational and thinking network"
+    },
+    "DOI:10.1007/s13143-026-00458-3": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13143-026-00458-3",
+      "identity_tokens": [
+        "DOI:10.1007/s13143-026-00458-3"
+      ],
+      "reason": "The candidate packet contains no primary abstract for this DOI and the record has no verifiable primary-source finding. Scope fit could not be established from available primary evidence, so classify as borderline.",
+      "first_checked_at": "2026-10-05T05:41:29+00:00",
+      "last_checked_at": "2026-10-05T05:41:29+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A Modeling Effort for Medium-Range Weather Prediction over India with a Modified Pangu-Weather Architecture"
     }
   }
 }

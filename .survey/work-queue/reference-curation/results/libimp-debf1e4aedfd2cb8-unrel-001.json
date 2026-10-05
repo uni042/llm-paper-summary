@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-debf1e4aedfd2cb8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30601",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30601",
+    "identity_tokens": [
+      "arXiv:2609.30601"
+    ],
+    "reason": "Modern industrial recommender systems must optimize across competing objectives, balancing semantic relevance with business metrics such as engagement and revenue. While bi-encoders dominate large-scale retrieval due to their efficiency, they collapse these heterogeneous signals into a single static embedding space. This design creates a fundamental limitation: once trained, the retriever cannot adapt to shifting objective priorities at serving time without retraining. Moreover, joint optimization with multi-object",
+    "first_checked_at": "2026-10-05T05:41:29+00:00",
+    "last_checked_at": "2026-10-05T05:41:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Embedding Subspace Partitioning for Dynamic Multi-Objective Retrieval"
+  },
+  "processed_at": "2026-10-05T05:41:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-debf1e4aedfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

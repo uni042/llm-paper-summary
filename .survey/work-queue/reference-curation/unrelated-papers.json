@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:38:57+00:00",
-  "record_count": 2949,
+  "updated_at": "2026-10-05T05:41:29+00:00",
+  "record_count": 2965,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -42928,6 +42928,234 @@
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
       "title": "TileBench: A Controlled Benchmark for Performance Evaluation and Bottleneck Diagnosis of Tile-Based Programming Models"
+    },
+    "DOI:10.1145/3837130": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3837130",
+      "identity_tokens": [
+        "DOI:10.1145/3837130"
+      ],
+      "reason": "Fine-tuning large language models (LLMs) often exceeds GPU memory limits, prompting systems to offload model states to CPU memory. However, existing offloaded training frameworks like ZeRO-Offload treat all parameters equally and update the full model on the CPU, causing severe GPU stalls, where fast, expensive GPUs sit idle, waiting for slow CPU updates and limited-bandwidth PCIe transfers.\n We present ZenFlow, a new offloaded training framework that decouples updates between GPU and CPU by pri",
+      "first_checked_at": "2026-10-05T05:41:27+00:00",
+      "last_checked_at": "2026-10-05T05:41:27+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ],
+      "title": "ZenFlow: Enabling Stall-Free Offloading for LLM Training"
+    },
+    "DOI:10.64898/2026.07.29.741127": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.29.741127",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.29.741127"
+      ],
+      "reason": "Large language models (LLMs) can ease the work of screening titles and abstracts for systematic reviews, but obtaining reliable results requires researchers to make practical choices about which LLMs to use, how to combine their scores into a ranking, and how far down that ranking to read. We aimed to identify a general-purpose workflow that screens accurately, minimises human review effort, and generalises across environmental literature corpora. We ran an ensemble of five open-source LLMs acro",
+      "first_checked_at": "2026-10-05T05:41:27+00:00",
+      "last_checked_at": "2026-10-05T05:41:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Operationalising LLM-assisted screening of literature to support systematic reviews"
+    },
+    "DOI:10.64898/2026.09.19.752878": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.19.752878",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.19.752878"
+      ],
+      "reason": "Protein–protein interactions (PPIs) are central to biological processes, making the identification of both interacting partners and their binding sites important for understanding molecular function and guiding therapeutic discovery. However, connecting large-scale partner prediction to residue-level interaction evidence remains challenging. Here we present ColBERT-PPI, a structure-aware multi-vector framework that links protein partner retrieval to interaction-site localisation. The model retai",
+      "first_checked_at": "2026-10-05T05:41:27+00:00",
+      "last_checked_at": "2026-10-05T05:41:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Multi-vector retrieval enables residue-resolved prediction of protein partners by ColBERT-PPI"
+    },
+    "DOI:10.64898/2026.09.23.753684": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.23.753684",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.23.753684"
+      ],
+      "reason": "Drug-drug interactions (DDIs) represent a critical challenge in drug development and clinical practice, as they can lead to severe adverse effects, including toxicity and reduced therapeutic efficacy. Deep learning methods have shown promise in large-scale, rapid DDI prediction; however, current approaches suffer from significant limitations in providing mechanistic in-sights into these interactions. Here, we propose DualTopoDDI, a dual-topology-enhanced interpretable deep learning model for DDI",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Deciphering Mechanistic Signatures in Drug-Drug Interactions with Dual Topology Graphs"
+    },
+    "arXiv:2609.27201": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27201",
+      "identity_tokens": [
+        "arXiv:2609.27201"
+      ],
+      "reason": "Sequential RecSys are central to modern personalization, exploiting user's historical interaction sequences to drive next-step decisions. Deep learning models, particularly CNN and Transformer-based architectures, have proven highly effective at capturing temporal dependencies in these histories. For transparency and trust, understanding which past interactions drive a given recommendation is increasingly important --- both for developers auditing model behavior and for users seeking a rationale",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "A Systematic Benchmark of Explainable Methods for Temporal Attribution in Sequential Recommendation Systems"
+    },
+    "DOI:10.1108/ftpgl-11-2025-0068": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/ftpgl-11-2025-0068",
+      "identity_tokens": [
+        "DOI:10.1108/ftpgl-11-2025-0068"
+      ],
+      "reason": "Code auditing examines whether an implementation satisfies target properties such as reliability, security, performance, and design intent. Classical static analysis provides rigorous foundations for automated auditing, but it remains difficult to apply broadly in real-world software. The emergence of large language models (LLMs) and agents creates new opportunities for leveraging semantic cues that are embedded in source code, documentation, and other software artifacts yet difficult for classical static analyzers",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Neurosymbolic code auditing"
+    },
+    "DOI:10.1108/ir-03-2026-0100": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/ir-03-2026-0100",
+      "identity_tokens": [
+        "DOI:10.1108/ir-03-2026-0100"
+      ],
+      "reason": "Force-guided trajectory tracking is partially observable because safe contact depends on recent force/motion history, not only on the current sensor sample. This study aims to evaluate efficient sequence modelling for real-time robot force control.        The authors integrate the Mamba selective state-space encoder with soft actor–critic (SAC) and a 100-Hz Cartesian impedance control interface. The evaluation compares SAC, long short-term memory-SAC, Transformer-SAC and temporal convolutional network-SAC on a 7-de",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Mamba-SAC: selective state space modelling for robot force-guided trajectory tracking"
+    },
+    "DOI:10.1145/3837114": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3837114",
+      "identity_tokens": [
+        "DOI:10.1145/3837114"
+      ],
+      "reason": "GPU-accelerated analytical query processing is often limited by both GPU device memory capacity and host-to-device data transfer time. Modern data compression techniques, such as cascaded lightweight compression, can mitigate these issues. However, existing designs all exhibit critical tradeoffs on compression ratios, decompression speed, and extensibility. They either apply aggressive compression without addressing execution irregularity, or maintain strictly aligned data layouts that sacrifice compressibility. Al",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "G-CasDec: General Cascaded Decompression on GPUs"
+    },
+    "arXiv:2609.30352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30352",
+      "identity_tokens": [
+        "arXiv:2609.30352"
+      ],
+      "reason": "Self-consistency has become a popular technique for enhancing the reasoning abilities of large language models by generating multiple reasoning paths and selecting the final answer through a majority vote. However, because model providers typically charge users in proportion to the number of reasoning paths generated, they have a financial incentive to artificially increase the path count. In this work, we show that an unfaithful provider can exploit this incentive using a simple, efficient algorithm while avoiding",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Strategic Self-Consistency"
+    },
+    "arXiv:2609.30379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30379",
+      "identity_tokens": [
+        "arXiv:2609.30379"
+      ],
+      "reason": "Variable-size inputs are common in deep learning, but dense batching allocates a shared envelope and spends computation on padding. The cost multiplies across varying axes: an explicit pair state allocates $BN_{\\max}^2$ positions instead of $\\sum_i N_i^2$. Packing removes that waste, but composing packed operations still requires the logical axes and sample boundaries a flat buffer no longer exposes. We present DanLing NestedTensor, a PyTorch tensor abstraction that makes multi-ragged structure a property of the te",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "DanLing NestedTensor: Composable Multi-Ragged Tensors for Deep Learning"
+    },
+    "arXiv:2609.30454": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30454",
+      "identity_tokens": [
+        "arXiv:2609.30454"
+      ],
+      "reason": "Non-generative\"System-1\"models return structured probabilistic decisions in a single forward pass, without autoregressive decoding, at a small fraction of the inference cost of a generative model. This makes them of interest as inexpensive components in larger pipelines, but their reliability on biosecurity-relevant tasks has not been systematically examined. We audit one commercial System-1 model on 6,020 multiple-choice items drawn from the Weapons of Mass Destruction Proxy (WMDP), a paraphrase-robust WMDP-Bio va",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Auditing System-1 Models on Biosecurity-Relevant Benchmarks: Calibration, Selective Prediction, and Permutation Instability in a Non-Generative Model"
+    },
+    "arXiv:2609.30569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30569",
+      "identity_tokens": [
+        "arXiv:2609.30569"
+      ],
+      "reason": "CryoEM map interpretation requires features that are spatially localized, consistent across samples, and informative across spatial scales. Most deep learning methods for map annotation extract features from fixed voxel grids. However, implicit neural representations (INRs) are able to model volumetric data as scale-agnostic, coordinate-conditioned functions. INRs are therefore attractive for cryoEM, but fitting a separate INR for each map is too expensive for large-scale feature extraction and produces representat",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Atelier: Learning Local Self-Supervised Features for CryoEM Volumes via Hypernetworks"
+    },
+    "arXiv:2609.30572": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30572",
+      "identity_tokens": [
+        "arXiv:2609.30572"
+      ],
+      "reason": "Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two polic",
+      "first_checked_at": "2026-10-05T05:41:28+00:00",
+      "last_checked_at": "2026-10-05T05:41:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations"
+    },
+    "arXiv:2609.30601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30601",
+      "identity_tokens": [
+        "arXiv:2609.30601"
+      ],
+      "reason": "Modern industrial recommender systems must optimize across competing objectives, balancing semantic relevance with business metrics such as engagement and revenue. While bi-encoders dominate large-scale retrieval due to their efficiency, they collapse these heterogeneous signals into a single static embedding space. This design creates a fundamental limitation: once trained, the retriever cannot adapt to shifting objective priorities at serving time without retraining. Moreover, joint optimization with multi-object",
+      "first_checked_at": "2026-10-05T05:41:29+00:00",
+      "last_checked_at": "2026-10-05T05:41:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Embedding Subspace Partitioning for Dynamic Multi-Objective Retrieval"
+    },
+    "arXiv:2610.00257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00257",
+      "identity_tokens": [
+        "arXiv:2610.00257"
+      ],
+      "reason": "In standard transformer attention, a source token sends the same value vector to every receiver. The query determines \\emph{how much} to attend but not \\emph{what} to extract. This work introduces \\textbf{attention manifolds}: learned 2D B-spline surfaces $S_d(q_d, k_d)$ that modulate each value dimension based on the query-key interaction. Each surface is a tensor-product cubic B-spline initialized to zero, preserving pretrained behavior. Applied to LLaMA 3.2-1B-Instruct and 3B-Instruct, attention manifolds reduce",
+      "first_checked_at": "2026-10-05T05:41:29+00:00",
+      "last_checked_at": "2026-10-05T05:41:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Attention Manifolds: Steering or Blocking Language Models by Editing Learned B-Spline Surfaces"
+    },
+    "DOI:10.1007/s11042-026-21943-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11042-026-21943-x",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21943-x"
+      ],
+      "reason": "Digital breast tomosynthesis (DBT) provides volumetric image stacks that improve lesion conspicuity compared with two-dimensional (2D) mammography, yet most automated methods process slices independently and discard the depth-wise continuity that underpins this advantage. We introduce TomoMamba, a two-stage deep learning framework for DBT screening and diagnosis. A dual-branch 2.5D network with multi-view fusion first triages each breast study as normal or suspicious, reaching a breast-level area under the receiver",
+      "first_checked_at": "2026-10-05T05:41:29+00:00",
+      "last_checked_at": "2026-10-05T05:41:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "TomoMamba: a two-stage model with state-space cross-slice propagation for breast cancer diagnosis in digital breast tomosynthesis"
     }
   }
 }

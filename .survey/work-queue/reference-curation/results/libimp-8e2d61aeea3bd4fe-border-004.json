@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e2d61aeea3bd4fe-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3837104",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3837104",
+    "identity_tokens": [
+      "DOI:10.1145/3837104"
+    ],
+    "reason": "要旨は直接関連するが一次本文を取得できず、圧縮/遅延の測定条件と品質tradeoffを確認できないため微妙へ回す。",
+    "first_checked_at": "2026-10-05T05:41:28+00:00",
+    "last_checked_at": "2026-10-05T05:41:28+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+    ],
+    "title": "CatKV: Accelerating Position-Independent Caching with Context-Adaptive KV Cache Compression"
+  },
+  "processed_at": "2026-10-05T05:41:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e2d61aeea3b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
