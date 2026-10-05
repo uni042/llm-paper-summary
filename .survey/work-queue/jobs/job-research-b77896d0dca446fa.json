@@ -2,6 +2,9 @@
   "artifact_transport": "structured_record_v10",
   "arxiv_id": "2606.19348",
   "canonical_id": "arXiv:2606.19348",
+  "citation_count": 0,
+  "citation_count_checked_at": "2026-10-05T04:08:22+00:00",
+  "citation_count_source": "openalex",
   "completion": "Submit the complete workflow-v10 five-slot structured research record and source evidence. Return blocked with retrieval evidence only after the ordered official full-text routes have been exhausted without enough primary evidence; do not stop merely because the first successful fetch is incomplete.",
   "created_at": "2026-09-23T14:40:12+00:00",
   "doi": null,
@@ -16,18 +19,21 @@
     "citation_count": 0,
     "citations": 0,
     "freshness": 0,
-    "freshness_age_days": null,
+    "freshness_age_days": 162,
     "is_fresh": false,
     "matched_prestigious_venue": null,
     "policy": "candidate-priority-v1",
     "prestigious_venue": 0,
     "total": 0
   },
+  "published": "2026-04-26",
   "schema_version": 1,
   "selection_reason": "既存の投機的復号・長文脈推論系統から直接参照される2026年のMoEモデル技術報告。圧縮疎注意と強圧縮注意を組み合わせ、100万トークン文脈でDeepSeek-V3.2比27%の単一トークン推論FLOPs、10%のKVキャッシュを報告しており、推論効率系統への直接性が高い。",
   "source_url": "https://arxiv.org/abs/2606.19348",
   "status": "ready",
   "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
   "type": "research",
-  "workflow_version": 10
+  "venue": "arXiv (Cornell University)",
+  "workflow_version": 10,
+  "year": 2026
 }
