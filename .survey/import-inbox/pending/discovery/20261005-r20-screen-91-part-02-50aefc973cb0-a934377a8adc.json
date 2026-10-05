@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-91-part-02-50aefc973cb0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10807",
+      "identity_tokens": [
+        "arXiv:2502.10807"
+      ],
+      "title": "HybriDNA: A Hybrid Transformer-Mamba2 Long-Range DNA Language Model",
+      "reason": "DNA配列向け言語モデルの研究で、対象LLM inference効率と無関係。",
+      "source_url": "https://arxiv.org/abs/2502.10807",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.01481",
+      "identity_tokens": [
+        "arXiv:2502.01481"
+      ],
+      "title": "Intrinsic Entropy of Context Length Scaling in LLMs",
+      "reason": "context長とLM lossの理論・実験分析だが、推論コスト削減手法ではない。",
+      "source_url": "https://arxiv.org/abs/2502.01481",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2502.20791",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2502.20791"
+      ],
+      "title": "Cyber Defense Reinvented: Large Language Models as Threat Intelligence Copilots",
+      "reason": "一次arXiv要旨ではCYLENSが脅威報告を知識源とするcyber threat intelligence copilotを提案。LLM業務支援だが効率化方式ではない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2502.20791",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICAIQSA64000.2024.10882424",
+      "identity_tokens": [
+        "DOI:10.1109/ICAIQSA64000.2024.10882424"
+      ],
+      "title": "Decentralized Generative AI Model Deployment Using Microservices",
+      "reason": "要旨は分散microservice deploymentとparallel inferenceを提案するが、IEEE一次本文を取得できずLLM serving効率への寄与を確認不能。",
+      "source_url": "https://doi.org/10.1109/ICAIQSA64000.2024.10882424",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.07583",
+      "identity_tokens": [
+        "arXiv:2412.07583"
+      ],
+      "title": "Mobile Video Diffusion",
+      "reason": "mobile video diffusionを高速化するが動画生成モデル対象でLLMではない。",
+      "source_url": "https://arxiv.org/abs/2412.07583",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    }
+  ]
+}
