@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T09:50:19+00:00",
-  "record_count": 1333,
+  "updated_at": "2026-10-05T09:53:07+00:00",
+  "record_count": 1337,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -20531,6 +20531,65 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "PreDiff-LM: Pretrained Discrete Masked Diffusion Language Modeling with Hybrid Attention"
+    },
+    "arXiv:2607.26016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26016",
+      "identity_tokens": [
+        "arXiv:2607.26016"
+      ],
+      "reason": "一次本文§V Results and Discussionを確認。フォトニックacceleratorをfunctional simulation/ hardware simulatorで評価し、DeiTとBERT-B/Lに対しenergy saving 40.6–45.1%を報告。ただし対象workloadはencoder-style DeiT/BERTでありLLM decoder serving・generation throughputの評価ではない。汎用Transformer hardwareの隣接知見としては関係するが、LLM inference対象への適合は弱い。",
+      "first_checked_at": "2026-10-05T09:53:07+00:00",
+      "last_checked_at": "2026-10-05T09:53:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar"
+    },
+    "arXiv:2607.26017": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26017",
+      "identity_tokens": [
+        "arXiv:2607.26017"
+      ],
+      "reason": "一次本文Abstract・§3 framework/§4 evaluation・Limitationsを確認。LLM-agent task streamsでepisodic memoryからparametric memoryへconsolidationする方式を提案し、3 backboneで平均+4.0 EM。abstractはepisodic retrievalにinference-time overheadがあるとするが、本文の確認範囲にretrieval latency/throughput/memory-efficiencyの定量比較は見当たらず、limitationsもparameter-efficiency trade-offをfuture workとしている。推論効率の主題・証拠が弱い。",
+      "first_checked_at": "2026-10-05T09:53:07+00:00",
+      "last_checked_at": "2026-10-05T09:53:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams"
+    },
+    "arXiv:2607.26192": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26192",
+      "identity_tokens": [
+        "arXiv:2607.26192"
+      ],
+      "reason": "一次本文§4.4–4.5を確認。FeatureGateは全Transformer blockを実行し、Denseより実測30.8%遅くthroughput 23.5%低下。MUDDPythia-1.4Bでも全block実行。dynamic parameterizationだけではdynamic inference/compute savingsにならないと検証する負例研究。推論効率の誤認防止には関連するが、効率化技法や改善手法ではなく対象寄与は限定的。",
+      "first_checked_at": "2026-10-05T09:53:07+00:00",
+      "last_checked_at": "2026-10-05T09:53:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Dynamic Parameterization Is Not Dynamic Inference"
+    },
+    "arXiv:2607.24424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.24424",
+      "identity_tokens": [
+        "arXiv:2607.24424"
+      ],
+      "reason": "一次本文§4.1–4.3・§5 Limitations・Appendix Bを確認。対象は7B LMに結合するvisual encoder/token routerで、efficiency metricsはvisual tokens/TTFT/memory。ただしTable 1およびAppendix Bがsimulated/illustrative placeholdersと明記され、実験・正式claimの裏付けなし。概念上は関連するが、現状の性能主張は根拠として採用不可。",
+      "first_checked_at": "2026-10-05T09:53:07+00:00",
+      "last_checked_at": "2026-10-05T09:53:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "MAViE: A Multi-scale Adaptive Vision Encoder for Fine-grained Visual Perception and Efficient Multimodal Reasoning"
     }
   }
 }

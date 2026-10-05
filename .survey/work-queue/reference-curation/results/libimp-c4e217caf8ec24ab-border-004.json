@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4e217caf8ec24ab-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.24424",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.24424",
+    "identity_tokens": [
+      "arXiv:2607.24424"
+    ],
+    "reason": "一次本文§4.1–4.3・§5 Limitations・Appendix Bを確認。対象は7B LMに結合するvisual encoder/token routerで、efficiency metricsはvisual tokens/TTFT/memory。ただしTable 1およびAppendix Bがsimulated/illustrative placeholdersと明記され、実験・正式claimの裏付けなし。概念上は関連するが、現状の性能主張は根拠として採用不可。",
+    "first_checked_at": "2026-10-05T09:53:07+00:00",
+    "last_checked_at": "2026-10-05T09:53:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+    ],
+    "title": "MAViE: A Multi-scale Adaptive Vision Encoder for Fine-grained Visual Perception and Efficient Multimodal Reasoning"
+  },
+  "processed_at": "2026-10-05T09:53:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4e217caf8ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

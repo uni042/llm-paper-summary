@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4e217caf8ec24ab-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24199",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24199",
+    "identity_tokens": [
+      "arXiv:2607.24199"
+    ],
+    "reason": "要旨はtraffic-rule understanding用VLMへのCoT/SFT/GRPO trainingとaccuracy評価で、推論効率ではない。",
+    "first_checked_at": "2026-10-05T09:53:08+00:00",
+    "last_checked_at": "2026-10-05T09:53:08+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Reasoning to Regulate: Chain-of-Thought for Traffic Rule Understanding"
+  },
+  "processed_at": "2026-10-05T09:53:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4e217caf8ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
