@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5fd86d74244c192d-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.135173",
+  "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+  "title": "Evaluating the Role of Provider on Safety Alignment in Large Language Models",
+  "identity_tokens": [
+    "DOI:10.1016/j.neucom.2026.135173"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5fd86d74244c",
+  "source_precheck_request_id": null
+}
