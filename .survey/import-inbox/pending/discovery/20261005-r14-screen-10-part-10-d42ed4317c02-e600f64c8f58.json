@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-10-part-10-d42ed4317c02",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.06296",
+      "identity_tokens": [
+        "arXiv:2303.06296"
+      ],
+      "title": "Stabilizing Transformer Training by Preventing Attention Entropy Collapse",
+      "reason": "一次資料はattention entropy collapseを防ぐTransformer training安定化を扱い、学習専用である。",
+      "source_url": "https://arxiv.org/abs/2303.06296",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.07895",
+      "identity_tokens": [
+        "arXiv:2303.07895"
+      ],
+      "title": "The Learnability of In-Context Learning",
+      "reason": "一次要旨はin-context learningの理論的learnabilityを分析する研究で、実行時効率化/servingではない。",
+      "source_url": "https://arxiv.org/abs/2303.07895",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ]
+    }
+  ]
+}
