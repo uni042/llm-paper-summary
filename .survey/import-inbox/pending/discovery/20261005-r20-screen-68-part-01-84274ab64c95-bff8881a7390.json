@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-68-part-01-84274ab64c95",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16831",
+      "identity_tokens": [
+        "arXiv:2505.16831"
+      ],
+      "title": "Unlearning Isn't Deletion: Investigating Reversibility of Machine Unlearning in LLMs",
+      "reason": "要旨はLLM unlearningの可逆性・評価指標を研究し、serving/inference efficiencyの方法を提案しない。",
+      "source_url": "https://arxiv.org/abs/2505.16831",
+      "first_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "last_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.19443",
+      "identity_tokens": [
+        "arXiv:2411.19443"
+      ],
+      "title": "Auto-RAG: Autonomous Retrieval-Augmented Generation for Large Language Models",
+      "reason": "要旨はiterative retrievalと回答品質の向上が主題。反復retrieveに追加推論負荷があると述べるが、その効率低減手法ではない。",
+      "source_url": "https://arxiv.org/abs/2411.19443",
+      "first_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "last_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02097",
+      "identity_tokens": [
+        "arXiv:2409.02097"
+      ],
+      "title": "LinFusion: 1 GPU, 1 Minute, 16K Image",
+      "reason": "画像diffusionモデルの線形attentionによる高解像度生成であり、LLM inference対象外。",
+      "source_url": "https://arxiv.org/abs/2409.02097",
+      "first_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "last_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.14724",
+      "identity_tokens": [
+        "arXiv:2601.14724"
+      ],
+      "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+      "reason": "主題はLLM inferenceと近いが、一次本文の2つの取得経路が失敗し、TTFT/token削減の条件と制約を検証できない。現状で具体的Research読解へ進める根拠が不足するためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.14724",
+      "first_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "last_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.01518-infinipot-infinite-context-processing-on-memory-constrained-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21996",
+      "identity_tokens": [
+        "arXiv:2505.21996"
+      ],
+      "title": "Learning World Models for Interactive Video Generation",
+      "reason": "interactive video world modelの一貫性・retrievalが主題で、LLM serving/inference効率ではない。",
+      "source_url": "https://arxiv.org/abs/2505.21996",
+      "first_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "last_checked_at": "2026-10-05T10:52:54.554340+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    }
+  ]
+}
