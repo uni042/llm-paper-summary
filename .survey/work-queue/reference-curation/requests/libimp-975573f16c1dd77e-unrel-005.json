@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-975573f16c1dd77e-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2508.12969",
+  "reason": "The computational demands of self-attention mechanisms pose a critical challenge for transformer-based video generation, particularly in synthesizing ultra-long sequences. Current approaches, such as factorized attention and fixed sparse patterns, fail to fully exploit the inherent spatio-temporal redundancies in video data. Through systematic analysis of video diffusion transformers (DiT), we uncover a key insight: Attention matrices exhibit structured, yet heterogeneous sparsity patterns, where specialized heads dynamically attend to distinct spatiotemporal regions (e.g., local pattern, cross-shaped pattern, or global pattern). Existing sparse attention methods either impose rigid constraints or introduce significant overhead, limiting their effectiveness. To address this, we propose Compact Attention, a hardware-aware acceleration framework featuring three innovations: 1) Adaptive tiling strategies that approximate diverse spatial interaction patterns via dynamic tile grouping, 2) Temporally varying windows that adjust sparsity levels based on frame proximity, and 3) An automated configuration search algorithm that optimizes sparse patterns while preserving critical attention pathways. Our method achieves 1.6~2.5x acceleration in attention computation on single-GPU setups while maintaining comparable visual quality with full-attention baselines. This work provides a principled approach to unlocking efficient long-form video generation through structured sparsity exploitation. Project Page: https://yo-ava.github.io/Compact-Attention.github.io/",
+  "title": "Compact Attention: Exploiting Structured Spatio-Temporal Sparsity for Fast Video Generation",
+  "identity_tokens": [
+    "arXiv:2508.12969"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+    "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+    "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+    "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+    "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+    "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+    "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+    "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+    "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+    "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-975573f16c1d",
+  "source_precheck_request_id": null
+}

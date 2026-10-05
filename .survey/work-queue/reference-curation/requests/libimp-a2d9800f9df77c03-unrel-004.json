@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a2d9800f9df77c03-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2508.02304",
+  "reason": "Neural Radiance Fields (NeRF) offer significant promise for generating photorealistic images and videos. However, existing mainstream neural rendering models often fall short in meeting the demands for immediacy and power efficiency in practical applications. Specifically, these models frequently exhibit irregular access patterns and substantial computational overhead, leading to undesirable inference latency and high power consumption. Computing-in-memory (CIM), an emerging computational paradigm, has the potential to address these access bottlenecks and reduce the power consumption associated with model execution. To bridge the gap between model performance and real-world scene requirements, we propose an algorithm-architecture co-design approach, abbreviated as ASDR, a CIM-based accelerator supporting efficient neural rendering. At the algorithmic level, we propose two rendering optimization schemes: (1) Dynamic sampling by online sensing of the rendering difficulty of different pixels, thus reducing access memory and computational overhead. (2) Reducing MLP overhead by decoupling and approximating the volume rendering of color and density. At the architecture level, we design an efficient ReRAM-based CIM architecture with efficient data mapping and reuse microarchitecture. Experiments demonstrate that our design can achieve up to 9.55× and 69.75× speedup over state-of-the-art NeRF accelerators and Xavier NX GPU in graphics rendering tasks with only 0.1 PSNR loss.",
+  "title": "ASDR: Exploiting Adaptive Sampling and Data Reuse for CIM-based Instant Neural Rendering",
+  "identity_tokens": [
+    "arXiv:2508.02304"
+  ],
+  "linked_from": [
+    "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2d9800f9df7",
+  "source_precheck_request_id": null
+}
