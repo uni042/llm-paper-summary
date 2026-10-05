@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-83-part-01-247aa70f59f8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731016",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731016"
+      ],
+      "title": "Cramming a Data Center into One Cabinet, a Co-Exploration of Computing and Hardware Architecture of Waferscale Chip",
+      "reason": "wafer-scale cabinet architectureをco-designしLlama2-7B/72Bをsimulation評価するが、一次本文を取得できず、対象構成・simulation条件を確認できない。",
+      "source_url": "https://doi.org/10.1145/3695053.3731016",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03616",
+      "identity_tokens": [
+        "arXiv:2506.03616"
+      ],
+      "title": "Learning to Insert [PAUSE] Tokens for Better Reasoning",
+      "reason": "[PAUSE] tokenの位置を選んで追加学習しreasoning accuracyを改善するfine-tuning手法で、推論時の計算/serving効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2506.03616",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.10909",
+      "identity_tokens": [
+        "arXiv:2505.10909"
+      ],
+      "title": "Phi: Leveraging Pattern-based Hierarchical Sparsity for High-Efficiency Spiking Neural Networks",
+      "reason": "spiking neural networkのsparsity/hardware accelerator研究で、LLM inference/serving対象ではない。",
+      "source_url": "https://arxiv.org/abs/2505.10909",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16788",
+      "identity_tokens": [
+        "arXiv:2503.16788"
+      ],
+      "title": "Does Chain-of-Thought Reasoning Help Mobile GUI Agent? An Empirical Study",
+      "reason": "mobile GUI agentへのChain-of-Thoughtの効果を測る性能調査で、LLM inference efficiencyを提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2503.16788",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10093",
+      "identity_tokens": [
+        "arXiv:2503.10093"
+      ],
+      "title": "Efficient Safety Alignment of Large Language Models via Preference Re-ranking and Representation-based Reward Modeling",
+      "reason": "LLM safety alignment reward modelの効率的な学習手法で、training/alignment専用。",
+      "source_url": "https://arxiv.org/abs/2503.10093",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    }
+  ]
+}
