@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:01:08+00:00",
-  "record_count": 3434,
+  "updated_at": "2026-10-05T07:03:38+00:00",
+  "record_count": 3447,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -50046,6 +50046,191 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "TV-Regulated OPD: Direction Matters in On-Policy Distillation"
+    },
+    "arXiv:2609.09270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09270",
+      "identity_tokens": [
+        "arXiv:2609.09270"
+      ],
+      "reason": "The abstract concerns compilation/runtime for quantum workloads across CPUs, GPUs, and FPGAs, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:03:37+00:00",
+      "last_checked_at": "2026-10-05T07:03:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Python in the front, party in the Backline: compiling quantum workloads across CPUs, GPUs, and FPGAs"
+    },
+    "arXiv:2609.09410": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09410",
+      "identity_tokens": [
+        "arXiv:2609.09410"
+      ],
+      "reason": "The abstract benchmarks agentic deep-research quality across web and SQL tools; it does not study model inference efficiency.",
+      "first_checked_at": "2026-10-05T07:03:37+00:00",
+      "last_checked_at": "2026-10-05T07:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Benchmarking Hybrid Deep Research Across Database Querying and Web Search"
+    },
+    "arXiv:2609.11989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11989",
+      "identity_tokens": [
+        "arXiv:2609.11989"
+      ],
+      "reason": "The abstract proposes a theoretical account of computational primitives in biological/artificial adaptation; it provides no LLM inference or serving method.",
+      "first_checked_at": "2026-10-05T07:03:37+00:00",
+      "last_checked_at": "2026-10-05T07:03:37+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "The Computational Primitives of Adaptation"
+    },
+    "DOI:10.1007/s44163-026-02069-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-02069-3",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02069-3"
+      ],
+      "reason": "The abstract reviews transformer models for medical-image diagnosis; it is domain-specific application/model quality work, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T07:03:37+00:00",
+      "last_checked_at": "2026-10-05T07:03:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Transformer-based deep learning models for lung cancer detection and classification: a comprehensive review"
+    },
+    "DOI:10.1117/12.3125329": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3125329",
+      "identity_tokens": [
+        "DOI:10.1117/12.3125329"
+      ],
+      "reason": "The abstract proposes an English generation-quality algorithm using attention and knowledge retrieval; its reported outcomes are BLEU/ROUGE, not inference efficiency.",
+      "first_checked_at": "2026-10-05T07:03:37+00:00",
+      "last_checked_at": "2026-10-05T07:03:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "An English text generation algorithm based on dual attention mechanism and dynamic knowledge enhancement"
+    },
+    "arXiv:2609.07134": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07134",
+      "identity_tokens": [
+        "arXiv:2609.07134"
+      ],
+      "reason": "一次要旨: This paper presents our system for CCL2026-Eval Task 5: Minor-Grain Breeding Information Extraction (MGBIE), which jointly extracts 12 entity types and 6 relation types from minor-grain breeding literature. We propose RAME (Retrieval-Augmented Multi-Prompt Ensemble), a training-free framework that elicits multiple LLM outputs under controlled diversity and aggregates them by majority voting to obtain high-confidence predictions. RAME combines (i) retrieval-augmented few-shot selection via a hybrid BM25-embedding retriever, (ii) a three-prompt ensemble (Strict, Relaxed, Balanced) spanning the precision to recall spectrum, and (iii) large-scale repeated sampling with majority voting to filter noisy predictions. Built on DeepSeek-V4-Flash, RAME achieves a Total Score of 0.499 (NER 0.730, RE 0.346) on the leaderboard, ranking 1st and surpassing the official Track-A baseline powered by GPT-5.5 (0.448), representing an 11.4% relative improvement. Code is available at https://github.com/king-wang123/CCL26-RAME.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Retrieval-Augmented Multi-Prompt Ensemble for Minor-Grain Breeding Information Extraction"
+    },
+    "arXiv:2609.07155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07155",
+      "identity_tokens": [
+        "arXiv:2609.07155"
+      ],
+      "reason": "一次要旨: Model compression is key to mitigate deployment challenges of ever growing machine learning models. In this area of research, singular value decomposition (SVD)-based compression offers a compelling trade-off between computational efficiency and model accuracy. Fisher-weighted SVD in particular provides principled, loss-aware compression. However, we find that improving the fidelity of Fisher approximation used in the compression is poorly predictive of post-compression accuracy for Vision Transformers (ViTs). Motivated by this observation, we propose FACTS, a structured Fisher Approximation tailored to Compressing ViTs with Fisher-weighted SVD, which enforces token-local aggregation while preserving within-token activation-gradient dependence. Additionally, we introduce a fast Constrained Rank Search (CoRS), that optimizes layer-wise rank allocation while adhering to a fixed floating point operation (FLOP) constraint. Extensive experiments across ViTs and hybrid architectures demonstrate that FACTS consistently improves accuracy-efficiency trade-offs without requiring finetuning. Notably, it outperforms the strongest SVD baseline by up to +5.8 percentage points (p.p.) Top-1 on Swin-B, with further gains driven by our search method. Code is available at https://github.com/MoritzTho/FACTS.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Mind the Approximation: Fisher-Weighted SVD Compression for ViTs"
+    },
+    "arXiv:2609.07160": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07160",
+      "identity_tokens": [
+        "arXiv:2609.07160"
+      ],
+      "reason": "一次要旨: Diffusion Large Language Models (dLLMs) generate text via bidirectional iterative denoising, naturally supporting user-specified constraints anchored at arbitrary output positions, a paradigm known as In-place Prompting (IPP). We formalize this as the In-place Instruction Following (IIF) task and construct IIF-Bench, a hierarchical benchmark spanning literal, style, and discourse-function constraints, paired with a rubric-based local-global evaluation protocol. An inference-time attention-bias probe suggests that vanilla dLLMs often under-prioritize constraint spans during denoising. We then propose GRAFT, an IPP-oriented post-training framework combining constraint-aware SFT and preference optimization. On four representative dLLMs, GRAFT raises the average IIF score from 57.75 to 73.10 (+15.35 points), with absolute gains of 15.91 and 15.57 points on literal and discourse-function constraints, while preserving general generation ability.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "In-Place Instruction Following in Diffusion Language Models"
+    },
+    "arXiv:2609.07236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07236",
+      "identity_tokens": [
+        "arXiv:2609.07236"
+      ],
+      "reason": "一次要旨: Selecting a parallelism strategy - the configuration of data, tensor, and pipeline parallelism degrees together with micro- and global-batch sizes - largely determines the training efficiency of large language models. State-of-the-art methods search for a parallelism strategy offline and select the single strategy that minimizes per-iteration time. But we find that they neglect the target validation perplexity and time-to-perplexity (TTP). In particular, our analysis reveals that the best strategy yielding the fastest perplexity improvement changes multiple times during training. As a result, state-of-the-art methods are 1.8-11.4x slower in TTP than the strategy sequence that selects the best strategy at each iteration. This paper proposes CONA, a new training method that introduces online strategy chaining. Instead of a single strategy selected offline, CONA ranks candidate strategies during training using a surrogate metric built from compute throughput and gradient statistics, and switches the current strategy to a new strategy with a higher metric. In our evaluation with GPT-3 1.3B, BERT-Large, and Llama-3.2-1B, CONA reaches the target validation perplexity 1.4-9.6x faster than state-of-the-art methods. Moreover, CONA closely tracks the perplexity achieved by the sequence that selects the best strategy at each iteration, within 2.6%.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Parallelism Strategy Chaining for Fast Training Convergence"
+    },
+    "arXiv:2609.07254": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07254",
+      "identity_tokens": [
+        "arXiv:2609.07254"
+      ],
+      "reason": "一次要旨: Mathematical programming provides a common language for many decisions embedded in modern machine-learning (ML) and artificial-intelligence (AI) systems: selecting retrieval context, routing tokens, allocating inference compute, fitting structured predictors, protecting against distribution shift, and balancing competing objectives. However, the relevant literature is fragmented across optimization, information retrieval, recommendation, natural-language processing, computer vision, and learning theory. This paper organizes various applications under common mathematical programming paradigms: linear, quadratic, binary and mixed-integer, conic, bilevel, multi-objective, inverse, distributionally robust, submodular, and min--max optimization. We normalize the models with a mostly unified notation and, for every application, identify inputs, decision variables, a principal formulation, structural properties, solution strategies, and limitations. Across paradigms, we compare tractability, relaxation quality, decomposition, approximation guarantees, and scalability bottlenecks. The paper shows that mathematical programming is most useful not as a claim that all learning is LP or MIP, but as a disciplined interface between predictions and constrained decisions.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Mathematical Programming in Machine Learning and Artificial Intelligence: A Unified Taxonomy of Models and Applications"
+    },
+    "DOI:10.3390/electronics15184056": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15184056",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15184056"
+      ],
+      "reason": "一次要旨: Semantic search over domain-specific corpora requires an effective embedding model and infrastructure. Elasticsearch’s native semantic_text field and ELSER sparse-vector inference require a commercial Enterprise subscription, inaccessible to most academic institutions. This paper documents the licensing barrier and presents a reproducible manual pipeline achieving comparable semantic search with free Elasticsearch components and open-source small language models (SLMs), on a four-node Raspberry Pi 4 cluster (8 GB RAM, three-node Elasticsearch) over 1088 USGS documents. Five models were evaluated —ELSER v2, .multilingual-e5-small, all-MiniLM-L12-v2, all-mpnet-base-v2, and msmarco-MiniLM-L12-cos-v5—from 35 screened candidates, plus a BM25 lexical baseline. Available process memory, not compute, is the binding constraint: Elasticsearch’s footprint consumes 5–6 GB of the 8 GB. The three 384-dimensional models reindexed the corpus in 2.1–2.2 h; the 768-dimensional all-mpnet-base-v2 took 10.1 h. On-disk size is unreliable for provisioning: .multilingual-e5-small expands from 1.4 GB on disk to 3.5 GB at runtime (2.5×). Retrieval quality was assessed with Precision@10, MRR, MAP@10, and nDCG@10 over 15 human-judged queries rather than raw similarity scores; embedding-based retrieval outperforms BM25, reaching significance for two of five configurations. Msmarco-MiniLM-L12-cos-v5 offers the strongest quality-per-resource trade-off among the 384-dimensional models for 8 GB ARM deployments. Pipeline and configuration artefacts are documented and reproducible.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Low-Resource SLM Models for Elastic Semantic Search"
+    },
+    "arXiv:2609.06931": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06931",
+      "identity_tokens": [
+        "arXiv:2609.06931"
+      ],
+      "reason": "一次要旨: Invasive coronary angiography (CAG) is the gold standard for diagnosing coronary artery disease, but interpretation varies substantially among observers. Existing AI systems can improve consistency but lack auditable decision processes and are limited in comprehensive open-ended assessment, undermining clinician trust and clinical adoption readiness. We developed CARDEA, a unified large vision-language model that serves as the inference core of a CAG pipeline. It was trained solely on public datasets and closed-ended tasks in three stages: visual feature alignment, a self-distilled Chain-of-Box (CoB) cold start, and reinforcement learning with verifiable rewards (RLVR) with a CoB reward encouraging bounding-box use in the reasoning trace. We assessed its two study-level diagnoses, dominance classification and complexity assessment, against a dedicated classifier and two interventional cardiologists. Report generation was excluded from training and evaluated zero-shot across stages on an external cohort using vessel-severity macro-$F_1$. CARDEA trailed the classifier on in-distribution dominance but drew level under domain shift (accuracy, 0.91 [95% confidence interval (CI), 0.86 to 0.95]) and was comparable to the cardiologists on complexity assessment (accuracy, 0.90 [CI, 0.82 to 0.97]). Only RLVR improved zero-shot report generation, raising its vessel-severity macro-$F_1$ (0.686 [CI, 0.664 to 0.707]) above the untuned base model (0.513) and over twice the always-normal floor (0.312). CARDEA runs an end-to-end CAG pipeline from raw multi-view videos through keyframe selection to study-level diagnosis while exposing auditable spatial evidence behind its conclusions. RLVR on verifiable closed-ended tasks surfaced open-ended reporting ability that supervised imitation did not. Clinical use requires prospective validation against expert cardiologists.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation"
+    },
+    "arXiv:2609.07103": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07103",
+      "identity_tokens": [
+        "arXiv:2609.07103"
+      ],
+      "reason": "一次要旨: Large language models (LLMs) are often post-trained on pre-collected reasoning trajectories to improve their reasoning capability. Such trajectories tend to be long due to complex, interwoven paths, which often include detours on the path toward the answer. However, it has been underexplored whether LLMs indeed benefit from learning complete trajectories in post-training, such as supervised fine-tuning (SFT). Starting from our pilot study, we find that full trajectories provide only limited benefit, while partial trajectories are effective even under heavy truncation. We analyze redundancy in reasoning trajectories through attention-based analyses and controlled token-removal studies, both of which show that intermediate tokens contribute minimally to final reasoning quality. This suggests that avoiding redundant information may allow LLMs to internally infer coherent alternatives by inferring missing steps from their internal knowledge, given known trajectory endpoints. Furthermore, we show that training LLMs using endpoints leads to consistent changes in reasoning behavior, and that it also benefits post-training methods based on reinforcement learning or on-policy distillation, highlighting the need to revisit complete reasoning traces. Code is available at https://github.com/naver-ai/revisiting-trace.",
+      "first_checked_at": "2026-10-05T07:03:38+00:00",
+      "last_checked_at": "2026-10-05T07:03:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Revisiting Complete Reasoning Traces for Post-Training"
     }
   }
 }
