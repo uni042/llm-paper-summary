@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-17-part-04-c86867e4e0b0",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30057",
+      "identity_tokens": [
+        "arXiv:2609.30057"
+      ],
+      "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity",
+      "reason": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We presen",
+      "source_url": "https://arxiv.org/abs/2609.30057",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30087",
+      "identity_tokens": [
+        "arXiv:2609.30087"
+      ],
+      "title": "Return or Revise? Learning When Revision Helps Retrieval-Augmented QA",
+      "reason": "LLM callを選択する可能性はあるが、本文はQA正確度が焦点で、cost/latency削減やその評価を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.30087",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30092",
+      "identity_tokens": [
+        "arXiv:2609.30092"
+      ],
+      "title": "Self-Adaptive VLA for Robust Robot Deployment",
+      "reason": "While Vision-Language-Action (VLA) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. Enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. In this work, we introduce Self-Adaptive VLA, a novel post-training recipe that enables the policy to iter",
+      "source_url": "https://arxiv.org/abs/2609.30092",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30177",
+      "identity_tokens": [
+        "arXiv:2609.30177"
+      ],
+      "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search",
+      "reason": "Query understanding (QU) plays a critical role in production search systems, translating raw user queries into search execution plans that drive downstream retrieval and ranking. While large language models (LLMs) have enabled QU to be framed as a structured multi-task generation problem (e.g., intent classification, query expansion), optimizing such models to produce search-engine-coupled outputs remains challenging: static, label-based supervision fails to capture how each component actually interacts with the un",
+      "source_url": "https://arxiv.org/abs/2609.30177",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30258",
+      "identity_tokens": [
+        "arXiv:2609.30258"
+      ],
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning",
+      "reason": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. Th",
+      "source_url": "https://arxiv.org/abs/2609.30258",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
