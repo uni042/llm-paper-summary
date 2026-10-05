@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（319本）
+## 自動生成の論文一覧（322本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1210,6 +1210,10 @@
   実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：1  
   自己整合性（自己整合性）は、同じ問題へ複数の推論経路を生成し、最終回答の多数決で精度を上げる。しかし従来は簡単な問題にも難しい問題にも同じ本数を生成するため、すでに回答がほぼ確定した問題へ余分なLLM呼び出しを続ける。適応的-Consistencyは生成途中の回答一致度を観測し、十分な確信に達した問題だけ早期停止する。
 
+- **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究はこの設計空間をブロックデータ表現（Block Data Representation; BDR）として整理し、その中から共有microexponent（MX）形式を提案する。
+
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
@@ -1233,6 +1237,10 @@
   UNはTransformerのoffline normalizationを、活性値/勾配統計の平滑化と適応型 outlier除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
 
 ### 6年前（2020-11〜2021-10）
+
+- **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  非構造枝刈りはパラメータ数を大きく減らせても、ゼロが不規則に散るため通常GPU カーネルでは速度へ変換しにくい。中心となるHybrid方式は、FFNでは完全な隠れ dimensionを、注意機構では32×32 ブロックを徐々に削る。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
   実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：2  
@@ -1285,6 +1293,10 @@
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   推論時には最初にtarget長を予測し、全位置をmaskした状態から全トークンを同時に生成する。
+
+- **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

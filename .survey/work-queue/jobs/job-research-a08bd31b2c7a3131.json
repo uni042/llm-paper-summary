@@ -35,10 +35,15 @@
   "selection_reason": "BERTをquantization-aware fine-tuningで8-bit化し4倍圧縮、8-bit integer対応hardwareで推論高速化可能とする。Transformer inferenceのmemory/compute/power制約を直接対象とするため対象内。",
   "semantic_scholar_id": "ce106590145e89ea4b621c99665862967ccf5dac",
   "source_url": "https://arxiv.org/abs/1910.06188",
-  "status": "ready",
+  "status": "superseded",
   "title": "Q8BERT: Quantized 8Bit BERT",
   "type": "research",
   "venue": "2019 Fifth Workshop on Energy Efficient Machine Learning and Cognitive Computing - NeurIPS Edition (EMC2-NIPS)",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-05T22:54:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+  "represented_canonical_id": "arXiv:1910.06188",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -33,10 +33,15 @@
   "selection_reason": "共有マイクロ指数（MX）という低精度数値形式をハードウェア効率まで含めて設計し、GPT-3級を含む大規模生成モデルの推論で低ビット重み・活性化を検証しており、推論向け量子化・圧縮に直接該当する。",
   "semantic_scholar_id": "eebe95c31aba4b862e1bc3d312ca60094bd01f61",
   "source_url": "https://arxiv.org/abs/2302.08007",
-  "status": "ready",
+  "status": "superseded",
   "title": "With Shared Microexponents, A Little Shifting Goes a Long Way",
   "type": "research",
   "venue": "International Symposium on Computer Architecture",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-05T22:54:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md",
+  "represented_canonical_id": "arXiv:2302.08007",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
