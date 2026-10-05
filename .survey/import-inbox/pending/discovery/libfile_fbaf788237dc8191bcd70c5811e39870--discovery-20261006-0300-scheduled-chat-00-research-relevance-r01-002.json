@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261006-0300-scheduled-chat-00/r01",
+  "reference_main_sha": "5a6dd6bfaecdce1d7648ddb6da69a804463cc5e2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "arXiv:2203.07814"
+      ],
+      "title": "Competition-level code generation with AlphaCode",
+      "reason": "大規模sampling・filteringを用いる生成システムだが、主貢献は競技プログラミング能力と生成方式であり、LLM推論runtime/serving効率そのものを主目的としない。",
+      "source_url": "https://arxiv.org/abs/2203.07814",
+      "body_check": "research_fulltext_relevance_review",
+      "first_checked_at": "2026-10-06T03:34:00+09:00",
+      "last_checked_at": "2026-10-06T03:34:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 2
+    }
+  ]
+}
