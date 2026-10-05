@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r22-screen-01-part-04-1c4aeff91781",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12952",
+      "identity_tokens": [
+        "arXiv:2605.12952"
+      ],
+      "title": "Debunking Grad-ECLIP: A Comprehensive Study on Its Incorrectness and Fundamental Principles for Model Interpretation",
+      "reason": "The abstract studies image-model interpretability and critiques Grad-ECLIP, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2605.12952",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13181",
+      "identity_tokens": [
+        "arXiv:2605.13181"
+      ],
+      "title": "Stable Attention Response for Reliable Precipitation Nowcasting",
+      "reason": "The paper develops attention response for precipitation nowcasting; its application is weather prediction, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2605.13181",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09313",
+      "identity_tokens": [
+        "arXiv:2605.09313"
+      ],
+      "title": "Attention Sinks in Diffusion Transformers: A Causal Analysis",
+      "reason": "The abstract analyzes attention sinks in diffusion transformers for image/video generation, not LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.09313",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15351",
+      "identity_tokens": [
+        "arXiv:2604.15351"
+      ],
+      "title": "Aletheia: Gradient-Guided Layer Selection for Efficient LoRA Fine-Tuning Across Architectures",
+      "reason": "The abstract selects layers for efficient LoRA fine-tuning; this is training-time adaptation, which is outside scope.",
+      "source_url": "https://arxiv.org/abs/2604.15351",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14198",
+      "identity_tokens": [
+        "arXiv:2604.14198"
+      ],
+      "title": "MixAtlas: Uncertainty-aware Data Mixture Optimization for Multimodal LLM Midtraining",
+      "reason": "The paper optimizes data mixtures for multimodal-LLM midtraining, a training-only contribution.",
+      "source_url": "https://arxiv.org/abs/2604.14198",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
