@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1300-scheduled-chat-00/r02",
+  "reference_main_sha": "b83a8be22ddaf009992493254d53b3e698a3e312",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1805.04623",
+      "identity_tokens": [
+        "arXiv:1805.04623"
+      ],
+      "title": "Sharp Nearby, Fuzzy Far Away: How Neural Language Models Use Context",
+      "reason": "neural language modelが近距離・長距離contextをどう利用するかをprediction behaviorから分析するinterpretability研究。推論runtime・memory・serving最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/1805.04623",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でlanguage modelのcontext利用分析が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 111
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.01672",
+      "identity_tokens": [
+        "arXiv:2102.01672"
+      ],
+      "title": "The GEM Benchmark: Natural Language Generation, its Evaluation and Metrics",
+      "reason": "自然言語生成modelの評価dataset・metric・benchmarkを整備する研究で、推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2102.01672",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でNLG benchmark/evaluationが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 112
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.findings-acl.449",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.findings-acl.449"
+      ],
+      "title": "DialogSum: A Real-Life Scenario Dialogue Summarization Dataset",
+      "reason": "日常対話のsummarization datasetとbaseline評価を提供するdataset/task研究。LLM推論system最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2105.06762",
+      "body_check": "abstract_screen_only: 一次論文情報でdialogue summarization datasetとtask評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 113
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3649449",
+      "identity_tokens": [
+        "DOI:10.1145/3649449"
+      ],
+      "title": "Pre-Trained Language Models for Text Generation: A Survey",
+      "reason": "pre-trained language modelによるtext generationのarchitecture・training・taskを整理するsurveyで、推論systemの特定のruntime最適化方式を提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2201.05273",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtext generation向けpretrained LM surveyが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 114
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.04037",
+      "identity_tokens": [
+        "arXiv:2212.04037"
+      ],
+      "title": "Demystifying Prompts in Language Models via Perplexity Estimation",
+      "reason": "prompt templateの品質をperplexityで推定・選択するprompt engineering研究。推論時にmodelを使うが、latency・memory・throughput削減が目的ではない。",
+      "source_url": "https://arxiv.org/abs/2212.04037",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprompt selection/perplexityとtask qualityが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1903.04611",
+      "identity_tokens": [
+        "arXiv:1903.04611"
+      ],
+      "title": "Evaluating Modern GPU Interconnect: PCIe, NVLink, NV-SLI, NVSwitch and GPUDirect",
+      "reason": "PCIe、NVLink、NVSwitch、GPUDirect等を複数GPU/HPC platformで実測し、topology・routing由来のNUMA効果と通信性能を分析する。分散LLM推論の通信設計に直接有用だが、論文自体は汎用multi-GPU/HPC評価でLLM推論専用ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/1903.04611",
+      "body_check": "full_text_checked: 一次arXiv論文情報で6種のhigh-end GPU platform、PCIe/NVLink/NVSwitch/GPUDirect、NUMA効果、task allocation/scheduling/performance tuningへの含意を確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 116
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2004.839485",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2004.839485"
+      ],
+      "title": "Fine-grained dynamic voltage and frequency scaling for precise energy and performance trade-off based on the ratio of off-chip access to on-chip computation times",
+      "reason": "off-chip access時間とon-chip computation時間の比に基づいて細粒度DVFSを制御しenergy/performance trade-offを最適化するarchitecture研究。推論energy最適化へ応用可能だがLLM/Transformer推論を対象としないためborderline。",
+      "source_url": "https://doi.org/10.1109/TCAD.2004.839485",
+      "body_check": "full_text_checked: 一次書誌・論文情報でmemory access/computation比に基づくfine-grained DVFSとenergy/performance trade-offが主題と確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 117
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.09763",
+      "identity_tokens": [
+        "arXiv:1712.09763"
+      ],
+      "title": "PixelSNAIL: An Improved Autoregressive Generative Model",
+      "reason": "画像生成向けautoregressive modelでcausal convolutionとattentionを組み合わせ、CIFAR-10/ImageNet等のlikelihood・sample qualityを改善する研究。最終適用先がimage generationでLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/1712.09763",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でautoregressive image generationと画像benchmarkが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 118
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3085572",
+      "identity_tokens": [
+        "DOI:10.1145/3085572"
+      ],
+      "title": "CACTI 7: New Tools for Interconnect Exploration in Innovative Off-Chip Memories",
+      "reason": "HBM/NVM等を含むoff-chip memory interconnectのpower/performanceをmodel化し、channel topologyの再設計で性能・電力を改善するmemory-system研究。LLM階層メモリ設計に強く関連するがLLM推論専用評価がないためborderline。",
+      "source_url": "https://doi.org/10.1145/3085572",
+      "body_check": "full_text_checked: ACM一次本文でI/O power modeling、HBM/NVM等のmemory hierarchy、cascaded/narrow channel設計、DDR性能22%改善やmemory power 23%削減を確認。LLM専用ではないため境界扱い。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.01552",
+      "identity_tokens": [
+        "arXiv:2312.01552"
+      ],
+      "title": "The Unlocking Spell on Base LLMs: Rethinking Alignment via In-Context Learning",
+      "reason": "base LLMへin-context learningでalignment behaviorを引き出す方法を研究し、instruction following等の能力を評価するalignment/capability研究。推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2312.01552",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でin-context alignmentと能力評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:29:00+09:00",
+      "last_checked_at": "2026-10-05T13:29:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 120
+    }
+  ]
+}
