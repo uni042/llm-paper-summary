@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-76-part-02-269b48ab9a62",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.01385",
+      "identity_tokens": [
+        "arXiv:2306.01385"
+      ],
+      "title": "Task-Agnostic Structured Pruning of Speech Representation Models",
+      "reason": "The paper prunes speech representation models (wav2vec2/Hubert/WavLM); it does not study LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2306.01385",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10355",
+      "identity_tokens": [
+        "arXiv:2601.10355"
+      ],
+      "title": "Unlocking Implicit Experience: Synthesizing Tool-Use Trajectories from Text",
+      "reason": "The efficiency result concerns a specialized data/trajectory synthesis pipeline and tool-use benchmarks, rather than general user-facing LLM serving; evidence is too narrow for an unqualified follow-up.",
+      "source_url": "https://arxiv.org/abs/2601.10355",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.01617",
+      "identity_tokens": [
+        "arXiv:2510.01617"
+      ],
+      "title": "AMAS: Adaptively Determining Communication Topology for LLM-based Multi-Agent System",
+      "reason": "Although LLM inference latency is measured, results show little latency gain and the framework is an accuracy-oriented multi-agent topology method; efficiency relevance is weak.",
+      "source_url": "https://arxiv.org/abs/2510.01617",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05261",
+      "identity_tokens": [
+        "arXiv:2507.05261"
+      ],
+      "title": "TokenShapley: Token Level Context Attribution with Shapley Value",
+      "reason": "TokenShapley addresses token-level attribution and retrieval-based explanation, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2507.05261",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12805",
+      "identity_tokens": [
+        "arXiv:2505.12805"
+      ],
+      "title": "FedSVD: Adaptive Orthogonalization for Private Federated Learning with LoRA",
+      "reason": "FedSVD addresses differentially private federated LoRA training and gradient-noise behavior; it is a training method, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2505.12805",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    }
+  ]
+}
