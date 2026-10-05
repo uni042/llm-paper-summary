@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9613d13ec054cee-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.07678",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.07678",
+    "identity_tokens": [
+      "arXiv:2607.07678"
+    ],
+    "reason": "RoPE frequency and length-generalization analysis is a language-modeling/training contribution, not inference optimization.",
+    "first_checked_at": "2026-10-05T03:41:22+00:00",
+    "last_checked_at": "2026-10-05T03:41:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+    ],
+    "title": "How Data Shapes RoPE Frequency Usage: From Positional Scale Matching to Length Generalization"
+  },
+  "processed_at": "2026-10-05T03:41:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9613d13ec05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

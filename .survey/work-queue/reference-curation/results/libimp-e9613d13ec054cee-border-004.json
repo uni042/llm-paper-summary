@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9613d13ec054cee-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.04640",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.04640",
+    "identity_tokens": [
+      "arXiv:2607.04640"
+    ],
+    "reason": "This is a compression-risk audit with no proposed compression technique or inference speed/memory benefit; its relevance is limited to quality/safety screening.",
+    "first_checked_at": "2026-10-05T03:41:22+00:00",
+    "last_checked_at": "2026-10-05T03:41:22+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "title": "Wrong Before Right: Late Rescue and Interface Failure in Aligned Language Models"
+  },
+  "processed_at": "2026-10-05T03:41:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9613d13ec05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

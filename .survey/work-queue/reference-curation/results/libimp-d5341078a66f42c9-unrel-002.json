@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5341078a66f42c9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s44359-026-00195-w",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s44359-026-00195-w",
+    "identity_tokens": [
+      "DOI:10.1038/s44359-026-00195-w"
+    ],
+    "reason": "High-level AI sustainability strategies/design rather than a concrete LLM inference/serving technique.",
+    "first_checked_at": "2026-10-05T03:41:21+00:00",
+    "last_checked_at": "2026-10-05T03:41:21+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+    ],
+    "title": "Strategies and design for increasing AI sustainability"
+  },
+  "processed_at": "2026-10-05T03:41:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5341078a66f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

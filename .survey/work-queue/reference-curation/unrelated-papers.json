@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:38:34+00:00",
-  "record_count": 2322,
+  "updated_at": "2026-10-05T03:41:22+00:00",
+  "record_count": 2337,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -33628,6 +33628,223 @@
         "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
       ],
       "title": "Can a Language Model Learn Facts Continually in Its Weights?"
+    },
+    "DOI:10.1145/3774895.3812198": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774895.3812198",
+      "identity_tokens": [
+        "DOI:10.1145/3774895.3812198"
+      ],
+      "reason": "Triton/CUDA development for scientific HPC operators rather than LLM inference serving.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "From Naive CUDA to Triton: A Systematic Evaluation of AI-Era HPC Operator Development"
+    },
+    "arXiv:2607.03589": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03589",
+      "identity_tokens": [
+        "arXiv:2607.03589"
+      ],
+      "reason": "Vision SSM architecture for image recognition; not an LLM inference/serving study.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Vision Non-Causal Trapezoidal Mamba: Eliminating Directional Scanning in Vision SSMs with Second-Order Dynamics"
+    },
+    "DOI:10.1038/s44359-026-00195-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44359-026-00195-w",
+      "identity_tokens": [
+        "DOI:10.1038/s44359-026-00195-w"
+      ],
+      "reason": "High-level AI sustainability strategies/design rather than a concrete LLM inference/serving technique.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+      ],
+      "title": "Strategies and design for increasing AI sustainability"
+    },
+    "arXiv:2607.06959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06959",
+      "identity_tokens": [
+        "arXiv:2607.06959"
+      ],
+      "reason": "Cosmology parameter estimation with KAN/LSTM/Transformer; unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "KAN-LSTM-Transformer Neural Networks, MFV and Cosmological Parameters"
+    },
+    "arXiv:2607.07207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07207",
+      "identity_tokens": [
+        "arXiv:2607.07207"
+      ],
+      "reason": "Industry scenario analysis mentions inference economics but does not introduce/evaluate an LLM inference or serving technique.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030 - A quantitative scenario analysis of inference economics, training-cost divergence, and infrastructure solvency"
+    },
+    "arXiv:2607.07670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07670",
+      "identity_tokens": [
+        "arXiv:2607.07670"
+      ],
+      "reason": "Activation-based factual familiarity/reliability study; the semantic-entropy comparison is an evaluation cost, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Does Bielik Know What It Doesn't Know? Activation Dispersion Separates Entity Familiarity from Factual Reliability Across Model Scale"
+    },
+    "DOI:10.1109/netsoft70012.2026.11603511": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/netsoft70012.2026.11603511",
+      "identity_tokens": [
+        "DOI:10.1109/netsoft70012.2026.11603511"
+      ],
+      "reason": "SD-WAN CPE向けのトラフィック制御・時系列予測を扱い、LLM推論・servingの性能改善を研究対象としていない。",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Agentic AI CPE: Traffic Steering Via Small Language Models and Zero-Shot Forecasting"
+    },
+    "DOI:10.64898/2026.06.25.26356626": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.25.26356626",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.25.26356626"
+      ],
+      "reason": "がん登録情報を臨床記録から抽出するLLM応用評価であり、推論システムや推論効率の研究ではない。",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Large language models for cancer registry abstraction: a real-world evaluation across models, variables, and cancer types"
+    },
+    "arXiv:2606.29275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29275",
+      "identity_tokens": [
+        "arXiv:2606.29275"
+      ],
+      "reason": "ABDはdenoising configurationの分布でリスクを最適化し、学習時のtraining-inference mismatchを改善する訓練フレームワーク。著者自身が「inference efficiencyを直接扱わず、最適なinference-time policy選択は未解決」と制限に記す。 学習分布を変える方法のため、契約上の対象である推論時効率・servingの貢献ではない。",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Adaptive Block Diffusion: Resolving Training-Inference Mismatch in Diffusion Language Models"
+    },
+    "arXiv:2606.29360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29360",
+      "identity_tokens": [
+        "arXiv:2606.29360"
+      ],
+      "reason": "高解像度画像向けDiffusion Transformerのfast-path実行で、LLM推論・serving対象ではない。",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "SAFE-DiT: Semantics-Aware Fast-path Execution for High-Resolution Diffusion Transformers"
+    },
+    "arXiv:2606.29580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29580",
+      "identity_tokens": [
+        "arXiv:2606.29580"
+      ],
+      "reason": "助産師・看護師向けオンデバイス医療RAGアプリの設計報告で、新たなLLM推論効率化またはserving機構が要旨に示されていない。",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "MAM-AI: An On-Device Medical Retrieval-Augmented Generation System for Nurses and Midwives in Zanzibar"
+    },
+    "arXiv:2607.07678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07678",
+      "identity_tokens": [
+        "arXiv:2607.07678"
+      ],
+      "reason": "RoPE frequency and length-generalization analysis is a language-modeling/training contribution, not inference optimization.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "How Data Shapes RoPE Frequency Usage: From Positional Scale Matching to Length Generalization"
+    },
+    "arXiv:2607.05895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05895",
+      "identity_tokens": [
+        "arXiv:2607.05895"
+      ],
+      "reason": "MatrixFSDP optimizes optimizer communication and latency during LLM training; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "MatrixFSDP: communication-free matrix optimizers under ZeRO-3 parameter sharding"
+    },
+    "arXiv:2607.06534": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06534",
+      "identity_tokens": [
+        "arXiv:2607.06534"
+      ],
+      "reason": "CAIRN improves 3D multimodal scene-understanding capability; the abstract does not report inference efficiency or serving method.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "CAIRN: Cross-Room 3D Scene Understanding with Topology-Aware Large Multimodal Models"
+    },
+    "arXiv:2607.04389": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04389",
+      "identity_tokens": [
+        "arXiv:2607.04389"
+      ],
+      "reason": "WALLA studies decentralized prediction aggregation/incentives; no inference-cost or serving-efficiency contribution is stated.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Decentralized Aggregation of LLM Predictions via Wagering Mechanisms"
     }
   }
 }

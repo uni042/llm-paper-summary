@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:38:33+00:00",
-  "record_count": 776,
+  "updated_at": "2026-10-05T03:41:22+00:00",
+  "record_count": 780,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11473,6 +11473,68 @@
         "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
       ],
       "title": "GigaChat Audio: Time-aware Large Audio Language Model"
+    },
+    "arXiv:2607.04454": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04454",
+      "identity_tokens": [
+        "arXiv:2607.04454"
+      ],
+      "reason": "Kernel correctness/performance validation is adjacent to inference systems, but evaluated standalone DSL operators rather than an LLM model/runtime, so serving relevance is unresolved.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Correct but Slow: An Empirical Study of the GPU Kernel Evaluation Gap in Modern Domain-Specific Languages"
+    },
+    "arXiv:2607.03055": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.03055",
+      "identity_tokens": [
+        "arXiv:2607.03055"
+      ],
+      "reason": "The recurrence may offer bounded-memory sequence inference, but the evaluated contribution is a mechanism study without broad language-model or serving efficiency evidence.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "SHiPPO: Recurrent Memory with Transported Polynomial Projections"
+    },
+    "arXiv:2607.20524": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20524",
+      "identity_tokens": [
+        "arXiv:2607.20524"
+      ],
+      "reason": "The audit is relevant to attention-based eviction, but finds attention statistics do not causally predict retrieval and presents no better cache-efficiency method.",
+      "first_checked_at": "2026-10-05T03:41:21+00:00",
+      "last_checked_at": "2026-10-05T03:41:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Attention Degradation, Function Token Anchoring, and the Limits of Attention-Based Intervention in Large Language Models"
+    },
+    "arXiv:2607.04640": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04640",
+      "identity_tokens": [
+        "arXiv:2607.04640"
+      ],
+      "reason": "This is a compression-risk audit with no proposed compression technique or inference speed/memory benefit; its relevance is limited to quality/safety screening.",
+      "first_checked_at": "2026-10-05T03:41:22+00:00",
+      "last_checked_at": "2026-10-05T03:41:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Wrong Before Right: Late Rescue and Interface Failure in Aligned Language Models"
     }
   }
 }
