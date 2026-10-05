@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-111-part-06-cd72719f9dfa",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19078",
+      "identity_tokens": [
+        "arXiv:2508.19078"
+      ],
+      "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices",
+      "reason": "resource-constrained端末でのMoE federated fine-tuning。training対象。",
+      "source_url": "https://arxiv.org/abs/2508.19078",
+      "first_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "last_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3709023.3737689",
+      "identity_tokens": [
+        "DOI:10.1145/3709023.3737689"
+      ],
+      "title": "FedDDF: Dynamic Dataset Filtering in Federated Large Language Model Training",
+      "reason": "federated LLM training用dataset filtering。training対象。",
+      "source_url": "https://doi.org/10.1145/3709023.3737689",
+      "first_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "last_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/adpr.202500149",
+      "identity_tokens": [
+        "DOI:10.1002/adpr.202500149"
+      ],
+      "title": "Transformer Encoder–Decoder Framework for Nonlinear Pulse Evolution and Inverse Modeling",
+      "reason": "非線形optical pulseをTransformerで前向き/逆向きにモデル化する物理研究。LLMではない。",
+      "source_url": "https://doi.org/10.1002/adpr.202500149",
+      "first_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "last_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-1464",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-1464"
+      ],
+      "title": "Efficient Noise-Robust Hybrid Audiovisual Encoder with Joint Distillation and Pruning for Audiovisual Speech Recognition",
+      "reason": "audiovisual speech recognition encoderのdistillation/pruning。LLM inference対象外。",
+      "source_url": "https://doi.org/10.21437/interspeech.2025-1464",
+      "first_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "last_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.10426",
+      "identity_tokens": [
+        "arXiv:2508.10426"
+      ],
+      "title": "Computational Economics in Large Language Models: Exploring Model Behavior and Incentive Design under Resource Constraints",
+      "reason": "本文の実験はtraining/incentive designとBERT-base中心。serving/runtime性能の裏付けが弱く適合困難。",
+      "source_url": "https://arxiv.org/abs/2508.10426",
+      "first_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "last_checked_at": "2026-10-05T13:43:02.676273+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    }
+  ]
+}
