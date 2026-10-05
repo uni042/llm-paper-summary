@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-45-part-06-cf3bc5cca8a6",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.10244",
+      "identity_tokens": [
+        "arXiv:2607.10244"
+      ],
+      "title": "DSSMs: State Space Models with Explicit Memory via Delay Differential Equations",
+      "reason": "S4D等とsequence length 1K–8Kでthroughput/memoryを比較し、per-token recurrenceの計算特性を論じる。SSM/general sequence modelの研究で、LLM benchmarkまたはLLM serving評価は確認できず適用は間接的。",
+      "source_url": "https://arxiv.org/abs/2607.10244",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10365",
+      "identity_tokens": [
+        "arXiv:2607.10365"
+      ],
+      "title": "Gradient-Skipping Relevance Propagation for Efficient Explainability of Vision Transformers",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.10365",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10389",
+      "identity_tokens": [
+        "arXiv:2607.10389"
+      ],
+      "title": "Stateful Worlds, Stateless Elasticity: Exact-State Serving for Interactive World Models",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.10389",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.16603-flowprefill-operator-level-preemption.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.10441",
+      "identity_tokens": [
+        "arXiv:2607.10441"
+      ],
+      "title": "Context by Distinct Information: An Auditable Dirichlet-Process Working Memory for Long, Redundant Context Streams",
+      "reason": "novelty-gated KV memoryとSSM/full/window方式を比較。character-sequence、synthetic/long-log等の評価で一部利得はあるが全課題で優位でなく、LLM inference実測/一般化は不明瞭。",
+      "source_url": "https://arxiv.org/abs/2607.10441",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11954",
+      "identity_tokens": [
+        "arXiv:2607.11954"
+      ],
+      "title": "Graph-Constrained Policy Learning for Extreme Clinical Code Prediction",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.11954",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
