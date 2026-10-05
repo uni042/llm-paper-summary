@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:19:38+00:00",
-  "record_count": 1493,
+  "updated_at": "2026-10-05T11:22:17+00:00",
+  "record_count": 1503,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -23119,6 +23119,170 @@
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "Signal-Centric Memory Architectures for Reliable Long-Context Artificial Intelligence"
+    },
+    "DOI:10.1109/icscss69635.2026.11645985": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icscss69635.2026.11645985",
+      "identity_tokens": [
+        "DOI:10.1109/icscss69635.2026.11645985"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:14+00:00",
+      "last_checked_at": "2026-10-05T11:22:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "A Machine Learning Approach to Estimating Energy Use in Language Model Inference"
+    },
+    "DOI:10.1109/icufn69619.2026.11628507": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icufn69619.2026.11628507",
+      "identity_tokens": [
+        "DOI:10.1109/icufn69619.2026.11628507"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:14+00:00",
+      "last_checked_at": "2026-10-05T11:22:14+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "A Survey on Optimization Techniques for On-Device Large Language Model Inference"
+    },
+    "DOI:10.1109/icws72778.2026.00018": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00018",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00018"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:14+00:00",
+      "last_checked_at": "2026-10-05T11:22:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Large or Small? Cloud or Edge? Investigating the Use of Language Models for Smart Drone Services"
+    },
+    "DOI:10.1109/icws72778.2026.00039": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00039",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00039"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:15+00:00",
+      "last_checked_at": "2026-10-05T11:22:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Optimizing FaaS Platforms for Orchestrating MCP-Enabled Agentic Workflows"
+    },
+    "DOI:10.1109/icws72778.2026.00108": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00108",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00108"
+      ],
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "first_checked_at": "2026-10-05T11:22:16+00:00",
+      "last_checked_at": "2026-10-05T11:22:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.15997-ensuring-fair-llm-serving-amid-diverse-applications.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
+        "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md"
+      ],
+      "title": "CompQ: QoE-Aware Compensation for Resumed Requests in Interactive LLM Inference Services"
+    },
+    "DOI:10.1109/icws72778.2026.00112": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00112",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00112"
+      ],
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "first_checked_at": "2026-10-05T11:22:16+00:00",
+      "last_checked_at": "2026-10-05T11:22:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ],
+      "title": "QoS-Aware Brokering for LLM-as-a-Service: SLA-Constrained Routing with Drift Detection"
+    },
+    "DOI:10.1109/icocn70692.2026.11656052": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icocn70692.2026.11656052",
+      "identity_tokens": [
+        "DOI:10.1109/icocn70692.2026.11656052"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:16+00:00",
+      "last_checked_at": "2026-10-05T11:22:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Oracle: A BERT-Based Workload Predictor for LLM Inference"
+    },
+    "DOI:10.1109/icoict71118.2026.11664754": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icoict71118.2026.11664754",
+      "identity_tokens": [
+        "DOI:10.1109/icoict71118.2026.11664754"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:16+00:00",
+      "last_checked_at": "2026-10-05T11:22:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "UTARI: An On-Prem GPU-Accelerated LLM Platform for Higher-Education Services"
+    },
+    "DOI:10.1109/icoict71118.2026.11664865": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icoict71118.2026.11664865",
+      "identity_tokens": [
+        "DOI:10.1109/icoict71118.2026.11664865"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:17+00:00",
+      "last_checked_at": "2026-10-05T11:22:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Integration of Chain-of-Thought and Program-of-Thought on 4-bit Quantized Small Language Models for Financial Question Answering"
+    },
+    "DOI:10.1109/icscss69635.2026.11645919": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icscss69635.2026.11645919",
+      "identity_tokens": [
+        "DOI:10.1109/icscss69635.2026.11645919"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:22:17+00:00",
+      "last_checked_at": "2026-10-05T11:22:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "AdaptiReason: Adaptive Chain-of-Thought Compression for Efficient Large Language Model Inference"
     }
   }
 }

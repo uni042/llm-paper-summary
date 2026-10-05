@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44f4beebbf6e9771-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icscss69635.2026.11645985",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icscss69635.2026.11645985",
+    "identity_tokens": [
+      "DOI:10.1109/icscss69635.2026.11645985"
+    ],
+    "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+    "first_checked_at": "2026-10-05T11:22:14+00:00",
+    "last_checked_at": "2026-10-05T11:22:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "A Machine Learning Approach to Estimating Energy Use in Language Model Inference"
+  },
+  "processed_at": "2026-10-05T11:22:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44f4beebbf6e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
