@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5adc866cb896ad6-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.16188",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.16188",
+    "identity_tokens": [
+      "arXiv:2608.16188"
+    ],
+    "reason": "Primary abstract reviewed: The rise of vehicle-infrastructure (V2I) collaboration enables safer and broader perception. To process large-scale V2I video streams, vision-language models (VLMs) are promising as they unify multi-view vision into end-to-end task grounding, reducing handcrafted design. We use Vision Mixture-of-Experts (V-MoE) as the distributed visual backbone of VLMs, leveraging sparse exper… This is a V2I model co-adaptation and task concurrency for vehicle perception; related edge AI but not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T11:54:29+00:00",
+    "last_checked_at": "2026-10-05T11:54:29+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+    ],
+    "title": "AdaSprite: Resource-efficient Online Co-Adaptation for V2I Systems Under Large-scale Data Drifts"
+  },
+  "processed_at": "2026-10-05T11:54:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5adc866cb89",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

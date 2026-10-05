@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc4d131e1a05fcd8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3812835.3814861",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3812835.3814861",
+    "identity_tokens": [
+      "DOI:10.1145/3812835.3814861"
+    ],
+    "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+    "first_checked_at": "2026-10-05T11:54:30+00:00",
+    "last_checked_at": "2026-10-05T11:54:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+    ],
+    "title": "Poster: Selective Semantic Cache Transfer for Mobile-Cloud LLM Inference"
+  },
+  "processed_at": "2026-10-05T11:54:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc4d131e1a05",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

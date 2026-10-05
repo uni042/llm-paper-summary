@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:51:47+00:00",
-  "record_count": 1580,
+  "updated_at": "2026-10-05T11:54:30+00:00",
+  "record_count": 1588,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24528,6 +24528,148 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
       ],
       "title": "Bridging FinOps practice and machine learning research: a systematic review of cloud cost optimization"
+    },
+    "arXiv:2606.21257": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21257",
+      "identity_tokens": [
+        "arXiv:2606.21257"
+      ],
+      "reason": "本文確認後も関連は弱い。主題は効率化に隣接するが、実用的なLLM推論/serving効率を示す根拠が不足しているためborderline。",
+      "first_checked_at": "2026-10-05T11:54:28+00:00",
+      "last_checked_at": "2026-10-05T11:54:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "An Empirical Study of OpenPangu Quantization on Ascend NPUs"
+    },
+    "arXiv:2608.09941": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.09941",
+      "identity_tokens": [
+        "arXiv:2608.09941"
+      ],
+      "reason": "本文確認後も関連は弱い。主題は効率化に隣接するが、実用的なLLM推論/serving効率を示す根拠が不足しているためborderline。",
+      "first_checked_at": "2026-10-05T11:54:29+00:00",
+      "last_checked_at": "2026-10-05T11:54:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "The Multilingual Quantization Tax: Structural Collapse and Typological Fragility in Edge SLMs"
+    },
+    "DOI:10.1145/3745756.3809197": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3745756.3809197",
+      "identity_tokens": [
+        "DOI:10.1145/3745756.3809197"
+      ],
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:54:29+00:00",
+      "last_checked_at": "2026-10-05T11:54:29+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+      ],
+      "title": "SpMAP: Transparent Sparsity for LLMs"
+    },
+    "arXiv:2606.21075": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21075",
+      "identity_tokens": [
+        "arXiv:2606.21075"
+      ],
+      "reason": "本文確認後も関連は弱い。主題は効率化に隣接するが、実用的なLLM推論/serving効率を示す根拠が不足しているためborderline。",
+      "first_checked_at": "2026-10-05T11:54:29+00:00",
+      "last_checked_at": "2026-10-05T11:54:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "FiLM-Coordinated Dual-Branch Transformer for Global-Local Dependency Modeling in Language Modeling"
+    },
+    "DOI:10.1145/3745756.3809203": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3745756.3809203",
+      "identity_tokens": [
+        "DOI:10.1145/3745756.3809203"
+      ],
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:54:30+00:00",
+      "last_checked_at": "2026-10-05T11:54:30+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md"
+      ],
+      "title": "TimelyLLM: Time-sensitive LLM Serving System for Physical-I/O Limited Agents"
+    },
+    "DOI:10.1145/3745756.3809208": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3745756.3809208",
+      "identity_tokens": [
+        "DOI:10.1145/3745756.3809208"
+      ],
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:54:30+00:00",
+      "last_checked_at": "2026-10-05T11:54:30+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Act Before It’s Too Late: Power-Efficient LLM Inference on Mobile Device"
+    },
+    "DOI:10.1145/3812835.3814808": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3812835.3814808",
+      "identity_tokens": [
+        "DOI:10.1145/3812835.3814808"
+      ],
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:54:30+00:00",
+      "last_checked_at": "2026-10-05T11:54:30+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "title": "Efficient On-Device Intelligence: From Continual Adaptation to Generative AI on Edge Devices"
+    },
+    "DOI:10.1145/3812835.3814861": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3812835.3814861",
+      "identity_tokens": [
+        "DOI:10.1145/3812835.3814861"
+      ],
+      "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:54:30+00:00",
+      "last_checked_at": "2026-10-05T11:54:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "Poster: Selective Semantic Cache Transfer for Mobile-Cloud LLM Inference"
     }
   }
 }
