@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-df1afc72efcdcfbe-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.21236",
+  "reason": "Representation engineering offers a lightweight means of controlling language-model behavior by modifying intermediate hidden states, but its direct application to Mixture-of-Experts (MoE) models introduces a structural mismatch. We first verify this failure mode through a series of empirical studies and find that preserving clean routing substantially recovers steering performance and that routing is more sensitive to semantic content than to behavioral changes under controlled content. Motivated by these findings, we introduce RARE, a router-agnostic representation engineering framework for MoE language models. RARE projects arbitrary behavioral perturbations onto the null space of the router matrix, thereby removing router-visible components, and further corrects routing drift propagated to selected downstream layers. To decide the best perturbation estimator in this framework, we evaluate five estimators on six heterogeneous open-weight MoE models across three steering scenarios: harmfulness, truthfulness, and factual editing. On harmfulness steering, RARE reaches an average attack success rate of 53.3% while retaining 67.8% MMLU accuracy, yielding a stronger aggregate effectiveness--utility trade-off than baselines. It further improves average TruthfulQA MC1 accuracy from 41.0% to 58.6% and CounterFact efficacy from 16.8% to 96.3%. These results support routing consistency as an important architectural consideration for adapting representation engineering to MoE models.",
+  "title": "RARE: Decoupling Representation Steering from Expert Routing in Mixture-of-Experts Language Models",
+  "identity_tokens": [
+    "arXiv:2608.21236"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df1afc72efcd",
+  "source_precheck_request_id": null
+}

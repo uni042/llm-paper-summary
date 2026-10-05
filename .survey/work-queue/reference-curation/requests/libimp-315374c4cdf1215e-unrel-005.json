@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-315374c4cdf1215e-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.3390/software5030037",
+  "reason": "We present SimDSL, a domain-specific language (DSL) for executing large-scale simulations on the GPU using an Entity Component System (ECS) architecture. Systems written in SimDSL are analyzed, lowered into an intermediate representation, and compiled by a CuPy-based backend into CUDA kernels operating over structure-of-arrays archetype tables. We evaluate SimDSL on five workloads: Particle Fountain, Traffic Ring, Reaction Diffusion, Ant Colony, and Tower Defense. The evaluation compares SimDSL with straightforward CuPy and CUDA baseline implementations under matched simulation configurations. Results show that SimDSL sustains GPU-resident execution and achieves favorable performance relative to these baselines. These findings demonstrate that high-level ECS simulation programs can be compiled into efficient GPU execution without requiring users to manually implement and coordinate low-level kernels.",
+  "title": "SimDSL: A Domain-Specific Language for Large-Scale GPU-Resident Simulation",
+  "identity_tokens": [
+    "DOI:10.3390/software5030037"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-315374c4cdf1",
+  "source_precheck_request_id": null
+}
