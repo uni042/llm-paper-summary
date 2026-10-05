@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:18:54+00:00",
-  "record_count": 5488,
+  "updated_at": "2026-10-05T14:21:54+00:00",
+  "record_count": 5503,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -79739,6 +79739,221 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
       ],
       "title": "Generative Large Recommendation Models: Emerging Trends in LLMs for Recommendation"
+    },
+    "arXiv:2501.15724": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15724",
+      "identity_tokens": [
+        "arXiv:2501.15724"
+      ],
+      "reason": "The survey concerns computational pathology foundation models and their adaptation/evaluation, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T14:21:51+00:00",
+      "last_checked_at": "2026-10-05T14:21:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A survey on computational pathology foundation models: datasets, adaptation strategies, and evaluation tasks"
+    },
+    "arXiv:2408.04275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.04275",
+      "identity_tokens": [
+        "arXiv:2408.04275"
+      ],
+      "reason": "DistTrain addresses distributed training heterogeneity for multimodal LLMs; training-only efficiency is out of scope.",
+      "first_checked_at": "2026-10-05T14:21:51+00:00",
+      "last_checked_at": "2026-10-05T14:21:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "DistTrain: Addressing Model and Data Heterogeneity with Disaggregated Training for Multimodal Large Language Models"
+    },
+    "arXiv:2406.09265": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09265",
+      "identity_tokens": [
+        "arXiv:2406.09265"
+      ],
+      "reason": "The work analyzes cross-language/task neuron representations rather than inference-time efficiency.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Sharing Matters: Analysing Neurons Across Languages and Tasks in LLMs"
+    },
+    "DOI:10.1109/jbhi.2022.3207233": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jbhi.2022.3207233",
+      "identity_tokens": [
+        "DOI:10.1109/jbhi.2022.3207233"
+      ],
+      "reason": "Liver tumor and vessel segmentation on Jetson is a medical image-segmentation model, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "TransFusionNet: Semantic and Spatial Features Fusion Framework for Liver Tumor and Vessel Segmentation Under JetsonTX2"
+    },
+    "arXiv:2503.13804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13804",
+      "identity_tokens": [
+        "arXiv:2503.13804"
+      ],
+      "reason": "GraphRAG knowledge filtering/integration addresses retrieval quality and knowledge use, not serving efficiency.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md"
+      ],
+      "title": "Empowering GraphRAG with Knowledge Filtering and Integration"
+    },
+    "arXiv:2410.14195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14195",
+      "identity_tokens": [
+        "arXiv:2410.14195"
+      ],
+      "reason": "The paper adapts transformers for whole-slide histopathology analysis; it is not an LLM efficiency method.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Rethinking Transformer for Long Contextual Histopathology Whole Slide Image Analysis"
+    },
+    "arXiv:2406.17660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17660",
+      "identity_tokens": [
+        "arXiv:2406.17660"
+      ],
+      "reason": "GRASS reduces memory/compute for LLM training via sparse gradients; training-only efficiency is out of scope.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "GRASS: Compute Efficient Low-Memory LLM Training with Structured Sparse Gradients"
+    },
+    "arXiv:2406.07537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07537",
+      "identity_tokens": [
+        "arXiv:2406.07537"
+      ],
+      "reason": "Mamba is evaluated for autoregressive vision pretraining, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Autoregressive Pretraining with Mamba in Vision"
+    },
+    "arXiv:2405.14507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14507",
+      "identity_tokens": [
+        "arXiv:2405.14507"
+      ],
+      "reason": "The method uses otherwise-unselected MoE experts to improve inference-time model capability; the abstract does not propose reduced inference cost or latency.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ],
+      "title": "Unchosen Experts Can Contribute Too: Unleashing MoE Models' Power by Self-Contrast"
+    },
+    "arXiv:2404.18928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18928",
+      "identity_tokens": [
+        "arXiv:2404.18928"
+      ],
+      "reason": "Automatic adapter selection for diffusion models is outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "title": "Stylus: Automatic Adapter Selection for Diffusion Models"
+    },
+    "arXiv:2511.09057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.09057",
+      "identity_tokens": [
+        "arXiv:2511.09057"
+      ],
+      "reason": "PAN is a world-simulation model for actionable long-horizon simulation, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "PAN: A World Model for General, Actionable, and Long-Horizon World Simulation"
+    },
+    "DOI:10.1145/3768156": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3768156",
+      "identity_tokens": [
+        "DOI:10.1145/3768156"
+      ],
+      "reason": "The survey covers document-intelligence applications and trends, with no abstract evidence of inference efficiency as its contribution.",
+      "first_checked_at": "2026-10-05T14:21:54+00:00",
+      "last_checked_at": "2026-10-05T14:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Large Language Models in Document Intelligence: A Comprehensive Survey, Recent Advances, Challenges, and Future Trends"
+    },
+    "arXiv:2506.23858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.23858",
+      "identity_tokens": [
+        "arXiv:2506.23858"
+      ],
+      "reason": "VMoBA targets video diffusion model attention and generation, outside the LLM inference scope.",
+      "first_checked_at": "2026-10-05T14:21:54+00:00",
+      "last_checked_at": "2026-10-05T14:21:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "VMoBA: Mixture-of-Block Attention for Video Diffusion Models"
+    },
+    "arXiv:2502.14822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14822",
+      "identity_tokens": [
+        "arXiv:2502.14822"
+      ],
+      "reason": "The survey classifies information-retrieval model architectures, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:21:54+00:00",
+      "last_checked_at": "2026-10-05T14:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "A Survey of Model Architectures in Information Retrieval"
+    },
+    "arXiv:2502.05741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05741",
+      "identity_tokens": [
+        "arXiv:2502.05741"
+      ],
+      "reason": "Linear attention is applied to learned image compression, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:21:54+00:00",
+      "last_checked_at": "2026-10-05T14:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Linear Attention Modeling for Learned Image Compression"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7e889691cc8c9001-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.17660",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.17660",
+    "identity_tokens": [
+      "arXiv:2406.17660"
+    ],
+    "reason": "GRASS reduces memory/compute for LLM training via sparse gradients; training-only efficiency is out of scope.",
+    "first_checked_at": "2026-10-05T14:21:53+00:00",
+    "last_checked_at": "2026-10-05T14:21:53+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+    ],
+    "title": "GRASS: Compute Efficient Low-Memory LLM Training with Structured Sparse Gradients"
+  },
+  "processed_at": "2026-10-05T14:21:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7e889691cc8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

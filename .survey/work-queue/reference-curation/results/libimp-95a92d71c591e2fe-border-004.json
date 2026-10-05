@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95a92d71c591e2fe-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2310.02998",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2310.02998",
+    "identity_tokens": [
+      "arXiv:2310.02998"
+    ],
+    "reason": "VLM pruning is adjacent, but the inspected results demonstrate sparsity/memory rather than inference latency or throughput.",
+    "first_checked_at": "2026-10-05T14:21:53+00:00",
+    "last_checked_at": "2026-10-05T14:21:53+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+    ],
+    "title": "ECoFLaP: Efficient Coarse-to-Fine Layer-Wise Pruning for Vision-Language Models"
+  },
+  "processed_at": "2026-10-05T14:21:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95a92d71c591",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

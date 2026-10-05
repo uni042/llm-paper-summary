@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:18:54+00:00",
-  "record_count": 1826,
+  "updated_at": "2026-10-05T14:21:54+00:00",
+  "record_count": 1831,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28200,6 +28200,77 @@
         "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
       ],
       "title": "Overcoming language barriers via machine translation with sparse Mixture-of-Experts fusion of large language models"
+    },
+    "arXiv:2410.16267": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.16267",
+      "identity_tokens": [
+        "arXiv:2410.16267"
+      ],
+      "reason": "Video token reduction is a plausible inference-efficiency mechanism, but the measured evidence is specialized to video VLMs and does not establish runtime benefit.",
+      "first_checked_at": "2026-10-05T14:21:51+00:00",
+      "last_checked_at": "2026-10-05T14:21:51+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ],
+      "title": "xGen-MM-Vid (BLIP-3-Video): You Only Need 32 Tokens to Represent a Video Even in VLMs"
+    },
+    "arXiv:2410.20771": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20771",
+      "identity_tokens": [
+        "arXiv:2410.20771"
+      ],
+      "reason": "Runtime improvement is measured, but evidence is for byte-level ByT5/character tasks rather than large LLM inference; transfer to the target scope is uncertain.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ],
+      "title": "MrT5: Dynamic Token Merging for Efficient Byte-level Language Models"
+    },
+    "arXiv:2408.06793": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.06793",
+      "identity_tokens": [
+        "arXiv:2408.06793"
+      ],
+      "reason": "The paper evaluates language models, but the reported speed evidence is training throughput and inference efficiency is not established.",
+      "first_checked_at": "2026-10-05T14:21:52+00:00",
+      "last_checked_at": "2026-10-05T14:21:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Layerwise Recurrent Router for Mixture-of-Experts"
+    },
+    "arXiv:2310.02998": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.02998",
+      "identity_tokens": [
+        "arXiv:2310.02998"
+      ],
+      "reason": "VLM pruning is adjacent, but the inspected results demonstrate sparsity/memory rather than inference latency or throughput.",
+      "first_checked_at": "2026-10-05T14:21:53+00:00",
+      "last_checked_at": "2026-10-05T14:21:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "ECoFLaP: Efficient Coarse-to-Fine Layer-Wise Pruning for Vision-Language Models"
+    },
+    "arXiv:2509.25911": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25911",
+      "identity_tokens": [
+        "arXiv:2509.25911"
+      ],
+      "reason": "The work compresses agent memory, but the inspected evidence is token-budget and task quality rather than serving efficiency.",
+      "first_checked_at": "2026-10-05T14:21:54+00:00",
+      "last_checked_at": "2026-10-05T14:21:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Mem-α: Learning Memory Construction via Reinforcement Learning"
     }
   }
 }

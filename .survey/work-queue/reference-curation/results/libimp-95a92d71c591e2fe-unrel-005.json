@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-95a92d71c591e2fe-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.09057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.09057",
+    "identity_tokens": [
+      "arXiv:2511.09057"
+    ],
+    "reason": "PAN is a world-simulation model for actionable long-horizon simulation, not LLM serving efficiency.",
+    "first_checked_at": "2026-10-05T14:21:53+00:00",
+    "last_checked_at": "2026-10-05T14:21:53+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+    ],
+    "title": "PAN: A World Model for General, Actionable, and Long-Horizon World Simulation"
+  },
+  "processed_at": "2026-10-05T14:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-95a92d71c591",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

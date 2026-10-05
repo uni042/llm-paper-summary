@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b578f1c346fdf36f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.25911",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.25911",
+    "identity_tokens": [
+      "arXiv:2509.25911"
+    ],
+    "reason": "The work compresses agent memory, but the inspected evidence is token-budget and task quality rather than serving efficiency.",
+    "first_checked_at": "2026-10-05T14:21:54+00:00",
+    "last_checked_at": "2026-10-05T14:21:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+    ],
+    "title": "Mem-α: Learning Memory Construction via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T14:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b578f1c346fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
