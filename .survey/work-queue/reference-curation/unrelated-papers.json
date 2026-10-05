@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:45:00+00:00",
-  "record_count": 1704,
+  "updated_at": "2026-10-05T01:47:39+00:00",
+  "record_count": 1718,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -24579,6 +24579,203 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
       ],
       "title": "A Comprehensive Survey of Large Language Models and Multimodal Large Language Models in Medicine"
+    },
+    "arXiv:1804.08198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.08198",
+      "identity_tokens": [
+        "arXiv:1804.08198"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/1804.08198: Neural multilingual translation representation, no LLM inference efficiency result.",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md"
+      ],
+      "title": "A neural interlingua for multilingual machine translation"
+    },
+    "arXiv:2501.15368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15368",
+      "identity_tokens": [
+        "arXiv:2501.15368"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2501.15368: Omni-modal model capability technical report, no specific inference efficiency contribution in abstract.",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+        "papers/inference/99-other-inference-systems/2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md"
+      ],
+      "title": "Baichuan-Omni-1.5 Technical Report"
+    },
+    "arXiv:2503.19470": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.19470",
+      "identity_tokens": [
+        "arXiv:2503.19470"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2503.19470: Reinforcement learning for search-augmented reasoning capability; efficiency not the contribution.",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md"
+      ],
+      "title": "ReSearch: Learning to Reason with Search for LLMs via Reinforcement Learning"
+    },
+    "arXiv:2106.04972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.04972",
+      "identity_tokens": [
+        "arXiv:2106.04972"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2106.04972: Softmax uncertainty estimation, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md"
+      ],
+      "title": "Understanding Softmax Confidence and Uncertainty"
+    },
+    "arXiv:2503.07511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.07511",
+      "identity_tokens": [
+        "arXiv:2503.07511"
+      ],
+      "reason": "一次要旨は3D点群をVLAへ注入するrobotic manipulation用vision-language-action architectureであり、LLM推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ],
+      "title": "PointVLA: Injecting the 3D World into Vision-Language-Action Models"
+    },
+    "DOI:10.18653/v1/p19-1075": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1075",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1075"
+      ],
+      "reason": "一次要旨は中国語成語cloze dataset ChIDと理解モデルのbenchmarkを提示する。LLM推論の計算/serving効率を扱わない。",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "ChID: A Large-scale Chinese IDiom Dataset for Cloze Test"
+    },
+    "arXiv:2003.08165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.08165",
+      "identity_tokens": [
+        "arXiv:2003.08165"
+      ],
+      "reason": "一次要旨は進化的手法で自己解釈可能agentを生成する研究であり、LLM推論効率評価ではない。",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Neuroevolution of self-interpretable agents"
+    },
+    "arXiv:2206.08514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08514",
+      "identity_tokens": [
+        "arXiv:2206.08514"
+      ],
+      "reason": "一次要旨はtextual backdoor learningのframework/benchmarkによる評価研究で、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "A Unified Evaluation of Textual Backdoor Learning: Frameworks and Benchmarks"
+    },
+    "DOI:10.18653/v1/2023.findings-acl.426": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2023.findings-acl.426",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.findings-acl.426"
+      ],
+      "reason": "ACL Anthologyの一次要旨は圧縮器を用いる低資源text classification methodを扱う。LLM inference/servingの効率化ではない。",
+      "first_checked_at": "2026-10-05T01:47:38+00:00",
+      "last_checked_at": "2026-10-05T01:47:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "\"Low-Resource\" Text Classification: A Parameter-Free Classification Method with Compressors"
+    },
+    "arXiv:2004.14769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.14769",
+      "identity_tokens": [
+        "arXiv:2004.14769"
+      ],
+      "reason": "一次要旨はaspect term extractionのためのconditional augmentationとmasked seq2seq generationを提案するタスク特化NLP研究。LLM推論効率の評価ではない。",
+      "first_checked_at": "2026-10-05T01:47:39+00:00",
+      "last_checked_at": "2026-10-05T01:47:39+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md"
+      ],
+      "title": "Conditional Augmentation for Aspect Term Extraction via Masked Sequence-to-Sequence Generation"
+    },
+    "arXiv:2310.06500": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06500",
+      "identity_tokens": [
+        "arXiv:2310.06500"
+      ],
+      "reason": "一次要旨はLLM multi-agentによるteam decision makingを扱うが、推論効率・serving最適化が主題ではない。",
+      "first_checked_at": "2026-10-05T01:47:39+00:00",
+      "last_checked_at": "2026-10-05T01:47:39+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+      ],
+      "title": "MetaAgents: Large Language Model Based Agents for Decision-Making on Teaming"
+    },
+    "arXiv:2606.20092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20092",
+      "identity_tokens": [
+        "arXiv:2606.20092"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2606.20092: Visual-language-action robotics memory/policy, not LLM serving.",
+      "first_checked_at": "2026-10-05T01:47:39+00:00",
+      "last_checked_at": "2026-10-05T01:47:39+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies"
+    },
+    "arXiv:2403.15796": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.15796",
+      "identity_tokens": [
+        "arXiv:2403.15796"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2403.15796: Emergent abilities analysis from loss scaling, no inference optimization.",
+      "first_checked_at": "2026-10-05T01:47:39+00:00",
+      "last_checked_at": "2026-10-05T01:47:39+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Understanding Emergent Abilities of Language Models from the Loss Perspective"
+    },
+    "arXiv:2101.00408": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.00408",
+      "identity_tokens": [
+        "arXiv:2101.00408"
+      ],
+      "reason": "Primary abstract read at https://arxiv.org/abs/2101.00408: Neural retriever training for QA, not LLM inference runtime.",
+      "first_checked_at": "2026-10-05T01:47:39+00:00",
+      "last_checked_at": "2026-10-05T01:47:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "title": "End-to-End Training of Neural Retrievers for Open-Domain Question Answering"
     }
   }
 }

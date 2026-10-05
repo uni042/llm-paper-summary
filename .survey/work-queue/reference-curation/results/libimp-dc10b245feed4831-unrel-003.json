@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc10b245feed4831-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2101.00408",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2101.00408",
+    "identity_tokens": [
+      "arXiv:2101.00408"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/2101.00408: Neural retriever training for QA, not LLM inference runtime.",
+    "first_checked_at": "2026-10-05T01:47:39+00:00",
+    "last_checked_at": "2026-10-05T01:47:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+    ],
+    "title": "End-to-End Training of Neural Retrievers for Open-Domain Question Answering"
+  },
+  "processed_at": "2026-10-05T01:47:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc10b245feed",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

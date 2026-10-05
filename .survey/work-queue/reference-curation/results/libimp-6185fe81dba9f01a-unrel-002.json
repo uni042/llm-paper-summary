@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6185fe81dba9f01a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.15368",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.15368",
+    "identity_tokens": [
+      "arXiv:2501.15368"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/2501.15368: Omni-modal model capability technical report, no specific inference efficiency contribution in abstract.",
+    "first_checked_at": "2026-10-05T01:47:38+00:00",
+    "last_checked_at": "2026-10-05T01:47:38+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+      "papers/inference/99-other-inference-systems/2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md"
+    ],
+    "title": "Baichuan-Omni-1.5 Technical Report"
+  },
+  "processed_at": "2026-10-05T01:47:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6185fe81dba9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
