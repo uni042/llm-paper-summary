@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b617be100b579fad-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.29934",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.29934",
+    "identity_tokens": [
+      "arXiv:2608.29934"
+    ],
+    "reason": "KV compressionと組合せるがcache size/latency削減ではなく圧縮後abstentionの挙動改善が主題でborderline。",
+    "first_checked_at": "2026-10-05T07:53:35+00:00",
+    "last_checked_at": "2026-10-05T07:53:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Compression-Aware Abstention: Teaching LLMs to Refuse When KV-Compression Masks Remove Answer Evidence"
+  },
+  "processed_at": "2026-10-05T07:53:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b617be100b57",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

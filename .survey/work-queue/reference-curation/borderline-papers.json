@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:51:15+00:00",
-  "record_count": 1134,
+  "updated_at": "2026-10-05T07:53:36+00:00",
+  "record_count": 1141,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17327,6 +17327,129 @@
         "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
       ],
       "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model"
+    },
+    "arXiv:2608.29291": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29291",
+      "identity_tokens": [
+        "arXiv:2608.29291"
+      ],
+      "reason": "一次要旨はUMM routing/schedulingと1.93x end-to-end speedupを明示するが、本文取得不可で手法・評価条件・limitationsを監査できない。",
+      "first_checked_at": "2026-10-05T07:53:35+00:00",
+      "last_checked_at": "2026-10-05T07:53:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Accelerating Unified Multimodal Models with Core-Expansion Routing and Unified Computation Scheduling"
+    },
+    "arXiv:2608.29934": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29934",
+      "identity_tokens": [
+        "arXiv:2608.29934"
+      ],
+      "reason": "KV compressionと組合せるがcache size/latency削減ではなく圧縮後abstentionの挙動改善が主題でborderline。",
+      "first_checked_at": "2026-10-05T07:53:35+00:00",
+      "last_checked_at": "2026-10-05T07:53:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Compression-Aware Abstention: Teaching LLMs to Refuse When KV-Compression Masks Remove Answer Evidence"
+    },
+    "arXiv:2608.29953": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29953",
+      "identity_tokens": [
+        "arXiv:2608.29953"
+      ],
+      "reason": "trajectory efficiencyは関連するがretrieval policyの評価が中心で、serving効率改善は明確でないためborderline。",
+      "first_checked_at": "2026-10-05T07:53:35+00:00",
+      "last_checked_at": "2026-10-05T07:53:35+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "SearchWiki: Learning to Build and Navigate Knowledge Wikis for Active Information Seeking"
+    },
+    "arXiv:2609.00049": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00049",
+      "identity_tokens": [
+        "arXiv:2609.00049"
+      ],
+      "reason": "PTQと低bit deploymentはscopeに近いが、確認本文は量子化後inference resource効果の直接測定なしでborderline。",
+      "first_checked_at": "2026-10-05T07:53:36+00:00",
+      "last_checked_at": "2026-10-05T07:53:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "REAL-Q: E2E LLM Quantization via Dynamic Gradient Descent"
+    },
+    "DOI:10.1145/3844505": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3844505",
+      "identity_tokens": [
+        "DOI:10.1145/3844505"
+      ],
+      "reason": "IDU transformerの長距離依存/memory efficiency surveyは隣接するが、LLM inference/serving対象と本文で確認できずborderline。",
+      "first_checked_at": "2026-10-05T07:53:36+00:00",
+      "last_checked_at": "2026-10-05T07:53:36+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "A Survey on Transformer-Based Long-Range Dependency Modeling in Intelligent Document Understanding"
+    },
+    "arXiv:2608.29606": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29606",
+      "identity_tokens": [
+        "arXiv:2608.29606"
+      ],
+      "reason": "query cost/latencyを測るagent memory paperだが、serving最適化よりmemory/groundingとbackbone選択の報告が中心でscopeは隣接。",
+      "first_checked_at": "2026-10-05T07:53:36+00:00",
+      "last_checked_at": "2026-10-05T07:53:36+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents"
+    },
+    "arXiv:2608.29667": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29667",
+      "identity_tokens": [
+        "arXiv:2608.29667"
+      ],
+      "reason": "量子化とdeploymentは関連するが、中心は量子化aware trainingで推論時効率化から距離がありborderline。",
+      "first_checked_at": "2026-10-05T07:53:36+00:00",
+      "last_checked_at": "2026-10-05T07:53:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "A Target-Centric Survey of Quantization-Aware Training"
     }
   }
 }

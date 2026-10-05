@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b847dbc7b102a6de-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3844505",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3844505",
+    "identity_tokens": [
+      "DOI:10.1145/3844505"
+    ],
+    "reason": "IDU transformerの長距離依存/memory efficiency surveyは隣接するが、LLM inference/serving対象と本文で確認できずborderline。",
+    "first_checked_at": "2026-10-05T07:53:36+00:00",
+    "last_checked_at": "2026-10-05T07:53:36+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "A Survey on Transformer-Based Long-Range Dependency Modeling in Intelligent Document Understanding"
+  },
+  "processed_at": "2026-10-05T07:53:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b847dbc7b102",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
