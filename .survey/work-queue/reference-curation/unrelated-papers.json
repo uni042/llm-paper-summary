@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:59:54+00:00",
-  "record_count": 4807,
+  "updated_at": "2026-10-05T12:02:46+00:00",
+  "record_count": 4819,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -69972,6 +69972,182 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "3dcon: tomogram denoising by deconvolution"
+    },
+    "arXiv:2606.17378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17378",
+      "identity_tokens": [
+        "arXiv:2606.17378"
+      ],
+      "reason": "Edge-device collaborative text-to-image diffusion service; the served model is diffusion, not a language model.",
+      "first_checked_at": "2026-10-05T12:02:44+00:00",
+      "last_checked_at": "2026-10-05T12:02:44+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
+      ],
+      "title": "RISE: Relay Inference and Online Scheduling for Efficient Edge-Device Collaborative Diffusion Model Services"
+    },
+    "arXiv:2606.17518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17518",
+      "identity_tokens": [
+        "arXiv:2606.17518"
+      ],
+      "reason": "Speculative generation accelerates agentic GPU-kernel optimization/search; LLM is a tool, not the served inference target.",
+      "first_checked_at": "2026-10-05T12:02:44+00:00",
+      "last_checked_at": "2026-10-05T12:02:44+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "SpecGen: Accelerating Agentic Kernel Optimization with Speculative Generation"
+    },
+    "arXiv:2606.17566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17566",
+      "identity_tokens": [
+        "arXiv:2606.17566"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17566. Abstract summary: Video diffusion has quickly grown into a key generative serving workload, yet producing each clip demands many denoising iterations over large spatio-temporal latents, which puts low-latency inference out of reach on a single device. A denoising step is therefore typically distributed across multiple accelerators, and TPU sub-sl Out of scope: Video-diffusion TPU denoising optimizer, outside LLM inference.",
+      "first_checked_at": "2026-10-05T12:02:44+00:00",
+      "last_checked_at": "2026-10-05T12:02:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "AoiZora: Topology-Aware Auto-Parallel Optimization for Inference of Diffusion Transformers"
+    },
+    "arXiv:2606.17631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17631",
+      "identity_tokens": [
+        "arXiv:2606.17631"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17631. Abstract summary: Query-based transformer decoders are effective for object reconstruction from sparse scientific sensor measurements, but their scalability to high-multiplicity data is limited by fixed, input-independent query sets and costly decoder cross-attention. We introduce a geometry-aware dynamic-query decoder that couples input-conditio Out of scope: Charged-particle detector reconstruction, not LLM serving.",
+      "first_checked_at": "2026-10-05T12:02:45+00:00",
+      "last_checked_at": "2026-10-05T12:02:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Better Queries, Cheaper Attention: Adapting Transformers for Efficient Sparse Reconstruction"
+    },
+    "arXiv:2606.17650": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17650",
+      "identity_tokens": [
+        "arXiv:2606.17650"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.17650. Abstract summary: Text-guided Open-vocabulary Object Counting (TOOC) aims to estimate the number of objects described by text prompts, which is particularly challenging in dense scenes with large scale variations. Existing TOOC approaches predominantly rely on Transformers, whose quadratic complexity with respect to image resolution limits their Out of scope: Visual object-counting task, not LLM serving.",
+      "first_checked_at": "2026-10-05T12:02:45+00:00",
+      "last_checked_at": "2026-10-05T12:02:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "MambaCount: Efficient Text-guided Open-vocabulary Object Counting with Spatial Sparse State Space Duality Block"
+    },
+    "arXiv:2606.16281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16281",
+      "identity_tokens": [
+        "arXiv:2606.16281"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16281. Abstract summary: Masked Diffusion Language Models (MDLMs) have emerged as a distinct paradigm for sequence generation. As MDLMs become diverse in capabilities and knowledge coverage, an important question is how to combine their knowledge. Toward this, we first investigate the unique decoding dynamics of MDLMs. We find that successful generation Out of scope: Masked-diffusion ensemble targets output quality, not runtime efficiency.",
+      "first_checked_at": "2026-10-05T12:02:45+00:00",
+      "last_checked_at": "2026-10-05T12:02:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "title": "Who Should Lead Decoding Now? Tracking Reliable Trajectories for Ensembling Masked Diffusion Language Models"
+    },
+    "arXiv:2606.16317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16317",
+      "identity_tokens": [
+        "arXiv:2606.16317"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16317. Abstract summary: Sparse attention accelerates Diffusion Transformers (DiTs) for video generation by computing only the important tokens while skipping the rest. The token selection strategy is key to balancing sparsity and accuracy. We formulate the token filtering process as a dual-goal optimization problem: maximizing sparsity and minimizing a Out of scope: Video Diffusion Transformer sparse attention, not language inference.",
+      "first_checked_at": "2026-10-05T12:02:45+00:00",
+      "last_checked_at": "2026-10-05T12:02:45+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Training-free sparse attention based on cumulative energy filtering"
+    },
+    "arXiv:2606.16384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16384",
+      "identity_tokens": [
+        "arXiv:2606.16384"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16384. Abstract summary: Pretraining language models with extended context windows enhances their ability to leverage rich information during generation. Existing methods split input sequences into chunks, broadcast them across multiple devices, and compute attention block by block which incurs significant communication overhead. While feasible in high- Out of scope: Context-parallel pretraining communication compression.",
+      "first_checked_at": "2026-10-05T12:02:45+00:00",
+      "last_checked_at": "2026-10-05T12:02:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Mixtures of Subspaces for Bandwidth Efficient Context Parallel Training"
+    },
+    "arXiv:2606.18324": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18324",
+      "identity_tokens": [
+        "arXiv:2606.18324"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18324. Abstract summary: SWave is a complex-valued recurrent language model (169.26M parameters, D=384, L=16, T=2048) trained on FineWeb-Edu using 2xH100 NVL. It was designed around three founding premises: that representing language as complex waves rather than real-valued numbers enables richer information encoding; that a Cayley-parameterised unitary Out of scope: Recurrent LM retrospective/training; no inference-efficiency result.",
+      "first_checked_at": "2026-10-05T12:02:46+00:00",
+      "last_checked_at": "2026-10-05T12:02:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Why SWAVE May Not Be All You Need:A Concept-Evolution Retrospective on Complex-Valued Recurrent Language Models"
+    },
+    "arXiv:2606.18381": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18381",
+      "identity_tokens": [
+        "arXiv:2606.18381"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18381. Abstract summary: Retrieval-augmented generation (RAG) systems must balance retrieval granularity with contextual coherence, a challenge that existing methods address through LLM-guided chunking, single-level context expansion, or hierarchical summarization. These approaches variously depend on costly LLM calls during indexing or retrieval, limit Out of scope: RAG retrieval/tree construction and answer quality, no serving optimization.",
+      "first_checked_at": "2026-10-05T12:02:46+00:00",
+      "last_checked_at": "2026-10-05T12:02:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG"
+    },
+    "arXiv:2606.18389": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18389",
+      "identity_tokens": [
+        "arXiv:2606.18389"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18389. Abstract summary: Large language models (LLMs) have become an effective tool for synthetic data generation, including for low-resource languages, where generated data can improve downstream task performance. Current best-performing approaches typically rely on few-shot prompting with target-language examples, which increases inference costs and m Out of scope: Synthetic low-resource language data generation/training.",
+      "first_checked_at": "2026-10-05T12:02:46+00:00",
+      "last_checked_at": "2026-10-05T12:02:46+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "title": "Want Better Synthetic Data? Steer It: Activation Steering for Low-Resource Language Generation"
+    },
+    "arXiv:2606.18400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18400",
+      "identity_tokens": [
+        "arXiv:2606.18400"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.18400. Abstract summary: Large foundation models deployed on third-party and shared accelerator infrastructure face a practical risk of model exfiltration that existing defenses do not fully address. In common serving deployments, model providers control the VM or bare-metal serving stack but not the surrounding hardware substrate. The host to GPU inter Out of scope: GPU memory-layout obfuscation for model-exfiltration defense.",
+      "first_checked_at": "2026-10-05T12:02:46+00:00",
+      "last_checked_at": "2026-10-05T12:02:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md"
+      ],
+      "title": "CloakLM: Obfuscating GPU Memory Layout to Mitigate Model Ex-filtration for Serving"
     }
   }
 }
