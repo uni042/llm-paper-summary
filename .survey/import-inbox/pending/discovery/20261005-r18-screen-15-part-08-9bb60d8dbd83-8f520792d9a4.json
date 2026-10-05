@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-15-part-08-9bb60d8dbd83",
+  "reference_main_sha": "3b0c5546288819965a32278794ebf3b45201393d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30998",
+      "identity_tokens": [
+        "arXiv:2609.30998"
+      ],
+      "title": "PipeDRAM: A Data-Transposition-Free Processing-Using-DRAM Architecture with Hardware/Software Pipelining",
+      "reason": "generic PUD DRAM hardware/software architectureを一般compute向けに評価する。LLM/Transformer inference workloadの測定・特化設計がない。",
+      "source_url": "https://arxiv.org/abs/2609.30998",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    }
+  ]
+}
