@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6952387f000144f9-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.28659",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.28659",
+    "identity_tokens": [
+      "arXiv:2607.28659"
+    ],
+    "reason": "Sequential recommendation with hybrid tokenization/decoding is a recommender task; the abstract does not claim LLM serving efficiency.",
+    "first_checked_at": "2026-10-05T03:33:36+00:00",
+    "last_checked_at": "2026-10-05T03:33:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding"
+  },
+  "processed_at": "2026-10-05T03:33:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6952387f0001",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:31:02+00:00",
-  "record_count": 2275,
+  "updated_at": "2026-10-05T03:33:36+00:00",
+  "record_count": 2287,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -32936,6 +32936,182 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs"
+    },
+    "arXiv:2607.23250": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23250",
+      "identity_tokens": [
+        "arXiv:2607.23250"
+      ],
+      "reason": "Long-context LLM trainingのattention workload balancingであり、学習専用効率化は対象外。",
+      "first_checked_at": "2026-10-05T03:33:35+00:00",
+      "last_checked_at": "2026-10-05T03:33:35+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "Libra: Taming Attention Workload Skew in Long-Context LLM Training with Bounded Sequence Pool"
+    },
+    "DOI:10.3390/hydrology13080201": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/hydrology13080201",
+      "identity_tokens": [
+        "DOI:10.3390/hydrology13080201"
+      ],
+      "reason": "流出予測Transformerのhyperparameter optimizationで、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T03:33:35+00:00",
+      "last_checked_at": "2026-10-05T03:33:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Enhancing Daily Runoff Prediction via Uniform Design and Meta-Learning Integrated Hyperparameter Optimization Embedded in Transformer"
+    },
+    "arXiv:2607.24368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24368",
+      "identity_tokens": [
+        "arXiv:2607.24368"
+      ],
+      "reason": "Agent memoryのimplicit-association盲点を測るベンチマークで、効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:33:35+00:00",
+      "last_checked_at": "2026-10-05T03:33:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory"
+    },
+    "arXiv:2607.23444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23444",
+      "identity_tokens": [
+        "arXiv:2607.23444"
+      ],
+      "reason": "Agent memory extractionの攻撃・脅威評価であり、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:33:35+00:00",
+      "last_checked_at": "2026-10-05T03:33:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Isolated but Exposed: Persistence-Based Memory Extraction Attack on LLM Agents"
+    },
+    "arXiv:2607.23227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23227",
+      "identity_tokens": [
+        "arXiv:2607.23227"
+      ],
+      "reason": "ARM上のINT8 dispatch-invarianceを扱うkernel/numerical stability研究で、要旨の対象はCNN/edge kernelでありLLM servingを扱わない。",
+      "first_checked_at": "2026-10-05T03:33:35+00:00",
+      "last_checked_at": "2026-10-05T03:33:35+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "INT8 Quantization Makes ARM Edge Inference Dispatch-Invariant"
+    },
+    "arXiv:2607.21118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21118",
+      "identity_tokens": [
+        "arXiv:2607.21118"
+      ],
+      "reason": "Image-restoration benchmark and image-restoration methods; the primary abstract contains no LLM inference or serving work.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "The Second LoViF 2026 Challenge on Real-World All-in-One Image Restoration: Methods and Results"
+    },
+    "arXiv:2607.21519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21519",
+      "identity_tokens": [
+        "arXiv:2607.21519"
+      ],
+      "reason": "Generative recommendation modeling is the task contribution; the abstract gives no LLM-serving or inference-efficiency evaluation.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ],
+      "title": "Diffusion Language Model for Recommendation"
+    },
+    "arXiv:2607.19922": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19922",
+      "identity_tokens": [
+        "arXiv:2607.19922"
+      ],
+      "reason": "GPU NUMA microbenchmarking is generic GPU-memory characterization, not LLM-specific inference or serving work.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "title": "DGNA: Dissecting GPU NUMA Architecture through Microbenchmarking and Data Analysis"
+    },
+    "arXiv:2607.19971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19971",
+      "identity_tokens": [
+        "arXiv:2607.19971"
+      ],
+      "reason": "Robot-navigation prediction/planning model compression targets robotics deployment, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md"
+      ],
+      "title": "Unified Prediction and Planning via Conflict-Aware Disjoint Parameter Training"
+    },
+    "arXiv:2607.19139": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19139",
+      "identity_tokens": [
+        "arXiv:2607.19139"
+      ],
+      "reason": "The paper studies text-to-image diffusion transformers and denoising/attention pruning; the LLM-based text encoder is only conditioning context, not the object of LLM serving optimization.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md"
+      ],
+      "title": "Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers"
+    },
+    "arXiv:2607.19519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19519",
+      "identity_tokens": [
+        "arXiv:2607.19519"
+      ],
+      "reason": "Molecular generative design over Boltzmann ensembles is unrelated to LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Boltzmann-Expected Molecular Design with Decoupled Annealing Flows"
+    },
+    "arXiv:2607.28659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28659",
+      "identity_tokens": [
+        "arXiv:2607.28659"
+      ],
+      "reason": "Sequential recommendation with hybrid tokenization/decoding is a recommender task; the abstract does not claim LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T03:33:36+00:00",
+      "last_checked_at": "2026-10-05T03:33:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding"
     }
   }
 }

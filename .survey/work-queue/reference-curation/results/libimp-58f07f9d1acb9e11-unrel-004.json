@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58f07f9d1acb9e11-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.21519",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.21519",
+    "identity_tokens": [
+      "arXiv:2607.21519"
+    ],
+    "reason": "Generative recommendation modeling is the task contribution; the abstract gives no LLM-serving or inference-efficiency evaluation.",
+    "first_checked_at": "2026-10-05T03:33:36+00:00",
+    "last_checked_at": "2026-10-05T03:33:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+    ],
+    "title": "Diffusion Language Model for Recommendation"
+  },
+  "processed_at": "2026-10-05T03:33:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58f07f9d1acb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
