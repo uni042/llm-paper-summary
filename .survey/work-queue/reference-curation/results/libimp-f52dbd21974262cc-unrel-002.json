@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f52dbd21974262cc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.23524",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.23524",
+    "identity_tokens": [
+      "arXiv:2606.23524"
+    ],
+    "reason": "Primary abstract reviewed: End-to-end OCR increasingly relies on autoregressive sequence models, where the quadratic cost of Transformer attention limits efficient transcription of long, paragraph-level text. State-Space Models (SSMs) such as Mamba offer linear-time decoding and have recently been shown to match Transformer accuracy on printed historical lines, but their behavior as sequences grow from s… This is a Mamba-based OCR sequence-model accuracy/behavior rather than LLM inference or serving.",
+    "first_checked_at": "2026-10-05T11:49:11+00:00",
+    "last_checked_at": "2026-10-05T11:49:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Scaling State-Space Models from Lines to Paragraphs: An Ablation of Mamba-based OCR"
+  },
+  "processed_at": "2026-10-05T11:49:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f52dbd219742",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

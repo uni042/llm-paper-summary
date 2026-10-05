@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f52dbd21974262cc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.23391",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.23391",
+    "identity_tokens": [
+      "arXiv:2606.23391"
+    ],
+    "reason": "Primary abstract reviewed: Time series forecasting is a fundamental machine learning task. Recent work has explored Large Language Models (LLMs) for this purpose due to their strong generalization, pattern recognition, and zero-shot or few-shot capabilities. Despite their suitability for long-context learning, LLMs face challenges in multimodal settings: they lack calibrated probabilistic modeling for no… This is a application/model-method paper for forecasting, image generation, robotics, telemetry, or image compression rather than LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T11:49:11+00:00",
+    "last_checked_at": "2026-10-05T11:49:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Distribution-Aware Diffusion-LLM for Robust Ultra-Long-Term Time Series Forecasting"
+  },
+  "processed_at": "2026-10-05T11:49:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f52dbd219742",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:46:58+00:00",
-  "record_count": 1566,
+  "updated_at": "2026-10-05T11:49:11+00:00",
+  "record_count": 1569,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24319,6 +24319,48 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
       ],
       "title": "Capability-Specific Degradation Patterns in Quantized Small Language Models"
+    },
+    "arXiv:2606.25160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25160",
+      "identity_tokens": [
+        "arXiv:2606.25160"
+      ],
+      "reason": "Despite low-latency framing, full-text results establish prediction quality rather than runtime, throughput, memory or compute savings.",
+      "first_checked_at": "2026-10-05T11:49:09+00:00",
+      "last_checked_at": "2026-10-05T11:49:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Toward Low-Latency Vision-Language Models with Doubly-Correct Predictions in Egocentric Visual Understanding"
+    },
+    "arXiv:2606.25207": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25207",
+      "identity_tokens": [
+        "arXiv:2606.25207"
+      ],
+      "reason": "Full text confirms cache reuse/speculation reduce HPO time, but the contribution is application-specific search, not measured general LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T11:49:09+00:00",
+      "last_checked_at": "2026-10-05T11:49:09+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ],
+      "title": "ASAP: Agent-System Co-Design for Wall-Clock-Centered Auto HPO Research for ML Experiments"
+    },
+    "DOI:10.1007/s00530-026-02393-9": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00530-026-02393-9",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-026-02393-9"
+      ],
+      "reason": "Packetにprimary abstractがなく、一次URL https://doi.org/10.1007/s00530-026-02393-9 を試行したが取得不可だった。タイトルからは植物種の検出タスクと分かるだけで、一次証拠を確認できない。",
+      "first_checked_at": "2026-10-05T11:49:11+00:00",
+      "last_checked_at": "2026-10-05T11:49:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Automatically detect Solidago canadensis using an improved attention mechanism network"
     }
   }
 }
