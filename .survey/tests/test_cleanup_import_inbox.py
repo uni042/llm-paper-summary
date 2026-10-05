@@ -32,7 +32,10 @@ class CleanupImportInboxTests(unittest.TestCase):
             receipts = list((root / ".survey/import-inbox/results/cleanup").glob("*.json"))
             self.assertEqual(len(receipts), 1)
             payload = json.loads(receipts[0].read_text(encoding="utf-8"))
-            self.assertEqual(payload["status"], "discarded_pending_research_junk")
+            self.assertEqual(
+                payload["events"][-1]["status"],
+                "discarded_pending_research_junk",
+            )
 
     def test_deletes_blocked_research_when_success_result_exists(self) -> None:
         with tempfile.TemporaryDirectory() as td:
