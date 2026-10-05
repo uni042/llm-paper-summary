@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:49:11+00:00",
-  "record_count": 4755,
+  "updated_at": "2026-10-05T11:51:48+00:00",
+  "record_count": 4764,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -69228,6 +69228,132 @@
         "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
       ],
       "title": "Keep The Essentials: Efficient Reference Conditioned Generation via Token Dropping"
+    },
+    "DOI:10.1007/s10664-026-10905-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10664-026-10905-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-026-10905-4"
+      ],
+      "reason": "Primary abstract reviewed: Primary Springer abstract: framework for project-level C-to-Rust migration using LLMs, dependency scheduling, context-aware transpilation, and compilation feedback; measured compilation/correctness/safety outcomes.… This is a different application/model-quality or general computing topic, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T11:51:45+00:00",
+      "last_checked_at": "2026-10-05T11:51:45+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "MinsC2Rust: LLM-driven project-level code migration from C to safe Rust"
+    },
+    "DOI:10.1145/3744255.3798125": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3744255.3798125",
+      "identity_tokens": [
+        "DOI:10.1145/3744255.3798125"
+      ],
+      "reason": "Primary abstract reviewed: Data center loads have expanded significantly in recent years. During a grid fault, simultaneous tripping of large-scale data centers can further destabilize the transmission system and even lead to cascading failures. In response, transmission system operators are proposing voltage ride-through (VRT) requirements for data centers. In this work, we systematically survey the new… This is a data-center power-grid reliability/workload migration rather than LLM inference-system performance.",
+      "first_checked_at": "2026-10-05T11:51:45+00:00",
+      "last_checked_at": "2026-10-05T11:51:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Data Center Voltage Ride-Through: Emerging Challenges and Opportunities"
+    },
+    "DOI:10.1145/3744256.3812564": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3744256.3812564",
+      "identity_tokens": [
+        "DOI:10.1145/3744256.3812564"
+      ],
+      "reason": "Primary abstract reviewed: Current simulation-based pipelines require substantial up-front engineering to model building sensor data behavior. In contrast, generative models offer an attractive alternative: users describe desired telemetry characteristics in natural language and obtain corresponding sensor streams. To test this, we evaluate a diverse range of generative models for long-horizon building t… This is a application/model-method paper for forecasting, image generation, robotics, telemetry, or image compression rather than LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T11:51:45+00:00",
+      "last_checked_at": "2026-10-05T11:51:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.01989-taichi-unified-prefill-decode-serving.md"
+      ],
+      "title": "Generative Models as a Catalyst for Lowering the Barrier to Synthetic Sensor Telemetry"
+    },
+    "DOI:10.1145/3765611.3815063": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3765611.3815063",
+      "identity_tokens": [
+        "DOI:10.1145/3765611.3815063"
+      ],
+      "reason": "Primary abstract reviewed: Data centers (DCs) are becoming large, controllable electrical loads as AI-driven compute demand grows, while renewable-heavy power grids require reliable flexibility for balancing services. This paper experimentally evaluates, on operational DCs, the response-time feasibility of cross-DC workload migration for grid support, where response time is defined as the elapsed time fr… This is a data-center power-grid reliability/workload migration rather than LLM inference-system performance.",
+      "first_checked_at": "2026-10-05T11:51:45+00:00",
+      "last_checked_at": "2026-10-05T11:51:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Inter-Data-Center Workload Migration for Grid-Interactive Balancing Services: A Field Demonstration"
+    },
+    "DOI:10.1145/3787109.3815299": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3787109.3815299",
+      "identity_tokens": [
+        "DOI:10.1145/3787109.3815299"
+      ],
+      "reason": "Primary abstract reviewed: Modern Machine Learning (ML) applications increasingly demand high-precision arithmetic within critical resource constraints. Although standard floating-point arithmetic remains widely used, it incurs huge hardware complexity. The recently introduced Posit format has emerged as a promising alternative, offering improved numerical efficiency with reduced hardware costs. Empirica… This is a VLSI clock-mesh analysis, FPGA arithmetic, or generic sparse matrix multiplication rather than LLM inference.",
+      "first_checked_at": "2026-10-05T11:51:46+00:00",
+      "last_checked_at": "2026-10-05T11:51:46+00:00",
+      "linked_from": [
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "Resource-Efficient DSP Slice for Embedded FPGAs Using Split-Posit Arithmetic"
+    },
+    "DOI:10.1145/3787109.3815287": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3787109.3815287",
+      "identity_tokens": [
+        "DOI:10.1145/3787109.3815287"
+      ],
+      "reason": "Primary abstract reviewed: Clock meshes are an essential technique in high-performance VLSI systems to minimize skew and handle On-Chip Variation (OCV), especially in nanometer technologies. However, analyzing meshes is difficult due to reconvergent paths and multi-source drivers. The industrial standard is to use SPICE simulation since static timing analysis (STA) tools can not handle mesh loops. SPICE … This is a VLSI clock-mesh analysis, FPGA arithmetic, or generic sparse matrix multiplication rather than LLM inference.",
+      "first_checked_at": "2026-10-05T11:51:47+00:00",
+      "last_checked_at": "2026-10-05T11:51:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "A Fast and Accurate Surrogate Model for Clock-Mesh Timing Analysis"
+    },
+    "arXiv:2606.22325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22325",
+      "identity_tokens": [
+        "arXiv:2606.22325"
+      ],
+      "reason": "Primary abstract reviewed: Attention sinks, representation collapse, and norm stratification are treated as transformer-specific pathologies. We show they are not specific to attention: they are what content-based routing does under a fixed similarity metric. We give a reframing identity: softmax attention is Boltzmann-weighted aggregation over Euclidean distances with constant key norms, so its score om… This is a analysis of transformer representation/routing or retrieval-head mechanisms, not a system/algorithm contribution to inference efficiency.",
+      "first_checked_at": "2026-10-05T11:51:47+00:00",
+      "last_checked_at": "2026-10-05T11:51:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "All Routes Lead to Collapse"
+    },
+    "arXiv:2606.22471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22471",
+      "identity_tokens": [
+        "arXiv:2606.22471"
+      ],
+      "reason": "Primary abstract reviewed: A key bottleneck in training generalist policies for bimanual dexterous manipulation is the lack of large-scale, high-quality datasets. Synthetic data generation in simulation provides a scalable alternative to human video demonstrations by overcoming challenges such as morphology mismatch, missing physical interactions, and the generation of robot actions. However, existing ap… This is a application/model-method paper for forecasting, image generation, robotics, telemetry, or image compression rather than LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T11:51:48+00:00",
+      "last_checked_at": "2026-10-05T11:51:48+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Scalable Multi-Task Data Generation via Reinforcement Learning for Language-Conditioned Bimanual Dexterous Manipulation"
+    },
+    "arXiv:2606.22482": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22482",
+      "identity_tokens": [
+        "arXiv:2606.22482"
+      ],
+      "reason": "Primary abstract reviewed: Sparse matrix–matrix multiplication (SpMM) is a fundamental data operation for large-scale sparse data processing. With NPUs increasingly deployed in data centers for their performance and energy efficiency, accelerating SpMM on these platforms is a natural choice. However, high-performance SpMM on NPUs poses a data management challenge, as irregular sparsity demands efficient … This is a VLSI clock-mesh analysis, FPGA arithmetic, or generic sparse matrix multiplication rather than LLM inference.",
+      "first_checked_at": "2026-10-05T11:51:48+00:00",
+      "last_checked_at": "2026-10-05T11:51:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "NeutronSparse: Coordinating Heterogeneous Engines for Sparse Matrix Multiplication on NPUs"
     }
   }
 }

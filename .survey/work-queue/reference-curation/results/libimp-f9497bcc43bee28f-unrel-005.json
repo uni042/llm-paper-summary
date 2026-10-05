@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9497bcc43bee28f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.22482",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.22482",
+    "identity_tokens": [
+      "arXiv:2606.22482"
+    ],
+    "reason": "Primary abstract reviewed: Sparse matrix–matrix multiplication (SpMM) is a fundamental data operation for large-scale sparse data processing. With NPUs increasingly deployed in data centers for their performance and energy efficiency, accelerating SpMM on these platforms is a natural choice. However, high-performance SpMM on NPUs poses a data management challenge, as irregular sparsity demands efficient … This is a VLSI clock-mesh analysis, FPGA arithmetic, or generic sparse matrix multiplication rather than LLM inference.",
+    "first_checked_at": "2026-10-05T11:51:48+00:00",
+    "last_checked_at": "2026-10-05T11:51:48+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+    ],
+    "title": "NeutronSparse: Coordinating Heterogeneous Engines for Sparse Matrix Multiplication on NPUs"
+  },
+  "processed_at": "2026-10-05T11:51:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9497bcc43be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

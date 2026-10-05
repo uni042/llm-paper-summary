@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3949e2651795dfea-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3765611.3815434",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3765611.3815434",
+    "identity_tokens": [
+      "DOI:10.1145/3765611.3815434"
+    ],
+    "reason": "評価条件・方法・限界をprimary full textで検証できず、abstractだけでは最終的な貢献の適合性を確定できないためborderline。",
+    "first_checked_at": "2026-10-05T11:51:45+00:00",
+    "last_checked_at": "2026-10-05T11:51:45+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md"
+    ],
+    "title": "LLM-GreenServe: Optimized Power Consumption with Power-aware Prefill-Decoding Scheduling"
+  },
+  "processed_at": "2026-10-05T11:51:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3949e2651795",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
