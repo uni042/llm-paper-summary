@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-12-part-03-978d7933ab4d",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33591",
+      "identity_tokens": [
+        "arXiv:2609.33591"
+      ],
+      "title": "Pretraining Transformers with Quantized Softmax in Attention",
+      "reason": "Quantized softmax is studied during Transformer pretraining and changes gradients; training-only.",
+      "source_url": "https://arxiv.org/abs/2609.33591",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33601",
+      "identity_tokens": [
+        "arXiv:2609.33601"
+      ],
+      "title": "JustQuant: You Don't Need Smoothing, SVD, or Rotation for 4-Bit Activation Quantization",
+      "reason": "Quantization-aware distillation/QAT trains low-bit activation models; deployment operators are discussed, but contribution is training-time.",
+      "source_url": "https://arxiv.org/abs/2609.33601",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33618",
+      "identity_tokens": [
+        "arXiv:2609.33618"
+      ],
+      "title": "ParaAgent: Reinforcing Parallel Acting in Open-World Tool Environments",
+      "reason": "Reinforcement-learns parallel tool actions to improve agent task success; abstract gives no inference-cost/serving efficiency evidence.",
+      "source_url": "https://arxiv.org/abs/2609.33618",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33659",
+      "identity_tokens": [
+        "arXiv:2609.33659"
+      ],
+      "title": "Learning Multimodal Embeddings with Evidence-Aligned Readout",
+      "reason": "Learns multimodal embeddings with evidence-aligned readout; representation-learning contribution, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.33659",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33662",
+      "identity_tokens": [
+        "arXiv:2609.33662"
+      ],
+      "title": "Audit-First VAPO: Risk-Certified Selective Updates under Imperfect Verification",
+      "reason": "Audit-first selective updates under imperfect verification; a training/update policy, not model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.33662",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
