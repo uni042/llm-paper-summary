@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-38-part-04-6dffdf6d2078",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28144",
+      "identity_tokens": [
+        "arXiv:2607.28144"
+      ],
+      "title": "ReGenVC: End-to-End Real-Time Generative Video Coding at Ultra-Low Bitrate",
+      "reason": "We present ReGenVC, an end-to-end generative video codec that compresses talking-head video to an ultra-low bitrate and decodes it in real time. The encoder reduces a source clip to a compact bitstream -- a neurally compressed first frame, per-frame pose keypoints, and metadata -- totaling about 26 kB for a 77-frame sequence. The decoder is a four-step distilled diffusion transformer that reconstructs the video conditioned on the transmitted pose and reference frame. Compared with x264/x265, ReGenVC reduces the bitrate to roughly one tenth of that required by traditional codecs (about 26 kB vs. 250--280 kB for essentially artifact-free reconstruction); at a matched ultra-low bitrate, conventional codecs collapse into blocking artifacts while ReGenVC stays sharp by exploiting a strong generative prior. The central obstacle to deploying such a codec is decoder latency: multi-step sampling with transformer and VAE components is too slow for interactive use. We make the decoder real-time through four-step distillation and three model-preserving system techniques: (i) eight-GPU unified sequence parallelism (Ulysses&Ring), (ii) a spatially-split VAE, and (iii) a three-stage overlapped pipeline; an analytical timing model characterizes the real-time feasibility region. On an 8-GPU node, the system sustains 24 fps output (972 ms per 25-frame window, within the 1000 ms budget), enabling a live browser stream without observed frame underruns. A hybrid CPU-GPU deployment further runs the encoder on the CPU at 24 fps and offloads the decoder-side one-shot conditioning encoders to the CPU, reducing the per-GPU memory peak from 21.1 GB to about 7.7 GB. To our knowledge, ReGenVC is the first end-to-end generative video codec to combine ultra-low-bitrate encoding with real-time decoding on an 8-GPU system.",
+      "source_url": "https://arxiv.org/abs/2607.28144",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28223",
+      "identity_tokens": [
+        "arXiv:2607.28223"
+      ],
+      "title": "Queue-Theoretic Admission Control for Multi-Tenant GPU Clusters",
+      "reason": "一次本文でGPU cluster queue admissionとmodel-serving request schedulingを別問題と明示しており、候補は対象範囲外と確認した。",
+      "source_url": "https://arxiv.org/abs/2607.28223",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28268",
+      "identity_tokens": [
+        "arXiv:2607.28268"
+      ],
+      "title": "LLM-Guided Evolutionary Search for Constraint Model Reformulation to Improve Solver Efficiency",
+      "reason": "Combinatorial problems appear in numerous industrial applications. A common approach is to formulate these problems as declarative constraint models that can subsequently be compiled to and solved by a range of back-end solvers. Recent work shows that Large Language Models (LLMs) can produce correct models from natural language, but even a correct model can be expensive to solve because performance remains sensitive to modelling choices. In this work, we investigate whether LLMs can automate performance-oriented model reformulation. Inspired by Automatic Heuristic Design (AHD), we use an evolutionary framework in which an LLM proposes candidate reformulations that are verified and benchmarked against the user-defined baseline model. We compare AHD-adapted search strategies that control which prior attempts, instructions, and measured feedback enter each prompt. Existing retention strategies prioritize recency or performance, but do not explicitly diversify the context. To cover this gap, we introduce Profile-Diverse Retention (PDR), which applies Maximal Marginal Relevance (MMR) to instance-level runtime vectors to retain behaviourally diverse attempts. We systematically evaluate the strategies on eight CSPLib problems using validation-based final model selection. The results show that: (i) iterative reformulation can produce substantial held-out speedups; (ii) strategies that keep the retained context diverse outperform those that retain only recent or the fastest attempts; and (iii) validation-based selection improves the held-out speedup of every strategy.",
+      "source_url": "https://arxiv.org/abs/2607.28268",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28319",
+      "identity_tokens": [
+        "arXiv:2607.28319"
+      ],
+      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations",
+      "reason": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs). As a foundational empirical validation of this method, this work focuses on causal bias localization. Using minimally contrastive prompt pairs and inference-time activation capture, the method identifies neurons that react differentially when processing demographic attributes in GLU architectures, evaluating the signal at the down_proj input. Empirical evaluation was conducted on models of up to 3 billion parameters (Llama-3.2 family and Salamandra-2B), combining standardized benchmark evaluation with qualitative text generation experiments. Results demonstrate that zeroing the identified neurons alters how the model responds to associated demographic variables. However, rather than producing flat mitigation, the intervention causes bidirectional bias destabilization: because BiasScore is unsigned, candidate sets mix neurons that push toward and against the stereotype, and the net effect on aggregate bias depends on which sign dominates. The intervention is extremely surgical: zeroing at most 40 neurons in Llama-3.2-1B (less than 0.031% of total MLP width) achieves a mean retention of 99.49% in reasoning and general knowledge capabilities. These findings empirically confirm that demographic bias processing and model capabilities operate on dissociable circuits, establishing the methodological foundations for transitioning from blind zeroing toward directional behavior modulation.",
+      "source_url": "https://arxiv.org/abs/2607.28319",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.28627",
+      "identity_tokens": [
+        "arXiv:2607.28627"
+      ],
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 This is a vision-language input-retrieval method, not a general LLM serving optimization; direct system-level efficiency evidence is limited.",
+      "source_url": "https://arxiv.org/abs/2607.28627",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
