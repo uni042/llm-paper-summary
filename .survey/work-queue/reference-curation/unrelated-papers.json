@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:53:06+00:00",
-  "record_count": 4545,
+  "updated_at": "2026-10-05T10:56:01+00:00",
+  "record_count": 4562,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -66198,6 +66198,245 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Causally-motivated generative few-shot reward inference through efficient DPO"
+    },
+    "DOI:10.1016/j.neunet.2026.109338": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109338",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109338"
+      ],
+      "reason": "The spiking Transformer method is evaluated on vision datasets and reports task accuracy; it is not an LLM inference/serving study.",
+      "first_checked_at": "2026-10-05T10:55:58+00:00",
+      "last_checked_at": "2026-10-05T10:55:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Enhancing spiking transformers with temporal feedback coding and global-local dynamic neurons."
+    },
+    "DOI:10.1016/j.neunet.2026.109402": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109402",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109402"
+      ],
+      "reason": "Backspin is a backdoor attack against split learning across CV/NLP tasks; the contribution is security attack efficacy, not inference efficiency.",
+      "first_checked_at": "2026-10-05T10:55:58+00:00",
+      "last_checked_at": "2026-10-05T10:55:58+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Backspin: A backdoor attack framework for split learning based on smashed data."
+    },
+    "DOI:10.1016/j.nlp.2026.100224": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.nlp.2026.100224",
+      "identity_tokens": [
+        "DOI:10.1016/j.nlp.2026.100224"
+      ],
+      "reason": "The work applies a VLM to key-information extraction from visually rich Chinese documents; the packet title/abstract do not present an inference-efficiency or serving method.",
+      "first_checked_at": "2026-10-05T10:55:58+00:00",
+      "last_checked_at": "2026-10-05T10:55:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "VLM-Guided Key Information Extraction for Chinese Visually-Rich Documents"
+    },
+    "DOI:10.1016/j.patrec.2026.07.029": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patrec.2026.07.029",
+      "identity_tokens": [
+        "DOI:10.1016/j.patrec.2026.07.029"
+      ],
+      "reason": "LSBR-pkd is a student-behavior recognition model using pruning/distillation for a vision task, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "LSBR-pkd: A lightweight model for student behavior recognition via co-optimization of pruning and knowledge distillation"
+    },
+    "DOI:10.1016/j.yjoc.2026.100132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.yjoc.2026.100132",
+      "identity_tokens": [
+        "DOI:10.1016/j.yjoc.2026.100132"
+      ],
+      "reason": "The paper discusses limits of generative AI and human creativity, not an inference/serving efficiency method.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "The Authenticity Gap: Why Generative AI Cannot Replicate Human Creativity"
+    },
+    "DOI:10.1038/s41598-026-59736-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-59736-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-59736-9"
+      ],
+      "reason": "The Transformer/convolution model detects pine beetle infestation in UAV imagery; it is a vision application with no LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "A transformer and large-kernel convolution-based detection model for Red Turpentine Beetle infestation in pine trees"
+    },
+    "DOI:10.1049/ein2.70031": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1049/ein2.70031",
+      "identity_tokens": [
+        "DOI:10.1049/ein2.70031"
+      ],
+      "reason": "The paper analyzes computing-electricity coordination and policy/incentive barriers for data centers; it does not present an LLM inference/serving method or evaluation.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+      ],
+      "title": "Why Computing–Electricity Coordination Has Not Scaled in Practice"
+    },
+    "DOI:10.1093/bib/bbag378": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bib/bbag378",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbag378"
+      ],
+      "reason": "LipiDetective applies a deep model to lipid identification from mass spectra; the abstract provides no language-model inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "LipiDetective: a deep learning model for the identification of molecular lipid species in tandem mass spectra"
+    },
+    "DOI:10.1093/bioinformatics/btag320": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag320",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag320"
+      ],
+      "reason": "KLaR uses language-model representations for biomedical target discovery/link prediction; this is a task-specific application, not an inference-efficiency or serving contribution.",
+      "first_checked_at": "2026-10-05T10:55:59+00:00",
+      "last_checked_at": "2026-10-05T10:55:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "KLaR: fusing knowledge graphs and language models for biomedical target discovery"
+    },
+    "DOI:10.1016/j.scib.2026.07.036": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.scib.2026.07.036",
+      "identity_tokens": [
+        "DOI:10.1016/j.scib.2026.07.036"
+      ],
+      "reason": "The primary abstract is a review/proposal for generative AI and automated experimentation in electrochemical research; it does not evaluate LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T10:56:00+00:00",
+      "last_checked_at": "2026-10-05T10:56:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Closing the loop with generative AI and automated experimentation in electrochemical energy innovation."
+    },
+    "DOI:10.1016/j.sysarc.2026.103834": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103834",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103834"
+      ],
+      "reason": "GraphDelta optimizes distributed dynamic graph computing at the edge, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:56:00+00:00",
+      "last_checked_at": "2026-10-05T10:56:00+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "GraphDelta: A distributed incremental framework for efficient dynamic graph computing in edge intelligence"
+    },
+    "DOI:10.1016/j.sysarc.2026.103925": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103925",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103925"
+      ],
+      "reason": "Mini-MDP concerns processor memory-dependence prediction and its accuracy/complexity trade-off, not language-model inference.",
+      "first_checked_at": "2026-10-05T10:56:00+00:00",
+      "last_checked_at": "2026-10-05T10:56:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "title": "Mini-MDP: Revisiting the accuracy–complexity tradeoff in memory dependence prediction"
+    },
+    "DOI:10.1016/j.sysarc.2026.103933": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103933",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103933"
+      ],
+      "reason": "VMOC optimizes CNN deployment on vector accelerators; it is outside the LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T10:56:00+00:00",
+      "last_checked_at": "2026-10-05T10:56:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "VMOC: MLIR-based memory optimization for CNN deployment on vector accelerators"
+    },
+    "DOI:10.1016/j.knosys.2026.116693": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116693",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116693"
+      ],
+      "reason": "The contribution is a sparse-computation framework for graph node classification, not language-model inference or serving.",
+      "first_checked_at": "2026-10-05T10:56:01+00:00",
+      "last_checked_at": "2026-10-05T10:56:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Structure-Preserving Mixture-of-Experts: A graph sparse computation framework for node classification"
+    },
+    "DOI:10.1016/j.mlwa.2026.100948": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.mlwa.2026.100948",
+      "identity_tokens": [
+        "DOI:10.1016/j.mlwa.2026.100948"
+      ],
+      "reason": "The primary abstract is a review of post-deployment AI adaptation under access, organizational and computational constraints; it does not study LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T10:56:01+00:00",
+      "last_checked_at": "2026-10-05T10:56:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Adapting deployed AI systems under operational constraints: A review of differential replication methods"
+    },
+    "DOI:10.1016/j.neucom.2026.134485": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134485",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134485"
+      ],
+      "reason": "This is cross-modal condition recognition for zinc-oxide rotary kilns, an industrial classification application rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:56:01+00:00",
+      "last_checked_at": "2026-10-05T10:56:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "Learning cross-modal semantic consistency and complementary fusion for condition recognition in zinc oxide rotary kilns"
+    },
+    "DOI:10.1016/j.neucom.2026.134608": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134608",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134608"
+      ],
+      "reason": "UltraLBM-UNet targets skin-lesion segmentation; the title and abstract do not establish an LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-05T10:56:01+00:00",
+      "last_checked_at": "2026-10-05T10:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "UltraLBM-UNet: Ultralight bidirectional mamba-based model for skin lesion segmentation"
     }
   }
 }

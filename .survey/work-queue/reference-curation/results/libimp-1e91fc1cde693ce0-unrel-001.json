@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e91fc1cde693ce0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.neunet.2026.109338",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.neunet.2026.109338",
+    "identity_tokens": [
+      "DOI:10.1016/j.neunet.2026.109338"
+    ],
+    "reason": "The spiking Transformer method is evaluated on vision datasets and reports task accuracy; it is not an LLM inference/serving study.",
+    "first_checked_at": "2026-10-05T10:55:58+00:00",
+    "last_checked_at": "2026-10-05T10:55:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "Enhancing spiking transformers with temporal feedback coding and global-local dynamic neurons."
+  },
+  "processed_at": "2026-10-05T10:55:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e91fc1cde69",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91f02b3b57f4f247-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.sysarc.2026.103933",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.sysarc.2026.103933",
+    "identity_tokens": [
+      "DOI:10.1016/j.sysarc.2026.103933"
+    ],
+    "reason": "VMOC optimizes CNN deployment on vector accelerators; it is outside the LLM inference/serving scope.",
+    "first_checked_at": "2026-10-05T10:56:00+00:00",
+    "last_checked_at": "2026-10-05T10:56:00+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "VMOC: MLIR-based memory optimization for CNN deployment on vector accelerators"
+  },
+  "processed_at": "2026-10-05T10:56:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91f02b3b57f4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

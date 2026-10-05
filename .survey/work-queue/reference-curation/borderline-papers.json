@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:53:08+00:00",
-  "record_count": 1465,
+  "updated_at": "2026-10-05T10:56:01+00:00",
+  "record_count": 1468,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -22634,6 +22634,60 @@
         "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
       ],
       "title": "Hardware-software co-design for edge computing in bridge monitoring: Heterogeneous multi-MCU architecture with Q-Learning augmented PSO"
+    },
+    "DOI:10.1016/j.parco.2026.103208": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.parco.2026.103208",
+      "identity_tokens": [
+        "DOI:10.1016/j.parco.2026.103208"
+      ],
+      "reason": "The ScienceDirect primary article endpoint returned HTTP 403; the indexed primary abstract/introduction describe a broad multi-GPU survey, but detailed reviewed methods, boundaries and treatment of LLM inference could not be checked.",
+      "first_checked_at": "2026-10-05T10:55:58+00:00",
+      "last_checked_at": "2026-10-05T10:55:58+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "A comprehensive survey on multi-GPU systems"
+    },
+    "DOI:10.1016/j.sysarc.2026.103945": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103945",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103945"
+      ],
+      "reason": "The primary text is relevant background for attention/softmax optimization, but it does not provide a focused LLM inference result or concrete contribution suitable for a Research implementation handoff.",
+      "first_checked_at": "2026-10-05T10:56:00+00:00",
+      "last_checked_at": "2026-10-05T10:56:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "A Survey of Softmax Acceleration: From Algorithms and Function Realization to System and Hardware Optimization"
+    },
+    "DOI:10.1016/j.neucom.2026.134566": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134566",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134566"
+      ],
+      "reason": "The ScienceDirect primary article endpoint returned HTTP 403 when opened. The primary abstract was available through its indexed article page, but the method/results sections needed to verify runtime/cost evidence could not be reviewed.",
+      "first_checked_at": "2026-10-05T10:56:01+00:00",
+      "last_checked_at": "2026-10-05T10:56:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Expert-guided routing: A supervised post-hoc routing framework for task-specific and multilingual LLM specialization"
     }
   }
 }

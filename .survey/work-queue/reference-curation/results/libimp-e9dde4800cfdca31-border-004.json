@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9dde4800cfdca31-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.neucom.2026.134566",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.neucom.2026.134566",
+    "identity_tokens": [
+      "DOI:10.1016/j.neucom.2026.134566"
+    ],
+    "reason": "The ScienceDirect primary article endpoint returned HTTP 403 when opened. The primary abstract was available through its indexed article page, but the method/results sections needed to verify runtime/cost evidence could not be reviewed.",
+    "first_checked_at": "2026-10-05T10:56:01+00:00",
+    "last_checked_at": "2026-10-05T10:56:01+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+    ],
+    "title": "Expert-guided routing: A supervised post-hoc routing framework for task-specific and multilingual LLM specialization"
+  },
+  "processed_at": "2026-10-05T10:56:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9dde4800cfd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
