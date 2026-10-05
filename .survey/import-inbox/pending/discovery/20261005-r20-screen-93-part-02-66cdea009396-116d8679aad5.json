@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-93-part-02-66cdea009396",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2025.1564394",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2025.1564394"
+      ],
+      "title": "Deep learning-based text generation for plant phenotyping and precision agriculture",
+      "reason": "一次要旨は農業phenotyping用の文章生成システムで、LLM推論/servingの効率化を扱わない。",
+      "source_url": "https://doi.org/10.3389/fpls.2025.1564394",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02126",
+      "identity_tokens": [
+        "arXiv:2506.02126"
+      ],
+      "title": "Knowledge or Reasoning? A Close Look at How LLMs Think Across Domains",
+      "reason": "一次要旨はLLMの知識・reasoning能力を比較分析する評価研究で、推論実行の効率化手法を示していない。",
+      "source_url": "https://arxiv.org/abs/2506.02126",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.06738",
+      "identity_tokens": [
+        "arXiv:2505.06738"
+      ],
+      "title": "I Know What You Said: Unveiling Hardware Cache Side-Channels in Local Large Language Model Inference",
+      "reason": "一次要旨はローカルLLM推論のhardware cache side-channelと情報漏えいを検証するsecurity研究であり、推論効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2505.06738",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17365",
+      "identity_tokens": [
+        "arXiv:2504.17365"
+      ],
+      "title": "TimeSoccer: An End-to-End Multimodal Large Language Model for Soccer Commentary Generation",
+      "reason": "一次要旨はsoccer commentary生成用multimodal LLMを構築・評価する応用研究で、serving/inference optimizationを示していない。",
+      "source_url": "https://arxiv.org/abs/2504.17365",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09261",
+      "identity_tokens": [
+        "arXiv:2504.09261"
+      ],
+      "title": "Head-Aware KV Cache Compression for Efficient Visual Autoregressive Modeling",
+      "reason": "一次要旨の対象はvisual autoregressive image modelingのhead-aware KV compressionで、言語生成LLM/VLMの推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2504.09261",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+      ]
+    }
+  ]
+}
