@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-16-part-05-7d280a08d10e",
+  "reference_main_sha": "3b0c5546288819965a32278794ebf3b45201393d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31938",
+      "identity_tokens": [
+        "arXiv:2609.31938"
+      ],
+      "title": "Cache-Aware Conv3D Lowering Across Embedded World-Model Decoders",
+      "reason": "Conv3D lowering for visual world-model decoders; not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.31938",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31956",
+      "identity_tokens": [
+        "arXiv:2609.31956"
+      ],
+      "title": "Transformer MLP Gate Thresholds Are Couplings to a Carried Reference Direction",
+      "reason": "Analysis of Transformer MLP gate thresholds, not inference-cost reduction.",
+      "source_url": "https://arxiv.org/abs/2609.31956",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32021",
+      "identity_tokens": [
+        "arXiv:2609.32021"
+      ],
+      "title": "SilentCall: Hidden Tool-Call Backdoors in Open-Weight Agents, and How to Catch Them",
+      "reason": "Tool-call backdoor security and detection, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.32021",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32041",
+      "identity_tokens": [
+        "arXiv:2609.32041"
+      ],
+      "title": "Amnesia by Design, Memory By Necessity: Persistent State for Document Intelligence",
+      "reason": "Persistent state for document intelligence, without an LLM inference/serving efficiency result.",
+      "source_url": "https://arxiv.org/abs/2609.32041",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32042",
+      "identity_tokens": [
+        "arXiv:2609.32042"
+      ],
+      "title": "Quantization Thresholds Replicate, Failure Modes Do Not: A Three-Model Study of Agentic Tool Use in Polish from 8-bit to 2-bit",
+      "reason": "Quantization is an inference compression setting, but evidence concerns tool-use accuracy/failure modes, including a synthetic environment without tool-latency variability; no efficiency tradeoff is measured.",
+      "source_url": "https://arxiv.org/abs/2609.32042",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    }
+  ]
+}
