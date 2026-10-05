@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-105-part-02-92daefc0070a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806200",
+      "identity_tokens": [
+        "DOI:10.1145/3806200"
+      ],
+      "title": "LLMRCA: Multilevel Root Cause Analysis for LLM Applications Using Multimodal Observability Data",
+      "reason": "ACM DOI fetch returned HTTP 403; the Imperial repository record advertises an accepted-manuscript PDF but direct fetch timed out (400). Without body review, retain the adjacent performance-diagnosis paper as borderline.",
+      "source_url": "https://doi.org/10.1145/3806200",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23971",
+      "identity_tokens": [
+        "arXiv:2603.23971"
+      ],
+      "title": "The Price Reversal Phenomenon: When Cheaper Reasoning Models End Up Costing More",
+      "reason": "Evidence depends on evaluated providers, model versions, API prices, task mix, and variable repeated-run token consumption; measurement/monitoring is adjacent to optimization.",
+      "source_url": "https://arxiv.org/abs/2603.23971",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22866",
+      "identity_tokens": [
+        "arXiv:2603.22866"
+      ],
+      "title": "Aerial Agentic AI: Synergizing LLM and SLM for Low-Altitude Wireless Networks",
+      "reason": "The work is specific to low-altitude wireless-network agents and one simulated task; it does not establish general-purpose LLM serving gains.",
+      "source_url": "https://arxiv.org/abs/2603.22866",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.23032",
+      "identity_tokens": [
+        "arXiv:2603.23032"
+      ],
+      "title": "Generative Event Pretraining with Foundation Model Alignment",
+      "reason": "The abstract concerns event-camera foundation-model pretraining and visual downstream tasks, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2603.23032",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21354",
+      "identity_tokens": [
+        "arXiv:2603.21354"
+      ],
+      "title": "The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project",
+      "reason": "This is a vision/synthesis paper; measurements are from referenced project work, not an independent evaluation in this paper.",
+      "source_url": "https://arxiv.org/abs/2603.21354",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md"
+      ]
+    }
+  ]
+}
