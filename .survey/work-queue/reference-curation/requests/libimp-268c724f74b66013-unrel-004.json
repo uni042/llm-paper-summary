@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-268c724f74b66013-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2410.17215",
+  "reason": "MiniPLMの本文は小規模student LMを作るpre-training向け知識蒸留とteacher-data refinementが中心。教師推論はoffline化して学習コストを抑えるが、提案対象はtraining data/pre-trainingであり、LLM inference/serving最適化ではない。",
+  "title": "MiniPLM: Knowledge Distillation for Pre-Training Language Models",
+  "identity_tokens": [
+    "arXiv:2410.17215"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+    "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-268c724f74b6",
+  "source_precheck_request_id": null
+}
