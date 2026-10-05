@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-21-part-03-00483a713aba",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25336",
+      "identity_tokens": [
+        "arXiv:2608.25336"
+      ],
+      "title": "Provenance Before Prose: Claim-Locked Reporting for Statistical Text Generation",
+      "reason": "The paper is primarily a provenance and reliability protocol for statistical reporting; inference-efficiency evidence is a secondary cost analysis.",
+      "source_url": "https://arxiv.org/abs/2608.25336",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25371",
+      "identity_tokens": [
+        "arXiv:2608.25371"
+      ],
+      "title": "Capacity Overflow: A Blind Spot for Backdoor Attacks in Vision MoE",
+      "reason": "The abstract studies backdoor attacks in capacity-bounded Vision MoE dispatch, not language-model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.25371",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25380",
+      "identity_tokens": [
+        "arXiv:2608.25380"
+      ],
+      "title": "APT: Accelerating Diffusion Transformers via Attention Probability-Guided Pruning and Quantization",
+      "reason": "APT accelerates image/video Diffusion Transformers; the abstract does not concern diffusion language models or LLM inference.",
+      "source_url": "https://arxiv.org/abs/2608.25380",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25382",
+      "identity_tokens": [
+        "arXiv:2608.25382"
+      ],
+      "title": "Q&A or Document-Based? The Effects of Interface Type on How Screen Reader Users Access Interconnected Documents",
+      "reason": "This is a user study comparing screen-reader document and Q&A interfaces, not an LLM inference or serving technique.",
+      "source_url": "https://arxiv.org/abs/2608.25382",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25386",
+      "identity_tokens": [
+        "arXiv:2608.25386"
+      ],
+      "title": "Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation",
+      "reason": "The abstract explicitly targets autoregressive image-generation training cost; training-only efficiency is outside scope.",
+      "source_url": "https://arxiv.org/abs/2608.25386",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
