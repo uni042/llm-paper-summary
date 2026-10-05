@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-21-part-01-00483a713aba",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1061/9780784486962.010",
+      "identity_tokens": [
+        "DOI:10.1061/9780784486962.010"
+      ],
+      "title": "Talk, See, Support (TSS): A Wearable Multimodal, Intelligent, Agentic LLM-Powered Construction Assistant for Real-Time On-Site Guidance and Compliance Monitoring",
+      "reason": "The official NJIT repository abstract describes a wearable construction assistant that streams audio/vision to cloud LLM/RAG for guidance; it is an application system and reports no LLM inference-efficiency method.",
+      "source_url": "https://doi.org/10.1061/9780784486962.010",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIP.2026.3725720",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2026.3725720"
+      ],
+      "title": "Broadcast-and-Mixing Transformer for 3D Semantic Segmentation",
+      "reason": "The abstract concerns point-cloud 3D semantic segmentation with a broadcast-and-mixing Transformer, not language-model inference.",
+      "source_url": "https://doi.org/10.1109/TIP.2026.3725720",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.17586/2226-1494-2026-26-4-851-859",
+      "identity_tokens": [
+        "DOI:10.17586/2226-1494-2026-26-4-851-859"
+      ],
+      "title": "Real-time NLP moderation on XMPP with GPU-accelerated inference and adaptive batching",
+      "reason": "Abstract: adaptive batching and GPU-accelerated transformer moderation are directly relevant to LLM serving. The primary full text could not be retrieved for mechanism/evaluation verification.",
+      "source_url": "https://doi.org/10.17586/2226-1494-2026-26-4-851-859",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/friot.2026.1883673",
+      "identity_tokens": [
+        "DOI:10.3389/friot.2026.1883673"
+      ],
+      "title": "Artificial intelligence-driven resource management in edge-cloud computing continuum for internet of things applications: new trends and future directions",
+      "reason": "The primary abstract is an edge-cloud IoT resource-management review spanning broad AI scheduling; foundation-model integration is only an emerging topic, not an LLM inference/serving contribution.",
+      "source_url": "https://doi.org/10.3389/friot.2026.1883673",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/asi9090177",
+      "identity_tokens": [
+        "DOI:10.3390/asi9090177"
+      ],
+      "title": "A Hybrid Method for Semantic Cache Analysis of Computational Kernels in C Programs",
+      "reason": "The abstract concerns semantic cache analysis for computational kernels in C programs; its target is source-level CPU cache analysis, not LLM serving.",
+      "source_url": "https://doi.org/10.3390/asi9090177",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    }
+  ]
+}
