@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f2fb31b2c66dfed-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12344",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12344",
+    "identity_tokens": [
+      "arXiv:2502.12344"
+    ],
+    "reason": "Cycle-level simulation and encoder-only BERT do not establish generative LLM serving performance.",
+    "first_checked_at": "2026-10-05T13:08:14+00:00",
+    "last_checked_at": "2026-10-05T13:08:14+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+    ],
+    "title": "HASTILY: Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory"
+  },
+  "processed_at": "2026-10-05T13:08:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f2fb31b2c66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

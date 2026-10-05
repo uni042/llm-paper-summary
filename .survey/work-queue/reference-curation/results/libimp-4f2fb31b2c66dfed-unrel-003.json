@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4f2fb31b2c66dfed-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.07183",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.07183",
+    "identity_tokens": [
+      "arXiv:2502.07183"
+    ],
+    "reason": "Primary abstract: Guide-dog robot VLM dataset/instruction tuning, not efficiency.",
+    "first_checked_at": "2026-10-05T13:08:14+00:00",
+    "last_checked_at": "2026-10-05T13:08:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "Space-Aware Instruction Tuning: Dataset and Benchmark for Guide Dog Robots Assisting the Visually Impaired"
+  },
+  "processed_at": "2026-10-05T13:08:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4f2fb31b2c66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

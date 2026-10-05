@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:05:40+00:00",
-  "record_count": 1696,
+  "updated_at": "2026-10-05T13:08:16+00:00",
+  "record_count": 1702,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26301,6 +26301,90 @@
         "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
       ],
       "title": "Rearchitecting Datacenter Lifecycle for AI: A TCO-Driven Framework"
+    },
+    "arXiv:2502.20695": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.20695",
+      "identity_tokens": [
+        "arXiv:2502.20695"
+      ],
+      "reason": "Offline vector-index construction is retrieval infrastructure, not LLM execution; no online RAG or end-to-end serving latency is established.",
+      "first_checked_at": "2026-10-05T13:08:13+00:00",
+      "last_checked_at": "2026-10-05T13:08:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "title": "Scalable Overload-Aware Graph-Based Index Construction for 10-Billion-Scale Vector Similarity Search"
+    },
+    "arXiv:2502.12051": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12051",
+      "identity_tokens": [
+        "arXiv:2502.12051"
+      ],
+      "reason": "It is secondary and cross-domain, not a focused inference method or serving measurement.",
+      "first_checked_at": "2026-10-05T13:08:14+00:00",
+      "last_checked_at": "2026-10-05T13:08:14+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+      ],
+      "title": "How to Upscale Neural Networks with Scaling Law? A Survey and Practical Guidelines"
+    },
+    "arXiv:2502.12344": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12344",
+      "identity_tokens": [
+        "arXiv:2502.12344"
+      ],
+      "reason": "Cycle-level simulation and encoder-only BERT do not establish generative LLM serving performance.",
+      "first_checked_at": "2026-10-05T13:08:14+00:00",
+      "last_checked_at": "2026-10-05T13:08:14+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "HASTILY: Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory"
+    },
+    "DOI:10.1109/jiot.2025.3550841": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2025.3550841",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3550841"
+      ],
+      "reason": "The abstract suggests a direct MoE inference-memory/response-rate optimization, but without primary body access the concrete measurements and limitations cannot be verified.",
+      "first_checked_at": "2026-10-05T13:08:14+00:00",
+      "last_checked_at": "2026-10-05T13:08:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "An Adaptive and Scalable Framework for Resource-Efficient Deployment of Mixture of Experts in LLM-Based Intelligent IoT Networks"
+    },
+    "DOI:10.1109/access.2025.3592308": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3592308",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3592308"
+      ],
+      "reason": "IEEE full text could not be retrieved to verify method or simulated evaluation.",
+      "first_checked_at": "2026-10-05T13:08:15+00:00",
+      "last_checked_at": "2026-10-05T13:08:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ],
+      "title": "Edge-LLM Inference With Cost-Aware Layer Allocation and Adaptive Scheduling"
+    },
+    "arXiv:2408.10210": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.10210",
+      "identity_tokens": [
+        "arXiv:2408.10210"
+      ],
+      "reason": "LLM効率との接点は蒸留後の小型化という広い可能性にとどまり、本文もsymbolic KDのsurveyで直接のserving貢献を特定できないためborderline。",
+      "first_checked_at": "2026-10-05T13:08:16+00:00",
+      "last_checked_at": "2026-10-05T13:08:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md"
+      ],
+      "title": "A Survey on Symbolic Knowledge Distillation of Large Language Models"
     }
   }
 }
