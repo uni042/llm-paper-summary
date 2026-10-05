@@ -35,10 +35,15 @@
   "selection_reason": "各sampleの難易度に応じてBERTの中間classifierから早期終了させ、全layer通過を回避するdynamic early-exit方式。品質劣化を小さく保ちながら推論時間を最大約40%削減し、Transformer inference accelerationを直接評価するため対象内。",
   "semantic_scholar_id": "90a1491ac32e732c93773354e4e665794ed4d490",
   "source_url": "https://arxiv.org/abs/2004.12993",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2020
+  "year": 2020,
+  "superseded_at": "2026-10-05T15:54:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+  "represented_canonical_id": "arXiv:2004.12993",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

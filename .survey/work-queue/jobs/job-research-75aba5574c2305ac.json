@@ -35,10 +35,15 @@
   "selection_reason": "Transformer/BERTのmulti-head attentionを推論時にgreedy pruningし、多数headを除去してaccuracyをほぼ維持できることを示し、推論速度・memory効率改善を直接検討するため推論向け構造圧縮として収録対象。",
   "semantic_scholar_id": "b03c7ff961822183bab66b2e594415e585d3fd09",
   "source_url": "https://arxiv.org/abs/1905.10650",
-  "status": "ready",
+  "status": "superseded",
   "title": "Are Sixteen Heads Really Better than One?",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-05T15:54:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+  "represented_canonical_id": "arXiv:1905.10650",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

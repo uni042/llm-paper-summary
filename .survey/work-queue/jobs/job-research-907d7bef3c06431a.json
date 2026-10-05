@@ -35,10 +35,15 @@
   "selection_reason": "LayerDropでtraining時にlayer単位のstructured dropoutを行い、推論時には追加fine-tuningなしで任意深度のsub-networkへpruneできる。Transformer/BERT系のinference-time depth pruningと計算削減を最終適用に含むため収録対象。",
   "semantic_scholar_id": "f4a8480cffa491020bdbb8c4c4e7a7e923b1c2c1",
   "source_url": "https://arxiv.org/abs/1909.11556",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reducing Transformer Depth on Demand with Structured Dropout",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2019
+  "year": 2019,
+  "superseded_at": "2026-10-05T15:54:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+  "represented_canonical_id": "arXiv:1909.11556",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
