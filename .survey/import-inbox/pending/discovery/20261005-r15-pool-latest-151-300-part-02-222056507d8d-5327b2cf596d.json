@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-151-300-part-02-222056507d8d",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/k16-1029",
+      "identity_tokens": [
+        "DOI:10.18653/v1/k16-1029"
+      ],
+      "title": "Compression of Neural Machine Translation Models via Pruning",
+      "reason": "NMT pruning/model-size compression; runtime reduction is outside scope.",
+      "source_url": "https://aclanthology.org/K16-1029/",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.08771",
+      "identity_tokens": [
+        "arXiv:2104.08771"
+      ],
+      "title": "Cross-Attention is All You Need: Adapting Pretrained Transformers for Machine Translation",
+      "reason": "Transformer adaptation for translation quality/training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2104.08771",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.08045-krul-dynamic-cross-layer-kv-restoration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tit.2012.2186786",
+      "identity_tokens": [
+        "DOI:10.1109/tit.2012.2186786"
+      ],
+      "title": "Fixed-Length Lossy Compression in the Finite Blocklength Regime",
+      "reason": "Finite-blocklength information-theoretic compression, not neural model compression.",
+      "source_url": "https://arxiv.org/abs/1102.3944",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04165",
+      "identity_tokens": [
+        "arXiv:1906.04165"
+      ],
+      "title": "Leveraging BERT for Extractive Text Summarization on Lectures",
+      "reason": "BERT lecture summarization application, no efficiency method.",
+      "source_url": "https://arxiv.org/abs/1906.04165",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3724420",
+      "identity_tokens": [
+        "DOI:10.1145/3724420"
+      ],
+      "title": "Empowering Edge Intelligence: A Comprehensive Survey on On-Device AI Models",
+      "reason": "General edge-AI survey, not focused on LLM inference/serving or comparative efficiency results.",
+      "source_url": "https://arxiv.org/abs/2503.06027",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ]
+    }
+  ]
+}
