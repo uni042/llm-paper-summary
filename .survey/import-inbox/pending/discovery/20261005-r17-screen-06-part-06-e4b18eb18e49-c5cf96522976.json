@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-06-part-06-e4b18eb18e49",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15142",
+      "identity_tokens": [
+        "arXiv:2607.15142"
+      ],
+      "title": "Improving Weak World Models Behind Strong Agents in Atari Pong",
+      "reason": "This is world-model and reinforcement-learning research for Atari, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2607.15142",
+      "first_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "last_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13455",
+      "identity_tokens": [
+        "arXiv:2607.13455"
+      ],
+      "title": "Reverse to Advance: Teleoperation-Cost Effective Hard Policy Learning from Reversed Easy Tasks",
+      "reason": "The paper optimizes robot teleoperation-data collection and policy learning, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2607.13455",
+      "first_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "last_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13770",
+      "identity_tokens": [
+        "arXiv:2607.13770"
+      ],
+      "title": "Kaleido: Algorithm-Hardware Co-Design for Video Diffusion Transformers by Exploiting Latent Space Correlations",
+      "reason": "Kaleido accelerates video diffusion transformers; despite transformer attention overlap, the workload is vDiT video generation rather than LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2607.13770",
+      "first_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "last_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20553",
+      "identity_tokens": [
+        "arXiv:2607.20553"
+      ],
+      "title": "CMI-Mem: Toward Generalizable Long-Term Memory Management via CMI-Augmented Reinforcement Learning",
+      "reason": "CMI-Mem is an LLM-agent memory manager and the abstract claims more efficient training and inference, but the body reports memory QA accuracy and RL rollout/training stability without inference latency, token, or runtime-resource results. The efficiency claim cannot yet be tied to the in-scope serving path.",
+      "source_url": "https://arxiv.org/abs/2607.20553",
+      "first_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "last_checked_at": "2026-10-05T03:23:56.573146+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
