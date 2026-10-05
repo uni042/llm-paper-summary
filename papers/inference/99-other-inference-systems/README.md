@@ -1111,11 +1111,11 @@
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：123  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：110  
+  実装：✓ ・ リポジトリ内被引用：111  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -1245,15 +1245,15 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：250  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：251  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：74  
+  実装：✓ ・ リポジトリ内被引用：75  
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   重み・活性化を細粒度に量子化する方式、層単位知識蒸留（層-by-層 knowledge distillation; LKD）、量子化と逆量子化のオーバーヘッドを消す最適化バックエンドを一体化している。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -1305,7 +1305,7 @@
   DeeBERTは、すべての入力をBERT最終層まで処理する固定深度推論をやめ、簡単な入力は途中層で分類を確定する早期終了（early exit）方式である。
 
 - **2020-07 · [FTRANS: Energy-Efficient Acceleration of Transformers using FPGA](2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   Transformerは大規模な全結合行列を多数持ち、組込み・エッジ向けFPGAでは重み容量と外部メモリ転送がボトルネックになる。同時にBCMの規則構造へ合わせたFPGAデータパスを設計することで、圧縮後の表現を展開せず直接計算する。
 
 ### 8年前（2018-11〜2019-10）
@@ -1326,13 +1326,13 @@
   実装：✓ ・ リポジトリ内被引用：10  
   本論文は、多頭注意（multi-head 注意機構）の全ヘッドが推論時にも必要なのかを実験的に検証し、かなりの割合が冗長であることを示す。
 
+- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  Q-BERTはBERTの推論時メモリ容量と遅延を減らすため、重みを一律bit幅で量子化するのではなく、層・groupごとの感度に応じて精度を配分する方式である。group-wise量子化とHessianに基づく混合精度割当を組み合わせ、2bit級の重みまで下げても4つのNLPタスクで最大性能低下を2.3%以内に抑えた。
+
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   Q8BERTは、BERTをproductionへ配置するときのパラメータ メモリ、メモリ 帯域、整数演算利用を改善するため、重みと活性値を8bitへ量子化する研究である。論文はBERTの下流 accuracyをほぼ維持しながら約4倍圧縮できることを示し、INT8演算を高速に実行できるハードウェアでは推論速度改善につながるとする。
-
-- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  Q-BERTはBERTの推論時メモリ容量と遅延を減らすため、重みを一律bit幅で量子化するのではなく、層・groupごとの感度に応じて精度を配分する方式である。group-wise量子化とHessianに基づく混合精度割当を組み合わせ、2bit級の重みまで下げても4つのNLPタスクで最大性能低下を2.3%以内に抑えた。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
