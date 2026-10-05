@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bfa6d3982b86740e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.13720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.13720",
+    "identity_tokens": [
+      "arXiv:2410.13720"
+    ],
+    "reason": "Abstract introduces media foundation models for video generation; no LLM inference-efficiency or serving contribution.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+    ],
+    "title": "Movie Gen: A Cast of Media Foundation Models"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bfa6d3982b86",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

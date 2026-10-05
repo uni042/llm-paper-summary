@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b097b52299a8c8ea-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.17177",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.17177",
+    "identity_tokens": [
+      "arXiv:2402.17177"
+    ],
+    "reason": "Abstract reviews Sora and large vision models, focusing on background, limitations, and opportunities rather than LLM inference efficiency or serving.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md"
+    ],
+    "title": "Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b097b52299a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

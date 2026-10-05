@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-829812b066779004-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.52202/075280-0441",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.52202/075280-0441",
+    "identity_tokens": [
+      "DOI:10.52202/075280-0441"
+    ],
+    "reason": "Official proceedings DOI record was not retrievable as a usable primary abstract during screening.",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T00:53:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
+    ],
+    "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+  },
+  "processed_at": "2026-10-05T00:53:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-829812b06677",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

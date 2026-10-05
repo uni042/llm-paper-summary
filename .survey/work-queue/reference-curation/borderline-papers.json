@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:50:54+00:00",
-  "record_count": 469,
+  "updated_at": "2026-10-05T00:53:14+00:00",
+  "record_count": 478,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6731,6 +6731,141 @@
         "papers/inference/16-weight-quantization-compression/2026-2610.01265-rapidmoe-exploiting-cross-asymmetry-via-adaptive-residual-offloading-for.md"
       ],
       "title": "Model Compression and Hardware Acceleration for Neural Networks: A Comprehensive Survey"
+    },
+    "arXiv:1902.09574": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.09574",
+      "identity_tokens": [
+        "arXiv:1902.09574"
+      ],
+      "reason": "The experiments evaluate sparsification of a WMT 2014 neural-translation Transformer and ResNet-50 using sparsity/quality trade-offs, but do not measure LLM inference or serving performance. The Transformer-compression connection is indirect.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "The State of Sparsity in Deep Neural Networks"
+    },
+    "DOI:10.1145/322217.322232": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/322217.322232",
+      "identity_tokens": [
+        "DOI:10.1145/322217.322232"
+      ],
+      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Parallel Prefix Computation"
+    },
+    "DOI:10.52202/075280-0441": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/075280-0441",
+      "identity_tokens": [
+        "DOI:10.52202/075280-0441"
+      ],
+      "reason": "Official proceedings DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
+      ],
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
+    },
+    "DOI:10.18653/v1/w16-2301": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/w16-2301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w16-2301"
+      ],
+      "reason": "Official ACL Anthology record identifies workshop proceedings but provides no usable abstract.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md"
+      ],
+      "title": "Findings of the 2016 Conference on Machine Translation"
+    },
+    "DOI:10.1109/wacv48630.2021.00357": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
+      "identity_tokens": [
+        "DOI:10.1109/wacv48630.2021.00357"
+      ],
+      "reason": "The method reduces attention memory and computation, but the full text evaluates only vision tasks and does not test language models, causal attention, or LLM inference.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Efficient Attention: Attention with Linear Complexities"
+    },
+    "DOI:10.1109/micro.2016.7783723": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/micro.2016.7783723",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783723"
+      ],
+      "reason": "Official IEEE DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ],
+      "title": "Cambricon-X: An accelerator for sparse neural networks"
+    },
+    "DOI:10.1038/s41591-024-03141-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41591-024-03141-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-024-03141-0"
+      ],
+      "reason": "The official Nature DOI page did not yield a usable primary abstract in this screening run.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection"
+    },
+    "DOI:10.1007/s44336-024-00009-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44336-024-00009-2",
+      "identity_tokens": [
+        "DOI:10.1007/s44336-024-00009-2"
+      ],
+      "reason": "The survey includes agent-architecture examples that reduce context and improve inference efficiency, but its focus is LLM multi-agent workflows and communication rather than model inference or serving systems.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges"
+    },
+    "DOI:10.18653/v1/d19-1445": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d19-1445",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1445"
+      ],
+      "reason": "The paper is an attention-interpretability study. Head disabling sometimes preserves or improves task accuracy, but it does not implement parameter/head pruning or measure inference savings.",
+      "first_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Revealing the Dark Secrets of BERT"
     }
   }
 }
