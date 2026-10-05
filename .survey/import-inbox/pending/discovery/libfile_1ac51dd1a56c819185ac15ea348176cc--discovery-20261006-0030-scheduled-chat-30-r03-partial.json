@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261006-0030-scheduled-chat-30/r03",
+  "reference_main_sha": "4f86394b1c3beddf1e64ddb16cfcf9785eb0a79b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02707",
+      "identity_tokens": [
+        "arXiv:2306.02707"
+      ],
+      "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4",
+      "reason": "GPT-4/ChatGPTのexplanation traceを教師信号として13Bモデルをprogressive imitation learningする能力・学習研究。推論runtime/serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2306.02707",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でimitation learning、explanation traces、BBH/AGIEval等の能力評価が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-06T00:55:00+09:00",
+      "last_checked_at": "2026-10-06T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit",
+      "reason": "CNTKはcomputation graph、multi-GPU/server parallelism、memory sharing、recurrent-loop inference/executionを含む高性能DL frameworkで推論runtimeとの接点がある。ただしLLM/Transformer以前の汎用DNN frameworkで、現行LLM推論を直接評価しないためborderline。",
+      "source_url": "https://www.kdd.org/kdd2016/tutorials/view/cntk",
+      "body_check": "full_text_relevance_review: 公式KDD/Microsoft資料でautomatic differentiation、multi-server parallelization、memory sharing、recurrent-loop inference/executionを確認。system研究だがLLM専用ではないためborderline。",
+      "first_checked_at": "2026-10-06T00:55:00+09:00",
+      "last_checked_at": "2026-10-06T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:1811.03115",
+      "identity_tokens": [
+        "arXiv:1811.03115"
+      ],
+      "title": "Blockwise Parallel Decoding for Deep Autoregressive Models",
+      "reason": "複数未来tokenを並列予測しscoring modelで最長prefixを検証するblockwise parallel decodingにより、自己回帰生成の逐次critical pathを直接短縮する。品質維持でiteration最大2x削減、品質を少し許容すれば7x、wall-clock最大4x高速化を報告するため対象内。",
+      "source_url": "https://arxiv.org/abs/1811.03115",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でparallel draft prediction、longest-prefix validation、machine translation/image super-resolutionでiteration 2x/7x、wall-clock最大4xを確認。自己回帰推論高速化が最終適用先。",
+      "first_checked_at": "2026-10-06T00:55:00+09:00",
+      "last_checked_at": "2026-10-06T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10762",
+      "identity_tokens": [
+        "arXiv:2410.10762"
+      ],
+      "title": "AFlow: Automating Agentic Workflow Generation",
+      "reason": "LLM呼出しnodeからなるworkflowをMCTSで自動探索し、小型modelでGPT-4oを一部task上4.55%のinference dollar costで上回る。agentic inference costに関連するが、主要貢献はworkflow generation/optimizationでserving runtimeではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.10762",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でcode-represented workflow、MCTS、execution feedback、6 benchmark、inference cost比較を確認。agentic runtime専用systemではないためborderline。",
+      "first_checked_at": "2026-10-06T00:55:00+09:00",
+      "last_checked_at": "2026-10-06T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2402.13718",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.13718",
+        "arXiv:2402.13718"
+      ],
+      "title": "∞Bench: Extending Long Context Evaluation Beyond 100K Tokens",
+      "reason": "平均100K超の長文脈LLM能力を測るbenchmarkで、長文脈runtime、KV cache、attention高速化手法そのものを提案・評価するsystem研究ではない。",
+      "source_url": "https://arxiv.org/abs/2402.13718",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で100K+ long-context benchmarkとmodel capability評価が主題と確認。推論system最適化ではないため本文未読。",
+      "first_checked_at": "2026-10-06T00:55:00+09:00",
+      "last_checked_at": "2026-10-06T00:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 25
+    }
+  ]
+}
