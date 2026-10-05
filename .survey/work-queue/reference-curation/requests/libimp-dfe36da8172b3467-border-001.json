@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dfe36da8172b3467-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2609.13846",
+  "reason": "DTP向けlayoutの動機はinference architectureだが、この論文の確認可能な改善はdistillation step数で、実serving効率の根拠が不足。既存DTP runtime比較や測定に解決可能なfollowupが必要なほど具体的でなくborderline。",
+  "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+  "identity_tokens": [
+    "arXiv:2609.13846"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/12-moe-parallelism-communication/2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md",
+    "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfe36da8172b",
+  "source_precheck_request_id": null
+}
