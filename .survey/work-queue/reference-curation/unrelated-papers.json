@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:21:54+00:00",
-  "record_count": 1593,
+  "updated_at": "2026-10-05T01:24:02+00:00",
+  "record_count": 1597,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -22984,6 +22984,66 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models"
+    },
+    "arXiv:2606.12273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12273",
+      "identity_tokens": [
+        "arXiv:2606.12273"
+      ],
+      "reason": "Diffusion LM denoising/post-training optimization.",
+      "first_checked_at": "2026-10-05T01:24:02+00:00",
+      "last_checked_at": "2026-10-05T01:24:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md"
+      ],
+      "title": "Beyond Fully Random Masking: Attention-Guided Denoising and Optimization for Diffusion Language Models"
+    },
+    "arXiv:2404.02183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.02183",
+      "identity_tokens": [
+        "arXiv:2404.02183"
+      ],
+      "reason": "Multi-agent code generation/optimization, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T01:24:02+00:00",
+      "last_checked_at": "2026-10-05T01:24:02+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ],
+      "title": "Self-Organized Agents: A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization"
+    },
+    "arXiv:1911.11313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.11313",
+      "identity_tokens": [
+        "arXiv:1911.11313"
+      ],
+      "reason": "CPU/GPU product-trend synthesis, no LLM inference-system evaluation.",
+      "first_checked_at": "2026-10-05T01:24:02+00:00",
+      "last_checked_at": "2026-10-05T01:24:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Summarizing CPU and GPU Design Trends with Product Data"
+    },
+    "arXiv:2607.26037": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26037",
+      "identity_tokens": [
+        "arXiv:2607.26037"
+      ],
+      "reason": "Video world model and video diffusion generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T01:24:02+00:00",
+      "last_checked_at": "2026-10-05T01:24:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Wonder: Video World Model Done Better"
     }
   }
 }

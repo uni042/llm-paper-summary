@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-adc2bd14efdbdee4-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.02183",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.02183",
+    "identity_tokens": [
+      "arXiv:2404.02183"
+    ],
+    "reason": "Multi-agent code generation/optimization, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T01:24:02+00:00",
+    "last_checked_at": "2026-10-05T01:24:02+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+    ],
+    "title": "Self-Organized Agents: A LLM Multi-Agent Framework toward Ultra Large-Scale Code Generation and Optimization"
+  },
+  "processed_at": "2026-10-05T01:24:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adc2bd14efdb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

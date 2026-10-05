@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-adc2bd14efdbdee4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.12273",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.12273",
+    "identity_tokens": [
+      "arXiv:2606.12273"
+    ],
+    "reason": "Diffusion LM denoising/post-training optimization.",
+    "first_checked_at": "2026-10-05T01:24:02+00:00",
+    "last_checked_at": "2026-10-05T01:24:02+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md"
+    ],
+    "title": "Beyond Fully Random Masking: Attention-Guided Denoising and Optimization for Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T01:24:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-adc2bd14efdb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
