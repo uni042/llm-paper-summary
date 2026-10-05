@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f45fe89e21da325a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tc.2026.3702749",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tc.2026.3702749",
+    "identity_tokens": [
+      "DOI:10.1109/tc.2026.3702749"
+    ],
+    "reason": "一次要旨とtitleはEfficient Mixture-of-Experts Training With Pipelining Optimizationを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+    "first_checked_at": "2026-10-05T04:15:33+00:00",
+    "last_checked_at": "2026-10-05T04:15:33+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
+    ],
+    "title": "Efficient Mixture-of-Experts Training With Pipelining Optimization"
+  },
+  "processed_at": "2026-10-05T04:15:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f45fe89e21da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

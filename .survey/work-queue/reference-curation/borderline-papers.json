@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:12:39+00:00",
-  "record_count": 846,
+  "updated_at": "2026-10-05T04:15:33+00:00",
+  "record_count": 856,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -12542,6 +12542,165 @@
         "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
       ],
       "title": "Survey on joint compression and fine-tuning of large language models: Methods, toolchains, and open challenges under resource constraints"
+    },
+    "DOI:10.1109/jiot.2026.3719132": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jiot.2026.3719132",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3719132"
+      ],
+      "reason": "主題は対象範囲と明確に接するが、一次本文を取得できず、scheduler/cache機構、比較条件、実測範囲と限界を検証できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:32+00:00",
+      "last_checked_at": "2026-10-05T04:15:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "A Cloud--Edge Collaborative Large Language Model Inference Framework Based on Historical Context Matching"
+    },
+    "DOI:10.1109/jssc.2026.3708458": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2026.3708458",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3708458"
+      ],
+      "reason": "対象性は明確だが、一次本文のmethod・hardware evaluation・baseline conditionsを取得確認できず、定量比較の解釈を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:32+00:00",
+      "last_checked_at": "2026-10-05T04:15:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "PDAcc: A Prefill-Decode Disaggregated MCM-Based Accelerator for Multi-Task Large Language Model Applications"
+    },
+    "DOI:10.1109/tcad.2026.3660209": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2026.3660209",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2026.3660209"
+      ],
+      "reason": "model storage/inference hardwareには関連し得るが、対象モデルがLLMか本文から確認できず、一次本文も取得できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:32+00:00",
+      "last_checked_at": "2026-10-05T04:15:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "A High-Density RRAM Memory Architecture With IO-Assisted-Core-Transistor 1T1R Array and Two-Level Encoding for Edge AI Models"
+    },
+    "DOI:10.1109/tcad.2026.3663251": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2026.3663251",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2026.3663251"
+      ],
+      "reason": "LLM inference hardware efficiencyに明確に接する一方、一次本文が取得できず、方式・評価条件・近似の品質限界を本文で確認できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:32+00:00",
+      "last_checked_at": "2026-10-05T04:15:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Beyond Uniform Approximation: Toward Efficient Computing in Logarithmic Number System for Large Language Models"
+    },
+    "DOI:10.1109/tcsi.2026.3692014": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsi.2026.3692014",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2026.3692014"
+      ],
+      "reason": "edge Transformer inference acceleratorとして対象候補だが、一次本文を取得できず、attention pipeline/design、simulation/synthesis条件および限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:32+00:00",
+      "last_checked_at": "2026-10-05T04:15:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "CAMformer: Binary Associative Memory Is All You Need"
+    },
+    "DOI:10.1109/lcn67947.2026.11660767": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+      "identity_tokens": [
+        "DOI:10.1109/lcn67947.2026.11660767"
+      ],
+      "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+      "first_checked_at": "2026-10-05T04:15:33+00:00",
+      "last_checked_at": "2026-10-05T04:15:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems"
+    },
+    "DOI:10.1109/lcn67947.2026.11660787": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660787",
+      "identity_tokens": [
+        "DOI:10.1109/lcn67947.2026.11660787"
+      ],
+      "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+      "first_checked_at": "2026-10-05T04:15:33+00:00",
+      "last_checked_at": "2026-10-05T04:15:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "From Brownfield CLI to Intent Models: A Guardrailed Agentic Translation Workflow"
+    },
+    "DOI:10.1109/mc.2026.3717392": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mc.2026.3717392",
+      "identity_tokens": [
+        "DOI:10.1109/mc.2026.3717392"
+      ],
+      "reason": "対象テーマに近いが、一次本文の議論・根拠・技術範囲を取得できず、短い概説記事がLLM inference efficiencyへ与える具体的な貢献を判定できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:33+00:00",
+      "last_checked_at": "2026-10-05T04:15:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference"
+    },
+    "DOI:10.1109/tc.2026.3701443": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2026.3701443",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2026.3701443"
+      ],
+      "reason": "serving/resource coordinationとの関連可能性はあるが、本文を取得できず、LLM workloadでの検証やinference serviceへの適用範囲が確認できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:33+00:00",
+      "last_checked_at": "2026-10-05T04:15:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning"
+    },
+    "DOI:10.1109/tc.2026.3713223": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2026.3713223",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2026.3713223"
+      ],
+      "reason": "Transformer inference acceleratorとして関係し得るが、LLM workloadを含むか、本文の評価条件・追加費用が確認できず、一次本文も取得できないためborderline。",
+      "first_checked_at": "2026-10-05T04:15:33+00:00",
+      "last_checked_at": "2026-10-05T04:15:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "HDQAtt: A Photonic Transformer Accelerator via Hierarchical Dynamic Precision Quantification"
     }
   }
 }

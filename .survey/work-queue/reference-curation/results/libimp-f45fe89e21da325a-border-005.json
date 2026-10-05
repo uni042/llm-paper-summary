@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f45fe89e21da325a-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tc.2026.3713223",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tc.2026.3713223",
+    "identity_tokens": [
+      "DOI:10.1109/tc.2026.3713223"
+    ],
+    "reason": "Transformer inference acceleratorとして関係し得るが、LLM workloadを含むか、本文の評価条件・追加費用が確認できず、一次本文も取得できないためborderline。",
+    "first_checked_at": "2026-10-05T04:15:33+00:00",
+    "last_checked_at": "2026-10-05T04:15:33+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+    ],
+    "title": "HDQAtt: A Photonic Transformer Accelerator via Hierarchical Dynamic Precision Quantification"
+  },
+  "processed_at": "2026-10-05T04:15:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f45fe89e21da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

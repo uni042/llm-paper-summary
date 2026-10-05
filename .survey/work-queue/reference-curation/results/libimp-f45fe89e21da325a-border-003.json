@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f45fe89e21da325a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tc.2026.3701443",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tc.2026.3701443",
+    "identity_tokens": [
+      "DOI:10.1109/tc.2026.3701443"
+    ],
+    "reason": "serving/resource coordinationとの関連可能性はあるが、本文を取得できず、LLM workloadでの検証やinference serviceへの適用範囲が確認できないためborderline。",
+    "first_checked_at": "2026-10-05T04:15:33+00:00",
+    "last_checked_at": "2026-10-05T04:15:33+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "GACER-M: Granularity-Aware and Memory-Centric Coordination for Multi-Tenant Deep Learning"
+  },
+  "processed_at": "2026-10-05T04:15:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f45fe89e21da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
