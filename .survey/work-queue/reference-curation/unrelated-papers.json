@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:37:33+00:00",
-  "record_count": 5632,
+  "updated_at": "2026-10-05T14:39:51+00:00",
+  "record_count": 5662,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -81813,6 +81813,437 @@
         "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
       ],
       "title": "MMQ: Multimodal Mixture-of-Quantization Tokenization for Semantic ID Generation and User Behavioral Adaptation"
+    },
+    "arXiv:2411.00308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.00308",
+      "identity_tokens": [
+        "arXiv:2411.00308"
+      ],
+      "reason": "This scoping review surveys GPT applications in games; it does not address inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:39:46+00:00",
+      "last_checked_at": "2026-10-05T14:39:46+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "GPT for Games: An Updated Scoping Review (2020–2024)"
+    },
+    "arXiv:2410.20553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.20553",
+      "identity_tokens": [
+        "arXiv:2410.20553"
+      ],
+      "reason": "SPICEPilot is a circuit-generation dataset and benchmark for LLM code generation, focused on capability/accuracy rather than model inference efficiency.",
+      "first_checked_at": "2026-10-05T14:39:46+00:00",
+      "last_checked_at": "2026-10-05T14:39:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "title": "SPICEPilot: Navigating SPICE Code Generation and Simulation with AI Guidance"
+    },
+    "arXiv:2409.01192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01192",
+      "identity_tokens": [
+        "arXiv:2409.01192"
+      ],
+      "reason": "SSD4Rec is a Mamba-based sequential recommendation model; its task and evaluation are recommender systems, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "SSD4Rec: A Structured State Space Duality Model for Efficient Sequential Recommendation"
+    },
+    "DOI:10.24963/ijcai.2024/474": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2024/474",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2024/474"
+      ],
+      "reason": "HyQ quantizes CNN-transformer hybrid vision models for image classification and FPGA resource reduction; it is not an LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "HyQ: Hardware-Friendly Post-Training Quantization for CNN-Transformer Hybrid Networks"
+    },
+    "arXiv:2306.01385": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.01385",
+      "identity_tokens": [
+        "arXiv:2306.01385"
+      ],
+      "reason": "The paper prunes speech representation models (wav2vec2/Hubert/WavLM); it does not study LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Task-Agnostic Structured Pruning of Speech Representation Models"
+    },
+    "arXiv:2507.05261": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05261",
+      "identity_tokens": [
+        "arXiv:2507.05261"
+      ],
+      "reason": "TokenShapley addresses token-level attribution and retrieval-based explanation, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ],
+      "title": "TokenShapley: Token Level Context Attribution with Shapley Value"
+    },
+    "arXiv:2505.12805": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12805",
+      "identity_tokens": [
+        "arXiv:2505.12805"
+      ],
+      "reason": "FedSVD addresses differentially private federated LoRA training and gradient-noise behavior; it is a training method, not inference optimization.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "FedSVD: Adaptive Orthogonalization for Private Federated Learning with LoRA"
+    },
+    "arXiv:2510.03206": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03206",
+      "identity_tokens": [
+        "arXiv:2510.03206"
+      ],
+      "reason": "The paper studies expressivity and trainability of continuous/discrete diffusion language reasoners; its stated contribution is reasoning representation/capability, not inference efficiency.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Coevolutionary Continuous Discrete Diffusion: Make Your Diffusion Language Model a Latent Reasoner"
+    },
+    "arXiv:2510.01624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.01624",
+      "identity_tokens": [
+        "arXiv:2510.01624"
+      ],
+      "reason": "The work analyzes SFT/RL post-training quality metrics and downstream RL outcomes; it does not reduce inference/serving cost.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Quagmires in SFT-RL Post-Training: When High SFT Scores Mislead and What to Use Instead"
+    },
+    "arXiv:2505.13271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13271",
+      "identity_tokens": [
+        "arXiv:2505.13271"
+      ],
+      "reason": "CSC-SQL combines parallel self-consistency sampling with corrective revision to improve text-to-SQL accuracy, increasing test-time compute rather than optimizing it.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "CSC-SQL: Corrective Self-Consistency in Text-to-SQL via Reinforcement Learning"
+    },
+    "arXiv:2604.26752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.26752",
+      "identity_tokens": [
+        "arXiv:2604.26752"
+      ],
+      "reason": "This report describes GLM-5V-Turbo multimodal model design, training, and agent capability improvements; the abstract does not present an inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents"
+    },
+    "arXiv:2604.11748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11748",
+      "identity_tokens": [
+        "arXiv:2604.11748"
+      ],
+      "reason": "LangFlow studies continuous diffusion language-model quality/perplexity and comparisons with discrete models; its primary paper does not present inference-latency, throughput, memory, or serving-efficiency results.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "LangFlow: Continuous Diffusion Rivals Discrete in Language Modeling"
+    },
+    "DOI:10.1145/3788284": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3788284",
+      "identity_tokens": [
+        "DOI:10.1145/3788284"
+      ],
+      "reason": "The survey covers LLM function-calling concepts and evaluation, with computational efficiency as one metric among task challenges; it does not focus on methods for optimizing LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "title": "Function Calling in Large Language Models: Industrial Practices, Challenges, and Future Directions"
+    },
+    "DOI:10.1038/s41588-025-02441-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41588-025-02441-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41588-025-02441-6"
+      ],
+      "reason": "DNA-Diffusion is a synthetic regulatory-element generator evaluated in genomics; it is unrelated to language-model inference.",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Designing synthetic regulatory elements using the generative AI framework DNA-Diffusion"
+    },
+    "arXiv:2511.05963": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05963",
+      "identity_tokens": [
+        "arXiv:2511.05963"
+      ],
+      "reason": "NextLat studies latent-state/world-model learning objectives and representation compactness, not computationally efficient LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Next-Latent Prediction Transformers Learn Compact World Models"
+    },
+    "DOI:10.1109/cluster52292.2023.00015": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cluster52292.2023.00015",
+      "identity_tokens": [
+        "DOI:10.1109/cluster52292.2023.00015"
+      ],
+      "reason": "大規模MoEの並列trainingにおけるload balancingが主題。学習時の効率化である。",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md"
+      ],
+      "title": "Prophet: Fine-grained Load Balancing for Parallel Training of Large-scale MoE Models"
+    },
+    "arXiv:2308.09138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.09138",
+      "identity_tokens": [
+        "arXiv:2308.09138"
+      ],
+      "reason": "prompt variationに対するLLM出力のsemantic consistency・信頼性確保が主題で、推論コスト低減を目的としない。",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Semantic Consistency for Assuring Reliability of Large Language Models"
+    },
+    "arXiv:2604.10734": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10734",
+      "identity_tokens": [
+        "arXiv:2604.10734"
+      ],
+      "reason": "RAGのcontext selectionとNLI-guided MCTSによりfaithfulness/回答品質を高める研究。推論効率の低減は寄与として示されていない。",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Self-Correcting RAG: Enhancing Faithfulness via MMKP Context Selection and NLI-Guided MCTS"
+    },
+    "arXiv:2509.22284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.22284",
+      "identity_tokens": [
+        "arXiv:2509.22284"
+      ],
+      "reason": "SSMの遷移行列をFSA状態追跡に適合させる理論・表現力の研究で、LLM serving効率を扱わない。",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Structured Sparse Transition Matrices to Enable State Tracking in State-Space Models"
+    },
+    "DOI:10.18653/v1/2025.findings-acl.1014": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1014",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1014"
+      ],
+      "reason": "The primary abstract presents LOCCO as a dataset/benchmark for long-term memory retention and rehearsal in LLMs; it does not concern inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Evaluating the Long-Term Memory of Large Language Models"
+    },
+    "SemanticScholar:180e8815a8528162d4b950d769bd8eac037ddafe": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:180e8815a8528162d4b950d769bd8eac037ddafe",
+      "identity_tokens": [
+        "SemanticScholar:180e8815a8528162d4b950d769bd8eac037ddafe"
+      ],
+      "reason": "The primary abstract concerns task-vector model editing, interference, and avoiding coefficient tuning; it does not optimize LLM inference/serving performance.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Mastering Task Arithmetic: τJp as a Key Indicator for Weight Disentanglement"
+    },
+    "SemanticScholar:3a5894a7b82336d2dc99ebf797bda294d24759b8": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:3a5894a7b82336d2dc99ebf797bda294d24759b8",
+      "identity_tokens": [
+        "SemanticScholar:3a5894a7b82336d2dc99ebf797bda294d24759b8"
+      ],
+      "reason": "The primary ICLR abstract presents training-free Mamba context-length extension by calibrating discretization scales (up to 32× context) and reports perplexity; it does not claim inference-cost reduction.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "MambaExtend: A Training-Free Approach to Improve Long Context Extension of Mamba"
+    },
+    "arXiv:2410.04727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04727",
+      "identity_tokens": [
+        "arXiv:2410.04727"
+      ],
+      "reason": "The paper proposes a benchmark/method to evaluate memorization in long-context models, not a model-serving or inference optimization.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Forgetting Curve: A Reliable Method for Evaluating Memorization Capability for Long-Context Models"
+    },
+    "arXiv:2505.11659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11659",
+      "identity_tokens": [
+        "arXiv:2505.11659"
+      ],
+      "reason": "This perspective concerns programmable photonic neural-network hardware broadly; it does not establish an LLM-specific inference or serving method.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Programmable metasurfaces for future photonic artificial intelligence"
+    },
+    "arXiv:2505.05530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.05530",
+      "identity_tokens": [
+        "arXiv:2505.05530"
+      ],
+      "reason": "This survey covers low-bit quantization for deep neural networks generally, without an LLM-specific inference/serving contribution in the primary abstract.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "Low-bit Model Quantization for Deep Neural Networks: A Survey"
+    },
+    "arXiv:2504.09621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09621",
+      "identity_tokens": [
+        "arXiv:2504.09621"
+      ],
+      "reason": "DehazeXL addresses high-resolution image dehazing and image-context modeling, not language-model inference.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "Tokenize Image Patches: Global Context Fusion for Effective Haze Removal in Large Images"
+    },
+    "DOI:10.48550/arxiv.2407.20756": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2407.20756",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.20756",
+        "arXiv:2407.20756"
+      ],
+      "reason": "主題はVLM学習用の高品質な合成データ生成で、推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T14:39:51+00:00",
+      "last_checked_at": "2026-10-05T14:39:51+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "SynthVLM: High-Efficiency and High-Quality Synthetic Data for Vision Language Models"
+    },
+    "arXiv:2407.15748": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.15748",
+      "identity_tokens": [
+        "arXiv:2407.15748"
+      ],
+      "reason": "サイバーセキュリティ向けRAG chatbotの構築・回答品質が主題で、推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T14:39:51+00:00",
+      "last_checked_at": "2026-10-05T14:39:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "MoRSE: Bridging the Gap in Cybersecurity Expertise with Retrieval Augmented Generation"
+    },
+    "arXiv:2404.19553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.19553",
+      "identity_tokens": [
+        "arXiv:2404.19553"
+      ],
+      "reason": "Llama 3のcontext length拡張をQLoRA fine-tuningで実現し、要旨が述べる効率は学習時間の短縮。推論時効率の改善ではない。",
+      "first_checked_at": "2026-10-05T14:39:51+00:00",
+      "last_checked_at": "2026-10-05T14:39:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "Extending Llama-3's Context Ten-Fold Overnight"
+    },
+    "arXiv:2403.09026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09026",
+      "identity_tokens": [
+        "arXiv:2403.09026"
+      ],
+      "reason": "CNN等の一般的DNN acceleratorのdataflow・energy efficiencyを扱い、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-05T14:39:51+00:00",
+      "last_checked_at": "2026-10-05T14:39:51+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "FlexNN: A Dataflow-aware Flexible Deep Learning Accelerator for Energy-Efficient Edge Devices"
     }
   }
 }

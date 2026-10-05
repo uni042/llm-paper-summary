@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-971e3a8d9f02a608-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.13191",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.13191",
+    "identity_tokens": [
+      "arXiv:2308.13191"
+    ],
+    "reason": "The tested models/tasks are encoder-style long-text processing rather than decoder-only LLM generation; transfer to current LLM serving is not established.",
+    "first_checked_at": "2026-10-05T14:39:49+00:00",
+    "last_checked_at": "2026-10-05T14:39:49+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Chunk, Align, Select: A Simple Long-sequence Processing Method for Transformers"
+  },
+  "processed_at": "2026-10-05T14:39:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-971e3a8d9f02",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

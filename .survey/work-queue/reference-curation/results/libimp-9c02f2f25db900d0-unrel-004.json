@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c02f2f25db900d0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.05530",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.05530",
+    "identity_tokens": [
+      "arXiv:2505.05530"
+    ],
+    "reason": "This survey covers low-bit quantization for deep neural networks generally, without an LLM-specific inference/serving contribution in the primary abstract.",
+    "first_checked_at": "2026-10-05T14:39:50+00:00",
+    "last_checked_at": "2026-10-05T14:39:50+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+    ],
+    "title": "Low-bit Model Quantization for Deep Neural Networks: A Survey"
+  },
+  "processed_at": "2026-10-05T14:39:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c02f2f25db9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

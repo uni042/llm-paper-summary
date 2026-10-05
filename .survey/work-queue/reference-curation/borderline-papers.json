@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:37:32+00:00",
-  "record_count": 1878,
+  "updated_at": "2026-10-05T14:39:51+00:00",
+  "record_count": 1888,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29011,6 +29011,158 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs"
+    },
+    "DOI:10.1109/icccworkshops62562.2024.10693742": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccworkshops62562.2024.10693742",
+      "identity_tokens": [
+        "DOI:10.1109/icccworkshops62562.2024.10693742"
+      ],
+      "reason": "The abstract indicates a direct LLM edge/terminal inference optimization, but the primary full text was inaccessible after checking the DOI and IEEE Xplore record; method and experimental evidence therefore remain unverified.",
+      "first_checked_at": "2026-10-05T14:39:46+00:00",
+      "last_checked_at": "2026-10-05T14:39:46+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge and Terminal Cooperation Enabled LLM Deployment Optimization in Wireless Network"
+    },
+    "arXiv:2601.10355": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10355",
+      "identity_tokens": [
+        "arXiv:2601.10355"
+      ],
+      "reason": "The efficiency result concerns a specialized data/trajectory synthesis pipeline and tool-use benchmarks, rather than general user-facing LLM serving; evidence is too narrow for an unqualified follow-up.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking Implicit Experience: Synthesizing Tool-Use Trajectories from Text"
+    },
+    "arXiv:2510.01617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.01617",
+      "identity_tokens": [
+        "arXiv:2510.01617"
+      ],
+      "reason": "Although LLM inference latency is measured, results show little latency gain and the framework is an accuracy-oriented multi-agent topology method; efficiency relevance is weak.",
+      "first_checked_at": "2026-10-05T14:39:47+00:00",
+      "last_checked_at": "2026-10-05T14:39:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AMAS: Adaptively Determining Communication Topology for LLM-based Multi-Agent System"
+    },
+    "arXiv:2510.09719": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09719",
+      "identity_tokens": [
+        "arXiv:2510.09719"
+      ],
+      "reason": "Routing may reduce calls to all candidate models, but this paper primarily optimizes routing quality/scalability; comparative total latency/cost evidence is limited.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ICL-Router: In-Context Learned Model Representations for LLM Routing"
+    },
+    "arXiv:2509.25681": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25681",
+      "identity_tokens": [
+        "arXiv:2509.25681"
+      ],
+      "reason": "The method is a diffusion vision-language-action robotics model with task-specific action inference; transfer to text LLM serving is weak.",
+      "first_checked_at": "2026-10-05T14:39:48+00:00",
+      "last_checked_at": "2026-10-05T14:39:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "dVLA: Diffusion Vision-Language-Action Model with Multimodal Chain-of-Thought"
+    },
+    "arXiv:2310.20558": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.20558",
+      "identity_tokens": [
+        "arXiv:2310.20558"
+      ],
+      "reason": "encoder-only BERTの分類タスクに限定され、autoregressive LLMの生成・servingではないため適用範囲が弱い。",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Breaking the Token Barrier: Chunking and Convolution for Efficient Long Text Classification with BERT"
+    },
+    "arXiv:2308.13191": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.13191",
+      "identity_tokens": [
+        "arXiv:2308.13191"
+      ],
+      "reason": "The tested models/tasks are encoder-style long-text processing rather than decoder-only LLM generation; transfer to current LLM serving is not established.",
+      "first_checked_at": "2026-10-05T14:39:49+00:00",
+      "last_checked_at": "2026-10-05T14:39:49+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chunk, Align, Select: A Simple Long-sequence Processing Method for Transformers"
+    },
+    "arXiv:2505.11892": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11892",
+      "identity_tokens": [
+        "arXiv:2505.11892"
+      ],
+      "reason": "The fast regime depends on bounded entries, and the paper does not demonstrate end-to-end LLM decoding speed or deployment compatibility.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast RoPE Attention: Combining the Polynomial Method and Fast Fourier Transform"
+    },
+    "arXiv:2505.11695": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11695",
+      "identity_tokens": [
+        "arXiv:2505.11695"
+      ],
+      "reason": "Relevant to LLM quantization, but candidate-specific inference-serving speed/memory evidence is not supplied; reported runtime figures cover quantizer/calibration, not generated-token latency.",
+      "first_checked_at": "2026-10-05T14:39:50+00:00",
+      "last_checked_at": "2026-10-05T14:39:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Qronos: Correcting the Past by Shaping the Future... in Post-Training Quantization"
+    },
+    "arXiv:2404.02945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.02945",
+      "identity_tokens": [
+        "arXiv:2404.02945"
+      ],
+      "reason": "極小の特定タスク・MCU向けencoder系モデルの実装であり、生成型LLM/servingへ一般化できる証拠が弱い。",
+      "first_checked_at": "2026-10-05T14:39:51+00:00",
+      "last_checked_at": "2026-10-05T14:39:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing the Deployment of Tiny Transformers on Low-Power MCUs"
     }
   }
 }
