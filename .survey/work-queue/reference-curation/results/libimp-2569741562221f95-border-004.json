@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2569741562221f95-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2107.00910",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2107.00910",
+    "identity_tokens": [
+      "arXiv:2107.00910"
+    ],
+    "reason": "Encoder-only RoBERTa; no decoder generation, KV-cache or LLM-serving evaluation.",
+    "first_checked_at": "2026-10-05T02:09:30+00:00",
+    "last_checked_at": "2026-10-05T02:09:30+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+    ],
+    "title": "Learned Token Pruning for Transformers"
+  },
+  "processed_at": "2026-10-05T02:09:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-256974156222",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

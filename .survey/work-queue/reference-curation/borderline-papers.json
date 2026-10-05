@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:07:09+00:00",
-  "record_count": 670,
+  "updated_at": "2026-10-05T02:09:30+00:00",
+  "record_count": 673,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9782,6 +9782,49 @@
         "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
       ],
       "title": "Empowering Edge Intelligence: A Comprehensive Survey on On-Device AI Models"
+    },
+    "DOI:10.1109/sc41405.2020.00073": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sc41405.2020.00073",
+      "identity_tokens": [
+        "DOI:10.1109/sc41405.2020.00073"
+      ],
+      "reason": "No decoder LLM/token-generation/KV-cache test, limiting direct LLM-serving applicability.",
+      "first_checked_at": "2026-10-05T02:09:29+00:00",
+      "last_checked_at": "2026-10-05T02:09:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md"
+      ],
+      "title": "BATCH: Machine Learning Inference Serving on Serverless Platforms with Adaptive Batching"
+    },
+    "arXiv:2107.00910": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.00910",
+      "identity_tokens": [
+        "arXiv:2107.00910"
+      ],
+      "reason": "Encoder-only RoBERTa; no decoder generation, KV-cache or LLM-serving evaluation.",
+      "first_checked_at": "2026-10-05T02:09:30+00:00",
+      "last_checked_at": "2026-10-05T02:09:30+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "title": "Learned Token Pruning for Transformers"
+    },
+    "DOI:10.1145/3626772.3657957": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3626772.3657957",
+      "identity_tokens": [
+        "DOI:10.1145/3626772.3657957"
+      ],
+      "reason": "Efficiency concerns retrieval benchmark evaluation, not online RAG inference/serving.",
+      "first_checked_at": "2026-10-05T02:09:30+00:00",
+      "last_checked_at": "2026-10-05T02:09:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "Evaluating Retrieval Quality in Retrieval-Augmented Generation"
     }
   }
 }
