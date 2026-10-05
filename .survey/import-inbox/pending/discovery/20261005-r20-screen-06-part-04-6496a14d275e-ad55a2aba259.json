@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-06-part-04-6496a14d275e",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16669",
+      "identity_tokens": [
+        "arXiv:2609.16669"
+      ],
+      "title": "Memory-Skill Isomorphism: One Skill Carrier, Two Native Uses",
+      "reason": "一次本文§4 evaluationとlimitationsを確認。memory/skill carrierの実験・token costはあるが、selected task・小標本の設計監査であり、一般LLM serving/inference optimizationの方法を実証していない。scope fitと証拠の弱さからborderline。",
+      "source_url": "https://arxiv.org/abs/2609.16669",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16710",
+      "identity_tokens": [
+        "arXiv:2609.16710"
+      ],
+      "title": "Continuous-Time Machine Learning: A Unified Mathematical Perspective",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16710",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16730",
+      "identity_tokens": [
+        "arXiv:2609.16730"
+      ],
+      "title": "LSREP: A Longitudinal State-Replay Protocol for Evaluating Conversational Memory, with ICE v2 as an Audited Local-First Architecture",
+      "reason": "一次本文§6–§8のevaluation/limitationsを確認。会話memory architectureがprompt-token/fragment burdenも比較するため隣接性はあるが、主貢献はlongitudinal memory evaluation/local-first architectureで、reported quality/cost tradeoffも限定的。範囲適合が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.16730",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16787",
+      "identity_tokens": [
+        "arXiv:2609.16787"
+      ],
+      "title": "Many Processors, Still One Computer: The Nested Parallel von Neumann Architecture and Nested BSP",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16787",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16800",
+      "identity_tokens": [
+        "arXiv:2609.16800"
+      ],
+      "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement",
+      "reason": "一次本文§3–§5、cost analysisおよびlimitationsを確認。DRPGはenvironment feedback/retrievalからcontinual LLM improvement policiesを生成する方式で、追加policy generation/inference costとtask scoresを扱うが、主題はcontinual capability improvementで標準serving/推論最適化ではない。弱いscope fitのためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.16800",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    }
+  ]
+}
