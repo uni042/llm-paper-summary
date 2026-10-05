@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a56dfb47a2ea7e09-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.07912",
+  "reason": "一次要旨: We propose PKDB, the first interactive debugger for GPU and multithreaded low-level kernels written in Python. Python is widely used in high performance computing (HPC), with frameworks such as PyKokkos translating Python-embedded domain-specific languages to native code that runs across OpenMP-threaded CPUs and various GPUs. Yet interactive debugging support for such code is absent: developers resort to print statements, framework-specific assertions, or CPU-only execution, the last of which requires altering the program or its data and can mask device-specific bugs. PKDB enables standard interactive debugging like breakpoints, stepping, and variable inspection while preserving actual on-device execution without source modification. Beyond these fundamentals, PKDB introduces two advanced capabilities that exploit the dynamic nature of Python and PyKokkos: (i) Live code evaluation, which lets developers execute arbitrary Python expressions or entire kernels in the middle of a paused kernel without restarting the process; (ii) Kernel call site substitution, which allows an actively running kernel to be updated and reloaded on the fly, so only the kernel is recompiled and re-executed without restarting the application. Our performance evaluation on Intel, AMD, and NVIDIA CPUs, and NVIDIA and AMD GPUs shows that PKDB introduces limited overhead and is practical for everyday use while introducing critical debugging features to the Python HPC ecosystem.",
+  "title": "Interactive Debugger for Performance Portable Python HPC Kernels",
+  "identity_tokens": [
+    "arXiv:2609.07912"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a56dfb47a2ea",
+  "source_precheck_request_id": null
+}

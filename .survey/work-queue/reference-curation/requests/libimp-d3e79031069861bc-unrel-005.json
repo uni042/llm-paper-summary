@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d3e79031069861bc-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.07474",
+  "reason": "一次要旨: Language models compute over tokens: language is their input, their output, and increasingly their internal representation. Whether language should keep all of these positions depends on what language does to the system that uses it. The one system with a century of data on that question is the human. We review what language does to human perception, the brain, and thought, and read the same evidence against multimodal models and language models. Throughout, we treat language as a compressor that runs on a shared codebook: a word is an index, the content is in the receiver, and a community maintains the codebook. In humans the compression is measurable, learning the codebook reorganizes the senses, and thought survives the loss of language. We then measure the rule that models apply when two cues disagree, with cue-conflict experiments on six vision-language models and two robot policies. Surviving cues are weighted in the order their reliabilities prescribe, at 11 to 82\\% of the ideal observer's slope, and many answers copy the text. One policy family drops a cue that adds no information beyond the others rather than down-weighting it, another keeps it at a weight that fails when the cues conflict, and a visual cue that identifies the task in every training frame is never learned, because the language pathway already fits the data. Language models are the best current models of the human language network, and they have entered the human speech community, shifting word frequencies while alignment narrows their conceptual diversity. We close with seven implications for token-based systems. Language belongs at a model's boundary and in the shared codebook, as in the brain, not as its internal representation; the price of leaving the codebook inside is auditability.",
+  "title": "Where Should Language Sit in a Multimodal Model? Lessons from What Language Does to Human Perception and Cognition",
+  "identity_tokens": [
+    "arXiv:2609.07474"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3e790310698",
+  "source_precheck_request_id": null
+}
