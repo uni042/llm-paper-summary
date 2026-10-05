@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-02-part-03-5775f36f3108",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/22104968261453132",
+      "identity_tokens": [
+        "DOI:10.1177/22104968261453132"
+      ],
+      "title": "External Knowledge Integration in Large Language Models: A Survey on Methods, Challenges, and Future Directions",
+      "reason": "Survey of external knowledge integration/RAG, not serving efficiency.",
+      "source_url": "https://journals.sagepub.com/doi/full/10.1177/22104968261453132",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17541",
+      "identity_tokens": [
+        "arXiv:2311.17541"
+      ],
+      "title": "TaskWeaver: A Code-First Agent Framework",
+      "reason": "LLM agent framework functionality without efficiency evidence.",
+      "source_url": "https://arxiv.org/abs/2311.17541",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3594512.3594527",
+      "identity_tokens": [
+        "DOI:10.14778/3594512.3594527"
+      ],
+      "title": "Towards Efficient Index Construction and Approximate Nearest Neighbor Search in High-Dimensional Spaces",
+      "reason": "ANN index construction/search, not LLM inference.",
+      "source_url": "https://www.vldb.org/pvldb/vol16/p1979-zhao.pdf",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2021.3084839",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2021.3084839"
+      ],
+      "title": "Transform Quantization for CNN Compression",
+      "reason": "CNN weight quantization, evaluated on CNNs rather than LLMs.",
+      "source_url": "https://arxiv.org/abs/2009.01174",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3297858.3304064",
+      "identity_tokens": [
+        "DOI:10.1145/3297858.3304064"
+      ],
+      "title": "HawkEye: Efficient Fine-grained OS Support for Huge Pages",
+      "reason": "OS huge-page management without LLM serving evaluation.",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/hawkeye-efficient-fine-grained-os-support-for-huge-pages/?lang=ja",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ]
+    }
+  ]
+}
