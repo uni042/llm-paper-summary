@@ -1,0 +1,188 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1445-scheduled-chat-45/r01",
+  "reference_main_sha": "15a6d48a6cda3d07ae07e950ef4c5f7c219893aa",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00407",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00407",
+        "arXiv:2012.00955"
+      ],
+      "title": "How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering",
+      "reason": "T5/BART/GPT-2のQA出力確率のcalibrationと、fine-tuning・post-hoc補正による信頼度改善が主題。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2012.00955",
+      "body_check": "abstract_screen_only: 一次arXiv/TACL要旨でQA calibrationとconfidence correctionが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:53:00+09:00",
+      "last_checked_at": "2026-10-05T14:53:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1806.00187",
+      "identity_tokens": [
+        "arXiv:1806.00187"
+      ],
+      "title": "Scaling Neural Machine Translation",
+      "reason": "reduced precision・large batch・多数GPUでNMT学習を高速化するtraining systems研究。主要結果は学習時間とBLEUであり推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1806.00187",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で8/128 GPUのtraining speedupとWMT BLEUが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:53:00+09:00",
+      "last_checked_at": "2026-10-05T14:53:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00059",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00059"
+      ],
+      "title": "Applied Machine Learning at Facebook: A Datacenter Infrastructure Perspective",
+      "reason": "Facebookの大規模ML workloadとdatacenter infrastructureをcharacterizeする研究で、現代LLM/Transformer生成推論を最終適用先とするruntime方式ではない。",
+      "source_url": "https://doi.org/10.1109/HPCA.2018.00059",
+      "body_check": "abstract_screen_only: 書誌・一次公開情報からFacebook production ML datacenter infrastructure characterizationが主題と確認。LLM推論system固有研究ではないため本文未読。",
+      "first_checked_at": "2026-10-05T14:54:00+09:00",
+      "last_checked_at": "2026-10-05T14:54:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2749469.2749475",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2749475"
+      ],
+      "title": "Heracles: Improving resource efficiency at scale",
+      "reason": "latency-critical serviceとbest-effort jobを安全にco-locateする一般datacenter resource controller。CPU/memory/network isolationで90%平均server utilizationを示すがLLM推論serving固有ではない。",
+      "source_url": "https://doi.org/10.1145/2749469.2749475",
+      "body_check": "abstract_screen_only: 著者所属一次ページ要旨でproduction latency-critical/batch workloadのcolocationとresource isolationが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:54:00+09:00",
+      "last_checked_at": "2026-10-05T14:54:00+09:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arXiv:2402.12289"
+      ],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "量産車OrinX上で大規模VLMを実時間動作させるため、visual token圧縮・speculative sampling・slow-fast非同期構成を組み合わせる。VLM推論のdeployment最適化を実機で評価しており対象内。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "full_text_relevance_review: 一次arXiv本文への導線と本文内容を確認し、DriveVLM-Dualのslow-fast構成、LDPNetv2によるvisual token削減、speculative sampling、量産車OrinX上のreal-time deploymentを確認。推論効率化が実配備成立の主要要素のためaccept。",
+      "first_checked_at": "2026-10-05T14:55:00+09:00",
+      "last_checked_at": "2026-10-05T14:55:00+09:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/215399.215427",
+      "identity_tokens": [
+        "DOI:10.1145/215399.215427"
+      ],
+      "title": "LogGP: incorporating long messages into the LogP model—one step closer towards a realistic model for parallel computation",
+      "reason": "長messageのbandwidth parameter Gを加えた一般parallel computation communication model。scatter/FFT/radix sort等を解析する古典HPC研究でLLM推論固有の方式・評価ではない。",
+      "source_url": "https://doi.org/10.1145/215399.215427",
+      "body_check": "abstract_screen_only: UCSB一次technical report要旨でLogP拡張、long-message bandwidth、parallel algorithm analysisが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.05374",
+      "identity_tokens": [
+        "arXiv:2308.05374"
+      ],
+      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+      "reason": "LLM trustworthiness/alignmentを7カテゴリ29サブカテゴリで整理・評価するsurvey。安全性・公平性・robustness等が主題で推論runtime/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.05374",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtrustworthiness/alignment evaluation taxonomyが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10130",
+      "identity_tokens": [
+        "arXiv:2303.10130"
+      ],
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+      "reason": "LLMが米国労働市場・職務へ与える潜在的影響を評価する経済・社会研究。推論runtime・memory・serving方式を扱わない。",
+      "source_url": "https://arxiv.org/abs/2303.10130",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でoccupation/task exposureとlabor-market impactが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:57:00+09:00",
+      "last_checked_at": "2026-10-05T14:57:00+09:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.10866",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2302.10866",
+        "arXiv:2302.10866"
+      ],
+      "title": "Hyena Hierarchy: Towards Larger Convolutional Language Models",
+      "reason": "attentionの二次計算量を避けるsubquadratic long-convolution/gating operatorを提案し、sequence length 8Kで最適化attention比2倍、64Kで100倍のoperator速度を報告する。長文脈言語モデル推論の計算効率へ直接関係するため対象内。",
+      "source_url": "https://arxiv.org/abs/2302.10866",
+      "body_check": "full_text_relevance_review: 一次arXiv本文情報でHyena operatorのimplicit long convolution/data-controlled gating、subquadratic scaling、language modeling評価、8Kで2x・64Kで100xのattention比operator speedを確認。効率的長文脈LM architectureとしてaccept。",
+      "first_checked_at": "2026-10-05T14:58:00+09:00",
+      "last_checked_at": "2026-10-05T14:58:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1507.06149",
+      "identity_tokens": [
+        "arXiv:1507.06149"
+      ],
+      "title": "Data-free Parameter Pruning for Deep Neural Networks",
+      "reason": "MNIST/AlexNet等のcomputer vision DNNで類似neuronを除去するdata-free pruning研究。最大85%/35%のparameter削減を示すがLLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1507.06149",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でMNIST/AlexNetのfully-connected layer pruningが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T14:59:00+09:00",
+      "last_checked_at": "2026-10-05T14:59:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "worklist_rank": 28
+    }
+  ]
+}
