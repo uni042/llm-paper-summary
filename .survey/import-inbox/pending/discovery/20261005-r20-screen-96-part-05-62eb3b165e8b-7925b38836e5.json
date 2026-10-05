@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-96-part-05-62eb3b165e8b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06625",
+      "identity_tokens": [
+        "arXiv:2501.06625"
+      ],
+      "title": "Guided Code Generation with LLMs: A Multi-Agent Framework for Complex Code Tasks",
+      "reason": "The abstract presents a multi-agent code-generation framework and makes no inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2501.06625",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14389",
+      "identity_tokens": [
+        "arXiv:2410.14389"
+      ],
+      "title": "SurgeryV2: Bridging the Gap Between Model Merging and Multi-Task Learning with Deep Representation Surgery",
+      "reason": "The abstract studies representation surgery for model merging and multi-task learning, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.14389",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06809",
+      "identity_tokens": [
+        "arXiv:2410.06809"
+      ],
+      "title": "Root Defence Strategies: Ensuring Safety of LLM at the Decoding Level",
+      "reason": "The abstract proposes decoding-time safety interventions, but its objective is safety enforcement rather than compute, latency, memory, or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.06809",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.10927",
+      "identity_tokens": [
+        "arXiv:2409.10927"
+      ],
+      "title": "Propulsion: Steering LLM with Tiny Fine-Tuning",
+      "reason": "The abstract is about tiny fine-tuning/steering and its training cost; it does not target inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.10927",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05929",
+      "identity_tokens": [
+        "arXiv:2409.05929"
+      ],
+      "title": "M3-JEPA: Multimodal Alignment via Multi-gate MoE based on the Joint-Embedding Predictive Architecture",
+      "reason": "The abstract focuses on multimodal alignment and JEPA/MoE learning objectives, with no inference efficiency result.",
+      "source_url": "https://arxiv.org/abs/2409.05929",
+      "first_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "last_checked_at": "2026-10-05T12:49:15.397210+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ]
+    }
+  ]
+}
