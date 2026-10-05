@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-35-part-07-d6e9124db595",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11042-026-21831-4",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21831-4"
+      ],
+      "title": "Adaptive Mixture-of-Recursions vision transformer with joint depth routing for multimedia vision",
+      "reason": "The packet contains no primary abstract. Direct access to the DOI primary-source URL was attempted but did not provide the abstract or full text; no topical inference is made from title or citation context.",
+      "source_url": "https://doi.org/10.1007/s11042-026-21831-4",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11042-026-21856-9",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21856-9"
+      ],
+      "title": "Scene graph generation from point cloud panoptic segmentation for indoor scene understanding",
+      "reason": "Indoor scene understanding enables machines to comprehend 3D indoor environments by capturing object relationships and supporting spatial reasoning. Scene graphs are commonly used to represent objects and their relationships in a node–edge structure describing how neighboring objects are connected within a scene. The current scene graph generation methods often suffer from ambiguous object-edge labeling caused by imbalanced training samples and unknown multi-objects identification. Hence, a panoptic segmentation derived from an unified transformer segmentation framework is proposed to retrieve objects and their attributes. This information is then used to generate the nodes and edges of the scene graph. Subsequently, semantic labels for predicted instances are obtained using a majority label voting mechanism, while an edge completion network predicts relationships among neighboring object instances. The proposed network is evaluated using the ScanNet and ScanNet++ datasets. The results show that using a unified transformer network to generate object label predictions prior to scene graph generation yields an improvement in Panoptic Quality of +29.74% on the ScanNet dataset and +22.87% on the ScanNet++ dataset.",
+      "source_url": "https://doi.org/10.1007/s11042-026-21856-9",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05500-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05500-5"
+      ],
+      "title": "Preserving Diagnosis, Reducing Bits: Sparsity-Controlled Linear Anatomical Attention for Medical Image Compression",
+      "reason": "The packet contains no primary abstract. Direct access to the DOI primary-source URL was attempted but did not provide the abstract or full text; no topical inference is made from title or citation context.",
+      "source_url": "https://doi.org/10.1007/s11760-026-05500-5",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01029-2",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01029-2"
+      ],
+      "title": "MSBR-KT: knowledge tracing via multifaceted structured-bias routing",
+      "reason": "Knowledge tracing (KT) aims to model the evolution of students’ latent knowledge states from historical interaction sequences for accurate prediction of future responses. Modeling knowledge evolution entails the joint consideration of multiple interrelated signals, including temporal dynamics, content semantics, and behavior-driven transitions. However, current KT approaches still face bottlenecks in context-adaptive multi-source fusion and the modeling of time-varying knowledge dynamics. Moreover, relying on a single shared prediction layer may limit both prediction accuracy and flexibility in heterogeneous learning contexts, thereby reducing overall performance. To address these issues, we propose a novel knowledge tracing framework built on multifaceted structured-bias routing, called MSBR-KT. To begin with, the proposed framework constructs learnable structured-bias matrices to capture time-decay patterns, semantic relationships among questions and knowledge concepts, and transition dependencies induced by correctness signals. Furthermore, a bias routing mechanism adaptively integrates these biases within multi-head attention by allocating context-dependent strengths, which results in stage-aware tracking of students’ evolving knowledge states through selective attention to the most relevant historical interactions. Ultimately, a routing-aware mixture-of-experts prediction layer is incorporated, with mixing coefficients derived from the routing distributions, to improve context-adaptive evidence aggregation at the prediction stage. Experiments on three benchmark datasets show that the proposed framework achieves the best AUC on all datasets while maintaining competitive ACC and RMSE performance, demonstrating reliable and robust predictive performance compared with ",
+      "source_url": "https://doi.org/10.1007/s44443-026-01029-2",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.apgeog.2026.104094",
+      "identity_tokens": [
+        "DOI:10.1016/j.apgeog.2026.104094"
+      ],
+      "title": "Decoding future land use dynamics through neighborhood sequences: A cellular automata-inspired large language model framework (LLM-CA)",
+      "reason": "The packet contains no primary abstract. Direct access to the DOI primary-source URL was attempted but did not provide the abstract or full text; no topical inference is made from title or citation context.",
+      "source_url": "https://doi.org/10.1016/j.apgeog.2026.104094",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    }
+  ]
+}
