@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:29:32+00:00",
-  "record_count": 1007,
+  "updated_at": "2026-10-05T06:33:18+00:00",
+  "record_count": 1010,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15325,6 +15325,54 @@
         "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
       ],
       "title": "RideWay: Benchmarking Efficient Task Completion for Tool-Using Language Agents"
+    },
+    "arXiv:2609.18723": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.18723",
+      "identity_tokens": [
+        "arXiv:2609.18723"
+      ],
+      "reason": "decoding候補選択法として関連するが、評価ではend-to-end inference latencyが低下せず増加し、効率改善の根拠が弱い。",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Beyond Truncation: Rethinking LLM Decoding as Ensemble Pruning"
+    },
+    "arXiv:2609.18842": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.18842",
+      "identity_tokens": [
+        "arXiv:2609.18842"
+      ],
+      "reason": "deployed LLMのcontext/compute償却という仮説は関連するがserving efficiency評価が弱く、具体的followupには適合根拠が不足。",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data"
+    },
+    "arXiv:2609.19101": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19101",
+      "identity_tokens": [
+        "arXiv:2609.19101"
+      ],
+      "reason": "低overheadなLLM監視は隣接するが、serving/compression/inference optimizationの成果を評価する研究ではない。",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Monitoring and Discovering Reward Hacking with Internal Representations during LLM Evaluations"
     }
   }
 }

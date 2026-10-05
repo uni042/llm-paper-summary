@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-25efac575413a9d9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18294",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18294",
+    "identity_tokens": [
+      "arXiv:2609.18294"
+    ],
+    "reason": "一次要旨: In seismic exploration, the propagation of seismic waves naturally gives rise to long-range dependencies in seismic data. Capturing such global correlations can significantly improve the accuracies of seismic signal processing, inversion, and interpretation. Global modeling (GM) methods have therefore emerged as an effective paradigm for seismic exploration, offering a powerful means of exploiting the intrinsic global relation",
+    "first_checked_at": "2026-10-05T06:33:16+00:00",
+    "last_checked_at": "2026-10-05T06:33:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "A general lightweight global modeling framework for three-dimensional seismic exploration"
+  },
+  "processed_at": "2026-10-05T06:33:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-25efac575413",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

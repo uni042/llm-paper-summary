@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-25efac575413a9d9-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18315",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18315",
+    "identity_tokens": [
+      "arXiv:2609.18315"
+    ],
+    "reason": "一次要旨: Non-intrusive load monitoring (NILM) estimates appliance power sequences from aggregate power, but models trained on source households commonly lose accuracy in unseen households. Aggregate power also contains loads from other appliances and measurement error, so predictions may depend on the residual background that co-occurs with source-household targets. Time-aligned submetered measurements and the additive decomposition of",
+    "first_checked_at": "2026-10-05T06:33:16+00:00",
+    "last_checked_at": "2026-10-05T06:33:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Multi-Appliance Non-Intrusive Load Monitoring via Label-Preserving Aggregate Recomposition and Prediction Consistency"
+  },
+  "processed_at": "2026-10-05T06:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-25efac575413",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

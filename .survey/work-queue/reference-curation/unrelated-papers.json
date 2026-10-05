@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:29:33+00:00",
-  "record_count": 3259,
+  "updated_at": "2026-10-05T06:33:18+00:00",
+  "record_count": 3276,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -47459,6 +47459,255 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes"
+    },
+    "arXiv:2609.18249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18249",
+      "identity_tokens": [
+        "arXiv:2609.18249"
+      ],
+      "reason": "一次要旨: Real-world recommendation scenarios are commonly grounded in shared physical environments during user-recommender interactions. This motivates situated conversational recommendation (SCR), a complex task requiring recommender assistants to jointly reason over dialogue history, co-observed scenes, and in-scene item attributes. However, current approaches struggle with this setting due to two intertwined challenges: accurately u",
+      "first_checked_at": "2026-10-05T06:33:16+00:00",
+      "last_checked_at": "2026-10-05T06:33:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Re2A: Situated Conversational Recommendation via Rubric-based Preference Reasoning and Alignment"
+    },
+    "arXiv:2609.18294": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18294",
+      "identity_tokens": [
+        "arXiv:2609.18294"
+      ],
+      "reason": "一次要旨: In seismic exploration, the propagation of seismic waves naturally gives rise to long-range dependencies in seismic data. Capturing such global correlations can significantly improve the accuracies of seismic signal processing, inversion, and interpretation. Global modeling (GM) methods have therefore emerged as an effective paradigm for seismic exploration, offering a powerful means of exploiting the intrinsic global relation",
+      "first_checked_at": "2026-10-05T06:33:16+00:00",
+      "last_checked_at": "2026-10-05T06:33:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A general lightweight global modeling framework for three-dimensional seismic exploration"
+    },
+    "arXiv:2609.18315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18315",
+      "identity_tokens": [
+        "arXiv:2609.18315"
+      ],
+      "reason": "一次要旨: Non-intrusive load monitoring (NILM) estimates appliance power sequences from aggregate power, but models trained on source households commonly lose accuracy in unseen households. Aggregate power also contains loads from other appliances and measurement error, so predictions may depend on the residual background that co-occurs with source-household targets. Time-aligned submetered measurements and the additive decomposition of",
+      "first_checked_at": "2026-10-05T06:33:16+00:00",
+      "last_checked_at": "2026-10-05T06:33:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multi-Appliance Non-Intrusive Load Monitoring via Label-Preserving Aggregate Recomposition and Prediction Consistency"
+    },
+    "arXiv:2609.18407": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18407",
+      "identity_tokens": [
+        "arXiv:2609.18407"
+      ],
+      "reason": "一次要旨: Weekly influenza surveillance counts guide vaccine distribution and public-health alerts, yet they are hard to forecast. Each region offers only a few seasons, waves shift in timing and height every year, and information that helps while a wave grows misleads after its peak, whereas last season's shape stays informative for a year. Existing epidemic graph models and general forecasters read a short fixed window and treat all p",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "TERN: A Delta-rule Memory with a Seasonal Reference and Online Adaptation for Epidemic Forecasting"
+    },
+    "arXiv:2609.18496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18496",
+      "identity_tokens": [
+        "arXiv:2609.18496"
+      ],
+      "reason": "一次要旨: Cybersecurity combines high-stakes analysis with complex technical language, making it an impactful and challenging domain for LLMs. We present MiST (Mid-trained Security Transformer), a suite of 8B and 32B models that achieve strong performance on public cybersecurity benchmarks. We use mid-training as an intermediate adaptation stage between general pre-training and cybersecurity training. Rather than performing continual pr",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "MiST: Mid-Training LLMs for Cybersecurity"
+    },
+    "arXiv:2609.18139": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18139",
+      "identity_tokens": [
+        "arXiv:2609.18139"
+      ],
+      "reason": "一次要旨: Cross-view object geo-localization (CVOGL) locates a target in satellite imagery using drone or street-view queries. Existing methods train separate detectors for each viewpoint, leading to parameter redundancy and impeding cross-view knowledge sharing. Moreover, top-ranked satellite candidates are often visually similar, so visual appearance and categorical labels alone are insufficient to resolve such ambiguity. To address t",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Multi-View Mixture-of-Experts with Vision-Language Reranking for Cross-View Object Geo-Localization"
+    },
+    "arXiv:2609.18178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18178",
+      "identity_tokens": [
+        "arXiv:2609.18178"
+      ],
+      "reason": "一次要旨: Distributed model training at scale is frequently interrupted by transient network failures, conventionally forcing cluster managers to abort all processes and roll back to the latest checkpoint. While periodic checkpointing provides durability, frequent snapshotting introduces severe storage backpressure: our measurements on a 1.216B-parameter decoder reveal that per-update asynchronous checkpointing incurs up to a +656.7% la",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Zero-I/O Fault Recovery for Sharded Deep Learning via Dynamic Framework Dependency Rebinding"
+    },
+    "arXiv:2609.18203": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18203",
+      "identity_tokens": [
+        "arXiv:2609.18203"
+      ],
+      "reason": "一次要旨: Human values are deep motivational orientations that shape human behaviors. In e-commerce, they reveal the stable drivers behind users'purchase decisions. Compared with short-term interests, consumer values better explain how users evaluate products before purchase. However, consumer values are often implicit in complex and fragmented behavioral trajectories, leaving value measurement from e-commerce behaviors largely underexp",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Behavior2Value: Benchmarking and Empowering LLMs for Consumer Value Measurement from E-commerce Behaviors"
+    },
+    "arXiv:2609.18239": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18239",
+      "identity_tokens": [
+        "arXiv:2609.18239"
+      ],
+      "reason": "一次要旨: Structured pruning is commonly formulated as ranking individual channels, although channel responses can be complementary or cancel through downstream mixing. Motivated by these response interactions, we formulate pruning as the selection of a subset with large joint response capacity, followed by a separate functional realization step. Our unified response geometry maps each candidate set to \\(M(D,R)=D^{1/2}RD^{1/2}\\) and use",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Unified Response Geometry for Structured Pruning"
+    },
+    "arXiv:2609.18248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18248",
+      "identity_tokens": [
+        "arXiv:2609.18248"
+      ],
+      "reason": "一次要旨: An advanced retrieval-augmented generation pipeline is typically assembled from three or four independently operated systems: an approximate nearest-neighbour index, a full-text search engine, a graph database, and a relational document store. Each contributes its own deployment surface, configuration model, and failure modes, and the integration logic that binds them is written anew in every project. In this work, we present",
+      "first_checked_at": "2026-10-05T06:33:17+00:00",
+      "last_checked_at": "2026-10-05T06:33:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "Quanta: A Self-Contained Python Library for Hybrid Retrieval over Quantised Embeddings, Lexical Indexes, and Knowledge Graphs"
+    },
+    "arXiv:2609.18519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18519",
+      "identity_tokens": [
+        "arXiv:2609.18519"
+      ],
+      "reason": "一次要旨: With the rapid advancement of deep learning technology, shared GPU clusters receive an increasing number of deep learning training (DLT) jobs. Yet resource fragmentation make such clusters underutilized and forces the DLT jobs running on them to endure long turnaround times. Extensive research has been devoted to quantifying fragmentation and developing scheduling algorithms that alleviate its impact. However, existing fragmen",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "COMPASS-ABS: Reducing Fragmentation in Shared GPU Clusters for Deep Learning Training Workloads"
+    },
+    "arXiv:2609.18612": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18612",
+      "identity_tokens": [
+        "arXiv:2609.18612"
+      ],
+      "reason": "一次要旨: We analyze the learned input-output behavior of GLU-based neurons in large language models (LLMs). We propose a simple analysis method: For each neuron, we compute the cosine similarities between its input (reading) and output (writing) weight vectors. In this scheme, a strong negative cosine similarity indicates the neuron weakens the direction it detects in the residual stream, so we call this a weakening neuron. This allows",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Weakening Neurons: An Input-Output Functionality in Transformers with Outsize Influence"
+    },
+    "arXiv:2609.18623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18623",
+      "identity_tokens": [
+        "arXiv:2609.18623"
+      ],
+      "reason": "一次要旨: State-of-the-art vision-language-action models (VLA) for autonomous driving face critical limitations: excessive parameter counts, inefficient high-resolution image processing, and lack of temporal memory. We introduce Fast and EffectIVE VLA (FIVE-VLA) to address these through two key contributions. First, we employ an efficient vision encoder that processes high-resolution ($448 \\times 896$) images while generating only 98 to",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "FIVE-VLA: Fast and EffectIVE Autonomous Driving with Recurrent Action Memory"
+    },
+    "arXiv:2609.18662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18662",
+      "identity_tokens": [
+        "arXiv:2609.18662"
+      ],
+      "reason": "一次要旨: Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pi",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression"
+    },
+    "arXiv:2609.18686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18686",
+      "identity_tokens": [
+        "arXiv:2609.18686"
+      ],
+      "reason": "一次要旨: Self-supervised learning (SSL) has improved speech representations, yet performance degrades in pathological domains such as electrolaryngeal (EL) speech, and the computational footprint of SSL models limits their applicability in real-time, on-device deployment. We propose a multi-teacher knowledge distillation framework to train a lightweight, streaming content encoder that generalizes across healthy (HE) and EL speech. Two",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multi-Teacher Distillation for Cross-Domain Streaming Electrolaryngeal Speech Encoding"
+    },
+    "arXiv:2609.18688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18688",
+      "identity_tokens": [
+        "arXiv:2609.18688"
+      ],
+      "reason": "一次要旨: AI models for multimodal medical imaging must balance modality-specific specialization with cross-modal shared representations, a trade-off that pure Mixture-of-Experts (MoE) architectures currently fail to satisfy. Expert-based routing improves in-domain learning but may sacrifice cross-modal signals, which appear particularly important for rare (low-prevalence) pathologies in our experiments. To resolve this, we introduce Ge",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Generalist-Specialist Mixture-of-Experts for Rare Pathology Detection in Multimodal Imaging"
+    },
+    "arXiv:2609.19113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19113",
+      "identity_tokens": [
+        "arXiv:2609.19113"
+      ],
+      "reason": "一次要旨: We evaluate six frontier language models on the two-agent $\\log_2 N$-Questions game (Potash et al., 2019) to measure self-communication across an information asymmetry. A questioner with access to $N$ candidate Wikipedia lead paragraphs ($N = 4$ to $1024$) must identify a secret target using exactly $\\log_2 N$ binary questions answered by an agent from the same provider that sees only the target. Across 408 games, win rate dec",
+      "first_checked_at": "2026-10-05T06:33:18+00:00",
+      "last_checked_at": "2026-10-05T06:33:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Playing log(N)-Questions over Wikipedia Abstracts: How Per-Round Errors Compound Under Information Asymmetry"
     }
   }
 }

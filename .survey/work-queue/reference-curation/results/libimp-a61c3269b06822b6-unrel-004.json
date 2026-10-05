@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a61c3269b06822b6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18662",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18662",
+    "identity_tokens": [
+      "arXiv:2609.18662"
+    ],
+    "reason": "一次要旨: Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pi",
+    "first_checked_at": "2026-10-05T06:33:18+00:00",
+    "last_checked_at": "2026-10-05T06:33:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression"
+  },
+  "processed_at": "2026-10-05T06:33:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a61c3269b068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

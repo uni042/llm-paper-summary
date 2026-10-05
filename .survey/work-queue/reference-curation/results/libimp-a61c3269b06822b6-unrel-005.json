@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a61c3269b06822b6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18686",
+    "identity_tokens": [
+      "arXiv:2609.18686"
+    ],
+    "reason": "一次要旨: Self-supervised learning (SSL) has improved speech representations, yet performance degrades in pathological domains such as electrolaryngeal (EL) speech, and the computational footprint of SSL models limits their applicability in real-time, on-device deployment. We propose a multi-teacher knowledge distillation framework to train a lightweight, streaming content encoder that generalizes across healthy (HE) and EL speech. Two",
+    "first_checked_at": "2026-10-05T06:33:18+00:00",
+    "last_checked_at": "2026-10-05T06:33:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Multi-Teacher Distillation for Cross-Domain Streaming Electrolaryngeal Speech Encoding"
+  },
+  "processed_at": "2026-10-05T06:33:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a61c3269b068",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
