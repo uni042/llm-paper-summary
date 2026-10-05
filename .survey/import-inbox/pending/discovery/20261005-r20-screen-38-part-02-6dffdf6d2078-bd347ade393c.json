@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-38-part-02-6dffdf6d2078",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31622",
+      "identity_tokens": [
+        "arXiv:2609.31622"
+      ],
+      "title": "The Multi-Lab Enterprise: Governance, FinOps, and Telemetry Challenges of Multi-Model AI Adoption",
+      "reason": "Enterprises are not choosing a single frontier AI provider; they are licensing all of them. As of early 2026, 81% of Global 2000 enterprises run three or more model families, and OpenAI, Anthropic, and Google Gemini together account for roughly 88 to 89% of enterprise LLM usage and spend. Drawing on survey data, transaction data, provider disclosures, and case studies across finance, legal, consulting, healthcare, life sciences, retail, and government, this paper shows that multi-lab licensing is a structural feature of the market, driven by durable task-specific model differentiation rather than a transitional phase awaiting commoditization. This structure creates three operational problems. Governance fragmentation (P1): heterogeneous vendor security postures, documentation, and compliance surfaces must be reconciled across overlapping regulatory frameworks while shadow AI proliferates. FinOps breakdown (P2): token-based, behavior-driven consumption defeats budgeting. In the past year, 79% of enterprises overran AI budgets, with FinOps-mature organizations overshooting by a mean of 30.9%, and no standardized cross-provider unit of spend exists. Telemetry fragmentation (P3): each lab exposes adoption and cost data through incompatible consoles, APIs, and metric definitions, forcing bespoke unification layers. We map the emerging responses, including LLM gateways, observability platforms, and the Tokenomics Foundation's FOCUS extension. We then develop a five-metric framework for evaluating API and agent cost burn, with a worked example where the cheapest model per attempt is the most expensive per successful task. We conclude that P1, P2, and P3 reflect one missing abstraction: a cross-provider enterprise AI control plane.",
+      "source_url": "https://arxiv.org/abs/2609.31622",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109437",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109437"
+      ],
+      "title": "Distilling large language models for code generation via ranking supervision.",
+      "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 The intended smaller student may be deployable, but the evidence accessible here establishes training-resource savings rather than inference-time efficiency; the full article could not be fetched for a closer review.",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.109437",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag579",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag579"
+      ],
+      "title": "Accelerating inference in genomic and proteomic foundation models via speculative decoding",
+      "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 This evaluates genomic and proteomic foundation models rather than natural-language LLM inference. Biological downstream quality/functional validation is left for future work, making transfer to the target scope uncertain.",
+      "source_url": "https://doi.org/10.1093/bioinformatics/btag579",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25077/jnte.v15n2.1350.2026",
+      "identity_tokens": [
+        "DOI:10.25077/jnte.v15n2.1350.2026"
+      ],
+      "title": "Vision Reformer Model To Enhance Transformer Efficiency for Face Recognition",
+      "reason": "The rapid advancement of digital technology has transformed attendance systems in educational environments. Conventional manual attendance methods are vulnerable to manipulation, while fingerprint-based biometric systems often experience limitations due to certain physical conditions. Facial recognition has therefore emerged as a reliable and non-contact biometric solution for attendance verification. However, existing deep learning architectures such as the Vision Transformer (ViT) require substantial computational resources and memory during training. This study proposes the Vision Reformer (ViR) model to enhance the computational efficiency of the ViT architecture for facial recognition. The proposed approach integrates the memory-efficient attention mechanism of the Reformer architecture into the ViT framework to improve training efficiency while maintaining high recognition performance. Experiments were conducted using the Indonesian Muslim Student Face Dataset (IMSFD) with learning rates of  and . The experimental results show that the ViR model with a learning rate of  and  achieved the best performance, with accuracy of 94.63%, F1-score of 94.77%, precision of 95.89%, and recall of 94.63%, while requiring only 41.076 seconds of training time. In comparison, the ViT model achieved accuracy of 94.11% and required 82.368 seconds under the same configuration. Additionally, GPU memory analysis indicates that ViR reduces memory consumption by 78 MB and 39 MB at batch sizes of 16 and 32, respectively, while maintaining a stable and linear memory usage pattern. These results demonstrate that the proposed Vision Reformer model improves computational efficiency and memory utilization while maintaining competitive accuracy, making it a practical solution for facial recognition-based attendance systems in educational settings.",
+      "source_url": "https://doi.org/10.25077/jnte.v15n2.1350.2026",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/rs18152494",
+      "identity_tokens": [
+        "DOI:10.3390/rs18152494"
+      ],
+      "title": "Self-Supervised Hyperspectral Image Clustering via Spatial–Frequency Interaction and Amplitude–Phase Decoupling",
+      "reason": "Hyperspectral image (HSI) clustering assigns unlabeled pixels to land-cover groups by jointly exploiting spectral and spatial observations. Existing Vision Transformer-based deep clustering captures global dependencies through self-attention. However, the quadratic computational complexity of self-attention restricts practical applications in large HSI scenes. Furthermore, illumination variation and topographic shading shift spectral amplitude of co-class pixels toward divergent directions in feature space, enlarging intra-class distances and reducing inter-class separability in learned embeddings. To address the above limitations, we propose a self-supervised Spatial–Frequency Interaction and Amplitude–Phase Decoupling framework, termed SFI-APD, which integrates a High-Order Spatial–Frequency Interaction Module (HSFIM), a Frequency Feature Attention Block (FFAB), and a Frequency-Domain Vision Transformer (FreqViT) into a unified architecture. Specifically, HSFIM couples local convolutions with Fourier filtering to extract enriched spectral–spatial representations. FFAB then decouples amplitude and phase components to suppress brightness variations, yielding illumination-robust embeddings. Finally, FreqViT performs attention modulation across spectral channels, reducing token aggregation complexity from O(N2D) to O(NDlogN). On the Indian Pines, Salinas, Pavia University, and Yangzhou datasets, SFI-APD achieves OAs of 57.47%, 79.38%, 54.57%, and 64.11%, respectively, outperforming state-of-the-art self-supervised methods for large HSIs.",
+      "source_url": "https://doi.org/10.3390/rs18152494",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
