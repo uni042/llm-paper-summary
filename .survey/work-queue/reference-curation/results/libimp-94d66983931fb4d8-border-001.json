@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94d66983931fb4d8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.06683",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.06683",
+    "identity_tokens": [
+      "arXiv:2204.06683"
+    ],
+    "reason": "Transformerの長入力計算資源に隣接するが、評価は分類専用encoderでLLM生成/servingではない。LLM推論への移転を示す実験がないためborderline。",
+    "first_checked_at": "2026-10-05T01:50:05+00:00",
+    "last_checked_at": "2026-10-05T01:50:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Revisiting Transformer-based Models for Long Document Classification"
+  },
+  "processed_at": "2026-10-05T01:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94d66983931f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

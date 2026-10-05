@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-94d66983931fb4d8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.13803",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.13803",
+    "identity_tokens": [
+      "arXiv:2305.13803"
+    ],
+    "reason": "一次要旨はrepresentation matchingによるknowledge distillationの方法で、学習時のモデル圧縮が主題。LLM inference効率の研究ではない。",
+    "first_checked_at": "2026-10-05T01:50:05+00:00",
+    "last_checked_at": "2026-10-05T01:50:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+    ],
+    "title": "NORM: Knowledge Distillation via N-to-One Representation Matching"
+  },
+  "processed_at": "2026-10-05T01:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94d66983931f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

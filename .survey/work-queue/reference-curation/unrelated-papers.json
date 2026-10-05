@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:47:39+00:00",
-  "record_count": 1718,
+  "updated_at": "2026-10-05T01:50:06+00:00",
+  "record_count": 1729,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -24776,6 +24776,160 @@
         "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
       ],
       "title": "End-to-End Training of Neural Retrievers for Open-Domain Question Answering"
+    },
+    "arXiv:2305.15074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.15074",
+      "identity_tokens": [
+        "arXiv:2305.15074"
+      ],
+      "reason": "一次要旨はLLMのproblem-solving abilityを測るchallenging benchmarkであり、効率化法ではない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark For Large Language Models"
+    },
+    "arXiv:2310.07676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07676",
+      "identity_tokens": [
+        "arXiv:2310.07676"
+      ],
+      "reason": "一次要旨はLLMに対するcomposite backdoor attackの設計/分析であり、推論効率ではない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Composite Backdoor Attacks Against Large Language Models"
+    },
+    "DOI:10.14778/3407790.3407807": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3407790.3407807",
+      "identity_tokens": [
+        "DOI:10.14778/3407790.3407807"
+      ],
+      "reason": "一次資料の要旨は大規模dataframe systemsの設計・scalabilityを扱い、LLM推論を対象としない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "Towards scalable dataframe systems"
+    },
+    "arXiv:2305.13803": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13803",
+      "identity_tokens": [
+        "arXiv:2305.13803"
+      ],
+      "reason": "一次要旨はrepresentation matchingによるknowledge distillationの方法で、学習時のモデル圧縮が主題。LLM inference効率の研究ではない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+      ],
+      "title": "NORM: Knowledge Distillation via N-to-One Representation Matching"
+    },
+    "DOI:10.18653/v1/2022.acl-long.524": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.524",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.524"
+      ],
+      "reason": "一次要旨はvision-and-language navigationのタスク・方法・今後の方向をsurveyするもので、LLM推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md"
+      ],
+      "title": "Vision-and-Language Navigation: A Survey of Tasks, Methods, and Future Directions"
+    },
+    "arXiv:2005.05402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.05402",
+      "identity_tokens": [
+        "arXiv:2005.05402"
+      ],
+      "reason": "一次要旨はvideo paragraph captioning向けmemory-augmented recurrent transformerを提案するタスク固有のvideo captioning研究。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "MART: Memory-Augmented Recurrent Transformer for Coherent Video Paragraph Captioning"
+    },
+    "arXiv:1811.00783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.00783",
+      "identity_tokens": [
+        "arXiv:1811.00783"
+      ],
+      "reason": "一次要旨はReddit投稿のabstractive summarization向けmulti-level memory networkで、一般LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Abstractive Summarization of Reddit Posts with Multi-level Memory Networks"
+    },
+    "arXiv:2106.03650": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.03650",
+      "identity_tokens": [
+        "arXiv:2106.03650"
+      ],
+      "reason": "一次要旨は画像用Vision Transformerのspatial shuffle設計を扱う。LLM推論とは対象が異なる。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "title": "Shuffle Transformer: Rethinking Spatial Shuffle for Vision Transformer"
+    },
+    "arXiv:2503.10631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10631",
+      "identity_tokens": [
+        "arXiv:2503.10631"
+      ],
+      "reason": "一次要旨はvision-language-action robot modelのdiffusion/autoregression協調方式を扱うが、LLM推論効率/servingの評価ではない。",
+      "first_checked_at": "2026-10-05T01:50:05+00:00",
+      "last_checked_at": "2026-10-05T01:50:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+      ],
+      "title": "HybridVLA: Collaborative Diffusion and Autoregression in a Unified Vision-Language-Action Model"
+    },
+    "DOI:10.1109/icse.2019.00107": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icse.2019.00107",
+      "identity_tokens": [
+        "DOI:10.1109/icse.2019.00107"
+      ],
+      "reason": "一次要旨はdeep learning libraryのbackend間不整合を検出/局所化するvalidation方法を提案する。LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T01:50:06+00:00",
+      "last_checked_at": "2026-10-05T01:50:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md"
+      ],
+      "title": "CRADLE: Cross-Backend Validation to Detect and Localize Bugs in Deep Learning Libraries"
+    },
+    "arXiv:2408.07199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07199",
+      "identity_tokens": [
+        "arXiv:2408.07199"
+      ],
+      "reason": "一次要旨は自律agentのreasoning・search・learningを扱う手法で、効率化の具体的評価は主題でない。",
+      "first_checked_at": "2026-10-05T01:50:06+00:00",
+      "last_checked_at": "2026-10-05T01:50:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling-dlpm.md"
+      ],
+      "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents"
     }
   }
 }
