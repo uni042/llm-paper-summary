@@ -19,8 +19,10 @@ class CandidatePriorityTest(unittest.TestCase):
             "policy_name": "test",
             "freshness": {
                 "enabled": True,
-                "max_age_days": 120,
-                "score": 100,
+                "window_mode": "rolling_months",
+                "months": 12,
+                "score": 10,
+                "cited_score": 100,
                 "year_only_is_fresh": False,
             },
             "prestigious_venue": {
@@ -47,6 +49,42 @@ class CandidatePriorityTest(unittest.TestCase):
         self.assertEqual(got["prestigious_venue"], 10)
         self.assertEqual(got["citations"], 140)
         self.assertEqual(got["total"], 250)
+
+    def test_recent_cited_gets_attention_equivalent_boost(self):
+        cited = candidate_priority.score_record(
+            {"published": "2026-09-01", "citation_count": 1},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        uncited = candidate_priority.score_record(
+            {"published": "2026-09-01", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 3),
+            config=self.policy(),
+        )
+        self.assertTrue(cited["is_recent_cited"])
+        self.assertEqual(cited["freshness"], 100)
+        self.assertEqual(cited["total"], 101)
+        self.assertFalse(uncited["is_recent_cited"])
+        self.assertEqual(uncited["freshness"], 10)
+        self.assertEqual(uncited["total"], 10)
+
+    def test_recent_window_matches_survey_list_month_buckets(self):
+        november = candidate_priority.score_record(
+            {"published": "2025-11-01", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 31),
+            config=self.policy(),
+        )
+        october = candidate_priority.score_record(
+            {"published": "2025-10-31", "citation_count": 0},
+            repo_root=Path("."),
+            now=dt.date(2026, 10, 1),
+            config=self.policy(),
+        )
+        self.assertTrue(november["is_fresh"])
+        self.assertFalse(october["is_fresh"])
 
     def test_old_highly_cited_paper_can_outrank_fresh_uncited_paper(self):
         old = candidate_priority.score_record(
@@ -120,6 +158,7 @@ class CandidatePriorityTest(unittest.TestCase):
     def test_weights_are_configuration_driven(self):
         policy = self.policy()
         policy["freshness"]["score"] = 7
+        policy["freshness"]["cited_score"] = 7
         policy["prestigious_venue"]["score"] = 3
         policy["citations"]["score_per_citation"] = 2
         got = candidate_priority.score_record(
