@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-07-candidates-part-02-e649fc991d3d",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.12255",
+      "identity_tokens": [
+        "arXiv:2205.12255"
+      ],
+      "title": "TALM: Tool Augmented Language Models",
+      "reason": "一次要旨は外部toolを使うlanguage modelの能力・QA/math性能を扱う。推論コストやserving効率を改善する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2205.12255",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.05004",
+      "identity_tokens": [
+        "arXiv:2508.05004"
+      ],
+      "title": "R-Zero: Self-Evolving Reasoning LLM from Zero Data",
+      "reason": "一次要旨はreasoning LLMの自己進化・学習枠組みを提案する。推論時の効率化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2508.05004",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.07456",
+      "identity_tokens": [
+        "arXiv:2402.07456"
+      ],
+      "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+      "reason": "一次要旨はcomputer agentの汎用能力とself-improvementを扱う。LLM推論効率・serving最適化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2402.07456",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.08819",
+      "identity_tokens": [
+        "arXiv:2404.08819"
+      ],
+      "title": "The Illusion of State in State-Space Models",
+      "reason": "一次要旨はstate-space modelの状態表現に関する理論的分析であり、推論効率改善手法を扱わない。",
+      "source_url": "https://arxiv.org/abs/2404.08819",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.2307/3213271",
+      "identity_tokens": [
+        "DOI:10.2307/3213271"
+      ],
+      "title": "Optimality of the shortest line discipline",
+      "reason": "一次DOIページはリダイレクト先取得に失敗し、要旨を取得できなかった。一次資料の内容は推測しない。",
+      "source_url": "https://doi.org/10.2307/3213271",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00466-eldr-expert-locality-decode-routing.md"
+      ]
+    }
+  ]
+}
