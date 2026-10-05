@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-71-part-07-635aea8c170c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.09563",
+      "identity_tokens": [
+        "arXiv:2412.09563"
+      ],
+      "title": "Does Representation Matter? Exploring Intermediate Layers in Large Language Models",
+      "reason": "The study probes intermediate LLM representations and their task performance; no inference efficiency method is stated.",
+      "source_url": "https://arxiv.org/abs/2412.09563",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.09616",
+      "identity_tokens": [
+        "arXiv:2412.09616"
+      ],
+      "title": "V2PE: Improving Multimodal Long-Context Capability of Vision-Language Models with Variable Visual Position Encoding",
+      "reason": "Variable visual position encoding targets VLM long-context capability; the abstract does not claim lower inference cost or latency.",
+      "source_url": "https://arxiv.org/abs/2412.09616",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10478",
+      "identity_tokens": [
+        "arXiv:2411.10478"
+      ],
+      "title": "Large Language Models for Constructing and Optimizing Machine Learning Workflows: A Survey",
+      "reason": "This survey uses LLMs to construct/optimize ML workflows; it does not study LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.10478",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15686",
+      "identity_tokens": [
+        "arXiv:2410.15686"
+      ],
+      "title": "NetSafe: Exploring the Topological Safety of Multi-agent Networks",
+      "reason": "Topological safety of multi-agent networks is not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.15686",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14815",
+      "identity_tokens": [
+        "arXiv:2410.14815"
+      ],
+      "title": "Adapting Multilingual LLMs to Low-Resource Languages using Continued Pre-training and Synthetic Corpus",
+      "reason": "Continued pretraining and synthetic corpora adapt multilingual LLMs; this is training, not inference-time optimization.",
+      "source_url": "https://arxiv.org/abs/2410.14815",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    }
+  ]
+}
