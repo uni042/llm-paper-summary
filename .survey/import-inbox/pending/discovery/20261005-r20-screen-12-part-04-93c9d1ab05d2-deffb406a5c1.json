@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-12-part-04-93c9d1ab05d2",
+  "reference_main_sha": "6244834113a980d44d3be8fc3fc63537f02040f8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04585",
+      "identity_tokens": [
+        "arXiv:2609.04585"
+      ],
+      "title": "JLIR: A Julia-Native MLIR-Inspired Intermediate Representation with Automatic JACC Kernel Extraction",
+      "reason": "Julia-native compiler and kernel extraction, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.04585",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04609",
+      "identity_tokens": [
+        "arXiv:2609.04609"
+      ],
+      "title": "CIERA: Cross-Iteration Exponent Reuse for Lossless Allgather in Sharded MoE Training",
+      "reason": "Lossless Allgather compression for sharded MoE training; training-only.",
+      "source_url": "https://arxiv.org/abs/2609.04609",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04646",
+      "identity_tokens": [
+        "arXiv:2609.04646"
+      ],
+      "title": "Importance-Aware Low-Rank Distillation of Diffusion Transformers",
+      "reason": "Diffusion-transformer image-generation distillation; non-LLM task.",
+      "source_url": "https://arxiv.org/abs/2609.04646",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04678",
+      "identity_tokens": [
+        "arXiv:2609.04678"
+      ],
+      "title": "Train What You Deploy:Token-Faithful Post-Training of a Production Coding",
+      "reason": "Post-training coding-agent work; training-focused.",
+      "source_url": "https://arxiv.org/abs/2609.04678",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04721",
+      "identity_tokens": [
+        "arXiv:2609.04721"
+      ],
+      "title": "Locating and Steering Refusal Beyond Attention",
+      "reason": "Refusal interpretability/steering, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.04721",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    }
+  ]
+}
