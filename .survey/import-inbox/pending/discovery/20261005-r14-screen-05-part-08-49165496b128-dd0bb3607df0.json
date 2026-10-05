@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-05-part-08-49165496b128",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26694",
+      "identity_tokens": [
+        "arXiv:2607.26694"
+      ],
+      "title": "Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation",
+      "reason": "一次要旨の対象はreal-time interactive long-video generation modelで、LLM inference/serving対象ではない。",
+      "source_url": "https://arxiv.org/abs/2607.26694",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25161",
+      "identity_tokens": [
+        "arXiv:2606.25161"
+      ],
+      "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
+      "reason": "一次要旨はLLM agentのmemory consolidationを学習しtrustworthinessを改善する手法で、inference cost/latencyを主要評価しない。",
+      "source_url": "https://arxiv.org/abs/2606.25161",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10677",
+      "identity_tokens": [
+        "arXiv:2606.10677"
+      ],
+      "title": "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory",
+      "reason": "一次要旨はlong-term LLM agent memoryのretrieval architectureとMemoryAgentBench品質を扱い、context/token/latency効率の改善を主張しない。",
+      "source_url": "https://arxiv.org/abs/2606.10677",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01822",
+      "identity_tokens": [
+        "arXiv:2402.01822"
+      ],
+      "title": "Building Guardrails for Large Language Models",
+      "reason": "一次要旨はLLM guardrailsの設計と評価を扱い、inference efficiencyの寄与を示さない。",
+      "source_url": "https://arxiv.org/abs/2402.01822",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24695",
+      "identity_tokens": [
+        "arXiv:2512.24695"
+      ],
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+      "reason": "一次要旨はNested Learningによる学習/architectureの見方を扱い、LLM serving効率の具体的手法を提示しない。",
+      "source_url": "https://arxiv.org/abs/2512.24695",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    }
+  ]
+}
