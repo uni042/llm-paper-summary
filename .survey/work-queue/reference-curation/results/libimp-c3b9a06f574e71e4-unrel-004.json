@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3b9a06f574e71e4-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1088/2631-8695/ae841e",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1088/2631-8695/ae841e",
+    "identity_tokens": [
+      "DOI:10.1088/2631-8695/ae841e"
+    ],
+    "reason": "Primary abstract reviewed: In side-channel analysis, combining Boolean masking with extreme algorithmic jitter effectively thwarts standard Convolutional Neural Networks (CNNs) by scattering leakage shares beyond their maximum receptive field. While Transformer architectures offer global correlation to bypass this spatial limit, applying pure self-attention to high-dimensional raw traces triggers a prohibitive O(L2) memory bottleneck. This paper presents an architectural exploration of attention mechan [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:34+00:00",
+    "last_checked_at": "2026-10-05T11:37:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Bypassing the dimensionality bottleneck: a hybrid CNN-transformer framework for side-channel analysis"
+  },
+  "processed_at": "2026-10-05T11:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3b9a06f574e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9ee37e2aebbdfef-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3808189",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3808189",
+    "identity_tokens": [
+      "DOI:10.1145/3808189"
+    ],
+    "reason": "Primary abstract reviewed: The popularity of Python in various application domains has driven widespread adoption of NumPy-style APIs. To improve performance, libraries such as PyTorch, JAX, CuPy, and cuPyNumeric offer GPU-compatible counterparts to NumPy functions. However, substituting NumPy with these alternatives is not always beneficial due to the overheads of type conversion, data transfer, and kernel launch costs. We present SmartDispatch, a runtime framework that dynamically substitutes NumPy-s [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:35+00:00",
+    "last_checked_at": "2026-10-05T11:37:35+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "SmartDispatch: Dynamic Substitution of NumPy-Style APIs on Heterogeneous CPU-GPU Systems"
+  },
+  "processed_at": "2026-10-05T11:37:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9ee37e2aebb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

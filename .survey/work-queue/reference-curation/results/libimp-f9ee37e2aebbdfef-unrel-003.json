@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9ee37e2aebbdfef-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/signals7040059",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/signals7040059",
+    "identity_tokens": [
+      "DOI:10.3390/signals7040059"
+    ],
+    "reason": "Primary abstract reviewed: User Behaviour Analytics (UBA) relies heavily on sequential data to detect anomalies such as insider threats. Traditional approaches often model user behaviour as discrete sequences of events using Recurrent Neural Networks (RNNs) like Long Short-Term Memory (LSTM) networks. These methods implicitly treat time steps as uniform, ignoring the irregular time intervals inherent in user logs. In this paper, we present the first application of Neural Controlled Differential Equatio [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:35+00:00",
+    "last_checked_at": "2026-10-05T11:37:35+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Time Is of the Essence: A Comparative Study of Continuous (NCDE) and Discrete (LSTM) Time Models for User Anomaly Detection"
+  },
+  "processed_at": "2026-10-05T11:37:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9ee37e2aebb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c3b9a06f574e71e4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/netsoft70012.2026.11603456",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/netsoft70012.2026.11603456",
+    "identity_tokens": [
+      "DOI:10.1109/netsoft70012.2026.11603456"
+    ],
+    "reason": "Primary abstract reviewed: The proliferation of computation-and energyintensive AI/ML applications in 6G challenges resourceconstrained User Equipment (UE). Split AI, which partitions inference tasks between the UE and network, can reduce UE energy consumption. However, existing methods often neglect constraints on UE energy expenditure and lack mechanisms to adapt to heterogeneous, time-varying network conditions. This paper proposes EnSplit, a dynamic split inference framework that jointly optimizes  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:37:34+00:00",
+    "last_checked_at": "2026-10-05T11:37:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+    ],
+    "title": "EnSplit: Dynamic DRL Energy-Aware Split Inference for AI-Based UE Apps in 6G Networks"
+  },
+  "processed_at": "2026-10-05T11:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c3b9a06f574e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:34:44+00:00",
-  "record_count": 4663,
+  "updated_at": "2026-10-05T11:37:35+00:00",
+  "record_count": 4681,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -67892,6 +67892,263 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "Edge-Efficient Transformer for End-to-End RF Spectrum Monitoring"
+    },
+    "arXiv:2606.30460": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30460",
+      "identity_tokens": [
+        "arXiv:2606.30460"
+      ],
+      "reason": "Primary abstract reviewed: In this paper, we aim to combine the advantages of existing sequence parallelism paradigms and overcomes their drawbacks, the most serious of which is the incapability to correctly compute causal attention on the hybrid-context packed sequences, in a stronger sequence parallelism framework. The practical technique of packing sequences for efficiently pretraining and fine-tuning large language models causes cross-contamination problem in attention computation, which can be eff [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:32+00:00",
+      "last_checked_at": "2026-10-05T11:37:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "HSAP: A Hierarchical Sequence-aware Parallelism for Hybrid-Context Generative Models"
+    },
+    "arXiv:2606.30533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30533",
+      "identity_tokens": [
+        "arXiv:2606.30533"
+      ],
+      "reason": "Primary abstract reviewed: Cloud-based online services face significant sub-second load fluctuations while needing to meet strict Service Level Objectives (SLOs). Cluster operators often over-provision resources to protect SLOs, sacrificing utilization and cost efficiency. Existing reactive and proactive autoscalers, serverless (FaaS) deployments, and VM/FaaS hybrid systems fail to reconcile strict SLO compliance with low cost and high utilization under fine-grained load fluctuation. We introduce Spand [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:32+00:00",
+      "last_checked_at": "2026-10-05T11:37:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ],
+      "title": "Spandana: Reconciling Strict SLOs with Low Cost under Fine-Grained Load Fluctuations"
+    },
+    "arXiv:2606.30577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30577",
+      "identity_tokens": [
+        "arXiv:2606.30577"
+      ],
+      "reason": "Primary abstract reviewed: We present APRIL-MedSeg, a YAML-driven modular framework for 2D medical image segmentation. It provides a unified and extensible ecosystem that decomposes segmentation networks into reusable components. Also, the framework integrates a broad spectrum of advanced paradigms, including semi-supervised learning, domain adaptation, knowledge distillation, weakly supervised learning, and text-guided segmentation as well as foundation model support. A registry-based configuration sy [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:32+00:00",
+      "last_checked_at": "2026-10-05T11:37:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "APRIL-MedSeg: A Modular Medical Image Segmentation Toolbox Embracing Modern Paradigms"
+    },
+    "arXiv:2606.30634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30634",
+      "identity_tokens": [
+        "arXiv:2606.30634"
+      ],
+      "reason": "Primary abstract reviewed: Modern large-scale LLM pretraining benefits from utilizing Pipeline Parallelism; however, synchronous implementations leave GPUs idle during pipeline bubbles, wasting computational resources. Asynchronous Pipeline Parallelism eliminates these bubbles, maximizing throughput at the cost of gradient staleness. Among asynchronous schedules, PipeDream-2BW is particularly appealing: unlike the original PipeDream schedule, it ensures a constant one-step gradient delay regardless of  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:32+00:00",
+      "last_checked_at": "2026-10-05T11:37:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "One-Step Gradient Delay is Not a Barrier for Large-Scale Asynchronous Pipeline Parallel LLM Pretraining"
+    },
+    "arXiv:2607.22661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22661",
+      "identity_tokens": [
+        "arXiv:2607.22661"
+      ],
+      "reason": "Primary abstract reviewed: Diffusion large language models (D-LLMs) have recently gained increasing attention, yet their reliability is significantly hindered by the hallucination problem. Existing hallucination detection approaches for D-LLMs mainly follow a training-based paradigm, relying on data-driven training to optimize the detector. Such reliance not only limits their generalizability across domains models but also incurs additional training cost and deployment overhead. To address these limita [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:32+00:00",
+      "last_checked_at": "2026-10-05T11:37:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "TRE: Training-Free Hallucination Detection for Diffusion Language Models"
+    },
+    "arXiv:2607.22662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22662",
+      "identity_tokens": [
+        "arXiv:2607.22662"
+      ],
+      "reason": "Primary abstract reviewed: Open-web corpora curated via highly selective filters, such as FineWeb-Edu and DCLM, constitute the core of LLM pretraining data and have significantly advanced LLM performance. However, these pipelines typically rely on singular optimization objectives, which inevitably narrows distributional diversity and marginalizes long-tail knowledge, thereby restricting data coverage and underutilizing the vast potential of the open web. To address this limitation, we propose a novel c [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:33+00:00",
+      "last_checked_at": "2026-10-05T11:37:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "CuraWeb: Joint Optimization of Quality, Redundancy, and Diversity for Web-Scale Pretraining Data"
+    },
+    "DOI:10.1088/1361-6560/ae8419": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-6560/ae8419",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6560/ae8419"
+      ],
+      "reason": "Primary abstract reviewed: Objective. Existing sparse attention networks in medical image segmentation suffer from fixed K values across modules and scales, hindering effective adaptation to the wide variability in lesion sizes and shapes. The objective of this study is to develop an adaptive, differentiable sparse attention mechanism to solve this issue for both the robustness and the segmentation accuracy of medical image analysis systems. Approach. We propose patch adaptive cut-off network (PACNet), [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:33+00:00",
+      "last_checked_at": "2026-10-05T11:37:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "PAC-Net: patch adaptive cut-off network with differentiable module-wise K-learning for robust and efficient medical image segmentation"
+    },
+    "DOI:10.1088/2631-8695/ae841e": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/ae841e",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae841e"
+      ],
+      "reason": "Primary abstract reviewed: In side-channel analysis, combining Boolean masking with extreme algorithmic jitter effectively thwarts standard Convolutional Neural Networks (CNNs) by scattering leakage shares beyond their maximum receptive field. While Transformer architectures offer global correlation to bypass this spatial limit, applying pure self-attention to high-dimensional raw traces triggers a prohibitive O(L2) memory bottleneck. This paper presents an architectural exploration of attention mechan [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Bypassing the dimensionality bottleneck: a hybrid CNN-transformer framework for side-channel analysis"
+    },
+    "DOI:10.1109/netsoft70012.2026.11603456": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/netsoft70012.2026.11603456",
+      "identity_tokens": [
+        "DOI:10.1109/netsoft70012.2026.11603456"
+      ],
+      "reason": "Primary abstract reviewed: The proliferation of computation-and energyintensive AI/ML applications in 6G challenges resourceconstrained User Equipment (UE). Split AI, which partitions inference tasks between the UE and network, can reduce UE energy consumption. However, existing methods often neglect constraints on UE energy expenditure and lack mechanisms to adapt to heterogeneous, time-varying network conditions. This paper proposes EnSplit, a dynamic split inference framework that jointly optimizes  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+      ],
+      "title": "EnSplit: Dynamic DRL Energy-Aware Split Inference for AI-Based UE Apps in 6G Networks"
+    },
+    "arXiv:2606.29814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29814",
+      "identity_tokens": [
+        "arXiv:2606.29814"
+      ],
+      "reason": "Primary abstract reviewed: We propose Nemotron-Labs-Diffusion-Image, a state-of-the-art masked discrete diffusion model (MDM) for high-resolution text-to-image synthesis. Compared with prior work on masked image generation, Nemotron-Labs-Diffusion-Image addresses two key challenges. First, unlike continuous diffusion models which progressively refine latent representations across the entire image, standard MDMs lack self-correcting capability because discrete tokens cannot be modified once they are unm [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "title": "Nemotron-Labs-Diffusion-Image: Advancing Masked Discrete Diffusion for High-Resolution Image Synthesis"
+    },
+    "arXiv:2606.29916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29916",
+      "identity_tokens": [
+        "arXiv:2606.29916"
+      ],
+      "reason": "Primary abstract reviewed: Long-running language agents need mechanisms for deciding which experiences should persist after the working context is gone. Retrieval systems can reinsert past text, but they do not by themselves show that an experience has been selectively consolidated into the model's own behavior. We introduce EVAF, an Echo-Valence Attractor Field mechanism for gated LoRA consolidation, and a test-retest protocol for measuring selective parametric consolidation under controlled interfere [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "EVAF: A Test-Retest Protocol for Selective Parametric Consolidation"
+    },
+    "arXiv:2606.29928": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29928",
+      "identity_tokens": [
+        "arXiv:2606.29928"
+      ],
+      "reason": "Primary abstract reviewed: Multimodal Large Models have significantly advanced automated breast ultrasound diagnosis. However, most existing frameworks utilize opaque, end-to-end paradigms prioritizing global statistical correlations over structured clinical reasoning. Consequently, these models remain susceptible to shortcut learning amid extreme real-world epidemiological imbalances, often bypassing rare but decisive malignant indicators for dominant benign patterns. To address this disconnect, we pr [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Latent-CURE for Breast Cancer Diagnosis"
+    },
+    "arXiv:2606.29966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29966",
+      "identity_tokens": [
+        "arXiv:2606.29966"
+      ],
+      "reason": "Primary abstract reviewed: Quantum computing provides a powerful paradigm for representing and transforming high-dimensional information through superposition, entanglement, and measurement-induced nonlinear features. While current quantum hardware is not yet practical for direct large-scale vision-language model (VLM) inference, simulated quantum computation can be used during model construction to generate structured parameters for compact classical AI systems. We build RiverONE, a lightweight vision [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "RiverONE: Generating Knowledge-Intensive VLM by Simulated Quantum Machines"
+    },
+    "arXiv:2606.30147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30147",
+      "identity_tokens": [
+        "arXiv:2606.30147"
+      ],
+      "reason": "Primary abstract reviewed: Recent progress in Text-to-Image generation benefits from large-scale Text-Image pairs. However, the scarcity of Text-LiDAR pairs often causes over-smoothed scenes and limited controllability. In this paper, we rethink the limitations of Text-LiDAR generation task, focusing on alleviating insufficient training priors and constructing controllable Text-LiDAR data. We propose a \\textbf{T}ext-\\textbf{to}-\\textbf{L}iDAR \\textbf{D}iffusion \\textbf{M}odel for LiDAR scene generation [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:34+00:00",
+      "last_checked_at": "2026-10-05T11:37:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "T2LDM++: A Self-Conditioned Representation Guided Diffusion Model for Realistic Text-to-LiDAR Scene Generation"
+    },
+    "DOI:10.1145/3808189": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3808189",
+      "identity_tokens": [
+        "DOI:10.1145/3808189"
+      ],
+      "reason": "Primary abstract reviewed: The popularity of Python in various application domains has driven widespread adoption of NumPy-style APIs. To improve performance, libraries such as PyTorch, JAX, CuPy, and cuPyNumeric offer GPU-compatible counterparts to NumPy functions. However, substituting NumPy with these alternatives is not always beneficial due to the overheads of type conversion, data transfer, and kernel launch costs. We present SmartDispatch, a runtime framework that dynamically substitutes NumPy-s [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:35+00:00",
+      "last_checked_at": "2026-10-05T11:37:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SmartDispatch: Dynamic Substitution of NumPy-Style APIs on Heterogeneous CPU-GPU Systems"
+    },
+    "DOI:10.33407/itlt.v113i3.6614": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.33407/itlt.v113i3.6614",
+      "identity_tokens": [
+        "DOI:10.33407/itlt.v113i3.6614"
+      ],
+      "reason": "Primary abstract reviewed: In modern research practice, AI chatbots are gaining recognition as effective digital assistants that facilitate the search and analysis of scientific literature. In this context, the article presents a comprehensive analysis of the features of using AI chatbots in research practice, particularly for searching and analysing scientific sources. The research methodology is based on a mixed approach that combines a desk review of scientific sources with a comparative assessment  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:35+00:00",
+      "last_checked_at": "2026-10-05T11:37:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "AI CHATBOTS IN RESEARCH PRACTICE: POSSIBILITIES FOR SEARCHING AND ANALYSING SCIENTIFIC SOURCES"
+    },
+    "DOI:10.3390/signals7040059": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/signals7040059",
+      "identity_tokens": [
+        "DOI:10.3390/signals7040059"
+      ],
+      "reason": "Primary abstract reviewed: User Behaviour Analytics (UBA) relies heavily on sequential data to detect anomalies such as insider threats. Traditional approaches often model user behaviour as discrete sequences of events using Recurrent Neural Networks (RNNs) like Long Short-Term Memory (LSTM) networks. These methods implicitly treat time steps as uniform, ignoring the irregular time intervals inherent in user logs. In this paper, we present the first application of Neural Controlled Differential Equatio [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:35+00:00",
+      "last_checked_at": "2026-10-05T11:37:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Time Is of the Essence: A Comparative Study of Continuous (NCDE) and Discrete (LSTM) Time Models for User Anomaly Detection"
+    },
+    "DOI:10.7717/peerj-cs.3966": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7717/peerj-cs.3966",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.3966"
+      ],
+      "reason": "Primary abstract reviewed: Convolutional neural networks (CNNs) and Transformer-based architectures are widely adopted across vision and sequence modeling tasks, yet their computational efficiency is often evaluated using empirical benchmarks without a unified theoretical framework. While metrics such as latency, floating-point operations (FLOPs), and memory usage provide practical insight, they do not explicitly characterize how computational costs scale with increasing input resolution or sequence le [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:37:35+00:00",
+      "last_checked_at": "2026-10-05T11:37:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "A unified Big-O-based framework for comparative complexity analysis of CNN and Transformer architectures"
     }
   }
 }
