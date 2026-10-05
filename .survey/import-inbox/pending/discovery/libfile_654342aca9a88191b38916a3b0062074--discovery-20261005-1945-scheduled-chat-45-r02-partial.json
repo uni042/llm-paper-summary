@@ -1,0 +1,27 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1945-scheduled-chat-45/r02",
+  "reference_main_sha": "ea70fecd57c9ef688b9fe71af37c94d00900bf73",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.10131",
+      "identity_tokens": [
+        "arXiv:2403.10131"
+      ],
+      "title": "RAFT: Adapting Language Model to Domain Specific RAG",
+      "reason": "retrieved document中のdistractorを無視し正しい根拠を引用できるようLLMをfine-tuneするtraining recipe。PubMed/HotpotQA/Gorillaで回答品質を改善するが、RAG inference runtime・retrieval latency・memory・serving効率化は主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2403.10131",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でRetrieval Augmented FineTuning、distractor document training、domain-specific QA性能が主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T20:13:00+09:00",
+      "last_checked_at": "2026-10-05T20:13:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+      ],
+      "worklist_rank": 32
+    }
+  ]
+}
