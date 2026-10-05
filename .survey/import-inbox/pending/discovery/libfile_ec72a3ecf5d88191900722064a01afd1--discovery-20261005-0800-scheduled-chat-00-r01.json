@@ -1,0 +1,163 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0800-scheduled-chat-00/r01",
+  "reference_main_sha": "8e5f81d3584459396677f8abc1a9f3c2d8faca84",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.08050",
+      "identity_tokens": [
+        "arXiv:2105.08050"
+      ],
+      "title": "Pay Attention to MLPs",
+      "reason": "gMLPは自己注意をMLPの空間ゲーティングへ置換し、BERT事前学習・下流NLPとVision Transformer相当の精度を検証するアーキテクチャ研究。主眼はモデル能力・スケーリングで、生成LLMの推論ランタイム、サービング、KVキャッシュ最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2105.08050",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgMLPのBERT/vision評価とスケーリングが主題であることを確認し、現行LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.272",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.272",
+        "arXiv:2112.01488"
+      ],
+      "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+      "reason": "ColBERTv2はtoken単位のlate interaction検索器に残差圧縮とdenoised supervisionを導入し、検索品質を保ちながらindex容量を6–10倍削減する情報検索研究。RAG周辺技術として有用だが、LLM推論runtime/serving自体を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2112.01488",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でneural information retrievalの品質とindex space footprintが最終評価であることを確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.01315",
+      "identity_tokens": [
+        "arXiv:1909.01315"
+      ],
+      "title": "Deep Graph Library: A Graph-Centric, Highly-Performant Package for Graph Neural Networks",
+      "reason": "DGLはGNN向けの疎tensor演算、operator fusion、auto-batchingを提供し速度・メモリを改善するgraph deep learning基盤。最終適用先はGNNであり、LLM/Transformer推論systemではない。",
+      "source_url": "https://arxiv.org/abs/1909.01315",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でGNN frameworkの速度・memory・scalabilityが主題と確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.findings-acl.146",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.findings-acl.146",
+        "arXiv:2108.08877"
+      ],
+      "title": "Sentence-T5: Scalable Sentence Encoders from Pre-trained Text-to-Text Models",
+      "reason": "T5からsentence embeddingを抽出する3方式とSentGLUEを提案し、意味類似度・transfer品質とモデルscale効果を評価する表現学習研究。推論runtime、memory、serving最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2108.08877",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でsentence representation transfer/STS品質が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.10435",
+      "identity_tokens": [
+        "arXiv:2211.10435"
+      ],
+      "title": "PAL: Program-aided Language Models",
+      "reason": "PALはLLMに自然言語問題を実行可能programへ分解させ、計算自体をPython interpreterへ委譲してreasoning accuracyを改善する推論時手法。外部runtimeを使うが目的はGSM8K等の正解率向上で、LLM serving/runtimeの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2211.10435",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprogram-aided reasoningと13 reasoning taskのaccuracy改善が主題と確認し、性能最適化対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25080/majora-7b98e3ed-013",
+      "identity_tokens": [
+        "DOI:10.25080/majora-7b98e3ed-013"
+      ],
+      "title": "Dask: Parallel Computation with Blocked algorithms and Task Scheduling",
+      "reason": "Daskはblocked algorithmと動的・memory-aware task schedulingでparallel/out-of-core NumPy計算を実現する汎用並列計算基盤。LLM推論を最終適用先とせず、LLM serving固有の評価もない。",
+      "source_url": "https://doi.org/10.25080/MAJORA-7B98E3ED-013",
+      "body_check": "abstract_screen_only: SciPy Proceedings一次論文の要旨でparallel/out-of-core NumPyと汎用task schedulingが主題と確認し、LLM推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.00037",
+      "identity_tokens": [
+        "arXiv:2410.00037"
+      ],
+      "title": "Moshi: a speech-text foundation model for real-time dialogue",
+      "reason": "Moshiはtext LLM backboneと階層型audio language modelを統合し、入力音声と出力音声を並列autoregressive streamとして常時処理するfull-duplex実時間会話LLM。streaming architectureにより理論160 ms、実測約200 msのlatencyを実現し、従来pipelineの数秒latencyを推論architectureそのものから削減するため対象内。",
+      "source_url": "https://arxiv.org/abs/2410.00037",
+      "body_check": "full_text_checked: 一次arXiv HTML本文のIntroduction/Model/Evaluationを確認。multi-stream audio LM、hierarchical streaming generation、text/audio tokenの時間整列、5分context、理論160 ms・実測約200 msのreal-time inferenceを確認。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.14624",
+      "identity_tokens": [
+        "arXiv:2403.14624"
+      ],
+      "title": "MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?",
+      "reason": "MathVerseは2,612問を6種の情報条件へ変換した15K sampleのvisual math benchmarkとCoT評価法でMLLMの図理解・推論品質を測る評価研究。推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2403.14624",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvisual math benchmark構築とMLLM reasoning評価が主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.acl-long.581",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.acl-long.581",
+        "arXiv:2104.08696"
+      ],
+      "title": "Knowledge Neurons in Pretrained Transformers",
+      "reason": "BERTの事実知識を表現するknowledge neuronをattributionで同定し、特定知識のupdate/eraseをfine-tuningなしで操作するinterpretability/model editing研究。推論runtime・memory・serving効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2104.08696",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でknowledge attribution、BERT cloze、knowledge editingが主題と確認し、推論system対象外と明白なため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.09419",
+      "identity_tokens": [
+        "arXiv:2302.09419"
+      ],
+      "title": "A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT",
+      "reason": "text/image/graph等のpretrained foundation modelをpretraining、応用、効率、securityまで広く整理する総合survey。LLM推論system固有の新規方式・runtime評価を提案する論文ではない。",
+      "source_url": "https://arxiv.org/abs/2302.09419",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でfoundation model全般のsurveyが主題と確認し、特定LLM推論system研究ではないため本文未読。",
+      "first_checked_at": "2026-10-05T08:12:00+09:00",
+      "last_checked_at": "2026-10-05T08:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    }
+  ]
+}
