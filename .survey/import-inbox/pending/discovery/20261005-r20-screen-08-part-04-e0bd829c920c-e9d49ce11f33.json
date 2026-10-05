@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-08-part-04-e0bd829c920c",
+  "reference_main_sha": "6768a2bc0c3a0c25d31da0568ec192c4f389513d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12320",
+      "identity_tokens": [
+        "arXiv:2609.12320"
+      ],
+      "title": "AIM: A Privacy-Aware Interoperable Memory Framework for Multi-Agent Multi-User LLM Systems",
+      "reason": "一次要旨: Traditional large language models (LLMs) are scoped to individual user sessions, limiting their knowledge to a single conversation and preventing them from learning user preferences that evolve over time. Existing agentic memory systems address this limitation but generally operate at the individual-user level, restricting the public knowledge that could be shared across users to improve downstream responses. We intr",
+      "source_url": "https://arxiv.org/abs/2609.12320",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12337",
+      "identity_tokens": [
+        "arXiv:2609.12337"
+      ],
+      "title": "Theoretical Guarantees for One-Shot Magnitude Pruning and Compute-Adaptive Early Exit",
+      "reason": "一次要旨: We study compute reduction in neural networks through a unified partial versus full computation view, captured by one-shot magnitude pruning in the static regime and early exit in the adaptive regime. In an asymptotic single-neuron model, we prove a concentration theorem for one-shot magnitude pruning with explicit rates. We also introduce the conditional perceptron for early exit and show that its excess generalizat",
+      "source_url": "https://arxiv.org/abs/2609.12337",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12419",
+      "identity_tokens": [
+        "arXiv:2609.12419"
+      ],
+      "title": "MInTRL: Off-policy Intervention can boost On-policy RL",
+      "reason": "一次要旨: Reinforcement learning with verifiable rewards is typically performed on-policy, keeping training data close to the current policy but limiting learning to trajectories that the policy can discover itself. Off-policy methods such as supervised fine-tuning, on the other hand, can leverage external knowledge beyond the base model's capabilities, but may suffer from large distribution shift. The key challenge is thus to",
+      "source_url": "https://arxiv.org/abs/2609.12419",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12436",
+      "identity_tokens": [
+        "arXiv:2609.12436"
+      ],
+      "title": "LifeFuse-Mem: Lifecycle-Aware State Fusion Against Temporary Overwriting for Long-Term Memory",
+      "reason": "一次要旨: Long-running LLM agents require memory mechanisms that maintain coherent internal states across interactions. We study a lifecycle-labeled memory setting in which write episodes provide lifecycle metadata during training, and phase-aware readout is used during evaluation. This setting reflects the need to distinguish information that should remain influential across future interactions from information that should af",
+      "source_url": "https://arxiv.org/abs/2609.12436",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12471",
+      "identity_tokens": [
+        "arXiv:2609.12471"
+      ],
+      "title": "AMDKernelVault: Large-Scale Datasets and Agentic Training for AMD GPU Kernel Optimization",
+      "reason": "一次要旨: We introduce AMDKernelVault, an open HIP and Triton kernel corpus and training framework for recent AMD CDNA GPUs. Existing LLM-based kernel agents are largely CUDA/NVIDIA-centric and often depend on repeated frontier-LLM calls for generation, reflection, and optimization. To address this gap, we develop HIPKernelGen and TritonKernelGen, agent-driven pipelines that transform PyTorch references into HIP or Triton kern",
+      "source_url": "https://arxiv.org/abs/2609.12471",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    }
+  ]
+}
