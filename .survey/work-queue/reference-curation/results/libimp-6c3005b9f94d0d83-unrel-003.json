@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c3005b9f94d0d83-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.00712",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.00712",
+    "identity_tokens": [
+      "arXiv:2607.00712"
+    ],
+    "reason": "KV cache圧縮対象は自己回帰動画生成モデルの動画履歴で、言語モデル推論の対象外。",
+    "first_checked_at": "2026-10-05T03:49:51+00:00",
+    "last_checked_at": "2026-10-05T03:49:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+    ],
+    "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption"
+  },
+  "processed_at": "2026-10-05T03:49:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c3005b9f94d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

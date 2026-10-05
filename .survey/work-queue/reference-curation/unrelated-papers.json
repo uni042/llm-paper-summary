@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:47:25+00:00",
-  "record_count": 2366,
+  "updated_at": "2026-10-05T03:49:52+00:00",
+  "record_count": 2378,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -34268,6 +34268,185 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Probabilistic Low-Voltage Peak Load Forecasting with Time Series Foundation Models Evaluated on Application-Oriented Metrics"
+    },
+    "arXiv:2607.00712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00712",
+      "identity_tokens": [
+        "arXiv:2607.00712"
+      ],
+      "reason": "KV cache圧縮対象は自己回帰動画生成モデルの動画履歴で、言語モデル推論の対象外。",
+      "first_checked_at": "2026-10-05T03:49:51+00:00",
+      "last_checked_at": "2026-10-05T03:49:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption"
+    },
+    "arXiv:2607.00902": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00902",
+      "identity_tokens": [
+        "arXiv:2607.00902"
+      ],
+      "reason": "RWKVを時間方向の映像偽造箇所検出へ適用するタスク特化モデル論文で、LLM推論/servingではない。",
+      "first_checked_at": "2026-10-05T03:49:51+00:00",
+      "last_checked_at": "2026-10-05T03:49:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "MG-RWKV: Multi-Grained Context-Aware RWKV for Temporal Forgery Localization"
+    },
+    "DOI:10.1109/tcc.2026.3689897": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3689897",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3689897"
+      ],
+      "reason": "マルチクラウドのworkloadを予測するgraph mixture-of-expertsであり、LLM serving/inferenceの効率化ではない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Causality-Aware Graph Mixture of Experts for Accurate Multi-Cloud Workload Prediction"
+    },
+    "DOI:10.1109/tmc.2026.3657229": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3657229",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3657229"
+      ],
+      "reason": "Federated LLMのプライバシー漏えい測定・検知・保護が主題で、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "FedShieldLLM: Measurement, Detection and Protection of Privacy Leakage in Federated LLMs"
+    },
+    "arXiv:2607.03612": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03612",
+      "identity_tokens": [
+        "arXiv:2607.03612"
+      ],
+      "reason": "対象はF3Rの画像列3D再構成attentionであり、LLM/VLMの推論・servingや言語モデル圧縮ではない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "SAF3R: Dynamic Sparse Attention for Feed-Forward 3D Reconstruction Transformers"
+    },
+    "arXiv:2607.03615": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03615",
+      "identity_tokens": [
+        "arXiv:2607.03615"
+      ],
+      "reason": "RAGで無関係文書を加えた場合のQA再現性・prompt/decoding設定の影響を検討する実験で、推論効率を改善する手法やserving機構を提案しない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise"
+    },
+    "arXiv:2607.01586": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01586",
+      "identity_tokens": [
+        "arXiv:2607.01586"
+      ],
+      "reason": "VLAのflow-matching事前学習目的を比較するtraining frameworkで、abstractの主題と評価は学習・transfer性能。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment"
+    },
+    "arXiv:2607.01844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01844",
+      "identity_tokens": [
+        "arXiv:2607.01844"
+      ],
+      "reason": "MoEの分散・並列化を使う大規模pre-training/fine-tuningのtraining stackで、推論専用の効率化ではない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models"
+    },
+    "DOI:10.1016/j.inffus.2026.104617": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104617",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2026.104617"
+      ],
+      "reason": "交通時空間予測のcross-modal手法をまとめるsurveyで、LLM推論/serving対象外。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Cross-modal Spatiotemporal Prediction in Transportation: A Survey of Modeling Paradigms, Representations, Alignment, and Reasoning"
+    },
+    "DOI:10.1016/j.sysarc.2026.103940": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103940",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103940"
+      ],
+      "reason": "edge向けメモリ中心アクセラレータの一般的なneural network hardware surveyで、abstractにLLM/言語モデルを対象とする根拠がない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A survey on memory-centric neural network accelerators for edge intelligence: Architectures, technologies, and emerging trends"
+    },
+    "DOI:10.1109/jlt.2026.3688671": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jlt.2026.3688671",
+      "identity_tokens": [
+        "DOI:10.1109/jlt.2026.3688671"
+      ],
+      "reason": "光ネットワーク間のcollective communicationを扱う通信網研究で、AI/LLM inference workloadを対象としていない。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "All-Optical Network Coding-Enabled Efficient Collective Communication Over OTN-Interconnected Inter-DC Networks"
+    },
+    "arXiv:2606.22540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22540",
+      "identity_tokens": [
+        "arXiv:2606.22540"
+      ],
+      "reason": "PolicyTrimはVLAのRL post-trainingで連続動作chunkを短くしpolicy executionを高速化し、本文ではLIBEROで最大2.48xを示す。 対象はvision-language-action robot policyの行動頻度・trajectory効率で、LLM token inference/serving機構ではない。対象範囲外。",
+      "first_checked_at": "2026-10-05T03:49:52+00:00",
+      "last_checked_at": "2026-10-05T03:49:52+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "PolicyTrim: Boosting Intrinsic Policy Efficiency of Vision-Language-Action Models"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9aaa4231700d8d6f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.sysarc.2026.103940",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.sysarc.2026.103940",
+    "identity_tokens": [
+      "DOI:10.1016/j.sysarc.2026.103940"
+    ],
+    "reason": "edge向けメモリ中心アクセラレータの一般的なneural network hardware surveyで、abstractにLLM/言語モデルを対象とする根拠がない。",
+    "first_checked_at": "2026-10-05T03:49:52+00:00",
+    "last_checked_at": "2026-10-05T03:49:52+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "A survey on memory-centric neural network accelerators for edge intelligence: Architectures, technologies, and emerging trends"
+  },
+  "processed_at": "2026-10-05T03:49:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aaa4231700d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

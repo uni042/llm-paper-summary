@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9aaa4231700d8d6f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/lra.2026.3683324",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/lra.2026.3683324",
+    "identity_tokens": [
+      "DOI:10.1109/lra.2026.3683324"
+    ],
+    "reason": "VLA architectureとMaclaurin-seriesの設計が推論効率に関係する可能性があるが、一次本文を取得できずcompression/runtime効果と対象性を確認できない。",
+    "first_checked_at": "2026-10-05T03:49:52+00:00",
+    "last_checked_at": "2026-10-05T03:49:52+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Dynamic Maclaurin-Series-Based Vision-Language-Action Model"
+  },
+  "processed_at": "2026-10-05T03:49:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9aaa4231700d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
