@@ -92,7 +92,7 @@ jobs:
           }
 
           # Stage 1: intake is bounded by actual work volume, not file count.
-          # Research: at most 5 papers. Discovery: at most 40 records.
+          # Research: at most 5 papers. Discovery: at most 60 records.
           stage1_ok=0
           for attempt in $(seq 1 6); do
             sync_main
@@ -100,7 +100,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 5 \
-              --max-discovery-records 40
+              --max-discovery-records 60
             python .survey/scripts/render_status_dashboard.py \
               --repo-root . \
               --output STATUS.md
@@ -164,7 +164,7 @@ jobs:
             set +e
             python .survey/scripts/process_reference_relevance_requests.py \
               --repo-root . \
-              --max-requests 40
+              --max-requests 60
             relevance_rc=$?
             set -e
 
@@ -181,7 +181,7 @@ jobs:
             exit 1
           }
 
-          # Stage 3: re-read current main and advance only the same <=40-record
+          # Stage 3: re-read current main and advance only the same <=60-record
           # Discovery window. Research is disabled after the intake stage.
           stage3_ok=0
           for attempt in $(seq 1 4); do
@@ -189,7 +189,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 0 \
-              --max-discovery-records 40
+              --max-discovery-records 60
 
             if publish \
               'library-import: advance bounded Discovery work' \
@@ -207,7 +207,7 @@ jobs:
             exit 1
           }
 
-          # Stage 4: a 40-record Discovery window creates at most eight normal
+          # Stage 4: a 60-record Discovery window creates at most twelve normal
           # five-candidate submissions. Keep extra historical queue work bounded.
           stage4_ok=0
           for attempt in $(seq 1 4); do
@@ -240,7 +240,7 @@ jobs:
             python .survey/scripts/process_library_import_inbox.py \
               --repo-root . \
               --max-research 0 \
-              --max-discovery-records 40
+              --max-discovery-records 60
             python .survey/scripts/render_status_dashboard.py \
               --repo-root . \
               --output STATUS.md
