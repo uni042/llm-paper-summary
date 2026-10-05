@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-19-part-06-a1a063f6ecd4",
+  "reference_main_sha": "0db32737ee15a836d1c701bc3103731c45ee6d70",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25963",
+      "identity_tokens": [
+        "arXiv:2609.25963"
+      ],
+      "title": "GeoPair: Geometry-Preserving Cross-Layer Factorization for Training-Free Transformer Compression",
+      "reason": "Although the method compresses model weights, the paper evidence inspected is limited to compression and quality metrics and does not establish inference-serving savings; weak scope evidence warrants borderline.",
+      "source_url": "https://arxiv.org/abs/2609.25963",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26363",
+      "identity_tokens": [
+        "arXiv:2609.26363"
+      ],
+      "title": "DHSched: Stateless Control for Stateful Real-Time Avatar Serving",
+      "reason": "DHSched coordinates ownership and control-path correctness for stateful real-time avatar sessions and reports large concurrent-session and migration-integrity evaluations. It does not optimize LLM generation or inference resource use.",
+      "source_url": "https://arxiv.org/abs/2609.26363",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26365",
+      "identity_tokens": [
+        "arXiv:2609.26365"
+      ],
+      "title": "Privacy-Preserving Coordinated Operation of Power Grids and AI Data Centers: A Checkpoint-Aware Three-Phase Scheme",
+      "reason": "The paper coordinates power grids and AI data centers through checkpoint-aware workload scheduling and grid flexibility; it is not an LLM inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.26365",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26389",
+      "identity_tokens": [
+        "arXiv:2609.26389"
+      ],
+      "title": "TimeInteract: Towards Real-Time Interactive Intelligence for Streaming Time Series",
+      "reason": "TimeInteract targets interactive streaming time-series forecasting; it does not concern LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.26389",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26425",
+      "identity_tokens": [
+        "arXiv:2609.26425"
+      ],
+      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for Video World Models",
+      "reason": "QuantWM compresses KV state for video world models; the contribution is video-world-model inference rather than LLM inference/serving under the stated survey scope.",
+      "source_url": "https://arxiv.org/abs/2609.26425",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
