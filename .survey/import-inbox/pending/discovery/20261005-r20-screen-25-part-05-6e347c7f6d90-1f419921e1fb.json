@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-25-part-05-6e347c7f6d90",
+  "reference_main_sha": "b5564ebf35e031dfac425a9d05f890d23ba0e178",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18182",
+      "identity_tokens": [
+        "arXiv:2608.18182"
+      ],
+      "title": "Efficient INT8 Inference of Small NLP Models on Server CPUs with PyTorch Native Stack",
+      "reason": "Small encoder NLP models rather than generative LLM serving; results depend on Intel CPU generation, batching, and native-stack implementation, so scope fit is adjacent.",
+      "source_url": "https://arxiv.org/abs/2608.18182",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18183",
+      "identity_tokens": [
+        "arXiv:2608.18183"
+      ],
+      "title": "Accelerating Visual On-Policy Distillation with Batched Speculative Jacobi Rollouts",
+      "reason": "Primary abstract accelerates visual on-policy distillation rollouts during student training; the efficiency target is training-time.",
+      "source_url": "https://arxiv.org/abs/2608.18183",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18232",
+      "identity_tokens": [
+        "arXiv:2608.18232"
+      ],
+      "title": "Contracting for LLM Delegation: Moral Hazard in Technology and Effort Choice",
+      "reason": "Primary abstract develops an economic principal-agent contract model for technology/effort choice, not an LLM serving optimization.",
+      "source_url": "https://arxiv.org/abs/2608.18232",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28649",
+      "identity_tokens": [
+        "arXiv:2608.28649"
+      ],
+      "title": "Can Large Language Models Identify Meaningful Touchpoints in Conversion Attribution?",
+      "reason": "Primary abstract evaluates LLM identification of e-commerce conversion touchpoints, an application capability study rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.28649",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21105/joss.10698",
+      "identity_tokens": [
+        "DOI:10.21105/joss.10698"
+      ],
+      "title": "FIRECODE: A Computational Chemistry Workflow Driver and Modular Hub",
+      "reason": "Primary JOSS paper describes a computational-chemistry workflow driver for molecular ensembles, calculators, geometry optimization and transition-state search; it is not an LLM inference tool.",
+      "source_url": "https://doi.org/10.21105/joss.10698",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
