@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:21:08+00:00",
-  "record_count": 863,
+  "updated_at": "2026-10-05T04:23:24+00:00",
+  "record_count": 866,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -12823,6 +12823,61 @@
         "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
       ],
       "title": "Self-Evolving Algorithm-Design Agents: Escaping In-Context Evolutionary Stagnation via Population-Curated Policy Optimization"
+    },
+    "arXiv:2609.39198": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39198",
+      "identity_tokens": [
+        "arXiv:2609.39198"
+      ],
+      "reason": "The target is embodied VLA control and the method compensates for action-loop delay; transfer to the survey’s LLM inference/serving scope is weak.",
+      "first_checked_at": "2026-10-05T04:23:23+00:00",
+      "last_checked_at": "2026-10-05T04:23:23+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "DSDyn-VLA: A Dual-Stream Dynamic Manipulation Framework with Motion Perception, Future Awareness, and Realtime Correction"
+    },
+    "arXiv:2609.39394": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39394",
+      "identity_tokens": [
+        "arXiv:2609.39394"
+      ],
+      "reason": "The demonstrated contribution is reuse for answer quality; the full text does not quantify serving latency, FLOPs, token cost, or memory-versus-compute trade-offs sufficiently to establish inference efficiency.",
+      "first_checked_at": "2026-10-05T04:23:24+00:00",
+      "last_checked_at": "2026-10-05T04:23:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Can Computation from Earlier Problems Help LLMs Solve New Ones?"
+    },
+    "arXiv:2609.39361": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39361",
+      "identity_tokens": [
+        "arXiv:2609.39361"
+      ],
+      "reason": "No measured end-to-end speedup or energy reduction is established; claimed acceleration is prospective and latency from recomputation is acknowledged. Keep borderline pending hardware performance evidence.",
+      "first_checked_at": "2026-10-05T04:23:24+00:00",
+      "last_checked_at": "2026-10-05T04:23:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "LampAttention: Look-Ahead Mixed-Precision FlashAttention for Dedicated Accelerators"
     }
   }
 }

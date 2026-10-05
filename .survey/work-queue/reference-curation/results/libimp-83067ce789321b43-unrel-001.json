@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83067ce789321b43-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39111",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39111",
+    "identity_tokens": [
+      "arXiv:2609.39111"
+    ],
+    "reason": "Training a machine-intuition decision model for throughput; no LLM inference optimization study.",
+    "first_checked_at": "2026-10-05T04:23:24+00:00",
+    "last_checked_at": "2026-10-05T04:23:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Bongard: Training Machine Intuition"
+  },
+  "processed_at": "2026-10-05T04:23:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83067ce78932",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
