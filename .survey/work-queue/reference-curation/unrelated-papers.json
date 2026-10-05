@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:12:08+00:00",
-  "record_count": 1850,
+  "updated_at": "2026-10-05T02:14:50+00:00",
+  "record_count": 1868,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -26692,6 +26692,275 @@
         "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
       ],
       "title": "Planning with Large Language Models for Code Generation"
+    },
+    "arXiv:2410.24164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.24164",
+      "identity_tokens": [
+        "arXiv:2410.24164"
+      ],
+      "reason": "vision-language-action flow modelによるrobot controlと訓練/行動性能が主題で、LLM serving効率ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
+      ],
+      "title": "π0: A Vision-Language-Action Flow Model for General Robot Control"
+    },
+    "arXiv:2411.15594": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15594",
+      "identity_tokens": [
+        "arXiv:2411.15594"
+      ],
+      "reason": "LLM-as-a-judgeの能力・評価設定のsurveyで、推論効率やserving systemは対象でない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md"
+      ],
+      "title": "A Survey on LLM-as-a-Judge"
+    },
+    "arXiv:2503.14734": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14734",
+      "identity_tokens": [
+        "arXiv:2503.14734"
+      ],
+      "reason": "humanoid robot向けgeneralist foundation modelとVLA能力が主題で、LLM inference/serving効率ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
+      ],
+      "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
+    },
+    "arXiv:2503.13657": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13657",
+      "identity_tokens": [
+        "arXiv:2503.13657"
+      ],
+      "reason": "multi-agent LLM system failureの分類・分析が主題で、効率化手法の提案/評価ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Why Do Multi-Agent LLM Systems Fail?"
+    },
+    "arXiv:2502.03387": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03387",
+      "identity_tokens": [
+        "arXiv:2502.03387"
+      ],
+      "reason": "reasoning性能を少量のtraining dataで得るLIMOはtraining data efficiencyが主題で、inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ],
+      "title": "LIMO: Less is More for Reasoning"
+    },
+    "arXiv:1811.02084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.02084",
+      "identity_tokens": [
+        "arXiv:1811.02084"
+      ],
+      "reason": "Mesh-TensorFlowはスーパーコンピュータ上の大規模深層学習のsharding/distributed trainingが主題。LLM推論効率の評価ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Mesh-TensorFlow: Deep Learning for Supercomputers"
+    },
+    "arXiv:1702.04008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1702.04008",
+      "identity_tokens": [
+        "arXiv:1702.04008"
+      ],
+      "reason": "汎用neural-network weight sharing/compressionの研究で、LLM-specific inference/servingや推論時評価の要旨ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
+      ],
+      "title": "Soft Weight-Sharing for Neural Network Compression"
+    },
+    "arXiv:2404.18416": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18416",
+      "identity_tokens": [
+        "arXiv:2404.18416"
+      ],
+      "reason": "Gemini modelの医療能力評価が主題で、推論効率の方法・実験ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Capabilities of Gemini Models in Medicine"
+    },
+    "arXiv:2305.19466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.19466",
+      "identity_tokens": [
+        "arXiv:2305.19466"
+      ],
+      "reason": "positional encodingとTransformerのlength generalizationの研究で、速度/メモリ/推論効率は主題でない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.03949-vestigekv-the-nope-mla-kv-cache-carries-its-own-eviction-signal-in-a-ves.md",
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "The Impact of Positional Encoding on Length Generalization in Transformers"
+    },
+    "arXiv:2101.01321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2101.01321",
+      "identity_tokens": [
+        "arXiv:2101.01321"
+      ],
+      "reason": "I-BERTは整数演算BERT量子化によるencoder modelの効率化。project scopeのgenerative LLM inference/servingの候補ではない。",
+      "first_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "I-BERT: Integer-only BERT Quantization"
+    },
+    "DOI:10.18653/v1/2020.emnlp-main.185": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.185",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.185"
+      ],
+      "reason": "XCOPAは多言語因果常識推論のbenchmark/datasetであり、推論システム効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "XCOPA: A Multilingual Dataset for Causal Commonsense Reasoning"
+    },
+    "arXiv:2401.13601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.13601",
+      "identity_tokens": [
+        "arXiv:2401.13601"
+      ],
+      "reason": "multimodal LLMの最近の研究をまとめるsurveyであり、特定の推論効率化機構・評価ではない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md",
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "MM-LLMs: Recent Advances in MultiModal Large Language Models"
+    },
+    "DOI:10.18653/v1/2020.acl-main.148": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.148",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.148"
+      ],
+      "reason": "multilingual neural machine translationとzero-shot translation品質を扱う研究で、推論効率は主題でない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+      ],
+      "title": "Improving Massively Multilingual Neural Machine Translation and Zero-Shot Translation"
+    },
+    "arXiv:2409.04109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.04109",
+      "identity_tokens": [
+        "arXiv:2409.04109"
+      ],
+      "reason": "研究アイデア生成の大規模human studyであり、LLM inference/serving efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers"
+    },
+    "arXiv:2004.05986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.05986",
+      "identity_tokens": [
+        "arXiv:2004.05986"
+      ],
+      "reason": "CLUEは中国語NLU benchmarkであり、推論効率化の方法・systemではない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md"
+      ],
+      "title": "CLUE: A Chinese Language Understanding Evaluation Benchmark"
+    },
+    "arXiv:2406.20094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.20094",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.20094",
+        "arXiv:2406.20094"
+      ],
+      "reason": "persona由来synthetic dataを大規模生成するdataset/data-scaling手法で、推論時効率は対象外。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2411.18462-draft-model-knows-when-to-stop-a-self-verification-length-policy-for-spe.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+      ],
+      "title": "Scaling Synthetic Data Creation with 1,000,000,000 Personas"
+    },
+    "arXiv:2307.03393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03393",
+      "identity_tokens": [
+        "arXiv:2307.03393"
+      ],
+      "reason": "LLMをgraph learningへ適用する可能性の研究であり、serving/inference efficiencyの貢献でない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ],
+      "title": "Exploring the Potential of Large Language Models (LLMs)in Learning on Graphs"
+    },
+    "DOI:10.1145/3704435": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3704435",
+      "identity_tokens": [
+        "DOI:10.1145/3704435"
+      ],
+      "reason": "要旨が本候補の別領域の能力・評価・trainingを主題としており、LLM推論/serving効率の具体的機構・評価がない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T02:14:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2512.15834-optimizing-agentic-language-model-inference-via-speculative-tool-calls.md"
+      ],
+      "title": "Tool Learning with Foundation Models"
     }
   }
 }

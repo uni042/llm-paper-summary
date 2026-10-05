@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a9a7a856dd37c34d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.14734",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.14734",
+    "identity_tokens": [
+      "arXiv:2503.14734"
+    ],
+    "reason": "humanoid robot向けgeneralist foundation modelとVLA能力が主題で、LLM inference/serving効率ではない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T02:14:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
+    ],
+    "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
+  },
+  "processed_at": "2026-10-05T02:14:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a9a7a856dd37",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

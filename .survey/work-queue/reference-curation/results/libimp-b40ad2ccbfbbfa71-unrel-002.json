@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b40ad2ccbfbbfa71-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1811.02084",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1811.02084",
+    "identity_tokens": [
+      "arXiv:1811.02084"
+    ],
+    "reason": "Mesh-TensorFlowはスーパーコンピュータ上の大規模深層学習のsharding/distributed trainingが主題。LLM推論効率の評価ではない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T02:14:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Mesh-TensorFlow: Deep Learning for Supercomputers"
+  },
+  "processed_at": "2026-10-05T02:14:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b40ad2ccbfbb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
