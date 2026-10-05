@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cc23760b7de874b7-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.04407",
+  "reason": "Memory-efficient matrix optimizers such as Sinkhorn gradient descent remove most AdamW optimizer state for dense Transformer matrices, but direct application to Mixture-of-Experts (MoE) training is unreliable. We study this failure in a controlled 110M-parameter nanowhale DeepSeek-style MoE pretraining setting. A SAGE/Sinkhorn hybrid reduces optimizer state from 0.883GB to 0.331GB but degrades evaluation loss to 3.8265, far above the AdamW baselines observed in the same setup (3.58--3.64 across the seeds we study). We show that routed MoE expert matrices are the dominant failure point: their gradients are conditional, temporally varying, and poorly served by stateless Sinkhorn normalization. We propose MESH, a hidden-momentum Sinkhorn update for MoE experts. MESH restores a temporal first-moment signal through the gradient-buffer lifecycle, without storing the expert first moment as optimizer state. MESH is an optional block-preconditioned variant that adds a coarse neuron/block inverse-RMS multiplier. Across ablations, temporal smoothing before matrix normalization is the primary causal ingredient; block/neuron preconditioning can improve the memory-quality frontier, but is not established as universally necessary. In two additional seeds, MESH and MESH-B reduce optimizer-state memory by 62.5\\% and peak PyTorch CUDA allocation by about 12.6\\% relative to AdamW, with a modest evaluation-loss gap. Full-state diagnostic variants recover AdamW-like performance in ablations, supporting the conclusion that MoE experts need temporal smoothing, but not necessarily full coordinate-wise AdamW state.",
+  "title": "MESH: Memory-Efficient Sinkhorn Optimization for Mixture-of-Experts Training",
+  "identity_tokens": [
+    "arXiv:2608.04407"
+  ],
+  "linked_from": [
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc23760b7de8",
+  "source_precheck_request_id": null
+}

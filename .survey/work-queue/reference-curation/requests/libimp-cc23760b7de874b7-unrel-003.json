@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cc23760b7de874b7-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.04450",
+  "reason": "Training and serving large language models (LLMs) rely heavily on high-performance GPU communication, yet implementing efficient GPU communication primitives requires deep expertise in GPU architectures, networking hardware, and distributed communication patterns, making them particularly challenging for code generation models. We present CommBench, a comprehensive benchmark for GPU communication programming, consisting of over 100 expert-curated tasks spanning point-to-point communication, collective operations, expert-parallel communication, compute--communication fusion, and communication utility functions, with reference implementations either written by GPU communication experts or distilled from production codebases. We further introduce a cheat-resistant evaluation framework that automatically compiles, executes, and validates generated code on multi-GPU systems, and a unified metric that jointly measures functional correctness and communication performance. Evaluating leading frontier and open-source code generation models on both intra-node NVLink and inter-node RDMA platforms reveals that even the strongest model, GPT-5.5, correctly implements and achieves competitive performance on only 30.7\\% of the benchmark tasks. Our results expose a substantial gap between current LLMs and expert-written GPU communication code, establishing CommBench as a challenging benchmark for advancing AI-assisted systems programming.",
+  "title": "CommBench: Can LLMs Write Correct and Efficient GPU Communication Code?",
+  "identity_tokens": [
+    "arXiv:2608.04450"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+    "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+    "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+    "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+    "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc23760b7de8",
+  "source_precheck_request_id": null
+}

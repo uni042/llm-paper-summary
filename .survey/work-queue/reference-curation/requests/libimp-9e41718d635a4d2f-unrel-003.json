@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9e41718d635a4d2f-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.04333",
+  "reason": "Large language model (LLM) configuration evaluation is challenging due to limited evaluation budgets, varying costs, and multiple competing objectives. In this paper, we formulate LLM configuration evaluation as a cost-aware multi-objective bandit problem, where each configuration evaluation incurs a configuration-dependent cost and yields a noisy vector-valued outcome. Under this framework, we study two fundamental problems: online configuration selection and Pareto configuration identification. For online configuration selection, we propose a hypervolume-based UCB algorithm that optimizes an optimistic hypervolume-per-cost index. We establish a budgeted regret bound of order $O\\bigl(\\sum_{i\\ne i^\\star}\\frac{\\log B}{\\Delta_i}\\bigr)$, where $B$ is the evaluation budget, $i^\\star$ is the optimal configuration in terms of hypervolume efficiency, and $\\Delta_i$ is the corresponding efficiency gap of configuration $i$. This bound retains the logarithmic budget dependence of classical single-objective budgeted bandits. For fixed-budget Pareto identification, we develop a cost-aware empirical gap elimination algorithm and prove that its error probability is of order $O\\bigl(\\exp(-\\frac{B}{H_{\\mu,c}})\\bigr)$, where $H_{\\mu,c}$ is a cost-aware Pareto identification complexity depending on configuration costs and Pareto classification gaps. This error probability decays exponentially with the evaluation budget and recovers the standard Pareto set identification guarantee when all configuration costs are identical. Experiments on LLM configuration evaluation tasks demonstrate that the proposed framework enables efficient online decision-making and accurate cost-aware Pareto identification under limited budgets.",
+  "title": "Cost-Aware Multi-Objective Bandits: Theory and Application to Budgeted LLM Configuration Evaluation",
+  "identity_tokens": [
+    "arXiv:2608.04333"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+    "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e41718d635a",
+  "source_precheck_request_id": null
+}
