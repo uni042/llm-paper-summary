@@ -77,17 +77,30 @@ def _research_success_ids(repo_root: Path) -> set[str]:
 
 
 def _record_cleanup(repo_root: Path, source: Path, status: str, detail: dict[str, Any]) -> None:
-    token = hashlib.sha256(source.as_posix().encode("utf-8")).hexdigest()[:16]
-    target = repo_root / CLEANUP_RESULTS / f"{token}.json"
+    """Keep a bounded cleanup audit without replacing old clutter with new clutter."""
+    target = repo_root / CLEANUP_RESULTS / "latest.json"
+    try:
+        current = json.loads(target.read_text(encoding="utf-8")) if target.is_file() else {}
+    except (json.JSONDecodeError, OSError):
+        current = {}
+    events = current.get("events")
+    if not isinstance(events, list):
+        events = []
+    events.append(
+        {
+            "status": status,
+            "source_path": inbox.repo_relative(source, repo_root),
+            "processed_at": inbox.now(),
+            **detail,
+        }
+    )
     _write_json(
         target,
         {
             "schema_version": 1,
             "artifact_type": "import_cleanup",
-            "status": status,
-            "source_path": inbox.repo_relative(source, repo_root),
-            "processed_at": inbox.now(),
-            **detail,
+            "updated_at": inbox.now(),
+            "events": events[-500:],
         },
     )
 
