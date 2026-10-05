@@ -1,0 +1,262 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-26aea2b36f76d3cc-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-26aea2b36f76",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2004.11886",
+    "arXiv:2410.17434"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "6d7b99cd1f6ed81e8a7c326279912c57fe8fe2f1",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 2,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 2,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T15:51:07.887991+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2004.11886",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.17434",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Lite Transformer with Long-Short Range Attention",
+      "source_url": "https://arxiv.org/abs/2004.11886",
+      "year": 2020,
+      "published": "2020-04-24",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 404,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer has become ubiquitous in natural language processing (e.g., machine translation, question answering); however, it requires enormous amount of computations to achieve high performance, which makes it not suitable for mobile applications since mobile phones are tightly constrained by the hardware resources and battery. In this paper, we investigate the mobile setting (under 500M Mult-Adds) for NLP tasks to facilitate the deployment on the edge devices. We present Long-Short Range Attention (LSRA), where one group of heads specializes in the local context modeling (by convolution) while another group captures the long-distance relationship (by attention). Based on this primitive, we design Lite Transformer that is tailored for the mobile NLP application. Our Lite Transformer demonstrates consistent improvement over the transformer on three well-established language tasks: machine translation, abstractive summarization, and language modeling. It outperforms the transformer on WMT’14 English-French by 1.2 BLEU under 500M Mult-Adds and 1.7 BLEU under 100M Mult-Adds, and reduces the computation of transformer base model by 2.5x. Further, with general techniques, our Lite Transformer achieves 18.2x model size compression. For language modeling, our Lite Transformer also achieves 3.8 lower perplexity than the transformer around 500M Mult-Adds. Without the costly architecture search that requires more than 250 GPU years, our Lite Transformer outperforms the AutoML-based Evolved Transformer by 0.5 higher BLEU under the mobile setting.",
+      "identifiers": [
+        "SemanticScholar:8af925f4edf45131b5b6fed8aa655089d58692fa"
+      ],
+      "semantic_scholar_id": "8af925f4edf45131b5b6fed8aa655089d58692fa",
+      "canonical_id": "arXiv:2004.11886",
+      "arxiv_id": "2004.11886",
+      "authors": [
+        "Zhanghao Wu",
+        "Zhijian Liu",
+        "Ji Lin",
+        "Yu-Jun Lin",
+        "Song Han"
+      ],
+      "priority": 414,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 404,
+        "citation_count": 404,
+        "total": 414,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2355,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+      "source_url": "https://arxiv.org/abs/2410.17434",
+      "year": 2024,
+      "published": "2024-10-22",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 385,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have shown promising progress in understanding and analyzing video content. However, processing long videos remains a significant challenge constrained by LLM's context size. To address this limitation, we propose LongVU, a spatiotemporal adaptive compression mechanism thats reduces the number of video tokens while preserving visual details of long videos. Our idea is based on leveraging cross-modal query and inter-frame dependencies to adaptively reduce temporal and spatial redundancy in videos. Specifically, we leverage DINOv2 features to remove redundant frames that exhibit high similarity. Then we utilize text-guided cross-modal query for selective frame feature reduction. Further, we perform spatial token reduction across frames based on their temporal dependencies. Our adaptive compression strategy effectively processes a large number of frames with little visual information loss within given context length. Our LongVU consistently surpass existing methods across a variety of video understanding benchmarks, especially on hour-long video understanding tasks such as VideoMME and MLVU. Given a light-weight LLM, our LongVU also scales effectively into a smaller size with state-of-the-art video understanding performance.",
+      "identifiers": [
+        "SemanticScholar:d83e2f9b24ec92f5ff07420b665f07ff200e149a"
+      ],
+      "semantic_scholar_id": "d83e2f9b24ec92f5ff07420b665f07ff200e149a",
+      "canonical_id": "arXiv:2410.17434",
+      "arxiv_id": "2410.17434",
+      "doi": "10.48550/arXiv.2410.17434",
+      "authors": [
+        "Xiaoqian Shen",
+        "Yun-Yang Xiong",
+        "Changsheng Zhao",
+        "Lemeng Wu",
+        "Jun Chen",
+        "Chenchen Zhu",
+        "Zechun Liu",
+        "Fanyi Xiao",
+        "Bala Varadarajan",
+        "Florian Bordes",
+        "Zhuang Liu",
+        "Hu Xu",
+        "Hyunwoo J. Kim",
+        "Bilge Soran",
+        "Raghuraman Krishnamoorthi",
+        "Mohamed Elhoseiny",
+        "Vikas Chandra"
+      ],
+      "priority": 395,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 385,
+        "citation_count": 385,
+        "total": 395,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 713,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2004.11886",
+      "identity_tokens": [
+        "id:SemanticScholar:8af925f4edf45131b5b6fed8aa655089d58692fa",
+        "id:arXiv:2004.11886",
+        "title:lite transformer with longshort range attention",
+        "url:https://arxiv.org/abs/2004.11886"
+      ],
+      "record": {
+        "title": "Lite Transformer with Long-Short Range Attention",
+        "source_url": "https://arxiv.org/abs/2004.11886",
+        "year": 2020,
+        "published": "2020-04-24",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 404,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer has become ubiquitous in natural language processing (e.g., machine translation, question answering); however, it requires enormous amount of computations to achieve high performance, which makes it not suitable for mobile applications since mobile phones are tightly constrained by the hardware resources and battery. In this paper, we investigate the mobile setting (under 500M Mult-Adds) for NLP tasks to facilitate the deployment on the edge devices. We present Long-Short Range Attention (LSRA), where one group of heads specializes in the local context modeling (by convolution) while another group captures the long-distance relationship (by attention). Based on this primitive, we design Lite Transformer that is tailored for the mobile NLP application. Our Lite Transformer demonstrates consistent improvement over the transformer on three well-established language tasks: machine translation, abstractive summarization, and language modeling. It outperforms the transformer on WMT’14 English-French by 1.2 BLEU under 500M Mult-Adds and 1.7 BLEU under 100M Mult-Adds, and reduces the computation of transformer base model by 2.5x. Further, with general techniques, our Lite Transformer achieves 18.2x model size compression. For language modeling, our Lite Transformer also achieves 3.8 lower perplexity than the transformer around 500M Mult-Adds. Without the costly architecture search that requires more than 250 GPU years, our Lite Transformer outperforms the AutoML-based Evolved Transformer by 0.5 higher BLEU under the mobile setting.",
+        "identifiers": [
+          "SemanticScholar:8af925f4edf45131b5b6fed8aa655089d58692fa"
+        ],
+        "semantic_scholar_id": "8af925f4edf45131b5b6fed8aa655089d58692fa",
+        "canonical_id": "arXiv:2004.11886",
+        "arxiv_id": "2004.11886",
+        "authors": [
+          "Zhanghao Wu",
+          "Zhijian Liu",
+          "Ji Lin",
+          "Yu-Jun Lin",
+          "Song Han"
+        ],
+        "priority": 414,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 404,
+          "citation_count": 404,
+          "total": 414,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2355,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.17434",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.17434",
+        "id:SemanticScholar:d83e2f9b24ec92f5ff07420b665f07ff200e149a",
+        "id:arXiv:2410.17434",
+        "title:longvu spatiotemporal adaptive compression for long videolanguage understanding",
+        "url:https://arxiv.org/abs/2410.17434"
+      ],
+      "record": {
+        "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+        "source_url": "https://arxiv.org/abs/2410.17434",
+        "year": 2024,
+        "published": "2024-10-22",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 385,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have shown promising progress in understanding and analyzing video content. However, processing long videos remains a significant challenge constrained by LLM's context size. To address this limitation, we propose LongVU, a spatiotemporal adaptive compression mechanism thats reduces the number of video tokens while preserving visual details of long videos. Our idea is based on leveraging cross-modal query and inter-frame dependencies to adaptively reduce temporal and spatial redundancy in videos. Specifically, we leverage DINOv2 features to remove redundant frames that exhibit high similarity. Then we utilize text-guided cross-modal query for selective frame feature reduction. Further, we perform spatial token reduction across frames based on their temporal dependencies. Our adaptive compression strategy effectively processes a large number of frames with little visual information loss within given context length. Our LongVU consistently surpass existing methods across a variety of video understanding benchmarks, especially on hour-long video understanding tasks such as VideoMME and MLVU. Given a light-weight LLM, our LongVU also scales effectively into a smaller size with state-of-the-art video understanding performance.",
+        "identifiers": [
+          "SemanticScholar:d83e2f9b24ec92f5ff07420b665f07ff200e149a"
+        ],
+        "semantic_scholar_id": "d83e2f9b24ec92f5ff07420b665f07ff200e149a",
+        "canonical_id": "arXiv:2410.17434",
+        "arxiv_id": "2410.17434",
+        "doi": "10.48550/arXiv.2410.17434",
+        "authors": [
+          "Xiaoqian Shen",
+          "Yun-Yang Xiong",
+          "Changsheng Zhao",
+          "Lemeng Wu",
+          "Jun Chen",
+          "Chenchen Zhu",
+          "Zechun Liu",
+          "Fanyi Xiao",
+          "Bala Varadarajan",
+          "Florian Bordes",
+          "Zhuang Liu",
+          "Hu Xu",
+          "Hyunwoo J. Kim",
+          "Bilge Soran",
+          "Raghuraman Krishnamoorthi",
+          "Mohamed Elhoseiny",
+          "Vikas Chandra"
+        ],
+        "priority": 395,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 385,
+          "citation_count": 385,
+          "total": 395,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 713,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:10f0cd77df3a4cb68bb6e0fd53e7380314df2e9498277f520d4d34959e4b1696",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
