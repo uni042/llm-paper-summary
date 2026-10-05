@@ -370,6 +370,88 @@ URL https://example.com/cache and `cache` code must remain unchanged.
             finally:
                 os.chdir(original_cwd)
 
+    def test_borderline_reconsideration_metadata_reaches_relevance_request(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            record = {
+                "classification": "borderline",
+                "canonical_id": "arXiv:2609.12345",
+                "identity_tokens": ["arXiv:2609.12345"],
+                "reason": "still borderline after reconsideration",
+                "origin": "borderline_reconsideration",
+                "borderline_recheck_count_before": 2,
+            }
+            waiting, failures = inbox.create_relevance_requests(root, "recheck-token", [record])
+            self.assertEqual(failures, [])
+            self.assertEqual(len(waiting), 1)
+            request_path = root / inbox.RELEVANCE_REQUESTS / f"{waiting[0]}.json"
+            request = json.loads(request_path.read_text(encoding="utf-8"))
+            self.assertTrue(request["reconsidered_from_borderline"])
+
+    def test_borderline_reconsideration_accept_precheck_and_success_clear_old_borderline(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            token = "reconsider-accept-token"
+            identity = "arXiv:2609.54321"
+            record = {
+                "classification": "accept",
+                "canonical_id": identity,
+                "identity_tokens": [identity],
+                "reason": "now strong enough for Research",
+                "origin": "borderline_reconsideration",
+                "borderline_recheck_count_before": 1,
+            }
+            borderline_path = root / inbox.reference_relevance_ledger.DEFAULT_BORDERLINE_LEDGER
+            inbox.reference_relevance_ledger.mark_borderline(
+                borderline_path,
+                canonical_id=identity,
+                reason="older borderline decision",
+                identity_tokens=[identity],
+            )
+
+            request_id = inbox.candidate_request_id(token, 1)
+            precheck_result = root / inbox.PRECHECK_RESULTS / f"{request_id}.json"
+            precheck_result.parent.mkdir(parents=True)
+            precheck_result.write_text(json.dumps({
+                "ok": True,
+                "evaluation_allowed": True,
+                "candidate_statuses": [{"requested_id": identity, "status": "allowed"}],
+                "allowed_records": [{
+                    "record": {
+                        "canonical_id": identity,
+                        "arxiv_id": "2609.54321",
+                        "title": "Reconsidered paper",
+                        "source_url": "https://arxiv.org/abs/2609.54321",
+                    }
+                }],
+                "receipt": "sha256:test-reconsider",
+            }), encoding="utf-8")
+
+            submission_id = f"{request_id}-sub01"
+            queue_result = root / inbox.DISCOVERY_RESULTS / f"{submission_id}.json"
+            queue_result.parent.mkdir(parents=True)
+            queue_result.write_text(json.dumps({"ok": True, "research_jobs_added": 1}), encoding="utf-8")
+
+            waiting, sub_waiting, failures, gaps, counts = inbox.create_accept_pipeline(
+                root, token, [record]
+            )
+            self.assertEqual(waiting, [])
+            self.assertEqual(sub_waiting, [])
+            self.assertEqual(failures, [])
+            self.assertEqual(gaps, [])
+            self.assertEqual(counts["submitted"], 1)
+
+            request = json.loads(
+                (root / inbox.PRECHECK_REQUESTS / f"{request_id}.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(request["reconsider_identifiers"], [identity])
+            submission = json.loads(
+                (root / inbox.DISCOVERY_SUBMISSIONS / f"{submission_id}.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(submission["candidates"][0]["origin"], "borderline_reconsideration")
+            ledger = json.loads(borderline_path.read_text(encoding="utf-8"))
+            self.assertNotIn(identity, ledger["records"])
+
     def test_provider_error_is_candidate_gap_not_whole_run_failure(self) -> None:
         original_cwd = Path.cwd()
         with tempfile.TemporaryDirectory() as tmpdir:
