@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:51:51+00:00",
-  "record_count": 5357,
+  "updated_at": "2026-10-05T13:54:48+00:00",
+  "record_count": 5370,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -77857,6 +77857,193 @@
         "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
       ],
       "title": "Agents Should Replace Narrow Predictive AI as the Orchestrator in 6G AI-RAN"
+    },
+    "arXiv:2602.13639": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13639",
+      "identity_tokens": [
+        "arXiv:2602.13639"
+      ],
+      "reason": "The paper proposes entropy-guided collaboration and retrieval for heterogeneous LLM agents, evaluating collaboration effectiveness rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T13:54:44+00:00",
+      "last_checked_at": "2026-10-05T13:54:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Guided Collaboration in Heterogeneous LLM-Based Multi-Agent Systems via Entropy-Based Understanding Assessment and Experience Retrieval"
+    },
+    "arXiv:2602.13033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13033",
+      "identity_tokens": [
+        "arXiv:2602.13033"
+      ],
+      "reason": "This is a government decision framework for buying or building LLM services, not an inference optimization.",
+      "first_checked_at": "2026-10-05T13:54:45+00:00",
+      "last_checked_at": "2026-10-05T13:54:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Buy versus Build an LLM: A Decision Framework for Governments"
+    },
+    "DOI:10.1109/isbi61048.2026.11515422": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isbi61048.2026.11515422",
+      "identity_tokens": [
+        "DOI:10.1109/isbi61048.2026.11515422"
+      ],
+      "reason": "CoPrimeEEG reconstructs EEG signals from co-prime sub-Nyquist samples; it is unrelated to LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:54:46+00:00",
+      "last_checked_at": "2026-10-05T13:54:46+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.19657-llmeasyquant-scalable-quantization-for-parallel-and-distributed-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+      ],
+      "title": "CoPrimeEEG: CRT-Guided Dual-Branch Reconstruction from Co-Prime Sub-Nyquist EEG"
+    },
+    "arXiv:2602.08905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08905",
+      "identity_tokens": [
+        "arXiv:2602.08905"
+      ],
+      "reason": "STP improves reinforcement-learning training efficiency/stability for diffusion LMs; its measured target is training time, not inference.",
+      "first_checked_at": "2026-10-05T13:54:46+00:00",
+      "last_checked_at": "2026-10-05T13:54:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Efficient and Stable Reinforcement Learning for Diffusion Language Models"
+    },
+    "arXiv:2602.08031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.08031",
+      "identity_tokens": [
+        "arXiv:2602.08031"
+      ],
+      "reason": "The paper calibrates machine-generated text detection metrics, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T13:54:46+00:00",
+      "last_checked_at": "2026-10-05T13:54:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md"
+      ],
+      "title": "Beyond Raw Detection Scores: Markov-Informed Calibration for Boosting Machine-Generated Text Detection"
+    },
+    "arXiv:2602.06687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06687",
+      "identity_tokens": [
+        "arXiv:2602.06687"
+      ],
+      "reason": "This work evaluates vulnerability reasoning and explanation quality in LLMs; it does not target inference efficiency.",
+      "first_checked_at": "2026-10-05T13:54:46+00:00",
+      "last_checked_at": "2026-10-05T13:54:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "Evaluating and Enhancing the Vulnerability Reasoning Capabilities of Large Language Models"
+    },
+    "arXiv:2602.07256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07256",
+      "identity_tokens": [
+        "arXiv:2602.07256"
+      ],
+      "reason": "The paper proposes a graph-homophily method for heterophilic graph learning, outside LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:54:46+00:00",
+      "last_checked_at": "2026-10-05T13:54:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Graph homophily booster: Reimagining the role of discrete features in heterophilic graph learning"
+    },
+    "arXiv:2602.07263": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07263",
+      "identity_tokens": [
+        "arXiv:2602.07263"
+      ],
+      "reason": "tLoRA addresses co-location and resource efficiency of LoRA training jobs; the contribution is training-time.",
+      "first_checked_at": "2026-10-05T13:54:47+00:00",
+      "last_checked_at": "2026-10-05T13:54:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md"
+      ],
+      "title": "tLoRA: Efficient Multi-LoRA Training with Elastic Shared Super-Models"
+    },
+    "arXiv:2602.15889": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15889",
+      "identity_tokens": [
+        "arXiv:2602.15889"
+      ],
+      "reason": "The paper measures temporal variation in LLM performance under fixed conditions, not a method to reduce inference cost.",
+      "first_checked_at": "2026-10-05T13:54:47+00:00",
+      "last_checked_at": "2026-10-05T13:54:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Daily and Weekly Periodicity in Large Language Model Performance and Its Implications for Research"
+    },
+    "DOI:10.1145/3807246.3807335": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3807246.3807335",
+      "identity_tokens": [
+        "DOI:10.1145/3807246.3807335"
+      ],
+      "reason": "Relative ULP Noise Injection removes master weights for low-precision training; it is a training-memory method.",
+      "first_checked_at": "2026-10-05T13:54:47+00:00",
+      "last_checked_at": "2026-10-05T13:54:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "title": "Escaping the Swamping Zone: Fully Low-Precision Training via Relative ULP Noise Injection"
+    },
+    "arXiv:2602.13185": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13185",
+      "identity_tokens": [
+        "arXiv:2602.13185"
+      ],
+      "reason": "FlexAM controls video generation through appearance-motion decomposition; its task is outside LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:54:48+00:00",
+      "last_checked_at": "2026-10-05T13:54:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "FlexAM: Flexible Appearance-Motion Decomposition for Versatile Video Generation Control"
+    },
+    "arXiv:2602.11410": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11410",
+      "identity_tokens": [
+        "arXiv:2602.11410"
+      ],
+      "reason": "CADET adapts decoder-only transformers for advertising click-through prediction; no LLM inference-efficiency contribution is described.",
+      "first_checked_at": "2026-10-05T13:54:48+00:00",
+      "last_checked_at": "2026-10-05T13:54:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "CADET: Context-Conditioned Ads CTR Prediction With a Decoder-Only Transformer"
+    },
+    "arXiv:2603.03335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03335",
+      "identity_tokens": [
+        "arXiv:2603.03335"
+      ],
+      "reason": "The work uses compressed sensing to localize model capabilities to attention heads; it studies capability attribution, not inference optimization.",
+      "first_checked_at": "2026-10-05T13:54:48+00:00",
+      "last_checked_at": "2026-10-05T13:54:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md"
+      ],
+      "title": "Compressed Sensing for Capability Localization in Large Language Models"
     }
   }
 }

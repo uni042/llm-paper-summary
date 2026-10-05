@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f43351031b16cd9c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.13185",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.13185",
+    "identity_tokens": [
+      "arXiv:2602.13185"
+    ],
+    "reason": "FlexAM controls video generation through appearance-motion decomposition; its task is outside LLM inference/serving/compression.",
+    "first_checked_at": "2026-10-05T13:54:48+00:00",
+    "last_checked_at": "2026-10-05T13:54:48+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+    ],
+    "title": "FlexAM: Flexible Appearance-Motion Decomposition for Versatile Video Generation Control"
+  },
+  "processed_at": "2026-10-05T13:54:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f43351031b16",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
