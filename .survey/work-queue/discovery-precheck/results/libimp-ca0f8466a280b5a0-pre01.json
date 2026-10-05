@@ -1,0 +1,352 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ca0f8466a280b5a0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ca0f8466a280",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2202.10447",
+    "arXiv:2310.17157",
+    "arXiv:2407.04620"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a93da4a8ebc5f65577223eb1531c67771fc1574f",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T16:42:28.644921+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2202.10447",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2310.17157",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2407.04620",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Transformer Quality in Linear Time",
+      "source_url": "https://arxiv.org/abs/2202.10447",
+      "year": 2022,
+      "published": "2022-02-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 382,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We revisit the design choices in Transformers, and propose methods to address their weaknesses in handling long sequences. First, we propose a simple layer named gated attention unit, which allows the use of a weaker single-head attention with minimal quality loss. We then propose a linear approximation method complementary to this new layer, which is accelerator-friendly and highly competitive in quality. The resulting model, named FLASH, matches the perplexity of improved Transformers over both short (512) and long (8K) context lengths, achieving training speedups of up to 4.9$\\times$ on Wiki-40B and 12.1$\\times$ on PG-19 for auto-regressive language modeling, and 4.8$\\times$ on C4 for masked language modeling.",
+      "identifiers": [
+        "SemanticScholar:dc0102a51a9d33e104a4a3808a18cf17f057228c"
+      ],
+      "semantic_scholar_id": "dc0102a51a9d33e104a4a3808a18cf17f057228c",
+      "canonical_id": "arXiv:2202.10447",
+      "arxiv_id": "2202.10447",
+      "authors": [
+        "Weizhe Hua",
+        "Zihang Dai",
+        "Hanxiao Liu",
+        "Quoc V. Le"
+      ],
+      "priority": 392,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 382,
+        "citation_count": 382,
+        "total": 392,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1687,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time",
+      "source_url": "https://arxiv.org/abs/2310.17157",
+      "year": 2023,
+      "published": "2023-10-26",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 380,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with hundreds of billions of parameters have sparked a new wave of exciting AI applications. However, they are computationally expensive at inference time. Sparsity is a natural approach to reduce this cost, but existing methods either require costly retraining, have to forgo LLM's in-context learning ability, or do not yield wall-clock time speedup on modern hardware. We hypothesize that contextual sparsity, which are small, input-dependent sets of attention heads and MLP parameters that yield approximately the same output as the dense model for a given input, can address these issues. We show that contextual sparsity exists, that it can be accurately predicted, and that we can exploit it to speed up LLM inference in wall-clock time without compromising LLM's quality or in-context learning ability. Based on these insights, we propose DejaVu, a system that uses a low-cost algorithm to predict contextual sparsity on the fly given inputs to each layer, along with an asynchronous and hardware-aware implementation that speeds up LLM inference. We validate that DejaVu can reduce the inference latency of OPT-175B by over 2X compared to the state-of-the-art FasterTransformer, and over 6X compared to the widely used Hugging Face implementation, without compromising model quality. The code is available at https://github.com/FMInference/DejaVu.",
+      "identifiers": [
+        "SemanticScholar:95240dda409e28acccdc5cf619ad0c036cf4292d"
+      ],
+      "semantic_scholar_id": "95240dda409e28acccdc5cf619ad0c036cf4292d",
+      "canonical_id": "arXiv:2310.17157",
+      "arxiv_id": "2310.17157",
+      "doi": "10.48550/arXiv.2310.17157",
+      "authors": [
+        "Zichang Liu",
+        "Jue Wang",
+        "Tri Dao",
+        "Tianyi Zhou",
+        "Binhang Yuan",
+        "Zhao Song",
+        "Anshumali Shrivastava",
+        "Ce Zhang",
+        "Yuan-Dong Tian",
+        "Christopher Ré",
+        "Beidi Chen"
+      ],
+      "priority": 390,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 380,
+        "citation_count": 380,
+        "total": 390,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1075,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+      "source_url": "https://arxiv.org/abs/2407.04620",
+      "year": 2024,
+      "published": "2024-07-05",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 378,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Self-attention performs well in long context but has quadratic complexity. Existing RNN layers have linear complexity, but their performance in long context is limited by the expressive power of their hidden states. We present a practical framework for instantiating sequence modeling layers with linear complexity and expressive hidden states. The key idea is to make the hidden state a machine learning model itself, and the update rule a step of self-supervised learning. Since the hidden state is updated by training even on test sequences, our layers are called Test-Time Training (TTT) layers. We consider two instantiations: TTT-Linear and TTT-MLP, whose hidden state is a linear model and a two-layer MLP respectively. We evaluate our instantiations at the scale of 125M to 1.3B parameters, comparing with a strong Transformer and Mamba, a modern RNN. Similar to Transformer, TTT-Linear and TTT-MLP can keep reducing perplexity by conditioning on more tokens, while Mamba cannot after 16k context. TTT-MLP still faces challenges in memory I/O, but shows larger potential in long context, pointing to a promising direction for future research.",
+      "identifiers": [
+        "SemanticScholar:35ab93f41115e860bee5e202b71061addfd0fd5d"
+      ],
+      "semantic_scholar_id": "35ab93f41115e860bee5e202b71061addfd0fd5d",
+      "canonical_id": "arXiv:2407.04620",
+      "arxiv_id": "2407.04620",
+      "doi": "10.48550/arXiv.2407.04620",
+      "authors": [
+        "Yu Sun",
+        "Xinhao Li",
+        "Karan Dalal",
+        "Jiarui Xu",
+        "Arjun Vikram",
+        "Ge Zhang",
+        "Yann Dubois",
+        "Xinlei Chen",
+        "Xiaolong Wang",
+        "O. Koyejo",
+        "Tatsunori Hashimoto",
+        "Carlos Guestrin"
+      ],
+      "priority": 388,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 378,
+        "citation_count": 378,
+        "total": 388,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 822,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2202.10447",
+      "identity_tokens": [
+        "id:SemanticScholar:dc0102a51a9d33e104a4a3808a18cf17f057228c",
+        "id:arXiv:2202.10447",
+        "title:transformer quality in linear time",
+        "url:https://arxiv.org/abs/2202.10447"
+      ],
+      "record": {
+        "title": "Transformer Quality in Linear Time",
+        "source_url": "https://arxiv.org/abs/2202.10447",
+        "year": 2022,
+        "published": "2022-02-21",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 382,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We revisit the design choices in Transformers, and propose methods to address their weaknesses in handling long sequences. First, we propose a simple layer named gated attention unit, which allows the use of a weaker single-head attention with minimal quality loss. We then propose a linear approximation method complementary to this new layer, which is accelerator-friendly and highly competitive in quality. The resulting model, named FLASH, matches the perplexity of improved Transformers over both short (512) and long (8K) context lengths, achieving training speedups of up to 4.9$\\times$ on Wiki-40B and 12.1$\\times$ on PG-19 for auto-regressive language modeling, and 4.8$\\times$ on C4 for masked language modeling.",
+        "identifiers": [
+          "SemanticScholar:dc0102a51a9d33e104a4a3808a18cf17f057228c"
+        ],
+        "semantic_scholar_id": "dc0102a51a9d33e104a4a3808a18cf17f057228c",
+        "canonical_id": "arXiv:2202.10447",
+        "arxiv_id": "2202.10447",
+        "authors": [
+          "Weizhe Hua",
+          "Zihang Dai",
+          "Hanxiao Liu",
+          "Quoc V. Le"
+        ],
+        "priority": 392,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 382,
+          "citation_count": 382,
+          "total": 392,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1687,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2310.17157",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2310.17157",
+        "id:SemanticScholar:95240dda409e28acccdc5cf619ad0c036cf4292d",
+        "id:arXiv:2310.17157",
+        "title:deja vu contextual sparsity for efficient llms at inference time",
+        "url:https://arxiv.org/abs/2310.17157"
+      ],
+      "record": {
+        "title": "Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time",
+        "source_url": "https://arxiv.org/abs/2310.17157",
+        "year": 2023,
+        "published": "2023-10-26",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 380,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) with hundreds of billions of parameters have sparked a new wave of exciting AI applications. However, they are computationally expensive at inference time. Sparsity is a natural approach to reduce this cost, but existing methods either require costly retraining, have to forgo LLM's in-context learning ability, or do not yield wall-clock time speedup on modern hardware. We hypothesize that contextual sparsity, which are small, input-dependent sets of attention heads and MLP parameters that yield approximately the same output as the dense model for a given input, can address these issues. We show that contextual sparsity exists, that it can be accurately predicted, and that we can exploit it to speed up LLM inference in wall-clock time without compromising LLM's quality or in-context learning ability. Based on these insights, we propose DejaVu, a system that uses a low-cost algorithm to predict contextual sparsity on the fly given inputs to each layer, along with an asynchronous and hardware-aware implementation that speeds up LLM inference. We validate that DejaVu can reduce the inference latency of OPT-175B by over 2X compared to the state-of-the-art FasterTransformer, and over 6X compared to the widely used Hugging Face implementation, without compromising model quality. The code is available at https://github.com/FMInference/DejaVu.",
+        "identifiers": [
+          "SemanticScholar:95240dda409e28acccdc5cf619ad0c036cf4292d"
+        ],
+        "semantic_scholar_id": "95240dda409e28acccdc5cf619ad0c036cf4292d",
+        "canonical_id": "arXiv:2310.17157",
+        "arxiv_id": "2310.17157",
+        "doi": "10.48550/arXiv.2310.17157",
+        "authors": [
+          "Zichang Liu",
+          "Jue Wang",
+          "Tri Dao",
+          "Tianyi Zhou",
+          "Binhang Yuan",
+          "Zhao Song",
+          "Anshumali Shrivastava",
+          "Ce Zhang",
+          "Yuan-Dong Tian",
+          "Christopher Ré",
+          "Beidi Chen"
+        ],
+        "priority": 390,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 380,
+          "citation_count": 380,
+          "total": 390,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1075,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2407.04620",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2407.04620",
+        "id:SemanticScholar:35ab93f41115e860bee5e202b71061addfd0fd5d",
+        "id:arXiv:2407.04620",
+        "title:learning to learn at test time rnns with expressive hidden states",
+        "url:https://arxiv.org/abs/2407.04620"
+      ],
+      "record": {
+        "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+        "source_url": "https://arxiv.org/abs/2407.04620",
+        "year": 2024,
+        "published": "2024-07-05",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 378,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Self-attention performs well in long context but has quadratic complexity. Existing RNN layers have linear complexity, but their performance in long context is limited by the expressive power of their hidden states. We present a practical framework for instantiating sequence modeling layers with linear complexity and expressive hidden states. The key idea is to make the hidden state a machine learning model itself, and the update rule a step of self-supervised learning. Since the hidden state is updated by training even on test sequences, our layers are called Test-Time Training (TTT) layers. We consider two instantiations: TTT-Linear and TTT-MLP, whose hidden state is a linear model and a two-layer MLP respectively. We evaluate our instantiations at the scale of 125M to 1.3B parameters, comparing with a strong Transformer and Mamba, a modern RNN. Similar to Transformer, TTT-Linear and TTT-MLP can keep reducing perplexity by conditioning on more tokens, while Mamba cannot after 16k context. TTT-MLP still faces challenges in memory I/O, but shows larger potential in long context, pointing to a promising direction for future research.",
+        "identifiers": [
+          "SemanticScholar:35ab93f41115e860bee5e202b71061addfd0fd5d"
+        ],
+        "semantic_scholar_id": "35ab93f41115e860bee5e202b71061addfd0fd5d",
+        "canonical_id": "arXiv:2407.04620",
+        "arxiv_id": "2407.04620",
+        "doi": "10.48550/arXiv.2407.04620",
+        "authors": [
+          "Yu Sun",
+          "Xinhao Li",
+          "Karan Dalal",
+          "Jiarui Xu",
+          "Arjun Vikram",
+          "Ge Zhang",
+          "Yann Dubois",
+          "Xinlei Chen",
+          "Xiaolong Wang",
+          "O. Koyejo",
+          "Tatsunori Hashimoto",
+          "Carlos Guestrin"
+        ],
+        "priority": 388,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 378,
+          "citation_count": 378,
+          "total": 388,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 822,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:55f275555d0af0f499fb41b1d155da81cbec96e95e6756b2532cfedf9804214d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
