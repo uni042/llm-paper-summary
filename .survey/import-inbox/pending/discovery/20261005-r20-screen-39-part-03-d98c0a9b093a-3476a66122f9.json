@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-39-part-03-d98c0a9b093a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25196",
+      "identity_tokens": [
+        "arXiv:2607.25196"
+      ],
+      "title": "Rethinking CD: A Reproducibility Study and Extension on the Ineffectiveness of Contrastive Decoding at Mitigating Object Hallucinations in MLLMs",
+      "reason": "要旨はMLLM contrastive decodingのobject hallucination/visual grounding精度の再現性研究で、推論効率を目的・評価していない。",
+      "source_url": "https://arxiv.org/abs/2607.25196",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25376",
+      "identity_tokens": [
+        "arXiv:2607.25376"
+      ],
+      "title": "Rethinking Likelihood distributions: Student's t Likelihood Boosts Bayesian Neural Network Performance",
+      "reason": "要旨はBayesian neural networkのlikelihood distributionとMLP regression/training timeの研究で、LLM推論効率対象外。",
+      "source_url": "https://arxiv.org/abs/2607.25376",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25451",
+      "identity_tokens": [
+        "arXiv:2607.25451"
+      ],
+      "title": "Bits and Memories: Measuring Verbatim Extraction Across LLM Quantization",
+      "reason": "要旨はLLM quantization下のverbatim memorization/privacy評価で、効率改善手法ではない。",
+      "source_url": "https://arxiv.org/abs/2607.25451",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25529",
+      "identity_tokens": [
+        "arXiv:2607.25529"
+      ],
+      "title": "Are the High-weight Neurons the Important Ones in Image Classification Neural Networks?",
+      "reason": "要旨はimage classification neural-network neuronsの重要度評価で、LLM inference/servingではない。",
+      "source_url": "https://arxiv.org/abs/2607.25529",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25651",
+      "identity_tokens": [
+        "arXiv:2607.25651"
+      ],
+      "title": "Demystifying Deep Learning Compiler Frontend Bugs: An LLM-Aided Empirical Study",
+      "reason": "要旨はdeep-learning compiler frontend bugのLLM-assisted empirical studyで、compiler efficiencyやLLM serving改善の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2607.25651",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
