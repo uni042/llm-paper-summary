@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T22:23:08+00:00",
-  "record_count": 6502,
+  "updated_at": "2026-10-05T22:27:29+00:00",
+  "record_count": 6510,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -2686,9 +2686,9 @@
       "identity_tokens": [
         "arXiv:2103.13262"
       ],
-      "reason": "分散MoEの学習高速化が主題で、現在凍結中の学習高速化系統に該当する。",
+      "reason": "PyTorch上でexpertを複数GPU/nodeへ配置しtrillion-scale MoEのdistributed trainingを高速化するsystem。Transformer-XL/Megatron-LM等に適用可能だが、論文の最終適用先・主要評価はMoE trainingであり、現行の推論systemサーベイ範囲外。",
       "first_checked_at": "2026-09-27T02:00:00+09:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-10-05T22:27:29+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -3456,9 +3456,9 @@
         "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
         "arXiv:1811.06965"
       ],
-      "reason": "layer列を複数acceleratorへ分割しmicro-batch pipelineで巨大networkを学習するtraining library。ImageNetと多言語NMTの大規模trainingが主評価で、LLM推論serving方式ではない。",
+      "reason": "microbatch pipelineで巨大networkを複数acceleratorへ分割するtraining library。評価はAmoebaNetと6B Transformerの学習で、推論system最適化が主目的ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-10-05T22:23:07+00:00",
+      "last_checked_at": "2026-10-05T22:27:26+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -8979,9 +8979,9 @@
       "identity_tokens": [
         "arXiv:2101.03961"
       ],
-      "reason": "Switch Transformers use sparse expert routing with roughly constant FLOPs per token, but the paper's main goal and measured speedups are pretraining scalability and training stability (up to 7x pretraining speed in its abstract). The manuscript evaluates training/fine-tuning quality and training regimes, not inference-serving efficiency or inference-time optimization. Under the workflow's training-only exclusion it is unrelated.",
+      "reason": "主目的と主要定量評価はMoEの学習安定化・事前学習速度・model scalingであり、推論serving/配置/推論kernelを最終適用先として評価していない。",
       "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-05T22:27:24+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[2]"
       ],
@@ -15657,21 +15657,6 @@
         "worker-worklist-30"
       ],
       "title": "MMMU: A Massive Multi-Discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI"
-    },
-    "arXiv:2203.07814": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2203.07814",
-      "identity_tokens": [
-        "DOI:10.1126/science.abq1158",
-        "arXiv:2203.07814"
-      ],
-      "reason": "AlphaCodeは競技プログラミング問題に対する大規模コード生成と候補sampling/filtering/clusteringで人間レベルに近い問題解決能力を評価する研究で、LLM推論runtime・serving・memory階層の効率化を最終適用先としない。",
-      "first_checked_at": "2026-10-04T14:30:19+00:00",
-      "last_checked_at": "2026-10-05T22:17:54+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
-      ],
-      "title": "Competition-level code generation with AlphaCode"
     },
     "DOI:10.1109/tit.1960.1057548": {
       "classification": "unrelated",
@@ -26102,21 +26087,6 @@
       ],
       "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception"
     },
-    "arXiv:1805.00907": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1805.00907",
-      "identity_tokens": [
-        "arXiv:1805.00907"
-      ],
-      "reason": "Glowはneural-network graph compiler lowering/code generationのsystem work。LLM-specific inference servingや推論時の効率化を評価対象としていない。",
-      "first_checked_at": "2026-10-05T02:12:07+00:00",
-      "last_checked_at": "2026-10-05T02:12:07+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
-        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
-      ],
-      "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
-    },
     "arXiv:2402.17152": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2402.17152",
@@ -29584,9 +29554,9 @@
       "identity_tokens": [
         "arXiv:2402.12289"
       ],
-      "reason": "VLMでscene description・analysis・hierarchical planningを行い自動運転を改善し、production vehicleへ展開する応用研究。計算負荷への言及はあるが最終適用先はautonomous drivingで、LLM推論system効率化ではない。",
+      "reason": "自動運転VLMの認識・計画applicationが主題で、LLM推論systemの効率化を主要貢献としていない。",
       "first_checked_at": "2026-10-05T02:49:32+00:00",
-      "last_checked_at": "2026-10-05T02:49:32+00:00",
+      "last_checked_at": "2026-10-05T22:27:25+00:00",
       "linked_from": [],
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
@@ -92116,9 +92086,9 @@
       "identity_tokens": [
         "arXiv:2504.10479"
       ],
-      "reason": "InternVL3はmultimodal pre-training、supervised fine-tuning、mixed preference optimization、test-time scaling recipeでVLM能力を改善するモデル／学習研究。主評価はmultimodal benchmark性能で、推論ランタイム、メモリ、サービング効率化を主要貢献としない。",
+      "reason": "主貢献はnative multimodal pre-training、V2PE、SFT/MPO、test-time scalingによるMLLM能力向上で、評価もMMMU等のmultimodal task品質が中心。推論runtime・serving・memory最適化を最終適用先としないためunrelated。",
       "first_checked_at": "2026-10-05T16:19:06+00:00",
-      "last_checked_at": "2026-10-05T16:19:06+00:00",
+      "last_checked_at": "2026-10-05T22:27:26+00:00",
       "linked_from": [],
       "title": "InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models"
     },
@@ -92128,9 +92098,9 @@
       "identity_tokens": [
         "arXiv:2506.05176"
       ],
-      "reason": "Qwen3基盤モデルをembedding/rerankingへ適応し、多段階pre-training・fine-tuning・model mergingで検索品質を高める研究。deployment効率の選択肢は提供するが、推論runtime・memory・serving方式の最適化を提案・評価しない。",
+      "reason": "Qwen3をbackboneにembedding/rerankingモデルをmulti-stage trainingし、MTEBやretrieval品質を改善する研究。deployment size選択には触れるが推論runtime・serving・memory最適化が主貢献ではないためunrelated。",
       "first_checked_at": "2026-10-05T16:19:07+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
+      "last_checked_at": "2026-10-05T22:27:27+00:00",
       "linked_from": [],
       "title": "Qwen3 Embedding: Advancing Text Embedding and Reranking Through Foundation Models"
     },
@@ -92140,9 +92110,9 @@
       "identity_tokens": [
         "arXiv:2506.15742"
       ],
-      "reason": "画像生成・編集を統一するflow-matching modelで、KontextBench上の生成品質・multi-turn consistencyと高速生成を評価する。最終適用先は画像生成・編集で、LLM/Transformer推論system最適化ではない。",
+      "reason": "flow matchingによる画像生成・編集を統合しKontextBenchで品質とmulti-turn consistencyを評価する画像生成研究。生成時間は報告するがLLM/Transformer推論systemのruntime・memory・serving最適化ではないためunrelated。",
       "first_checked_at": "2026-10-05T16:19:07+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
+      "last_checked_at": "2026-10-05T22:27:27+00:00",
       "linked_from": [],
       "title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space"
     },
@@ -92582,11 +92552,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2601.03267",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.03267",
         "arXiv:2601.03267"
       ],
-      "reason": "GPT-5の能力・安全性・routing・評価を報告するsystem card。高速modelとreasoning modelのrouterは含むが、推論runtime/serving効率化方式の研究・system評価が主要貢献ではない。",
+      "reason": "GPT-5統合system、router、安全性、能力評価を記述するsystem cardで、推論効率の新規runtime・scheduler・memory hierarchy方式を提案・評価する論文ではないためunrelated。",
       "first_checked_at": "2026-10-05T16:34:15+00:00",
-      "last_checked_at": "2026-10-05T16:34:15+00:00",
+      "last_checked_at": "2026-10-05T22:27:27+00:00",
       "linked_from": [],
       "title": "OpenAI GPT-5 System Card"
     },
@@ -93569,9 +93540,9 @@
       "identity_tokens": [
         "arXiv:1802.05799"
       ],
-      "reason": "分散深層学習のtraining通信を対象とするframeworkで、推論効率化が最終目的ではない。",
+      "reason": "分散deep learningのtraining通信を主題とし、推論ではなく学習専用最適化に該当する。",
       "first_checked_at": "2026-10-05T22:17:57+00:00",
-      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:27:25+00:00",
       "linked_from": [],
       "title": "Horovod: fast and easy distributed deep learning in TensorFlow"
     },
@@ -94006,17 +93977,137 @@
       "linked_from": [],
       "title": "Benchmarking GPUs to tune dense linear algebra"
     },
-    "arXiv:2506.01844": {
+    "arXiv:2309.10668": {
       "classification": "unrelated",
-      "canonical_id": "arXiv:2506.01844",
+      "canonical_id": "arXiv:2309.10668",
       "identity_tokens": [
-        "arXiv:2506.01844"
+        "arXiv:2309.10668"
       ],
-      "reason": "効率性はrobotics向けVLAモデルの学習・実行全体を指し、LLM推論serving/メモリ/decoding最適化を主対象にしない。",
-      "first_checked_at": "2026-10-05T22:23:05+00:00",
-      "last_checked_at": "2026-10-05T22:23:05+00:00",
+      "reason": "言語モデルとlossless compressionの理論的等価性を分析し、Chinchilla等を汎用compressorとして評価する研究。推論runtime・memory hierarchy・serving最適化を提案するsystem研究ではないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
       "linked_from": [],
-      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+      "title": "Language Modeling Is Compression"
+    },
+    "arXiv:2203.03466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.03466",
+      "identity_tokens": [
+        "arXiv:2203.03466"
+      ],
+      "reason": "μPで小型model上の最適hyperparameterを大規模modelへzero-shot transferし、大規模pretrainingのtuning costを削減する研究。主要目的はtraining hyperparameter tuningで、推論system効率化ではないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
+      "linked_from": [],
+      "title": "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer"
+    },
+    "arXiv:1903.05566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.05566",
+      "identity_tokens": [
+        "arXiv:1903.05566"
+      ],
+      "reason": "Dialogflow、LUIS、Rasa、Watson等のNLU serviceをintent/entity recognition精度で比較するbenchmark研究。LLM推論runtime・memory・serving効率化を扱わないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
+      "linked_from": [],
+      "title": "Benchmarking Natural Language Understanding Services for building Conversational Agents"
+    },
+    "arXiv:2405.02957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02957",
+      "identity_tokens": [
+        "arXiv:2405.02957"
+      ],
+      "reason": "LLM-powered患者・看護師・医師agentによる病院simulacrumを構築し、doctor agentのevolutionとMedQA性能を評価する医療agent能力研究。agent serving runtime・scheduler・memory効率化ではないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
+      "linked_from": [],
+      "title": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents"
+    },
+    "arXiv:2302.04062": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04062",
+      "identity_tokens": [
+        "arXiv:2302.04062"
+      ],
+      "reason": "機械学習によるsynthetic data generationを用途・生成model・privacy・fairnessの観点で整理するreview。LLM推論runtime・memory・serving最適化の新規方式を扱わないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
+      "linked_from": [],
+      "title": "Machine Learning for Synthetic Data Generation: a Review"
+    },
+    "arXiv:2603.16666": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16666",
+      "identity_tokens": [
+        "arXiv:2603.16666"
+      ],
+      "reason": "World Action Modelでtest-time future video generationを省略し190 ms、既存方式比4倍超高速化するが、最終適用先はembodied robot controlでLLM/Transformer推論systemではないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:22+00:00",
+      "last_checked_at": "2026-10-05T22:27:22+00:00",
+      "linked_from": [],
+      "title": "Fast-WAM: Do World Action Models Need Test-time Future Imagination?"
+    },
+    "DOI:10.14778/3415478.3415530": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3415478.3415530",
+      "identity_tokens": [
+        "DOI:10.14778/3415478.3415530"
+      ],
+      "reason": "PyTorch Distributed Data Parallelのgradient bucketing、compute/communication overlap、gradient synchronization省略によりdistributed trainingを高速化するtraining system。主要評価は256 GPUまでのdata-parallel training scalabilityで、推論system範囲外のためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:23+00:00",
+      "last_checked_at": "2026-10-05T22:27:23+00:00",
+      "linked_from": [],
+      "title": "PyTorch distributed"
+    },
+    "arXiv:2310.07521": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07521",
+      "identity_tokens": [
+        "arXiv:2310.07521"
+      ],
+      "reason": "LLM factualityの原因、評価、改善、standalone/RAG構成を体系化するsurvey。信頼性・知識処理が主題で、推論runtime・memory・serving効率化の新規system方式を扱わないためunrelated。",
+      "first_checked_at": "2026-10-05T22:27:23+00:00",
+      "last_checked_at": "2026-10-05T22:27:23+00:00",
+      "linked_from": [],
+      "title": "Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity"
+    },
+    "arXiv:2203.14680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.14680",
+      "identity_tokens": [
+        "arXiv:2203.14680"
+      ],
+      "reason": "Transformer FFNのmechanistic interpretationが主題で、推論効率・serving・compressionの提案ではない。",
+      "first_checked_at": "2026-10-05T22:27:23+00:00",
+      "last_checked_at": "2026-10-05T22:27:25+00:00",
+      "linked_from": [],
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space"
+    },
+    "arXiv:1712.05889": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.05889",
+      "identity_tokens": [
+        "arXiv:1712.05889"
+      ],
+      "reason": "汎用分散AI frameworkであり、LLM推論固有のmemory/KV/MoE/serving最適化を扱わない。",
+      "first_checked_at": "2026-10-05T22:27:24+00:00",
+      "last_checked_at": "2026-10-05T22:27:24+00:00",
+      "linked_from": [],
+      "title": "Ray: A Distributed Framework for Emerging AI Applications"
+    },
+    "arXiv:2502.12110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12110",
+      "identity_tokens": [
+        "arXiv:2502.12110"
+      ],
+      "reason": "agent memoryのsemantic organizationとtask能力が主題で、推論servingのKV/階層memoryやsystem効率を最終適用先として評価しない。",
+      "first_checked_at": "2026-10-05T22:27:25+00:00",
+      "last_checked_at": "2026-10-05T22:27:25+00:00",
+      "linked_from": [],
+      "title": "A-MEM: Agentic Memory for LLM Agents"
     }
   }
 }

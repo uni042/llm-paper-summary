@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T22:23:08+00:00",
-  "record_count": 2087,
+  "updated_at": "2026-10-05T22:27:28+00:00",
+  "record_count": 2095,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -3278,12 +3278,13 @@
       "identity_tokens": [
         "arXiv:2312.03863"
       ],
-      "reason": "効率的LLMをモデル・データ・フレームワークの観点から整理する有用なサーベイだが、新規推論システム手法ではない。",
+      "reason": "効率的LLM研究をmodel-centric・data-centric・framework-centricに整理し、推論圧縮・KV cache・serving frameworkも含む包括survey。サーベイ対象との関連は強いが、単独の新規推論system方式・実装評価ではないためborderline。",
       "first_checked_at": "2026-09-27T12:02:15+09:00",
-      "last_checked_at": "2026-09-30T09:47:28+00:00",
+      "last_checked_at": "2026-10-05T22:27:28+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
+      "borderline_recheck_count": 0,
       "title": "Efficient Large Language Models: A Survey"
     },
     "arXiv:2308.15987": {
@@ -31377,9 +31378,9 @@
         "DOI:10.48550/arxiv.2503.20215",
         "arXiv:2503.20215"
       ],
-      "reason": "エンドツーエンドのマルチモーダル基盤モデルで、音声・視覚encoderのblock-wise processing、Thinker-Talker、sliding-window DiTによりstreaming入力/音声出力と初回パケット遅延低減を意図する。推論機構には直接関係するが、主評価はモデル能力・音声品質であり、汎用LLM推論runtime/servingの速度・メモリ効率を主目的とするsystem論文ではないためborderline。",
+      "reason": "block-wise audio/visual encoder、Thinker-Talker、sliding-window DiTでstreaming multimodal入出力と初期音声遅延低減を設計しており推論機構との接点は強い。一方、主貢献はend-to-end omni-modal model architectureと能力評価で、汎用LLM serving/runtime system最適化が中心ではないためborderline。",
       "first_checked_at": "2026-10-05T16:00:00+00:00",
-      "last_checked_at": "2026-10-05T16:00:00+00:00",
+      "last_checked_at": "2026-10-05T22:27:26+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Qwen2.5-Omni Technical Report"
@@ -32136,19 +32137,6 @@
       "borderline_recheck_count": 0,
       "title": "AFlow: Automating Agentic Workflow Generation"
     },
-    "arXiv:1712.05889": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1712.05889",
-      "identity_tokens": [
-        "arXiv:1712.05889"
-      ],
-      "reason": "Rayはtask/actor抽象と分散schedulerを統合し、強化学習など動的AI workloadを支える汎用分散frameworkである。後年LLM serving基盤の土台にもなるが、本論文自体の最終評価はLLM推論systemではないため現行サーベイではborderline。",
-      "first_checked_at": "2026-10-05T22:23:05+00:00",
-      "last_checked_at": "2026-10-05T22:23:05+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Ray: A Distributed Framework for Emerging AI Applications"
-    },
     "arXiv:2409.02060": {
       "classification": "borderline",
       "canonical_id": "arXiv:2409.02060",
@@ -32174,19 +32162,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Titans: Learning to Memorize at Test Time"
-    },
-    "arXiv:2502.12110": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.12110",
-      "identity_tokens": [
-        "arXiv:2502.12110"
-      ],
-      "reason": "Zettelkasten型のdynamic indexing/linkingとmemory evolutionでagentの外部記憶を整理する。推論時memory retrievalには関係するが、主要評価はagent task性能で、serving latency/throughput/memory footprintのsystem最適化を主目的としないためborderline。",
-      "first_checked_at": "2026-10-05T22:23:07+00:00",
-      "last_checked_at": "2026-10-05T22:23:07+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "A-MEM: Agentic Memory for LLM Agents"
     },
     "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
       "classification": "borderline",
@@ -32226,6 +32201,136 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "IntelliCode compose: code generation using transformer"
+    },
+    "arXiv:2305.14160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.14160",
+      "identity_tokens": [
+        "arXiv:2305.14160"
+      ],
+      "reason": "ICLのlabel wordをinformation anchorとして解析し、demonstration compressionでinferenceを高速化する応用を示す。推論入力圧縮には直接関係するが、主貢献はICL内部機構の解釈で、system-level latency/throughput最適化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:21+00:00",
+      "last_checked_at": "2026-10-05T22:27:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Label Words are Anchors: An Information Flow Perspective for Understanding In-Context Learning"
+    },
+    "arXiv:2607.02770": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.02770",
+      "identity_tokens": [
+        "arXiv:2607.02770"
+      ],
+      "reason": "Gemma 4のモデル設計・学習・能力評価が中心で、推論効率に関係するアーキテクチャ情報はあるが、runtime・memory hierarchy・serving最適化を主貢献とするシステム論文ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:23+00:00",
+      "last_checked_at": "2026-10-05T22:27:23+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Gemma 4 Technical Report"
+    },
+    "arXiv:1901.10430": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1901.10430",
+      "identity_tokens": [
+        "arXiv:1901.10430"
+      ],
+      "reason": "self-attentionをlightweight/dynamic convolutionへ置換してsequence modelingの計算を軽量化するが、研究の中心は翻訳model architectureと品質で、現代LLM serving/runtimeのsystem実測が中心ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:24+00:00",
+      "last_checked_at": "2026-10-05T22:27:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Pay Less Attention with Lightweight and Dynamic Convolutions"
+    },
+    "DOI:10.1109/tkde.2025.3554028": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tkde.2025.3554028",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2025.3554028"
+      ],
+      "reason": "MoEのrouting、system design、open implementationを体系化するsurveyで現行サーベイと強く関連するが、新規推論system方式の一次実装・評価ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:25+00:00",
+      "last_checked_at": "2026-10-05T22:27:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Mixture of Experts in Large Language Models"
+    },
+    "arXiv:2506.01844": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "reason": "小型VLAと、perception/action predictionをaction executionから分離するasynchronous inference stackによりconsumer GPU/CPU deploymentと高control rateを狙う。推論system要素は明確だが最終適用先と主要評価はrobotics controlで、LLM推論サーベイの中心から外れるためborderline。",
+      "first_checked_at": "2026-10-05T22:27:26+00:00",
+      "last_checked_at": "2026-10-05T22:27:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+    },
+    "arXiv:2203.07814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.07814",
+      "identity_tokens": [
+        "arXiv:2203.07814"
+      ],
+      "reason": "大規模sampling・filteringを用いる生成システムだが、主貢献は競技プログラミング能力と生成方式であり、LLM推論runtime/serving効率そのものを主目的としない。",
+      "first_checked_at": "2026-10-05T22:27:27+00:00",
+      "last_checked_at": "2026-10-05T22:27:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Competition-level code generation with AlphaCode"
+    },
+    "arXiv:2412.19442": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.19442",
+      "identity_tokens": [
+        "arXiv:2412.19442"
+      ],
+      "reason": "LLM推論のKVキャッシュ管理をtoken/model/system levelに分類し、selection・budget allocation・merging・quantization・low-rank decomposition・memory management・schedulingを体系化する。対象範囲には直結するが、新規推論runtime/system方式を実装・評価する一次方式論文ではなくsurveyのためborderline。",
+      "first_checked_at": "2026-10-05T22:27:28+00:00",
+      "last_checked_at": "2026-10-05T22:27:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Large Language Model Acceleration based on KV Cache Management"
+    },
+    "arXiv:2402.14905": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.14905",
+      "identity_tokens": [
+        "arXiv:2402.14905"
+      ],
+      "reason": "sub-billion LLMをon-device用途へ最適化し、deep-thin architecture、embedding sharing、grouped-query attention、block-wise weight sharingで小型modelの品質を高める。mobile deployment効率を動機とするが、主要貢献はmodel architecture/quality設計でsystem-level inference runtimeの新規方式・latency評価が中心ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:28+00:00",
+      "last_checked_at": "2026-10-05T22:27:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases"
+    },
+    "DOI:10.1145/3706418": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3706418",
+      "identity_tokens": [
+        "DOI:10.1145/3706418"
+      ],
+      "reason": "foundation modelのresource-efficient architecture・algorithm・systemをcloudからedgeまで整理し、LLM inference、offload、quantization、serving等を広く含む。現行サーベイに有用な俯瞰だが、個別の新規推論runtime/system方式を実装評価する論文ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:28+00:00",
+      "last_checked_at": "2026-10-05T22:27:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey"
+    },
+    "arXiv:1805.00907": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1805.00907",
+      "identity_tokens": [
+        "arXiv:1805.00907"
+      ],
+      "reason": "neural network graphを高位・低位のtyped IRへloweringし、instruction scheduling、static memory allocation、copy elimination、target-specific code generationを行うML compiler。推論kernel/runtime compilerの基礎として関連するが、評価対象は汎用NNでLLM/Transformer推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:27:28+00:00",
+      "last_checked_at": "2026-10-05T22:27:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11f5bedd0681c772-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2309.10668",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2309.10668",
+    "identity_tokens": [
+      "arXiv:2309.10668"
+    ],
+    "reason": "言語モデルとlossless compressionの理論的等価性を分析し、Chinchilla等を汎用compressorとして評価する研究。推論runtime・memory hierarchy・serving最適化を提案するsystem研究ではないためunrelated。",
+    "first_checked_at": "2026-10-05T22:27:22+00:00",
+    "last_checked_at": "2026-10-05T22:27:22+00:00",
+    "linked_from": [],
+    "title": "Language Modeling Is Compression"
+  },
+  "processed_at": "2026-10-05T22:27:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11f5bedd0681",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

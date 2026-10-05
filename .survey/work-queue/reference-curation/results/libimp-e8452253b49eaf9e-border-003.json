@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8452253b49eaf9e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2312.03863",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2312.03863",
+    "identity_tokens": [
+      "arXiv:2312.03863"
+    ],
+    "reason": "効率的LLM研究をmodel-centric・data-centric・framework-centricに整理し、推論圧縮・KV cache・serving frameworkも含む包括survey。サーベイ対象との関連は強いが、単独の新規推論system方式・実装評価ではないためborderline。",
+    "first_checked_at": "2026-09-27T12:02:15+09:00",
+    "last_checked_at": "2026-10-05T22:27:28+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Large Language Models: A Survey"
+  },
+  "processed_at": "2026-10-05T22:27:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8452253b49e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

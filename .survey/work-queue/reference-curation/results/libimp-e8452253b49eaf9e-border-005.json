@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8452253b49eaf9e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3706418",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3706418",
+    "identity_tokens": [
+      "DOI:10.1145/3706418"
+    ],
+    "reason": "foundation modelのresource-efficient architecture・algorithm・systemをcloudからedgeまで整理し、LLM inference、offload、quantization、serving等を広く含む。現行サーベイに有用な俯瞰だが、個別の新規推論runtime/system方式を実装評価する論文ではないためborderline。",
+    "first_checked_at": "2026-10-05T22:27:28+00:00",
+    "last_checked_at": "2026-10-05T22:27:28+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey"
+  },
+  "processed_at": "2026-10-05T22:27:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8452253b49e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

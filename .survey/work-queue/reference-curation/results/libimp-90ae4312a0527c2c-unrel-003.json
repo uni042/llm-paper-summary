@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90ae4312a0527c2c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.15742",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.15742",
+    "identity_tokens": [
+      "arXiv:2506.15742"
+    ],
+    "reason": "flow matchingによる画像生成・編集を統合しKontextBenchで品質とmulti-turn consistencyを評価する画像生成研究。生成時間は報告するがLLM/Transformer推論systemのruntime・memory・serving最適化ではないためunrelated。",
+    "first_checked_at": "2026-10-05T16:19:07+00:00",
+    "last_checked_at": "2026-10-05T22:27:27+00:00",
+    "linked_from": [],
+    "title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space"
+  },
+  "processed_at": "2026-10-05T22:27:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90ae4312a052",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
