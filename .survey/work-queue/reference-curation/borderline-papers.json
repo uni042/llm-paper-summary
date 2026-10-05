@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:14:50+00:00",
-  "record_count": 1053,
+  "updated_at": "2026-10-05T07:17:12+00:00",
+  "record_count": 1059,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -16059,6 +16059,92 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
       ],
       "title": "It's the Problem, Not the Path: Budget and Difficulty Confounds in LLM Reasoning Trajectories"
+    },
+    "arXiv:2609.03747": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.03747",
+      "identity_tokens": [
+        "arXiv:2609.03747"
+      ],
+      "reason": "The relevance to LLM inference efficiency is indirect and the surveyed evidence is not a comparable deployment measurement.",
+      "first_checked_at": "2026-10-05T07:17:11+00:00",
+      "last_checked_at": "2026-10-05T07:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "Closing the Semantic-Edge Gap: Tiny Language Models for 6G Wireless Intelligence"
+    },
+    "arXiv:2609.03753": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.03753",
+      "identity_tokens": [
+        "arXiv:2609.03753"
+      ],
+      "reason": "Its memory-agent setup is relevant to serving cost, but the reported cost outcome is adverse.",
+      "first_checked_at": "2026-10-05T07:17:11+00:00",
+      "last_checked_at": "2026-10-05T07:17:11+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SimSkill: A Self-Evolving LLM Agent for Skill and Knowledge Accumulation in Traffic Simulation"
+    },
+    "arXiv:2609.22226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22226",
+      "identity_tokens": [
+        "arXiv:2609.22226"
+      ],
+      "reason": "The method operates at decode time, but its intended operating regime discounts latency.",
+      "first_checked_at": "2026-10-05T07:17:12+00:00",
+      "last_checked_at": "2026-10-05T07:17:12+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Swiss-Knife: A Framework for Reconfigurable Externalised Multi-Objective Alignment at Decode Time"
+    },
+    "arXiv:2609.22231": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22231",
+      "identity_tokens": [
+        "arXiv:2609.22231"
+      ],
+      "reason": "The contribution is memory/retrieval quality and diagnostics, not measured inference efficiency.",
+      "first_checked_at": "2026-10-05T07:17:12+00:00",
+      "last_checked_at": "2026-10-05T07:17:12+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "EvalMem: An Operation-Level Diagnostic Framework for Long-Term Memory Systems"
+    },
+    "arXiv:2610.00042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00042",
+      "identity_tokens": [
+        "arXiv:2610.00042"
+      ],
+      "reason": "The mechanism is adjacent to inference efficiency, but cost savings are not evidenced.",
+      "first_checked_at": "2026-10-05T07:17:12+00:00",
+      "last_checked_at": "2026-10-05T07:17:12+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Zengram-Lite: An In-Browser Agentic-Memory Framework - Semantic Knowledge, Session Tracking, and Token-Budgeted Context"
+    },
+    "DOI:10.3390/electronics15173980": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15173980",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15173980"
+      ],
+      "reason": "Packet abstract suggests an SRAM energy-encoding measurement involving SmolLM2-135M, but primary body evidence was unavailable.",
+      "first_checked_at": "2026-10-05T07:17:12+00:00",
+      "last_checked_at": "2026-10-05T07:17:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Read-Polarity-Aware Row-Wise Offset Encoding for Readout-Energy Reduction in 8T SRAM Compute-in-Memory"
     }
   }
 }
