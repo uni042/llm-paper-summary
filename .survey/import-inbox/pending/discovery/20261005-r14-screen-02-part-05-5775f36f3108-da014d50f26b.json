@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-02-part-05-5775f36f3108",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16051",
+      "identity_tokens": [
+        "arXiv:2607.16051"
+      ],
+      "title": "Loop the Loopies!",
+      "reason": "Looped MoE model capability under matched training compute; no inference efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2607.16051",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22844",
+      "identity_tokens": [
+        "arXiv:2606.22844"
+      ],
+      "title": "RaMem: Contextual Reinstatement for Long-term Agentic Memory",
+      "reason": "Agentic memory retrieval correctness, no inference cost optimization.",
+      "source_url": "https://arxiv.org/abs/2606.22844",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13177",
+      "identity_tokens": [
+        "arXiv:2606.13177"
+      ],
+      "title": "MemRefine: LLM-Guided Compression for Long-Term Agent Memory",
+      "reason": "Agent memory storage-budget compression, not LLM inference-context/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2606.13177",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08417",
+      "identity_tokens": [
+        "arXiv:2606.08417"
+      ],
+      "title": "Hacking Generative Perplexity: Why Unconditional Text Evaluation Needs Distributional Metrics",
+      "reason": "Generative language model evaluation metrics, not efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.08417",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.03752",
+      "identity_tokens": [
+        "arXiv:2409.03752"
+      ],
+      "title": "Attention heads of large language models",
+      "reason": "Survey of attention-head functions/interpretability, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2409.03752",
+      "first_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "last_checked_at": "2026-10-05T00:39:43.384929+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md"
+      ]
+    }
+  ]
+}
