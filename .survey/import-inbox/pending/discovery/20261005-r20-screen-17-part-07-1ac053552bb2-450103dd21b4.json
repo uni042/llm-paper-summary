@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-17-part-07-1ac053552bb2",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185794",
+      "identity_tokens": [
+        "DOI:10.3390/s26185794"
+      ],
+      "title": "Preprocessing and Capability–Risk Coupling in an Event-Synchronized Dual-Frontend Speech Sensor System",
+      "reason": "一次要旨は音声sensor前処理とcloud LLMを含む制御pipeline safety case studyで、LLM inference efficiencyは研究対象でない。",
+      "source_url": "https://doi.org/10.3390/s26185794",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26185944",
+      "identity_tokens": [
+        "DOI:10.3390/s26185944"
+      ],
+      "title": "Sensor-Driven World Models for Embodied Intelligence: A Survey of Sensor–State–Decision Modeling Across Far-Field and Near-Field Regimes",
+      "reason": "一次要旨はembodied world-model一般のsensor/state/decision surveyで、LLM推論/serving最適化に焦点を当てない。",
+      "source_url": "https://doi.org/10.3390/s26185944",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30145",
+      "identity_tokens": [
+        "arXiv:2608.30145"
+      ],
+      "title": "Understanding before verifying: Claim normalization for automated citation verification",
+      "reason": "一次要旨はautomated citation verificationのclaim normalization/classification quality向上を扱い、inference efficiencyを測定しない。",
+      "source_url": "https://arxiv.org/abs/2608.30145",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30226",
+      "identity_tokens": [
+        "arXiv:2608.30226"
+      ],
+      "title": "LaMoC: Loss-Aware Modular Compression for LLMs",
+      "reason": "本文で確認できた主結果は圧縮後のperplexityとtask accuracyで、推論latency、throughput、serving memoryの直接測定を確認できない。効率面の効果が間接的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.30226",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30376",
+      "identity_tokens": [
+        "arXiv:2608.30376"
+      ],
+      "title": "Kathleen Remembers: Length-Invariant One-Shot Recall Without Attention",
+      "reason": "一次要旨はKathleen recurrent sequence modelのassociative memory/recall能力を評価し、LLM serving efficiencyやruntime optimizationを扱っていない。",
+      "source_url": "https://arxiv.org/abs/2608.30376",
+      "first_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "last_checked_at": "2026-10-05T06:17:00.971281+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    }
+  ]
+}
