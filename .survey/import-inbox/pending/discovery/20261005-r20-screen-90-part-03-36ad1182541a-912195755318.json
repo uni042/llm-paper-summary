@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-90-part-03-36ad1182541a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07209",
+      "identity_tokens": [
+        "arXiv:2604.07209"
+      ],
+      "title": "INSPATIO-WORLD: A Real-Time 4D World Simulator via Spatiotemporal Autoregressive Modeling",
+      "reason": "INSPATIO-WORLD is a real-time 4D visual world simulator based on video generation; it is outside the LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2604.07209",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22615",
+      "identity_tokens": [
+        "arXiv:2512.22615"
+      ],
+      "title": "Dream-VL & Dream-VLA: Open Vision-Language and Vision-Language-Action Models with Diffusion Language Model Backbone",
+      "reason": "The speed result is for low-level robot action chunks in a VLA system rather than general text generation or LLM serving; relevance to the survey scope is adjacent and weak.",
+      "source_url": "https://arxiv.org/abs/2512.22615",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12080",
+      "identity_tokens": [
+        "arXiv:2512.12080"
+      ],
+      "title": "BAgger: Backwards Aggregation for Mitigating Drift in Autoregressive Video Diffusion Models",
+      "reason": "The paper addresses exposure-bias mitigation in autoregressive video diffusion, not LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.12080",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16665",
+      "identity_tokens": [
+        "arXiv:2511.16665"
+      ],
+      "title": "Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter",
+      "reason": "The paper optimizes reinforcement-learning post-training throughput for LLMs; its contribution is training efficiency, outside this inference/serving screen.",
+      "source_url": "https://arxiv.org/abs/2511.16665",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.18871",
+      "identity_tokens": [
+        "arXiv:2510.18871"
+      ],
+      "title": "How Do LLMs Use Their Depth?",
+      "reason": "The analysis motivates possible dynamic-depth inference, but a usable optimization and system-level efficiency result remain future work.",
+      "source_url": "https://arxiv.org/abs/2510.18871",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    }
+  ]
+}
