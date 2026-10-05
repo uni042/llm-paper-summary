@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-01-part-03-a8337c921e62",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27922",
+      "identity_tokens": [
+        "arXiv:2608.27922"
+      ],
+      "title": "DensityKV: Density-Guided KV Cache Compression for Long Video Generation",
+      "reason": "要旨は「Autoregressive video diffusion models enable streaming generation through sliding-window attention, but each generated block is conditioned on previously generated content, causing appearance and motion errors to propagate recursively over time. Historical key-value (KV) memory preserves earlier subject and scene states and」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.27922",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28150",
+      "identity_tokens": [
+        "arXiv:2608.28150"
+      ],
+      "title": "Intrinsic Interaction Geometry Controls the Low-Rank Complexity of Softmax Attention",
+      "reason": "This is a complexity characterization, not an inference-time approximation/serving optimization implementation; direct efficiency benefit is not established.",
+      "source_url": "https://arxiv.org/abs/2608.28150",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28205",
+      "identity_tokens": [
+        "arXiv:2608.28205"
+      ],
+      "title": "Cut-ViT: Task-Specific Model Pruning via Gram Anchoring Subspace Consistency",
+      "reason": "要旨は「Pruning visual foundation models has attracted considerable attention. However, existing methods focus on rigid point-to-point token alignment on a single dataset for pruning, suffering from two limitations: i) robustness degradation, and ii) task-specificity deficiency. To address these limitations, we propose a task-specific」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.28205",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28232",
+      "identity_tokens": [
+        "arXiv:2608.28232"
+      ],
+      "title": "HEPToolBench 1.2: Testing How Reliably Language Models Can Drive Particle Physics Software",
+      "reason": "要旨は「Scientists increasingly want to drive research software by natural-language request, but fluent output helps only if it becomes a correct machine-readable artifact. We introduce HEPToolBench, a benchmark of 28 collider-simulation tasks scored by deterministic, task-specific scorers, plus a three-task structured-debugging」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.28232",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26822",
+      "identity_tokens": [
+        "arXiv:2608.26822"
+      ],
+      "title": "Bridging short- and medium-range weather forecasting with machine learning",
+      "reason": "要旨は「The National Oceanic and Atmospheric Administration (NOAA) employs independent prediction systems for distinct forecast products. While some separation is practical, we argue that combining short- and medium-range weather into a single prediction system would provide the public with a useful distillation of global weather and」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.26822",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
