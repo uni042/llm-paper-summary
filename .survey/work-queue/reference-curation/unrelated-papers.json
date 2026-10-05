@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:08:05+00:00",
-  "record_count": 2148,
+  "updated_at": "2026-10-05T03:10:26+00:00",
+  "record_count": 2160,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -31052,6 +31052,177 @@
         "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
       ],
       "title": "Calibrating Interpretability Instruments Before Trusting Their Verdicts"
+    },
+    "DOI:10.1038/s41591-026-04638-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41591-026-04638-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-026-04638-6"
+      ],
+      "reason": "Primary Nature Medicine abstract critiques a clinical AI benchmark comparison.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Limited benchmarks constrain the conclusions of a general-purpose versus clinical AI comparison."
+    },
+    "arXiv:2609.02094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02094",
+      "identity_tokens": [
+        "arXiv:2609.02094"
+      ],
+      "reason": "Primary abstract focuses on continual skill optimization and capability improvement.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "MASkills: Continual Skills Optimization for Multi-Agent LLM Systems"
+    },
+    "arXiv:2609.02702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02702",
+      "identity_tokens": [
+        "arXiv:2609.02702"
+      ],
+      "reason": "Primary abstract focuses on long-context reasoning quality through trace placement.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Trace as State: Reasoning Traces as Conditional States for Long-Context Transformers"
+    },
+    "arXiv:2609.02730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02730",
+      "identity_tokens": [
+        "arXiv:2609.02730"
+      ],
+      "reason": "Primary abstract optimizes recommender-system behavior and serving cost, not LLM serving.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "CORAL: An LLM-Native Harness for Production Recommender Systems"
+    },
+    "arXiv:2609.01043": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.01043",
+      "identity_tokens": [
+        "arXiv:2609.01043"
+      ],
+      "reason": "Primary abstract improves diffusion sampling quality trade-offs at fixed NFE, without lower inference cost.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "From Truncation to Commitment: Persistent Context in Uniform Discrete Diffusion"
+    },
+    "DOI:10.1016/j.eswa.2026.132856": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.132856",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.132856"
+      ],
+      "reason": "Primary publisher abstract evaluates ViT quantization on image benchmarks, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "SLIQ-ViT: Sensitivity-aware log-uniform integer quantization for efficient vision transformers"
+    },
+    "DOI:10.1016/j.ipm.2026.104751": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2026.104751",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2026.104751"
+      ],
+      "reason": "Primary publisher abstract applies LLMs to talent matching/HR rather than model serving.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ],
+      "title": "Adaptive talent aligner: A large language model with dynamic hierarchical analysis and bias-corrective memory pool for personalized human resource management"
+    },
+    "DOI:10.1016/j.jss.2026.112895": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jss.2026.112895",
+      "identity_tokens": [
+        "DOI:10.1016/j.jss.2026.112895"
+      ],
+      "reason": "Primary publisher abstract evaluates domain-specific smart-contract detection networks, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:10:25+00:00",
+      "last_checked_at": "2026-10-05T03:10:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "An empirical study of attention mechanisms in wide and deep neural networks for smart contract vulnerability detection"
+    },
+    "arXiv:2609.03999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03999",
+      "identity_tokens": [
+        "arXiv:2609.03999"
+      ],
+      "reason": "Primary abstract is a survey/framework for LLM web security, not inference efficiency.",
+      "first_checked_at": "2026-10-05T03:10:26+00:00",
+      "last_checked_at": "2026-10-05T03:10:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.13510-intelligent-router-for-llm-workloads-improving-performance-through-workload-aware-routing.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Shifting from Injection to Interaction: Rethinking Web Security in the Age of LLMs and Beyond"
+    },
+    "DOI:10.1016/j.oceaneng.2026.127311": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.oceaneng.2026.127311",
+      "identity_tokens": [
+        "DOI:10.1016/j.oceaneng.2026.127311"
+      ],
+      "reason": "Publisher-hosted abstract describes remote-sensing ship detection, not LLM serving.",
+      "first_checked_at": "2026-10-05T03:10:26+00:00",
+      "last_checked_at": "2026-10-05T03:10:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "UMS-DETR: A lightweight Transformer-based framework for real-time ship detection in complex remote sensing scenes"
+    },
+    "DOI:10.1109/jssc.2026.3693653": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2026.3693653",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3693653"
+      ],
+      "reason": "Primary abstract presents a transformer-training accelerator, not inference serving.",
+      "first_checked_at": "2026-10-05T03:10:26+00:00",
+      "last_checked_at": "2026-10-05T03:10:26+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "ASAP: A 28-nm Transformer Training Accelerator With Alternating Sparsity and Asymmetrical Microscaling Precision"
+    },
+    "DOI:10.1109/tcsvt.2026.3694979": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3694979",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3694979"
+      ],
+      "reason": "Primary abstract concerns hyperspectral tracking, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:10:26+00:00",
+      "last_checked_at": "2026-10-05T03:10:26+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "FSMT: Frequency-Spatial Mixture-of-Experts Hyperspectral Object Tracking"
     }
   }
 }

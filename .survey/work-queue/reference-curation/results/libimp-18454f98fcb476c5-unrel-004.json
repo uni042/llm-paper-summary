@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-18454f98fcb476c5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.02702",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.02702",
+    "identity_tokens": [
+      "arXiv:2609.02702"
+    ],
+    "reason": "Primary abstract focuses on long-context reasoning quality through trace placement.",
+    "first_checked_at": "2026-10-05T03:10:25+00:00",
+    "last_checked_at": "2026-10-05T03:10:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Trace as State: Reasoning Traces as Conditional States for Long-Context Transformers"
+  },
+  "processed_at": "2026-10-05T03:10:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-18454f98fcb4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

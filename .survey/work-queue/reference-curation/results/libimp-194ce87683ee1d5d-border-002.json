@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-194ce87683ee1d5d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.05641",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.05641",
+    "identity_tokens": [
+      "arXiv:2609.05641"
+    ],
+    "reason": "Generic dithered matrix-product quantization bound/constructions with synthetic validation; no LLM or serving experiments. Generic matrix model/no LLM validation.",
+    "first_checked_at": "2026-10-05T03:10:26+00:00",
+    "last_checked_at": "2026-10-05T03:10:26+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "A Nuclear-Norm Lower Bound for Dithered Scalar Quantization of Matrix Products"
+  },
+  "processed_at": "2026-10-05T03:10:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-194ce87683ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
