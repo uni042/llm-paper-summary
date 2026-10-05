@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6229afed9abb83b9-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1016/j.neunet.2026.109469",
+  "reason": "Mixture of Experts (MoE) Large Language Models (LLMs) have demonstrated exceptional performance in recent years. However, their significantly increased parameter count poses substantial challenges for achieving a fine-tuned model without modifying the MoE architecture or quantity, particularly under memory-constrained conditions. Previous studies have shown that MoE tends to have a subset of representative experts in a specific domain. This inherent characteristic creates the possibility of fine-tuning such models exclusively during the training phase by loading and training only a targeted subset of experts. To address the challenge, we propose an algorithm framework named DR-EFT (Domain-Representative Experts for Fine-Tuning), which explores and loads the domain-representative experts for subsequent retraining and reincorporation. DR-EFT operates based on a structured two-stage learning mechanism. Firstly, it achieves the representative experts via quantized model fine-tuning to remove the obstacle brought by the observed phenomenon of easily overlooked expert activation drift during fine-tuning. Then it enables continuous fine-tuning through denoting a novel MoE training dynamic. It finds that secondary relevant experts play a crucial role and should be included in the representative subset, which differs from existing pruning strategies that focus on the most relevant experts, thus enriching the theoretical framework of domain-specific expert. We propose two strategies of static fine-tuning or expert switching to achieve continuous adaptation of the retrained experts. Extensive experiments on multiple downstream tasks show that the proposed DR-EFT framework reduces the memory consumption of MoEs by close to 50% with only a marginal performance loss. Furthermore, our method demonstrates robustness through validations on popular MoE LLMs, including Qwen, DeepSeek, and Ernie.",
+  "title": "DR-EFT: Exploring and reloading domain-representative experts for the memory-constrained fine-tuning of MoE large models.",
+  "identity_tokens": [
+    "DOI:10.1016/j.neunet.2026.109469"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md",
+    "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+    "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+    "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6229afed9abb",
+  "source_precheck_request_id": null
+}
