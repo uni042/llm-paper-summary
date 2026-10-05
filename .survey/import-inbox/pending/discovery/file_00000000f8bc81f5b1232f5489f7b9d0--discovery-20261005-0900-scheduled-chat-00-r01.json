@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-0900-scheduled-chat-00/r01",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2016.7783723",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783723"
+      ],
+      "title": "Cambricon-X: An accelerator for sparse neural networks",
+      "reason": "疎なニューラルネットワーク向け専用アクセラレータで、圧縮DNNの不規則な疎行列計算を高速化する汎用ハードウェア研究。LLM/Transformer推論を最終適用先とせず、LLM固有の推論評価がない。",
+      "source_url": "https://doi.org/10.1109/MICRO.2016.7783723",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3282307",
+      "identity_tokens": [
+        "DOI:10.1145/3282307"
+      ],
+      "title": "A new golden age for computer architecture",
+      "reason": "汎用計算機アーキテクチャの潮流、domain-specific architecture、セキュリティ等を論じる展望論文で、LLM推論システムの具体的最適化方式を提案・評価しない。",
+      "source_url": "https://doi.org/10.1145/3282307",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41591-024-03141-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-024-03141-0"
+      ],
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+      "reason": "Virchowを用いた病理画像のpan-cancer検出・biomarker予測が主題で、最終適用先は臨床計算病理。LLM推論ランタイム・メモリ・サービング最適化ではない。",
+      "source_url": "https://doi.org/10.1038/s41591-024-03141-0",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13657",
+      "identity_tokens": [
+        "arXiv:2503.13657"
+      ],
+      "title": "Why Do Multi-Agent LLM Systems Fail?",
+      "reason": "複数LLMエージェントの実行traceを分析し14種のfailure mode taxonomyとMAST-Dataを構築する信頼性・評価研究。system designを扱うが、推論ランタイムの速度・メモリ・スループット最適化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2503.13657",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/42201.42203",
+      "identity_tokens": [
+        "DOI:10.1145/42201.42203"
+      ],
+      "title": "Multiple-query optimization",
+      "reason": "複数データベースquery間で共通処理を共有する古典的query optimization研究で、LLM推論やagentic servingを最終適用先としない。",
+      "source_url": "https://doi.org/10.1145/42201.42203",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13720",
+      "identity_tokens": [
+        "arXiv:2410.13720"
+      ],
+      "title": "Movie Gen: A Cast of Media Foundation Models",
+      "reason": "30B Transformerを含む動画・音声生成foundation model群で、並列化・推論最適化も含むが最終適用先はmedia generationでありLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/2410.13720",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00407",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00407"
+      ],
+      "title": "How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering",
+      "reason": "T5/BART/GPT-2のQA確信度calibrationを分析しfine-tuningやpost-hoc補正で信頼度を改善する評価・信頼性研究。推論runtime効率化を提案しない。",
+      "source_url": "https://doi.org/10.1162/tacl_a_00407",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1806.00187",
+      "identity_tokens": [
+        "arXiv:1806.00187"
+      ],
+      "title": "Scaling Neural Machine Translation",
+      "reason": "低精度とlarge-batch分散学習でNMT trainingを約5倍高速化し128 GPUで学習時間を短縮するtraining system研究。最終評価が学習速度であり推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1806.00187",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00059",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00059"
+      ],
+      "title": "Applied Machine Learning at Facebook: A Datacenter Infrastructure Perspective",
+      "reason": "Facebookの大規模ML workloadとdatacenter infrastructureを特徴づける一般ML基盤研究で、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1109/HPCA.2018.00059",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2749469.2749475",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2749475"
+      ],
+      "title": "Heracles: Improving resource efficiency at scale",
+      "reason": "latency-critical serviceとbest-effort batch taskを同一serverへ安全にcolocateしてresource efficiencyを高めるdatacenter resource management研究。LLM推論固有のserving方式ではない。",
+      "source_url": "https://doi.org/10.1145/2749469.2749475",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報から研究対象・方式・最終適用先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:22:00+09:00",
+      "last_checked_at": "2026-10-05T09:22:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 23
+    }
+  ]
+}
