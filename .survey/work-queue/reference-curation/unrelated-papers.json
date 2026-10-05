@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:13:18+00:00",
-  "record_count": 3787,
+  "updated_at": "2026-10-05T08:16:12+00:00",
+  "record_count": 3804,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -55169,6 +55169,262 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "HERO: Human-profile Enhanced Retrieval Optimization Framework for Long-term Agent Memory"
+    },
+    "DOI:10.1007/s00414-026-03970-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00414-026-03970-3",
+      "identity_tokens": [
+        "DOI:10.1007/s00414-026-03970-3"
+      ],
+      "reason": "The publisher abstract evaluates ML/ANN methods for forensic sex estimation from mandibular measurements in panoramic radiographs; it is not an LLM paper.",
+      "first_checked_at": "2026-10-05T08:16:10+00:00",
+      "last_checked_at": "2026-10-05T08:16:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Evaluating machine learning and neural network architectures for forensic sex estimation using mandibular ramus and notch features on panoramic radiographs."
+    },
+    "DOI:10.3390/e28090944": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/e28090944",
+      "identity_tokens": [
+        "DOI:10.3390/e28090944"
+      ],
+      "reason": "The paper concerns physiological CT-perfusion image processing, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:16:10+00:00",
+      "last_checked_at": "2026-10-05T08:16:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "TriAIF-RWKV: A Physiology-Guided Spatiotemporal Framework for Robust Arterial Input Function Selection in CT Perfusion Imaging"
+    },
+    "arXiv:2608.20634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20634",
+      "identity_tokens": [
+        "arXiv:2608.20634"
+      ],
+      "reason": "AgentMercury focuses on synthesizing verifiable business environments for agent RL training, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T08:16:10+00:00",
+      "last_checked_at": "2026-10-05T08:16:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "AgentMercury: Your Agent Can Synthesize Verifiable Environments for Business Scenarios at scale"
+    },
+    "arXiv:2608.20635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20635",
+      "identity_tokens": [
+        "arXiv:2608.20635"
+      ],
+      "reason": "This is a theoretical sample-complexity analysis for score-entropy discrete diffusion; the abstract does not present an LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-05T08:16:10+00:00",
+      "last_checked_at": "2026-10-05T08:16:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Minimax Optimality of Score-Entropy Discrete Diffusion"
+    },
+    "arXiv:2608.20732": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20732",
+      "identity_tokens": [
+        "arXiv:2608.20732"
+      ],
+      "reason": "LLM API resellers have become an important access layer to modern LLM services. However, multi-level resale creates an opaque supply chain: a user's request may traverse undisclosed upstream resellers, each of which can inspect or modify prompts and responses, inducing ecosystem-level confidentiality and integrity risks. Existing studies audit individual resellers, but provide little visibility into hidden dependencies across resellers. We present CacheTracer, the first API-only measurement of such hidden dependencies. Our key insight is to exploit prefix-cache reuse as a side channel to measure dependency via cache-reach relations. CacheTracer operationalizes this insight with two primitives: Flood populates fresh cache state through one endpoint, and Prove probes whether another can reuse it while excluding probe-created hits. We then conduct a real-world measurement study with CacheTracer on 39 reseller endpoints, sending 1.1 million API requests across 636 endpoint pairs. Our measurements reveal a deep, concentrated cache-reach structure: 37.1% of measured pairs exhibit shared cache reach, the containment order spans seven layers, and one cache reach is contained within at least 31 of other nodes. We further find that the recovered structure is model-specific. We also evaluate the validity of CacheTracer through both real-world consistency checks and controlled experiments. The results show its high reliability and accuracy. These findings reveal substantial hidden dependencies among seemingly independent API resellers. Such deep and concentrated dependencies can create a large potential blast radius, where a confidentiality or integrity failure along a common upstream path may affect users across multiple downstream resellers.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Uncovering and Understanding Hidden Dependencies in the LLM API Reseller Ecosystem via Prefix-Cache Side Channels"
+    },
+    "arXiv:2608.20853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20853",
+      "identity_tokens": [
+        "arXiv:2608.20853"
+      ],
+      "reason": "Evaluation of long-context Large Language Models (LLMs) has advanced rapidly. However, most existing benchmarks are limited to the document level and focus mainly on high-resource languages, leaving many fine-grained challenges insufficiently evaluated. To address this gap, we present MGAL, the first multilingual, granularity- and position-aware long-context benchmark. MGAL is constructed from United Nations (UN) reports spanning 8K to 128K tokens across the six official UN languages. It covers four coherent levels of linguistic granularity (word, sentence, paragraph, and document) and further stratifies entries by their position within the document (begin, middle, and end), indexed at both the document and paragraph levels. This design enables systematic diagnosis of multilingual long-context comprehension across different granularities. Through extensive experiments and analyses, we find that: (1) LLMs perform well at word-level tasks but struggle with coarser-grained ones; and (2) Closed-source models retain a clear performance advantage in lower-resource languages. We further identify two new challenges: (1) Under local semantic crowding, where neighboring sentences share topics and entities, models tend to follow surface cues (e.g., connectives like ``however''or repeated entities) rather than the discourse role of the sentence in surrounding context (e.g., background, outcome); and (2) A gap between fluency and consistency in generated outputs, where models produce text that reads smoothly but drifts from the source facts. In addition, we observe several patterns in line with prior studies, including reliance on nearby evidence and reuse of options under uncertainty.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "MGAL: A Multilingual Granularity-Aware Long-Context Benchmark"
+    },
+    "arXiv:2608.20918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20918",
+      "identity_tokens": [
+        "arXiv:2608.20918"
+      ],
+      "reason": "Organizations maintain task-specific adapters for open-weight language models, and each new base-model release forces a migration decision: retain existing specialists, port adapters, refresh from preserved behavior, or retrain. Prior transfer work evaluates isolated model pairs, without studying these choices across real model release sequences. We present UpgradeBench, a decision-driven longitudinal benchmark covering four consecutive Qwen releases, one continuation checkpoint, six tasks, and two model sizes, augmented by OLMo checkpoints with known training lineage. The benchmark disentangles three core questions: whether a new checkpoint improves fixed-recipe retrained specialist performance, whether specialization assets transfer across versions, and what recovery resources are usable. We observe upgrade gains differ across task-scale-release episodes: some retrained baselines improve while others stay within training noise, with durability ranging from under one release interval for text-to-SQL to over fourteen months for intent classification. Direct adapter copying depends neither on architecture nor model family: on OLMo, retention drops from 0.88-0.99 at 46B-token continued pretraining to zero at 2.9T tokens; annealing and model souping introduce no extra harm, with portability decaying with continued-pretraining distance. Given preserved input data, teacher relabeling recovers target-base specialists without fresh gold annotations, though compute savings are not guaranteed. Simulating a fixed decision policy over 33 upgrade episodes yields 0.37pp mean quality regret with zero behavioral regressions at one-third the compute and label cost of full retraining. A lightweight CKA probe over 256 prompts predicts cross-version adapter portability (Spearman 0.74 across eight model pairs). We release per-example predictions, cost logs, split manifests, and evaluation code.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "UpgradeBench: A Decision-Centric Benchmark for Upgrading Fine-Tuned LLM Specialists"
+    },
+    "arXiv:2608.20953": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20953",
+      "identity_tokens": [
+        "arXiv:2608.20953"
+      ],
+      "reason": "QAH heals compressed MXFP4 LLMs using a second KL-distillation/training pass; evaluation centers on quality recovery and training convergence. The deployable artifact uses less weight memory but no inference-path optimization is introduced.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Quantization-Aware Healing: A Practical Recipe for Recovering Compressed, 4-Bit LLMs"
+    },
+    "arXiv:2608.21964": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21964",
+      "identity_tokens": [
+        "arXiv:2608.21964"
+      ],
+      "reason": "Repo2Skill-Evo studies agent-skill maintenance and benchmark behavior, not model inference resources.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Repo2Skill-Evo: Repository Skills Go Stale in Silence"
+    },
+    "arXiv:2608.21969": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21969",
+      "identity_tokens": [
+        "arXiv:2608.21969"
+      ],
+      "reason": "ToSCA is reinforcement-learning training for conversational agents; training-only work is outside scope.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "ToSCA: Leveraging Hierarchical Reinforcement Learning on Temporal and Strategic Abstractions of Conversational Agents"
+    },
+    "arXiv:2608.22090": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22090",
+      "identity_tokens": [
+        "arXiv:2608.22090"
+      ],
+      "reason": "Semantic Reasoning Denoising trains a model to improve reasoning quality through repeated inference-time denoising; the abstract reports accuracy, not reduced inference compute, latency, memory, or serving cost.",
+      "first_checked_at": "2026-10-05T08:16:11+00:00",
+      "last_checked_at": "2026-10-05T08:16:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Semantic Reasoning Denoising: Correcting Language Model Reasoning with Semantic Operators"
+    },
+    "arXiv:2608.22117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22117",
+      "identity_tokens": [
+        "arXiv:2608.22117"
+      ],
+      "reason": "Primary full text §§3–5 and §6.1. The throughput results (3.26–3.45× against full TANGO) are training/model-evaluation experiments over FineWeb-Edu; the paper states that generation is largely untested.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "TANGO: Treating Tokens as Operators"
+    },
+    "arXiv:2609.27925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27925",
+      "identity_tokens": [
+        "arXiv:2609.27925"
+      ],
+      "reason": "This is selective anti-interference pretraining, a training-time method excluded by the project scope.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Learning When Not to Listen: Selective Anti-Interference Pretraining for Language Models"
+    },
+    "arXiv:2608.20988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20988",
+      "identity_tokens": [
+        "arXiv:2608.20988"
+      ],
+      "reason": "Quantization of Large Language Models (LLMs) is often hindered by the sensitivity of the self-attention mechanism to discretization errors. We identify the softmax operator as a bottleneck for quantization stability due to its sensitivity to outliers and state-dependent Jacobian. We theoretically establish that suppressing the norm of this Jacobian helps in bounding quantization-induced performance degradation. Based on this, we propose Jacobian-Guided Noise Injection, a training strategy that injects zero-mean Gaussian noise into pre-attention logits, with variance derived directly from the Jacobian Frobenius norm. Unlike prior approaches that rely on heuristic or penalise jacobian directly, our method provides a way to identify the optimal noise variance based on the local attention sensitivity. We evaluate the method on SOTA LLM architectures, where it demonstrates improved robustness over popular PTQ methods. Empirical analysis reveals that the proposed method gives up to +37% relative gains on Top-1 accuracy on ImageNet-1K for SigLIP and improves relative perplexity by upto 40% on WikiText for language models in low bit quantisation settings, proving the efficacy of the approach.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Jacobian-guided Noise Injection for Quantization Robustness in Large Language Models"
+    },
+    "arXiv:2608.21034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21034",
+      "identity_tokens": [
+        "arXiv:2608.21034"
+      ],
+      "reason": "Space-infrastructure vision paper includes Rover, a VLM runtime that checkpoints/recoveries inference across spacecraft thermal shutdowns; contribution is service continuity under intermittent power.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "AI Infrastructure in Space: How Far Can We Go?"
+    },
+    "arXiv:2608.21157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21157",
+      "identity_tokens": [
+        "arXiv:2608.21157"
+      ],
+      "reason": "HIERA plans implementation spaces for LLM-based GPU-kernel generation and evaluates KernelBench/scientific GPU workloads. The LLM is the optimizer; the work does not optimize LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+      ],
+      "title": "HIERA: Workload-Aware Planning Across Implementation Spaces for GPU Kernel Optimization"
+    },
+    "arXiv:2608.21174": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21174",
+      "identity_tokens": [
+        "arXiv:2608.21174"
+      ],
+      "reason": "Attention masks are relation-level controls: they specify which query--source pairs may interact. They do not provide a representation-carried token state that is non-participating at the attention boundary. We assign each token hidden carrier \\(h_i\\) an active-presence coefficient \\(p_i=\\lVert h_i\\rVert^2/(\\tau+\\lVert h_i\\rVert^2)\\). The same coefficient has two roles: it gates information emitted by token \\(i\\), and it determines the mass with which token \\(i\\) enters computations shared with other tokens. OAttention is the support-coupled attention realization of this rule. It gates the receiver output by \\(p_i\\) and weights source \\(j\\) by \\(p_j\\) in both the attention numerator and partition, while retaining the standard score, visibility relation, exponential competition, and value aggregation. This makes the zero-vector token a zero element and yields exact null-receiver, null-source insertion, self-attention insertion, and empty-support properties. The same token-level presence gives local O-components (OFFN, ONorm, and OInject), presence-weighted OStandardize, the O-Closure law \\(M(H\\oplus0)=M(H)\\oplus0\\), and an OTransformer by residual and compositional closure. The canonical operator is checked by contract tests and a GPU evaluation. In a zero-fine-tuning retrofit of a cloned pretrained TabPFN v3 regressor, calibrated hidden-carrier OAttention and Full-O variants change mean RMSE by $+0.088\\%$ and $+0.177\\%$, respectively, over 18 matched dataset--seed cases. A two-block ablation shows that OAttention alone does not preserve a NULL state through ordinary host components, whereas the OTransformer path does. These are scoped tests of exactness, active-path compatibility, and compositional necessity; they do not establish universal no-loss, arbitrary-host closure, learned attraction to the origin, or a general semantics for missing values.",
+      "first_checked_at": "2026-10-05T08:16:12+00:00",
+      "last_checked_at": "2026-10-05T08:16:12+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md"
+      ],
+      "title": "From Attention Masks to Inert Zero-Vector Tokens: OAttention and O-Closure for Token Dynamics"
     }
   }
 }
