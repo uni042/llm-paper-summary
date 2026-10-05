@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-83-part-05-247aa70f59f8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12675",
+      "identity_tokens": [
+        "arXiv:2602.12675"
+      ],
+      "title": "SLA2: Sparse-Linear Attention with Learnable Routing and QAT",
+      "reason": "video/diffusion model用sparse-linear attentionとQATであり、LLM言語推論ではない。",
+      "source_url": "https://arxiv.org/abs/2602.12675",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11348",
+      "identity_tokens": [
+        "arXiv:2602.11348"
+      ],
+      "title": "AgentNoiseBench: Benchmarking Robustness of Tool-Using LLM Agents Under Noisy Condition",
+      "reason": "tool-using LLM agentsのnoise robustness benchmarkで、推論効率が主題でない。",
+      "source_url": "https://arxiv.org/abs/2602.11348",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/OJCOMS.2026.3680064",
+      "identity_tokens": [
+        "DOI:10.1109/OJCOMS.2026.3680064"
+      ],
+      "title": "LLMs and IoT: A Comprehensive Survey on Large Language Models and the Internet of Things",
+      "reason": "LLMとIoT統合全般のsurveyで、要旨が扱うのはIoT上のLLM利用/課題全般。inference-serving efficiencyの焦点がない。",
+      "source_url": "https://doi.org/10.1109/OJCOMS.2026.3680064",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26493",
+      "identity_tokens": [
+        "arXiv:2510.26493"
+      ],
+      "title": "Context Engineering 2.0: The Context of Context Engineering",
+      "reason": "context engineeringの概念・社会的文脈の論考で、LLM inference optimization/servingではない。",
+      "source_url": "https://arxiv.org/abs/2510.26493",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15103",
+      "identity_tokens": [
+        "arXiv:2510.15103"
+      ],
+      "title": "Continual Learning via Sparse Memory Finetuning",
+      "reason": "continual learningのsparse memory fine-tuningで、学習/更新効率が対象。",
+      "source_url": "https://arxiv.org/abs/2510.15103",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    }
+  ]
+}
