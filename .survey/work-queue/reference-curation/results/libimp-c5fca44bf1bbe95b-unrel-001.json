@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5fca44bf1bbe95b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jstars.2025.3528122",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jstars.2025.3528122",
+    "identity_tokens": [
+      "DOI:10.1109/jstars.2025.3528122"
+    ],
+    "reason": "hyperspectral image classification向けMamba/tokenization手法であり、LLM servingではない。",
+    "first_checked_at": "2026-10-05T15:04:30+00:00",
+    "last_checked_at": "2026-10-05T15:04:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Semantic Tokenization-Based Mamba for Hyperspectral Image Classification"
+  },
+  "processed_at": "2026-10-05T15:04:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5fca44bf1bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

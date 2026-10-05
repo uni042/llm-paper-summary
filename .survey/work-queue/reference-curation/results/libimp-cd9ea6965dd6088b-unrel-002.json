@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd9ea6965dd6088b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.09351",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.09351",
+    "identity_tokens": [
+      "arXiv:2506.09351"
+    ],
+    "reason": "The primary abstract concerns dense-to-MoE model reconstruction and retraining budgets; its efficiency contribution is training-side, outside the inference/serving scope.",
+    "first_checked_at": "2026-10-05T15:04:32+00:00",
+    "last_checked_at": "2026-10-05T15:04:32+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+      "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+    ],
+    "title": "DIVE into MoE: Diversity-Enhanced Reconstruction of Large Language Models from Dense into Mixture-of-Experts"
+  },
+  "processed_at": "2026-10-05T15:04:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd9ea6965dd6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
