@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5e74aaaf8297a83f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27149",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27149",
+    "identity_tokens": [
+      "arXiv:2609.27149"
+    ],
+    "reason": "Remote sensing change detection requires both global reasoning across bitemporal images and precise localization of changed regions. However, dense attention is computationally expensive for high-resolution imagery, while conventional feature fusion and coarse decoding may inadequately separate genuine changes from appearance variations or preserve object boundaries. We present Bitemporal Mamba-Diffusion for Change Detection (BMD-CD), which combines temporally structured state-space modeling with logit-space diffusion refinement. BMD-CD converts deep bitemporal features into region tokens and arranges them in explicit temporal partitions before bidirectional state-space propagation. Its Bitemporal Ordered Mamba Operator enables long-range cross-temporal interaction with linear sequence complexity, while Orthogonal Feature Disentanglement forms a change-oriented output and a complementary rotated output using learned pairwise rotations and unchanged-region consistency. Multiscale decoding then produces coarse change logits, which are refined through a five-step Conditional Diffusion Decoder operating directly in logit space. Experiments on LEVIR-CD, WHU-CD, DSIFN-CD, CDD, and S2Looking demonstrate strong performance across diverse change-detection settings. BMD-CD achieves F1 scores of 93.7%, 96.0%, 97.8%, and 99.0% on the four standard benchmarks and improves 3-pixel Boundary-F1 to 87.7% and 91.4% on LEVIR-CD and WHU-CD, respectively. The full model requires 32.09 GFLOPs and 47 ms per 256 x 256 image pair, while also showing zero-shot transfer to ValaisCD and B-FLAIR-test. Our code is available at https://github.com/Aparup2139/Public_WACV/",
+    "first_checked_at": "2026-10-05T05:56:36+00:00",
+    "last_checked_at": "2026-10-05T05:56:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Temporally Ordered Region-Token Mamba with Logit-Space Diffusion for Remote Sensing Change Detection"
+  },
+  "processed_at": "2026-10-05T05:56:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e74aaaf8297",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

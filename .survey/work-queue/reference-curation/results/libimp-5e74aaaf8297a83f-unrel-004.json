@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5e74aaaf8297a83f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s44196-026-01582-8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s44196-026-01582-8",
+    "identity_tokens": [
+      "DOI:10.1007/s44196-026-01582-8"
+    ],
+    "reason": "Financial forecasting is a critical decision-making process, as the whole business operation depends on accurate results. Therefore, poor predictions can lead to unexpected events or financial struggles. At the same time, the growing accessibility of modern artificial intelligence tools has often made them invaluable business assistants. Despite this, practitioners frequently underestimate the risk of errors or unreliable outputs. To explore these risks, we analyze the behavior of generative models in estimating the social security contributions of Spanish self-employed workers, which must be determined based on a full-year revenue forecast. Using a real-world dataset of 395 self-employed workers, we compared the effectiveness of ensemble models against deep-learning transformers when integrated into an expert system specifically designed for this purpose. Our results show that ensemble-based methods achieve a superior balance between accuracy, reliability, and overall predictability, effectively minimizing year-end tax offsets. In contrast, the evaluated Amazon Chronos T5 transformers tend to produce more biased results. Thus, the findings highlight that, despite their apparently promising performance, practitioners should consider these technologies with caution in critical applications such as financial planning.",
+    "first_checked_at": "2026-10-05T05:56:36+00:00",
+    "last_checked_at": "2026-10-05T05:56:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Is “More is Better” Always True? An Analysis of an Expert System based on Moving-Average, Ensemble, and Transformer Models for Revenue Forecasting"
+  },
+  "processed_at": "2026-10-05T05:56:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e74aaaf8297",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

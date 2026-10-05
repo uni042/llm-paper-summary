@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:54:04+00:00",
-  "record_count": 3027,
+  "updated_at": "2026-10-05T05:56:37+00:00",
+  "record_count": 3046,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -44092,6 +44092,288 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "AI-Enabled Wireless Propagation Modeling and Radio Environment Maps for 5G Aerial Wireless Networks"
+    },
+    "arXiv:2609.27149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27149",
+      "identity_tokens": [
+        "arXiv:2609.27149"
+      ],
+      "reason": "Remote sensing change detection requires both global reasoning across bitemporal images and precise localization of changed regions. However, dense attention is computationally expensive for high-resolution imagery, while conventional feature fusion and coarse decoding may inadequately separate genuine changes from appearance variations or preserve object boundaries. We present Bitemporal Mamba-Diffusion for Change Detection (BMD-CD), which combines temporally structured state-space modeling with logit-space diffusion refinement. BMD-CD converts deep bitemporal features into region tokens and arranges them in explicit temporal partitions before bidirectional state-space propagation. Its Bitemporal Ordered Mamba Operator enables long-range cross-temporal interaction with linear sequence complexity, while Orthogonal Feature Disentanglement forms a change-oriented output and a complementary rotated output using learned pairwise rotations and unchanged-region consistency. Multiscale decoding then produces coarse change logits, which are refined through a five-step Conditional Diffusion Decoder operating directly in logit space. Experiments on LEVIR-CD, WHU-CD, DSIFN-CD, CDD, and S2Looking demonstrate strong performance across diverse change-detection settings. BMD-CD achieves F1 scores of 93.7%, 96.0%, 97.8%, and 99.0% on the four standard benchmarks and improves 3-pixel Boundary-F1 to 87.7% and 91.4% on LEVIR-CD and WHU-CD, respectively. The full model requires 32.09 GFLOPs and 47 ms per 256 x 256 image pair, while also showing zero-shot transfer to ValaisCD and B-FLAIR-test. Our code is available at https://github.com/Aparup2139/Public_WACV/",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Temporally Ordered Region-Token Mamba with Logit-Space Diffusion for Remote Sensing Change Detection"
+    },
+    "DOI:10.1007/s12530-026-09872-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12530-026-09872-4",
+      "identity_tokens": [
+        "DOI:10.1007/s12530-026-09872-4"
+      ],
+      "reason": "Primary Springer abstract: DSM-Net applies a lightweight dilated-squeezed Mamba to lung-lesion segmentation from CT images; image segmentation metrics and dataset results are reported.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DSM-Net: a lightweight dilated-squeezed Mamba for refined lung lesion segmentation from CT images"
+    },
+    "DOI:10.1007/s13721-026-00876-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s13721-026-00876-3",
+      "identity_tokens": [
+        "DOI:10.1007/s13721-026-00876-3"
+      ],
+      "reason": "Primary Springer abstract: systematic review of transformer/LLM automated hospital discharge-summary generation, focusing on clinical summarization methods and evaluation metrics.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "From transformer to large language models for automated generation of hospital discharge summaries: a systematic review"
+    },
+    "DOI:10.1007/s44196-026-01582-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44196-026-01582-8",
+      "identity_tokens": [
+        "DOI:10.1007/s44196-026-01582-8"
+      ],
+      "reason": "Financial forecasting is a critical decision-making process, as the whole business operation depends on accurate results. Therefore, poor predictions can lead to unexpected events or financial struggles. At the same time, the growing accessibility of modern artificial intelligence tools has often made them invaluable business assistants. Despite this, practitioners frequently underestimate the risk of errors or unreliable outputs. To explore these risks, we analyze the behavior of generative models in estimating the social security contributions of Spanish self-employed workers, which must be determined based on a full-year revenue forecast. Using a real-world dataset of 395 self-employed workers, we compared the effectiveness of ensemble models against deep-learning transformers when integrated into an expert system specifically designed for this purpose. Our results show that ensemble-based methods achieve a superior balance between accuracy, reliability, and overall predictability, effectively minimizing year-end tax offsets. In contrast, the evaluated Amazon Chronos T5 transformers tend to produce more biased results. Thus, the findings highlight that, despite their apparently promising performance, practitioners should consider these technologies with caution in critical applications such as financial planning.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Is “More is Better” Always True? An Analysis of an Expert System based on Moving-Average, Ensemble, and Transformer Models for Revenue Forecasting"
+    },
+    "DOI:10.1007/s44443-026-01284-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01284-3",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01284-3"
+      ],
+      "reason": "Unsupervised multivariate time-series anomaly detection seeks to detect rare abnormal events in correlated sensor streams when dense anomaly labels are unavailable. Although Transformer-based methods have strengthened long-range representation learning, many still depend on fixed patch construction or costly attention operations, which can limit their ability to model transient local deviations together with cross-variable interactions. We propose SIGMA-AD, an unsupervised multivariate time-series anomaly detection framework that integrates adaptive semantic patching, dual-stream Mamba modeling, hybrid graph learning, and robust dynamic scoring. Adaptive Semantic Patching forms local tokens through statistics-aware differentiable temporal resampling, retaining local variation while preserving a regular token layout. The temporal encoder contains a channel-independent Mamba stream for variable-specific dynamics and a graph-enhanced channel-mixing Mamba stream for inter-variable dependencies. A Hybrid Dual-track Graph module further combines a stable structural prior with dynamically learned semantic relations, guided by an auxiliary graph reconstruction objective. Robust Dynamic Scoring then maps reconstruction errors to normalized anomaly scores through percentile clipping and causal rolling statistics. Experiments on five public benchmark datasets show that SIGMA-AD obtains the best average point-adjusted F1 score under the adopted percentile-search benchmark protocol and ranks first on three of the five datasets. Five-seed evaluation against Autoformer, DLinear, and TimesNet further shows that SIGMA-AD achieves the highest mean F1 on MSL, SWaT, and SMD, as well as the highest cross-dataset average among the four repeatedly evaluated models. Additional raw, unadjusted evaluation reveals a trade-off between point-adjusted interval triggering and raw timestamp-level coverage.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SIGMA-AD: spatio-temporal integrated graph Mamba architecture for multivariate time-series anomaly detection"
+    },
+    "arXiv:2609.23979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23979",
+      "identity_tokens": [
+        "arXiv:2609.23979"
+      ],
+      "reason": "Attention encoder-decoder (AED) Speech Foundation Models achieve strong ASR performance but can generate acoustically unsupported text when inputs contain no speech, weak acoustic evidence, or unreliable transcription. We propose AURA: Activation-editing with Uncertainty-Routed Adaptation, an ultra-efficient representation-editing method that freezes the pretrained model and applies sparse scale-and-shift edits to decoder cross-attention heads. AURA dynamically routes edits using cross-attention uncertainty features that capture over-concentration, diffuse attention, and abrupt frame shifts. We evaluate AURA on four datasets spanning non-speech hallucination and speech grounding stressors, including imperfect-label child speech, imperfect-label adult speech, and disfluent speech. On non-speech audio, AURA reduces hallucination rate from 89.18% to 1.94% without prior hallucination-head identification. On imperfect-label corpora, AURA approaches LoRA WER while using roughly 500x fewer trainable parameters. Sensitivity analysis and qualitative cross-attention examples are consistent with AURA's uncertainty-routed editing behavior, supporting dynamic activation editing as a practical path for grounding AED speech models.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "AURA: Uncertainty-Routed Activation Editing for Acoustic Grounding in Speech Foundation Models"
+    },
+    "arXiv:2609.24049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24049",
+      "identity_tokens": [
+        "arXiv:2609.24049"
+      ],
+      "reason": "Accurate retinal vessel segmentation is important for computer-aided ophthalmic analysis, yet thin vessels, low contrast, and severe foreground-background imbalance remain challenging for encoder-decoder networks. This paper presents U-PEN Mamba, a U-shaped retinal vessel segmentation architecture that couples progressive nonlinear feature expansion with selective state-space modeling. The proposed network enriches local vessel responses with progressive expansion, models long-range spatial dependencies through a Mamba Global Context (MGC) block with linear sequence complexity, and uses attention-based decoder fusion to recover fine vascular boundaries. We evaluate U-PEN Mamba on CHASE DB1 and DRIVE using a consistent patch-based preprocessing pipeline and compare it with convolutional, attention-based, transformer-based, and Mamba-based segmentation baselines. U-PEN Mamba obtains the best mean intersection over union among the compared methods, achieving 0.8394 on CHASE DB1 and 0.8221 on DRIVE, with Dice scores of 0.8187 and 0.8078, respectively, using 21.6M trainable parameters. Ablation studies show that the MGC block contributes the largest gain over the U-Net baseline, while projection dimension and state size provide practical accuracy-efficiency control. These results indicate that selective state-space modeling is a promising global-context mechanism for parameter-efficient retinal vessel segmentation. Code is available at: https://github.com/areyesan/UPEN_Mamba.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "U-PEN Mamba: Progressive Expansion with Selective State-Space Modeling for Efficient Retinal Vessel Segmentation"
+    },
+    "arXiv:2609.24084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24084",
+      "identity_tokens": [
+        "arXiv:2609.24084"
+      ],
+      "reason": "Open-weight large language models (LLMs) can be copied, modified, and redeployed behind black-box APIs, making post-release ownership verification difficult. Existing black-box fingerprints often rely on secret query-key pairs that reproduce predefined responses, and can therefore be easily disrupted by fine-tuning, pruning, quantization, model merging, and serving-time prompt changes. We propose SimPrint, a recoverable semantic fingerprinting framework for black-box LLM ownership verification. Rather than relying on isolated exact matches, SimPrint encodes a private owner signature into a coded semantic fingerprint domain, distributing ownership evidence across natural binary question-answering probes. It implants only base-deviating probes through a low-interference batch update that preserves the original model behavior, and later recovers the signature by parsing suspect-model responses into reliable bits or erasures with an error-correcting recovery mechanism. Because verification only uses input-output queries, SimPrint remains applicable when model weights or activations are inaccessible. Experiments on three open-weight LLMs show that SimPrint reliably recovers the owner signature in both clean and modified settings, remains robust under fine-tuning, pruning, quantization, model merging, and serving-time perturbations, and maintains comparable downstream utility.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "From Bits to Beliefs: Recoverable Semantic Fingerprints for Black-Box Verification of Large Language Models"
+    },
+    "arXiv:2609.24189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24189",
+      "identity_tokens": [
+        "arXiv:2609.24189"
+      ],
+      "reason": "Vision-language navigation requires embodied agents to navigate environments using natural language instructions and visual observations. Existing approaches typically decompose navigation into sequential language-guided decisions or rely on online exploration without prior environmental knowledge. Scene graph representations offer compact semantic memory but remain decoupled from downstream navigation, which still depends on dense metric maps. To close this gap, we propose an object--path graph that unifies open-vocabulary semantic reasoning with topological navigation. The proposed representation jointly supports semantic grounding, graph-based localization, and navigation within a single lightweight topological framework. Building on this graph, we introduce a navigation strategy that combines global path planning with local inter-node execution through lightweight node localization and semantic visual servoing, enabling navigation directly over the graph without dense metric reconstruction. Experiments on HM3D and Replica demonstrate competitive performance in open-vocabulary object grounding through the proposed hierarchical graph structure, while achieving effective navigation performance. Real-world robot experiments further validate the practicality of the proposed framework.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "A Topological Representation with Object-Path Graphs for Open-Vocabulary Instance Navigation"
+    },
+    "arXiv:2609.24202": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24202",
+      "identity_tokens": [
+        "arXiv:2609.24202"
+      ],
+      "reason": "Sparse attention reduces the quadratic cost of global self-attention while retaining strong empirical performance, but how its restricted interactions shape the evolution of token representations remains theoretically underexplored. Modeling tokens as particles on the unit sphere, we introduce opinion leader dynamics, a framework that identifies two mechanisms through which token groups converge internally while maintaining distinct limiting directions. In the explicit model, fixed representatives induce a potential that attracts tokens toward distinct local maxima. In the implicit model, disconnected interaction groups evolve toward separate consensus directions. We formulate both models as reverse Wasserstein gradient flows and establish exponential convergence under suitable conditions. We further connect these theoretical predictions to token evolution in frontier sparse-attention LLMs that motivate our framework. Across four benchmarks, Kimi-K3, MiniMax-M3, and DeepSeek-V4-Flash consistently exhibit clearer cluster separation and higher clustering scores than the dense-attention model GLM-4.7-Flash in projected token representations. These observations support the relevance of the predicted multiple-group structure to trained frontier LLMs, while finite-particle simulations illustrate the theoretical convergence behavior. Together, our results connect restricted token interactions to distinct group-level attractors, providing a dynamical account of how sparse attention can support alignment within groups while preserving separation between them.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Opinion Leader Dynamics: How Sparse Attention Shapes Token Clustering"
+    },
+    "arXiv:2609.24205": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24205",
+      "identity_tokens": [
+        "arXiv:2609.24205"
+      ],
+      "reason": "Modern AI model training imposes unprecedented computational demands, making it a key contributor to datacenter energy consumption. Yet a significant fraction of the energy consumed during training does not translate to useful computation due to bottlenecks throughout the training pipeline. We present PAFT, a phase-aware, dynamically adaptable GPU frequency tuning system that reduces energy consumption of training workloads with minimal performance overhead. The key insight behind PAFT is that bottlenecks represent an energy optimization opportunity, rather than purely a performance problem: when GPUs are bound to stall, PAFT opportunistically reduces their clock frequencies to match the pace of bottlenecked devices, saving energy without impacting execution time. PAFT achieves this by continuously monitoring pipeline behavior and applying fine-grained frequency adjustments, adapting to workload and system changes. Experiments conducted on twelve widely used models show that PAFT consistently outperforms all baselines, achieving energy savings of up to 46% with an average overhead of 4%.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "A principled approach for energy-efficient training via phase-aware GPU frequency tuning"
+    },
+    "arXiv:2609.24271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24271",
+      "identity_tokens": [
+        "arXiv:2609.24271"
+      ],
+      "reason": "Current embodied systems largely rely on pretrained capabilities that remain fixed after deployment, limiting their ability to learn from physical interaction. We introduce MachEmbodied-Brain (ME-Brain), a self-evolving embodied system organized around a closed loop of action execution, experience acquisition, experience evolution, and improved execution. Evolvable Memory consolidates multimodal trajectories into hierarchical, reusable experience; Cognitive Core transforms physical experience into transferable skills; and the Action Model combines event-driven keyframes, EventCell local-world prediction, and action-conditioned memory modulation to focus computation on decision-critical moments, regions, and historical evidence. Together, these modules shift embodied intelligence from train-and-freeze to deploy-and-evolve without model retraining. Cognitive Core outperforms the strongest comparison models by 8.2 and 9.6 points on embodied and agent benchmarks. The Action Model achieves 47.88% mean success on RoboMME, a 3.26-point improvement over the strongest baseline. On RoboDojo, it reaches a 21.51 mean Score and 16.03% success rate, exceeding $\\pi_{0.5}$ by 10.10 and 9.12 points. On the six-task ME-RealBench, ME-Brain achieves a 69.5 mean Score and 66.7% success rate, outperforming DM0.5 by 12.8 and 11.7 points, respectively.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "ME-Brain-1.0: Memory, Cognition and Action for Evolving Embodied Intelligence"
+    },
+    "arXiv:2609.24274": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24274",
+      "identity_tokens": [
+        "arXiv:2609.24274"
+      ],
+      "reason": "Deploying language-conditioned manipulation without a dedicated GPU requires efficient inference and action chunks that cover the delay between policy queries. We present vla.simd, a CPU inference engine that combines shared SIMD micro-kernels, reusable computation, and target-specific optimization. We relate query latency and execution horizon to action availability under lagged and time-aligned execution, distinguishing action supply from feedback frequency. Across six policies and four CPUs, vla.simd achieves approximately $1.4\\times$ median speedup over compiled PyTorch references while preserving fp32 numerical fidelity. We also introduce IMPACT, an ACT-based policy with cached text representations and language-modulated visual features. IMPACT is the only language-conditioned policy in our evaluated set that supplies at least 30 actions/s on the Raspberry Pi 5: after a 90 s thermal soak, it supplies 33.5 actions/s in fp32 and 81.2 with int8. Separate GPU evaluations yield $76.4\\%$ mean success across four LIBERO suites without robot pretraining; instruction-shuffling tests demonstrate selection among familiar goals. Trials with IMPACT on an SO-101 arm and SmolVLA on a UR10e with a Robotiq gripper demonstrate CPU deployment on two robot embodiments.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "vla.simd: Efficient CPU Inference for Language-Conditioned Manipulation"
+    },
+    "arXiv:2609.24303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24303",
+      "identity_tokens": [
+        "arXiv:2609.24303"
+      ],
+      "reason": "Post-training often improves task performance but can degrade confidence calibration, leaving post-trained language models (PoLMs) more overconfident than their corresponding pretrained language models (PLMs). Because task-specific labeled calibration data can be costly or unavailable, the corresponding pretrained PLM provides a natural label-free reference for post-hoc calibration. Prior agreement-gated PLM-referenced calibration fits a scalar temperature using only examples on which the PoLM and its PLM reference agree, excluding disagreement examples because direct alignment can drive the fitted temperature excessively high and induce under-confidence. We revisit this binary treatment. A controlled reintroduction diagnostic reveals a non-monotonic aggregate effect: admitting a moderate fraction of disagreement examples can improve calibration, whereas the benefit diminishes as unit-weight inclusion approaches the full disagreement set. We introduce SupportCal, a label-free post-hoc method that retains agreement examples at unit weight and assigns disagreement examples continuous weights based on the own-base PLM's relative support and corroboration from pretrained references selected from a size-compatible candidate pool. We further characterize when the resulting weighted objective admits a finite optimal temperature. Across MedMCQA and MathQA, SupportCal yields lower ECE than the agreement-only baseline for nearly all evaluated target-model configurations; supplementary TweetEval Sentiment results show the same pattern on a fixed-label classification task.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "SupportCal: Label-Free Calibration of Post-Trained LLMs via Reference Support and Corroboration"
+    },
+    "DOI:10.1080/0144929x.2026.2734081": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/0144929x.2026.2734081",
+      "identity_tokens": [
+        "DOI:10.1080/0144929x.2026.2734081"
+      ],
+      "reason": "Primary Taylor & Francis abstract: survey of 1,066 employees on generative-AI adoption intention, analyzed with fsQCA; no inference system efficiency evaluation.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Influence of personality traits on employee’ adoption of generative AI: a qualitative comparative analysis"
+    },
+    "DOI:10.1109/tip.2026.3733352": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3733352",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3733352"
+      ],
+      "reason": "Deep learning has markedly enhanced single image super-resolution (SISR) performance. However, the accompanying growth in model size severely limits the practical deployment of SISR models on edge devices with limited computational and storage resources. Existing methods typically adopt pruning or recurrent network architectures to reduce the model size. Yet, under higher compression ratios, these techniques suffer from severe performance degradation or even training collapse. To address this issue, we propose a novel Hybrid-Hash Parameter-Sharing (HH-PS) method for a limited memory budget, which achieves arbitrary compression ratios by mapping parameters into a pre-allocated shared memory space of any size. HH-PS is model-agnostic and memory-efficient. It incorporates two key components: a collision-aware hybrid hashing scheme and a collision-guided gradient reweighting scheme. The collision-aware hybrid hashing alleviates the reconstruction errors caused by hash collision, which is a critical issue intrinsic to random parameter sharing. Meanwhile, the gradient reweighting promotes diversity in the weight distribution and regularizes gradients to stabilize optimization. Extensive experiments on benchmarks show that HH-PS outperforms state-of-the-art methods, achieving significant gains at high compression ratios while maintaining competitive reconstruction quality. Code and model weights are available at https://github.com/huanghz22/HH-PS",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Memory-Efficient High-Ratio Model Compression for Image Super-Resolution via Hybrid Hashing"
+    },
+    "DOI:10.1145/3849380": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3849380",
+      "identity_tokens": [
+        "DOI:10.1145/3849380"
+      ],
+      "reason": "Sequential recommender systems predominantly focus on time-domain modeling, overlooking rich seasonal and periodic structures revealed in the frequency domain. While recent frequency-aware methods leverage Fourier transforms, their reliance on fixed filters introduces two critical limitations: i) inadequate sequence encoding due to indiscriminate spectral suppression, causing information degradation, and ii) semantic-degrading contrastive augmentations that compromise critical frequency components essential for behavioral semantics. To address these challenges, we propose FAESRec, a Frequency-Adaptive Encoder with three synergistic innovations: First, a Frequency-Adaptive Mixture-of-Experts (FAMoE) layer decomposes sequences into non-overlapping spectral bands with end-to-end learned boundaries, enabling dynamic weighting of heterogeneous frequency drivers. Second, a Filter-Enhanced module (FAFe) employs learnable global/local filters with adaptive thresholds to denoise spectral components while preserving energy-concentrated bands. The filtered spectral features are projected back to the time domain and encoded by a Mamba block. Third, a Frequency Semantic-aware Contrastive Learner (FSaCL) synthesizes semantically coherent views through probabilistic frequency masking, theoretically guaranteeing mutual information conservation between original and augmented sequences. Extensive experiments on six benchmarks from Amazon, Movielens and LastFM, demonstrate FAESRec's consistent superiority over thirteen SOTA baselines. It achieves significant improvements of 2.74–67.69% HR@1 and 3.95–20.38% NDCG@5, particularly under extreme sparsity. Theoretical analysis proves FSaCL preserves minimal sufficient semantics, establishing a new paradigm for frequency-aware sequential recommendation. Code is available at: https://github.com/0-1user/FAESRec.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "FAESRec: Frequency Adaptive Encoder for Sequential Recommendation"
+    },
+    "DOI:10.3389/fnhum.2026.1955696": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fnhum.2026.1955696",
+      "identity_tokens": [
+        "DOI:10.3389/fnhum.2026.1955696"
+      ],
+      "reason": "Intracerebral hemorrhage (ICH) is associated with substantial morbidity and mortality, and early hematoma expansion (HE), defined as an increase in hematoma volume on follow-up imaging, is a major determinant of early neurological deterioration and poor outcomes. Accurate, hyperacute prediction of HE is critical for guiding precise interventions, such as intensive blood pressure management and surgical evacuation. This narrative review examines the progression of prediction models from univariate predictors to systems incorporating artificial intelligence (AI), with particular attention to risk factors, model validation, and clinical translation. We further examine the validation status of current prediction models and the methodological and practical barriers to their clinical implementation. We review the progression from established independent predictors, such as the CT angiography (CTA) spot sign (SpS) and non-contrast CT (NCCT) island sign (IS), to multivariable clinical scoring systems, radiomics-based machine learning (ML) approaches, and deep learning (DL) models, while also discussing emerging generative architectures. Furthermore, major clinical trials evaluating strategies to limit HE are reviewed. Finally, the current challenges and future prospects of predictive models of HE are also elucidated.",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Hematoma expansion in intracerebral hemorrhage: neuroimaging biomarkers, radiomics-based prediction models, and clinical translation"
+    },
+    "DOI:10.64189/ssc.26213": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64189/ssc.26213",
+      "identity_tokens": [
+        "DOI:10.64189/ssc.26213"
+      ],
+      "reason": "Edge Artificial Intelligence (Edge AI) and Federated Learning (FL) have emerged as the two dominant methodological trends reshaping how AI and Internet of Things (IoT) systems are deployed across urban engineering domains, yet existing reviews continue to organize the field by application sector rather than by these transversal deployment paradigms. This review addresses the gap through a cross-domain synthesis of Edge AI and FL implementations spanning transportation, environmental, and building engineering, drawing on peer-reviewed literature published between January 2021 and February 2026. A structured search protocol applied across IEEE Xplore, Scopus, ScienceDirect, ACM Digital Library, and Web of Science identified an initial corpus that, after screening against pre-registered inclusion criteria and a PRISMA 2020 selection flow, yielded over 200 studies for inclusion. The review makes four contributions: (1) a transversal taxonomy that classifies smart city AI implementations along axes of computation locality (cloud, fog, edge, on-device) and learning paradigm (centralized, federated, hybrid), exposing methodological convergence patterns invisible in domain-siloed reviews; (2) a five-layer reference architecture explicitly annotated with Edge AI and FL placement decisions; (3) a comparative synthesis of deployment outcomes across more than thirty international case studies, contrasting infrastructure-intensive and resource-constrained settings; and (4) an evidence-based research agenda identifying eight open problems where Edge AI and FL maturity remains insufficient for production-grade urban deployment. The findings indicate that Edge AI delivers consistent latency and energy benefits in transportation and building applications where on-device inference is feasible, while FL is most impactful where data sovereignty, regulatory constraint, or cross-jurisdictional coordination dominate the problem geometry, particularly in environmental monitoring and multi-stakeholder energy systems. Implementation challenges persist in model drift under non-IID urban data, communication efficiency under intermittent connectivity, and the absence of standardized fairness and explainability tooling for distributed urban AI. This work provides actionable guidance for civil engineers, urban planners, technology providers, and policymakers selecting between centralized, edge, and federated deployment strategies for next-generation urban infrastructure.",
+      "first_checked_at": "2026-10-05T05:56:37+00:00",
+      "last_checked_at": "2026-10-05T05:56:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Edge AI and Federated Learning in Smart City Engineering: A Cross-Domain Review of Architectures, Applications, and Deployment Challenges in Transportation, Environmental, and Building Systems"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:54:03+00:00",
-  "record_count": 990,
+  "updated_at": "2026-10-05T05:56:36+00:00",
+  "record_count": 991,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15028,6 +15028,32 @@
         "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
       ],
       "title": "GeoPair: Geometry-Preserving Cross-Layer Factorization for Training-Free Transformer Compression"
+    },
+    "arXiv:2609.24089": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24089",
+      "identity_tokens": [
+        "arXiv:2609.24089"
+      ],
+      "reason": "高速化評価はあるが、中心は高階勾配計算で、inference scopeとの接続が弱い。Appendixではtest-time training等に触れるものの、推論servingの実証ではない。",
+      "first_checked_at": "2026-10-05T05:56:36+00:00",
+      "last_checked_at": "2026-10-05T05:56:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "FlashBoB: I/O-Efficient Exact Backward-over-Backward for Softmax Attention"
     }
   }
 }
