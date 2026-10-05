@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-09-part-04-e8d267ac0881",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35002",
+      "identity_tokens": [
+        "arXiv:2609.35002"
+      ],
+      "title": "Still There, No Longer Seen: Exposing Compression-Induced Risk in Large Vision-Language Models",
+      "reason": "主目的はcompression robustness/securityと攻撃・防御で、推論計算量やserving efficiencyを改善する手法ではない。scopeのcompression-effects/quality trade-offには接するが、効率研究としての適合は弱い。",
+      "source_url": "https://arxiv.org/abs/2609.35002",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35039",
+      "identity_tokens": [
+        "arXiv:2609.35039"
+      ],
+      "title": "Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in Robotic Harvesting",
+      "reason": "robotic harvesting VLA policyのrejectability/calibrationが主題で、推論効率化の根拠がない。",
+      "source_url": "https://arxiv.org/abs/2609.35039",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35054",
+      "identity_tokens": [
+        "arXiv:2609.35054"
+      ],
+      "title": "Perceptual Quality Loss or Loss of Perceptual Quality?",
+      "reason": "deep speech enhancement modelのperceptual quality loss分析で、LLM推論/serving効率化対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35054",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35083",
+      "identity_tokens": [
+        "arXiv:2609.35083"
+      ],
+      "title": "Continuous Variational Synthesis",
+      "reason": "DNA sequenceのbiological synthesis/generative modelsを扱う研究でLLM inference効率対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35083",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35108",
+      "identity_tokens": [
+        "arXiv:2609.35108"
+      ],
+      "title": "A mechanistic study of language model introspection",
+      "reason": "LLM introspection/activation interventionに関するmechanistic studyで、inference cost削減やcompressionを扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.35108",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    }
+  ]
+}
