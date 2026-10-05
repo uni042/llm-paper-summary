@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-screen-04-part-07-45a1a30dab6f",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.08264",
+      "identity_tokens": [
+        "arXiv:2409.08264"
+      ],
+      "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
+      "reason": "Windows Agent Arena is an agent-evaluation benchmark; evaluation runtime is not an LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2409.08264",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.08065",
+      "identity_tokens": [
+        "arXiv:2607.08065"
+      ],
+      "title": "When LLMs Agree, Are They Right? Auditing Self-Consistency and Cross-Model Agreement as Confidence Signals",
+      "reason": "Tests self-consistency/agreement as LLM correctness signals, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.08065",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    }
+  ]
+}
