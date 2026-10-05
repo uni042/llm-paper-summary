@@ -35,10 +35,15 @@
   "selection_reason": "推論時にrecurrent blockの反復回数を増減してlatent reasoningの計算量を直接スケールするLLM architecture。3.5Bモデルで任意深さへunrollし、難度に応じたtest-time compute配分とself-speculative decodingまで扱うため推論効率・条件付き計算の対象内。",
   "semantic_scholar_id": "cbc1363d0c55abb60aa9c0e5a7ca0798ce86a752",
   "source_url": "https://arxiv.org/abs/2502.05171",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-05T21:27:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md",
+  "represented_canonical_id": "arXiv:2502.05171",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -32,10 +32,15 @@
   "selection_reason": "structured referencesでKV圧縮・MoE量子化・WebGPU系8件から参照される未収録候補。Hadamard incoherenceとE8 lattice codebookによる4bit以下weight-only PTQと高速推論を扱い、低bit推論基盤の比較点になる。",
   "semantic_scholar_id": "8fbf2eb4587b5c271979c3f96eee1b109496143e",
   "source_url": "https://arxiv.org/abs/2402.04396",
-  "status": "ready",
+  "status": "superseded",
   "title": "QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T21:27:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md",
+  "represented_canonical_id": "arXiv:2402.04396",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
