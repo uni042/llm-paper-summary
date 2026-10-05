@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-28a6303e95ebe047-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06784",
+  "reason": "一次要旨: AI inference often crosses regional boundaries as prompts travel to remote data centers and generated tokens return to users. Regional averages cannot represent the resulting differences in serving hardware, electricity, and network delivery. Request-level accounting needs a common boundary for the service, serving site, route, local comparator, uncertainty, and data provenance. GreenPassport Carbon Accounting (GPCA) associates these inputs with each request. It estimates serving and route carbon, then selects a reporting level from the available documentation. Our public-data implementation covers data-center instances, accelerators, model families, electricity mixes, routes, and cloud-region carbon intensity. Against six accounting baselines and four energy-prediction baselines, GPCA reduced median absolute percentage error by 56.3% and median absolute error by 15.5% relative to EcoLogits under the aligned accelerator-energy boundary. It produced zero rule overstatement in the deterministic conformance tests. In the buyer case, the clean-electricity CN-West scenario produced 0.0148 gCO2e per request, 88% below the local service at 0.1220 gCO2e per request.",
+  "title": "GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference",
+  "identity_tokens": [
+    "arXiv:2609.06784"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+    "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28a6303e95eb",
+  "source_precheck_request_id": null
+}

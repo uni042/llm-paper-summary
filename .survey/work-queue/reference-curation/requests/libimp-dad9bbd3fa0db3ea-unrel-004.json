@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dad9bbd3fa0db3ea-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06694",
+  "reason": "一次要旨: Industrial and scientific computing rests on a few core kernels, and the stencil is among the most widely used: weather and climate models, seismic imaging, fluid dynamics, and image processing all run on it. No single stencil implementation is fastest: the optimal kernel changes qualitatively with stencil shape, grid shape, precision, and host application. For two decades the field has answered with general methods (DSLs, code generators, autotuners), because specialized solutions were too expensive to build per case, so all reuse one human-authored recipe. That reuse costs performance; we call the cost the generality tax. This premise no longer holds: code-synthesis agents now build a correct, specialized solution per case at acceptable cost. ForgeStencil automates this. A Kernel Agent synthesizes CUDA and forges a per-configuration map of specialized operators, removing the tax case by case. On an A100 the map beats the strongest public baseline in 37 of 37 cases: geometric mean 2.35x against same-precision f32 baselines and 1.95x for fp16, each reported under its own precision. The same change reaches end-to-end application performance. A generic operator library is tuned once for its own general case and reused across applications, so its shapes, layouts, and launch boundaries are optimal for none of them: using it is the application-level form of the tax. An App Agent instead forges a specialized solution per application, locating hotspots, rewriting application structure, and validating and integrating each change. Across 100 real industrial and scientific codes the end-to-end median speedup is 1.41x against each application's own GPU baseline. To our knowledge this is the first demonstration that per-case synthesis carries from a kernel library to complete applications at this breadth, and evidence that reuse is no longer the default in a domain built on it for two decades.",
+  "title": "ForgeStencil: Automating Per-Case Stencil Specialization from Kernels to 100+ Real Applications",
+  "identity_tokens": [
+    "arXiv:2609.06694"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dad9bbd3fa0d",
+  "source_precheck_request_id": null
+}
