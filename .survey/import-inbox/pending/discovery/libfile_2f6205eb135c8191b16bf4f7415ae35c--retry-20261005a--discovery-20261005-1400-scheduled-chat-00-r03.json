@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1400-scheduled-chat-00/r03",
+  "reference_main_sha": "b49f68da66aee602493abbf39415a727ed4989bc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2109.04838",
+      "identity_tokens": [
+        "arXiv:2109.04838"
+      ],
+      "title": "Block Pruning For Faster Transformers",
+      "reason": "movement pruningを任意サイズのblockへ拡張し、attention head等の構造単位を削除して小型・高速Transformerを作る。BERT on SQuAD v1で74%小型化・2.4倍高速化をF1低下1%で達成し、Transformer推論速度を直接評価するため対象内。",
+      "source_url": "https://arxiv.org/abs/2109.04838",
+      "body_check": "full_text_checked: 一次arXiv論文ページでblock structured movement pruning、attention-head pruning、classification/generation評価、BERT 2.4x speedup・74% smaller・1% F1 dropを確認。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 146
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04468",
+      "identity_tokens": [
+        "arXiv:2411.04468"
+      ],
+      "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks",
+      "reason": "Orchestratorがbrowser/file/code等の専門agentを計画・再計画して複雑taskを解くmulti-agent capability研究。GAIA/AssistantBench/WebArenaのtask性能とagent modularityが主評価で、agent serving runtime・latency・memory効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2411.04468",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmulti-agent orchestration、task solving、agent benchmarkが主題と確認し、serving最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 147
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.03350",
+      "identity_tokens": [
+        "arXiv:2411.03350"
+      ],
+      "title": "A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness",
+      "reason": "小型言語モデルの定義・獲得・応用・強化・LLM協調・trustworthinessを整理する包括survey。低latency/resource-constrained deploymentを動機に含むが、推論systemの新規runtime・memory・serving方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2411.03350",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でSLM taxonomy/surveyが主題と確認し、推論systemの新規方式ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 148
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1022594.1022596",
+      "identity_tokens": [
+        "DOI:10.1145/1022594.1022596"
+      ],
+      "title": "Latency Lags Bandwidth",
+      "reason": "microprocessor・memory・network・diskでbandwidth改善がlatency改善を大幅に上回る長期傾向を分析し、cache・replication・prediction等の対処を論じるsystems基礎研究。LLM推論のmemory/I/O bottleneck理解に有用だがLLM/Transformerを対象としないためborderline。",
+      "source_url": "https://doi.org/10.1145/1022594.1022596",
+      "body_check": "full_text_checked: 一次書誌・論文abstract情報で複数hardware technologyのbandwidth-vs-latency trend、20–25年のmilestone、cache/replication/prediction等の対処を確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 149
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.04463",
+      "identity_tokens": [
+        "arXiv:2502.04463"
+      ],
+      "title": "Training Language Models to Reason Efficiently",
+      "reason": "reinforcement learningでtask complexityに応じてinference-time computeを動的配分し、長いChain-of-Thought由来のdeployment costを削減する。二つのopen-weight reasoning modelでaccuracyの大半を維持しつつinference costを大幅削減し、単一hyperparameterでefficiency levelを制御するため対象内。",
+      "source_url": "https://arxiv.org/abs/2502.04463",
+      "body_check": "full_text_checked: 一次arXiv論文ページで長いCoTのdeployment cost、RLによるdynamic inference-compute allocation、不要計算削減、二つのopen-weight reasoning modelでのinference-cost reductionを確認。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 150
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.08167",
+      "identity_tokens": [
+        "arXiv:1908.08167"
+      ],
+      "title": "Multi-passage BERT: A Globally Normalized BERT Model for Open-domain Question Answering",
+      "reason": "複数passage間でanswer scoreをglobal normalizationし、passage rankerも用いてopen-domain QA精度を改善するtask/modeling研究。推論runtime・memory・serving効率化を目的としない。",
+      "source_url": "https://arxiv.org/abs/1908.08167",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmulti-passage global normalization、passage ranking、QA accuracyが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 151
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3651890.3672233",
+      "identity_tokens": [
+        "DOI:10.1145/3651890.3672233"
+      ],
+      "title": "RDMA over Ethernet for Distributed Training at Meta Scale",
+      "reason": "Metaの大規模AI training向けRoCE backend network、routing、collective-aware congestion management、運用を扱う。LLMを含むAI infrastructureだが最終適用先がdistributed trainingであり、推論servingを評価しないため現行凍結範囲でunrelated。",
+      "source_url": "https://engineering.fb.com/wp-content/uploads/2024/08/sigcomm24-final246.pdf",
+      "body_check": "abstract_screen_only: Meta/ACM一次PDFでdedicated backend network、routing、transport、operationsの対象がdistributed AI trainingであることを確認し、training専用のため深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 152
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.05864",
+      "identity_tokens": [
+        "arXiv:2011.05864"
+      ],
+      "title": "On the Sentence Embeddings from BERT for Semantic Textual Similarity",
+      "reason": "BERT sentence embeddingをsemantic textual similarityへ適用・改善するrepresentation/NLP task研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2011.05864",
+      "body_check": "abstract_screen_only: 一次arXiv書誌・要旨でBERT sentence embeddingとsemantic textual similarityが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 153
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03589",
+      "identity_tokens": [
+        "arXiv:2310.03589"
+      ],
+      "title": "TimeGPT-1",
+      "reason": "時系列予測用foundation modelを構築しzero-shot forecasting性能・簡便性を評価するtime-series研究。zero-shot inference efficiencyへの言及はあるが、LLM/Transformer推論runtime・memory・servingの最適化方式ではない。",
+      "source_url": "https://arxiv.org/abs/2310.03589",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtime-series foundation modelとforecasting benchmarkが最終適用先と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 154
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.11816",
+      "identity_tokens": [
+        "arXiv:2406.11816"
+      ],
+      "title": "VideoLLM-online: Online Video Large Language Model for Streaming Video",
+      "reason": "連続video stream上でtemporal alignment・long context・real-time dialogueを実現するLIVE frameworkに、実環境stream向けmodel responseを高速化するoptimized inference pipelineを含む。Llama-2/3ベースVideoLLM-onlineがA100で5分videoのstreaming dialogueを平均10 FPS超で処理し、online multimodal LLM推論pipelineを直接扱うため対象内。",
+      "source_url": "https://arxiv.org/abs/2406.11816",
+      "body_check": "full_text_checked: 一次arXiv論文ページでLIVEのstreaming training/data/inference pipeline、real-time continuous video dialogue、optimized inference pipeline、A100で5-minute clip >10 FPSを確認。",
+      "first_checked_at": "2026-10-05T14:56:00+09:00",
+      "last_checked_at": "2026-10-05T14:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 155
+    }
+  ]
+}
