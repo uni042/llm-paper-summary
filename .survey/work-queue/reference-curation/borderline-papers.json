@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:14:50+00:00",
-  "record_count": 931,
+  "updated_at": "2026-10-05T05:17:12+00:00",
+  "record_count": 941,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14016,6 +14016,186 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "Validating Memory-Optimal Transformer Kernels on Real Hardware: From Formal Derivation to Measured Performance Across Two HPC Clusters"
+    },
+    "DOI:10.1145/3832810.3832840": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832840",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832840"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "RPSC: Robust LLM Scheduling by Tolerating Prediction Inaccuracy and Mitigating Tail Latency"
+    },
+    "DOI:10.1145/3832810.3832854": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832854",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832854"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "AccESM: Packed-Total Exact Inference for CPU ESM2 Embedding"
+    },
+    "DOI:10.1145/3832810.3832818": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832818",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832818"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md"
+      ],
+      "title": "TileGEMM: Boosting the Performance of GEMM on AMX-Powered CPUs by Exploiting Data Reuse"
+    },
+    "DOI:10.1145/3832810.3832827": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832827",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832827"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md"
+      ],
+      "title": "ReliefServe: Relieving GPU Pressure in Multi-Model Serving via Selective CPU Escape"
+    },
+    "DOI:10.1007/s11760-026-05728-1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05728-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05728-1"
+      ],
+      "reason": "packetのabstract欄が空で、対象性を一次要旨から判定できない。Springerの一次URLを開いたが取得できず、外部索引の要約を代用しない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Wavelet transform vision state space model for underwater image enhancement"
+    },
+    "DOI:10.1145/3816891.3834844": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816891.3834844",
+      "identity_tokens": [
+        "DOI:10.1145/3816891.3834844"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Repeated-Token Diagnostics for Transformer Cache Traces"
+    },
+    "DOI:10.1145/3816891.3834846": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816891.3834846",
+      "identity_tokens": [
+        "DOI:10.1145/3816891.3834846"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:12+00:00",
+      "last_checked_at": "2026-10-05T05:17:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Helios: Exposing Context Lifecycles for Memory-Efficient Agentic LLM Serving"
+    },
+    "DOI:10.1145/3816891.3834895": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3816891.3834895",
+      "identity_tokens": [
+        "DOI:10.1145/3816891.3834895"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:12+00:00",
+      "last_checked_at": "2026-10-05T05:17:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07494-apt-serve-hybrid-cache-adaptive-scheduling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Adaptive GPU Sharing for Real-time LLM Serving with Best-effort Workloads"
+    },
+    "DOI:10.1145/3832810.3832811": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832811",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832811"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:12+00:00",
+      "last_checked_at": "2026-10-05T05:17:12+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2503.05066-capacity-aware-inference-mitigating-the-straggler-effect-in-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "MigMoE: Task-Aware Expert Migration for Faster and More Balanced Expert-Parallel MoE Inference"
+    },
+    "DOI:10.1145/3832810.3832814": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832814",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832814"
+      ],
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "first_checked_at": "2026-10-05T05:17:12+00:00",
+      "last_checked_at": "2026-10-05T05:17:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "title": "SSQT: A Hardware-Friendly Fusion Compression Framework of Structured Sparsification and Sensitivity-Driven Quantization for Large-Scale Language Models"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:14:51+00:00",
-  "record_count": 2819,
+  "updated_at": "2026-10-05T05:17:11+00:00",
+  "record_count": 2829,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -40996,6 +40996,152 @@
         "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
       ],
       "title": "Optimizing the Phi-2 Small Language Model for Real-time Chatbot Applications Using Parameter-Efficient Fine-Tuning (PEFT) with QLoRA Quantization"
+    },
+    "DOI:10.1145/3832810.3832837": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832837",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832837"
+      ],
+      "reason": "K-Means clusteringの低精度化・高速化であり、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "MX-KMeans: Accelerating K-Means Clustering through Microscaling Quantization"
+    },
+    "DOI:10.1145/3832810.3832841": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832841",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832841"
+      ],
+      "reason": "一般のOpenMP GPU offloadingでCPU-GPU転送引数のfusionを扱い、LLM inferenceに特化しない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "title": "In-Copy Fusion: Runtime Argument Fusion for Efficient OpenMP GPU Offloading"
+    },
+    "DOI:10.1145/3832810.3832855": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832855",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832855"
+      ],
+      "reason": "Intel AMX上のGNN推論におけるSpMM/GeMM融合。LLM推論ではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "TFS: Tile-Aware SpMM–GeMM Fusion for Accelerating GNN Inference on Intel AMX"
+    },
+    "DOI:10.1145/3832810.3832820": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832820",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832820"
+      ],
+      "reason": "GPT/Llama等の大規模モデル学習におけるpipeline parallelismの最適化。学習専用。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
+      ],
+      "title": "OmniPipe: Efficient, Flexible and Scalable Pipeline Parallelism for Large Model Training"
+    },
+    "DOI:10.1145/3832810.3832823": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832823",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832823"
+      ],
+      "reason": "ニューロモーフィックedge vision向けspiking transformer設計。LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Algorithm--Hardware Co-Design of Spiking Transformers for In-Memory Neuromorphic Edge Vision"
+    },
+    "DOI:10.1145/3832810.3832836": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832836",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832836"
+      ],
+      "reason": "一般的なFP32 GPU行列積アルゴリズムの高速化で、LLM推論/serving実験を要旨が示していない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "BAG: Faster Matrix Multiplication on a Single GPU"
+    },
+    "arXiv:2609.37485": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37485",
+      "identity_tokens": [
+        "arXiv:2609.37485"
+      ],
+      "reason": "衛星画像間のbi-temporal change理解・損傷評価向けのvision-language expert融合であり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PoE-Fuse: Precision-Weighted Expert Fusion for Bi-Temporal Change Understanding"
+    },
+    "DOI:10.1145/3773078.3831782": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831782",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831782"
+      ],
+      "reason": "推薦システムにおける知識統合研究の歴史的surveyで、LLM推論/serving最適化の研究ではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "From Side Information and Knowledge Graphs to Large Language Models: Two Decades of Knowledge Integration in Recommender Systems"
+    },
+    "DOI:10.1145/3773078.3831831": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831831",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831831"
+      ],
+      "reason": "生成推薦向けRoPEの時間・順序統合と品質評価であり、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Beyond Index-Only RoPE: Integrating Time and Order for Generative Recommendation"
+    },
+    "DOI:10.1145/3773078.3831868": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831868",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831868"
+      ],
+      "reason": "ユーザー系列推薦の本番予測システム。要旨はsequence model運用を述べるが、LLM推論/servingや推論時効率化ではない。",
+      "first_checked_at": "2026-10-05T05:17:11+00:00",
+      "last_checked_at": "2026-10-05T05:17:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "TransAct V2: Production System for Lifelong User Sequence Modeling at Scale"
     }
   }
 }
