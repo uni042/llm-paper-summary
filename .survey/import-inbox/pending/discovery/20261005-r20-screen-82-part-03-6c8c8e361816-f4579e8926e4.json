@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-82-part-03-6c8c8e361816",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.09075",
+      "identity_tokens": [
+        "arXiv:2507.09075"
+      ],
+      "title": "OpenCodeReasoning-II: A Simple Test Time Scaling Approach via Self-Critique",
+      "reason": "OpenCodeReasoning-II is a dataset and test-time scaling approach for code reasoning; the abstract reports dataset/quality scope, not reduced inference resources or serving cost.",
+      "source_url": "https://arxiv.org/abs/2507.09075",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.03014",
+      "identity_tokens": [
+        "arXiv:2507.03014"
+      ],
+      "title": "Intrinsic Fingerprint of LLMs: Continue Training is NOT All You Need to Steal A Model!",
+      "reason": "The paper fingerprints models for ownership/copyright protection; no inference-efficiency method is proposed.",
+      "source_url": "https://arxiv.org/abs/2507.03014",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2506.17667",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2506.17667"
+      ],
+      "title": "PhysUniBench: An Undergraduate-Level Physics Reasoning Benchmark for Multimodal Models",
+      "reason": "PhysUniBench is a multimodal physics reasoning benchmark; it evaluates capability and does not propose an inference-efficiency method.",
+      "source_url": "https://doi.org/10.48550/arXiv.2506.17667",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16346",
+      "identity_tokens": [
+        "arXiv:2505.16346"
+      ],
+      "title": "How to Keep Pushing ML Accelerator Performance? Know Your Rooflines!",
+      "reason": "The paper surveys machine-learning accelerator roofline trends across general ML workloads. It is not specifically an LLM inference/serving efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2505.16346",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11486",
+      "identity_tokens": [
+        "arXiv:2503.11486"
+      ],
+      "title": "A Review of DeepSeek Models' Key Innovative Techniques",
+      "reason": "The survey’s demonstrated emphasis includes model development/training costs; direct coverage of inference/serving efficiency is not sufficiently specific for a concrete Research follow-up based on this screen.",
+      "source_url": "https://arxiv.org/abs/2503.11486",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ]
+    }
+  ]
+}
