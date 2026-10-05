@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-13-part-06-51686d99d39b",
+  "reference_main_sha": "489623932dd15119c489a9eaa19353a6cc7ba9dd",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-68894-9",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-68894-9"
+      ],
+      "title": "Clinical risk-aware reinforcement learning for latency-constrained healthcare IoT scheduling",
+      "reason": "Healthcare IoT scheduling, not language-model inference.",
+      "source_url": "https://doi.org/10.1038/s41598-026-68894-9",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3820377",
+      "identity_tokens": [
+        "DOI:10.1145/3820377"
+      ],
+      "title": "Debugging Functionality-Twisting Translations by LLMs via Differential Testing with Bayesian Prior",
+      "reason": "Code-translation/debugging quality work, with no inference-efficiency contribution in the abstract.",
+      "source_url": "https://doi.org/10.1145/3820377",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15173980",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15173980"
+      ],
+      "title": "Read-Polarity-Aware Row-Wise Offset Encoding for Readout-Energy Reduction in 8T SRAM Compute-in-Memory",
+      "reason": "Packet abstract suggests an SRAM energy-encoding measurement involving SmolLM2-135M, but primary body evidence was unavailable.",
+      "source_url": "https://doi.org/10.3390/electronics15173980",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02006",
+      "identity_tokens": [
+        "arXiv:2609.02006"
+      ],
+      "title": "Train What You Deploy: Closing the MLP Reachability Gap in Low-Rank Clone Distillation",
+      "reason": "Clone distillation is training-only; abstract states deployed inference FLOPs are unchanged.",
+      "source_url": "https://arxiv.org/abs/2609.02006",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02127",
+      "identity_tokens": [
+        "arXiv:2609.02127"
+      ],
+      "title": "Stored Is Not Supported: Typed Provenance and Assertion Guardrails for Persistent AI Agents",
+      "reason": "Provenance and assertion guardrails for persistent agents, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.02127",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
