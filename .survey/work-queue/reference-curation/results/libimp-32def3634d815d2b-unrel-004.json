@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-32def3634d815d2b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.02039",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.02039",
+    "identity_tokens": [
+      "arXiv:2404.02039"
+    ],
+    "reason": "一次要旨はLLM game agentsのsurveyで、inference efficiencyを主題としない。",
+    "first_checked_at": "2026-10-05T01:33:17+00:00",
+    "last_checked_at": "2026-10-05T01:33:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+    ],
+    "title": "A Survey on Large Language Model-Based Game Agents"
+  },
+  "processed_at": "2026-10-05T01:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32def3634d81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

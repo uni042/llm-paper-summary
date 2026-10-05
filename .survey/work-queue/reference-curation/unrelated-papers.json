@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:31:06+00:00",
-  "record_count": 1646,
+  "updated_at": "2026-10-05T01:33:17+00:00",
+  "record_count": 1657,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -23749,6 +23749,163 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
       ],
       "title": "Leveraging Large Language Models to Power Chatbots for Collecting User Self-Reported Data"
+    },
+    "arXiv:1908.06605": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.06605",
+      "identity_tokens": [
+        "arXiv:1908.06605"
+      ],
+      "reason": "一次要旨はhierarchical variational modelによる長文生成。LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Long and Diverse Text Generation with Planning-based Hierarchical Variational Model"
+    },
+    "arXiv:2102.08942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.08942",
+      "identity_tokens": [
+        "arXiv:2102.08942"
+      ],
+      "reason": "一次要旨はLSH algorithmsのsurvey。LLM inferenceへの具体的適用を主題としない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md"
+      ],
+      "title": "A Survey on Locality Sensitive Hashing Algorithms and their Applications"
+    },
+    "arXiv:2502.04644": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04644",
+      "identity_tokens": [
+        "arXiv:2502.04644"
+      ],
+      "reason": "一次要旨はagentic toolsでLLM reasoning能力を向上するframework。latency/token/memory efficiencyを主張しない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+      ],
+      "title": "Agentic Reasoning: A Streamlined Framework for Enhancing LLM Reasoning with Agentic Tools"
+    },
+    "arXiv:2404.02039": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.02039",
+      "identity_tokens": [
+        "arXiv:2404.02039"
+      ],
+      "reason": "一次要旨はLLM game agentsのsurveyで、inference efficiencyを主題としない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "A Survey on Large Language Model-Based Game Agents"
+    },
+    "arXiv:2211.09699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.09699",
+      "identity_tokens": [
+        "arXiv:2211.09699"
+      ],
+      "reason": "一次要旨はVQA向けtask-aware image captioning。LLM推論効率を対象としない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ],
+      "title": "PromptCap: Prompt-Guided Task-Aware Image Captioning"
+    },
+    "arXiv:1802.08770": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.08770",
+      "identity_tokens": [
+        "arXiv:1802.08770"
+      ],
+      "reason": "一次要旨はSGD training dynamics/theory。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "A Walk with SGD"
+    },
+    "DOI:10.1007/b98835": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/b98835",
+      "identity_tokens": [
+        "DOI:10.1007/b98835"
+      ],
+      "reason": "Springer一次ページでPrincipal Component Analysisの書籍と確認。LLM推論対象外。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md"
+      ],
+      "title": "Principal Component Analysis"
+    },
+    "arXiv:2402.04248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.04248",
+      "identity_tokens": [
+        "arXiv:2402.04248"
+      ],
+      "reason": "一次要旨はMamba/Transformerのin-context learning能力比較。推論効率method/metricはない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Can Mamba Learn How to Learn? A Comparative Study on In-Context Learning Tasks"
+    },
+    "arXiv:2504.15965": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.15965",
+      "identity_tokens": [
+        "arXiv:2504.15965"
+      ],
+      "reason": "一次要旨はLLM memory mechanisms survey。knowledge managementが主題で、推論計算/serving効率を扱わない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md"
+      ],
+      "title": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs"
+    },
+    "arXiv:2402.19348": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19348",
+      "identity_tokens": [
+        "arXiv:2402.19348"
+      ],
+      "reason": "一次要旨はurban computing data fusion survey。LLM推論対象外。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Deep Learning for Cross-Domain Data Fusion in Urban Computing: Taxonomy, Advances, and Outlook"
+    },
+    "arXiv:1804.06087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1804.06087",
+      "identity_tokens": [
+        "arXiv:1804.06087"
+      ],
+      "reason": "一次要旨は一般的ML analytics service。LLM model serving最適化ではない。",
+      "first_checked_at": "2026-10-05T01:33:17+00:00",
+      "last_checked_at": "2026-10-05T01:33:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md"
+      ],
+      "title": "Rafiki: Machine Learning as an Analytics Service System"
     }
   }
 }

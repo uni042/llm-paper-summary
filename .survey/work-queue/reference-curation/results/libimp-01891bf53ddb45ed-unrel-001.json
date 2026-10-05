@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-01891bf53ddb45ed-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1908.06605",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1908.06605",
+    "identity_tokens": [
+      "arXiv:1908.06605"
+    ],
+    "reason": "一次要旨はhierarchical variational modelによる長文生成。LLM inference efficiencyではない。",
+    "first_checked_at": "2026-10-05T01:33:17+00:00",
+    "last_checked_at": "2026-10-05T01:33:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+    ],
+    "title": "Long and Diverse Text Generation with Planning-based Hierarchical Variational Model"
+  },
+  "processed_at": "2026-10-05T01:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-01891bf53ddb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

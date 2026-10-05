@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-881fe77509f7b0b7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.15965",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.15965",
+    "identity_tokens": [
+      "arXiv:2504.15965"
+    ],
+    "reason": "一次要旨はLLM memory mechanisms survey。knowledge managementが主題で、推論計算/serving効率を扱わない。",
+    "first_checked_at": "2026-10-05T01:33:17+00:00",
+    "last_checked_at": "2026-10-05T01:33:17+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.29002-memory-processing-pipeline-gpu-fpga.md"
+    ],
+    "title": "From Human Memory to AI Memory: A Survey on Memory Mechanisms in the Era of LLMs"
+  },
+  "processed_at": "2026-10-05T01:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-881fe77509f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

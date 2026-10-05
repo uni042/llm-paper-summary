@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-32def3634d815d2b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.04644",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.04644",
+    "identity_tokens": [
+      "arXiv:2502.04644"
+    ],
+    "reason": "一次要旨はagentic toolsでLLM reasoning能力を向上するframework。latency/token/memory efficiencyを主張しない。",
+    "first_checked_at": "2026-10-05T01:33:17+00:00",
+    "last_checked_at": "2026-10-05T01:33:17+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+    ],
+    "title": "Agentic Reasoning: A Streamlined Framework for Enhancing LLM Reasoning with Agentic Tools"
+  },
+  "processed_at": "2026-10-05T01:33:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-32def3634d81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
