@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:40:57+00:00",
-  "record_count": 4214,
+  "updated_at": "2026-10-05T09:44:46+00:00",
+  "record_count": 4229,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -61351,6 +61351,229 @@
         "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
       ],
       "title": "A 0.53-pJ/bit 5 × 10 Gb/s/pin Single-Ended Transceiver With Reconfigurable 4-Aggressor Crosstalk Cancellation for HBM Interfaces"
+    },
+    "arXiv:2607.29071": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29071",
+      "identity_tokens": [
+        "arXiv:2607.29071"
+      ],
+      "reason": "The abstract studies federated foundation-model fine-tuning for heterogeneous clients; its scope is training, not inference.",
+      "first_checked_at": "2026-10-05T09:44:43+00:00",
+      "last_checked_at": "2026-10-05T09:44:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Federated Foundation Models Fine-Tuning with Heterogeneous Compressed Clients"
+    },
+    "arXiv:2607.29087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29087",
+      "identity_tokens": [
+        "arXiv:2607.29087"
+      ],
+      "reason": "The paper studies iterative collaboration among LLMs to improve problem solving, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Harnessing the Wisdom of LLM Crowds through Complementarity-Driven Iterative Collaboration"
+    },
+    "arXiv:2607.29433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29433",
+      "identity_tokens": [
+        "arXiv:2607.29433"
+      ],
+      "reason": "The paper evaluates whether LLM agents use personalized memories, measuring behavior/recall rather than inference efficiency or serving cost.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Know It, Act on It: Investigating Memory Utilization in LLM Personalization"
+    },
+    "arXiv:2607.29621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29621",
+      "identity_tokens": [
+        "arXiv:2607.29621"
+      ],
+      "reason": "The paper proposes concept extraction for CNN time-series classification; it is unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "CENDRe: Concept Extraction with Natural Domain Representations"
+    },
+    "arXiv:2608.00264": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00264",
+      "identity_tokens": [
+        "arXiv:2608.00264"
+      ],
+      "reason": "The method prunes attention heads in DINOv2/vision transformers for ImageNet classification, not LLMs.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Interpretability-Guided Soft Pruning of Attention Heads in Vision Transformers"
+    },
+    "arXiv:2609.31622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31622",
+      "identity_tokens": [
+        "arXiv:2609.31622"
+      ],
+      "reason": "Enterprises are not choosing a single frontier AI provider; they are licensing all of them. As of early 2026, 81% of Global 2000 enterprises run three or more model families, and OpenAI, Anthropic, and Google Gemini together account for roughly 88 to 89% of enterprise LLM usage and spend. Drawing on survey data, transaction data, provider disclosures, and case studies across finance, legal, consulting, healthcare, life sciences, retail, and government, this paper shows that multi-lab licensing is a structural feature of the market, driven by durable task-specific model differentiation rather than a transitional phase awaiting commoditization. This structure creates three operational problems. Governance fragmentation (P1): heterogeneous vendor security postures, documentation, and compliance surfaces must be reconciled across overlapping regulatory frameworks while shadow AI proliferates. FinOps breakdown (P2): token-based, behavior-driven consumption defeats budgeting. In the past year, 79% of enterprises overran AI budgets, with FinOps-mature organizations overshooting by a mean of 30.9%, and no standardized cross-provider unit of spend exists. Telemetry fragmentation (P3): each lab exposes adoption and cost data through incompatible consoles, APIs, and metric definitions, forcing bespoke unification layers. We map the emerging responses, including LLM gateways, observability platforms, and the Tokenomics Foundation's FOCUS extension. We then develop a five-metric framework for evaluating API and agent cost burn, with a worked example where the cheapest model per attempt is the most expensive per successful task. We conclude that P1, P2, and P3 reflect one missing abstraction: a cross-provider enterprise AI control plane.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "The Multi-Lab Enterprise: Governance, FinOps, and Telemetry Challenges of Multi-Model AI Adoption"
+    },
+    "DOI:10.25077/jnte.v15n2.1350.2026": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25077/jnte.v15n2.1350.2026",
+      "identity_tokens": [
+        "DOI:10.25077/jnte.v15n2.1350.2026"
+      ],
+      "reason": "The rapid advancement of digital technology has transformed attendance systems in educational environments. Conventional manual attendance methods are vulnerable to manipulation, while fingerprint-based biometric systems often experience limitations due to certain physical conditions. Facial recognition has therefore emerged as a reliable and non-contact biometric solution for attendance verification. However, existing deep learning architectures such as the Vision Transformer (ViT) require substantial computational resources and memory during training. This study proposes the Vision Reformer (ViR) model to enhance the computational efficiency of the ViT architecture for facial recognition. The proposed approach integrates the memory-efficient attention mechanism of the Reformer architecture into the ViT framework to improve training efficiency while maintaining high recognition performance. Experiments were conducted using the Indonesian Muslim Student Face Dataset (IMSFD) with learning rates of  and . The experimental results show that the ViR model with a learning rate of  and  achieved the best performance, with accuracy of 94.63%, F1-score of 94.77%, precision of 95.89%, and recall of 94.63%, while requiring only 41.076 seconds of training time. In comparison, the ViT model achieved accuracy of 94.11% and required 82.368 seconds under the same configuration. Additionally, GPU memory analysis indicates that ViR reduces memory consumption by 78 MB and 39 MB at batch sizes of 16 and 32, respectively, while maintaining a stable and linear memory usage pattern. These results demonstrate that the proposed Vision Reformer model improves computational efficiency and memory utilization while maintaining competitive accuracy, making it a practical solution for facial recognition-based attendance systems in educational settings.",
+      "first_checked_at": "2026-10-05T09:44:44+00:00",
+      "last_checked_at": "2026-10-05T09:44:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Vision Reformer Model To Enhance Transformer Efficiency for Face Recognition"
+    },
+    "DOI:10.3390/rs18152494": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/rs18152494",
+      "identity_tokens": [
+        "DOI:10.3390/rs18152494"
+      ],
+      "reason": "Hyperspectral image (HSI) clustering assigns unlabeled pixels to land-cover groups by jointly exploiting spectral and spatial observations. Existing Vision Transformer-based deep clustering captures global dependencies through self-attention. However, the quadratic computational complexity of self-attention restricts practical applications in large HSI scenes. Furthermore, illumination variation and topographic shading shift spectral amplitude of co-class pixels toward divergent directions in feature space, enlarging intra-class distances and reducing inter-class separability in learned embeddings. To address the above limitations, we propose a self-supervised Spatial–Frequency Interaction and Amplitude–Phase Decoupling framework, termed SFI-APD, which integrates a High-Order Spatial–Frequency Interaction Module (HSFIM), a Frequency Feature Attention Block (FFAB), and a Frequency-Domain Vision Transformer (FreqViT) into a unified architecture. Specifically, HSFIM couples local convolutions with Fourier filtering to extract enriched spectral–spatial representations. FFAB then decouples amplitude and phase components to suppress brightness variations, yielding illumination-robust embeddings. Finally, FreqViT performs attention modulation across spectral channels, reducing token aggregation complexity from O(N2D) to O(NDlogN). On the Indian Pines, Salinas, Pavia University, and Yangzhou datasets, SFI-APD achieves OAs of 57.47%, 79.38%, 54.57%, and 64.11%, respectively, outperforming state-of-the-art self-supervised methods for large HSIs.",
+      "first_checked_at": "2026-10-05T09:44:45+00:00",
+      "last_checked_at": "2026-10-05T09:44:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Self-Supervised Hyperspectral Image Clustering via Spatial–Frequency Interaction and Amplitude–Phase Decoupling"
+    },
+    "DOI:10.59543/jidmis.v3.1260": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.59543/jidmis.v3.1260",
+      "identity_tokens": [
+        "DOI:10.59543/jidmis.v3.1260"
+      ],
+      "reason": "Dependency Parsing forms one of the key building blocks of natural language processing tasks such as semantic role labelling, machine translation, and information extraction since it furnishes the syntactic structure on which those high-level tasks depend. While transformer-based architectures can model highly expressive representations, there exists a tough trade-off between the two existing methods: specialized parsers can reach high benchmark scores but need special parsing heads and specific training processes, while generative large language models have flexible architecture but do not have any structural guarantee of forming dependency trees as outputs. This paper introduces SARG-QLoRA, a method which solves this trade-off problem by merging Syntax-Aware Retrieval Guidance (SARG) with Quantized Low-Rank Adaptation (QLoRA), allowing for the generation of dependency structures on a consumer-grade hardware setup. In contrast to conventional retrieval-augmented generation approaches where context selection is performed based on semantic similarity, the proposed approach generates a FAISS index based on multilingual-e5-base embedding of training examples and performs syntactically similar retrieval of context. In addition to a Tree Validity Checker (TVC) that validates four well-formedness formal criteria after generation, a structural validity dimension is introduced that is orthogonal to traditional attachment scores metrics. After training solely on the Universal Dependencies English Web Treebank and fine-tuning just 0.75% of the parameters (24.3 million out of 3.24 billion), SARG-QLoRA reaches 81.35% Unlabelled Attachment Score (UAS) and 78.28% Labelled Attachment Score (LAS) — just 1.07 UAS away from the specialized Stanza parser — while preserving zero-shot transfer capability to Spanish (62.81% UAS), German (61.51%), and French (59.11%). TVC analysis shows structural validity for 87.14% of the test set, balanced brackets for 97.35%, and one root per tree for 99.95%.",
+      "first_checked_at": "2026-10-05T09:44:45+00:00",
+      "last_checked_at": "2026-10-05T09:44:45+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "SARG-QLoRA: Syntax-Aware Retrieval-Guided Parameter-Efficient Fine-Tuning for Dependency Parsing with Autoregressive Large Language Models"
+    },
+    "arXiv:2607.27731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27731",
+      "identity_tokens": [
+        "arXiv:2607.27731"
+      ],
+      "reason": "Modern deep learning typically keeps the batch size static throughout training, thus overlooking the joint effect of learning rate and batch size on the training dynamics. In this paper, we study the deep learning dynamics through the lens of convex optimization and derive a joint characterization of loss in terms of both schedules, applicable to general optimizers and model architectures. This characterization yields a closed-form optimal batch size schedule for any prescribed learning rate schedule, and further leads to joint scaling laws that consistently outperform static batch size baselines, highlighting the significance of dynamic batch size schedule in large language model training.",
+      "first_checked_at": "2026-10-05T09:44:45+00:00",
+      "last_checked_at": "2026-10-05T09:44:45+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Towards joint scaling laws with optimal batch size schedules"
+    },
+    "arXiv:2607.27744": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27744",
+      "identity_tokens": [
+        "arXiv:2607.27744"
+      ],
+      "reason": "Modern recommendation models gain prediction quality by scaling feature-interaction and sequence modules, but production cost constraints cap how far systems can scale. In this work, we propose Request-Oriented Compute Sharing (ROCS), a modeling and inference paradigm that exploits a unique property of recommendation inference: each user request is evaluated against many candidates, while request-side features are shared across candidates. ROCS defers request-candidate interactions as late as possible, isolates candidate-dependent representations, and evaluates substantial portions of the model once per request rather than once per candidate, significantly improving inference efficiency while maintaining or improving prediction quality. To realize this paradigm, we develop Generalized Layer Masking (GLM) to enforce candidate isolation in feature-interaction architectures, and Deep Cross Attention (DCA) to extend request-oriented sharing to sequence architectures. To support efficient GPU deployment, we co-design In-Kernel Broadcast Optimization (IKBO) that significantly accelerates ROCS model execution. Experiments on public benchmarks show that ROCS consistently improves the quality-efficiency tradeoff across recommendation backbones. On production-scale workloads, ROCS achieves up to a 3x QPS improvement on retrieval models without quality degradation and a 0.5% relative LogLoss improvement with a 50% QPS gain on a short-form video ranking model. ROCS has been deployed across large-scale recommendation systems spanning ads and organic surfaces, retrieval and ranking stages, and more than two orders of magnitude in inference complexity, delivering significant online gains at reduced infrastructure cost.",
+      "first_checked_at": "2026-10-05T09:44:45+00:00",
+      "last_checked_at": "2026-10-05T09:44:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "ROCS: Request-Oriented Compute Sharing for Efficient Large-Scale Recommendation"
+    },
+    "arXiv:2607.27823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27823",
+      "identity_tokens": [
+        "arXiv:2607.27823"
+      ],
+      "reason": "Large vision-language models (LVLMs) often hallucinate objects that are absent from an image. Despite recent progress, existing mitigation methods still lack reliable object-level grounding diagnostics and therefore tend to apply coarse-grained interventions, which can impair visual understanding, shorten responses, and reduce coverage of genuinely grounded objects. The key challenge is thus to detect, during generation, whether each emerging object mention is supported by reliable visual evidence, so that hallucination can be mitigated selectively. Yet output confidence reflects next-token plausibility rather than visual support, allowing language priors to make absent objects appear certain. We show that the missing diagnostic evidence is encoded in an Intrinsic Grounding Signature (IGS), a distributed signed attention pattern that remains informative for such confident hallucinations. Based on IGS, we propose Verifier-Guided Decoding (VGD), a decoding framework in which a lightweight verifier examines each emerging object mention, rolls back the KV cache when the mention is identified as high risk, suppresses the object and its synonyms, and regenerates the affected continuation. Because VGD intervenes only on object mentions identified as high risk, it reduces object hallucination while preserving the model's original visual understanding and grounded object coverage. Experiments on CHAIR and AMBER-G show that VGD achieves state-of-the-art object hallucination reduction: at @rec90, it cuts AMBER-G CHAIR by 43.6\\% while retaining 99.6\\% of grounded-object coverage, and reduces CHAIR-MSCOCO CHAIR$_i$/CHAIR$_s$ by 37.0\\%/30.4\\% without shortening captions.",
+      "first_checked_at": "2026-10-05T09:44:45+00:00",
+      "last_checked_at": "2026-10-05T09:44:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Hallucinations Leave a Grounding Signature:Verifier-Guided Decoding for Selective Object Correction"
+    },
+    "arXiv:2608.06396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06396",
+      "identity_tokens": [
+        "arXiv:2608.06396"
+      ],
+      "reason": "Mixture-of-Experts (MoE) language models route each token through a small subset of experts, making routing patterns useful for identifying task-relevant experts during downstream adaptation. Yet current approaches have two limitations: task experts are typically identified from aggregate routing statistics that reflect usage rather than association with successful task completion, and task-expert activations remain underexplored as signals for supervision allocation. We introduce Task-Expert-Aware Supervision (TEXAS), which combines correctness-conditioned task expert discovery with token-level supervision allocation. TEXAS compares expert activations on instances that the base model solves successfully and those it fails to solve, and retains experts more strongly activated on successful instances. During fine-tuning, it upweights answer tokens in failed instances when they activate these experts. TEXAS therefore leverages existing routing behavior without restricting adaptation to a fixed expert subset or imposing an explicit target routing distribution. Across three MoE models and six benchmarks, TEXAS achieves the best or tied-best performance in 17 of 18 settings and improves over the strongest baseline by 1.3--1.5 points on average. Ablations and further analyses validate both the discovered experts and the resulting supervision strategy.",
+      "first_checked_at": "2026-10-05T09:44:46+00:00",
+      "last_checked_at": "2026-10-05T09:44:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "TEXAS: Task-Expert-Aware Supervision for Downstream Mixture-of-Experts LLM Adaptation"
+    },
+    "arXiv:2608.11240": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11240",
+      "identity_tokens": [
+        "arXiv:2608.11240"
+      ],
+      "reason": "Vector quantization is an old problem but has recently become central to AI infrastructure. It is therefore experiencing a surge of renewed engineering and research activity. This paper provides a unified framework for developing and benchmarking new quantization algorithms. We describe 7 common conceptual quantization primitives and show how to compose them arbitrarily. We then re-express 25 common quantizers as pipelines of these primitives. Finally, we publish VQ-bench as open-source to be extended further and make reproducible benchmarks publicly available.",
+      "first_checked_at": "2026-10-05T09:44:46+00:00",
+      "last_checked_at": "2026-10-05T09:44:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "VQ-bench: A Composable Vector Quantization Framework"
+    },
+    "arXiv:2609.16179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16179",
+      "identity_tokens": [
+        "arXiv:2609.16179"
+      ],
+      "reason": "Z-loss has been widely applied to the logits of language-model output heads and sparse mixture-of-experts routers. Z-loss constrains the softmax log-normalizers of these output heads and routers, thereby limiting large-logit excursions, reducing finite-precision roundoff exposure, and avoiding training-loss divergence. These use cases arise in modern Transformer settings where large-vocabulary softmax heads, top-$k$ routing, fused losses, and mixed-precision optimizers interact. Z-loss has typically been understood only as a scalar penalty on the log-normalizer. This paper instead analyzes Z-loss from a backward-pass perspective, focusing on the gradients produced by the Z-loss penalty. The logit-space gradient, which we call the backward source, is injected at the logit boundary of the Z-loss branch of backpropagation; consequently, the backward source's effect depends on the architecture and implementation through which the gradient is transported. We develop a backward-transport view for Z-loss that separates the source's scalar amplitude and softmax shape from the transport factors. These factors include common-shift coordinates, tied-embedding pathways, output-to-hidden gain, fused-loss source consistency, optimizer-facing updates, and top-$k$ router reduction scale. These diagnostics show that nearly identical forward Z-loss values can coexist with distinct logit-space Z-loss gradients and, after architectural and optimizer transport, distinct parameter updates. The transport diagnostics also explain why raw-logit Z-loss can reduce scalar tails without changing output-to-hidden gain and why active-route reductions alter the effective router coefficient. Across evaluations of models in the GPT-2 and Pythia families on WikiText-103 and FineWeb-Edu, architecture-aware variants reduce backward-geometry tails while maintaining comparable validation perplexity in low-coefficient regimes.",
+      "first_checked_at": "2026-10-05T09:44:46+00:00",
+      "last_checked_at": "2026-10-05T09:44:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Z-Loss Backward Geometry in Dense Output Heads and Sparse Routers"
     }
   }
 }

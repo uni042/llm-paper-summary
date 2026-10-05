@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d977154457bb2bf4-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.27823",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.27823",
+    "identity_tokens": [
+      "arXiv:2607.27823"
+    ],
+    "reason": "Large vision-language models (LVLMs) often hallucinate objects that are absent from an image. Despite recent progress, existing mitigation methods still lack reliable object-level grounding diagnostics and therefore tend to apply coarse-grained interventions, which can impair visual understanding, shorten responses, and reduce coverage of genuinely grounded objects. The key challenge is thus to detect, during generation, whether each emerging object mention is supported by reliable visual evidence, so that hallucination can be mitigated selectively. Yet output confidence reflects next-token plausibility rather than visual support, allowing language priors to make absent objects appear certain. We show that the missing diagnostic evidence is encoded in an Intrinsic Grounding Signature (IGS), a distributed signed attention pattern that remains informative for such confident hallucinations. Based on IGS, we propose Verifier-Guided Decoding (VGD), a decoding framework in which a lightweight verifier examines each emerging object mention, rolls back the KV cache when the mention is identified as high risk, suppresses the object and its synonyms, and regenerates the affected continuation. Because VGD intervenes only on object mentions identified as high risk, it reduces object hallucination while preserving the model's original visual understanding and grounded object coverage. Experiments on CHAIR and AMBER-G show that VGD achieves state-of-the-art object hallucination reduction: at @rec90, it cuts AMBER-G CHAIR by 43.6\\% while retaining 99.6\\% of grounded-object coverage, and reduces CHAIR-MSCOCO CHAIR$_i$/CHAIR$_s$ by 37.0\\%/30.4\\% without shortening captions.",
+    "first_checked_at": "2026-10-05T09:44:45+00:00",
+    "last_checked_at": "2026-10-05T09:44:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Hallucinations Leave a Grounding Signature:Verifier-Guided Decoding for Selective Object Correction"
+  },
+  "processed_at": "2026-10-05T09:44:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d977154457bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

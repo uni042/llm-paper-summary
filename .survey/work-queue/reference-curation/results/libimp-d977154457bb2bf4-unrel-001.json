@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d977154457bb2bf4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.59543/jidmis.v3.1260",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.59543/jidmis.v3.1260",
+    "identity_tokens": [
+      "DOI:10.59543/jidmis.v3.1260"
+    ],
+    "reason": "Dependency Parsing forms one of the key building blocks of natural language processing tasks such as semantic role labelling, machine translation, and information extraction since it furnishes the syntactic structure on which those high-level tasks depend. While transformer-based architectures can model highly expressive representations, there exists a tough trade-off between the two existing methods: specialized parsers can reach high benchmark scores but need special parsing heads and specific training processes, while generative large language models have flexible architecture but do not have any structural guarantee of forming dependency trees as outputs. This paper introduces SARG-QLoRA, a method which solves this trade-off problem by merging Syntax-Aware Retrieval Guidance (SARG) with Quantized Low-Rank Adaptation (QLoRA), allowing for the generation of dependency structures on a consumer-grade hardware setup. In contrast to conventional retrieval-augmented generation approaches where context selection is performed based on semantic similarity, the proposed approach generates a FAISS index based on multilingual-e5-base embedding of training examples and performs syntactically similar retrieval of context. In addition to a Tree Validity Checker (TVC) that validates four well-formedness formal criteria after generation, a structural validity dimension is introduced that is orthogonal to traditional attachment scores metrics. After training solely on the Universal Dependencies English Web Treebank and fine-tuning just 0.75% of the parameters (24.3 million out of 3.24 billion), SARG-QLoRA reaches 81.35% Unlabelled Attachment Score (UAS) and 78.28% Labelled Attachment Score (LAS) — just 1.07 UAS away from the specialized Stanza parser — while preserving zero-shot transfer capability to Spanish (62.81% UAS), German (61.51%), and French (59.11%). TVC analysis shows structural validity for 87.14% of the test set, balanced brackets for 97.35%, and one root per tree for 99.95%.",
+    "first_checked_at": "2026-10-05T09:44:45+00:00",
+    "last_checked_at": "2026-10-05T09:44:45+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "SARG-QLoRA: Syntax-Aware Retrieval-Guided Parameter-Efficient Fine-Tuning for Dependency Parsing with Autoregressive Large Language Models"
+  },
+  "processed_at": "2026-10-05T09:44:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d977154457bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

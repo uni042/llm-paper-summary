@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ddb8153a31e5986-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.29071",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.29071",
+    "identity_tokens": [
+      "arXiv:2607.29071"
+    ],
+    "reason": "The abstract studies federated foundation-model fine-tuning for heterogeneous clients; its scope is training, not inference.",
+    "first_checked_at": "2026-10-05T09:44:43+00:00",
+    "last_checked_at": "2026-10-05T09:44:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Federated Foundation Models Fine-Tuning with Heterogeneous Compressed Clients"
+  },
+  "processed_at": "2026-10-05T09:44:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ddb8153a31e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

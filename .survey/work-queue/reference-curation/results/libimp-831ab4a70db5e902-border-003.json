@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-831ab4a70db5e902-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1093/bioinformatics/btag579",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1093/bioinformatics/btag579",
+    "identity_tokens": [
+      "DOI:10.1093/bioinformatics/btag579"
+    ],
+    "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 This evaluates genomic and proteomic foundation models rather than natural-language LLM inference. Biological downstream quality/functional validation is left for future work, making transfer to the target scope uncertain.",
+    "first_checked_at": "2026-10-05T09:44:44+00:00",
+    "last_checked_at": "2026-10-05T09:44:44+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "Accelerating inference in genomic and proteomic foundation models via speculative decoding"
+  },
+  "processed_at": "2026-10-05T09:44:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-831ab4a70db5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
