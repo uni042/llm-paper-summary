@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-107-part-04-07f72d6af00f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21633",
+      "identity_tokens": [
+        "arXiv:2602.21633"
+      ],
+      "title": "Self-Correcting VLA: Online Action Refinement via Sparse World Imagination",
+      "reason": "Self-Correcting VLA is a robotics action-refinement/control method; fewer task steps are not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.21633",
+      "first_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "last_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20669",
+      "identity_tokens": [
+        "arXiv:2602.20669"
+      ],
+      "title": "Integrating Domain-Specialized Language Models with AI Measurement Tools for Deterministic Atomic-Resolution Experimentation",
+      "reason": "The paper integrates domain-specialized small LMs with microscopy tools for a scientific control application. Full text describes deterministic control and task-specific deployment but does not establish a general inference-serving efficiency technique or comparative systems evaluation.",
+      "source_url": "https://arxiv.org/abs/2602.20669",
+      "first_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "last_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20934",
+      "identity_tokens": [
+        "arXiv:2602.20934"
+      ],
+      "title": "Architecting AgentOS: From Token-Level Context to Emergent System-Level Intelligence",
+      "reason": "AgentOS maps OS concepts to context management and coordination, but the primary text is a conceptual framework without empirical inference-efficiency evaluation; token-efficiency language is architectural advocacy rather than measured evidence.",
+      "source_url": "https://arxiv.org/abs/2602.20934",
+      "first_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "last_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18017",
+      "identity_tokens": [
+        "arXiv:2603.18017"
+      ],
+      "title": "Frayed RoPE and Long Inputs: A Geometric Perspective",
+      "reason": "RoPE-ID targets long-context accuracy/generalization through positional-embedding changes; the abstract does not propose inference acceleration, serving, or compression.",
+      "source_url": "https://arxiv.org/abs/2603.18017",
+      "first_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "last_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19633",
+      "identity_tokens": [
+        "arXiv:2602.19633"
+      ],
+      "title": "TAPE: Tool-Guided Adaptive Planning and Constrained Execution in Language Model Agents",
+      "reason": "TAPE improves agent planning success using tools, constrained decoding, and replanning; the abstract reports task quality, not efficiency gains.",
+      "source_url": "https://arxiv.org/abs/2602.19633",
+      "first_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "last_checked_at": "2026-10-05T13:24:19.424592+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
