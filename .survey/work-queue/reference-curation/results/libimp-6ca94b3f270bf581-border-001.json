@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ca94b3f270bf581-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.38652",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.38652",
+    "identity_tokens": [
+      "arXiv:2609.38652"
+    ],
+    "reason": "This is a useful deployment benchmark but does not propose an inference/serving optimization method; results are device/workload-specific.",
+    "first_checked_at": "2026-10-05T04:49:14+00:00",
+    "last_checked_at": "2026-10-05T04:49:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "AgBench: Agentic AI Benchmarks for Personal AI Devices"
+  },
+  "processed_at": "2026-10-05T04:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca94b3f270b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

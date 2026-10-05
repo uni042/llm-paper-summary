@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:46:57+00:00",
-  "record_count": 895,
+  "updated_at": "2026-10-05T04:49:14+00:00",
+  "record_count": 901,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13382,6 +13382,102 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "VideoLoop: Looped Working Memory Against Semantic Thrashing in Long-Form Video Agents"
+    },
+    "arXiv:2609.38536": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38536",
+      "identity_tokens": [
+        "arXiv:2609.38536"
+      ],
+      "reason": "The paper improves task competence but adds inference passes per candidate and does not report a serving efficiency gain; fit to inference-efficiency scope is weak.",
+      "first_checked_at": "2026-10-05T04:49:13+00:00",
+      "last_checked_at": "2026-10-05T04:49:13+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Does This Action Still Explain the Task? Reverse Scoring for Diffusion Language Model Agents"
+    },
+    "arXiv:2609.38652": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38652",
+      "identity_tokens": [
+        "arXiv:2609.38652"
+      ],
+      "reason": "This is a useful deployment benchmark but does not propose an inference/serving optimization method; results are device/workload-specific.",
+      "first_checked_at": "2026-10-05T04:49:14+00:00",
+      "last_checked_at": "2026-10-05T04:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "AgBench: Agentic AI Benchmarks for Personal AI Devices"
+    },
+    "arXiv:2610.00346": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00346",
+      "identity_tokens": [
+        "arXiv:2610.00346"
+      ],
+      "reason": "The main contribution is a task-specific benchmark and design rules, not a new inference-efficiency mechanism; cost results rely on distinct platforms and utilization assumptions.",
+      "first_checked_at": "2026-10-05T04:49:14+00:00",
+      "last_checked_at": "2026-10-05T04:49:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Benchmarking System One decision models against trained classifiers and language models for automated decision gates"
+    },
+    "DOI:10.1007/s10586-026-06535-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10586-026-06535-6",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-026-06535-6"
+      ],
+      "reason": "The packet has no primary abstract, and the DOI primary page was attempted but the retrieval tool reported it inaccessible; scope and paper details could not be verified.",
+      "first_checked_at": "2026-10-05T04:49:14+00:00",
+      "last_checked_at": "2026-10-05T04:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A novel approach to detecting advanced persistent threats in imbalanced network traffic"
+    },
+    "arXiv:2609.38599": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38599",
+      "identity_tokens": [
+        "arXiv:2609.38599"
+      ],
+      "reason": "The gain is model quality at unchanged inference cost, rather than an inference-efficiency improvement.",
+      "first_checked_at": "2026-10-05T04:49:14+00:00",
+      "last_checked_at": "2026-10-05T04:49:14+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "JARQ: Joint Alternating Refinement for Quantization"
+    },
+    "arXiv:2609.38482": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38482",
+      "identity_tokens": [
+        "arXiv:2609.38482"
+      ],
+      "reason": "The efficiency measure is at the multi-agent task/orchestration level rather than model inference latency, throughput, or compute per token; its fit to an LLM inference efficiency survey is indirect.",
+      "first_checked_at": "2026-10-05T04:49:14+00:00",
+      "last_checked_at": "2026-10-05T04:49:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.18248-lamps.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md"
+      ],
+      "title": "PANDA: A Decentralized Architecture with Flexible Orchestration for Scalable, Fault-Tolerant Multi-Agent Systems"
     }
   }
 }
