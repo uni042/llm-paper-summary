@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-09-part-06-393c411de82d",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.oceaneng.2026.127311",
+      "identity_tokens": [
+        "DOI:10.1016/j.oceaneng.2026.127311"
+      ],
+      "title": "UMS-DETR: A lightweight Transformer-based framework for real-time ship detection in complex remote sensing scenes",
+      "reason": "Publisher-hosted abstract describes remote-sensing ship detection, not LLM serving.",
+      "source_url": "https://doi.org/10.1016/j.oceaneng.2026.127311",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.vlsi.2026.102784",
+      "identity_tokens": [
+        "DOI:10.1016/j.vlsi.2026.102784"
+      ],
+      "title": "ALISTA: Accelerator using LSH-based maximum inner-product search in transformer attention",
+      "reason": "Publisher preview reports ALISTA LSH attention FPGA gains up to 8.5× throughput; full paper unavailable and LLM workload not established. Complete paper inaccessible; no LLM serving evaluation verified.",
+      "source_url": "https://doi.org/10.1016/j.vlsi.2026.102784",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3695932",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2026.3695932"
+      ],
+      "title": "Latency-Constrained Dependency-Aware Heterogeneous Multimodal LLM Agents Placement at Edge",
+      "reason": "Packet abstract reports latency-aware multimodal LLM-agent placement with up to 42.62% lower latency; full paper inaccessible. No body to verify baselines/workload/claim.",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3695932",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-3731569.3764815-aegaeon-gpu-pooling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3693653",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2026.3693653"
+      ],
+      "title": "ASAP: A 28-nm Transformer Training Accelerator With Alternating Sparsity and Asymmetrical Microscaling Precision",
+      "reason": "Primary abstract presents a transformer-training accelerator, not inference serving.",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3693653",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2026.3694979",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2026.3694979"
+      ],
+      "title": "FSMT: Frequency-Spatial Mixture-of-Experts Hyperspectral Object Tracking",
+      "reason": "Primary abstract concerns hyperspectral tracking, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2026.3694979",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
