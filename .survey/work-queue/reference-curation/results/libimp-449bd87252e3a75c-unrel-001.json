@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-449bd87252e3a75c-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3817932",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3817932",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3817932"
+    ],
+    "reason": "The sustainability of AI-powered Web platforms often relies on a feedback loop: stronger models improve user experience, which can help generate interaction data for further refinement. During Large Language Model (LLM) fine-tuning, however, the marginal utility of additional data can change over time, while many incentive mechanisms are primarily reactive. For example, contextual-bandit approaches treat training as a black box and adjust payments only after observing stochastic feedback, which makes it difficult to plan budgets ex ante or to communicate a stable pricing plan. We introduce LEAP (Learning-dynamics-based Economic Adaptive Pricing), a framework that formulates data acquisition as an open-loop planning problem guided by a simple proxy of learning dynamics. Specifically, LEAP links an analytically motivated approximation of SGD progress to a Stackelberg-style pricing model, and yields a closed-form, deterministic price schedule that can be computed before training starts. The resulting schedule is transparent and easy to interpret, and serves as a structured baseline for aligning economic spending with longer-horizon training objectives in commitment-sensitive settings. Across controlled market-simulator experiments in three domains (Medical, Finance, and Comprehension), LEAP achieves lower evaluated acquisition-cost objectives than representative heuristic and online-learning baselines in many tested settings, with reductions exceeding 30% in representative long-horizon configurations. We further evaluate sensitivity to deviations from idealized assumptions, including non-linear supply curves and heterogeneous noise patterns, and find that the planned schedules remain competitive in the simulated settings considered. Overall, LEAP provides a planning-oriented starting point for integrating coarse learning-curve priors into interpretable pricing design for LLM data collection.",
+    "first_checked_at": "2026-10-05T08:55:08+00:00",
+    "last_checked_at": "2026-10-05T08:55:08+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+    ],
+    "title": "LEAP: Learning-Dynamics-Guided Open-Loop Pricing for LLM Data Acquisition"
+  },
+  "processed_at": "2026-10-05T08:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-449bd87252e3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

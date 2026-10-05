@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b19aa19567f5aeae-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818196",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3818196",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3818196"
+    ],
+    "reason": "In large language models (LLMs), attention heads generally encode both semantic association information (SAI) and positional information (PI). This raises a fundamental interpretability question: Which does each attention head relatively prefer, SAI or PI? To address this question, based on theoretical analysis and derivations, we propose a unified relative-preference measurement method. We also define two types of high-preference heads: SAI-preference heads and PI-preference heads. Specifically, we formalize the problem and restrict the research object to attention heads in RoPE-based LLMs (covering single-head/multi-head). We further derive a theoretical expression of the relative-preference measure by introducing an SAI-reduction mask. However, the expression involves an unknown function and lacks directly usable labeled datasets to learn it. For computation, we design an estimator of SAI-preference to approximate the theoretical expression and derive a sufficient condition for the maximum of the estimator. Finally, we propose a unified and computable relative-preference measurement method. In experiments, we present computed results and visualizations of information preference across multiple RoPE-based LLMs. We provide two interpretable applications. (1) We reveal interpretable layer-wise distribution patterns of the two types of high-preference heads. (2) We visualize and analyze the interpretable intervention effects of pruning high-preference heads. Then, we conduct intervention experiments on multiple datasets under a small budget and further find that there exists a certain type of high-preference head that can be pruned to yield a positive or at least non-negative gain on a given dataset in most cases.",
+    "first_checked_at": "2026-10-05T08:55:09+00:00",
+    "last_checked_at": "2026-10-05T08:55:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "Semantic Association vs. Position: Which Information Do Attention Heads Prefer?"
+  },
+  "processed_at": "2026-10-05T08:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19aa19567f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

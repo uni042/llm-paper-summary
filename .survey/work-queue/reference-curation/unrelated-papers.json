@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:52:15+00:00",
-  "record_count": 4009,
+  "updated_at": "2026-10-05T08:55:09+00:00",
+  "record_count": 4021,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -58373,6 +58373,179 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "When Compilation Breaks Your GNN: A Numerical Stability Perspective"
+    },
+    "DOI:10.1145/3770855.3817911": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817911",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817911"
+      ],
+      "reason": "Parameter-efficient fine-tuning (PEFT) has become a standard approach for adapting large language models to downstream tasks. However, most existing PEFT methods rely on uniform and static adaptations, without accounting for the structured heterogeneity of attention across dimensions, heads, layers, and input tokens. In practice, attention representations exhibit non-uniform behavior, and positional encoding mechanisms such as rotary positional embeddings (RoPE) induce dimension-dependent positional structure, making uniform adaptation suboptimal. In this work, we propose DyPAM (Dynamic Positional Attention Modulation), a PEFT method that adapts how positional information contributes to attention by operating directly on the query and key representations. DyPAM combines input-conditioned, dimension-wise modulation with head-wise and layer-wise structural modulation, performing fine-grained adaptation of positional attention aligned with the RoPE-induced structure without modifying the pretrained backbone. Extensive experiments on mathematical and commonsense reasoning benchmarks across multiple backbone models demonstrate that DyPAM consistently outperforms existing strong PEFT baselines. The code is available for reproducibility at https://github.com/Beihang-BIGSCity/DyPAM.",
+      "first_checked_at": "2026-10-05T08:55:07+00:00",
+      "last_checked_at": "2026-10-05T08:55:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Dynamic Positional Attention Modulation for Parameter-Efficient Fine-Tuning of Large Language Models"
+    },
+    "DOI:10.1145/3770855.3817919": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817919",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817919"
+      ],
+      "reason": "The ongoing digitization has led to a proliferation of time-series data streams that monitor a variety of processes, from which valuable insights may be obtained. Further, the emergence of successful foundational language models begs the question of whether it is possible to achieve time-series models with the foundational properties of handling multiple tasks, while being sufficiently lightweight to allow real-time data stream processing. Existing foundational time-series models are often large and only effective in offline settings without stringent time and computational constraints, and where repeated model calibration is not needed. However, when applied to data streams, these models are ineffective due to their size and lack of support for continual calibration, which compromise their ability to deliver accurate real-time responses, their durability, and their deployability in hardware-limited settings. We propose TimeBlocks to enable versatile time-series processing by facilitating the efficient building of lightweight models suitable for multiple tasks under variable conditions. In particular, the method maintains a pool of interchangeable and modular model blocks that can be used to construct new time-series models. When presented with specific time-series data, a routing strategy iteratively selects the most suitable blocks to construct a lightweight and accurate model for the data. We equip TimeBlocks with a method called StreamCore to build a representative small subset of the data stream, which preserves a guaranteed approximation of the stream over time, enabling continual model calibration. An experimental study on multiple data sets and covering multiple tasks shows that TimeBlocks enables to build models capable of outperforming existing baselines.",
+      "first_checked_at": "2026-10-05T08:55:07+00:00",
+      "last_checked_at": "2026-10-05T08:55:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "TimeBlocks: Versatile and Continual Time-Series Blockbase"
+    },
+    "DOI:10.1145/3770855.3818937": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818937",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818937"
+      ],
+      "reason": "Spatiotemporal modeling of electromagnetic fields governed by time-domain Maxwell's equations is essential for simulating and understanding wave propagation and scattering phenomena. However, accurate long-term predictions remains challenging due to the stringent numerical stability requirements and high computational costs inherent in traditional numerical algorithms. In this work, we present GT-MSMW, a novel specialized framework built upon the finite-difference time-domain (FDTD) paradigm. To overcome the optimization difficulties of direct long-term mapping while mitigating the cumulative errors of step-by-step unrolling, GT-MSMW employs a robust blockwise forecasting scheme, advancing the simulation in stable multi-step intervals. A key innovation of our framework is the deep integration of physical laws: we design specialized edge features that encode discrete gradient and curl operators, guiding the graph neural networks (GNN) to learn the precise local coupled evolution. This local encoding is complemented by a Transformer module, which employs physics-informed distance gating to regulate the magnitude of spatial interactions based on spatial proximity, alongside self- and cross-attention mechanisms to explicitly capture the global couplings among electromagnetic fields. Validated on complex unstructured meshes, GT-MSMW demonstrates SOTA performance in 2D scenarios, significantly reducing rollout errors compared to baseline methods. Furthermore, the framework is successfully extended to 3D geometries, proving its capability to capture intricate wave scattering behaviors. Codes and data are available at https://github.com/0lin0-c/GT--MSMW.",
+      "first_checked_at": "2026-10-05T08:55:07+00:00",
+      "last_checked_at": "2026-10-05T08:55:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Physics-Augmented Graph Transformer for Multi-step Time-Domain Maxwell's Equations in Electromagnetic Scattering"
+    },
+    "DOI:10.1145/3770855.3819038": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3819038",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3819038"
+      ],
+      "reason": "Large language model agents have shown strong promise for clinical decision support over electronic health records (EHR), yet current approaches treat tasks in isolation and lack capacities for self-evolution through accumulated experience. We propose U-EHR, a Unified EHR Agent with Retrospective Memory Evolution that enables continuous capability improvement through closed-loop experiential learning. U-EHR introduces three tightly integrated mechanisms: (1) Step-Level Trajectory Scoring evaluates each action in an execution trajectory along relevance, progress, and correctness dimensions, providing fine-grained credit assignment that distinguishes effective behaviors from detrimental ones within the same trajectory. (2) Dual-Polarity Memory Extraction transforms these quality signals into structured experiential knowledge by distilling both positive patterns worth emulating and negative lessons to avoid. (3) UCB-Guided Memory Retrieval formulates memory selection as a multi-armed bandit problem grounded in the Upper Confidence Bound principle, strategically selecting the most relevant memories from a growing knowledge base while exploring underutilized entries to prevent stagnation. As execution outcomes feed back to refine memory quality estimates and retrieval statistics, the three components form a self-reinforcing evolution cycle that continuously improves the agent's behavioral knowledge without external supervision. Extensive experiments on both the public MIMIC benchmark and our newly introduced Chinese clinical benchmark CN-EHR across diverse clinical tasks demonstrate that U-EHR consistently surpasses existing methods in accuracy and efficiency, with sustained performance gains as experience accumulates, validating the effectiveness of the proposed self-evolution paradigm. Notably, U-EHR exhibits strong cross-lingual generalizability on CN-EHR, suggesting that the learned experiential knowledge transfers across diverse healthcare environments.",
+      "first_checked_at": "2026-10-05T08:55:08+00:00",
+      "last_checked_at": "2026-10-05T08:55:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+      ],
+      "title": "U-EHR: A Self-Evolving EHR Agent with Step-Level Credit Assignment and UCB-Guided Memory Retrieval"
+    },
+    "DOI:10.3390/electronics15163522": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15163522",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15163522"
+      ],
+      "reason": "Application-specific instruction set processors (ASIPs) often employ specialized hardware to improve performance, but this introduces complexity in resource management and programming. Existing compiler solutions, including LLVM’s default schedulers, lack fine-grained structural conflict analysis for complex arithmetic logic unit (ALU) instructions, leading to suboptimal performance or runtime errors. This limitation becomes critical when targeting very long instruction word (VLIW) architectures with instruction fusion units that exhibit pipeline-stage-level resource contention. In this paper, we propose a compile-time instruction scheduling method that models sub-cycle resource usage and analyzes both data and structural dependencies at fine granularity. Unlike coarse-grained resource tables used in existing compilers, our approach tracks functional unit occupancy at the pipeline stage level, enabling precise detection of structural hazards in complex execution units. We implement this scheduler as a backend pass in the LLVM compiler framework and validate it on the Sayram VLIW processor for wireless communication. Experimental results show that our approach achieves 100% scheduling correctness while improving execution efficiency by 23% on average compared with in-order scheduling, with benefits up to 38% for highly parallel kernels such as PRACH, and reducing average running time by 66% compared with atomic execution.",
+      "first_checked_at": "2026-10-05T08:55:08+00:00",
+      "last_checked_at": "2026-10-05T08:55:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Fine-Grained Structural Conflict Modeling for Compile-Time Instruction Scheduling on VLIW ASIPs"
+    },
+    "DOI:10.1145/3770855.3817932": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817932",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817932"
+      ],
+      "reason": "The sustainability of AI-powered Web platforms often relies on a feedback loop: stronger models improve user experience, which can help generate interaction data for further refinement. During Large Language Model (LLM) fine-tuning, however, the marginal utility of additional data can change over time, while many incentive mechanisms are primarily reactive. For example, contextual-bandit approaches treat training as a black box and adjust payments only after observing stochastic feedback, which makes it difficult to plan budgets ex ante or to communicate a stable pricing plan. We introduce LEAP (Learning-dynamics-based Economic Adaptive Pricing), a framework that formulates data acquisition as an open-loop planning problem guided by a simple proxy of learning dynamics. Specifically, LEAP links an analytically motivated approximation of SGD progress to a Stackelberg-style pricing model, and yields a closed-form, deterministic price schedule that can be computed before training starts. The resulting schedule is transparent and easy to interpret, and serves as a structured baseline for aligning economic spending with longer-horizon training objectives in commitment-sensitive settings. Across controlled market-simulator experiments in three domains (Medical, Finance, and Comprehension), LEAP achieves lower evaluated acquisition-cost objectives than representative heuristic and online-learning baselines in many tested settings, with reductions exceeding 30% in representative long-horizon configurations. We further evaluate sensitivity to deviations from idealized assumptions, including non-linear supply curves and heterogeneous noise patterns, and find that the planned schedules remain competitive in the simulated settings considered. Overall, LEAP provides a planning-oriented starting point for integrating coarse learning-curve priors into interpretable pricing design for LLM data collection.",
+      "first_checked_at": "2026-10-05T08:55:08+00:00",
+      "last_checked_at": "2026-10-05T08:55:08+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ],
+      "title": "LEAP: Learning-Dynamics-Guided Open-Loop Pricing for LLM Data Acquisition"
+    },
+    "DOI:10.1145/3770855.3818083": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818083",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818083"
+      ],
+      "reason": "Training Large Foundation Models (LFMs), including Large Language Models and Vision-Language Models, on massive distributed GPU clusters is increasingly bottlenecked by communication overhead. While frameworks like ZeRO++ employ static quantization to reduce communication volume, they suffer from a rigid trade-off: aggressive low-bit quantization maximizes throughput but introduces a persistent noise floor that impedes late-stage convergence, whereas high-precision quantization preserves accuracy at the cost of diminished training efficiency. In this paper, we propose the Noise Equivalent Hypothesis (Neophyte): the noise inherent to the weight quantization process plays a role functionally analogous to the stochastic gradient variance present in standard SGD optimization. We theoretically prove that just as a decaying learning rate is essential for convergence, an ascending quantization schedule is necessary to maintain optimization stability while maximizing throughput. Building on this hypothesis, we present Aquavit, an adaptive distributed training framework that implements an ascending precision schedule for model weights. To overcome the hardware limitations of discrete bit-widths (e.g., jumping from 4-bit to 6-bit), Aquavit introduces fractional precision via granularity modulation. By dynamically adjusting quantization block sizes, we achieve quasi-continuous transitions in effective bits-per-weight (bpw), preventing ''numerical shocks'' and ensuring a smooth error-reduction curve. We evaluate Aquavit on a 256-GPU cluster across diverse LFMs, including LLaMA-3.3-70B and Qwen-Image. Our results demonstrate that Aquavit achieves up to a 2.15× speedup in time-to-accuracy while maintaining full numerical parity with FP16 baselines, even in sensitive multimodal tasks where static quantization typically fails.",
+      "first_checked_at": "2026-10-05T08:55:08+00:00",
+      "last_checked_at": "2026-10-05T08:55:08+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Aquavit: Ascending Quantization for Communication-Efficient Vast-Scale Distributed Training"
+    },
+    "DOI:10.1145/3770855.3818136": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818136",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818136"
+      ],
+      "reason": "Collaborative inference enables cost-effective deployment of large language models by partitioning layers across multiple participants and forwarding intermediate activations between participants in a pipeline, but these transmitted activations also create a new attack surface: a malicious participant can manipulate intermediate activations during inference. Prior work on collaborative inference attacks has largely focused on privacy leakage, leaving the backdoor threat insufficiently explored. Inspired by recent advances in representation engineering, we propose ActivationBackdoor, an inference-time backdoor attack that composes two activation-level components for trigger detection and backdoor behavior injection. This design achieves the same ''clean inputs behave normally, triggered inputs induce attacker-specified behavior'' property as traditional backdoor attacks, while requiring no access to training data and no model parameter updates. Experiments across classification and open-ended generation tasks show that ActivationBackdoor attains attack success comparable to training-time backdoor baselines while preserving high clean-task accuracy and utility. Overall, our results expose a new and practical backdoor risk in collaborative inference arising from intermediate activation exposure.",
+      "first_checked_at": "2026-10-05T08:55:09+00:00",
+      "last_checked_at": "2026-10-05T08:55:09+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ],
+      "title": "ActivationBackdoor: Backdooring Large Language Models in Collaborative Inference via Intermediate Activations"
+    },
+    "DOI:10.1145/3770855.3818144": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818144",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818144"
+      ],
+      "reason": "The integration of Large Language Models (LLMs) to dynamically enhance ad creatives offers significant market value but presents a formidable mechanism design challenge. This interaction is characterized by a tri-level optimization problem where the platform, as a Stackelberg leader, must determine an optimal investment policy while anticipating the strategic responses of both advertisers and their budget-constrained auto-bidding agents. To address this, we theoretically deconstruct the strategic hierarchy and prove that creative enhancement can endogenously align advertiser incentives via the monotonicity of market outcomes relative to bid pacing multipliers. This insight allows us to collapse the intractable tri-level hierarchy into a more manageable bilevel optimization task. We then introduce the Equilibrium-Predictive Mechanism Design (EPMD) framework, which employs a novel dual-network architecture consisting of an Investment Policy Network (IPN) and an Equilibrium Prediction Network (EPN). This design enables the platform to learn optimal resource allocation and the market's equilibrium mapping simultaneously in an efficient, end-to-end manner. Empirical evaluations using real-world datasets and GPT-4o-based enhancement demonstrate that EPMD increases platform revenue by up to +1.11% while ensuring market stability and incentive alignment, providing the first tractable solution for this new class of generative advertising problems.",
+      "first_checked_at": "2026-10-05T08:55:09+00:00",
+      "last_checked_at": "2026-10-05T08:55:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "EPMD: A Framework for LLM-Enhanced Ad Auctions"
+    },
+    "DOI:10.1145/3770855.3818155": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818155",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818155"
+      ],
+      "reason": "Vision language models face a fundamental geometry trade-off: Euclidean representations excel at instance-level discrimination, while hyperbolic representations naturally encode semantic hierarchies. Hybrid training is challenging because one geometry may dominate early, leaving the other under-trained failure mode we term geometry dominance. We introduce Adaptive Geometry Routing (AGR), a framework that addresses this via a novel four-phase training curriculum : (1) Isolation hyperbolic-only training stabilizes hierarchical structure; (2) Shadow router learns mixing patterns using only hyperbolic signals; (3) Soft Launch Euclidean scores gradually become visible; (4) Adaptive full dual-geometry routing. This phased coordination of router activation (?) and Euclidean visibility (?) prevents early dominance while enabling data-driven geometry selection. Built on a shared backbone with lightweight LoRA-adapted heads and bounded residual corrections, AGR discovers that hyperbolic geometry is preferred by default (85% weight), with routing adapting semantically abstract queries route more hyperbolic, attribute-rich queries shift toward Euclidean. On ViT-B, AGR achieves 38.8% COCO T2I R@5 (+6.5pp over MERU), 64.7% Flickr30K I2T R@5 (+11.3pp), and 32.6% ImageNet accuracy (+9.3pp), demonstrating that phased curriculum training enables stable hybrid geometry learning for vision-language understanding.",
+      "first_checked_at": "2026-10-05T08:55:09+00:00",
+      "last_checked_at": "2026-10-05T08:55:09+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Adaptive Geometry Routing for Vision-Language Understanding"
+    },
+    "DOI:10.1145/3770855.3818196": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818196",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818196"
+      ],
+      "reason": "In large language models (LLMs), attention heads generally encode both semantic association information (SAI) and positional information (PI). This raises a fundamental interpretability question: Which does each attention head relatively prefer, SAI or PI? To address this question, based on theoretical analysis and derivations, we propose a unified relative-preference measurement method. We also define two types of high-preference heads: SAI-preference heads and PI-preference heads. Specifically, we formalize the problem and restrict the research object to attention heads in RoPE-based LLMs (covering single-head/multi-head). We further derive a theoretical expression of the relative-preference measure by introducing an SAI-reduction mask. However, the expression involves an unknown function and lacks directly usable labeled datasets to learn it. For computation, we design an estimator of SAI-preference to approximate the theoretical expression and derive a sufficient condition for the maximum of the estimator. Finally, we propose a unified and computable relative-preference measurement method. In experiments, we present computed results and visualizations of information preference across multiple RoPE-based LLMs. We provide two interpretable applications. (1) We reveal interpretable layer-wise distribution patterns of the two types of high-preference heads. (2) We visualize and analyze the interpretable intervention effects of pruning high-preference heads. Then, we conduct intervention experiments on multiple datasets under a small budget and further find that there exists a certain type of high-preference head that can be pruned to yield a positive or at least non-negative gain on a given dataset in most cases.",
+      "first_checked_at": "2026-10-05T08:55:09+00:00",
+      "last_checked_at": "2026-10-05T08:55:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Semantic Association vs. Position: Which Information Do Attention Heads Prefer?"
+    },
+    "DOI:10.1145/3770855.3818467": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818467",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818467"
+      ],
+      "reason": "Deep Learning Recommendation Models (DLRMs) play a key role to power real-world recommendation and ranking, yet their growing complexity has made production deployment increasingly challenging. While PyTorch 2 (PT2) offers promising performance and productivity gains through automated model compilation, its initial release lacked critical features needed for DLRM adoption. In this work, we present RecCompl, a comprehensive model compilation system that enables efficient model compilation of industrial scale DLRMs with PT2. RecCompl addresses key compatibility issues by extending operator coverage, minimizing graph breaks, avoiding unnecessary recompilation, and generalizing graph transformation. Besides, to meet the high requirement on model exploration, we introduce a configuration-based user interface that decouples compilation settings from model code, allowing fine-grained control without intrusive changes. Despite these improvements, efficiency gaps remain in achieving a production-ready compilation system. To close them, we introduce systematic designs and engineering optimizations that enhance compilation time, memory management, and online deployment reliability. RecCompl is widely adopted, and delivers up to 60% higher training throughput while achieving substantially lower compilation latency, consistent performance across varying memory budgets, and stable online deployment.",
+      "first_checked_at": "2026-10-05T08:55:09+00:00",
+      "last_checked_at": "2026-10-05T08:55:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "RecCompl: Efficient Model Compilation for Industrial Scale Recommendation Models with PyTorch 2"
     }
   }
 }

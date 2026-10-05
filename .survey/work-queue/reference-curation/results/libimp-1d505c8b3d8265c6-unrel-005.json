@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d505c8b3d8265c6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/electronics15163522",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/electronics15163522",
+    "identity_tokens": [
+      "DOI:10.3390/electronics15163522"
+    ],
+    "reason": "Application-specific instruction set processors (ASIPs) often employ specialized hardware to improve performance, but this introduces complexity in resource management and programming. Existing compiler solutions, including LLVM’s default schedulers, lack fine-grained structural conflict analysis for complex arithmetic logic unit (ALU) instructions, leading to suboptimal performance or runtime errors. This limitation becomes critical when targeting very long instruction word (VLIW) architectures with instruction fusion units that exhibit pipeline-stage-level resource contention. In this paper, we propose a compile-time instruction scheduling method that models sub-cycle resource usage and analyzes both data and structural dependencies at fine granularity. Unlike coarse-grained resource tables used in existing compilers, our approach tracks functional unit occupancy at the pipeline stage level, enabling precise detection of structural hazards in complex execution units. We implement this scheduler as a backend pass in the LLVM compiler framework and validate it on the Sayram VLIW processor for wireless communication. Experimental results show that our approach achieves 100% scheduling correctness while improving execution efficiency by 23% on average compared with in-order scheduling, with benefits up to 38% for highly parallel kernels such as PRACH, and reducing average running time by 66% compared with atomic execution.",
+    "first_checked_at": "2026-10-05T08:55:08+00:00",
+    "last_checked_at": "2026-10-05T08:55:08+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Fine-Grained Structural Conflict Modeling for Compile-Time Instruction Scheduling on VLIW ASIPs"
+  },
+  "processed_at": "2026-10-05T08:55:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d505c8b3d82",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

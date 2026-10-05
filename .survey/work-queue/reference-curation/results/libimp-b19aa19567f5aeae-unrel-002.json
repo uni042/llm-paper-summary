@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b19aa19567f5aeae-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3818144",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3770855.3818144",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3818144"
+    ],
+    "reason": "The integration of Large Language Models (LLMs) to dynamically enhance ad creatives offers significant market value but presents a formidable mechanism design challenge. This interaction is characterized by a tri-level optimization problem where the platform, as a Stackelberg leader, must determine an optimal investment policy while anticipating the strategic responses of both advertisers and their budget-constrained auto-bidding agents. To address this, we theoretically deconstruct the strategic hierarchy and prove that creative enhancement can endogenously align advertiser incentives via the monotonicity of market outcomes relative to bid pacing multipliers. This insight allows us to collapse the intractable tri-level hierarchy into a more manageable bilevel optimization task. We then introduce the Equilibrium-Predictive Mechanism Design (EPMD) framework, which employs a novel dual-network architecture consisting of an Investment Policy Network (IPN) and an Equilibrium Prediction Network (EPN). This design enables the platform to learn optimal resource allocation and the market's equilibrium mapping simultaneously in an efficient, end-to-end manner. Empirical evaluations using real-world datasets and GPT-4o-based enhancement demonstrate that EPMD increases platform revenue by up to +1.11% while ensuring market stability and incentive alignment, providing the first tractable solution for this new class of generative advertising problems.",
+    "first_checked_at": "2026-10-05T08:55:09+00:00",
+    "last_checked_at": "2026-10-05T08:55:09+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "EPMD: A Framework for LLM-Enhanced Ad Auctions"
+  },
+  "processed_at": "2026-10-05T08:55:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b19aa19567f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
