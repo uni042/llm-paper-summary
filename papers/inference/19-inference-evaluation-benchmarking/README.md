@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（20本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -75,6 +75,14 @@
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   MoEのスケーリング則へ推論費用を組み込み、専門家数を増やした「損失最適」構成より、小さなMoEを多くのデータで学習する構成が配信費用まで含めて有利になる領域を示す。
+
+- **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  Transformer型LLMは層を深くすることで容量を増やすが、全層が推論品質へ同程度に寄与するとは限らない。
+
+- **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  自己整合性（自己整合性; SC）は同じ問題から複数の思考連鎖をsamplingし、最終回答の多数決を取ることで推論精度を上げる。さらにtask/モデルごとの性能と費用の交換条件を調整する制御方式を導く。通常SCと同等の性能を狙いながら、平均sampling数をGSM8Kで80.1%、Coin Flipで84.2%など削減した。
 
 ### 4年前（2022-11〜2023-10）
 

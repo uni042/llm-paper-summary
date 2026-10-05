@@ -35,10 +35,15 @@
   "selection_reason": "open-weight LLMでlayer similarityに基づき連続blockを削除し、軽量なQLoRA healingを行うlayer pruningを評価する。最大で層の約半分を削除しても複数QA benchmarkで性能劣化が小さく、著者は推論memoryとlatency改善を実配備上の効果として示すためLLM推論圧縮の対象内。",
   "semantic_scholar_id": "2ccbafd636184c6edd83e585359514923b6cf849",
   "source_url": "https://arxiv.org/abs/2403.17887",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Unreasonable Ineffectiveness of the Deeper Layers",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T23:12:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md",
+  "represented_canonical_id": "arXiv:2403.17887",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
