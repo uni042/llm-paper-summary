@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-10-part-05-fc0a8d4585cc",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08574",
+      "identity_tokens": [
+        "arXiv:2609.08574"
+      ],
+      "title": "Do New Attention Mechanisms Actually Fix Attention Sinks at Million-Token Context?",
+      "reason": "This is a diagnostic study rather than an efficiency technique, and its pilot does not substantiate behavior at advertised million-token context.",
+      "source_url": "https://arxiv.org/abs/2609.08574",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08709",
+      "identity_tokens": [
+        "arXiv:2609.08709"
+      ],
+      "title": "Chimaera: A Mixture-of-Graph-Experts Architecture for Cross-Task and Cross-Dataset Graph Learning",
+      "reason": "The abstract concerns graph-learning models and cross-dataset graph tasks, not large language model inference.",
+      "source_url": "https://arxiv.org/abs/2609.08709",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08759",
+      "identity_tokens": [
+        "arXiv:2609.08759"
+      ],
+      "title": "A Note on Scaling in Randomly Rotated Quantization and Its Connection to the CDEF +1 Pythagorean Relation",
+      "reason": "The abstract is a communication-theory note on randomized-rotation quantization scaling and CDEF; it presents no neural/LLM inference method or deployment evaluation.",
+      "source_url": "https://arxiv.org/abs/2609.08759",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08965",
+      "identity_tokens": [
+        "arXiv:2609.08965"
+      ],
+      "title": "PlannerForge: LLM Agents for Scenario-Based Testing of Motion Planners in Autonomous Driving",
+      "reason": "arXiv abstract evaluates LLM agents for autonomous-driving motion-planner scenario testing; the target is planner-test coverage, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.08965",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08966",
+      "identity_tokens": [
+        "arXiv:2609.08966"
+      ],
+      "title": "Good Pretraining, Bad SFT: Checkpoint Quality Across the Training Stack",
+      "reason": "The abstract compares checkpoint quality across pretraining and supervised fine-tuning, a training/model-selection study rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.08966",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
