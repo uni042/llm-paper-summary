@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-06-part-03-6496a14d275e",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16531",
+      "identity_tokens": [
+        "arXiv:2609.16531"
+      ],
+      "title": "XMPIaaS: Towards Cloud Native MPI via Cooperative Process Migration",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16531",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16537",
+      "identity_tokens": [
+        "arXiv:2609.16537"
+      ],
+      "title": "What Does Layer-Importance Reveal About Transformers and State-Space Models?",
+      "reason": "一次本文のlayer-importance diagnostic protocol、Transformer/SSM結果とimplicationsを確認。重要度解析がcompressionに関連するが、主目的はarchitecture-dependent necessity/plasticityの分析で、compression/inference efficiency methodやruntime評価は示していない。寄与が間接的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.16537",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16540",
+      "identity_tokens": [
+        "arXiv:2609.16540"
+      ],
+      "title": "On the Importance of Gating: Memorization vs. In-Context Learning in State Space Models",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16540",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16599",
+      "identity_tokens": [
+        "arXiv:2609.16599"
+      ],
+      "title": "Large Language Models in the Loop: A Stability- and Network-Aware Survey in Networked Control, Cyber-Physical, and Multi-Agent Systems",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16599",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16656",
+      "identity_tokens": [
+        "arXiv:2609.16656"
+      ],
+      "title": "Channel-Wise and Token-Aware Post-Training Quantization for Visual State Space Duality",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16656",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
