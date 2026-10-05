@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-19-part-07-a1a063f6ecd4",
+  "reference_main_sha": "0db32737ee15a836d1c701bc3103731c45ee6d70",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26590",
+      "identity_tokens": [
+        "arXiv:2609.26590"
+      ],
+      "title": "GTR: Gated Token Recurrence for Efficient Dense Prediction",
+      "reason": "GTR is a gated token recurrence model for dense prediction; it is not an LLM inference/serving contribution.",
+      "source_url": "https://arxiv.org/abs/2609.26590",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26621",
+      "identity_tokens": [
+        "arXiv:2609.26621"
+      ],
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+      "reason": "The paper studies output divergence across BF16/FP16/FP32 and adds a gated FP32 output-head recomputation to improve decoding agreement, at an added latency below 4% for tested batch sizes. Its objective is precision correctness, with extra inference work, rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.26621",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26635",
+      "identity_tokens": [
+        "arXiv:2609.26635"
+      ],
+      "title": "MambaVoice: Lightweight Audiovisual Singing Voice Separation Via A Hybrid Mamba-Transformer Model",
+      "reason": "MambaVoice is a hybrid architecture for singing-voice source separation; it is outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.26635",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26718",
+      "identity_tokens": [
+        "arXiv:2609.26718"
+      ],
+      "title": "The Sirens'Song: When Proximal Background Context Overshadows Distant Evidence",
+      "reason": "LYRA modifies attention scoring to improve distant-evidence use under proximal-context interference and evaluates quality on long-context benchmarks. Appendix C states asymptotic prefill/decoding complexity and KV-cache size remain unchanged; analytical added FLOPs are below 0.04%, so this is a quality-alignment method with negligible overhead, not an inference-efficiency reduction.",
+      "source_url": "https://arxiv.org/abs/2609.26718",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/13-sparse-attention/2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26777",
+      "identity_tokens": [
+        "arXiv:2609.26777"
+      ],
+      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+      "reason": "SWE-Serve benchmarks agentic software-engineering production inference serving but the abstract presents a benchmark/evaluation rather than an inference optimization method or resource-saving system.",
+      "source_url": "https://arxiv.org/abs/2609.26777",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    }
+  ]
+}
