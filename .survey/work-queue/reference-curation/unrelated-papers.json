@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:44:59+00:00",
-  "record_count": 3335,
+  "updated_at": "2026-10-05T06:47:43+00:00",
+  "record_count": 3354,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -48584,6 +48584,297 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "Atria Dawn: The Dawn of Agentic Superintelligence"
+    },
+    "arXiv:2609.16312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16312",
+      "identity_tokens": [
+        "arXiv:2609.16312"
+      ],
+      "reason": "One-to-many machine translation (MT) is computationally expensive for autoregressive (AR) systems, which suffer from linear latency scaling with both sequence length and the number of target languages. We explore how diffusion can enable multilingual translation with a discrete diffusion framework that refines all target languages in parallel, achieving sublinear latency scaling with the number of targets, and supports deployment as a single unified model to replace multiple independent systems. Conditioned on a continuous semantic anchor rather than source tokens, our framework supports zero-shot transfer to unseen source languages without retraining, maintaining approximately $75\\%$ of its supervised translation quality on zero-shot sources. We investigate the quality-latency frontier and find that with accelerated sampling, it achieves comparable supervised quality to AR baselines with a $2 \\times$ speedup and $11.9\\%$ better zero-shot BLEU. These results highlight the potential of joint multi-stream diffusion as a practical and flexible alternative for efficient one-to-many translation.",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ],
+      "title": "Efficient One-to-Many Translation with Joint Multi-Stream Diffusion"
+    },
+    "arXiv:2609.16389": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16389",
+      "identity_tokens": [
+        "arXiv:2609.16389"
+      ],
+      "reason": "Modern GPUs require not only SIMT-style parallelism but also software-managed concurrency between compute and data movement to reach maximum performance. Performance engineers must reason about subdividing work into the hierarchy of computation resources (threads, warps, warpgroups, blocks, clusters), and, in many cases, also must use asynchronous tensor core and memcpy instructions on different levels of the memory hierarchy (registers, tensor core accumulators, shared memory, global memory). Unlike CPUs, where out-of-order execution is managed by hardware and hidden from programmers, GPUs expose explicit instruction reordering to software through these asynchronous instructions. Well-established GPU programming languages generally offer either direct low-level control without safety guarantees (e.g., CUDA C++ inline assembly or intrinsics) or easier-to-analyze, high-level abstractions (e.g., Triton's tile-based model) that hide asynchronous instructions in the compiler backend, which may prevent performance engineers from maximizing performance by tuning critical details. We propose Exo-GPU, an imperative, low-level language that creates minimal abstraction over CUDA. Our key idea is to treat parallelism and synchronization as mere annotations on sequential code rather than as fundamental control flow primitives, enabling verification that these constructs do not alter the program semantics. The benefit is twofold: programmers can reason about code without hidden control flow or mutation, while allowing the Exo-GPU compiler to verify sequential-parallel equivalence--guaranteeing that parallel execution is functionally equivalent to its sequential interpretation. We used Exo-GPU to author GEMM kernels for the H100 GPU, using wgmma, TMA, and split-k. Our kernels achieved over 80% of theoretical peak on large problem sizes, in some cases outperforming the vendor-provided CUBLAS library.",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Exo-GPU: Safe, Imperative, User-schedulable Programming for Tensor Cores"
+    },
+    "arXiv:2609.16391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16391",
+      "identity_tokens": [
+        "arXiv:2609.16391"
+      ],
+      "reason": "Weight-only post-training quantization is the cheapest way to shrink a retrieval embedder, and the received advice for applying it -- protect the embedding table, allocate bits by module sensitivity, prefer a ranking-aware objective over weight reconstruction -- was carried into LLM quantization largely intact. We test that advice on retrieval embedders directly, quantizing five checkpoints from four architecture families across a grid of bit widths and group sizes, and isolating the embedding, attention and feed-forward blocks at each width. Every heuristic fails to transfer as stated. The embedding table never emerges as the dominant isolated protection priority in any family, despite being the largest tensor in several of them. Module sensitivity does not survive as a transferable ordering: at INT4/g16 the spread between modules is too small to allocate against, at INT3 the ordering becomes family-dependent and joint damage stops being the sum of its parts, and at INT2 comparable reconstruction error accompanies retention ranging from 1.3 to 65.9 percent of full precision. A cheap reconstruction proxy is useful for screening uniform bit widths but substantially less reliable for choosing which tensors to protect; its apparent strength across the whole grid is a range-extension artifact. A distilled 109M student at INT3 holds 78.04 NDCG@10 in 68.4 MB and dominates the extreme-PTQ arm of its own 0.6B teacher, 297.9 MB at 64.46, on both size and quality -- but only inside the task it was distilled for. Sizes are byte counts of files that exist rather than arithmetic estimates, and the measurement repository carries the byte provenance for every one of them.",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Where Post-Training Quantization Breaks Text Embedders: A Measured Map Across Four Embedder Families"
+    },
+    "arXiv:2609.27371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27371",
+      "identity_tokens": [
+        "arXiv:2609.27371"
+      ],
+      "reason": "Generative image models can produce highly realistic images, raising concerns about potential misuse in creating deceptive content. Current deepfake approaches face several challenges, including limited generalizability, lack of interpretability, and poor actionability. To help address these, we present ASAP, an interactive visualization system designed to empower users in the analysis and summarization of deceptive patterns in AI-generated images. ASAP introduces a novel CLIP-adapted image encoder that generates interpretable representations, enabling the extraction of influential pixel regions via calculated masks. This approach facilitates the identification of key deceptive features through influence measurement techniques. These backend techniques are integrated into a visual analytics dashboard that allows users to quantify and analyze authenticity-indicative patterns in image collections containing both authentic and AI-generated images. This approach also supports the comparative analysis of various generative models, including GANs and diffusion models. We demonstrate ASAP’s efficacy through a user study and two application scenarios using established fake image detection benchmarks, showcasing its ability to effectively extract and quantify deceptive patterns.",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "ASAP: Visual analytics for identifying and analyzing image patterns in AI-generated images"
+    },
+    "arXiv:2609.17599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17599",
+      "identity_tokens": [
+        "arXiv:2609.17599"
+      ],
+      "reason": "一次要旨: A small number of unusually high-gain parameters can exert disproportionate effects in transformer language models, but whether analogous structures recur in genomic foundation models and whether structural geometry determines functional importance remains unknown. We analyzed high-gain rows in gated feed-forward networks across text and genomic foundation models, including a frozen 22-model causal census. Computing",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Structure is not mechanism: high-gain gated-FFN rows across text and genomic foundation models"
+    },
+    "arXiv:2609.13645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13645",
+      "identity_tokens": [
+        "arXiv:2609.13645"
+      ],
+      "reason": "一次要旨: Training large models still relies on general-purpose frameworks such as Megatron-LM, whose generality tax constrains scenario-specific optimization and adds runtime overhead through accumulated abstraction. AI code generation reduces the cost of building a framework, and makes it affordable to forge one per scenario. We propose Forge Engineering: building a dedicated implementation from scratch for each scenario and",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "ForgeTrain: Forging Production-Grade Training Frameworks via Harness-Driven AI Development"
+    },
+    "arXiv:2609.13647": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13647",
+      "identity_tokens": [
+        "arXiv:2609.13647"
+      ],
+      "reason": "一次要旨: The rapid development of unmanned aerial vehicle (UAV) technology has made aerial-image object detection increasingly important for natural-resource monitoring, traffic management, and disaster response. Detecting small objects in aerial images remains difficult because objects occupy very few pixels, high-frequency cues are easily lost, and global context is hard to model in cluttered scenes. Existing detectors ofte",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "YOLO12-MambaScan: An Efficient Object Detector with High-Frequency Enhancement and State-Space Modeling"
+    },
+    "arXiv:2609.13654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13654",
+      "identity_tokens": [
+        "arXiv:2609.13654"
+      ],
+      "reason": "一次要旨: Pretrained foundation models (FMs) have achieved remarkable success in computer vision, yet their high fine-tuning cost limits practical deployment. Parameter-efficient fine-tuning (PEFT) methods such as Low-Rank Adaptation (LoRA) improve efficiency by constraining updates to a predefined low-rank subspace. However, when applied to remote sensing tasks with substantial domain shifts, the fixed subspace is constructed",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Multimodal Foundation Models Adaptation based on Domain-Aware Relaxed Orthogonal Subspace for Remote Sensing"
+    },
+    "arXiv:2609.13680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13680",
+      "identity_tokens": [
+        "arXiv:2609.13680"
+      ],
+      "reason": "一次要旨: Fine-tuning instruct models often improves target performance while inducing behavioral drift from the reference model, which can degrade existing capabilities. Rather than treating this drift as an uncontrolled consequence of optimization, we specify a behavioral drift budget before optimization and ask how to boost the target-task performance within it. Locally, behavioral drift induces a shared geometry anchored a",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Drift-Constrained Optimization: Only Direction Matters in Fine-Tuning Instruct Models"
+    },
+    "arXiv:2609.31654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31654",
+      "identity_tokens": [
+        "arXiv:2609.31654"
+      ],
+      "reason": "Video diffusion transformers depend on temporal attention to coordinate information across frames, yet nearly everything known about this mechanism comes from analyzing trained models, so when and where temporal-attention structure forms during training remains poorly characterized. Population averages can also hide it, since a few specializing heads and a diffusing majority cancel in the mean. We therefore conduct a checkpoint-resolved census of every temporal-attention head across nine Open-Sora STDiT training runs spanning three model scales (306M to 1.03B parameters), scoring each head with an entropy-normalized measure of cross-frame attention concentration (CFAC) under a preregistered change-point and effect-size selection rule. The census reveals the sparse picture that averages obscure. Aggregate CFAC is flat or decreasing in every run, while a small minority of heads, roughly 4--13% in full-grid runs, develops pronounced concentration. Across seeds, the reproducible signal is positional but block-level. Selected heads repeatedly arise in the first temporal block, whereas individual head coordinates do not reproduce once block membership is accounted for. Among the analyzed 760M selected heads, attention maps converge to a small repertoire of local frame-routing motifs, self-frame diagonals and adjacent-frame bands, even when the responsible coordinates differ across runs. Correlation and ablation analyses do not establish a causal link to generated video quality, and we bound our claims accordingly. Beyond this STDiT family, the study contributes a transferable methodology. Checkpoint-resolved, per-head analysis under fixed selection rules can expose sparse temporal organization in other factorized video diffusion transformers and, with adapted routing metrics, in joint spatio-temporal architectures.",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Temporal-Attention Head Specialization During Video Diffusion Training"
+    },
+    "DOI:10.64898/2026.09.08.750216": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.08.750216",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.08.750216"
+      ],
+      "reason": "The range of peptides a human leukocyte antigen (HLA) binds and displays modulates immune response and therefore underpins vaccine design, neoantigen discovery, autoimmunity, transplantation, and hypersensitivity reactions. Modern predictors of peptide–HLA (pMHC) binding and presentation are remarkably accurate, but they are black boxes; their internal computations are opaque and post-hoc explanatory methods lack guarantees of attribution. Here we introduce LAtent Motif INteraction Aggregation (LAMINA), an architecture whose prediction is, by construction, interpretable and attributable. LAMINA embeds every gapless subsequence of the HLA pseudosequence and of the candidate peptide as a learned “soft” motif, scores every HLA–peptide-motif pair, and lastly aggregates those scores to produce a prediction. Despite having only 4.7 million parameters and training in about ten hours on a single desktop workstation, LAMINA matches or exceeds state-of-the-art predictors on held-out binding-affinity regression and is competitive on rank correlation. Strikingly, the model states correlate with interaction energies and other structural metrics in structurally characterized pMHC complexes, despite training exclusively on sequence data alone.",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "An interpretable peptide–HLA model emergently learns binding energetics and structure"
+    },
+    "arXiv:2609.14258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14258",
+      "identity_tokens": [
+        "arXiv:2609.14258"
+      ],
+      "reason": "Vision-language models (VLMs) remain vulnerable to jailbreaks that distribute harmful intent across text and images, making unimodal safety mechanisms insufficient. We investigate whether this vulnerability can be mitigated directly in the multimodal key-value (KV) memory formed during prefill, without modifying model parameters at inference time. We introduce SPARK, a two-stage framework for targeted KV-memory repair. Stage 1 uses a disposable diagnostic adapter to identify harm-associated directions in multimodal key and value representations. Stage 2 projects out these directions, learns a lightweight residual repair, and anchors repaired keys with an image-structural prior to preserve visual grounding. Rather than applying the intervention uniformly, SPARK mixes repaired and original memory using a head-wise coefficient g_h* determined by intervention-relevant subspace energy E_h, requiring no explicit harm classifier at inference. Across LLaVA-OneVision-7B, Chameleon-7B, Qwen2-VL-7B, and InternVL2-4B, SPARK reduces multimodal attack success while preserving general capability. On LLaVA-OneVision-7B, image-only jailbreak attack success falls to 4.7%, while MMMU remains within 0.6 points of the undefended model (47.8 vs. 48.4) with near-baseline language quality. On MM-SafetyBench, attack success decreases from 39.2% to 12.4%. Even under white-box adaptive joint prompt-image attacks, attack success is limited to 20.3%, compared with 54.6% for the undefended model. These results suggest that multimodal jailbreak behavior can be substantially mitigated by selectively repairing intervention-relevant KV subspaces at prefill, particularly when harmful evidence is carried by the visual modality.",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "SPARK: Representation-Level KV Memory Alignment for Safer Vision-Language Models"
+    },
+    "arXiv:2609.14306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14306",
+      "identity_tokens": [
+        "arXiv:2609.14306"
+      ],
+      "reason": "Training a Mixture-of-Experts (MoE) model at long context or large batch size fails as soon as any one component's peak allocation exceeds device memory, so the target is every peak at once, not the average footprint. Four are left unbounded by the parallelism plans in common use, and each grows differently: expert dispatch with the routing matrix, the vocabulary projection with tokens times vocabulary, gradient checkpoint boundaries with depth times sequence length, and optimizer state with parameter count. Which one runs out first changes with the model, the context length, and the device count, so lowering the largest only exposes the next. We bound all four with schedules whose GPU working set is fixed at launch: PipelinedLLEP extends least-loaded expert parallelism with a cap on the tokens each source contributes to a dispatch chunk, Ring-DTP circulates activations or weight shards around a ring at the vocabulary projection and folds each block of logits into an online log-sum-exp, Selective checkpoint offload (SCO) keeps the one long-lived tensor of each checkpoint boundary in CPU memory, and OffloadStreamAdamW turns the serial CPU Adam update of optimizer offload into a bucket pipeline. All four change only the order and granularity of computation and data movement, so the loss and gradients stay exact. In matched component tests, they cut the MoE dispatch peak by up to $59.3\\%$ without losing throughput, the vocabulary projection peak by $86.6\\%$, and the offloaded optimizer step by $2.05\\times$ faster. Composed on MoE models from 120B to 667B parameters, they train at 1M context length, $8$--$32\\times$ the reach of a tuned FSDP2 baseline, and up to $10.4\\times$ its throughput.",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/12-moe-parallelism-communication/2026-2601.17111-least-loaded-expert-parallelism-load-balancing-an-imbalanced-mixture-of-.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training"
+    },
+    "arXiv:2609.14320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14320",
+      "identity_tokens": [
+        "arXiv:2609.14320"
+      ],
+      "reason": "Recently, linear attention layers have been increasingly adopted to replace softmax attention at scale for long-context modeling. However, existing context extension approaches typically apply continued pretraining directly without modifying these layers, overlooking the spectral properties of linear attention state dynamics. In this work, we study long-context extension of Gated DeltaNet (GDN) from a spectral perspective of transition matrix and identify two essential factors governing long-range information retrieval: (1) a sufficiently broad slow spectral band aligned with the target dependency length, and (2) the preservation of fast-decaying modes for state clearing and context switching. Based on this observation, we propose SpectralShift, a spectral reparameterization approach for long-context continual pretraining of GDNs. Specifically, SpectralShift reparameterizes the alpha projections initialization to reshape the decay spectrum by enhancing slow propagation capacity, and further introduces a learning-rate scaling for alpha projections to facilitate long-context training. Experiments show that SpectralShift consistently improves long-context capabilities over training, providing an effective and efficient solution for extending context windows of linear attention models. The code has been open-sourced at https://github.com/RUCAIBox/GDN-SpectralShift.",
+      "first_checked_at": "2026-10-05T06:47:42+00:00",
+      "last_checked_at": "2026-10-05T06:47:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "SpectralShift: Effective Context Window Extension of Gated DeltaNet via Spectral Reparameterization"
+    },
+    "arXiv:2609.14399": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14399",
+      "identity_tokens": [
+        "arXiv:2609.14399"
+      ],
+      "reason": "Natural language prompts and skills serve as the strategic backbone of LLM-based agents. Recent advances in prompt and skill optimization have achieved notable gains, yet all existing methods optimize a \\emph{single} text template---missing the synergy among multiple complementary strategies. We propose MOSCOPT, a text-native, parameter-free algorithm that jointly optimizes a pool of $N$ skills and a gating skill $G$ that dynamically selects $K$ skills per step. To effectively optimize the skills, we build the EditAdam with internally maintained dual states. Through the three-phase interleaved updates with EditAdam, the system monotonically improves without gradient or parameter tuning. Extensive experiments and detailed ablations across 5 benchmarks and 3 target LLMs demonstrate that MOSCOPT consistently outperforms all baselines, and confirm that both the mixture-of-skills architecture with selective activation and the collective evolution with three-phase interleaving are essential to its superior performance. Code is released https://github.com/zhangzhenyu13/SummerClaw/tree/master/summerclaw/agent_trainer/algorithms/moscopt.",
+      "first_checked_at": "2026-10-05T06:47:43+00:00",
+      "last_checked_at": "2026-10-05T06:47:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "MOSCOPT: Mixture-of-Skills Collective Optimization for LLM Agents"
+    },
+    "arXiv:2609.14413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14413",
+      "identity_tokens": [
+        "arXiv:2609.14413"
+      ],
+      "reason": "Large language model (LLM)-based database migration is often treated as direct code transformation, although enterprise Oracle systems contain heterogeneous SQL and PL/SQL artifacts with different dependencies, execution order, complexity, and validation needs. This paper proposes a hybrid dependency-aware framework that identifies migration tasks, builds a cross-file dependency graph, condenses cyclic dependencies, and uses task specifications to generate specialized migration agents at runtime. The deterministic path combines ANTLR-based parsing with typed dependency extraction, while an LLM fallback is invoked only for units that cannot be parsed reliably. On a corpus of 116 Oracle files, the pipeline produced 1,037 units with zero coverage gaps and 1,271 AST-derived dependencies. The fallback processed 165 parse-error units, recovered 496 additional validated dependencies, eliminated unresolved-dependency units, and increased resolved internal edges from 446 to 527. The graph contained four dependency-respecting phases, while cycle handling was validated separately using Tarjan SCC condensation. A complementary experiment on 1,006 PL/SQL files regenerated 623 scripts (~62%), of which 380 (~61%) executed successfully in PostgreSQL 16. Tables achieved about 85% regeneration success, whereas no query regenerations succeeded under the evaluated specification-mediated baseline, and procedural objects remained strongly dependent on schema context. These results motivate dependency-aware context delivery, task-specific validation, and differentiated agent routing. The paper also formalizes task-to-agent mapping, introduces monitoring and diagnostics for execution feedback, and defines a controlled comparison of monolithic, static-decomposition, dependency-aware, and dynamically orchestrated migration strategies.",
+      "first_checked_at": "2026-10-05T06:47:43+00:00",
+      "last_checked_at": "2026-10-05T06:47:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "A Hybrid Dependency-Aware Framework for Task Decomposition and Dynamic Agent Generation in Oracle-to-PostgreSQL Migration"
+    },
+    "arXiv:2609.14715": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14715",
+      "identity_tokens": [
+        "arXiv:2609.14715"
+      ],
+      "reason": "We scale our conventional sub-150M pretraining recipe from 53.5M to 109.7M parameters, holding the method fixed (Qwen3-style decoder with grouped-query attention, RoPE, SwiGLU, RMSNorm, QK-Norm, and a z-loss; FineWeb-Edu data) and changing only the geometry to a deep-and-thin 23-layer x 576-hidden design. The larger model improves across the board -- BLiMP 78.1 ->81.3, ARC-Easy 51.4 ->52.5, WikiText-2 byte-perplexity 2.04 ->1.95 -- and its 81.3% BLiMP essentially matches GPT-X2-125M (81.28) at about 12% fewer parameters. Notably the 110M model achieves this on fewer training tokens (about 8B vs 12B), so the gain is attributable to capacity and depth, not more data. Both models are deliberately conventional; this report is a clean scaling control and the baseline rung (R0) of an ablation study of what further improves models in this regime. An ablation ladder follows: value residuals (R1) and the Muon optimizer (R2) lift ARC-Easy by a cumulative +3.6 (52.5 ->56.1) at a near-flat BLiMP and are kept; a diverse data blend (R3) and two logit-distillation settings (R4a/R4b) are not kept -- honest negatives. R3 pins ARC-Easy to FineWeb-Edu's educational filtering rather than raw diversity; distillation from a 1.7B teacher can reach the class-leading ARC-Easy (56.99, matching GPT-X2-125M) but only at a perplexity cost that dialing KD down then erases -- so R2 remains the best kept stack.",
+      "first_checked_at": "2026-10-05T06:47:43+00:00",
+      "last_checked_at": "2026-10-05T06:47:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Depth and Scale in the Sub-150M Regime: JugnuLM-53M vs JugnuLM-110M"
+    },
+    "arXiv:2609.14739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14739",
+      "identity_tokens": [
+        "arXiv:2609.14739"
+      ],
+      "reason": "Large language models are increasingly used in high-stakes domains such as law, where systems must ground their reasoning in retrieved evidence and abstain when that evidence is insufficient. However, existing reward models are largely optimised for general preferences rather than contextual grounding, limiting their ability to evaluate these behaviours in retrieval-augmented generation (RAG) settings. We introduce a framework for transforming existing legal QA datasets into contextual preference data and use it to construct LegalRewardBench (LRB), a benchmark for evaluating grounded legal generation under noisy and insufficient retrieval conditions. Across general and legal contextual evaluation, we find that contextual DPO improves grounded evaluation, but performance is sensitive to preference-data construction. Length-balanced augmentation substantially improves grounded legal evaluation, with the strongest configuration combining length-balanced legal and general contextual preference data and improving performance by up to $\\mathbf{+25.6}$pp over baseline. We further find evidence of cross-jurisdiction transfer: models contextually refined primarily on Victorian criminal-law data improve grounded evaluation on external US legal benchmarks, including a $\\mathbf{+16.2}$pp improvement on \\textsc{Housing Statute QA}. Together, these results provide a reproducible foundation for constructing and evaluating grounded legal reward models in retrieval-augmented settings.",
+      "first_checked_at": "2026-10-05T06:47:43+00:00",
+      "last_checked_at": "2026-10-05T06:47:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Building Legal Reward Models for Grounding and Abstention"
+    },
+    "arXiv:2609.14803": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14803",
+      "identity_tokens": [
+        "arXiv:2609.14803"
+      ],
+      "reason": "This paper reports experiments across six frontier model types from OpenAI, Anthropic, xAI, and Google DeepMind. Ten independent sessions per model type used the same three stage prompt sequence, progressing from architectural preference to a full ASCII backbone. Under the school audience framing, responses repeatedly converged on a shared architectural pattern built around persistent latent state, adaptive computation, memory, specialist routing, verification, stopping control, and delayed decoding. Most runs remained close to this common structure, while a small number developed markedly greater engineering specificity. The audience framing appears to be an important condition of this effect. In additional control runs that removed the school framing while retaining the architectural request, responses became substantially more heterogeneous and failed to reproduce the same stable motif convergence. One observation is particularly striking. GPT-5.6 Sol produced an unusually elaborate successor architecture whose organization closely overlaps with the architecture independently sketched by GPT-6 Astra. Because the prompts explicitly ask each model to imagine an architectural future, this resemblance raises a testable question: whether the overlap reflects exposure to related architectural concepts, a shared learned design prior, or independent convergence toward similar computational principles. The paper uses the term epistemic jailbreak for the accompanying loss of discipline in technical provenance as requested specificity increases. The experiments establish a repeatable behavioral pattern and do not authenticate proprietary implementation claims. What we leave to the community is a harder question: are these models independently imagining the same architectural future, or do such motifs somehow propagate between model families?",
+      "first_checked_at": "2026-10-05T06:47:43+00:00",
+      "last_checked_at": "2026-10-05T06:47:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Another Blueprint In The Wall: How to Ask Frontier AI Like a Kid?"
     }
   }
 }

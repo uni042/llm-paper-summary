@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:44:58+00:00",
-  "record_count": 1023,
+  "updated_at": "2026-10-05T06:47:41+00:00",
+  "record_count": 1024,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15600,6 +15600,27 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup"
+    },
+    "arXiv:2609.16372": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16372",
+      "identity_tokens": [
+        "arXiv:2609.16372"
+      ],
+      "reason": "固定stateによるcontext reductionは推論時効率と関連するが、本文はquality比較が中心でresource savingsを示さず、効率上の効果を確定できない。",
+      "first_checked_at": "2026-10-05T06:47:41+00:00",
+      "last_checked_at": "2026-10-05T06:47:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Register Tokens for Bounded-State Reasoning in Diffusion Language Models"
     }
   }
 }

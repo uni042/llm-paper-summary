@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20f77a3a72a646a8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.16389",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.16389",
+    "identity_tokens": [
+      "arXiv:2609.16389"
+    ],
+    "reason": "Modern GPUs require not only SIMT-style parallelism but also software-managed concurrency between compute and data movement to reach maximum performance. Performance engineers must reason about subdividing work into the hierarchy of computation resources (threads, warps, warpgroups, blocks, clusters), and, in many cases, also must use asynchronous tensor core and memcpy instructions on different levels of the memory hierarchy (registers, tensor core accumulators, shared memory, global memory). Unlike CPUs, where out-of-order execution is managed by hardware and hidden from programmers, GPUs expose explicit instruction reordering to software through these asynchronous instructions. Well-established GPU programming languages generally offer either direct low-level control without safety guarantees (e.g., CUDA C++ inline assembly or intrinsics) or easier-to-analyze, high-level abstractions (e.g., Triton's tile-based model) that hide asynchronous instructions in the compiler backend, which may prevent performance engineers from maximizing performance by tuning critical details. We propose Exo-GPU, an imperative, low-level language that creates minimal abstraction over CUDA. Our key idea is to treat parallelism and synchronization as mere annotations on sequential code rather than as fundamental control flow primitives, enabling verification that these constructs do not alter the program semantics. The benefit is twofold: programmers can reason about code without hidden control flow or mutation, while allowing the Exo-GPU compiler to verify sequential-parallel equivalence--guaranteeing that parallel execution is functionally equivalent to its sequential interpretation. We used Exo-GPU to author GEMM kernels for the H100 GPU, using wgmma, TMA, and split-k. Our kernels achieved over 80% of theoretical peak on large problem sizes, in some cases outperforming the vendor-provided CUBLAS library.",
+    "first_checked_at": "2026-10-05T06:47:41+00:00",
+    "last_checked_at": "2026-10-05T06:47:41+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Exo-GPU: Safe, Imperative, User-schedulable Programming for Tensor Cores"
+  },
+  "processed_at": "2026-10-05T06:47:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20f77a3a72a6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
