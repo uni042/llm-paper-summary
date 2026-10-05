@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-13-part-08-100d191e9907",
+  "reference_main_sha": "450952d4bf80271117a556aba510616b0f611917",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660767",
+      "identity_tokens": [
+        "DOI:10.1109/lcn67947.2026.11660767"
+      ],
+      "title": "NeuFAS: Edge-Efficient Mamba-Based Channel Estimation for Fluid Antenna Systems",
+      "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+      "source_url": "https://doi.org/10.1109/lcn67947.2026.11660767",
+      "first_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "last_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/lcn67947.2026.11660787",
+      "identity_tokens": [
+        "DOI:10.1109/lcn67947.2026.11660787"
+      ],
+      "title": "From Brownfield CLI to Intent Models: A Guardrailed Agentic Translation Workflow",
+      "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+      "source_url": "https://doi.org/10.1109/lcn67947.2026.11660787",
+      "first_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "last_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/LRA.2026.3706944",
+      "identity_tokens": [
+        "DOI:10.1109/LRA.2026.3706944"
+      ],
+      "title": "Action and Detection Chunking With Transformers Based on Experience Tree",
+      "reason": "一次要旨とtitleはAction and Detection Chunking With Transformers Based on Experience Treeを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+      "source_url": "https://doi.org/10.1109/LRA.2026.3706944",
+      "first_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "last_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/LRA.2026.3728316",
+      "identity_tokens": [
+        "DOI:10.1109/LRA.2026.3728316"
+      ],
+      "title": "Robot Independent Intelligence: When Language Vanishes in Vision-Language-Action Models",
+      "reason": "一次要旨とtitleはRobot Independent Intelligence: When Language Vanishes in Vision-Language-Action Modelsを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+      "source_url": "https://doi.org/10.1109/LRA.2026.3728316",
+      "first_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "last_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MC.2026.3717392",
+      "identity_tokens": [
+        "DOI:10.1109/MC.2026.3717392"
+      ],
+      "title": "The Next Memory Wall: Why Moving Data Will Define the Future of AI Inference",
+      "reason": "対象テーマに近いが、一次本文の議論・根拠・技術範囲を取得できず、短い概説記事がLLM inference efficiencyへ与える具体的な貢献を判定できないためborderline。",
+      "source_url": "https://doi.org/10.1109/MC.2026.3717392",
+      "first_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "last_checked_at": "2026-10-05T03:51:44.283725+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
