@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1730-scheduled-chat-30/r02",
+  "reference_main_sha": "ded8c63c976f76c3652ca5636c218a5bb4de9336",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.04618",
+      "identity_tokens": [
+        "arXiv:2510.04618"
+      ],
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models",
+      "reason": "ACEはagent memory/contextをincrementalに蓄積・整理してcontext collapseを避け、adaptation latencyとrollout costも削減する。agentic inference効率に関連するが、主要貢献はcontext adaptation手法と能力改善でserving runtimeそのものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2510.04618",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でgeneration-reflection-curation、online agent memory、+10.6% agent性能、adaptation latency/rollout cost低減を確認。runtime system専論ではないためborderline。",
+      "first_checked_at": "2026-10-05T17:27:00+09:00",
+      "last_checked_at": "2026-10-05T17:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3697010",
+      "identity_tokens": [
+        "DOI:10.1145/3697010",
+        "arXiv:2308.02828"
+      ],
+      "title": "An Empirical Study of the Non-determinism of ChatGPT in Code Generation",
+      "reason": "同一promptへのChatGPT code generation出力の非決定性を829問題で測る再現性・評価研究。temperature=0でも非決定性が残ることを示すが、推論runtime・memory・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.02828",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でCodeContests/APPS/HumanEval、829 tasks、output nondeterminismとtemperature影響が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:27:00+09:00",
+      "last_checked_at": "2026-10-05T17:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.17126",
+      "identity_tokens": [
+        "arXiv:2305.17126"
+      ],
+      "title": "Large Language Models as Tool Makers",
+      "reason": "高価なLLMが一度toolを生成し、軽量LLMがそのtoolを再利用する二段構成とfunctional cacheでtool-making costを複数requestへ償却し、GPT-4相当性能を維持しながら平均inference costを削減する。agentic inferenceのcache/cost最適化として対象内。",
+      "source_url": "https://arxiv.org/abs/2305.17126",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でtool maker/tool user分離、server-side tool caching、functional cache、GPT-4 maker+GPT-3.5 userによるinference cost削減を確認。",
+      "first_checked_at": "2026-10-05T17:27:00+09:00",
+      "last_checked_at": "2026-10-05T17:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3081333.3081360",
+      "identity_tokens": [
+        "DOI:10.1145/3081333.3081360"
+      ],
+      "title": "DeepMon: Mobile GPU-based Deep Learning Framework for Continuous Vision Applications",
+      "reason": "mobile GPUへCNN convolutionをoffloadして連続vision inferenceを高速・省電力化するsystem研究だが、対象はVGG等の一般DNN/CNNでLLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1145/3081333.3081360",
+      "body_check": "abstract_screen_only: 出版社/著者機関一次書誌要旨でmobile GPU、CNN/RNN continuous vision、VGG-16をGalaxy S7で644msが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:27:00+09:00",
+      "last_checked_at": "2026-10-05T17:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.15327",
+      "identity_tokens": [
+        "arXiv:2010.15327"
+      ],
+      "title": "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth",
+      "reason": "networkの幅・深さが内部表現と誤りpatternへ与える影響を分析するrepresentation/interpretability研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2010.15327",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でwidth/depth、hidden representation block structure、prediction error patternsが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:27:00+09:00",
+      "last_checked_at": "2026-10-05T17:27:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 47
+    }
+  ]
+}
