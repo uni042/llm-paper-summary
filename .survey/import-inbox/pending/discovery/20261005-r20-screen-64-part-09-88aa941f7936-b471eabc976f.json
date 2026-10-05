@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-64-part-09-88aa941f7936",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.14550",
+      "identity_tokens": [
+        "arXiv:2406.14550"
+      ],
+      "title": "GraphReader: Building Graph-based Agent to Enhance Long-Context Abilities of Large Language Models",
+      "reason": "A possible context/memory efficiency implication, but no runtime/cost result is measured and contribution is long-context QA quality.",
+      "source_url": "https://arxiv.org/abs/2406.14550",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3708493.3712691",
+      "identity_tokens": [
+        "DOI:10.1145/3708493.3712691"
+      ],
+      "title": "LLM Compiler: Foundation Language Models for Compiler Optimization",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3708493.3712691. Abstract summary: Large Language Models (LLMs) have demonstrated remarkable capabilities across a variety of software engineering and coding tasks. However, their application in the domain of code and compiler optimization remains underexplored. Training LLMs is resource-intensive, requiring substantial GPU hours and extensive data collection, wh Out of scope: LLM Compiler is a model for compiler optimization tasks, not LLM serving runtime.",
+      "source_url": "https://doi.org/10.1145/3708493.3712691",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04925",
+      "identity_tokens": [
+        "arXiv:2404.04925"
+      ],
+      "title": "Multilingual Large Language Model: A Survey of Resources, Taxonomy and Frontiers",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2404.04925. Abstract summary: Multilingual Large Language Models are capable of using powerful Large Language Models to handle and respond to queries in multiple languages, which achieves remarkable success in multilingual natural language processing tasks. Despite these breakthroughs, there still remains a lack of a comprehensive survey to summarize existin Out of scope: Multilingual LLM resource/taxonomy survey, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2404.04925",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17651",
+      "identity_tokens": [
+        "arXiv:2305.17651"
+      ],
+      "title": "DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.17651. Abstract summary: Self-supervised learning (SSL) has achieved notable success in many speech processing tasks, but the large model size and heavy computational cost hinder the deployment. Knowledge distillation trains a small student model to mimic the behavior of a large teacher model. However, the student architecture usually needs to be manual Out of scope: Speech self-supervised model pruning/distillation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2305.17651",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.15724",
+      "identity_tokens": [
+        "arXiv:2303.15724"
+      ],
+      "title": "Scalable, Detailed and Mask-Free Universal Photometric Stereo",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2303.15724. Abstract summary: In this paper, we introduce SDM-UniPS, a groundbreaking Scalable, Detailed, Mask-free, and Universal Photometric Stereo network. Our approach can recover astonishingly intricate surface normal maps, rivaling the quality of 3D scanners, even when images are captured under unknown, spatially-varying lighting conditions in uncontro Out of scope: Photometric stereo vision reconstruction.",
+      "source_url": "https://arxiv.org/abs/2303.15724",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    }
+  ]
+}
