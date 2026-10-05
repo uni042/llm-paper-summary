@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6ffd13496db3493-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.25010",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.25010",
+    "identity_tokens": [
+      "arXiv:2606.25010"
+    ],
+    "reason": "疎attentionパターンからの能力創発を学習段階で分析する研究で、LLM推論システムの貢献ではない。",
+    "first_checked_at": "2026-10-05T03:44:13+00:00",
+    "last_checked_at": "2026-10-05T03:44:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Emergent Capabilities Arise Randomly from Learning Sparse Attention Patterns"
+  },
+  "processed_at": "2026-10-05T03:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6ffd13496db",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

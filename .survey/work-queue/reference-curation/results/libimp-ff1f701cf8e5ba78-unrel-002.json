@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff1f701cf8e5ba78-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.27069",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.27069",
+    "identity_tokens": [
+      "arXiv:2606.27069"
+    ],
+    "reason": "司法判断の差異を説明するマルチタスク学習であり、LLM推論システムの研究ではない。",
+    "first_checked_at": "2026-10-05T03:44:13+00:00",
+    "last_checked_at": "2026-10-05T03:44:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Towards Explainable Adjudicative Variance: Quantifying Judicial Discretion via Gated Multi-Task Learning"
+  },
+  "processed_at": "2026-10-05T03:44:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff1f701cf8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

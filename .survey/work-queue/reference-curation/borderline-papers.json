@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:41:22+00:00",
-  "record_count": 780,
+  "updated_at": "2026-10-05T03:44:13+00:00",
+  "record_count": 785,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11535,6 +11535,76 @@
         "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
       ],
       "title": "Wrong Before Right: Late Rescue and Interface Failure in Aligned Language Models"
+    },
+    "arXiv:2606.25509": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25509",
+      "identity_tokens": [
+        "arXiv:2606.25509"
+      ],
+      "reason": "特定の自動運転制御アーキテクチャ内のLLM呼出制御であり、汎用LLM inference/serving mechanismではない。screen対象範囲への移送可能性は限定的。",
+      "first_checked_at": "2026-10-05T03:44:12+00:00",
+      "last_checked_at": "2026-10-05T03:44:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "ASSCG: Just-Right Gating over Chattering for Fast-Slow LLM Planning in Autonomous Driving"
+    },
+    "arXiv:2606.28925": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28925",
+      "identity_tokens": [
+        "arXiv:2606.28925"
+      ],
+      "reason": "LLM servingのrequest-level model routingや実際のinference workload削減システムではなく、タスク層のagent選択ベンチマーク。対象範囲との接続が間接的で、次工程へ進めるだけのserving寄与は確認できない。",
+      "first_checked_at": "2026-10-05T03:44:13+00:00",
+      "last_checked_at": "2026-10-05T03:44:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Multi-Agent Routing as Set-Valued Prediction: A WildChat Benchmark and Cost-Aware Evaluation"
+    },
+    "arXiv:2606.27617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27617",
+      "identity_tokens": [
+        "arXiv:2606.27617"
+      ],
+      "reason": "本文でsystem throughput、latency、memoryまたは同品質での計算削減を確認できず、生成モデル設計の価値はあるが推論効率研究としての貢献が曖昧。",
+      "first_checked_at": "2026-10-05T03:44:13+00:00",
+      "last_checked_at": "2026-10-05T03:44:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Masked Language Flow Models"
+    },
+    "arXiv:2606.25156": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25156",
+      "identity_tokens": [
+        "arXiv:2606.25156"
+      ],
+      "reason": "本文自身が一モデル規模・一事前学習 regime・限られたseed/serving timingを制限としており、inference cost/quality優位の一般的証拠は不足。compression memoryの有用性はあり得るが現状は結論を強くできない。",
+      "first_checked_at": "2026-10-05T03:44:13+00:00",
+      "last_checked_at": "2026-10-05T03:44:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "ATMA: Long-Context Language Modeling via Polar Attention and Gated-Delta Compression Memory"
+    },
+    "arXiv:2606.26978": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26978",
+      "identity_tokens": [
+        "arXiv:2606.26978"
+      ],
+      "reason": "対象はagentic program-repair workflowのtool execution policyで、model runtime/serving/inference kernel等の効率化ではない。LLM calls/tokensへ波及する間接効果に留まり、対象範囲との接続が弱い。",
+      "first_checked_at": "2026-10-05T03:44:13+00:00",
+      "last_checked_at": "2026-10-05T03:44:13+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "To Run or Not to Run: Analyzing the Cost-Effectiveness of Code Execution in LLM-Based Program Repair"
     }
   }
 }
