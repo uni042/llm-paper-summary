@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-02-part-02-3880d7faac19",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1902.09574",
+      "identity_tokens": [
+        "arXiv:1902.09574"
+      ],
+      "title": "The State of Sparsity in Deep Neural Networks",
+      "reason": "The experiments evaluate sparsification of a WMT 2014 neural-translation Transformer and ResNet-50 using sparsity/quality trade-offs, but do not measure LLM inference or serving performance. The Transformer-compression connection is indirect.",
+      "source_url": "https://arxiv.org/abs/1902.09574",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/322217.322232",
+      "identity_tokens": [
+        "DOI:10.1145/322217.322232"
+      ],
+      "title": "Parallel Prefix Computation",
+      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
+      "source_url": "https://doi.org/10.1145/322217.322232",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/075280-0441",
+      "identity_tokens": [
+        "DOI:10.52202/075280-0441"
+      ],
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "reason": "Official proceedings DOI record was not retrievable as a usable primary abstract during screening.",
+      "source_url": "https://doi.org/10.52202/075280-0441",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/w16-2301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w16-2301"
+      ],
+      "title": "Findings of the 2016 Conference on Machine Translation",
+      "reason": "Official ACL Anthology record identifies workshop proceedings but provides no usable abstract.",
+      "source_url": "https://doi.org/10.18653/v1/W16-2301",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/wacv48630.2021.00357",
+      "identity_tokens": [
+        "DOI:10.1109/wacv48630.2021.00357"
+      ],
+      "title": "Efficient Attention: Attention with Linear Complexities",
+      "reason": "The method reduces attention memory and computation, but the full text evaluates only vision tasks and does not test language models, causal attention, or LLM inference.",
+      "source_url": "https://arxiv.org/abs/1812.01243",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    }
+  ]
+}
