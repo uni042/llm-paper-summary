@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7d566a205f728f95-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.02013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.02013",
+    "identity_tokens": [
+      "arXiv:2502.02013"
+    ],
+    "reason": "言語モデル内部表現の解析と下流task性能が主題。推論時計算・メモリ・servingの効率化は要旨の貢献でない。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T02:12:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
+    ],
+    "title": "Layer by Layer: Uncovering Hidden Representations in Language Models"
+  },
+  "processed_at": "2026-10-05T02:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7d566a205f72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

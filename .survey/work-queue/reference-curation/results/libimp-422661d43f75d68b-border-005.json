@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-422661d43f75d68b-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/2425248.2425252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/2425248.2425252",
+    "identity_tokens": [
+      "DOI:10.1145/2425248.2425252"
+    ],
+    "reason": "一次資料の要旨/本文を直接確認できなかった。タイトル以外の内容を推定しない。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T02:12:07+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2605.13319-pipesd.md"
+    ],
+    "title": "Measuring energy consumption for short code paths using RAPL"
+  },
+  "processed_at": "2026-10-05T02:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-422661d43f75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

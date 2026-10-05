@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bee76ee8e834e3cd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10916-018-1003-9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10916-018-1003-9",
+    "identity_tokens": [
+      "DOI:10.1007/s10916-018-1003-9"
+    ],
+    "reason": "Bioinformatics deep-learning survey, not LLM inference.",
+    "first_checked_at": "2026-10-05T02:12:08+00:00",
+    "last_checked_at": "2026-10-05T02:12:08+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+    ],
+    "title": "A Survey of Data Mining and Deep Learning in Bioinformatics"
+  },
+  "processed_at": "2026-10-05T02:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bee76ee8e834",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

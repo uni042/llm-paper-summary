@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-422661d43f75d68b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1805.00907",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1805.00907",
+    "identity_tokens": [
+      "arXiv:1805.00907"
+    ],
+    "reason": "Glowはneural-network graph compiler lowering/code generationのsystem work。LLM-specific inference servingや推論時の効率化を評価対象としていない。",
+    "first_checked_at": "2026-10-05T02:12:07+00:00",
+    "last_checked_at": "2026-10-05T02:12:07+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+    ],
+    "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
+  },
+  "processed_at": "2026-10-05T02:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-422661d43f75",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

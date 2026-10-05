@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bee76ee8e834e3cd-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.17196",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.17196",
+    "identity_tokens": [
+      "arXiv:2410.17196"
+    ],
+    "reason": "LLM voice-assistant quality benchmark, not inference efficiency.",
+    "first_checked_at": "2026-10-05T02:12:08+00:00",
+    "last_checked_at": "2026-10-05T02:12:08+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+      "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
+    ],
+    "title": "VoiceBench: Benchmarking LLM-Based Voice Assistants"
+  },
+  "processed_at": "2026-10-05T02:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bee76ee8e834",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

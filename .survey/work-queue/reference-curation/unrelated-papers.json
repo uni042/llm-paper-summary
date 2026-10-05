@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:09:31+00:00",
-  "record_count": 1834,
+  "updated_at": "2026-10-05T02:12:08+00:00",
+  "record_count": 1850,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -26455,6 +26455,243 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
       ],
       "title": "CulturaX: A Cleaned, Enormous, and Multilingual Dataset for Large Language Models in 167 Languages"
+    },
+    "DOI:10.48550/arxiv.2401.16158": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2401.16158",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2401.16158",
+        "arXiv:2401.16158"
+      ],
+      "reason": "mobile-device visual agentがUI操作を遂行するagent architecture/evaluationであり、on-device LLM inference efficiencyの機構ではない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md"
+      ],
+      "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception"
+    },
+    "arXiv:1805.00907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1805.00907",
+      "identity_tokens": [
+        "arXiv:1805.00907"
+      ],
+      "reason": "Glowはneural-network graph compiler lowering/code generationのsystem work。LLM-specific inference servingや推論時の効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
+    },
+    "arXiv:2402.17152": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.17152",
+      "identity_tokens": [
+        "arXiv:2402.17152"
+      ],
+      "reason": "生成推薦用sequential transducerの論文。推薦モデルのarchitecture/品質評価であり、LLM推論・serving効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Actions Speak Louder than Words: Trillion-Parameter Sequential Transducers for Generative Recommendations"
+    },
+    "arXiv:2502.02013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02013",
+      "identity_tokens": [
+        "arXiv:2502.02013"
+      ],
+      "reason": "言語モデル内部表現の解析と下流task性能が主題。推論時計算・メモリ・servingの効率化は要旨の貢献でない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
+      ],
+      "title": "Layer by Layer: Uncovering Hidden Representations in Language Models"
+    },
+    "DOI:10.2196/59505": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2196/59505",
+      "identity_tokens": [
+        "DOI:10.2196/59505"
+      ],
+      "reason": "医療におけるmultimodal LLMのapplication/challengeを扱うviewpoint/surveyで、推論効率の機構・評価が主題ではない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
+      ],
+      "title": "Multimodal Large Language Models in Health Care: Applications, Challenges, and Future Outlook"
+    },
+    "arXiv:2405.10825": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.10825",
+      "identity_tokens": [
+        "arXiv:2405.10825"
+      ],
+      "reason": "通信分野のLLM利用を総覧するsurvey。通信応用が主題でLLM推論効率の研究ではない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md",
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "title": "Large Language Model (LLM) for Telecommunications: A Comprehensive Survey on Principles, Key Techniques, and Opportunities"
+    },
+    "arXiv:2010.00710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.00710",
+      "identity_tokens": [
+        "arXiv:2010.00710"
+      ],
+      "reason": "kNN machine translationはtest-time datastoreで翻訳精度向上を扱うが、要旨に推論効率・遅延低減の主張がない。",
+      "first_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "title": "Nearest Neighbor Machine Translation"
+    },
+    "DOI:10.1007/s10916-018-1003-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10916-018-1003-9",
+      "identity_tokens": [
+        "DOI:10.1007/s10916-018-1003-9"
+      ],
+      "reason": "Bioinformatics deep-learning survey, not LLM inference.",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ],
+      "title": "A Survey of Data Mining and Deep Learning in Bioinformatics"
+    },
+    "arXiv:2311.17842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17842",
+      "identity_tokens": [
+        "arXiv:2311.17842"
+      ],
+      "reason": "GPT-4V robotic planning application, not efficiency optimization.",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md"
+      ],
+      "title": "Look Before You Leap: Unveiling the Power of GPT-4V in Robotic Vision-Language Planning"
+    },
+    "arXiv:2410.17196": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17196",
+      "identity_tokens": [
+        "arXiv:2410.17196"
+      ],
+      "reason": "LLM voice-assistant quality benchmark, not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
+      ],
+      "title": "VoiceBench: Benchmarking LLM-Based Voice Assistants"
+    },
+    "DOI:10.1137/0119020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/0119020",
+      "identity_tokens": [
+        "DOI:10.1137/0119020"
+      ],
+      "reason": "Mutual-information calculation, no LLM inference relevance.",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "title": "ON THE CALCULATION OF MUTUAL INFORMATION"
+    },
+    "arXiv:2305.15717": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.15717",
+      "identity_tokens": [
+        "arXiv:2305.15717"
+      ],
+      "reason": "proprietary LLM模倣の能力・品質/データ評価が主題で、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "The False Promise of Imitating Proprietary LLMs"
+    },
+    "arXiv:2202.08904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.08904",
+      "identity_tokens": [
+        "arXiv:2202.08904"
+      ],
+      "reason": "GPT sentence embeddingsをsemantic searchへ適用する埋め込み/検索研究で、LLM generation/serving効率は扱わない。",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ],
+      "title": "SGPT: GPT Sentence Embeddings for Semantic Search"
+    },
+    "arXiv:2203.08913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.08913",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2203.08913",
+        "arXiv:2203.08913"
+      ],
+      "reason": "test-time retrieval memoryで言語モデルの長距離情報/品質を改善する研究。要旨上の主題は効率化でなく記憶能力の拡張。",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Memorizing Transformers"
+    },
+    "arXiv:2404.11018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11018",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.11018",
+        "arXiv:2404.11018"
+      ],
+      "reason": "many-shot in-context learningの性能を示す研究で、入力例増加は推論計算負荷を増やす方向であり効率手法ではない。",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/13-sparse-attention/2026-2604.16864-hierasparse.md"
+      ],
+      "title": "Many-Shot In-Context Learning"
+    },
+    "arXiv:2303.05510": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05510",
+      "identity_tokens": [
+        "arXiv:2303.05510"
+      ],
+      "reason": "LLMによるcode generation planningを品質向上の目的で評価する研究。一般的なLLM serving/inference efficiencyは対象外。",
+      "first_checked_at": "2026-10-05T02:12:08+00:00",
+      "last_checked_at": "2026-10-05T02:12:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "title": "Planning with Large Language Models for Code Generation"
     }
   }
 }
