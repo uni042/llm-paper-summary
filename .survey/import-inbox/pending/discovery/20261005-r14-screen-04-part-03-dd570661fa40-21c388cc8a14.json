@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-04-part-03-dd570661fa40",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26453",
+      "identity_tokens": [
+        "arXiv:2606.26453"
+      ],
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization",
+      "reason": "LLM agent optimizes GPU kernel code; target is code development, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.26453",
+      "first_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "last_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10671",
+      "identity_tokens": [
+        "arXiv:2606.10671"
+      ],
+      "title": "FadeMem: Distance-Aware Memory Consolidation for Autoregressive Video Diffusion",
+      "reason": "KV consolidation for video diffusion, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2606.10671",
+      "first_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "last_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725331",
+      "identity_tokens": [
+        "DOI:10.1145/3725331"
+      ],
+      "title": "OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment",
+      "reason": "Text-to-SQL few-shot/consistency method; no serving efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2502.14913",
+      "first_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "last_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41928-024-01126-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41928-024-01126-y"
+      ],
+      "title": "High-performance, power-efficient three-dimensional system-in-package designs with universal chiplet interconnect express",
+      "reason": "一次資料未取得。publisher URLの取得結果はinaccessible/403。",
+      "source_url": "https://doi.org/10.1038/s41928-024-01126-y",
+      "first_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "last_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.03315",
+      "identity_tokens": [
+        "arXiv:2102.03315"
+      ],
+      "title": "Think you have Solved Direct-Answer Question Answering? Try ARC-DA, the Direct-Answer AI2 Reasoning Challenge",
+      "reason": "Direct-answer QA dataset/benchmark proposal, not an efficiency method.",
+      "source_url": "https://arxiv.org/abs/2102.03315",
+      "first_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "last_checked_at": "2026-10-05T00:52:12.820192+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    }
+  ]
+}
