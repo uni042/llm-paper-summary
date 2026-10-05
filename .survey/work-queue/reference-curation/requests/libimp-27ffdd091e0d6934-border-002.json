@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-27ffdd091e0d6934-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1612.04426",
+  "reason": "過去hidden activationと次wordをcacheし、現在hidden stateとのdot productでcache distributionを作るtest-time memory機構。大規模cacheへ低追加コストでscaleするが、主評価はperplexity改善でruntime/memory削減の実測がなく、現代LLM serving最適化そのものではないためborderline。",
+  "title": "Improving Neural Language Models with a Continuous Cache",
+  "identity_tokens": [
+    "arXiv:1612.04426"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27ffdd091e0d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
