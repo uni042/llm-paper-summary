@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e0531e10af11819-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.knosys.2026.116445",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.knosys.2026.116445",
+    "identity_tokens": [
+      "DOI:10.1016/j.knosys.2026.116445"
+    ],
+    "reason": "Publisher material identifies a gastrointestinal endoscopy image-restoration model that adaptively selects visual tokens and fuses frequency-domain features, evaluated on image-restoration datasets. Its reported application is medical image super-resolution/denoising, not an LLM or language-model serving workload. The accessible publisher text notes failure on severely blurred images and instrument deformation.",
+    "first_checked_at": "2026-10-05T22:17:58+00:00",
+    "last_checked_at": "2026-10-05T22:17:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "title": "A self-adaptive top token transformer for gastrointestinal endoscopy image restoration"
+  },
+  "processed_at": "2026-10-05T22:17:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e0531e10af1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

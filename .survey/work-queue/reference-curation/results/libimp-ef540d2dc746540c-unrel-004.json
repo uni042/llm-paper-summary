@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef540d2dc746540c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.15351",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.15351",
+    "identity_tokens": [
+      "arXiv:2604.15351"
+    ],
+    "reason": "The abstract selects layers for efficient LoRA fine-tuning; this is training-time adaptation, which is outside scope.",
+    "first_checked_at": "2026-10-05T22:18:00+00:00",
+    "last_checked_at": "2026-10-05T22:18:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+    ],
+    "title": "Aletheia: Gradient-Guided Layer Selection for Efficient LoRA Fine-Tuning Across Architectures"
+  },
+  "processed_at": "2026-10-05T22:18:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef540d2dc746",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

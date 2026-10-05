@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T21:28:45+00:00",
-  "record_count": 2073,
+  "updated_at": "2026-10-05T22:17:59+00:00",
+  "record_count": 2077,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32037,6 +32037,64 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CORAL: Scalable Multi-Task Robot Learning via LoRA Experts"
+    },
+    "arXiv:2607.05743": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.05743",
+      "identity_tokens": [
+        "arXiv:2607.05743"
+      ],
+      "reason": "The SoK closely overlaps the linked agent execution-security lineage, but its subject is isolation/access-control/TOCTOU taxonomy and defenses rather than LLM inference, serving, or inference-time efficiency. Whether the repository accepts this adjacent security literature is a scope question; no performance or serving contribution is claimed.",
+      "first_checked_at": "2026-10-05T22:17:53+00:00",
+      "last_checked_at": "2026-10-05T22:17:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Balkanization of Execution-Security Research for AI Coding Agents: Isolation, Access Control, and Time-of-Check-to-Time-of-Use Vulnerabilities"
+    },
+    "arXiv:2202.08906": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.08906",
+      "identity_tokens": [
+        "arXiv:2202.08906"
+      ],
+      "reason": "疎MoEの安定学習・transfer設計が中心で、expert offload・serving・推論時通信最適化を主貢献としない。",
+      "first_checked_at": "2026-10-05T22:17:54+00:00",
+      "last_checked_at": "2026-10-05T22:17:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ST-MoE: Designing Stable and Transferable Sparse Expert Models"
+    },
+    "arXiv:2608.10939": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10939",
+      "identity_tokens": [
+        "arXiv:2608.10939"
+      ],
+      "reason": "The method routes compact multilingual sentence-encoder classification by language/resource tier and sometimes invokes translation; its evidence concerns narrow classification systems rather than LLM generation, general LLM serving, or model-compute optimization. The adjacency to cost-aware inference routing is weak and the task/model family mismatch remains unresolved.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Cost-Efficient Routing Pipeline for Multilingual Short-Text Classification Using Small Language Models"
+    },
+    "arXiv:2606.01838": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01838",
+      "identity_tokens": [
+        "arXiv:2606.01838"
+      ],
+      "reason": "The primary arXiv abstract describes a plausible layer-skipping method, but the submission is withdrawn and the primary record reports no PDF/full text, so method, evaluation, and limitations cannot be verified.",
+      "first_checked_at": "2026-10-05T22:17:59+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models"
     }
   }
 }

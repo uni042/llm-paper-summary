@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-155ab11cd70f6c81-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.05743",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.05743",
+    "identity_tokens": [
+      "arXiv:2607.05743"
+    ],
+    "reason": "The SoK closely overlaps the linked agent execution-security lineage, but its subject is isolation/access-control/TOCTOU taxonomy and defenses rather than LLM inference, serving, or inference-time efficiency. Whether the repository accepts this adjacent security literature is a scope question; no performance or serving contribution is claimed.",
+    "first_checked_at": "2026-10-05T22:17:53+00:00",
+    "last_checked_at": "2026-10-05T22:17:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Balkanization of Execution-Security Research for AI Coding Agents: Isolation, Access Control, and Time-of-Check-to-Time-of-Use Vulnerabilities"
+  },
+  "processed_at": "2026-10-05T22:17:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-155ab11cd70f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

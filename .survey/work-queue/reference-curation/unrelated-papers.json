@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T21:28:45+00:00",
-  "record_count": 6460,
+  "updated_at": "2026-10-05T22:18:02+00:00",
+  "record_count": 6509,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -765,21 +765,6 @@
         "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
       ],
       "title": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism"
-    },
-    "arXiv:2202.08906": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2202.08906",
-      "identity_tokens": [
-        "arXiv:2202.08906"
-      ],
-      "reason": "The primary title is ST-MoE: Designing Stable and Transferable Sparse Expert Models. Its abstract and main sections focus on training instabilities, transfer/fine-tuning quality and scaling a 269B sparse model; the paper reports a 4x pretraining speedup as context but does not study inference-serving efficiency. Its central contribution is sparse-model training stability and transfer, so it is outside the inference-efficiency scope.",
-      "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json",
-        "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[9]"
-      ],
-      "title": "ST-MoE"
     },
     "arXiv:2507.06261": {
       "classification": "unrelated",
@@ -8979,9 +8964,9 @@
       "identity_tokens": [
         "arXiv:1712.05889"
       ],
-      "reason": "Ray is a general-purpose distributed framework for interactive AI applications. The paper's conclusion notes a training/serving/simulation loop, but the motivating applications and reported evaluation focus on reinforcement-learning workloads and distributed task throughput (up to 1.8 million tasks/s), not LLM inference or LLM-serving efficiency. General framework applicability alone does not establish the required LLM-inference focus, so this is unrelated to the assigned scope.",
+      "reason": "汎用分散実行frameworkであり、LLM推論・KV・MoE・推論kernel・servingを対象にした研究ではない。",
       "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[3]"
       ],
@@ -8993,9 +8978,9 @@
       "identity_tokens": [
         "arXiv:2008.12260"
       ],
-      "reason": "Pollux is explicitly a deep-learning cluster scheduler that jointly tunes resources, batch sizes and learning rates for distributed DL training jobs. Its goodput metric combines training system throughput and statistical efficiency; the experiments and conclusion address training-job scheduling, not LLM inference or serving. Excluded under the training-only scope rule.",
+      "reason": "深層学習training jobのcluster schedulingをgoodputで最適化する研究で、主目的・評価対象が学習スループットとGPU cluster割当であり、LLM inference/serving最適化ではない。",
       "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[2]"
       ],
@@ -15719,9 +15704,9 @@
         "DOI:10.1126/science.abq1158",
         "arXiv:2203.07814"
       ],
-      "reason": "競技プログラミング問題を解くコード生成モデルAlphaCodeの学習・大規模sampling・behavior filteringと問題解決能力が主題で、LLM推論基盤の効率化を目的としない。",
+      "reason": "AlphaCodeは競技プログラミング問題に対する大規模コード生成と候補sampling/filtering/clusteringで人間レベルに近い問題解決能力を評価する研究で、LLM推論runtime・serving・memory階層の効率化を最終適用先としない。",
       "first_checked_at": "2026-10-04T14:30:19+00:00",
-      "last_checked_at": "2026-10-04T14:30:19+00:00",
+      "last_checked_at": "2026-10-05T22:17:54+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
       ],
@@ -91360,11 +91345,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1908.08167",
       "identity_tokens": [
+        "DOI:10.18653/v1/d19-1599",
         "arXiv:1908.08167"
       ],
-      "reason": "複数passage間でanswer scoreをglobal normalizationし、passage rankerも用いてopen-domain QA精度を改善するtask/modeling研究。推論runtime・memory・serving効率化を目的としない。",
+      "reason": "複数passage間でanswer scoreをglobal normalizationしopen-domain QA精度を改善するtask/model研究。主要評価はEM/F1で、推論runtime・memory・serving効率化を扱わないため対象外。",
       "first_checked_at": "2026-10-05T15:48:45+00:00",
-      "last_checked_at": "2026-10-05T15:48:45+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
       "linked_from": [],
       "title": "Multi-passage BERT: A Globally Normalized BERT Model for Open-domain Question Answering"
     },
@@ -93435,6 +93421,688 @@
         "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
       ],
       "title": "TANDEM: Bi-Level Data Mixture Optimization with Twin Networks"
+    },
+    "arXiv:2607.18541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18541",
+      "identity_tokens": [
+        "arXiv:2607.18541"
+      ],
+      "reason": "This paper analyzes GPU LZ77 lossless decompression. It attributes throughput to average match length and adjusts the encoder minimum-match-length to improve compression ratio and the decode kernel; measurements are H100/device-resident generic data. It explicitly excludes entropy/host transfer timing and is not LLM weights, activations, KV cache, or serving compression. The corrupted lineage text does not establish a technical bridge.",
+      "first_checked_at": "2026-10-05T22:17:53+00:00",
+      "last_checked_at": "2026-10-05T22:17:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.24832-optimus-elastic-decoding-diffusion-llm-serving.md"
+      ],
+      "title": "What Governs Decode Throughput in Absolute-Offset GPU LZ77? A Work-Granularity Mechanism and an Encode-Time Min-Match-Length Lever"
+    },
+    "arXiv:2607.03362": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03362",
+      "identity_tokens": [
+        "arXiv:2607.03362"
+      ],
+      "reason": "The abstract describes an industrial generative recommendation architecture; it does not identify LLM inference/serving efficiency as its contribution.",
+      "first_checked_at": "2026-10-05T22:17:53+00:00",
+      "last_checked_at": "2026-10-05T22:17:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "HGenPush: A Heterogeneous Generative Recommendation Architecture for Industrial Push Notification Systems"
+    },
+    "DOI:10.1016/j.cmpb.2026.109541": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cmpb.2026.109541",
+      "identity_tokens": [
+        "DOI:10.1016/j.cmpb.2026.109541"
+      ],
+      "reason": "The paper is a medical QA survey of multimodal/LLM applications, not a concrete inference or serving optimization.",
+      "first_checked_at": "2026-10-05T22:17:54+00:00",
+      "last_checked_at": "2026-10-05T22:17:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Medical question answering: A comprehensive multimodal and LLM-driven survey"
+    },
+    "DOI:10.1109/jiot.2026.3672720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3672720",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3672720"
+      ],
+      "reason": "The primary abstract is a federated-learning transformer for Wi-Fi 8 link mapping/IoT network performance, not LLM inference.",
+      "first_checked_at": "2026-10-05T22:17:54+00:00",
+      "last_checked_at": "2026-10-05T22:17:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "MLO TTLM Optimization for IEEE 802.11bn IoT Networks Through Federated Learning Supported Transformer-Based Correlation Estimation"
+    },
+    "arXiv:2603.07977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07977",
+      "identity_tokens": [
+        "arXiv:2603.07977"
+      ],
+      "reason": "The MoE architecture is for machine-learning interatomic potentials, not language-model inference or serving.",
+      "first_checked_at": "2026-10-05T22:17:55+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Mixture of experts architectures for machine learning interatomic potentials"
+    },
+    "arXiv:2603.01412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01412",
+      "identity_tokens": [
+        "arXiv:2603.01412"
+      ],
+      "reason": "The abstract concerns efficient single-object visual tracking; no LLM inference or serving contribution is described.",
+      "first_checked_at": "2026-10-05T22:17:55+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "UETrack: A Unified and Efficient Framework for Single Object Tracking"
+    },
+    "arXiv:2609.34344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34344",
+      "identity_tokens": [
+        "arXiv:2609.34344"
+      ],
+      "reason": "The paper studies RLVR training dynamics and uses trainable activation-space vectors to analyze/recover low-dimensional steering directions. Its procedures compare RL-training updates, frozen-base activations, and gradient interventions; it does not propose or evaluate LLM serving, inference compute reduction, latency, throughput, or memory savings. The lineage link does not match this training-analysis contribution.",
+      "first_checked_at": "2026-10-05T22:17:55+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Learning to Steer, Steering to See: Unveiling the Geometry of RLVR in Large Language Models via Trainable Vectors"
+    },
+    "arXiv:2609.31281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31281",
+      "identity_tokens": [
+        "arXiv:2609.31281"
+      ],
+      "reason": "MA-WAM uses a world-action model to generate/rank candidate multi-agent trajectories at test time. Reported planning can improve task returns over reactive policies, but uses up to eight candidate rollouts; its cost discussion concerns world-model test-time planning, not LLM inference/serving or reducing compute. It evaluates coordination benchmarks rather than LLM workloads; benefits are limited near the task ceiling and experiments use M=8/horizon cap 8.",
+      "first_checked_at": "2026-10-05T22:17:55+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "MA-WAM: Multi-Agent World-Action Model for Test-Time Planning"
+    },
+    "arXiv:2609.24058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24058",
+      "identity_tokens": [
+        "arXiv:2609.24058"
+      ],
+      "reason": "The paper applies script-aware MoE to multilingual scene-text recognition, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T22:17:55+00:00",
+      "last_checked_at": "2026-10-05T22:17:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "All-in-One Multilingual Scene Text Recognition with Script-aware Mixture-of-Experts"
+    },
+    "arXiv:2608.03275": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03275",
+      "identity_tokens": [
+        "arXiv:2608.03275"
+      ],
+      "reason": "The abstract is instance-adaptive LoRA generation/parameter-efficient adaptation; its goal is model adaptation, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "MoEGen: Mixture-of-Experts for Instance-Adaptive LoRA Generation"
+    },
+    "arXiv:2608.03473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03473",
+      "identity_tokens": [
+        "arXiv:2608.03473"
+      ],
+      "reason": "The paper certifies split points for parallel lexing; it has no LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md"
+      ],
+      "title": "Certified Split Points for Parallel Lexing: Exact and Modulo Discarded Tokens"
+    },
+    "arXiv:2608.02441": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02441",
+      "identity_tokens": [
+        "arXiv:2608.02441"
+      ],
+      "reason": "ACWorld defines buyer/merchant tasks over static catalogs and deterministic counterparties, with 10 integrity cases and trace reconstruction. It is a research benchmark for commerce-agent behavior; authors state it is not a production payment/security system and that its catalogs do not model live markets. No LLM inference/serving scheduling or efficiency method links it to the serving-disaggregation lineage.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Agentic Commerce World: An Auditable and Verifiable Environment for Vibe Commerce"
+    },
+    "arXiv:2606.29983": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29983",
+      "identity_tokens": [
+        "arXiv:2606.29983"
+      ],
+      "reason": "The learned RL-Halting policy is trained by sampling loop depth and supervising the selected depth. Experiments are synthetic algorithmic length-generalization tasks; the main benefit is lower OOD variance and stability across inference-time loop counts, not demonstrated reductions to LLM serving cost or latency. Authors explicitly frame stopping as a training-time design choice and note learned schedules can stabilize a suboptimal computation.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping"
+    },
+    "DOI:10.1108/jhtt-11-2025-1080": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/jhtt-11-2025-1080",
+      "identity_tokens": [
+        "DOI:10.1108/jhtt-11-2025-1080"
+      ],
+      "reason": "The primary abstract evaluates tourism response quality and prompting across GenAI platforms; it proposes no inference/serving optimization.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Can tourists trust generative AI? A systematic evaluation of the quality of AI-generated tourism information"
+    },
+    "arXiv:2609.12622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12622",
+      "identity_tokens": [
+        "arXiv:2609.12622"
+      ],
+      "reason": "The abstract concerns RGB-thermal salient-object detection under sensor degradation, with no language-model or serving contribution.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "RA-SOD: Reliability-Aware RGB-T Salient Object Detection under Modality Degradation"
+    },
+    "arXiv:2609.11518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11518",
+      "identity_tokens": [
+        "arXiv:2609.11518"
+      ],
+      "reason": "The paper applies spatially partitioned experts to coordinate-based neuroevolution, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T22:17:56+00:00",
+      "last_checked_at": "2026-10-05T22:17:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Breaking the Central Bias: Spatially Partitioned Experts for Coordinate-Based Neuroevolution"
+    },
+    "arXiv:2608.29381": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29381",
+      "identity_tokens": [
+        "arXiv:2608.29381"
+      ],
+      "reason": "The work models execution state across frameworks, tools, workspaces, and services and analyzes security violations caused by partial checkpoint/rollback boundaries. LangGraph/CrewAI examples include LLM calls but the contribution is recovery security; tests expose violations rather than measure inference/serving performance. The authors explicitly limit conclusions to rollback-induced security hazards, so no in-scope inference optimization is established.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "title": "Safe to Resume? Breaking Execution Continuity of Agent Execution via Rollback"
+    },
+    "arXiv:2608.09761": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09761",
+      "identity_tokens": [
+        "arXiv:2608.09761"
+      ],
+      "reason": "The abstract concerns certified split points for parallel lexing; no LLM inference/serving workload is described.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md"
+      ],
+      "title": "Certified Split Windows for Parallel Lexing: Recovering Boundaries Where No Byte Certifies"
+    },
+    "arXiv:2608.08621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08621",
+      "identity_tokens": [
+        "arXiv:2608.08621"
+      ],
+      "reason": "Business Arena is an environment for cross-border business decision-making and scores marketplace outcomes across frontier models. Ablations test policy mechanisms such as demand inference, portfolio choice, pricing, and customer service. The paper states it abstracts production systems and does not evaluate updating live storefronts or operating real interfaces. It is a task benchmark, not an agent sandbox/recovery or LLM inference-serving method.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "title": "Business Arena: Benchmarking LLM Agents in a Realistic Marketplace"
+    },
+    "arXiv:1802.05799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.05799",
+      "identity_tokens": [
+        "arXiv:1802.05799"
+      ],
+      "reason": "分散深層学習のtraining通信を対象とするframeworkで、推論効率化が最終目的ではない。",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [],
+      "title": "Horovod: fast and easy distributed deep learning in TensorFlow"
+    },
+    "arXiv:2609.11917": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11917",
+      "identity_tokens": [
+        "arXiv:2609.11917"
+      ],
+      "reason": "The abstract studies repeated-data overfitting during MoE training, not inference/serving optimization.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data"
+    },
+    "arXiv:2609.10287": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10287",
+      "identity_tokens": [
+        "arXiv:2609.10287"
+      ],
+      "reason": "The paper analyzes transformer circuit removability as determined by training trajectories; it does not optimize LLM inference or serving.",
+      "first_checked_at": "2026-10-05T22:17:57+00:00",
+      "last_checked_at": "2026-10-05T22:17:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Training Trajectories Determine Circuit Removability in Annealable Soft-Prior Transformers"
+    },
+    "DOI:10.1016/j.knosys.2026.116445": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116445",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116445"
+      ],
+      "reason": "Publisher material identifies a gastrointestinal endoscopy image-restoration model that adaptively selects visual tokens and fuses frequency-domain features, evaluated on image-restoration datasets. Its reported application is medical image super-resolution/denoising, not an LLM or language-model serving workload. The accessible publisher text notes failure on severely blurred images and instrument deformation.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "A self-adaptive top token transformer for gastrointestinal endoscopy image restoration"
+    },
+    "arXiv:2607.27155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27155",
+      "identity_tokens": [
+        "arXiv:2607.27155"
+      ],
+      "reason": "The paper benchmarks long-horizon office-suite agents and economic grounding; it is a task benchmark, not an inference/serving method.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding"
+    },
+    "DOI:10.1109/icc59461.2026.11587340": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icc59461.2026.11587340",
+      "identity_tokens": [
+        "DOI:10.1109/icc59461.2026.11587340"
+      ],
+      "reason": "The abstract applies an early-exit transformer to network intrusion detection; it is not an LLM inference or serving method.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "LIME: Lightweight Multi-head Early-exit Transformer for Network Intrusion Detection"
+    },
+    "arXiv:2605.16686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16686",
+      "identity_tokens": [
+        "arXiv:2605.16686"
+      ],
+      "reason": "The paper edits MoE LLM knowledge with tensor-structured updates; it concerns model editing, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Scalable Knowledge Editing for Mixture-of-Experts LLMs via Tensor-Structured Updates"
+    },
+    "arXiv:2605.16690": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16690",
+      "identity_tokens": [
+        "arXiv:2605.16690"
+      ],
+      "reason": "The abstract is resource-adaptive federated fine-tuning of foundation models, a training-only contribution.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "UB-SMoE: Universally Balanced Sparse Mixture-of-Experts for Resource-adaptive Federated Fine-tuning of Foundation Models"
+    },
+    "DOI:10.1038/s41698-026-01476-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41698-026-01476-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41698-026-01476-0"
+      ],
+      "reason": "The primary abstract is a multimodal clinical toxicity-prediction model; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T22:17:58+00:00",
+      "last_checked_at": "2026-10-05T22:17:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Multimodal prediction for radiotherapy-induced hematologic toxicity in rectal cancer patients"
+    },
+    "arXiv:2606.20544": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20544",
+      "identity_tokens": [
+        "arXiv:2606.20544"
+      ],
+      "reason": "The proposed adversarial reweighting changes the training objective to improve calibration under distribution shift. Experiments use CIFAR-10H, PACS, and CivilComments classifiers with four-expert MoEs; calibration/accuracy is measured, not LLM runtime, serving, memory, or throughput. It addresses prediction reliability rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T22:17:59+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift"
+    },
+    "DOI:10.1016/j.suscom.2026.101313": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.suscom.2026.101313",
+      "identity_tokens": [
+        "DOI:10.1016/j.suscom.2026.101313"
+      ],
+      "reason": "The publisher abstract is about mandatory disclosure of AI training energy/emissions and policy feasibility, not an LLM inference or serving method. The publisher abstract was retrieved after the packet’s abstract field was empty; it clearly states the scope.",
+      "first_checked_at": "2026-10-05T22:17:59+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Emissions transparency in AI research should be mandatory"
+    },
+    "arXiv:2606.01047": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01047",
+      "identity_tokens": [
+        "arXiv:2606.01047"
+      ],
+      "reason": "The paper learns data-efficient robotic manipulation trajectory policies; the contribution is policy learning, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T22:17:59+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Learning Multi-Modal Trajectory Policies for Data-Efficient Robotic Manipulation"
+    },
+    "arXiv:2605.31025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31025",
+      "identity_tokens": [
+        "arXiv:2605.31025"
+      ],
+      "reason": "The abstract studies task-specific parameters for continual fine-tuning, a training/adaptation contribution outside inference scope.",
+      "first_checked_at": "2026-10-05T22:17:59+00:00",
+      "last_checked_at": "2026-10-05T22:17:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "TRACE: Discovering Task-Specific Parameter via Adaptation-Aware Probing for Continual Fine-Tuning"
+    },
+    "arXiv:2605.12952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12952",
+      "identity_tokens": [
+        "arXiv:2605.12952"
+      ],
+      "reason": "The abstract studies image-model interpretability and critiques Grad-ECLIP, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Debunking Grad-ECLIP: A Comprehensive Study on Its Incorrectness and Fundamental Principles for Model Interpretation"
+    },
+    "arXiv:2605.13181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13181",
+      "identity_tokens": [
+        "arXiv:2605.13181"
+      ],
+      "reason": "The paper develops attention response for precipitation nowcasting; its application is weather prediction, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Stable Attention Response for Reliable Precipitation Nowcasting"
+    },
+    "arXiv:2605.09313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09313",
+      "identity_tokens": [
+        "arXiv:2605.09313"
+      ],
+      "reason": "The abstract analyzes attention sinks in diffusion transformers for image/video generation, not LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Attention Sinks in Diffusion Transformers: A Causal Analysis"
+    },
+    "arXiv:2604.15351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15351",
+      "identity_tokens": [
+        "arXiv:2604.15351"
+      ],
+      "reason": "The abstract selects layers for efficient LoRA fine-tuning; this is training-time adaptation, which is outside scope.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Aletheia: Gradient-Guided Layer Selection for Efficient LoRA Fine-Tuning Across Architectures"
+    },
+    "arXiv:2604.14198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14198",
+      "identity_tokens": [
+        "arXiv:2604.14198"
+      ],
+      "reason": "The paper optimizes data mixtures for multimodal-LLM midtraining, a training-only contribution.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "MixAtlas: Uncertainty-aware Data Mixture Optimization for Multimodal LLM Midtraining"
+    },
+    "arXiv:2605.07097": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07097",
+      "identity_tokens": [
+        "arXiv:2605.07097"
+      ],
+      "reason": "The abstract is a general PAC learnability result for fixed feedforward networks; it proposes no LLM inference/serving mechanism or efficiency evaluation.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Every Feedforward Neural Network Definable in an o-Minimal Structure Has Finite Sample Complexity"
+    },
+    "arXiv:2605.04446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04446",
+      "identity_tokens": [
+        "arXiv:2605.04446"
+      ],
+      "reason": "Misrouter optimizes adversarial prompts to steer a MoE service toward weakly aligned experts and tests safety bypass/output quality on surrogate and public services. The objective and evaluation concern security attacks, not inference cost, memory, latency, throughput, or serving mechanisms. Authors identify limited route controllability, coupled objectives, and output-quality degradation as limitations. The shared MoE architecture alone does not create an in-scope serving-efficiency contribution.",
+      "first_checked_at": "2026-10-05T22:18:00+00:00",
+      "last_checked_at": "2026-10-05T22:18:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Misrouter: Exploiting Routing Mechanisms for Input-Only Attacks on Mixture-of-Experts LLMs"
+    },
+    "DOI:10.1109/tpami.2026.3689998": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2026.3689998",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3689998"
+      ],
+      "reason": "The primary abstract concerns scaling a neural video-coding model and video-compression quality, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "NVC-1B: Scaling up Neural Video Coding Models"
+    },
+    "arXiv:2603.22198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22198",
+      "identity_tokens": [
+        "arXiv:2603.22198"
+      ],
+      "reason": "The abstract improves multiple-instance learning for pathology image classification with a mixture-of-experts layer; it is not an LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Mixture of Mini Experts: Overcoming the Linear Layer Bottleneck in Multiple Instance Learning"
+    },
+    "arXiv:2602.16160": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16160",
+      "identity_tokens": [
+        "arXiv:2602.16160"
+      ],
+      "reason": "The abstract adapts depth for visual object tracking; the evaluated task is single-object tracking rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Uncertainty-Guided Inference-Time Depth Adaptation for Transformer-Based Visual Tracking"
+    },
+    "arXiv:2110.02861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.02861",
+      "identity_tokens": [
+        "arXiv:2110.02861"
+      ],
+      "reason": "optimizer stateの8-bit化によるtraining memory削減が主目的で、推論量子化ではない。",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [],
+      "title": "8-bit Optimizers via Block-wise Quantization"
+    },
+    "DOI:10.1109/isbi.2008.4541126": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isbi.2008.4541126",
+      "identity_tokens": [
+        "DOI:10.1109/isbi.2008.4541126"
+      ],
+      "reason": "CUDAの汎用GPU並列programming modelとscientific computingへの適用を扱う基盤技術論文。LLM/Transformer推論を最終適用先とするruntime・kernel・serving方式ではないため対象外。",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [],
+      "title": "CUDA: Scalable parallel programming for high-performance scientific computing"
+    },
+    "arXiv:1810.00825": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.00825",
+      "identity_tokens": [
+        "arXiv:1810.00825"
+      ],
+      "reason": "set-structured data向けpermutation-invariant attention modelでinducing pointによりself-attentionをlinear化するが、最終適用先はset taskでLLM推論systemではない。",
+      "first_checked_at": "2026-10-05T22:18:01+00:00",
+      "last_checked_at": "2026-10-05T22:18:01+00:00",
+      "linked_from": [],
+      "title": "Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks"
+    },
+    "arXiv:2112.08608": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.08608",
+      "identity_tokens": [
+        "arXiv:2112.08608"
+      ],
+      "reason": "平均約5000 tokenの長文読解能力を測るmultiple-choice QA dataset/benchmark。長文脈推論runtime・KV cache・serving最適化方式を提案しないため対象外。",
+      "first_checked_at": "2026-10-05T22:18:02+00:00",
+      "last_checked_at": "2026-10-05T22:18:02+00:00",
+      "linked_from": [],
+      "title": "QuALITY: Question Answering with Long Input Texts, Yes!"
+    },
+    "arXiv:2402.05162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05162",
+      "identity_tokens": [
+        "arXiv:2402.05162"
+      ],
+      "reason": "pruningとlow-rank modificationを用いてLLM safety-critical regionを同定するsafety/interpretability研究。圧縮技法は解析手段で推論効率化が最終目的ではないため対象外。",
+      "first_checked_at": "2026-10-05T22:18:02+00:00",
+      "last_checked_at": "2026-10-05T22:18:02+00:00",
+      "linked_from": [],
+      "title": "Assessing the Brittleness of Safety Alignment via Pruning and Low-Rank Modifications"
+    },
+    "arXiv:2506.15564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15564",
+      "identity_tokens": [
+        "arXiv:2506.15564"
+      ],
+      "reason": "autoregressive modelingとflow matchingを統合したmultimodal understanding/generation model。主要貢献はmodel representationとtrainingで、LLM inference runtime・serving効率化ではないため対象外。",
+      "first_checked_at": "2026-10-05T22:18:02+00:00",
+      "last_checked_at": "2026-10-05T22:18:02+00:00",
+      "linked_from": [],
+      "title": "Show-o2: Improved Native Unified Multimodal Models"
+    },
+    "DOI:10.1287/mnsc.2014.1939": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1287/mnsc.2014.1939",
+      "identity_tokens": [
+        "DOI:10.1287/mnsc.2014.1939"
+      ],
+      "reason": "顧客ごとの商品assortmentを在庫制約下でreal-time最適化するoperations research研究。online retail revenueとcompetitive ratioが主題でLLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T22:18:02+00:00",
+      "last_checked_at": "2026-10-05T22:18:02+00:00",
+      "linked_from": [],
+      "title": "Real-Time Optimization of Personalized Assortments"
+    },
+    "arXiv:2004.03329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.03329",
+      "identity_tokens": [
+        "arXiv:2004.03329"
+      ],
+      "reason": "英語・中国語の大規模patient-doctor dialogue datasetを構築する医療NLP data resource研究。推論runtime・memory・serving効率化を扱わないため対象外。",
+      "first_checked_at": "2026-10-05T22:18:02+00:00",
+      "last_checked_at": "2026-10-05T22:18:02+00:00",
+      "linked_from": [],
+      "title": "MedDialog: Two Large-scale Medical Dialogue Datasets"
     }
   }
 }

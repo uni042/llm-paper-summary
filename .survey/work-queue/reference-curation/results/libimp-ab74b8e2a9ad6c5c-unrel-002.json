@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab74b8e2a9ad6c5c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.16686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.16686",
+    "identity_tokens": [
+      "arXiv:2605.16686"
+    ],
+    "reason": "The paper edits MoE LLM knowledge with tensor-structured updates; it concerns model editing, not inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T22:17:58+00:00",
+    "last_checked_at": "2026-10-05T22:17:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Scalable Knowledge Editing for Mixture-of-Experts LLMs via Tensor-Structured Updates"
+  },
+  "processed_at": "2026-10-05T22:17:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab74b8e2a9ad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
