@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-45-part-01-cf3bc5cca8a6",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11770",
+      "identity_tokens": [
+        "arXiv:2607.11770"
+      ],
+      "title": "AutoSLO: Practical Latency SLOs on Cloud Data Warehouses - Extended Version",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.11770",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.12216",
+      "identity_tokens": [
+        "arXiv:2607.12216"
+      ],
+      "title": "RCWT: Measuring Task-Budget Displacement from Coordination Content in LLM Calls",
+      "reason": "3商用モデル、固定4096 token条件を中心にcoordination overheadがtask evidenceを圧迫する挙動を測定。task blockを保つablationではcoordination比率95%まで正答し、一般的semantic interferenceではなくbudget displacementと結論を限定。inference resource削減を直接測る研究ではない。",
+      "source_url": "https://arxiv.org/abs/2607.12216",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13088",
+      "identity_tokens": [
+        "arXiv:2607.13088"
+      ],
+      "title": "Securing LLMs in the Wild: Privacy and Security Challenges at the Edge",
+      "reason": "本文はedge/on-prem LLMのsecurity/privacyとquantization・pruning等の効率施策を一体評価する枠組みとSOESを提示。個別のinference最適化法よりdeployment risk/scoreに重点があるため、実務効率の直接研究としては隣接的。",
+      "source_url": "https://arxiv.org/abs/2607.13088",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15650",
+      "identity_tokens": [
+        "arXiv:2607.15650"
+      ],
+      "title": "DiTango: Cost-Effective Parallel Diffusion Generation with Selective Attention State Reuse",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.15650",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26072",
+      "identity_tokens": [
+        "arXiv:2607.26072"
+      ],
+      "title": "IFCMemoryBench: Evaluating Long-Term Memory of LLM-Based Agents in BIM Information Retrieval",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.26072",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
