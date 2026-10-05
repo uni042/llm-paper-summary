@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-05-part-07-c6262f952bdb",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23250",
+      "identity_tokens": [
+        "arXiv:2607.23250"
+      ],
+      "title": "Libra: Taming Attention Workload Skew in Long-Context LLM Training with Bounded Sequence Pool",
+      "reason": "Long-context LLM trainingのattention workload balancingであり、学習専用効率化は対象外。",
+      "source_url": "https://arxiv.org/abs/2607.23250",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/hydrology13080201",
+      "identity_tokens": [
+        "DOI:10.3390/hydrology13080201"
+      ],
+      "title": "Enhancing Daily Runoff Prediction via Uniform Design and Meta-Learning Integrated Hyperparameter Optimization Embedded in Transformer",
+      "reason": "流出予測Transformerのhyperparameter optimizationで、LLM推論ではない。",
+      "source_url": "https://doi.org/10.3390/hydrology13080201",
+      "first_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "last_checked_at": "2026-10-05T03:15:56.053211+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    }
+  ]
+}
