@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:32:29+00:00",
-  "record_count": 1071,
+  "updated_at": "2026-10-05T07:34:29+00:00",
+  "record_count": 1090,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -16358,6 +16358,283 @@
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
       "title": "Measuring the Microtask Eligibility Gap: When Is an Off-the-Shelf SLM Enough for an Agent Harness?"
+    },
+    "DOI:10.1016/j.eswa.2026.134293": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134293",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.134293"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Informer++: Channel-Independent Trend Modeling and Multi-Scale Seasonal Fusion for Long-Horizon Cloud Workload Forecasting"
+    },
+    "DOI:10.1016/j.eswa.2026.134329": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134329",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.134329"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "HIF-FD: A Heterogeneous Information Fusion Framework for Financial Fraud Detection"
+    },
+    "DOI:10.1016/j.hcc.2026.100428": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+      "identity_tokens": [
+        "DOI:10.1016/j.hcc.2026.100428"
+      ],
+      "reason": "一次要旨の中心はon-device LLM personalization/privacy/reliabilityのsurveyで、efficiency/resource constraintsは課題の一部として挙がるものの、推論性能最適化が主題とは確認できない。本文のscope確認ができず弱い適合としてborderline。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization"
+    },
+    "DOI:10.1016/j.ibmed.2026.100475": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ibmed.2026.100475",
+      "identity_tokens": [
+        "DOI:10.1016/j.ibmed.2026.100475"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Lightweight deep learning models for histopathological image analysis in resource-constrained healthcare environments"
+    },
+    "DOI:10.1016/j.image.2026.117585": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.image.2026.117585",
+      "identity_tokens": [
+        "DOI:10.1016/j.image.2026.117585"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "CSACE-Net: Cross-Modal Semantic Attention Co-Enhancement for video captioning"
+    },
+    "DOI:10.1016/j.jii.2026.101190": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jii.2026.101190",
+      "identity_tokens": [
+        "DOI:10.1016/j.jii.2026.101190"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md"
+      ],
+      "title": "Enabling robust industrial information integration: An adaptive compressed federated learning framework for heterogeneous Industrial Internet of Things"
+    },
+    "DOI:10.1016/j.jnca.2026.104534": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jnca.2026.104534",
+      "identity_tokens": [
+        "DOI:10.1016/j.jnca.2026.104534"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Schema-portable adaptive early-exit transformer for resource-aware IoT intrusion detection"
+    },
+    "DOI:10.1016/j.mlwa.2026.100997": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.mlwa.2026.100997",
+      "identity_tokens": [
+        "DOI:10.1016/j.mlwa.2026.100997"
+      ],
+      "reason": "一次要旨のLLM-based tabular predictionはarchitecture cost auditを比較し、常時介入baselineに対する運用costを論じるが、LLM inference implementation/runtimeを高速化する研究か本文で確認できない。scopeが弱いためborderline。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "COST-SENSITIVE ARCHITECTURE AUDITING FOR LLM-BASED TABULAR PREDICTION: EVIDENCE FROM FREIGHT CANCELLATION MANAGEMENT"
+    },
+    "DOI:10.1016/j.mlwa.2026.101013": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.mlwa.2026.101013",
+      "identity_tokens": [
+        "DOI:10.1016/j.mlwa.2026.101013"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Multimodal medical AI: A survey of vision–language models, knowledge-enhanced learning, and retrieval-augmented generation in clinical applications"
+    },
+    "DOI:10.1016/j.comnet.2026.112774": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.comnet.2026.112774",
+      "identity_tokens": [
+        "DOI:10.1016/j.comnet.2026.112774"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "title": "Fairness-Aware and Parallelized SFC Placement with VNF Sharing in MEC-Enabled IoT Networks"
+    },
+    "DOI:10.1016/j.cviu.2026.104948": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cviu.2026.104948",
+      "identity_tokens": [
+        "DOI:10.1016/j.cviu.2026.104948"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Cross-modal proxy tokens for robust infrared-visible feature matching"
+    },
+    "DOI:10.1016/j.eij.2026.101030": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eij.2026.101030",
+      "identity_tokens": [
+        "DOI:10.1016/j.eij.2026.101030"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "JSATRA: topology based logic mining using discrete hopfield neural network"
+    },
+    "DOI:10.1016/j.eij.2026.101046": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eij.2026.101046",
+      "identity_tokens": [
+        "DOI:10.1016/j.eij.2026.101046"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "title": "Ai-infused business model innovation for competitive advantage in the Era of big data and digital transformation"
+    },
+    "DOI:10.1016/j.eng.2026.09.004": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eng.2026.09.004",
+      "identity_tokens": [
+        "DOI:10.1016/j.eng.2026.09.004"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
+      ],
+      "title": "Interconnect-Centric AI Computing: From Bandwidth Scaling to Physical Interface Architecture"
+    },
+    "DOI:10.1016/j.imavis.2026.106200": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.imavis.2026.106200",
+      "identity_tokens": [
+        "DOI:10.1016/j.imavis.2026.106200"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "RetAction: Retentive and circulant attention dual path modeling for efficient temporal action detection"
+    },
+    "DOI:10.1016/j.ins.2026.124131": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ins.2026.124131",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.124131"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Multi-scenario CTR prediction with LLM-augmented semantic graphs and anti-polarization experts"
+    },
+    "DOI:10.1016/j.ins.2026.124201": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ins.2026.124201",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.124201"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "HMMF-MPP: Hierarchical multi-modal fusion with mixture-of-experts for molecular property prediction"
+    },
+    "DOI:10.1016/j.is.2026.102796": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.is.2026.102796",
+      "identity_tokens": [
+        "DOI:10.1016/j.is.2026.102796"
+      ],
+      "reason": "一次要旨ではcolumn-scale LLM operatorsのquantizationによりresident footprint 1.8–2.8x減、memory-bound時 throughput改善と報告され、明確な適合可能性がある。本文の実験条件・quality limitsを確認できないためborderline。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "IOLM-DB: Instance-optimized large language model execution for column-scale semantic operators"
+    },
+    "DOI:10.1016/j.jcp.2026.115455": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jcp.2026.115455",
+      "identity_tokens": [
+        "DOI:10.1016/j.jcp.2026.115455"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:34:29+00:00",
+      "last_checked_at": "2026-10-05T07:34:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Physics-Informed Perceiver IO: scalable mesh-free solving of partial differential equations without supervision"
     }
   }
 }

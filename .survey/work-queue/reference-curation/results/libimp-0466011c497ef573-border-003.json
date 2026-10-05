@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0466011c497ef573-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.hcc.2026.100428",
+    "identity_tokens": [
+      "DOI:10.1016/j.hcc.2026.100428"
+    ],
+    "reason": "一次要旨の中心はon-device LLM personalization/privacy/reliabilityのsurveyで、efficiency/resource constraintsは課題の一部として挙がるものの、推論性能最適化が主題とは確認できない。本文のscope確認ができず弱い適合としてborderline。",
+    "first_checked_at": "2026-10-05T07:34:28+00:00",
+    "last_checked_at": "2026-10-05T07:34:28+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+      "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "SoK: Towards a user-centric, privacy-preserving, and reliable AI agent via on-device LLM personalization"
+  },
+  "processed_at": "2026-10-05T07:34:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0466011c497e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

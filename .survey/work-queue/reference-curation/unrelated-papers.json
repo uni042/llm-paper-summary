@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:32:30+00:00",
-  "record_count": 3572,
+  "updated_at": "2026-10-05T07:34:28+00:00",
+  "record_count": 3573,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -52053,6 +52053,21 @@
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
       "title": "GALE: Memory-Efficient Global Approximate and Local Exact Features"
+    },
+    "DOI:10.1016/j.media.2026.104287": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.media.2026.104287",
+      "identity_tokens": [
+        "DOI:10.1016/j.media.2026.104287"
+      ],
+      "reason": "一次要旨: Medical image segmentation foundation models (MedFMs) perform strongly across diverse imaging modalities, but their large size and computational demands hinder deployment in resource-limited clinical settings. Lightweight fine-tuning is impractical given the high training cost of MedFMs, and the efficiency benefits of integer inference remain underused. Post-training quantization (PTQ) is a promising alternative, yet existing PTQ methods fail on MedFMs because their heterogeneous weight distributions lead to severe accuracy degradation at low bit-widths. To address this challenge, we propose GPTQ-MedFM, a generalized post-training quantization framework tailored for medical foundation models. GPTQ-MedFM standardizes complex weight distributions under an ℓ∞-constrained normalization to produce quantization-friendly matrices, and then applies an efficient coordinate-descent solver to obtain high-fidelity low-bit representations. The method adds no extra computation or memory overhead at inference, enabling seamless deployment on medical edge devices. By explicitly modeling and mitigating quantization-induced errors, GPTQ-MedFM achieves state-of-the-art low-bit compression across six medical foundation models and nine imaging modalities - spanning nearly the full range of clinical imaging scenarios - and remains robust even with a single calibration sample. Its broad generalization and minimal calibration cost make GPTQ-MedFM a practical pathway for real-time AI-assisted diagnostics in resource-limited healthcare settings.",
+      "first_checked_at": "2026-10-05T07:34:28+00:00",
+      "last_checked_at": "2026-10-05T07:34:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Generalized post-training quantization for medical image segmentation foundation model."
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf7f7d53a7c00149-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.is.2026.102796",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.is.2026.102796",
+    "identity_tokens": [
+      "DOI:10.1016/j.is.2026.102796"
+    ],
+    "reason": "一次要旨ではcolumn-scale LLM operatorsのquantizationによりresident footprint 1.8–2.8x減、memory-bound時 throughput改善と報告され、明確な適合可能性がある。本文の実験条件・quality limitsを確認できないためborderline。",
+    "first_checked_at": "2026-10-05T07:34:29+00:00",
+    "last_checked_at": "2026-10-05T07:34:29+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "IOLM-DB: Instance-optimized large language model execution for column-scale semantic operators"
+  },
+  "processed_at": "2026-10-05T07:34:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf7f7d53a7c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
