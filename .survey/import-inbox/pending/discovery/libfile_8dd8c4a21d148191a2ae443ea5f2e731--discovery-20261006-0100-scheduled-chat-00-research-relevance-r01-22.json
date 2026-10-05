@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261006-0100-scheduled-chat-00/r01",
+  "reference_main_sha": "ab11f67364ac4fdac967de197fe9684eb6a08d5d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.00615",
+      "identity_tokens": [
+        "arXiv:2510.00615"
+      ],
+      "title": "ACON: Optimizing Context Compression for Long-horizon LLM Agents",
+      "reason": "agentの観測・履歴を自然言語で圧縮してpeak tokenを26–54%削減するが、追加compressorによりwall-clock latencyが増える条件もある。agent memory効率には関連するがLLM runtime/serving system最適化が主目的ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2510.00615",
+      "body_check": "research_fulltext_relevance_review: 一次論文情報でcompression guideline optimization、distillation、26–54% peak-token削減、追加compressor overheadを確認。",
+      "first_checked_at": "2026-10-06T01:40:00+09:00",
+      "last_checked_at": "2026-10-06T01:40:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 22
+    }
+  ]
+}
