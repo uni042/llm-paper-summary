@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-08-part-01-c5800dee5a1a",
+  "reference_main_sha": "779b87e2a74d421eab58598de1d09f9c0e3beeed",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03612",
+      "identity_tokens": [
+        "arXiv:2607.03612"
+      ],
+      "title": "SAF3R: Dynamic Sparse Attention for Feed-Forward 3D Reconstruction Transformers",
+      "reason": "対象はF3Rの画像列3D再構成attentionであり、LLM/VLMの推論・servingや言語モデル圧縮ではない。",
+      "source_url": "https://arxiv.org/abs/2607.03612",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03615",
+      "identity_tokens": [
+        "arXiv:2607.03615"
+      ],
+      "title": "The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise",
+      "reason": "RAGで無関係文書を加えた場合のQA再現性・prompt/decoding設定の影響を検討する実験で、推論効率を改善する手法やserving機構を提案しない。",
+      "source_url": "https://arxiv.org/abs/2607.03615",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/fractalfract10070454",
+      "identity_tokens": [
+        "DOI:10.3390/fractalfract10070454"
+      ],
+      "title": "Fractional Calculus for Large Language Models: A Survey of Potentials, Mechanisms, and Challenges",
+      "reason": "LLMのmemory/context課題とfractional approachesを扱うが、本文で>1B autoregressiveモデルの検証が乏しいと明記され、推論効率改善は提案段階。Survey/概念提案の対象適合性が残る。",
+      "source_url": "https://doi.org/10.3390/fractalfract10070454",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01586",
+      "identity_tokens": [
+        "arXiv:2607.01586"
+      ],
+      "title": "VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment",
+      "reason": "VLAのflow-matching事前学習目的を比較するtraining frameworkで、abstractの主題と評価は学習・transfer性能。",
+      "source_url": "https://arxiv.org/abs/2607.01586",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01844",
+      "identity_tokens": [
+        "arXiv:2607.01844"
+      ],
+      "title": "Mixture-of-Parallelisms: Towards Memory-Efficient Training Stack for Mixture-of-Experts Models",
+      "reason": "MoEの分散・並列化を使う大規模pre-training/fine-tuningのtraining stackで、推論専用の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2607.01844",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
