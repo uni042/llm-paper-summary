@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-06-part-02-746ae4b34984",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15116",
+      "identity_tokens": [
+        "arXiv:2402.15116"
+      ],
+      "title": "Large multimodal agents: a survey",
+      "reason": "一次要旨はlarge multimodal agentsの分類・評価survey。推論効率/serving最適化が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2402.15116",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3503161.3547826",
+      "identity_tokens": [
+        "DOI:10.1145/3503161.3547826"
+      ],
+      "title": "Towards Accurate Post-Training Quantization for Vision Transformer",
+      "reason": "一次arXiv資料はVision Transformerのpost-training quantization。LLM inference対象外。",
+      "source_url": "https://arxiv.org/abs/2303.14341",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.23919/jcc.ja.2021-0776",
+      "identity_tokens": [
+        "DOI:10.23919/jcc.ja.2021-0776"
+      ],
+      "title": "Computing power network: A survey",
+      "reason": "一次arXiv資料はcomputing power network/resource schedulingのsurvey。LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2210.06080",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.06940-unified-ai-gateway-a-framework-for-joint-model-routing-and-kv-cache-mana.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19355",
+      "identity_tokens": [
+        "arXiv:2410.19355"
+      ],
+      "title": "FasterCache: Training-Free Video Diffusion Model Acceleration with High Quality",
+      "reason": "一次要旨はvideo diffusion model accelerationで、LLMではない。",
+      "source_url": "https://arxiv.org/abs/2410.19355",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.18058",
+      "identity_tokens": [
+        "arXiv:2401.18058"
+      ],
+      "title": "LongAlign: A Recipe for Long Context Alignment of Large Language Models",
+      "reason": "一次要旨はlong-context LLM alignment/training recipe。推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2401.18058",
+      "first_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "last_checked_at": "2026-10-05T01:08:15.937601+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
