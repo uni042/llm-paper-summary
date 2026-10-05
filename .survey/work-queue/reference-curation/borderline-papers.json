@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:05:40+00:00",
-  "record_count": 1604,
+  "updated_at": "2026-10-05T12:08:38+00:00",
+  "record_count": 1608,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24917,6 +24917,69 @@
         "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
       ],
       "title": "Stillness is Redundant: Motion-Aware KV Cache Retrieval for Efficient Video Understanding"
+    },
+    "arXiv:2606.15734": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15734",
+      "identity_tokens": [
+        "arXiv:2606.15734"
+      ],
+      "reason": "Post-deployment adaptation relevance but no demonstrated inference-efficiency gain.",
+      "first_checked_at": "2026-10-05T12:08:36+00:00",
+      "last_checked_at": "2026-10-05T12:08:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift"
+    },
+    "DOI:10.1109/vlsitechnologyandcir65830.2026.11577229": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/vlsitechnologyandcir65830.2026.11577229",
+      "identity_tokens": [
+        "DOI:10.1109/vlsitechnologyandcir65830.2026.11577229"
+      ],
+      "reason": "The paper is an embodied-AI accelerator design, but primary evidence that its transformer results include LLM inference/serving is inaccessible.",
+      "first_checked_at": "2026-10-05T12:08:37+00:00",
+      "last_checked_at": "2026-10-05T12:08:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Sirius: A Dual-Chiplet System for Multimodal Embodied AI with Heterogeneous RVV Cores, Dense and Sparse Accelerators"
+    },
+    "DOI:10.1109/vlsitechnologyandcir65830.2026.11577608": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/vlsitechnologyandcir65830.2026.11577608",
+      "identity_tokens": [
+        "DOI:10.1109/vlsitechnologyandcir65830.2026.11577608"
+      ],
+      "reason": "The abstract is strongly relevant, but the inaccessible primary article prevents checking accelerator implementation, measurements and comparison conditions.",
+      "first_checked_at": "2026-10-05T12:08:37+00:00",
+      "last_checked_at": "2026-10-05T12:08:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+      ],
+      "title": "Spectra: An Asymmetric-Precision Speculative Decoding LLM Accelerator with Product Quantization and Reconfigurable Flip-Flop Buffers in 28Nm CMOS"
+    },
+    "DOI:10.3390/electronics15122635": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15122635",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15122635"
+      ],
+      "reason": "Strong abstract relevance but required primary body verification failed.",
+      "first_checked_at": "2026-10-05T12:08:38+00:00",
+      "last_checked_at": "2026-10-05T12:08:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "BTHA: Block-Then-Hash Attention for Efficient Long Context"
     }
   }
 }
