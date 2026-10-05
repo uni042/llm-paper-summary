@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:56:01+00:00",
-  "record_count": 1468,
+  "updated_at": "2026-10-05T10:58:56+00:00",
+  "record_count": 1477,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -22688,6 +22688,164 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
       ],
       "title": "Expert-guided routing: A supervised post-hoc routing framework for task-specific and multilingual LLM specialization"
+    },
+    "DOI:10.1109/cloud72782.2026.00050": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00050",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00050"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; a separate author preprint with a different title was found, but its version and reported metrics do not match the conference abstract closely enough to substitute for the published body.",
+      "first_checked_at": "2026-10-05T10:58:53+00:00",
+      "last_checked_at": "2026-10-05T10:58:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Pick and Spin: Cold-Start-Aware Routing for Self-Hosted LLM Serving"
+    },
+    "DOI:10.1109/cloud72782.2026.00055": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00055",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00055"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the distributed-cluster evaluation and comparison details could not be checked.",
+      "first_checked_at": "2026-10-05T10:58:53+00:00",
+      "last_checked_at": "2026-10-05T10:58:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Dynamic Pipeline Inference Optimization for LLMs: Load-Aware Partitioning, Updating, and Migration"
+    },
+    "DOI:10.1109/atigb70203.2026.11628224": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/atigb70203.2026.11628224",
+      "identity_tokens": [
+        "DOI:10.1109/atigb70203.2026.11628224"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader, so the methods and evaluation sections could not be inspected.",
+      "first_checked_at": "2026-10-05T10:58:54+00:00",
+      "last_checked_at": "2026-10-05T10:58:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "PhoBERT: Long-Document Sentiment Analysis in Vietnamese with Sparse Attention"
+    },
+    "DOI:10.1109/bdai70753.2026.11655128": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bdai70753.2026.11655128",
+      "identity_tokens": [
+        "DOI:10.1109/bdai70753.2026.11655128"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the primary full text and result tables could not be reviewed.",
+      "first_checked_at": "2026-10-05T10:58:54+00:00",
+      "last_checked_at": "2026-10-05T10:58:54+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "TCSP: Text-Conditioned Spectral Prototyping for Multimodal Token Compression"
+    },
+    "DOI:10.1109/cloud72782.2026.00021": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00021",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00021"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the full evaluation and workload composition could not be checked.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md"
+      ],
+      "title": "Two-level Network Bandwidth Allocation for Multi-tenant AI Clouds in Kubernetes"
+    },
+    "DOI:10.1109/cloud72782.2026.00037": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00037",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00037"
+      ],
+      "reason": "The IEEE Xplore article route required JavaScript/anti-bot verification, and the primary full text could not be read.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md"
+      ],
+      "title": "BYSTANDER: State-Aware End-to-End Latency Prediction for Heterogeneous LLM Inference Scheduling"
+    },
+    "DOI:10.1109/cloud72782.2026.00039": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00039",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00039"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the implementation, comparison conditions and limitations could not be reviewed.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+      ],
+      "title": "Reducing Memory Requirements of LLM Inference Through Online rANS Decompression"
+    },
+    "DOI:10.1109/cisat71030.2026.11682293": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cisat71030.2026.11682293",
+      "identity_tokens": [
+        "DOI:10.1109/cisat71030.2026.11682293"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; method and benchmark details could not be reviewed.",
+      "first_checked_at": "2026-10-05T10:58:56+00:00",
+      "last_checked_at": "2026-10-05T10:58:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Data-Free Adaptive Quantization for Large Language Models via Layer-Wise Dynamic Routing"
+    },
+    "DOI:10.1109/cisat71030.2026.11682549": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cisat71030.2026.11682549",
+      "identity_tokens": [
+        "DOI:10.1109/cisat71030.2026.11682549"
+      ],
+      "reason": "The title concerns an efficient Transformer FFN and could plausibly include language models, but the primary abstract is unavailable, so its model scope, inference-time behavior and measured efficiency cannot be established.",
+      "first_checked_at": "2026-10-05T10:58:56+00:00",
+      "last_checked_at": "2026-10-05T10:58:56+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "LFFN: A Locality-Aware Feed-Forward Network for Efficient Transformer Architectures"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f633271608187188-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/cisat71030.2026.11682450",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/cisat71030.2026.11682450",
+    "identity_tokens": [
+      "DOI:10.1109/cisat71030.2026.11682450"
+    ],
+    "reason": "Data-centric dataset pruning reduces the cost of on-device learning/training, which is explicitly outside this inference-focused scope.",
+    "first_checked_at": "2026-10-05T10:58:56+00:00",
+    "last_checked_at": "2026-10-05T10:58:56+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Data-Centric Dataset Pruning for Resource-Efficient Edge Learning"
+  },
+  "processed_at": "2026-10-05T10:58:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f63327160818",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

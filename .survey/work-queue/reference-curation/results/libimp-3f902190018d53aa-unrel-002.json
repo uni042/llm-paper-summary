@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f902190018d53aa-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/cloud72782.2026.00054",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/cloud72782.2026.00054",
+    "identity_tokens": [
+      "DOI:10.1109/cloud72782.2026.00054"
+    ],
+    "reason": "Although the autoscaler is for AI inference services, its reported real workload is ResNet-50 ONNX plus tenant contention; the primary abstract does not establish an LLM inference contribution.",
+    "first_checked_at": "2026-10-05T10:58:53+00:00",
+    "last_checked_at": "2026-10-05T10:58:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+    ],
+    "title": "InferScale: Kubernetes-Native Predictive Autoscaling for SLO-Aware AI Inference"
+  },
+  "processed_at": "2026-10-05T10:58:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f902190018d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

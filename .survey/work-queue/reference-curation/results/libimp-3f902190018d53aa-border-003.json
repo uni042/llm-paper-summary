@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f902190018d53aa-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/cloud72782.2026.00055",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/cloud72782.2026.00055",
+    "identity_tokens": [
+      "DOI:10.1109/cloud72782.2026.00055"
+    ],
+    "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the distributed-cluster evaluation and comparison details could not be checked.",
+    "first_checked_at": "2026-10-05T10:58:53+00:00",
+    "last_checked_at": "2026-10-05T10:58:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+    ],
+    "title": "Dynamic Pipeline Inference Optimization for LLMs: Load-Aware Partitioning, Updating, and Migration"
+  },
+  "processed_at": "2026-10-05T10:58:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f902190018d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

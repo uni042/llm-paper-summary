@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:56:01+00:00",
-  "record_count": 4562,
+  "updated_at": "2026-10-05T10:58:56+00:00",
+  "record_count": 4573,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -66437,6 +66437,161 @@
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
       "title": "UltraLBM-UNet: Ultralight bidirectional mamba-based model for skin lesion segmentation"
+    },
+    "DOI:10.1109/cloud72782.2026.00054": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00054",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00054"
+      ],
+      "reason": "Although the autoscaler is for AI inference services, its reported real workload is ResNet-50 ONNX plus tenant contention; the primary abstract does not establish an LLM inference contribution.",
+      "first_checked_at": "2026-10-05T10:58:53+00:00",
+      "last_checked_at": "2026-10-05T10:58:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ],
+      "title": "InferScale: Kubernetes-Native Predictive Autoscaling for SLO-Aware AI Inference"
+    },
+    "DOI:10.1109/cloud72782.2026.00057": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00057",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00057"
+      ],
+      "reason": "AnchorDL schedules generic deep-learning model inference workflows; its abstract does not establish LLM inference/serving as the workload.",
+      "first_checked_at": "2026-10-05T10:58:53+00:00",
+      "last_checked_at": "2026-10-05T10:58:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ],
+      "title": "AnchorDL: Dual-Locality-based Scheduling for Serverless Inference Workflows"
+    },
+    "DOI:10.1109/codit70676.2026.11631239": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/codit70676.2026.11631239",
+      "identity_tokens": [
+        "DOI:10.1109/codit70676.2026.11631239"
+      ],
+      "reason": "The LLM is used to propose emergency-department layouts before optimization; the paper evaluates a healthcare planning application, not inference efficiency.",
+      "first_checked_at": "2026-10-05T10:58:54+00:00",
+      "last_checked_at": "2026-10-05T10:58:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "A Hybrid Generative AI and Optimization Approach for Resilient Emergency Department Layouts"
+    },
+    "DOI:10.1109/bdai70753.2026.11655099": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bdai70753.2026.11655099",
+      "identity_tokens": [
+        "DOI:10.1109/bdai70753.2026.11655099"
+      ],
+      "reason": "The study redistributes LoRA rank during adaptation/fine-tuning and measures GLUE task quality; its efficiency focus is training-time, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:58:54+00:00",
+      "last_checked_at": "2026-10-05T10:58:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Gradient-Informed Rank Redistribution for Low-Rank Adaptation: An Empirical Assessment on GLUE Benchmarks in Low-Resource Settings"
+    },
+    "DOI:10.1109/bdai70753.2026.11655175": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bdai70753.2026.11655175",
+      "identity_tokens": [
+        "DOI:10.1109/bdai70753.2026.11655175"
+      ],
+      "reason": "Align-TS applies frozen LLM backbones to time-series forecasting; the abstract concerns forecasting quality and does not establish an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:58:54+00:00",
+      "last_checked_at": "2026-10-05T10:58:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Align-TS: Structure-Guided Semantic Conditioning for Multivariate Time-Series Forecasting with Frozen Language Models"
+    },
+    "DOI:10.1109/bdai70753.2026.11655185": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bdai70753.2026.11655185",
+      "identity_tokens": [
+        "DOI:10.1109/bdai70753.2026.11655185"
+      ],
+      "reason": "Gated Delta Network targets 3D MRI super-resolution, a medical-imaging task outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Gated Delta Network for Slice-Wise Anisotropic 3D MRI Super-Resolution"
+    },
+    "DOI:10.1109/cloud72782.2026.00016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00016",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00016"
+      ],
+      "reason": "BridgeScheduler targets generic mobile edge-cloud application scheduling and cloud variability; the abstract does not establish LLM inference/serving as its workload or contribution.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
+      ],
+      "title": "BridgeScheduler: Non-Intrusive Sensing and Collaborative Scheduling for Hybrid Edge-Cloud Environments"
+    },
+    "DOI:10.1109/cloud72782.2026.00045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00045",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00045"
+      ],
+      "reason": "PRISM addresses fault recovery in hyperscale AI training fabrics and explicitly targets training collectives, not inference.",
+      "first_checked_at": "2026-10-05T10:58:55+00:00",
+      "last_checked_at": "2026-10-05T10:58:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md"
+      ],
+      "title": "PRISM: Workload-Aware Autonomous Network Fault Recovery for Hyperscale AI Training Fabrics"
+    },
+    "DOI:10.1109/bigdataservice70481.2026.00019": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bigdataservice70481.2026.00019",
+      "identity_tokens": [
+        "DOI:10.1109/bigdataservice70481.2026.00019"
+      ],
+      "reason": "InstructCoT studies instruction tuning and chain-of-thought training for VLM capability, not inference-time efficiency or serving.",
+      "first_checked_at": "2026-10-05T10:58:56+00:00",
+      "last_checked_at": "2026-10-05T10:58:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "InstructCoT: Bridging Instruction Tuning and Chain-of-Thought Reasoning for Scalable Vision-Language Models"
+    },
+    "DOI:10.1109/cisat71030.2026.11682059": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cisat71030.2026.11682059",
+      "identity_tokens": [
+        "DOI:10.1109/cisat71030.2026.11682059"
+      ],
+      "reason": "The paper quantizes AlexNet for image classification; it does not concern language-model inference or serving.",
+      "first_checked_at": "2026-10-05T10:58:56+00:00",
+      "last_checked_at": "2026-10-05T10:58:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "title": "Lightweight AlexNet Image Classification Based on KL Divergence INT8 Quantization"
+    },
+    "DOI:10.1109/cisat71030.2026.11682450": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cisat71030.2026.11682450",
+      "identity_tokens": [
+        "DOI:10.1109/cisat71030.2026.11682450"
+      ],
+      "reason": "Data-centric dataset pruning reduces the cost of on-device learning/training, which is explicitly outside this inference-focused scope.",
+      "first_checked_at": "2026-10-05T10:58:56+00:00",
+      "last_checked_at": "2026-10-05T10:58:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Data-Centric Dataset Pruning for Resource-Efficient Edge Learning"
     }
   }
 }
