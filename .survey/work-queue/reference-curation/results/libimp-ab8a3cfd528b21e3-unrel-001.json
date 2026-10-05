@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab8a3cfd528b21e3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10980",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10980",
+    "identity_tokens": [
+      "arXiv:2609.10980"
+    ],
+    "reason": "EGGROLL (Sarkar et al., 2026) makes evolution strategies (ES) practical for LLMs by replacing dense Gaussian weight perturbations with low-rank Gaussian products, often of rank one. This choice is computationally attractive but geometrically severe: Each rank-one perturbation lies in a zero-volume subset of the ambient matrix space, despite having identity covariance. We characterize the EGGROLL update mean field at finite rank and nonzero perturbation radius as a resolvent applied to the gradient of the perturbation-smoothed objective. This transformation can make the mean field nonconservative and reverse the local stability of an optimum. EGGROLL nevertheless recovers the gradient exactly on quadratic objectives at every rank and radius. In finite populations, the additional sampling variance of rank-one perturbations relative to dense Gaussian ES decays inversely with matrix width under a local affine model, and is only $0.098\\%$ at width $4096$. Finally, we introduce LOO-ROLL, a leave-one-out estimator that replaces EGGROLL's two antithetic evaluations per direction by one. At equal evaluation cost, LOO-ROLL halves estimator MSE in transformer blocks. Across fourteen post-training settings up to 14B parameters, matched-time comparisons with EGGROLL yield eleven improvements in individual paired tests and no significant loss. At 1.7B, 8B, and 14B parameters, matched-time gains are $2.9$, $14.1$, and $7.9$ percentage points on GSM8K and $12.2$, $8.4$, and $8.1$ points on MATH-500.",
+    "first_checked_at": "2026-10-05T06:56:48+00:00",
+    "last_checked_at": "2026-10-05T06:56:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale"
+  },
+  "processed_at": "2026-10-05T06:56:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab8a3cfd528b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

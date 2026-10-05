@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:54:07+00:00",
-  "record_count": 3385,
+  "updated_at": "2026-10-05T06:56:48+00:00",
+  "record_count": 3404,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -49333,6 +49333,285 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS"
+    },
+    "DOI:10.1007/s11708-026-1076-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11708-026-1076-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11708-026-1076-y"
+      ],
+      "reason": "Primary publisher abstract: FuelProp-LM predicts multiple fuel physicochemical properties from molecular SMILES using instruction tuning and in-context learning. Four open-source LLMs were fine-tuned on 100,000 PubChem entries; evaluation covers 10 fuel-property datasets. The work concerns chemistry/QSPR capability and does not study LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T06:56:46+00:00",
+      "last_checked_at": "2026-10-05T06:56:46+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Language models as QSPR predictors: Unleashing potential through in-context learning and instruction tuning"
+    },
+    "DOI:10.1186/s40580-026-00575-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40580-026-00575-9",
+      "identity_tokens": [
+        "DOI:10.1186/s40580-026-00575-9"
+      ],
+      "reason": "Energy-efficient neural computing is increasingly limited not by computational throughput but by memory access and data movement. In-memory computing architectures offer a promising solution by collocating storage and computation, yet their practical realization remains constrained by static power dissipation, thermal challenges, and limited integration density in existing memory devices. Here, we demonstrate a vertically stackable charge-trap-flash (CTF)-based memcapacitor array that combines the high integration density of 3D NAND technology with the charge-domain computation. A continuous in-situ-doped N+ bottom readout electrode is introduced beneath the lightly doped active layer, decoupling lateral readout resistance from depletion-based capacitance modulation and alleviating the resistance–depletion trade-off of the previous architecture. The fabricated 24 × 48 memcapacitor array operates through transient charge displacement and demonstrates highly uniform array-level characteristics (σ/µ < 0.37%), reliable 16-state closed-loop weight programming, and linear charge-domain VMM with an error below 0.227%. When scaled toward modern 3D NAND dimensions, a verification–inference electrostatic mismatch introduces systematic VMM error, which is reduced by up to 84.6% through an intercell trapped-charge scheme in TCAD simulations. Geometric scaling based on the CV2 relation projects femtojoule-level intrinsic cell read energy at scaled dimensions. A hybrid hardware–software spiking neural network evaluation, in which only the final 24 × 10 layer is mapped to measured arrays, achieves 88.01% CIFAR-10 accuracy compared with 88.17% in software. These results establish vertically stackable memcapacitors as a scalable charge-domain computing platform combining reliable array-level operation with high-density vertical integration.",
+      "first_checked_at": "2026-10-05T06:56:46+00:00",
+      "last_checked_at": "2026-10-05T06:56:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Capacitive in-memory vector–matrix multiplication computing with charge-trap memcapacitors"
+    },
+    "DOI:10.3390/ai7090358": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ai7090358",
+      "identity_tokens": [
+        "DOI:10.3390/ai7090358"
+      ],
+      "reason": "Smart systems, the Industrial Internet of Things, and cyber-physical networks increasingly make decisions on the devices where data is generated, on nodes short of memory, compute, energy, and bandwidth, and exposed to real adversaries. Two research currents have grown to meet this: one makes artificial intelligence small and distributed (quantization, pruning, distillation, TinyML, federated and split learning), the other makes it safe (defenses against poisoning, backdoors, inversion, and evasion). This review argues that the two are entangled rather than parallel. Operators that shrink a model or scatter it across nodes also redraw its attack surface, each carrying a security dividend and a security liability, and because a node’s resources are finite and shared, model capacity and defense strength compete for one multi-dimensional budget. We formalize this as an efficiency-decentralization-security (EDS) design tension, explicitly a tension and not an impossibility, and show with published measurements that the coupling is non-monotonic. Around this thesis we build three artifacts, following an explicit design-science research process: an evidence-graded scoring matrix that separates each operator’s security dividend from its liability across seven axes and reports the direction of every effect separately from the confidence in the evidence behind it; a resource-aware threat model that judges attack and defense feasibility against a tiered device, gateway, network, and server budget with stated units; and a co-design framework whose decision workflow terminates in a defense-selection program and a verification step under adaptive attack. We work the framework through an industrial predictive-maintenance scenario with the resource arithmetic computed line by line, and evaluate it retrospectively against six published edge-AI systems. The result is a decision-support guide for building edge AI that is efficient, decentralized, and secure at once.",
+      "first_checked_at": "2026-10-05T06:56:46+00:00",
+      "last_checked_at": "2026-10-05T06:56:46+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "The Efficiency-Decentralization-Security Trilemma: A Co-Design Framework for Lightweight, Decentralized AI in Cyber-Physical Systems"
+    },
+    "DOI:10.3390/app16189003": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app16189003",
+      "identity_tokens": [
+        "DOI:10.3390/app16189003"
+      ],
+      "reason": "This study proposes EQAS (Empowered Question-Answering System), a hybrid framework designed to support context-aware question-answering and intelligent feedback generation in domain-specific knowledge environments. EQAS integrates fine-tuned transformer-based models, instruction-guided large language models, domain-specific knowledge graphs, and LangChain-based vector retrieval to improve contextual relevance, response quality, and feedback consistency. To evaluate the proposed framework, a benchmark dataset consisting of 10,000 real-world question–answer pairs was constructed from authentic user interactions and domain-related information resources. Experimental evaluation across established transformer-based architectures and recent instruction-tuned large language models showed that the Llama-3.3-70B-Instruct baseline achieved the highest standalone QA performance (F1: 77.42; EM: 44.60), while the EQAS transformer-based configuration achieved an F1 score of 75.48 and an Exact Match score of 41.80. A controlled ablation analysis using Llama-3.3-70B-Instruct as the fixed QA backbone further showed that incorporating knowledge graph enhancement increased the F1 score from 77.42 to 79.93 and the Exact Match score from 44.60 to 46.82, corresponding to absolute improvements of 2.51 and 2.22 points, respectively. A complementary human-centered evaluation of 1000 generative responses by three NLP researchers yielded an overall quality score of 4.34/5 across correctness, clarity, sufficiency, and helpfulness, with an overall Krippendorff’s α of 0.80. Furthermore, the framework provides context-sensitive explanatory feedback that can support user understanding and knowledge acquisition during information-seeking interactions. The findings suggest that EQAS offers a scalable solution for intelligent question-answering, feedback support, and knowledge assistance in complex information environments. The proposed framework highlights the potential of combining large language models with structured knowledge representations to support context-aware question-answering and explanatory feedback generation in domain-specific information environments.",
+      "first_checked_at": "2026-10-05T06:56:46+00:00",
+      "last_checked_at": "2026-10-05T06:56:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "A Knowledge Graph-Augmented Large Language Model Framework for Context-Aware Question-Answering and Intelligent Feedback Generation"
+    },
+    "DOI:10.3390/electronics15184114": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15184114",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15184114"
+      ],
+      "reason": "Multivariate time series forecasting requires modeling both hierarchical temporal dynamics and complex inter-variable dependencies, a dual requirement that often degrades predictive performance and incurs high computational costs in standard Transformer architectures. Unlike current channel-independent models that ignore vital cross-variable synergies, or dense-attention frameworks that suffer from quadratic computational noise, our approach extracts structurally sparse dependencies. To address these specific limitations, this study introduces the FCA-Transformer. The proposed framework integrates a Feature Pyramid Network (FPN) to isolate macroscopic trends from high-frequency localized fluctuations via hierarchical downsampling. Concurrently, a structured Transformer-based Cross-Attention (TCA) mechanism employs Dimensional Segmentation with Weighting (DSW) and a Two-Stage Attention (TSA) layer to map topological variable interactions, effectively extracting robust cross-variable pathways and mitigating distributional noise. Extensive empirical evaluations across three real-world multivariate benchmarks (ETTh1, Electricity, and Exchange Rate) demonstrate that the FCA-Transformer achieves an average reduction of up to 4.39% in MSE and 5.11% in MAE compared to leading baselines. These findings indicate that the proposed architecture successfully reconciles multi-scale feature extraction with lightweight dependency modeling, enhancing structural generalization and providing a scalable framework for real-time temporal analysis in complex industrial environments.",
+      "first_checked_at": "2026-10-05T06:56:46+00:00",
+      "last_checked_at": "2026-10-05T06:56:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "FCA-Transformer: A Feature Pyramid Time Series Forecasting Model Driven by Cross-Attention Mechanism"
+    },
+    "arXiv:2609.11231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11231",
+      "identity_tokens": [
+        "arXiv:2609.11231"
+      ],
+      "reason": "This paper presents SurgicalRoomAgent, a voice-interactive multi-agent system for smart operating rooms based on large language models (LLMs). The system achieves natural language understanding, device control, intraoperative recording, and surgical report generation through a layered architecture comprising a voice interaction pipeline (wake, ASR, turn detection, agent reasoning, TTS) and an agent core (skill registry, task planner, device manager). Three key technologies are investigated: (1) KV Cache prefix warming for low-latency inference, reducing recomputation overhead from approximately 500 ms to tens of milliseconds via byte-level Longest Common Prefix reuse; (2) streaming partial JSON parsing with early parallel task execution, reducing end-to-end latency by approximately 30%; and (3) progressive skill prompt disclosure, which dynamically filters system prompts based on user role, connected devices, and surgical phase to maximize information density within limited context windows. The system is implemented using the Qwen3-27B model with llama.cpp/sglang inference engines. Experimental analysis demonstrates effective operation within a 16,384-token context limit and multi-device parallel control response times meeting OR real-time requirements.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "A Voice-Interactive Multi-Agent System for Smart Operating Rooms: Architecture Design and Key Technologies"
+    },
+    "arXiv:2609.11336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11336",
+      "identity_tokens": [
+        "arXiv:2609.11336"
+      ],
+      "reason": "Statistical physics extracts macroscopic laws by averaging over the many microscopic degrees of freedom of a system. Disordered systems demand a second and far harder average, one over the quenched randomness itself. The classic analytical routes, the replica and cavity methods, become uncontrolled outside mean-field or tree-like limits, and conventional numerical algorithms like parallel tempering require expensive, independent equilibration for every disorder realization. In this work, we introduce a universal neural variational framework that amortizes inference across the disorder ensemble, eliminating both the need for per-instance Markov chain equilibration and the cost of retraining instance-specific variational ansatzes. Built on an encoder-decoder Transformer architecture, after training once, it produces an explicit approximation to the Boltzmann distribution given previously unseen disorder realizations without further optimization. We validate this framework on 2D Edwards-Anderson models, and apply it to the random-bond Ising model, successfully capturing the Binder cumulant crossings near the Nishimori multicritical point. These results shift the object of variational inference from the single instance to the disorder ensemble, opening a route to frustrated many-body systems where instance-by-instance computation is prohibitive.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Universal sampling of spin systems across quenched disorder"
+    },
+    "arXiv:2609.11542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11542",
+      "identity_tokens": [
+        "arXiv:2609.11542"
+      ],
+      "reason": "Large language model (LLM) training is among the fastest-growing sources of electricity demand in modern data centers, and power availability is a primary bottleneck to continued AI infrastructure growth. Making the power consumption of these workloads flexible could unlock additional power for AI growth, limit increases in electricity prices, and improve the utilization of existing grid infrastructure. However, to realize this flexibility, we must first understand how the performance of training workloads changes when GPU power is reduced. This paper presents the first systematic characterization of \\emph{job power elasticity} (the sensitivity of throughput to power reductions) in LLM training. To quantify elasticity, we introduce the \\emph{Power Flexibility Index (PFI)}, a normalized metric that quantifies the performance cost of power reductions and provides a control primitive for SLA-aware power flexibility. We collect data from 131 LLM training runs on H200 (plus 24 H200 validation runs and 34 matched H100 runs), including both dense and mixture-of-experts models, pretraining and fine-tuning tasks, and up to 32 GPUs. We find that LLM training jobs exhibit substantial but variable power elasticity, and we identify telemetry signals that predict PFI at runtime. Finally, we demonstrate that PFI-aware power allocation maximizes total tokens/second throughput under power constraints. Under a 30\\% power reduction, PFI-aware power allocation recovers ~1.5k tokens/s per job, 63\\% of the performance gap between an equal-weight allocation and an oracle with perfect information. Our results establish power elasticity as a measurable property of training jobs and provide a foundation for power-aware, grid-responsive AI infrastructure.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Characterizing Job Power Elasticity for Power-Flexible AI Training"
+    },
+    "arXiv:2609.11752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11752",
+      "identity_tokens": [
+        "arXiv:2609.11752"
+      ],
+      "reason": "For industrial content risk control, the real deployment constraint is not average accuracy but how much risk can be auto-handled under high precision and second-level latency. We present SIRF (Spec-Internalized Risk Foundation Model), which internalizes a platform's complex policies, synthesized without additional human annotation via EntiGraph, MAGA rewriting and account-level chain-of-thought (CoT), into the weights via continued pretraining (CPT), so rules are applied at high precision under an ultra-low-latency, verdict-only deployment. A controlled same-source comparison (Qwen3-8B-SFT vs. SIRF-8B-SFT, identical policy injection and verdict-only output form, differing only in policy-grounded CPT) attributes the gain to internalization: SIRF-8B-SFT reaches 71.3% Black Recall@P95, +15.1pp over the baseline, using only ~70M CPT tokens without harming general ability, and among included, logprob-available models under this interface it matches or exceeds far larger systems. SIRF is deployed as a tree-model adjudication layer (20% more mis-penalized samples recovered) and transfers to a freezing scenario at low cost (~70% relative mis-penalization reduction).",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "SIRF: A Spec-Internalized Risk Foundation Model for Industrial Content Risk Control"
+    },
+    "arXiv:2609.11799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11799",
+      "identity_tokens": [
+        "arXiv:2609.11799"
+      ],
+      "reason": "Large language models are often fine-tuned, shared, or downloaded from third parties, so a deployed model may carry a hidden backdoor that behaves normally on benign inputs but switches to attacker-controlled behavior when a secret trigger appears. While backdoors can be audited before deployment, runtime monitoring remains important for models that are frequently updated. The challenge is that LLM serving is latency-sensitive: existing inference-time detectors either rely on assumptions about the trigger form, which can fail on stealthy attacks, or require extra model computation, such as input perturbations or an additional generation pass. We introduce SpecGuard, an inference-time backdoor detector that repurposes speculative decoding at zero added model-computation cost. Speculative decoding speeds up inference by using a small draft model to propose tokens and a target model to verify them. We observe that this verification process already exposes a useful signal: when a backdoor is triggered, the target model shifts toward the attacker's behavior, while a clean draft model does not predict this shift, causing the draft-token acceptance rate to change. We formalize when this signal appears and show that an attacker who suppresses it must also weaken the backdoor. Across diverse backdoor types and model families, SpecGuard reliably detects triggered behavior, including stealthy cases where input-level filters are blind, while avoiding the extra generation cost of existing runtime detectors. Speculative decoding therefore doubles as a free, always-on signal for detecting backdoored LLM behavior.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ],
+      "title": "SpecGuard: Inference-Time Backdoor Detection For Free"
+    },
+    "arXiv:2609.11913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11913",
+      "identity_tokens": [
+        "arXiv:2609.11913"
+      ],
+      "reason": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping a fixed context length. We construct two synthetic delay copy tasks, both involving finite distances between source and recall, where tokens are copied either fully or selectively, and test models on delays unseen during training. We address three questions: (A) Do positional encoding schemes such as RoPE and ALiBi improve distance resolution relative to no positional encoding (NoPE)? (B) How does data diversity, the number of inter-token distances seen in training, affect performance? (C) When is distance transfer learning positive or negative? We present a thorough investigation, finding that it is paramount to improve our understanding of the underlying mechanisms.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Distance generalization in transformers: why bother with positional encoding?"
+    },
+    "arXiv:2609.12036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12036",
+      "identity_tokens": [
+        "arXiv:2609.12036"
+      ],
+      "reason": "In this technical report, we propose Pelican-Sim 1.0, a general world model simulator for embodied intelligence that predicts future observations from visual context and robot actions to support downstream learning and decision making. The model incorporates four key design features: (1) Unified action representation: a 28-dimensional action value space covering most mainstream embodiments, keeping one model valid across heterogeneous devices. (2) Action-visual injection: URDF- and camera-rendered action videos bridge actions and pixels, giving markedly better controllability across embodiments, scenes, and tasks (PSNR +0.904 over alternative fusion baselines). (3) Sparse mixture-of-experts (MoE): sparse MoE layers add capacity for heterogeneous dynamics and absorb the action modality while reducing inter-modality conflict (FVD -6.530 vs. the dense backbone). (4) Efficient rollout generation: causal adaptation and few-step distillation yield a four-step autoregressive simulator, achieving a 5.67-fold speedup over the 35-step model. Benefiting from these designs, we train on approximately one million real-world and simulated trajectories and obtain large gains in action controllability and video quality: PSNR improves over the strongest evaluated baselines by 4.636 on AgiBotWorld Beta, 2.080 on RoboMIND, and 10.343 on RoboTwin, with the adapted EWMBench DYN score up 0.426 on RoboTwin. Relying on this, four downstream applications on RoboTwin succeed: 500 generated trajectories added to 50 demonstrations per task raise policy success from 70% to 93%; policy evaluation reaches a Pearson correlation of 0.994 across five checkpoints; and relative success gains reach 47.7% for action selection and 20.3% for policy improvement. Qualitative generalization across trajectory, scene, object, embodiment, and viewpoint shifts highlights its potential as a general-purpose world model simulator.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence"
+    },
+    "arXiv:2609.12270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12270",
+      "identity_tokens": [
+        "arXiv:2609.12270"
+      ],
+      "reason": "First-stage recommenders in multi-stage systems produce a ranked candidate list from which a limited prefix is forwarded to downstream rankers. Because each forwarded item must be processed by more expensive ranking stages, this shortlist cannot be arbitrarily large. The first-stage objective is therefore high coverage of relevant items within the forwarded prefix, commonly measured by Recall@$k$. A relevant item may be available deeper in the retrieved list but absent from the shorter prefix that is actually consumed. This paper studies post-hoc verification for promoting such candidates into the consumed shortlist without retraining or replacing the retriever. We introduce a lightweight generative verifier for retrieval models. Given a retriever state and a candidate item, the verifier scores the item through the likelihood of its identifier tokens. It is trained post hoc with next-token cross entropy, requires no sampled negatives or candidate pool during training, and scores only the retriever's top-$K$ candidates at inference. The interface is minimal: the retriever supplies a query state and candidate items, and the item representation can use any fixed tokenization. Across Amazon product recommendation and YaMBDa music recommendation, the same verifier training recipe improves Recall@10 for SASRec, GRU4Rec, NextItNet, and MiniOneRec. Ablations show that the improvements are not explained solely by injecting item-content features into the retriever, supporting verification as a post-hoc output-side adaptation mechanism.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Recommendation Retrievers Need Verifiers: Universal Generative Reranking for Sequential Recommendations"
+    },
+    "DOI:10.1007/s10791-026-10572-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10791-026-10572-5",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10572-5"
+      ],
+      "reason": "The inspection of surface defects in leather manufacture has attracted considerable attention due to the significant impact of appearance on leather pricing. In order to address the challenges associated with leather defect inspection, this study presents a comprehensive deep learning framework for classifying surface defects on leather materials. The proposed framework integrates a convolutional neural network for binary descriptor extraction with a dual channel transformer for classification. The binary descriptor reduces computational complexity while preserving discriminative feature representations. The computational benefit of the binary representation can be quantified as follows. For a feature vector of dimension \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$D$$\\end{document}, the standard floating point dot product in the self attention mechanism requires \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$D$$\\end{document} multiplications and \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$D-1$$\\end{document} additions per pair of vectors. With the binary descriptor, each element is either 0 or 1, so multiplications are replaced by simple bitwise AND operations, and additions are replaced by bitwise population count (POPCNT) instructions. This reduces the computational cost from \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$O(D)$$\\end{document} floating point operations to \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$O(D/64)$$\\end{document} 64 bit word operations, yielding a theoretical speedup factor of approximately 64x for the dot product computation. In practice, considering memory access patterns and the overhead of binarization, the measured speedup in the attention mechanism is approximately 8x to 12x compared with floating point features of the same dimensionality., and the dual channel transformer captures both spatial and temporal information from the extracted features. The experimental results demonstrate that the proposed approach achieves competitive performance with mean accuracy of 94.87 percent, mean sensitivity of 95.43 percent, and mean specificity of 94.60 percent on the manually collected dataset, together with mean accuracy of 94.14 percent on the publicly available dataset. Not applicable.",
+      "first_checked_at": "2026-10-05T06:56:47+00:00",
+      "last_checked_at": "2026-10-05T06:56:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Leather surface defect inspection using a binary descriptor and dual channel transformer"
+    },
+    "arXiv:2609.10980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10980",
+      "identity_tokens": [
+        "arXiv:2609.10980"
+      ],
+      "reason": "EGGROLL (Sarkar et al., 2026) makes evolution strategies (ES) practical for LLMs by replacing dense Gaussian weight perturbations with low-rank Gaussian products, often of rank one. This choice is computationally attractive but geometrically severe: Each rank-one perturbation lies in a zero-volume subset of the ambient matrix space, despite having identity covariance. We characterize the EGGROLL update mean field at finite rank and nonzero perturbation radius as a resolvent applied to the gradient of the perturbation-smoothed objective. This transformation can make the mean field nonconservative and reverse the local stability of an optimum. EGGROLL nevertheless recovers the gradient exactly on quadratic objectives at every rank and radius. In finite populations, the additional sampling variance of rank-one perturbations relative to dense Gaussian ES decays inversely with matrix width under a local affine model, and is only $0.098\\%$ at width $4096$. Finally, we introduce LOO-ROLL, a leave-one-out estimator that replaces EGGROLL's two antithetic evaluations per direction by one. At equal evaluation cost, LOO-ROLL halves estimator MSE in transformer blocks. Across fourteen post-training settings up to 14B parameters, matched-time comparisons with EGGROLL yield eleven improvements in individual paired tests and no significant loss. At 1.7B, 8B, and 14B parameters, matched-time gains are $2.9$, $14.1$, and $7.9$ percentage points on GSM8K and $12.2$, $8.4$, and $8.1$ points on MATH-500.",
+      "first_checked_at": "2026-10-05T06:56:48+00:00",
+      "last_checked_at": "2026-10-05T06:56:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale"
+    },
+    "arXiv:2609.11044": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11044",
+      "identity_tokens": [
+        "arXiv:2609.11044"
+      ],
+      "reason": "While accelerators for AI have seen great commercial success, it is challenging to replicate that success for other specialized domains due to a number of factors. We make the case that barriers for new accelerators can be lowered by starting with a baseline AI accelerator, and adding minimal logic to support new operators demanded by new specialized domains. This leads to a versatile chip that can be manufactured at high volume and deployed for a range of popular applications. We refer to this as the AI+X approach. This paper explores its potential for the emerging domain of Computational Pathology, which involves analysis of large whole-slide tissue images with a multi-stage pipeline. The pipeline requires support for a number of different kernels and operators - early stages perform segmentation and feature extraction, followed by graph creation with k nearest neighbor (kNN) algorithms, and finally inference with an iterative graph convolutional network (GCN) that alternates between Aggregation and Combination. We show that these stages execute inefficiently on a range of baseline CPU, GPU, AI, and GCN accelerators. That inefficiency is addressed with a combination of software re-structuring and small modifications to a baseline systolic AI accelerator. Many of the above kernels can be mapped to a systolic accelerator by offering a flexible datapath between processing elements and register access mechanisms. We add support for feature aggregation, load balanced execution, Euclidean distance calculation, binning, and counter aggregation. This additional flexibility and logic grows the area of a baseline AI chiplet by 1.1x, but by avoiding the memory wall and offering high parallelism, the proposed accelerator BEACON yields over an order of magnitude higher throughput for Computational Pathology than baseline CPU and GPU platforms.",
+      "first_checked_at": "2026-10-05T06:56:48+00:00",
+      "last_checked_at": "2026-10-05T06:56:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "BEACON: A Versatile Accelerator for Computational Pathology Applications"
+    },
+    "arXiv:2609.11132": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11132",
+      "identity_tokens": [
+        "arXiv:2609.11132"
+      ],
+      "reason": "Accurate posterior prediction need not require accurate approximation of Bayesian updates. We prove that an unbounded gap between the update maps can coexist with vanishing predictive KL for every fixed finite $K\\ge2$ in a stationary symmetric Gaussian HMM. Exact Bayesian mixing and an explicit deterministic radial filter act on the same $K-1$ belief coordinates. As $q\\to0^+$, their separation in centered logits in the worst case grows at least linearly in the natural confidence scale $L_K(q)$, while their categorical $D_{\\mathrm{KL}}(\\mathrm{exact}\\|\\mathrm{radial})$ vanishes at the same explicit witness. Along stationary HMM trajectories, the expected terminal KL between filtered posteriors also converges to zero at $H(q)=\\lceil-\\log(q)/c\\rceil+1$. Typical blocks without switches drive both filters into a common confidence cone, where softmax curvature suppresses their disagreement; a single Gaussian maximal event controls adaptive noise. A sweep with equally spaced Gaussians over $K\\in\\{2,4,8\\}$ illustrates the opposing trends, and binary controls at long horizons compare saturating and nonsaturating recurrences. The result isolates two missing links between internal update gaps and predictive cost: the contribution of separating states to expected loss and decoder sensitivity. Thus even an unbounded internal update gap does not by itself certify predictive failure. The construction is fixed in $K$ and does not provide a universal criterion for when compression is harmless or characterize when internal gaps must incur task loss.",
+      "first_checked_at": "2026-10-05T06:56:48+00:00",
+      "last_checked_at": "2026-10-05T06:56:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "How Wrong Can a Good Predictor Be? Diverging Updates with Vanishing Predictive KL"
+    },
+    "arXiv:2609.11149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11149",
+      "identity_tokens": [
+        "arXiv:2609.11149"
+      ],
+      "reason": "How fast does a language model degrade when trained on its own outputs? Theory traces it to gradually accumulating errors, while experiments report repeated phrases within ten generations. Under a fixed sampling seed in vLLM, the fast loss of lexical diversity comes from the sampler. When vLLM serves a batch from one seeded sampling configuration, every request receives the same random draws, and a fixed seed replays them every generation. Fine-tuning raises the tokens that won, and the replayed draws let them win by more. Sharing across requests and replay across generations matter only together. Remove either one, by changing the shared seed every generation or by giving each request its own seed that repeats every generation, and the unique-4-gram fraction of two StableLM checkpoints stays near its starting value of about 0.98 through generation 3. Keep both, and the replayed shared seed takes seven checkpoints from five families to between 0.045 and 0.38 by then. Three generations of replay write the favoured phrases into the weights: decoded with one seed per request, the generation-3 weights of the replayed StableLM-2-1.6B chain recover most of their diversity, yet the phrase that filled every sample under the shared seed still opens 46% of them. Without replay, five checkpoints drift slowly, consistent with the gradual accumulation that theory describes, and three turn incoherent though their diversity scores stay high. One peer-reviewed model-collapse pipeline that fine-tunes Gemma-2-27B samples identical prompts under one seeded configuration, and three quarters of the rows it released for one iteration repeat nearly as often as one such batch copies them. A seed per request restores the fresh sample that stability analyses assume.",
+      "first_checked_at": "2026-10-05T06:56:48+00:00",
+      "last_checked_at": "2026-10-05T06:56:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Break Step: Recursive Training Resonates with Replayed Sampling Noise"
+    },
+    "arXiv:2609.11156": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11156",
+      "identity_tokens": [
+        "arXiv:2609.11156"
+      ],
+      "reason": "All-in-One medical image restoration (MedIR) aims to address diverse tasks across modalities and degradation types using a single universal model. Existing methods typically prioritize modeling inter-task heterogeneity (e.g., distinct data distributions and degradation types). However, they largely neglect the inherent homogeneity present in medical images, such as widely shared anatomical structures within and across modalities, which can be leveraged to ease model training and improve generalization. To this end, we propose UniH3, a novel framework that Unifies Hierarchical Homogeneity and Heterogeneity for all-in-one medical image restoration. Specifically, to comprehensively exploit homogeneity, we introduce a Hierarchical Homogeneity Memory (H2M) module that progressively distills intra- and inter-task homogeneity priors from high-quality images during training, and adaptively retrieves the most relevant priors tailored to the input for guided restoration. These retrieved priors are then injected into the restoration pipeline via an efficient Homogeneity-Guided Attention (HGA) mechanism. Furthermore, to comprehensively address heterogeneity, we design a Hierarchical Heterogeneity Balancer (H2B) that mitigates both inter- and intra-task conflicts during optimization, facilitating balanced and effective multi-task learning. Extensive experiments on two large-scale benchmarks, MedIR-2D-500K and MedIR-3D-3K, demonstrate that UniH3 achieves state-of-the-art performance on both all-in-one and single-task medical image restoration. We hope this work establishes a strong benchmark and advances the development of general-purpose medical image restoration models. Code is available at https://github.com/Yaziwel/UniH3.",
+      "first_checked_at": "2026-10-05T06:56:48+00:00",
+      "last_checked_at": "2026-10-05T06:56:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "UniH$^3$: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration"
     }
   }
 }
