@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r25-screen-01-part-03-a52007293bd9",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.40016",
+      "identity_tokens": [
+        "arXiv:2609.40016"
+      ],
+      "title": "Component-Weighted Centroid Search for Exact Incremental BPE",
+      "reason": "incremental BPE探索の最悪時probe数は大きく減る一方、実語彙ではcomplete-updateが0.3–13.1%遅く平均throughput向上なし。tokenizer最悪時挙動とLLM servingへの実効性が未確定。",
+      "source_url": "https://arxiv.org/abs/2609.40016",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.40230",
+      "identity_tokens": [
+        "arXiv:2609.40230"
+      ],
+      "title": "EviRover: Reinforcing Agentic Perception Beyond a Glance",
+      "reason": "VLMを用いたagentic visual perception/groundingの改善が主題で、推論コストを下げる具体策や性能測定は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2609.40230",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.40316",
+      "identity_tokens": [
+        "arXiv:2609.40316"
+      ],
+      "title": "Scaling Laws for Looped Mixture of Experts",
+      "reason": "一次本文で手法・評価を確認した結果、主題はLLM training/safety/benchmark/model capabilityであり、対象のinference efficiency/serving改善と技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.40316",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00368",
+      "identity_tokens": [
+        "arXiv:2610.00368"
+      ],
+      "title": "DeepJEPA: Scaling World Models from Within",
+      "reason": "JEPA系のworld modelをスケールさせる研究で、LLMの推論・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00368",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00373",
+      "identity_tokens": [
+        "arXiv:2610.00373"
+      ],
+      "title": "When Do Attention-Head Ablations Support Causal Claims? Projection-Level Confounds, Floor Effects, and Matched Controls",
+      "reason": "Attention head ablationによる因果主張の統計的妥当性を評価する方法論で、LLM実行効率を改善しない。",
+      "source_url": "https://arxiv.org/abs/2610.00373",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
