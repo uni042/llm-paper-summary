@@ -1,0 +1,162 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1430-scheduled-chat-30/r03",
+  "reference_main_sha": "20cbcca1a9e1569e8655f45d706b7b623f600776",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/060673096",
+      "identity_tokens": [
+        "DOI:10.1137/060673096"
+      ],
+      "title": "The Fast Johnson--Lindenstrauss Transform and Approximate Nearest Neighbors",
+      "reason": "randomized Fourier transformで低歪み次元削減を高速化し、approximate nearest neighbor searchを改善する理論・探索アルゴリズム研究。後続attention近似への数学的関連はあり得るが、LLM/Transformer推論を最終適用先とする方式・評価ではない。",
+      "source_url": "https://doi.org/10.1137/060673096",
+      "body_check": "abstract_screen_only: SIAM一次要旨でFJLT、low-distortion embedding、approximate nearest neighbor searchが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1108",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1108",
+        "arXiv:1803.11138"
+      ],
+      "title": "Colorless Green Recurrent Networks Dream Hierarchically",
+      "reason": "RNN language modelが4言語でlong-distance number agreementと抽象的階層syntaxを学習できるかを評価するlinguistic capability研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1803.11138",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でRNNのhierarchical syntactic structure、number agreement、人間比較が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1509.02897",
+      "identity_tokens": [
+        "arXiv:1509.02897"
+      ],
+      "title": "Practical and Optimal LSH for Angular Distance",
+      "reason": "angular distance向けlocality-sensitive hashingを理論・実験で改善し、approximate near-neighbor searchを高速化するアルゴリズム研究。LLM推論への直接適用・評価がない。",
+      "source_url": "https://arxiv.org/abs/1509.02897",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLSH family、angular distance、near-neighbor search、multiprobe評価が主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03533",
+      "identity_tokens": [
+        "arXiv:2310.03533"
+      ],
+      "title": "Large Language Models for Software Engineering: Survey and Open Problems",
+      "reason": "LLMをcoding、design、requirements、repair、refactoring、documentation等へ適用するsoftware engineering survey。効率的LLM-based SEへの言及はあるが、推論runtime・serving最適化の新規方式・実装評価を提案しない。",
+      "source_url": "https://arxiv.org/abs/2310.03533",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM for software engineeringのsurveyとopen problemsが主題と確認。推論system新規方式ではないため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jml.2019.104047",
+      "identity_tokens": [
+        "DOI:10.1016/j.jml.2019.104047"
+      ],
+      "title": "How many words do we read per minute? A review and meta-analysis of reading rate",
+      "reason": "190研究・18,573人を集約して人間のsilent/oral reading rateを推定する心理言語学meta-analysis。LLM/Transformer推論systemとは無関係。",
+      "source_url": "https://doi.org/10.1016/j.jml.2019.104047",
+      "body_check": "abstract_screen_only: 書誌・要旨でhuman reading rate meta-analysis、silent 238/260 wpm、oral 183 wpmが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.14565",
+      "identity_tokens": [
+        "arXiv:2306.14565"
+      ],
+      "title": "Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning",
+      "reason": "400k visual instructionのLRV-InstructionとGAVIE評価を提案し、MiniGPT4/mPLUG-Owlのfine-tuningでhallucinationを抑えるtraining/data研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2306.14565",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvisual instruction dataset、negative instructions、GAVIE、fine-tuningによるhallucination mitigationが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.12900",
+      "identity_tokens": [
+        "arXiv:2301.12900"
+      ],
+      "title": "DepGraph: Towards Any Structural Pruning",
+      "reason": "Dependency Graphでlayer間のstructural couplingを自動解析し、CNN/RNN/GNN/Transformer等をarchitecture非依存に構造pruningしてmodel accelerationを狙う。Transformerも対象だが評価中心はvision/graph/LSTMでLLM生成推論の直接評価がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2301.12900",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でstructural pruning、Dependency Graph、coupled parameter grouping、Vision Transformer等を含む複数architecture評価を確認。model accelerationに直接関連するがLLM inference固有評価がないためborderline。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.07416",
+      "identity_tokens": [
+        "arXiv:1803.07416"
+      ],
+      "title": "Tensor2Tensor for Neural Machine Translation",
+      "reason": "neural machine translation向けdeep learning libraryでTransformerのreference implementationを提供するsoftware紹介。LLM推論runtime・serving効率化の新規方式や定量system評価を提案しない。",
+      "source_url": "https://arxiv.org/abs/1803.07416",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でTensor2Tensor libraryとNMT/Transformer reference implementationの紹介が主題と確認。現行LLM推論system研究対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.16419",
+      "identity_tokens": [
+        "arXiv:2503.16419"
+      ],
+      "title": "Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models",
+      "reason": "長いChain-of-Thoughtによる計算overheadをoverthinkingとして整理し、model-based、reasoning-output-based、prompt-basedの効率化を体系化する。推論時にreasoning step/lengthを動的削減する手法群を直接扱うLLM inference efficiency surveyのため対象内。",
+      "source_url": "https://arxiv.org/abs/2503.16419",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でlong-CoT computational overhead、model-based efficient reasoning、inference時のreasoning-step/length reduction、prompt difficulty/length control、benchmarkingを確認。LLM推論効率が中心のためaccept。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p17-1080",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p17-1080",
+        "arXiv:1704.03471"
+      ],
+      "title": "What do Neural Machine Translation Models Learn about Morphology?",
+      "reason": "NMT encoder/decoder表現が形態論情報をどの程度学ぶかをPOS・morphological taggingで分析するinterpretability/linguistics研究。推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1704.03471",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でNMT representation analysis、morphology、POS/morphological taggingが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:10:00+09:00",
+      "last_checked_at": "2026-10-05T15:10:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 51
+    }
+  ]
+}
