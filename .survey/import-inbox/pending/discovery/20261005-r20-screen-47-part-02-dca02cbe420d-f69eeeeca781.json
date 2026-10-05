@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-47-part-02-dca02cbe420d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SIU71813.2026.11637009",
+      "identity_tokens": [
+        "DOI:10.1109/SIU71813.2026.11637009"
+      ],
+      "title": "Rotational Post-Training Quantization for Biomedical Vision-Language Models",
+      "reason": "The title suggests quantization of biomedical VLMs, potentially in scope, but primary evidence for inference efficiency, measurements and quality trade-offs was unavailable.",
+      "source_url": "https://doi.org/10.1109/SIU71813.2026.11637009",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3829079",
+      "identity_tokens": [
+        "DOI:10.1145/3829079"
+      ],
+      "title": "Generative AI at the Edge: A Comprehensive Survey of Architectures, Hardware and Applications",
+      "reason": "The ACM Digital Library primary article route returned HTTP 403 in this check, so the survey chapters, coverage and synthesis could not be checked beyond the abstract.",
+      "source_url": "https://doi.org/10.1145/3829079",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2507.17120-bucketserve-dynamic-batching.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md",
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0353156",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0353156"
+      ],
+      "title": "UAMP: Consistent video object segmentation with uncertainty-aware memory propagation.",
+      "reason": "The work improves SAM 2 video segmentation memory propagation and segmentation consistency; it does not study language-model inference efficiency.",
+      "source_url": "https://doi.org/10.1371/journal.pone.0353156",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.20473/jisebi.12.2.348-360",
+      "identity_tokens": [
+        "DOI:10.20473/jisebi.12.2.348-360"
+      ],
+      "title": "Toward Real-Time Hoax Detection: Integrating Transformer for News Scraping and Semantic Analysis",
+      "reason": "The contribution is an Indonesian news-hoax verification application and semantic pipeline; the abstract provides no LLM serving-efficiency method or measurement.",
+      "source_url": "https://doi.org/10.20473/jisebi.12.2.348-360",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04749",
+      "identity_tokens": [
+        "arXiv:2607.04749"
+      ],
+      "title": "Direct Model State Migration for Elastic Training of Large Language Models",
+      "reason": "The proposed state migration is explicitly for elastic LLM training, not inference-time serving.",
+      "source_url": "https://arxiv.org/abs/2607.04749",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
