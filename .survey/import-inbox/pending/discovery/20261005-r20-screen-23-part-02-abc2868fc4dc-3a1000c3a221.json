@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-23-part-02-abc2868fc4dc",
+  "reference_main_sha": "b5564ebf35e031dfac425a9d05f890d23ba0e178",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44515-026-00018-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44515-026-00018-w"
+      ],
+      "title": "Knowledge Accuracy and Response Characteristics of an On-Device Large Language Model in Building Environmental Engineering: a Preliminary Case Study of EXAONE 4.0 1.2B Using ChatGPT-4o as a Cloud Reference",
+      "reason": "The primary abstract is a small Korean-language accuracy/response case study comparing an on-device LLM with ChatGPT-4o; it does not claim inference cost, latency, memory, or serving optimization.",
+      "source_url": "https://doi.org/10.1007/s44515-026-00018-w",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22149",
+      "identity_tokens": [
+        "arXiv:2608.22149"
+      ],
+      "title": "Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints",
+      "reason": "The saved memory is for robot-specific constrained-decoding machinery, not the LLM weights/KV or general serving path; generalization beyond embodied planning is uncertain.",
+      "source_url": "https://arxiv.org/abs/2608.22149",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22242",
+      "identity_tokens": [
+        "arXiv:2608.22242"
+      ],
+      "title": "Unfolding the Interdisciplinary Complexities of Climate Science: Fuxi-Climate Foundational Model",
+      "reason": "Fuxi-Climate is a climate-science reasoning model evaluated for domain capability; the abstract gives no LLM inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2608.22242",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22263",
+      "identity_tokens": [
+        "arXiv:2608.22263"
+      ],
+      "title": "Training-Free VLM Personalization via Calibrated Residual Decoding",
+      "reason": "This work improves VLM personalization quality through residual decoding, without an inference-cost or serving-efficiency claim.",
+      "source_url": "https://arxiv.org/abs/2608.22263",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22310",
+      "identity_tokens": [
+        "arXiv:2608.22310"
+      ],
+      "title": "HERO: Human-profile Enhanced Retrieval Optimization Framework for Long-term Agent Memory",
+      "reason": "HERO is an agent-memory retrieval quality framework; its abstract does not report reducing LLM inference/serving resources.",
+      "source_url": "https://arxiv.org/abs/2608.22310",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
