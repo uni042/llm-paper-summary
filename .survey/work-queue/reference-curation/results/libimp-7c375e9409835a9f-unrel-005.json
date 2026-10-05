@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c375e9409835a9f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1172",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1172",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.findings-acl.1172"
+    ],
+    "reason": "The paper studies privacy attacks on intermediate representations in distributed inference; its stated contribution is threat measurement rather than an efficiency improvement.",
+    "first_checked_at": "2026-10-05T13:00:22+00:00",
+    "last_checked_at": "2026-10-05T13:00:22+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+    ],
+    "title": "Privacy Risks of Intermediate Representations: Attribute Inference in Distributed LLM Inference"
+  },
+  "processed_at": "2026-10-05T13:00:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c375e940983",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

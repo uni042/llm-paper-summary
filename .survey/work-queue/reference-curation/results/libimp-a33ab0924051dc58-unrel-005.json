@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a33ab0924051dc58-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.09228",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.09228",
+    "identity_tokens": [
+      "arXiv:2508.09228"
+    ],
+    "reason": "The work optimizes multilingual speech-model training with multi-objective gradients; it is not an LLM inference or serving contribution.",
+    "first_checked_at": "2026-10-05T13:00:23+00:00",
+    "last_checked_at": "2026-10-05T13:00:23+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+    ],
+    "title": "Objective Soups: Multilingual Multi-Task Modeling for Speech Processing"
+  },
+  "processed_at": "2026-10-05T13:00:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a33ab0924051",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
