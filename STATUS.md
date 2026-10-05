@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-06 07:26:25 JST**
+> 自動生成: **2026-10-06 07:27:35 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -34,17 +34,17 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **27742** |
-| 処理済み | **10586** |
-| 未処理Discovery候補 | **17156** |
+| 探索候補総数 | **27759** |
+| 処理済み | **10597** |
+| 未処理Discovery候補 | **17162** |
 | 収録済み | **1613** |
-| Research / Audit候補へ昇格済み | **484** |
-| 無関係として除外 | **6455** |
-| 微妙として除外 | **2034** |
+| Research / Audit候補へ昇格済み | **481** |
+| 無関係として除外 | **6463** |
+| 微妙として除外 | **2040** |
 
 - 消化率: **38.2%**
-- 現在の生在庫: 後方references **6304件** / 前方引用 **11840件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **17838件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **6306件** / 前方引用 **11840件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **17841件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 19:05:03 JST（12時間21分前）** |
+| 最終maintenance完了 | **10-05 19:05:03 JST（12時間22分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -102,8 +102,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 - Research: **10-06 06:37:00 JST** / worker — / run 20261006-0600-scheduled-chat-00/r02 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_598e3102cea081919e8152e9d1d593fa--2009.12812-ternarybert.json
 - Discovery: **10-06 07:00:00 JST** / worker scheduled-chat-00 / run 20261006-0700-scheduled-chat-00/r01
-  - 本文確認・分類 **7件** / accept **0件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_d549a8eca2788191b568d900f7ff8734--research-prescreen-20261006-0700-r01.json
+  - 本文確認・分類 **7件** / accept **0件** / unrelated+borderline **7件**
+  - evidence: .survey/import-inbox/results/discovery/libfile_d549a8eca2788191b568d900f7ff8734--research-prescreen-20261006-0700-r01.json
 
 ## 件数サマリー（旧immutable transport診断）
 
