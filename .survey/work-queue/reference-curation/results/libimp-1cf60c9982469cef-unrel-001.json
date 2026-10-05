@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1cf60c9982469cef-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18195",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18195",
+    "identity_tokens": [
+      "arXiv:2606.18195"
+    ],
+    "reason": "Primary abstract proposes on-policy self-distillation training for diffusion LLMs; the contribution is post-training, not inference-time efficiency.",
+    "first_checked_at": "2026-10-05T02:25:05+00:00",
+    "last_checked_at": "2026-10-05T02:25:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs"
+  },
+  "processed_at": "2026-10-05T02:25:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1cf60c998246",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

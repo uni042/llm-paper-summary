@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:22:47+00:00",
-  "record_count": 1909,
+  "updated_at": "2026-10-05T02:25:06+00:00",
+  "record_count": 1928,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -27579,6 +27579,279 @@
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
       "title": "A Systematic Approach to Multi-Agent AI from Advanced Regulatory Control Theory: Safe and Auditable LLM Operator Agents for Process Control"
+    },
+    "arXiv:2608.24747": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24747",
+      "identity_tokens": [
+        "arXiv:2608.24747"
+      ],
+      "reason": "Primary abstract proposes verification and refinement of skills for RL-trained agents; its contribution is agent training/skill quality, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SkillForge: Evolving Verifiable Skills for Reinforcement Learning Agents"
+    },
+    "arXiv:2608.21750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21750",
+      "identity_tokens": [
+        "arXiv:2608.21750"
+      ],
+      "reason": "Primary abstract proposes retrieval-conditioned LoRA adapter fusion for RAG answer quality and tuning robustness; it does not claim inference/serving efficiency improvements.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "FCPRAG: Fusion-Controller Parametric Retrieval-Augmented Generation for Stable Multi-Passage LoRA Injection"
+    },
+    "arXiv:2608.19564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19564",
+      "identity_tokens": [
+        "arXiv:2608.19564"
+      ],
+      "reason": "Primary abstract benchmarks whether agents should persist, verify, or clarify memories; the contribution is memory-decision evaluation, not runtime efficiency.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Remember, Verify, or Ask? Cross-Family Evaluation of Memory Commitment in LLM Agents"
+    },
+    "arXiv:2608.17605": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17605",
+      "identity_tokens": [
+        "arXiv:2608.17605"
+      ],
+      "reason": "Primary abstract is a broad multimodal conversational-AI survey/research agenda, with no specific inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Multi-turn Conversational AI from Text to Multimodal Interaction: Data, Models, Evaluation, and Open Challenges"
+    },
+    "arXiv:2606.18195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18195",
+      "identity_tokens": [
+        "arXiv:2606.18195"
+      ],
+      "reason": "Primary abstract proposes on-policy self-distillation training for diffusion LLMs; the contribution is post-training, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Learning from the Self-future: On-policy Self-distillation for dLLMs"
+    },
+    "arXiv:2606.17175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17175",
+      "identity_tokens": [
+        "arXiv:2606.17175"
+      ],
+      "reason": "Primary abstract studies training-data mismatch for diffusion-LM token editing and proposes self-generated error training; no serving/inference-efficiency method is claimed.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Self-Generated Error Training for Token Editing in Diffusion Language Models"
+    },
+    "arXiv:2606.17182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17182",
+      "identity_tokens": [
+        "arXiv:2606.17182"
+      ],
+      "reason": "Primary abstract formalizes concurrency anomalies in multi-agent systems and verifies TLA+ detection/prevention; not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Verified Detection and Prevention of Concurrency Anomalies in Multi-Agent Large Language Model Systems"
+    },
+    "arXiv:2606.15285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15285",
+      "identity_tokens": [
+        "arXiv:2606.15285"
+      ],
+      "reason": "Primary abstract targets real-time VLA robotic control through asynchronous action generation; it is a VLA control method, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Acting While Understanding: Asynchronous Semantic-Action Decoupling for Real-Time Vision-Language-Action Models"
+    },
+    "arXiv:2606.15378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15378",
+      "identity_tokens": [
+        "arXiv:2606.15378"
+      ],
+      "reason": "本文確認により、主たる貢献が対象範囲外または対象の推論/serving効率を改善する証拠がないと判断。",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Rethinking the Role of Efficient Attention in Hybrid Architectures"
+    },
+    "arXiv:2609.27331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27331",
+      "identity_tokens": [
+        "arXiv:2609.27331"
+      ],
+      "reason": "Primary abstract evaluates a StarCraft II controller using language-model planning; it reports application-level gameplay/cost rather than improving LLM inference/serving.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning"
+    },
+    "arXiv:2609.05736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05736",
+      "identity_tokens": [
+        "arXiv:2609.05736"
+      ],
+      "reason": "本文確認により、主たる貢献が対象範囲外または対象の推論/serving効率を改善する証拠がないと判断。",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Beyond Prompts: Measuring and Optimizing LLM Tool-Agent Harnesses"
+    },
+    "arXiv:2609.03715": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03715",
+      "identity_tokens": [
+        "arXiv:2609.03715"
+      ],
+      "reason": "Primary abstract evaluates a compact visuomotor VLA policy for robotic manipulation; it is not an LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?"
+    },
+    "arXiv:2608.26846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26846",
+      "identity_tokens": [
+        "arXiv:2608.26846"
+      ],
+      "reason": "Primary abstract introduces a matched-trajectory evaluation protocol for confidence-gated retrieval; it studies action-choice evaluation rather than reducing inference cost or serving latency.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Evaluating Confidence-Gated Retrieval with Matched Trajectory Replay"
+    },
+    "arXiv:2608.27384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27384",
+      "identity_tokens": [
+        "arXiv:2608.27384"
+      ],
+      "reason": "Primary abstract accelerates flow-matching VLA action decoding for robot control, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference"
+    },
+    "arXiv:2606.12329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12329",
+      "identity_tokens": [
+        "arXiv:2606.12329"
+      ],
+      "reason": "Primary abstract presents persistent project-event memory and file-scoped advisories for coding agents; its speed benchmark concerns local log analysis, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment Layer for AI Coding Agents"
+    },
+    "arXiv:2606.08960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08960",
+      "identity_tokens": [
+        "arXiv:2606.08960"
+      ],
+      "reason": "Primary abstract develops adversarial loops to harden agent task verifiers and benchmarks; the focus is reward-integrity/security, not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Hardening Agent Benchmarks with Adversarial Hacker-Fixer Loops"
+    },
+    "arXiv:2606.09749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09749",
+      "identity_tokens": [
+        "arXiv:2606.09749"
+      ],
+      "reason": "Primary abstract proposes a safety filter for VLA robot policies and obstacle tracking; not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models"
+    },
+    "DOI:10.1109/jsac.2026.3660010": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jsac.2026.3660010",
+      "identity_tokens": [
+        "DOI:10.1109/jsac.2026.3660010"
+      ],
+      "reason": "IEEE primary abstract describes a broad 6G/LAM/Agentic-AI tutorial and surveys communication applications; it does not contribute a specific LLM inference-efficiency or serving method.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "title": "From Large AI Models to Agentic AI: A Tutorial on Future Intelligent Communications"
+    },
+    "arXiv:2409.18169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18169",
+      "identity_tokens": [
+        "arXiv:2409.18169"
+      ],
+      "reason": "Primary abstract is a survey of harmful fine-tuning attacks and defenses; it concerns model security/alignment rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T02:25:06+00:00",
+      "last_checked_at": "2026-10-05T02:25:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Harmful Fine-tuning Attacks and Defenses for Large Language Models: A Survey"
     }
   }
 }

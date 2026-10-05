@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54a613eb8dab04d5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.27331",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.27331",
+    "identity_tokens": [
+      "arXiv:2609.27331"
+    ],
+    "reason": "Primary abstract evaluates a StarCraft II controller using language-model planning; it reports application-level gameplay/cost rather than improving LLM inference/serving.",
+    "first_checked_at": "2026-10-05T02:25:05+00:00",
+    "last_checked_at": "2026-10-05T02:25:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning"
+  },
+  "processed_at": "2026-10-05T02:25:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54a613eb8dab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

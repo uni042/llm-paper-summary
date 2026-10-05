@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:22:47+00:00",
-  "record_count": 692,
+  "updated_at": "2026-10-05T02:25:05+00:00",
+  "record_count": 693,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10116,6 +10116,20 @@
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
       "title": "ECHO: Prune to act, trace to learn with selective turn memory in agentic RL"
+    },
+    "arXiv:2608.12990": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12990",
+      "identity_tokens": [
+        "arXiv:2608.12990"
+      ],
+      "reason": "The measured savings are chiefly memory-construction cost, not request-serving inference latency/throughput, and the paper explicitly leaves deployment evaluation open. Fit to the inference/serving scope is therefore uncertain.",
+      "first_checked_at": "2026-10-05T02:25:05+00:00",
+      "last_checked_at": "2026-10-05T02:25:05+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "LycheeMemory V2: Efficient Long-Term Memory for LLM Agents via Semantic Segment-Level Consolidation"
     }
   }
 }
