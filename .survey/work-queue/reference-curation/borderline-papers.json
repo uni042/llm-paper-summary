@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:08:38+00:00",
-  "record_count": 1608,
+  "updated_at": "2026-10-05T12:11:27+00:00",
+  "record_count": 1610,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24980,6 +24980,39 @@
         "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
       ],
       "title": "BTHA: Block-Then-Hash Attention for Efficient Long Context"
+    },
+    "arXiv:2606.14150": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.14150",
+      "identity_tokens": [
+        "arXiv:2606.14150"
+      ],
+      "reason": "The paper concerns compressed LLMs that may be deployable more cheaply, but its primary evidence is training/quality rather than measured inference efficiency.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Small LLMs: Pruning vs. Training from Scratch"
+    },
+    "arXiv:2607.11897": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11897",
+      "identity_tokens": [
+        "arXiv:2607.11897"
+      ],
+      "reason": "Full text gives theory/toy evidence only and explicitly leaves fair throughput and large-scale LM experiments to future work, so runtime benefit cannot be confirmed.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Semidirect Fourier Delta Attention: Phase-Controlled Delta Memory with Constructive Chunk-WY Kernels"
     }
   }
 }

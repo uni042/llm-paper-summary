@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:08:39+00:00",
-  "record_count": 4846,
+  "updated_at": "2026-10-05T12:11:28+00:00",
+  "record_count": 4864,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -70527,6 +70527,262 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "Greedy Coordinate Diffusion: Effective and Semantically Coherent Adversarial Attacks via Diffusion Guidance"
+    },
+    "arXiv:2606.15054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15054",
+      "identity_tokens": [
+        "arXiv:2606.15054"
+      ],
+      "reason": "Sparse-autoencoder feature scoring/interpretability research, not inference serving optimization.",
+      "first_checked_at": "2026-10-05T12:11:25+00:00",
+      "last_checked_at": "2026-10-05T12:11:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Size Doesn't Matter: Cosine-Scored Sparse Autoencoders"
+    },
+    "arXiv:2606.15085": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15085",
+      "identity_tokens": [
+        "arXiv:2606.15085"
+      ],
+      "reason": "Integrable token-mixing layer and sequence-model properties, without an LLM inference-efficiency evaluation.",
+      "first_checked_at": "2026-10-05T12:11:25+00:00",
+      "last_checked_at": "2026-10-05T12:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "An Integrable Token Mixing Layer from the Generalized Yang Baxter Equation"
+    },
+    "arXiv:2606.15133": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15133",
+      "identity_tokens": [
+        "arXiv:2606.15133"
+      ],
+      "reason": "Dexterous hand-object interaction/generation for robotics, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:11:25+00:00",
+      "last_checked_at": "2026-10-05T12:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "DragMesh-2: Physically Plausible Dexterous Hand-Object Interaction with Articulated Objects"
+    },
+    "arXiv:2606.15327": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15327",
+      "identity_tokens": [
+        "arXiv:2606.15327"
+      ],
+      "reason": "Diffusion-LM transition-kernel quality/training-dynamics study; it does not establish inference efficiency or serving improvement.",
+      "first_checked_at": "2026-10-05T12:11:25+00:00",
+      "last_checked_at": "2026-10-05T12:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Semantic DLM+: Improving Diffusion Language Models through Bias-variance Trade-off in Transition Kernel Design"
+    },
+    "DOI:10.64898/2026.06.13.732043": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.13.732043",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.13.732043"
+      ],
+      "reason": "Protein-binder generation with sparse experts is a protein-design model/task, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "MoE-Bind: Guiding De Novo Protein Binder Generation with Sparse Experts"
+    },
+    "arXiv:2606.14030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14030",
+      "identity_tokens": [
+        "arXiv:2606.14030"
+      ],
+      "reason": "Speaker diarization model pruning/quantization is an audio recognition task, not language-model inference.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Efficiency-Performance Trade-offs in Neural Speaker Diarization via Structured Pruning and Low-Bit Quantization"
+    },
+    "arXiv:2606.14094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14094",
+      "identity_tokens": [
+        "arXiv:2606.14094"
+      ],
+      "reason": "Frame/event-camera multi-object tracking dataset and model, a vision task rather than LLM inference.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "FEMOT: Multi-Object Tracking using Frame and Event Cameras"
+    },
+    "arXiv:2606.14122": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14122",
+      "identity_tokens": [
+        "arXiv:2606.14122"
+      ],
+      "reason": "Byte-aware LM UTF-8 validity is studied through training scale and reliability; no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Beyond Perplexity: UTF-8 Validity in Byte-aware Language Models"
+    },
+    "arXiv:2606.14235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14235",
+      "identity_tokens": [
+        "arXiv:2606.14235"
+      ],
+      "reason": "Bayesian posterior approximation via neural rejection sampling, not language-model inference.",
+      "first_checked_at": "2026-10-05T12:11:26+00:00",
+      "last_checked_at": "2026-10-05T12:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Implicit Variational Rejection Sampling"
+    },
+    "arXiv:2606.14346": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14346",
+      "identity_tokens": [
+        "arXiv:2606.14346"
+      ],
+      "reason": "Structural minimization experiments concern fully connected and CNN models; transformer extension is a proof-of-concept, not an LLM inference evaluation.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Squeeze-Release: Iterative Pruning with Exact Structural Minimization"
+    },
+    "arXiv:2606.14831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14831",
+      "identity_tokens": [
+        "arXiv:2606.14831"
+      ],
+      "reason": "Characterizes constraint-evasive fabrication/safety behavior in deployed LLM agents; no efficiency optimization.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Is Your Agent Playing Dead? Deployed LLM Agents Exhibit Constraint-Evasive Fabrication and Thanatosis"
+    },
+    "arXiv:2606.14943": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14943",
+      "identity_tokens": [
+        "arXiv:2606.14943"
+      ],
+      "reason": "Natural-language conditional modeling method without a serving/inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Simplifying the Modeling of Arbitrary Conditionals in Natural Language"
+    },
+    "arXiv:2606.15005": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15005",
+      "identity_tokens": [
+        "arXiv:2606.15005"
+      ],
+      "reason": "Mixture-of-experts framework detects/localizes false-data-injection attacks in power systems, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "A Transformer-Based Mixture-of-Experts Framework for False Data Injection Attack Detection and Localization"
+    },
+    "arXiv:2606.15021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15021",
+      "identity_tokens": [
+        "arXiv:2606.15021"
+      ],
+      "reason": "Action-token intervention steers vision-language-action policies for robotics; it is a control/behavior method, not LLM efficiency.",
+      "first_checked_at": "2026-10-05T12:11:27+00:00",
+      "last_checked_at": "2026-10-05T12:11:27+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Steering Autoregressive Vision-Language-Action Policies via Action Token Intervention"
+    },
+    "arXiv:2606.19379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19379",
+      "identity_tokens": [
+        "arXiv:2606.19379"
+      ],
+      "reason": "Studies linear recoverability of transformer feed-forward blocks as a model-analysis measure, not an inference optimization.",
+      "first_checked_at": "2026-10-05T12:11:28+00:00",
+      "last_checked_at": "2026-10-05T12:11:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "How Linear Is a Transformer Feed-Forward Block? Per-Block Linear Recoverability Is Learned, Not Architectural"
+    },
+    "arXiv:2606.24901": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24901",
+      "identity_tokens": [
+        "arXiv:2606.24901"
+      ],
+      "reason": "Survey of continual-learning lifecycle for industrial LLMs, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T12:11:28+00:00",
+      "last_checked_at": "2026-10-05T12:11:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "LLM Evolution as an Industry-Scale Ecosystem: A Lifecycle Perspective on Continual Learning"
+    },
+    "DOI:10.1109/icdcm67837.2026.11594454": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icdcm67837.2026.11594454",
+      "identity_tokens": [
+        "DOI:10.1109/icdcm67837.2026.11594454"
+      ],
+      "reason": "Electro-thermal simulation and hybrid energy-storage control for AI data centers, not model inference optimization.",
+      "first_checked_at": "2026-10-05T12:11:28+00:00",
+      "last_checked_at": "2026-10-05T12:11:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Modeling of AI Data Centers with Electro-Thermal Coupling & Coordinated Hybrid Energy Storages"
+    },
+    "arXiv:2606.12765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12765",
+      "identity_tokens": [
+        "arXiv:2606.12765"
+      ],
+      "reason": "Reverse-engineers Apple GPU tensor path; generic accelerator characterization without an LLM inference evaluation.",
+      "first_checked_at": "2026-10-05T12:11:28+00:00",
+      "last_checked_at": "2026-10-05T12:11:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Rigel: Reverse-Engineering the Metal 4.1 Tensor Compute Path on the Apple M4 Max GPU"
     }
   }
 }
