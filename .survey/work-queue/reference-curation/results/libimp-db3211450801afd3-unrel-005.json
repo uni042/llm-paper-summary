@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-db3211450801afd3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32922",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32922",
+    "identity_tokens": [
+      "arXiv:2609.32922"
+    ],
+    "reason": "Vision Transformer matrix multiplicationのstochastic computing量子化が主対象でLLM inferenceではない。",
+    "first_checked_at": "2026-10-05T05:28:04+00:00",
+    "last_checked_at": "2026-10-05T05:28:04+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Precision As You Need: Stochastic Computing Is a Dense Adaptive Quantizer"
+  },
+  "processed_at": "2026-10-05T05:28:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-db3211450801",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

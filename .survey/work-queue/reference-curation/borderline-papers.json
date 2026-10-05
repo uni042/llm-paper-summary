@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:25:34+00:00",
-  "record_count": 958,
+  "updated_at": "2026-10-05T05:28:03+00:00",
+  "record_count": 961,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14531,6 +14531,54 @@
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
       "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research"
+    },
+    "arXiv:2609.32960": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32960",
+      "identity_tokens": [
+        "arXiv:2609.32960"
+      ],
+      "reason": "一次本文は対象範囲（AI lifecycle/energy）に関連するレビューだが、推論の効率手法ではなく、published-data由来の概算とtaxonomy/policy synthesisで新規物理測定はない。",
+      "first_checked_at": "2026-10-05T05:28:03+00:00",
+      "last_checked_at": "2026-10-05T05:28:03+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Environmental Impact of Generative and Agentic AI: An in-Depth Analysis and Green Solutions"
+    },
+    "arXiv:2609.35875": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35875",
+      "identity_tokens": [
+        "arXiv:2609.35875"
+      ],
+      "reason": "本文はdebateをmatched self-consistencyより非効率と示す比較研究で、効率化手法やLLM serving/inference mechanismは提案しない。",
+      "first_checked_at": "2026-10-05T05:28:03+00:00",
+      "last_checked_at": "2026-10-05T05:28:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models"
+    },
+    "arXiv:2609.32814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32814",
+      "identity_tokens": [
+        "arXiv:2609.32814"
+      ],
+      "reason": "110M decoder LMの単一pretraining pilotでgeneration throughputは6.2–7.8%増えたが、全3 downstream指標でdense modelより低く、著者もfeasibility checkと位置づける。",
+      "first_checked_at": "2026-10-05T05:28:03+00:00",
+      "last_checked_at": "2026-10-05T05:28:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Change the Product, Keep the Parameters: Associative Algebra Layers for Transformers"
     }
   }
 }
