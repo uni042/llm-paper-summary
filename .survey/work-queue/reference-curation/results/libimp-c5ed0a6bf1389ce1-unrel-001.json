@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ed0a6bf1389ce1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.28600",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.28600",
+    "identity_tokens": [
+      "arXiv:2608.28600"
+    ],
+    "reason": "Primary abstract reviewed: Large language models (LLMs) achieve strong performance on mathematical reasoning benchmarks, yet the mathematically meaningful skills underlying their reasoning remain underexplored. We introduce \\texttt{SHAPE}, a framework that analyzes Chain-of-Thought (CoT) trajectories through two lenses developed in mathematics education: (1) semantic spaces: the model's evolving mathematical interpretations of a problem (e.g.,… Out of scope: CoT pattern analysis and post-training for reasoning accuracy, not runtime efficiency.",
+    "first_checked_at": "2026-10-05T11:40:01+00:00",
+    "last_checked_at": "2026-10-05T11:40:01+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+    ],
+    "title": "SHAPE of Chain-of-Thought in Math Reasoning"
+  },
+  "processed_at": "2026-10-05T11:40:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ed0a6bf138",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

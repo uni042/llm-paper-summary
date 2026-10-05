@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c5ed0a6bf1389ce1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.28754",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.28754",
+    "identity_tokens": [
+      "arXiv:2606.28754"
+    ],
+    "reason": "The abstract and results are in-scope, but the evidence is limited to a simulated chiplet architecture and selected workloads; transfer to deployed inference systems is unverified.",
+    "first_checked_at": "2026-10-05T11:40:01+00:00",
+    "last_checked_at": "2026-10-05T11:40:01+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md"
+    ],
+    "title": "SHIFT: Dynamic Compute Relocation Framework for Communication-Aware Chiplet-Based Systems"
+  },
+  "processed_at": "2026-10-05T11:40:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c5ed0a6bf138",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

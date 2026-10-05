@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:37:35+00:00",
-  "record_count": 4681,
+  "updated_at": "2026-10-05T11:40:02+00:00",
+  "record_count": 4697,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -68149,6 +68149,233 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "A unified Big-O-based framework for comparative complexity analysis of CNN and Transformer architectures"
+    },
+    "arXiv:2606.28835": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28835",
+      "identity_tokens": [
+        "arXiv:2606.28835"
+      ],
+      "reason": "Primary abstract reviewed: Federated Learning (FL) emerged as a promising distributed machine learning paradigm. However, extending FL to the class incremental learning scenarios introduces unique challenges: 1) Capacity conflict and catastrophic forgetting from the shared model overloading, 2) Heterogeneity from Non-Independent and Identically Distributed (Non-IID) data, and 3) Synchronized class misalignment. In this paper, we propose \\textb… Out of scope: Federated continual-learning training/convergence, not inference.",
+      "first_checked_at": "2026-10-05T11:40:00+00:00",
+      "last_checked_at": "2026-10-05T11:40:00+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Fisher-Routed Mixture of Experts for Federated Class-Incremental Learning"
+    },
+    "arXiv:2606.28962": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28962",
+      "identity_tokens": [
+        "arXiv:2606.28962"
+      ],
+      "reason": "Primary abstract reviewed: Model quantization is essential for the efficient deployment of Large Language Models (LLMs), but introduces a critical vulnerability: Quantization-Conditioned Backdoor (QCB) attacks. In these attacks, malicious behaviors remain dormant in full-precision models and activate only after specific quantization distortions, bypassing standard security audits. To mitigate this, we introduce FlipGuard, a proactive defense f… Out of scope: Quantization backdoor security defense, not inference efficiency.",
+      "first_checked_at": "2026-10-05T11:40:00+00:00",
+      "last_checked_at": "2026-10-05T11:40:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "title": "FlipGuard: Defending Large Language Models Against Quantization-Conditioned Backdoor Attacks"
+    },
+    "DOI:10.64898/2026.06.26.734178": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.26.734178",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.26.734178"
+      ],
+      "reason": "Primary abstract reviewed: Optogenetics enables experiments in out-of-equilibrium conditions to clarify biological mechanisms and quantify biophysical parameters. However, modelling and control techniques to study mammalian cell biology under optogenetic perturbation remain underutilised. Here, we benchmark these methods within mammalian cells by steering nucleocytoplasmic transport via the optogenetic LEXY protein in outcome-driven microscopy… Out of scope: Biological optogenetic system-identification/control study.",
+      "first_checked_at": "2026-10-05T11:40:00+00:00",
+      "last_checked_at": "2026-10-05T11:40:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "System Identification and Control for Optogenetics in Mammalian Nucleocytoplasmic Transport"
+    },
+    "arXiv:2606.27634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27634",
+      "identity_tokens": [
+        "arXiv:2606.27634"
+      ],
+      "reason": "Primary abstract reviewed: Small Language Models (SLMs) are increasingly being considered for deployment on edge devices such as laptops, enabling private, low-latency, and locally personalized applications. However, personalization requires models to adapt over time to evolving user- or task-specific data, placing them in a continual learning setting. This creates the risk of catastrophic forgetting, where learning new information degrades pe… Out of scope: Sequential LoRA personalization and forgetting during adaptation, not inference.",
+      "first_checked_at": "2026-10-05T11:40:00+00:00",
+      "last_checked_at": "2026-10-05T11:40:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "title": "Continual Learning for Sequential Personalization of Small Language Models: A Stability Monitoring Analysis"
+    },
+    "arXiv:2608.28600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28600",
+      "identity_tokens": [
+        "arXiv:2608.28600"
+      ],
+      "reason": "Primary abstract reviewed: Large language models (LLMs) achieve strong performance on mathematical reasoning benchmarks, yet the mathematically meaningful skills underlying their reasoning remain underexplored. We introduce \\texttt{SHAPE}, a framework that analyzes Chain-of-Thought (CoT) trajectories through two lenses developed in mathematics education: (1) semantic spaces: the model's evolving mathematical interpretations of a problem (e.g.,… Out of scope: CoT pattern analysis and post-training for reasoning accuracy, not runtime efficiency.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "SHAPE of Chain-of-Thought in Math Reasoning"
+    },
+    "DOI:10.1016/j.compbiolchem.2026.109217": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.compbiolchem.2026.109217",
+      "identity_tokens": [
+        "DOI:10.1016/j.compbiolchem.2026.109217"
+      ],
+      "reason": "Primary abstract reviewed: Bioinformatics has become a crucial discipline that connects biology and computational analysis, extracting meaningful insights from complex biological datasets. Traditional bioinformatics approaches, which rely on statistical models and manual analysis, are often inadequate for handling such complexity. The integration of artificial intelligence (AI) and machine learning (ML) has revolutionized bioinformatics by pro… Out of scope: Bioinformatics review on molecular docking/genomics, not LLM runtime.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Role of Artificial Intelligence in bioinformatics: Revolutionizing molecular docking and DNA tokenization"
+    },
+    "DOI:10.3390/s26134108": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26134108",
+      "identity_tokens": [
+        "DOI:10.3390/s26134108"
+      ],
+      "reason": "Primary abstract reviewed: Point cloud segmentation constitutes a core task in 3D computer vision. However, prevailing models suffer from inherent limitations, including the absence of polarity correlation (i.e., spatial attribute-containing features derived from the separation and calculation of positive/negative correlations within point cloud query–key pairs), inefficient feature fusion, loss of fine-grained geometric details, and excessive… Out of scope: Point-cloud vision classification/segmentation, not LLM inference.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "PA-DFNet: Polarity-Aware Attention Network with Feature Dynamic Fusion for Point Cloud Classification and Semantic Segmentation"
+    },
+    "arXiv:2606.28745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28745",
+      "identity_tokens": [
+        "arXiv:2606.28745"
+      ],
+      "reason": "Primary abstract reviewed: Diffusion prior-based methods have shown impressive results in real-world image super-resolution (ISR), yet two key challenges persist: balancing pixel-level fidelity with semantic quality, and adapting to diverse degradations. Existing dual-branch approaches freeze the pixel module during semantic training, but the semantic branch can still expand capacity within the pixel subspace, precluding genuine perceptual imp… Out of scope: Image super-resolution training/generation, not language-model serving.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "FreqOrtho-SR: Frequency-Guided Orthogonal Expert Learning for Real-World Image Super-Resolution"
+    },
+    "DOI:10.31449/inf.v50i12.12935": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.31449/inf.v50i12.12935",
+      "identity_tokens": [
+        "DOI:10.31449/inf.v50i12.12935"
+      ],
+      "reason": "Primary abstract reviewed: Recently, significant advancements have been made in models for automatic text summarization, primarilybecause of the emergence of modern technologies such as transformers and pre-training. However,handling long documents remains a major challenge for most models. Current research addresses thischallenge either by designing recurring chained models or by truncating the text to fit the input size. Insufficientattention has been given to preserving the context of the original t [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Context-Aware Extractive Summarization Using Pretrained Models for LongDocuments"
+    },
+    "DOI:10.54097/jd5aet13": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54097/jd5aet13",
+      "identity_tokens": [
+        "DOI:10.54097/jd5aet13"
+      ],
+      "reason": "Primary abstract reviewed: Large-scale recommendation systems (RS) are among the most computationally demanding workloads deployed in modern data centers, characterized by the co-existence of memory-intensive embedding table lookups and compute-intensive dense neural network operations. As model sizes grow to encompass hundreds of embedding tables with billions of parameters, deploying these models under strict service-level objective (SLO) constraints becomes increasingly challenging. This paper propo [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Latency-Bounded Embedding Table Partitioning Across Heterogeneous Accelerators for Large-Scale Recommendation Serving"
+    },
+    "arXiv:2606.29462": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29462",
+      "identity_tokens": [
+        "arXiv:2606.29462"
+      ],
+      "reason": "Primary abstract reviewed: Multimodal Large Language Models (MLLMs) inherit rich relational priors from their language backbones, yet often fail when asked to apply these relationships in visual contexts. We trace this failure to a structural blind spot: projection-based alignment trains each visual token to carry the right semantics, but never asks whether the relationships between concepts survive the crossing from language to vision. To address this, we propose MIRROR (Mapping Inter-concept Relation [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "MIRROR: Aligning Semantic Relations from Language to Image via Gromov-Wasserstein"
+    },
+    "arXiv:2607.02558": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02558",
+      "identity_tokens": [
+        "arXiv:2607.02558"
+      ],
+      "reason": "Primary abstract reviewed: As machine learning shifts from laboratory curiosity to critical infrastructure, the systems that sustain it span an extraordinary range, from sub-milliwatt microcontrollers to multi-gigawatt datacenter fleets. Reasoning across this range is hard: empirical profiling requires the target hardware in hand, while cycle-accurate simulation costs hours per configuration, leaving no tool for rapid, full-stack architectural reasoning. We present MLSYSIM (Machine Learning Systems Inf [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:01+00:00",
+      "last_checked_at": "2026-10-05T11:40:01+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "MLSYSIM: First-Principles Infrastructure Modeling for Machine Learning Systems"
+    },
+    "DOI:10.1109/tip.2026.3706290": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3706290",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3706290"
+      ],
+      "reason": "Primary abstract reviewed: One-shot 3D skeleton action recognition task struggles with diverse intra-class action execution styles, causing excessive discriminative information to obstruct obtaining separable feature space. We innovatively propose leveraging shared information among intra-class action executions to mitigate the over-influence of discriminative information. To this end, we proposed dynamic information interaction module (DIIM) that enables shared information to effectively weaken excess [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:02+00:00",
+      "last_checked_at": "2026-10-05T11:40:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "CVDII: Enhancing One-Shot Skeleton Action Recognition Through Cross-View Dynamic Information Interaction"
+    },
+    "DOI:10.1145/3765613.3811673": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3765613.3811673",
+      "identity_tokens": [
+        "DOI:10.1145/3765613.3811673"
+      ],
+      "reason": "Primary abstract reviewed: The rapid development of large language models (LLMs) has led to their increasing deployment on edge devices for applications such as autonomous driving. These edge deployments enable efficient localized processing while enhancing user privacy. However, unintentional leaks of model families and hyperparameters during LLM execution serve as critical attack vectors, facilitating high-level threats like model extraction and membership inference. In this paper, we propose ArchSno [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:02+00:00",
+      "last_checked_at": "2026-10-05T11:40:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.10443-mnn-llm-mobile-inference-engine.md"
+      ],
+      "title": "ArchSnoop: LLM Architecture Snooping via Electromagnetic Side-Channel on Edge Devices"
+    },
+    "DOI:10.1145/3820016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3820016",
+      "identity_tokens": [
+        "DOI:10.1145/3820016"
+      ],
+      "reason": "Primary abstract reviewed: Image denoising is fundamental to Monte Carlo rendering. Recently, real-time path-traced applications have become viable, relying heavily on efficient denoising. Modern denoisers are often based on neural networks, most commonly variants of the U-Net architecture. While tooling for development and training of custom neural networks is well established in Python, existing deployment and interop strategies typically rely on external inference frameworks, incur host synchronizat [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:02+00:00",
+      "last_checked_at": "2026-10-05T11:40:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Optimizing Vulkan Dispatch Schedules for Real-Time U-Net Denoising"
+    },
+    "DOI:10.24002/konstelasi.v6i1.15153": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24002/konstelasi.v6i1.15153",
+      "identity_tokens": [
+        "DOI:10.24002/konstelasi.v6i1.15153"
+      ],
+      "reason": "Primary abstract reviewed: This study examines semantic text clustering using all-MiniLM-L6-v2 sentence embeddings and K-Means on a Dewi Durga question-answering corpus from Indian, Javanese, and Balinese cultural contexts. The dataset contains 1,620 Context-Question-Answer entries extracted from Chapters 1-22. Text preprocessing included structural checking, missing-value inspection, duplicate detection, case folding, non-alphanumeric character removal, and whitespace normalization. Each context was t [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "first_checked_at": "2026-10-05T11:40:02+00:00",
+      "last_checked_at": "2026-10-05T11:40:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Optimizing Semantic Clustering of Cultural Heritage Question-Answering Corpora Using Sentence-BERT Embeddings and PCA-Enhanced K-Means"
     }
   }
 }

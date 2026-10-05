@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d45ce944c2ba3062-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tip.2026.3706290",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tip.2026.3706290",
+    "identity_tokens": [
+      "DOI:10.1109/tip.2026.3706290"
+    ],
+    "reason": "Primary abstract reviewed: One-shot 3D skeleton action recognition task struggles with diverse intra-class action execution styles, causing excessive discriminative information to obstruct obtaining separable feature space. We innovatively propose leveraging shared information among intra-class action executions to mitigate the over-influence of discriminative information. To this end, we proposed dynamic information interaction module (DIIM) that enables shared information to effectively weaken excess [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:40:02+00:00",
+    "last_checked_at": "2026-10-05T11:40:02+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "CVDII: Enhancing One-Shot Skeleton Action Recognition Through Cross-View Dynamic Information Interaction"
+  },
+  "processed_at": "2026-10-05T11:40:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d45ce944c2ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
