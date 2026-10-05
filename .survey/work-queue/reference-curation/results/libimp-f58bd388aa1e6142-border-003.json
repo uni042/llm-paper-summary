@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f58bd388aa1e6142-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3789240.3829201",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3789240.3829201",
+    "identity_tokens": [
+      "DOI:10.1145/3789240.3829201"
+    ],
+    "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+    "first_checked_at": "2026-10-05T08:30:20+00:00",
+    "last_checked_at": "2026-10-05T08:30:20+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+    ],
+    "title": "Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism"
+  },
+  "processed_at": "2026-10-05T08:30:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f58bd388aa1e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

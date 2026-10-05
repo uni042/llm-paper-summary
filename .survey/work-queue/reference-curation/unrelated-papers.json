@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:27:47+00:00",
-  "record_count": 3864,
+  "updated_at": "2026-10-05T08:30:21+00:00",
+  "record_count": 3878,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -56284,6 +56284,205 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "i-RASE: intelligent radiation sensor readout systems for real-time photon-by-photon radiation detection"
+    },
+    "DOI:10.3389/fneur.2026.1876862": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fneur.2026.1876862",
+      "identity_tokens": [
+        "DOI:10.3389/fneur.2026.1876862"
+      ],
+      "reason": "外傷性脳損傷バイオセンサー検出のレビューで、LLM推論効率の研究ではない。",
+      "first_checked_at": "2026-10-05T08:30:18+00:00",
+      "last_checked_at": "2026-10-05T08:30:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "title": "Nanomaterial-enhanced biosensors for traumatic brain injury biomarker detection: a review of analytical performance, machine learning integration, clinical validation, and point-of-care translation"
+    },
+    "DOI:10.3390/robotics15080160": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/robotics15080160",
+      "identity_tokens": [
+        "DOI:10.3390/robotics15080160"
+      ],
+      "reason": "VLAロボットモデルの体系的レビューで、一次の推論効率手法・評価を提示する候補ではない。",
+      "first_checked_at": "2026-10-05T08:30:18+00:00",
+      "last_checked_at": "2026-10-05T08:30:18+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Systematic Literature Review of Vision-Language-Action Models for Generalist Robots"
+    },
+    "DOI:10.64898/2026.07.06.736502": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.07.06.736502",
+      "identity_tokens": [
+        "DOI:10.64898/2026.07.06.736502"
+      ],
+      "reason": "細胞型別転写因子結合予測の生物学的マルチモーダルモデルで、LLM inference/servingの効率化対象ではない。",
+      "first_checked_at": "2026-10-05T08:30:18+00:00",
+      "last_checked_at": "2026-10-05T08:30:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "EpiBinder: A Multimodal Framework for Cell-Type-Specific Prediction and Interpretation of Transcription Factor Binding"
+    },
+    "arXiv:2608.15565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15565",
+      "identity_tokens": [
+        "arXiv:2608.15565"
+      ],
+      "reason": "最適化問題モデリングagentの経験ライブラリ品質・誤答混入防止を扱い、要旨には推論コスト低減の検証がない。",
+      "first_checked_at": "2026-10-05T08:30:18+00:00",
+      "last_checked_at": "2026-10-05T08:30:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Admission Without Answers: Label-Free Certification and Experience Learning for LLM-Based Optimization Modeling"
+    },
+    "arXiv:2608.15673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15673",
+      "identity_tokens": [
+        "arXiv:2608.15673"
+      ],
+      "reason": "LLM guardrailの確率論理によるpolicy判定手法であり、推論効率ではなく安全性/正確性が中心。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "PL-Guard: Probabilistic Logic Reasoning for LLM Guardrails"
+    },
+    "arXiv:2608.15755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15755",
+      "identity_tokens": [
+        "arXiv:2608.15755"
+      ],
+      "reason": "マルチターンagentの意図・状況追跡が主題で、要旨に推論resource削減の結果がない。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Intent-Driven Situation Tracking for User-Centric Multi-Turn Agents"
+    },
+    "arXiv:2608.15787": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15787",
+      "identity_tokens": [
+        "arXiv:2608.15787"
+      ],
+      "reason": "MoE蒸留時のexpert routing差の因果解釈を検討するtraining研究である。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Routing Divergence Is Not Evidence of Behavioral Influence in Same-Weight MoE Self-Distillation"
+    },
+    "arXiv:2608.15913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15913",
+      "identity_tokens": [
+        "arXiv:2608.15913"
+      ],
+      "reason": "AI supply-chain構成要素へのconjunctive poisoningを扱うsecurity研究で、推論効率は主題でない。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "title": "Conjunctive Poisoning in AI Supply-Chain Applications"
+    },
+    "arXiv:2608.15051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15051",
+      "identity_tokens": [
+        "arXiv:2608.15051"
+      ],
+      "reason": "電力変換器過渡応答のMamba-MoE surrogateによるシミュレーション/予測で、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "A Unified Mamba--MoE Surrogate for Closed-Loop Simulation and Measurement-Window Forecasting of Inverter Transients"
+    },
+    "arXiv:2608.15211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15211",
+      "identity_tokens": [
+        "arXiv:2608.15211"
+      ],
+      "reason": "地球科学予測モデルの階層分散trainingとmemory orchestrationを扱う。",
+      "first_checked_at": "2026-10-05T08:30:20+00:00",
+      "last_checked_at": "2026-10-05T08:30:20+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "TERRA: A Hierarchical Parallel Training and Memory Orchestration Framework for High-Resolution AI-based Earth Modeling"
+    },
+    "arXiv:2608.15251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15251",
+      "identity_tokens": [
+        "arXiv:2608.15251"
+      ],
+      "reason": "航空/地上画像のstructure-from-motionによる3D再構成で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T08:30:20+00:00",
+      "last_checked_at": "2026-10-05T08:30:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Robust structure from motion for aerial-ground images via detector-free feature matching and multi-view track refinement"
+    },
+    "arXiv:2608.15369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15369",
+      "identity_tokens": [
+        "arXiv:2608.15369"
+      ],
+      "reason": "音声codecの低bit圧縮で、LLM量子化を着想にしているが対象は音声データ符号化でありLLM推論ではない。",
+      "first_checked_at": "2026-10-05T08:30:20+00:00",
+      "last_checked_at": "2026-10-05T08:30:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "AudioTQ: A Data-Oblivious 6-Bit CPU Audio Codec via Randomized Hadamard Rotation and Lloyd-Max Quantization"
+    },
+    "DOI:10.1145/3789240.3829117": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829117",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829117"
+      ],
+      "reason": "汎用RDMAトラフィック・データセンターネットワークのスケジューリングが主題で、LLM推論特化の根拠がない。",
+      "first_checked_at": "2026-10-05T08:30:21+00:00",
+      "last_checked_at": "2026-10-05T08:30:21+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "STORM: Enabling Traffic Scheduling for RDMA"
+    },
+    "DOI:10.1145/3828692": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3828692",
+      "identity_tokens": [
+        "DOI:10.1145/3828692"
+      ],
+      "reason": "スライド用アニメーションDSLの設計で、LLM推論資源の削減を扱わない。",
+      "first_checked_at": "2026-10-05T08:30:21+00:00",
+      "last_checked_at": "2026-10-05T08:30:21+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Animated Pictures for Slide Presentations: From the Shallows to the Depths of a Domain-Specific Language (Functional Pearl)"
     }
   }
 }

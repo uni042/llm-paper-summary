@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:27:46+00:00",
-  "record_count": 1193,
+  "updated_at": "2026-10-05T08:30:21+00:00",
+  "record_count": 1199,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18267,6 +18267,107 @@
         "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17910-activated-lora-cross-model-kv-reuse.md"
       ],
       "title": "Agents unlock new capabilities through Switching LoRA Adapters as a Tool (SLAaaT)"
+    },
+    "arXiv:2608.15502": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15502",
+      "identity_tokens": [
+        "arXiv:2608.15502"
+      ],
+      "reason": "一次本文から手法と評価は確認したが、対象scopeへの適合が狭い、またはLLM servingへの一般化に不確実性が残るためborderlineへ分類。",
+      "first_checked_at": "2026-10-05T08:30:18+00:00",
+      "last_checked_at": "2026-10-05T08:30:18+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "EcoVLA: Energy-Efficient Device-Edge Co-inference for Vision-Language-Action Models Under Real-Time Constraints"
+    },
+    "arXiv:2608.15636": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15636",
+      "identity_tokens": [
+        "arXiv:2608.15636"
+      ],
+      "reason": "一次本文から手法と評価は確認したが、対象scopeへの適合が狭い、またはLLM servingへの一般化に不確実性が残るためborderlineへ分類。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md"
+      ],
+      "title": "Algorithm-Architecture Co-Design for Efficient VLA Inference via Speculative Inference and Verification"
+    },
+    "arXiv:2608.15117": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.15117",
+      "identity_tokens": [
+        "arXiv:2608.15117"
+      ],
+      "reason": "一次本文から手法と評価は確認したが、対象scopeへの適合が狭い、またはLLM servingへの一般化に不確実性が残るためborderlineへ分類。",
+      "first_checked_at": "2026-10-05T08:30:19+00:00",
+      "last_checked_at": "2026-10-05T08:30:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2509.00579-kvcomp-a-high-performance-llm-aware-lossy-compression-framework-for-kv-c.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2511.00321-cxl-pnm-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.01869-infercept-intercept-aware-llm-inference.md"
+      ],
+      "title": "Anatomy of a Quantized Agent: VRAM Stability and Forecasting in Code-Synthesis Agentic Workloads"
+    },
+    "DOI:10.1145/3789240.3828750": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3828750",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3828750"
+      ],
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "first_checked_at": "2026-10-05T08:30:20+00:00",
+      "last_checked_at": "2026-10-05T08:30:20+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md"
+      ],
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference"
+    },
+    "DOI:10.1145/3789240.3829201": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829201",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829201"
+      ],
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "first_checked_at": "2026-10-05T08:30:20+00:00",
+      "last_checked_at": "2026-10-05T08:30:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism"
+    },
+    "DOI:10.1145/3789240.3829347": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829347",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829347"
+      ],
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "first_checked_at": "2026-10-05T08:30:21+00:00",
+      "last_checked_at": "2026-10-05T08:30:21+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ],
+      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving"
     }
   }
 }
