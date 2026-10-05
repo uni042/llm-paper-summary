@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-01-part-03-a5fca9711061",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19191",
+      "identity_tokens": [
+        "arXiv:2607.19191"
+      ],
+      "title": "ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU",
+      "reason": "一次要旨は単一GPU上のinteractive video world rollout。動画world modelでありLLM推論/servingでない。",
+      "source_url": "https://arxiv.org/abs/2607.19191",
+      "first_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "last_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14377",
+      "identity_tokens": [
+        "arXiv:2608.14377"
+      ],
+      "title": "A Survey of Large Models in Sports",
+      "reason": "一次要旨はsports領域large modelsのsurvey。LLM推論効率を主題としない。",
+      "source_url": "https://arxiv.org/abs/2608.14377",
+      "first_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "last_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.19823",
+      "identity_tokens": [
+        "arXiv:2412.19823"
+      ],
+      "title": "A Survey on Large Language Models for Communication, Network, and Service Management: Application Insights, Challenges, and Future Directions",
+      "reason": "主題はネットワーク管理へのLLM応用。推論効率は課題・将来方向の一部で、推論/serving技術の定量比較研究ではない。",
+      "source_url": "https://arxiv.org/abs/2412.19823",
+      "first_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "last_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.05858",
+      "identity_tokens": [
+        "arXiv:2309.05858"
+      ],
+      "title": "Uncovering mesa-optimization algorithms in Transformers",
+      "reason": "一次要旨はTransformer内部のmesa-optimizationを機構解析する研究。inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2309.05858",
+      "first_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "last_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1609.09548",
+      "identity_tokens": [
+        "arXiv:1609.09548"
+      ],
+      "title": "Approximate Hierarchical Clustering via Sparsest Cut and Spreading Metrics",
+      "reason": "一次要旨はsparsest cut/spreading metricsによる階層クラスタリング近似。LLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/1609.09548",
+      "first_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "last_checked_at": "2026-10-05T00:39:29.640453+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.13692-prefix-sharing-sorting-problem.md"
+      ]
+    }
+  ]
+}
