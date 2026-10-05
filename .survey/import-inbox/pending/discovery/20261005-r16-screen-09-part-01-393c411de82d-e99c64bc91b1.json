@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-09-part-01-393c411de82d",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10969",
+      "identity_tokens": [
+        "arXiv:2609.10969"
+      ],
+      "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures",
+      "reason": "Primary abstract focuses on safety and transactional integrity of agent commit gates, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.10969",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11042",
+      "identity_tokens": [
+        "arXiv:2609.11042"
+      ],
+      "title": "T1: Terminal Agent Reinforcement Learning for Long-Horizon Tasks",
+      "reason": "Primary abstract focuses on reinforcement-learning post-training of a terminal-use agent.",
+      "source_url": "https://arxiv.org/abs/2609.11042",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11655",
+      "identity_tokens": [
+        "arXiv:2609.11655"
+      ],
+      "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+      "reason": "Primary abstract focuses on Muon optimizer stability during model training.",
+      "source_url": "https://arxiv.org/abs/2609.11655",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11716",
+      "identity_tokens": [
+        "arXiv:2609.11716"
+      ],
+      "title": "Why Does Post-Training Quantization Work?",
+      "reason": "PTQ robustness analysis attributes small output changes to layer-error cancellation and LM-head geometry across several pretrained architectures; no serving efficiency technique is proposed. Mechanistic PTQ analysis, no systems-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2609.11716",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09929",
+      "identity_tokens": [
+        "arXiv:2609.09929"
+      ],
+      "title": "Source-Adaptive Data Curation for Bilingual NVV-Aware ASR",
+      "reason": "Primary abstract focuses on ASR data curation and Whisper speech transcription.",
+      "source_url": "https://arxiv.org/abs/2609.09929",
+      "first_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "last_checked_at": "2026-10-05T02:43:47.224826+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
