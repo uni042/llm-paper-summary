@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-95-part-02-d371abb690b1",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07598",
+      "identity_tokens": [
+        "arXiv:2401.07598"
+      ],
+      "title": "MAPLE: Multilingual Evaluation of Parameter Efficient Finetuning of Large Language Models",
+      "reason": "The primary abstract evaluates parameter-efficient fine-tuning for multilingual task performance; its efficiency is training/adaptation parameter count, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2401.07598",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.15494",
+      "identity_tokens": [
+        "arXiv:2310.15494"
+      ],
+      "title": "TRAMS: Training-free Memory Selection for Long-range Language Modeling",
+      "reason": "The topic is adjacent to inference-time memory optimization, but the primary evaluation shows a clear cost increase and no serving-efficiency benefit to advance.",
+      "source_url": "https://arxiv.org/abs/2310.15494",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.15372",
+      "identity_tokens": [
+        "arXiv:2310.15372"
+      ],
+      "title": "EpiK-Eval: Evaluation for Language Models as Epistemic Models",
+      "reason": "The primary abstract studies how LMs consolidate knowledge from documents and proposes an epistemic evaluation; it does not concern inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2310.15372",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.06840",
+      "identity_tokens": [
+        "arXiv:2211.06840"
+      ],
+      "title": "FPT: Improving Prompt Tuning Efficiency via Progressive Training",
+      "reason": "The primary abstract explicitly addresses prompt-tuning convergence/training efficiency, which is outside the inference-time scope.",
+      "source_url": "https://arxiv.org/abs/2211.06840",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30877",
+      "identity_tokens": [
+        "arXiv:2605.30877"
+      ],
+      "title": "Wall-OSS-0.5 Technical Report",
+      "reason": "The primary abstract is about vision-language-action pretraining and robotic policy behavior after task fine-tuning, not LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2605.30877",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
