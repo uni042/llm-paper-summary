@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:36:03+00:00",
-  "record_count": 1012,
+  "updated_at": "2026-10-05T06:39:31+00:00",
+  "record_count": 1017,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15436,6 +15436,78 @@
         "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
       ],
       "title": "Towards Optimal Speculative Decoding: A Comprehensive Survey on Optimizations and Future Directions"
+    },
+    "arXiv:2609.16669": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16669",
+      "identity_tokens": [
+        "arXiv:2609.16669"
+      ],
+      "reason": "一次本文§4 evaluationとlimitationsを確認。memory/skill carrierの実験・token costはあるが、selected task・小標本の設計監査であり、一般LLM serving/inference optimizationの方法を実証していない。scope fitと証拠の弱さからborderline。",
+      "first_checked_at": "2026-10-05T06:39:30+00:00",
+      "last_checked_at": "2026-10-05T06:39:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Memory-Skill Isomorphism: One Skill Carrier, Two Native Uses"
+    },
+    "arXiv:2609.16730": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16730",
+      "identity_tokens": [
+        "arXiv:2609.16730"
+      ],
+      "reason": "一次本文§6–§8のevaluation/limitationsを確認。会話memory architectureがprompt-token/fragment burdenも比較するため隣接性はあるが、主貢献はlongitudinal memory evaluation/local-first architectureで、reported quality/cost tradeoffも限定的。範囲適合が弱いためborderline。",
+      "first_checked_at": "2026-10-05T06:39:30+00:00",
+      "last_checked_at": "2026-10-05T06:39:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "LSREP: A Longitudinal State-Replay Protocol for Evaluating Conversational Memory, with ICE v2 as an Audited Local-First Architecture"
+    },
+    "arXiv:2609.16800": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16800",
+      "identity_tokens": [
+        "arXiv:2609.16800"
+      ],
+      "reason": "一次本文§3–§5、cost analysisおよびlimitationsを確認。DRPGはenvironment feedback/retrievalからcontinual LLM improvement policiesを生成する方式で、追加policy generation/inference costとtask scoresを扱うが、主題はcontinual capability improvementで標準serving/推論最適化ではない。弱いscope fitのためborderline。",
+      "first_checked_at": "2026-10-05T06:39:30+00:00",
+      "last_checked_at": "2026-10-05T06:39:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement"
+    },
+    "DOI:10.36948/ijfmr.2026.v08i05.87791": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.36948/ijfmr.2026.v08i05.87791",
+      "identity_tokens": [
+        "DOI:10.36948/ijfmr.2026.v08i05.87791"
+      ],
+      "reason": "一次PDFのIntroduction、Related Work、設計/評価プロトコル節を確認。モデル/solverをtask complexityに応じてrouterが選ぶ設計は推論費用に隣接するが、論文はconceptual design and protocolのみでrouter実装・benchmark結果なし。範囲適合の実証がないためborderline。",
+      "first_checked_at": "2026-10-05T06:39:30+00:00",
+      "last_checked_at": "2026-10-05T06:39:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Automatic Model Selection Based on Task Complexity"
+    },
+    "arXiv:2609.16537": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.16537",
+      "identity_tokens": [
+        "arXiv:2609.16537"
+      ],
+      "reason": "一次本文のlayer-importance diagnostic protocol、Transformer/SSM結果とimplicationsを確認。重要度解析がcompressionに関連するが、主目的はarchitecture-dependent necessity/plasticityの分析で、compression/inference efficiency methodやruntime評価は示していない。寄与が間接的なためborderline。",
+      "first_checked_at": "2026-10-05T06:39:31+00:00",
+      "last_checked_at": "2026-10-05T06:39:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "What Does Layer-Importance Reveal About Transformers and State-Space Models?"
     }
   }
 }

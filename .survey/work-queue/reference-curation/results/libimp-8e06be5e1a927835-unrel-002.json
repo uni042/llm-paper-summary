@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e06be5e1a927835-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.16710",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.16710",
+    "identity_tokens": [
+      "arXiv:2609.16710"
+    ],
+    "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+    "first_checked_at": "2026-10-05T06:39:30+00:00",
+    "last_checked_at": "2026-10-05T06:39:30+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Continuous-Time Machine Learning: A Unified Mathematical Perspective"
+  },
+  "processed_at": "2026-10-05T06:39:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e06be5e1a92",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

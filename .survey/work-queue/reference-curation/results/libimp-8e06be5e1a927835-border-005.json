@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e06be5e1a927835-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.16800",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.16800",
+    "identity_tokens": [
+      "arXiv:2609.16800"
+    ],
+    "reason": "一次本文§3–§5、cost analysisおよびlimitationsを確認。DRPGはenvironment feedback/retrievalからcontinual LLM improvement policiesを生成する方式で、追加policy generation/inference costとtask scoresを扱うが、主題はcontinual capability improvementで標準serving/推論最適化ではない。弱いscope fitのためborderline。",
+    "first_checked_at": "2026-10-05T06:39:30+00:00",
+    "last_checked_at": "2026-10-05T06:39:30+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Smarter by the Moment: Environment-Driven Dynamic Policies for Continual LLM Improvement"
+  },
+  "processed_at": "2026-10-05T06:39:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e06be5e1a92",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
