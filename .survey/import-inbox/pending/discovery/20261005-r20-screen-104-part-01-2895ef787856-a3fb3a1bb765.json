@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-104-part-01-2895ef787856",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10278-025-01659-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10278-025-01659-4"
+      ],
+      "title": "Implementing a Resource-Light and Low-Code Large Language Model System for Information Extraction from Mammography Reports: A Pilot Study",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://doi.org/10.1007/s10278-025-01659-4",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.03117",
+      "identity_tokens": [
+        "arXiv:2509.03117"
+      ],
+      "title": "PromptCOS: Towards Content-Only System Prompt Copyright Auditing for LLMs",
+      "reason": "System prompts are critical for shaping the behavior and output quality of large language model (LLM)-based applications, driving substantial investment in optimizing highquality prompts beyond traditional handcrafted designs. However, as system prompts become valuable intellectual property, they are increasingly vulnerable to prompt theft and unauthorized use, highlighting the urgent need for effective copyright auditing, especially watermarking. Existing methods rely on verifying subtle logit distribution shifts triggered by a query. We observe that this logit-dependent verification framework is impractical in real-world content-only settings, primarily because (1) random sampling makes content-level generation unstable for verification, and (2) stronger instructions needed for content-level signals compromise prompt fidelity. To overcome these challenges, we propose PromptCOS, the first content-only system prompt copyright auditing method based on content-level output similarity. PromptCOS achieves watermark stability by designing a cyclic output signal as the conditional instruction's target. It preserves prompt fidelity by injecting a small set of auxiliary tokens to encode the watermark, leaving the main prompt untouched. Furthermore, to ensure robustness against malicious removal, we optimize cover tokens, i.e., critical tokens in the original prompt, to ensure that removing auxiliary tokens causes severe performance degradation. Experimental results show that PromptCOS achieves high effectiveness (99.3% average watermark similarity), strong distinctiveness (60.8% higher than the best baseline), high fidelity (accuracy degradation no greater than 0.6%), robustness (resilience against four potential attack categories), and high computational efficiency (up to 98.1% cost saving).",
+      "source_url": "https://arxiv.org/abs/2509.03117",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.01082",
+      "identity_tokens": [
+        "arXiv:2509.01082"
+      ],
+      "title": "REFINESTAT: Efficient Exploration for Probabilistic Program Synthesis",
+      "reason": "Probabilistic programming offers a powerful framework for modeling uncertainty, yet statistical model discovery in this domain entails navigating an immense search space under strict domain-specific constraints. When small language models are tasked with generating probabilistic programs, they frequently produce outputs that suffer from both syntactic and semantic errors, such as flawed inference constructs. Motivated by probabilistic programmers'domain expertise and debugging strategies, we introduce RefineStat, a language model--driven framework that enforces semantic constraints ensuring synthesized programs contain valid distributions and well-formed parameters, and then applies diagnostic-aware refinement by resampling prior or likelihood components whenever reliability checks fail. We evaluate RefineStat on multiple probabilistic-programming code-generation tasks using smaller language models (SLMs) and find that it produces programs that are both syntactically sound and statistically reliable, often matching or surpassing those from closed-source large language models (e.g., OpenAI o3).",
+      "source_url": "https://arxiv.org/abs/2509.01082",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2025.108120",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2025.108120"
+      ],
+      "title": "SEMQ: Efficient non-uniform quantization with sensitivity-based error minimization for large language models",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://doi.org/10.1016/j.future.2025.108120",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3718958.3750467",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750467"
+      ],
+      "title": "Coflow Scheduling for LLM Training",
+      "reason": "Training large language models (LLMs) generates diverse coflows within a cluster, requiring optimized scheduling to enhance communication-computation overlap and minimize training time. Existing schedulers inadequately handle contention both across and within coflows, resulting in suboptimal performance. We present Hermod, a comprehensive coflow scheduler that orchestrates all coflow types for LLM training. The key insight behind Hermod is that coflows can be uniquely characterized by three model factors—microbatch ID, coflow type, and layer ID—enabling optimal scheduling decisions. Leveraging this insight, Hermod applies model-factor-driven inter-coflow priority scheduling aligned with the LLM training DAG. Preliminary simulation results show potential for performance improvements.",
+      "source_url": "https://doi.org/10.1145/3718958.3750467",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ]
+    }
+  ]
+}
