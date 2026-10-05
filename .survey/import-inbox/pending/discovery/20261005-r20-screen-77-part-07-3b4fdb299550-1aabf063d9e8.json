@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-77-part-07-3b4fdb299550",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09022",
+      "identity_tokens": [
+        "arXiv:2503.09022"
+      ],
+      "title": "Prompt Inversion Attack Against Collaborative Inference of Large Language Models",
+      "reason": "Collaborative LLM inferenceに対するprompt inversion/privacy attackを提案・評価する安全性研究。推論効率向上が目的ではない。",
+      "source_url": "https://arxiv.org/abs/2503.09022",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09291",
+      "identity_tokens": [
+        "arXiv:2503.09291"
+      ],
+      "title": "Prompt Inference Attack on Distributed Large Language Model Inference Frameworks",
+      "reason": "Distributed LLM inferenceの中間表現からpromptを推定する攻撃研究。推論コスト最適化ではなくプライバシー・securityが主題。",
+      "source_url": "https://arxiv.org/abs/2503.09291",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ]
+    }
+  ]
+}
