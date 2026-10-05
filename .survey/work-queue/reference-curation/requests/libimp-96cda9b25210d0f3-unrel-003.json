@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-96cda9b25210d0f3-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.07160",
+  "reason": "一次要旨: Diffusion Large Language Models (dLLMs) generate text via bidirectional iterative denoising, naturally supporting user-specified constraints anchored at arbitrary output positions, a paradigm known as In-place Prompting (IPP). We formalize this as the In-place Instruction Following (IIF) task and construct IIF-Bench, a hierarchical benchmark spanning literal, style, and discourse-function constraints, paired with a rubric-based local-global evaluation protocol. An inference-time attention-bias probe suggests that vanilla dLLMs often under-prioritize constraint spans during denoising. We then propose GRAFT, an IPP-oriented post-training framework combining constraint-aware SFT and preference optimization. On four representative dLLMs, GRAFT raises the average IIF score from 57.75 to 73.10 (+15.35 points), with absolute gains of 15.91 and 15.57 points on literal and discourse-function constraints, while preserving general generation ability.",
+  "title": "In-Place Instruction Following in Diffusion Language Models",
+  "identity_tokens": [
+    "arXiv:2609.07160"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+    "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cda9b25210",
+  "source_precheck_request_id": null
+}

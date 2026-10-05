@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-96cda9b25210d0f3-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.07155",
+  "reason": "一次要旨: Model compression is key to mitigate deployment challenges of ever growing machine learning models. In this area of research, singular value decomposition (SVD)-based compression offers a compelling trade-off between computational efficiency and model accuracy. Fisher-weighted SVD in particular provides principled, loss-aware compression. However, we find that improving the fidelity of Fisher approximation used in the compression is poorly predictive of post-compression accuracy for Vision Transformers (ViTs). Motivated by this observation, we propose FACTS, a structured Fisher Approximation tailored to Compressing ViTs with Fisher-weighted SVD, which enforces token-local aggregation while preserving within-token activation-gradient dependence. Additionally, we introduce a fast Constrained Rank Search (CoRS), that optimizes layer-wise rank allocation while adhering to a fixed floating point operation (FLOP) constraint. Extensive experiments across ViTs and hybrid architectures demonstrate that FACTS consistently improves accuracy-efficiency trade-offs without requiring finetuning. Notably, it outperforms the strongest SVD baseline by up to +5.8 percentage points (p.p.) Top-1 on Swin-B, with further gains driven by our search method. Code is available at https://github.com/MoritzTho/FACTS.",
+  "title": "Mind the Approximation: Fisher-Weighted SVD Compression for ViTs",
+  "identity_tokens": [
+    "arXiv:2609.07155"
+  ],
+  "linked_from": [
+    "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96cda9b25210",
+  "source_precheck_request_id": null
+}

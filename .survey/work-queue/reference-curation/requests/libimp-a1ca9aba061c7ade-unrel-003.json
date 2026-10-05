@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a1ca9aba061c7ade-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.06931",
+  "reason": "一次要旨: Invasive coronary angiography (CAG) is the gold standard for diagnosing coronary artery disease, but interpretation varies substantially among observers. Existing AI systems can improve consistency but lack auditable decision processes and are limited in comprehensive open-ended assessment, undermining clinician trust and clinical adoption readiness. We developed CARDEA, a unified large vision-language model that serves as the inference core of a CAG pipeline. It was trained solely on public datasets and closed-ended tasks in three stages: visual feature alignment, a self-distilled Chain-of-Box (CoB) cold start, and reinforcement learning with verifiable rewards (RLVR) with a CoB reward encouraging bounding-box use in the reasoning trace. We assessed its two study-level diagnoses, dominance classification and complexity assessment, against a dedicated classifier and two interventional cardiologists. Report generation was excluded from training and evaluated zero-shot across stages on an external cohort using vessel-severity macro-$F_1$. CARDEA trailed the classifier on in-distribution dominance but drew level under domain shift (accuracy, 0.91 [95% confidence interval (CI), 0.86 to 0.95]) and was comparable to the cardiologists on complexity assessment (accuracy, 0.90 [CI, 0.82 to 0.97]). Only RLVR improved zero-shot report generation, raising its vessel-severity macro-$F_1$ (0.686 [CI, 0.664 to 0.707]) above the untuned base model (0.513) and over twice the always-normal floor (0.312). CARDEA runs an end-to-end CAG pipeline from raw multi-view videos through keyframe selection to study-level diagnosis while exposing auditable spatial evidence behind its conclusions. RLVR on verifiable closed-ended tasks surfaced open-ended reporting ability that supervised imitation did not. Clinical use requires prospective validation against expert cardiologists.",
+  "title": "CARDEA: Auditable Reasoning Grounded in Spatial Evidence for End-to-End Coronary Angiography Interpretation",
+  "identity_tokens": [
+    "arXiv:2609.06931"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a1ca9aba061c",
+  "source_precheck_request_id": null
+}
