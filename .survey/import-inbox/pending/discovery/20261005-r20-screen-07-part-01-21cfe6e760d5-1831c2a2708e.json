@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-07-part-01-21cfe6e760d5",
+  "reference_main_sha": "235401c8887c00559105d5905d77ce1c6e45b5c3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3816250",
+      "identity_tokens": [
+        "DOI:10.1145/3816250"
+      ],
+      "title": "Hunk-Constrained DPO: Segment-Level Optimization for Secure and Correct LLM Code Generation",
+      "reason": "Large Language Models (LLMs) have been widely applied in code generation tasks like code completion and automated development, demonstrating significant potential for improving coding efficiency. However, research has shown that LLM-generated code frequently contains security vulnerabilities, raising concerns about its reliability in production environments. To address these security issues, various mitigation approaches have been proposed, but these methods typically impact the LLM’s ability to generate functionally correct code, which may limit their practical application in real-world development environments. In this work, we address this problem through a key observation: security patches and functional bug fixes in real-world software exhibit structural similarities as small, localized modifications. This shared characteristic suggests that a unified learning model could address both objectives jointly. Building on this insight, we introduce HPO (Hunk-Constrained Direct Preference Optimization), a training framework that unifies security hardening and functional correction. Our framework features two key technical components: a novel segment-weighted preference optimization objective to focus learning on repair logic, and an automated data synthesis pipeline to provide high-quality training data. Experiments across multiple models and programming languages demonstrate that HPO achieves substantial security improvements—up to 28 percentage points—while preserving or enhancing functional correctness.",
+      "source_url": "https://doi.org/10.1145/3816250",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3847665",
+      "identity_tokens": [
+        "DOI:10.1145/3847665"
+      ],
+      "title": "Pose Magic++: Integrating Mamba and HyperGCN for Efficient and Temporally Consistent 3D Human Pose Estimation",
+      "reason": "Transformers have become dominant in 3D Human Pose Estimation (HPE). However, existing Transformer-based 3D HPE backbones often encounter a trade-off between accuracy and computational efficiency. To resolve the above dilemma, in this work we leverage recent advances in state space models and utilize Mamba for high-quality and efficient long-range modeling. Nonetheless, Mamba still faces challenges in precisely exploiting local dependencies between joints. To address these issues, we propose a novel attention-free integrated spatiotemporal architecture named Integrated Mamba-HyperGCN (Pose Magic++). This architecture introduces local enhancement with HyperGCN by capturing relationships between neighboring joints and their synergies, producing new representations to complement Mamba's outputs. By adaptively fusing representations from Mamba and HyperGCN, Pose Magic++ demonstrates superior capability in learning the underlying 3D structure. To meet the requirements of real-time inference, we also provide a fully causal version. Extensive experiments show that Pose Magic++ achieves new state-of-the-art (SOTA) results ( \\(\\downarrow 1.6mm\\) ) while saving \\(74.1\\%\\) FLOPs. Notably, it significantly improves the estimation accuracy of peripheral joints without incurring extra computational cost. In addition, Pose Magic++ exhibits optimal motion consistency and strong ability to generalize to unseen sequence lengths.",
+      "source_url": "https://doi.org/10.1145/3847665",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14898",
+      "identity_tokens": [
+        "arXiv:2609.14898"
+      ],
+      "title": "Agentic Autoscaling through Worker-Pool Orchestration for LLM-driven Text Classification in Cloud Computing Environments",
+      "reason": "autoscaling mechanismはservingに近いが、実測はencoder/分類モデル中心であり、対象LLM inference workloadsへ適用可能な証拠がない。",
+      "source_url": "https://arxiv.org/abs/2609.14898",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14978",
+      "identity_tokens": [
+        "arXiv:2609.14978"
+      ],
+      "title": "LazFormer: Scaling Transformers for Industrial Recommendation via Transferable Generative Pre-training",
+      "reason": "Transformers have shown promising performance in LLMs due to their outstanding scalability, several studies have investigated the scalability of Transformers for industrial recommendation. They typically rely on a single ranking model to optimize both sparse and dense parameters from scratch, resulting in substantial computational resource consumption and slow convergence. Fortunately, the pre-training models offer an effective solution to the above issues by providing favorable initialization of both sparse and dense parameters for the subsequent ranking. However, they still face two major limitations: (1) Since the input features used in pre-training and ranking are usually inconsistent, directly transferring dense parameters from pre-training to ranking may lead to negative transfer. (2) Multi-epoch training during the ranking process may result in the overfitting of sparse parameters, while freezing the sparse parameters limits their adaptability to the ranking objectives. To this end, we propose a Scaling Transformer for Industrial Recommendation via Transferable Generative Pre-training, termed LazFormer. Specifically, we first present a generative pre-training module to autoregressively generate sequential features, providing favorable initialization of both sparse and dense parameters for the subsequent ranking. To solve the negative transfer of dense parameters, we propose a transferable residual adapter that injects additional ranking-specific features into ranking in a residual manner. Moreover, a request-aware ranking module integrates long-sequence compression, hybrid sparse attention, and a request-aware paradigm to efficiently model users'long sequences. Besides, we further propose an asymmetric multi-epoch training strategy that resets sparse parameters while continuously accumulating dense parameters across epochs, alleviating the overfitting of sparse parameters.",
+      "source_url": "https://arxiv.org/abs/2609.14978",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14992",
+      "identity_tokens": [
+        "arXiv:2609.14992"
+      ],
+      "title": "MTAC-IFBench: Benchmarking Instruction-Following in Multi-Turn Agentic Coding",
+      "reason": "Recently, the rapid development of large language models (LLMs) has reshaped software engineering by enabling autonomous code agents that plan, execute, and utilize external tools iteratively to tackle complex tasks. Beyond achieving functional correctness, these agents must faithfully follow process instructions and constraints throughout the development lifecycle. However, existing benchmarks typically focus on final functional correctness or confine instruction-following evaluation to single-turn, general chat or simple code generation scenarios, leaving instruction-following in multi-turn agentic coding underexplored. To bridge this gap, we propose MTAC-IFBench, a comprehensive benchmark for this critical capability. It features multi-turn progressive software development instructions with diverse constraints spanning 6 primary and 18 secondary categories. With an average of 7.04 turns and 91.33 constraints per instance, it poses a rigorous challenge to current LLMs. To make the evaluation reliable, we construct a checklist for each constraint and functional requirement, and integrate verification scripts and judge agents to verify each checklist item. MTAC-IFBench identifies significant deficiencies in existing code agents in multi-turn instruction-following, with their performance degrading rapidly as the interaction session grows longer.",
+      "source_url": "https://arxiv.org/abs/2609.14992",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
