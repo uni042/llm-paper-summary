@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98dbd4ae61798b9c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.23735",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.23735",
+    "identity_tokens": [
+      "arXiv:2505.23735"
+    ],
+    "reason": "context-at-test-timeの関連はあるが効率の実測寄与が本文から確認できず、追加の工程が明確でないためborderline。",
+    "first_checked_at": "2026-10-05T12:42:16+00:00",
+    "last_checked_at": "2026-10-05T12:42:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "ATLAS: Learning to Optimally Memorize the Context at Test Time"
+  },
+  "processed_at": "2026-10-05T12:42:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98dbd4ae6179",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
