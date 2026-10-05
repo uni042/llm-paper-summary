@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a82d39de5a452ba9-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2502.06768",
+  "reason": "masked diffusion modelのdecode token orderを適応させ難しいinfilling subproblemを避ける。Sudoku等でaccuracy改善を示すが、latency/FLOPs/iteration削減は評価しない。推論アルゴリズムとは関係するものの効率適合が未解決。",
+  "title": "Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions",
+  "identity_tokens": [
+    "arXiv:2502.06768"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+    "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+    "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+    "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a82d39de5a45",
+  "source_precheck_request_id": null
+}
