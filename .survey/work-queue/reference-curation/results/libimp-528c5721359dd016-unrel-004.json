@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-528c5721359dd016-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.10793",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.10793",
+    "identity_tokens": [
+      "arXiv:2402.10793"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2402.10793. Graph-learning architecture/benchmarks, not LLM serving.",
+    "first_checked_at": "2026-10-05T14:07:39+00:00",
+    "last_checked_at": "2026-10-05T14:07:39+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "An end-to-end attention-based approach for learning on graphs"
+  },
+  "processed_at": "2026-10-05T14:07:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-528c5721359d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

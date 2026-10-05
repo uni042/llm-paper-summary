@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcc81fae19f60cc7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.05659",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.05659",
+    "identity_tokens": [
+      "arXiv:2503.05659"
+    ],
+    "reason": "LLM agents for recommendation/searchの広域survey。IR agent applications/taxonomyが主題で、inference efficiencyを検証しない。",
+    "first_checked_at": "2026-10-05T14:07:39+00:00",
+    "last_checked_at": "2026-10-05T14:07:39+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+    ],
+    "title": "A Survey of Large Language Model Empowered Agents for Recommendation and Search: Towards Next-Generation Information Retrieval"
+  },
+  "processed_at": "2026-10-05T14:07:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcc81fae19f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

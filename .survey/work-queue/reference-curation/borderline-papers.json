@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:04:54+00:00",
-  "record_count": 1801,
+  "updated_at": "2026-10-05T14:07:41+00:00",
+  "record_count": 1804,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27834,6 +27834,49 @@
         "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
       ],
       "title": "Investigating Hallucinations in Pruned Large Language Models for Abstractive Summarization"
+    },
+    "arXiv:2502.04392": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.04392",
+      "identity_tokens": [
+        "arXiv:2502.04392"
+      ],
+      "reason": "Measured savings apply to a hybrid local-SLM/cloud-LLM agent workflow and task/API cost; transfer to standalone serving is uncertain.",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Division-of-Thoughts: Harnessing Hybrid Language Model Synergy for Efficient On-Device Agents"
+    },
+    "arXiv:2402.11550": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.11550",
+      "identity_tokens": [
+        "arXiv:2402.11550"
+      ],
+      "reason": "Multi-agent long-document retrieval results are tied to this context-processing setup; general LLM serving transfer is not established.",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "LongAgent: Scaling Language Models to 128k Context through Multi-Agent Collaboration"
+    },
+    "arXiv:2502.00791": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00791",
+      "identity_tokens": [
+        "arXiv:2502.00791"
+      ],
+      "reason": "Vist uses a vision encoder for distant text and is evaluated on its particular long-context/ICL design; text-only serving generalization needs validation.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Vision-centric Token Compression in Large Language Model"
     }
   }
 }

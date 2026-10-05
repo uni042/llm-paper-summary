@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:04:54+00:00",
-  "record_count": 5414,
+  "updated_at": "2026-10-05T14:07:41+00:00",
+  "record_count": 5430,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -78685,6 +78685,233 @@
         "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
       ],
       "title": "Masked Structural Growth for 2x Faster Language Model Pre-training"
+    },
+    "arXiv:2211.14227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.14227",
+      "identity_tokens": [
+        "arXiv:2211.14227"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2211.14227. Accelerates neural-network training preprocessing, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:07:38+00:00",
+      "last_checked_at": "2026-10-05T14:07:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "title": "Bypass Exponential Time Preprocessing: Fast Neural Network Training via Weight-Data Correlation Preprocessing"
+    },
+    "arXiv:2509.26490": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26490",
+      "identity_tokens": [
+        "arXiv:2509.26490"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.26490. VitaBench contributes an interactive-agent benchmark without an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T14:07:38+00:00",
+      "last_checked_at": "2026-10-05T14:07:38+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "VitaBench: Benchmarking LLM Agents with Versatile Interactive Tasks in Real-world Applications"
+    },
+    "arXiv:2502.08942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.08942",
+      "identity_tokens": [
+        "arXiv:2502.08942"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.08942. TaTS addresses time-series/text representation and forecasting, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T14:07:38+00:00",
+      "last_checked_at": "2026-10-05T14:07:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Language in the Flow of Time: Time-Series-Paired Texts Weaved into a Unified Temporal Narrative"
+    },
+    "arXiv:2402.10793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.10793",
+      "identity_tokens": [
+        "arXiv:2402.10793"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2402.10793. Graph-learning architecture/benchmarks, not LLM serving.",
+      "first_checked_at": "2026-10-05T14:07:39+00:00",
+      "last_checked_at": "2026-10-05T14:07:39+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "An end-to-end attention-based approach for learning on graphs"
+    },
+    "arXiv:2311.09179": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.09179",
+      "identity_tokens": [
+        "arXiv:2311.09179"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2311.09179. SiRA is sparse low-rank adaptation for parameter-efficient tuning; contribution is training/adaptation.",
+      "first_checked_at": "2026-10-05T14:07:39+00:00",
+      "last_checked_at": "2026-10-05T14:07:39+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "SiRA: Sparse Mixture of Low Rank Adaptation"
+    },
+    "DOI:10.1038/s41592-025-02881-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41592-025-02881-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41592-025-02881-2"
+      ],
+      "reason": "DNA foundation modelsでgenome annotation/biology性能を改善する研究で、LLM serving対象外。",
+      "first_checked_at": "2026-10-05T14:07:39+00:00",
+      "last_checked_at": "2026-10-05T14:07:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Annotating the genome at single-nucleotide resolution with DNA foundation models"
+    },
+    "arXiv:2503.05659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05659",
+      "identity_tokens": [
+        "arXiv:2503.05659"
+      ],
+      "reason": "LLM agents for recommendation/searchの広域survey。IR agent applications/taxonomyが主題で、inference efficiencyを検証しない。",
+      "first_checked_at": "2026-10-05T14:07:39+00:00",
+      "last_checked_at": "2026-10-05T14:07:39+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+      ],
+      "title": "A Survey of Large Language Model Empowered Agents for Recommendation and Search: Towards Next-Generation Information Retrieval"
+    },
+    "DOI:10.48550/arxiv.2404.07066": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2404.07066",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2404.07066",
+        "arXiv:2404.07066"
+      ],
+      "reason": "LLMのconcept representationをlayerwise probingするmechanistic studyで、効率化の可能性を説明するruntime手法・評価は提示しない。",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Exploring Concept Depth: How Large Language Models Acquire Knowledge at Different Layers?"
+    },
+    "arXiv:2501.05370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.05370",
+      "identity_tokens": [
+        "arXiv:2501.05370"
+      ],
+      "reason": "連続状態diffusion generative modelsのspeculative samplingで画像/拡散推論を加速する研究で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "title": "Accelerated Diffusion Models via Speculative Sampling"
+    },
+    "arXiv:2411.07602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.07602",
+      "identity_tokens": [
+        "arXiv:2411.07602"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2411.07602. The abstract establishes theoretical circuit-complexity bounds for RoPE Transformers; it does not propose or measure inference efficiency.",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ],
+      "title": "Circuit Complexity Bounds for RoPE-based Transformer Architecture"
+    },
+    "arXiv:2512.15702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15702",
+      "identity_tokens": [
+        "arXiv:2512.15702"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.15702. Contribution is training for autoregressive video diffusion and exposure-bias reduction, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:07:40+00:00",
+      "last_checked_at": "2026-10-05T14:07:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "End-to-End Training for Autoregressive Video Diffusion via Self-Resampling"
+    },
+    "arXiv:2312.05589": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.05589",
+      "identity_tokens": [
+        "arXiv:2312.05589"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2312.05589. Broad survey of NLP hybrid/ensemble models, not a paper-specific LLM inference optimization.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md"
+      ],
+      "title": "A Review of Hybrid and Ensemble in Deep Learning for Natural Language Processing"
+    },
+    "arXiv:2207.05477": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.05477",
+      "identity_tokens": [
+        "arXiv:2207.05477"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2207.05477. HelixFold optimizes AlphaFold2 protein-structure prediction, outside LLM inference scope.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "HelixFold: An Efficient Implementation of AlphaFold2 using PaddlePaddle"
+    },
+    "arXiv:2502.15910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15910",
+      "identity_tokens": [
+        "arXiv:2502.15910"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.15910. MANU addresses multimodal-model unlearning and privacy, not inference efficiency.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Modality-Aware Neuron Pruning for Unlearning in Multimodal Large Language Models"
+    },
+    "arXiv:2410.17509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17509",
+      "identity_tokens": [
+        "arXiv:2410.17509"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.17509. WAGLE improves selective data-unlearning effectiveness; abstract does not claim inference-cost/serving optimization.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "WAGLE: Strategic Weight Attribution for Effective and Modular Unlearning in Large Language Models"
+    },
+    "arXiv:2410.09846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09846",
+      "identity_tokens": [
+        "arXiv:2410.09846"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.09846. Quantum parameter adaptation is for parameter-efficient fine-tuning; quantum machinery is confined to training.",
+      "first_checked_at": "2026-10-05T14:07:41+00:00",
+      "last_checked_at": "2026-10-05T14:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "title": "A Quantum Circuit-Based Compression Perspective for Parameter-Efficient Learning"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef732de4e7f931e4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2207.05477",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2207.05477",
+    "identity_tokens": [
+      "arXiv:2207.05477"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2207.05477. HelixFold optimizes AlphaFold2 protein-structure prediction, outside LLM inference scope.",
+    "first_checked_at": "2026-10-05T14:07:41+00:00",
+    "last_checked_at": "2026-10-05T14:07:41+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+    ],
+    "title": "HelixFold: An Efficient Implementation of AlphaFold2 using PaddlePaddle"
+  },
+  "processed_at": "2026-10-05T14:07:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef732de4e7f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
