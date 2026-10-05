@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1200-scheduled-chat-00/r03",
+  "reference_main_sha": "b83a8be22ddaf009992493254d53b3e698a3e312",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11235",
+      "identity_tokens": [
+        "arXiv:2309.11235"
+      ],
+      "title": "OpenChat: Advancing Open-source Language Models with Mixed-Quality Data",
+      "reason": "mixed-quality SFT dataをcoarse-grained rewardとして利用するC-RLFTでopen-source LLMのalignment能力を改善する学習研究。単段のRL-free supervised learningが主貢献で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2309.11235",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmixed-quality dataを用いたalignment/fine-tuningとbenchmark性能が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.10188",
+      "identity_tokens": [
+        "arXiv:2408.10188"
+      ],
+      "title": "LongVILA: Scaling Long-Context Visual Language Models for Long Videos",
+      "reason": "長文脈VLM向けMulti-Modal Sequence Parallelismをtrainingとinferenceの双方へ適用し、modalityの不均衡と通信topologyを考慮して長動画処理を分散並列化するfull-stack system。2M contextを扱い、ring-style sequence parallelism比2.1–5.7倍、Megatronのhybrid context/tensor parallelism比1.1–1.4倍の高速化を報告し、長文脈推論systemにも直接適用するため対象内。",
+      "source_url": "https://arxiv.org/abs/2408.10188",
+      "body_check": "full_text_checked: 一次arXiv本文情報でMM-SPのtraining/inference両対応、2M context、通信設計、ring-style比2.1–5.7x・Megatron比1.1–1.4xを確認。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.15159",
+      "identity_tokens": [
+        "arXiv:2312.15159"
+      ],
+      "title": "Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference",
+      "reason": "LLMのoperator/layerごとに専用hardware unitを配置し、dataflowで直接接続してoff-chip memory accessを減らすFPGA spatial acceleratorを解析・実装する。GPT生成推論のprefillで既存FPGA overlay比2.2倍、decodeでNVIDIA A100比1.9倍高速・5.7倍energy efficientを報告しており、LLM推論hardware-system最適化を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2312.15159",
+      "body_check": "full_text_checked: 一次arXiv本文情報でspatial dataflow、analytical model、HLS kernel library、BERT/GPT2実装、GPT prefill 2.2x、decode A100比1.9x speedup・5.7x energy efficiencyを確認。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2305.18403",
+      "identity_tokens": [
+        "arXiv:2305.18403"
+      ],
+      "title": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
+      "reason": "LoRAのweight/gradientだけでimportanceを推定し、attention headとFFN channelを構造的に削除するLLM圧縮方式。LLaMAで50% compression時にLLM-Prunerより低perplexityを保ちつつmemory usageを52.6%削減し、構造化pruningにより通常hardware上でdeployment計算量を削減できるため対象内。",
+      "source_url": "https://arxiv.org/abs/2305.18403",
+      "body_check": "full_text_checked: 一次arXiv本文情報でLoRA-guided criterion、iterative structured pruning、LLaMA系列評価、50% compression、memory 52.6% reductionとdeployment目的を確認。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2304.09145",
+      "identity_tokens": [
+        "arXiv:2304.09145"
+      ],
+      "title": "Outlier Suppression+: Accurate quantization of large language models by equivalent and optimal shifting and scaling",
+      "reason": "activation outlierのchannel-wise asymmetry/concentrationを等価なshift/scaleとして後続moduleへ移し、post-training quantizationの誤差を抑えるOS+を提案する。OPT/BLOOM/BLOOMZ/LLaMA等で8/6-bitをほぼ浮動小数点品質に保ち、LLMの低bit推論を直接可能にするため対象内。",
+      "source_url": "https://arxiv.org/abs/2304.09145",
+      "body_check": "full_text_checked: 一次arXiv本文情報でchannel-wise shifting/scaling、equivalent migration、PTQ、BERT/OPT/BLOOM/BLOOMZ/LLaMA評価、8/6-bit near-FP performanceを確認。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 95
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.05754",
+      "identity_tokens": [
+        "arXiv:2111.05754"
+      ],
+      "title": "Prune Once for All: Sparse Pre-Trained Language Models",
+      "reason": "weight pruningとdistillationを統合して疎なBERT系pretrained modelを作り、下流taskへsparsityを維持したまま転移し、8-bit量子化も併用してBERT-Large encoderで40倍compressionを達成する。deployment効率化へ直結するが、主要方式がtraining-time pruning/distillationでLLM生成推論のruntime評価が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2111.05754",
+      "body_check": "full_text_checked: 一次arXiv本文情報でsparse pre-training、distillation、downstream transfer、8-bit QAT、BERT-Large 40x encoder compression・<1% accuracy lossを確認。推論system直接評価の弱さから境界扱い。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 96
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.13678",
+      "identity_tokens": [
+        "arXiv:1905.13678"
+      ],
+      "title": "Learning Sparse Networks Using Targeted Dropout",
+      "reason": "pruning後も性能を維持できるようtraining中に低重要度weight/unitを選択的dropoutする学習手法。疎model生成への基礎技術だが、LLM/Transformer推論や実hardwareでのruntime効率を最終評価しない。",
+      "source_url": "https://arxiv.org/abs/1905.13678",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtraining-time targeted dropoutとpost-hoc pruning robustnessが主題と確認し、LLM推論システムへの直接適用がないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 97
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/access.2024.3409745",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3409745"
+      ],
+      "title": "Measuring and Improving the Energy Efficiency of Large Language Models Inference",
+      "reason": "EnergyMeterでCPU・GPU・memory・storage別のLLM推論energyを測定し、model architecture、batch size、weight quantizationがenergy/tokenとlatencyへ与える影響を実測して運用最適化する。batch増加で最大20倍のenergy/token削減、量子化で条件によりenergy最大2倍・latency3倍超改善など、LLM推論効率を直接評価するため対象内。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2024.3409745",
+      "body_check": "full_text_checked: IEEE一次本文でEnergyMeter設計、Pythia/BLOOM/LLaMA等の推論実験、CPU/GPU/memory/storage計測、batch sizeとquantizationによるenergy/latency最適化、最大20x energy/token reduction等を確認。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 98
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01822",
+      "identity_tokens": [
+        "arXiv:2402.01822"
+      ],
+      "title": "Building Guardrails for Large Language Models",
+      "reason": "LLM入出力の安全性・policy遵守を保証するguardrail設計・評価を扱う安全性研究。追加推論処理は伴うが、主目的は安全性・制御性であり、推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2402.01822",
+      "body_check": "abstract_screen_only: 一次資料の題名・書誌と研究目的からLLM guardrail/safetyが主題で、推論system効率化ではないことが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 99
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24695",
+      "identity_tokens": [
+        "arXiv:2512.24695"
+      ],
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures",
+      "reason": "深層networkを複数時間尺度のnested optimizationとして再解釈し、architectureとlearning dynamicsの関係を扱う理論・学習枠組み。推論systemへの含意はあり得るが、worklist情報と一次資料上の主目的はtraining/architecture理解であり、LLM推論runtimeの直接最適化とは言い切れないためborderline。",
+      "source_url": "https://arxiv.org/abs/2512.24695",
+      "body_check": "full_text_checked: 一次arXiv本文情報でnested learning/optimizationの問題設定と評価先を確認。推論runtime・servingの直接評価が主貢献ではないため境界扱い。",
+      "first_checked_at": "2026-10-05T12:55:00+09:00",
+      "last_checked_at": "2026-10-05T12:55:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 100
+    }
+  ]
+}
