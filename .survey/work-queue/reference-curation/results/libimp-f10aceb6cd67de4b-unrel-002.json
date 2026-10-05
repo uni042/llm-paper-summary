@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f10aceb6cd67de4b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.23286",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.23286",
+    "identity_tokens": [
+      "arXiv:2609.23286"
+    ],
+    "reason": "3D reconstruction from a lengthy video stream input poses a dilemma for feed-forward reconstruction models (FFRMs), that a whole-stream inference context cannot be retained under limited GPU memory.Recent studies seek to resolve this problem via a trade-off between the integrity of inference context and GPU memory usage, which either suffer from a rapid memory inflation or degraded context integrity due to artificially capping memory usage.Driven by our key observation that the initial saliency of a token reliably dictates its long-term importance across the stream, we propose RegVGGT, a training-free token regulation method which aggressively regulates the tokens of incoming frames.By admitting at most 1% of tokens per frame to update the context memory, our method dramatically suppresses memory inflation as the stream progresses.Equipped with a FlashAttention-compatible token saliency estimation scheme, RegVGGT is capable of processing thousands of frames on a consumer-grade GPU with negligible compromise to reconstruction quality.Extensive experiments demonstrate that RegVGGT achieves state-of-the-art performance on long-horizon benchmarks across diverse FFRM prediction tasks, surpassing prior FFRM-based stream reconstruction baselines by a large margin.",
+    "first_checked_at": "2026-10-05T06:14:24+00:00",
+    "last_checked_at": "2026-10-05T06:14:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "RegVGGT: Sustainable Visual Geometry Grounding for Streaming via Regulated Memory"
+  },
+  "processed_at": "2026-10-05T06:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f10aceb6cd67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f10aceb6cd67de4b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.64898/2026.09.11.750945",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.64898/2026.09.11.750945",
+    "identity_tokens": [
+      "DOI:10.64898/2026.09.11.750945"
+    ],
+    "reason": "Reprogramming biosynthetic assembly lines can extend biosynthesis beyond the chemical space explored by nature. However, this remains difficult because assembly-line function depends on coordinated interactions across large multidomain enzymes. Here, we couple gLM2, a genomic language model trained on metagenomic sequences, with discrete diffusion and domain-level conditioning to enable generative design and optimization of biosynthetic gene clusters. We apply this approach to a chimeric type I polyketide synthase (PKS) engineered to produce δ-valerolactam, a molecule not naturally synthesized by PKSs. Through iterative redesign of two multi-domain regions in the context of the full PKS sequence, gLM2 progressively improved δ-valerolactam production, yielding variants with up to 9.4-fold higher titer than the starting enzyme. Together, these results demonstrate that evolutionary sequence information can be learned and applied to complex, multi-domain enzyme design problems, expanding biosynthetic assembly lines to produce molecules outside their natural biosynthetic repertoire.",
+    "first_checked_at": "2026-10-05T06:14:24+00:00",
+    "last_checked_at": "2026-10-05T06:14:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling"
+  },
+  "processed_at": "2026-10-05T06:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f10aceb6cd67",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

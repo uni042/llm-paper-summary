@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:12:08+00:00",
-  "record_count": 3157,
+  "updated_at": "2026-10-05T06:14:24+00:00",
+  "record_count": 3176,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -45941,6 +45941,294 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "Multimodal semantic weather-aware Mamba: a dual-path framework for EV charging occupancy forecasting"
+    },
+    "arXiv:2609.23733": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23733",
+      "identity_tokens": [
+        "arXiv:2609.23733"
+      ],
+      "reason": "Feed-forward visual geometry models such as the Visual Geometry Grounded Transformer (VGGT) have recently enabled direct 3D reconstruction from multi-view images. Despite their promising performance, these models scale quadratically with the number of input views due to their global attention mechanism, resulting in substantial latency for long sequence inputs. There have been some recent efforts to accelerate VGGT, but they primarily focus on reducing \\emph{token redundancy} through token merging or key/value sparsification. Our work resolves this bottleneck from a different perspective by investigating \\emph{architectural redundancy} in visual geometry transformers. We show that the multi-head attention modules in VGGT's global-attention layers contain substantial architectural redundancy, with only a subset of heads carrying critical geometric information. In light of this observation, we propose VGGT-Prime, a compute-adaptive mixture-of-heads model that resolves this redundancy to accelerate visual geometry transformers while maintaining competitive reconstruction quality. The key idea of VGGT-Prime is to estimate the appropriate computation level for each global-attention head using a lightweight router and then dynamically assign each head to different computation modes. Extensive experiments on multiple datasets demonstrate that VGGT-Prime can achieve an {$8\\times$} inference speedup over VGGT while maintaining competitive performance on camera pose, depth, and point-cloud predictions. We further show that VGGT-Prime is complementary to existing acceleration methods, such as token merging, further improving inference speed by up to $14{\\times}$ over VGGT. An overview of our work is available on our \\href{https://vggt-prime.github.io}{project page}.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers"
+    },
+    "arXiv:2609.26822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26822",
+      "identity_tokens": [
+        "arXiv:2609.26822"
+      ],
+      "reason": "Financial time series evolve across multiple temporal resolutions, challenging forecasting systems to incorporate newly available information without repeatedly recomputing unchanged representations. We introduce HARN, a Hierarchical Associative Resonance Network for event-driven multi-timeframe forecasting. HARN maintains persistent representations across temporal levels and updates each level only when its corresponding completed bar becomes available. The architecture combines causal multi-scale temporal encoding, gated associative memory, cross-level resonance, and hierarchical evidence aggregation, with forecasting performed in basis-point space and reconstructed to the original price scale. We evaluate HARN on four assets spanning equity, foreign exchange, and commodity markets using multiple random seeds and component ablations. HARN achieves competitive reconstructed-price forecasting errors against single-timeframe PatchTST and TimeXer baselines, while ablations reveal the effects of removing individual components across assets and timeframes. A code-level audit further examines consistency between the implementation and the defined event-driven causal protocol. The results position HARN as a persistent multi-timeframe forecasting framework rather than evidence of universal predictive superiority.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "HARN: Hierarchical Associative Resonance Network for Event-Driven Multi-Timeframe Forecasting"
+    },
+    "DOI:10.1038/s41467-026-76272-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-76272-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-76272-2"
+      ],
+      "reason": "Singular value decomposition (SVD) underpins low-rank representation across scientific computing, signal processing, and machine learning. However, iterative computations in SVD are energy-intensive on conventional von Neumann architectures with separate storage and computation units, posing significant challenges for complex information processing. Here, we present memristive SVD (MSVD), built on compute-in-memory (CIM) memristor chips, enabled by a selective representation enhanced architecture (SREA) that ensures numerical fidelity across iterations. We demonstrate MSVD across three tiers of increasing complexity: low-rank approximation for image enhancement and epidemiological data reconstruction; user-scalable recognition where incremental MSVD exploits persistent in-memory storage to incorporate new users without remapping existing information; and large language model weight decomposition where MSVD-based initialization consistently outperforms the standard fine-tuning method on mathematical benchmarks. Beyond software-comparable accuracy, SREA reduces energy overhead and accelerates convergence over unenhanced MSVD, and the full system achieves order-of-magnitude gains in energy efficiency and speed over conventional hardware across all demonstrated scenarios, with these advantages growing progressively with each update cycle in the incremental setting. This work accelerates SVD across various scenarios and extends memristor-based systems towards general computing applications. Efficient processing of high-dimensional datasets demands minimal information loss and reduced computational complexity. Ding et al. report a memristor-based system that boosts data simplification efficiency and accuracy, supporting applications in image reconstruction, biomedical signal analysis, and LLM fine tuning.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Memristive singular value decomposition"
+    },
+    "DOI:10.20965/jaciii.2026.p1404": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.20965/jaciii.2026.p1404",
+      "identity_tokens": [
+        "DOI:10.20965/jaciii.2026.p1404"
+      ],
+      "reason": "The performance of an LLM application is highly dependent on how the user commands the application through prompts. Previous researchers invented role-play prompting techniques to overcome these problems. Including roles relevant to the task can improve the accuracy of the responses generated by LLMs. Nevertheless, the assignment of roles in this study remained a human-driven process. This study addresses the research gap in previous studies by developing deep learning models to effectively predict relevant roles based on tasks. In addition, the impact of the ontology data as an enrichment of the training data on the model performance in two scenarios (with and without ontology) was examined. In the with-ontology setup, enrichment data are extracted from an occupational ontology that includes roles, skills, and abilities along with their corresponding definitions. Data that were restricted to four predefined occupations were incorporated into the benchmark datasets. The benchmark datasets consisted of questions used to assess the LLM performance aligned with predetermined occupations. In without-ontology settings, the models were trained using only the benchmark datasets. An experiment on three variants of recurrent-based and a graph-based model in both scenarios showed that these models exhibited stable convergence and performed best on ontology-enriched data. Notably, the recurrent neural network (RNN) exhibited significant performance gains, achieving improvements of 34% and 1.86% in the F1 score and receiver operating characteristic-area under the curve (ROC–AUC), respectively. Despite its great performance—92% F1 score and 97% ROC–AUC, the gated recurrent unit is computationally the most expensive model compared to long short-term memory, RNN, and graph convolutional network. Further research is required to explore alternative model architectures and expand the scope of their predictable roles.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "LLM Prompt Optimization: From Zero-Shot to Automatic Role-Playing Generation Using Ontology"
+    },
+    "arXiv:2609.23367": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23367",
+      "identity_tokens": [
+        "arXiv:2609.23367"
+      ],
+      "reason": "FORM is a domain-specific symbolic manipulation language widely used in particle physics for processing the very large algebraic expressions arising from multi-loop Feynman diagram calculations. Despite its central role in precision theoretical physics, no artificial-intelligence tooling exists, to our knowledge, for assisting physicists in writing FORM code. We show that contemporary large language models (LLMs), including frontier models with hundreds of billions of parameters, achieve a zero-percent execution pass rate on our instruction-following and tutorial-style FORM tasks without documentation in a single attempt, establishing FORM as a genuine zero-shot language for LLMs at the time of writing. We then present a verification-driven data generation pipeline that uses the FORM binary itself as an execution oracle to produce and validate a corpus of 4,633 training examples spanning deterministic computations, open-ended programs, tutorial code, and knowledge question-answer pairs. Fine-tuning a compact open-weights model (Qwen3-8B) with quantized low-rank adaptation (QLoRA) yields a specialist that, evaluated on four complementary benchmarks (840 tasks, single attempt each), decisively outperforms frontier models with up to 756B parameters in execution rate and in strict, FORM-verified output matching on the larger benchmarks, and remains statistically indistinguishable from them on the smaller, harder ones. General reasoning and coding capabilities are preserved within 2.6 percentage points.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "LLM-Based FORM Code Generation with Verification-Driven Fine-Tuning"
+    },
+    "arXiv:2609.23465": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23465",
+      "identity_tokens": [
+        "arXiv:2609.23465"
+      ],
+      "reason": "Despite an LLM memory system, its primary claim is evidence-grounded recall accuracy and it explicitly disclaims latency/token-cost optimization, so it does not meet this survey’s inference-efficiency scope.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Propose, Verify, Commit: Evidence-Grounded Memory for Long-Horizon Multi-Actor Conversations"
+    },
+    "arXiv:2609.23495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23495",
+      "identity_tokens": [
+        "arXiv:2609.23495"
+      ],
+      "reason": "Failures of high-resolution MLLMs are commonly attributed to a visual problem, motivating zooming, cropping, and related visual interventions to recover fine-grained evidence or suppress interference. Yet recent studies suggest that relevant visual evidence is already encoded in intermediate representations, indicating that visual-side improvements alone insufficient. This raises a natural question: does the remaining bottleneck lie in the text that guides visual search? We identify a previously overlooked linguistic bottleneck: questions formulated for answering do not necessarily specify the visual evidence required for localization. To address this mismatch, we introduce EviSpec, a training-free compiler that derives complementary evidence specifications while preserving the original question for final reasoning. We further validate it through matched-control experiments that isolate the roles of evidence specification and localization. With the search budget fixed, structured evidence specifications yield an 8.6% relative gain over generic requests. With evidence geometry matched, the evidence localized by EviSpec yields a 14.8% relative gain over random evidence. Together, these controls isolate the benefit of specifying what evidence to seek rather than merely expanding visual access. Across all five MLLMs, EviSpec consistently improves upon the corresponding baseline on each of the three benchmarks, yielding average relative gains of \\textbf{10.4%, 8.8%, and 12.4%} on V\\textsuperscript{*}Bench, HR-Bench-4K, and HR-Bench-8K, respectively. Beyond high-resolution reasoning, EviSpec also achieves state-of-the-art performance on VQA and hallucination-focused benchmarks.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Pay More Attention To Text In High-Resolution MLLMs"
+    },
+    "arXiv:2609.23686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23686",
+      "identity_tokens": [
+        "arXiv:2609.23686"
+      ],
+      "reason": "Patch-based autoregressive time-series forecasting often ties input representation, learned transitions, and recursive execution to one patch length. We ask which of these roles can be adjusted separately. A supporting atomic-encoding study finds greater sensitivity to model width than to atom grouping on the evaluated grid. Our main finding is that a frozen parent's recursive trajectory is easier to fit than the observed future with lightweight parallel exits. Autoregressive Trajectory Distillation (ATD) turns this into selectable ATD-1/2/4/8 execution, with ATD-1 exactly recovering the parent. On a paired four-data-set comparison, ATD-8 reaches $5.54\\times$ end-to-end speedup with stable quality across widths. Fewer calls do not automatically remove the parent's existing forecast error: ATD improves trajectory fidelity in all 21 seed runs but forecast accuracy in only 15 against matched clean-future supervision. We further find a correctable residual projection along a train-selected periodic history direction. Spectrum Tangent applies this correction without adding neural parameters or Transformer calls. At horizon 720, it reduces mean squared error (MSE) and mean absolute error (MAE) by 2.54% and 2.33% over seven data sets and two output widths, while remaining $3.24\\times$ faster than recursive inference. Level and shape projections sometimes disagree. Trajectory compressibility, the fidelity-accuracy mismatch, and the correction recur across three public AR parents. Together these results separate representation, transition, and execution as AR design axes. Code is available at https://github.com/RowanFFF/ATD-Spectrum-Tangent.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "One Patch, Three Roles: What Is Actually Coupled in Autoregressive Time-Series Forecasting?"
+    },
+    "arXiv:2609.23703": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23703",
+      "identity_tokens": [
+        "arXiv:2609.23703"
+      ],
+      "reason": "Financial language models can transform unstructured firm-specific news into structured decision signals, but financial AI research lacks an integrated deployment framework for evaluating whether those signals remain useful in financial decision systems. Computer science research has developed strong methods for time-series forecasting, text classification, multimodal stock prediction, graph-based market modeling, and machine-learning operations, yet these streams do not provide a domain-specific protocol that jointly tests financial language-model outputs under event-time observability, probability calibration, execution timing, transaction costs, liquidity constraints, capacity limits, operational diagnostics, and statistical inference. We introduce MFAST, a Market-Friction-Aware Sentiment-to-Trading framework that converts timestamped financial text into auditable, reproducible, and market-feasible trading decisions. The application is news-based trading, where firm-specific text must be linked to securities before portfolio decisions can be evaluated. The framework links Refinitiv News Analytics to Center for Research in Security Prices (CRSP) equity data, restricts the primary out-of-sample evaluation to post-release news outside disclosed foundation-model data-freshness periods, and adds a public replication arm using open financial text and public price data. Results show that decoder-only language models outperform encoder baselines and dictionary sentiment in classification, calibration, return prediction, and net portfolio performance, while operational diagnostics reveal trade-offs among accuracy, latency, memory, throughput, and inference cost. The paper shows that credible evaluation of financial language models requires an end-to-end engineering approach combining language understanding, temporal discipline, market-friction-aware deployment, and reproducible validation.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Financial Language Models as Applied Artificial Intelligence Systems for News-Based Trading under Market Frictions"
+    },
+    "DOI:10.53941/ic.2026.100011": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.53941/ic.2026.100011",
+      "identity_tokens": [
+        "DOI:10.53941/ic.2026.100011"
+      ],
+      "reason": "The rapid development of large language models (LLMs) has expanded the capabilities of autonomous unmanned aerial vehicle (UAV) systems in naturallanguage instruction understanding, multimodal perception, and decision-making. This survey reviews the technical evolution, system architectures, and deployment challenges of LLM-driven UAVs across perception, planning, control, multi-agent coordination, and edge–cloud computing. Beyond cataloguing representative systems, we separate semantic-reasoning latency, control timing, power, task outcomes, hardware, and validation settings to avoid misleading cross-platform comparisons. We further analyze Sim2Real gaps, intermittent connectivity, hallucination-induced action risk, cyberattacks, and privacy leakage. In this survey, a semantically adaptive safety certificate denotes a runtime-verifiable CBF/MPC/STL constraint whose safe set or margin is parameterized by grounded task and scene semantics but enforced by a deterministic safety layer outside the generative model. Future directions emphasize hierarchical lightweight reasoning, communication-aware autonomy, formally bounded semantic adaptation, and airworthiness-oriented assurance.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Large Language Model-Driven Autonomous UAV Systems: Technical Evolution, Core Architectures, and Critical Challenges"
+    },
+    "arXiv:2609.22674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22674",
+      "identity_tokens": [
+        "arXiv:2609.22674"
+      ],
+      "reason": "Joint Embedding Predictive Architectures (JEPAs) are becoming a core representation-learning primitive and a building block for latent world models across vision, video, audio, brain dynamics, and time series. Despite (potential of) wide deployment, current JEPA training pipelines are inefficient: each input is executed through multiple mask-specific branches, with redundant target-side work, and memory-bound token routing. These costs grow with the number of masks and limit GPU efficiency. We present M-JEPA, a mask-aware execution architecture that restructures JEPA training without changing the learning objective. M-JEPA separates mask-independent computation from mask-dependent routing, enabling shared context encoder execution, fused token routing and slicing with backward support, sparse target encoder execution over the union of target tokens, and masked patch embedding for sparse inputs. The resulting pipeline preserves training semantics while reducing computation, memory traffic, and synchronization overhead. We implement M-JEPA for five JEPA variants and evaluate it on NVIDIA A100 GPUs. Compared against the state-of-the-art baselines, M-JEPA achieves up to 1.7x end-to-end training speedup for 2-10 masks. Separately, with masked patch embedding, 4.75x patch-embedding speedup at high sparsity. These results show that execution restructuring, rather than changes to the JEPA objective, is a key lever for efficient JEPA training.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "Mask-Aware Execution for Efficient JEPA Training"
+    },
+    "arXiv:2609.22702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22702",
+      "identity_tokens": [
+        "arXiv:2609.22702"
+      ],
+      "reason": "Accurate flood forecasts several days in advance are essential for flood control, water-resource management, and emergency response. A central challenge is to produce high-resolution forecasts across continental domains where hydrological behavior varies widely from place to place. We developed Hapi, a U-Net Swin Transformer that uses fine three-dimensional patches and hierarchical shifted-window attention to forecast river discharge, surface runoff, snow water equivalent, and soil wetness index across the contiguous United States. The model produces medium-range forecasts (24--72~h) at $0.05^{\\circ}$ resolution with adaptive task weighting and required only 0.11 seconds for a four-variable 72-h CONUS forecast on one A100 GPU. In a held-out 2024 potential-skill evaluation with ERA5-Land inputs prescribed over the forecast horizon, Hapi achieved the highest F1-score for floods in 20 of 21 comparisons across seven GloFAS return periods and three forecast leads. Independent validation against observed daily discharge at 3{,}881 U.S. Geological Survey gauges showed that Hapi achieved the highest median Nash--Sutcliffe efficiency at every lead, supported by regional-cluster bootstrap intervals. In a matched 24-h comparison of loss formulations, adaptive task balancing produced the lowest discharge errors and the highest F1-score for floods.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Hapi: A Multivariable Land-Surface Transformer for Medium-Range Hydrological Forecasting at Continental Scale"
+    },
+    "arXiv:2609.22755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22755",
+      "identity_tokens": [
+        "arXiv:2609.22755"
+      ],
+      "reason": "Long-context LLM training on long-tailed corpora faces a central communication--balance tradeoff. Such sequence-length heterogeneity makes any single sequence-parallelism (SP) degree a poor fit for the workload: a small degree leaves the few long sequences badly imbalanced, while a large degree forces the many short sequences that dominate the workload to pay excessive communication. Existing dynamic-SP systems mix SP degrees within a batch, but to run several groups at once they partition the GPUs into disjoint groups, which reintroduces imbalance across groups and forces costly micro-batch workarounds. We present NSP, a sequence-parallel training system that resolves this tradeoff by nesting differently sized SP groups on shared GPUs within a single training iteration. This lets long sequences use larger SP groups while keeping short sequences on smaller ones, so communication is incurred only where needed and load is balanced per GPU rather than per group. NSP realizes this idea with a tree-structured routing planner that assigns sequences under memory constraints and an executor that exploits the resulting hierarchy through inter-level phase streaming and tree-level recomputation. NSP supports common SP backends and requires no model changes. We evaluate NSP on Qwen3-MoE workloads with up to 384K-token contexts across multiple long-tail datasets on an internal production GPU cluster. Across these settings, NSP consistently improves end-to-end training throughput, outperforming Static SP by up to 1.48x and FlexSP by up to 1.16x.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "NSP: Accelerating Variable-Length LLM Training via Nested Sequence Parallelism"
+    },
+    "arXiv:2609.22870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22870",
+      "identity_tokens": [
+        "arXiv:2609.22870"
+      ],
+      "reason": "Reinforcement learning (RL) has become a key technique for improving the reasoning and agentic abilities of large language models (LLMs). Although FP8 quantization can accelerate RL training, maintaining stability throughout an FP8 RL pipeline remains challenging. While previous works have focused on resolving train-inference mismatches using correction techniques like TIS, we reveal that full-pipeline FP8 RL still suffers from severe training instability, manifesting as anomalous mid-training entropy surges and garbled outputs. We trace this instability to a previously overlooked cause: compounded FP8 quantization noise distorts the importance ratio, disproportionately pushing negative-advantage tokens outside the trust region and erroneously zeroing out their gradients. As a result, pathological outputs are not properly penalized and accumulate over the course of training. To address this, we propose Calibrated Clipping, a dynamic method that aligns the FP8 clipping bounds with high-precision BF16 distributions by matching the lower-bound clipping quantile and rebalancing the upper bound accordingly. Extensive experiments across GRPO and DAPO algorithms, model scales from 8B to 32B, and multiple FP8 scaling granularities demonstrate that our approach successfully eliminates entropy surges and restores performance comparable to the BF16 baseline.",
+      "first_checked_at": "2026-10-05T06:14:23+00:00",
+      "last_checked_at": "2026-10-05T06:14:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Towards Full Pipeline FP8 Reinforcement Learning for LLMs"
+    },
+    "DOI:10.64898/2026.09.11.750945": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.11.750945",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.11.750945"
+      ],
+      "reason": "Reprogramming biosynthetic assembly lines can extend biosynthesis beyond the chemical space explored by nature. However, this remains difficult because assembly-line function depends on coordinated interactions across large multidomain enzymes. Here, we couple gLM2, a genomic language model trained on metagenomic sequences, with discrete diffusion and domain-level conditioning to enable generative design and optimization of biosynthetic gene clusters. We apply this approach to a chimeric type I polyketide synthase (PKS) engineered to produce δ-valerolactam, a molecule not naturally synthesized by PKSs. Through iterative redesign of two multi-domain regions in the context of the full PKS sequence, gLM2 progressively improved δ-valerolactam production, yielding variants with up to 9.4-fold higher titer than the starting enzyme. Together, these results demonstrate that evolutionary sequence information can be learned and applied to complex, multi-domain enzyme design problems, expanding biosynthetic assembly lines to produce molecules outside their natural biosynthetic repertoire.",
+      "first_checked_at": "2026-10-05T06:14:24+00:00",
+      "last_checked_at": "2026-10-05T06:14:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Generative Design of New-to-nature Biosynthetic Assembly Lines with Genomic Language Modeling"
+    },
+    "arXiv:2609.23286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23286",
+      "identity_tokens": [
+        "arXiv:2609.23286"
+      ],
+      "reason": "3D reconstruction from a lengthy video stream input poses a dilemma for feed-forward reconstruction models (FFRMs), that a whole-stream inference context cannot be retained under limited GPU memory.Recent studies seek to resolve this problem via a trade-off between the integrity of inference context and GPU memory usage, which either suffer from a rapid memory inflation or degraded context integrity due to artificially capping memory usage.Driven by our key observation that the initial saliency of a token reliably dictates its long-term importance across the stream, we propose RegVGGT, a training-free token regulation method which aggressively regulates the tokens of incoming frames.By admitting at most 1% of tokens per frame to update the context memory, our method dramatically suppresses memory inflation as the stream progresses.Equipped with a FlashAttention-compatible token saliency estimation scheme, RegVGGT is capable of processing thousands of frames on a consumer-grade GPU with negligible compromise to reconstruction quality.Extensive experiments demonstrate that RegVGGT achieves state-of-the-art performance on long-horizon benchmarks across diverse FFRM prediction tasks, surpassing prior FFRM-based stream reconstruction baselines by a large margin.",
+      "first_checked_at": "2026-10-05T06:14:24+00:00",
+      "last_checked_at": "2026-10-05T06:14:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "RegVGGT: Sustainable Visual Geometry Grounding for Streaming via Regulated Memory"
+    },
+    "arXiv:2609.23301": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23301",
+      "identity_tokens": [
+        "arXiv:2609.23301"
+      ],
+      "reason": "Distributed tracing in large-scale AI infrastructure fails silently when clock accuracy is insufficient: causal events are misordered, fault attribution is corrupted, and performance diagnoses are unreliable. We present TempoTrace, a system that co-designs IEEE 1588v2 PTP time synchronization with distributed tracing to preserve causal ordering across heterogeneous, multi-tenant GPU clusters. We formally prove that NTP-grade clocks produce causal inversions at 25-30% of directed operation pairs under WAN/cloud conditions (11.3% under LAN NTP). A Laplace heavy-tail noise model extends the analysis beyond Gaussian assumptions, giving a weighted expected misorder rate of 27.76% vs. 29.37% Gaussian, confirming robustness to tail shape. TempoTrace reduces GPU-to-host timestamp uncertainty from 2.1 us to a design target of 0.056 us residual standard deviation via GPUDirect RDMA hardware timestamping, with sub-100 ns PTP synchronization. A bounded Sketch Vector Clock tracks causal relationships with false-positive rate below 10^-5 for up to four participants. A hybrid rule-based and XGBoost diagnosis engine achieves macro-F1 0.974 in controlled validation (1,800-incident corpus; McNemar p=1.25e-23). A formally proven multi-tenant model provides isolated logical clock domains. For RoCEv2/ECMP fabrics, P4-based in-band network telemetry corrects path-delay asymmetry, yielding 99.1% attribution accuracy. Application Confidence Policies let workloads specify precision requirements and degraded-mode fallback. Evaluation combines physical five-node measurements (NTP inversion rate 44.978%, Laplace fit preferred over Gaussian by AIC under congestion) and controlled synthetic validation with illustrative configurations from 512 to 16,384 H100 GPUs across InfiniBand and RoCEv2 fabrics.",
+      "first_checked_at": "2026-10-05T06:14:24+00:00",
+      "last_checked_at": "2026-10-05T06:14:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ],
+      "title": "Accurate Distributed Tracing for Large-Scale AI Infrastructure: Time Synchronization as a Foundation for Reliable Observability"
+    },
+    "arXiv:2609.23321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23321",
+      "identity_tokens": [
+        "arXiv:2609.23321"
+      ],
+      "reason": "Low-rank adaptation (LoRA) has become a key technology for serving large-scale personalized large language models and diffusion models in the cloud. However, the co-occurrence patterns, resource contention relationships, and evolutionary regularities of adapters under production inference workloads have not been systematically or quantitatively studied. Based on GenTD26, Alibaba's production diffusion model inference dataset, this paper adopts a graph-theoretic framework to construct an adapter co-occurrence network and conducts a characterization from both static structure and dynamic evolution. Our main findings are as follows. (1) The co-occurrence network is extremely sparse, and adapter usage frequency follows a significant heavy-tailed distribution. (2) Introducing the first adapter incurs a 66.1% execution-latency overhead, with diminishing marginal costs afterwards. (3) Co-occurrence relationships are driven by base models: in 90.6% of multi-adapter requests, all adapters share the same dominant base model; 66.2% of significant co-occurrence edges connect same-model adapter pairs; and in 85.8% of multi-adapter requests, all adapter pairs form significant co-occurrence edges. (4) The adapter ecosystem exhibits a core-periphery bipolar structure, with a weekly Jaccard similarity of 0.696 at the model level and a churn rate of 54.5% for the top-10 hottest models within a 12-hour window. Based on these findings, we propose a preloading strategy built on top-k co-occurrence statistics; offline experiments show that it covers 81.0% of test-set co-occurrence pairs at k=3, and sensitivity analyses across frequency thresholds and time windows verify the robustness of the conclusions. These results provide a data-driven basis for cache preloading, adaptive scheduling, and GPU memory management in LoRA inference services.",
+      "first_checked_at": "2026-10-05T06:14:24+00:00",
+      "last_checked_at": "2026-10-05T06:14:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "title": "Co-occurrence Patterns of LoRA Adapters in Production Diffusion Model Inference Services"
+    },
+    "arXiv:2609.23363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23363",
+      "identity_tokens": [
+        "arXiv:2609.23363"
+      ],
+      "reason": "Recent advances in large language models (LLMs) have led to the emergence of coding agents capable of performing complex engineering tasks, including register-transfer level (RTL) design and optimization. Existing RTL benchmarks mainly evaluate functional correctness and performance, power, and area (PPA) of the generated RTL designs, leaving agents'ability for \\emph{timing closure} under-evaluated. We propose TicTacBench, a benchmark specifically designed to evaluate coding agents'capabilities for RTL-level timing closure under post-place-and-route (post-PnR) evaluation. TicTacBench contains 30 diverse tasks, each provided with a suboptimal RTL design, realistic timing constraints, functional equivalence verification, and timing reports. With over 300 runs of coding agents driven by 8 frontier LLMs, we find that even the best agent can only close 53.3\\% of tasks with 7.18\\% area-delay product (ADP) degradation and 8.83\\% energy-delay-squared product (EDDP) improvement on average. We identify common failure categories that explain why agents fail to close timing. Then we propose TicTacSkill, a new method that guides agents to follow standard timing-closure procedures and improves the Timing Closure Rate by 9\\%. These results suggest that while coding agents have made significant progress in RTL design, their timing-closure capability still has substantial room for improvement.",
+      "first_checked_at": "2026-10-05T06:14:24+00:00",
+      "last_checked_at": "2026-10-05T06:14:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TicTacBench: Benchmarking Timing Closure Capabilities of Coding Agents"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44c155895263567d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41467-026-76272-2",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41467-026-76272-2",
+    "identity_tokens": [
+      "DOI:10.1038/s41467-026-76272-2"
+    ],
+    "reason": "Singular value decomposition (SVD) underpins low-rank representation across scientific computing, signal processing, and machine learning. However, iterative computations in SVD are energy-intensive on conventional von Neumann architectures with separate storage and computation units, posing significant challenges for complex information processing. Here, we present memristive SVD (MSVD), built on compute-in-memory (CIM) memristor chips, enabled by a selective representation enhanced architecture (SREA) that ensures numerical fidelity across iterations. We demonstrate MSVD across three tiers of increasing complexity: low-rank approximation for image enhancement and epidemiological data reconstruction; user-scalable recognition where incremental MSVD exploits persistent in-memory storage to incorporate new users without remapping existing information; and large language model weight decomposition where MSVD-based initialization consistently outperforms the standard fine-tuning method on mathematical benchmarks. Beyond software-comparable accuracy, SREA reduces energy overhead and accelerates convergence over unenhanced MSVD, and the full system achieves order-of-magnitude gains in energy efficiency and speed over conventional hardware across all demonstrated scenarios, with these advantages growing progressively with each update cycle in the incremental setting. This work accelerates SVD across various scenarios and extends memristor-based systems towards general computing applications. Efficient processing of high-dimensional datasets demands minimal information loss and reduced computational complexity. Ding et al. report a memristor-based system that boosts data simplification efficiency and accuracy, supporting applications in image reconstruction, biomedical signal analysis, and LLM fine tuning.",
+    "first_checked_at": "2026-10-05T06:14:23+00:00",
+    "last_checked_at": "2026-10-05T06:14:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Memristive singular value decomposition"
+  },
+  "processed_at": "2026-10-05T06:14:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44c155895263",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

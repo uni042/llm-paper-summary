@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44c155895263567d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.25131",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.25131",
+    "identity_tokens": [
+      "arXiv:2609.25131"
+    ],
+    "reason": "It modifies inference-time generation, but the reviewed evaluations establish quality gains at fixed sampling budgets rather than efficiency gains; its explored lookahead can multiply runtime, leaving only weak scope fit.",
+    "first_checked_at": "2026-10-05T06:14:23+00:00",
+    "last_checked_at": "2026-10-05T06:14:23+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "title": "Entropy Can Flow, or It Can Guide. Be Entropy. LEDFlow: Introducing Entropy-guided Generation Order into Uniform Discrete Flow"
+  },
+  "processed_at": "2026-10-05T06:14:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44c155895263",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

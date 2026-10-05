@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e52af2197ec5e55-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.22674",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.22674",
+    "identity_tokens": [
+      "arXiv:2609.22674"
+    ],
+    "reason": "Joint Embedding Predictive Architectures (JEPAs) are becoming a core representation-learning primitive and a building block for latent world models across vision, video, audio, brain dynamics, and time series. Despite (potential of) wide deployment, current JEPA training pipelines are inefficient: each input is executed through multiple mask-specific branches, with redundant target-side work, and memory-bound token routing. These costs grow with the number of masks and limit GPU efficiency. We present M-JEPA, a mask-aware execution architecture that restructures JEPA training without changing the learning objective. M-JEPA separates mask-independent computation from mask-dependent routing, enabling shared context encoder execution, fused token routing and slicing with backward support, sparse target encoder execution over the union of target tokens, and masked patch embedding for sparse inputs. The resulting pipeline preserves training semantics while reducing computation, memory traffic, and synchronization overhead. We implement M-JEPA for five JEPA variants and evaluate it on NVIDIA A100 GPUs. Compared against the state-of-the-art baselines, M-JEPA achieves up to 1.7x end-to-end training speedup for 2-10 masks. Separately, with masked patch embedding, 4.75x patch-embedding speedup at high sparsity. These results show that execution restructuring, rather than changes to the JEPA objective, is a key lever for efficient JEPA training.",
+    "first_checked_at": "2026-10-05T06:14:23+00:00",
+    "last_checked_at": "2026-10-05T06:14:23+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Mask-Aware Execution for Efficient JEPA Training"
+  },
+  "processed_at": "2026-10-05T06:14:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e52af2197ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
