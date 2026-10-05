@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-94-part-02-7de6b59512f7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.05288",
+      "identity_tokens": [
+        "arXiv:2507.05288"
+      ],
+      "title": "A Survey on Proactive Defense Strategies Against Misinformation in Large Language Models",
+      "reason": "The primary abstract is a misinformation-defense survey centered on reliability and safety, not inference resource efficiency.",
+      "source_url": "https://arxiv.org/abs/2507.05288",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.03285",
+      "identity_tokens": [
+        "arXiv:2507.03285"
+      ],
+      "title": "Memory Mosaics at scale",
+      "reason": "The primary abstract reports scale-up/training and task capability of a memory-mosaic architecture; it does not report reduced inference/serving cost.",
+      "source_url": "https://arxiv.org/abs/2507.03285",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.03038",
+      "identity_tokens": [
+        "arXiv:2507.03038"
+      ],
+      "title": "Cautious Next Token Prediction",
+      "reason": "The primary abstract proposes uncertainty-triggered multi-trial decoding for reliability; it does not claim inference cost or latency reduction and adds trials when uncertain.",
+      "source_url": "https://arxiv.org/abs/2507.03038",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07296",
+      "identity_tokens": [
+        "arXiv:2506.07296"
+      ],
+      "title": "HotelMatch-LLM: Joint Multi-Task Training of Small and Large Language Models for Efficient Multimodal Hotel Retrieval",
+      "reason": "The primary abstract is a domain-specific hotel retrieval model; it reports retrieval quality but no general LLM inference/serving efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2506.07296",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17083",
+      "identity_tokens": [
+        "arXiv:2505.17083"
+      ],
+      "title": "Scale-invariant Attention",
+      "reason": "The primary abstract addresses attention generalization to longer contexts and validation loss/retrieval quality, not inference-time resource efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.17083",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    }
+  ]
+}
