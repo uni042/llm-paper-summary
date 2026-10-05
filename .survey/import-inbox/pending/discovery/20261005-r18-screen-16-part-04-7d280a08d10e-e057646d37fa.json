@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-16-part-04-7d280a08d10e",
+  "reference_main_sha": "3b0c5546288819965a32278794ebf3b45201393d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31560",
+      "identity_tokens": [
+        "arXiv:2609.31560"
+      ],
+      "title": "Generalization behavior of OPTQ and the role of regularization",
+      "reason": "No measured inference memory, latency, throughput or concrete LLM deployment/quantizer experiment was established in inspected sections, leaving inference-efficiency scope fit weak.",
+      "source_url": "https://arxiv.org/abs/2609.31560",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31796",
+      "identity_tokens": [
+        "arXiv:2609.31796"
+      ],
+      "title": "Same Probe, Different Numbers: Are Activation Probes Robust to Inference-Time Numerical Non-Determinism?",
+      "reason": "Robustness of activation probes under numerical nondeterminism; no serving-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2609.31796",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31812",
+      "identity_tokens": [
+        "arXiv:2609.31812"
+      ],
+      "title": "Beyond Sparsity: Weight Location and Network Context in Pruned MRI Reconstruction",
+      "reason": "Pruning effects in MRI reconstruction models, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.31812",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31823",
+      "identity_tokens": [
+        "arXiv:2609.31823"
+      ],
+      "title": "SynDORBench: Evaluating LVLM Perceptual Robustness Under Physically Constrained Visibility Conditions",
+      "reason": "LVLM perceptual-robustness benchmark, not a compute-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.31823",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31918",
+      "identity_tokens": [
+        "arXiv:2609.31918"
+      ],
+      "title": "ROTE: Benchmarking Neural Memorization on Complexity-Controlled Symbolic Sequences",
+      "reason": "Benchmark of symbolic memorization in neural models, not an LLM inference-efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2609.31918",
+      "first_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "last_checked_at": "2026-10-05T04:46:30.175058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    }
+  ]
+}
