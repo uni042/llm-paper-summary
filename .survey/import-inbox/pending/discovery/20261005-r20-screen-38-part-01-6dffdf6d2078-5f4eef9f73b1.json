@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-38-part-01-6dffdf6d2078",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00325",
+      "identity_tokens": [
+        "arXiv:2608.00325"
+      ],
+      "title": "Triton for MTIA: Bridging the Programming Model Gaps for Custom AI Accelerators",
+      "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 The compiler/kernel tooling is inference-adjacent and targets an inference ASIC, but reported end-to-end model performance is not an LLM inference evaluation; scope fit remains weak.",
+      "source_url": "https://arxiv.org/abs/2608.00325",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06396",
+      "identity_tokens": [
+        "arXiv:2608.06396"
+      ],
+      "title": "TEXAS: Task-Expert-Aware Supervision for Downstream Mixture-of-Experts LLM Adaptation",
+      "reason": "Mixture-of-Experts (MoE) language models route each token through a small subset of experts, making routing patterns useful for identifying task-relevant experts during downstream adaptation. Yet current approaches have two limitations: task experts are typically identified from aggregate routing statistics that reflect usage rather than association with successful task completion, and task-expert activations remain underexplored as signals for supervision allocation. We introduce Task-Expert-Aware Supervision (TEXAS), which combines correctness-conditioned task expert discovery with token-level supervision allocation. TEXAS compares expert activations on instances that the base model solves successfully and those it fails to solve, and retains experts more strongly activated on successful instances. During fine-tuning, it upweights answer tokens in failed instances when they activate these experts. TEXAS therefore leverages existing routing behavior without restricting adaptation to a fixed expert subset or imposing an explicit target routing distribution. Across three MoE models and six benchmarks, TEXAS achieves the best or tied-best performance in 17 of 18 settings and improves over the strongest baseline by 1.3--1.5 points on average. Ablations and further analyses validate both the discovered experts and the resulting supervision strategy.",
+      "source_url": "https://arxiv.org/abs/2608.06396",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.06398",
+      "identity_tokens": [
+        "arXiv:2608.06398"
+      ],
+      "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
+      "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 The evidence is primarily a continuation-training/modeling comparison and does not demonstrate inference speed or resource gains over the dense backbone.",
+      "source_url": "https://arxiv.org/abs/2608.06398",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11240",
+      "identity_tokens": [
+        "arXiv:2608.11240"
+      ],
+      "title": "VQ-bench: A Composable Vector Quantization Framework",
+      "reason": "Vector quantization is an old problem but has recently become central to AI infrastructure. It is therefore experiencing a surge of renewed engineering and research activity. This paper provides a unified framework for developing and benchmarking new quantization algorithms. We describe 7 common conceptual quantization primitives and show how to compose them arbitrarily. We then re-express 25 common quantizers as pipelines of these primitives. Finally, we publish VQ-bench as open-source to be extended further and make reproducible benchmarks publicly available.",
+      "source_url": "https://arxiv.org/abs/2608.11240",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16179",
+      "identity_tokens": [
+        "arXiv:2609.16179"
+      ],
+      "title": "Z-Loss Backward Geometry in Dense Output Heads and Sparse Routers",
+      "reason": "Z-loss has been widely applied to the logits of language-model output heads and sparse mixture-of-experts routers. Z-loss constrains the softmax log-normalizers of these output heads and routers, thereby limiting large-logit excursions, reducing finite-precision roundoff exposure, and avoiding training-loss divergence. These use cases arise in modern Transformer settings where large-vocabulary softmax heads, top-$k$ routing, fused losses, and mixed-precision optimizers interact. Z-loss has typically been understood only as a scalar penalty on the log-normalizer. This paper instead analyzes Z-loss from a backward-pass perspective, focusing on the gradients produced by the Z-loss penalty. The logit-space gradient, which we call the backward source, is injected at the logit boundary of the Z-loss branch of backpropagation; consequently, the backward source's effect depends on the architecture and implementation through which the gradient is transported. We develop a backward-transport view for Z-loss that separates the source's scalar amplitude and softmax shape from the transport factors. These factors include common-shift coordinates, tied-embedding pathways, output-to-hidden gain, fused-loss source consistency, optimizer-facing updates, and top-$k$ router reduction scale. These diagnostics show that nearly identical forward Z-loss values can coexist with distinct logit-space Z-loss gradients and, after architectural and optimizer transport, distinct parameter updates. The transport diagnostics also explain why raw-logit Z-loss can reduce scalar tails without changing output-to-hidden gain and why active-route reductions alter the effective router coefficient. Across evaluations of models in the GPT-2 and Pythia families on WikiText-103 and FineWeb-Edu, architecture-aware variants reduce backward-geometry tails while maintaining comparable validation perplexity in low-coefficient regimes.",
+      "source_url": "https://arxiv.org/abs/2609.16179",
+      "first_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "last_checked_at": "2026-10-05T07:25:17.465629+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
