@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-69b08837d004459c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.eij.2026.100905",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.eij.2026.100905",
+    "identity_tokens": [
+      "DOI:10.1016/j.eij.2026.100905"
+    ],
+    "reason": "The packet has no primary abstract for this DOI record. The supplied DOI URL was attempted but returned an internal retrieval error, so the paper scope cannot be assessed from primary evidence.",
+    "first_checked_at": "2026-10-05T13:29:29+00:00",
+    "last_checked_at": "2026-10-05T13:29:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "title": "Movie Recommendation system with sentiment analysis using deep learning algorithms"
+  },
+  "processed_at": "2026-10-05T13:29:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-69b08837d004",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2fe2f98b8aad4847-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.04730",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.04730",
+    "identity_tokens": [
+      "arXiv:2603.04730"
+    ],
+    "reason": "Count Bridges models/deconvolves integer transcriptomic data; its generative sampling task is biological count modeling, not LLM inference/serving/compression.",
+    "first_checked_at": "2026-10-05T13:29:28+00:00",
+    "last_checked_at": "2026-10-05T13:29:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Count Bridges enable Modeling and Deconvolving Transcriptomic Data"
+  },
+  "processed_at": "2026-10-05T13:29:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2fe2f98b8aad",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

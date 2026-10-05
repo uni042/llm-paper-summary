@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:27:14+00:00",
-  "record_count": 1743,
+  "updated_at": "2026-10-05T13:29:29+00:00",
+  "record_count": 1751,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26991,6 +26991,122 @@
         "papers/inference/05-speculative-decoding-moe/2025-2505.21594-fast-and-cost-effective-speculative-edge-cloud-decoding-with-early-exits.md"
       ],
       "title": "RAPID: Redundancy-Aware and Compatibility-Optimal Edge-Cloud Partitioned Inference for Diverse VLA Models"
+    },
+    "arXiv:2603.05225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05225",
+      "identity_tokens": [
+        "arXiv:2603.05225"
+      ],
+      "reason": "The paper is a broad AI+hardware vision roadmap, not a concrete LLM inference optimization. Its full text frames efficiency gains as long-term goals and action items rather than evaluated mechanisms.",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.18194-tract-rack-scale-cxl-shared-kv.md"
+      ],
+      "title": "AI+HW 2035: Shaping the Next Decade"
+    },
+    "DOI:10.48550/arxiv.2503.09114": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2503.09114",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.09114",
+        "arXiv:2503.09114"
+      ],
+      "reason": "推論時のedge性能・電力評価は対象と隣接するが、具体的な最適化手法より測定・実現可能性が主で、Surveyの核心貢献との適合が弱い。",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md"
+      ],
+      "title": "Sometimes Painful but Certainly Promising: Feasibility and Trade-offs of Language Model Inference at the Edge"
+    },
+    "DOI:10.1016/j.eij.2026.100905": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eij.2026.100905",
+      "identity_tokens": [
+        "DOI:10.1016/j.eij.2026.100905"
+      ],
+      "reason": "The packet has no primary abstract for this DOI record. The supplied DOI URL was attempted but returned an internal retrieval error, so the paper scope cannot be assessed from primary evidence.",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "Movie Recommendation system with sentiment analysis using deep learning algorithms"
+    },
+    "DOI:10.1016/j.future.2026.108483": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2026.108483",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2026.108483"
+      ],
+      "reason": "The packet has no primary abstract for this DOI record. The supplied DOI URL was attempted but returned an internal retrieval error; no primary full text/abstract could be checked.",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Energy-efficient large language models"
+    },
+    "DOI:10.1016/j.inffus.2025.103734": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103734",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103734"
+      ],
+      "reason": "The packet has no primary abstract for this DOI record. The supplied DOI URL was attempted but returned an internal retrieval error; no primary abstract could be verified.",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "HSCFA: Hierarchical sparse and collaborative fusion attention with large foundation models for diagnosing Alzheimer's disease"
+    },
+    "arXiv:2502.00281": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00281",
+      "identity_tokens": [
+        "arXiv:2502.00281"
+      ],
+      "reason": "attention機構とLLM efficiencyに隣接する理論結果だが、測定可能なinference/serving最適化との結び付きが弱いためborderline。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "Sigmoid Self-Attention has Lower Sample Complexity than Softmax Self-Attention: A Mixture-of-Experts Perspective"
+    },
+    "arXiv:2502.01673": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.01673",
+      "identity_tokens": [
+        "arXiv:2502.01673"
+      ],
+      "reason": "効率的SSMを使う多言語QA応用で関連可能性はあるが、本文で本研究固有の推論コスト改善を実証しておらず、対象との適合は限定的。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Multilingual State Space Models for Structured Question Answering in Indic Languages"
+    },
+    "arXiv:2501.10187": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.10187",
+      "identity_tokens": [
+        "arXiv:2501.10187"
+      ],
+      "reason": "推論hardware設計に関連するが、検討対象の抽象度が高く、具体的な実証済みserving改善との接続が弱いためborderline。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
+      "title": "Good things come in small packages: Should we build AI clusters with Lite-GPUs?"
     }
   }
 }

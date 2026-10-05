@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:27:15+00:00",
-  "record_count": 5249,
+  "updated_at": "2026-10-05T13:29:30+00:00",
+  "record_count": 5261,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -76307,6 +76307,185 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
       ],
       "title": "AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation"
+    },
+    "arXiv:2603.04730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.04730",
+      "identity_tokens": [
+        "arXiv:2603.04730"
+      ],
+      "reason": "Count Bridges models/deconvolves integer transcriptomic data; its generative sampling task is biological count modeling, not LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Count Bridges enable Modeling and Deconvolving Transcriptomic Data"
+    },
+    "arXiv:2603.04766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.04766",
+      "identity_tokens": [
+        "arXiv:2603.04766"
+      ],
+      "reason": "GAMDSS corrects annotation bias in micro-expression recognition; no LLM inference, serving, or compression contribution is described.",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Evaluating and Correcting Human Annotation Bias in Dynamic Micro-Expression Recognition"
+    },
+    "arXiv:2603.05193": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05193",
+      "identity_tokens": [
+        "arXiv:2603.05193"
+      ],
+      "reason": "Transducing Language Models composes language models with finite-state transducers for output-format adaptation; its contribution is inference-time functionality, not inference efficiency or compression.",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Transducing Language Models"
+    },
+    "arXiv:2603.03597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03597",
+      "identity_tokens": [
+        "arXiv:2603.03597"
+      ],
+      "reason": "NuMuon modifies the optimizer during LLM pretraining to promote later compressibility; the contribution is training-time optimization, outside the inference-efficiency scope.",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "NuMuon: Nuclear-Norm-Constrained Muon for Compressible LLM Training"
+    },
+    "arXiv:2503.06980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.06980",
+      "identity_tokens": [
+        "arXiv:2503.06980"
+      ],
+      "reason": "対象はmultimodal LLMの人間知覚評定との一致度評価であり、推論効率化の手法・計測を扱わない。",
+      "first_checked_at": "2026-10-05T13:29:28+00:00",
+      "last_checked_at": "2026-10-05T13:29:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Exploring Multimodal Perception in Large Language Models Through Perceptual Strength Ratings"
+    },
+    "arXiv:2503.02511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.02511",
+      "identity_tokens": [
+        "arXiv:2503.02511"
+      ],
+      "reason": "対象はvisual place recognition向け視覚Transformerの三値量子化で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "TeTRA-VPR: A Ternary Transformer Approach for Compact Visual Place Recognition"
+    },
+    "arXiv:2503.00491": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.00491",
+      "identity_tokens": [
+        "arXiv:2503.00491"
+      ],
+      "reason": "要旨上、Speculative Decodingのtutorial proposalであり独自研究・評価ではない。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ],
+      "title": "Tutorial Proposal: Speculative Decoding for Efficient LLM Inference"
+    },
+    "DOI:10.1016/j.jpi.2025.100436": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jpi.2025.100436",
+      "identity_tokens": [
+        "DOI:10.1016/j.jpi.2025.100436"
+      ],
+      "reason": "病理レポート検索用のLLMアプリケーションが対象で、推論効率化手法の研究ではない。",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ],
+      "title": "PIRO: A web-based search platform for pathology reports, leveraging large language models to generate discrete searchable insights"
+    },
+    "arXiv:2603.03138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03138",
+      "identity_tokens": [
+        "arXiv:2603.03138"
+      ],
+      "reason": "LF2WB compresses terrain memory for a legged robot locomotion policy, not an LLM inference/serving or model-compression system.",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Look Forward to Walk Backward: Efficient Terrain Memory for Backward Locomotion with Forward Vision"
+    },
+    "arXiv:2603.01331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01331",
+      "identity_tokens": [
+        "arXiv:2603.01331"
+      ],
+      "reason": "MetaState adds recurrent memory to discrete diffusion LMs to improve reasoning accuracy; the abstract describes trainable augmentation and quality gains, not inference efficiency.",
+      "first_checked_at": "2026-10-05T13:29:29+00:00",
+      "last_checked_at": "2026-10-05T13:29:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "MetaState: Persistent Working Memory Enhances Reasoning in Discrete Diffusion Language Models"
+    },
+    "DOI:10.3390/s25041227": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s25041227",
+      "identity_tokens": [
+        "DOI:10.3390/s25041227"
+      ],
+      "reason": "Transformerによるobject pose estimationの改善が対象で、言語モデル推論ではない。",
+      "first_checked_at": "2026-10-05T13:29:30+00:00",
+      "last_checked_at": "2026-10-05T13:29:30+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "A Study on Systematic Improvement of Transformer Models for Object Pose Estimation"
+    },
+    "DOI:10.48550/arxiv.2501.11847": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2501.11847",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.11847",
+        "arXiv:2501.11847"
+      ],
+      "reason": "AI for Scienceにおける大規模モデルtrainingのmemory efficiency surveyで、inference対象外。",
+      "first_checked_at": "2026-10-05T13:29:30+00:00",
+      "last_checked_at": "2026-10-05T13:29:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "A Survey on Memory-Efficient Large-Scale Model Training in AI for Science"
     }
   }
 }
