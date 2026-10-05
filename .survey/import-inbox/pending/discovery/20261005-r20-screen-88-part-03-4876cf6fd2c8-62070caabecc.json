@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-88-part-03-4876cf6fd2c8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3524059.3532372",
+      "identity_tokens": [
+        "DOI:10.1145/3524059.3532372"
+      ],
+      "title": "Handling heavy-tailed input of transformer inference on GPUs",
+      "reason": "abstract上はTransformer NLP inference batching効率化で接点がある一方、LLM固有の実証と適用条件を確認できず、本文取得もできなかった。",
+      "source_url": "https://doi.org/10.1145/3524059.3532372",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08519",
+      "identity_tokens": [
+        "arXiv:2603.08519"
+      ],
+      "title": "AtomVLA: Scalable Post-Training for Robotic Manipulation via Predictive Latent World Models",
+      "reason": "ロボット操作VLAのpost-trainingとlatent world modelが対象で、LLM推論効率の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2603.08519",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02146",
+      "identity_tokens": [
+        "arXiv:2603.02146"
+      ],
+      "title": "LongRLVR: Long-Context Reinforcement Learning Requires Verifiable Context Rewards",
+      "reason": "long-context RLVRのreward設計と学習可能性を扱うtraining研究。",
+      "source_url": "https://arxiv.org/abs/2603.02146",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13515",
+      "identity_tokens": [
+        "arXiv:2602.13515"
+      ],
+      "title": "SpargeAttention2: Trainable Sparse Attention via Hybrid Top-k+Top-p Masking and Distillation Fine-Tuning",
+      "reason": "diffusion model向けtrainable sparse attentionとdistillation fine-tuning。言語モデルの推論対象ではない。",
+      "source_url": "https://arxiv.org/abs/2602.13515",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.02958",
+      "identity_tokens": [
+        "arXiv:2602.02958"
+      ],
+      "title": "Quant VideoGen: Auto-Regressive Long Video Generation via 2-Bit KV-Cache Quantization",
+      "reason": "autoregressive video diffusion generationでのKV cache量子化であり、言語モデルのcacheではない。",
+      "source_url": "https://arxiv.org/abs/2602.02958",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.06219-skvq-sliding-window-key-and-value-cache-quantization-for-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md"
+      ]
+    }
+  ]
+}
