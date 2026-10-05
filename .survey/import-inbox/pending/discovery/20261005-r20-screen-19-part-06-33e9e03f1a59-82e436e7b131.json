@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-19-part-06-33e9e03f1a59",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27869",
+      "identity_tokens": [
+        "arXiv:2608.27869"
+      ],
+      "title": "See, Hypothesize, Validate: Multimodal Agentic Framework for Discovering Governing PDEs",
+      "reason": "LLMを使うPDE discovery applicationで、LLM serving効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2608.27869",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27874",
+      "identity_tokens": [
+        "arXiv:2608.27874"
+      ],
+      "title": "TerraceMoE: A Cost Model for Hierarchical MoE All-to-All Communication",
+      "reason": "MoE all-to-allのtraining communication modelで学習専用。",
+      "source_url": "https://arxiv.org/abs/2608.27874",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27886",
+      "identity_tokens": [
+        "arXiv:2608.27886"
+      ],
+      "title": "Resource Constraints and Performance in Agentic AI Systems",
+      "reason": "resource evaluationは有用だが、serving methodではなくsystem comparisonであり、構成差も交絡するためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.27886",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27925",
+      "identity_tokens": [
+        "arXiv:2608.27925"
+      ],
+      "title": "Entity-Memory Graph Retrieval Improves Evidence Coverage in Long-Conversation Question Answering",
+      "reason": "entity-memory retrievalのevidence coverageを扱い、resource/serving efficiencyを報告しない。",
+      "source_url": "https://arxiv.org/abs/2608.27925",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27953",
+      "identity_tokens": [
+        "arXiv:2608.27953"
+      ],
+      "title": "The Illusion of $\\textit{What If}$: Evaluating the Breakdown of Counterfactual Reasoning in LLMs",
+      "reason": "counterfactual reasoning benchmarkであり効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2608.27953",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
