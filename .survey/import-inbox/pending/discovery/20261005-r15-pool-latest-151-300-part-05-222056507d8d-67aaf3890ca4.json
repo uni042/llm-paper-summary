@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-151-300-part-05-222056507d8d",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca.2018.00053",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00053"
+      ],
+      "title": "GraphP: Reducing Communication for PIM-Based Graph Processing with Efficient Data Partition",
+      "reason": "PIM graph-processing communication/data partition, no LLM workload.",
+      "source_url": "https://mast.stanford.edu/pubs/graphp_reducing_communication_for_pim_based_graph_processing_with_efficient_data_partition/",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.00920",
+      "identity_tokens": [
+        "arXiv:2409.00920"
+      ],
+      "title": "ToolACE: Winning the Points of LLM Function Calling",
+      "reason": "Function-calling training data/model capabilities, not serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.00920",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2608.19662.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3464298.3476133",
+      "identity_tokens": [
+        "DOI:10.1145/3464298.3476133"
+      ],
+      "title": "SeBS: a serverless benchmark suite for function-as-a-service computing",
+      "reason": "Generic FaaS benchmark suite, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2012.14132",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.18666",
+      "identity_tokens": [
+        "arXiv:2503.18666"
+      ],
+      "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+      "reason": "Agent safety/runtime enforcement, not efficiency optimization.",
+      "source_url": "https://arxiv.org/abs/2503.18666",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.09400",
+      "identity_tokens": [
+        "arXiv:2309.09400"
+      ],
+      "title": "CulturaX: A Cleaned, Enormous, and Multilingual Dataset for Large Language Models in 167 Languages",
+      "reason": "Multilingual LLM pretraining dataset/cleaning.",
+      "source_url": "https://arxiv.org/abs/2309.09400",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    }
+  ]
+}
