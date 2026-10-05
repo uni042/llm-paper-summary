@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r24-screen-01-part-05-14327c6fcd83",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02910",
+      "identity_tokens": [
+        "arXiv:2610.02910"
+      ],
+      "title": "Frequency Is Not Sensitivity Identifying Safety-Sensitive Experts in Sparse MoE LLM",
+      "reason": "Identifies safety-sensitive experts in sparse MoE LLMs to preserve safety; abstract gives no efficiency/serving improvement.",
+      "source_url": "https://arxiv.org/abs/2610.02910",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03109",
+      "identity_tokens": [
+        "arXiv:2610.03109"
+      ],
+      "title": "Emergent Structure in the Marginal Attention Space of Language Models",
+      "reason": "Characterizes marginal attention-space structure across LMs; no resource-reduction or serving method.",
+      "source_url": "https://arxiv.org/abs/2610.03109",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03265",
+      "identity_tokens": [
+        "arXiv:2610.03265"
+      ],
+      "title": "SPEAR: A Spectral-Disentangled MoE Neural Operator with Knowledge-Guided Expert Aggregation for Large-Scale PDE Pretraining",
+      "reason": "MoE neural-operator PDE pretraining is outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2610.03265",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.03369",
+      "identity_tokens": [
+        "arXiv:2610.03369"
+      ],
+      "title": "Mixture-of-Experts for Cryptocurrency Order Execution: Training Stability, Tail Risk, and Failure Modes",
+      "reason": "MoE reinforcement-learning policies for cryptocurrency order execution concern financial control/training, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2610.03369",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.03415",
+      "identity_tokens": [
+        "arXiv:2610.03415"
+      ],
+      "title": "RailWave: Adaptive Spatial and Temporal Scheduling for Expert-Parallel Communication",
+      "reason": "RailWave is adjacent to MoE communication but primary evaluation uses training workloads only, with no inference-serving evidence.",
+      "source_url": "https://arxiv.org/abs/2610.03415",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
