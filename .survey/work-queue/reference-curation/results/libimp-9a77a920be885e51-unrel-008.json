@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a77a920be885e51-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1807.11205",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1807.11205",
+    "identity_tokens": [
+      "arXiv:1807.11205"
+    ],
+    "reason": "mixed precision、大規模mini-batch、all-reduce最適化でImageNet学習を1024〜2048 GPUへscaleするtraining system。最終評価はtraining time/accuracyで推論対象外。",
+    "first_checked_at": "2026-10-05T15:43:18+00:00",
+    "last_checked_at": "2026-10-05T16:39:39+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+    ],
+    "title": "Highly Scalable Deep Learning Training System with Mixed-Precision: Training ImageNet in Four Minutes"
+  },
+  "processed_at": "2026-10-05T16:39:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a77a920be88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

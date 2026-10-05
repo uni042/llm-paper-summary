@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a77a920be885e51-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/2906388.2906396",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/2906388.2906396",
+    "identity_tokens": [
+      "DOI:10.1145/2906388.2906396"
+    ],
+    "reason": "mobile-cloud上のcontinuous computer vision DNNを対象にapproximate model scheduling、specialization/sharing、device/cloud配置を最適化するruntime研究。推論systemとして近接するが最終適用先は非LLMの動画分類であり現行LLM推論サーベイ範囲外。",
+    "first_checked_at": "2026-10-05T15:43:23+00:00",
+    "last_checked_at": "2026-10-05T16:39:39+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+    ],
+    "title": "MCDNN: An Approximation-Based Execution Framework for Deep Stream Processing Under Resource Constraints"
+  },
+  "processed_at": "2026-10-05T16:39:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a77a920be88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

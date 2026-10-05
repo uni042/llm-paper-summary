@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T16:34:23+00:00",
-  "record_count": 6427,
+  "updated_at": "2026-10-05T16:39:40+00:00",
+  "record_count": 6428,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25841,33 +25841,15 @@
       ],
       "title": "RedPajama: an Open Dataset for Training Large Language Models"
     },
-    "arXiv:2109.08668": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2109.08668",
-      "identity_tokens": [
-        "arXiv:2109.08668"
-      ],
-      "reason": "Primer improves training cost/speed; not inference.",
-      "first_checked_at": "2026-10-05T02:07:09+00:00",
-      "last_checked_at": "2026-10-05T02:07:09+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
-        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
-        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
-        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
-        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
-      ],
-      "title": "Primer: Searching for Efficient Transformers for Language Modeling"
-    },
     "arXiv:2505.20275": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2505.20275",
       "identity_tokens": [
         "arXiv:2505.20275"
       ],
-      "reason": "Image-editing dataset/model/benchmark, outside language inference.",
+      "reason": "120万のimage-editing pairからなるdataset/benchmarkを構築し、VLMを利用するediting modelを学習して画像編集品質を評価するcomputer vision/data研究。LLM推論runtime・memory・serving効率化ではない。",
       "first_checked_at": "2026-10-05T02:07:09+00:00",
-      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T16:39:40+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
       ],
@@ -25879,9 +25861,9 @@
       "identity_tokens": [
         "arXiv:2308.07124"
       ],
-      "reason": "Code-LLM instruction-tuning/training, no serving optimization.",
+      "reason": "code LLM向けinstruction tuning dataとfine-tuning recipeを構築しcoding能力を改善するtraining研究。推論runtime・KV cache・serving効率化を主目的としない。",
       "first_checked_at": "2026-10-05T02:07:09+00:00",
-      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T16:39:40+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
       ],
@@ -91061,9 +91043,9 @@
       "identity_tokens": [
         "arXiv:2312.00858"
       ],
-      "reason": "U-Net拡散画像モデルの隣接denoising step間で高レベル特徴をキャッシュ再利用し推論を2.3〜4.1倍高速化する研究だが、最終適用先は画像拡散モデルでありLLM/言語モデル推論システムではない。",
+      "reason": "diffusion modelの隣接denoising step間でhigh-level featureをcache/reuseしStable Diffusion等を2.3–4.1倍高速化するが、最終適用先は画像diffusionでLLM/Transformer生成推論ではない。",
       "first_checked_at": "2026-10-05T15:43:16+00:00",
-      "last_checked_at": "2026-10-05T15:43:16+00:00",
+      "last_checked_at": "2026-10-05T16:39:35+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
       ],
@@ -91142,21 +91124,6 @@
       "linked_from": [],
       "title": "A Survey on Visual Mamba"
     },
-    "DOI:10.1145/3643681": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/3643681",
-      "identity_tokens": [
-        "DOI:10.1145/3643681",
-        "arXiv:2308.00708"
-      ],
-      "reason": "CodeGen等をVerilog corpusでfine-tuneしhardware code generationの構文・機能正確性を改善する研究。主貢献はtrainingと生成品質で、LLM inference runtime/serving最適化ではない。",
-      "first_checked_at": "2026-10-05T15:43:18+00:00",
-      "last_checked_at": "2026-10-05T15:43:22+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md"
-      ],
-      "title": "VeriGen: A Large Language Model for Verilog Code Generation"
-    },
     "DOI:10.1073/pnas.1907367117": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1073/pnas.1907367117",
@@ -91175,9 +91142,9 @@
       "identity_tokens": [
         "arXiv:1807.11205"
       ],
-      "reason": "mixed precisionと大規模分散によりImageNet trainingを4分へ短縮するtraining system研究。評価対象は学習throughput/timeでLLM推論systemではない。",
+      "reason": "mixed precision、大規模mini-batch、all-reduce最適化でImageNet学習を1024〜2048 GPUへscaleするtraining system。最終評価はtraining time/accuracyで推論対象外。",
       "first_checked_at": "2026-10-05T15:43:18+00:00",
-      "last_checked_at": "2026-10-05T15:43:23+00:00",
+      "last_checked_at": "2026-10-05T16:39:39+00:00",
       "linked_from": [
         "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
       ],
@@ -91323,9 +91290,9 @@
       "identity_tokens": [
         "arXiv:1503.01007"
       ],
-      "reason": "trainable stack memoryをRNNへ追加し、counting/memorizationを要するalgorithmic sequence predictionを学習できるか検証するmodel capability研究。推論runtime・serving効率化ではない。",
+      "reason": "trainable stack memoryをRNNへ付加し、counting/memorizationを要するalgorithmic sequenceを学習できるか検証するモデル能力研究。LLM推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T15:43:22+00:00",
-      "last_checked_at": "2026-10-05T16:12:45+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
       ],
@@ -91337,9 +91304,9 @@
       "identity_tokens": [
         "arXiv:2110.08387"
       ],
-      "reason": "LM自身がknowledgeを生成して追加promptとして与え、commonsense reasoning精度を改善するprompting/capability研究。推論計算量削減やruntime/serving最適化を目的としない。",
+      "reason": "LM自身が外部知識を生成し追加promptとして与えることでcommonsense reasoning精度を高めるprompting能力研究。推論runtime・memory・serving効率化を扱わない。",
       "first_checked_at": "2026-10-05T15:43:22+00:00",
-      "last_checked_at": "2026-10-05T16:12:45+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
@@ -91352,9 +91319,9 @@
         "DOI:10.48550/arxiv.2204.03645",
         "arXiv:2204.03645"
       ],
-      "reason": "spatial window attentionとchannel group attentionを組み合わせるcomputer vision Transformerで、ImageNet分類・detection等の視覚性能が主題。LLM推論systemを最終適用先としない。",
+      "reason": "spatial window attentionとchannel group attentionを組み合わせるvision Transformer architectureで、画像分類・検出・segmentation性能を改善するcomputer vision研究。LLM推論systemを最終適用先としない。",
       "first_checked_at": "2026-10-05T15:43:22+00:00",
-      "last_checked_at": "2026-10-05T15:43:22+00:00",
+      "last_checked_at": "2026-10-05T16:39:36+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
@@ -91380,9 +91347,9 @@
       "identity_tokens": [
         "DOI:10.1145/2906388.2906396"
       ],
-      "reason": "resource-constrained stream processingで複数DNN approximationを選択してthroughput/accuracy制約を満たす一般DNN execution framework。LLM/Transformer推論を最終適用先としない。",
+      "reason": "mobile-cloud上のcontinuous computer vision DNNを対象にapproximate model scheduling、specialization/sharing、device/cloud配置を最適化するruntime研究。推論systemとして近接するが最終適用先は非LLMの動画分類であり現行LLM推論サーベイ範囲外。",
       "first_checked_at": "2026-10-05T15:43:23+00:00",
-      "last_checked_at": "2026-10-05T15:43:23+00:00",
+      "last_checked_at": "2026-10-05T16:39:39+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
       ],
@@ -91516,9 +91483,9 @@
       "identity_tokens": [
         "arXiv:2410.10762"
       ],
-      "reason": "LLM呼出しnodeを接続したagent workflowをcode表現し、Monte Carlo Tree Searchでworkflow自体を自動生成・最適化する研究。4.55%のinference dollar costで小型modelがGPT-4oを上回る例はあるが、主要貢献はworkflow searchとtask qualityで、agent serving runtime・scheduler・memory効率化ではない。",
+      "reason": "LLM-invoking nodeをcode workflowとして表現しMCTSでworkflowを自動探索・改善するagent capability/optimization研究。特定taskでGPT-4o比4.55%のdollar costを示すが、runtime/serving効率化ではなくworkflow品質・自動生成が主目的。",
       "first_checked_at": "2026-10-05T15:48:48+00:00",
-      "last_checked_at": "2026-10-05T15:48:48+00:00",
+      "last_checked_at": "2026-10-05T16:39:36+00:00",
       "linked_from": [],
       "title": "AFlow: Automating Agentic Workflow Generation"
     },
@@ -91529,9 +91496,9 @@
         "DOI:10.48550/arxiv.2402.13718",
         "arXiv:2402.13718"
       ],
-      "reason": "平均100K token超の長文脈LLM能力を測るbenchmarkを構築し、retrieval・code・math・novel・dialogue等で既存modelを評価する研究。長文脈推論の能力評価が目的で、runtime・KV cache・memory・serving効率化方式を提案しない。",
+      "reason": "100K token超のlong-context能力を評価するbenchmark suiteで、長文脈LLMのretrieval/reasoning等を測る評価研究。推論runtime・KV-cache削減・serving最適化方式を提案しない。",
       "first_checked_at": "2026-10-05T15:48:49+00:00",
-      "last_checked_at": "2026-10-05T15:48:49+00:00",
+      "last_checked_at": "2026-10-05T16:39:36+00:00",
       "linked_from": [],
       "title": "∞Bench: Extending Long Context Evaluation Beyond 100K Tokens"
     },
@@ -92114,9 +92081,9 @@
       "identity_tokens": [
         "arXiv:1909.09577"
       ],
-      "reason": "Neural Moduleを組み合わせるAIアプリ構築ツールキットで、ASR/NLP module、分散学習、mixed precisionを提供する。主眼はモデル構築・再利用・学習基盤で、LLM推論サービングのruntime最適化ではない。",
+      "reason": "typed neural modulesを組み合わせる汎用AI toolkitで、ASR/NLP module、distributed training、mixed precisionを提供するframework紹介。現行LLM推論engine/serving runtimeを対象としない。",
       "first_checked_at": "2026-10-05T16:12:45+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
       "linked_from": [],
       "title": "NeMo: a toolkit for building AI applications using Neural Modules"
     },
@@ -92337,9 +92304,9 @@
       "identity_tokens": [
         "arXiv:2306.02707"
       ],
-      "reason": "OrcaはGPT-4のexplanation traceやstep-by-step reasoningを用いるprogressive imitation learningで13B modelの能力を改善するtraining研究。BBH/AGIEval等の能力評価が主題で、推論runtime・memory・serving効率化ではない。",
+      "reason": "GPT-4のexplanation trace・step-by-step reasoningを13B modelへimitation learningするprogressive training研究。BBH/AGIEval等のreasoning能力向上が主評価で、推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T16:19:07+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
+      "last_checked_at": "2026-10-05T16:39:35+00:00",
       "linked_from": [],
       "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4"
     },
@@ -92361,9 +92328,9 @@
       "identity_tokens": [
         "arXiv:2307.12856"
       ],
-      "reason": "WebAgentは自然言語指示を分解し、長いHTMLを要約してPython programを生成し実Web操作を行うagent能力研究。MiniWoB/Mind2Webでtask successを評価するが、agent serving runtime・scheduler・KV cache・memory効率化を扱わない。",
+      "reason": "LLM agentがinstructionをsub-instructionへ分解し、long HTMLをsummarizeしてPython programでweb操作するagent/application研究。real website task success改善が主目的で、推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T16:19:09+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
+      "last_checked_at": "2026-10-05T16:39:37+00:00",
       "linked_from": [],
       "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis"
     },
@@ -92373,9 +92340,9 @@
       "identity_tokens": [
         "arXiv:1808.04444"
       ],
-      "reason": "64層Transformerで文字単位言語モデルのbits-per-characterを改善し、補助損失の有効性を分析するモデル品質研究。推論runtime・memory・serving効率化を提案しない。",
+      "reason": "64-layer Transformerと補助損失でcharacter-level language modelingのbits-per-characterを改善するモデル構造・学習研究。推論runtime・memory・serving効率化を主目的としない。",
       "first_checked_at": "2026-10-05T16:19:09+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
+      "last_checked_at": "2026-10-05T16:39:39+00:00",
       "linked_from": [],
       "title": "Character-Level Language Modeling with Deeper Self-Attention"
     },
@@ -92864,9 +92831,9 @@
         "DOI:10.1145/3650212.3680384",
         "arXiv:2404.05427"
       ],
-      "reason": "LLMとASTベースcode search・fault localizationを組み合わせGitHub issueを自動修正するsoftware-engineering agent研究。SWE-bench-liteの解決率・API costが主要評価で、推論runtime・memory・serving最適化ではない。",
+      "reason": "LLM agentがrepositoryから関連codeを探索しissueを解析してpatchを生成するautomated program repair研究。coding-agent能力・repair successが主目的で、agentic inference servingやKV-cache/runtime効率化ではない。",
       "first_checked_at": "2026-10-05T16:34:19+00:00",
-      "last_checked_at": "2026-10-05T16:34:19+00:00",
+      "last_checked_at": "2026-10-05T16:39:35+00:00",
       "linked_from": [],
       "title": "AutoCodeRover: Autonomous Program Improvement"
     },
@@ -92876,9 +92843,9 @@
       "identity_tokens": [
         "arXiv:2202.01279"
       ],
-      "reason": "自然言語promptのtemplating language、開発UI、共有repositoryを提供するprompt engineering infrastructure研究。2,000超prompt/約170 datasetを扱うが、LLM推論runtime・serving効率化ではない。",
+      "reason": "dataset-linked promptを作成・共有するtemplating language、IDE、2000超prompt repositoryを提供するprompt engineering tooling研究。LLM推論runtime・memory・serving最適化ではない。",
       "first_checked_at": "2026-10-05T16:34:19+00:00",
-      "last_checked_at": "2026-10-05T16:34:19+00:00",
+      "last_checked_at": "2026-10-05T16:39:36+00:00",
       "linked_from": [],
       "title": "PromptSource: An Integrated Development Environment and Repository for Natural Language Prompts"
     },
@@ -92888,9 +92855,9 @@
       "identity_tokens": [
         "arXiv:1907.12009"
       ],
-      "reason": "likelihood maximizationとweight tyingでword embeddingが狭いconeへ退化するtraining pathologyを分析し、regularizationで改善する学習研究。language modeling/MT性能が主要評価で、推論runtime・serving効率化ではない。",
+      "reason": "weight tying下のNLG trainingでword embeddingがnarrow coneへdegenerateする現象を解析しregularizationで改善するtraining研究。language modeling/MT性能が主評価で推論runtime効率化ではない。",
       "first_checked_at": "2026-10-05T16:34:19+00:00",
-      "last_checked_at": "2026-10-05T16:34:19+00:00",
+      "last_checked_at": "2026-10-05T16:39:36+00:00",
       "linked_from": [],
       "title": "Representation Degeneration Problem in Training Natural Language Generation Models"
     },
@@ -93004,6 +92971,45 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
       ],
       "title": "Predictability and Surprise in Large Generative Models"
+    },
+    "DOI:10.1145/2939672.2945397": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "reason": "汎用deep-learning toolkit CNTKのtraining/evaluation、automatic differentiation、memory sharing、multi-server parallelization等を紹介するtutorial。speech/image/text一般を対象とし、LLM推論runtime専用の研究・評価ではない。",
+      "first_checked_at": "2026-10-05T16:39:38+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
+      "linked_from": [],
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
+    },
+    "arXiv:2308.00708": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00708",
+      "identity_tokens": [
+        "DOI:10.1145/3643681",
+        "arXiv:2308.00708"
+      ],
+      "reason": "CodeGen-16B等をVerilogデータでfine-tuneし、hardware design code generationのfunctional/syntactic correctnessを評価する能力・学習研究。推論runtime・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T15:43:18+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md"
+      ],
+      "title": "VeriGen: A Large Language Model for Verilog Code Generation"
+    },
+    "arXiv:2005.00743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.00743",
+      "identity_tokens": [
+        "arXiv:2005.00743"
+      ],
+      "reason": "query-key dot-productをsynthetic attentionへ置換するTransformer architecture研究。60%高速というheadlineはC4 masked-language-modelingのtraining steps/sec（2x2 TPU v3、約524k steps）比較であり、生成LLM推論runtimeのspeedup評価ではないため対象外。",
+      "first_checked_at": "2026-10-05T16:39:38+00:00",
+      "last_checked_at": "2026-10-05T16:39:38+00:00",
+      "linked_from": [],
+      "title": "Synthesizer: Rethinking Self-Attention in Transformer Models"
     }
   }
 }
