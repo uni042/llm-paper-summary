@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -209,6 +209,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2022-11 · [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
+
+- **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：3  
+  固定枝刈りでパラメータを削れば帯域を減らせるが、全入力に共通の小ネットワークへ固定すると精度やin-文脈 learningを損なう。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
   実装：[✓](https://github.com/haoliuhl/ringattention) ・ リポジトリ内被引用：2  

@@ -35,10 +35,15 @@
   "selection_reason": "FlightLLMはFPGA上の生成LLM推論を対象に、疎行列計算と混合精度重みをDSP・メモリ資源へ写像し、decode活性をオンチップに保持する。推論時の完全なマッピング手法と実システム評価を示すため、LLM推論効率の対象に該当する。",
   "semantic_scholar_id": "3695739b3a8b0e92b8ae90081124d098ae33b15c",
   "source_url": "https://arxiv.org/abs/2401.03868",
-  "status": "ready",
+  "status": "superseded",
   "title": "FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs",
   "type": "research",
   "venue": "Symposium on Field Programmable Gate Arrays",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T23:49:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+  "represented_canonical_id": "arXiv:2401.03868",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

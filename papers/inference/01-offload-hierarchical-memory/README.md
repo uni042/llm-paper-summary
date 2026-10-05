@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（112本）
+## 自動生成の論文一覧（113本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -439,6 +439,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2024-09 · [Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM](2024-2409.15654-cambricon-llm-chiplet-flash-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
+
+- **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
+  実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：7  
+  さらに枝刈りや低ビット量子化で理論演算量を減らしても、GPUの固定的な疎形式やキャッシュ構造がその不規則性を効率良く処理できなければ実時間は縮まらない。U280実機ではV100S GPUに対して平均6.0倍のエネルギー効率と1.8倍のコスト効率を報告し、より新しいVHK158ではA100 GPUより1.2倍高いスループットを示す。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
   実装：[✓](https://yuzhenmao.github.io/IceFormer/) ・ リポジトリ内被引用：4  

@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（172本）
+## 自動生成の論文一覧（174本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -565,6 +565,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：41  
   KV行列を一様量子化すると外れ値と構造化誤差が自己回帰生成で蓄積する問題に対し、通常成分の低ビット量子化、量子化誤差の低ランク近似、外れ値誤差の疎行列補正を組み合わせる。4ビットKVで近損失品質を保ち、最大2.38倍のスループット、最大2.29倍のピークメモリ削減を報告する。
 
+- **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
+  実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：34  
+  長文脈LLMでは全注意機構 ヘッドが全トークン分のKV キャッシュを保持するのが標準だが、実際に遠い過去から情報を取り出すヘッドは一部しかない。MHA モデルではメモリを最大2.55倍削減し、デコードを最大2.18倍、プリフィルを最大1.73倍高速化する。
+
 - **2024-02 · [Hydragen: High-Throughput LLM Inference with Shared Prefixes](2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md)**  
   実装：[✓](https://github.com/ScalingIntelligence/hydragen) ・ リポジトリ内被引用：29  
   Hydragenは、共有接頭辞への複数系列のクエリをまとめて計算し、同じKVのHBM読出しを一度に処理して、共有プロンプトの注意帯域と実行効率を改善する。
@@ -608,6 +612,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-03 · [QAQ: Quality Adaptive Quantization for LLM KV Cache](2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
   KとVで異なる量子化誤差伝播を理論化し、注意重要度・外れ値・直近窓からトークン別ビット幅を割り当てるKV量子化。LLaMA2-7B/13Bで1%未満の精度低下時に約6〜9倍圧縮。
+
+- **2024-02 · [ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition](2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  複数利用者へ同じ大規模言語モデル（LLM）を提供すると、システム プロンプトや少数例例のような長い接頭辞が要求間で重複することが多い。A100 80GB、CUDA 11.8の評価では、共有システム プロンプトが1024〜4096トークンの場合、PagedAttention系カーネルに対して注意機構 カーネル スループットを3.2〜4.8倍へ高める。
 
 - **2024-10 · [Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning](2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md)**  
   実装：✓ ・ リポジトリ内被引用：15  

@@ -32,10 +32,15 @@
   "selection_reason": "長文脈LLM推論でretrieval headだけ完全KV cacheを保持しstreaming headを定長cache化する推論メモリ・遅延最適化。最大2.55倍のメモリ削減、最大2.18倍のdecode高速化を報告。",
   "semantic_scholar_id": "8f3d959238e67bf6b9bc9818025d0d2e403e478f",
   "source_url": "https://arxiv.org/abs/2410.10819",
-  "status": "ready",
+  "status": "superseded",
   "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-05T23:49:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md",
+  "represented_canonical_id": "arXiv:2410.10819",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

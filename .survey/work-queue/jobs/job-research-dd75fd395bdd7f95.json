@@ -35,10 +35,15 @@
   "selection_reason": "入力ごとに必要なattention headとMLP parameterのcontextual sparsityを低コスト予測し、非同期かつhardware-awareに疎実行するDejaVuを提案する。OPT-175BでFasterTransformer比2倍超、Hugging Face実装比6倍超の推論latency短縮を品質を損なわず報告しており、LLM推論高速化を直接扱う。",
   "semantic_scholar_id": "95240dda409e28acccdc5cf619ad0c036cf4292d",
   "source_url": "https://arxiv.org/abs/2310.17157",
-  "status": "ready",
+  "status": "superseded",
   "title": "Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-05T23:49:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
+  "represented_canonical_id": "arXiv:2310.17157",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
