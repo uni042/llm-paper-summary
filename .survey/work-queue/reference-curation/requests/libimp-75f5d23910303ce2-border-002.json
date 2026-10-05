@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-75f5d23910303ce2-border-002",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2111.05754",
+  "reason": "weight pruningとdistillationを統合して疎なBERT系pretrained modelを作り、下流taskへsparsityを維持したまま転移し、8-bit量子化も併用してBERT-Large encoderで40倍compressionを達成する。deployment効率化へ直結するが、主要方式がtraining-time pruning/distillationでLLM生成推論のruntime評価が弱いためborderline。",
+  "title": "Prune Once for All: Sparse Pre-Trained Language Models",
+  "identity_tokens": [
+    "arXiv:2111.05754"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75f5d2391030",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
