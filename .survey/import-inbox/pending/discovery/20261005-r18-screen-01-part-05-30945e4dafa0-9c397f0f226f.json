@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-01-part-05-30945e4dafa0",
+  "reference_main_sha": "205a8db249ac7bd68c69d64fb27f9d2dff87cfb6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3839510",
+      "identity_tokens": [
+        "DOI:10.1145/3839510"
+      ],
+      "title": "Bonsai: Efficient and Optimal Automatic Tensor Rematerialization for Memory-Constrained DNN Training",
+      "reason": "Automatic tensor rematerialization targets DNN training memory/efficiency; training-only.",
+      "source_url": "https://doi.org/10.1145/3839510",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3840586.3843212",
+      "identity_tokens": [
+        "DOI:10.1145/3840586.3843212"
+      ],
+      "title": "The Developer as Curator: A Canvas for Coding Agent Context",
+      "reason": "Coding-agent context canvas is an interaction/context curation interface, not a measured inference-efficiency method.",
+      "source_url": "https://doi.org/10.1145/3840586.3843212",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frobt.2026.1938840",
+      "identity_tokens": [
+        "DOI:10.3389/frobt.2026.1938840"
+      ],
+      "title": "How to express social presence: a comparison of perceptions of social robots’ cognitive abilities",
+      "reason": "Study of social robots’ perceived cognitive abilities, unrelated to LLM inference/serving.",
+      "source_url": "https://doi.org/10.3389/frobt.2026.1938840",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38699",
+      "identity_tokens": [
+        "arXiv:2609.38699"
+      ],
+      "title": "Budget Boundary Effects in Test-Time Mathematical Reasoning",
+      "reason": "Useful evidence about test-time budget accounting and policy boundary effects, but the paper is an observational controller/replay analysis rather than a demonstrated inference-efficiency optimization; its own results reject strong equal-compute or equivalence claims. Keep borderline for scope/claim strength.",
+      "source_url": "https://arxiv.org/abs/2609.38699",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38757",
+      "identity_tokens": [
+        "arXiv:2609.38757"
+      ],
+      "title": "Self-Evolving Algorithm-Design Agents: Escaping In-Context Evolutionary Stagnation via Population-Curated Policy Optimization",
+      "reason": "There is a quantified inference-token outcome, but the mechanism is domain-specific policy training and the evidence is total tokens over a fixed 16-rollout algorithm-design process, not general inference/serving optimization or latency/energy. Retain as borderline unless downstream scope accepts training-based domain adaptation as inference-efficiency work.",
+      "source_url": "https://arxiv.org/abs/2609.38757",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
