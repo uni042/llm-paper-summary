@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-20-part-07-28aa75873904",
+  "reference_main_sha": "c2906cd5d56fba2e688066c8ce9467ae8f42d253",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24763",
+      "identity_tokens": [
+        "arXiv:2609.24763"
+      ],
+      "title": "Neural Kalman Filtering for Unknown Dynamics: Task-Aware Learning with a Koopman Backbone",
+      "reason": "Recent years have witnessed a growing interest in AI-aided Kalman filters. While emerging methodologies, such as KalmanNet, were shown to facilitate tracking in partially known state-space models, they are not directly applicable when the underlying dynamics is unknown. To overcome this limitation, we extend the KalmanNet philosophy to the unknown-dynamics regime by developing blind Kalman filtering frameworks that learn both the predictor and the correction gain from data, assuming that the state-evolution function and the noise statistics are both unavailable. To this end, we first introduce a task-aware neural Kalman filtering framework, Blind-KalmanNet, which carries the learning principle of the Kalman gain into the prediction step through a two-head neural architecture that jointly learns a state-dependent linear surrogate and the Kalman gain from data. Building on this formulation, we then develop our main framework, Koopman-aided Blind-KalmanNet, which incorporates Koopman operator theory to lift the unknown dynamics into a latent space where the state evolves linearly. The lifted linear predictor integrates seamlessly into the Blind-KalmanNet structure: the pre-trained deep Koopman network serves as a globally structured predictor, augmented by the task-aware residual surrogate and the learned Kalman gain inherited from Blind-KalmanNet. Extensive experiments demonstrate that the proposed frameworks achieve competitive performance against baselines, with Koopman-aided Blind-KalmanNet attaining the best accuracy across all considered settings.",
+      "source_url": "https://arxiv.org/abs/2609.24763",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24802",
+      "identity_tokens": [
+        "arXiv:2609.24802"
+      ],
+      "title": "Tiga: Compiling Graph Message Passing at Scale",
+      "reason": "Graph message passing offers a common way to express learning algorithms, physical simulations, and numerical solvers. Efficient execution depends on interaction structure and data movement, which can be obscured when a program is expressed as a sequence of tensor operations. On memory-constrained systems such as laptops, materializing connectivity and intermediate messages can also exhaust device memory. We present Tiga, a just-in-time compiler that separates the definition of a message-passing program from how its interactions are traversed, computed, and stored. Tiga preserves graph relations and reducer algebra in a multi-level intermediate representation, enabling traversal specialization, fusion of relation generation with aggregation, and reverse-mode automatic differentiation. Backend-specific lowering targets CPUs and GPUs. Its runtime extends execution beyond device-memory capacity by streaming graph partitions from disk through host memory with page-sized device staging buffers; partition ownership and halo exchange extend the same programming model to distributed execution. A Python interface interoperates with ordinary PyTorch tensors and autograd for forward and backward computation. Numerical checks validate outputs and gradients for differentiable workloads. A differentiated geometric workload characterizes the memory--time tradeoff of fused forward and backward execution. Evaluation against matched Torch and PyTorch Geometric baselines demonstrates reduced runtime and device-memory use for generated-relation workloads, while offloaded forward execution processes billion-edge graphs on a single memory-limited GPU. Measurements on heterogeneous devices further characterize the communication and load-balance costs of distributed execution.",
+      "source_url": "https://arxiv.org/abs/2609.24802",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24882",
+      "identity_tokens": [
+        "arXiv:2609.24882"
+      ],
+      "title": "Learning Prognostic Variables for AI Convective Parameterizations via Symbolic Distillation",
+      "reason": "Hybrid AI-physics climate modeling aims to improve coarse (~100km-resolution) Earth system models by learning to parameterize subgrid processes from high-fidelity data. However, this so far mostly involves local-in-time, diagnostic parameterizations, in which the subgrid state depends only on the current coarse state with no memory of previous states, which is unrealistic for processes such as convection that have intrinsic persistence. To address this, we enhance local-in-time parameterizations by learning prognostic variables that compactly carry important, additional past information where no explicit sub-grid information is available. First we compress past information into a low-dimensional latent space using an autoencoder, which then informs a neural network trained to parameterize targeted subgrid-scale processes. We then replace the autoencoder with symbolic equations that govern the time evolution of the latent variables, yielding additional prognostic memory variables that can be integrated alongside the resolved atmospheric state. We evaluate this approach on two systems: the Lorenz-96 model (online) and surface precipitation from high-resolution atmospheric simulations (offline). A forced multivariate linear ordinary differential equation recovers most of the added value achieved by the autoencoder-based approach in both experiments. Benchmarked against diagnostic parameterizations without memory, our memory-informed approach improves climate statistics and temporal structure, including a realistic diurnal cycle of tropical land precipitation.",
+      "source_url": "https://arxiv.org/abs/2609.24882",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25411",
+      "identity_tokens": [
+        "arXiv:2609.25411"
+      ],
+      "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis",
+      "reason": "Classifier-free Guidance (CFG) is widely adopted in text-to-speech (TTS) systems to enhance generation quality and conditioning fidelity by interpolating between conditioned and unconditioned predictions. A common unconditional technique is to use an empty representation, in the form of a fixed null vector. In this work, we propose replacing this representation with a learnable unconditional embedding, optimized to represent a meaningful unconditional state. Objective and subjective evaluations demonstrate that learnable null embeddings consistently outperform fixed null embeddings across speaker similarity, speech stability, and expressiveness, while exhibiting greater robustness to larger guidance scales. We further show that learning a distinct unconditional embedding for each of the TTS conditioning modalities allows fine-grained control over speaker and text guidance, showcasing the trade-off between similarity and quality, and stability and expressiveness in the generated speech.",
+      "source_url": "https://arxiv.org/abs/2609.25411",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25442",
+      "identity_tokens": [
+        "arXiv:2609.25442"
+      ],
+      "title": "WeightBridge: An Efficient Weight Transfer Library for Reinforcement Learning",
+      "reason": "rollout生成器は推論を行うが、研究の中心はRL training pipelineでの更新重み転送と同期。通常のserving/inference効率とのscope fitが弱い。",
+      "source_url": "https://arxiv.org/abs/2609.25442",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    }
+  ]
+}
