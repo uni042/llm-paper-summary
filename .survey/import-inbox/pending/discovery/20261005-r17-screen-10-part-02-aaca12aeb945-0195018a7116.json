@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-10-part-02-aaca12aeb945",
+  "reference_main_sha": "89ecb1e8c461c748ff1f2f90bfd365f652325aef",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19164",
+      "identity_tokens": [
+        "arXiv:2606.19164"
+      ],
+      "title": "Essential Subspace Merging for Multi-Task Learning",
+      "reason": "The paper studies parameter merging for multi-task learning and quality, with no inference/serving efficiency contribution in the abstract.",
+      "source_url": "https://arxiv.org/abs/2606.19164",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19535",
+      "identity_tokens": [
+        "arXiv:2606.19535"
+      ],
+      "title": "FloatDoor: Platform-Triggered Backdoors in LLMs",
+      "reason": "The contribution is a platform-triggered LLM backdoor attack, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2606.19535",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19636",
+      "identity_tokens": [
+        "arXiv:2606.19636"
+      ],
+      "title": "Hard or Just Unreached? Diagnosing the Sampling Blind Spot in Math-Reasoning Difficulty Estimation",
+      "reason": "The paper uses matched-compute activation interventions to diagnose whether estimated reasoning difficulty is hard or merely unreached; the mechanism modifies internal activations for analysis rather than changing ordinary decoding.",
+      "source_url": "https://arxiv.org/abs/2606.19636",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14797",
+      "identity_tokens": [
+        "arXiv:2608.14797"
+      ],
+      "title": "Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models",
+      "reason": "The survey is in-domain but only provides synthesis and no specific new actionable contribution suitable for a focused Research follow-up.",
+      "source_url": "https://arxiv.org/abs/2608.14797",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17522",
+      "identity_tokens": [
+        "arXiv:2606.17522"
+      ],
+      "title": "An expressivity analysis of hierarchical modelling in deep transformers via bounded-depth grammars",
+      "reason": "This is a theoretical expressivity analysis of deep transformers, not an LLM inference/serving systems contribution.",
+      "source_url": "https://arxiv.org/abs/2606.17522",
+      "first_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "last_checked_at": "2026-10-05T03:38:15.198281+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    }
+  ]
+}
