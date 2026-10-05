@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:23:11+00:00",
-  "record_count": 1000,
+  "updated_at": "2026-10-05T06:26:37+00:00",
+  "record_count": 1001,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15206,6 +15206,23 @@
         "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
       ],
       "title": "Zarya: A Hybrid Autoregressive--Masked Diffusion Language Model with Flexible Training and Dual-Mode Inference"
+    },
+    "arXiv:2609.20068": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.20068",
+      "identity_tokens": [
+        "arXiv:2609.20068"
+      ],
+      "reason": "KV-cache概念への直接的言及はあるが、実験が小規模geo-mining classifierに限られ、LLM推論効率の実測・適用可能性が示されていない。",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Marginal utility, matrix factorization, and the Key-Value (KV) cache: a unified information-economic framework for sovereign geo-mining inference"
     }
   }
 }

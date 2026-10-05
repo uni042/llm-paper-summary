@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:23:12+00:00",
-  "record_count": 3228,
+  "updated_at": "2026-10-05T06:26:38+00:00",
+  "record_count": 3247,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -47006,6 +47006,286 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "Conditional Generation and Inpainting of Non-Coding RNA Sequences with Masked Discrete Diffusion"
+    },
+    "arXiv:2609.20723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20723",
+      "identity_tokens": [
+        "arXiv:2609.20723"
+      ],
+      "reason": "Online image generation with Diffusion Transformers (DiTs) must meet latency service-level objectives (SLOs) while using GPU resources efficiently. Existing systems improve GPU utilization by batching multiple requests for joint execution. However, request-level batching offers limited control over batch size: batches may be too small to saturate GPU compute, while larger ones may violate latency SLOs. Globally coordinated scheduling introduces further delays by requiring independently progressing GPUs to synchronize before admitting new work. We present PixelFlow, a distributed DiT serving system that addresses these limitations through token-level workload management. Its key idea is to use image tokens (the units a DiT processes to generate an image) to divide and batch request workloads at a finer granularity. This allows each GPU to take on a portion of additional work under latency constraints. By distributing these portions across GPUs, PixelFlow accommodates more concurrent requests, improving GPU utilization while reducing queueing delays. To realize this flexibility, PixelFlow provides a runtime that splits requests into variable-sized partitions and batches them efficiently on each GPU. To reduce the resulting communication overhead, it optimizes token placement to limit cross-GPU data exchange while balancing GPU workloads. It further exploits similarity across denoising steps to overlap the remaining transfers with computation. An SLO-aware scheduler groups GPUs to share compute resources among requests with compatible latency requirements. Each group progresses independently, synchronizing with others only when their combined resources are needed to admit a new request. Evaluation with Stable Diffusion 3 and FLUX.1-dev on H100 GPUs shows that PixelFlow improves SLO attainment by up to 43% and achieves up to 2.8 times the goodput of state-of-the-art DiT serving systems.",
+      "first_checked_at": "2026-10-05T06:26:36+00:00",
+      "last_checked_at": "2026-10-05T06:26:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PixelFlow: Token-Level Workload Management for Efficient Distributed DiT Serving"
+    },
+    "arXiv:2609.20751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20751",
+      "identity_tokens": [
+        "arXiv:2609.20751"
+      ],
+      "reason": "Adapting a pretrained autoregressive (AR) model is a cost-efficient route to a diffusion language model (DLM). While nearly all such adaptations start from a full-attention transformer, AR modeling has shifted toward hybrid architectures that interleave attention and RNN layers. This creates an obstacle for adaptation: unlike attention, RNNs are structurally causal and nontrivial to bidirectionalize. Despite this mismatch, we investigate whether such backbones can become effective DLMs by adapting Qwen3.5 at 0.8B, 2B, 4B, and 9B scales, yielding the dQwen3.5 family. We find that hybrid backbones can be efficient starting points for adaptation: against a full-attention control, the hybrid reaches a given training loss in about half the tokens. Across scales, dQwen3.5 resembles full-attention DLMs in any-order decoding behavior and performs strongly under parallel decoding.",
+      "first_checked_at": "2026-10-05T06:26:36+00:00",
+      "last_checked_at": "2026-10-05T06:26:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "dQwen3.5: Hybrid-Attention Diffusion Language Models"
+    },
+    "arXiv:2609.20974": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20974",
+      "identity_tokens": [
+        "arXiv:2609.20974"
+      ],
+      "reason": "In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We propose Attention-Aware Routing (AAR), which augments the router with temporal and spectral features extracted from a sliding window of attention weights that represent a summary of the model's contextual state, disentangled from the hidden state. Keeping the base transformer entirely frozen, we train only the routing parameters, isolating routing as the sole variable. AAR improves GSM8K by +3.37 pp over a routing-only SFT baseline on OLMoE. Beyond performance, we show that routing and attention form a coupled circuit: routing changes at layer l propagate through the residual stream to amplify attention sinks at layer l+1, reshaping attention without any direct update to the attention mechanism itself. Further, AAR reduces long diverging generation, with incorrect answers getting shorter, while correct answers remain unchanged in length. Finally, AAR is strongly depth-sensitive: applying it indiscriminately across layers can degrade factual retrieval, whereas mathematical reasoning gains persist when it is introduced deeper in the network. This sensitivity exposes a retrieval--reasoning tension across depth and makes layer-selective AAR a controlled probe of the routing-relevant information carried by attention at different layers.",
+      "first_checked_at": "2026-10-05T06:26:36+00:00",
+      "last_checked_at": "2026-10-05T06:26:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs"
+    },
+    "arXiv:2609.20981": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20981",
+      "identity_tokens": [
+        "arXiv:2609.20981"
+      ],
+      "reason": "Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine the advantages and overcome the drawbacks of the dual, we propose Causal Latent Revision (CaLR), a framework that reformulates reasoning as constrained latent optimization. By adopting a causal topology matrix (CTM) from an expert model and implicit differentiation, CaLR performs gradient-guided ``thought revision\"to enforce logical consistency, enabling dynamic self-correction of intermediate steps during parallel generation. Empirically, CaLR achieves SOTA DLM performance on complex benchmarks, surpassing strong AR baselines and demonstrating superior robustness in constrained tasks like Sudoku.",
+      "first_checked_at": "2026-10-05T06:26:36+00:00",
+      "last_checked_at": "2026-10-05T06:26:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning"
+    },
+    "arXiv:2609.21022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21022",
+      "identity_tokens": [
+        "arXiv:2609.21022"
+      ],
+      "reason": "Vision-Language-Action (VLA) models have shown strong generalization in robotic manipulation by combining semantic knowledge from pretrained vision-language models with expressive action-generation policies. Diffusion-based action generators are particularly effective for modeling temporally coherent action chunks, but these chunks are typically executed open-loop after inference. This limits responsiveness when objects move, contacts change, or the scene evolves during execution. We propose VLA-Feedback, a two-timescale architecture that combines low-frequency diffusion planning with high-frequency visual feedback. Rather than fully denoising an action chunk before execution, VLA-Feedback retains its final denoising step as a lightweight feedback interface, allowing each action to be corrected using the latest observation before it is executed. This design preserves the expressiveness of the diffusion planner while enabling real-time action correction without rerunning the full vision-language diffusion model. VLA-Feedback matched GR00T on static LIBERO tasks while improving average success on dynamic simulation tasks from 27.5% to 85.0%. On real-robot tasks, it improved average success from 51% to 73%. Additional materials can be found on our project page: https://vla-feedback.github.io.",
+      "first_checked_at": "2026-10-05T06:26:36+00:00",
+      "last_checked_at": "2026-10-05T06:26:36+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Catch Me If You Can: Real-Time Feedback Denoising for Responsive VLAs"
+    },
+    "arXiv:2609.20463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20463",
+      "identity_tokens": [
+        "arXiv:2609.20463"
+      ],
+      "reason": "Streaming target speaker extraction must maintain a representation of whom to extract while the target may fall silent, be masked by interference, or drift acoustically away from enrollment. Existing systems typically hold this state as a stored embedding updated by hand-designed rules. Across 22 configurations, including confidence-gated and oracle-activity-gated updates, we show that this family lies on a stability-plasticity frontier: even perfect target-activity information cannot combine robustness to target absence with adaptation to enrollment-mixture mismatch. We therefore meta-train speaker-state dynamics through the closed streaming loop, exposing the updater to its own contaminated evidence. Our proposed 41k-parameter anchored fast-weights (AFW) memory moves beyond the measured heuristic frontier, gaining 3.0 dB over the best heuristic under severe mismatch while staying within 0.9 dB of static enrollment after 30 s of absence, at under 5% runtime overhead. A gated recurrent unit (GRU) control confirms that the gain is not AFW-specific, while AFW is smaller and more interpretable: under severe mismatch, its write residual grows and aligns with the target rather than the interferer. Code is publicly available at https://github.com/ym2976/anchor-fast-weight.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Beyond the Stability--Plasticity Frontier in Streaming Target Speaker Extraction"
+    },
+    "arXiv:2609.20523": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20523",
+      "identity_tokens": [
+        "arXiv:2609.20523"
+      ],
+      "reason": "Quantum communication underpins secure information processing and scalable quantum networks. In particular, remote state preparation (RSP) enables efficient quantum state transfer, but accurately estimating target states under complex noise remains challenging. Here, we propose a Transformer-based Quantum State Characterizer (TQSC) model for noisy RSP experiments. Our model reconstructs experimentally prepared pure and mixed photonic polarization states from noisy measurements in complex scattering environments, while its attention patterns provide physically grounded insights into correlations among the measured observables. The method achieves a mean estimator-target fidelity exceeding 99.999% under complex scattering and dynamic Gaussian noise, while its robustness and generalization are further examined using Qiskit-simulated Bloch-ball states. Furthermore, in a practical MNIST image transmission task with held-out states, the decoded bit error rate is reduced from 50.34% to zero after TQSC post-processing. The TQSC model enables accurate tomographic characterization under dynamic noise and provides physically grounded post-hoc insights, holding promise for intelligent quantum information processing applications.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Noise-Robust Quantum State Characterization for Remote State Preparation with Deep Learning"
+    },
+    "arXiv:2609.20614": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20614",
+      "identity_tokens": [
+        "arXiv:2609.20614"
+      ],
+      "reason": "Frontier AI models are rapidly gaining the ability to exploit vulnerabilities in complex pieces of software. The risk is not theoretical, as evidenced by recent sandbox escapes performed by frontier models at OpenAI and Anthropic. Discussions of how to sandbox inference stack components often focus on components other than the inference engine itself (e.g., network proxies or code execution environments). However, the inference engine is an attractive target for a misaligned model. For example, if a model can trigger exploits in that engine merely by generating specially-crafted output tokens, the model can initiate a multi-step, to-the-bare-metal exploit chain in the engine, without relying on vulnerabilities in other components of the inference stack, and without assistance from externally-provided, maliciously-crafted input tokens. In this paper, we show that a misaligned model can perform inference engine fingerprinting to determine the specific engine (e.g., vLLM, SGLang) which executes the model. Once the engine has been fingerprinted, the model can leverage engine-specific exploits to take control of the engine using only carefully-selected output tokens. We provide concrete examples of model fingerprints in five popular engines, and demonstrate how realistic agentic harnesses allow a model to leverage those fingerprints to identify the local engine. We also describe a proof-of-concept, to-the-bare-metal exploit chain that originates from a fingerprinted (and subsequently compromised) inference engine. We conclude by discussing several ways that inference engines could be changed to make fingerprinting attacks more difficult.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Inference-Engine Fingerprinting Attacks are Practical: Exploring Model-Driven Environmental Discovery, Exploitation, and Escape"
+    },
+    "arXiv:2609.20648": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20648",
+      "identity_tokens": [
+        "arXiv:2609.20648"
+      ],
+      "reason": "Vision-Language-Action (VLA) models are a class of generalist robot policies that map camera images and language instructions directly to robot actions. While promising, these models remain slow at test time, particularly for long-horizon tasks that require many queries to the policy. Recent efforts reduce VLA latency by distilling smaller models, overlapping asynchronous action chunks, or pairing the VLA with a fast low-level policy, but still run a learned policy for the entire task. In contrast to VLA, classical motion planners quickly find collision-free motions, but require an explicit goal and have no semantic understanding of the task. In this work, we present SkipVLA, a hybrid policy that combines a pretrained VLA with a classical motion planner, using the planner for free-space motion and querying the VLA only for contact-rich skills such as grasping and placing. SkipVLA reuses the frozen vision-language backbone of the VLA to predict a target pose for each planned motion, and learns this predictor without additional demonstrations introduced into the system by using what was already learnt by the large VLA. We evaluate SkipVLA with three VLAs on 13 LIBERO tasks in simulation and three pick-and-place tasks on a physical 6-DoF YAM arm, demonstrating up to 2.5x faster task completion and significantly lower energy consumption while achieving the same task success rate.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "SkipVLA: Skipping VLA Steps with Classical Planning for Fast Robot Manipulation"
+    },
+    "arXiv:2609.20693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20693",
+      "identity_tokens": [
+        "arXiv:2609.20693"
+      ],
+      "reason": "Detecting phases of matter in general relies on identifying the correct order parameter - a task that remains notoriously difficult for unknown transitions and traditionally is guided by physical intuition and educated guess. Neural networks have recently offered an alternative route by locating phase transitions in known models without any a priori physical knowledge. Yet these approaches remain black boxes and only identify phases without elucidating their properties. Moreover, they often struggle when confronted with realistic, noisy experimental data, which constitute the ultimate testbed for automated methods in physics. Here, we bridge these perspectives by introducing TetrisCNN, a convolutional architecture with parallel branches of differently shaped filters, reminiscent of Tetris blocks, that learns sparse, interpretable latent representations directly in terms of spin correlators. Applied to experimental snapshots of two-dimensional Ising and XY quantum simulators measured in multiple bases, the network not only detects phase transitions and crossovers but also expresses its latent representation and decision boundaries as symbolic formulas built from experimentally measurable spin correlators. This framework opens the way to integrating interpretable neural networks with quantum simulators to uncover and understand new phases of matter.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "TetrisCNN for interpretable detection of phases of matter from experimental quantum simulator data"
+    },
+    "arXiv:2609.19966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19966",
+      "identity_tokens": [
+        "arXiv:2609.19966"
+      ],
+      "reason": "Synthetic image and mask pairs can alleviate scarce colonoscopy annotations, but realistic synthesis requires preserving the supplied lesion while generating compatible mucosa. Existing foreground-guided methods treat all non-foreground pixels as background and rely mainly on local integration. Directly applying them to colonoscopy causes two problems: non-mucosal black regions contaminate generated tissue, and local reasoning produces inconsistent mucosal texture and illumination. We propose LAMP, the first foreground-guided framework for polyp image synthesis based on lesion-guided adaptive mucosal context propagation. LAMP explicitly separates the lesion, valid mucosa, and camera exterior using a field-of-view (FOV) mask. Lesion-to-Mucosa cross-attention extracts lesion appearance conditions for valid-mucosa locations, while FOV-constrained multidirectional Vision Receptance Weighted Key Value propagates them over legal tissue support. An adaptive gate then controls their residual fusion into the diffusion U-Net. Extensive experiments on five polyp datasets demonstrate that LAMP substantially outperforms existing methods in overall generation quality and consistently improves five downstream segmentation models. Our code will be released at https://github.com/wangtong627/LAMP.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Beyond the Foreground: FOV-Aware Polyp Image Synthesis via Lesion-Guided Adaptive Mucosal Context Propagation"
+    },
+    "arXiv:2609.19985": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19985",
+      "identity_tokens": [
+        "arXiv:2609.19985"
+      ],
+      "reason": "Fine-tuning foundation models on new tasks inevitably suffer from catastrophic forgetting. While existing works attempt to mitigate this on the basis of parameter-efficient fine-tuning methods, they adopted an overly restrictive Subspace Orthogonality condition. In this paper, we introduce a purely post-hoc and tuning-agnostic weight rectification framework that achieves Parameter Space Orthogonality, which is the necessary and sufficient condition for preserving historical performance to the first order. By projecting parameter updates into the JAcobian NUll Space (JANUS), our method significantly recovers compromised historical knowledge without interfering with the underlying fine-tuning process. To overcome the local validity of the Jacobian approximation, we further propose a Multi-step Adaptive Rectification mechanism that utilizes the JANUS shift to dynamically verify the valid trust region and adjust step sizes. Coupled with our proposed ghost projection, ghost orientation comparison, and sequence-level singular value decomposition compression techniques, JANUS also achieves great temporal and spatial efficiency. Experiments demonstrate that JANUS seamlessly integrates with various fine-tuning methods, significantly mitigating the stability-plasticity dilemma by recovering historical knowledge while preserving downstream task adaptation.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Past, Future, All at Once: Mitigating Stability-Plasticity Dilemma via Post-hoc JANUS Rectification"
+    },
+    "arXiv:2609.20045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20045",
+      "identity_tokens": [
+        "arXiv:2609.20045"
+      ],
+      "reason": "A memory can answer a current query correctly while discarding distinctions required by a later update. We investigate this failure with a paired-history audit: two histories have the same current answer, receive a shared future update, and require different subsequent answers. A pilot evaluates 24 history pairs across six synthetic mechanisms, 12 memory conditions, two repeats, and two model backends. A deterministic frontier selector obtains strict reveal accuracy of 96/96 on DeepSeek and 82/96 on GLM; a structured writer obtains 62 successes with one unresolved outcome and 56/96. The configured four-outcome joint contrast has finite-sample identification intervals of [0.521, 0.542] and [0.292, 0.313], not confidence intervals. A record-level audit distinguishes retained-state adequacy, response delivery, and answer-schema compliance without changing those original scores. It finds 26 and 25 well-formed but semantically wrong structured reveal memories, while all 14 GLM frontier reveal failures contain correct values in the wrong wrapper. Tombstone removal produces 16/16 exact replay failures in the targeted mechanism. Identifier renaming then exposes a separate flaw: original frontier late-reference adequacy falls from 8/8 to 94/320 transformed instances. We provide and test a label-equivariant repair, but it preserves only 2/8 original late-reference answers: eliminating a naming shortcut does not solve unknown future relevance. These results support a scoped evaluation methodology and reproducible failure analysis, not general superiority of the repaired algorithm. Paid pilot evidence, retrospective diagnostics, and new offline tests are reported separately; no independent held-out or natural-task validation is claimed.",
+      "first_checked_at": "2026-10-05T06:26:37+00:00",
+      "last_checked_at": "2026-10-05T06:26:37+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Correct Now, Insufficient Later: Auditing Update Sufficiency in Context Compression"
+    },
+    "arXiv:2609.20066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20066",
+      "identity_tokens": [
+        "arXiv:2609.20066"
+      ],
+      "reason": "Event cameras offer high temporal resolution and motion sensitivity for tiny UAV detection, yet distant targets generate sparse and fragmented events that are easily overwhelmed by clutter and ego-motion. Existing methods mainly rely on dense event representations or local sparse spatiotemporal modeling, resulting in redundant computation or fragmented modeling of motion continuity across distant asynchronous events. To address this limitation, we introduce serialized motion evidence accumulation, which treats motion continuity as an ordered evidence propagation process. Specifically, the same event stream is organized into locality-preserving spatiotemporal paths and chronology-preserving temporal paths through the latent complementary serializations. Based on this principle, we propose PointEvent, a lightweight event-wise state-space framework that alternates serialized scans across the complementary orders, progressively consolidating fragmented motion evidence beyond fixed local neighborhoods. A high-resolution event branch preserves fine-grained target responses, while compact context modulation suppresses interference. Experiments demonstrate that PointEvent achieves SOTA with the fewest parameters and fastest measured inference among the compared methods. Code: https://github.com/wzz-z/PointEvent",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PointEvent: Rethinking Event-based Tiny Object Detection via Serialized Motion Evidence Accumulation"
+    },
+    "arXiv:2609.20086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20086",
+      "identity_tokens": [
+        "arXiv:2609.20086"
+      ],
+      "reason": "Long-term multivariate time series plays a significant role in many application areas such as power systems, trading, etc. However, their accurate prediction is quite difficult for conventional forecasting methods as they often exhibit high dimensionality and complex relationships. Recent works show that transformer-based approaches are quite effective for long-term forecasting thanks to their attention mechanism. However, in the presence of complex high-dimensional inputs, they show evidence of oversmoothing, limited capacity, and opacity. To this end, this paper introduces SETTer, a transformer-based model that addresses these challenges by incorporating novel techniques for decoupled self-attention and hybrid masking. The proposed techniques enable SETTer to effectively capture the dominant short- and long-term patterns across the temporal and channel dimensions. In addition, we enrich the model layers with simple explainable structures that indicate the discriminative pattern of SETTer. We show that with a single-layer transformer architecture, SETTer can effectively model long-term dependencies in the presence of varying data complexities. Extensive experiments on real-word benchmark datasets for long-term multivariate time series forecasting demonstrate that SETTer outperforms state-of-the-art models in 88% of the scenarios.",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "SETTer: Sparse-Encoder Transformer for Long-term Multivariate Time Series Forecasting"
+    },
+    "arXiv:2609.20130": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20130",
+      "identity_tokens": [
+        "arXiv:2609.20130"
+      ],
+      "reason": "Recent memory-augmented repository-level program repair methods reuse historical repair experiences to improve LLM-based issue resolution. However, our analysis reveals three limitations in existing repository-level memory retrieval. First, episodic memory is highly imbalanced across repositories, leaving low-resource repositories with little effective support. Second, more memory does not monotonically lead to higher repair success, suggesting that relevance, quality, and redundancy matter more than raw memory volume. Third, memory accumulation is phase-misaligned: repositories may contain many reproduction experiences but few patch or refinement experiences. To address these problems, we propose an adaptive experience retrieval framework for repository-level program repair. Our framework introduces coverage-aware retrieval, which falls back to cross-repository or repair-type-based memories when same-repository memory is insufficient; quality-aware selection, which ranks memories by relevance, historical utility, specificity, and redundancy; and stage-aware routing, which separates and retrieves memories for reproduction, localization, patch generation, patch refinement, and validation. Evaluated on SWE-Bench-Lite and SWE-Bench-Verified, the proposed framework improves repair performance on under-covered repositories, reduces noisy memory retrieval, and better supports failed-to-fixed patch refinement. Our results show that the key to memory-augmented repair is not simply accumulating more experiences, but retrieving the right experiences for the right repair context.",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "AdaRepair-Mem: Adaptive Experience Orchestration for Repository-Level Program Repair"
+    },
+    "arXiv:2609.20359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20359",
+      "identity_tokens": [
+        "arXiv:2609.20359"
+      ],
+      "reason": "The symbiotic scaling of artificial intelligence models and high-performance computing systems continually creates algorithmic challenges in their convergence. Foundation models (FMs) are a crucial example, requiring months-long training on thousands of cutting-edge GPUs. Sharded data parallelism (DP) is the dominant strategy to accelerate such computations by splitting data and models across multiple GPUs. However, it incurs prohibitive communication overhead when deployed at scale, particularly on multi-tier interconnects with heterogeneous performance. Inspired by the efficient communication principles of federated learning (FL), this work introduces two hybrid algorithms - FL+FSDP and FL+HSDP - interleaving sharded DP with FedAvg-style aggregations. Such approaches decouple large DP deployments into smaller, loosely-coupled federation groups, requiring minimal inter-group traffic while keeping the global batch size bounded by the groups'size. Formal analysis of communication costs and experimental validation prove their scalability and flexibility. A Llama3.1 8B pre-training on 512 A100 GPUs shows that, under identical hyperparameters, FL+FSDP and FL+HSDP achieve up to 8.04 faster data processing and 4.48 lower evaluation perplexity than their counterparts, demonstrating superior computational efficiency and improved model quality. These properties stem from reduced communication overhead and the bounded growth of the global batch size relative to the federation group size.",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Accelerating Sharded Data Parallelism at Scale with Federated Learning"
+    },
+    "arXiv:2609.20446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20446",
+      "identity_tokens": [
+        "arXiv:2609.20446"
+      ],
+      "reason": "Coding agents and evolutionary code-search systems can improve implementations once a target and evaluation criterion have been specified. Applying these methods to an existing software repository raises an earlier question: which implementation choices are worth investigating for a high-level engineering objective? We introduce \\emph{optimization-opportunity discovery}, the repository-level task of identifying candidate source regions, explaining how they relate to the objective, and proposing possible changes. The task takes as input a repository, an engineering objective, and optional runtime evidence such as offline telemetry observations or profiles. It does not require the user to specify a defect, bottleneck, or code location. We present \\emph{Spotlights}, a system that performs this task through logical repository mapping, successive agent reviews, and optional research linking candidates to relevant techniques. We evaluate Spotlights across model serving, document retrieval, blockchain ordering, and document processing. Across three cases, it recovers seven of nine expert-selected targets. In the reliability study, 70\\% of the top ten candidates meet the stated correctness and severity thresholds. Across five repeated retrieval runs, 73.6\\% of candidate occurrences have a matching source region in all five runs. Spotlights also rediscovers the target of a withheld retrieval optimization and connects it to a relevant tiling technique. In an implementation study, a discovered change reduces end-to-end page-processing runtime by 10.6\\% while preserving measured output quality. These results establish optimization-opportunity discovery as a distinct and empirically evaluable step between a broad engineering objective and subsequent implementation and validation.",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Spotlights: Discovering Improvement Opportunities in Software Repositories"
+    },
+    "arXiv:2609.20457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20457",
+      "identity_tokens": [
+        "arXiv:2609.20457"
+      ],
+      "reason": "While multimodal large language models (MLLMs) enable a wide range of image-text reasoning tasks, recent incidents indicate that they are vulnerable to illicit deployment and unauthorized distillation. Existing solutions for model provenance are typically confounded by shared language backbones in MLLMs and struggle to detect violations of distillation. To bridge this gap and safeguard model ownership, we present the first study on multimodal model fingerprinting. Inspired by recent findings that self-attention acts as a low-pass filter and that its low-frequency components are informative, we develop AttnPrint for white-box provenance. Specifically, we extract cross-modal attention distributions and isolate their low-frequency components to serve as model fingerprints. To facilitate black-box auditing, we further introduce DistillTrace, which employs hypothesis testing of MLLM outputs to identify potential model infringement. We conduct extensive experiments on 154 model instances across 19 multimodal architectures. Notably, AttnPrint achieves strong derivative-model detection performance while remaining robust to five downstream modification techniques. DistillTrace also provides evidence of distillation relationships under three parameter-independent techniques.",
+      "first_checked_at": "2026-10-05T06:26:38+00:00",
+      "last_checked_at": "2026-10-05T06:26:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Fingerprinting Multimodal Large Language Models"
     }
   }
 }
