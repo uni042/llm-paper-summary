@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1530-scheduled-chat-30/r02",
+  "reference_main_sha": "66243e1b6da8ea4b70ec2bb1e6d64dfc3f027817",
+  "record_count": 7,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.06120",
+      "identity_tokens": [
+        "arXiv:2505.06120"
+      ],
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "reason": "単一turnとmulti-turn会話でLLM能力を比較し、200k超のsimulationでmulti-turn性能が平均39%低下する原因を分析するevaluation/capability研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2505.06120",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmulti-turn conversation reliability、200k+ simulations、平均39% performance dropが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.12836",
+      "identity_tokens": [
+        "arXiv:2009.12836"
+      ],
+      "title": "Normalization Techniques in Training DNNs: Methodology, Analysis and Application",
+      "reason": "DNN学習におけるnormalization手法をoptimization観点から整理するsurvey。主眼はtraining acceleration/generalizationで、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2009.12836",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でDNN training normalization、optimization、taxonomy、applicationsが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.05662",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.1903.05662",
+        "arXiv:1903.05662"
+      ],
+      "title": "Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets",
+      "reason": "量子化activationを持つnetwork学習でstraight-through estimatorのcoarse gradientがなぜ機能するかを理論解析するtraining optimization研究。量子化deploymentへの背景的関連はあるが、推論runtime・kernel・servingを評価しない。",
+      "source_url": "https://arxiv.org/abs/1903.05662",
+      "body_check": "abstract_screen_only: 一次arXiv書誌・要旨相当情報でSTE-modified chain rule、coarse gradient、population loss convergence、CIFAR-10 training stabilityが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.13109",
+      "identity_tokens": [
+        "arXiv:2505.13109"
+      ],
+      "title": "FreeKV: Boosting KV Cache Retrieval for Efficient LLM Inference",
+      "reason": "長文脈LLMのKV cache retrievalをalgorithm-system協調で高速化し、speculative retrieval、CPU/GPU hybrid KV layout、double-buffered streamed recallによりcritical pathと転送断片化を削減する。SOTA KV retrieval比最大13倍高速化を報告するため対象内。",
+      "source_url": "https://arxiv.org/abs/2505.13109",
+      "body_check": "full_text_relevance_review: 一次arXiv要旨でKV cache retrieval bottleneck、speculative retrieval、fine-grained correction、CPU/GPU hybrid layout、double-buffered streamed recall、最大13x speedupを確認。LLM inference system効率が主要貢献。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.00507",
+      "identity_tokens": [
+        "arXiv:2507.00507"
+      ],
+      "title": "Towards Resource-Efficient Serverless LLM Inference with SLINFER",
+      "reason": "CPU/GPU異種hardwareをelasticに共有するserverless LLM inference schemeで、token-level resource allocation、forward-looking memory scaling、preemption/bin-packingを統合する。4 CPU+4 A100でsharingによりcapacity 47–62%、CPU活用込み86–154%向上を報告するため対象内。",
+      "source_url": "https://arxiv.org/abs/2507.00507",
+      "body_check": "full_text_relevance_review: 一次arXiv要旨でserverless LLM serving、heterogeneous CPU/GPU sharing、token-level allocation、OOM-aware memory scaling、instance consolidation、capacity improvementを確認。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.07115",
+      "identity_tokens": [
+        "arXiv:2502.07115"
+      ],
+      "title": "Online Scheduling for LLM Inference with KV Cache Constraints",
+      "reason": "KV cache memory制約下のLLM inference batching/schedulingを理論化し、semi-onlineで平均latency最適、stochastic onlineでconstant regretのschedulerを提案する。Llama-70B/A100の実データ評価でlatencyとenergyを改善するため対象内。",
+      "source_url": "https://arxiv.org/abs/2502.07115",
+      "body_check": "full_text_relevance_review: 一次arXiv要旨でKV-cache constrained scheduling、semi-online optimal algorithm、online constant-regret algorithm、Llama-70B/A100 empirical evaluationを確認。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.08438",
+      "identity_tokens": [
+        "arXiv:2508.08438"
+      ],
+      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
+      "reason": "global KV cache共有のtiming side-channelを抑えつつcache reuse性能を維持するSafeKVを提案し、HBM/DRAM/SSDを跨ぐpublic/private cache管理を行う。per-user isolation比TTFT最大40.58%、throughput最大2.66倍改善し、Qwen3-235Bのcache-induced TTFT overheadを50.41%から11.74%へ低減するため対象内。",
+      "source_url": "https://arxiv.org/abs/2508.08438",
+      "body_check": "full_text_relevance_review: 一次arXiv要旨でselective KV sharing、multi-tier radix-tree cache、HBM/DRAM/SSD、94–97% timing attack mitigation、TTFT/throughput定量値を確認。",
+      "first_checked_at": "2026-10-05T15:57:00+09:00",
+      "last_checked_at": "2026-10-05T15:57:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    }
+  ]
+}
