@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-6b969c0385b83b1f-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2507.01843",
+  "reason": "Mixture-of-Experts (MoE) approaches have recently gained traction in robotics applications due to their ability to dynamically allocate computational resources and specialize sub-networks for distinct tasks or environmental contexts, enabling more efficient decision-making. Such systems often comprise sparsely activated experts combined under a single monolithic architecture and require a well-configured internal routing mechanism, which does not allow for selective low-level expert and router customization and requires additional training. We propose MoIRA, an architecture-agnostic modular MoE framework designed to coordinate existing experts with an external text-based router. MoIRA incorporates two zero-shot routing options: embedding-based similarity and prompt-driven language model inference. In our experiments, we choose large Vision-Language-Action models, gr00t-N1 and $\\pi_0$, as the underlying experts, and train low-rank adapters for low-overhead inference. We evaluate MoIRA on various GR1 Humanoid tasks and LIBERO Spatial and Goal benchmarks, where it consistently outperforms generalist models and competes with other MoE pipelines. Additionally, we analyse the robustness of the proposed approach to the variations of the instructions. While relying solely on textual descriptions of tasks and experts, MoIRA demonstrates the practical viability of modular deployment with precise, low-effort routing and provides an alternative, scalable foundation for future multi-expert robotic systems.",
+  "title": "MoIRA: Modular Instruction Routing Architecture for Multi-Task Robotics",
+  "identity_tokens": [
+    "arXiv:2507.01843"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b969c0385b8",
+  "source_precheck_request_id": null
+}
