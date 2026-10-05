@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-12-part-05-978d7933ab4d",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33742",
+      "identity_tokens": [
+        "arXiv:2609.33742"
+      ],
+      "title": "DuraS2ST: Chain-of-Thought and Reinforcement Learning for Duration-Aligned Speech-to-Speech Translation",
+      "reason": "Speech-to-speech translation CoT corpus and reinforcement-learning training; training/quality focus.",
+      "source_url": "https://arxiv.org/abs/2609.33742",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33755",
+      "identity_tokens": [
+        "arXiv:2609.33755"
+      ],
+      "title": "Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices",
+      "reason": "Low-power hearable-device speech beamforming; efficient audio inference but not an LLM system.",
+      "source_url": "https://arxiv.org/abs/2609.33755",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33780",
+      "identity_tokens": [
+        "arXiv:2609.33780"
+      ],
+      "title": "Selecting Diverse SFT Traces Improves Post-RL Generalization",
+      "reason": "Selects SFT traces to improve post-RL generalization; training-data selection.",
+      "source_url": "https://arxiv.org/abs/2609.33780",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33804",
+      "identity_tokens": [
+        "arXiv:2609.33804"
+      ],
+      "title": "MinkowskiPE: Minkowski Positional Encoding for Spatiotemporal Perception",
+      "reason": "Minkowski positional encoding for spatiotemporal perception; not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.33804",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33822",
+      "identity_tokens": [
+        "arXiv:2609.33822"
+      ],
+      "title": "Vestrum: Improving Agent Harnesses by Adapting Their Verification, Structure and Memory",
+      "reason": "Agent-harness evaluation has some intermediate-step cost relevance, but the overall result is quality/harness adaptation rather than a demonstrated LLM inference or serving efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.33822",
+      "first_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "last_checked_at": "2026-10-05T04:33:26.297824+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
