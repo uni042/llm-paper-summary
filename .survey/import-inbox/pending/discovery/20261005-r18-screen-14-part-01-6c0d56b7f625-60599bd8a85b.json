@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-14-part-01-6c0d56b7f625",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32160",
+      "identity_tokens": [
+        "arXiv:2609.32160"
+      ],
+      "title": "Typed Decision Models: An Early Evidence Audit and Evaluation Checklist",
+      "reason": "inference latency/costとの関連はあるが、対象は初期研究の監査・評価checklistであり、speedupも特定のtyped-model application/serving設定に限定される。効率最適化の一次手法を提示しないためscope fitが弱い。",
+      "source_url": "https://arxiv.org/abs/2609.32160",
+      "first_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "last_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32178",
+      "identity_tokens": [
+        "arXiv:2609.32178"
+      ],
+      "title": "Analytic-Walk Rotary Positional Encodings for Graphs",
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.32178",
+      "first_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "last_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32185",
+      "identity_tokens": [
+        "arXiv:2609.32185"
+      ],
+      "title": "Contamination, Prior, or Evidence? Decomposing and Training Evidence Use in Whole-Slide Vision-Language Models",
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.32185",
+      "first_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "last_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32189",
+      "identity_tokens": [
+        "arXiv:2609.32189"
+      ],
+      "title": "ScopeIF: Improving Scope-Aware Precise Instruction-Following in Large Language Models via Graded Reward Modeling",
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "source_url": "https://arxiv.org/abs/2609.32189",
+      "first_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "last_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32193",
+      "identity_tokens": [
+        "arXiv:2609.32193"
+      ],
+      "title": "Devol-ONE: One Autoregressive Mixture of Transformers to Unify Vision-Language-Action and Latent World Modeling",
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.32193",
+      "first_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "last_checked_at": "2026-10-05T04:38:00.132808+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
