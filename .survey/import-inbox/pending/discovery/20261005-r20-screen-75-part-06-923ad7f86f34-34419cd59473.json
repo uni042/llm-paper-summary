@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-75-part-06-923ad7f86f34",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.16007",
+      "identity_tokens": [
+        "arXiv:2501.16007"
+      ],
+      "title": "TOPLOC: A Locality Sensitive Hashing Scheme for Trustless Verifiable Inference",
+      "reason": "The contribution is verifiable inference/trust, and the measured efficiency reduction concerns proof-storage overhead rather than LLM inference execution.",
+      "source_url": "https://arxiv.org/abs/2501.16007",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86",
+      "identity_tokens": [
+        "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86"
+      ],
+      "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+      "reason": "Packet contains no primary abstract. The Semantic Scholar record page supplied no abstract/full text in this screen; relevance of GPU multi-NIC communication to LLM serving cannot be inferred from title alone.",
+      "source_url": "https://www.semanticscholar.org/paper/8e8582198850220ffeeb65ca1049f6ac1419aa86",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae",
+      "identity_tokens": [
+        "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae"
+      ],
+      "title": "Improving Language Model Distillation through Hidden State Matching",
+      "reason": "Packet contains no primary abstract. The Semantic Scholar record supplied no primary source text in this screen; title alone does not establish whether this distillation work improves inference efficiency.",
+      "source_url": "https://www.semanticscholar.org/paper/b49ec6b01dc7f3b27566469043e409b95d9411ae",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15039",
+      "identity_tokens": [
+        "arXiv:2405.15039"
+      ],
+      "title": "CEEBERT: Cross-Domain Inference in Early Exit BERT",
+      "reason": "The measured acceleration is real but narrowly limited to BERT/ALBERT encoder classification; transfer to generative LLM inference is uncertain.",
+      "source_url": "https://arxiv.org/abs/2405.15039",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3642970.3655840",
+      "identity_tokens": [
+        "DOI:10.1145/3642970.3655840"
+      ],
+      "title": "Navigating Challenges and Technical Debt in Large Language Models Deployment",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3642970.3655840. Primary abstract surveys deployment challenges and technical debt in LLMs without a specific method or measured inference-efficiency contribution.",
+      "source_url": "https://doi.org/10.1145/3642970.3655840",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ]
+    }
+  ]
+}
