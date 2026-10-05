@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-54703f7652b5132b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2409.16040",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2409.16040",
+    "identity_tokens": [
+      "arXiv:2409.16040"
+    ],
+    "reason": "Time-MoE reports sparse-MoE inference speed/memory, but targets time-series forecasting rather than LLMs, so scope fit is weak.",
+    "first_checked_at": "2026-10-05T02:04:35+00:00",
+    "last_checked_at": "2026-10-05T02:04:35+00:00",
+    "linked_from": [
+      "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+      "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
+    ],
+    "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts"
+  },
+  "processed_at": "2026-10-05T02:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-54703f7652b5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

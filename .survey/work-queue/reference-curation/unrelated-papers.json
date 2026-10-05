@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:01:51+00:00",
-  "record_count": 1789,
+  "updated_at": "2026-10-05T02:04:36+00:00",
+  "record_count": 1800,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25805,6 +25805,170 @@
         "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
       ],
       "title": "Does String-Based Neural MT Learn Source Syntax?"
+    },
+    "arXiv:2411.04368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04368",
+      "identity_tokens": [
+        "arXiv:2411.04368"
+      ],
+      "reason": "SimpleQA is a factuality benchmark, not an inference/serving method.",
+      "first_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md",
+        "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md"
+      ],
+      "title": "Measuring short-form factuality in large language models"
+    },
+    "arXiv:2305.17144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17144",
+      "identity_tokens": [
+        "arXiv:2305.17144"
+      ],
+      "reason": "Ghost in the Minecraft studies general agent capability/memory, not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md",
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory"
+    },
+    "arXiv:2007.01045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.01045",
+      "identity_tokens": [
+        "arXiv:2007.01045"
+      ],
+      "reason": "DAPPLE is a pipelined data-parallel method for training large models, outside inference scope.",
+      "first_checked_at": "2026-10-05T02:04:35+00:00",
+      "last_checked_at": "2026-10-05T02:04:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md"
+      ],
+      "title": "DAPPLE: a pipelined data parallel approach for training large models"
+    },
+    "arXiv:2411.04468": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04468",
+      "identity_tokens": [
+        "arXiv:2411.04468"
+      ],
+      "reason": "Magentic-One is a generalist multi-agent capability system, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md"
+      ],
+      "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks"
+    },
+    "arXiv:2401.07339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07339",
+      "identity_tokens": [
+        "arXiv:2401.07339"
+      ],
+      "reason": "CodeAgent is a repo-level code-generation agent, not an inference optimization.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+      ],
+      "title": "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges"
+    },
+    "arXiv:2006.02419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.02419",
+      "identity_tokens": [
+        "arXiv:2006.02419"
+      ],
+      "reason": "Survey of emergent multi-agent communication, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md"
+      ],
+      "title": "Emergent Multi-Agent Communication in the Deep Learning Era"
+    },
+    "arXiv:2307.04964": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.04964",
+      "identity_tokens": [
+        "arXiv:2307.04964"
+      ],
+      "reason": "RLHF/PPO training analysis, outside inference/serving scope.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.27046-performance-foundations-of-parallel-distributed-reasoning-language-models.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "Secrets of RLHF in Large Language Models Part I: PPO"
+    },
+    "arXiv:2212.12017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.12017",
+      "identity_tokens": [
+        "arXiv:2212.12017"
+      ],
+      "reason": "OPT-IML is instruction meta-learning/training, not inference/serving optimization.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+      ],
+      "title": "OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization"
+    },
+    "arXiv:1906.03741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.03741",
+      "identity_tokens": [
+        "arXiv:1906.03741"
+      ],
+      "reason": "BIGPATENT is an abstractive summarization dataset, not an inference method.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization"
+    },
+    "arXiv:2503.05592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05592",
+      "identity_tokens": [
+        "arXiv:2503.05592"
+      ],
+      "reason": "R1-Searcher uses RL to train search capability; not inference cost/latency optimization.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "R1-Searcher: Incentivizing the Search Capability in LLMs via Reinforcement Learning"
+    },
+    "arXiv:2406.08426": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08426",
+      "identity_tokens": [
+        "arXiv:2406.08426"
+      ],
+      "reason": "Survey of LLM-based text-to-SQL interfaces; capability area, not inference efficiency.",
+      "first_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "Next-Generation Database Interfaces: A Survey of LLM-Based Text-to-SQL"
     }
   }
 }

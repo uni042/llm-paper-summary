@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa760f45caf34b16-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.02419",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.02419",
+    "identity_tokens": [
+      "arXiv:2006.02419"
+    ],
+    "reason": "Survey of emergent multi-agent communication, not LLM serving efficiency.",
+    "first_checked_at": "2026-10-05T02:04:36+00:00",
+    "last_checked_at": "2026-10-05T02:04:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md"
+    ],
+    "title": "Emergent Multi-Agent Communication in the Deep Learning Era"
+  },
+  "processed_at": "2026-10-05T02:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa760f45caf3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

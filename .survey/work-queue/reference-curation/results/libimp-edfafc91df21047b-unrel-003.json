@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-edfafc91df21047b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.03741",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.03741",
+    "identity_tokens": [
+      "arXiv:1906.03741"
+    ],
+    "reason": "BIGPATENT is an abstractive summarization dataset, not an inference method.",
+    "first_checked_at": "2026-10-05T02:04:36+00:00",
+    "last_checked_at": "2026-10-05T02:04:36+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization"
+  },
+  "processed_at": "2026-10-05T02:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-edfafc91df21",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

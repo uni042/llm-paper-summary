@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa760f45caf34b16-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2109.04838",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2109.04838",
+    "identity_tokens": [
+      "arXiv:2109.04838"
+    ],
+    "reason": "Abstract reports transformer pruning speedups, but full text could not be retrieved to verify evaluation conditions and limitations.",
+    "first_checked_at": "2026-10-05T02:04:36+00:00",
+    "last_checked_at": "2026-10-05T02:04:36+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+      "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+    ],
+    "title": "Block Pruning For Faster Transformers"
+  },
+  "processed_at": "2026-10-05T02:04:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa760f45caf3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
