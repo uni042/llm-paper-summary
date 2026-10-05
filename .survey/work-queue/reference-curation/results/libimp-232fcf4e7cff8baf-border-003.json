@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-232fcf4e7cff8baf-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.10387",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.10387",
+    "identity_tokens": [
+      "arXiv:2607.10387"
+    ],
+    "reason": "This audio LLM measures compute-cost trade-offs for temporal-marker/tokenization choices, but does not establish an inference-efficiency method or serving speedup.",
+    "first_checked_at": "2026-10-05T03:38:33+00:00",
+    "last_checked_at": "2026-10-05T03:38:33+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+    ],
+    "title": "GigaChat Audio: Time-aware Large Audio Language Model"
+  },
+  "processed_at": "2026-10-05T03:38:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-232fcf4e7cff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

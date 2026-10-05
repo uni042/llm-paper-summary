@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:35:58+00:00",
-  "record_count": 774,
+  "updated_at": "2026-10-05T03:38:33+00:00",
+  "record_count": 776,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11443,6 +11443,36 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
       ],
       "title": "TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization"
+    },
+    "arXiv:2607.11990": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.11990",
+      "identity_tokens": [
+        "arXiv:2607.11990"
+      ],
+      "reason": "Sparse attribution suggests a possible inference sparsity path, but the paper does not implement a serving kernel or measure runtime/latency; the efficiency contribution remains prospective.",
+      "first_checked_at": "2026-10-05T03:38:33+00:00",
+      "last_checked_at": "2026-10-05T03:38:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "Sparse Inter-Layer Dependencies of Transformer FFN Neurons"
+    },
+    "arXiv:2607.10387": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.10387",
+      "identity_tokens": [
+        "arXiv:2607.10387"
+      ],
+      "reason": "This audio LLM measures compute-cost trade-offs for temporal-marker/tokenization choices, but does not establish an inference-efficiency method or serving speedup.",
+      "first_checked_at": "2026-10-05T03:38:33+00:00",
+      "last_checked_at": "2026-10-05T03:38:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "GigaChat Audio: Time-aware Large Audio Language Model"
     }
   }
 }
