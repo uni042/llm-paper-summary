@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-44284f106ac4f454-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3837130",
+  "reason": "Fine-tuning large language models (LLMs) often exceeds GPU memory limits, prompting systems to offload model states to CPU memory. However, existing offloaded training frameworks like ZeRO-Offload treat all parameters equally and update the full model on the CPU, causing severe GPU stalls, where fast, expensive GPUs sit idle, waiting for slow CPU updates and limited-bandwidth PCIe transfers.\n We present ZenFlow, a new offloaded training framework that decouples updates between GPU and CPU by pri",
+  "title": "ZenFlow: Enabling Stall-Free Offloading for LLM Training",
+  "identity_tokens": [
+    "DOI:10.1145/3837130"
+  ],
+  "linked_from": [
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+    "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44284f106ac4",
+  "source_precheck_request_id": null
+}

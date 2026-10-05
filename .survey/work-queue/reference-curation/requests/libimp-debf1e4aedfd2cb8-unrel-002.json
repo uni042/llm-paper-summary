@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-debf1e4aedfd2cb8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.00257",
+  "reason": "In standard transformer attention, a source token sends the same value vector to every receiver. The query determines \\emph{how much} to attend but not \\emph{what} to extract. This work introduces \\textbf{attention manifolds}: learned 2D B-spline surfaces $S_d(q_d, k_d)$ that modulate each value dimension based on the query-key interaction. Each surface is a tensor-product cubic B-spline initialized to zero, preserving pretrained behavior. Applied to LLaMA 3.2-1B-Instruct and 3B-Instruct, attention manifolds reduce",
+  "title": "Attention Manifolds: Steering or Blocking Language Models by Editing Learned B-Spline Surfaces",
+  "identity_tokens": [
+    "arXiv:2610.00257"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-debf1e4aedfd",
+  "source_precheck_request_id": null
+}
