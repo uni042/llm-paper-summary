@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-05T15:39:01+00:00",
-  "last_run_key": "library-import-154987dbaa55",
-  "last_round": "libimp-154987dbaa556578-pre01",
+  "updated_at": "2026-10-05T15:44:36+00:00",
+  "last_run_key": "library-import-ecb00746520d",
+  "last_round": "libimp-ecb00746520dbed7-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,76 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "manual-stress-2026-09-20T0340JST",
-      "round": "refcuration-stress-r1-a",
-      "axis": "structured references relevance curation stress round 1",
-      "query_summary": "Stress-test round 1 over the first 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
-      "candidate_count": 10,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 10,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 10,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2308.14352",
-        "DOI:10.1145/3651890.3672274",
-        "arXiv:2503.01840",
-        "arXiv:2402.16363",
-        "arXiv:2406.16858"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false.",
-      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0340JST-r1-a.json"
-    },
-    {
-      "run_key": "manual-stress-2026-09-20T0340JST",
-      "round": "refcuration-stress-r1-b",
-      "axis": "structured references relevance curation stress round 1",
-      "query_summary": "Stress-test round 1 over the second 10 of 20 allowed structured-reference records after current represented/rejection filtering.",
-      "candidate_count": 10,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 10,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 10,
-      "accepted_count": 3,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2408.00741",
-        "arXiv:2407.11550",
-        "arXiv:2404.14294"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Continue structured-reference curation; the ranked pool remains productive and provider_exhausted=false.",
-      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0340JST-r1-b.json"
-    },
-    {
-      "run_key": "manual-stress-2026-09-20T0346JST",
-      "round": "refcuration-stress-offset100-a",
-      "axis": "structured references stress probe at raw offset 100",
-      "query_summary": "Stress probe over a 20-record allowed buffer around raw offset 100; slice a records were evaluated with unrelated/borderline papers durably classified.",
-      "candidate_count": 7,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 7,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 7,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2410.01035",
-        "arXiv:2502.16002",
-        "arXiv:2109.10465",
-        "arXiv:2311.04934",
-        "DOI:10.1145/3731569.3764815"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Continue structured-reference exploration; strong systems papers remain common beyond the top-ranked reference layer.",
-      "source_submission": "work-queue/submissions/refcuration-stress-20260920T0346JST-offset100-a.json"
-    },
     {
       "run_key": "manual-stress-2026-09-20T0346JST",
       "round": "refcuration-stress-offset100-b",
@@ -11832,6 +11762,108 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-399f55f991ed7884-pre01",
+      "precheck_request_id": "libimp-399f55f991ed7884-pre01",
+      "run_key": "library-import-399f55f991ed",
+      "round": "libimp-399f55f991ed7884-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-399f55f991ed7884-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-399f55f991ed7884-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-a0260679bc257d27-pre01",
+      "precheck_request_id": "libimp-a0260679bc257d27-pre01",
+      "run_key": "library-import-a0260679bc25",
+      "round": "libimp-a0260679bc257d27-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-a0260679bc257d27-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-a0260679bc257d27-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-ecb00746520dbed7-pre01",
+      "precheck_request_id": "libimp-ecb00746520dbed7-pre01",
+      "run_key": "library-import-ecb00746520d",
+      "round": "libimp-ecb00746520dbed7-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-ecb00746520dbed7-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-ecb00746520dbed7-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20203,16 +20235,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-154987dbaa55",
-      "rounds": 108,
-      "candidate_count": 354,
+      "last_run_key": "library-import-ecb00746520d",
+      "rounds": 111,
+      "candidate_count": 357,
       "duplicate_filtered_count": 105,
-      "novel_candidate_count": 249,
+      "novel_candidate_count": 252,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 246,
-      "accepted_count": 246,
-      "duplicate_ratio": 0.2966101694915254,
-      "final_duplicate_ratio": 0.012048192771084338,
+      "post_final_dedupe_count": 249,
+      "accepted_count": 249,
+      "duplicate_ratio": 0.29411764705882354,
+      "final_duplicate_ratio": 0.011904761904761904,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
