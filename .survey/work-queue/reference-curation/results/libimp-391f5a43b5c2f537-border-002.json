@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-391f5a43b5c2f537-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.12189",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.12189",
+    "identity_tokens": [
+      "arXiv:2410.12189"
+    ],
+    "reason": "本文はLLM document pipelineの書換え・検証で主に出力精度を改善する仕組みで、対象inference runtimeの効率改善自体が主貢献ではない。",
+    "first_checked_at": "2026-10-05T01:26:16+00:00",
+    "last_checked_at": "2026-10-05T01:26:16+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+    ],
+    "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing"
+  },
+  "processed_at": "2026-10-05T01:26:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-391f5a43b5c2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

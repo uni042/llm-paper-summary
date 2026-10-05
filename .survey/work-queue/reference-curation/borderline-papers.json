@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:24:02+00:00",
-  "record_count": 563,
+  "updated_at": "2026-10-05T01:26:17+00:00",
+  "record_count": 568,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -8208,6 +8208,78 @@
         "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
       ],
       "title": "Anchor: Mitigating GPU Shallow Disruptions with Decoupled Memory"
+    },
+    "arXiv:2608.08239": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08239",
+      "identity_tokens": [
+        "arXiv:2608.08239"
+      ],
+      "reason": "本文はmodel-switching router評価の妥当性を検証するcontrolled pilotであり、router自体の効率改善ではない。実験も限定されscope寄与が弱い。",
+      "first_checked_at": "2026-10-05T01:26:16+00:00",
+      "last_checked_at": "2026-10-05T01:26:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "The Replay Gap: Static Evaluation of Model Switching in LLM Agents Scores the Wrong World"
+    },
+    "arXiv:2410.12189": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.12189",
+      "identity_tokens": [
+        "arXiv:2410.12189"
+      ],
+      "reason": "本文はLLM document pipelineの書換え・検証で主に出力精度を改善する仕組みで、対象inference runtimeの効率改善自体が主貢献ではない。",
+      "first_checked_at": "2026-10-05T01:26:16+00:00",
+      "last_checked_at": "2026-10-05T01:26:16+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ],
+      "title": "DocETL: Agentic Query Rewriting and Evaluation for Complex Document Processing"
+    },
+    "DOI:10.15607/rss.2024.xx.090": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.15607/rss.2024.xx.090",
+      "identity_tokens": [
+        "DOI:10.15607/rss.2024.xx.090"
+      ],
+      "reason": "候補に記載の一次DOI URLを開いたが一次論文・要旨本文を取得できず、内容をタイトルから推定しない。",
+      "first_checked_at": "2026-10-05T01:26:17+00:00",
+      "last_checked_at": "2026-10-05T01:26:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+      ],
+      "title": "Octo: An Open-Source Generalist Robot Policy"
+    },
+    "DOI:10.1145/3489048.3522661": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3489048.3522661",
+      "identity_tokens": [
+        "DOI:10.1145/3489048.3522661"
+      ],
+      "reason": "候補に記載のACM DOI一次ページから要旨を取得できず、適合性をタイトルから推測しない。",
+      "first_checked_at": "2026-10-05T01:26:17+00:00",
+      "last_checked_at": "2026-10-05T01:26:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+      ],
+      "title": "Towards Efficient Sparse Matrix Vector Multiplication on Real Processing-In-Memory Architectures"
+    },
+    "DOI:10.1145/2780584": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2780584",
+      "identity_tokens": [
+        "DOI:10.1145/2780584"
+      ],
+      "reason": "候補に記載のACM DOI一次ページから要旨を取得できず、適合性をタイトルから推測しない。",
+      "first_checked_at": "2026-10-05T01:26:17+00:00",
+      "last_checked_at": "2026-10-05T01:26:17+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2025-2511.15076-gpu-initiated-networking-for-nccl.md"
+      ],
+      "title": "Remote Memory Access Programming in MPI-3"
     }
   }
 }
