@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e8b9638484659a3a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3847665",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3847665",
+    "identity_tokens": [
+      "DOI:10.1145/3847665"
+    ],
+    "reason": "Transformers have become dominant in 3D Human Pose Estimation (HPE). However, existing Transformer-based 3D HPE backbones often encounter a trade-off between accuracy and computational efficiency. To resolve the above dilemma, in this work we leverage recent advances in state space models and utilize Mamba for high-quality and efficient long-range modeling. Nonetheless, Mamba still faces challenges in precisely exploiting local dependencies between joints. To address these issues, we propose a novel attention-free integrated spatiotemporal architecture named Integrated Mamba-HyperGCN (Pose Magic++). This architecture introduces local enhancement with HyperGCN by capturing relationships between neighboring joints and their synergies, producing new representations to complement Mamba's outputs. By adaptively fusing representations from Mamba and HyperGCN, Pose Magic++ demonstrates superior capability in learning the underlying 3D structure. To meet the requirements of real-time inference, we also provide a fully causal version. Extensive experiments show that Pose Magic++ achieves new state-of-the-art (SOTA) results ( \\(\\downarrow 1.6mm\\) ) while saving \\(74.1\\%\\) FLOPs. Notably, it significantly improves the estimation accuracy of peripheral joints without incurring extra computational cost. In addition, Pose Magic++ exhibits optimal motion consistency and strong ability to generalize to unseen sequence lengths.",
+    "first_checked_at": "2026-10-05T06:42:06+00:00",
+    "last_checked_at": "2026-10-05T06:42:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Pose Magic++: Integrating Mamba and HyperGCN for Efficient and Temporally Consistent 3D Human Pose Estimation"
+  },
+  "processed_at": "2026-10-05T06:42:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e8b963848465",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
