@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-26aea2b36f76d3cc-border-006",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2401.15947",
+  "reason": "soft routerで各tokenをtop-k expertだけへdispatchし、inactive expertを停止して総parameter数を増やしつつactivated parameterと計算量を固定するsparse LVLM。deployment計算効率へ直接関係するが、本文評価は主にvisual understanding/hallucination精度とactivated parameter数で、latency・throughput・memoryのsystem実測がないためborderline。",
+  "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+  "identity_tokens": [
+    "arXiv:2401.15947"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-26aea2b36f76",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
