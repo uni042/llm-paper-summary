@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-51-part-10-bf43659f40c3",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00022",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00022"
+      ],
+      "title": "Service Integrity of LLM-Driven Edge Web Services Under Semantic Backdoor Attacks",
+      "reason": "一次abstractはedge LLM servicesへのsemantic backdoor攻撃とservice integrity評価であり、効率化ではない。",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00022",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00024",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00024"
+      ],
+      "title": "FedMoE: Efficient Federated Fine-Tuning for MoE-Based Large Language Models",
+      "reason": "一次abstractはMoE LLMのfederated fine-tuningを効率化する研究で、inferenceではなく学習工程が対象。",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00024",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00027",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00027"
+      ],
+      "title": "DCQ: Dimension Selection and Compensation in Post-Training Quantization for Edge Vision Services",
+      "reason": "一次abstractはedge vision service向けViT post-training quantizationで、LLMではない。",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00027",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00039",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00039"
+      ],
+      "title": "Optimizing FaaS Platforms for Orchestrating MCP-Enabled Agentic Workflows",
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00039",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00060",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00060"
+      ],
+      "title": "Towards Accurate Yet Efficient Federated Learning as a Service Via Personalized Lora Rank Allocation",
+      "reason": "一次abstractはheterogeneous clients向けfederated LoRA rank allocationによるFL training効率化であり、推論ではない。",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00060",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2020-fa2b92104549-cannikin-no-lagger-of-slo-in-concurrent-multiple-lora-llm-serving.md"
+      ]
+    }
+  ]
+}
