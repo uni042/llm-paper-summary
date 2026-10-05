@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-06-part-05-d127d7d0c62a",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24102",
+      "identity_tokens": [
+        "arXiv:2606.24102"
+      ],
+      "title": "PORTER: Language-Grounded Event Representations for Portable Structured EHR Foundation Models",
+      "reason": "language-grounded EHR foundation modelsのmedical event representationが対象。推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.24102",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24756",
+      "identity_tokens": [
+        "arXiv:2606.24756"
+      ],
+      "title": "Adaptive Hebbian Memory Routing in Vision Transformers for Few-Shot Learning",
+      "reason": "Vision Transformerのfew-shot learning向けHebbian memory routingで、LLM inference対象ではない。",
+      "source_url": "https://arxiv.org/abs/2606.24756",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22794",
+      "identity_tokens": [
+        "arXiv:2606.22794"
+      ],
+      "title": "UniFS: Unified Fast-to-Slow Hierarchical Architecture for Vision-Language-Action Models",
+      "reason": "VLA向けfast-to-slow architectureでrobot policyを扱う研究。",
+      "source_url": "https://arxiv.org/abs/2606.22794",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23019",
+      "identity_tokens": [
+        "arXiv:2606.23019"
+      ],
+      "title": "ScalingAttention: Discovering Intrinsic Sparse Attention Topology for Video Diffusion Transformers",
+      "reason": "video Diffusion Transformer用sparse attentionで、LLM/DLMではなくvideo generationを高速化する研究。",
+      "source_url": "https://arxiv.org/abs/2606.23019",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23271",
+      "identity_tokens": [
+        "arXiv:2606.23271"
+      ],
+      "title": "Scaling LLM Knowledge Boundaries via Distribution-Optimized Synthesis",
+      "reason": "LLM knowledge synthesisのデータ生成/学習改善が主題で、推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.23271",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    }
+  ]
+}
