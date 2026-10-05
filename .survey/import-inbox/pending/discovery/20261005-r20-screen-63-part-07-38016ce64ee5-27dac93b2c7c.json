@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-63-part-07-38016ce64ee5",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16778",
+      "identity_tokens": [
+        "arXiv:2406.16778"
+      ],
+      "title": "Finding Transformer Circuits with Edge Pruning",
+      "reason": "Edge pruning finds faithful GPT-2 interpretability circuits; pruning is for analysis, not deployed-model inference. Primary abstract: The path to interpreting a language model often proceeds via analysis of circuits -- sparse computational subgraphs of the model that capture specific aspects of its behavior. Recent work has automated the task of discovering circuits. Yet, these methods have practical limitations, as they rely either on inefficient search algorithms or inaccurate approximations. In this paper, we frame automated circuit discovery as an optimization problem and propose *Edge Pruning* as an ef",
+      "source_url": "https://arxiv.org/abs/2406.16778",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.02764",
+      "identity_tokens": [
+        "arXiv:2307.02764"
+      ],
+      "title": "When Does Confidence-Based Cascade Deferral Suffice?",
+      "reason": "Confidence deferral is evaluated for generic classifier cascades, not LLM inference. Primary abstract: Cascades are a classical strategy to enable inference cost to vary adaptively across samples, wherein a sequence of classifiers are invoked in turn. A deferral rule determines whether to invoke the next classifier in the sequence, or to terminate prediction. One simple deferral rule employs the confidence of the current classifier, e.g., based on the maximum predicted softmax probability. Despite being oblivious to the structure of the cascade -- e.g., not modelling the error",
+      "source_url": "https://arxiv.org/abs/2307.02764",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22084",
+      "identity_tokens": [
+        "arXiv:2506.22084"
+      ],
+      "title": "Transformers are Graph Neural Networks",
+      "reason": "Theoretical connection between Transformers and GNNs without an inference optimization. Primary abstract: We establish connections between the Transformer architecture, originally introduced for natural language processing, and Graph Neural Networks (GNNs) for representation learning on graphs. We show how Transformers can be viewed as message passing GNNs operating on fully connected graphs of tokens, where the self-attention mechanism capture the relative importance of all tokens w.r.t. each-other, and positional encodings provide hints about sequential ordering or structure. T",
+      "source_url": "https://arxiv.org/abs/2506.22084",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2105.11905",
+      "identity_tokens": [
+        "arXiv:2105.11905"
+      ],
+      "title": "Exploiting Adapters for Cross-Lingual Low-Resource Speech Recognition",
+      "reason": "Adapter-based cross-lingual ASR fine-tuning is not LLM inference. Primary abstract: Cross-lingual speech adaptation aims to solve the problem of leveraging multiple rich-resource languages to build models for a low-resource target language. Since the low-resource language has limited training data, speech recognition models can easily overfit. Adapter is a versatile module that can be plugged into Transformer for parameter-efficient learning. In this paper, we propose to use adapters for parameter-efficient cross-lingual speech adaptation. Based on our previ",
+      "source_url": "https://arxiv.org/abs/2105.11905",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05173",
+      "identity_tokens": [
+        "arXiv:2502.05173"
+      ],
+      "title": "VideoRoPE: What Makes for Good Video Rotary Position Embedding?",
+      "reason": "Video rotary embedding improves video understanding/retrieval quality; no efficiency contribution is claimed. Primary abstract: While Rotary Position Embedding (RoPE) and its variants are widely adopted for their long-context capabilities, the extension of the 1D RoPE to video, with its complex spatio-temporal structure, remains an open challenge. This work first introduces a comprehensive analysis that identifies four key characteristics essential for the effective adaptation of RoPE to video, which have not been fully considered in prior work. As part of our analysis, we introduce a challenging V-NI",
+      "source_url": "https://arxiv.org/abs/2502.05173",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
