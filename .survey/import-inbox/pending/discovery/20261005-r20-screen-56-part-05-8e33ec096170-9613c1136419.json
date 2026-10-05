@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-56-part-05-8e33ec096170",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24140",
+      "identity_tokens": [
+        "arXiv:2606.24140"
+      ],
+      "title": "A Time-Reparameterized Cumulative Intensity Extrapolation Sampler for Discrete Flow Matching",
+      "reason": "Sampler for discrete flow-matching generation without an LLM-specific target; generic generative model.",
+      "source_url": "https://arxiv.org/abs/2606.24140",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24294",
+      "identity_tokens": [
+        "arXiv:2606.24294"
+      ],
+      "title": "Extreme-Case Distorted Utility under Moment Ambiguity",
+      "reason": "Robust optimization under moment ambiguity, no LLM inference/serving contribution.",
+      "source_url": "https://arxiv.org/abs/2606.24294",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24331",
+      "identity_tokens": [
+        "arXiv:2606.24331"
+      ],
+      "title": "Transformer-Based Language Models Across Domain Verticals: Architectures, Applications and Critical Assessment",
+      "reason": "Broad survey of transformer language models across domains, not a focused inference-efficiency study.",
+      "source_url": "https://arxiv.org/abs/2606.24331",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24737",
+      "identity_tokens": [
+        "arXiv:2606.24737"
+      ],
+      "title": "VSANet: View-aware Sparse Attention Network for Light Field Image Denoising",
+      "reason": "Sparse attention for light-field image denoising, a vision task rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.24737",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24747",
+      "identity_tokens": [
+        "arXiv:2606.24747"
+      ],
+      "title": "Scaling Laws for Task-Specific LLM Distillation",
+      "reason": "The primary study targets compressed deployment, but its results do not measure runtime/resource savings; that missing evidence leaves scope fit borderline.",
+      "source_url": "https://arxiv.org/abs/2606.24747",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    }
+  ]
+}
