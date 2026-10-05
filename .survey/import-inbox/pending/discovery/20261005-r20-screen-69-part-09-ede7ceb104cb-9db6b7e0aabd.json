@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-69-part-09-ede7ceb104cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.11919",
+      "identity_tokens": [
+        "arXiv:2412.11919"
+      ],
+      "title": "RetroLLM: Empowering Large Language Models to Retrieve Fine-grained Evidence within Generation",
+      "reason": "RetroLLM reduces input tokens versus multi-step RAG but is slower than Naive RAG in query latency; no broad serving speedup is established.",
+      "source_url": "https://arxiv.org/abs/2412.11919",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.05165",
+      "identity_tokens": [
+        "arXiv:2410.05165"
+      ],
+      "title": "Efficient Inference for Large Language Model-based Generative Recommendation",
+      "reason": "Measured speedups apply only to LLM-based recommendation and top-K/beam-search verification; broader generation applicability is not shown.",
+      "source_url": "https://arxiv.org/abs/2410.05165",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19113",
+      "identity_tokens": [
+        "arXiv:2406.19113"
+      ],
+      "title": "MegIS: High-Performance, Energy-Efficient, and Low-Cost Metagenomic Analysis with In-Storage Processing",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.19113. MegIS accelerates metagenomic sequence search, outside LLM inference.",
+      "source_url": "https://arxiv.org/abs/2406.19113",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.17245",
+      "identity_tokens": [
+        "arXiv:2406.17245"
+      ],
+      "title": "Unlocking Continual Learning Abilities in Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.17245. MIGU targets continual-learning updates/training, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2406.17245",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03496",
+      "identity_tokens": [
+        "arXiv:2406.03496"
+      ],
+      "title": "Wings: Learning Multimodal LLMs without Text-only Forgetting",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.03496. Wings addresses multimodal training and text-only forgetting, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2406.03496",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ]
+    }
+  ]
+}
