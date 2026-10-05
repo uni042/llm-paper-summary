@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-84c0c8d3ffb07df7-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.18988",
+  "reason": "Retrieve-then-generate pipelines are commonly used to produce deep-research answers for open-ended questions, but retrieval alone is insufficient: LLMs must organize noisy and fragmented evidence into comprehensive, well-cited answers. We refer to this process as evidence synthesis. However, direct generation often underuses evidence, misaligns citations, and collapses diverse information into shallow summaries, exposing an evidence synthesis gap between retrieval and generation. Thus, we propose DeepWeaver, a novel framework that weaves noisy retrieved evidence into comprehensive answers by maintaining Thought Block Chains (TBCs), a structured representation that groups claims, salient information, keywords, and supporting evidence. DeepWeaver uses subordinate TBCs to inspect residual evidence, commit TBC revisions, and discover new claims before final generation. We evaluate DeepWeaver on open-ended QA over both knowledge bases and the web, and introduce LoQA, a high-density benchmark for evidence synthesis. Across multiple LLMs, DeepWeaver improves content sufficiency, citation grounding, and detail preservation on LoQA, while achieving deeper insights and higher citation quality on DeepResearch Bench. These results show that evidence weaving is an effective mechanism for bridging retrieval and generation in open-ended QA. Our code is available at https://github.com/KlozeWang/DeepWeaver.",
+  "title": "DeepWeaver: Bridging the Evidence Synthesis Gap in Open-Ended Question Answering",
+  "identity_tokens": [
+    "arXiv:2608.18988"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+    "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84c0c8d3ffb0",
+  "source_precheck_request_id": null
+}
