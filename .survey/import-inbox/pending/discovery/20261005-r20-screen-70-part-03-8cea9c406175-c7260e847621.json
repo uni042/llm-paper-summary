@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-70-part-03-8cea9c406175",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info15120792",
+      "identity_tokens": [
+        "DOI:10.3390/info15120792"
+      ],
+      "title": "Leveraging Large Language Models in Tourism: A Comparative Study of the Latest GPT Omni Models and BERT NLP for Customer Review Classification and Sentiment Analysis",
+      "reason": "tourism review sentiment classificationのaccuracy比較であり、LLM inference optimizationを扱わない。",
+      "source_url": "https://doi.org/10.3390/info15120792",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.04267",
+      "identity_tokens": [
+        "arXiv:2409.04267"
+      ],
+      "title": "An overview of domain-specific foundation model: key technologies, applications and challenges",
+      "reason": "domain-specific foundation modelsのcustomization surveyで、特定のLLM serving/inference efficiency研究ではない。",
+      "source_url": "https://arxiv.org/abs/2409.04267",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3649219",
+      "identity_tokens": [
+        "DOI:10.1145/3649219"
+      ],
+      "title": "H3D-Transformer: A Heterogeneous 3D (H3D) Computing Platform for Transformer Model Acceleration on Edge Devices",
+      "reason": "関連評価はBERT/GPT-2とspecialized acceleratorに限られ、一次本文でsystem boundaryやmodel/throughput/quality条件を検証できないためborderline。",
+      "source_url": "https://doi.org/10.1145/3649219",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNNLS.2023.3347227",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2023.3347227"
+      ],
+      "title": "A Lightweight Group Transformer-Based Time Series Reduction Network for Edge Intelligence and Its Application in Industrial RUL Prediction",
+      "reason": "industrial remaining-useful-life time-series prediction向け軽量Transformerであり、LLM inferenceではない。",
+      "source_url": "https://doi.org/10.1109/TNNLS.2023.3347227",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2406.02536",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2406.02536"
+      ],
+      "title": "Mitigate Position Bias in Large Language Models via Scaling a Single Dimension",
+      "reason": "一次arXiv abstractを直接確認。提案はhidden-stateの一次元scaleでlong-context position bias/QA精度を改善する手法で、推論効率・runtime/memory削減を扱わない。",
+      "source_url": "https://doi.org/10.48550/arXiv.2406.02536",
+      "first_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "last_checked_at": "2026-10-05T10:58:19.689348+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    }
+  ]
+}
