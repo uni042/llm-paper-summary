@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-11-part-07-53225347f9f2",
+  "reference_main_sha": "6d500013a9a75faa34205e40b590cfb80817666f",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01054",
+      "identity_tokens": [
+        "arXiv:2610.01054"
+      ],
+      "title": "Capturing In-Context Learning Dynamics with Task Operators",
+      "reason": "本文はquality・mechanistic resultsが中心で、同じtaskの複数queryに対するdemonstration prefill削減、latency、token/FLOP/memoryを直接測定していない。効率効果は論文中でも将来利用の可能性として述べられる。",
+      "source_url": "https://arxiv.org/abs/2610.01054",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01058",
+      "identity_tokens": [
+        "arXiv:2610.01058"
+      ],
+      "title": "MOMAT: Mixture of Multiple Atlases for Low-Power Jailbreak Defense of Quantized LLMs",
+      "reason": "著者自身がboard-level Raspberry Pi energy estimateとcircuit-level CiM simulation energyは絶対値を直接比較できないと述べる。主貢献は安全filterでありLLM inference本体の効率でなく、CiM hardwareはsimulated。",
+      "source_url": "https://arxiv.org/abs/2610.01058",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01103",
+      "identity_tokens": [
+        "arXiv:2610.01103"
+      ],
+      "title": "ParaCalib: Semantically Calibrated Paralinguistic Modeling for Depression Detection",
+      "reason": "audio-language modelを使う抑うつ検出応用で、推論効率やserving systemを扱わない。",
+      "source_url": "https://arxiv.org/abs/2610.01103",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01105",
+      "identity_tokens": [
+        "arXiv:2610.01105"
+      ],
+      "title": "Extreme Length Generalization in a Compact Recurrent Architecture for One-Shot Exploration",
+      "reason": "小型recurrent architectureをalgorithmic sequence taskで評価する研究で、LLM inference/servingの対象ではない。",
+      "source_url": "https://arxiv.org/abs/2610.01105",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01110",
+      "identity_tokens": [
+        "arXiv:2610.01110"
+      ],
+      "title": "How Much Can Language Models Gain from Test-Time Computation?",
+      "reason": "新たなmodel inference/serving optimization mechanismではなくtask-level candidate selection/cost audit。measured API price and task-specific replay results do not establish runtime throughput or system efficiency. Relevance is adjacent rather than a clear engine/system contribution.",
+      "source_url": "https://arxiv.org/abs/2610.01110",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    }
+  ]
+}
