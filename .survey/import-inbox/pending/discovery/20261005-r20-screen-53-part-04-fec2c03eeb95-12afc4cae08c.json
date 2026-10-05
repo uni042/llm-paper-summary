@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-53-part-04-fec2c03eeb95",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TAI.2025.3646146",
+      "identity_tokens": [
+        "DOI:10.1109/TAI.2025.3646146"
+      ],
+      "title": "ConSignformer: Conformer-Based Framework for Continuous Sign Language Recognition",
+      "reason": "Continuous sign-language recognition is a video/vision sequence task.",
+      "source_url": "https://doi.org/10.1109/TAI.2025.3646146",
+      "first_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "last_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2026.3678524",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2026.3678524"
+      ],
+      "title": "TransformKV: Optimizing Multi-Turn Conversational Services in LLMs via KV Cache Transformation",
+      "reason": "The mechanism, workloads, baselines and limits need primary full-text verification.",
+      "source_url": "https://doi.org/10.1109/TC.2026.3678524",
+      "first_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "last_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2026.3689022",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2026.3689022"
+      ],
+      "title": "Low Bit-Width LLM Acceleration via Symmetric Lookup Format and Compute-in-Decoding Paradigm",
+      "reason": "Title suggests low-bit LLM acceleration, but no primary abstract was available in packet or publisher retrieval.",
+      "source_url": "https://doi.org/10.1109/TC.2026.3689022",
+      "first_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "last_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCC.2026.3689276",
+      "identity_tokens": [
+        "DOI:10.1109/TCC.2026.3689276"
+      ],
+      "title": "BalanceMoE: An Efficient Dynamic Load Balance Framework to Accelerate Mixture-of-Expert Training",
+      "reason": "MoE load balancing accelerates training, which is outside the inference-only scope.",
+      "source_url": "https://doi.org/10.1109/TCC.2026.3689276",
+      "first_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "last_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCC.2026.3696613",
+      "identity_tokens": [
+        "DOI:10.1109/TCC.2026.3696613"
+      ],
+      "title": "Optimizing Server Allocation for Multi-Tenant GPU Inference With Dynamic Batching: A Queueing Theoretic Approach",
+      "reason": "Generic DNN batching/server allocation evaluated on ResNet-50 and RetinaNet; no LLM workload or LLM-specific result.",
+      "source_url": "https://doi.org/10.1109/TCC.2026.3696613",
+      "first_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "last_checked_at": "2026-10-05T10:02:47.132010+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
+      ]
+    }
+  ]
+}
