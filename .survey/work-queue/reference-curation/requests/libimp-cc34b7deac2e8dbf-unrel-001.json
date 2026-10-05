@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-cc34b7deac2e8dbf-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.27922",
+  "reason": "要旨は「Autoregressive video diffusion models enable streaming generation through sliding-window attention, but each generated block is conditioned on previously generated content, causing appearance and motion errors to propagate recursively over time. Historical key-value (KV) memory preserves earlier subject and scene states and」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+  "title": "DensityKV: Density-Guided KV Cache Compression for Long Video Generation",
+  "identity_tokens": [
+    "arXiv:2608.27922"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+    "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc34b7deac2e",
+  "source_precheck_request_id": null
+}
