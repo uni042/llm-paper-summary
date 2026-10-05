@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Unreasonable Ineffectiveness of the Deeper Layers",
+      "source_url": "https://arxiv.org/abs/2403.17887",
+      "year": 2024,
+      "published": "2024-03-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 270,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How is knowledge stored in an LLM's weights? We study this via layer pruning: if removing a certain layer does not affect model performance in common question-answering benchmarks, then the weights in that layer are not necessary for storing the knowledge needed to answer those questions. To find these unnecessary parameters, we identify the optimal block of layers to prune by considering similarity across layers; then, to\"heal\"the damage, we perform a small amount of finetuning. Surprisingly, with this method we find minimal degradation of performance until after a large fraction (up to half) of the layers are removed for some common open-weight models. From a scientific perspective, the robustness of these LLMs to the deletion of layers implies either that current pretraining methods are not properly leveraging the parameters in the deeper layers of the network or that the shallow layers play a critical role in storing knowledge. For our study, we use parameter-efficient finetuning (PEFT) methods, specifically quantization and Low Rank Adapters (QLoRA), such that each of our experiments can be performed on a single 40GB A100 GPU.",
+      "identifiers": [
+        "SemanticScholar:2ccbafd636184c6edd83e585359514923b6cf849"
+      ],
+      "semantic_scholar_id": "2ccbafd636184c6edd83e585359514923b6cf849",
+      "canonical_id": "arXiv:2403.17887",
+      "arxiv_id": "2403.17887",
+      "doi": "10.48550/arXiv.2403.17887",
+      "authors": [
+        "Andrey Gromov",
+        "Kushal Tirumala",
+        "Hassan Shapourian",
+        "Paolo Glorioso",
+        "Daniel A. Roberts"
+      ],
+      "priority": 280,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 270,
+        "citation_count": 270,
+        "total": 280,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 923,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "open-weight LLMでlayer similarityに基づき連続blockを削除し、軽量なQLoRA healingを行うlayer pruningを評価する。最大で層の約半分を削除しても複数QA benchmarkで性能劣化が小さく、著者は推論memoryとlatency改善を実配備上の効果として示すためLLM推論圧縮の対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でlayer-similarity based block pruning、QLoRA healing、最大約半数layer削除時のbenchmark評価、inference memory/latency改善という実用上の含意を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Token-Budget-Aware LLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2412.18547",
+      "year": 2024,
+      "published": "2024-12-24",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 238,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning is critical for large language models (LLMs) to excel in a wide range of tasks. While methods like Chain-of-Thought (CoT) reasoning and enhance LLM performance by decomposing problems into intermediate steps, they also incur significant overhead in token usage, leading to increased costs. We find that the reasoning process of current LLMs is unnecessarily lengthy and it can be compressed by including a reasonable token budget in the prompt, but the choice of token budget plays a crucial role in the actual compression effectiveness. We then propose a token-budget-aware LLM reasoning framework that dynamically adjusts the number of reasoning tokens based on the reasoning complexity of each problem. Experiments show that our method effectively reduces token costs in CoT reasoning with only a slight performance reduction, offering a practical solution to balance efficiency and accuracy in LLM reasoning. Code: https://github.com/GeniusHTX/TALE",
+      "identifiers": [
+        "SemanticScholar:3bbf541c2a3ce0ffaed3703cd486f0e1b2febb27"
+      ],
+      "semantic_scholar_id": "3bbf541c2a3ce0ffaed3703cd486f0e1b2febb27",
+      "canonical_id": "arXiv:2412.18547",
+      "arxiv_id": "2412.18547",
+      "doi": "10.48550/arXiv.2412.18547",
+      "authors": [
+        "Tingxu Han",
+        "Zhen-Ting Wang",
+        "Chun-Rong Fang",
+        "Shi-Yu Zhao",
+        "Shi-Qing Ma",
+        "Zhen-Yu Chen"
+      ],
+      "priority": 248,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 238,
+        "citation_count": 238,
+        "total": 248,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 650,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "CoTが不要に長くtoken costを増やす問題に対し、問題ごとのreasoning complexityからtoken budgetを動的推定しpromptで推論長を制御する。少量の性能低下でreasoning token costを削減するtest-time compute制御を直接扱うため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でtoken elasticity、problem-specific token budget estimation、budget-guided reasoning、CoT token costとaccuracy trade-off評価を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory",
+      "source_url": "https://arxiv.org/abs/2509.25140",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 245,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing adoption of large language model agents in persistent real-world roles, they naturally encounter continuous streams of tasks. A key limitation, however, is their failure to learn from the accumulated interaction history, forcing them to discard valuable insights and repeat past errors. We propose ReasoningBank, a novel memory framework that distills generalizable reasoning strategies from an agent's self-judged successful and failed experiences. At test time, an agent retrieves relevant memories from ReasoningBank to inform its interaction and then integrates new learnings back, enabling it to become more capable over time. Building on this powerful experience learner, we further introduce memory-aware test-time scaling (MaTTS), which accelerates and diversifies this learning process by scaling up the agent's interaction experience. By allocating more compute to each task, the agent generates abundant, diverse experiences that provide rich contrastive signals for synthesizing higher-quality memory. The better memory in turn guides more effective scaling, establishing a powerful synergy between memory and test-time scaling. Across web browsing and software engineering benchmarks, ReasoningBank consistently outperforms existing memory mechanisms that store raw trajectories or only successful task routines, improving both effectiveness and efficiency; MaTTS further amplifies these gains. These findings establish memory-driven experience scaling as a new scaling dimension, enabling agents to self-evolve with emergent behaviors naturally arise. Our code can be found at https://github.com/google-research/reasoning-bank.",
+      "identifiers": [
+        "SemanticScholar:9c03c7b9ae5bc182134edd736c6d48946f4aaaaf"
+      ],
+      "semantic_scholar_id": "9c03c7b9ae5bc182134edd736c6d48946f4aaaaf",
+      "canonical_id": "arXiv:2509.25140",
+      "arxiv_id": "2509.25140",
+      "doi": "10.48550/arXiv.2509.25140",
+      "authors": [
+        "Siru Ouyang",
+        "Jun Yan",
+        "I-Hung Hsu",
+        "Yan-Fei Chen",
+        "Ke Jiang",
+        "Zifeng Wang",
+        "Ru-Jun Han",
+        "Long T. Le",
+        "Samira Daruki",
+        "Xiang-Ru Tang",
+        "Vishwanadh Tirumalashetty",
+        "George Lee",
+        "Mahsan Rofouei",
+        "Hang-Fei Lin",
+        "Jiawei Han",
+        "Chen-Yu Lee",
+        "Tomas Pfister"
+      ],
+      "priority": 245,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 245,
+        "citation_count": 245,
+        "total": 245,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 371,
+        "matched_prestigious_venue": null
+      },
+      "reason": "agentの成功・失敗trajectoryから再利用可能なreasoning memoryを抽出し、test timeに検索して次のinteractionへ投入する。WebArenaではNo Memoryより成功率を改善しつつ平均interaction stepも9.7から8.3へ減らすなど、agentic inferenceで外部memory再利用により実行step効率を改善するため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でexperience-to-memory extraction/retrieval loop、memory-aware test-time scaling、web/software-engineering benchmark、ReasoningBankによるeffectiveness/efficiency改善を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LLaMA-Omni: Seamless Speech Interaction with Large Language Models",
+      "source_url": "https://arxiv.org/abs/2409.06666",
+      "year": 2024,
+      "published": "2024-09-10",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 235,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Models like GPT-4o enable real-time interaction with large language models (LLMs) through speech, significantly enhancing user experience compared to traditional text-based interaction. However, there is still a lack of exploration on how to build speech interaction models based on open-source LLMs. To address this, we propose LLaMA-Omni, a novel model architecture designed for low-latency and high-quality speech interaction with LLMs. LLaMA-Omni integrates a pretrained speech encoder, a speech adaptor, an LLM, and a streaming speech decoder. It eliminates the need for speech transcription, and can simultaneously generate text and speech responses directly from speech instructions with extremely low latency. We build our model based on the latest Llama-3.1-8B-Instruct model. To align the model with speech interaction scenarios, we construct a dataset named InstructS2S-200K, which includes 200K speech instructions and corresponding speech responses. Experimental results show that compared to previous speech-language models, LLaMA-Omni provides better responses in both content and style, with a response latency as low as 226ms. Additionally, training LLaMA-Omni takes less than 3 days on just 4 GPUs, paving the way for the efficient development of speech-language models in the future.",
+      "identifiers": [
+        "SemanticScholar:218ddd5ca9e959c91ad6b48a379397e4cb0d47d8"
+      ],
+      "semantic_scholar_id": "218ddd5ca9e959c91ad6b48a379397e4cb0d47d8",
+      "canonical_id": "arXiv:2409.06666",
+      "arxiv_id": "2409.06666",
+      "doi": "10.48550/arXiv.2409.06666",
+      "authors": [
+        "Qingkai Fang",
+        "Shoutao Guo",
+        "Yan Zhou",
+        "Zhengrui Ma",
+        "Shaolei Zhang",
+        "Yang Feng"
+      ],
+      "priority": 245,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 235,
+        "citation_count": 235,
+        "total": 245,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 755,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "Llama-3.1-8Bを核にspeech encoder/adaptor/LLM/streaming speech decoderを統合し、textとspeechを同時生成する。非自己回帰streaming decoderとchunked playbackでresponse latencyを最短226 msまで抑え、real-time speech LLM推論latencyを直接扱うため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次論文情報でspeech encoder/adaptor、Llama-3.1-8B、CTC-based non-autoregressive streaming speech decoder、simultaneous text/speech generation、226 ms response latencyを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5fc9a1984a50",
+    "round": "libimp-5fc9a1984a50ffd6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5fc9a1984a50ffd6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5fc9a1984a50ffd6-pre01.json",
+    "receipt": "sha256:e4f6dc54df9f69a743c02961c787ea16fec12e385bf50a4f431929e43ed8c7a9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5fc9a1984a50",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
