@@ -1,0 +1,184 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1945-scheduled-chat-45/r01",
+  "reference_main_sha": "ea70fecd57c9ef688b9fe71af37c94d00900bf73",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2024.3373763",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2024.3373763",
+        "arXiv:2403.14123"
+      ],
+      "title": "AI and Memory Wall",
+      "reason": "LLM servingを含むTransformerでmemory bandwidthが主要bottleneckになることをhardware scalingとencoder/decoder解析から示し、architecture・training・deploymentの再設計を論じる。推論memory hierarchyへ直接関連するが、新規runtime/system方式の実装評価ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2403.14123",
+      "body_check": "full_text_relevance_review: 一次論文情報でFLOPSとDRAM/interconnect bandwidthのscaling gap、decoder Transformer servingのmemory-bandwidth bottleneck解析、deployment redesign議論を確認。",
+      "first_checked_at": "2026-10-05T20:02:00+09:00",
+      "last_checked_at": "2026-10-05T20:02:00+09:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1503.01007",
+      "identity_tokens": [
+        "arXiv:1503.01007"
+      ],
+      "title": "Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets",
+      "reason": "stack-augmented recurrent networkにtrainable memoryを加え、countingやmemorizationを要するalgorithmic sequenceを学習させる研究。LLM/Transformer推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1503.01007",
+      "body_check": "abstract_screen_only: 一次論文要旨でalgorithmic sequence learningとtrainable stack memoryが主題と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T20:03:00+09:00",
+      "last_checked_at": "2026-10-05T20:03:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.08387",
+      "identity_tokens": [
+        "arXiv:2110.08387"
+      ],
+      "title": "Generated Knowledge Prompting for Commonsense Reasoning",
+      "reason": "LMで外部知識を生成してpromptへ追加しcommonsense reasoning精度を改善する能力研究。推論latency・memory・serving効率化を目的・評価としない。",
+      "source_url": "https://arxiv.org/abs/2110.08387",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgenerated knowledge promptingと4 commonsense benchmarkの性能改善が主題と確認し、推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T20:04:00+09:00",
+      "last_checked_at": "2026-10-05T20:04:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2204.03645",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2204.03645",
+        "arXiv:2204.03645"
+      ],
+      "title": "DaViT: Dual Attention Vision Transformers",
+      "reason": "spatial window attentionとchannel group attentionを組み合わせるcomputer vision Transformerで、ImageNet分類・detection等の視覚性能が主題。LLM推論systemを最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2204.03645",
+      "body_check": "abstract_screen_only: 一次論文書誌・要旨でvision Transformer architectureと画像認識評価が主題と確認し、LLM推論system対象外。",
+      "first_checked_at": "2026-10-05T20:05:00+09:00",
+      "last_checked_at": "2026-10-05T20:05:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3643681",
+      "identity_tokens": [
+        "DOI:10.1145/3643681",
+        "arXiv:2308.00708"
+      ],
+      "title": "VeriGen: A Large Language Model for Verilog Code Generation",
+      "reason": "CodeGen等をVerilog corpusでfine-tuneしhardware code generationの構文・機能正確性を改善する研究。主貢献はtrainingと生成品質で、LLM inference runtime/serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.00708",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でVerilog fine-tuning、testbenchによるfunctional correctness、CodeGen-16Bの生成品質が主題と確認し、推論system対象外。",
+      "first_checked_at": "2026-10-05T20:06:00+09:00",
+      "last_checked_at": "2026-10-05T20:06:00+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.12208-vortex-bridging-extreme-compression-and-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2022.findings-naacl.55",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.findings-naacl.55",
+        "arXiv:2112.07916"
+      ],
+      "title": "LongT5: Efficient Text-To-Text Transformer for Long Sequences",
+      "reason": "T5 encoderのfull attentionをlocal/TGlobal sparse attentionへ置換し、長入力でattention計算・memoryを抑えつつsummarization/QA性能を改善する。長文脈Transformerの効率的attention architectureとして推論計算量に直接関係するため対象内。",
+      "source_url": "https://arxiv.org/abs/2112.07916",
+      "body_check": "full_text_relevance_review: 一次arXiv本文情報でlocal attentionとTransient Global attention、長入力scaling、T5との計算・memory効率比較、summarization/QA評価を確認。",
+      "first_checked_at": "2026-10-05T20:07:00+09:00",
+      "last_checked_at": "2026-10-05T20:07:00+09:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1807.11205",
+      "identity_tokens": [
+        "arXiv:1807.11205"
+      ],
+      "title": "Highly Scalable Deep Learning Training System with Mixed-Precision: Training ImageNet in Four Minutes",
+      "reason": "mixed precisionと大規模分散によりImageNet trainingを4分へ短縮するtraining system研究。評価対象は学習throughput/timeでLLM推論systemではない。",
+      "source_url": "https://arxiv.org/abs/1807.11205",
+      "body_check": "abstract_screen_only: 題名・一次論文情報からImageNetのdistributed mixed-precision training高速化が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T20:08:00+09:00",
+      "last_checked_at": "2026-10-05T20:08:00+09:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.08066",
+      "identity_tokens": [
+        "arXiv:2504.08066"
+      ],
+      "title": "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search",
+      "reason": "agentic tree searchとexperiment managerで科学研究を自動化し、論文生成・査読結果を評価するagent能力研究。agent servingのlatency・memory・scheduler最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2504.08066",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でautonomous scientific discovery、agentic tree search、workshop submission評価が主題と確認し推論system対象外。",
+      "first_checked_at": "2026-10-05T20:09:00+09:00",
+      "last_checked_at": "2026-10-05T20:09:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2906388.2906396",
+      "identity_tokens": [
+        "DOI:10.1145/2906388.2906396"
+      ],
+      "title": "MCDNN: An Approximation-Based Execution Framework for Deep Stream Processing Under Resource Constraints",
+      "reason": "resource-constrained stream processingで複数DNN approximationを選択してthroughput/accuracy制約を満たす一般DNN execution framework。LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://doi.org/10.1145/2906388.2906396",
+      "body_check": "abstract_screen_only: 一次書誌情報でdeep stream processing、approximation selection、resource constraintsが主題と確認し、LLM推論system対象外。",
+      "first_checked_at": "2026-10-05T20:10:00+09:00",
+      "last_checked_at": "2026-10-05T20:10:00+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+      ],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17216",
+      "identity_tokens": [
+        "arXiv:2305.17216"
+      ],
+      "title": "Generating Images with Multimodal Language Models",
+      "reason": "frozen LLMをimage encoder/decoderへembedding mappingで接続し、画像生成・retrieval・multimodal dialogue能力を実現する研究。効率的mapping networkには触れるが推論runtime・memory・serving効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2305.17216",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmultimodal capabilityとtext-to-image generation/retrievalが主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T20:11:00+09:00",
+      "last_checked_at": "2026-10-05T20:11:00+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "worklist_rank": 31
+    }
+  ]
+}
