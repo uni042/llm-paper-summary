@@ -1,0 +1,169 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-dbbc2e2108145d1d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-dbbc2e210814",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2401.15947",
+    "arXiv:2503.04697"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "a8973362339dc3173c4609f1a2bf339fc6c94415",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T16:35:57.485804+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2401.15947",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.04697",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2503.04697"
+    }
+  ],
+  "results": [
+    {
+      "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2401.15947",
+      "year": 2024,
+      "published": "2024-01-29",
+      "venue": "IEEE transactions on multimedia",
+      "citation_count": 384,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, remarkable progress has been made in scaling up Large Language Models (LLMs) through the use of the sparse Mixture-of-Expert (MoE) layers without significantly increasing computational cost. However, the transition from a pre-trained LLM to a sparse Large Vision-Language Model (LVLM) with MoE remains an open challenge. Directly fine-tuning an LLM to a sparse LVLM often leads to training collapse, characterized by (1) a large modality feature distribution gap and (2) expert load imbalance. This paper proposes a three-stage decoupled weight training process. In the first two stages, the model learns to adapt the LLM to an LVLM. In the third stage, the FFN weights from the second stage are used as lossless initialization for expert weights, effectively constructing a sparse model with a vast number of parameters while maintaining constant computational cost. Through extensive ablation experiments, we derive three empirical guidelines and propose a sparse LVLM termed MoE-LLaVA. MoE-LLaVA is a MoE-based sparse LVLM architecture, which uniquely activates only the top-$k$ experts through routers during deployment, keeping the remaining experts inactive. Extensive experiments demonstrate that MoE-LLaVA outperforms LLaVA-1.5-7B by 4.6 on average across nine visual understanding benchmarks. Notably, MoE-LLaVA has only 2.2B active parameters, achieving an average performance of 66.7, surpassing LLaVA-1.5-7B’s 65.5. Our work establishes a baseline for sparse LVLMs and provides empirical guidelines for exploring the sparse LVLMs.",
+      "identifiers": [
+        "SemanticScholar:cd1d7f5c4ce2d31ce9ee72db165a8272624da7d3"
+      ],
+      "semantic_scholar_id": "cd1d7f5c4ce2d31ce9ee72db165a8272624da7d3",
+      "canonical_id": "arXiv:2401.15947",
+      "arxiv_id": "2401.15947",
+      "doi": "10.1109/TMM.2026.3654458",
+      "authors": [
+        "Bin Lin",
+        "Zhen-Yu Tang",
+        "Yang Ye",
+        "Jia-Xi Cui",
+        "Bin Zhu",
+        "Peng Jin",
+        "Jinfa Huang",
+        "Junwu Zhang",
+        "Mu-Nan Ning",
+        "Li Yuan"
+      ],
+      "priority": 384,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 384,
+        "citation_count": 384,
+        "total": 384,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 980,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2401.15947",
+      "identity_tokens": [
+        "id:DOI:10.1109/tmm.2026.3654458",
+        "id:SemanticScholar:cd1d7f5c4ce2d31ce9ee72db165a8272624da7d3",
+        "id:arXiv:2401.15947",
+        "title:moellava mixture of experts for large visionlanguage models",
+        "url:https://arxiv.org/abs/2401.15947"
+      ],
+      "record": {
+        "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2401.15947",
+        "year": 2024,
+        "published": "2024-01-29",
+        "venue": "IEEE transactions on multimedia",
+        "citation_count": 384,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recently, remarkable progress has been made in scaling up Large Language Models (LLMs) through the use of the sparse Mixture-of-Expert (MoE) layers without significantly increasing computational cost. However, the transition from a pre-trained LLM to a sparse Large Vision-Language Model (LVLM) with MoE remains an open challenge. Directly fine-tuning an LLM to a sparse LVLM often leads to training collapse, characterized by (1) a large modality feature distribution gap and (2) expert load imbalance. This paper proposes a three-stage decoupled weight training process. In the first two stages, the model learns to adapt the LLM to an LVLM. In the third stage, the FFN weights from the second stage are used as lossless initialization for expert weights, effectively constructing a sparse model with a vast number of parameters while maintaining constant computational cost. Through extensive ablation experiments, we derive three empirical guidelines and propose a sparse LVLM termed MoE-LLaVA. MoE-LLaVA is a MoE-based sparse LVLM architecture, which uniquely activates only the top-$k$ experts through routers during deployment, keeping the remaining experts inactive. Extensive experiments demonstrate that MoE-LLaVA outperforms LLaVA-1.5-7B by 4.6 on average across nine visual understanding benchmarks. Notably, MoE-LLaVA has only 2.2B active parameters, achieving an average performance of 66.7, surpassing LLaVA-1.5-7B’s 65.5. Our work establishes a baseline for sparse LVLMs and provides empirical guidelines for exploring the sparse LVLMs.",
+        "identifiers": [
+          "SemanticScholar:cd1d7f5c4ce2d31ce9ee72db165a8272624da7d3"
+        ],
+        "semantic_scholar_id": "cd1d7f5c4ce2d31ce9ee72db165a8272624da7d3",
+        "canonical_id": "arXiv:2401.15947",
+        "arxiv_id": "2401.15947",
+        "doi": "10.1109/TMM.2026.3654458",
+        "authors": [
+          "Bin Lin",
+          "Zhen-Yu Tang",
+          "Yang Ye",
+          "Jia-Xi Cui",
+          "Bin Zhu",
+          "Peng Jin",
+          "Jinfa Huang",
+          "Junwu Zhang",
+          "Mu-Nan Ning",
+          "Li Yuan"
+        ],
+        "priority": 384,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 384,
+          "citation_count": 384,
+          "total": 384,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 980,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2510024acc6b3fa6d30b92b1ccb159c791a35b2dba60a88cd4c6bbb9c1a496d1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
