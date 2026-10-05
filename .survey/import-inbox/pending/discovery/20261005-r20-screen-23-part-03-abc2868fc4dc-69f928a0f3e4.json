@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-23-part-03-abc2868fc4dc",
+  "reference_main_sha": "b5564ebf35e031dfac425a9d05f890d23ba0e178",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22341",
+      "identity_tokens": [
+        "arXiv:2608.22341"
+      ],
+      "title": "TransHands: Repurposing Human Pose Encoders as Hand Pose Encoders",
+      "reason": "The paper concerns hand-pose estimation encoders and contains no LLM inference contribution.",
+      "source_url": "https://arxiv.org/abs/2608.22341",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22506",
+      "identity_tokens": [
+        "arXiv:2608.22506"
+      ],
+      "title": "Kernel Token Contradiction: a Fast and Principled Approach for LLM Claim Uncertainty Quantification",
+      "reason": "The efficiency target is post-generation uncertainty monitoring, not reducing LLM generation/serving cost itself. Its fit to this LLM inference-efficiency survey is adjacent and weak.",
+      "source_url": "https://arxiv.org/abs/2608.22506",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22577",
+      "identity_tokens": [
+        "arXiv:2608.22577"
+      ],
+      "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents",
+      "reason": "The intervention reallocates a fixed visual budget for task quality rather than reducing LLM inference resources; added selection overhead is material. Scope fit is weak.",
+      "source_url": "https://arxiv.org/abs/2608.22577",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15439/2026F0210",
+      "identity_tokens": [
+        "DOI:10.15439/2026F0210"
+      ],
+      "title": "Enabling Agentic AI across the Cloud-Edge Computing Continuum: A Research Roadmap",
+      "reason": "The paper is a broad cloud-edge agentic-AI research roadmap rather than a concrete LLM inference/serving efficiency result.",
+      "source_url": "https://doi.org/10.15439/2026F0210",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64823/ijter.2621020",
+      "identity_tokens": [
+        "DOI:10.64823/ijter.2621020"
+      ],
+      "title": "The Entropy of Artificial Cognition: Deciphering the Anthropogenic Footprint and Multilingual Energetic Tax of Large Language Models",
+      "reason": "The abstract synthesizes existing environmental-impact studies and recommends Green-AI practices; it does not present a primary LLM inference optimization or measured serving system.",
+      "source_url": "https://doi.org/10.64823/ijter.2621020",
+      "first_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "last_checked_at": "2026-10-05T06:35:56.850760+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
