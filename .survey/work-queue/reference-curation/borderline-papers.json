@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:22:02+00:00",
-  "record_count": 1993,
+  "updated_at": "2026-10-05T15:25:19+00:00",
+  "record_count": 1998,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30845,6 +30845,86 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OxygenREC: An Instruction-Following Generative Framework for E-commerce Recommendation"
+    },
+    "arXiv:2409.14713": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.14713",
+      "identity_tokens": [
+        "arXiv:2409.14713"
+      ],
+      "reason": "efficient multimodal modelという動機はあるが、本文のinference比較ではPhantom Dimensionによるtokens/s差は約10%にとどまり、独立した推論最適化としての一般性・利得が弱い。",
+      "first_checked_at": "2026-10-05T15:25:14+00:00",
+      "last_checked_at": "2026-10-05T15:25:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Phantom of Latent for Large Language and Vision Models"
+    },
+    "arXiv:2507.07996": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.07996",
+      "identity_tokens": [
+        "arXiv:2507.07996"
+      ],
+      "reason": "層skipで推論計算を減らす機構は対象に近いが、本文のMCTS最適化は候補出力を正解と比較して探索する設定で、labelを持たないserving時に適用可能な方式やend-to-end探索overheadが確立されていない。",
+      "first_checked_at": "2026-10-05T15:25:17+00:00",
+      "last_checked_at": "2026-10-05T15:25:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Skip a Layer or Loop it? Test-Time Depth Adaptation of Pretrained LLMs"
+    },
+    "arXiv:2507.04636": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.04636",
+      "identity_tokens": [
+        "arXiv:2507.04636"
+      ],
+      "reason": "実運用されたedge NLP圧縮として隣接する一方、対象はBERTのNLU/recommendationであり、生成LLM推論の具体的な性能測定ではないためscope適合が限定的。",
+      "first_checked_at": "2026-10-05T15:25:17+00:00",
+      "last_checked_at": "2026-10-05T15:25:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Put Teacher in Student's Shoes: Cross-Distillation for Ultra-compact Model Compression Framework"
+    },
+    "arXiv:2601.07351": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07351",
+      "identity_tokens": [
+        "arXiv:2601.07351"
+      ],
+      "reason": "Diffusion LMの推論形態は関連するが、本文は主に学習法と品質改善を評価し、提案固有の推論高速化・資源削減を定量比較していない。",
+      "first_checked_at": "2026-10-05T15:25:19+00:00",
+      "last_checked_at": "2026-10-05T15:25:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Hard Masks: Progressive Token Evolution for Diffusion Language Models"
+    },
+    "arXiv:2502.17535": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.17535",
+      "identity_tokens": [
+        "arXiv:2502.17535"
+      ],
+      "reason": "圧縮後の能力保持という問題設定は関連するが、著者自身の実装・推論効率測定を伴わないブログ形式の仮説で、独立した効率化手法としての寄与が弱い。",
+      "first_checked_at": "2026-10-05T15:25:19+00:00",
+      "last_checked_at": "2026-10-05T15:25:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Lottery LLM Hypothesis, Rethinking What Abilities Should LLM Compression Preserve?"
     }
   }
 }

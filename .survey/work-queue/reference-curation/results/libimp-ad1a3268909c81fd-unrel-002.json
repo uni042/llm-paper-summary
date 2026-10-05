@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad1a3268909c81fd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.23926",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.23926",
+    "identity_tokens": [
+      "arXiv:2510.23926"
+    ],
+    "reason": "The primary abstract studies quantized-parameter optimization during quantization-aware pretraining/fine-tuning; reported gains concern training time and accuracy, not inference efficiency.",
+    "first_checked_at": "2026-10-05T15:25:18+00:00",
+    "last_checked_at": "2026-10-05T15:25:18+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+      "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+    ],
+    "title": "Improving the Straight-Through Estimator with Zeroth-Order Information"
+  },
+  "processed_at": "2026-10-05T15:25:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad1a3268909c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

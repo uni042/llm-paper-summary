@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad1a3268909c81fd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.09861",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.09861",
+    "identity_tokens": [
+      "arXiv:2511.09861"
+    ],
+    "reason": "The primary abstract restricts the study to thermal imbalance and concurrent multi-GPU LLM training; it does not propose or evaluate inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T15:25:18+00:00",
+    "last_checked_at": "2026-10-05T15:25:18+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+      "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md"
+    ],
+    "title": "Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs"
+  },
+  "processed_at": "2026-10-05T15:25:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad1a3268909c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

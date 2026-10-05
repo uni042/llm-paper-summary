@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-03781fb7f11e7ccc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.09261",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.09261",
+    "identity_tokens": [
+      "arXiv:2504.09261"
+    ],
+    "reason": "一次要旨の対象はvisual autoregressive image modelingのhead-aware KV compressionで、言語生成LLM/VLMの推論効率化ではない。",
+    "first_checked_at": "2026-10-05T15:25:13+00:00",
+    "last_checked_at": "2026-10-05T15:25:13+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.14256-zipcache.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+      "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+    ],
+    "title": "Head-Aware KV Cache Compression for Efficient Visual Autoregressive Modeling"
+  },
+  "processed_at": "2026-10-05T15:25:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-03781fb7f11e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
