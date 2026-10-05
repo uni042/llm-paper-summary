@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-88-part-06-4876cf6fd2c8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s43588-025-00811-y",
+      "identity_tokens": [
+        "DOI:10.1038/s43588-025-00811-y"
+      ],
+      "title": "Rethinking chemical research in the age of large language models",
+      "reason": "一次論文の公開copyのabstractは化学研究におけるLLM活用・評価・倫理課題を論じるPerspective。推論/serving効率の方法・評価ではない。",
+      "source_url": "https://doi.org/10.1038/s43588-025-00811-y",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04213",
+      "identity_tokens": [
+        "arXiv:2506.04213"
+      ],
+      "title": "FullDiT2: Efficient In-Context Conditioning for Video Diffusion Transformers",
+      "reason": "video diffusion transformerの条件付け・推論を高速化する研究で、言語モデルの推論対象ではない。",
+      "source_url": "https://arxiv.org/abs/2506.04213",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.113278",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.113278"
+      ],
+      "title": "Integrating large language models with cross-modal data fusion for advanced intelligent transportation systems in sustainable cities development",
+      "reason": "LLMを用いた自律航行向けcross-modal environmental perceptionを提案。MoE expert prefetchは通信遅延を扱うが、論文の主評価は知覚精度で、LLM inference/serving効率化ではない。",
+      "source_url": "https://doi.org/10.1016/j.asoc.2025.113278",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/widm.70019",
+      "identity_tokens": [
+        "DOI:10.1002/widm.70019"
+      ],
+      "title": "Long Document Classification in the Transformer Era: A Survey on Challenges, Advances, and Open Issues",
+      "reason": "long-document classificationとTransformer入力長の課題をsurveyするが、LLM inference/serving効率の方法を対象としない。",
+      "source_url": "https://doi.org/10.1002/widm.70019",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16922",
+      "identity_tokens": [
+        "arXiv:2504.16922"
+      ],
+      "title": "Generalized Neighborhood Attention: Multi-dimensional Sparse Attention at the Speed of Light",
+      "reason": "主な応用評価はFLUX/HunyuanVideo等の画像・動画diffusion生成におけるsparse attention。LLM推論でない。",
+      "source_url": "https://arxiv.org/abs/2504.16922",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    }
+  ]
+}
