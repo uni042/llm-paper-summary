@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3098d6ed513a38dd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.cell.2026.08.026",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.cell.2026.08.026",
+    "identity_tokens": [
+      "DOI:10.1016/j.cell.2026.08.026"
+    ],
+    "reason": "一次要旨: Over the past two decades, human aging has been characterized across DNA methylation, transcriptomic, proteomic, and clinical modalities, yet no benchmark evaluates whether AI systems can interpret these heterogeneous data types in the context of aging biology. We introduce LongevityBench, an open suite of 17 tasks spanning five biodata domains, and use it to assess 18 frontier AI systems from six developer teams. Despite recent advances in AI, no single model dominates all tasks, with omics-based age prediction being the hardest task regardless of scale. To test whether these gaps can be closed without frontier-scale resources, we fine-tuned a family of five multitask Longevity-LLMs on domain-specific aging data. The compact (0.6B-9B parameters) Longevity-LLMs matched or exceeded far larger frontier systems on LongevityBench, showing that general-purpose language models can be adapted to structured-omics tasks. We publicly release the benchmark, models, and Longevity Claw, an agentic research interface for aging researchers.",
+    "first_checked_at": "2026-10-05T07:32:29+00:00",
+    "last_checked_at": "2026-10-05T07:32:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "An open benchmark and language models for AI in aging biology."
+  },
+  "processed_at": "2026-10-05T07:32:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3098d6ed513a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

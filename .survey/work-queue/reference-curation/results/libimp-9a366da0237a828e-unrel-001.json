@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a366da0237a828e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01743",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01743",
+    "identity_tokens": [
+      "arXiv:2609.01743"
+    ],
+    "reason": "一次要旨: Edge vision models are difficult to deploy on resource-constrained hardware, making low-bit post-training quantization (PTQ) attractive. In practice, standard FP32 training often produces heavy-tailed activation distributions whose outliers destabilize activation quantization: preserving the full range wastes quantization bins on rare extremes, while aggressive clipping causes information loss. Existing solutions typically rely on quantization-aware training (QAT), which adds training complexity and bit-width coupling, or advanced PTQ procedures that repair the model after training. We present SCULPT (Statistical Clipping and Uniform Loss for Post-Training), a training-time method that improves PTQ readiness during ordinary FP32 fine-tuning. SCULPT combines a topology-aware activation regularizer that suppresses quantization-hostile skewness and kurtosis with a stable percentile-based clipping mechanism that learns deployment-ready activation bounds. Unlike QAT, SCULPT does not simulate quantization during optimization; unlike post hoc outlier-repair PTQ methods, it does not require runtime activation transformations. The learned clipping bounds can be exported directly into a standard PTQ workflow for low-bit deployment, including INT8 and lower-bit settings such as W4A8.",
+    "first_checked_at": "2026-10-05T07:32:29+00:00",
+    "last_checked_at": "2026-10-05T07:32:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "SCULPT: Training Edge Vision Models for Post-Training Quantization Readiness"
+  },
+  "processed_at": "2026-10-05T07:32:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a366da0237a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

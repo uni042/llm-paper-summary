@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:30:12+00:00",
-  "record_count": 1064,
+  "updated_at": "2026-10-05T07:32:29+00:00",
+  "record_count": 1071,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -16217,6 +16217,147 @@
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
       "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time"
+    },
+    "DOI:10.1016/j.neucom.2026.134973": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134973",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134973"
+      ],
+      "reason": "一次要旨はLLM inference servingのload balancing surveyと確認でき、関連性は高い。しかし出版社ページでは本文は取得できず、section snippetsだけではtaxonomy/evaluationの必要本文確認を満たせないためborderline。",
+      "first_checked_at": "2026-10-05T07:32:28+00:00",
+      "last_checked_at": "2026-10-05T07:32:28+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.17276-opt-tree-speculative-decoding-with-adaptive-draft-tree-structure.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.19379-marconi-prefix-caching-for-the-era-of-hybrid-llms.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Load balancing for large language model inference serving: A control and learning oriented survey"
+    },
+    "DOI:10.1016/j.apm.2026.117304": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.apm.2026.117304",
+      "identity_tokens": [
+        "DOI:10.1016/j.apm.2026.117304"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:32:28+00:00",
+      "last_checked_at": "2026-10-05T07:32:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "AI-enabled momentum and heat transfer optimisation in a fusion reactor cooling system pipe with varying surface roughness"
+    },
+    "DOI:10.1016/j.asoc.2026.116520": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.116520",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.116520"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:32:28+00:00",
+      "last_checked_at": "2026-10-05T07:32:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "FoTa-Net: Boundary-conditioned spatial–spectral coordination for large mask image inpainting"
+    },
+    "DOI:10.1016/j.buildenv.2026.115268": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.buildenv.2026.115268",
+      "identity_tokens": [
+        "DOI:10.1016/j.buildenv.2026.115268"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:32:28+00:00",
+      "last_checked_at": "2026-10-05T07:32:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Investigating indoor CO2 heterogeneity: The impact of sensor location on CO2-based IAQ classification and presence detection in Brazilian educational buildings"
+    },
+    "DOI:10.1007/s10586-026-06557-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10586-026-06557-0",
+      "identity_tokens": [
+        "DOI:10.1007/s10586-026-06557-0"
+      ],
+      "reason": "入力packetにabstractがなく、一次source_urlを確認。Web一次source取得ではabstract本文を取得できず、題名から関連性を推測してunrelated扱いしない。",
+      "first_checked_at": "2026-10-05T07:32:29+00:00",
+      "last_checked_at": "2026-10-05T07:32:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "SAGE-DQN SLAM: semantic-aware and expert-guided DQN for visual SLAM parameter adaptation"
+    },
+    "DOI:10.1007/s10994-026-07131-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10994-026-07131-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-026-07131-w"
+      ],
+      "reason": "一次要旨はattention variantのcomputational trade-offs/efficient attentionを広くsurveyし、GPT/LLaMAなども列挙するが、LLM inference/serving効率に限定した研究ではない。対象範囲の弱い一致を解消する一次本文の重点箇所を取得できずborderlineとする。",
+      "first_checked_at": "2026-10-05T07:32:29+00:00",
+      "last_checked_at": "2026-10-05T07:32:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "What is Attention Mechanism? A Comprehensive Survey of Attention Methods and Transformer Models"
+    },
+    "arXiv:2610.00025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00025",
+      "identity_tokens": [
+        "arXiv:2610.00025"
+      ],
+      "reason": "小型LLM/量子化のdeployment適性に隣接するが、この研究の評価対象はtask quality/capabilityのみで推論効率の測定・改善をしないため弱い適合。",
+      "first_checked_at": "2026-10-05T07:32:29+00:00",
+      "last_checked_at": "2026-10-05T07:32:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Measuring the Microtask Eligibility Gap: When Is an Off-the-Shelf SLM Enough for an Agent Harness?"
     }
   }
 }

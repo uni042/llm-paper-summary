@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9a366da0237a828e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.00025",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.00025",
+    "identity_tokens": [
+      "arXiv:2610.00025"
+    ],
+    "reason": "小型LLM/量子化のdeployment適性に隣接するが、この研究の評価対象はtask quality/capabilityのみで推論効率の測定・改善をしないため弱い適合。",
+    "first_checked_at": "2026-10-05T07:32:29+00:00",
+    "last_checked_at": "2026-10-05T07:32:29+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Measuring the Microtask Eligibility Gap: When Is an Off-the-Shelf SLM Enough for an Agent Harness?"
+  },
+  "processed_at": "2026-10-05T07:32:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9a366da0237a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
