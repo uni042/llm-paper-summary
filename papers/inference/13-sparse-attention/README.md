@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（47本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -153,6 +153,10 @@
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長動画や画像列を扱う視覚言語モデル（Vision-Language モデル; VLM）では、最初の出力を生成する前のプリフィルで全入力トークン間の注意を計算するため、入力長が100万トークン級になると二乗計算量が支配的になる。テキストLLM向け疎注意をそのまま使うと、動画トークンの時空間構造や、テキストと映像の境界で注意パターンが変わる性質を取り逃す。
+
+- **2025-02 · [SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference](2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md)**  
+  実装：[✓](https://github.com/thu-ml/SpargeAttn) ・ リポジトリ内被引用：3  
+  固定窓など特定の疎patternを仮定せず、言語、画像、動画で異なる注意機構 patternをオンラインに推定することを狙う。論文は既存の密/sparse 注意機構実装に対して条件により2.5～5倍級の注意処理高速化を示し、画像・動画・言語のエンドツーエンド指標を維持する。
 
 - **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
   実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：2  
