@@ -35,10 +35,15 @@
   "selection_reason": "LLMのoperator/layerごとに専用hardware unitを配置し、dataflowで直接接続してoff-chip memory accessを減らすFPGA spatial acceleratorを解析・実装する。GPT生成推論のprefillで既存FPGA overlay比2.2倍、decodeでNVIDIA A100比1.9倍高速・5.7倍energy efficientを報告しており、LLM推論hardware-system最適化を直接扱う。",
   "semantic_scholar_id": "47beae741f6a4470dbd286d4f3f05ba2031c52d2",
   "source_url": "https://arxiv.org/abs/2312.15159",
-  "status": "ready",
+  "status": "superseded",
   "title": "Understanding the Potential of FPGA-based Spatial Acceleration for Large Language Model Inference",
   "type": "research",
   "venue": "ACM Transactions on Reconfigurable Technology and Systems",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-05T23:16:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md",
+  "represented_canonical_id": "arXiv:2312.15159",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
