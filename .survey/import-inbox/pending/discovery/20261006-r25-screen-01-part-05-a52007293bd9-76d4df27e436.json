@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r25-screen-01-part-05-a52007293bd9",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37386",
+      "identity_tokens": [
+        "arXiv:2609.37386"
+      ],
+      "title": "Anatomy-Aware Prediction of Bronchoscopic Accessibility from 3D CT",
+      "reason": "3D CTから気管支鏡の到達可能性を予測する医療画像手法。LLMの推論・serving対象外。",
+      "source_url": "https://arxiv.org/abs/2609.37386",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37899",
+      "identity_tokens": [
+        "arXiv:2609.37899"
+      ],
+      "title": "Scaling Zero-Order Pretraining through Model Sharding",
+      "reason": "LLMのzero-order pretrainingをshardingで拡張する学習時の計算手法で、推論・serving改善ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37899",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38111",
+      "identity_tokens": [
+        "arXiv:2609.38111"
+      ],
+      "title": "From Routing Signals to Selective Review: Visual regrounding in MoE VLMs",
+      "reason": "MoE VLMのvisual regrounding/selective reviewによる信頼性・回答品質研究で、実行コスト低減を主張しない。",
+      "source_url": "https://arxiv.org/abs/2609.38111",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38246",
+      "identity_tokens": [
+        "arXiv:2609.38246"
+      ],
+      "title": "ModalFidelity: Routing Modalities for Deepfake Detection on a Budget",
+      "reason": "予算制約下のdeepfake検出のためのmodality routingであり、LLM推論最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.38246",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38335",
+      "identity_tokens": [
+        "arXiv:2609.38335"
+      ],
+      "title": "E2E-SWE: Benchmarking LLMs on Building Working Codebases from Scratch",
+      "reason": "一次本文で手法・評価を確認した結果、主題はLLM training/safety/benchmark/model capabilityであり、対象のinference efficiency/serving改善と技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.38335",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    }
+  ]
+}
