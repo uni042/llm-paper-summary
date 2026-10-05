@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ecb00746520dbed7-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1109/mm.2024.3373763",
+  "reason": "LLM servingを含むTransformerでmemory bandwidthが主要bottleneckになることをhardware scalingとencoder/decoder解析から示し、architecture・training・deploymentの再設計を論じる。推論memory hierarchyへ直接関連するが、新規runtime/system方式の実装評価ではないためborderline。",
+  "title": "AI and Memory Wall",
+  "identity_tokens": [
+    "DOI:10.1109/mm.2024.3373763",
+    "arXiv:2403.14123"
+  ],
+  "linked_from": [
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ecb00746520d",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
