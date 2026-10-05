@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad74d02b3999b70e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.08921",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.08921",
+    "identity_tokens": [
+      "arXiv:2408.08921"
+    ],
+    "reason": "GraphRAGのindexing、retrieval、generation、応用・評価を体系化するsurveyで、RAG品質・知識構造活用が主題。LLM推論runtime、KV cache、serving、kernel等の性能最適化方式を提案・評価する論文ではない。",
+    "first_checked_at": "2026-10-05T02:52:34+00:00",
+    "last_checked_at": "2026-10-05T16:24:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+    ],
+    "title": "Graph Retrieval-Augmented Generation: A Survey"
+  },
+  "processed_at": "2026-10-05T16:24:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad74d02b3999",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

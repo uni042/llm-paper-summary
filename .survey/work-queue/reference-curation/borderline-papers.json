@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:19:13+00:00",
-  "record_count": 2050,
+  "updated_at": "2026-10-05T16:24:20+00:00",
+  "record_count": 2048,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6720,21 +6720,6 @@
       ],
       "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
     },
-    "DOI:10.1145/224056.224064": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/224056.224064",
-      "identity_tokens": [
-        "DOI:10.1145/224056.224064"
-      ],
-      "reason": "指定ACM DOIを開いたが、一次出版社ページへのredirect先がこの取得手段から利用不可で、usable abstractを取得できなかった。",
-      "first_checked_at": "2026-10-05T00:58:25+00:00",
-      "last_checked_at": "2026-10-05T00:58:25+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
-      ],
-      "title": "Informed prefetching and caching"
-    },
     "arXiv:1801.10198": {
       "classification": "borderline",
       "canonical_id": "arXiv:1801.10198",
@@ -9112,21 +9097,6 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling"
-    },
-    "arXiv:2502.14786": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.14786",
-      "identity_tokens": [
-        "arXiv:2502.14786"
-      ],
-      "reason": "Vision-language encoder family offers model-size cost/performance choices, but its contribution/evaluation is vision representation/training rather than LLM serving; scope is adjacent and weak.",
-      "first_checked_at": "2026-10-05T01:59:05+00:00",
-      "last_checked_at": "2026-10-05T01:59:05+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
-        "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
-      ],
-      "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
     },
     "arXiv:1612.04426": {
       "classification": "borderline",

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d9645de449d02374-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1805.04623",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1805.04623",
+    "identity_tokens": [
+      "arXiv:1805.04623"
+    ],
+    "reason": "LSTM language modelが過去contextをどう利用するかをshuffle/replace/drop ablationで分析するinterpretability/capability研究。約200 tokenの利用範囲やnear/far context差を示すが、推論runtime・cache・serving最適化方式ではない。",
+    "first_checked_at": "2026-10-05T16:07:16+00:00",
+    "last_checked_at": "2026-10-05T16:24:19+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+    ],
+    "title": "Sharp Nearby, Fuzzy Far Away: How Neural Language Models Use Context"
+  },
+  "processed_at": "2026-10-05T16:24:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d9645de449d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e6d103c5ba891fc-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1507.06149",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1507.06149",
+    "identity_tokens": [
+      "arXiv:1507.06149"
+    ],
+    "reason": "MNIST/AlexNet等のcomputer vision DNNで類似neuronを除去するdata-free pruning研究。最大85%/35%のparameter削減を示すがLLM/Transformer推論を最終適用先としない。",
+    "first_checked_at": "2026-10-05T02:49:32+00:00",
+    "last_checked_at": "2026-10-05T16:24:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+    ],
+    "title": "Data-free Parameter Pruning for Deep Neural Networks"
+  },
+  "processed_at": "2026-10-05T16:24:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e6d103c5ba8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
