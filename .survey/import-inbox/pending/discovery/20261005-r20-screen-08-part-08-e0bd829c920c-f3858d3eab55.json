@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-08-part-08-e0bd829c920c",
+  "reference_main_sha": "6768a2bc0c3a0c25d31da0568ec192c4f389513d",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13470",
+      "identity_tokens": [
+        "arXiv:2609.13470"
+      ],
+      "title": "OrchSLM: Probing the Dynamics of Small Language Model Orchestration",
+      "reason": "non-interactive SLM orchestration is cost-motivated, but the paper is a routing-behavior probe without measured inference-cost reduction; insufficient for concrete followup. Borderline.(",
+      "source_url": "https://arxiv.org/abs/2609.13470",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13544",
+      "identity_tokens": [
+        "arXiv:2609.13544"
+      ],
+      "title": "PEAT: Pseudo-Error Assessment for GPU Kernel Validation in DNN Training",
+      "reason": "一次要旨: Deep neural networks (DNNs) are widely adopted in various fields, driving an emerging trend in developing software stacks associated with DNN training systems. For example, many codes have been ported across different frameworks or developed to leverage the computing power of GPUs or domain-specific accelerators. However, validating a kernel implementation in DNN training is time-consuming and generally requires mass",
+      "source_url": "https://arxiv.org/abs/2609.13544",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13577",
+      "identity_tokens": [
+        "arXiv:2609.13577"
+      ],
+      "title": "Comparative Framework Analysis for Enterprise Generative AI Applications: Chatbot, Automation, and Oracle-to-PostgreSQL Migration",
+      "reason": "一次要旨: This study compares framework suitability across three classes of enterprise generative AI applications: a documentation-based development assistant, an email and inquiry automation system, and an Oracle-to-PostgreSQL migration tool. The analysis evaluates component boundaries, orchestration, policy retrieval or reasoning, model integration, deterministic validation, persistence, observability, and operational effici",
+      "source_url": "https://arxiv.org/abs/2609.13577",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    }
+  ]
+}
