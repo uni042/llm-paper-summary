@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-03-part-08-be1fdb1a6959",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18354",
+      "identity_tokens": [
+        "arXiv:2305.18354"
+      ],
+      "title": "LLMs and the Abstraction and Reasoning Corpus: Successes, Failures, and the Importance of Object-based Representations",
+      "reason": "GPT-4 ARC abstract reasoning能力とobject-based representationの精度比較で、推論効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2305.18354",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.1985.6312218",
+      "identity_tokens": [
+        "DOI:10.1109/tc.1985.6312218"
+      ],
+      "title": "Speculative computation, parallelism, and functional programming",
+      "reason": "一次IEEE DOIページがinaccessible。primary abstractを取得できず、検索抜粋には依存しない。",
+      "source_url": "https://doi.org/10.1109/TC.1985.6312218",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.emnlp-main.498",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.emnlp-main.498"
+      ],
+      "title": "MultiDoc2Dial: Modeling Dialogues Grounded in Multiple Documents",
+      "reason": "multi-document grounded dialogue task/datasetとbaseline modelの研究で、効率/servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2109.12595",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.12686-residual-vector-long-context-recall.md"
+      ]
+    }
+  ]
+}
