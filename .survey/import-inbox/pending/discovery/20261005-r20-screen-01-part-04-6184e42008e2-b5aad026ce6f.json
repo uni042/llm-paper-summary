@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-01-part-04-6184e42008e2",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34783",
+      "identity_tokens": [
+        "arXiv:2609.34783"
+      ],
+      "title": "TQTS-Bench: A Multi-Syntax Benchmark for Text-to-Query over Time-Series Databases",
+      "reason": "TQTS-Bench is a benchmark for LLM text-to-time-series-database querying; it evaluates task quality rather than inference cost.",
+      "source_url": "https://arxiv.org/abs/2609.34783",
+      "first_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "last_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35210",
+      "identity_tokens": [
+        "arXiv:2609.35210"
+      ],
+      "title": "Understanding On-Policy Distillation: A Mechanistic Interpretability Perspective via Sparse Crosscoders",
+      "reason": "This paper uses sparse crosscoders to interpret what on-policy distillation changes internally; it is an interpretability study, not an inference method.",
+      "source_url": "https://arxiv.org/abs/2609.35210",
+      "first_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "last_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35909",
+      "identity_tokens": [
+        "arXiv:2609.35909"
+      ],
+      "title": "Cheap to Hypothesize, Costly to Verify: The Defense Surface of Agentic Vulnerability Discovery",
+      "reason": "RedHerring is a cybersecurity defense that intentionally diverts agent verification effort to safe decoys; resource diversion is an attack/defense outcome, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.35909",
+      "first_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "last_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35954",
+      "identity_tokens": [
+        "arXiv:2609.35954"
+      ],
+      "title": "ROSS: Relearning from Self-Generated Rollouts through Selective Supervision",
+      "reason": "ROSS is a post-training method that learns from generated rollouts; the abstract does not present reduced inference cost as a contribution.",
+      "source_url": "https://arxiv.org/abs/2609.35954",
+      "first_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "last_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36246",
+      "identity_tokens": [
+        "arXiv:2609.36246"
+      ],
+      "title": "Learning from Teacher Continuations at Student States",
+      "reason": "Learning from teacher continuations is a post-training/distillation method; it does not describe a serving or inference-efficiency technique.",
+      "source_url": "https://arxiv.org/abs/2609.36246",
+      "first_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "last_checked_at": "2026-10-05T05:10:07.149431+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
