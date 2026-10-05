@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-823645a7a1dd5ed7-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1088/2631-8695/ae8bff",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1088/2631-8695/ae8bff",
+    "identity_tokens": [
+      "DOI:10.1088/2631-8695/ae8bff"
+    ],
+    "reason": "本文未取得でefficiency contribution/評価条件を確定できない。",
+    "first_checked_at": "2026-10-05T10:20:15+00:00",
+    "last_checked_at": "2026-10-05T10:20:15+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "Causal-Dependency State Space Prompting: bounded-memory long-horizon reasoning for streaming IT incidents"
+  },
+  "processed_at": "2026-10-05T10:20:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-823645a7a1dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

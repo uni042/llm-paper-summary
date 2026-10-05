@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ee38091d5d6141a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.14711",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.14711",
+    "identity_tokens": [
+      "arXiv:2607.14711"
+    ],
+    "reason": "VideoSEMA is a video-understanding vision architecture, not an LLM inference/serving contribution.",
+    "first_checked_at": "2026-10-05T10:20:15+00:00",
+    "last_checked_at": "2026-10-05T10:20:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "VideoSEMA: a scalable and efficient Mamba-like attention for video understanding"
+  },
+  "processed_at": "2026-10-05T10:20:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ee38091d5d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

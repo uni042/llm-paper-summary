@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:17:51+00:00",
-  "record_count": 1378,
+  "updated_at": "2026-10-05T10:20:16+00:00",
+  "record_count": 1382,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -21237,6 +21237,65 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Adaptive Multi-Step Lookahead Decoding for Diffusion Language Models"
+    },
+    "arXiv:2607.16117": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16117",
+      "identity_tokens": [
+        "arXiv:2607.16117"
+      ],
+      "reason": "Although language-model encoding and compute budgets are related to inference cost, the authors explicitly state that the models are encoder-based and do not evaluate autoregressive generation. The results therefore do not establish a decoder-only LLM inference/serving efficiency contribution; fit to this survey scope remains weak.",
+      "first_checked_at": "2026-10-05T10:20:15+00:00",
+      "last_checked_at": "2026-10-05T10:20:15+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Rate-Utility Frontiers for Language Encodings: Comparing Tokens, Bytes, and Pixels Under Controlled Linguistic Content"
+    },
+    "DOI:10.53941/jaia.2026.100012": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.53941/jaia.2026.100012",
+      "identity_tokens": [
+        "DOI:10.53941/jaia.2026.100012"
+      ],
+      "reason": "The primary DOI/publisher route was inaccessible for article text in this check. The abstract establishes broad topic relevance but does not identify a concrete evaluated inference-efficiency contribution; no body could be reviewed.",
+      "first_checked_at": "2026-10-05T10:20:15+00:00",
+      "last_checked_at": "2026-10-05T10:20:15+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Towards a Unified Framework for Large–Small Model Collaboration in Cloud–Edge Systems"
+    },
+    "DOI:10.1088/2631-8695/ae8bff": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2631-8695/ae8bff",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae8bff"
+      ],
+      "reason": "本文未取得でefficiency contribution/評価条件を確定できない。",
+      "first_checked_at": "2026-10-05T10:20:15+00:00",
+      "last_checked_at": "2026-10-05T10:20:15+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Causal-Dependency State Space Prompting: bounded-memory long-horizon reasoning for streaming IT incidents"
+    },
+    "DOI:10.1117/12.3119043": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3119043",
+      "identity_tokens": [
+        "DOI:10.1117/12.3119043"
+      ],
+      "reason": "primary full textを確認できずmethods/baseline/hardware/evaluation detailsを検証できない。",
+      "first_checked_at": "2026-10-05T10:20:16+00:00",
+      "last_checked_at": "2026-10-05T10:20:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Efficient inference and computational optimization of large language models for intelligent signal processing"
     }
   }
 }

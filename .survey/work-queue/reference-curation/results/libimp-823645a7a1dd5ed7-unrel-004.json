@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-823645a7a1dd5ed7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.18961",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.18961",
+    "identity_tokens": [
+      "arXiv:2609.18961"
+    ],
+    "reason": "一次要旨はPEFT training対象層を選ぶ方法で、inference efficiencyではない。",
+    "first_checked_at": "2026-10-05T10:20:16+00:00",
+    "last_checked_at": "2026-10-05T10:20:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "MechSparse: Mechanism-Guided Sparse PEFT Selection Is Task-Shaped"
+  },
+  "processed_at": "2026-10-05T10:20:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-823645a7a1dd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

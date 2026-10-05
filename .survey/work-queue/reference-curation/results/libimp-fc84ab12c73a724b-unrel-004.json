@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc84ab12c73a724b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.13425",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.13425",
+    "identity_tokens": [
+      "arXiv:2607.13425"
+    ],
+    "reason": "一次要旨はattention reweightingによるdata-efficient adaptationで推論効率の測定・改善ではない。",
+    "first_checked_at": "2026-10-05T10:20:16+00:00",
+    "last_checked_at": "2026-10-05T10:20:16+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+    ],
+    "title": "Data-Efficient Adaptation of LLMs via Attention Head Reweighting"
+  },
+  "processed_at": "2026-10-05T10:20:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc84ab12c73a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
