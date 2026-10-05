@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-63-part-05-38016ce64ee5",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.18252",
+      "identity_tokens": [
+        "arXiv:2410.18252"
+      ],
+      "title": "Asynchronous RLHF: Faster and More Efficient Off-Policy RL for Language Models",
+      "reason": "Asynchronous RLHF accelerates training runs, not deployed model inference. Primary abstract: The dominant paradigm for RLHF is online and on-policy RL: synchronously generating from the large language model (LLM) policy, labelling with a reward model, and learning using feedback on the LLM's own outputs. While performant, this paradigm is computationally inefficient. Inspired by classical deep RL literature, we propose separating generation and learning in RLHF. This enables asynchronous generation of new samples while simultaneously training on old samples, leading ",
+      "source_url": "https://arxiv.org/abs/2410.18252",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23771",
+      "identity_tokens": [
+        "arXiv:2410.23771"
+      ],
+      "title": "What is Wrong with Perplexity for Long-context Language Modeling?",
+      "reason": "LongPPL evaluates long-context quality and LongCE fine-tunes models; not inference efficiency. Primary abstract: Handling long-context inputs is crucial for large language models (LLMs) in tasks such as extended conversations, document summarization, and many-shot in-context learning. While recent approaches have extended the context windows of LLMs and employed perplexity (PPL) as a standard evaluation metric, PPL has proven unreliable for assessing long-context capabilities. The underlying cause of this limitation has remained unclear. In this work, we provide a comprehensive explanat",
+      "source_url": "https://arxiv.org/abs/2410.23771",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.16737",
+      "identity_tokens": [
+        "arXiv:2408.16737"
+      ],
+      "title": "Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling",
+      "reason": "Optimizes synthetic data generation and LLM fine-tuning under training budget; not inference serving. Primary abstract: Training on high-quality synthetic data from strong language models (LMs) is a common strategy to improve the reasoning performance of LMs. In this work, we revisit whether this strategy is compute-optimal under a fixed inference budget (e.g., FLOPs). To do so, we investigate the trade-offs between generating synthetic data using a stronger but more expensive (SE) model versus a weaker but cheaper (WC) model. We evaluate the generated data across three key metrics: coverage, ",
+      "source_url": "https://arxiv.org/abs/2408.16737",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11528",
+      "identity_tokens": [
+        "arXiv:2502.11528"
+      ],
+      "title": "A Survey of Personalized Large Language Models: Progress and Future Directions",
+      "reason": "Survey concerns model personalization by prompts, adapters and alignment, not inference efficiency. Primary abstract: Large Language Models (LLMs) excel in handling general knowledge tasks, yet they struggle with user-specific personalization, such as understanding individual emotions, writing styles, and preferences. Personalized Large Language Models (PLLMs) tackle these challenges by leveraging individual user data, such as user profiles, historical dialogues, content, and interactions, to deliver responses that are contextually relevant and tailored to each user's specific needs. This is",
+      "source_url": "https://arxiv.org/abs/2502.11528",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01618",
+      "identity_tokens": [
+        "arXiv:2505.01618"
+      ],
+      "title": "Don't be lazy: CompleteP enables compute-efficient deep transformers",
+      "reason": "Compute-efficient parameterizations for LLM training are explicitly training-only. Primary abstract: We study compute efficiency of LLM training when using different parameterizations, i.e., rules for adjusting model and optimizer hyperparameters (HPs) as model size changes. Some parameterizations fail to transfer optimal base HPs (such as learning rate) across changes in model depth, requiring practitioners to either re-tune these HPs as they scale up (expensive), or accept sub-optimal training when re-tuning is prohibitive. Even when they achieve HP transfer, we develop th",
+      "source_url": "https://arxiv.org/abs/2505.01618",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    }
+  ]
+}
