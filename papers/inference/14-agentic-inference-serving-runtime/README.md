@@ -140,7 +140,7 @@
   エージェント実行グラフから将来再利用を予測してKV追出しとCPU→GPU先読みを制御し、SGLang HiCache比最大2.19倍高速化。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
-  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：11  
+  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：12  
   会話から重要事実だけを抽出・統合し、意味検索と矛盾更新で永続記憶を保つことで、全文履歴を毎回読むエージェント推論のトークン量と遅延を削る。
 
 - **2025-06 · [The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective](2025-2506.04301-cost-dynamic-reasoning.md)**  

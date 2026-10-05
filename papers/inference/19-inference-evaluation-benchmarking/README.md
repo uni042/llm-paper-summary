@@ -75,6 +75,6 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   本論文は新しい高速化方式を提案するのではなく、LLaMA 7B/13B/65Bを実機で動かし、スループットとGPUエネルギーを同時に測ることで、推論構成の交換条件を明らかにする。V100 32GBでは最低8枚、A100 80GBでは最低4枚が必要で、V100では8/16/32分割まで拡張する。
 <!-- survey:auto:end -->
