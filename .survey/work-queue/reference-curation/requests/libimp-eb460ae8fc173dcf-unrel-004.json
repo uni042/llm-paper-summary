@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-eb460ae8fc173dcf-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1109/ICCC70295.2026.11680246",
+  "reason": "Accurate time series forecasting is crucial for improving the operational efficiency and enabling energy savings for refrigeration units in data centers enabled by Internet-of-Things (IoT). However, time series data in real-world scenarios often contain multiple complex patterns, which challenge existing deep learning methods. While Mixture-of-Experts (MoE) architectures show promise for pattern decoupling in general forecasting tasks, their industrial applicability has not been fully investigated. This paper proposes LPA-MoE, a lightweight period-aware MoE model tailored for refrigeration in data center scenarios. LPA-MoE integrates three core components, including an FFT-based periodic embedding module to capture multi-scale periodic patterns, a gated lightweight TimesBlock for efficient local feature extraction and a sparse MoE routing mechanism to dynamically decouple heterogeneous temporal patterns. This design enables the model to achieve stronger representational capacity and lower computational overhead. Experimental results on realworld datasets from refrigeration units in IoT-enabled data centers validate that the proposed method not only significantly improves forecasting accuracy and stability on multi-pattern time series data but also exhibits excellent generalization capability.",
+  "title": "LPA-MoE: A Lightweight Period-Aware MoE Model for Time Series Forecasting in Data Centers",
+  "identity_tokens": [
+    "DOI:10.1109/ICCC70295.2026.11680246"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb460ae8fc17",
+  "source_precheck_request_id": null
+}

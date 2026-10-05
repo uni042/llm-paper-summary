@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c6f086b5d8428986-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1029/2025EF007318",
+  "reason": "Statistical earthquake forecasting models, such as the Epidemic‐type Aftershock Sequence (ETAS), embed decades of empirical knowledge and assumptions about earthquake triggering, clustering, and catalog completeness. In contrast, neural spatio‐temporal point process (STPP) models often treat seismicity as generic spatiotemporal data without such domain‐specific considerations. Using an earthquake catalog from the China Earthquake Networks Center, we investigate how seismology‐motivated inputs and training strategies affect the forecasting performance of the Deep Spatio‐Temporal Point Process (DeepSTPP). These domain‐driven designs include introducing magnitude as an input feature, incorporating an auxiliary training period, extending visible event history, and varying magnitude thresholds. We benchmark DeepSTPP against ETAS and a homogeneous Poisson process to assess relative strengths and limitations. Our results show that certain domain‐motivated configurations, such as including an auxiliary period, improve performance, particularly in forecasting immediate aftershocks. However, limitations in the model architecture, including short memory and attention dilution, restrict the benefits of event magnitude and long‐range history. The results also show that DeepSTPP remains inferior to ETAS in terms of overall spatiotemporal log‐likelihood, although it outperforms ETAS in temporal forecasting at lower magnitude thresholds, specifically for Mcut=1.4−2.8 ${M}_{\\text{cut}}=1.4-2.8$ . This indicates that DeepSTPP does not yet perform as well as ETAS in the magnitude range most relevant to operational earthquake forecasting Mcut≥3.0 $\\left({M}_{\\text{cut}}\\ge 3.0\\right)$ . The gains observed at lower thresholds may primarily stem from DeepSTPP's flexibility in handling catalog incompleteness and artifacts. These findings highlight the value of integrating seismological practice into neural model design and point toward future architectures that can fully exploit earthquake catalogs.",
+  "title": "Can Domain‐Informed Design Improve Neural Spatio‐Temporal Point Processes for Earthquake Forecasting?",
+  "identity_tokens": [
+    "DOI:10.1029/2025EF007318"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6f086b5d842",
+  "source_precheck_request_id": null
+}

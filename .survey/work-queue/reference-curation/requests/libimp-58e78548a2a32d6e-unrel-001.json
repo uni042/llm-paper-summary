@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-58e78548a2a32d6e-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1093/bioinformatics/btag606",
+  "reason": "Abstract Motivation The rapid advancement of generative artificial intelligence has enabled the high-throughput design of therapeutic antibody candidates. However, the precise evaluation of these candidates remains a significant challenge due to the scarcity of high-quality activity data and the structural flexibility of antibody complementarity-determining regions (CDRs). Results To address these challenges, we propose AbAgKer, an antibody screening model leveraging pre-trained representations and biological prior guidance for antigen-antibody affinity and kinetics prediction. Specifically, we design a biological prior-guided feature fusion framework that integrates pseudo-structural epitope knowledge and CDR-specific attention mechanisms via a mixture-of-experts architecture to effectively capture complex binding landscapes. To mitigate data scarcity, we employ a semi-supervised learning strategy for data self-distillation, which significantly enhances affinity prediction performance. Additionally, we demonstrate that the interaction representations learned by AbAgKer can be effectively transferred to the data-scarce task of predicting dissociation rates via few-shot learning. Extensive experiments demonstrate that AbAgKer outperforms baseline models and exhibits strong generalization capabilities in antibody screening and drug residence time analysis. Availability and implementation The source code and dataset are available at https://github.com/CSUBioGroup/AbAgKer and https://doi.org/10.5281/zenodo.19691211.",
+  "title": "AbAgKer: a unified semi-supervised framework for antigen-antibody binding affinity and kinetics prediction",
+  "identity_tokens": [
+    "DOI:10.1093/bioinformatics/btag606"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58e78548a2a3",
+  "source_precheck_request_id": null
+}
