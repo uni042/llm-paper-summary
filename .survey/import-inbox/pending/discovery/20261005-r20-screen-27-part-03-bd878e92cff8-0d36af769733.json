@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-27-part-03-bd878e92cff8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0354894",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0354894"
+      ],
+      "title": "Contrastive representation learning for self-supervised deception detection in edge LLMs",
+      "reason": "Existing deceptive alignment detection schemes generally follow a three-step strategy: auto-labeling, supervised fine-tuning (SFT), and proximal policy optimization (PPO). In which, the detection is treated as a simple binary classification and rely on heavyweight teacher models for Chain-of-Thought (CoT) annotation, limiting discrimination of nuanced deceptive strategies and creating an oracle dependency that prevents autonomous operation. This paper introduces contrastive representation learning, rather than learning a hard decision boundary (BCE loss), our lightweight monitor (0.1% parameters) projects CoT hidden states into a structured semantic space where deceptive and safe reasoning form separable manifolds. Through Triplet Loss optimization, the monitor captures gradual deceptive transitions, from surface hedging to fundamental objective substitution, that elude binary classifiers. Evaluation on Sycophancy subset of DeceptionBench confirms that contrastive learning outperforms BCE classification by 2.33pp Deception Tendency Rate (DTR, lower better, 39.29% vs. 36.96%). This establishes a geometric foundation for self-supervised deception detection, transforming CoT transparency from vulnerability into forensic evidence.",
+      "source_url": "https://doi.org/10.1371/journal.pone.0354894",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math14162941",
+      "identity_tokens": [
+        "DOI:10.3390/math14162941"
+      ],
+      "title": "Optimized Sparse Attention Regularized Transformer with Low-Rank Constraint for Efficient Urban Landscape Perception Modeling",
+      "reason": "Deep neural networks increasingly convert street-level imagery into quantitative measures of urban perception, but the cost of transformer backbones limits repeated inference over city-scale image collections. This study proposes an optimized Sparse Attention Regularized Transformer with a Low-Rank constraint (SART-LR), a Siamese vision transformer in which softmax is replaced by learnable α-entmax attention and the attention and feed-forward projections are directly factorized. The evaluation assigns each Place Pulse 2.0 image to exactly one of the training, validation, or test partitions, thereby preventing the same image from entering multiple partitions through different comparisons. All models are tuned with an equal, architecture-specific validation budget and evaluated over five seeds. Under this image-disjoint evaluation, SART-LR reaches an average pairwise accuracy of 72.6%, 2.1 percentage points above ViT-B/16 and 1.2 points above Swin-T. The explicit layer-wise derivation gives 2.97 million trainable parameters, a 5.0-fold reduction relative to the depth- and width-matched dense backbone and a 29.1-fold difference from ViT-B/16; the latter comparison is reported only as an end-to-end model total because the architectures differ. Five repeated city-level folds give a cross-city accuracy of 67.0±1.3%, corresponding to a 5.6-point decrease from the image-disjoint result. Paired tests indicate that the advantage over Swin-T varies by attribute, and analyses stratified by rater agreement show lower accuracy for ambiguous comparisons. These findings support an accuracy–efficiency benefit on Place Pulse 2.0, while the absence of an independent urban-perception dataset and the geographic imbalance of the 56-city sample limit external-validity claims.",
+      "source_url": "https://doi.org/10.3390/math14162941",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.09.743676",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.09.743676"
+      ],
+      "title": "FP8 Inference in Genomic Foundation Models: Theoretical vs. Realized Speedups on GenomeOcean",
+      "reason": "Abstract directly studies FP8 inference throughput, memory, and energy, but primary full text was inaccessible; domain fit is weak and detailed results remain unverified.",
+      "source_url": "https://doi.org/10.64898/2026.08.09.743676",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.10.744024",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.10.744024"
+      ],
+      "title": "Benchmark Averages Hide the Failures That Matter: Quantizing ESM-2 for Protein Variant-Effect Prediction",
+      "reason": "Abstract reports quantization accuracy, throughput, and memory for ESM-2, but primary body was inaccessible; the protein-language-model domain is adjacent but weakly fits LLM serving.",
+      "source_url": "https://doi.org/10.64898/2026.08.10.744024",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12700",
+      "identity_tokens": [
+        "arXiv:2608.12700"
+      ],
+      "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels, and a Native Blackwell Backward for the Gated-Linear-Recurrence Family",
+      "reason": "Systems that generate GPU kernels with language models report high correctness rates. Those rates come from a single loose test: run the kernel on a few random inputs at one fixed shape and accept it if the output is close to a reference. A kernel can pass that test and still be silently wrong. It can return an ordinary number where the true answer is a NaN or an infinity, differ from run to run, break when the shape changes, or accumulate in fp16 where the reference keeps an fp32 total. We build the instrument that checks correctness properly: a contract-grade verifier of twelve adversarial gates, each a property a correct kernel must satisfy, several of them tolerance-free, so no choice of threshold can explain a failure away. Aimed outward, the verifier audits 2,638 machine-generated kernels that a public system's own harness had already accepted as correct. It finds 39.5% broken beyond any tolerance argument and 62.1% carrying at least one violation. The field's standard test accepts 1,487 kernels the verifier rejects, against only 14 the other way. We defend the finding four independent ways: a 7/7 positive control, a threshold-calibration sweep, 98.5% agreement with the reference benchmark's own correctness code, and a stratified hand-audit. Aimed inward, the verifier judges a kernel of our own: the first native Blackwell tcgen05 training backward for the gated-linear-recurrence (GDN) family, including the reverse-state stage the field still runs on a fallback. We establish its correctness independently, against a double-precision oracle, and train five family members through it. The correctness signal behind reported progress in kernel generation is far weaker than the numbers suggest, and a set of tolerance-free contracts would close most of the gap.",
+      "source_url": "https://arxiv.org/abs/2608.12700",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    }
+  ]
+}
