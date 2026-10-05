@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-24-part-06-6081f454b4ce",
+  "reference_main_sha": "b5564ebf35e031dfac425a9d05f890d23ba0e178",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10791-026-10470-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10470-w"
+      ],
+      "title": "A novel attention-enhanced Swin Transformer for tire surface defect classification",
+      "reason": "Tire surface defects are critical factors affecting driving safety, and traditional manual inspection methods suffer from low efficiency, strong subjectivity, and high missed detection rates. To alleviate these drawbacks, this study constructs an attention-enhanced Swin Transformer (AE-Swin Transformer) for automatic tire surface defect classification with acceptable precision. Firstly, a multi-scale convolutional attention module (MCAM) is embedded into the vanilla Swin Transformer to strengthen feature extraction capacity for tiny defect regions. Secondly, a cross-scale feature fusion module (FFM) is designed to aggregate low-level texture features and high-level semantic features, which helps distinguish defective areas from normal tire backgrounds. Validations are carried out on three public tire defect datasets, namely the TireNet Dataset, Tire Quality Inspection Dataset and Tire Texture Image Recognition Dataset. The proposed model reaches AP values of 97.8%, 96.5% and 95.4% on the three datasets respectively, which obtains 2.3–4.5% numerical improvements compared with several mainstream backbones including ResNet50, EfficientNet-B4 and the original Swin Transformer. The presented method can serve as an alternative solution for tire surface defect classification in automobile manufacturing, and possesses certain practical reference value for product quality control and driving risk reduction.",
+      "source_url": "https://doi.org/10.1007/s10791-026-10470-w",
+      "first_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "last_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-6501/ae9c61",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6501/ae9c61"
+      ],
+      "title": "Multi-channel noise-resistant transformer with multiscale adaptive fusion for fault diagnosis of rotating machinery",
+      "reason": "Multiscale fusion-based fault diagnosis methods can exploit complementary fault information across different scales and are therefore effective in improving diagnostic accuracy. However, when noisy multiscale information is represented or fused, noise components from different scales tend to interfere with one another, which may obscure critical fault-related features and consequently degrade diagnostic performance. To address this issue, we propose a Multi-Channel Noise-Resistant Transformer (MNRformer) for fault diagnosis under noisy conditions, with the aim of reducing noise interference among multiscale information. Specifically, a channel-independent modeling strategy is adopted to construct Transformer subchannels with shared embedding representations and parameter weights, where features from different scales are modeled independently to mitigate mutual noise interference across scales. In addition, we design a dynamic weighting algorithm based on inverse information entropy to guide the feedforward network to adaptively enhance the response to channels with higher feature representation stability, thereby improving the discriminant robustness and overall reliability in the fault diagnosis process. Experimental results on four public rotating machinery datasets and one laboratory-built natural-noise dataset show that MNRformer maintains smaller performance degradation under different noise conditions, verifying its noise robustness in rotating machinery fault diagnosis.",
+      "source_url": "https://doi.org/10.1088/1361-6501/ae9c61",
+      "first_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "last_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICIET70550.2026.11712652",
+      "identity_tokens": [
+        "DOI:10.1109/ICIET70550.2026.11712652"
+      ],
+      "title": "LLMOps at Scale: Reliability, Cost Governance, and Multi-Model Orchestration for Enterprise Generative AI Platforms",
+      "reason": "Packetの一次abstract欄が空。DOI primary landing URLのopenはinaccessibleを返し、exact-DOI searchからも対象primary recordを取得できなかった。",
+      "source_url": "https://doi.org/10.1109/ICIET70550.2026.11712652",
+      "first_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "last_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICIET70550.2026.11712786",
+      "identity_tokens": [
+        "DOI:10.1109/ICIET70550.2026.11712786"
+      ],
+      "title": "CHQR: A Context-Aware Hybrid Query Routing Framework for Energy-and Latency-Optimized Academic Question Answering",
+      "reason": "Packetの一次abstract欄が空。DOI primary landing URLのopenはinaccessibleを返し、exact-DOI searchからも対象primary recordを取得できなかった。",
+      "source_url": "https://doi.org/10.1109/ICIET70550.2026.11712786",
+      "first_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "last_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/software5030037",
+      "identity_tokens": [
+        "DOI:10.3390/software5030037"
+      ],
+      "title": "SimDSL: A Domain-Specific Language for Large-Scale GPU-Resident Simulation",
+      "reason": "We present SimDSL, a domain-specific language (DSL) for executing large-scale simulations on the GPU using an Entity Component System (ECS) architecture. Systems written in SimDSL are analyzed, lowered into an intermediate representation, and compiled by a CuPy-based backend into CUDA kernels operating over structure-of-arrays archetype tables. We evaluate SimDSL on five workloads: Particle Fountain, Traffic Ring, Reaction Diffusion, Ant Colony, and Tower Defense. The evaluation compares SimDSL with straightforward CuPy and CUDA baseline implementations under matched simulation configurations. Results show that SimDSL sustains GPU-resident execution and achieves favorable performance relative to these baselines. These findings demonstrate that high-level ECS simulation programs can be compiled into efficient GPU execution without requiring users to manually implement and coordinate low-level kernels.",
+      "source_url": "https://doi.org/10.3390/software5030037",
+      "first_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "last_checked_at": "2026-10-05T06:37:20.678423+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
