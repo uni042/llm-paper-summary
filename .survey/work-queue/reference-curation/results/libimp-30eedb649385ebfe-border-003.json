@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30eedb649385ebfe-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.05824",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.05824",
+    "identity_tokens": [
+      "arXiv:2609.05824"
+    ],
+    "reason": "Diversity-aware skill retrievalはagent skill選択の品質/多様性を扱うが、本文に推論token・latency・cost改善の測定を確認できず、効率寄与が不確か。",
+    "first_checked_at": "2026-10-05T02:34:44+00:00",
+    "last_checked_at": "2026-10-05T02:34:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Beyond Top-$k$ Skill Retrieval: Diversity-Aware Skill Routing for LLM Agents"
+  },
+  "processed_at": "2026-10-05T02:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30eedb649385",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

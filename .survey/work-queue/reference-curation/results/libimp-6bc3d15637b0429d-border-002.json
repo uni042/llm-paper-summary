@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6bc3d15637b0429d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.29748",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.29748",
+    "identity_tokens": [
+      "arXiv:2608.29748"
+    ],
+    "reason": "一次本文を取得できず、要旨だけでは具体的な効率改善の再現条件・比較結果を検証できない。規約に従いborderlineへ分類。",
+    "first_checked_at": "2026-10-05T02:34:44+00:00",
+    "last_checked_at": "2026-10-05T02:34:44+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+    ],
+    "title": "ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding"
+  },
+  "processed_at": "2026-10-05T02:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6bc3d15637b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

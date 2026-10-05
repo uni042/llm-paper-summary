@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:30:40+00:00",
-  "record_count": 697,
+  "updated_at": "2026-10-05T02:34:44+00:00",
+  "record_count": 702,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10190,6 +10190,89 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "MuonSSM: Orthogonalizing State Space Models for Sequence Modeling"
+    },
+    "arXiv:2608.13756": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13756",
+      "identity_tokens": [
+        "arXiv:2608.13756"
+      ],
+      "reason": "LLM inference implementationには関係するが、本文はkernel interchangeabilityの数値diagnosticで、推論/serving効率への貢献を示さない。",
+      "first_checked_at": "2026-10-05T02:34:43+00:00",
+      "last_checked_at": "2026-10-05T02:34:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "The Integer Alibi: Localizing Cross-Kernel Divergence in INT8-Quantized LLM Inference"
+    },
+    "arXiv:2608.11693": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11693",
+      "identity_tokens": [
+        "arXiv:2608.11693"
+      ],
+      "reason": "LLM serving stackのdeployment状態には関係するが、performance measurementを除外したstack auditで効率改善評価がない。",
+      "first_checked_at": "2026-10-05T02:34:43+00:00",
+      "last_checked_at": "2026-10-05T02:34:43+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "Spec Sheets Are Not Kernels: An ISA- and Source-Level Audit of INT8 Availability on NVIDIA Blackwell Ultra"
+    },
+    "arXiv:2609.06872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06872",
+      "identity_tokens": [
+        "arXiv:2609.06872"
+      ],
+      "reason": "Delta Attentionで会話recordを厳密に削除/訂正する状態遷移とreplay costの分析。推論serve最適化との関係は間接的。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate"
+    },
+    "arXiv:2609.05824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05824",
+      "identity_tokens": [
+        "arXiv:2609.05824"
+      ],
+      "reason": "Diversity-aware skill retrievalはagent skill選択の品質/多様性を扱うが、本文に推論token・latency・cost改善の測定を確認できず、効率寄与が不確か。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Beyond Top-$k$ Skill Retrieval: Diversity-Aware Skill Routing for LLM Agents"
+    },
+    "arXiv:2608.29748": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29748",
+      "identity_tokens": [
+        "arXiv:2608.29748"
+      ],
+      "reason": "一次本文を取得できず、要旨だけでは具体的な効率改善の再現条件・比較結果を検証できない。規約に従いborderlineへ分類。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+      ],
+      "title": "ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding"
     }
   }
 }

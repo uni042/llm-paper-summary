@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:32:47+00:00",
-  "record_count": 1978,
+  "updated_at": "2026-10-05T02:34:44+00:00",
+  "record_count": 1993,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28596,6 +28596,219 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "FORGE: Fused On-Register Gradient Elimination for Memory-Efficient LLM Training"
+    },
+    "arXiv:2608.19181": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19181",
+      "identity_tokens": [
+        "arXiv:2608.19181"
+      ],
+      "reason": "長文推論向けon-policy distillation/post-trainingで、servingまたは推論効率法ではない。",
+      "first_checked_at": "2026-10-05T02:34:43+00:00",
+      "last_checked_at": "2026-10-05T02:34:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning"
+    },
+    "arXiv:2608.18066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18066",
+      "identity_tokens": [
+        "arXiv:2608.18066"
+      ],
+      "reason": "self-improving agentsの評価分散/task order研究で、推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:34:43+00:00",
+      "last_checked_at": "2026-10-05T02:34:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification"
+    },
+    "arXiv:2608.13129": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13129",
+      "identity_tokens": [
+        "arXiv:2608.13129"
+      ],
+      "reason": "LLM numeracy能力・diagnostic/mitigation surveyで、推論serving効率ではない。",
+      "first_checked_at": "2026-10-05T02:34:43+00:00",
+      "last_checked_at": "2026-10-05T02:34:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Numeracy in Large Language Models: Fundamental Limitations and Paths to Improvement"
+    },
+    "arXiv:2609.07925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07925",
+      "identity_tokens": [
+        "arXiv:2609.07925"
+      ],
+      "reason": "coding agentのオンラインtask synthesis/trainingが主題で、serving時推論最適化ではない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "FrogNano: Training a 4B Coding Agent via Online Task Synthesis"
+    },
+    "arXiv:2609.04434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04434",
+      "identity_tokens": [
+        "arXiv:2609.04434"
+      ],
+      "reason": "hybrid LMにおけるattention/recurrenceの記憶挙動分析であり、推論効率化の技法を提案する研究ではない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "What Attention Recalls and Recurrence Controls in Hybrid Language Models"
+    },
+    "arXiv:2609.00830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00830",
+      "identity_tokens": [
+        "arXiv:2609.00830"
+      ],
+      "reason": "VLM visual attentionのfaithfulnessを調べる解釈可能性/評価研究で、推論cost最適化が主題でない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Visual Attention Faithfulness in Vision-Language Models is Heterogeneous"
+    },
+    "DOI:10.1016/j.knosys.2026.116947": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116947",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116947"
+      ],
+      "reason": "一次出版社ページの抄録はLLM時代のsocial network simulation survey。agent/social simulation領域で、model inference efficiencyとは異なる。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md"
+      ],
+      "title": "A survey of social network simulation in the LLM era: From classical models to Generative Agents"
+    },
+    "arXiv:2608.27609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27609",
+      "identity_tokens": [
+        "arXiv:2608.27609"
+      ],
+      "reason": "VLAのplanning-horizon補助学習によるrobot task成功率改善。LLM inference efficiencyの証拠がない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models"
+    },
+    "arXiv:2608.23651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23651",
+      "identity_tokens": [
+        "arXiv:2608.23651"
+      ],
+      "reason": "failed tool-call repetitionを測るagent reliability/harness研究。提案は再試行挙動・安全性の修正であり、主目的はinference efficiencyではない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Feedback That Backfires: Why Small Language Model Agents Repeat the Call They Just Watched Fail"
+    },
+    "arXiv:2608.19652": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19652",
+      "identity_tokens": [
+        "arXiv:2608.19652"
+      ],
+      "reason": "StateMem/benchmarkはlong-horizon agent memoryのcurrent-state accuracyを改善する。単一callかつlength/cost-matched比較で品質上の寄与を示すが、推論効率の削減を主張・評価していない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Can Agent Memory Systems Track Evolving State?"
+    },
+    "arXiv:2609.27216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27216",
+      "identity_tokens": [
+        "arXiv:2609.27216"
+      ],
+      "reason": "Fourier neural operator surrogateによるneural topology optimizationが対象であり、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "KATOsuper: Surrogate-accelerated neural topology optimization with sensitivity-consistent Fourier neural operators"
+    },
+    "arXiv:2609.18094": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18094",
+      "identity_tokens": [
+        "arXiv:2609.18094"
+      ],
+      "reason": "Gitを共有記憶とするAutoResearch agentのcoordinationが主題。LLM inference-cost/latency削減の証拠がない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Agora: Git as Shared Memory for Collective AutoResearch"
+    },
+    "arXiv:2609.18374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18374",
+      "identity_tokens": [
+        "arXiv:2609.18374"
+      ],
+      "reason": "VLA multi-task robot policyのvision/language/action構成を扱う。推論効率の明確な貢献が抄録にない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Decoupling Vision, Language, and Action for Efficient Multi-Task Robot Policies"
+    },
+    "arXiv:2609.16053": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16053",
+      "identity_tokens": [
+        "arXiv:2609.16053"
+      ],
+      "reason": "retrieval-driven memory reconsolidationでagent記憶/回答品質を扱う。一次本文にtoken/推論cost低減の提案または評価を確認できず、効率を中心目的としない。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents"
+    },
+    "arXiv:2609.10632": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10632",
+      "identity_tokens": [
+        "arXiv:2609.10632"
+      ],
+      "reason": "self-contained ML stackの実演はYOLO/CV系で、LLM inference optimizationとは異なる。",
+      "first_checked_at": "2026-10-05T02:34:44+00:00",
+      "last_checked_at": "2026-10-05T02:34:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Numbat: Building and Verifying a Self-Contained Machine-Learning Stack"
     }
   }
 }
