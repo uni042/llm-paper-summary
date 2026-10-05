@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1731-scheduled-chat-30/r01",
+  "reference_main_sha": "9504953aac82c2b7bc0fe63d55a1713ad06f71ee",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.12592",
+      "identity_tokens": [
+        "arXiv:2005.12592"
+      ],
+      "title": "GECToR -- Grammatical Error Correction: Tag, Not Rewrite",
+      "reason": "Transformer encoderを用いた文法誤り訂正（GEC）のsequence tagging方式で、seq2seq GEC比最大10倍の推論速度を報告するが、最終適用先は文法訂正タスク専用モデルであり、LLM推論runtime・serving・memory最適化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2005.12592",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtoken-level transformationによるGEC、CoNLL-2014/BEA-2019のF0.5、Transformer seq2seq GEC比最大10x inference speedが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md"
+      ],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.14024",
+      "identity_tokens": [
+        "arXiv:2212.14024"
+      ],
+      "title": "Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP",
+      "reason": "凍結LMとretrieval modelを自然言語pipelineとして構成し、demonstration生成・検索・grounded predictionで知識集約型NLPの精度を改善するRAG/能力研究。主要評価はQA等のtask performanceで、推論runtime・cache・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2212.14024",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でDSP program、retrieval-augmented in-context learning、open-domain/multi-hop/conversational taskの相対性能改善が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.14984",
+      "identity_tokens": [
+        "arXiv:2307.14984"
+      ],
+      "title": "S3: Social-network Simulation System with Large Language Model-Empowered Agents",
+      "reason": "LLM agentでemotion・attitude・interactionを模倣して社会ネットワーク現象を再現するsimulation/application研究。評価対象は社会現象の再現精度で、LLM serving runtimeやagent invocation schedulingの効率化方式ではない。",
+      "source_url": "https://arxiv.org/abs/2307.14984",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprompt engineering/tuningによるsocial-network agent simulationとreal-world social dataでのsimulation accuracyが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+      ],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2815400.2815419",
+      "identity_tokens": [
+        "DOI:10.1145/2815400.2815419"
+      ],
+      "title": "Fast in-memory transaction processing using RDMA and HTM",
+      "reason": "RDMAとhardware transactional memoryを組み合わせたin-memory transaction processing system（DrTM）のlatency/throughput改善研究。データベースtransaction処理が最終適用先で、LLM/Transformer推論systemではない。",
+      "source_url": "https://doi.org/10.1145/2815400.2815419",
+      "body_check": "abstract_screen_only: 一次書誌と公開要旨でDrTM、RDMA、HTM、distributed transaction system比のorder-of-magnitude latency/throughput改善が主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.01310-tarragon-resilient-moe-inference.md"
+      ],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.11775",
+      "identity_tokens": [
+        "arXiv:1908.11775"
+      ],
+      "title": "Transformer Dissection: A Unified Understanding of Transformer's Attention via the Lens of Kernel",
+      "reason": "attentionをkernel smootherとして再解釈し、position embeddingやkernel構成を分析・提案するTransformer理解/architecture研究。計算量低減の例はあるが、評価はNMT/sequence predictionでLLM推論runtime・serving最適化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1908.11775",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でkernel formulation of attention、symmetric-kernel variant、NMT/sequence predictionでcompetitive performance with less computationが主題と確認。現行LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 50
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/153244303321897735",
+      "identity_tokens": [
+        "DOI:10.1162/153244303321897735"
+      ],
+      "title": "Cluster ensembles --- a knowledge reuse framework for combining multiple partitions",
+      "reason": "複数clustering partitionを統合するcluster ensemble/consensus clusteringの一般機械学習研究。LLM、Transformer、推論runtime、serving、memory階層を最終適用先としない。",
+      "source_url": "https://doi.org/10.1162/153244303321897735",
+      "body_check": "abstract_screen_only: 一次書誌および引用書誌でcluster ensembles、multiple partitions、consensus clusteringが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.07697",
+      "identity_tokens": [
+        "arXiv:2307.07697"
+      ],
+      "title": "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph",
+      "reason": "LLM agentがknowledge graphをbeam searchで探索してreasoning accuracy・traceabilityを改善する能力/knowledge integration研究。小型LLMで計算cost低減も述べるが、runtime・serving・memory管理方式のsystem評価ではない。",
+      "source_url": "https://arxiv.org/abs/2307.07697",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM-KG interaction、beam-search reasoning paths、9 datasetsのreasoning performance、training-free deployment cost低減が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1167/iovs.11-8284",
+      "identity_tokens": [
+        "DOI:10.1167/iovs.11-8284"
+      ],
+      "title": "Standardized Assessment of Reading Performance: The New International Reading Speed Texts IReST",
+      "reason": "17言語の標準化読書速度テキストIReSTを作成し、正常視力者436名の人間のreading speedを測定する眼科学・読書評価研究。LLM/Transformer推論とは無関係。",
+      "source_url": "https://doi.org/10.1167/iovs.11-8284",
+      "body_check": "abstract_screen_only: 出版社一次要旨で17 languages、436 normally-sighted readers、words/syllables/characters per minuteのstandardized reading assessmentが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.07566",
+      "identity_tokens": [
+        "arXiv:2107.07566"
+      ],
+      "title": "Internet-Augmented Dialogue Generation",
+      "reason": "対話文脈からinternet search queryを生成し、検索結果で応答をgroundingするretrieval-augmented dialogue model研究。評価は対話品質・knowledge freshnessで、retrieval/LLM serving runtimeやcache最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2107.07566",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でinternet-search-augmented dialogue generation、新規human-human dataset、no augmentation/FAISS retrievalとの品質比較が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1805.04623",
+      "identity_tokens": [
+        "arXiv:1805.04623"
+      ],
+      "title": "Sharp Nearby, Fuzzy Far Away: How Neural Language Models Use Context",
+      "reason": "LSTM language modelが過去contextをどう利用するかをshuffle/replace/drop ablationで分析するinterpretability/capability研究。約200 tokenの利用範囲やnear/far context差を示すが、推論runtime・cache・serving最適化方式ではない。",
+      "source_url": "https://arxiv.org/abs/1805.04623",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLSTM context ablation、Penn Treebank/WikiText-2、約200-token context、近傍50 tokenと遠距離contextの差が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T17:31:47+09:00",
+      "last_checked_at": "2026-10-05T17:31:47+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "worklist_rank": 60
+    }
+  ]
+}
