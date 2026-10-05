@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-02-part-05-e41a1d251f44",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23733",
+      "identity_tokens": [
+        "arXiv:2609.23733"
+      ],
+      "title": "VGGT-Prime: Compute-Adaptive Mixture-of-Heads for Efficient Visual Geometry Transformers",
+      "reason": "Feed-forward visual geometry models such as the Visual Geometry Grounded Transformer (VGGT) have recently enabled direct 3D reconstruction from multi-view images. Despite their promising performance, these models scale quadratically with the number of input views due to their global attention mechanism, resulting in substantial latency for long sequence inputs. There have been some recent efforts to accelerate VGGT, but they primarily focus on reducing \\emph{token redundancy} through token merging or key/value sparsification. Our work resolves this bottleneck from a different perspective by investigating \\emph{architectural redundancy} in visual geometry transformers. We show that the multi-head attention modules in VGGT's global-attention layers contain substantial architectural redundancy, with only a subset of heads carrying critical geometric information. In light of this observation, we propose VGGT-Prime, a compute-adaptive mixture-of-heads model that resolves this redundancy to accelerate visual geometry transformers while maintaining competitive reconstruction quality. The key idea of VGGT-Prime is to estimate the appropriate computation level for each global-attention head using a lightweight router and then dynamically assign each head to different computation modes. Extensive experiments on multiple datasets demonstrate that VGGT-Prime can achieve an {$8\\times$} inference speedup over VGGT while maintaining competitive performance on camera pose, depth, and point-cloud predictions. We further show that VGGT-Prime is complementary to existing acceleration methods, such as token merging, further improving inference speed by up to $14{\\times}$ over VGGT. An overview of our work is available on our \\href{https://vggt-prime.github.io}{project page}.",
+      "source_url": "https://arxiv.org/abs/2609.23733",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25131",
+      "identity_tokens": [
+        "arXiv:2609.25131"
+      ],
+      "title": "Entropy Can Flow, or It Can Guide. Be Entropy. LEDFlow: Introducing Entropy-guided Generation Order into Uniform Discrete Flow",
+      "reason": "It modifies inference-time generation, but the reviewed evaluations establish quality gains at fixed sampling budgets rather than efficiency gains; its explored lookahead can multiply runtime, leaving only weak scope fit.",
+      "source_url": "https://arxiv.org/abs/2609.25131",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26822",
+      "identity_tokens": [
+        "arXiv:2609.26822"
+      ],
+      "title": "HARN: Hierarchical Associative Resonance Network for Event-Driven Multi-Timeframe Forecasting",
+      "reason": "Financial time series evolve across multiple temporal resolutions, challenging forecasting systems to incorporate newly available information without repeatedly recomputing unchanged representations. We introduce HARN, a Hierarchical Associative Resonance Network for event-driven multi-timeframe forecasting. HARN maintains persistent representations across temporal levels and updates each level only when its corresponding completed bar becomes available. The architecture combines causal multi-scale temporal encoding, gated associative memory, cross-level resonance, and hierarchical evidence aggregation, with forecasting performed in basis-point space and reconstructed to the original price scale. We evaluate HARN on four assets spanning equity, foreign exchange, and commodity markets using multiple random seeds and component ablations. HARN achieves competitive reconstructed-price forecasting errors against single-timeframe PatchTST and TimeXer baselines, while ablations reveal the effects of removing individual components across assets and timeframes. A code-level audit further examines consistency between the implementation and the defined event-driven causal protocol. The results position HARN as a persistent multi-timeframe forecasting framework rather than evidence of universal predictive superiority.",
+      "source_url": "https://arxiv.org/abs/2609.26822",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-76272-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-76272-2"
+      ],
+      "title": "Memristive singular value decomposition",
+      "reason": "Singular value decomposition (SVD) underpins low-rank representation across scientific computing, signal processing, and machine learning. However, iterative computations in SVD are energy-intensive on conventional von Neumann architectures with separate storage and computation units, posing significant challenges for complex information processing. Here, we present memristive SVD (MSVD), built on compute-in-memory (CIM) memristor chips, enabled by a selective representation enhanced architecture (SREA) that ensures numerical fidelity across iterations. We demonstrate MSVD across three tiers of increasing complexity: low-rank approximation for image enhancement and epidemiological data reconstruction; user-scalable recognition where incremental MSVD exploits persistent in-memory storage to incorporate new users without remapping existing information; and large language model weight decomposition where MSVD-based initialization consistently outperforms the standard fine-tuning method on mathematical benchmarks. Beyond software-comparable accuracy, SREA reduces energy overhead and accelerates convergence over unenhanced MSVD, and the full system achieves order-of-magnitude gains in energy efficiency and speed over conventional hardware across all demonstrated scenarios, with these advantages growing progressively with each update cycle in the incremental setting. This work accelerates SVD across various scenarios and extends memristor-based systems towards general computing applications. Efficient processing of high-dimensional datasets demands minimal information loss and reduced computational complexity. Ding et al. report a memristor-based system that boosts data simplification efficiency and accuracy, supporting applications in image reconstruction, biomedical signal analysis, and LLM fine tuning.",
+      "source_url": "https://doi.org/10.1038/s41467-026-76272-2",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.20965/jaciii.2026.p1404",
+      "identity_tokens": [
+        "DOI:10.20965/jaciii.2026.p1404"
+      ],
+      "title": "LLM Prompt Optimization: From Zero-Shot to Automatic Role-Playing Generation Using Ontology",
+      "reason": "The performance of an LLM application is highly dependent on how the user commands the application through prompts. Previous researchers invented role-play prompting techniques to overcome these problems. Including roles relevant to the task can improve the accuracy of the responses generated by LLMs. Nevertheless, the assignment of roles in this study remained a human-driven process. This study addresses the research gap in previous studies by developing deep learning models to effectively predict relevant roles based on tasks. In addition, the impact of the ontology data as an enrichment of the training data on the model performance in two scenarios (with and without ontology) was examined. In the with-ontology setup, enrichment data are extracted from an occupational ontology that includes roles, skills, and abilities along with their corresponding definitions. Data that were restricted to four predefined occupations were incorporated into the benchmark datasets. The benchmark datasets consisted of questions used to assess the LLM performance aligned with predetermined occupations. In without-ontology settings, the models were trained using only the benchmark datasets. An experiment on three variants of recurrent-based and a graph-based model in both scenarios showed that these models exhibited stable convergence and performed best on ontology-enriched data. Notably, the recurrent neural network (RNN) exhibited significant performance gains, achieving improvements of 34% and 1.86% in the F1 score and receiver operating characteristic-area under the curve (ROC–AUC), respectively. Despite its great performance—92% F1 score and 97% ROC–AUC, the gated recurrent unit is computationally the most expensive model compared to long short-term memory, RNN, and graph convolutional network. Further research is required to explore alternative model architectures and expand the scope of their predictable roles.",
+      "source_url": "https://doi.org/10.20965/jaciii.2026.p1404",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    }
+  ]
+}
