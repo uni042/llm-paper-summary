@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df1afc72efcdcfbe-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21227",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21227",
+    "identity_tokens": [
+      "arXiv:2608.21227"
+    ],
+    "reason": "Traditionally, GPU kernels have been developed and optimized within vendor-specific programming models to achieve high performance, resulting in software that is difficult to optimize and adapt across increasingly heterogeneous computing systems. Hardware-agnostic programming models offer a more sustainable approach to GPU software development by improving portability and maintainability, but achieving efficient execution across diverse architectures remains challenging. We address this challenge by integrating auto-tuning into hardware-agnostic GPU kernels written in Julia. We rebuild the established Kernel Tuner auto-tuning framework with Julia support, enabling systematic exploration of kernel configurations for hardware-agnostic GPU kernels targeting NVIDIA, AMD, Intel, and Apple GPUs. We demonstrate this approach on hardware-agnostic singular value decomposition (SVD) as implemented in the NextLA.jl linear algebra library. The results show that auto-tuning is essential for creating resource-efficient hardware-agnostic GPU kernels across a variety of hardware. Optimal configurations improve kernel performance by a factor of 3 × to 7 × compared to median parameter configurations, demonstrating the substantial impact of tuning on efficient hardware utilization. Moreover, auto-tuning enables hardware-agnostic kernels to surpass manually optimized implementations in efficiency while reducing developer effort. This is made widely accessible through the first auto-tuning framework for Julia, KernelTuner.jl, bringing portable yet resource-efficient GPU kernels within reach for a wide range of applications and devices.",
+    "first_checked_at": "2026-10-05T08:19:07+00:00",
+    "last_checked_at": "2026-10-05T08:19:07+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "Portable to Efficient: Auto-Tuning Hardware-Agnostic GPU Kernels in Julia"
+  },
+  "processed_at": "2026-10-05T08:19:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df1afc72efcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

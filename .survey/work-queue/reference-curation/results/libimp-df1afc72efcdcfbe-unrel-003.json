@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df1afc72efcdcfbe-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21555",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21555",
+    "identity_tokens": [
+      "arXiv:2608.21555"
+    ],
+    "reason": "Modern machine learning compilers select tensor memory layouts to minimize execution cost under hardware constraints. Layout selection is global: an operator may be fastest under one layout while its consumers prefer another, and aligning these preferences requires explicit layout conversions that can hurt model performance. Despite its practical importance, layout selection lacks a formal basis, so current compilers rely on ad-hoc heuristics. This paper presents the first formal study of layout selection in machine learning compilers. We formulate the problem as combinatorial optimization over dataflow graphs, minimizing the sum of operator execution costs and the per-tensor cost of these conversions. Our theoretical analysis shows that optimal layout selection is computationally hard, even for programs containing only matrix multiplications over two-dimensional tensors. We design an optimal polynomial-time algorithm for dataflow graphs of bounded treewidth. For general instances, we give a weighted MaxSAT encoding that an off-the-shelf solver can optimize. The formulation unifies several existing layout optimization strategies, including XLA's layout assignment, partition dimension selection in systolic array compilers, and layout planning in mobile GPU optimizers. We implement the formalization in a production compiler for an AI accelerator and measure the execution time of the compiled models under greedy heuristics, the compiler's rule-based strategy, and an optimal solver. Simple heuristics degrade execution time by up to $5\\times$ on some workloads. Where the compiler's cost model is accurate, the solver matches or beats the rule-based strategy. On workloads with complex data movement it falls behind, and since the solver minimizes the stated objective exactly, that gap isolates cost-model error from search quality, showing where compiler effort actually pays off.",
+    "first_checked_at": "2026-10-05T08:19:07+00:00",
+    "last_checked_at": "2026-10-05T08:19:07+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+    ],
+    "title": "Tensor Seeks Layout: Formalizing Layout Selection for ML Compilers"
+  },
+  "processed_at": "2026-10-05T08:19:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df1afc72efcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

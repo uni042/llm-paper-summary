@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:16:12+00:00",
-  "record_count": 1178,
+  "updated_at": "2026-10-05T08:19:06+00:00",
+  "record_count": 1182,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18032,6 +18032,77 @@
         "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
       ],
       "title": "Target-Aware Calibration Data Selection for Preserving Uncertainty in Quantized Language Models"
+    },
+    "arXiv:2608.19670": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.19670",
+      "identity_tokens": [
+        "arXiv:2608.19670"
+      ],
+      "reason": "Compression deployment evaluation is adjacent, but the paper’s core is behavioral safety rather than efficiency.",
+      "first_checked_at": "2026-10-05T08:19:05+00:00",
+      "last_checked_at": "2026-10-05T08:19:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "The Asymmetric Harms of LLM Compression"
+    },
+    "DOI:10.1109/iciet70550.2026.11712652": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciet70550.2026.11712652",
+      "identity_tokens": [
+        "DOI:10.1109/iciet70550.2026.11712652"
+      ],
+      "reason": "Packetの一次abstract欄が空。DOI primary landing URLのopenはinaccessibleを返し、exact-DOI searchからも対象primary recordを取得できなかった。",
+      "first_checked_at": "2026-10-05T08:19:05+00:00",
+      "last_checked_at": "2026-10-05T08:19:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "LLMOps at Scale: Reliability, Cost Governance, and Multi-Model Orchestration for Enterprise Generative AI Platforms"
+    },
+    "DOI:10.1109/iciet70550.2026.11712786": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iciet70550.2026.11712786",
+      "identity_tokens": [
+        "DOI:10.1109/iciet70550.2026.11712786"
+      ],
+      "reason": "Packetの一次abstract欄が空。DOI primary landing URLのopenはinaccessibleを返し、exact-DOI searchからも対象primary recordを取得できなかった。",
+      "first_checked_at": "2026-10-05T08:19:05+00:00",
+      "last_checked_at": "2026-10-05T08:19:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "CHQR: A Context-Aware Hybrid Query Routing Framework for Energy-and Latency-Optimized Academic Question Answering"
+    },
+    "arXiv:2608.20566": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20566",
+      "identity_tokens": [
+        "arXiv:2608.20566"
+      ],
+      "reason": "Operational carbon is adjacent, but primary effect is shifting workload time/location rather than serving efficiency.",
+      "first_checked_at": "2026-10-05T08:19:06+00:00",
+      "last_checked_at": "2026-10-05T08:19:06+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "AgentDecarbonizer: Carbon-Aware Execution for AI Agents"
     }
   }
 }

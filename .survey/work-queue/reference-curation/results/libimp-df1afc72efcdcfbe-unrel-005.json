@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df1afc72efcdcfbe-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21657",
+    "identity_tokens": [
+      "arXiv:2608.21657"
+    ],
+    "reason": "Deploying deep neural networks on Field-Programmable Gate Arrays (FPGAs) requires joint reasoning about model compression and hardware acceleration, however the most comprehensive existing cross-platform treatment of this space, Deng et al.~\\cite{deng2020model}, compared compression techniques against CPU, GPU, FPGA, and ASIC targets at the level of broad, qualitative trade-offs, and not specific FPGA resource consequences. This survey instead restricted the scope to FPGAs alone and organized 25 compression-hardware co-design case studies (2015--2026) into a five-category taxonomy defined by which FPGA resources each strategy primarily reshapes: DSP-eliminating, DSP-repurposing/mixed-precision, sparsity-exploiting, memory-hierarchy-driven, and toolchain/deployment-level. Normalizing these case studies along a common set of dimensions (compression ratio, accuracy change, throughput, energy efficiency, and DSP/LUT/BRAM utilization) surfaces a central, quantitative finding; of the 25 reviewed works, only \\emph{one} reported a compression ratio and accuracy change measured against a single common baseline, and only \\emph{two} reported energy efficiency normalized against a common GPU baseline, exposing a field-wide characterization gap that no individual toolchain (FINN, HLS4ML, Vitis AI, or DNNWeaver) resolves on its own. Building on this taxonomy and meta-analysis, we formalize six open challenges: toolchain fragmentation, accuracy--efficiency characterization, automated mixed-precision optimization, sparse computation reliability, persistent memory bottlenecks, and FPGA-based training. Each is paired with a concrete next step grounded in extending an existing, cited technique, not a general call for future work.",
+    "first_checked_at": "2026-10-05T08:19:07+00:00",
+    "last_checked_at": "2026-10-05T08:19:07+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2512.11920-cxl-speckv-fpga-disaggregated-kv.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+    ],
+    "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis"
+  },
+  "processed_at": "2026-10-05T08:19:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df1afc72efcd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
