@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5bf9adce72a82cac-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.01905",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.01905",
+    "identity_tokens": [
+      "arXiv:2610.01905"
+    ],
+    "reason": "Online vectorized HD-map construction, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T04:06:57+00:00",
+    "last_checked_at": "2026-10-05T04:06:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "MapLightning: Online Vectorized HD Map Construction with 1D Map Tokens"
+  },
+  "processed_at": "2026-10-05T04:06:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5bf9adce72a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

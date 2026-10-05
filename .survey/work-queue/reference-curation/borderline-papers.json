@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:02:20+00:00",
-  "record_count": 813,
+  "updated_at": "2026-10-05T04:06:58+00:00",
+  "record_count": 815,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -12054,6 +12054,37 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
       ],
       "title": "Harness Annealing: Learning to Act with Less External Control"
+    },
+    "arXiv:2610.01687": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01687",
+      "identity_tokens": [
+        "arXiv:2610.01687"
+      ],
+      "reason": "Relevant VLM inference-time work, but the body does not show an efficiency benefit; classify borderline pending matched-cost measurements.",
+      "first_checked_at": "2026-10-05T04:06:56+00:00",
+      "last_checked_at": "2026-10-05T04:06:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Architectural Sampling: Test-Time Scaling via Computational Diversity in Frozen Vision-Language Models"
+    },
+    "arXiv:2610.01889": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01889",
+      "identity_tokens": [
+        "arXiv:2610.01889"
+      ],
+      "reason": "The inference-precision topic is relevant, but an efficiency gain is unverified; retain as borderline until hardware runtime/resource effects are measured.",
+      "first_checked_at": "2026-10-05T04:06:58+00:00",
+      "last_checked_at": "2026-10-05T04:06:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Stochastic Rounding in Low-Precision Transformer Inference: A Variable-Precision Emulation Study of a Small GPT-2"
     }
   }
 }

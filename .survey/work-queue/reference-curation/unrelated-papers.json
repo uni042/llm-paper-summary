@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:02:21+00:00",
-  "record_count": 2446,
+  "updated_at": "2026-10-05T04:06:58+00:00",
+  "record_count": 2464,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35429,6 +35429,265 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "Trustworthy Data- and ML-Ops for Intelligent Transportation Systems and Logistics"
+    },
+    "arXiv:2610.01595": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01595",
+      "identity_tokens": [
+        "arXiv:2610.01595"
+      ],
+      "reason": "The per-model profile is precomputed from 50 forward/reverse pairs; evaluation reports task accuracy across three VideoLLMs and four benchmarks, with no latency, throughput, token, or memory savings.",
+      "first_checked_at": "2026-10-05T04:06:56+00:00",
+      "last_checked_at": "2026-10-05T04:06:56+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Before It Fades: Reinforcing Temporal Representations at Inference Time in VideoLLMs"
+    },
+    "arXiv:2610.01685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01685",
+      "identity_tokens": [
+        "arXiv:2610.01685"
+      ],
+      "reason": "Selective memory for neural combinatorial optimization, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:06:56+00:00",
+      "last_checked_at": "2026-10-05T04:06:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "MiLoop: Selective Memory Propagation for Neural Combinatorial Optimization"
+    },
+    "arXiv:2610.01710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01710",
+      "identity_tokens": [
+        "arXiv:2610.01710"
+      ],
+      "reason": "Visual grounding and editing model, not language-model inference/serving.",
+      "first_checked_at": "2026-10-05T04:06:56+00:00",
+      "last_checked_at": "2026-10-05T04:06:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "CoEvolve: Construct-to-Edit Visual Grounding with Bidirectional State Refinement"
+    },
+    "arXiv:2610.01739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01739",
+      "identity_tokens": [
+        "arXiv:2610.01739"
+      ],
+      "reason": "The primary text defines target distributions over physical/discrete configurations and evaluates lattice spin models, amortized sampling, and alloy phase diagrams; no language-model inference workload is studied.",
+      "first_checked_at": "2026-10-05T04:06:56+00:00",
+      "last_checked_at": "2026-10-05T04:06:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Fixed-point neural samplers on discrete spaces"
+    },
+    "arXiv:2610.02057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02057",
+      "identity_tokens": [
+        "arXiv:2610.02057"
+      ],
+      "reason": "Recommendation-model training-fleet lifecycle efficiency, outside inference scope.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Optimizing Effective Training Time for Large-Scale Recommendation Systems"
+    },
+    "arXiv:2610.02070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02070",
+      "identity_tokens": [
+        "arXiv:2610.02070"
+      ],
+      "reason": "Causal identification for LLM memory retention decisions, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Causal Memory Policy: Making Memory Utility Identifiable by Intervening on Retrieval"
+    },
+    "arXiv:2610.02072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02072",
+      "identity_tokens": [
+        "arXiv:2610.02072"
+      ],
+      "reason": "Archaeological pottery-documentation automation, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "PyPottery: an AI-powered end-to-end suite for pottery processing and publication"
+    },
+    "arXiv:2610.02123": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02123",
+      "identity_tokens": [
+        "arXiv:2610.02123"
+      ],
+      "reason": "ExpertLens reduces multimodal adaptation/training effort, not inference serving cost.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Harnessing Domain Specialists in Multimodal Mixture-of-Experts for Efficient Adaptation"
+    },
+    "arXiv:2610.02142": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02142",
+      "identity_tokens": [
+        "arXiv:2610.02142"
+      ],
+      "reason": "Tool-use diagnostic and repair via SFT; reported efficiency is training, not inference.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Keyword Harnesses Fail Open: A Cheap Diagnostic Ladder for Tool-Use Claims in Small Language Models"
+    },
+    "arXiv:2610.01905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01905",
+      "identity_tokens": [
+        "arXiv:2610.01905"
+      ],
+      "reason": "Online vectorized HD-map construction, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "MapLightning: Online Vectorized HD Map Construction with 1D Map Tokens"
+    },
+    "arXiv:2610.01967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01967",
+      "identity_tokens": [
+        "arXiv:2610.01967"
+      ],
+      "reason": "GPU CI efficiency for LLM training frameworks; this is training infrastructure.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "FastCI: Efficient GPU-Intensive CI for LLM Training Frameworks"
+    },
+    "arXiv:2610.01975": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01975",
+      "identity_tokens": [
+        "arXiv:2610.01975"
+      ],
+      "reason": "CGRAs mapping generic kernels, with no LLM inference evaluation.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "CONFERM: Recurrence-Aware Temporal Mapping for Multi-Cycle Multi-Context CGRAs"
+    },
+    "arXiv:2610.01981": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01981",
+      "identity_tokens": [
+        "arXiv:2610.01981"
+      ],
+      "reason": "Theoretical universal-interpolation result for self-attention, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Universal interpolation for deep residual self-attention networks"
+    },
+    "arXiv:2610.02002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02002",
+      "identity_tokens": [
+        "arXiv:2610.02002"
+      ],
+      "reason": "LLM agent memory retrieval/answer-quality system; no reduced inference cost, latency, or resource evidence in abstract.",
+      "first_checked_at": "2026-10-05T04:06:57+00:00",
+      "last_checked_at": "2026-10-05T04:06:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents"
+    },
+    "arXiv:2610.01742": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01742",
+      "identity_tokens": [
+        "arXiv:2610.01742"
+      ],
+      "reason": "SE(3) world-motion sequence modeling, outside language-model inference.",
+      "first_checked_at": "2026-10-05T04:06:58+00:00",
+      "last_checked_at": "2026-10-05T04:06:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ],
+      "title": "World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories"
+    },
+    "arXiv:2610.01768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01768",
+      "identity_tokens": [
+        "arXiv:2610.01768"
+      ],
+      "reason": "Covert exfiltration/security attack through LLM web fetching, not an efficiency intervention.",
+      "first_checked_at": "2026-10-05T04:06:58+00:00",
+      "last_checked_at": "2026-10-05T04:06:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "The Innocent Courier: Covert Exfiltration Through Legitimate LLM Web Fetching"
+    },
+    "arXiv:2610.01891": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01891",
+      "identity_tokens": [
+        "arXiv:2610.01891"
+      ],
+      "reason": "Protein mutation-effect generation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T04:06:58+00:00",
+      "last_checked_at": "2026-10-05T04:06:58+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "RipplePLM: Structural and Property Decoupling for Protein Mutation Effect Generation"
+    },
+    "arXiv:2610.01896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01896",
+      "identity_tokens": [
+        "arXiv:2610.01896"
+      ],
+      "reason": "Asynchronous LLM post-training and convergence analysis; training-only work is outside scope.",
+      "first_checked_at": "2026-10-05T04:06:58+00:00",
+      "last_checked_at": "2026-10-05T04:06:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Asynchronous LLM Post-Training: Group-Mass Capping and Convergence Analysis"
     }
   }
 }
