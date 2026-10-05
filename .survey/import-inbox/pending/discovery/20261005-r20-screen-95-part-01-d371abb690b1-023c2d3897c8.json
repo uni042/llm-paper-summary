@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-95-part-01-d371abb690b1",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03007",
+      "identity_tokens": [
+        "arXiv:2410.03007"
+      ],
+      "title": "FastAdaSP: Multitask-Adapted Efficient Inference for Large Speech Language Model",
+      "reason": "The measured efficiency gain is concrete, but the specialized SpeechLM setting makes its fit to this survey adjacent rather than a direct general LLM contribution.",
+      "source_url": "https://arxiv.org/abs/2410.03007",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.07131",
+      "identity_tokens": [
+        "arXiv:2409.07131"
+      ],
+      "title": "Reranking Laws for Language Generation: A Communication-Theoretic Perspective",
+      "reason": "The primary abstract studies reliability/error probability of generate-many-and-rerank protocols and validates reranking laws; it does not target inference, serving, or inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2409.07131",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13167",
+      "identity_tokens": [
+        "arXiv:2406.13167"
+      ],
+      "title": "QRMeM: Unleash the Length Limitation through Question then Reflection Memory Mechanism",
+      "reason": "This is an adjacent long-context prompting/retrieval approach, and the available evaluation does not make its inference-efficiency contribution sufficiently direct.",
+      "source_url": "https://arxiv.org/abs/2406.13167",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01189",
+      "identity_tokens": [
+        "arXiv:2406.01189"
+      ],
+      "title": "MultiMax: Sparse and Multi-Modal Attention Learning",
+      "reason": "The primary abstract presents sparse/multimodal attention learning as a model-training/attention formulation contribution, without an LLM inference or serving efficiency method.",
+      "source_url": "https://arxiv.org/abs/2406.01189",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.02969",
+      "identity_tokens": [
+        "arXiv:2402.02969"
+      ],
+      "title": "Towards Understanding the Word Sensitivity of Attention Layers: A Study via Random Features",
+      "reason": "The primary abstract analyzes word sensitivity of attention through random-feature theory; it does not propose or evaluate inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2402.02969",
+      "first_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "last_checked_at": "2026-10-05T12:43:54.778785+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    }
+  ]
+}
