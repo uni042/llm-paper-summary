@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-71-part-05-635aea8c170c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07537",
+      "identity_tokens": [
+        "arXiv:2406.07537"
+      ],
+      "title": "Autoregressive Pretraining with Mamba in Vision",
+      "reason": "Mamba is evaluated for autoregressive vision pretraining, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2406.07537",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.14507",
+      "identity_tokens": [
+        "arXiv:2405.14507"
+      ],
+      "title": "Unchosen Experts Can Contribute Too: Unleashing MoE Models' Power by Self-Contrast",
+      "reason": "The method uses otherwise-unselected MoE experts to improve inference-time model capability; the abstract does not propose reduced inference cost or latency.",
+      "source_url": "https://arxiv.org/abs/2405.14507",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18928",
+      "identity_tokens": [
+        "arXiv:2404.18928"
+      ],
+      "title": "Stylus: Automatic Adapter Selection for Diffusion Models",
+      "reason": "Automatic adapter selection for diffusion models is outside LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2404.18928",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.02998",
+      "identity_tokens": [
+        "arXiv:2310.02998"
+      ],
+      "title": "ECoFLaP: Efficient Coarse-to-Fine Layer-Wise Pruning for Vision-Language Models",
+      "reason": "VLM pruning is adjacent, but the inspected results demonstrate sparsity/memory rather than inference latency or throughput.",
+      "source_url": "https://arxiv.org/abs/2310.02998",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.09057",
+      "identity_tokens": [
+        "arXiv:2511.09057"
+      ],
+      "title": "PAN: A World Model for General, Actionable, and Long-Horizon World Simulation",
+      "reason": "PAN is a world-simulation model for actionable long-horizon simulation, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.09057",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    }
+  ]
+}
