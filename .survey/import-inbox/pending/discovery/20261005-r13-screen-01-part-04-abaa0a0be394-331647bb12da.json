@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-01-part-04-abaa0a0be394",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.254",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.254"
+      ],
+      "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance",
+      "reason": "Abstract presents a hybrid table-and-text QA benchmark and model, without an inference-efficiency contribution.",
+      "source_url": "https://aclanthology.org/2021.acl-long.254/",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.04281",
+      "identity_tokens": [
+        "arXiv:1809.04281"
+      ],
+      "title": "Music Transformer: Generating Music with Long-Term Structure",
+      "reason": "Abstract reduces memory complexity for relative attention in long musical compositions; the application is music generation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/1809.04281",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/slt.2012.6424228",
+      "identity_tokens": [
+        "DOI:10.1109/slt.2012.6424228"
+      ],
+      "title": "Context dependent recurrent neural network language model",
+      "reason": "IEEE Xplore requires a JavaScript robot check for this DOI page, preventing retrieval of its primary abstract.",
+      "source_url": "https://doi.org/10.1109/SLT.2012.6424228",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-1023",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-1023"
+      ],
+      "title": "Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences",
+      "reason": "Abstract presents a challenge set for multi-sentence reading comprehension, not inference efficiency or serving.",
+      "source_url": "https://doi.org/10.18653/v1/N18-1023",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.crma.2012.03.014",
+      "identity_tokens": [
+        "DOI:10.1016/j.crma.2012.03.014"
+      ],
+      "title": "Multiple-gradient descent algorithm (MGDA) for multiobjective optimization",
+      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
+      "source_url": "https://doi.org/10.1016/J.CRMA.2012.03.014",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md"
+      ]
+    }
+  ]
+}
