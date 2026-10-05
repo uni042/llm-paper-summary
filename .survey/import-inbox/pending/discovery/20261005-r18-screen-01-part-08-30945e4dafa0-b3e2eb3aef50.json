@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-01-part-08-30945e4dafa0",
+  "reference_main_sha": "205a8db249ac7bd68c69d64fb27f9d2dff87cfb6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39056",
+      "identity_tokens": [
+        "arXiv:2609.39056"
+      ],
+      "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models",
+      "reason": "Quantization targets world-action models/robot control, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.39056",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39058",
+      "identity_tokens": [
+        "arXiv:2609.39058"
+      ],
+      "title": "A 3GPP-Compliant Benchmark Dataset for RIS-Aided Beyond 5G Networks",
+      "reason": "RIS wireless benchmark/dataset; not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.39058",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39066",
+      "identity_tokens": [
+        "arXiv:2609.39066"
+      ],
+      "title": "Agentic Tool-Augmented Reasoning for Explainable Image Forgery Detection",
+      "reason": "Image-forgery-detection agent emphasizes detection/explanation quality; no inference-efficiency result.",
+      "source_url": "https://arxiv.org/abs/2609.39066",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39082",
+      "identity_tokens": [
+        "arXiv:2609.39082"
+      ],
+      "title": "Shared Phase and Retention Control for Efficient Adaptive Spectral Recurrence",
+      "reason": "Adaptive spectral recurrent sequence model is evaluated on control/classification and training latency; not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.39082",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39096",
+      "identity_tokens": [
+        "arXiv:2609.39096"
+      ],
+      "title": "DeCoPrune: Efficient KV-Cache Pruning for Autoregressive Video Diffusion via Denoising Consistency",
+      "reason": "KV pruning targets autoregressive video diffusion, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2609.39096",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ]
+    }
+  ]
+}
