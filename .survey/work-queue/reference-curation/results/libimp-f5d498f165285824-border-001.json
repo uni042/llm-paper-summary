@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5d498f165285824-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.3390/electronics15163579",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.3390/electronics15163579",
+    "identity_tokens": [
+      "DOI:10.3390/electronics15163579"
+    ],
+    "reason": "Weak fit/evidence: Abstract describes edge-device health monitoring where an LLM orchestrates predictive-model selection and reports resource/accuracy trade-offs; full methods and LLM-serving costs were not verifiable.",
+    "first_checked_at": "2026-10-05T08:40:21+00:00",
+    "last_checked_at": "2026-10-05T08:40:21+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "LLM-Driven Context-Aware Health Monitoring for Resource-Constrained Edge Devices"
+  },
+  "processed_at": "2026-10-05T08:40:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5d498f16528",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

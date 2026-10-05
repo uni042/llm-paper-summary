@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f9cfe2215694636-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.18989",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.18989",
+    "identity_tokens": [
+      "arXiv:2609.18989"
+    ],
+    "reason": "Weak fit/evidence: Task-weighted charts outperform variance/linear alternatives under tight dimensional budgets, but next-token prediction needs 70–90% residual width within 5% perplexity; authors find no compact low-dimensional core.",
+    "first_checked_at": "2026-10-05T08:40:20+00:00",
+    "last_checked_at": "2026-10-05T08:40:20+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+    ],
+    "title": "Function Lives Where Variance Doesn't: Task-Weighted Charts of a Language Model's Computation"
+  },
+  "processed_at": "2026-10-05T08:40:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f9cfe221569",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

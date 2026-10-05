@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e16eb8ce36caf8b9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11015",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11015",
+    "identity_tokens": [
+      "arXiv:2608.11015"
+    ],
+    "reason": "We introduce Sona, a single-model generative recommender for Yandex Music. In an online A/B test, Sona replaced the entire production cascade, comprising more than 15 candidate generators followed by pre-ranking and ranking models that consume hundreds of features, including signals from large transformer models such as Argus and target-attention scorers, while significantly improving key engagement metrics. The architecture of Sona unifies candidate generation and ranking around a shared user representation. Its encoder transforms the user's chronological sequence of logged engagement events into hidden states consumed by both the autoregressive decoder and the Ranking Module. The next-token-prediction and distillation objectives jointly update the encoder, coupling generation and ranking through the same user state. Neither Sona nor its Teacher Ranker uses hand-engineered features; both operate on logged event fields and learned item representations. In the final Sona configuration, the larger teacher supplies ranking targets during training but is absent from serving, leaving the encoder, decoder, and Ranking Module as a single deployed model. We evaluate Sona in an online A/B experiment using live traffic from My Vibe on smart speakers, one of Yandex Music's largest recommendation surfaces. Relative to the production control, Sona produced statistically significant uplifts of 4.53% in Active Users, the primary metric, 6.30% in Total Listening Time, and 11.42% in Likes. These effects were incremental to improvements retained from preceding deployments. The Active Users uplift was 2.35 times the increment previously delivered by Argus, the strongest model deployed on this surface before Sona. These results show that a single jointly trained model can replace a mature multi-stage recommendation cascade while improving recommendation quality on live traffic.",
+    "first_checked_at": "2026-10-05T08:40:21+00:00",
+    "last_checked_at": "2026-10-05T08:40:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "Sona Technical Report"
+  },
+  "processed_at": "2026-10-05T08:40:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e16eb8ce36ca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
