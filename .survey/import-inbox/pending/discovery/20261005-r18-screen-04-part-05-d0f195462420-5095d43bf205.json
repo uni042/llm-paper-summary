@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-04-part-05-d0f195462420",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36688",
+      "identity_tokens": [
+        "arXiv:2609.36688"
+      ],
+      "title": "GRP v0.1 Technical Report",
+      "reason": "Generative recommendation model consolidating retrieval/ranking/reward components; recommendation serving, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36688",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36707",
+      "identity_tokens": [
+        "arXiv:2609.36707"
+      ],
+      "title": "LAURA: Knowledge Distillation for Interpretable Ambiguous Clause Identification in Legal Contracts",
+      "reason": "Post-training distillation for legal-clause identification; task-specific training method, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36707",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36734",
+      "identity_tokens": [
+        "arXiv:2609.36734"
+      ],
+      "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models",
+      "reason": "Selective knowledge distillation trains a smaller LLM; training method rather than inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36734",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36763",
+      "identity_tokens": [
+        "arXiv:2609.36763"
+      ],
+      "title": "SCORAS-MoE: Joint Compression and Resource-Adaptive Deployment of MoE-VLMs in LEO Satellite Networks",
+      "reason": "Specialized satellite VLM setting limits generality, and solver-speed figures must not be confused with inference throughput.",
+      "source_url": "https://arxiv.org/abs/2609.36763",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36770",
+      "identity_tokens": [
+        "arXiv:2609.36770"
+      ],
+      "title": "Emergent Specialization in Populations of Self-Supervised Collaborative Vision Experts Without a Shared Gate or Cross-Agent Gradients",
+      "reason": "Self-supervised collaborative vision expert population; vision training/specialization, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.36770",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ]
+    }
+  ]
+}
