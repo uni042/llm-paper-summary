@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a8edaaf594b63f3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.11163",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.11163",
+    "identity_tokens": [
+      "arXiv:2410.11163"
+    ],
+    "reason": "LLM expert weight-space adaptation via swarm searchが主題で、adaptation quality/training/searchが対象。",
+    "first_checked_at": "2026-10-05T14:04:53+00:00",
+    "last_checked_at": "2026-10-05T14:04:53+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+    ],
+    "title": "Model Swarms: Collaborative Search to Adapt LLM Experts via Swarm Intelligence"
+  },
+  "processed_at": "2026-10-05T14:04:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a8edaaf594b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

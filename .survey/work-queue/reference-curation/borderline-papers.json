@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:02:00+00:00",
-  "record_count": 1796,
+  "updated_at": "2026-10-05T14:04:54+00:00",
+  "record_count": 1801,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27764,6 +27764,76 @@
         "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
       ],
       "title": "Computational Economics in Large Language Models: Exploring Model Behavior and Incentive Design under Resource Constraints"
+    },
+    "arXiv:2510.26742": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.26742",
+      "identity_tokens": [
+        "arXiv:2510.26742"
+      ],
+      "reason": "明確な推論engine最適化を含むが、VLA統合と単一robot taskに特化し、一般LLM inference/serving対象への適用範囲が狭いためborderline。",
+      "first_checked_at": "2026-10-05T14:04:51+00:00",
+      "last_checked_at": "2026-10-05T14:04:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+      ],
+      "title": "Running VLAs at Real-time Speed"
+    },
+    "DOI:10.1109/hpcc67675.2025.00051": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpcc67675.2025.00051",
+      "identity_tokens": [
+        "DOI:10.1109/hpcc67675.2025.00051"
+      ],
+      "reason": "要旨では推論/servingに関連するが、一次出版社の全文取得に失敗し、関連節・評価・限界を確認できない。内容を推測しない。",
+      "first_checked_at": "2026-10-05T14:04:52+00:00",
+      "last_checked_at": "2026-10-05T14:04:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md"
+      ],
+      "title": "Adaptoserve: An Efficient System for Supporting Adaptive Chunked-Prefills in LLM Inference"
+    },
+    "arXiv:2508.07185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.07185",
+      "identity_tokens": [
+        "arXiv:2508.07185"
+      ],
+      "reason": "標準RAGよりtoken latencyは遅い。主利点は知識updateとgraph reasoning比較で、汎用serving最適化への関連は弱い。",
+      "first_checked_at": "2026-10-05T14:04:52+00:00",
+      "last_checked_at": "2026-10-05T14:04:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "DySK-Attn: A Framework for Efficient, Real-Time Knowledge Updating in Large Language Models via Dynamic Sparse Knowledge Attention"
+    },
+    "arXiv:2310.05317": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.05317",
+      "identity_tokens": [
+        "arXiv:2310.05317"
+      ],
+      "reason": "入力/出力token数圧縮は推論コストに関係し得るが、評価範囲が専用タスクに限られruntime benefitが未測定のためborderline。",
+      "first_checked_at": "2026-10-05T14:04:53+00:00",
+      "last_checked_at": "2026-10-05T14:04:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Task-Adaptive Tokenization: Enhancing Long-Form Text Generation Efficacy in Mental Health and Beyond"
+    },
+    "arXiv:2311.09335": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.09335",
+      "identity_tokens": [
+        "arXiv:2311.09335"
+      ],
+      "reason": "LLM pruningの効率文脈には接するが、本文の研究質問と評価はhallucination挙動に限定され、対象効率の直接貢献が弱いためborderline。",
+      "first_checked_at": "2026-10-05T14:04:54+00:00",
+      "last_checked_at": "2026-10-05T14:04:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "Investigating Hallucinations in Pruned Large Language Models for Abstractive Summarization"
     }
   }
 }

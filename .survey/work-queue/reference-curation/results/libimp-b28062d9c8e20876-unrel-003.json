@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b28062d9c8e20876-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.497",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2024.emnlp-main.497",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2024.emnlp-main.497"
+    ],
+    "reason": "LLMによるdata preprocessingへのinstruction tuningが主題。低価格GPU/小型モデル運用の文脈だが推論効率化手法を測らない。",
+    "first_checked_at": "2026-10-05T14:04:54+00:00",
+    "last_checked_at": "2026-10-05T14:04:54+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+    ],
+    "title": "Jellyfish: Instruction-Tuning Local Large Language Models for Data Preprocessing"
+  },
+  "processed_at": "2026-10-05T14:04:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b28062d9c8e2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
