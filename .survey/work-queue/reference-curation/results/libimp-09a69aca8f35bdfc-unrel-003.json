@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-09a69aca8f35bdfc-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2003.02245",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2003.02245",
+    "identity_tokens": [
+      "arXiv:2003.02245"
+    ],
+    "reason": "GPT-2/BERT/BARTをconditional data augmentationへ利用しlow-resource classification性能を改善するdata/training研究。推論runtime・memory・serving最適化を扱わない。",
+    "first_checked_at": "2026-10-05T01:59:06+00:00",
+    "last_checked_at": "2026-10-05T02:57:03+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Data Augmentation using Pre-trained Transformer Models"
+  },
+  "processed_at": "2026-10-05T02:57:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-09a69aca8f35",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

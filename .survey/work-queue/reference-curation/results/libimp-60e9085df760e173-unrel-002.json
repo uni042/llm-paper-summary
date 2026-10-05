@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60e9085df760e173-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/322217.322232",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/322217.322232",
+    "identity_tokens": [
+      "DOI:10.1145/322217.322232"
+    ],
+    "reason": "結合的演算のparallel prefix computationに対する古典的並列アルゴリズム/回路理論。後続のscanやattention実装へ理論的に利用され得るが、LLM/Transformer推論を最終適用先とする方式・評価ではない。",
+    "first_checked_at": "2026-10-05T02:57:04+00:00",
+    "last_checked_at": "2026-10-05T02:57:04+00:00",
+    "linked_from": [],
+    "title": "Parallel Prefix Computation"
+  },
+  "processed_at": "2026-10-05T02:57:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60e9085df760",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

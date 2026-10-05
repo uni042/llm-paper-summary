@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-421dd72091f64678-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.13565",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.13565",
+    "identity_tokens": [
+      "arXiv:2606.13565"
+    ],
+    "reason": "A2D2はany-length discrete diffusionのreward-guided fine-tuningとquality-based inference schedule。本文で主に生成品質を扱い、一般の推論latency/NFE/throughput削減値を確認できない。",
+    "first_checked_at": "2026-10-05T02:57:04+00:00",
+    "last_checked_at": "2026-10-05T02:57:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "A2D2: Fine-Tuning Any-Length Discrete Diffusion for Adaptive Decoding"
+  },
+  "processed_at": "2026-10-05T02:57:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-421dd72091f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

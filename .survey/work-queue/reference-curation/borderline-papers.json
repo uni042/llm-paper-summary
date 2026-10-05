@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:52:35+00:00",
-  "record_count": 717,
+  "updated_at": "2026-10-05T02:57:04+00:00",
+  "record_count": 718,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6753,20 +6753,6 @@
       ],
       "title": "The State of Sparsity in Deep Neural Networks"
     },
-    "DOI:10.1145/322217.322232": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/322217.322232",
-      "identity_tokens": [
-        "DOI:10.1145/322217.322232"
-      ],
-      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
-      "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
-      ],
-      "title": "Parallel Prefix Computation"
-    },
     "DOI:10.52202/075280-0441": {
       "classification": "borderline",
       "canonical_id": "DOI:10.52202/075280-0441",
@@ -9393,20 +9379,6 @@
       ],
       "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
     },
-    "DOI:10.1109/access.2024.3389497": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/access.2024.3389497",
-      "identity_tokens": [
-        "DOI:10.1109/access.2024.3389497"
-      ],
-      "reason": "Broad GPT technology/application/challenges review, not a focused inference-efficiency contribution; full text could not be retrieved.",
-      "first_checked_at": "2026-10-05T01:59:06+00:00",
-      "last_checked_at": "2026-10-05T01:59:06+00:00",
-      "linked_from": [
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md"
-      ],
-      "title": "GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions"
-    },
     "arXiv:2408.07666": {
       "classification": "borderline",
       "canonical_id": "arXiv:2408.07666",
@@ -9477,30 +9449,15 @@
       ],
       "title": "Alphazero-like Tree-Search can Guide Large Language Model Decoding and Training"
     },
-    "arXiv:2310.14735": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2310.14735",
-      "identity_tokens": [
-        "arXiv:2310.14735"
-      ],
-      "reason": "Broad prompt-engineering review covers capability, reasoning prompts, multimodal prompting, evaluation and security, not a focused serving-efficiency contribution.",
-      "first_checked_at": "2026-10-05T02:01:51+00:00",
-      "last_checked_at": "2026-10-05T02:01:51+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
-        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
-      ],
-      "title": "Unleashing the potential of prompt engineering for large language models"
-    },
     "DOI:10.1145/3373376.3378512": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3373376.3378512",
       "identity_tokens": [
         "DOI:10.1145/3373376.3378512"
       ],
-      "reason": "Primary ACM DOI page retrieval failed; no primary abstract/full text was available to verify scope.",
+      "reason": "virtualization-based serverless functionをcheckpoint imageから復元し、on-demand state recoveryとsforkでcold-startをbest case 1ms未満へ短縮するsystem研究。agent sandbox/LLM serverless実行基盤へ応用可能だが、論文自体は汎用serverless computingでLLM推論専用評価がないためborderline。",
       "first_checked_at": "2026-10-05T02:01:51+00:00",
-      "last_checked_at": "2026-10-05T02:01:51+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
@@ -10545,6 +10502,72 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "Sumi: Open Uniform Diffusion Language Model from Scratch"
+    },
+    "arXiv:2606.13565": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13565",
+      "identity_tokens": [
+        "arXiv:2606.13565"
+      ],
+      "reason": "A2D2はany-length discrete diffusionのreward-guided fine-tuningとquality-based inference schedule。本文で主に生成品質を扱い、一般の推論latency/NFE/throughput削減値を確認できない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "A2D2: Fine-Tuning Any-Length Discrete Diffusion for Adaptive Decoding"
+    },
+    "arXiv:2606.19537": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19537",
+      "identity_tokens": [
+        "arXiv:2606.19537"
+      ],
+      "reason": "collective inferenceの形式理論が主題。O(diam²)は線形Gaussianモデルの理論コストで、通常のLLM serving比較や実測最適化でない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Mesh Inference: A Formal Model of Collective Inference Without a Center"
+    },
+    "arXiv:2606.17609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.17609",
+      "identity_tokens": [
+        "arXiv:2606.17609"
+      ],
+      "reason": "圧縮LLMの出力能力評価は近接するが、本文の貢献はmultiple-choice/free-formの評価形式差の診断であり、実測latency/throughput/costや効率化機構は示さない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "The Benchmark Illusion: Pruned LLMs Can Pass Multiple Choice but Fail to Answer"
+    },
+    "arXiv:2606.12412": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.12412",
+      "identity_tokens": [
+        "arXiv:2606.12412"
+      ],
+      "reason": "Rerouteは既存pruningと同じ理論FLOPs/KV budgetでgrounding品質を改善。追加の効率削減ではなく同一budgetでの品質回復で、効率への寄与は間接的。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models"
     }
   }
 }

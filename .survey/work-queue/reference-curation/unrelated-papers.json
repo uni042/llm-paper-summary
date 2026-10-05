@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:52:35+00:00",
-  "record_count": 2079,
+  "updated_at": "2026-10-05T02:57:04+00:00",
+  "record_count": 2090,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -11093,20 +11093,6 @@
       ],
       "title": "K -THEORY AND REALITY"
     },
-    "arXiv:2305.10435": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2305.10435",
-      "identity_tokens": [
-        "arXiv:2305.10435"
-      ],
-      "reason": "GPTの技術、応用、課題、将来方向を広く整理する一般レビューで、推論サービングやKV/メモリ階層等のシステム最適化を主要貢献としない。",
-      "first_checked_at": "2026-10-03T17:48:37+00:00",
-      "last_checked_at": "2026-10-03T17:48:37+00:00",
-      "linked_from": [
-        ".survey/work-queue/worker-worklist-00.json"
-      ],
-      "title": "GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions"
-    },
     "DOI:10.1109/dac18074.2021.9586216": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/dac18074.2021.9586216",
@@ -21490,9 +21476,9 @@
       "identity_tokens": [
         "arXiv:2503.06749"
       ],
-      "reason": "arXiv要旨はVision-R1向けmultimodal CoT dataset、RL/GRPO/PTSTによるreasoning capabilityの学習を扱う。",
+      "reason": "200K multimodal CoT cold-start datasetとProgressive Thinking Suppression Training、GRPOでMLLMの推論能力を学習時に改善するtraining/capability研究。reasoning token長を制約するが、推論runtime・serving効率化のsystem研究ではない。",
       "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
       ],
@@ -25586,9 +25572,9 @@
       "identity_tokens": [
         "arXiv:2303.00566"
       ],
-      "reason": "Survey concerns structured pruning for deep CNNs, outside LLM inference/serving.",
+      "reason": "deep CNNのstructured pruningをfilter ranking、regularization、dynamic execution、NAS等の観点から整理するsurvey。hardware-friendly accelerationは扱うが、最終対象はCNNでLLM/Transformer推論ではない。",
       "first_checked_at": "2026-10-05T01:59:06+00:00",
-      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
       ],
@@ -25600,9 +25586,9 @@
       "identity_tokens": [
         "arXiv:2003.02245"
       ],
-      "reason": "Transformer-based data augmentation for NLP training, not inference efficiency.",
+      "reason": "GPT-2/BERT/BARTをconditional data augmentationへ利用しlow-resource classification性能を改善するdata/training研究。推論runtime・memory・serving最適化を扱わない。",
       "first_checked_at": "2026-10-05T01:59:06+00:00",
-      "last_checked_at": "2026-10-05T01:59:06+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
@@ -30058,6 +30044,174 @@
       "last_checked_at": "2026-10-05T02:52:35+00:00",
       "linked_from": [],
       "title": "Competitive caching with machine learned advice"
+    },
+    "DOI:10.1609/aaai.v34i04.6144": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v34i04.6144",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v34i04.6144",
+        "arXiv:1912.09729"
+      ],
+      "reason": "MOBA 1v1のcomplex action controlを大規模deep RL systemとdual-clip PPO等で学習しhuman-level game playを目指す研究。scalable systemは扱うが最終適用先はgame RL trainingで、LLM推論systemではない。",
+      "first_checked_at": "2026-10-05T02:57:03+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
+      "linked_from": [],
+      "title": "Mastering Complex Control in MOBA Games with Deep Reinforcement Learning"
+    },
+    "DOI:10.1109/access.2024.3389497": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2024.3389497",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3389497",
+        "arXiv:2305.10435"
+      ],
+      "reason": "GPTのarchitecture、training、applications、challenge、future directionを包括的に整理するreview。推論systemの特定runtime・kernel・memory最適化方式を提案・評価する論文ではない。",
+      "first_checked_at": "2026-10-03T17:48:37+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
+      "linked_from": [
+        ".survey/work-queue/worker-worklist-00.json"
+      ],
+      "title": "Generative Pre-trained Transformer: A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions"
+    },
+    "arXiv:2310.14735": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14735",
+      "identity_tokens": [
+        "arXiv:2310.14735"
+      ],
+      "reason": "chain-of-thought、self-consistency、generated knowledge、VLM prompt等のprompt engineeringを整理するreview。モデル能力・security・prompt評価が主題で、推論runtime・serving最適化ではない。",
+      "first_checked_at": "2026-10-05T02:57:03+00:00",
+      "last_checked_at": "2026-10-05T02:57:03+00:00",
+      "linked_from": [],
+      "title": "Unleashing the potential of prompt engineering in Large Language Models: a comprehensive review"
+    },
+    "arXiv:2606.13300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13300",
+      "identity_tokens": [
+        "arXiv:2606.13300"
+      ],
+      "reason": "time-series model quantization sensitivityでLLM/MLLMでない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "title": "Quantizing Time-Series Models As Dynamical Systems: Trajectory-Based Quantization Sensitivity Score"
+    },
+    "arXiv:2606.13603": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13603",
+      "identity_tokens": [
+        "arXiv:2606.13603"
+      ],
+      "reason": "CoT causal/probing analysisでinference efficiencyなし。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Beyond the Commitment Boundary: Probing Epiphenomenal Chain-of-Thought in Large Reasoning Models"
+    },
+    "arXiv:2606.13945": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13945",
+      "identity_tokens": [
+        "arXiv:2606.13945"
+      ],
+      "reason": "cross-hospital diagnosis multi-agent qualityが主題。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "LatentDx: Latent Multi-Agent Communication for Cross-Hospital Rare-Disease Diagnosis"
+    },
+    "arXiv:2606.12146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12146",
+      "identity_tokens": [
+        "arXiv:2606.12146"
+      ],
+      "reason": "generalized RoPE positional embeddingでefficiency metricsなし。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "nD-RoPE: A Generalized RoPE for n-Dimensional Position Embedding"
+    },
+    "DOI:10.1145/322217.322232": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/322217.322232",
+      "identity_tokens": [
+        "DOI:10.1145/322217.322232"
+      ],
+      "reason": "結合的演算のparallel prefix computationに対する古典的並列アルゴリズム/回路理論。後続のscanやattention実装へ理論的に利用され得るが、LLM/Transformer推論を最終適用先とする方式・評価ではない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [],
+      "title": "Parallel Prefix Computation"
+    },
+    "arXiv:2606.17937": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17937",
+      "identity_tokens": [
+        "arXiv:2606.17937"
+      ],
+      "reason": "VLA robot manipulation architecture/reasoning qualityであり、inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "ThinkingVLA: Interleaved Vision and Language Reasoning for Robotic Manipulation"
+    },
+    "arXiv:2606.18208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18208",
+      "identity_tokens": [
+        "arXiv:2606.18208"
+      ],
+      "reason": "world-model latent simulation/parameter efficiencyで、LLM inference/servingでない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Looped World Models"
+    },
+    "DOI:10.3390/sym18061037": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/sym18061037",
+      "identity_tokens": [
+        "DOI:10.3390/sym18061037"
+      ],
+      "reason": "persona-memory reliability/consistencyが目的でinference cost削減でない。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+        "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md"
+      ],
+      "title": "Verification-Gated Persona State Transitions for Memory-Augmented Language Agents"
+    },
+    "arXiv:2606.12290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12290",
+      "identity_tokens": [
+        "arXiv:2606.12290"
+      ],
+      "reason": "LLM graph-memory retrieval integrity/securityでcompute cost削減なし。",
+      "first_checked_at": "2026-10-05T02:57:04+00:00",
+      "last_checked_at": "2026-10-05T02:57:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Selection Integrity for LLM Graph Memory: An Accumulability Criterion for Information-Flow-Blind Retrieval"
     }
   }
 }

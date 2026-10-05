@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75dcb88a1a01467b-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.17609",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.17609",
+    "identity_tokens": [
+      "arXiv:2606.17609"
+    ],
+    "reason": "圧縮LLMの出力能力評価は近接するが、本文の貢献はmultiple-choice/free-formの評価形式差の診断であり、実測latency/throughput/costや効率化機構は示さない。",
+    "first_checked_at": "2026-10-05T02:57:04+00:00",
+    "last_checked_at": "2026-10-05T02:57:04+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+    ],
+    "title": "The Benchmark Illusion: Pruned LLMs Can Pass Multiple Choice but Fail to Answer"
+  },
+  "processed_at": "2026-10-05T02:57:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75dcb88a1a01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
