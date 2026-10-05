@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-37-part-05-244c615ed3cf",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3641538",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2025.3641538"
+      ],
+      "title": "Autonomous Model Quantization Framework for Hybrid Vision Transformers Based on Reinforcement Learning",
+      "reason": "The abstract evaluates post-training quantization of hybrid vision transformers, not LLMs.",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3641538",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCASAI.2026.3670075",
+      "identity_tokens": [
+        "DOI:10.1109/TCASAI.2026.3670075"
+      ],
+      "title": "Asymmetric KV Cache Compression Using State-Aware Sparsity and Quantization",
+      "reason": "KAIST author-affiliation record https://pure.kaist.ac.kr/en/publications/asymmetric-kv-cache-compression-using-state-aware-sparsity-and-qu/ exposed the primary abstract and pagination but no full text; IEEE full text was inaccessible. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/TCASAI.2026.3670075",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCE.2026.3657983",
+      "identity_tokens": [
+        "DOI:10.1109/TCE.2026.3657983"
+      ],
+      "title": "SQLLM: A Secure and Quantized Framework for Large Language Models in 5G Private Network Operations",
+      "reason": "The author-institution record https://researchportal.hkust.edu.hk/en/publications/sqllm-a-secure-and-quantized-framework-for-large-language-models-/ exposed abstract/metadata only; publisher full text was not accessible. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/TCE.2026.3657983",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCE.2026.3674936",
+      "identity_tokens": [
+        "DOI:10.1109/TCE.2026.3674936"
+      ],
+      "title": "Efficient Edge-Cloud Collaboration via Token Pruning and Quantized Feature Transmission for Consumer Electronics and Intelligent Vehicles",
+      "reason": "The paper explicitly proposes an edge-cloud collaboration training paradigm; training is outside the inference-only scope.",
+      "source_url": "https://doi.org/10.1109/TCE.2026.3674936",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3678854",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2026.3678854"
+      ],
+      "title": "A 0.53-pJ/bit 5 × 10 Gb/s/pin Single-Ended Transceiver With Reconfigurable 4-Aggressor Crosstalk Cancellation for HBM Interfaces",
+      "reason": "The paper is an HBM physical transceiver/crosstalk design, not an LLM inference method.",
+      "source_url": "https://doi.org/10.1109/TCSI.2026.3678854",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    }
+  ]
+}
