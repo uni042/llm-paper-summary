@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:17:09+00:00",
-  "record_count": 1618,
+  "updated_at": "2026-10-05T12:19:33+00:00",
+  "record_count": 1622,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25134,6 +25134,70 @@
         "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
       ],
       "title": "HyPIM: LLM Acceleration with A Hybrid ReRAM/SRAM 3D-PIM Architecture"
+    },
+    "DOI:10.1007/s11276-026-04169-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11276-026-04169-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11276-026-04169-5"
+      ],
+      "reason": "Packet has no abstract. The supplied primary DOI page was attempted but is inaccessible in the available reader. A secondary bibliographic summary indicates O-RAN edge-controller inference/deployment, but primary scope cannot be confirmed.",
+      "first_checked_at": "2026-10-05T12:19:31+00:00",
+      "last_checked_at": "2026-10-05T12:19:31+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Advances in edge-intelligent controllers for open radio access networks"
+    },
+    "DOI:10.1007/s11831-026-10656-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-026-10656-x",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10656-x"
+      ],
+      "reason": "Packet has no abstract. The supplied primary Springer DOI page was attempted but is inaccessible in the available reader. A secondary record describes a lightweight-LLM survey, but its primary scope and full-text evidence could not be verified.",
+      "first_checked_at": "2026-10-05T12:19:31+00:00",
+      "last_checked_at": "2026-10-05T12:19:31+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "title": "A Comprehensive Survey of Lightweight Large Language Models: Architectures, Techniques, and Challenges"
+    },
+    "arXiv:2606.09159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.09159",
+      "identity_tokens": [
+        "arXiv:2606.09159"
+      ],
+      "reason": "Relevant to DLM decoding, but objective/evidence are quality correction and speed can worsen.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Unified Energy for Invariant and Independent Decoding in Diffusion Language Models"
+    },
+    "arXiv:2606.09643": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.09643",
+      "identity_tokens": [
+        "arXiv:2606.09643"
+      ],
+      "reason": "Strong general serving result but inspected performance evidence does not establish autoregressive LLM serving/token-SLO benefit.",
+      "first_checked_at": "2026-10-05T12:19:33+00:00",
+      "last_checked_at": "2026-10-05T12:19:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14312-locality-aware-fair-scheduling-dlpm.md"
+      ],
+      "title": "FMplex: Model Virtualization for Serving Extensible Foundation Models"
     }
   }
 }

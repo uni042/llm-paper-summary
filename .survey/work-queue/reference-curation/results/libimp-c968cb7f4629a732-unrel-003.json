@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c968cb7f4629a732-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09312",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09312",
+    "identity_tokens": [
+      "arXiv:2606.09312"
+    ],
+    "reason": "Generic TVM tensor-program search/compiler optimization without LLM-specific workload or LLM-serving evidence in the primary abstract.",
+    "first_checked_at": "2026-10-05T12:19:32+00:00",
+    "last_checked_at": "2026-10-05T12:19:32+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Toward Compiler World Models: Learning Latent Dynamics for Efficient Tensor Program Search"
+  },
+  "processed_at": "2026-10-05T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c968cb7f4629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c968cb7f4629a732-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09572",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09572",
+    "identity_tokens": [
+      "arXiv:2606.09572"
+    ],
+    "reason": "Compact VLA visuomotor policy optimizes robotic control execution, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T12:19:32+00:00",
+    "last_checked_at": "2026-10-05T12:19:32+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "CT-VAM: A Cerebello-Thalamic-Inspired Vision-Action Model for Efficient Visuomotor Control"
+  },
+  "processed_at": "2026-10-05T12:19:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c968cb7f4629",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

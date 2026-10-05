@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:17:10+00:00",
-  "record_count": 4894,
+  "updated_at": "2026-10-05T12:19:32+00:00",
+  "record_count": 4906,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -71225,6 +71225,179 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "What Spatial Memory Must Store: Occlusion as the Test for Language-Agent Memory"
+    },
+    "arXiv:2606.14757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14757",
+      "identity_tokens": [
+        "arXiv:2606.14757"
+      ],
+      "reason": "Spatial-attention bias for vision transformers, evaluated for image recognition/pretraining rather than language-model serving.",
+      "first_checked_at": "2026-10-05T12:19:31+00:00",
+      "last_checked_at": "2026-10-05T12:19:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Spatial Priors via Space Filling Curves for Small and Limited Data Vision Transformers"
+    },
+    "arXiv:2606.14760": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14760",
+      "identity_tokens": [
+        "arXiv:2606.14760"
+      ],
+      "reason": "RoPE adaptation for remote-sensing foundation models and cross-resolution image tasks, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:19:31+00:00",
+      "last_checked_at": "2026-10-05T12:19:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "GeoRoPE: Ground-Aware Rotary Adaptation for Remote Sensing Foundation Models"
+    },
+    "DOI:10.1145/3820171.3806856": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3820171.3806856",
+      "identity_tokens": [
+        "DOI:10.1145/3820171.3806856"
+      ],
+      "reason": "Generic GPU/HPC workload profiling and power prediction, without an LLM-specific serving contribution.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Minos: Systematically Classifying Performance and Power Characteristics of GPU Workloads on HPC Clusters"
+    },
+    "arXiv:2606.08970": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08970",
+      "identity_tokens": [
+        "arXiv:2606.08970"
+      ],
+      "reason": "Full text says the router’s objective is answer-selection accuracy; it explicitly disregards cost and latency because hardware comparisons are unreliable. Evaluation measures selection accuracy/EM, not efficiency.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "An Effective Router for Vision-Language Model Selection"
+    },
+    "arXiv:2606.09312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09312",
+      "identity_tokens": [
+        "arXiv:2606.09312"
+      ],
+      "reason": "Generic TVM tensor-program search/compiler optimization without LLM-specific workload or LLM-serving evidence in the primary abstract.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Toward Compiler World Models: Learning Latent Dynamics for Efficient Tensor Program Search"
+    },
+    "arXiv:2606.09357": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09357",
+      "identity_tokens": [
+        "arXiv:2606.09357"
+      ],
+      "reason": "Recursive Transformer for speech recognition/parameter reduction in ASR, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Rethinking Depth: A study of the Recursive-Transformer for Speech Recognition"
+    },
+    "arXiv:2606.09572": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09572",
+      "identity_tokens": [
+        "arXiv:2606.09572"
+      ],
+      "reason": "Compact VLA visuomotor policy optimizes robotic control execution, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "CT-VAM: A Cerebello-Thalamic-Inspired Vision-Action Model for Efficient Visuomotor Control"
+    },
+    "arXiv:2606.09668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09668",
+      "identity_tokens": [
+        "arXiv:2606.09668"
+      ],
+      "reason": "Contextual queueing-bandit theory with queue-length regret; no LLM/inference workload or serving-system evaluation.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+      ],
+      "title": "Algorithm for Contextual Queueing Bandits with Rate-Optimal Queue Length Regret"
+    },
+    "arXiv:2606.09951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09951",
+      "identity_tokens": [
+        "arXiv:2606.09951"
+      ],
+      "reason": "Formal attention-mask structure and parallel-training task design; the contribution targets training mask construction, not serving efficiency.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Hasse Diagrams for Attention: A Partial Order Framework for Designing Transformer Masks"
+    },
+    "arXiv:2606.09962": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09962",
+      "identity_tokens": [
+        "arXiv:2606.09962"
+      ],
+      "reason": "Discrete diffusion for categorical/TTS generation; compares speech synthesis models rather than LLM inference systems.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Optimality of FSQ Tokens for Continuous Diffusion for Categorical Data with Application to Text-to-Speech"
+    },
+    "arXiv:2606.10254": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10254",
+      "identity_tokens": [
+        "arXiv:2606.10254"
+      ],
+      "reason": "Benchmark of LLM judges for human math reasoning; evaluated judge quality, not model inference efficiency.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "RealMath-Eval: Why SOTA Judges Struggle with Real Human Reasoning"
+    },
+    "arXiv:2606.11255": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11255",
+      "identity_tokens": [
+        "arXiv:2606.11255"
+      ],
+      "reason": "Random-feature approximation theory for kernel-ridge methods; no LLM or serving workload.",
+      "first_checked_at": "2026-10-05T12:19:32+00:00",
+      "last_checked_at": "2026-10-05T12:19:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Bernstein-Schur Kernels: Random Features by Sketched Modulation and Radial Randomization"
     }
   }
 }
