@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-59-part-04-6803bd2d8ca0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16456",
+      "identity_tokens": [
+        "arXiv:2606.16456"
+      ],
+      "title": "SPRI: SVD-Partitioned Residual Initialization for Data-Constrained MoE Upcycling",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16456. Abstract summary: Mixture-of-Experts (MoE) models enable efficient scaling, but training them from scratch remains prohibitively expensive. MoE upcycling mitigates this cost by converting pretrained dense models into sparse MoE models. However, existing upcycling methods typically rely on large-scale continued training and often perform poorly un Out of scope: MoE upcycling initialization/training.",
+      "source_url": "https://arxiv.org/abs/2606.16456",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16501",
+      "identity_tokens": [
+        "arXiv:2606.16501"
+      ],
+      "title": "Post-Hoc Merging is Not Enough: Many-Shot Model Merging with Loss-Gap Balancing",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16501. Abstract summary: Model merging has become a practical post-training strategy for building a single multi-task large language model (LLM) by combining multiple task-specialized models. However, most existing approaches rely on post-hoc merging, in which task-specific models are merged only once after training. This one-shot aggregation often suff Out of scope: Model merging strategy/quality, not serving.",
+      "source_url": "https://arxiv.org/abs/2606.16501",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16694",
+      "identity_tokens": [
+        "arXiv:2606.16694"
+      ],
+      "title": "When Does Depth Matter For In-Context Learning? Adaptive Inference in Deep Transformers",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16694. Abstract summary: Transformers perform computations through many successive attention and feedforward blocks, allowing them to learn complex correlations between a large collection of coupled variables. When does stacking successive attention-feedforward computations over many layers provide a computational advantage over a single transformer blo Out of scope: Adaptive-depth ICL theory without runtime efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2606.16694",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16730",
+      "identity_tokens": [
+        "arXiv:2606.16730"
+      ],
+      "title": "Attention is Just Another Name for Coupling?: A Fast-Slow ODE Perspective on Hierarchical Pretraining",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16730. Abstract summary: We re-interpret Transformer pretraining as a fast-slow, singularly perturbed flow along depth, with untied weights as its non-autonomous feature. The linearised dynamics is a depth-ordered product of layer maps. Along a token-homogeneous reference trajectory, the linearised layer factorises along the eigenbasis of a frozen atten Out of scope: Hierarchical pretraining theory.",
+      "source_url": "https://arxiv.org/abs/2606.16730",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16827",
+      "identity_tokens": [
+        "arXiv:2606.16827"
+      ],
+      "title": "No Resource, No Benchmarks, No Problem? Evaluating and Improving LLMs for Code Generation in No-Resource Languages",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16827. Abstract summary: Large Language Models (LLMs) have significantly advanced the automation of software engineering tasks. One prominent example is code generation, where an LLM produces code in a specified programming language based on a natural language description. Most research in this area has focused on high-resource languages, such as Python Out of scope: Low-resource code generation capability/training study.",
+      "source_url": "https://arxiv.org/abs/2606.16827",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
