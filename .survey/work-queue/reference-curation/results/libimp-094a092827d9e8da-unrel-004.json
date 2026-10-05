@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-094a092827d9e8da-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10044-026-01666-3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10044-026-01666-3",
+    "identity_tokens": [
+      "DOI:10.1007/s10044-026-01666-3"
+    ],
+    "reason": "Springer一次要旨: SEII-YOLOはsubstation infrared image object detection用YOLO11nでRK3588S NPU上66.8 FPS。vision detectionでありLLM inferenceではない。",
+    "first_checked_at": "2026-10-05T10:22:32+00:00",
+    "last_checked_at": "2026-10-05T10:22:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "SEII-YOLO: a lightweight enhanced object detection model for substation equipment infrared images with applications in IoT embedded devices"
+  },
+  "processed_at": "2026-10-05T10:22:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-094a092827d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

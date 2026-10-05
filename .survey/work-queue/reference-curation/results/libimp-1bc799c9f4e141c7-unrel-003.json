@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1bc799c9f4e141c7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.13925",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.13925",
+    "identity_tokens": [
+      "arXiv:2607.13925"
+    ],
+    "reason": "一次要旨はlow-light image enhancementのfusion品質を扱う画像処理で、LLM推論ではない。",
+    "first_checked_at": "2026-10-05T10:22:32+00:00",
+    "last_checked_at": "2026-10-05T10:22:32+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "Thresholded Cross-Attention for Reliable Intensity-Chromaticity Fusion in Low-Light Image Enhancement"
+  },
+  "processed_at": "2026-10-05T10:22:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1bc799c9f4e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
