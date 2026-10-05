@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-048e7f3dfc2cd163-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.22696",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.22696",
+    "identity_tokens": [
+      "arXiv:2607.22696"
+    ],
+    "reason": "MegaSlide-DiT targets full-parameter adaptation/training of video diffusion models; it is not LLM inference or serving.",
+    "first_checked_at": "2026-10-05T03:35:57+00:00",
+    "last_checked_at": "2026-10-05T03:35:57+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "MegaSlide-DiT: Memory-Centric Adaptation and Deformable Local Attention for Efficient Video Diffusion"
+  },
+  "processed_at": "2026-10-05T03:35:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-048e7f3dfc2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

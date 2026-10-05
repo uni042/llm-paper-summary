@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-048e7f3dfc2cd163-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.14898",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.14898",
+    "identity_tokens": [
+      "arXiv:2607.14898"
+    ],
+    "reason": "FlashDecoder accelerates latent-to-pixel video diffusion decoding, not language-model inference.",
+    "first_checked_at": "2026-10-05T03:35:57+00:00",
+    "last_checked_at": "2026-10-05T03:35:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "FlashDecoder: Real-Time Latent-to-Pixel Streaming Decoder with Transformers"
+  },
+  "processed_at": "2026-10-05T03:35:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-048e7f3dfc2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

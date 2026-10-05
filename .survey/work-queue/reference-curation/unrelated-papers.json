@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:33:36+00:00",
-  "record_count": 2287,
+  "updated_at": "2026-10-05T03:35:59+00:00",
+  "record_count": 2304,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -33112,6 +33112,251 @@
         "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
       ],
       "title": "Empowering Cross-Domain Sequential Recommendation with Hybrid Tokenization and Serial-Parallel Decoding"
+    },
+    "arXiv:2607.15576": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15576",
+      "identity_tokens": [
+        "arXiv:2607.15576"
+      ],
+      "reason": "The contribution is graph-based vector-index insertion/deletion and search quality, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "Efficient and Effective In-place Graph-based Vector Index Updates"
+    },
+    "arXiv:2607.16019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16019",
+      "identity_tokens": [
+        "arXiv:2607.16019"
+      ],
+      "reason": "The paper studies memory-evaluation confounds and state representation, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Presentation, Not Mechanism: A Render Confound in Deprecation-Aware Memory Evaluation"
+    },
+    "arXiv:2607.22696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22696",
+      "identity_tokens": [
+        "arXiv:2607.22696"
+      ],
+      "reason": "MegaSlide-DiT targets full-parameter adaptation/training of video diffusion models; it is not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "MegaSlide-DiT: Memory-Centric Adaptation and Deformable Local Attention for Efficient Video Diffusion"
+    },
+    "arXiv:2607.14522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14522",
+      "identity_tokens": [
+        "arXiv:2607.14522"
+      ],
+      "reason": "The primary contribution is RL fine-tuning of discrete diffusion models; its efficiency technique concerns training-time trajectory likelihood computation, outside scope.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "A Continuous-Time Reinforcement Learning Framework for Fine-Tuning Discrete Diffusion Models"
+    },
+    "arXiv:2607.14898": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14898",
+      "identity_tokens": [
+        "arXiv:2607.14898"
+      ],
+      "reason": "FlashDecoder accelerates latent-to-pixel video diffusion decoding, not language-model inference.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "FlashDecoder: Real-Time Latent-to-Pixel Streaming Decoder with Transformers"
+    },
+    "arXiv:2607.15142": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15142",
+      "identity_tokens": [
+        "arXiv:2607.15142"
+      ],
+      "reason": "This is world-model and reinforcement-learning research for Atari, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:35:57+00:00",
+      "last_checked_at": "2026-10-05T03:35:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Improving Weak World Models Behind Strong Agents in Atari Pong"
+    },
+    "arXiv:2607.13455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13455",
+      "identity_tokens": [
+        "arXiv:2607.13455"
+      ],
+      "reason": "The paper optimizes robot teleoperation-data collection and policy learning, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Reverse to Advance: Teleoperation-Cost Effective Hard Policy Learning from Reversed Easy Tasks"
+    },
+    "arXiv:2607.13770": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13770",
+      "identity_tokens": [
+        "arXiv:2607.13770"
+      ],
+      "reason": "Kaleido accelerates video diffusion transformers; despite transformer attention overlap, the workload is vDiT video generation rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "Kaleido: Algorithm-Hardware Co-Design for Video Diffusion Transformers by Exploiting Latent Space Correlations"
+    },
+    "arXiv:2607.17147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17147",
+      "identity_tokens": [
+        "arXiv:2607.17147"
+      ],
+      "reason": "SlotGuard focuses on privacy-preserving transcript redaction at an agent boundary; the abstract does not claim inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "SlotGuard: Stop Oversharing Private Local Context in LLM Agent Transcri"
+    },
+    "arXiv:2607.17299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17299",
+      "identity_tokens": [
+        "arXiv:2607.17299"
+      ],
+      "reason": "The system optimizes rollout generation during synchronous agentic RL training; training-only efficiency is outside the target scope.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "title": "WAR: Workload-Aware Rollouts for Synchronous Agentic Reinforcement Learning"
+    },
+    "DOI:10.1002/idm2.70070": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/idm2.70070",
+      "identity_tokens": [
+        "DOI:10.1002/idm2.70070"
+      ],
+      "reason": "A neuromorphic hardware review covers perception and multimodal fusion broadly without an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Neuromorphic Hardware Materials for Intelligent Artificial Perception and Multimodal Fusion: From Sensing to Cognition"
+    },
+    "arXiv:2607.16716": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16716",
+      "identity_tokens": [
+        "arXiv:2607.16716"
+      ],
+      "reason": "RECON is a benchmark for agent memory reasoning, not an inference-time efficiency or serving method.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "RECON: Benchmarking Agent Memory for Compositional Reasoning over Long Contexts"
+    },
+    "arXiv:2607.18020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18020",
+      "identity_tokens": [
+        "arXiv:2607.18020"
+      ],
+      "reason": "Fused Triton operators target neural PDE solvers and training memory/execution, not LLM inference.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "FlashPDE: A Drop-In Fused Triton Operator Library for Neural PDE Solvers"
+    },
+    "arXiv:2607.18026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18026",
+      "identity_tokens": [
+        "arXiv:2607.18026"
+      ],
+      "reason": "Heterogeneous LLM merging is a model-combination/quality method; the abstract does not establish inference-time efficiency or serving impact.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Rethinking Heterogeneous LLM Merging: A Weighted Model Averaging Perspective"
+    },
+    "arXiv:2607.18345": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18345",
+      "identity_tokens": [
+        "arXiv:2607.18345"
+      ],
+      "reason": "Diffusion generative models augment EEG auditory-attention training data; this is not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Addressing Limited Data in Auditory Attention Decoding with Diffusion Generative Models"
+    },
+    "arXiv:2607.18454": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18454",
+      "identity_tokens": [
+        "arXiv:2607.18454"
+      ],
+      "reason": "The work evaluates rare-event probability estimation for language-model failures; it is reliability evaluation, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:35:58+00:00",
+      "last_checked_at": "2026-10-05T03:35:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Estimating Rare Events in Language Models with Proper Evaluation"
+    },
+    "arXiv:2607.18548": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18548",
+      "identity_tokens": [
+        "arXiv:2607.18548"
+      ],
+      "reason": "A survey of trustworthy agentic AI for critical systems does not present an LLM inference/serving efficiency method.",
+      "first_checked_at": "2026-10-05T03:35:59+00:00",
+      "last_checked_at": "2026-10-05T03:35:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Engineering Trustworthy Agentic AI for Critical Systems"
     }
   }
 }
