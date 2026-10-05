@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a1fe726614f187bf-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.23055",
+  "reason": "Discrete diffusion models now match autoregressive language models on several benchmarks, while the question of how best to train them has received far less attention: the optimizer is inherited from one paper to the next and never compared. New optimizers, meanwhile, are validated almost exclusively on autoregressive pretraining, a different objective on a different loss surface. We present a controlled optimizer benchmark across four diffusion formulations, to our knowledge the first for discrete diffusion: seven optimizers (AdamW, Lion, Muon, SOAP, MARS, MARS-M, Schedule-Free) on masked diffusion (text8), uniform diffusion (QM9, and LM1B through the Gaussian duality) and Gaussian diffusion on images (CelebA-64), each on a task with published reference values. Every optimizer receives the same search protocol, and every winner is retrained at the full budget with three seeds. AdamW is a strong default but not always the right choice: it is beaten by a resolved margin on two of the four tasks, and the winner changes with the formulation, so the optimizer deserves the same care as the rest of the training recipe. Notably, methods validated on autoregressive language model pretraining transfer well: Muon, MARS-M and SOAP each beat the tuned AdamW on at least one diffusion formulation. The benchmark, all runs and every figure are reproducible end to end from the released code at https://github.com/armanbolatov/diffusion-baselines.",
+  "title": "Optimizers for Diffusion Models: A Controlled Benchmark",
+  "identity_tokens": [
+    "arXiv:2609.23055"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a1fe726614f1",
+  "source_precheck_request_id": null
+}
