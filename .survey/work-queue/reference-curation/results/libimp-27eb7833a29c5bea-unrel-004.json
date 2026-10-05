@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-27eb7833a29c5bea-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.00282",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.00282",
+    "identity_tokens": [
+      "arXiv:2404.00282"
+    ],
+    "reason": "LLM-enhanced RL survey, not inference efficiency.",
+    "first_checked_at": "2026-10-05T02:07:09+00:00",
+    "last_checked_at": "2026-10-05T02:07:09+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+    ],
+    "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods"
+  },
+  "processed_at": "2026-10-05T02:07:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-27eb7833a29c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

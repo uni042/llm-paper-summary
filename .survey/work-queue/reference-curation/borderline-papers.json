@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:04:36+00:00",
-  "record_count": 667,
+  "updated_at": "2026-10-05T02:07:09+00:00",
+  "record_count": 670,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9737,6 +9737,51 @@
         "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md"
       ],
       "title": "From System 1 to System 2: A Survey of Reasoning Large Language Models"
+    },
+    "arXiv:2502.17416": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.17416",
+      "identity_tokens": [
+        "arXiv:2502.17416"
+      ],
+      "reason": "Parameter reduction alone does not establish lower inference FLOPs, latency or serving cost.",
+      "first_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "Reasoning with Latent Thoughts: On the Power of Looped Transformers"
+    },
+    "arXiv:2002.11985": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.11985",
+      "identity_tokens": [
+        "arXiv:2002.11985"
+      ],
+      "reason": "Decoder extensions are mentioned but detailed methods and measurements are BERT encoder-focused.",
+      "first_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Compressing Large-Scale Transformer-Based Models: A Case Study on BERT"
+    },
+    "DOI:10.1145/3724420": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3724420",
+      "identity_tokens": [
+        "DOI:10.1145/3724420"
+      ],
+      "reason": "General edge-AI survey, not focused on LLM inference/serving or comparative efficiency results.",
+      "first_checked_at": "2026-10-05T02:07:09+00:00",
+      "last_checked_at": "2026-10-05T02:07:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.27081-remoe-router-finetuning-expert-reuse.md"
+      ],
+      "title": "Empowering Edge Intelligence: A Comprehensive Survey on On-Device AI Models"
     }
   }
 }

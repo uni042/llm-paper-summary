@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5ba83627f6569a46-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.08668",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.08668",
+    "identity_tokens": [
+      "arXiv:2109.08668"
+    ],
+    "reason": "Primer improves training cost/speed; not inference.",
+    "first_checked_at": "2026-10-05T02:07:09+00:00",
+    "last_checked_at": "2026-10-05T02:07:09+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2603.11535-expert-threshold-routing.md",
+      "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+    ],
+    "title": "Primer: Searching for Efficient Transformers for Language Modeling"
+  },
+  "processed_at": "2026-10-05T02:07:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5ba83627f656",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

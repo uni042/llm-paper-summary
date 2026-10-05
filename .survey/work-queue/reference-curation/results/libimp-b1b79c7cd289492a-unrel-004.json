@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b1b79c7cd289492a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1906.04165",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1906.04165",
+    "identity_tokens": [
+      "arXiv:1906.04165"
+    ],
+    "reason": "BERT lecture summarization application, no efficiency method.",
+    "first_checked_at": "2026-10-05T02:07:10+00:00",
+    "last_checked_at": "2026-10-05T02:07:10+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Leveraging BERT for Extractive Text Summarization on Lectures"
+  },
+  "processed_at": "2026-10-05T02:07:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b1b79c7cd289",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
