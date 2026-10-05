@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:57:30+00:00",
-  "record_count": 5385,
+  "updated_at": "2026-10-05T14:02:01+00:00",
+  "record_count": 5399,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -78261,6 +78261,215 @@
         "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
       ],
       "title": "What Makes Position Zero Special? A Mechanistic Study of Position Zero Attention Sinks in LLMs"
+    },
+    "DOI:10.24963/ijcai.2025/204": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2025/204",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2025/204"
+      ],
+      "reason": "SAM2 video segmentationの量子化benchmark。vision model対象。",
+      "first_checked_at": "2026-10-05T14:01:57+00:00",
+      "last_checked_at": "2026-10-05T14:01:57+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "title": "Q-MiniSAM2: A Quantization-based Benchmark for Resource-Efficient Video Segmentation"
+    },
+    "arXiv:2509.00570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.00570",
+      "identity_tokens": [
+        "arXiv:2509.00570"
+      ],
+      "reason": "LLM+KGを使うロボット計画応用。推論systems効率ではない。",
+      "first_checked_at": "2026-10-05T14:01:57+00:00",
+      "last_checked_at": "2026-10-05T14:01:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "ConceptBot: Enhancing Robot's Autonomy through Task Decomposition with Large Language Models and Knowledge Graph"
+    },
+    "arXiv:2508.21762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.21762",
+      "identity_tokens": [
+        "arXiv:2508.21762"
+      ],
+      "reason": "数値回帰というreasoning taskの応用研究。推論基盤の最適化ではない。",
+      "first_checked_at": "2026-10-05T14:01:58+00:00",
+      "last_checked_at": "2026-10-05T14:01:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Reasoning-Intensive Regression"
+    },
+    "arXiv:2509.11662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.11662",
+      "identity_tokens": [
+        "arXiv:2509.11662"
+      ],
+      "reason": "Ascend NPU上のMLLM training効率。推論実行ではない。",
+      "first_checked_at": "2026-10-05T14:01:58+00:00",
+      "last_checked_at": "2026-10-05T14:01:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md"
+      ],
+      "title": "MindVL: Towards Efficient and Effective Training of Multimodal Large Language Models on Ascend NPUs"
+    },
+    "arXiv:2509.12519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.12519",
+      "identity_tokens": [
+        "arXiv:2509.12519"
+      ],
+      "reason": "金融ニュースから市場影響を予測する応用研究。推論効率・serving研究ではない。",
+      "first_checked_at": "2026-10-05T14:01:58+00:00",
+      "last_checked_at": "2026-10-05T14:01:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Context-Aware Language Models for Forecasting Market Impact from Sequences of Financial News"
+    },
+    "DOI:10.1109/jiot.2025.3586835": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2025.3586835",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3586835"
+      ],
+      "reason": "IoT向けentity/relation extraction。LLM推論システム対象外。",
+      "first_checked_at": "2026-10-05T14:01:58+00:00",
+      "last_checked_at": "2026-10-05T14:01:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "RDLSH: Adaptive Entity Recognition and Relation Extraction for IoT Knowledge Graph"
+    },
+    "DOI:10.1109/jiot.2025.3587891": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2025.3587891",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2025.3587891"
+      ],
+      "reason": "Vision Transformerのedge video inference圧縮。対象がvisionモデルでLLMではない。",
+      "first_checked_at": "2026-10-05T14:01:59+00:00",
+      "last_checked_at": "2026-10-05T14:01:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "CST-ViT: Cascaded Spatio–Temporal Redundancy Elimination for Efficient Vision Transformers on Edge IoT Devices"
+    },
+    "arXiv:2509.09267": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.09267",
+      "identity_tokens": [
+        "arXiv:2509.09267"
+      ],
+      "reason": "3D医療画像segmentationモデルのpruning。LLM推論対象外。",
+      "first_checked_at": "2026-10-05T14:01:59+00:00",
+      "last_checked_at": "2026-10-05T14:01:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ],
+      "title": "Unified Start, Personalized End: Progressive Pruning for Efficient 3D Medical Image Segmentation"
+    },
+    "arXiv:2509.05226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.05226",
+      "identity_tokens": [
+        "arXiv:2509.05226"
+      ],
+      "reason": "chain-of-thought distillationによる学習手法。training対象で推論/serving効率の実測なし。",
+      "first_checked_at": "2026-10-05T14:01:59+00:00",
+      "last_checked_at": "2026-10-05T14:01:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Less is More Tokens: Efficient Math Reasoning via Difficulty-Aware Chain-of-Thought Distillation"
+    },
+    "arXiv:2509.01839": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.01839",
+      "identity_tokens": [
+        "arXiv:2509.01839"
+      ],
+      "reason": "triangular mesh上のoperator向けTransformer。LLM推論/serving対象外。",
+      "first_checked_at": "2026-10-05T14:02:00+00:00",
+      "last_checked_at": "2026-10-05T14:02:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "HodgeFormer: Transformers for Learnable Operators on Triangular Meshes through Data-Driven Hodge Matrices"
+    },
+    "arXiv:2508.19078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19078",
+      "identity_tokens": [
+        "arXiv:2508.19078"
+      ],
+      "reason": "resource-constrained端末でのMoE federated fine-tuning。training対象。",
+      "first_checked_at": "2026-10-05T14:02:00+00:00",
+      "last_checked_at": "2026-10-05T14:02:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.11217-moe-lightning-high-throughput-moe-inference-with-cpu-gpu-i-o-pipelining.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.02410-mixture-of-quantized-experts-moqe-complementary-effect-of-low-bit-quantization-a.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ],
+      "title": "Federated Fine-Tuning of Sparsely-Activated Large Language Models on Resource-Constrained Devices"
+    },
+    "DOI:10.1145/3709023.3737689": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3709023.3737689",
+      "identity_tokens": [
+        "DOI:10.1145/3709023.3737689"
+      ],
+      "reason": "federated LLM training用dataset filtering。training対象。",
+      "first_checked_at": "2026-10-05T14:02:00+00:00",
+      "last_checked_at": "2026-10-05T14:02:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "FedDDF: Dynamic Dataset Filtering in Federated Large Language Model Training"
+    },
+    "DOI:10.1002/adpr.202500149": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/adpr.202500149",
+      "identity_tokens": [
+        "DOI:10.1002/adpr.202500149"
+      ],
+      "reason": "非線形optical pulseをTransformerで前向き/逆向きにモデル化する物理研究。LLMではない。",
+      "first_checked_at": "2026-10-05T14:02:00+00:00",
+      "last_checked_at": "2026-10-05T14:02:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "Transformer Encoder–Decoder Framework for Nonlinear Pulse Evolution and Inverse Modeling"
+    },
+    "DOI:10.21437/interspeech.2025-1464": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-1464",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-1464"
+      ],
+      "reason": "audiovisual speech recognition encoderのdistillation/pruning。LLM inference対象外。",
+      "first_checked_at": "2026-10-05T14:02:01+00:00",
+      "last_checked_at": "2026-10-05T14:02:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Efficient Noise-Robust Hybrid Audiovisual Encoder with Joint Distillation and Pruning for Audiovisual Speech Recognition"
     }
   }
 }
