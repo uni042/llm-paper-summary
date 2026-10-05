@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-13-part-05-51686d99d39b",
+  "reference_main_sha": "489623932dd15119c489a9eaa19353a6cc7ba9dd",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22226",
+      "identity_tokens": [
+        "arXiv:2609.22226"
+      ],
+      "title": "Swiss-Knife: A Framework for Reconfigurable Externalised Multi-Objective Alignment at Decode Time",
+      "reason": "The method operates at decode time, but its intended operating regime discounts latency.",
+      "source_url": "https://arxiv.org/abs/2609.22226",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22231",
+      "identity_tokens": [
+        "arXiv:2609.22231"
+      ],
+      "title": "EvalMem: An Operation-Level Diagnostic Framework for Long-Term Memory Systems",
+      "reason": "The contribution is memory/retrieval quality and diagnostics, not measured inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.22231",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00042",
+      "identity_tokens": [
+        "arXiv:2610.00042"
+      ],
+      "title": "Zengram-Lite: An In-Browser Agentic-Memory Framework - Semantic Knowledge, Session Tracking, and Token-Budgeted Context",
+      "reason": "The mechanism is adjacent to inference efficiency, but cost savings are not evidenced.",
+      "source_url": "https://arxiv.org/abs/2610.00042",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10791-026-10491-5",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10491-5"
+      ],
+      "title": "Machine learning in stock market forecasting: a comprehensive review",
+      "reason": "Stock-market machine-learning review, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1007/s10791-026-10491-5",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.compmedimag.2026.102820",
+      "identity_tokens": [
+        "DOI:10.1016/j.compmedimag.2026.102820"
+      ],
+      "title": "DARTS-searched feedback-augmented state space model for 3D pulmonary nodule classification.",
+      "reason": "Medical-imaging state-space model, not LLM serving.",
+      "source_url": "https://doi.org/10.1016/j.compmedimag.2026.102820",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
