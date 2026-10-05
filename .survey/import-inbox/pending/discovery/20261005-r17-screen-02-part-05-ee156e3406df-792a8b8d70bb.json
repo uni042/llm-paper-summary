@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-02-part-05-ee156e3406df",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13921",
+      "identity_tokens": [
+        "arXiv:2608.13921"
+      ],
+      "title": "When Personal Memory Has No Single Answer: Evaluating LLM Agents under Irreducible Conflict",
+      "reason": "一次要旨はpersonal-memory conflict benchmark/action policy評価であり、推論・serving効率化に関する寄与がない。",
+      "source_url": "https://arxiv.org/abs/2608.13921",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14106",
+      "identity_tokens": [
+        "arXiv:2608.14106"
+      ],
+      "title": "Forecast Collapse in Time-Series Foundation Models",
+      "reason": "一次要旨はtime-series foundation modelによる株式予測/calibration objectiveで、LLM inference systemsではない。",
+      "source_url": "https://arxiv.org/abs/2608.14106",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14150",
+      "identity_tokens": [
+        "arXiv:2608.14150"
+      ],
+      "title": "Leading-Silence Augmentation and Multi-Stage Synthetic Supervision for the Second MLC-SLM Challenge",
+      "reason": "一次要旨はASR challengeのtraining data augmentation/fine-tuningであり、推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.14150",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14278",
+      "identity_tokens": [
+        "arXiv:2608.14278"
+      ],
+      "title": "Pairton: Iterative Reconstruction of Short-Lived Particles",
+      "reason": "一次要旨はparticle reconstruction for high-energy physicsであり、language model inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2608.14278",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14498",
+      "identity_tokens": [
+        "arXiv:2608.14498"
+      ],
+      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+      "reason": "一次要旨はVLM reinforcement-learning post-training runtimeのGPU phase schedulingで、学習/post-training専用効率化。契約scopeから除外。",
+      "source_url": "https://arxiv.org/abs/2608.14498",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    }
+  ]
+}
