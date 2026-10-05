@@ -1,0 +1,31 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-2230-scheduled-chat-30/r01::provider-gap",
+  "reference_main_sha": "988ff482b955446a578079db6e97f5c791bc2cb0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2302.11665",
+      "identity_tokens": [
+        "arXiv:2302.11665",
+        "SemanticScholar:f4f9ff1fb8fc987e0bbcbf1ae60546a09a74788d"
+      ],
+      "title": "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+      "reason": "model parallelismを複数modelのstatistical multiplexingへ利用し、bursty workload下のqueueing latencyを抑えるserving system。production workloadで99%以上をlatency制約内に保ちながら最大10x request rateまたは6x burstinessを処理するため対象内。",
+      "source_url": "https://arxiv.org/abs/2302.11665",
+      "body_check": "full_text_relevance_review: 一次arXiv本文情報でauto-parallelization、model placement/parallelizationのjoint optimization、distributed cluster serving、最大10x request rate・6x burstinessを確認。",
+      "first_checked_at": "2026-10-05T22:52:00+09:00",
+      "last_checked_at": "2026-10-05T22:52:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 85
+    }
+  ],
+  "parent_run_key": "20261005-2230-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_1056679549f08191807cba9a66446884--discovery-20261005-2230-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "arXiv:2302.11665"
+  ]
+}
