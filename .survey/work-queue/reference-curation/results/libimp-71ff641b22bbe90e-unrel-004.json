@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-71ff641b22bbe90e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32423",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32423",
+    "identity_tokens": [
+      "arXiv:2609.32423"
+    ],
+    "reason": "PluginRSI evolves agent harnesses to accelerate subsequent harness optimization; the measured target is optimization/training search, not deployed inference.",
+    "first_checked_at": "2026-10-05T06:09:18+00:00",
+    "last_checked_at": "2026-10-05T06:09:18+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "PluginRSI: Recursive Improvement of Agent Harnesses with Reusable Plugins"
+  },
+  "processed_at": "2026-10-05T06:09:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-71ff641b22bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

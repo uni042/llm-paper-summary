@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e50a8755f4ae9f79-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.32750",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.32750",
+    "identity_tokens": [
+      "arXiv:2609.32750"
+    ],
+    "reason": "CUA-Sandbox reduces memory and initialization costs for computer-use agent RL rollout environments; it optimizes training infrastructure, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T06:09:18+00:00",
+    "last_checked_at": "2026-10-05T06:09:18+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+    ],
+    "title": "CUA-Sandbox: Efficient Environments for Computer-Use Agent Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T06:09:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e50a8755f4ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
