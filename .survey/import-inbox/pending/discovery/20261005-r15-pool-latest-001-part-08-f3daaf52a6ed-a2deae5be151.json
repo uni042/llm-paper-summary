@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-001-part-08-f3daaf52a6ed",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04468",
+      "identity_tokens": [
+        "arXiv:2411.04468"
+      ],
+      "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks",
+      "reason": "Magentic-One is a generalist multi-agent capability system, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2411.04468",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.21276",
+      "identity_tokens": [
+        "arXiv:2410.21276",
+        "DOI:10.48550/arxiv.2410.21276"
+      ],
+      "title": "GPT-4o System Card",
+      "reason": "System card gives API latency/pricing but no reproducible serving optimization mechanism; opaque product-level context, not a transferable method.",
+      "source_url": "https://arxiv.org/abs/2410.21276",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.22572-dynamic-experts-search.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.06494-seqtopk-route-by-sequence.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.23649-efficient-low-rank-attention-for-long-context-inference-in-large-languag.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2603.11504-longflow-efficient-kv-cache-compression-for-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.04791-duetserve-adaptive-gpu-multiplexing.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.08382-llmvisor-realtime-latency-attribution.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
+        "papers/training/01-training-offload-memory-systems/2026-2602.04816-horizon-lm-a-ram-centric-architecture-for-llm-training.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.20314",
+      "identity_tokens": [
+        "arXiv:2503.20314"
+      ],
+      "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+      "reason": "Wan reports video-diffusion inference memory but is not an LLM; transfer to LLM inference is uncertain.",
+      "source_url": "https://arxiv.org/abs/2503.20314",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2603.28768-craft-cost-aware-expert-replication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.20156-temporally-extended-moe-expert-persistence.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+        "papers/training/01-training-offload-memory-systems/2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.16040",
+      "identity_tokens": [
+        "arXiv:2409.16040"
+      ],
+      "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts",
+      "reason": "Time-MoE reports sparse-MoE inference speed/memory, but targets time-series forecasting rather than LLMs, so scope fit is weak.",
+      "source_url": "https://arxiv.org/abs/2409.16040",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07339",
+      "identity_tokens": [
+        "arXiv:2401.07339"
+      ],
+      "title": "CodeAgent: Enhancing Code Generation with Tool-Integrated Agent Systems for Real-World Repo-level Coding Challenges",
+      "reason": "CodeAgent is a repo-level code-generation agent, not an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2401.07339",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+      ]
+    }
+  ]
+}
