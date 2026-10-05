@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b27db61c7de02792-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.11696",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.11696",
+    "identity_tokens": [
+      "arXiv:2510.11696"
+    ],
+    "reason": "QeRL accelerates quantized reinforcement-learning rollouts/training for LLMs; its objective is training efficiency, outside scope.",
+    "first_checked_at": "2026-10-05T15:07:44+00:00",
+    "last_checked_at": "2026-10-05T15:07:44+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+      "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+      "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md"
+    ],
+    "title": "QeRL: Beyond Efficiency - Quantization-enhanced Reinforcement Learning for LLMs"
+  },
+  "processed_at": "2026-10-05T15:07:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b27db61c7de0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

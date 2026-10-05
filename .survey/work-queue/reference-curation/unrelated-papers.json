@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T15:04:33+00:00",
-  "record_count": 5917,
+  "updated_at": "2026-10-05T15:07:46+00:00",
+  "record_count": 5944,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -85916,6 +85916,393 @@
         "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
       ],
       "title": "Quaff: Quantized Parameter-Efficient Fine-Tuning under Outlier Spatial Stability Hypothesis"
+    },
+    "arXiv:2206.14148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.14148",
+      "identity_tokens": [
+        "arXiv:2206.14148"
+      ],
+      "reason": "The paper presents memory-safe computation in the XLA compiler for general computations, with no LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T15:07:39+00:00",
+      "last_checked_at": "2026-10-05T15:07:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Memory Safe Computations with XLA Compiler"
+    },
+    "DOI:10.1101/2025.02.10.637097": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.02.10.637097",
+      "identity_tokens": [
+        "DOI:10.1101/2025.02.10.637097"
+      ],
+      "reason": "The work measures ecological knowledge in LLMs; it is a knowledge benchmark, not an inference efficiency technique.",
+      "first_checked_at": "2026-10-05T15:07:39+00:00",
+      "last_checked_at": "2026-10-05T15:07:39+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Large language models possess some ecological knowledge, but how much?"
+    },
+    "DOI:10.48550/arxiv.2601.15165": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2601.15165",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.15165",
+        "arXiv:2601.15165"
+      ],
+      "reason": "The paper studies reasoning quality and generation order in diffusion language models; the primary abstract presents no concrete inference-efficiency intervention or efficiency result.",
+      "first_checked_at": "2026-10-05T15:07:39+00:00",
+      "last_checked_at": "2026-10-05T15:07:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models"
+    },
+    "DOI:10.1038/s41586-026-10131-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10131-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10131-4"
+      ],
+      "reason": "The official Nature abstract describes an LLM-based collective-intelligence framework for chemical synthesis; it does not study inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T15:07:40+00:00",
+      "last_checked_at": "2026-10-05T15:07:40+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Collective intelligence for AI-assisted chemical synthesis"
+    },
+    "arXiv:2510.26144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26144",
+      "identity_tokens": [
+        "arXiv:2510.26144"
+      ],
+      "reason": "FM Agent is a scientific-agent framework; its speedup concerns GPU-kernel optimization tasks, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T15:07:40+00:00",
+      "last_checked_at": "2026-10-05T15:07:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+      ],
+      "title": "The FM Agent"
+    },
+    "arXiv:2501.02423": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.02423",
+      "identity_tokens": [
+        "arXiv:2501.02423"
+      ],
+      "reason": "This is a study of low-precision LLM training and training scaling laws; the survey excludes training-only efficiency.",
+      "first_checked_at": "2026-10-05T15:07:40+00:00",
+      "last_checked_at": "2026-10-05T15:07:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "Scaling Laws for Floating Point Quantization Training"
+    },
+    "DOI:10.18653/v1/2025.emnlp-industry.82": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.82",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-industry.82"
+      ],
+      "reason": "The official ACL abstract describes InstaJudge as aligning LLM-as-a-judge judgments with human judgments in industry; this is evaluator bias/alignment, not inference-serving efficiency.",
+      "first_checked_at": "2026-10-05T15:07:41+00:00",
+      "last_checked_at": "2026-10-05T15:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "InstaJudge: Aligning Judgment Bias of LLM-as-Judge with Humans in Industry Applications"
+    },
+    "DOI:10.1109/micro61859.2024.00039": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro61859.2024.00039",
+      "identity_tokens": [
+        "DOI:10.1109/micro61859.2024.00039"
+      ],
+      "reason": "LUCIE is a chiplet-interposer design framework for plug-and-play integration; no LLM inference/serving optimization is the contribution.",
+      "first_checked_at": "2026-10-05T15:07:41+00:00",
+      "last_checked_at": "2026-10-05T15:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ],
+      "title": "LUCIE: A Universal Chiplet-Interposer Design Framework for Plug-and-Play Integration"
+    },
+    "arXiv:2505.00598": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00598",
+      "identity_tokens": [
+        "arXiv:2505.00598"
+      ],
+      "reason": "GERM is a genomic foundation model and focuses on pretraining/fine-tuning and quantization adaptation; it is not a general LLM inference/serving method.",
+      "first_checked_at": "2026-10-05T15:07:41+00:00",
+      "last_checked_at": "2026-10-05T15:07:41+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ],
+      "title": "Fast and Low-Cost Genomic Foundation Models via Outlier Removal"
+    },
+    "arXiv:2502.09172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.09172",
+      "identity_tokens": [
+        "arXiv:2502.09172"
+      ],
+      "reason": "LOB-Bench evaluates generative finance data quality and realism; it proposes no inference efficiency method.",
+      "first_checked_at": "2026-10-05T15:07:41+00:00",
+      "last_checked_at": "2026-10-05T15:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "LOB-Bench: Benchmarking Generative AI for Finance - an Application to Limit Order Book Data"
+    },
+    "arXiv:2502.02095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02095",
+      "identity_tokens": [
+        "arXiv:2502.02095"
+      ],
+      "reason": "LongDPO improves long-form generation through preference training and quality supervision, not inference efficiency.",
+      "first_checked_at": "2026-10-05T15:07:41+00:00",
+      "last_checked_at": "2026-10-05T15:07:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "LongDPO: Unlock Better Long-form Generation Abilities for LLMs via Critique-augmented Stepwise Information"
+    },
+    "arXiv:2502.01330": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01330",
+      "identity_tokens": [
+        "arXiv:2502.01330"
+      ],
+      "reason": "The work accelerates sparse linear recurrent models for audio denoising on neuromorphic hardware, not LLMs.",
+      "first_checked_at": "2026-10-05T15:07:42+00:00",
+      "last_checked_at": "2026-10-05T15:07:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Accelerating Linear Recurrent Neural Networks for the Edge with Unstructured Sparsity"
+    },
+    "arXiv:2508.06225": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.06225",
+      "identity_tokens": [
+        "arXiv:2508.06225"
+      ],
+      "reason": "This paper calibrates confidence and reliability for LLM-as-a-judge pipelines, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T15:07:42+00:00",
+      "last_checked_at": "2026-10-05T15:07:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11809-generation-meets-verification-accelerating-large-language-models-with-speculative-decoding.md"
+      ],
+      "title": "Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution"
+    },
+    "arXiv:2508.02317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02317",
+      "identity_tokens": [
+        "arXiv:2508.02317"
+      ],
+      "reason": "VeOmni accelerates distributed omni-modal model training; its reported throughput and scalability are training-time measures, outside inference/serving.",
+      "first_checked_at": "2026-10-05T15:07:43+00:00",
+      "last_checked_at": "2026-10-05T15:07:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "VeOmni: Scaling Any Modality Model Training with Model-Centric Distributed Recipe Zoo"
+    },
+    "DOI:10.1093/jamiaopen/ooaf058": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/jamiaopen/ooaf058",
+      "identity_tokens": [
+        "DOI:10.1093/jamiaopen/ooaf058"
+      ],
+      "reason": "This study evaluates LLM calibration and post-hoc calibration quality on biomedical NLP tasks; it presents trustworthiness metrics rather than inference-efficiency methods.",
+      "first_checked_at": "2026-10-05T15:07:43+00:00",
+      "last_checked_at": "2026-10-05T15:07:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "A study of calibration as a measurement of trustworthiness of large language models in biomedical natural language processing"
+    },
+    "arXiv:2505.08936": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.08936",
+      "identity_tokens": [
+        "arXiv:2505.08936"
+      ],
+      "reason": "ATLAHS is a network-simulation toolchain for AI/HPC/storage workloads; its runtime and trace-size improvements concern simulation, not LLM inference.",
+      "first_checked_at": "2026-10-05T15:07:43+00:00",
+      "last_checked_at": "2026-10-05T15:07:43+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "ATLAHS: An Application-centric Network Simulator Toolchain for AI, HPC, and Distributed Storage"
+    },
+    "DOI:10.48550/arxiv.2510.19316": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2510.19316",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.19316",
+        "arXiv:2510.19316"
+      ],
+      "reason": "KORE improves knowledge injection into multimodal models through augmentation/constraints, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T15:07:43+00:00",
+      "last_checked_at": "2026-10-05T15:07:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "KORE: Enhancing Knowledge Injection for Large Multimodal Models via Knowledge-Oriented Augmentations and Constraints"
+    },
+    "arXiv:2510.11696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11696",
+      "identity_tokens": [
+        "arXiv:2510.11696"
+      ],
+      "reason": "QeRL accelerates quantized reinforcement-learning rollouts/training for LLMs; its objective is training efficiency, outside scope.",
+      "first_checked_at": "2026-10-05T15:07:44+00:00",
+      "last_checked_at": "2026-10-05T15:07:44+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md"
+      ],
+      "title": "QeRL: Beyond Efficiency - Quantization-enhanced Reinforcement Learning for LLMs"
+    },
+    "arXiv:2510.08510": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08510",
+      "identity_tokens": [
+        "arXiv:2510.08510"
+      ],
+      "reason": "The study analyzes visual attention-sink pathways to improve VLM understanding/reasoning quality; the abstract provides no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T15:07:44+00:00",
+      "last_checked_at": "2026-10-05T15:07:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "To Sink or Not to Sink: Visual Information Pathways in Large Vision-Language Models"
+    },
+    "arXiv:2509.21834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21834",
+      "identity_tokens": [
+        "arXiv:2509.21834"
+      ],
+      "reason": "RobustFlow trains agentic workflow generation to improve robustness under paraphrases; no serving-efficiency contribution is described.",
+      "first_checked_at": "2026-10-05T15:07:44+00:00",
+      "last_checked_at": "2026-10-05T15:07:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ],
+      "title": "RobustFlow: Towards Robust Agentic Workflow Generation"
+    },
+    "arXiv:2403.01915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01915",
+      "identity_tokens": [
+        "arXiv:2403.01915"
+      ],
+      "reason": "xT studies nested tokenization for large images/vision context rather than LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T15:07:44+00:00",
+      "last_checked_at": "2026-10-05T15:07:44+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "xT: Nested Tokenization for Larger Context in Large Images"
+    },
+    "DOI:10.52202/079017-2134": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-2134",
+      "identity_tokens": [
+        "DOI:10.52202/079017-2134"
+      ],
+      "reason": "FM-Delta losslessly compresses stored fine-tuned model artifacts; storage compression is not inference-time model compression/efficiency.",
+      "first_checked_at": "2026-10-05T15:07:45+00:00",
+      "last_checked_at": "2026-10-05T15:07:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ],
+      "title": "FM-Delta: Lossless Compression for Storing Massive Fine-tuned Foundation Models"
+    },
+    "arXiv:2305.14567": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14567",
+      "identity_tokens": [
+        "arXiv:2305.14567"
+      ],
+      "reason": "This concerns memory-efficient neural processes, not LLM serving.",
+      "first_checked_at": "2026-10-05T15:07:45+00:00",
+      "last_checked_at": "2026-10-05T15:07:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Memory Efficient Neural Processes via Constant Memory Attention Block"
+    },
+    "arXiv:2408.15300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.15300",
+      "identity_tokens": [
+        "arXiv:2408.15300"
+      ],
+      "reason": "GIFT-SW is Gaussian-noise-injected fine-tuning of salient LLM weights; the contribution is training adaptation.",
+      "first_checked_at": "2026-10-05T15:07:45+00:00",
+      "last_checked_at": "2026-10-05T15:07:45+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+      ],
+      "title": "GIFT-SW: Gaussian noise Injected Fine-Tuning of Salient Weights for LLMs"
+    },
+    "arXiv:2406.11353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.11353",
+      "identity_tokens": [
+        "arXiv:2406.11353"
+      ],
+      "reason": "MoE-RBench is a reliability/robustness benchmark for sparse MoE language models, not an inference efficiency method.",
+      "first_checked_at": "2026-10-05T15:07:45+00:00",
+      "last_checked_at": "2026-10-05T15:07:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "MoE-RBench: Towards Building Reliable Language Models with Sparse Mixture-of-Experts"
+    },
+    "arXiv:2405.03637": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.03637",
+      "identity_tokens": [
+        "arXiv:2405.03637"
+      ],
+      "reason": "Collage focuses on low-precision LLM training; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T15:07:45+00:00",
+      "last_checked_at": "2026-10-05T15:07:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "title": "Collage: Light-Weight Low-Precision Strategy for LLM Training"
+    },
+    "arXiv:2404.13182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.13182",
+      "identity_tokens": [
+        "arXiv:2404.13182"
+      ],
+      "reason": "The paper concerns spectral convolutional conditional neural processes, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T15:07:46+00:00",
+      "last_checked_at": "2026-10-05T15:07:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Spectral Convolutional Conditional Neural Processes"
     }
   }
 }

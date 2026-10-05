@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b27db61c7de02792-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.11252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.11252",
+    "identity_tokens": [
+      "arXiv:2509.11252"
+    ],
+    "reason": "It does not propose or validate a concrete efficiency/serving optimization that improves on baselines; findings are specific to code generation and tested models.",
+    "first_checked_at": "2026-10-05T15:07:43+00:00",
+    "last_checked_at": "2026-10-05T15:07:43+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2509.23094-d2cache-dual-adaptive-caching-diffusion-llm.md",
+      "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploring the Potential of Diffusion Large Language Models in Code Generation"
+  },
+  "processed_at": "2026-10-05T15:07:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b27db61c7de0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

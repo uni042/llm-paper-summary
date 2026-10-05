@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa1b39331176176c-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1038/s42256-025-01034-6",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1038/s42256-025-01034-6",
+    "identity_tokens": [
+      "DOI:10.1038/s42256-025-01034-6"
+    ],
+    "reason": "The packet has no abstract text. The article metadata indicates a review of recurrent models, Transformers and state-space approaches relevant to future large generative models, but the primary article body could not be retrieved for scope verification.",
+    "first_checked_at": "2026-10-05T15:07:42+00:00",
+    "last_checked_at": "2026-10-05T15:07:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Back to recurrent processing at the crossroad of transformers and state-space models"
+  },
+  "processed_at": "2026-10-05T15:07:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa1b39331176",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
