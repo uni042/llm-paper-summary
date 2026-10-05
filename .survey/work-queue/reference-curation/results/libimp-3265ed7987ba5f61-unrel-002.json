@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3265ed7987ba5f61-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2006.10518",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2006.10518",
+    "identity_tokens": [
+      "arXiv:2006.10518"
+    ],
+    "reason": "一次要旨および本文はpost-training quantizationをMobileNet/ResNet等で評価し、LLM/transformer inference評価がない。",
+    "first_checked_at": "2026-10-05T01:56:23+00:00",
+    "last_checked_at": "2026-10-05T01:56:23+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+    ],
+    "title": "Improving Post Training Neural Quantization: Layer-wise Calibration and Integer Programming"
+  },
+  "processed_at": "2026-10-05T01:56:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3265ed7987ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

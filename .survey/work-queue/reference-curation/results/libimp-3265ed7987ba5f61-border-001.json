@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3265ed7987ba5f61-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1907.01470",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1907.01470",
+    "identity_tokens": [
+      "arXiv:1907.01470"
+    ],
+    "reason": "言語model構造とparameter数の根拠はあるが、対象は古い小規模LMで推論効率の評価や現代LLMへの接続がなく、borderlineとする。",
+    "first_checked_at": "2026-10-05T01:56:23+00:00",
+    "last_checked_at": "2026-10-05T01:56:23+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Augmenting Self-attention with Persistent Memory"
+  },
+  "processed_at": "2026-10-05T01:56:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3265ed7987ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
