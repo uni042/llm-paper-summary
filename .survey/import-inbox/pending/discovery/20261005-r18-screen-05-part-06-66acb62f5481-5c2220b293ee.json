@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-05-part-06-66acb62f5481",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37611",
+      "identity_tokens": [
+        "arXiv:2609.37611"
+      ],
+      "title": "Selective Lookahead for Attention-Based Streaming ASR",
+      "reason": "Selective Lookaheadはattention-based streaming speech-recognition modelのlatency研究であり、LLM推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2609.37611",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37617",
+      "identity_tokens": [
+        "arXiv:2609.37617"
+      ],
+      "title": "AS$^2$D: Accelerating On-Demand Audio Understanding on Mobile Devices",
+      "reason": "audio-conditioned transcription/translation/QAとmobile phone設定に特化。per-window replayではslowdownsがゼロではなく、native-corpus timing/output parityは未確立と本文が明記。LLM scope fitは隣接。",
+      "source_url": "https://arxiv.org/abs/2609.37617",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37673",
+      "identity_tokens": [
+        "arXiv:2609.37673"
+      ],
+      "title": "KUPAS MASTER: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora",
+      "reason": "KUPAS MASTERは専門家経験をagent向けcorpusに編集し品質を高めるplatform。効率的なLLM inferenceの機構/評価はない。",
+      "source_url": "https://arxiv.org/abs/2609.37673",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37675",
+      "identity_tokens": [
+        "arXiv:2609.37675"
+      ],
+      "title": "LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling",
+      "reason": "LEMON-ZESTはprotein-language-model tokenizationと生物配列homologyを扱うdomain-specific PLMであり、対象はLLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2609.37675",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37697",
+      "identity_tokens": [
+        "arXiv:2609.37697"
+      ],
+      "title": "Sequence Models for Layer-3 Protocol Emulation",
+      "reason": "RSEは6G radio Layer-3 protocol emulation向け11M sequence modelで、LLM推論の効率化研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37697",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
