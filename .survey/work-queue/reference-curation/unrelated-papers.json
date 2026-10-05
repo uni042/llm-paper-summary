@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:11:51+00:00",
-  "record_count": 4360,
+  "updated_at": "2026-10-05T10:14:09+00:00",
+  "record_count": 4372,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -63527,6 +63527,176 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "Hardware Mechanisms to Dynamically Throttle AI Performance"
+    },
+    "arXiv:2607.17017": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17017",
+      "identity_tokens": [
+        "arXiv:2607.17017"
+      ],
+      "reason": "一次要旨はrecommendation modelのWukong/HSTU統合で、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T10:14:06+00:00",
+      "last_checked_at": "2026-10-05T10:14:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "WHALE: A Scalable Unified Model for Recommendation with Wukong-HSTU Architecture"
+    },
+    "DOI:10.20965/jaciii.2026.p1093": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.20965/jaciii.2026.p1093",
+      "identity_tokens": [
+        "DOI:10.20965/jaciii.2026.p1093"
+      ],
+      "reason": "一次要旨はfinance PLM/MoE domain adaptationとcontinual pretrainingが主題で、推論serving効率を要旨で評価しない。",
+      "first_checked_at": "2026-10-05T10:14:07+00:00",
+      "last_checked_at": "2026-10-05T10:14:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Mixture of Experts Approach for Domain Adaptation in Finance"
+    },
+    "DOI:10.30827/publicaciones.v56i1.36847": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.30827/publicaciones.v56i1.36847",
+      "identity_tokens": [
+        "DOI:10.30827/publicaciones.v56i1.36847"
+      ],
+      "reason": "一次要旨は教育用multi-agent LLM platformの設計・学習適応で、モデル推論効率の具体的測定を主題としない。",
+      "first_checked_at": "2026-10-05T10:14:07+00:00",
+      "last_checked_at": "2026-10-05T10:14:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Engineering Multi-Agent Large Language Model Systems for Mobile Adaptive Learning Environments"
+    },
+    "DOI:10.3390/computers15070459": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/computers15070459",
+      "identity_tokens": [
+        "DOI:10.3390/computers15070459"
+      ],
+      "reason": "一次要旨はconstruction LLMのLoRA fine-tuning/RAGによる生成品質で、resource-constrained GPUは背景であり推論効率比較ではない。",
+      "first_checked_at": "2026-10-05T10:14:07+00:00",
+      "last_checked_at": "2026-10-05T10:14:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00101-loquetier-virtualized-multilora-serving.md"
+      ],
+      "title": "Application of LoRA+ in Fine-Tuning Large Models for Construction Process and Its Synergy with RAG"
+    },
+    "DOI:10.3390/math14142637": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math14142637",
+      "identity_tokens": [
+        "DOI:10.3390/math14142637"
+      ],
+      "reason": "一次要旨はRoPEの数値rankとPythia実験のperplexity予測で、推論compute/memory/latency改善を測定しない。",
+      "first_checked_at": "2026-10-05T10:14:07+00:00",
+      "last_checked_at": "2026-10-05T10:14:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Curvature-Corrected Rotary Position Embeddings: An Entropy-Invariant Temperature for Mitigating Numerical-Rank Collapse in Long-Context Attention"
+    },
+    "arXiv:2607.17146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17146",
+      "identity_tokens": [
+        "arXiv:2607.17146"
+      ],
+      "reason": "The paper develops a geometric framework for transformer representations and operators; the abstract does not report inference-time efficiency or serving improvements.",
+      "first_checked_at": "2026-10-05T10:14:08+00:00",
+      "last_checked_at": "2026-10-05T10:14:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "The Geometry of Semantic Space: A Continuous Geometric Framework for the Transformer Architecture"
+    },
+    "arXiv:2607.17184": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17184",
+      "identity_tokens": [
+        "arXiv:2607.17184"
+      ],
+      "reason": "This is a sparse-representation method for cold-item recommendation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T10:14:08+00:00",
+      "last_checked_at": "2026-10-05T10:14:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Learning Sparse Representations of Multimodal Content for Enhanced Cold Item Recommendation"
+    },
+    "arXiv:2607.17422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17422",
+      "identity_tokens": [
+        "arXiv:2607.17422"
+      ],
+      "reason": "LATTICE schedules and compiles general NPU operator workloads; the abstract gives no LLM inference or serving evaluation.",
+      "first_checked_at": "2026-10-05T10:14:08+00:00",
+      "last_checked_at": "2026-10-05T10:14:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "LATTICE: Constraint-Directed Scheduling, Memory Planning, and Pipeline Refinement for NPUs"
+    },
+    "DOI:10.1145/3805712.3808413": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805712.3808413",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3808413"
+      ],
+      "reason": "SCOPE is a multi-task recommendation training architecture and does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-05T10:14:08+00:00",
+      "last_checked_at": "2026-10-05T10:14:08+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "SCOPE: Scalable Cross-Task Orthogonal Progressive Experts for Multi-Task Learning in Recommendations"
+    },
+    "DOI:10.1145/3805712.3808447": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805712.3808447",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3808447"
+      ],
+      "reason": "AgentChat Copilot reports lower human-agent average handling time and operational savings. The abstract does not report a reduction in LLM inference latency, token cost, memory, or serving resources.",
+      "first_checked_at": "2026-10-05T10:14:09+00:00",
+      "last_checked_at": "2026-10-05T10:14:09+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "A Cost-Efficient AI Copilot for High-Volume E-commerce Customer Support"
+    },
+    "DOI:10.1145/3805712.3808630": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805712.3808630",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3808630"
+      ],
+      "reason": "This is a toolkit for reranking methods; the abstract does not establish an LLM inference or serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:14:09+00:00",
+      "last_checked_at": "2026-10-05T10:14:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "rerankers: A Lightweight Unified Toolkit for Reranking Approaches"
+    },
+    "DOI:10.1145/3805712.3809659": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805712.3809659",
+      "identity_tokens": [
+        "DOI:10.1145/3805712.3809659"
+      ],
+      "reason": "The work measures LLM temporal-reasoning failures and task performance; it proposes no inference-time efficiency method.",
+      "first_checked_at": "2026-10-05T10:14:09+00:00",
+      "last_checked_at": "2026-10-05T10:14:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "From Existence to Exhaustiveness: Unveiling the Compounding Failures of LLMs in Multi-answer Event Temporal Reasoning"
     }
   }
 }
