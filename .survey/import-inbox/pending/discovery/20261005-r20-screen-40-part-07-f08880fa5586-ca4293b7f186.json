@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-40-part-07-f08880fa5586",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22489",
+      "identity_tokens": [
+        "arXiv:2607.22489"
+      ],
+      "title": "kappa-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
+      "reason": "一次要旨はLoRA fine-tuningのcompute/time/memory削減を主題とし、serving/inference時の効率は扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.22489",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22837",
+      "identity_tokens": [
+        "arXiv:2607.22837"
+      ],
+      "title": "Frustratingly Simple Black-Box Adaptation of Language Models via Logit Bias",
+      "reason": "一次要旨はdecoding-time logit biasでtask quality adaptationを目的とするが、inference latency/cost/throughputの改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2607.22837",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22091",
+      "identity_tokens": [
+        "arXiv:2609.22091"
+      ],
+      "title": "Memory That Looks Forward: A Zero-Inference Prospective Term for Personal Memory Retrieval",
+      "reason": "zero-inference memory retrievalとの隣接性はあるが、実効率指標・LLM inference比較が欠け、関連が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.22091",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s41060-026-01215-5",
+      "identity_tokens": [
+        "DOI:10.1007/s41060-026-01215-5"
+      ],
+      "title": "Towards vision-language-action systems: A statistical and objective study of recent advances",
+      "reason": "packetにprimary abstractがなく、DOI一次ページを開いたがInternal Errorで内容を取得できなかった。",
+      "source_url": "https://doi.org/10.1007/s41060-026-01215-5",
+      "first_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "last_checked_at": "2026-10-05T07:43:26.777031+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
