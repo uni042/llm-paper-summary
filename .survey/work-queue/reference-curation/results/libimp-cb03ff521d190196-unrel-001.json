@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cb03ff521d190196-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.cels.2026.101657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.cels.2026.101657",
+    "identity_tokens": [
+      "DOI:10.1016/j.cels.2026.101657"
+    ],
+    "reason": "BulkFormer: A large-scale foundation model for bulk transcriptomes.: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T02:30:40+00:00",
+    "last_checked_at": "2026-10-05T02:30:40+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "BulkFormer: A large-scale foundation model for bulk transcriptomes."
+  },
+  "processed_at": "2026-10-05T02:30:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cb03ff521d19",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
