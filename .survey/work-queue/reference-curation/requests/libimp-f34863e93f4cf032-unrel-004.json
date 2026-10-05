@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f34863e93f4cf032-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1007/s44443-026-01029-2",
+  "reason": "Knowledge tracing (KT) aims to model the evolution of students’ latent knowledge states from historical interaction sequences for accurate prediction of future responses. Modeling knowledge evolution entails the joint consideration of multiple interrelated signals, including temporal dynamics, content semantics, and behavior-driven transitions. However, current KT approaches still face bottlenecks in context-adaptive multi-source fusion and the modeling of time-varying knowledge dynamics. Moreover, relying on a single shared prediction layer may limit both prediction accuracy and flexibility in heterogeneous learning contexts, thereby reducing overall performance. To address these issues, we propose a novel knowledge tracing framework built on multifaceted structured-bias routing, called MSBR-KT. To begin with, the proposed framework constructs learnable structured-bias matrices to capture time-decay patterns, semantic relationships among questions and knowledge concepts, and transition dependencies induced by correctness signals. Furthermore, a bias routing mechanism adaptively integrates these biases within multi-head attention by allocating context-dependent strengths, which results in stage-aware tracking of students’ evolving knowledge states through selective attention to the most relevant historical interactions. Ultimately, a routing-aware mixture-of-experts prediction layer is incorporated, with mixing coefficients derived from the routing distributions, to improve context-adaptive evidence aggregation at the prediction stage. Experiments on three benchmark datasets show that the proposed framework achieves the best AUC on all datasets while maintaining competitive ACC and RMSE performance, demonstrating reliable and robust predictive performance compared with ",
+  "title": "MSBR-KT: knowledge tracing via multifaceted structured-bias routing",
+  "identity_tokens": [
+    "DOI:10.1007/s44443-026-01029-2"
+  ],
+  "linked_from": [
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+    "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+    "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+    "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f34863e93f4c",
+  "source_precheck_request_id": null
+}
