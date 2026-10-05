@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2410.04417",
+      "year": 2024,
+      "published": "2024-10-06",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 433,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In vision-language models (VLMs), visual tokens usually bear a significant amount of computational overhead despite sparsity of information in them when compared to text tokens. To address this, most existing methods learn a network to prune redundant visual tokens using certain training data. Differently, we propose a text-guided training-free token optimization mechanism dubbed SparseVLM that eliminates the need of extra parameters or fine-tuning costs. Given that visual tokens complement text tokens in VLM's linguistic reasoning, we select relevant text tokens to rate the significance of visual tokens using self-attention matrices and, then, prune visual tokens using the proposed strategy to maximize sparsity while retaining information. In particular, we introduce a rank-based strategy to adaptively determine the sparsification ratio for each layer, alongside a token recycling method that compresses pruned tokens into more compact representations. Experimental results show that SparseVLM increases the efficiency of various VLMs in a number of image and video understanding tasks. For example, LLaVA when equipped with SparseVLM achieves 54% reduction in FLOPs, 37% decrease in CUDA latency while maintaining 97% of its original accuracy. Our code is available at https://github.com/Gumpest/SparseVLMs.",
+      "identifiers": [
+        "SemanticScholar:a05c0dd5a8bc70814517fb424cf55e94b4208e67"
+      ],
+      "semantic_scholar_id": "a05c0dd5a8bc70814517fb424cf55e94b4208e67",
+      "canonical_id": "arXiv:2410.04417",
+      "arxiv_id": "2410.04417",
+      "doi": "10.48550/arXiv.2410.04417",
+      "authors": [
+        "Yuan Zhang",
+        "Chunkai Fan",
+        "Junpeng Ma",
+        "Wen-Zhao Zheng",
+        "Tao Huang",
+        "Kuan Cheng",
+        "Denis Gudovskiy",
+        "Tomoyuki Okuno",
+        "Yohei Nakata",
+        "Kurt Keutzer",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 443,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 433,
+        "citation_count": 433,
+        "total": 443,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 729,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "VLM推論時にtext-guided self-attentionからvisual token重要度を求め、layerごとのrank-based sparsificationとtoken recyclingで不要visual tokenをtraining-freeに削減する。LLaVAでFLOPs 54%削減、CUDA latency 37%削減、元精度97%維持を報告し、VLM/LLM decoder推論効率を直接改善するため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv本文/要旨でtext rater選択、self-attentionに基づくvisual-token scoring、rank-based adaptive sparsification、pruned-token recycling、LLaVA/Mini-Gemini/Qwen2-VL/VideoLLaVA評価を確認。LLaVAで54% FLOPs削減・37% CUDA latency削減・97% accuracy維持を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5f9ec5aca718",
+    "round": "libimp-5f9ec5aca71878f5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5f9ec5aca71878f5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5f9ec5aca71878f5-pre01.json",
+    "receipt": "sha256:d0877171e640e5a2ba5ffe6b62b3f56d7292a8526d31e27628bfdda9077a2c65"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5f9ec5aca718",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

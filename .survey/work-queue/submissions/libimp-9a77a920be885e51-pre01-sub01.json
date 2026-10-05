@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers",
+      "source_url": "https://arxiv.org/abs/2012.15828",
+      "year": 2020,
+      "published": "2020-12-31",
+      "venue": "Findings",
+      "citation_count": 434,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We generalize deep self-attention distillation in MiniLM (Wang et al., 2020) by only using self-attention relation distillation for task-agnostic compression of pretrained Transformers. In particular, we define multi-head self-attention relations as scaled dot-product between the pairs of query, key, and value vectors within each self-attention module. Then we employ the above relational knowledge to train the student model. Besides its simplicity and unified principle, more favorably, there is no restriction in terms of the number of student's attention heads, while most previous work has to guarantee the same head number between teacher and student. Moreover, the fine-grained self-attention relations tend to fully exploit the interaction knowledge learned by Transformer. In addition, we thoroughly examine the layer selection strategy for teacher models, rather than just relying on the last layer as in MiniLM. We conduct extensive experiments on compressing both monolingual and multilingual pretrained models. Experimental results demonstrate that our models distilled from base-size and large-size teachers (BERT, RoBERTa and XLM-R) outperform the state-of-the-art.",
+      "identifiers": [
+        "SemanticScholar:b5b006dc558cb7fbd532d67e989173b536e8ac80"
+      ],
+      "semantic_scholar_id": "b5b006dc558cb7fbd532d67e989173b536e8ac80",
+      "canonical_id": "arXiv:2012.15828",
+      "arxiv_id": "2012.15828",
+      "doi": "10.18653/v1/2021.findings-acl.188",
+      "authors": [
+        "Wen-Hui Wang",
+        "Hangbo Bao",
+        "Shao-Han Huang",
+        "Li Dong",
+        "Furu Wei"
+      ],
+      "priority": 434,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 434,
+        "citation_count": 434,
+        "total": 434,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2104,
+        "matched_prestigious_venue": null
+      },
+      "reason": "multi-head self-attention relation distillationでBERT/RoBERTa/XLM-Rを小型studentへ圧縮し、online servingの計算資源・latency制約を狙う。22MモデルでBERT_BASE比5.3倍、66Mモデルで2倍のspeedupを示すため推論向け圧縮として対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTMLのIntroduction/Resultsを確認。online servingのresource/latencyを問題設定に明記し、Q/K/V relation distillationでstudentを圧縮。GLUE/SQuAD評価表で22M student 5.3x、66M student 2.0x speedupを報告。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9a77a920be88",
+    "round": "libimp-9a77a920be885e51-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9a77a920be885e51-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9a77a920be885e51-pre01.json",
+    "receipt": "sha256:a7145c21135319ee63394629692f3f4bf9fc95b4be37c7dc51cace9b73d72a72"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9a77a920be88",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
