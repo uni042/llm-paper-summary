@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:02:46+00:00",
-  "record_count": 1599,
+  "updated_at": "2026-10-05T12:05:40+00:00",
+  "record_count": 1604,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24840,6 +24840,83 @@
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
       "title": "CoreMem: Riemannian Retrieval and Fisher-Guided Distillation for Long-Term Memory in Dialogue Agents"
+    },
+    "arXiv:2606.16845": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.16845",
+      "identity_tokens": [
+        "arXiv:2606.16845"
+      ],
+      "reason": "Only faster than unrestricted CoT in one task; severe absolute latency and no general serving optimization.",
+      "first_checked_at": "2026-10-05T12:05:37+00:00",
+      "last_checked_at": "2026-10-05T12:05:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Robust Dual-Signal Fusion: Hybrid Neuro-Symbolic Gating with Compressed Chain-of-Thought Refinement for Irony Detection in Social Media Texts"
+    },
+    "arXiv:2606.17118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.17118",
+      "identity_tokens": [
+        "arXiv:2606.17118"
+      ],
+      "reason": "No apples-to-apples serving baseline; multimodal MoE quantization scope is narrow.",
+      "first_checked_at": "2026-10-05T12:05:37+00:00",
+      "last_checked_at": "2026-10-05T12:05:37+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.21135-dynamo-runtime-switchable-quantization-for-moe-with-cross-dataset-adaptation-moq.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md"
+      ],
+      "title": "MODE: Modality-Decomposed Expert-Level Mixed-Precision Quantization for MoE Multimodal LLMs"
+    },
+    "arXiv:2608.20348": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.20348",
+      "identity_tokens": [
+        "arXiv:2608.20348"
+      ],
+      "reason": "Clinical accuracy/context selection, not demonstrated runtime efficiency.",
+      "first_checked_at": "2026-10-05T12:05:38+00:00",
+      "last_checked_at": "2026-10-05T12:05:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Inhibitory Attention for Clinical Long-Context Reasoning: Characterizing and Mitigating Lost-in-the-Middle Effects in EHR Processing"
+    },
+    "DOI:10.1145/3805622.3810822": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805622.3810822",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810822"
+      ],
+      "reason": "Plausible long-context inference relevance, but primary body unavailable.",
+      "first_checked_at": "2026-10-05T12:05:40+00:00",
+      "last_checked_at": "2026-10-05T12:05:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Scaling Multimodal Retrieval and Generation for Long Documents through Visual Tiling and Context Compression"
+    },
+    "DOI:10.1145/3805622.3810837": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805622.3810837",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810837"
+      ],
+      "reason": "Plausible multimodal efficiency, but body evaluation/limits could not be inspected.",
+      "first_checked_at": "2026-10-05T12:05:40+00:00",
+      "last_checked_at": "2026-10-05T12:05:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ],
+      "title": "Stillness is Redundant: Motion-Aware KV Cache Retrieval for Efficient Video Understanding"
     }
   }
 }

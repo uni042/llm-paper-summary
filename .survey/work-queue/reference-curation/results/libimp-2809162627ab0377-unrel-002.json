@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2809162627ab0377-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16907",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16907",
+    "identity_tokens": [
+      "arXiv:2606.16907"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16907. Abstract summary: The scale of LLM training jobs requires parallelization planning over large GPU clusters. Due to different GPU types and interconnects added over time, these GPU clusters are increasingly heterogeneous. Automatic LLM parallelizers can search for parallelization plans but face an exploding search space with heterogeneous GPUs. To Out of scope: LLM parallelization is for training throughput.",
+    "first_checked_at": "2026-10-05T12:05:37+00:00",
+    "last_checked_at": "2026-10-05T12:05:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "Tangram: Hiding GPU Heterogeneity for Efficient LLM Parallelization"
+  },
+  "processed_at": "2026-10-05T12:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2809162627ab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

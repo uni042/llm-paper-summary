@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a8e9efd81f7f062-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16501",
+    "identity_tokens": [
+      "arXiv:2606.16501"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.16501. Abstract summary: Model merging has become a practical post-training strategy for building a single multi-task large language model (LLM) by combining multiple task-specialized models. However, most existing approaches rely on post-hoc merging, in which task-specific models are merged only once after training. This one-shot aggregation often suff Out of scope: Model merging strategy/quality, not serving.",
+    "first_checked_at": "2026-10-05T12:05:39+00:00",
+    "last_checked_at": "2026-10-05T12:05:39+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+    ],
+    "title": "Post-Hoc Merging is Not Enough: Many-Shot Model Merging with Loss-Gap Balancing"
+  },
+  "processed_at": "2026-10-05T12:05:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a8e9efd81f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
