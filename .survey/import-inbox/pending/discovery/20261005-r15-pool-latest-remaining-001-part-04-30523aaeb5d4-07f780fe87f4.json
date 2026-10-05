@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-remaining-001-part-04-30523aaeb5d4",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.24164",
+      "identity_tokens": [
+        "arXiv:2410.24164"
+      ],
+      "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+      "reason": "vision-language-action flow modelによるrobot controlと訓練/行動性能が主題で、LLM serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2410.24164",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
+        "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15594",
+      "identity_tokens": [
+        "arXiv:2411.15594"
+      ],
+      "title": "A Survey on LLM-as-a-Judge",
+      "reason": "LLM-as-a-judgeの能力・評価設定のsurveyで、推論効率やserving systemは対象でない。",
+      "source_url": "https://arxiv.org/abs/2411.15594",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14734",
+      "identity_tokens": [
+        "arXiv:2503.14734"
+      ],
+      "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+      "reason": "humanoid robot向けgeneralist foundation modelとVLA能力が主題で、LLM inference/serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2503.14734",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13657",
+      "identity_tokens": [
+        "arXiv:2503.13657"
+      ],
+      "title": "Why Do Multi-Agent LLM Systems Fail?",
+      "reason": "multi-agent LLM system failureの分類・分析が主題で、効率化手法の提案/評価ではない。",
+      "source_url": "https://arxiv.org/abs/2503.13657",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03387",
+      "identity_tokens": [
+        "arXiv:2502.03387"
+      ],
+      "title": "LIMO: Less is More for Reasoning",
+      "reason": "reasoning性能を少量のtraining dataで得るLIMOはtraining data efficiencyが主題で、inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2502.03387",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ]
+    }
+  ]
+}
