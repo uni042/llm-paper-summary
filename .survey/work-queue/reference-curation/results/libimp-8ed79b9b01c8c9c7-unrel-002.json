@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ed79b9b01c8c9c7-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.16085",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.16085",
+    "identity_tokens": [
+      "arXiv:2609.16085"
+    ],
+    "reason": "一次本文で用いるモデルfamiliesはimage classification、CNN object detection、transformer detectionで、INT8 portability/speed/accuracyを7 hardware classes上で比較する。",
+    "first_checked_at": "2026-10-05T06:44:57+00:00",
+    "last_checked_at": "2026-10-05T06:44:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Is INT8 Portable? A Cross-Platform Measurement Study of Quantized Inference on Embedded and Automotive Accelerators"
+  },
+  "processed_at": "2026-10-05T06:44:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ed79b9b01c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

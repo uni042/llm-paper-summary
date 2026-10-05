@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:42:07+00:00",
-  "record_count": 1022,
+  "updated_at": "2026-10-05T06:44:58+00:00",
+  "record_count": 1023,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15584,6 +15584,22 @@
         "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
       ],
       "title": "How Fast Should an Optical Circuit Switch Reconfigure for MoE Inference?"
+    },
+    "arXiv:2609.15126": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.15126",
+      "identity_tokens": [
+        "arXiv:2609.15126"
+      ],
+      "reason": "LLM architectureとmemory efficiencyの関係はあるものの、推論実時間はベースより増え、推論効率を改善するscope貢献が弱い。",
+      "first_checked_at": "2026-10-05T06:44:58+00:00",
+      "last_checked_at": "2026-10-05T06:44:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MoME: Mixture-of-Memory Embeddings for Context-Aware Sparse Lookup"
     }
   }
 }

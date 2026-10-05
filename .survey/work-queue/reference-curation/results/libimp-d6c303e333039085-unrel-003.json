@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6c303e333039085-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.15354",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.15354",
+    "identity_tokens": [
+      "arXiv:2609.15354"
+    ],
+    "reason": "Accurate cell detection and classification are crucial for pathological analysis, directly affecting diagnostic accuracy and treatment planning. To capture complex cellular interactions beyond visual appearance within the tumor microenvironment, several approaches have employed graph neural networks to model spatial and relational patterns among cell nuclei, yielding promising results. However, these methods typically adopt a two-stage paradigm of visual extraction followed by relational modeling, which necessitates separate tuning for each stage, thereby increasing pipeline complexity and hindering end-to-end joint optimization. In this paper, we propose an end-to-end framework for cell detection and classification that jointly models patch-level visual representations and instance-level interactions, which incorporates a dynamic graph construction module and an instance-aware graph network. Specifically, the graph construction module dynamically builds the graph structure using learnable queries derived from patch-level features as cell instance representations, with adjacency defined by integrating feature similarity and spatial distances. The instance-aware graph network performs adaptive instance filtering and feature reorganization, aggregating them over the cell graph into a topological latent state for a selective state-space transition driven by visual cues, fusing appearance and relational evidence. When evaluated on multiple datasets with different staining protocols for cell and nucleus detection, our method significantly outperforms existing approaches in both detection and classification performance. The code will be released at https://github.com/RuochenLiu23/IGM.",
+    "first_checked_at": "2026-10-05T06:44:58+00:00",
+    "last_checked_at": "2026-10-05T06:44:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "End-to-End Cell Detection via Instance-aware Graph Modeling"
+  },
+  "processed_at": "2026-10-05T06:44:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6c303e33303",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

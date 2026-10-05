@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ed79b9b01c8c9c7-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.16193",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.16193",
+    "identity_tokens": [
+      "arXiv:2609.16193"
+    ],
+    "reason": "The difficulty of training large language models (LLMs), together with their ubiquity, raises the threat of stegomalware, where malicious payloads are embedded into model weights. Recent work has demonstrated the use of permutation symmetry in model weights to mitigate these threats, but failed to show neutralization of stegomalware across all weights for LLMs. In this paper, we demonstrate the full potential of behavior-preserving symmetries as a defense against stegomalware, as well as the risks these symmetries pose when exploited by attackers. For stegomalware neutralization, we improve upon previous work, demonstrating that it is possible to select permutations which displace all model parameters. This contrasts with previous methods which left a significant percentage of weights unaltered in LLMs. When used in an attack, we show that permutation symmetries can encode malware into the weights of a model in a way that is theoretically lossless, requires no retraining after encoding, and needs no payload-specific information in the extraction script---a combination of characteristics not previously seen in any single method. While theoretically lossless, permutation can in practice alter model behavior due to the accumulation of numerical error. We therefore quantify the loss in model performance associated with applying these methods, for both attack and defense, showing it to be minimal.",
+    "first_checked_at": "2026-10-05T06:44:57+00:00",
+    "last_checked_at": "2026-10-05T06:44:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Permutation-Based Stegomalware in Large Language Models: Threats and Countermeasures"
+  },
+  "processed_at": "2026-10-05T06:44:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ed79b9b01c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
