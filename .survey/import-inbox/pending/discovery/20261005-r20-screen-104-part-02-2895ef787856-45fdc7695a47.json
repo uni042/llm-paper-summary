@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-104-part-02-2895ef787856",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3718958.3750496",
+      "identity_tokens": [
+        "DOI:10.1145/3718958.3750496"
+      ],
+      "title": "ByteDance Jakiro: Enabling RDMA and TCP over Virtual Private Cloud",
+      "reason": "A Virtual Private Cloud (VPC) that enables both RDMA and TCP provides advantages for both tenants and cloud providers. It serves the flexible demands of RDMA and TCP of tenant applications while delivering a cost-effective solution compared to the construction of two distinct overlay networks. In this study, we introduce Jakiro, an innovative framework of vNIC design that supports both RDMA and TCP within ByteDance Cloud. Jakiro holds the capability to support fundamental VPC features such as QoS, security groups, etc., for both RDMA and TCP streams while maintaining compatibility with applications and intra-host RDMA optimization techniques. We benchmark Jakiro's performance using basic test cases and real-world high-performance computing applications and distributed machine learning training. The results indicate that the RDMA performance of Jakiro is close to that of the physical RDMA. Concurrently, Jakiro guarantees a weighted fair QoS between RDMA and TCP. Jakiro has been deployed in ByteDance Cloud for one year, we share our critical design and deployment decisions, as well as experiences and lessons from production.",
+      "source_url": "https://doi.org/10.1145/3718958.3750496",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10994-025-06859-1",
+      "identity_tokens": [
+        "DOI:10.1007/s10994-025-06859-1"
+      ],
+      "title": "EchoRAG: a framework for enhancing language models with graph-RAG and in-context learning",
+      "reason": "Packet has no primary abstract and publisher primary abstract/full text could not be retrieved. Third-party snippets were not used.",
+      "source_url": "https://doi.org/10.1007/s10994-025-06859-1",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3764944.3764967",
+      "identity_tokens": [
+        "DOI:10.1145/3764944.3764967"
+      ],
+      "title": "Fair, Practical, and Efficient Carbon Accounting for LLM Serving",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://doi.org/10.1145/3764944.3764967",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14170",
+      "identity_tokens": [
+        "arXiv:2508.14170"
+      ],
+      "title": "Comparing energy consumption and accuracy in text classification inference",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://arxiv.org/abs/2508.14170",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.12969",
+      "identity_tokens": [
+        "arXiv:2508.12969"
+      ],
+      "title": "Compact Attention: Exploiting Structured Spatio-Temporal Sparsity for Fast Video Generation",
+      "reason": "The computational demands of self-attention mechanisms pose a critical challenge for transformer-based video generation, particularly in synthesizing ultra-long sequences. Current approaches, such as factorized attention and fixed sparse patterns, fail to fully exploit the inherent spatio-temporal redundancies in video data. Through systematic analysis of video diffusion transformers (DiT), we uncover a key insight: Attention matrices exhibit structured, yet heterogeneous sparsity patterns, where specialized heads dynamically attend to distinct spatiotemporal regions (e.g., local pattern, cross-shaped pattern, or global pattern). Existing sparse attention methods either impose rigid constraints or introduce significant overhead, limiting their effectiveness. To address this, we propose Compact Attention, a hardware-aware acceleration framework featuring three innovations: 1) Adaptive tiling strategies that approximate diverse spatial interaction patterns via dynamic tile grouping, 2) Temporally varying windows that adjust sparsity levels based on frame proximity, and 3) An automated configuration search algorithm that optimizes sparse patterns while preserving critical attention pathways. Our method achieves 1.6~2.5x acceleration in attention computation on single-GPU setups while maintaining comparable visual quality with full-attention baselines. This work provides a principled approach to unlocking efficient long-form video generation through structured sparsity exploitation. Project Page: https://yo-ava.github.io/Compact-Attention.github.io/",
+      "source_url": "https://arxiv.org/abs/2508.12969",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
