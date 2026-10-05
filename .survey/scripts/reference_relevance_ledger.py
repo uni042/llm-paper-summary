@@ -135,6 +135,8 @@ def mark(
         row["borderline_recheck_count"] = borderline_recheck_count
         if reconsidered_from_borderline:
             row["last_reconsidered_at"] = row["last_checked_at"]
+        elif old.get("last_reconsidered_at"):
+            row["last_reconsidered_at"] = old["last_reconsidered_at"]
     if title or old.get("title"):
         row["title"] = str(title or old.get("title")).strip()
 
