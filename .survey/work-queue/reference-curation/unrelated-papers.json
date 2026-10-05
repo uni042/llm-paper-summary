@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:17:37+00:00",
-  "record_count": 1580,
+  "updated_at": "2026-10-05T01:21:54+00:00",
+  "record_count": 1593,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -22795,6 +22795,195 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
       ],
       "title": "Flex-MoE: Modeling Arbitrary Modality Combination via the Flexible Mixture-of-Experts"
+    },
+    "arXiv:2606.26453": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26453",
+      "identity_tokens": [
+        "arXiv:2606.26453"
+      ],
+      "reason": "LLM agent optimizes GPU kernel code; target is code development, not LLM inference.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md"
+      ],
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization"
+    },
+    "arXiv:2606.10671": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10671",
+      "identity_tokens": [
+        "arXiv:2606.10671"
+      ],
+      "reason": "KV consolidation for video diffusion, not language-model inference.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ],
+      "title": "FadeMem: Distance-Aware Memory Consolidation for Autoregressive Video Diffusion"
+    },
+    "DOI:10.1145/3725331": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725331",
+      "identity_tokens": [
+        "DOI:10.1145/3725331"
+      ],
+      "reason": "Text-to-SQL few-shot/consistency method; no serving efficiency evaluation.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2511.20172-beluga-cxl-memory-kvcache.md"
+      ],
+      "title": "OpenSearch-SQL: Enhancing Text-to-SQL with Dynamic Few-shot and Consistency Alignment"
+    },
+    "arXiv:2102.03315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.03315",
+      "identity_tokens": [
+        "arXiv:2102.03315"
+      ],
+      "reason": "Direct-answer QA dataset/benchmark proposal, not an efficiency method.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.24417-arm-attention-routed-memory-learnable-sparse-control.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Think you have Solved Direct-Answer Question Answering? Try ARC-DA, the Direct-Answer AI2 Reasoning Challenge"
+    },
+    "arXiv:2609.30216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30216",
+      "identity_tokens": [
+        "arXiv:2609.30216"
+      ],
+      "reason": "Jev ecosystem analysis without LLM-serving method or efficiency measurements.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+      ],
+      "title": "Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem"
+    },
+    "arXiv:2608.26105": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26105",
+      "identity_tokens": [
+        "arXiv:2608.26105"
+      ],
+      "reason": "Visual reasoning benchmark, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning"
+    },
+    "arXiv:2608.12629": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12629",
+      "identity_tokens": [
+        "arXiv:2608.12629"
+      ],
+      "reason": "Compiler-agent GPU-kernel evolution, not LLM inference execution.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "CAKE: Compiler-Agent Co-Design for Frontier Kernel Evolution"
+    },
+    "arXiv:2607.09207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09207",
+      "identity_tokens": [
+        "arXiv:2607.09207"
+      ],
+      "reason": "RL post-training resource scheduling, not post-training inference/serving.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "Bidirectional Resource Scheduling for Disaggregated and Asynchronous RL Post-Training"
+    },
+    "arXiv:2607.01940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01940",
+      "identity_tokens": [
+        "arXiv:2607.01940"
+      ],
+      "reason": "Transformer circuit interpretability/self-repair backup study; no LLM inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Conditional Co-Ablation: Recovering Self-Repair Backups in Transformer Circuits"
+    },
+    "arXiv:2606.23743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23743",
+      "identity_tokens": [
+        "arXiv:2606.23743"
+      ],
+      "reason": "Video diffusion generation acceleration, not LLM inference.",
+      "first_checked_at": "2026-10-05T01:21:53+00:00",
+      "last_checked_at": "2026-10-05T01:21:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "Sol Video Inference Engine: Agent-Native Full-Stack Acceleration Framework for Efficient Video Generation"
+    },
+    "arXiv:1902.04610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1902.04610",
+      "identity_tokens": [
+        "arXiv:1902.04610"
+      ],
+      "reason": "Generic GPU sharing for deep-learning applications; no LLM-specific evaluation.",
+      "first_checked_at": "2026-10-05T01:21:54+00:00",
+      "last_checked_at": "2026-10-05T01:21:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+      ],
+      "title": "Salus: Fine-Grained GPU Sharing Primitives for Deep Learning Applications"
+    },
+    "arXiv:2608.01619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01619",
+      "identity_tokens": [
+        "arXiv:2608.01619"
+      ],
+      "reason": "Personalized-agent response correctness repair, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:21:54+00:00",
+      "last_checked_at": "2026-10-05T01:21:54+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses"
+    },
+    "arXiv:2607.14552": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14552",
+      "identity_tokens": [
+        "arXiv:2607.14552"
+      ],
+      "reason": "CoT distillation for verifiable reasoning is training-focused.",
+      "first_checked_at": "2026-10-05T01:21:54+00:00",
+      "last_checked_at": "2026-10-05T01:21:54+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in Large Language Models"
     }
   }
 }

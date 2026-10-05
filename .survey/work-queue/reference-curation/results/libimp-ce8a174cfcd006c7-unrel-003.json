@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce8a174cfcd006c7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.01619",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.01619",
+    "identity_tokens": [
+      "arXiv:2608.01619"
+    ],
+    "reason": "Personalized-agent response correctness repair, not inference efficiency.",
+    "first_checked_at": "2026-10-05T01:21:54+00:00",
+    "last_checked_at": "2026-10-05T01:21:54+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "When Memory Updates but Behavior Does Not: Repairing Implicit Stale Dependencies in Personalized Agent Responses"
+  },
+  "processed_at": "2026-10-05T01:21:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce8a174cfcd0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

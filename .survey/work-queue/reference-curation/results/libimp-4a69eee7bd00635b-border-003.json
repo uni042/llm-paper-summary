@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a69eee7bd00635b-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2308.15022",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2308.15022",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2308.15022",
+      "arXiv:2308.15022"
+    ],
+    "reason": "本文はdialogue qualityを示す一方、summary/response双方でLLMを呼び、costを測らず、著者もLLM-call cost未計上を限界に挙げるため、効率改善の証拠が不足。",
+    "first_checked_at": "2026-10-05T01:21:53+00:00",
+    "last_checked_at": "2026-10-05T01:21:53+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.05708-akashic-memattention-memory-service.md"
+    ],
+    "title": "Recursively Summarizing Enables Long-Term Dialogue Memory in Large Language Models"
+  },
+  "processed_at": "2026-10-05T01:21:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a69eee7bd00",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
