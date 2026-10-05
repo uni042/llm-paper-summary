@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-03-part-05-f9ffdc682d1b",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.09509",
+      "identity_tokens": [
+        "arXiv:2203.09509"
+      ],
+      "title": "ToxiGen: A Large-Scale Machine-Generated Dataset for Adversarial and Implicit Hate Speech Detection",
+      "reason": "arXiv要旨は機械生成のhate-speech datasetとprompting/classifier-in-loop decodingを用いた毒性文生成・分類器改善を扱う。",
+      "source_url": "https://arxiv.org/abs/2203.09509",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2609.06076-post-compression-adjustment-cost-normalized.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/42201.42203",
+      "identity_tokens": [
+        "DOI:10.1145/42201.42203"
+      ],
+      "title": "Multiple-query optimization",
+      "reason": "指定ACM DOIを開いたがprimary publisher recordを取得できず、usable abstractを確認できなかった。",
+      "source_url": "https://doi.org/10.1145/42201.42203",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.06749",
+      "identity_tokens": [
+        "arXiv:2503.06749"
+      ],
+      "title": "Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models",
+      "reason": "arXiv要旨はVision-R1向けmultimodal CoT dataset、RL/GRPO/PTSTによるreasoning capabilityの学習を扱う。",
+      "source_url": "https://arxiv.org/abs/2503.06749",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.02301",
+      "identity_tokens": [
+        "arXiv:1511.02301"
+      ],
+      "title": "The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations",
+      "reason": "arXiv要旨はchildren’s books読解時のlanguage model memory representationとsemantic-word prediction性能を比較する。",
+      "source_url": "https://arxiv.org/abs/1511.02301",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.201",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.201"
+      ],
+      "title": "MetaICL: Learning to Learn In Context",
+      "reason": "arXiv要旨はpretrained LMを142 NLP taskでin-context learning向けにmeta-trainするframeworkを提案する。",
+      "source_url": "https://arxiv.org/abs/2110.15943",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    }
+  ]
+}
