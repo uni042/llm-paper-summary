@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-76-part-01-269b48ab9a62",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03637",
+      "identity_tokens": [
+        "arXiv:2506.03637"
+      ],
+      "title": "RewardAnything: Generalizable Principle-Following Reward Models",
+      "reason": "The paper develops principle-following preference reward models for RLHF alignment; its efficiency discussion concerns collecting preference data/retraining reward models, not inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2506.03637",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06148",
+      "identity_tokens": [
+        "arXiv:2412.06148"
+      ],
+      "title": "The Computational Limits of State-Space Models and Mamba via the Lens of Circuit Complexity",
+      "reason": "The contribution is a circuit-complexity analysis of what Mamba/SSMs can compute, not a method or evaluation for reducing LLM inference cost.",
+      "source_url": "https://arxiv.org/abs/2412.06148",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CVPR52733.2024.01523",
+      "identity_tokens": [
+        "DOI:10.1109/CVPR52733.2024.01523"
+      ],
+      "title": "BilevelPruning: Unified Dynamic and Static Channel Pruning for Convolutional Neural Networks",
+      "reason": "This is channel pruning for convolutional neural networks in computer vision, not language-model inference.",
+      "source_url": "https://doi.org/10.1109/CVPR52733.2024.01523",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math11204317",
+      "identity_tokens": [
+        "DOI:10.3390/math11204317"
+      ],
+      "title": "Structure-Aware Low-Rank Adaptation for Parameter-Efficient Fine-Tuning",
+      "reason": "SaLoRA allocates ranks for parameter-efficient fine-tuning of pretrained language models; the contribution concerns training/adaptation cost, not inference or serving.",
+      "source_url": "https://doi.org/10.3390/math11204317",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3604281",
+      "identity_tokens": [
+        "DOI:10.1145/3604281"
+      ],
+      "title": "A Primer on Seq2Seq Models for Generative Chatbots",
+      "reason": "This is a primer on sequence-to-sequence chatbot models and their research history, not an LLM inference-efficiency method.",
+      "source_url": "https://doi.org/10.1145/3604281",
+      "first_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "last_checked_at": "2026-10-05T11:17:19.564399+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    }
+  ]
+}
