@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-2330-scheduled-chat-30/r01",
+  "reference_main_sha": "7774b07391cf69ae484fa5a931eb53c2426266c3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1712.05889",
+      "identity_tokens": [
+        "arXiv:1712.05889"
+      ],
+      "title": "Ray: A Distributed Framework for Emerging AI Applications",
+      "reason": "Rayはtask/actor抽象と分散schedulerを統合し、強化学習など動的AI workloadを支える汎用分散frameworkである。後年LLM serving基盤の土台にもなるが、本論文自体の最終評価はLLM推論systemではないため現行サーベイではborderline。",
+      "source_url": "https://arxiv.org/abs/1712.05889",
+      "body_check": "research_fulltext_relevance_review: 一次論文のsystem designとevaluationを確認。distributed scheduler、global control store、task/actor APIは推論基盤へ関連する一方、評価対象はRL/AI application一般でLLM/Transformer servingを直接扱わない。",
+      "first_checked_at": "2026-10-05T23:59:30+09:00",
+      "last_checked_at": "2026-10-05T23:59:30+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
