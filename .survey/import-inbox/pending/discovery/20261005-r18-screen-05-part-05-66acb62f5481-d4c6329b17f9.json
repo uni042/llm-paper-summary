@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-05-part-05-66acb62f5481",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37533",
+      "identity_tokens": [
+        "arXiv:2609.37533"
+      ],
+      "title": "E-MoE: Enhanced Mixture-of-Experts for Non-Factorized Diffusion Language Models",
+      "reason": "本文の貢献は少ないstepでのsample qualityであり、同qualityでsteps/latencyをさらに削減した比較は提示されない。few-step settingとの関連に対し効率根拠が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.37533",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37544",
+      "identity_tokens": [
+        "arXiv:2609.37544"
+      ],
+      "title": "How Can Recommendation Feedback Evolve Agent Memory?",
+      "reason": "TIDEはrecommendation feedbackを用いるcontent-generation agentのexternal memory evolution/quality改善を扱い、LLM推論コストの改善を示していない。",
+      "source_url": "https://arxiv.org/abs/2609.37544",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37555",
+      "identity_tokens": [
+        "arXiv:2609.37555"
+      ],
+      "title": "Benchmarking graph-based models for in-silico toxicity prediction in drug discovery",
+      "reason": "毒性予測用graph deep-learning modelsのbenchmarkingであり、LLM inference/servingの研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37555",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37574",
+      "identity_tokens": [
+        "arXiv:2609.37574"
+      ],
+      "title": "MERGE: Multi-LLM Ensemble for Retrieval via Generative Enrichment",
+      "reason": "MERGEはLLMで検索queryを拡張しIR精度を上げる手法。複数LLMを実行するretrieval applicationで、LLM inference efficiencyを下げる提案ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37574",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37587",
+      "identity_tokens": [
+        "arXiv:2609.37587"
+      ],
+      "title": "ReLMem: Learning Recurrent Memory for Longitudinal EHR Modeling",
+      "reason": "評価は単一center MIMIC-IV retrospective dataset、Qwen/Llama 4B/8B、medication/diagnosis tasksに限定。独立機関/prospective validationなしで、scopeはdomain-specific。",
+      "source_url": "https://arxiv.org/abs/2609.37587",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
