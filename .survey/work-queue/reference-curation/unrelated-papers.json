@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:10:26+00:00",
-  "record_count": 3770,
+  "updated_at": "2026-10-05T08:13:18+00:00",
+  "record_count": 3787,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -54926,6 +54926,249 @@
         "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
       ],
       "title": "The Emergence of Relevance Through Axiomatic Attention Patterns During LoRA Fine-Tuning"
+    },
+    "arXiv:2608.21827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21827",
+      "identity_tokens": [
+        "arXiv:2608.21827"
+      ],
+      "reason": "The paper is a poetry-comprehension benchmark for language models and does not propose or measure inference efficiency.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Do Large Language Models Perform Well on Comprehending Poetic Logic in Modern Chinese Poetry?"
+    },
+    "arXiv:2608.21829": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21829",
+      "identity_tokens": [
+        "arXiv:2608.21829"
+      ],
+      "reason": "The contribution is supervised structure learning for training an agent-curated knowledge base, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Training a Knowledge Base: Supervised Structure Learning for Agent-Curated Document Stores"
+    },
+    "arXiv:2608.21840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21840",
+      "identity_tokens": [
+        "arXiv:2608.21840"
+      ],
+      "reason": "This is an inverse-scaling/spectral-bias analysis of MoE state-space models on synthetic time series, not inference-efficiency work for LLMs.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "More Experts, Worse Dynamics: Inverse Scaling and Spectral Bias in Mixture-of-Experts State-Space Models"
+    },
+    "arXiv:2608.21853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21853",
+      "identity_tokens": [
+        "arXiv:2608.21853"
+      ],
+      "reason": "PUMA is a multimodal understanding benchmark; its abstract does not report an LLM serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PUMA: A Polish Benchmark for Culturally Grounded Multimodal Understanding"
+    },
+    "arXiv:2608.21869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21869",
+      "identity_tokens": [
+        "arXiv:2608.21869"
+      ],
+      "reason": "The method is speculative safety decoding for text-to-image diffusion generation, outside the LLM inference scope.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "GuardPaint:SpeculativeSafetyDecodingforText-to-ImageGeneration"
+    },
+    "arXiv:2608.21710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21710",
+      "identity_tokens": [
+        "arXiv:2608.21710"
+      ],
+      "reason": "This paper applies diffusion to stereo matching/geometry, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "StereoDiffuer: Diffusion-based progressive geometry modeling with Saliency Attention Perception for stereo matching"
+    },
+    "arXiv:2608.21752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21752",
+      "identity_tokens": [
+        "arXiv:2608.21752"
+      ],
+      "reason": "The work studies theoretical compressibility of generic deep neural networks; the abstract does not establish LLM inference-time compression or deployment evidence.",
+      "first_checked_at": "2026-10-05T08:13:16+00:00",
+      "last_checked_at": "2026-10-05T08:13:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Width-Independent Compressibility of Deep Neural Networks"
+    },
+    "arXiv:2608.21755": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21755",
+      "identity_tokens": [
+        "arXiv:2608.21755"
+      ],
+      "reason": "ECHO evaluates agent-memory retrieval and provenance quality; no LLM token, latency, memory, energy, or serving-efficiency result is claimed.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "ECHO: A Cognitively Inspired, Auditable Memory Plane for Long-Horizon Agents"
+    },
+    "arXiv:2608.21796": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21796",
+      "identity_tokens": [
+        "arXiv:2608.21796"
+      ],
+      "reason": "SAFE-G evaluates visual-question-answering faithfulness/quality, with no inference-efficiency claim.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "SAFE-G: Structure-aware Faithful Evidence-guided Generation for Knowledge-based Visual Question Answering"
+    },
+    "arXiv:2608.21806": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21806",
+      "identity_tokens": [
+        "arXiv:2608.21806"
+      ],
+      "reason": "This is an observational study of compute resources and scholarly impact, not an LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "More Computational Resources Do Not Ensure Higher Scholarly Impact: Evidence from Leading NLP Conference Papers"
+    },
+    "arXiv:2608.22341": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22341",
+      "identity_tokens": [
+        "arXiv:2608.22341"
+      ],
+      "reason": "The paper concerns hand-pose estimation encoders and contains no LLM inference contribution.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "TransHands: Repurposing Human Pose Encoders as Hand Pose Encoders"
+    },
+    "DOI:10.15439/2026f0210": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.15439/2026f0210",
+      "identity_tokens": [
+        "DOI:10.15439/2026f0210"
+      ],
+      "reason": "The paper is a broad cloud-edge agentic-AI research roadmap rather than a concrete LLM inference/serving efficiency result.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "title": "Enabling Agentic AI across the Cloud-Edge Computing Continuum: A Research Roadmap"
+    },
+    "DOI:10.64823/ijter.2621020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64823/ijter.2621020",
+      "identity_tokens": [
+        "DOI:10.64823/ijter.2621020"
+      ],
+      "reason": "The abstract synthesizes existing environmental-impact studies and recommends Green-AI practices; it does not present a primary LLM inference optimization or measured serving system.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "The Entropy of Artificial Cognition: Deciphering the Anthropogenic Footprint and Multilingual Energetic Tax of Large Language Models"
+    },
+    "DOI:10.1007/s44515-026-00018-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44515-026-00018-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44515-026-00018-w"
+      ],
+      "reason": "The primary abstract is a small Korean-language accuracy/response case study comparing an on-device LLM with ChatGPT-4o; it does not claim inference cost, latency, memory, or serving optimization.",
+      "first_checked_at": "2026-10-05T08:13:18+00:00",
+      "last_checked_at": "2026-10-05T08:13:18+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Knowledge Accuracy and Response Characteristics of an On-Device Large Language Model in Building Environmental Engineering: a Preliminary Case Study of EXAONE 4.0 1.2B Using ChatGPT-4o as a Cloud Reference"
+    },
+    "arXiv:2608.22242": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22242",
+      "identity_tokens": [
+        "arXiv:2608.22242"
+      ],
+      "reason": "Fuxi-Climate is a climate-science reasoning model evaluated for domain capability; the abstract gives no LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:13:18+00:00",
+      "last_checked_at": "2026-10-05T08:13:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Unfolding the Interdisciplinary Complexities of Climate Science: Fuxi-Climate Foundational Model"
+    },
+    "arXiv:2608.22263": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22263",
+      "identity_tokens": [
+        "arXiv:2608.22263"
+      ],
+      "reason": "This work improves VLM personalization quality through residual decoding, without an inference-cost or serving-efficiency claim.",
+      "first_checked_at": "2026-10-05T08:13:18+00:00",
+      "last_checked_at": "2026-10-05T08:13:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Training-Free VLM Personalization via Calibrated Residual Decoding"
+    },
+    "arXiv:2608.22310": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22310",
+      "identity_tokens": [
+        "arXiv:2608.22310"
+      ],
+      "reason": "HERO is an agent-memory retrieval quality framework; its abstract does not report reducing LLM inference/serving resources.",
+      "first_checked_at": "2026-10-05T08:13:18+00:00",
+      "last_checked_at": "2026-10-05T08:13:18+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "HERO: Human-profile Enhanced Retrieval Optimization Framework for Long-term Agent Memory"
     }
   }
 }

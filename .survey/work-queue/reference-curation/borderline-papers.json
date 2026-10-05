@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:10:25+00:00",
-  "record_count": 1172,
+  "updated_at": "2026-10-05T08:13:17+00:00",
+  "record_count": 1175,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17934,6 +17934,51 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "Buried in Textual Debt: Context Pruning with Visual Evidence Preservation for MLLM Agents"
+    },
+    "arXiv:2608.22506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22506",
+      "identity_tokens": [
+        "arXiv:2608.22506"
+      ],
+      "reason": "The efficiency target is post-generation uncertainty monitoring, not reducing LLM generation/serving cost itself. Its fit to this LLM inference-efficiency survey is adjacent and weak.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Kernel Token Contradiction: a Fast and Principled Approach for LLM Claim Uncertainty Quantification"
+    },
+    "arXiv:2608.22577": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22577",
+      "identity_tokens": [
+        "arXiv:2608.22577"
+      ],
+      "reason": "The intervention reallocates a fixed visual budget for task quality rather than reducing LLM inference resources; added selection overhead is material. Scope fit is weak.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents"
+    },
+    "arXiv:2608.22149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22149",
+      "identity_tokens": [
+        "arXiv:2608.22149"
+      ],
+      "reason": "The saved memory is for robot-specific constrained-decoding machinery, not the LLM weights/KV or general serving path; generalization beyond embodied planning is uncertain.",
+      "first_checked_at": "2026-10-05T08:13:17+00:00",
+      "last_checked_at": "2026-10-05T08:13:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Meta-Ctrl: Guaranteed Plan Generation by Decoupling Syntactic and Semantic Constraints"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8b07492f14a8402-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21710",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21710",
+    "identity_tokens": [
+      "arXiv:2608.21710"
+    ],
+    "reason": "This paper applies diffusion to stereo matching/geometry, not LLM inference.",
+    "first_checked_at": "2026-10-05T08:13:16+00:00",
+    "last_checked_at": "2026-10-05T08:13:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "StereoDiffuer: Diffusion-based progressive geometry modeling with Saliency Attention Perception for stereo matching"
+  },
+  "processed_at": "2026-10-05T08:13:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8b07492f14a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

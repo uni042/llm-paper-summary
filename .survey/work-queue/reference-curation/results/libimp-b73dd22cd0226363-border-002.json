@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b73dd22cd0226363-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.22506",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.22506",
+    "identity_tokens": [
+      "arXiv:2608.22506"
+    ],
+    "reason": "The efficiency target is post-generation uncertainty monitoring, not reducing LLM generation/serving cost itself. Its fit to this LLM inference-efficiency survey is adjacent and weak.",
+    "first_checked_at": "2026-10-05T08:13:17+00:00",
+    "last_checked_at": "2026-10-05T08:13:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Kernel Token Contradiction: a Fast and Principled Approach for LLM Claim Uncertainty Quantification"
+  },
+  "processed_at": "2026-10-05T08:13:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b73dd22cd022",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

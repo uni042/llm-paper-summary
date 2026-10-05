@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8cbd6b0ed005136e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.21869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.21869",
+    "identity_tokens": [
+      "arXiv:2608.21869"
+    ],
+    "reason": "The method is speculative safety decoding for text-to-image diffusion generation, outside the LLM inference scope.",
+    "first_checked_at": "2026-10-05T08:13:16+00:00",
+    "last_checked_at": "2026-10-05T08:13:16+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "GuardPaint:SpeculativeSafetyDecodingforText-to-ImageGeneration"
+  },
+  "processed_at": "2026-10-05T08:13:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8cbd6b0ed005",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
