@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-23e7776edd5413d3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33209",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33209",
+    "identity_tokens": [
+      "arXiv:2609.33209"
+    ],
+    "reason": "要旨: Typed-decision models such as TypeSafe's Jev answer a declared yes/no or multiple-choice question about a state with a probability instead of text, and their evaluations report accuracy and calibration. Neither requires that the probabilities a model gives to logically related questions fit together item by item,。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:02:29+00:00",
+    "last_checked_at": "2026-10-05T03:02:29+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Beyond Calibration: Do a Typed-Decision Model's Probabilities Obey the Probability Axioms?"
+  },
+  "processed_at": "2026-10-05T03:02:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-23e7776edd54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

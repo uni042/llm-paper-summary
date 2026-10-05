@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-23e7776edd5413d3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.36070",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.36070",
+    "identity_tokens": [
+      "arXiv:2609.36070"
+    ],
+    "reason": "要旨: AI accelerator systems are rapidly consolidating into scale-up architectures, where tens to thousands of GPUs communicate over high-bandwidth, single-hop fabrics. We find that existing Mixture-of-Experts (MoE) training systems, optimized for conventional scale-out networks, transfer poorly to this setting, often。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+    "first_checked_at": "2026-10-05T03:02:29+00:00",
+    "last_checked_at": "2026-10-05T03:02:29+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Mixture-of-Kittens: MoE Megakernel for NVL72s"
+  },
+  "processed_at": "2026-10-05T03:02:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-23e7776edd54",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
