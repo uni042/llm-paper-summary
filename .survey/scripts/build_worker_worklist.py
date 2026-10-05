@@ -290,7 +290,7 @@ def _discovery_candidates(root: Path) -> tuple[list[dict[str, Any]], int]:
     rows = _dedupe_rows_by_identity(rows)
 
     refill_target, _repeat_penalty = _borderline_policy(config)
-    if len(rows) < refill_target:
+    if not rows and refill_target > 0:
         seen: set[str] = set()
         for row in rows:
             seen.update(_worklist_identity_tokens(row))
@@ -459,7 +459,7 @@ def build(
                 "Re-check canonical state immediately before work and skip rows that are no longer pending or are actively claimed.",
                 "For Library-first runs, skip an identity already saved in ChatGPT Library as a completed pending GitHub import.",
                 "Discovery rows are candidates only: before counting a row toward the 10-paper review quota, verify its canonical identity is still unprocessed in both GitHub durable state and ChatGPT Library; then read the primary paper body and classify it as accept, unrelated, or borderline. Title/abstract-only acceptance is forbidden.",
-                "When the ordinary Discovery pool falls below the configured refill target, top it up from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
+                "Only when the ordinary Discovery pool is exhausted, refill it with up to the configured target count from durable borderline records. For source_kind=borderline_reconsideration, copy origin=borderline_reconsideration and borderline_recheck_count_before from the worklist row into the completed Discovery record regardless of final classification.",
                 "Process both Research and Discovery rows from rank 1 upward. rank 1 has the highest current configurable importance score; ordinary Discovery rows stay ahead of refill rows, while refill rows are ordered by the same score minus the configured repeated-borderline penalty.",
             ],
             "research_audit": {
