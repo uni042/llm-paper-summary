@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-105-part-03-92daefc0070a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3779212.3790149",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790149"
+      ],
+      "title": "Cxlalloc: Safe and Efficient Memory Allocation for a CXL Pod",
+      "reason": "The abstract describes a general CXL-pod memory allocator and key-value-store workloads, not LLM inference/serving or compression.",
+      "source_url": "https://doi.org/10.1145/3779212.3790149",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3779212.3790155",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790155"
+      ],
+      "title": "EARTH: An Efficient MoE Accelerator with Entropy-Aware Speculative Prefetch and Result Reuse",
+      "reason": "The ACM DOI fetch returned HTTP 403 and no accessible primary proceedings copy was found, so method/hardware/evaluation limits cannot be checked beyond the abstract.",
+      "source_url": "https://doi.org/10.1145/3779212.3790155",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2408.10284-adapmoe.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+        "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/sd.70942",
+      "identity_tokens": [
+        "DOI:10.1002/sd.70942"
+      ],
+      "title": "Toward Sustainable Agentic\n AI\n Systems: A Survey of Architectures and Methodologies",
+      "reason": "The full article was not available through the primary page: the full-text link redirected to an abstract page without reviewable survey sections, leaving its fit uncertain.",
+      "source_url": "https://doi.org/10.1002/sd.70942",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16063",
+      "identity_tokens": [
+        "arXiv:2603.16063"
+      ],
+      "title": "ViT-AdaLA: Adapting Vision Transformers with Linear Attention",
+      "reason": "The abstract concerns linear-attention adaptation for vision transformers and vision tasks, not LLM inference/serving/compression.",
+      "source_url": "https://arxiv.org/abs/2603.16063",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15965",
+      "identity_tokens": [
+        "arXiv:2603.15965"
+      ],
+      "title": "MoLoRA: Composable Specialization via Per-Token Adapter Routing",
+      "reason": "Serving contribution is plausible, but evidence focuses on quality, size, and architecture claims; no measured end-to-end serving performance was found in the checked evaluation.",
+      "source_url": "https://arxiv.org/abs/2603.15965",
+      "first_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "last_checked_at": "2026-10-05T13:18:53.485366+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.22880-loraserve-heterogeneous-adapter-serving.md"
+      ]
+    }
+  ]
+}
