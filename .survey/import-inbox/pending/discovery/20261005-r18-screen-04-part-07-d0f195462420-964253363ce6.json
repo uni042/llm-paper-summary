@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-04-part-07-d0f195462420",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36899",
+      "identity_tokens": [
+        "arXiv:2609.36899"
+      ],
+      "title": "Reshaping Rollout Workloads for Asynchronous RL Post-Training on Heterogeneous Accelerators",
+      "reason": "Schedules heterogeneous accelerator rollouts for asynchronous RL post-training; training throughput, outside inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.36899",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36931",
+      "identity_tokens": [
+        "arXiv:2609.36931"
+      ],
+      "title": "Dating the Model: Hidden Dates in System Prompts Affect LLM Evaluation",
+      "reason": "Studies hidden prompt dates and evaluation reproducibility; no efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.36931",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36934",
+      "identity_tokens": [
+        "arXiv:2609.36934"
+      ],
+      "title": "VLALight: A Vision-Language-Action Model for Traffic Signal Control",
+      "reason": "Vision-language-action model for traffic-signal control; application/model development without a general inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.36934",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36945",
+      "identity_tokens": [
+        "arXiv:2609.36945"
+      ],
+      "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+      "reason": "Analyzes RE(S) reinforcement-learning fine-tuning convergence; training-only.",
+      "source_url": "https://arxiv.org/abs/2609.36945",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36953",
+      "identity_tokens": [
+        "arXiv:2609.36953"
+      ],
+      "title": "Cool the Sampler, Not the Learner: Sampling Temperature Moves the Staleness Cliff of Importance-Corrected GRPO",
+      "reason": "Controls sampler staleness during GRPO post-training; training stability, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36953",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
