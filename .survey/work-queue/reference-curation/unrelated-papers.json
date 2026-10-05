@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T15:15:53+00:00",
-  "record_count": 6027,
+  "updated_at": "2026-10-05T15:18:56+00:00",
+  "record_count": 6055,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -87509,6 +87509,401 @@
         "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
       ],
       "title": "Taming the Long-Tail: Efficient Reasoning RL Training with Adaptive Drafter"
+    },
+    "arXiv:2411.13055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.13055",
+      "identity_tokens": [
+        "arXiv:2411.13055"
+      ],
+      "reason": "大規模distributed transformerのtraining scalingを分析。推論工程を対象としない。",
+      "first_checked_at": "2026-10-05T15:18:49+00:00",
+      "last_checked_at": "2026-10-05T15:18:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md"
+      ],
+      "title": "Hardware Scaling Trends and Diminishing Returns in Large-Scale Distributed Training"
+    },
+    "DOI:10.1016/j.omtn.2024.102370": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.omtn.2024.102370",
+      "identity_tokens": [
+        "DOI:10.1016/j.omtn.2024.102370"
+      ],
+      "reason": "prime editing効率とPegRNA活性を予測する生物医学transformer。推論基盤効率ではない。",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "DTMP-prime: A deep transformer-based model for predicting prime editing efficiency and PegRNA activity"
+    },
+    "arXiv:2409.18314": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18314",
+      "identity_tokens": [
+        "arXiv:2409.18314"
+      ],
+      "reason": "model mergingによるcompositional generalization性能評価で、inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Realistic Evaluation of Model Merging for Compositional Generalization"
+    },
+    "arXiv:2409.19019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.19019",
+      "identity_tokens": [
+        "arXiv:2409.19019"
+      ],
+      "reason": "RAG application/pipelineの自動評価研究。推論品質評価であり効率改善は要旨にない。",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "title": "RAGProbe: An Automated Approach for Evaluating RAG Applications"
+    },
+    "arXiv:2405.19751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19751",
+      "identity_tokens": [
+        "arXiv:2405.19751"
+      ],
+      "reason": "FP4 quantization対象はDiffusion Transformer画像生成で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "title": "HQ-DiT: Efficient Diffusion Transformer with FP4 Hybrid Quantization"
+    },
+    "arXiv:2509.21302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21302",
+      "identity_tokens": [
+        "arXiv:2509.21302"
+      ],
+      "reason": "The work quantizes a 3D visual-geometry reconstruction transformer, not a language model serving workload.",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md"
+      ],
+      "title": "Quantized Visual Geometry Grounded Transformer"
+    },
+    "DOI:10.1038/s41598-025-06848-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-06848-3",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-06848-3"
+      ],
+      "reason": "The paper optimizes fully convolutional networks for resource-limited image segmentation devices; it does not concern LLM inference.",
+      "first_checked_at": "2026-10-05T15:18:51+00:00",
+      "last_checked_at": "2026-10-05T15:18:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "Optimizing FCN for devices with limited resources using quantization and sparsity enhancement"
+    },
+    "arXiv:2507.13833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.13833",
+      "identity_tokens": [
+        "arXiv:2507.13833"
+      ],
+      "reason": "DistFlow is a distributed framework for LLM reinforcement-learning post-training; its efficiency target is training, not inference.",
+      "first_checked_at": "2026-10-05T15:18:51+00:00",
+      "last_checked_at": "2026-10-05T15:18:51+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training"
+    },
+    "DOI:10.1007/s00034-025-03214-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00034-025-03214-6",
+      "identity_tokens": [
+        "DOI:10.1007/s00034-025-03214-6"
+      ],
+      "reason": "The paper evaluates approximate multipliers for generic neural-network/image applications, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T15:18:51+00:00",
+      "last_checked_at": "2026-10-05T15:18:51+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md"
+      ],
+      "title": "Efficient and High Accuracy Approximate Multiplier Design Approach for AI Application"
+    },
+    "arXiv:2505.20925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20925",
+      "identity_tokens": [
+        "arXiv:2505.20925"
+      ],
+      "reason": "The paper studies preference alignment/reward optimization using experts and routing; it does not establish inference-time efficiency.",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Multi-objective Large Language Model Alignment with Hierarchical Experts"
+    },
+    "arXiv:2505.14687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14687",
+      "identity_tokens": [
+        "arXiv:2505.14687"
+      ],
+      "reason": "This paper concerns diffusion-transformer image/video generation rather than LLM inference or serving.",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Grouping First, Attending Smartly: Training-Free Acceleration for Diffusion Transformers"
+    },
+    "arXiv:2505.12200": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12200",
+      "identity_tokens": [
+        "arXiv:2505.12200"
+      ],
+      "reason": "While real-world applications increasingly demand intricate scene manipulation, existing instruction-guided image editing benchmarks often oversimplify task complexity and lack comprehensive, fine-grained instructions. To bridge this gap, we introduce CompBench, a large-scale benchmark specifically …",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ],
+      "title": "CompBench: Benchmarking Complex Instruction-guided Image Editing"
+    },
+    "arXiv:2505.07775": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07775",
+      "identity_tokens": [
+        "arXiv:2505.07775"
+      ],
+      "reason": "This is a survey of computational persuasion and AI persuasion risks, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "Must Read: A Comprehensive Survey of Computational Persuasion"
+    },
+    "arXiv:2502.10807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10807",
+      "identity_tokens": [
+        "arXiv:2502.10807"
+      ],
+      "reason": "DNA配列向け言語モデルの研究で、対象LLM inference効率と無関係。",
+      "first_checked_at": "2026-10-05T15:18:53+00:00",
+      "last_checked_at": "2026-10-05T15:18:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "HybriDNA: A Hybrid Transformer-Mamba2 Long-Range DNA Language Model"
+    },
+    "DOI:10.48550/arxiv.2502.20791": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2502.20791",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2502.20791",
+        "arXiv:2502.20791"
+      ],
+      "reason": "一次arXiv要旨ではCYLENSが脅威報告を知識源とするcyber threat intelligence copilotを提案。LLM業務支援だが効率化方式ではない。",
+      "first_checked_at": "2026-10-05T15:18:53+00:00",
+      "last_checked_at": "2026-10-05T15:18:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md"
+      ],
+      "title": "Cyber Defense Reinvented: Large Language Models as Threat Intelligence Copilots"
+    },
+    "arXiv:2412.07583": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.07583",
+      "identity_tokens": [
+        "arXiv:2412.07583"
+      ],
+      "reason": "mobile video diffusionを高速化するが動画生成モデル対象でLLMではない。",
+      "first_checked_at": "2026-10-05T15:18:53+00:00",
+      "last_checked_at": "2026-10-05T15:18:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Mobile Video Diffusion"
+    },
+    "arXiv:2405.13708": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.13708",
+      "identity_tokens": [
+        "arXiv:2405.13708"
+      ],
+      "reason": "requirements駆動end-user software engineering workflow。対象外。",
+      "first_checked_at": "2026-10-05T15:18:54+00:00",
+      "last_checked_at": "2026-10-05T15:18:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Requirements Are All You Need: The Final Frontier for End-User Software Engineering"
+    },
+    "arXiv:2404.18311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.18311",
+      "identity_tokens": [
+        "arXiv:2404.18311"
+      ],
+      "reason": "LLM incremental learningのcritical review。推論/serving効率は主題でない。",
+      "first_checked_at": "2026-10-05T15:18:54+00:00",
+      "last_checked_at": "2026-10-05T15:18:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+      ],
+      "title": "Towards Incremental Learning in Large Language Models: A Critical Review"
+    },
+    "DOI:10.1145/3627535.3638465": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3627535.3638465",
+      "identity_tokens": [
+        "DOI:10.1145/3627535.3638465"
+      ],
+      "reason": "AlphaFoldのGPU training/inference最適化だが対象は生体構造予測モデルで、LLM servingではない。",
+      "first_checked_at": "2026-10-05T15:18:54+00:00",
+      "last_checked_at": "2026-10-05T15:18:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "FastFold: Optimizing AlphaFold Training and Inference on GPU Clusters"
+    },
+    "DOI:10.1145/3639034": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3639034",
+      "identity_tokens": [
+        "DOI:10.1145/3639034"
+      ],
+      "reason": "大規模Transformerのtraining-at-scale分析で、推論を対象としない。",
+      "first_checked_at": "2026-10-05T15:18:54+00:00",
+      "last_checked_at": "2026-10-05T15:18:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "title": "Thorough Characterization and Analysis of Large Transformer Model Training At-Scale"
+    },
+    "arXiv:2504.02800": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02800",
+      "identity_tokens": [
+        "arXiv:2504.02800"
+      ],
+      "reason": "SNS投稿からの精神疾患検出にLLMを適用する調査で、推論/serving効率改善が主題でない。",
+      "first_checked_at": "2026-10-05T15:18:54+00:00",
+      "last_checked_at": "2026-10-05T15:18:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "A Survey of Large Language Models in Mental Health Disorder Detection on Social Media"
+    },
+    "arXiv:2503.18150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.18150",
+      "identity_tokens": [
+        "arXiv:2503.18150"
+      ],
+      "reason": "動画拡散モデルによる長尺動画生成の時間整合性改善。LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T15:18:55+00:00",
+      "last_checked_at": "2026-10-05T15:18:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "LongDiff: Training-Free Long Video Generation in One Go"
+    },
+    "arXiv:2503.13319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13319",
+      "identity_tokens": [
+        "arXiv:2503.13319"
+      ],
+      "reason": "動画拡散の蒸留・生成効率を扱い、LLM対象でない。",
+      "first_checked_at": "2026-10-05T15:18:55+00:00",
+      "last_checked_at": "2026-10-05T15:18:55+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "MagicDistillation: Weak-to-Strong Video Distillation for Large-Scale Few-Step Synthesis"
+    },
+    "arXiv:2503.13572": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13572",
+      "identity_tokens": [
+        "arXiv:2503.13572"
+      ],
+      "reason": "LLM生成Verilogのbenchmark contamination評価で、推論効率化は扱わない。",
+      "first_checked_at": "2026-10-05T15:18:55+00:00",
+      "last_checked_at": "2026-10-05T15:18:55+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "VeriContaminated: Assessing LLM-Driven Verilog Coding for Data Contamination"
+    },
+    "arXiv:2503.08195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08195",
+      "identity_tokens": [
+        "arXiv:2503.08195"
+      ],
+      "reason": "LLM jailbreak攻撃手法で、serving/inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T15:18:55+00:00",
+      "last_checked_at": "2026-10-05T15:18:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md"
+      ],
+      "title": "Dialogue Injection Attack: Jailbreaking LLMs Through Context Manipulation"
+    },
+    "arXiv:2505.01959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.01959",
+      "identity_tokens": [
+        "arXiv:2505.01959"
+      ],
+      "reason": "EnsembleCI forecasts regional electricity carbon intensity; it does not optimize LLM inference or serving.",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20322-greenllm-disaggregating-large-language-model-serving-on-heterogeneous-gpus.md"
+      ],
+      "title": "EnsembleCI: Ensemble Learning for Carbon Intensity Forecasting"
+    },
+    "arXiv:2306.09762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.09762",
+      "identity_tokens": [
+        "arXiv:2306.09762"
+      ],
+      "reason": "Diffusion生成synthetic dataで物体検出モデルを訓練する研究。LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "The Big Data Myth: Using Diffusion Models for Dataset Generation to Train Deep Detection Models"
+    },
+    "DOI:10.1109/icassp49357.2023.10097170": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp49357.2023.10097170",
+      "identity_tokens": [
+        "DOI:10.1109/icassp49357.2023.10097170"
+      ],
+      "reason": "visible/infrared person re-identification向けvisual token選択で、LLM対象でない。",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "title": "Top-K Visual Tokens Transformer: Selecting Tokens for Visible-Infrared Person Re-Identification"
     }
   }
 }

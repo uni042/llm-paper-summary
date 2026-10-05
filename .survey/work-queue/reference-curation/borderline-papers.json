@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:15:53+00:00",
-  "record_count": 1975,
+  "updated_at": "2026-10-05T15:18:56+00:00",
+  "record_count": 1983,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30553,6 +30553,142 @@
       ],
       "borderline_recheck_count": 0,
       "title": "How Do LLMs Use Their Depth?"
+    },
+    "DOI:10.1109/icdcs63083.2025.00062": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdcs63083.2025.00062",
+      "identity_tokens": [
+        "DOI:10.1109/icdcs63083.2025.00062"
+      ],
+      "reason": "The accessible publisher abstract is directly relevant, but the primary article text and its evidence cannot be verified; retain as borderline pending primary full-text access.",
+      "first_checked_at": "2026-10-05T15:18:50+00:00",
+      "last_checked_at": "2026-10-05T15:18:50+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.13511-slice-level-scheduling-for-high-throughput-and-load-balanced-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MCaM : Efficient LLM Inference with Multi-tier KV Cache Management"
+    },
+    "arXiv:2505.11783": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11783",
+      "identity_tokens": [
+        "arXiv:2505.11783"
+      ],
+      "reason": "This is adjacent retrieval infrastructure rather than an LLM inference/serving optimization; whether to include such systems is unresolved for this scope.",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Vector Search on Disaggregated Memory with d-HNSW"
+    },
+    "arXiv:2502.01481": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.01481",
+      "identity_tokens": [
+        "arXiv:2502.01481"
+      ],
+      "reason": "context長とLM lossの理論・実験分析だが、推論コスト削減手法ではない。",
+      "first_checked_at": "2026-10-05T15:18:52+00:00",
+      "last_checked_at": "2026-10-05T15:18:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.15891-razorattention-efficient-kv-cache-compression-through-retrieval-heads.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Intrinsic Entropy of Context Length Scaling in LLMs"
+    },
+    "DOI:10.1109/icaiqsa64000.2024.10882424": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icaiqsa64000.2024.10882424",
+      "identity_tokens": [
+        "DOI:10.1109/icaiqsa64000.2024.10882424"
+      ],
+      "reason": "要旨は分散microservice deploymentとparallel inferenceを提案するが、IEEE一次本文を取得できずLLM serving効率への寄与を確認不能。",
+      "first_checked_at": "2026-10-05T15:18:53+00:00",
+      "last_checked_at": "2026-10-05T15:18:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Decentralized Generative AI Model Deployment Using Microservices"
+    },
+    "arXiv:2401.12230": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.12230",
+      "identity_tokens": [
+        "arXiv:2401.12230"
+      ],
+      "reason": "cloud/AI deploymentとの接点はあるが、論文は初期vision/事例でありserving評価が限定的。",
+      "first_checked_at": "2026-10-05T15:18:53+00:00",
+      "last_checked_at": "2026-10-05T15:18:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Computing in the Era of Large Generative Models: From Cloud-Native to AI-Native"
+    },
+    "arXiv:2312.03038": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.03038",
+      "identity_tokens": [
+        "arXiv:2312.03038"
+      ],
+      "reason": "一般Transformerのdynamic layer/head selectionは効率接点があるが、LLM適用性不明。一次本文取得失敗。",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sample-based Dynamic Hierarchical Transformer with Layer and Head Flexibility via Contextual Bandit"
+    },
+    "DOI:10.1007/s42979-023-02294-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42979-023-02294-y",
+      "identity_tokens": [
+        "DOI:10.1007/s42979-023-02294-y"
+      ],
+      "reason": "input packetのabstractが空で、一次DOIページも取得時Internal Error。タイトルだけからscopeを推測しない。",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CViT: A Convolution Vision Transformer for Video Abnormal Behavior Detection and Localization"
+    },
+    "arXiv:2604.07012": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07012",
+      "identity_tokens": [
+        "arXiv:2604.07012"
+      ],
+      "reason": "RAG summary-tree construction効率を改善するが、主測定はindex/tree構築でonline decode/serving効率への関係は間接的。",
+      "first_checked_at": "2026-10-05T15:18:56+00:00",
+      "last_checked_at": "2026-10-05T15:18:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DTCRS: Dynamic Tree Construction for Recursive Summarization"
     }
   }
 }
