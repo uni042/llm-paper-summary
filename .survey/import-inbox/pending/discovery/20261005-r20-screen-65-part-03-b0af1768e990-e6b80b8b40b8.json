@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-65-part-03-b0af1768e990",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00365",
+      "identity_tokens": [
+        "arXiv:2501.00365"
+      ],
+      "title": "Low-Rank Adaptation for Foundation Models: A Comprehensive Review",
+      "reason": "一次要旨は基盤モデルのLoRA適応技術をまとめるレビューで、推論サービングでなく主にパラメータ効率的な微調整が対象。",
+      "source_url": "https://arxiv.org/abs/2501.00365",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06011",
+      "identity_tokens": [
+        "arXiv:2410.06011"
+      ],
+      "title": "Large Language Model Enhanced Text-to-SQL Generation: A Survey",
+      "reason": "一次要旨はText-to-SQLの研究をまとめる応用サーベイであり、推論効率への言及は課題列挙にとどまり、効率化手法・評価の主題ではない。",
+      "source_url": "https://arxiv.org/abs/2410.06011",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.01563",
+      "identity_tokens": [
+        "arXiv:2502.01563"
+      ],
+      "title": "Massive Values in Self-Attention Modules are the Key to Contextual Knowledge Understanding",
+      "reason": "一次要旨は注意のQ/K活性値と文脈知識理解・量子化の関係を分析するもので、効率化手法の提案や推論性能評価が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2502.01563",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03355",
+      "identity_tokens": [
+        "arXiv:2410.03355"
+      ],
+      "title": "LANTERN: Accelerating Visual Autoregressive Models with Relaxed Speculative Decoding",
+      "reason": "一次要旨は画像生成の視覚的自己回帰モデルを高速化する研究で、言語モデル推論対象ではない。",
+      "source_url": "https://arxiv.org/abs/2410.03355",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCA57654.2024.00082",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA57654.2024.00082"
+      ],
+      "title": "SPARK: Scalable and Precision-Aware Acceleration of Neural Networks via Efficient Encoding",
+      "reason": "汎用DNN acceleratorとして効率改善は示すが、LLM workloadへの適合や実験を一次本文で確認できず、対象範囲との関係が弱いためborderline。",
+      "source_url": "https://doi.org/10.1109/HPCA57654.2024.00082",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    }
+  ]
+}
