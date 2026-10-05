@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:55:44+00:00",
-  "record_count": 1925,
+  "updated_at": "2026-10-05T14:58:31+00:00",
+  "record_count": 1933,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29763,6 +29763,133 @@
       ],
       "borderline_recheck_count": 0,
       "title": "S2FT: Efficient, Scalable and Generalizable LLM Fine-tuning by Structured Sparsity"
+    },
+    "DOI:10.1145/3695053.3731016": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3695053.3731016",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731016"
+      ],
+      "reason": "wafer-scale cabinet architectureをco-designしLlama2-7B/72Bをsimulation評価するが、一次本文を取得できず、対象構成・simulation条件を確認できない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cramming a Data Center into One Cabinet, a Co-Exploration of Computing and Hardware Architecture of Waferscale Chip"
+    },
+    "DOI:10.1109/gaiis69281.2026.11519206": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/gaiis69281.2026.11519206",
+      "identity_tokens": [
+        "DOI:10.1109/gaiis69281.2026.11519206"
+      ],
+      "reason": "serverless multi-tenant LLM inference schedulerで、abstractはSLO/cost-aware contextual banditとP99 latency削減を主張するが、一次本文を取得できなかった。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeepServeCB: SLO-Aware and Cost-Aware Elastic Scheduling for Serverless Multi-Tenant LLM Inference"
+    },
+    "arXiv:2505.01146": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.01146",
+      "identity_tokens": [
+        "arXiv:2505.01146"
+      ],
+      "reason": "biomedical RAG surveyはnaive/advanced/modular architectureを分類し、retrieval/re-ranking/agentic workflowのlatencyを扱う。本文はcross-encoder遅延やmodular RAGの遅延増を比較する。 医療RAGに特化したsurveyで、LLM inference/servingの一般的最適化法が中心でない。latency値は複数別論文/architectureからの整理で同一条件比較でない。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieval-Augmented Generation in Biomedicine: A Survey of Technologies, Datasets, and Clinical Applications"
+    },
+    "arXiv:2508.01506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.01506",
+      "identity_tokens": [
+        "arXiv:2508.01506"
+      ],
+      "reason": "FlashSVDは低rank SVDのactivation bufferをstreaming kernelで避けるinference memory method。本文の主評価はBERT/RoBERTa encoderで、decoder-side/causal-LM実験は将来protocolと明記される。 低rank LLM compressionとkernel機構は関連するが、本文の主実験はencoder-only。generative decoder/LLM servingへの実証が不足しscope fitが不確か。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashSVD: Memory-Efficient Inference with Streaming for Low-Rank Models"
+    },
+    "arXiv:2505.02665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.02665",
+      "identity_tokens": [
+        "arXiv:2505.02665"
+      ],
+      "reason": "本文はslow-thinking LLMをtest-time scaling、RL、長いCoT等で整理するsurveyで、inference-time scaling自体は主題に含むが、効率化よりreasoning能力向上とcompute scaling全般の範囲が広い。 推論効率・資源削減に限定した体系ではなく、過剰計算を減らす具体方式の扱いも限定的。#5516より対象scopeとの適合が弱い。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Slow Thinking-based Reasoning LLMs using Reinforced Learning and Inference-time Scaling Law"
+    },
+    "arXiv:2502.19830": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.19830",
+      "identity_tokens": [
+        "arXiv:2502.19830"
+      ],
+      "reason": "dynamic temperature alignmentでself-consistencyのanswer aggregation精度を改善するが、本文の比較は固定sample数N=10/20/40での性能差が中心で、必要sample数や実latency低減を示していない。 低sample budgetに対するaccuracy改善は示すが、同じ推論予算での費用削減やsample削減の実証は弱く、対象scopeへの寄与が不確か。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Revisiting Self-Consistency from Dynamic Distributional Alignment Perspective on Answer Aggregation"
+    },
+    "arXiv:2502.08020": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.08020",
+      "identity_tokens": [
+        "arXiv:2502.08020"
+      ],
+      "reason": "CoSDはdraft modelをautoregressiveに走らせassistant modelでdraft sequenceを並列検証する。本文の§4実験は主に複数benchmarkのaccuracyを比較し、latency/throughputの実測を確認できなかった。 speculative decodingの構造は推論効率に関係するが、本文で効率主張を定量的な実行時間・token throughputとして確かめられず、実効性が未解決。",
+      "first_checked_at": "2026-10-05T14:58:31+00:00",
+      "last_checked_at": "2026-10-05T14:58:31+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md",
+        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speculate, then Collaborate: Fusing Knowledge of Language Models during Decoding"
+    },
+    "DOI:10.52202/085713-4641": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-4641",
+      "identity_tokens": [
+        "DOI:10.52202/085713-4641"
+      ],
+      "reason": "Edit Flowsは可変長text/code生成を含むnon-autoregressive sequence-level edit CTMC。本文はiterative CTMC samplingを説明し、主な比較は生成品質で、LLM inference latency/token throughputの改善を示していない。 text/code generationへの適用は関連するが、samplingが反復的で、推論高速化・効率改善を評価した証拠が不足している。",
+      "first_checked_at": "2026-10-05T14:58:31+00:00",
+      "last_checked_at": "2026-10-05T14:58:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edit Flows: Variable Length Discrete Flow Matching with Sequence-Level Edit Operations"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a71690e65077b97-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/gaiis69281.2026.11519206",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/gaiis69281.2026.11519206",
+    "identity_tokens": [
+      "DOI:10.1109/gaiis69281.2026.11519206"
+    ],
+    "reason": "serverless multi-tenant LLM inference schedulerで、abstractはSLO/cost-aware contextual banditとP99 latency削減を主張するが、一次本文を取得できなかった。",
+    "first_checked_at": "2026-10-05T14:58:27+00:00",
+    "last_checked_at": "2026-10-05T14:58:27+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.20210-predictive-lora-serverless-inference.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DeepServeCB: SLO-Aware and Cost-Aware Elastic Scheduling for Serverless Multi-Tenant LLM Inference"
+  },
+  "processed_at": "2026-10-05T14:58:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a71690e6507",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

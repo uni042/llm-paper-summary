@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:55:44+00:00",
-  "record_count": 5815,
+  "updated_at": "2026-10-05T14:58:31+00:00",
+  "record_count": 5844,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -84446,6 +84446,433 @@
         "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
       ],
       "title": "Addax: Utilizing Zeroth-Order Gradients to Improve Memory Efficiency and Performance of SGD for Fine-Tuning Language Models"
+    },
+    "arXiv:2602.12675": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.12675",
+      "identity_tokens": [
+        "arXiv:2602.12675"
+      ],
+      "reason": "video/diffusion model用sparse-linear attentionとQATであり、LLM言語推論ではない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md",
+        "papers/inference/13-sparse-attention/2025-2502.12216-tactic-adaptive-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "SLA2: Sparse-Linear Attention with Learnable Routing and QAT"
+    },
+    "arXiv:2602.11348": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11348",
+      "identity_tokens": [
+        "arXiv:2602.11348"
+      ],
+      "reason": "tool-using LLM agentsのnoise robustness benchmarkで、推論効率が主題でない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "AgentNoiseBench: Benchmarking Robustness of Tool-Using LLM Agents Under Noisy Condition"
+    },
+    "DOI:10.1109/ojcoms.2026.3680064": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ojcoms.2026.3680064",
+      "identity_tokens": [
+        "DOI:10.1109/ojcoms.2026.3680064"
+      ],
+      "reason": "LLMとIoT統合全般のsurveyで、要旨が扱うのはIoT上のLLM利用/課題全般。inference-serving efficiencyの焦点がない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+      ],
+      "title": "LLMs and IoT: A Comprehensive Survey on Large Language Models and the Internet of Things"
+    },
+    "arXiv:2510.26493": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26493",
+      "identity_tokens": [
+        "arXiv:2510.26493"
+      ],
+      "reason": "context engineeringの概念・社会的文脈の論考で、LLM inference optimization/servingではない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Context Engineering 2.0: The Context of Context Engineering"
+    },
+    "arXiv:2510.15103": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15103",
+      "identity_tokens": [
+        "arXiv:2510.15103"
+      ],
+      "reason": "continual learningのsparse memory fine-tuningで、学習/更新効率が対象。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Continual Learning via Sparse Memory Finetuning"
+    },
+    "arXiv:2506.03616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.03616",
+      "identity_tokens": [
+        "arXiv:2506.03616"
+      ],
+      "reason": "[PAUSE] tokenの位置を選んで追加学習しreasoning accuracyを改善するfine-tuning手法で、推論時の計算/serving効率化が主題ではない。",
+      "first_checked_at": "2026-10-05T14:58:26+00:00",
+      "last_checked_at": "2026-10-05T14:58:26+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Learning to Insert [PAUSE] Tokens for Better Reasoning"
+    },
+    "arXiv:2505.10909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.10909",
+      "identity_tokens": [
+        "arXiv:2505.10909"
+      ],
+      "reason": "spiking neural networkのsparsity/hardware accelerator研究で、LLM inference/serving対象ではない。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Phi: Leveraging Pattern-based Hierarchical Sparsity for High-Efficiency Spiking Neural Networks"
+    },
+    "arXiv:2503.16788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16788",
+      "identity_tokens": [
+        "arXiv:2503.16788"
+      ],
+      "reason": "mobile GUI agentへのChain-of-Thoughtの効果を測る性能調査で、LLM inference efficiencyを提案・評価しない。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Does Chain-of-Thought Reasoning Help Mobile GUI Agent? An Empirical Study"
+    },
+    "arXiv:2503.10093": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10093",
+      "identity_tokens": [
+        "arXiv:2503.10093"
+      ],
+      "reason": "LLM safety alignment reward modelの効率的な学習手法で、training/alignment専用。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Efficient Safety Alignment of Large Language Models via Preference Re-ranking and Representation-based Reward Modeling"
+    },
+    "arXiv:2402.05913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05913",
+      "identity_tokens": [
+        "arXiv:2402.05913"
+      ],
+      "reason": "BERT/UL2 pretrainingを速めるprogressive subnetwork trainingで、training-only efficiency。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md"
+      ],
+      "title": "Efficient Stagewise Pretraining via Progressive Subnetworks"
+    },
+    "arXiv:2312.09542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.09542",
+      "identity_tokens": [
+        "arXiv:2312.09542"
+      ],
+      "reason": "long-context LLMの理解・reasoning benchmarkで、モデル効率の提案/評価ではない。",
+      "first_checked_at": "2026-10-05T14:58:27+00:00",
+      "last_checked_at": "2026-10-05T14:58:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "Marathon: A Race Through the Realm of Long Context with Large Language Models"
+    },
+    "arXiv:2305.13999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13999",
+      "identity_tokens": [
+        "arXiv:2305.13999"
+      ],
+      "reason": "LLM pretrainingのsparse feed-forward architecturesを統一分析するtraining/scaling study。inference efficiencyを直接改善しない。",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Towards A Unified View of Sparse Feed-Forward Network in Pretraining Large Language Model"
+    },
+    "arXiv:2603.21019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21019",
+      "identity_tokens": [
+        "arXiv:2603.21019"
+      ],
+      "reason": "agent skill marketplaceのsecurity auditing/robustness研究で、inference/serving efficiency対象外。",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "SkillProbe: Security Auditing for Emerging Agent Skill Marketplaces via Multi-Agent Collaboration"
+    },
+    "arXiv:2604.15701": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.15701",
+      "identity_tokens": [
+        "arXiv:2604.15701"
+      ],
+      "reason": "The method distills reasoning behavior into smaller models using stepwise attention to improve reasoning accuracy. The abstract reports capability gains, not an inference-efficiency technique or cost measurement.",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "Improving Reasoning Capabilities in Small Models through Mixture-of-layers Distillation with Stepwise Attention on Key Information"
+    },
+    "arXiv:2512.14068": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.14068",
+      "identity_tokens": [
+        "arXiv:2512.14068"
+      ],
+      "reason": "SDAR-VL focuses on efficient/stable training and convergence for vision-language diffusion; training efficiency is outside the stated inference/serving scope.",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "SDAR-VL: Stable and Efficient Block-wise Diffusion for Vision-Language Understanding"
+    },
+    "arXiv:2510.13855": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13855",
+      "identity_tokens": [
+        "arXiv:2510.13855"
+      ],
+      "reason": "CoRE improves robustness of LLM ensembles against inconsistent signals; the abstract presents quality/robustness rather than reduced inference resources or serving cost.",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Harnessing Consistency for Robust Test-Time LLM Ensemble"
+    },
+    "arXiv:2508.15396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.15396",
+      "identity_tokens": [
+        "arXiv:2508.15396"
+      ],
+      "reason": "The paper surveys evidence-based generation and evaluation metrics for LLM reliability; it does not concern inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ],
+      "title": "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
+    },
+    "arXiv:2412.05926": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.05926",
+      "identity_tokens": [
+        "arXiv:2412.05926"
+      ],
+      "reason": "画像diffusion modelsのquantizationで、LLM言語推論ではない。",
+      "first_checked_at": "2026-10-05T14:58:28+00:00",
+      "last_checked_at": "2026-10-05T14:58:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "BiDM: Pushing the Limit of Quantization for Diffusion Models"
+    },
+    "arXiv:2408.07337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07337",
+      "identity_tokens": [
+        "arXiv:2408.07337"
+      ],
+      "reason": "decomposable modelsのknowledge integration trainingを扱う。inference/serving efficiencyが主題ではない。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "KIND: Knowledge Integration and Diversion for Training Decomposable Models"
+    },
+    "arXiv:2405.18380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.18380",
+      "identity_tokens": [
+        "arXiv:2405.18380"
+      ],
+      "reason": "LLM fine-tuning時の選択的layer trainingとmemoryを扱い、training-only efficiency。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Outlier-weighed Layerwise Sampling for LLM Fine-tuning"
+    },
+    "arXiv:2405.16504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16504",
+      "identity_tokens": [
+        "arXiv:2405.16504"
+      ],
+      "reason": "Mamba/RWKV等のgated linear RNN attention formulationによるinterpretability/explainability研究で、効率化手法の提案ではない。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Explaining Modern Gated-Linear RNNs via a Unified Implicit Attention Formulation"
+    },
+    "arXiv:2404.05662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.05662",
+      "identity_tokens": [
+        "arXiv:2404.05662"
+      ],
+      "reason": "画像diffusion modelのweight binarization。言語モデルinference対象外。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "BinaryDM: Accurate Weight Binarization for Efficient Diffusion Models"
+    },
+    "arXiv:2504.17789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17789",
+      "identity_tokens": [
+        "arXiv:2504.17789"
+      ],
+      "reason": "autoregressive image generationのimage-token reductionで、画像 synthesis効率化。言語モデル推論の対象外。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Token-Shuffle: Towards High-Resolution Image Generation with Autoregressive Models"
+    },
+    "arXiv:2504.14557": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14557",
+      "identity_tokens": [
+        "arXiv:2504.14557"
+      ],
+      "reason": "quantum code generationのmulti-agent correctness/optimization研究で、inference system efficiencyではない。",
+      "first_checked_at": "2026-10-05T14:58:29+00:00",
+      "last_checked_at": "2026-10-05T14:58:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Enhancing LLM-based Quantum Code Generation with Multi-Agent Optimization and Quantum Error Correction"
+    },
+    "DOI:10.1038/s44387-025-00031-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44387-025-00031-9",
+      "identity_tokens": [
+        "DOI:10.1038/s44387-025-00031-9"
+      ],
+      "reason": "LLMのtheory-of-mind表現に関するsparse parameter interpretability研究。inference optimization対象外。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "How large language models encode theory-of-mind: a study on sparse parameter patterns"
+    },
+    "arXiv:2508.03334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03334",
+      "identity_tokens": [
+        "arXiv:2508.03334"
+      ],
+      "reason": "autoregressive long video generationのplanning研究で、video model対象。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Macro-from-Micro Planning for High-Quality and Parallelized Autoregressive Long Video Generation"
+    },
+    "arXiv:2507.11538": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.11538",
+      "identity_tokens": [
+        "arXiv:2507.11538"
+      ],
+      "reason": "LLM instruction-following densityを測るbenchmarkで、inference efficiencyに関する寄与なし。",
+      "first_checked_at": "2026-10-05T14:58:30+00:00",
+      "last_checked_at": "2026-10-05T14:58:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "How Many Instructions Can LLMs Follow at Once?"
+    },
+    "arXiv:2502.18156": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18156",
+      "identity_tokens": [
+        "arXiv:2502.18156"
+      ],
+      "reason": "LLMのcounterfactual self-explanation能力を検討する研究で、inference efficiency/servingの寄与なし。",
+      "first_checked_at": "2026-10-05T14:58:31+00:00",
+      "last_checked_at": "2026-10-05T14:58:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md"
+      ],
+      "title": "Can LLMs Explain Themselves Counterfactually?"
+    },
+    "DOI:10.52202/085713-1129": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-1129",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1129"
+      ],
+      "reason": "human motion generation用diffusion modelの効率化であり、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T14:58:31+00:00",
+      "last_checked_at": "2026-10-05T14:58:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ],
+      "title": "FlashMo: Geometric Interpolants and Frequency-Aware Sparsity for Scalable Efficient Motion Generation"
     }
   }
 }

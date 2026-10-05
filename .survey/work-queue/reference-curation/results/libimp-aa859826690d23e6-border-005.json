@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa859826690d23e6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.02665",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.02665",
+    "identity_tokens": [
+      "arXiv:2505.02665"
+    ],
+    "reason": "本文はslow-thinking LLMをtest-time scaling、RL、長いCoT等で整理するsurveyで、inference-time scaling自体は主題に含むが、効率化よりreasoning能力向上とcompute scaling全般の範囲が広い。 推論効率・資源削減に限定した体系ではなく、過剰計算を減らす具体方式の扱いも限定的。#5516より対象scopeとの適合が弱い。",
+    "first_checked_at": "2026-10-05T14:58:30+00:00",
+    "last_checked_at": "2026-10-05T14:58:30+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Survey of Slow Thinking-based Reasoning LLMs using Reinforced Learning and Inference-time Scaling Law"
+  },
+  "processed_at": "2026-10-05T14:58:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa859826690d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
