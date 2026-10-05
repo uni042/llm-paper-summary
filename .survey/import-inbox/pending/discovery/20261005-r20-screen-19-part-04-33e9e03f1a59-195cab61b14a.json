@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-19-part-04-33e9e03f1a59",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29111",
+      "identity_tokens": [
+        "arXiv:2608.29111"
+      ],
+      "title": "Auditing and Mitigating Privacy Leakage in Cloud-Edge Collaborative Decoding",
+      "reason": "cloud-edge collaborative decodingのprivacy leakage/防御が主題で、推論効率最適化が中心でない。",
+      "source_url": "https://arxiv.org/abs/2608.29111",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29151",
+      "identity_tokens": [
+        "arXiv:2608.29151"
+      ],
+      "title": "WoE Wrote It? Watermarking Mixture-of-Experts LLMs for Black-Box Text Provenance",
+      "reason": "MoE modelのblack-box watermark/provenance研究で、効率は対象外。",
+      "source_url": "https://arxiv.org/abs/2608.29151",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29255",
+      "identity_tokens": [
+        "arXiv:2608.29255"
+      ],
+      "title": "A-MADiff: Attention-Guided Multi-Agent DRL with Diffusion Policies for Memory-Aware Task Orchestration in Mobile AIGC Networks",
+      "reason": "mobile AIGC向けdiffusion policyのtask orchestrationで、LLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2608.29255",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/99-other-inference-systems/2025-2505.16502-recursive-offloading-for-llm-serving-in-multi-tier-networks.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29264",
+      "identity_tokens": [
+        "arXiv:2608.29264"
+      ],
+      "title": "EpaCache: Error-Propagation-Aware Caching for Accelerating Diffusion-Based Visual Generation",
+      "reason": "diffusion visual generationのcache reuseであり、LLMとは異なるモデル。",
+      "source_url": "https://arxiv.org/abs/2608.29264",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29291",
+      "identity_tokens": [
+        "arXiv:2608.29291"
+      ],
+      "title": "Accelerating Unified Multimodal Models with Core-Expansion Routing and Unified Computation Scheduling",
+      "reason": "一次要旨はUMM routing/schedulingと1.93x end-to-end speedupを明示するが、本文取得不可で手法・評価条件・limitationsを監査できない。",
+      "source_url": "https://arxiv.org/abs/2608.29291",
+      "first_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "last_checked_at": "2026-10-05T06:29:16.728517+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    }
+  ]
+}
