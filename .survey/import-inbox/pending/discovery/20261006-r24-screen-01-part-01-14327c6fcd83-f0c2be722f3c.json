@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r24-screen-01-part-01-14327c6fcd83",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06844",
+      "identity_tokens": [
+        "arXiv:2506.06844"
+      ],
+      "title": "Adapt Once, Thrive with Updates: Transferable Parameter-Efficient Fine-Tuning on Evolving Base Models",
+      "reason": "PEFT transfer across evolving base-model updates concerns adaptation compatibility, not inference efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2506.06844",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12523",
+      "identity_tokens": [
+        "arXiv:2505.12523"
+      ],
+      "title": "Energy-Aware Deep Learning on Resource-Constrained Hardware",
+      "reason": "General energy-aware deep learning for constrained IoT/mobile hardware; no LLM inference or serving method appears in its abstract.",
+      "source_url": "https://arxiv.org/abs/2505.12523",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05713",
+      "identity_tokens": [
+        "arXiv:2506.05713"
+      ],
+      "title": "Come Together, But Not Right Now: A Progressive Strategy to Boost Low-Rank Adaptation",
+      "reason": "Progressive LoRA strategy improves fine-tuning/training, not inference-time cost or serving.",
+      "source_url": "https://arxiv.org/abs/2506.05713",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.17161",
+      "identity_tokens": [
+        "arXiv:2303.17161"
+      ],
+      "title": "TreePiece: Faster Semantic Parsing via Tree Tokenization",
+      "reason": "Tree tokenization accelerates semantic parsing in encoder-decoder task models, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2303.17161",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.11115",
+      "identity_tokens": [
+        "arXiv:2502.11115"
+      ],
+      "title": "Are Generative Models Underconfident? Better Quality Estimation with Boosted Model Probability",
+      "reason": "Boosted model probability estimates generated-output quality; no inference efficiency/resource reduction mechanism is proposed.",
+      "source_url": "https://arxiv.org/abs/2502.11115",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    }
+  ]
+}
