@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-71-part-08-635aea8c170c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/10447318.2024.2392964",
+      "identity_tokens": [
+        "DOI:10.1080/10447318.2024.2392964"
+      ],
+      "title": "From Optimism to Concern: Unveiling Sentiments and Perceptions Surrounding ChatGPT on Twitter",
+      "reason": "The work studies public sentiment toward ChatGPT on Twitter, not model inference/serving.",
+      "source_url": "https://doi.org/10.1080/10447318.2024.2392964",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.01866",
+      "identity_tokens": [
+        "arXiv:2408.01866"
+      ],
+      "title": "Efficient Solutions For An Intriguing Failure of LLMs: Long Context Window Does Not Mean LLMs Can Analyze Long Sequences Flawlessly",
+      "reason": "This paper studies long-context reasoning failures and analysis quality, not an efficiency intervention.",
+      "source_url": "https://arxiv.org/abs/2408.01866",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04883",
+      "identity_tokens": [
+        "arXiv:2404.04883"
+      ],
+      "title": "Mixture of Low-rank Experts for Transferable AI-Generated Image Detection",
+      "reason": "The method detects AI-generated images using low-rank experts; it is not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2404.04883",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.12832",
+      "identity_tokens": [
+        "arXiv:2312.12832"
+      ],
+      "title": "Turning Dust into Gold: Distilling Complex Reasoning Capabilities from LLMs by Leveraging Negative Data",
+      "reason": "Smaller-model distillation may lower inference cost, but the paper’s inspected results focus on training/distillation and reasoning quality without matched serving-efficiency measurements.",
+      "source_url": "https://arxiv.org/abs/2312.12832",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.07209",
+      "identity_tokens": [
+        "arXiv:2308.07209"
+      ],
+      "title": "Unified Data-Free Compression: Pruning and Quantization without Fine-Tuning",
+      "reason": "Primary text confirms the pruning and quantization techniques target CNN/image-classification architectures, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2308.07209",
+      "first_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "last_checked_at": "2026-10-05T11:01:38.861294+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
