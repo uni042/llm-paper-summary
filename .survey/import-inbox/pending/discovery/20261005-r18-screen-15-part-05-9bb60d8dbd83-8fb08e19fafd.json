@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-15-part-05-9bb60d8dbd83",
+  "reference_main_sha": "3b0c5546288819965a32278794ebf3b45201393d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30749",
+      "identity_tokens": [
+        "arXiv:2609.30749"
+      ],
+      "title": "ORCA: Evaluating LLMs on Data Science Code Translation",
+      "reason": "LLM data-science code translationのbenchmark構築/評価で、推論効率手法を扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.30749",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30756",
+      "identity_tokens": [
+        "arXiv:2609.30756"
+      ],
+      "title": "Selective Amortization of Full-Budget Counterfactual Reasoning for Visual Token Communication",
+      "reason": "image communicationのvisual token選択をencoder計算効率化する研究で、LLM推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2609.30756",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30766",
+      "identity_tokens": [
+        "arXiv:2609.30766"
+      ],
+      "title": "WeEnv: The Environment for Agentic Reinforcement Learning at WeChat",
+      "reason": "agentic RLのenvironment provisioning/initialization効率化で、学習iterationの環境費用が対象。LLM推論時の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.30766",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30797",
+      "identity_tokens": [
+        "arXiv:2609.30797"
+      ],
+      "title": "HasMem: Hard-Origin Adaptively Softened Memory for Long-Term LLM Agents",
+      "reason": "HasMemはcontinuous memory表現をsoftenし位置数を減らす一方、主評価はtask recallであり、LLM inference token/cost/latency/serving測定がない。",
+      "source_url": "https://arxiv.org/abs/2609.30797",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30813",
+      "identity_tokens": [
+        "arXiv:2609.30813"
+      ],
+      "title": "A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory",
+      "reason": "shared agent memoryへのclaim admission/epistemic safety benchmarkで、LLM inference optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2609.30813",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
