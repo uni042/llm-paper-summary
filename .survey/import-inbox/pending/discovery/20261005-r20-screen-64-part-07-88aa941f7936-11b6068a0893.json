@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-64-part-07-88aa941f7936",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.20011",
+      "identity_tokens": [
+        "arXiv:2410.20011"
+      ],
+      "title": "A Survey of Small Language Models",
+      "reason": "Adjacent overview of efficient small models; topic is too broad and not a concrete LLM inference method.",
+      "source_url": "https://arxiv.org/abs/2410.20011",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fi16100365",
+      "identity_tokens": [
+        "DOI:10.3390/fi16100365"
+      ],
+      "title": "Large Language Models Meet Next-Generation Networking Technologies: A Review",
+      "reason": "Primary abstract reviewed at https://doi.org/10.3390/fi16100365. Abstract summary: The evolution of network technologies has significantly transformed global communication, information sharing, and connectivity. Traditional networks, relying on static configurations and manual interventions, face substantial challenges such as complex management, inefficiency, and susceptibility to human error. The rise of art Out of scope: LLM-enabled network engineering survey/application, not model inference efficiency.",
+      "source_url": "https://doi.org/10.3390/fi16100365",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/COMST.2023.3329027",
+      "identity_tokens": [
+        "DOI:10.1109/COMST.2023.3329027"
+      ],
+      "title": "A Survey on Scheduling Techniques in Computing and Network Convergence",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/COMST.2023.3329027. Abstract summary: The computing demand for massive applications has led to the ubiquitous deployment of computing power. This trend results in the urgent need for higher-level computing resource scheduling services. The Computing and Network Convergence (CNC), a new type of infrastructure, has become a hot topic. To realize the visions of CNC, su Out of scope: General computing/network scheduling survey without LLM-serving focus.",
+      "source_url": "https://doi.org/10.1109/COMST.2023.3329027",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17238",
+      "identity_tokens": [
+        "arXiv:2506.17238"
+      ],
+      "title": "Training a Scientific Reasoning Model for Chemistry",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.17238. Abstract summary: Reasoning models are large language models that emit a long chain-of-thought before answering, providing both higher accuracy and explicit reasoning for their response. A major question has been whether language model reasoning generalizes beyond mathematics, programming, and logic, where most previous work has focused. We demon Out of scope: Scientific reasoning model RL/post-training and data efficiency, not inference.",
+      "source_url": "https://arxiv.org/abs/2506.17238",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01713",
+      "identity_tokens": [
+        "arXiv:2506.01713"
+      ],
+      "title": "SRPO: Enhancing Multimodal LLM Reasoning via Reflection-Aware Reinforcement Learning",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.01713. Abstract summary: Multimodal large language models (MLLMs) have shown promising capabilities in reasoning tasks, yet still struggle with complex problems requiring explicit self-reflection and self-correction, especially compared to their unimodal text-based counterparts. Existing reflection methods are simplistic and struggle to generate meaning Out of scope: Multimodal LLM reasoning RL training method.",
+      "source_url": "https://arxiv.org/abs/2506.01713",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ]
+    }
+  ]
+}
