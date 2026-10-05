@@ -818,10 +818,22 @@ def split_oversized_discovery_sources(max_records: int | None) -> int:
     return split_count
 
 
+def discovery_source_priority(path: Path) -> tuple[int, str]:
+    """Prefer recovery work so repaired holes cannot starve behind fresh intake."""
+    name = path.name
+    recovery_prefixes = (
+        "retry-legacy-block-",
+        "retry-precheck-",
+        "retry-provider-gap-",
+        "retry-provider-alias-",
+    )
+    return (0 if name.startswith(recovery_prefixes) else 1, name)
+
+
 def select_discovery_sources(max_records: int | None) -> list[Path]:
     selected: list[Path] = []
     used_records = 0
-    for source in sorted(WAITING_DISCOVERY.glob("*.json")):
+    for source in sorted(WAITING_DISCOVERY.glob("*.json"), key=discovery_source_priority):
         try:
             count = len(discovery_records(read_json(source)))
         except Exception:
