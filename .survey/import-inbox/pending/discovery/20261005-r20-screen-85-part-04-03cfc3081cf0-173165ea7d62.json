@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-85-part-04-03cfc3081cf0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04421",
+      "identity_tokens": [
+        "arXiv:2506.04421"
+      ],
+      "title": "HMAR: Efficient Hierarchical Masked Auto-Regressive Image Generation",
+      "reason": "画像生成向けVisual Autoregressive modelの階層生成効率化であり、LLM推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2506.04421",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21627",
+      "identity_tokens": [
+        "arXiv:2505.21627"
+      ],
+      "title": "Is Your LLM Overcharging You? Tokenization, Transparency, and Incentives",
+      "reason": "token-based service pricingの透明性・provider/user incentive分析が中心で、モデル推論効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2505.21627",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18574",
+      "identity_tokens": [
+        "arXiv:2505.18574"
+      ],
+      "title": "Autocomp: A Powerful and Portable Code Optimizer for Tensor Accelerators",
+      "reason": "LLMを使ってtensor accelerator向けkernel codeを探索最適化する研究で、最適化対象は生成コードでありLLM自身の推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2505.18574",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14708",
+      "identity_tokens": [
+        "arXiv:2505.14708"
+      ],
+      "title": "DraftAttention: Fast Video Diffusion via Low-Resolution Attention Guidance",
+      "reason": "Video diffusion transformer推論のattention高速化で、言語モデルではなく動画生成が対象。",
+      "source_url": "https://arxiv.org/abs/2505.14708",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.19050",
+      "identity_tokens": [
+        "arXiv:2503.19050"
+      ],
+      "title": "Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization",
+      "reason": "大規模LLMのdistributed training parallelism/memory autotuningを扱い、学習専用。",
+      "source_url": "https://arxiv.org/abs/2503.19050",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    }
+  ]
+}
