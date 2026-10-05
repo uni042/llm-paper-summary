@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-4c6fb64b8651fbcc-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2403.10131",
+  "reason": "retrieved document中のdistractorを無視し正しい根拠を引用できるようLLMをfine-tuneするtraining recipe。PubMed/HotpotQA/Gorillaで回答品質を改善するが、RAG inference runtime・retrieval latency・memory・serving効率化は主目的ではない。",
+  "title": "RAFT: Adapting Language Model to Domain Specific RAG",
+  "identity_tokens": [
+    "arXiv:2403.10131"
+  ],
+  "linked_from": [
+    "papers/inference/10-kv-cache-offload-recomputation/2024-2409.13761-do-large-language-models-need-a-content-delivery-network.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c6fb64b8651",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
