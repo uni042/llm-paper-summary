@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4613346f2508f3b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.06179",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.06179",
+    "identity_tokens": [
+      "arXiv:2507.06179"
+    ],
+    "reason": "Primary abstract: Recent progress in speech separation has been largely driven by advances in deep neural networks, yet their high computational and memory requirements hinder deployment on resource-constrained devices.",
+    "first_checked_at": "2026-10-05T13:44:08+00:00",
+    "last_checked_at": "2026-10-05T13:44:08+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+    ],
+    "title": "Dynamic Slimmable Networks for Efficient Speech Separation"
+  },
+  "processed_at": "2026-10-05T13:44:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4613346f250",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

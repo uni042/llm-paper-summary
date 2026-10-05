@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:41:36+00:00",
-  "record_count": 1766,
+  "updated_at": "2026-10-05T13:44:07+00:00",
+  "record_count": 1769,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27328,6 +27328,50 @@
         "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
       ],
       "title": "Augmenting Small Language Model for Better Medical Question Answering through Source Authentication"
+    },
+    "arXiv:2602.11605": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11605",
+      "identity_tokens": [
+        "arXiv:2602.11605"
+      ],
+      "reason": "Rec2PM compresses long user histories into recurrent preference memory and reports inference memory/latency gains, but it is a generative recommender-specific architecture rather than a general-purpose LLM inference method.",
+      "first_checked_at": "2026-10-05T13:44:06+00:00",
+      "last_checked_at": "2026-10-05T13:44:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Recurrent Preference Memory for Efficient Long-Sequence Generative Recommendation"
+    },
+    "arXiv:2603.02227": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.02227",
+      "identity_tokens": [
+        "arXiv:2603.02227"
+      ],
+      "reason": "The paper studies learned sparse attention, gate co-adaptation, and post-hoc sparsification with some Qwen3 evaluation. Primary results show deployment quality penalties and limited scale/generalization, making it useful as a limitation/negative-result source rather than a confirmed efficient method.",
+      "first_checked_at": "2026-10-05T13:44:06+00:00",
+      "last_checked_at": "2026-10-05T13:44:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+      ],
+      "title": "Routing Absorption in Sparse Attention: Why Random Gates Are Hard to Beat"
+    },
+    "arXiv:2507.05940": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.05940",
+      "identity_tokens": [
+        "arXiv:2507.05940"
+      ],
+      "reason": "Efficiency is task-specific and does not establish broader LLM runtime or serving performance.",
+      "first_checked_at": "2026-10-05T13:44:07+00:00",
+      "last_checked_at": "2026-10-05T13:44:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
+      ],
+      "title": "Chat-Ghosting: A Comparative Study of Methods for Auto-Completion in Dialog Systems"
     }
   }
 }

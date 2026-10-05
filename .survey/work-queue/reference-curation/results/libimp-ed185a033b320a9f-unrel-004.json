@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ed185a033b320a9f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.12215",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.12215",
+    "identity_tokens": [
+      "arXiv:2507.12215"
+    ],
+    "reason": "Primary abstract: Game playing has long served as a fundamental benchmark for evaluating Artificial General Intelligence.",
+    "first_checked_at": "2026-10-05T13:44:08+00:00",
+    "last_checked_at": "2026-10-05T13:44:08+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Xiangqi-R1: Enhancing Spatial Strategic Reasoning in LLMs for Chinese Chess via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T13:44:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ed185a033b32",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

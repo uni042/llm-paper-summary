@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5375fc5d74d9262a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.02227",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.02227",
+    "identity_tokens": [
+      "arXiv:2603.02227"
+    ],
+    "reason": "The paper studies learned sparse attention, gate co-adaptation, and post-hoc sparsification with some Qwen3 evaluation. Primary results show deployment quality penalties and limited scale/generalization, making it useful as a limitation/negative-result source rather than a confirmed efficient method.",
+    "first_checked_at": "2026-10-05T13:44:06+00:00",
+    "last_checked_at": "2026-10-05T13:44:06+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+      "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md"
+    ],
+    "title": "Routing Absorption in Sparse Attention: Why Random Gates Are Hard to Beat"
+  },
+  "processed_at": "2026-10-05T13:44:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5375fc5d74d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
