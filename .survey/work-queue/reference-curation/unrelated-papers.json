@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:03:31+00:00",
-  "record_count": 4315,
+  "updated_at": "2026-10-05T10:07:16+00:00",
+  "record_count": 4331,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -62831,6 +62831,274 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Expanding Flow Maps"
+    },
+    "arXiv:2607.19864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19864",
+      "identity_tokens": [
+        "arXiv:2607.19864"
+      ],
+      "reason": "PRISM-DR is a specialist-model system for diabetic-retinopathy diagnosis, outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T10:07:13+00:00",
+      "last_checked_at": "2026-10-05T10:07:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "PRISM-DR: Per-lesion Retinal Inference with Specialist Models for Diabetic Retinopathy"
+    },
+    "arXiv:2607.19957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19957",
+      "identity_tokens": [
+        "arXiv:2607.19957"
+      ],
+      "reason": "HijackKV is an attack on position-independent KV-cache reuse; its objective is exploitation/security analysis, not efficiency improvement.",
+      "first_checked_at": "2026-10-05T10:07:14+00:00",
+      "last_checked_at": "2026-10-05T10:07:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.15332-epic-position-independent-caching.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16525-kvshare.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "HijackKV: New Threat in Position-Independent KV Cache Reuse"
+    },
+    "arXiv:2607.20048": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20048",
+      "identity_tokens": [
+        "arXiv:2607.20048"
+      ],
+      "reason": "The method prunes image Diffusion Models for visual fidelity; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T10:07:14+00:00",
+      "last_checked_at": "2026-10-05T10:07:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Importance-Aware OBS Pruning for Diffusion Models"
+    },
+    "arXiv:2607.20207": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20207",
+      "identity_tokens": [
+        "arXiv:2607.20207"
+      ],
+      "reason": "SeededGrasp is a language-guided robotics system whose claimed savings concern end-to-end training/data requirements, not inference efficiency.",
+      "first_checked_at": "2026-10-05T10:07:14+00:00",
+      "last_checked_at": "2026-10-05T10:07:14+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments"
+    },
+    "arXiv:2607.21731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21731",
+      "identity_tokens": [
+        "arXiv:2607.21731"
+      ],
+      "reason": "The full text identifies the evaluated language model as bert-base-uncased. RED-PIM is a generic Transformer/PIM attention design evaluated on BERT-base and non-LLM datasets, rather than a large-language-model inference/serving study.",
+      "first_checked_at": "2026-10-05T10:07:14+00:00",
+      "last_checked_at": "2026-10-05T10:07:14+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "RED-PIM: Reducing Data Movement for Transformers using Processing-in-Memory"
+    },
+    "arXiv:2607.21804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21804",
+      "identity_tokens": [
+        "arXiv:2607.21804"
+      ],
+      "reason": "The paper develops an adversarial acceptance-collapse attack against speculative decoding; the contribution is security analysis, not efficiency improvement.",
+      "first_checked_at": "2026-10-05T10:07:14+00:00",
+      "last_checked_at": "2026-10-05T10:07:14+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "Adversarial Prompts for Acceptance Collapse in Speculative Decoding"
+    },
+    "arXiv:2607.22757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22757",
+      "identity_tokens": [
+        "arXiv:2607.22757"
+      ],
+      "reason": "The proposed hierarchical grading approach is motivated by evaluation quality; the abstract explicitly says inference cost is unchanged and does not claim serving efficiency.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Hierarchical Grading in Large Language Models"
+    },
+    "arXiv:2608.00042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00042",
+      "identity_tokens": [
+        "arXiv:2608.00042"
+      ],
+      "reason": "The work measures trustworthiness costs of domain adaptation in small language models; the stated intervention is adaptation/training, not inference efficiency.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Trustworthiness Costs of Domain Adaptation in Small Language Models:A Cross-Architecture Empirical Study"
+    },
+    "arXiv:2609.15740": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.15740",
+      "identity_tokens": [
+        "arXiv:2609.15740"
+      ],
+      "reason": "The contribution is an application foundation model for brain-signal analysis, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "A Language‐Guided Multimodal Foundation Model for Zero‐Shot and Multi‐Task Brain Signal Analysis"
+    },
+    "DOI:10.1145/3831364": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3831364",
+      "identity_tokens": [
+        "DOI:10.1145/3831364"
+      ],
+      "reason": "DRM is a dual-view reasoning model for POI retrieval. The abstract describes retrieval/task performance rather than inference-efficiency improvement.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "DRM: An Interpretable Dual-view Reasoning Model for POI Retrieval"
+    },
+    "DOI:10.1186/s43593-026-00139-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s43593-026-00139-8",
+      "identity_tokens": [
+        "DOI:10.1186/s43593-026-00139-8"
+      ],
+      "reason": "The photonic processor concerns general real-time adaptive computing and does not identify an LLM inference/serving workload or efficiency result.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Temporally plastic photonic processor for real-time adaptive computing"
+    },
+    "DOI:10.2196/99136": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2196/99136",
+      "identity_tokens": [
+        "DOI:10.2196/99136"
+      ],
+      "reason": "This evaluates lay-language cancer protocols generated by LLMs for clinical usability; no inference-efficiency method is claimed.",
+      "first_checked_at": "2026-10-05T10:07:15+00:00",
+      "last_checked_at": "2026-10-05T10:07:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "LLM-Generated Lay-Language Protocols for Molecular Tumor Board Patients: Evaluation of Quality and Clinical Usability"
+    },
+    "arXiv:2607.20214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20214",
+      "identity_tokens": [
+        "arXiv:2607.20214"
+      ],
+      "reason": "ELSAA explicitly targets efficient attention approximation for Transformer training and frames its goal as longer-context training; no LLM inference/serving efficiency result is claimed.",
+      "first_checked_at": "2026-10-05T10:07:16+00:00",
+      "last_checked_at": "2026-10-05T10:07:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "ELSAA: Efficient Low-Rank and Sparse Attention Approximation for Training Transformers"
+    },
+    "arXiv:2607.20723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20723",
+      "identity_tokens": [
+        "arXiv:2607.20723"
+      ],
+      "reason": "LeakyLMs infers architecture and deployment optimizations via timing side channels; this is an attack/security paper rather than an efficiency method.",
+      "first_checked_at": "2026-10-05T10:07:16+00:00",
+      "last_checked_at": "2026-10-05T10:07:16+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing"
+    },
+    "arXiv:2607.20764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20764",
+      "identity_tokens": [
+        "arXiv:2607.20764"
+      ],
+      "reason": "ArbiGraph is a benchmark generator for context-management task accuracy; it does not propose an inference-cost reduction.",
+      "first_checked_at": "2026-10-05T10:07:16+00:00",
+      "last_checked_at": "2026-10-05T10:07:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "ArbiGraph: Arbitrarily Scalable Verifiable Task Graphs for Evaluating Context Management"
+    },
+    "DOI:10.1145/3830240": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3830240",
+      "identity_tokens": [
+        "DOI:10.1145/3830240"
+      ],
+      "reason": "MOCHA optimizes generic tensor-program autotuning sample efficiency on VTA/T4 backends, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T10:07:16+00:00",
+      "last_checked_at": "2026-10-05T10:07:16+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Validity-Aware Multi-Level Autotuning for Efficient Tensor Program Generation"
     }
   }
 }

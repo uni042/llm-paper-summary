@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53c82b4406afb657-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.22757",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.22757",
+    "identity_tokens": [
+      "arXiv:2607.22757"
+    ],
+    "reason": "The proposed hierarchical grading approach is motivated by evaluation quality; the abstract explicitly says inference cost is unchanged and does not claim serving efficiency.",
+    "first_checked_at": "2026-10-05T10:07:15+00:00",
+    "last_checked_at": "2026-10-05T10:07:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Hierarchical Grading in Large Language Models"
+  },
+  "processed_at": "2026-10-05T10:07:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53c82b4406af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

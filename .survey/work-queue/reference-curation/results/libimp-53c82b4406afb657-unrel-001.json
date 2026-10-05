@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53c82b4406afb657-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.21731",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.21731",
+    "identity_tokens": [
+      "arXiv:2607.21731"
+    ],
+    "reason": "The full text identifies the evaluated language model as bert-base-uncased. RED-PIM is a generic Transformer/PIM attention design evaluated on BERT-base and non-LLM datasets, rather than a large-language-model inference/serving study.",
+    "first_checked_at": "2026-10-05T10:07:14+00:00",
+    "last_checked_at": "2026-10-05T10:07:14+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "RED-PIM: Reducing Data Movement for Transformers using Processing-in-Memory"
+  },
+  "processed_at": "2026-10-05T10:07:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53c82b4406af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
