@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-12abc7fbb8e504d3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.04490",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.04490",
+    "identity_tokens": [
+      "arXiv:2607.04490"
+    ],
+    "reason": "The work addresses synthetic data for head-mounted-display facial-expression recognition, outside language-model inference scope.",
+    "first_checked_at": "2026-10-05T10:38:46+00:00",
+    "last_checked_at": "2026-10-05T10:38:46+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Enhancing Facial Expression Recognition in Head-Mounted Displays with Synthetic Data"
+  },
+  "processed_at": "2026-10-05T10:38:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12abc7fbb8e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

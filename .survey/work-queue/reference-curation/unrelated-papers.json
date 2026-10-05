@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:36:35+00:00",
-  "record_count": 4472,
+  "updated_at": "2026-10-05T10:38:48+00:00",
+  "record_count": 4486,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -65146,6 +65146,208 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Direct Model State Migration for Elastic Training of Large Language Models"
+    },
+    "arXiv:2607.04490": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04490",
+      "identity_tokens": [
+        "arXiv:2607.04490"
+      ],
+      "reason": "The work addresses synthetic data for head-mounted-display facial-expression recognition, outside language-model inference scope.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Enhancing Facial Expression Recognition in Head-Mounted Displays with Synthetic Data"
+    },
+    "DOI:10.1145/3774895.3812200": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774895.3812200",
+      "identity_tokens": [
+        "DOI:10.1145/3774895.3812200"
+      ],
+      "reason": "The contribution is LLM-assisted C-to-Triton code translation and kernel generation; it evaluates generated program correctness/performance rather than LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Augmenting LLM Code Translation with Compiler Analysis for C to Triton Kernel Generation"
+    },
+    "DOI:10.1145/3803437.3805245": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3803437.3805245",
+      "identity_tokens": [
+        "DOI:10.1145/3803437.3805245"
+      ],
+      "reason": "The paper studies fault localization in LLM training infrastructure; its scope is training reliability, not inference/serving.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Reflex: Event-Driven Automated Fault Localization for Large-Scale LLM Training"
+    },
+    "arXiv:2608.13578": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13578",
+      "identity_tokens": [
+        "arXiv:2608.13578"
+      ],
+      "reason": "Although the architecture is language-model-related, its evaluated efficiency contribution is training-only, outside this screening scope.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "BCMT: Blockwise Causal Memory Transformer"
+    },
+    "DOI:10.1117/12.3116246": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3116246",
+      "identity_tokens": [
+        "DOI:10.1117/12.3116246"
+      ],
+      "reason": "ACANE is an image-classification attention method and does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "ACANE: asymmetric CLS attention nullification for enhanced classification"
+    },
+    "DOI:10.1117/12.3116384": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3116384",
+      "identity_tokens": [
+        "DOI:10.1117/12.3116384"
+      ],
+      "reason": "The abstract describes a breast-cancer image/report classification and QA application; it does not establish an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "A Dify-integrated InternVL-based multimodal system for breast cancer report classification and medical diagnostic report question answering"
+    },
+    "DOI:10.3390/electronics15132949": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15132949",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15132949"
+      ],
+      "reason": "The abstract centers on applying LLMs to cyber incident analysis and distillation for the task, with no concrete inference-time efficiency evaluation.",
+      "first_checked_at": "2026-10-05T10:38:46+00:00",
+      "last_checked_at": "2026-10-05T10:38:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Local LLM-Based Cyber Incident Analysis in Air-Gapped Networks via Teacher–Student Knowledge Distillation and Agentic Orchestration"
+    },
+    "DOI:10.51453/3093-3706/2026/1475": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.51453/3093-3706/2026/1475",
+      "identity_tokens": [
+        "DOI:10.51453/3093-3706/2026/1475"
+      ],
+      "reason": "This is a disaster-alert multimodal application; the abstract does not establish an LLM serving or inference-efficiency method.",
+      "first_checked_at": "2026-10-05T10:38:47+00:00",
+      "last_checked_at": "2026-10-05T10:38:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Enhancing Disaster Early Warning Capabilities via Edge-based Multimodal Vision Systems: A Case Study in Tuyen Quang"
+    },
+    "arXiv:2607.04262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04262",
+      "identity_tokens": [
+        "arXiv:2607.04262"
+      ],
+      "reason": "The paper targets superpixel-graph image classification, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T10:38:47+00:00",
+      "last_checked_at": "2026-10-05T10:38:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "On Preserving Geometrical Invariance for Superpixel Image Classification using Graph Transformer"
+    },
+    "arXiv:2607.04391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04391",
+      "identity_tokens": [
+        "arXiv:2607.04391"
+      ],
+      "reason": "The abstract presents an auditable agent-memory architecture and retrieval design but no concrete inference-cost, latency, throughput, or serving-efficiency evaluation.",
+      "first_checked_at": "2026-10-05T10:38:47+00:00",
+      "last_checked_at": "2026-10-05T10:38:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Memory-Orchestrated Semantic System (MOSS): An Auditable Agentic Memory Architecture"
+    },
+    "arXiv:2607.04475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04475",
+      "identity_tokens": [
+        "arXiv:2607.04475"
+      ],
+      "reason": "The proposed ISA and accelerator target generic DNN acceleration; the abstract does not establish an LLM-specific inference/serving contribution.",
+      "first_checked_at": "2026-10-05T10:38:47+00:00",
+      "last_checked_at": "2026-10-05T10:38:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "A Reconfigurable and Representation-Adaptive ISA-Based Architecture for Efficient DNN Acceleration"
+    },
+    "arXiv:2607.04774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04774",
+      "identity_tokens": [
+        "arXiv:2607.04774"
+      ],
+      "reason": "MARLIN is a molecular-structure generation/application model; the abstract does not present inference efficiency or serving evidence.",
+      "first_checked_at": "2026-10-05T10:38:47+00:00",
+      "last_checked_at": "2026-10-05T10:38:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "MARLIN: De Novo Molecular Structure Elucidation from Tandem Mass Spectra without a Ground-Truth Formula"
+    },
+    "arXiv:2607.05095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05095",
+      "identity_tokens": [
+        "arXiv:2607.05095"
+      ],
+      "reason": "FAST targets temporal graph neural network training and its sampling/I/O/computation pipeline, outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T10:38:48+00:00",
+      "last_checked_at": "2026-10-05T10:38:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "FAST: A Holistic Framework for Optimizing Memory-I/O, Computation, and Sampling in Temporal GNN Training"
+    },
+    "arXiv:2607.05319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05319",
+      "identity_tokens": [
+        "arXiv:2607.05319"
+      ],
+      "reason": "The work studies optimization trajectories in diffusion representation learning, not language-model inference or serving.",
+      "first_checked_at": "2026-10-05T10:38:48+00:00",
+      "last_checked_at": "2026-10-05T10:38:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Steering Optimisation Trajectories in Diffusion Representation Learning"
     }
   }
 }
