@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40dd267ac46adec2-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tc.2026.3710733",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tc.2026.3710733",
+    "identity_tokens": [
+      "DOI:10.1109/tc.2026.3710733"
+    ],
+    "reason": "一次abstractはLLM推論/serving効率との関連可能性を示すが、一次本文の必要な手法・評価・限界節を取得できず、根拠あるacceptができないためborderline_listに分類。再確認条件は出版社/著者公開の一次full textが取得可能になること。",
+    "first_checked_at": "2026-10-05T07:41:21+00:00",
+    "last_checked_at": "2026-10-05T07:41:21+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+      "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md",
+      "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+    ],
+    "title": "HydraPIM: A Heterogeneous PIM Architecture for Efficient Attention in Long-Context LLMs"
+  },
+  "processed_at": "2026-10-05T07:41:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40dd267ac46a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

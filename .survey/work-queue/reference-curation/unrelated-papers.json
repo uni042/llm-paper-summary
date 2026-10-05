@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:39:05+00:00",
-  "record_count": 3592,
+  "updated_at": "2026-10-05T07:41:23+00:00",
+  "record_count": 3602,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -52338,6 +52338,150 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "AI Agent with Model Selection, Tool Synthesis, and Proactive Knowledge Base Management"
+    },
+    "DOI:10.1109/icip61757.2026.11630018": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icip61757.2026.11630018",
+      "identity_tokens": [
+        "DOI:10.1109/icip61757.2026.11630018"
+      ],
+      "reason": "IEEE一次要旨はVisDrone/AI-TODで航空画像の小物体を検出するYOLOv11系vision detectorを扱う。効率性はvision detection内のaccuracy-efficiency tradeoffで、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T07:41:21+00:00",
+      "last_checked_at": "2026-10-05T07:41:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "LASOD-YOLO: A Lightweight Global Context Modeling for Aerial Small-Object Detection"
+    },
+    "DOI:10.1109/tai.2026.3678885": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tai.2026.3678885",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2026.3678885"
+      ],
+      "reason": "一次要旨はany-shot learningのsurveyで、LLM inference/serving optimizationを対象にしていない。",
+      "first_checked_at": "2026-10-05T07:41:22+00:00",
+      "last_checked_at": "2026-10-05T07:41:22+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Fine-Grained Features in Any-Shot Learning: A Survey"
+    },
+    "DOI:10.1109/tcad.2025.3649442": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2025.3649442",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3649442"
+      ],
+      "reason": "一次要旨は2D/3D diffusion生成の量子化・疎性活用アクセラレーションで、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T07:41:22+00:00",
+      "last_checked_at": "2026-10-05T07:41:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ],
+      "title": "TriM-D: Accelerating 2-D/3-D Diffusion Generation Via Triple-Mixed Quantization and Sparsity-Aware Dual-Branched Computation"
+    },
+    "DOI:10.1109/tcsvt.2026.3697402": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3697402",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3697402"
+      ],
+      "reason": "一次要旨はface super-resolutionの深層展開ネットワークで、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T07:41:22+00:00",
+      "last_checked_at": "2026-10-05T07:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Structure-Aware Deep Unfolding Network for Face Super-Resolution With Global--Local Modeling"
+    },
+    "DOI:10.1109/tcsvt.2026.3700071": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3700071",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3700071"
+      ],
+      "reason": "一次要旨は低照度画像強調の色変換手法で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T07:41:22+00:00",
+      "last_checked_at": "2026-10-05T07:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Device-Independent Low-Light Image Enhancement via Learnable Von Kries Chromatic Adaptation Transform"
+    },
+    "DOI:10.1109/tkde.2026.3700562": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2026.3700562",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2026.3700562"
+      ],
+      "reason": "一次要旨はapproximate-nearest-neighbor検索のcache手法で、LLM model inference/serving自体の効率化ではない。",
+      "first_checked_at": "2026-10-05T07:41:22+00:00",
+      "last_checked_at": "2026-10-05T07:41:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md"
+      ],
+      "title": "ANN-Cache: Accelerating Approximate Nearest Neighbor Search via Caching"
+    },
+    "DOI:10.1109/jetcas.2026.3701542": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jetcas.2026.3701542",
+      "identity_tokens": [
+        "DOI:10.1109/jetcas.2026.3701542"
+      ],
+      "reason": "一次要旨はPCM analog in-memory computingで触覚認識特徴を抽出する信頼性・hardware研究で、LLM推論の評価はない。",
+      "first_checked_at": "2026-10-05T07:41:23+00:00",
+      "last_checked_at": "2026-10-05T07:41:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Drift-Resilient PCM-Based Analog In-Memory Computing for Tactile Sensing in Human--Robot Interaction: Efficient Feature Extraction"
+    },
+    "DOI:10.1109/jsen.2026.3713248": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jsen.2026.3713248",
+      "identity_tokens": [
+        "DOI:10.1109/jsen.2026.3713248"
+      ],
+      "reason": "一次要旨は水中音響分類用CNN–BiLSTMであり、LLM inference/servingを扱わない。",
+      "first_checked_at": "2026-10-05T07:41:23+00:00",
+      "last_checked_at": "2026-10-05T07:41:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Hybrid CNN–BiLSTM Framework With Quantum-Inspired Attention Mechanism for Underwater Acoustic Signal Classification"
+    },
+    "DOI:10.1109/jssc.2026.3679560": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2026.3679560",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3679560"
+      ],
+      "reason": "一次要旨はedge AIのfloating-point training/inference向けSRAM CIM macroを設計する回路研究。LLMまたはLLM servingの利用・評価が要旨にないため、今回のscope適合根拠にならない。",
+      "first_checked_at": "2026-10-05T07:41:23+00:00",
+      "last_checked_at": "2026-10-05T07:41:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A 28-nm Digital Transpose SRAM Compute-in-Memory Macro With Accurate/Approximate Dual Mode for Floating-Point Edge Training and Inference"
+    },
+    "DOI:10.1109/mc.2026.3708637": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mc.2026.3708637",
+      "identity_tokens": [
+        "DOI:10.1109/mc.2026.3708637"
+      ],
+      "reason": "一次要旨は企業向けsemantic layer/ontologyの説明と利用提案で、LLM推論またはserving efficiencyの方法・評価を扱わない。",
+      "first_checked_at": "2026-10-05T07:41:23+00:00",
+      "last_checked_at": "2026-10-05T07:41:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Semantic Layer-Enabled AI"
     }
   }
 }
