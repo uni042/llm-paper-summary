@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-88-part-07-4876cf6fd2c8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05646",
+      "identity_tokens": [
+        "arXiv:2504.05646"
+      ],
+      "title": "Lattice: Learning to Efficiently Compress the Memory",
+      "reason": "sequence-model memory efficiencyに接点はあるが、既存LLM inference/compressionの方法やserving測定ではなく、対象surveyとの関連は弱い。",
+      "source_url": "https://arxiv.org/abs/2504.05646",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13505",
+      "identity_tokens": [
+        "arXiv:2503.13505"
+      ],
+      "title": "Ensemble Learning for Large Language Models in Text and Code Generation: A Survey",
+      "reason": "LLM ensembleを出力品質・多様性・flexibility向上の観点で整理するsurvey。inference efficiency/costの分析が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2503.13505",
+      "first_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "last_checked_at": "2026-10-05T12:06:10.357990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ]
+    }
+  ]
+}
