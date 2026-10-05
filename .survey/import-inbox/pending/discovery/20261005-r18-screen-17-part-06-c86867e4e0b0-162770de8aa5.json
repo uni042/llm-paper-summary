@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-17-part-06-c86867e4e0b0",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30601",
+      "identity_tokens": [
+        "arXiv:2609.30601"
+      ],
+      "title": "Embedding Subspace Partitioning for Dynamic Multi-Objective Retrieval",
+      "reason": "Modern industrial recommender systems must optimize across competing objectives, balancing semantic relevance with business metrics such as engagement and revenue. While bi-encoders dominate large-scale retrieval due to their efficiency, they collapse these heterogeneous signals into a single static embedding space. This design creates a fundamental limitation: once trained, the retriever cannot adapt to shifting objective priorities at serving time without retraining. Moreover, joint optimization with multi-object",
+      "source_url": "https://arxiv.org/abs/2609.30601",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00257",
+      "identity_tokens": [
+        "arXiv:2610.00257"
+      ],
+      "title": "Attention Manifolds: Steering or Blocking Language Models by Editing Learned B-Spline Surfaces",
+      "reason": "In standard transformer attention, a source token sends the same value vector to every receiver. The query determines \\emph{how much} to attend but not \\emph{what} to extract. This work introduces \\textbf{attention manifolds}: learned 2D B-spline surfaces $S_d(q_d, k_d)$ that modulate each value dimension based on the query-key interaction. Each surface is a tensor-product cubic B-spline initialized to zero, preserving pretrained behavior. Applied to LLaMA 3.2-1B-Instruct and 3B-Instruct, attention manifolds reduce",
+      "source_url": "https://arxiv.org/abs/2610.00257",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11042-026-21943-x",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-026-21943-x"
+      ],
+      "title": "TomoMamba: a two-stage model with state-space cross-slice propagation for breast cancer diagnosis in digital breast tomosynthesis",
+      "reason": "Digital breast tomosynthesis (DBT) provides volumetric image stacks that improve lesion conspicuity compared with two-dimensional (2D) mammography, yet most automated methods process slices independently and discard the depth-wise continuity that underpins this advantage. We introduce TomoMamba, a two-stage deep learning framework for DBT screening and diagnosis. A dual-branch 2.5D network with multi-view fusion first triages each breast study as normal or suspicious, reaching a breast-level area under the receiver",
+      "source_url": "https://doi.org/10.1007/s11042-026-21943-x",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-026-5082-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5082-0"
+      ],
+      "title": "Agent-defined architecture: make 6G a conversational and thinking network",
+      "reason": "The candidate packet contains no primary abstract for this DOI and the record has no verifiable primary-source finding. Scope fit could not be established from the available primary evidence, so classify as borderline.",
+      "source_url": "https://doi.org/10.1007/s11432-026-5082-0",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13143-026-00458-3",
+      "identity_tokens": [
+        "DOI:10.1007/s13143-026-00458-3"
+      ],
+      "title": "A Modeling Effort for Medium-Range Weather Prediction over India with a Modified Pangu-Weather Architecture",
+      "reason": "The candidate packet contains no primary abstract for this DOI and the record has no verifiable primary-source finding. Scope fit could not be established from available primary evidence, so classify as borderline.",
+      "source_url": "https://doi.org/10.1007/s13143-026-00458-3",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
