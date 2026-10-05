@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-07-part-06-ad8439c8fbc1",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34144",
+      "identity_tokens": [
+        "arXiv:2609.34144"
+      ],
+      "title": "CAST: Reconstruction-Coupled Acceleration of Interactive World Models",
+      "reason": "Interactive-world-model acceleration for control response; not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.34144",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34162",
+      "identity_tokens": [
+        "arXiv:2609.34162"
+      ],
+      "title": "SlideDP: Scaling Host-Resident LLM Fine-Tuning Across Multiple GPUs",
+      "reason": "Scales LLM fine-tuning across heterogeneous GPUs; training-only efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.34162",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34167",
+      "identity_tokens": [
+        "arXiv:2609.34167"
+      ],
+      "title": "Natural Image Autoencoder-Based fMRI Representations for Trait and State Prediction",
+      "reason": "fMRI representation learning and biomedical prediction; not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.34167",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34174",
+      "identity_tokens": [
+        "arXiv:2609.34174"
+      ],
+      "title": "GradLev: Token-Parallel Test-Time Training Via Costate Prediction",
+      "reason": "The reviewed evidence does not show a deployed inference/TTT speed or memory benefit; contribution is primarily parallelizing the learning procedure, so scope fit is weak.",
+      "source_url": "https://arxiv.org/abs/2609.34174",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34212",
+      "identity_tokens": [
+        "arXiv:2609.34212"
+      ],
+      "title": "X-MoD: Practical Scaling Laws for Sparse-Depth Routing Beyond Mixture-of-Depths",
+      "reason": "Potential inference compute savings are architectural, but the evidence reviewed is primarily training/scaling and no operational inference-efficiency gain is established.",
+      "source_url": "https://arxiv.org/abs/2609.34212",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
