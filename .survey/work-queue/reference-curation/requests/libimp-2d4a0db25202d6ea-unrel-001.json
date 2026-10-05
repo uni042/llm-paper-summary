@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2d4a0db25202d6ea-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.11804",
+  "reason": "Generating coherent audio scenes that simultaneously blend speech, music, and sound effects remains a significant challenge. Current approaches typically rely on a disjointed pipeline where a frozen, decoupled text encoder feeds a separate audio decoder, limiting cross-modal optimization and leading to poor speech intelligibility. To overcome these limitations, we introduce MiDashengLM-Gen, an end-to-end framework that couples a pre-trained Large Language Model (LLM) with per-token conditional flow matching for autoregressive, variable-length mixed-audio scene generation. MiDashengLM-Gen represents a first approach for general text-to-audio generation with one end-to-end trained model. Empirical evaluations demonstrate that MiDashengLM-Gen drastically improves speech intelligibility over existing unified models. On the Seed-TTS benchmark, English Word Error Rate (WER) drops from 12.15% to 2.79%, approaching the performance of dedicated Text-to-Speech (TTS) systems (1.24%). Furthermore, the framework extends effectively to multilingual settings, yielding highly competitive multilingual WERs compared to existing baselines. Lastly, the model maintains competitive mixed-audio generation quality on the MECAT benchmark. Code and checkpoints are available at https://github.com/xiaomi-research/midashenglm-gen and https://huggingface.co/mispeech/midashenglm-gen, and the demo page is available at https://xingws.github.io/midashenglm-gen-demo/.",
+  "title": "MiDashengLM-Gen: Unified Audio Scene Generation via LLM-Driven Autoregressive Flow Matching",
+  "identity_tokens": [
+    "arXiv:2608.11804"
+  ],
+  "linked_from": [
+    "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d4a0db25202",
+  "source_precheck_request_id": null
+}

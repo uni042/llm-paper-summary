@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2d4a0db25202d6ea-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.12032",
+  "reason": "Video diffusion transformers are costly to sample: every denoising step applies self-attention over a long 3D token sequence, a quadratic cost that dominates as resolution and duration grow. Sparse attention reduces this cost without retraining, but existing methods pursue aggressive sparsity, where further speedup costs disproportionately more attention fidelity. We target the opposite end of this trade-off: fix near-lossless fidelity by construction, and remove as much computation as this constraint permits. Two observations make this regime practical: roughly 40% of block interactions can be removed while retaining 99% of the attention mass, and the high-mass support remains stable across denoising steps. We propose LoSA, a training-free sparse-attention method that fixes a retained-mass threshold of 99% rather than a sparsity ratio: it measures exact block attention masses at one early dense step, keeps, for each head and query block, the smallest key/value block set meeting the threshold, and reuses the frozen block indices for all remaining steps. On Wan2.1-1.3B, LoSA alone gives a $1.36\\times$ speedup with a 0.06-point VBench Overall drop. The benefit is largest under composition: combined with feature caching, LoSA reaches a $3.2\\times$ speedup on HunyuanVideo at a 0.02-point drop, versus 0.32 points for the strongest sparse baseline at comparable speed. Across three video diffusion transformers and speedups up to $3.2\\times$, LoSA consistently achieves the best training-free speed-quality trade-off.",
+  "title": "LoSA: Near-Lossless Sparse Attention for Training-Free Video Diffusion Acceleration",
+  "identity_tokens": [
+    "arXiv:2608.12032"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d4a0db25202",
+  "source_precheck_request_id": null
+}
