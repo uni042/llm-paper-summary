@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f1076f979ce3f69-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.07057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.07057",
+    "identity_tokens": [
+      "arXiv:2408.07057"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2408.07057. Abstract summary: The availability of performant pre-trained models has led to a proliferation of fine-tuned expert models that are specialized to a particular domain or task. Model MoErging methods aim to recycle expert models to create an aggregate system with improved performance or generalization. A key component of MoErging methods is the cr Out of scope: MoE model merging/collaboration survey, not inference runtime.",
+    "first_checked_at": "2026-10-05T12:32:44+00:00",
+    "last_checked_at": "2026-10-05T12:32:44+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+      "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+    ],
+    "title": "A Survey on Model MoErging: Recycling and Routing Among Specialized Experts for Collaborative Learning"
+  },
+  "processed_at": "2026-10-05T12:32:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f1076f979ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

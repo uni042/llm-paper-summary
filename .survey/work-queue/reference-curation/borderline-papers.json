@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:30:31+00:00",
-  "record_count": 1633,
+  "updated_at": "2026-10-05T12:32:44+00:00",
+  "record_count": 1637,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25369,6 +25369,63 @@
         "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
       ],
       "title": "FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering"
+    },
+    "arXiv:2512.01031": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01031",
+      "identity_tokens": [
+        "arXiv:2512.01031"
+      ],
+      "reason": "A relevant real-time VLA inference/control result, but task-specific reaction latency does not establish general LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T12:32:42+00:00",
+      "last_checked_at": "2026-10-05T12:32:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "VLASH: Real-Time VLAs via Future-State-Aware Asynchronous Inference"
+    },
+    "arXiv:2410.16033": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.16033",
+      "identity_tokens": [
+        "arXiv:2410.16033"
+      ],
+      "reason": "Compute-aware inference-time alignment is adjacent, but checked results support quality at equal compute rather than an inference-efficiency gain.",
+      "first_checked_at": "2026-10-05T12:32:42+00:00",
+      "last_checked_at": "2026-10-05T12:32:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md"
+      ],
+      "title": "TreeBoN: Enhancing Inference-Time Alignment with Speculative Tree-Search and Best-of-N Sampling"
+    },
+    "arXiv:2208.03646": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.03646",
+      "identity_tokens": [
+        "arXiv:2208.03646"
+      ],
+      "reason": "Generic Transformer/NLP hardware result is adjacent but no decoder-only LLM serving evidence or contemporary stack is measured.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "A Length Adaptive Algorithm-Hardware Co-design of Transformer on FPGA Through Sparse Attention and Dynamic Pipelining"
+    },
+    "arXiv:2503.23077": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.23077",
+      "identity_tokens": [
+        "arXiv:2503.23077"
+      ],
+      "reason": "Relevant literature survey, but not a concrete research method or serving-system result for this screening lane.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Efficient Inference for Large Reasoning Models: A Survey"
     }
   }
 }

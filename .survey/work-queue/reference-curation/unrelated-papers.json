@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:30:33+00:00",
-  "record_count": 4969,
+  "updated_at": "2026-10-05T12:32:45+00:00",
+  "record_count": 4985,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -72293,6 +72293,237 @@
         "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
       ],
       "title": "VideoRoPE: What Makes for Good Video Rotary Position Embedding?"
+    },
+    "arXiv:2511.11793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.11793",
+      "identity_tokens": [
+        "arXiv:2511.11793"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2511.11793. Abstract summary: We present MiroThinker v1.0, an open-source research agent designed to advance tool-augmented reasoning and information-seeking capabilities. Unlike previous agents that only scale up model size or context length, MiroThinker explores interaction scaling at the model level, systematically training the model to handle deeper and Out of scope: Research-agent capability scaling through more interactions, not efficiency.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "MiroThinker: Pushing the Performance Boundaries of Open-Source Research Agents via Model, Context, and Interactive Scaling"
+    },
+    "arXiv:2506.13284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13284",
+      "identity_tokens": [
+        "arXiv:2506.13284"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.13284. Abstract summary: In this work, we investigate the synergy between supervised fine-tuning (SFT) and reinforcement learning (RL) in developing strong reasoning models. We begin by curating the SFT training data through two scaling strategies: increasing the number of collected prompts and the number of generated responses per prompt. Both approach Out of scope: Math/code reasoning model post-training and capability improvement.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "AceReason-Nemotron 1.1: Advancing Math and Code Reasoning through SFT and RL Synergy"
+    },
+    "arXiv:2309.08586": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.08586",
+      "identity_tokens": [
+        "arXiv:2309.08586"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2309.08586. Abstract summary: Previous research observed accuracy degradation when replacing the attention softmax with a point-wise activation such as ReLU. In the context of vision transformers, we find that this degradation is mitigated when dividing by sequence length. Our experiments training small to large vision transformers on ImageNet-21k indicate t Out of scope: Softmax replacement for Vision Transformers.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Replacing softmax with ReLU in Vision Transformers"
+    },
+    "arXiv:2508.14318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.14318",
+      "identity_tokens": [
+        "arXiv:2508.14318"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.14318. Abstract summary: Large Artificial Intelligence (AI) training workloads spanning several tens of thousands of GPUs present unique power management challenges. These arise due to the high variability in power consumption during the training. Given the synchronous nature of these jobs, during every iteration there is a computation-heavy phase, wher Out of scope: AI training datacenter power stabilization, training-only.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Power Stabilization for AI Training Datacenters"
+    },
+    "arXiv:2507.17520": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.17520",
+      "identity_tokens": [
+        "arXiv:2507.17520"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2507.17520. Abstract summary: To operate effectively in the real world, robots should integrate multimodal reasoning with precise action generation. However, existing vision-language-action (VLA) models often sacrifice one for the other, narrow their abilities to task-specific manipulation data, and suffer catastrophic forgetting of pre-trained vision-langua Out of scope: Vision-language-action instruction tuning and robot capability training.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "InstructVLA: Vision-Language-Action Instruction Tuning from Understanding to Manipulation"
+    },
+    "arXiv:2502.21079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.21079",
+      "identity_tokens": [
+        "arXiv:2502.21079"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.21079. Abstract summary: Generating high-quality long videos with Diffusion Transformers (DiTs) faces significant latency due to computationally intensive attention mechanisms. For instance, generating an 8s 720p video (110K tokens) with HunyuanVideo requires around 600 PFLOPs, with attention computations consuming about 500 PFLOPs. To tackle this, we p Out of scope: Sparse attention for video Diffusion Transformers, not language-model inference.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "Training-Free and Adaptive Sparse Attention for Efficient Long Video Generation"
+    },
+    "DOI:10.1109/tase.2025.3612154": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tase.2025.3612154",
+      "identity_tokens": [
+        "DOI:10.1109/tase.2025.3612154"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/TASE.2025.3612154. Abstract summary: Given the rapid emergence and applications of Multi-Modal Large Language Models (MM-LLMs) across various scientific fields, insights regarding their applicability in agriculture are still only partially explored. This paper conducts an in-depth review of MM-LLMs in agriculture, focusing on understanding how MM-LLMs can be develo Out of scope: Agriculture multimodal LLM survey/application, not inference-system optimization.",
+      "first_checked_at": "2026-10-05T12:32:43+00:00",
+      "last_checked_at": "2026-10-05T12:32:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+      ],
+      "title": "Multi-Modal LLMs in Agriculture: A Comprehensive Review"
+    },
+    "arXiv:2408.07057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.07057",
+      "identity_tokens": [
+        "arXiv:2408.07057"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2408.07057. Abstract summary: The availability of performant pre-trained models has led to a proliferation of fine-tuned expert models that are specialized to a particular domain or task. Model MoErging methods aim to recycle expert models to create an aggregate system with improved performance or generalization. A key component of MoErging methods is the cr Out of scope: MoE model merging/collaboration survey, not inference runtime.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "A Survey on Model MoErging: Recycling and Routing Among Specialized Experts for Collaborative Learning"
+    },
+    "arXiv:2405.20224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.20224",
+      "identity_tokens": [
+        "arXiv:2405.20224"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2405.20224. Abstract summary: 3D Gaussian Splatting (3D-GS) has demonstrated exceptional capabilities in synthesizing novel views of 3D scenes. However, its training is heavily reliant on high-quality images and precise camera poses. Meeting these criteria can be challenging in non-ideal real-world conditions, where motion-blurred images frequently occur due Out of scope: Event-stream Gaussian splatting for vision.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "Evagaussians: Event Stream Assisted Gaussian Splatting from Blurry Images"
+    },
+    "arXiv:2308.00675": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00675",
+      "identity_tokens": [
+        "arXiv:2308.00675"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2308.00675. Abstract summary: Today, large language models (LLMs) are taught to use new tools by providing a few demonstrations of the tool's usage. Unfortunately, demonstrations are hard to acquire, and can result in undesirable biased usage if the wrong demonstration is chosen. Even in the rare scenario that demonstrations are readily available, there is n Out of scope: Tool documentation for zero-shot tool-use capability, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Tool Documentation Enables Zero-Shot Tool-Usage with Large Language Models"
+    },
+    "arXiv:2312.17173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.17173",
+      "identity_tokens": [
+        "arXiv:2312.17173"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2312.17173. Abstract summary: Modern language models can contain billions of parameters, raising the question of whether they can generalize beyond the training data or simply parrot their training corpora. We provide the first non-vacuous generalization bounds for pretrained large language models (LLMs), indicating that language models are capable of discov Out of scope: Generalization bounds theory for LLMs, not serving optimization.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "Non-Vacuous Generalization Bounds for Large Language Models"
+    },
+    "arXiv:2311.14479": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.14479",
+      "identity_tokens": [
+        "arXiv:2311.14479"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2311.14479. Abstract summary: As Large Language Models (LLMs) are deployed more widely, customization with respect to vocabulary, style, and character becomes more important. In this work, we introduce model arithmetic, a novel inference framework for composing and biasing LLMs without the need for model (re)training or highly specific datasets. In addition, Out of scope: Controlled text generation method, not a runtime optimization.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "title": "Controlled Text Generation via Language Model Arithmetic"
+    },
+    "arXiv:2307.06440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.06440",
+      "identity_tokens": [
+        "arXiv:2307.06440"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2307.06440. Abstract summary: The computation necessary for training Transformer-based language models has skyrocketed in recent years. This trend has motivated research on efficient training algorithms designed to improve training, validation, and downstream performance faster than standard training. In this work, we revisit three categories of such algorit Out of scope: Transformer training algorithm efficiency, training-only.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "No Train No Gain: Revisiting Efficient Training Algorithms For Transformer-based Language Models"
+    },
+    "arXiv:2512.05081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.05081",
+      "identity_tokens": [
+        "arXiv:2512.05081"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.05081. Abstract summary: Recent advances in autoregressive video diffusion have enabled real-time frame streaming, yet existing solutions still suffer from temporal repetition, drift, and motion deceleration. We find that naively applying StreamingLLM-style attention sinks to video diffusion leads to fidelity degradation and motion stagnation. To overco Out of scope: Deep sink/compression for long video generation with DiTs, outside LLM scope.",
+      "first_checked_at": "2026-10-05T12:32:44+00:00",
+      "last_checked_at": "2026-10-05T12:32:44+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ],
+      "title": "Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression"
+    },
+    "DOI:10.1109/cvpr52734.2025.01335": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52734.2025.01335",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.01335"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/CVPR52734.2025.01335. Abstract summary: Multimodal Emotion Recognition (MER) aims to predict human emotions by leveraging multiple modalities, such as vision, acoustics, and language. However, due to the heterogeneity of these modalities, MER faces two key challenges: modality balance dilemma and modality specialization disappearance. Existing methods often overlook t Out of scope: Multimodal emotion-recognition model, not LLM serving.",
+      "first_checked_at": "2026-10-05T12:32:45+00:00",
+      "last_checked_at": "2026-10-05T12:32:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ],
+      "title": "EMOE: Modality-Specific Enhanced Dynamic Emotion Experts"
+    },
+    "arXiv:2502.16468": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16468",
+      "identity_tokens": [
+        "arXiv:2502.16468"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.16468. Abstract summary: Semantic communication is emerging as a key pillar of wireless communication technology, owing to its capabilities in reducing communication overhead, enhancing resilience to channel noise, and supporting a large number of users. However, it still encounters various challenging obstacles that need to be solved before real-world Out of scope: Semantic communications survey, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T12:32:45+00:00",
+      "last_checked_at": "2026-10-05T12:32:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "A Contemporary Survey on Semantic Communications: Theory of Mind, Generative AI, and Deep Joint Source-Channel Coding"
     }
   }
 }

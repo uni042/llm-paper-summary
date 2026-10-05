@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1683f61fa7e798bc-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.13284",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.13284",
+    "identity_tokens": [
+      "arXiv:2506.13284"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.13284. Abstract summary: In this work, we investigate the synergy between supervised fine-tuning (SFT) and reinforcement learning (RL) in developing strong reasoning models. We begin by curating the SFT training data through two scaling strategies: increasing the number of collected prompts and the number of generated responses per prompt. Both approach Out of scope: Math/code reasoning model post-training and capability improvement.",
+    "first_checked_at": "2026-10-05T12:32:43+00:00",
+    "last_checked_at": "2026-10-05T12:32:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "AceReason-Nemotron 1.1: Advancing Math and Code Reasoning through SFT and RL Synergy"
+  },
+  "processed_at": "2026-10-05T12:32:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1683f61fa7e7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
