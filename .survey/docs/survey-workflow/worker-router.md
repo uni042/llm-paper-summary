@@ -73,6 +73,8 @@ Research / Audit / Discovery候補はworker専用worklistを入口にし、**ran
 
 スコアは**重要度・処理順だけ**を表し、accept / unrelated / borderline の関連性判定とは独立する。低得点を理由に候補を削除せず、Research投入下限も設けない。古い候補を一定割合で強制消化するaging枠も設けない。低得点候補でも後から被引用数が増えれば自動再取得後に上位へ浮上できる。
 
+通常Discovery候補が完全に枯渇した場合だけ、borderline台帳を再審査用リザーバーとして使う。再投入時も同じ基本スコアを使うが、再審査後に再びborderlineへ落ちた回数 `borderline_recheck_count` 1回につき `.survey/config/candidate-priority.json` の `borderline_reconsideration.repeat_penalty` を減点する。現行値は **100,000,000点/回** で、初回borderline時は0回として減点しない。
+
 venue・被引用数はPDF本文を読むためだけに取得せず、Semantic Scholar等から得られる書誌メタデータをキャッシュする。取得不能時は未知項目を0点として候補を保持し、後続更新で再評価する。
 
 専用worklistが欠損・古い・空の場合だけ最新mainの正規poolをread-onlyで参照する。
@@ -130,6 +132,18 @@ run中に在庫が変化してもモードは固定する。
 
 Discoveryの重複排除は、Library正本 `/LLM-paper-summary-library-first/WORKER-LIBRARY-PROCEDURES.md` の現行Discovery手順を必須とする。具体的には、候補本文確認前の**開始前重複ゲート**と、成果保存直前の**保存直前重複ゲート**の両方で、Libraryのimmutable Discovery成果群（必要な未転送Research成果を含む）を完全列挙してidentity集合を再構成し、GitHub mainのread-only canonical stateと統合する。意味検索だけを重複排除の正本にせず、共有可変台帳、claim、reservation、GitHub writeをScheduled workerへ追加しない。詳細な列挙・identity比較・並列worker時の再確認手順はLibrary正本へ委譲する。
 
+### 5.0.1 borderline枯渇時再投入
+
+通常の後方references・前方引用を統合したDiscovery候補が**0件**になった場合だけ、GitHubの正規borderline台帳を再審査候補へ戻す。通常候補が1件でも残っている間はborderlineを混ぜない。
+
+- `.survey/config/candidate-priority.json` の `borderline_reconsideration.refill_target` を再投入上限とし、現行値は **600件**。borderlineが600件未満なら存在する分だけ戻す。
+- 各borderlineは最新priority cacheで書誌・venue・外部被引用数を補完し、通常候補と同じ重要度式を再計算する。
+- `borderline_recheck_count` は初回borderlineでは0。再投入後の再審査で再びborderlineになった場合だけ1増やす。
+- 再投入順位は `通常priority - borderline_recheck_count × 100,000,000`。したがって一度再審査してなおborderlineだった候補は、未再審査borderlineより極端に後ろへ回る。
+- 再投入行は `source_kind: borderline_reconsideration`, `origin: borderline_reconsideration`, `borderline_recheck_count` を持つ。workerは最終分類がaccept / unrelated / borderlineのどれでも、完成Discovery recordへ `origin: borderline_reconsideration` と `borderline_recheck_count_before` を引き継ぐ。
+- 再審査で `borderline` なら正規borderline台帳の同identityを更新して回数を増やす。`unrelated` なら通常どおりunrelated台帳へ移し、borderline台帳から除く。`accept` なら通常accept経路でResearch job化が耐久成功した後にborderline台帳から除く。
+- borderlineのcitation/venue metadataも通常のpriority refresh対象に含め、長期間保留されていても再投入時に古い被引用数だけで順位付けしない。
+
 ### 5.1 ノルマ
 
 Discoveryは**1ラウンドにつき**新規canonical identity 10件を1候補ずつ確認し、各件を次のどれかへ最終分類する。
@@ -175,7 +189,7 @@ v12以降のDiscovery通常runは、**1ラウンド = 1 immutable JSON**だけ�
 - \`last_checked_at\`
 - \`linked_from\`
 
-取得できる場合は \`worklist_rank\` 等を追加してよい。
+`source_kind: borderline_reconsideration` の再審査行では、上記に加えて `origin: borderline_reconsideration` と `borderline_recheck_count_before` を必ず保存する。これは再borderline回数の加算とaccept時の旧borderline解除に使う。\n\n取得できる場合は \`worklist_rank\` 等を追加してよい。
 
 **共有3分類JSONやworker別relevance台帳へ新規追記しない。** 既存の旧形式ファイルは移行対象として残し、別途ユーザーが依頼した移行作業でv12形式へ変換する。
 
