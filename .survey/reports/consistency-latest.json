@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-05T08:42:14.212037+00:00",
-  "status": "passed",
+  "checked_at": "2026-10-05T08:48:51.538272+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 25833,
-  "checked_file_count": 25833,
+  "inventory_file_count": 25955,
+  "checked_file_count": 25955,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,5 +26,31 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 3007,
-  "findings": []
+  "findings": [
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/waiting/discovery/libfile_2bb0837406ec81918dba2ec8be7b5274--discovery-20261005-1400-scheduled-chat-00-r01.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/waiting/discovery/libfile_2f6205eb135c8191b16bf4f7415ae35c--discovery-20261005-1400-scheduled-chat-00-r03.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/waiting/discovery/libfile_ce825fbab6948191855ef0cd8fe3cbcb--discovery-20261005-1400-scheduled-chat-00-r02.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/waiting/discovery/libfile_e2e081ebc2c0819196fef55388a5bdf0--discovery-20261005-1030-scheduled-chat-30-r02-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "code": "invalid_json",
+      "path": ".survey/import-inbox/waiting/discovery/libfile_fdad3afe823c81918eb57e35ec1da4fc--discovery-20261005-1245-scheduled-chat-45-r02-partial.json",
+      "detail": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ]
 }
