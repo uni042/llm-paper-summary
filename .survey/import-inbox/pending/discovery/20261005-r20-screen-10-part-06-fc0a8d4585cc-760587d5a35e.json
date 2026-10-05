@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-10-part-06-fc0a8d4585cc",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09038",
+      "identity_tokens": [
+        "arXiv:2609.09038"
+      ],
+      "title": "Do Reasoning Representations Help Humans Evaluate LLM Outputs?",
+      "reason": "The abstract studies whether reasoning representations help human evaluation of model outputs; it does not address inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.09038",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09081",
+      "identity_tokens": [
+        "arXiv:2609.09081"
+      ],
+      "title": "Everything in Moderation: Per-Domain Coverage Optima and Alignment-Resistant Domain Gaps in Multi-Domain Mid-Training",
+      "reason": "The abstract studies domain coverage in multi-domain mid-training and alignment robustness, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.09081",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.09085",
+      "identity_tokens": [
+        "arXiv:2609.09085"
+      ],
+      "title": "It's Not RoPE that Creates Sinks: The Role of Self-Concentration and Value-Non-Mixing in Attention",
+      "reason": "No quantization or inference-efficiency method is evaluated; the stated application is future architecture understanding.",
+      "source_url": "https://arxiv.org/abs/2609.09085",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09153",
+      "identity_tokens": [
+        "arXiv:2609.09153"
+      ],
+      "title": "Procedural Graphs: Self-Evolving Execution Structures for LLM Agents",
+      "reason": "The abstract proposes procedural graphs to improve LLM-agent task execution and reliability; it evaluates action/task performance, not model inference or serving cost.",
+      "source_url": "https://arxiv.org/abs/2609.09153",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09157",
+      "identity_tokens": [
+        "arXiv:2609.09157"
+      ],
+      "title": "Learning Length-Extrapolatable Recurrent Models",
+      "reason": "The abstract proposes recurrent-model training changes for length extrapolation; its contribution is state-credit optimization during backpropagation, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.09157",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    }
+  ]
+}
