@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-25-part-01-6e347c7f6d90",
+  "reference_main_sha": "b5564ebf35e031dfac425a9d05f890d23ba0e178",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19171",
+      "identity_tokens": [
+        "arXiv:2608.19171"
+      ],
+      "title": "L\\'evy Attention: Single-Pass Predictive Uncertainty for Continuous-Time Attention",
+      "reason": "Primary abstract studies uncertainty estimates for continuous-time attention in irregularly sampled time-series prediction, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.19171",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21447",
+      "identity_tokens": [
+        "arXiv:2608.21447"
+      ],
+      "title": "BIMScript: Material-Aware Structured Scene Programs for BIM Ingestion",
+      "reason": "Primary abstract concerns structured scene-program modeling for building-information-model ingestion, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2608.21447",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ITC-Asia71864.2026.11710945",
+      "identity_tokens": [
+        "DOI:10.1109/ITC-Asia71864.2026.11710945"
+      ],
+      "title": "Energy Modeling and Spatiotemporal Characterization of Offloaded LLM Inference",
+      "reason": "No primary abstract is in the packet. Direct DOI and IEEE Xplore article retrieval attempts were inaccessible; no secondary-source description was used.",
+      "source_url": "https://doi.org/10.1109/ITC-Asia71864.2026.11710945",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2508.06978-ssd-moe-offloading-energy-efficiency.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3104988",
+      "identity_tokens": [
+        "DOI:10.1117/12.3104988"
+      ],
+      "title": "Comparison of natural language models for searches in virtual observatories",
+      "reason": "SPIE full paper/PDF could not be opened from the DOI/publisher access paths attempted, so measurement boundaries, runtime, methods, and baselines could not be checked; application-specific weak fit.",
+      "source_url": "https://doi.org/10.1117/12.3104988",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17288",
+      "identity_tokens": [
+        "arXiv:2608.17288"
+      ],
+      "title": "Q-Interference: Memory-Efficient Phase-Aware Quantum-Inspired Attention",
+      "reason": "No inference-time memory/latency/throughput benefit is demonstrated; quantitative evidence is controlled GPT-style training, so scope fit is weak.",
+      "source_url": "https://arxiv.org/abs/2608.17288",
+      "first_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "last_checked_at": "2026-10-05T06:42:27.106033+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
