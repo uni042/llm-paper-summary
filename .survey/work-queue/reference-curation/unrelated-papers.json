@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:09:20+00:00",
-  "record_count": 3481,
+  "updated_at": "2026-10-05T07:12:21+00:00",
+  "record_count": 3500,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -50720,6 +50720,284 @@
         "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
       ],
       "title": "Companion-style QA Assistance in Ego-Vision"
+    },
+    "arXiv:2609.06086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06086",
+      "identity_tokens": [
+        "arXiv:2609.06086"
+      ],
+      "reason": "Parallelism search for LLM pretraining; training-only.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md"
+      ],
+      "title": "Poseidon: DAG-Guided Parallelism Search for LLM Pre-Training on Heterogeneous Clusters"
+    },
+    "arXiv:2609.06212": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06212",
+      "identity_tokens": [
+        "arXiv:2609.06212"
+      ],
+      "reason": "Educational effectiveness benchmark for generated slides, no inference optimization.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SLATE: Are AI-Generated Slides Educationally Effective? A Benchmark for Language Teaching Quality and Learner Knowledge Acquisition"
+    },
+    "arXiv:2609.06219": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06219",
+      "identity_tokens": [
+        "arXiv:2609.06219"
+      ],
+      "reason": "Sequential recommendation and cached user history, not LLM.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Closing the Long-Short View Gap in Sequential Recommendation without Cached History"
+    },
+    "arXiv:2609.09206": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09206",
+      "identity_tokens": [
+        "arXiv:2609.09206"
+      ],
+      "reason": "MLLM hallucination/quality under information drift, not efficiency.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "MLLMs Hallucinate when Information Distribution Drifts in Synergy Heads"
+    },
+    "arXiv:2609.04585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04585",
+      "identity_tokens": [
+        "arXiv:2609.04585"
+      ],
+      "reason": "Julia-native compiler and kernel extraction, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "JLIR: A Julia-Native MLIR-Inspired Intermediate Representation with Automatic JACC Kernel Extraction"
+    },
+    "arXiv:2609.04609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04609",
+      "identity_tokens": [
+        "arXiv:2609.04609"
+      ],
+      "reason": "Lossless Allgather compression for sharded MoE training; training-only.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "CIERA: Cross-Iteration Exponent Reuse for Lossless Allgather in Sharded MoE Training"
+    },
+    "arXiv:2609.04646": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04646",
+      "identity_tokens": [
+        "arXiv:2609.04646"
+      ],
+      "reason": "Diffusion-transformer image-generation distillation; non-LLM task.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Importance-Aware Low-Rank Distillation of Diffusion Transformers"
+    },
+    "arXiv:2609.04678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04678",
+      "identity_tokens": [
+        "arXiv:2609.04678"
+      ],
+      "reason": "Post-training coding-agent work; training-focused.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Train What You Deploy:Token-Faithful Post-Training of a Production Coding"
+    },
+    "arXiv:2609.04721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04721",
+      "identity_tokens": [
+        "arXiv:2609.04721"
+      ],
+      "reason": "Refusal interpretability/steering, not inference efficiency.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Locating and Steering Refusal Beyond Attention"
+    },
+    "arXiv:2609.04773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04773",
+      "identity_tokens": [
+        "arXiv:2609.04773"
+      ],
+      "reason": "Teacher anchoring for tool-agent training, not inference efficiency.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Persistent Teacher Anchoring for Tool-Using Agents"
+    },
+    "arXiv:2609.04865": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04865",
+      "identity_tokens": [
+        "arXiv:2609.04865"
+      ],
+      "reason": "Joint reinforcement learning of reasoning/meta-skill agents; training.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "CoSkill: Joint Reinforcement Learning of Reasoning and Meta-Skill Agents for Hierarchical Skill Evolution"
+    },
+    "arXiv:2609.04910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04910",
+      "identity_tokens": [
+        "arXiv:2609.04910"
+      ],
+      "reason": "Flash Attention for Gauss sums, not LLM decoding.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Fast Gauss Sums via Flash Attention"
+    },
+    "arXiv:2609.05141": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05141",
+      "identity_tokens": [
+        "arXiv:2609.05141"
+      ],
+      "reason": "Scientific-document-understanding benchmark/data pipeline, no efficiency method.",
+      "first_checked_at": "2026-10-05T07:12:20+00:00",
+      "last_checked_at": "2026-10-05T07:12:20+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "SciDocBench: A Workflow-Centered Benchmark and Data Pipeline for Scientific Document Understanding"
+    },
+    "arXiv:2609.05260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05260",
+      "identity_tokens": [
+        "arXiv:2609.05260"
+      ],
+      "reason": "Real-robot benchmark of language-conditioned embodied reasoning, not serving.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "One Word, Different Action: A Real-Robot Benchmark for Language-Conditioned Embodied Reasoning"
+    },
+    "arXiv:2609.05309": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05309",
+      "identity_tokens": [
+        "arXiv:2609.05309"
+      ],
+      "reason": "Analysis of mHC residual streams, no inference-cost optimization.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "How Does mHC Use Its Residual Streams? Selective Routing and Near-Identity Mixing"
+    },
+    "arXiv:2609.05339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05339",
+      "identity_tokens": [
+        "arXiv:2609.05339"
+      ],
+      "reason": "Memory portability across agent model upgrades, not inference efficiency.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability"
+    },
+    "arXiv:2609.05370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05370",
+      "identity_tokens": [
+        "arXiv:2609.05370"
+      ],
+      "reason": "LLM decompilation correctness/quality, not serving.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "When LLM Decompilers Recompile More and Preserve Less"
+    },
+    "arXiv:2609.05406": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05406",
+      "identity_tokens": [
+        "arXiv:2609.05406"
+      ],
+      "reason": "AI workload flexibility for electric-grid load relief, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Beyond Scalar Flexibility: From Eligible AI Workloads to Dependable Load Relief"
+    },
+    "arXiv:2609.05592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05592",
+      "identity_tokens": [
+        "arXiv:2609.05592"
+      ],
+      "reason": "Full-duplex speech-model consistency/interaction quality, not efficiency.",
+      "first_checked_at": "2026-10-05T07:12:21+00:00",
+      "last_checked_at": "2026-10-05T07:12:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "What Did I Just Say? Self-Listening for Full-Duplex Speech Models"
     }
   }
 }

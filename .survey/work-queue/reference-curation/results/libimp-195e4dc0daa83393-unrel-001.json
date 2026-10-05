@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-195e4dc0daa83393-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.06086",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.06086",
+    "identity_tokens": [
+      "arXiv:2609.06086"
+    ],
+    "reason": "Parallelism search for LLM pretraining; training-only.",
+    "first_checked_at": "2026-10-05T07:12:20+00:00",
+    "last_checked_at": "2026-10-05T07:12:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md"
+    ],
+    "title": "Poseidon: DAG-Guided Parallelism Search for LLM Pre-Training on Heterogeneous Clusters"
+  },
+  "processed_at": "2026-10-05T07:12:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-195e4dc0daa8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

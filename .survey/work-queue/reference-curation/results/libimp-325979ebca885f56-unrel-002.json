@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-325979ebca885f56-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.04609",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.04609",
+    "identity_tokens": [
+      "arXiv:2609.04609"
+    ],
+    "reason": "Lossless Allgather compression for sharded MoE training; training-only.",
+    "first_checked_at": "2026-10-05T07:12:20+00:00",
+    "last_checked_at": "2026-10-05T07:12:20+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "CIERA: Cross-Iteration Exponent Reuse for Lossless Allgather in Sharded MoE Training"
+  },
+  "processed_at": "2026-10-05T07:12:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-325979ebca88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
