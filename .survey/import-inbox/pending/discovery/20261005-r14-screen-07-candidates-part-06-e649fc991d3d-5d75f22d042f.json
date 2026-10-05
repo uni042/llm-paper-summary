@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-07-candidates-part-06-e649fc991d3d",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.16014",
+      "identity_tokens": [
+        "arXiv:2404.16014"
+      ],
+      "title": "Improving Dictionary Learning with Gated Sparse Autoencoders",
+      "reason": "一次要旨はinterpretability向けgated sparse autoencoderの辞書学習を扱い、LLM serving/inference最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.16014",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.10554",
+      "identity_tokens": [
+        "arXiv:2212.10554"
+      ],
+      "title": "A Length-Extrapolatable Transformer",
+      "reason": "KV reuseと長文推論に隣接する一方、主貢献はcontext-length extrapolationで効率削減の根拠がなく、追加推論costも報告されるためborderline。",
+      "source_url": "https://arxiv.org/abs/2212.10554",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18659",
+      "identity_tokens": [
+        "arXiv:2402.18659"
+      ],
+      "title": "Large Language Models and Games: A Survey and Roadmap",
+      "reason": "一次要旨はLLMとゲームの応用・研究動向surveyであり、推論効率が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2402.18659",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2063384.2063400",
+      "identity_tokens": [
+        "DOI:10.1145/2063384.2063400"
+      ],
+      "title": "CudaDMA: Optimizing GPU memory bandwidth via warp specialization",
+      "reason": "一次ACM DOIページを開いたが、アクセス不能で要旨を取得できなかった。一次資料の内容は推測しない。",
+      "source_url": "https://doi.org/10.1145/2063384.2063400",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.00802",
+      "identity_tokens": [
+        "arXiv:2306.00802"
+      ],
+      "title": "Birth of a Transformer: A Memory Viewpoint",
+      "reason": "一次要旨はTransformerをmemoryの観点から解釈する理論的論考であり、実用推論効率改善手法ではない。",
+      "source_url": "https://arxiv.org/abs/2306.00802",
+      "first_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "last_checked_at": "2026-10-05T01:12:18.775769+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.36322-periodic-weak-spots-phase-sensitivity-from-chunked-kv-cache-compression.md"
+      ]
+    }
+  ]
+}
