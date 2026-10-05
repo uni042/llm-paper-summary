@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-06-part-03-d127d7d0c62a",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.30151",
+      "identity_tokens": [
+        "arXiv:2606.30151"
+      ],
+      "title": "AERIS: Aerial-Edge Role-Driven Intelligence at Runtime via Orchestrated Language-Model Swarm",
+      "reason": "AERISは小型LM swarmをaerial-edge runtimeで役割配置しreal-time loopを示すが、本文でLLM推論効率の比較測定が十分でない。",
+      "source_url": "https://arxiv.org/abs/2606.30151",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30420",
+      "identity_tokens": [
+        "arXiv:2606.30420"
+      ],
+      "title": "Experience Augmented Policy Optimization for LLM Reasoning",
+      "reason": "LLM reasoningのexperience-augmented policy optimizationというRL post-training手法。inference-time効率ではない。",
+      "source_url": "https://arxiv.org/abs/2606.30420",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28321",
+      "identity_tokens": [
+        "arXiv:2606.28321"
+      ],
+      "title": "StructSplat: Generalizable 3D Gaussian Splatting from Uncalibrated Sparse Views",
+      "reason": "3D Gaussian Splattingによるview synthesisが対象であり、LLM推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2606.28321",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28438",
+      "identity_tokens": [
+        "arXiv:2606.28438"
+      ],
+      "title": "When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs",
+      "reason": "Code LLMのrecursive self-training collapseを検証するtraining-quality研究で、推論最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2606.28438",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26801",
+      "identity_tokens": [
+        "arXiv:2606.26801"
+      ],
+      "title": "Improving Vision-Language-Action Model Fine-Tuning with Structured Stage and Keyframe Supervision",
+      "reason": "VLA fine-tuningのstage/keyframe supervisionでrobot task性能を改善する手法。",
+      "source_url": "https://arxiv.org/abs/2606.26801",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
