@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-09-part-01-f67a62d01326",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13582",
+      "identity_tokens": [
+        "arXiv:2609.13582"
+      ],
+      "title": "Same Patient, Different Order: Action-Level Reliability of Clinical LLM Agents Under Repeated Runs",
+      "reason": "A clinical agent benchmark can report the same verdict on identical inputs while the agent files a materially different order on each run. Such agents order tests, request medications and place referrals, yet benchmarks typically score one run per task and rarely ask whether identical inputs produce identical actions; MedAgentBench, the benchmark we use, scores a single attempt and says so. To measure this gap we introduce\"same-input rerun\", which replays a task with every input held fixed and compares the orders rather than the score, with six reliability metrics, and apply it to 1000 MedAgentBench runs across 50 tasks from its five write-capable families, two open-weight models below ten billion parameters quantised to four bits, and two temperatures. The study establishes that action-level divergence exists and can pass unrecorded by the score, not that any rate generalises. Under the 8B model at temperature 0.7, all 43 ordering groups emit a different set of orders across five identical runs, 26 emit the order on some runs and not others, and 28 record a different coded value, dose or analyte. In 22 of those 43 the benchmark reports the same failing verdict for materially different behaviour, as it does for all 10 divergent groups of the 4B model at 0.7. Orders also reach different endpoints across runs, one of which the record server rejects while the agent is told it succeeded. These findings motivate repeated-run evaluation, action-level stability reporting and execution-faithful environment feedback in clinical-agent benchmarks.",
+      "source_url": "https://arxiv.org/abs/2609.13582",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19167",
+      "identity_tokens": [
+        "arXiv:2609.19167"
+      ],
+      "title": "To Memories and Beyond: From Remembering to Knowing You across Long-Term Multimodal Personal Archives",
+      "reason": "As AI systems evolve into personalized digital companions, a central capability is reasoning over a user's long-term personal history: not merely storing past events, but tracking longitudinal experiences and evolving preferences. Progress here is bottlenecked by evaluation, existing long-term memory benchmarks are largely synthetic and text-only, they overlook the visual records that anchor everyday human memory, lack the authentic and causally connected longitudinal data that real personalization demands, and consequently remain confined to shallow factual recall. We introduce ReaLMem (Real-world Long-term Multimodal Memory), the first benchmark built from authentic multi-year personal visual archives, paired with first-person subjective annotations. ReaLMem evaluates models across three cognitive tiers of increasing difficulty: factual recall, persona inference, and predictive personalization. We further propose ChronoProfiler, a temporal-weighting profiling module that computes temporal stability scores for user attributes and applies them as a salience prior, resolving conflicts among temporally inconsistent preferences and helping models compound multiple co-active preferences in complex personalized decisions. Extensive evaluation of frontier multimodal large language models (MLLMs) and memory systems on ReaLMem reveals predictive personalization as a consistent ceiling, exposes clear performance gaps and bottlenecks between MLLMs and memory systems, and shows that high-quality, temporally informed representations substantially improve personalization. Together, ReaLMem and ChronoProfiler provide an authentic testbed and a simple, effective mechanism for long-term personalization, laying a foundation for future research on lifelong AI companions.",
+      "source_url": "https://arxiv.org/abs/2609.19167",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31641",
+      "identity_tokens": [
+        "arXiv:2609.31641"
+      ],
+      "title": "Product-Aware Deterministic Rounding for Quantized Matrix Multiplication",
+      "reason": "一次本文まで確認したが、理論対象は汎用量子化行列積で、LLMモデル/推論測定はない。LLM PTQへの直接適用可能性と実行時rounding overheadが未確定で、現段階では適合範囲が弱い。",
+      "source_url": "https://arxiv.org/abs/2609.31641",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1402-4896/aea64e",
+      "identity_tokens": [
+        "DOI:10.1088/1402-4896/aea64e"
+      ],
+      "title": "Spatial sliding-window attention for learning solution operators of partial differential equations",
+      "reason": "This paper studies a spatial sliding-window attention mechanism for learning solution operators of partial differential equations in a data-driven setting. The mechanism is formulated as an explicit spatial-locality bias that retains only nearby interactions and avoids materializing the full spatial score matrix. We derive an output perturbation bound governed by the discarded off-window score energy and establish a separate conditional residual-stability estimate under a discrete inf–sup assumption. Experiments on the one-dimensional Burgers equation and the two-dimensional Navier–Stokes equations compare sliding-window attention with an explicit dense spatial-score control and established operator-learning baselines. Separate fixed-weight forward and gradient tests confirm that the explicit dense and standard reassociated evaluations of unmasked Galerkin attention agree to floating-point precision. A two-dimensional feasibility test further shows that the standard reassociated implementation runs at both tested resolutions. Overall, the results reveal a problem- and resolution-dependent trade-off between prediction accuracy and computational resource utilization. The sliding-window mechanism is thus best interpreted as a controllable spatial-locality mechanism rather than a uniformly more efficient replacement for standard Galerkin attention.",
+      "source_url": "https://doi.org/10.1088/1402-4896/aea64e",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10937",
+      "identity_tokens": [
+        "arXiv:2609.10937"
+      ],
+      "title": "The Art of Closed-Formula Defaults: Search-Free Code Generation for Tensor Operators",
+      "reason": "Agentic search and automated optimization of GPU kernels are powerful tools for large language model inference. Their effectiveness, however, depends not on the sophistication of the search itself, but on the clarity of the optimization problem being solved. We provide an application-first approach that drives a hierarchical code generation tool from operator specifi cation down to GPU instructions, and show that a clearly defined computational model makes the optimization problem tractable.",
+      "source_url": "https://arxiv.org/abs/2609.10937",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
