@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-08-part-07-c56febc52e56",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.12531",
+      "identity_tokens": [
+        "arXiv:2609.12531"
+      ],
+      "title": "Temporal Recurrence Favors Fewer Layers",
+      "reason": "Main results concern compute allocation/performance; serving-time efficiency contribution remains unclear.",
+      "source_url": "https://arxiv.org/abs/2609.12531",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12814",
+      "identity_tokens": [
+        "arXiv:2609.12814"
+      ],
+      "title": "RunningTensor: Generalizing Linear Attention to Higher-Order Recurrent States",
+      "reason": "要旨: Linear attention and state-space models provide linear-time sequence modeling, but their recurrent memory remains a second-order tensor (a matrix), limiting the order of interactions that can be represented in the state. We introduce the RunningTensor, which generalizes this memory to an order-$o$ tensor, updated by a。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.12814",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    }
+  ]
+}
