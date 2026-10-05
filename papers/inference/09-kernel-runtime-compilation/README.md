@@ -249,6 +249,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   通常の数値安定softmaxは、まず入力最大値を求め、次にexp(x-max)の和を求め、最後に各要素を正規化する。この安全な実装は同じベクトルを複数回メモリから読む。本論文は最大値と指数和を同じ走査で更新するオンライン正規化子（online normalizer）を導入し、古典的softmaxと数学的に同じ結果を保ちながらメモリアクセスを減らす。
 <!-- survey:auto:end -->
