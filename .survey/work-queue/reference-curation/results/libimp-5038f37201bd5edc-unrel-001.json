@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5038f37201bd5edc-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14127",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14127",
+    "identity_tokens": [
+      "arXiv:2609.14127"
+    ],
+    "reason": "一次要旨: We derive exact local responses for attention interventions, allowing candidate edits to be scored from a cached baseline and one backward pass. The starting point is the RoPE derivative $\\partial_p z(p) = A z(p)$: its integral gives the finite positional displacement, which we carry through the softmax without linearising either rotation or normalisation. The resulting predictions achieve 95.36--96.52% sign accuracy",
+    "first_checked_at": "2026-10-05T06:51:05+00:00",
+    "last_checked_at": "2026-10-05T06:51:05+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+    ],
+    "title": "Exact Finite Attention Responses From RoPE Derivatives"
+  },
+  "processed_at": "2026-10-05T06:51:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5038f37201bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

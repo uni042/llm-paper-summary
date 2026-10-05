@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-74aa3faa75950002-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.12337",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.12337",
+    "identity_tokens": [
+      "arXiv:2609.12337"
+    ],
+    "reason": "一次要旨: We study compute reduction in neural networks through a unified partial versus full computation view, captured by one-shot magnitude pruning in the static regime and early exit in the adaptive regime. In an asymptotic single-neuron model, we prove a concentration theorem for one-shot magnitude pruning with explicit rates. We also introduce the conditional perceptron for early exit and show that its excess generalizat",
+    "first_checked_at": "2026-10-05T06:51:06+00:00",
+    "last_checked_at": "2026-10-05T06:51:06+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "Theoretical Guarantees for One-Shot Magnitude Pruning and Compute-Adaptive Early Exit"
+  },
+  "processed_at": "2026-10-05T06:51:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74aa3faa7595",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

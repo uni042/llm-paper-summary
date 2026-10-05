@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5038f37201bd5edc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.14147",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.14147",
+    "identity_tokens": [
+      "arXiv:2609.14147"
+    ],
+    "reason": "一次要旨: MOTIVATION Single-cell foundation models (scFMs) are transforming computational biology by enabling generalizable, task-agnostic representations for versatile single-cell analysis. Despite their progress in facilitating rapid deployment for downstream tasks, off-the-shelf scFMs still have some overlooked concerns: (I) (Pretraining Cost.) Pretrain-based scFMs necessitate pretraining on a vast volume of cells, renderin",
+    "first_checked_at": "2026-10-05T06:51:05+00:00",
+    "last_checked_at": "2026-10-05T06:51:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "RAGCell: Retrieval-Augmented Generation as Supervision for Versatile Single-cell Analysis."
+  },
+  "processed_at": "2026-10-05T06:51:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5038f37201bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

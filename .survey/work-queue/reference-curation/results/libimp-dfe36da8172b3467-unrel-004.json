@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dfe36da8172b3467-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13984",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13984",
+    "identity_tokens": [
+      "arXiv:2609.13984"
+    ],
+    "reason": "一次要旨: Vision-Language-Action (VLA) models combine a pretrained vision encoder, a language backbone, and an action head, but their relative contribution has not been established under controlled, latency-paired conditions. We fix the backbone families (SigLIP2 and Qwen2.5) and the training pipeline, sweep action-head design and module scale, and pair each configuration with measured on-device latency. The study yields three",
+    "first_checked_at": "2026-10-05T06:51:07+00:00",
+    "last_checked_at": "2026-10-05T06:51:07+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "What Makes an Efficient VLA? Navigating Action-Head Design, Scaling, and Latency"
+  },
+  "processed_at": "2026-10-05T06:51:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dfe36da8172b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
