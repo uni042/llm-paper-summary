@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad11c01ec523e1cb-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/iccc70295.2026.11680509",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/iccc70295.2026.11680509",
+    "identity_tokens": [
+      "DOI:10.1109/iccc70295.2026.11680509"
+    ],
+    "reason": "関連可能性はあるが、一次本文の必要箇所を取得・確認できず、推測でfollowupへ進めないためborderlineに分類。",
+    "first_checked_at": "2026-10-05T09:35:35+00:00",
+    "last_checked_at": "2026-10-05T09:35:35+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2503.15921-spin-heterogeneous-speculative-model-serving.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2507.00605-quantize-sample-and-verify-llm-acceleration-via-adaptive-edge-cloud-spec.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+      "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+      "papers/inference/99-other-inference-systems/2025-2503.10325-collaborative-speculative-inference-for-efficient-llm-inference-serving.md"
+    ],
+    "title": "Tiered Speculative Decoding with Uplink Scheduling for End-Edge LLM Inference"
+  },
+  "processed_at": "2026-10-05T09:35:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad11c01ec523",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
