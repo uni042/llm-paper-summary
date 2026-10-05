@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1530-scheduled-chat-30/r01",
+  "reference_main_sha": "66243e1b6da8ea4b70ec2bb1e6d64dfc3f027817",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21631",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21631",
+        "arXiv:2511.21631"
+      ],
+      "title": "Qwen3-VL Technical Report",
+      "reason": "Qwen3-VLのマルチモーダル能力、256K文脈、dense/MoE構成、interleaved-MRoPE・DeepStack等のモデル設計を報告するtechnical report。latency-quality trade-offには言及するが、推論runtime・serving・memory最適化方式そのものを提案・評価するsystem研究ではない。",
+      "source_url": "https://arxiv.org/abs/2511.21631",
+      "body_check": "full_text_relevance_review: 一次arXivのtechnical report情報でdense 2B/4B/8B/32B、MoE 30B-A3B/235B-A22B、256K interleaved context、interleaved-MRoPE、DeepStack、multimodal benchmark評価を確認。推論system効率化が主要貢献ではないためunrelated。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3714983.3714987",
+      "identity_tokens": [
+        "DOI:10.1145/3714983.3714987",
+        "arXiv:2306.00978"
+      ],
+      "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+      "reason": "LLMの低ビットweight-only量子化とTinyChat推論frameworkを組み合わせ、4-bit on-device LLM/VLM推論を直接高速化する。salient weight保護、kernel fusion、platform-aware weight packingを用い、desktop/mobile GPUでHuggingFace FP16比3倍超の高速化を報告するため対象内。",
+      "source_url": "https://arxiv.org/abs/2306.00978",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でactivation-aware scaling、backprop/reconstruction不要のpost-training quantization、TinyChat、kernel fusion、platform-aware weight packing、desktop/mobile GPUで3x超speedup、70B Llama-2 mobile GPU deploymentを確認。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20783",
+      "identity_tokens": [
+        "arXiv:2503.20783"
+      ],
+      "title": "Understanding R1-Zero-Like Training: A Critical Perspective",
+      "reason": "R1-Zero型強化学習のbase model依存性、GRPOの応答長bias、Dr. GRPOを分析するtraining研究。token efficiency改善は学習最適化の結果であり、推論runtime・serving効率化を主要目的としない。",
+      "source_url": "https://arxiv.org/abs/2503.20783",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でR1-Zero-like RL training、GRPO optimization bias、Dr. GRPO、AIME性能が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.02324",
+      "identity_tokens": [
+        "arXiv:2508.02324"
+      ],
+      "title": "Qwen-Image Technical Report",
+      "reason": "text renderingとimage editingを改善する画像生成foundation model研究。data pipeline、progressive training、MMDiT/Qwen2.5-VL/VAE dual encodingが中心で、LLM推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2508.02324",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtext-to-image/image editing、progressive training、dual encoding、生成benchmarkが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.05525",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2403.05525",
+        "arXiv:2403.05525"
+      ],
+      "title": "DeepSeek-VL: Towards Real-World Vision-Language Understanding",
+      "reason": "hybrid vision encoderで高解像度画像を比較的低計算量で処理するが、主要貢献はreal-world vision-language modelのdata/model/training設計と能力評価。LLM推論runtime・serving最適化のsystem研究ではない。",
+      "source_url": "https://arxiv.org/abs/2403.05525",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で1024x1024 hybrid vision encoder、instruction tuning、1.3B/7B VLM、vision-language benchmark性能が主題と確認。推論system固有評価がないためunrelated。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09985",
+      "identity_tokens": [
+        "arXiv:2506.09985"
+      ],
+      "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+      "reason": "100万時間超のvideo/imageで自己教師ありworld modelを学習し、video understandingとrobot planningを実現するmodel/training研究。LLMとのalignmentも能力評価目的で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2506.09985",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でself-supervised video pretraining、video QA、robot world model/planning、Franka deploymentが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18071",
+      "identity_tokens": [
+        "arXiv:2507.18071"
+      ],
+      "title": "Group Sequence Policy Optimization",
+      "reason": "sequence-level importance ratio/clippingを使うLLM強化学習algorithmで、GRPOよりtraining efficiencyとMoE RL安定性を改善する。主要貢献はtraining optimizationであり推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2507.18071",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でsequence-level RL objective、training efficiency、MoE RL stabilization、Qwen3 trainingが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w18-6301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w18-6301",
+        "arXiv:1806.00187"
+      ],
+      "title": "Scaling Neural Machine Translation",
+      "reason": "reduced precisionとlarge-batch distributed trainingでNMT学習を高速化するtraining system研究。8 GPUで約5倍学習高速化、128 GPUでWMT14 En-Deを85分学習するが、推論は対象外。",
+      "source_url": "https://arxiv.org/abs/1806.00187",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でlarge-batch/reduced-precision training、8/128 GPU training timeとBLEUが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1388",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1388",
+        "arXiv:1903.00089"
+      ],
+      "title": "Massively Multilingual Neural Machine Translation",
+      "reason": "最大102言語対を単一NMT modelで学習し、多言語translation qualityとmodeling trade-offを評価するtraining/capability研究。推論runtime・memory・serving最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1903.00089",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で102-language multilingual NMT training、TED/large-scale dataset、BLEU性能が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.02559",
+      "identity_tokens": [
+        "arXiv:2010.02559"
+      ],
+      "title": "LEGAL-BERT: “Preparing the Muppets for Court’”",
+      "reason": "法律domain向けBERTのpretraining/fine-tuningと下流task性能を研究するdomain adaptation研究。推論runtime・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2010.02559",
+      "body_check": "abstract_screen_only: 一次資料の書誌・要旨からlegal-domain BERT pretraining/fine-tuningとdownstream performanceが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:49:00+09:00",
+      "last_checked_at": "2026-10-05T15:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 10
+    }
+  ]
+}
