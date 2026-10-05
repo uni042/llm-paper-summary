@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-05-part-05-02a73da4b950",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18519",
+      "identity_tokens": [
+        "arXiv:2609.18519"
+      ],
+      "title": "COMPASS-ABS: Reducing Fragmentation in Shared GPU Clusters for Deep Learning Training Workloads",
+      "reason": "一次要旨: With the rapid advancement of deep learning technology, shared GPU clusters receive an increasing number of deep learning training (DLT) jobs. Yet resource fragmentation make such clusters underutilized and forces the DLT jobs running on them to endure long turnaround times. Extensive research has been devoted to quantifying fragmentation and developing scheduling algorithms that alleviate its impact. However, existing fragmen",
+      "source_url": "https://arxiv.org/abs/2609.18519",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18612",
+      "identity_tokens": [
+        "arXiv:2609.18612"
+      ],
+      "title": "Weakening Neurons: An Input-Output Functionality in Transformers with Outsize Influence",
+      "reason": "一次要旨: We analyze the learned input-output behavior of GLU-based neurons in large language models (LLMs). We propose a simple analysis method: For each neuron, we compute the cosine similarities between its input (reading) and output (writing) weight vectors. In this scheme, a strong negative cosine similarity indicates the neuron weakens the direction it detects in the residual stream, so we call this a weakening neuron. This allows",
+      "source_url": "https://arxiv.org/abs/2609.18612",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18623",
+      "identity_tokens": [
+        "arXiv:2609.18623"
+      ],
+      "title": "FIVE-VLA: Fast and EffectIVE Autonomous Driving with Recurrent Action Memory",
+      "reason": "一次要旨: State-of-the-art vision-language-action models (VLA) for autonomous driving face critical limitations: excessive parameter counts, inefficient high-resolution image processing, and lack of temporal memory. We introduce Fast and EffectIVE VLA (FIVE-VLA) to address these through two key contributions. First, we employ an efficient vision encoder that processes high-resolution ($448 \\times 896$) images while generating only 98 to",
+      "source_url": "https://arxiv.org/abs/2609.18623",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18662",
+      "identity_tokens": [
+        "arXiv:2609.18662"
+      ],
+      "title": "Automated Instruction Encoding Synthesis for Modern GPU ISA Compression",
+      "reason": "一次要旨: Modern GPU kernels increasingly stress the instruction supply path, while fixed instruction containers can leave substantial footprint slack. This paper presents an automated encoding-synthesis framework that treats instruction layout as a constrained slot-assignment problem over a validated instruction-form field specification. The formulation separates semantic field identity from physical bit positions and supports tied, pi",
+      "source_url": "https://arxiv.org/abs/2609.18662",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18686",
+      "identity_tokens": [
+        "arXiv:2609.18686"
+      ],
+      "title": "Multi-Teacher Distillation for Cross-Domain Streaming Electrolaryngeal Speech Encoding",
+      "reason": "一次要旨: Self-supervised learning (SSL) has improved speech representations, yet performance degrades in pathological domains such as electrolaryngeal (EL) speech, and the computational footprint of SSL models limits their applicability in real-time, on-device deployment. We propose a multi-teacher knowledge distillation framework to train a lightweight, streaming content encoder that generalizes across healthy (HE) and EL speech. Two",
+      "source_url": "https://arxiv.org/abs/2609.18686",
+      "first_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "last_checked_at": "2026-10-05T05:27:32.342270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
