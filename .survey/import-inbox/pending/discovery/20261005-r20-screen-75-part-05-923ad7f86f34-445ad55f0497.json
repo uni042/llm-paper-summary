@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-75-part-05-923ad7f86f34",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546",
+      "identity_tokens": [
+        "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546"
+      ],
+      "title": "This paper is included in the Proceedings of the 2022 USENIX Annual Technical Conference.",
+      "reason": "Packet abstract is empty and its title field is only a generic proceedings sentence. The exact primary work/identity could not be established from the supplied source URL, so its scope is unverified.",
+      "source_url": "https://www.semanticscholar.org/paper/67b578b4838d884172dd3afcdcd0f5291a3e3546",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24791",
+      "identity_tokens": [
+        "arXiv:2509.24791"
+      ],
+      "title": "Vision Function Layer in Multimodal LLMs",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.24791. Primary abstract analyzes visual-function layers in multimodal LLMs and uses selective data for training; its efficiency claim is data selection/training, not inference.",
+      "source_url": "https://arxiv.org/abs/2509.24791",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.04648",
+      "identity_tokens": [
+        "arXiv:2506.04648"
+      ],
+      "title": "FPSAttention: Training-Aware FP8 and Sparsity Co-Design for Fast Video Diffusion",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.04648. Primary abstract accelerates video diffusion generation with FP8/sparsity co-design; video diffusion is outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2506.04648",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07365",
+      "identity_tokens": [
+        "arXiv:2502.07365"
+      ],
+      "title": "LongReD: Mitigating Short-Text Degradation of Long-Context Large Language Models via Restoration Distillation",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.07365. Primary abstract proposes distillation/pretraining to preserve short-text quality in long-context LLMs; the work is training-focused.",
+      "source_url": "https://arxiv.org/abs/2502.07365",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.06857",
+      "identity_tokens": [
+        "arXiv:2502.06857"
+      ],
+      "title": "Gemstones: A Model Suite for Multi-Faceted Scaling Laws",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.06857. Primary abstract releases a model/checkpoint dataset to analyze scaling laws; it does not propose an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2502.06857",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+      ]
+    }
+  ]
+}
