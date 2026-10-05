@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-10-part-04-388b2b93526c",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35593",
+      "identity_tokens": [
+        "arXiv:2609.35593"
+      ],
+      "title": "ReSS: Residual-Restoring Sparse Attention for 3D Vision Transformers",
+      "reason": "3D vision transformerのattention手法でありLLM推論対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35593",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2502.03805-criticalkv-optimizing-kv-cache-eviction-from-an-output-perturbation-perspective.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35609",
+      "identity_tokens": [
+        "arXiv:2609.35609"
+      ],
+      "title": "Twist, Don't Tilt: Trajectory-Exact Constrained Decoding for Masked Diffusion Models",
+      "reason": "本文の主目的はmasked diffusionの制約付きsamplingにおけるtrajectory bias補正で、SMC/denoiser計算を要する。推論効率向上は示されない。",
+      "source_url": "https://arxiv.org/abs/2609.35609",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35620",
+      "identity_tokens": [
+        "arXiv:2609.35620"
+      ],
+      "title": "Attention Graphons: A Graph Limit Perspective on Graph Transformers",
+      "reason": "graph transformerの理論的graph-limit解析であり、serving効率評価がない。",
+      "source_url": "https://arxiv.org/abs/2609.35620",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35630",
+      "identity_tokens": [
+        "arXiv:2609.35630"
+      ],
+      "title": "Which the Eye Fears: Writing with Read-Blindness Explains Massive Activations in Transformers",
+      "reason": "Transformer内部のactivation/文章生成挙動を解析する研究で、推論効率化手法を提示しない。",
+      "source_url": "https://arxiv.org/abs/2609.35630",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35634",
+      "identity_tokens": [
+        "arXiv:2609.35634"
+      ],
+      "title": "DR-net-Mamba: Selective State-Space Modeling for Long-Range ECG Time-Series Denoising",
+      "reason": "ECG時系列denoising向けstate-space modelであり、LLM対象外。",
+      "source_url": "https://arxiv.org/abs/2609.35634",
+      "first_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "last_checked_at": "2026-10-05T04:25:14.737266+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
