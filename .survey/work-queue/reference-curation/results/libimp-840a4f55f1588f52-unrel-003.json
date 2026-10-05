@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-840a4f55f1588f52-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10439",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10439",
+    "identity_tokens": [
+      "arXiv:2609.10439"
+    ],
+    "reason": "arXiv abstract proposes model unlearning for privacy/utility robustness; its quantization mention concerns post-training unlearning resilience, not inference efficiency.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-05T06:58:58+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs"
+  },
+  "processed_at": "2026-10-05T06:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-840a4f55f158",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

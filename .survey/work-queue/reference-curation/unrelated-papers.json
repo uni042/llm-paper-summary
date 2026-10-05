@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:56:48+00:00",
-  "record_count": 3404,
+  "updated_at": "2026-10-05T06:58:58+00:00",
+  "record_count": 3419,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -49612,6 +49612,224 @@
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
       "title": "UniH$^3$: Unifying Hierarchical Homogeneity and Heterogeneity for All-in-One Medical Image Restoration"
+    },
+    "DOI:10.55056/cssesw2025/paper42": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.55056/cssesw2025/paper42",
+      "identity_tokens": [
+        "DOI:10.55056/cssesw2025/paper42"
+      ],
+      "reason": "This paper presents a systematic review of advanced deep learning methods used for text generation according to the literature published in 2022-2024. The review analyzes 43 research articles retrieved from the Scopus database focusing on the neural network architectures and approaches employed for text generation tasks. The results show that models based on the Transformer architecture, such as GPT-2, GPT-3, BERT, and their variants, are the most popular among the innovative approaches. Attention mechanisms and controllable text generation techniques are also gaining popularity. Overall, there is a trend of shifting from traditional methods to more innovative and effective models based on the Transformer architecture and attention mechanisms. Because the systematic search was executed in February 2024, the paper additionally provides a narrative, non-systematic discussion of developments between 2024 and 2026, which finds that Transformer dominance persisted while the locus of innovation moved to post-training, inference-time computation, retrieval and evaluation. The findings of this review can guide researchers and practitioners in selecting appropriate methods and architectures for developing text generation systems and identifying promising directions for future research in this field.",
+      "first_checked_at": "2026-10-05T06:58:57+00:00",
+      "last_checked_at": "2026-10-05T06:58:57+00:00",
+      "linked_from": [
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ],
+      "title": "Advanced deep learning methods for text generation in 2022-2024 literature: a systematic review"
+    },
+    "arXiv:2609.09778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09778",
+      "identity_tokens": [
+        "arXiv:2609.09778"
+      ],
+      "reason": "Long-term language-model agents rely on external memory across interactions. Atomic memories are particularly useful: their fine-grained semantic boundaries enable precise retrieval and direct comparison between observations. Yet accumulating atoms inevitably become redundant, overlapping, or conflicting. Existing methods often ask an LLM manager to add, update, delete, or rewrite memories directly, coupling semantic interpretation, storage decisions, and content generation in one error-prone operation. We introduce ROAM, a relation-guided framework that uses atomicity for management while allowing richer answer-time representations. ROAM classifies incoming--stored atom pairs as independent, equivalent, directionally subsuming, or conflicting, then organizes observations into active Primary and supporting Evidence roles. Fusion subsequently combines complementary details and temporal changes into compact, potentially non-atomic views. Only Primary views are retrieved for answering, preventing redundant or outdated atoms from competing independently. Across models and evaluation settings, ROAM improves answer accuracy by up to 29.8 percentage points. Ablations show complementary benefits from different relations and consistent gains from fusion beyond role organization. Mechanism analysis further finds 15.6-point higher answer-critical source recall and an 11.5-point lower confounder-token share. ROAM remains robust across manager scales.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations"
+    },
+    "arXiv:2609.09793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09793",
+      "identity_tokens": [
+        "arXiv:2609.09793"
+      ],
+      "reason": "Directional ablation removes an aligned language model's ability to refuse by projecting a single\"refusal direction\"out of the weights that write the residual stream. It needs no gradient-based training and no optimization, only a few hundred contrastive prompts, which makes it the canonical white-box attack on open-weight alignment. However, it has been established only on dense models up to roughly 70B parameters. We study whether it survives the shift to frontier mixture-of-experts (MoE) models whose residual streams are no longer a single tensor and whose weights ship quantized. We apply it to GLM-5.3-Flash (320B parameters, 288 routed experts, a four-wide hyper-connection residual, block-FP8). The attack survives the architecture, but what it reaches is no longer where a reader of the original recipe would look for it. Editing the attention, dense and routed-expert writers on their own removes 0.039, 0.016 and 0.148 of refusal respectively; editing all three together removes 0.776. As a result, 74% of the effect exists only under the joint intervention. The part the conventional recipe reaches by module-name matching accounts for 0.066 of that 0.776, which is why it fails silently on an MoE. The effect does not follow from removing just any direction: ablating a random direction orthogonal to it leaves refusal unchanged. A category-concentrated residue survives every edit we tried: subspaces fitted on violence, sexual content and hate leave measurable refusal at every rank from 1 to 12. We report the method, the 41-89 percentage-point reductions it achieves across seven harmful benchmarks with no detected change in capability, and the boundary where it stops.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "How Fragile Is Safety Alignment at Frontier Scale? A Single-Direction Attack on a 320B MoE"
+    },
+    "arXiv:2609.09835": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09835",
+      "identity_tokens": [
+        "arXiv:2609.09835"
+      ],
+      "reason": "Personalized language models aim to adapt responses to individual users, whose preferences are often latent and revealed gradually through interaction. Existing training-free methods rely on stored histories or retrieved memories, but they often struggle to reconcile long- term preferences with short-term topic-specific needs. To address this issue, we propose HyperTrace, a training-free framework that formulates online personalization as latent preference tracing. HyperTrace maintains interpretable natural-language hypotheses over short-term intent and long-term preferences, and updates them through an SMC-style reweight process using an LLM-based surrogate choice model. By updating these hypotheses across turns and sessions, HyperTrace enables personalization without parameter updates. Experiments on PRISM and PersonaMem-v2 show that HyperTrace improves response alignment, preference prediction, and profile consistency over strong online baselines, demonstrating the effectiveness of tracing latent user preferences for robust personalization. Code and scripts are available in the repository: https://github.com/jiseshen/HyperTrace.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "HyperTrace: Hypothesis-Based Preference Tracing for Online LLM Personalization"
+    },
+    "arXiv:2609.09840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09840",
+      "identity_tokens": [
+        "arXiv:2609.09840"
+      ],
+      "reason": "Accurate long-term trajectory prediction for maritime vessels is essential for safety and logistical efficiency. While deep learning models, particularly Transformers, have shown promise in processing Automatic Identification System (AIS) data, they often struggle with the quadratic computational complexity of self-attention and the loss of accuracy over extended forecasting horizons. This study proposes TempTPI, a novel prediction framework that integrates an Informer-based encoder with a multi-channel temporal encoding mechanism. The Informer architecture leverages a ProbSparse self-attention mechanism to reduce computational overhead and focus on the most significant dependencies, while the temporal encoder utilizes Fourier-like frequency expansions to capture cyclic patterns (hourly, daily, and seasonal) in vessel behavior. We evaluate our model against the state-of-the-art TPTrans architecture using AIS data from Danish waters. Experimental results demonstrate that TempTPI consistently outperforms existing methods across prediction windows of 1 to 5 hours. Notably, at a 5-hour horizon, the proposed model achieves a 55% improvement in Mean Squared Error (MSE), offering a robust solution for long-range maritime situational awareness.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "TempTPI: Informer-Based trajectory prediction for maritime vessels"
+    },
+    "arXiv:2609.10745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10745",
+      "identity_tokens": [
+        "arXiv:2609.10745"
+      ],
+      "reason": "arXiv abstract addresses multilingual entity linking accuracy through reasoning and retrieval, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Think Before You Link: Rarity, Reasoning, and Retrieval in Multilingual Entity Linking"
+    },
+    "arXiv:2609.10824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10824",
+      "identity_tokens": [
+        "arXiv:2609.10824"
+      ],
+      "reason": "arXiv abstract studies an agent preparing environment artifacts before downstream tasks; it measures task preparation, not model inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Studying Without a Syllabus: Task-Agnostic Environment Preprocessing"
+    },
+    "arXiv:2609.10046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10046",
+      "identity_tokens": [
+        "arXiv:2609.10046"
+      ],
+      "reason": "Large Language Models (LLMs) are increasingly used as interfaces for information retrieval, but they remain prone to hallucinations and faithfulness errors, in which the generated answers diverge from the retrieved evidence. While Retrieval-Augmented Generation (RAG) and recent hybrid or semi-extractive approaches mitigate this issue, they do not guarantee that quoted or extracted spans are verbatim from the retrieved context. This limitation can have severe consequences in safety-critical domains, where answers must exactly match certified documentation. We introduce Constrained Hybrid Decoding (CHyD), a novel faithfulness-first paradigm for speculative RAG. While traditional speculative decoding is optimized for inference speed, CHyD repurposes this architecture to ensure faithful verbatim evidence extraction when the extraction mode is correctly triggered. Our approach enforces hard decoding constraints that restrict generation to continuous spans present in the retrieved documents. This design provides a robust but straightforward guarantee: any explicitly quoted span in the output appears verbatim in the provided context. We evaluate our method across state-of-the-art LLMs on diverse abstractive, extractive, and semi-extractive QA benchmarks, including technical datasets motivated by aircraft maintenance. Results show that existing hybrid methods frequently hallucinate quoted spans, with exact extraction accuracy dropping below 40% in technical domains. In contrast, our approach achieves near-perfect extraction faithfulness regardless of the model used. Although enforcing hard constraints introduces a trade-off with fluency-oriented metrics, our method improves exact answer correctness and remains competitive overall, highlighting its suitability for safety-critical information retrieval applications.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ],
+      "title": "Guaranteeing Faithful Evidence Extraction in Speculative Retrieval-Augmented Generation"
+    },
+    "arXiv:2609.10226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10226",
+      "identity_tokens": [
+        "arXiv:2609.10226"
+      ],
+      "reason": "Large language models (LLMs) have demonstrated remarkable capabilities in reasoning and code generation, raising the prospect that they could assist in developing and optimizing the very infrastructure that powers them. However, existing benchmarks mainly focus on isolated kernels, predefined operators, or pre-specified optimization targets, and therefore fail to evaluate the ability of LLMs to perform open-ended, long-horizon LLM infrastructure engineering. To address this gap, we present $\\Phi$-Bench, a benchmark for systematically evaluating LLMs on engineering the LLM infrastructure stack. Derived from optimization problems studied in frontier research and grounded in real-world code repositories, $\\Phi$-Bench provides broad coverage of the LLM infrastructure stack and spans tasks of varying complexity, ranging from localized kernel-level function completion to long-horizon implementation and end-to-end system optimization. Extensive experiments on frontier LLMs reveal their current capabilities and limitations in engineering complex LLM infrastructure, offering insights into the challenges that remain on the path toward autonomous optimization of future AI infrastructure.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "$\\Phi$-Bench: Can Large Language Models Engineer the Infrastructure That Powers Them?"
+    },
+    "arXiv:2609.10316": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10316",
+      "identity_tokens": [
+        "arXiv:2609.10316"
+      ],
+      "reason": "Translating high-level controls from security standards into concrete, system-specific requirements is central to cybersecurity requirements engineering. Large language models (LLMs) can accelerate this labor-intensive, recall-sensitive task, but any single run is unreliable: it misses valid safeguards while introducing plausible hallucinations, and outputs shift across runs and models. We reframe this variability as a resource: rather than selecting one output, we study post-generation ensembling, aggregating stochastic runs with information-retrieval data-fusion operators. We propose two strategies: Uniform fusion rewards mere cross-run agreement, whereas Naive-Bayes fusion weights each run by its estimated reliability. We evaluate both over 24 runs from 12 configurations across four model families, generated for ten ISO/IEC 27002:2022 controls and expert-judged against a gold standard of 72 valid requirements. Pooling every run's output recovers all 72 (whereas single configurations recover on average under half) but also 111 hallucinations. Fusion separates the wheat from the chaff, ranking valid requirements well ahead of hallucinations. In the areas under the precision-recall and ROC curves, Uniform fusion alone largely surpasses every original run and configuration by 0.142 and 0.118 over the best configuration. Naive-Bayes weighting adds a further 0.039 and 0.052, reaching 0.864 and 0.869 while attaining useful operating points earlier. Internal validation confirms the stability of these gains: they stay positive in at least 92% of out-of-bag bootstrap resamples and every structured-perturbation sample. Post-generation fusion thus turns apparent noise into a practical asset: a lightweight layer giving analysts broader coverage and a better prioritized review queue, using affordable, below-frontier models alone.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Ensembling LLMs for AI-Augmented Cybersecurity Software Requirements Generation"
+    },
+    "arXiv:2609.10347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10347",
+      "identity_tokens": [
+        "arXiv:2609.10347"
+      ],
+      "reason": "arXiv abstract concerns SSD flash-translation-layer verification and storage-centric computing security, not LLM/model inference.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ],
+      "title": "CertiFlash: A Formal Verification Framework for Flash Translation Layers in Computational Solid State Drives"
+    },
+    "arXiv:2609.10368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10368",
+      "identity_tokens": [
+        "arXiv:2609.10368"
+      ],
+      "reason": "arXiv abstract benchmarks stencil computation for scientific/HPC workloads, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Stencil Computation at the Intersection of AI and HPC"
+    },
+    "arXiv:2609.10439": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10439",
+      "identity_tokens": [
+        "arXiv:2609.10439"
+      ],
+      "reason": "arXiv abstract proposes model unlearning for privacy/utility robustness; its quantization mention concerns post-training unlearning resilience, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs"
+    },
+    "arXiv:2609.10537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10537",
+      "identity_tokens": [
+        "arXiv:2609.10537"
+      ],
+      "reason": "arXiv abstract addresses formal-logic modeling for application security vulnerabilities, not model inference performance.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Towards Tackling Application Logic Flaws through Autonomous Formal-Logic Modeling and Automated Reasoning"
+    },
+    "arXiv:2609.10714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.10714",
+      "identity_tokens": [
+        "arXiv:2609.10714"
+      ],
+      "reason": "arXiv abstract studies semantic communication and token transport for 6G systems; distributed inference is context, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04576-communication-efficient-distributed-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "title": "From Semantic to Token Communication: The Next Paradigm for Large-Model-Driven 6G Intelligent Connectivity"
     }
   }
 }

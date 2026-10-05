@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-840a4f55f1588f52-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.10537",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.10537",
+    "identity_tokens": [
+      "arXiv:2609.10537"
+    ],
+    "reason": "arXiv abstract addresses formal-logic modeling for application security vulnerabilities, not model inference performance.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-05T06:58:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Towards Tackling Application Logic Flaws through Autonomous Formal-Logic Modeling and Automated Reasoning"
+  },
+  "processed_at": "2026-10-05T06:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-840a4f55f158",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

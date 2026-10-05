@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:56:47+00:00",
-  "record_count": 1032,
+  "updated_at": "2026-10-05T06:58:58+00:00",
+  "record_count": 1035,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15747,6 +15747,49 @@
         "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
       ],
       "title": "Efficient Vision-Language-Action Management and Serving for Robot Factories"
+    },
+    "arXiv:2609.10715": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.10715",
+      "identity_tokens": [
+        "arXiv:2609.10715"
+      ],
+      "reason": "The inference result is a small adjunct to a training-focused report; accepted length is not end-to-end latency/QPS, and the drafter integration uses a specific setup. Relevance to inference efficiency is therefore weak.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction"
+    },
+    "arXiv:2609.13287": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13287",
+      "identity_tokens": [
+        "arXiv:2609.13287"
+      ],
+      "reason": "The central contribution is a trained GUI agent and benchmark capability result; the abstract’s efficiency motivation is not substantiated by a system-level speed measurement in the inspected evaluation.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "LLaDA-UI: Bringing Block-wise Diffusion to Vision-Language GUI Agents"
+    },
+    "DOI:10.1145/3841638": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3841638",
+      "identity_tokens": [
+        "DOI:10.1145/3841638"
+      ],
+      "reason": "The packet contains an abstract describing neural-network inference optimization, but the primary source URL https://doi.org/10.1145/3841638 returned an internal error when opened; no readable publisher full text was available in this screening run.",
+      "first_checked_at": "2026-10-05T06:58:58+00:00",
+      "last_checked_at": "2026-10-05T06:58:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "title": "I/O Lower-Bound Theory and Reinforcement Learning for Efficient Neural Network Inference Optimization"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42efc4a5f68e0c89-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.10715",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.10715",
+    "identity_tokens": [
+      "arXiv:2609.10715"
+    ],
+    "reason": "The inference result is a small adjunct to a training-focused report; accepted length is not end-to-end latency/QPS, and the drafter integration uses a specific setup. Relevance to inference efficiency is therefore weak.",
+    "first_checked_at": "2026-10-05T06:58:58+00:00",
+    "last_checked_at": "2026-10-05T06:58:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction"
+  },
+  "processed_at": "2026-10-05T06:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42efc4a5f68e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
