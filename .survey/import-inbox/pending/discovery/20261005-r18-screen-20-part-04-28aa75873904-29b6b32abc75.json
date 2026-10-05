@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-20-part-04-28aa75873904",
+  "reference_main_sha": "c2906cd5d56fba2e688066c8ce9467ae8f42d253",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24202",
+      "identity_tokens": [
+        "arXiv:2609.24202"
+      ],
+      "title": "Opinion Leader Dynamics: How Sparse Attention Shapes Token Clustering",
+      "reason": "Sparse attention reduces the quadratic cost of global self-attention while retaining strong empirical performance, but how its restricted interactions shape the evolution of token representations remains theoretically underexplored. Modeling tokens as particles on the unit sphere, we introduce opinion leader dynamics, a framework that identifies two mechanisms through which token groups converge internally while maintaining distinct limiting directions. In the explicit model, fixed representatives induce a potential that attracts tokens toward distinct local maxima. In the implicit model, disconnected interaction groups evolve toward separate consensus directions. We formulate both models as reverse Wasserstein gradient flows and establish exponential convergence under suitable conditions. We further connect these theoretical predictions to token evolution in frontier sparse-attention LLMs that motivate our framework. Across four benchmarks, Kimi-K3, MiniMax-M3, and DeepSeek-V4-Flash consistently exhibit clearer cluster separation and higher clustering scores than the dense-attention model GLM-4.7-Flash in projected token representations. These observations support the relevance of the predicted multiple-group structure to trained frontier LLMs, while finite-particle simulations illustrate the theoretical convergence behavior. Together, our results connect restricted token interactions to distinct group-level attractors, providing a dynamical account of how sparse attention can support alignment within groups while preserving separation between them.",
+      "source_url": "https://arxiv.org/abs/2609.24202",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24205",
+      "identity_tokens": [
+        "arXiv:2609.24205"
+      ],
+      "title": "A principled approach for energy-efficient training via phase-aware GPU frequency tuning",
+      "reason": "Modern AI model training imposes unprecedented computational demands, making it a key contributor to datacenter energy consumption. Yet a significant fraction of the energy consumed during training does not translate to useful computation due to bottlenecks throughout the training pipeline. We present PAFT, a phase-aware, dynamically adaptable GPU frequency tuning system that reduces energy consumption of training workloads with minimal performance overhead. The key insight behind PAFT is that bottlenecks represent an energy optimization opportunity, rather than purely a performance problem: when GPUs are bound to stall, PAFT opportunistically reduces their clock frequencies to match the pace of bottlenecked devices, saving energy without impacting execution time. PAFT achieves this by continuously monitoring pipeline behavior and applying fine-grained frequency adjustments, adapting to workload and system changes. Experiments conducted on twelve widely used models show that PAFT consistently outperforms all baselines, achieving energy savings of up to 46% with an average overhead of 4%.",
+      "source_url": "https://arxiv.org/abs/2609.24205",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24271",
+      "identity_tokens": [
+        "arXiv:2609.24271"
+      ],
+      "title": "ME-Brain-1.0: Memory, Cognition and Action for Evolving Embodied Intelligence",
+      "reason": "Current embodied systems largely rely on pretrained capabilities that remain fixed after deployment, limiting their ability to learn from physical interaction. We introduce MachEmbodied-Brain (ME-Brain), a self-evolving embodied system organized around a closed loop of action execution, experience acquisition, experience evolution, and improved execution. Evolvable Memory consolidates multimodal trajectories into hierarchical, reusable experience; Cognitive Core transforms physical experience into transferable skills; and the Action Model combines event-driven keyframes, EventCell local-world prediction, and action-conditioned memory modulation to focus computation on decision-critical moments, regions, and historical evidence. Together, these modules shift embodied intelligence from train-and-freeze to deploy-and-evolve without model retraining. Cognitive Core outperforms the strongest comparison models by 8.2 and 9.6 points on embodied and agent benchmarks. The Action Model achieves 47.88% mean success on RoboMME, a 3.26-point improvement over the strongest baseline. On RoboDojo, it reaches a 21.51 mean Score and 16.03% success rate, exceeding $\\pi_{0.5}$ by 10.10 and 9.12 points. On the six-task ME-RealBench, ME-Brain achieves a 69.5 mean Score and 66.7% success rate, outperforming DM0.5 by 12.8 and 11.7 points, respectively.",
+      "source_url": "https://arxiv.org/abs/2609.24271",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24274",
+      "identity_tokens": [
+        "arXiv:2609.24274"
+      ],
+      "title": "vla.simd: Efficient CPU Inference for Language-Conditioned Manipulation",
+      "reason": "Deploying language-conditioned manipulation without a dedicated GPU requires efficient inference and action chunks that cover the delay between policy queries. We present vla.simd, a CPU inference engine that combines shared SIMD micro-kernels, reusable computation, and target-specific optimization. We relate query latency and execution horizon to action availability under lagged and time-aligned execution, distinguishing action supply from feedback frequency. Across six policies and four CPUs, vla.simd achieves approximately $1.4\\times$ median speedup over compiled PyTorch references while preserving fp32 numerical fidelity. We also introduce IMPACT, an ACT-based policy with cached text representations and language-modulated visual features. IMPACT is the only language-conditioned policy in our evaluated set that supplies at least 30 actions/s on the Raspberry Pi 5: after a 90 s thermal soak, it supplies 33.5 actions/s in fp32 and 81.2 with int8. Separate GPU evaluations yield $76.4\\%$ mean success across four LIBERO suites without robot pretraining; instruction-shuffling tests demonstrate selection among familiar goals. Trials with IMPACT on an SO-101 arm and SmolVLA on a UR10e with a Robotiq gripper demonstrate CPU deployment on two robot embodiments.",
+      "source_url": "https://arxiv.org/abs/2609.24274",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24303",
+      "identity_tokens": [
+        "arXiv:2609.24303"
+      ],
+      "title": "SupportCal: Label-Free Calibration of Post-Trained LLMs via Reference Support and Corroboration",
+      "reason": "Post-training often improves task performance but can degrade confidence calibration, leaving post-trained language models (PoLMs) more overconfident than their corresponding pretrained language models (PLMs). Because task-specific labeled calibration data can be costly or unavailable, the corresponding pretrained PLM provides a natural label-free reference for post-hoc calibration. Prior agreement-gated PLM-referenced calibration fits a scalar temperature using only examples on which the PoLM and its PLM reference agree, excluding disagreement examples because direct alignment can drive the fitted temperature excessively high and induce under-confidence. We revisit this binary treatment. A controlled reintroduction diagnostic reveals a non-monotonic aggregate effect: admitting a moderate fraction of disagreement examples can improve calibration, whereas the benefit diminishes as unit-weight inclusion approaches the full disagreement set. We introduce SupportCal, a label-free post-hoc method that retains agreement examples at unit weight and assigns disagreement examples continuous weights based on the own-base PLM's relative support and corroboration from pretrained references selected from a size-compatible candidate pool. We further characterize when the resulting weighted objective admits a finite optimal temperature. Across MedMCQA and MathQA, SupportCal yields lower ECE than the agreement-only baseline for nearly all evaluated target-model configurations; supplementary TweetEval Sentiment results show the same pattern on a fixed-label classification task.",
+      "source_url": "https://arxiv.org/abs/2609.24303",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
