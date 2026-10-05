@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-73ed0599b602c437-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2304.06194",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2304.06194",
+    "identity_tokens": [
+      "arXiv:2304.06194"
+    ],
+    "reason": "SiLKはcomputer visionのlearned keypoint検出/記述子に関する研究で、LLM推論効率ではない。",
+    "first_checked_at": "2026-10-05T02:32:47+00:00",
+    "last_checked_at": "2026-10-05T02:32:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "SiLK: Simple Learned Keypoints"
+  },
+  "processed_at": "2026-10-05T02:32:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73ed0599b602",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

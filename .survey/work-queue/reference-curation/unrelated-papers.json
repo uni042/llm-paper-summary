@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:30:40+00:00",
-  "record_count": 1960,
+  "updated_at": "2026-10-05T02:32:47+00:00",
+  "record_count": 1978,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28328,6 +28328,274 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers"
+    },
+    "arXiv:2608.18104": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18104",
+      "identity_tokens": [
+        "arXiv:2608.18104"
+      ],
+      "reason": "self-evolving agentのdynamic graph transformationを概説するsurvey。モデル推論の効率手法ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Self-Evolving Agents as Dynamic Graph Transformation: A Survey and New Perspective"
+    },
+    "arXiv:2606.10568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10568",
+      "identity_tokens": [
+        "arXiv:2606.10568"
+      ],
+      "reason": "Vision-Language-Action policyの空間的action verificationが主題。推論効率の寄与ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "VeriSpace: Spatially Grounded Action Verification for Vision-Language-Action Models"
+    },
+    "arXiv:2606.08446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08446",
+      "identity_tokens": [
+        "arXiv:2606.08446"
+      ],
+      "reason": "Long-context RLのsparse rolloutでtraining stability/efficiencyを扱う訓練時研究。inference-time効率化ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.16179-magicpig-lsh-sampling-efficient-llm-generation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Sparrow: Sparse Rollout for Stable and Efficient Long-context RL of Large Language Models"
+    },
+    "arXiv:2304.06194": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.06194",
+      "identity_tokens": [
+        "arXiv:2304.06194"
+      ],
+      "reason": "SiLKはcomputer visionのlearned keypoint検出/記述子に関する研究で、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "SiLK: Simple Learned Keypoints"
+    },
+    "DOI:10.1109/jiot.2026.3716688": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3716688",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3716688"
+      ],
+      "reason": "題名と一次書誌情報からmultimodal wearable sensorを用いたhuman action recognitionのsurvey。LLM serving/推論最適化と無関係。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Survey on Multimodal Wearable Sensor-Based Human Action Recognition"
+    },
+    "arXiv:2606.19317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19317",
+      "identity_tokens": [
+        "arXiv:2606.19317"
+      ],
+      "reason": "中心的貢献はTransformer attention headをプログラムで説明する解釈可能性研究。推論計算削減を目的とせず、代替headでperplexityが上がるという品質評価。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Explaining Attention with Program Synthesis"
+    },
+    "DOI:10.1038/s41586-026-10635-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10635-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10635-z"
+      ],
+      "reason": "Nature論文の題名と一次抄録が扱うのは光学メタサーフェスによるエッジ視覚処理であり、LLM推論の効率化ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Optical metasurfaces for general vision processing on the edge"
+    },
+    "DOI:10.1145/3805622.3810825": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805622.3810825",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810825"
+      ],
+      "reason": "抄録はDiffusion Transformerによる画像・動画生成向けPTQ。低ビット化の効率貢献はあるが対象モデル群がLLMではなく生成DiT。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "DapQ-DiT: Distribution-Aware Post-Training Quantization for Efficient Generative Tasks in Diffusion Transformers"
+    },
+    "arXiv:2606.15621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15621",
+      "identity_tokens": [
+        "arXiv:2606.15621"
+      ],
+      "reason": "counterfactual token-credit測定でre-feed replayの測定誤差を分析する評価・方法論研究。推論高速化/資源削減手法が主題ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Re-feeding Is Not Replaying: Measuring Replay Noise in Counterfactual Token-Credit Estimation"
+    },
+    "arXiv:2606.15980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15980",
+      "identity_tokens": [
+        "arXiv:2606.15980"
+      ],
+      "reason": "主題はactivation monitorのモデル更新後stalenessのbenchmark/repairであり、推論効率の改善ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Do Activation Monitors Survive Model Updates? Benchmarking, Predicting, and Repairing Activation-Monitor Staleness"
+    },
+    "arXiv:2606.20678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20678",
+      "identity_tokens": [
+        "arXiv:2606.20678"
+      ],
+      "reason": "Transformer componentのtask-specific sensitivityを測る解釈可能性研究で、推論効率化の手法・評価が主題ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Beyond Importance: Interchange-Sobol Sensitivity Reveals Task-Specific Content Channels in Transformer Components"
+    },
+    "arXiv:2606.13844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13844",
+      "identity_tokens": [
+        "arXiv:2606.13844"
+      ],
+      "reason": "DRAM system simulatorの構成可能性が対象。LLM推論効率の具体的手法ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Ramulator 2.1: A Composable Memory System Simulator for Modern DRAM Systems"
+    },
+    "arXiv:2607.20492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20492",
+      "identity_tokens": [
+        "arXiv:2607.20492"
+      ],
+      "reason": "フォーム入力でのLLM捏造回答を測る信頼性/安全性研究で、推論の計算効率は対象外。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "PhantomFill: When the Form Demands an Answer, Language Models Invent One"
+    },
+    "arXiv:2606.11867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11867",
+      "identity_tokens": [
+        "arXiv:2606.11867"
+      ],
+      "reason": "MoE routingのRL post-training負荷均衡化を扱う訓練時手法であり、推論時効率が主題ではない。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.19925-symi-efficient-mixture-of-experts-training-via-model-and-optimizer-state-decoupl.md"
+      ],
+      "title": "Harnessing Routing Foresight for Micro-step-level MoE load balancing in RL Post-training"
+    },
+    "arXiv:2606.12594": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12594",
+      "identity_tokens": [
+        "arXiv:2606.12594"
+      ],
+      "reason": "Lean形式証明と定理証明効率が対象で、LLM推論serving効率とは異なる領域。",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation"
+    },
+    "arXiv:2606.27409": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27409",
+      "identity_tokens": [
+        "arXiv:2606.27409"
+      ],
+      "reason": "Delayed Verification Destabilizes Multi-Agent LLM Belief: Instability Thresholds and Optimal Corrector Placement: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ],
+      "title": "Delayed Verification Destabilizes Multi-Agent LLM Belief: Instability Thresholds and Optimal Corrector Placement"
+    },
+    "DOI:10.1021/acs.jctc.6c00999": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acs.jctc.6c00999",
+      "identity_tokens": [
+        "DOI:10.1021/acs.jctc.6c00999"
+      ],
+      "reason": "Reinventing Density Functional Theory with Machine Learning on Integral Features.: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Reinventing Density Functional Theory with Machine Learning on Integral Features."
+    },
+    "arXiv:2606.22932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22932",
+      "identity_tokens": [
+        "arXiv:2606.22932"
+      ],
+      "reason": "FORGE: Fused On-Register Gradient Elimination for Memory-Efficient LLM Training: primary abstract concerns its named application/training task, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T02:32:47+00:00",
+      "last_checked_at": "2026-10-05T02:32:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "FORGE: Fused On-Register Gradient Elimination for Memory-Efficient LLM Training"
     }
   }
 }

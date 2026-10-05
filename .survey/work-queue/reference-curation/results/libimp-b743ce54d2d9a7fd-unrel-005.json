@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b743ce54d2d9a7fd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.12594",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.12594",
+    "identity_tokens": [
+      "arXiv:2606.12594"
+    ],
+    "reason": "Lean形式証明と定理証明効率が対象で、LLM推論serving効率とは異なる領域。",
+    "first_checked_at": "2026-10-05T02:32:47+00:00",
+    "last_checked_at": "2026-10-05T02:32:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+    ],
+    "title": "Pythagoras-Prover: Advancing Efficient Formal Proving via Augmented Lean Formalisation"
+  },
+  "processed_at": "2026-10-05T02:32:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b743ce54d2d9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
