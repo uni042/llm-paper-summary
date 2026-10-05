@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-33-part-06-9aa9e0416668",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.47852/bonviewjdsis62027770",
+      "identity_tokens": [
+        "DOI:10.47852/bonviewjdsis62027770"
+      ],
+      "title": "Time Series Prediction Network for Modeling Channel Correlation Based on Wavelet Transform",
+      "reason": "With the advancement of technology, multi-channel time series prediction tasks have become a focal point of research. However, due to the complex and intertwined correlations between channels, it is challenging to model their interactions accurately and flexibly. Furthermore, most existing methods typically model data from either the time domain or frequency domain alone, leading to inefficient utilization of information. To overcome these challenges, we introduce MCCWT-Net, a multi-channel time series forecasting framework built upon the wavelet transform. Unlike transformer-based models, MCCWT-Net does not rely on self-attention mechanisms, resulting in a more efficient training process. The wavelet transform, when applied in the frequency domain, can be used to extract and reflect features with predictability (such as periodicity) and act as a filter to reduce noise, instead of relying solely on raw historical data. Our model incorporates a specific number of channels and, while modeling long-term features, effectively captures inter-channel correlation information in the frequency domain through wavelet transform, combining it with information from the time domain. Experimental results demonstrate that our model achieves advanced performance across multiple datasets.\n \nReceived: 27 September 2025 | Revised: 18 March 2026 | Accepted: 27 March 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe ETT dataset was acquired at https://github.com/zhouhaoyi/ETDataset. The Exchange dataset was acquired at https://github.com/thuml/Autoformer. The Weather dataset was acquired at https://www.bgc-jena.mpg.de/wetter/. The Traffic dataset was acquired at http://pems.dot.ca.gov/. The Electricity dataset was acquired at https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014.\n \nAuthor Contribution Statement\nHanyu Jiang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data curation, Writing – original draft, Writing – review & editing, Visualization, Project administration, Funding acquisition. Zhichao Zheng: Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Supervision.",
+      "source_url": "https://doi.org/10.47852/bonviewjdsis62027770",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02995",
+      "identity_tokens": [
+        "arXiv:2608.02995"
+      ],
+      "title": "SparSEEty: Extracting Tokens from Sparsity-Exploiting LLM Serving Systems via Deterministic Side Channels",
+      "reason": "Modern large language models (LLMs) exhibit activation sparsity, wherein only a subset of their neurons is activated for given input tokens. Researchers have leveraged this property to optimize LLM serving systems by omitting weight accesses and computations pertaining to inactive neurons. Unfortunately, however, such optimizations create input-dependent weight accesses, which can be leaked over side channels. We present SparSEEty, a new token extraction attack that exploits input-dependent neuron weight accesses introduced by sparsity-exploiting LLM serving systems. SparSEEty first constructs a neuron-activation oracle using neuron weight access side channels during LLM inference, and then inverts the activation traces to reconstruct the input tokens, forming an end-to-end token extraction attack. We instantiate SparSEEty against an LLM serving system protected inside an Intel TDX confidential virtual machine (CVM), addressing three key challenges: (i) constructing a neuron-activation oracle using a combination of side channels exposed by CVMs, (ii) reducing inference-time overheads of neuron activation monitoring for covertness, and (iii) accurately inverting partial binary activation traces back to tokens. Our evaluation shows that SparSEEty can reconstruct both prompt and response tokens with consistently high BLEU scores (>0.95) across various models and datasets, while incurring monitoring overheads of 3.7% to 7.2%.",
+      "source_url": "https://arxiv.org/abs/2608.02995",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03148",
+      "identity_tokens": [
+        "arXiv:2608.03148"
+      ],
+      "title": "Lightweight Chunk Selection for Mobile Retrieval-Augmented Generation",
+      "reason": "RAG文脈選択には関連するが、本文の主要指標はevidence rank-1精度で、推論token/latency/resource savingsおよびselector overheadを測定していない。",
+      "source_url": "https://arxiv.org/abs/2608.03148",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03172",
+      "identity_tokens": [
+        "arXiv:2608.03172"
+      ],
+      "title": "Surrogate Substitution Preserves PHI Detectability: A Multi-Detector Equivalence Study",
+      "reason": "Structure-preserving de-identification replaces protected health information (PHI) with realistic same-type surrogates --\"Anna S.\"becomes\"Maria S.\", not [NAME] -- so that clinical text stays fluent and downstream tools keep working. But this only helps if the substitution does not itself corrupt the signal those tools rely on. We ask a narrow, testable question: on the spans a de-identifier actually masks, can downstream PHI detectors still find the surrogate? We introduce a paired, multi-detector evaluation protocol that (i) scores utility only on masked spans, decoupling coverage from utility; (ii) uses equivalence testing (TOST) rather than null-hypothesis significance testing, which is uninformative at our sample size (57k paired spans); and (iii) builds a surrogate-failure typology separating fixable generator defects from intrinsic detector limits. Across 11 detectors, 7 benchmarks, and 7 languages (1,750 documents), recall on masked spans moves from 76.1% to 74.9% -- a change our equivalence test shows is statistically equivalent to zero within a +/-2-point margin (p ~ 3e-9), with detector ranking preserved. The residual loss does not reflect detectors getting worse at PHI: it concentrates in malformed and out-of-distribution surrogates (truncation Chicago ->Illino, salience loss Cedars-Sinai ->Vidant). A redaction floor and an open-source surrogate baseline indicate the effect is a property of well-formed substitution, not of one tool. We release the evaluation subsets, scoring code, and an interactive dashboard at https://custodianai.pages.dev so the protocol can audit any structure-preserving transform.",
+      "source_url": "https://arxiv.org/abs/2608.03172",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.03228",
+      "identity_tokens": [
+        "arXiv:2608.03228"
+      ],
+      "title": "SAKI: Score-Aware Low-Rank Key Indexing with Random-Matrix Noise Correction for KV Retrieval",
+      "reason": "KV retrieval indexとして関連するが、本文で確認できるのは4K contextでのrecall評価で、end-to-end generation qualityやinference cost/latencyの効果が未確認。",
+      "source_url": "https://arxiv.org/abs/2608.03228",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2408.05646-eigen-attention-attention-in-low-rank-space-for-kv-cache-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    }
+  ]
+}
