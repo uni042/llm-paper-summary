@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc2da81ab6da99e9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.09024",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.09024",
+    "identity_tokens": [
+      "arXiv:2608.09024"
+    ],
+    "reason": "ELICITED is an EHR-grounded clinical triage benchmark and decision-support evaluation, not an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T08:44:30+00:00",
+    "last_checked_at": "2026-10-05T08:44:30+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+    ],
+    "title": "ELICITED: EHR-grounded Longitudinal Interactive Conversations for Information-seeking Triage Evaluation and Decision-making"
+  },
+  "processed_at": "2026-10-05T08:44:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc2da81ab6da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

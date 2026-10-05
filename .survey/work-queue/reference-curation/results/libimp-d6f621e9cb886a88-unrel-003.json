@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6f621e9cb886a88-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.09819",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.09819",
+    "identity_tokens": [
+      "arXiv:2608.09819"
+    ],
+    "reason": "Macaron-V1 describes a continually improving agent/model family and adapter composition; the abstract reports capability benchmarks, not inference efficiency gains.",
+    "first_checked_at": "2026-10-05T08:44:31+00:00",
+    "last_checked_at": "2026-10-05T08:44:31+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA"
+  },
+  "processed_at": "2026-10-05T08:44:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6f621e9cb88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
