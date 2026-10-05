@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-47-part-08-dca02cbe420d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03801",
+      "identity_tokens": [
+        "arXiv:2607.03801"
+      ],
+      "title": "Punching Above Their Weight: Classification-Head Fine-Tuning of Tiny Language Models (TLMs) for Verifiable Multiple-Choice Tasks",
+      "reason": "The work evaluates fine-tuning paradigms for multiple-choice task quality; it is training-focused and reports no inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2607.03801",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.07718",
+      "identity_tokens": [
+        "arXiv:2607.07718"
+      ],
+      "title": "LLT: Local Linear Transformer for PDE Operator Learning",
+      "reason": "LLT targets PDE neural-operator learning and reports training-iteration efficiency, not language-model inference/serving.",
+      "source_url": "https://arxiv.org/abs/2607.07718",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11913",
+      "identity_tokens": [
+        "arXiv:2607.11913"
+      ],
+      "title": "Towards Self-Evolving Agents: A Human-Inspired Adaptive Exploration-Exploitation Framework for Genetic Network Programming",
+      "reason": "HGNP is an evolutionary agent-programming method evaluated on Tileworld; it is not LLM inference/serving work.",
+      "source_url": "https://arxiv.org/abs/2607.11913",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21623",
+      "identity_tokens": [
+        "arXiv:2607.21623"
+      ],
+      "title": "Cloud-Native Evaluation-as-a-Service: A Microservices Architecture for Scalable AI Monitoring with Conformal Guarantees",
+      "reason": "EaaS is a platform for AI evaluation and monitoring; its microservice latency is for monitoring services, not LLM inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.21623",
+      "first_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "last_checked_at": "2026-10-05T09:47:17.455541+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+      ]
+    }
+  ]
+}
