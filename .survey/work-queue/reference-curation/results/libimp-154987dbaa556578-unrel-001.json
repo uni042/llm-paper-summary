@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-154987dbaa556578-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.06749",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.06749",
+    "identity_tokens": [
+      "arXiv:2503.06749"
+    ],
+    "reason": "200K multimodal CoT cold-start dataset、Progressive Thinking Suppression Training、GRPOでMLLMのreasoning能力を学習時に改善するtraining/capability研究。主要評価はMathVista等の正解率で、推論runtime・serving効率化のsystem研究ではない。",
+    "first_checked_at": "2026-10-05T01:01:01+00:00",
+    "last_checked_at": "2026-10-05T15:38:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+    ],
+    "title": "Vision-R1: Incentivizing Reasoning Capability in Multimodal Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:38:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-154987dbaa55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

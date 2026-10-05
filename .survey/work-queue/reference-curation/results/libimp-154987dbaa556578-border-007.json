@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-154987dbaa556578-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1910.06188",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1910.06188",
+    "identity_tokens": [
+      "arXiv:1910.06188"
+    ],
+    "reason": "fine-tuning中のquantization-aware trainingでBERTを8-bit化し4x圧縮、8-bit integer hardwareで推論高速化可能とするTransformer圧縮研究。推論配備に直接効くが、LLM世代以前のBERT encoderとQATが中心で、現行LLM inference surveyへの収録は境界的。",
+    "first_checked_at": "2026-10-05T15:38:21+00:00",
+    "last_checked_at": "2026-10-05T15:38:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Q8BERT: Quantized 8Bit BERT"
+  },
+  "processed_at": "2026-10-05T15:38:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-154987dbaa55",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

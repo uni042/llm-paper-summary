@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2bf009143b840652-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3373376.3378512",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3373376.3378512",
+    "identity_tokens": [
+      "DOI:10.1145/3373376.3378512"
+    ],
+    "reason": "virtualization-based serverless functionをcheckpoint imageから復元し、on-demand state recoveryとsforkでcold-startをbest case 1ms未満へ短縮するsystem研究。agent sandbox/LLM serverless実行基盤へ応用可能だが、論文自体は汎用serverless computingでLLM推論専用評価がないためborderline。",
+    "first_checked_at": "2026-10-05T02:01:51+00:00",
+    "last_checked_at": "2026-10-05T15:38:24+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Catalyzer: Sub-millisecond Startup for Serverless Computing with Initialization-less Booting"
+  },
+  "processed_at": "2026-10-05T15:38:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2bf009143b84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

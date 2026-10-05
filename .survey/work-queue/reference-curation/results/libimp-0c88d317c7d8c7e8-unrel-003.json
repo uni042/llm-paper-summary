@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c88d317c7d8c7e8-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1368",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1368",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.emnlp-main.1368"
+    ],
+    "reason": "The paper distills a T5 classifier chain for multi-label classification; it is task-specific classifier training rather than a general inference efficiency method.",
+    "first_checked_at": "2026-10-05T15:38:21+00:00",
+    "last_checked_at": "2026-10-05T15:38:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md"
+    ],
+    "title": "Leveraging Text-to-Text Transformers as Classifier Chain for Few-Shot Multi-Label Classification"
+  },
+  "processed_at": "2026-10-05T15:38:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c88d317c7d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

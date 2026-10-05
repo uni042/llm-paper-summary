@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0c88d317c7d8c7e8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.02463",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.02463",
+    "identity_tokens": [
+      "arXiv:2503.02463"
+    ],
+    "reason": "Selective Rationale Optimisation trains smaller models to deliberate; its contribution is model training, not inference/serving/compression.",
+    "first_checked_at": "2026-10-05T15:38:20+00:00",
+    "last_checked_at": "2026-10-05T15:38:20+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+    ],
+    "title": "It Helps to Take a Second Opinion: Teaching Smaller LLMs to Deliberate Mutually via Selective Rationale Optimisation"
+  },
+  "processed_at": "2026-10-05T15:38:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0c88d317c7d8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

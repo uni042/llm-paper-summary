@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:34:00+00:00",
-  "record_count": 2042,
+  "updated_at": "2026-10-05T15:38:29+00:00",
+  "record_count": 2040,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6443,18 +6443,6 @@
       ],
       "title": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions"
     },
-    "arXiv:1908.08593": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1908.08593",
-      "identity_tokens": [
-        "arXiv:1908.08593"
-      ],
-      "reason": "BERTのattention headを定量・定性分析し、head間の反復patternとoverparameterizationを示し、一部headを手動disableすると性能が改善することを報告する。推論時head削減への直接的含意はあるが、主目的はinterpretabilityで効率評価が中心ではないためborderline。",
-      "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-04T21:54:26+00:00",
-      "linked_from": [],
-      "title": "Revealing the Dark Secrets of BERT"
-    },
     "DOI:10.18653/v1/d19-1410": {
       "classification": "borderline",
       "canonical_id": "DOI:10.18653/v1/d19-1410",
@@ -6550,20 +6538,6 @@
       ],
       "title": "Mastering diverse control tasks through world models"
     },
-    "DOI:10.1145/2155620.2155650": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/2155620.2155650",
-      "identity_tokens": [
-        "DOI:10.1145/2155620.2155650"
-      ],
-      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
-      "first_checked_at": "2026-10-05T00:48:09+00:00",
-      "last_checked_at": "2026-10-05T00:48:09+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
-      ],
-      "title": "Bubble-up: Increasing utilization in modern warehouse scale computers via sensible co-locations"
-    },
     "DOI:10.1109/slt.2012.6424228": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/slt.2012.6424228",
@@ -6577,20 +6551,6 @@
         "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
       ],
       "title": "Context dependent recurrent neural network language model"
-    },
-    "DOI:10.1016/j.crma.2012.03.014": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.crma.2012.03.014",
-      "identity_tokens": [
-        "DOI:10.1016/j.crma.2012.03.014"
-      ],
-      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
-      "first_checked_at": "2026-10-05T00:48:09+00:00",
-      "last_checked_at": "2026-10-05T00:48:09+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md"
-      ],
-      "title": "Multiple-gradient descent algorithm (MGDA) for multiobjective optimization"
     },
     "DOI:10.25080/majora-7b98e3ed-013": {
       "classification": "borderline",
@@ -6811,20 +6771,6 @@
       ],
       "title": "A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges"
     },
-    "DOI:10.18653/v1/d19-1445": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.18653/v1/d19-1445",
-      "identity_tokens": [
-        "DOI:10.18653/v1/d19-1445"
-      ],
-      "reason": "The paper is an attention-interpretability study. Head disabling sometimes preserves or improves task accuracy, but it does not implement parameter/head pruning or measure inference savings.",
-      "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
-      ],
-      "title": "Revealing the Dark Secrets of BERT"
-    },
     "DOI:10.1147/rd.282.0135": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1147/rd.282.0135",
@@ -6923,27 +6869,14 @@
       "identity_tokens": [
         "arXiv:2006.06762"
       ],
-      "reason": "Ansorは一般DNN tensor program compiler/auto-tunerで、CPU/GPU kernelおよびend-to-end DNNを評価し、workload例にはBERTも含む。一方、LLM autoregressive decodeやLLM servingの測定はなく、BERTを含む汎用compilerという間接適用可能性だけでは対象内と確定できないためborderline。",
+      "reason": "階層的search space、evolutionary search、learned cost model、task schedulerでDNN tensor programを自動生成し、CPU/GPU実行を最大3.8x/2.6x/1.7x高速化するcompiler/runtime研究。推論kernel・runtimeの基礎として強く関連する一方、LLM/Transformerを最終適用先として評価していないためborderline。",
       "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T15:38:21+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
       ],
-      "title": "Ansor : Generating High-Performance Tensor Programs for Deep Learning"
-    },
-    "DOI:10.14778/3303753.3303754": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.14778/3303753.3303754",
-      "identity_tokens": [
-        "DOI:10.14778/3303753.3303754"
-      ],
-      "reason": "NSGは汎用approximate nearest-neighbor graph search/indexであり、本文の評価はSIFT/GIST/RAND/GAUSS等のvector datasetにおけるrecall、memory、search性能である。RAG検索への基盤としての隣接性はあるが、LLM/RAG workloadやend-to-end serving効果は評価していないためborderline。",
-      "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
-      "linked_from": [
-        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
-      ],
-      "title": "Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph"
+      "borderline_recheck_count": 0,
+      "title": "Ansor: Generating High-Performance Tensor Programs for Deep Learning"
     },
     "arXiv:2404.09516": {
       "classification": "borderline",
@@ -9294,34 +9227,6 @@
       ],
       "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
     },
-    "arXiv:2408.07666": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2408.07666",
-      "identity_tokens": [
-        "arXiv:2408.07666"
-      ],
-      "reason": "Broad model-merging survey includes faster MoE-LLM inference, but provides taxonomy/cited-work synthesis rather than a focused new serving method or unified evaluation.",
-      "first_checked_at": "2026-10-05T02:01:50+00:00",
-      "last_checked_at": "2026-10-05T02:01:50+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.19781-task-aware-expert-merging-online.md"
-      ],
-      "title": "Model Merging in LLMs, MLLMs, and Beyond: Methods, Theories, Applications, and Opportunities"
-    },
-    "arXiv:2402.10200": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2402.10200",
-      "identity_tokens": [
-        "arXiv:2402.10200"
-      ],
-      "reason": "Abstract describes top-k alternative decoding to elicit CoT but no efficiency result; primary HTML contained no article text to verify evaluation/limitations.",
-      "first_checked_at": "2026-10-05T02:01:50+00:00",
-      "last_checked_at": "2026-10-05T02:01:50+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
-      ],
-      "title": "Chain-of-Thought Reasoning Without Prompting"
-    },
     "arXiv:2307.06304": {
       "classification": "borderline",
       "canonical_id": "arXiv:2307.06304",
@@ -9342,12 +9247,13 @@
       "identity_tokens": [
         "arXiv:1612.04426"
       ],
-      "reason": "Continuous neural cache improves LM perplexity but uses older recurrent models and reports no latency/throughput; transfer is uncertain.",
+      "reason": "過去hidden activationと次wordをcacheし、現在hidden stateとのdot productでcache distributionを作るtest-time memory機構。大規模cacheへ低追加コストでscaleするが、主評価はperplexity改善でruntime/memory削減の実測がなく、現代LLM serving最適化そのものではないためborderline。",
       "first_checked_at": "2026-10-05T02:01:50+00:00",
-      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T15:38:23+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "Improving Neural Language Models with a Continuous Cache"
     },
     "arXiv:2309.17179": {
@@ -9372,11 +9278,12 @@
       ],
       "reason": "virtualization-based serverless functionをcheckpoint imageから復元し、on-demand state recoveryとsforkでcold-startをbest case 1ms未満へ短縮するsystem研究。agent sandbox/LLM serverless実行基盤へ応用可能だが、論文自体は汎用serverless computingでLLM推論専用評価がないためborderline。",
       "first_checked_at": "2026-10-05T02:01:51+00:00",
-      "last_checked_at": "2026-10-05T02:57:03+00:00",
+      "last_checked_at": "2026-10-05T15:38:24+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "Catalyzer: Sub-millisecond Startup for Serverless Computing with Initialization-less Booting"
     },
     "DOI:10.1145/3307681.3325400": {
@@ -31617,6 +31524,76 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Two Heads Are Better than One: Simulating Large Transformers with Small Ones"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.43": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.43",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.43"
+      ],
+      "reason": "The checked evidence emphasizes training/fine-tuning and architecture metrics, not inference latency, serving throughput, or compression/runtime implementation; fit to an inference/serving survey is weak.",
+      "first_checked_at": "2026-10-05T15:38:20+00:00",
+      "last_checked_at": "2026-10-05T15:38:20+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bag of Tricks for Sparse Mixture-of-Experts: A Benchmark Across Reasoning, Efficiency, and Safety"
+    },
+    "arXiv:1910.06188": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1910.06188",
+      "identity_tokens": [
+        "arXiv:1910.06188"
+      ],
+      "reason": "fine-tuning中のquantization-aware trainingでBERTを8-bit化し4x圧縮、8-bit integer hardwareで推論高速化可能とするTransformer圧縮研究。推論配備に直接効くが、LLM世代以前のBERT encoderとQATが中心で、現行LLM inference surveyへの収録は境界的。",
+      "first_checked_at": "2026-10-05T15:38:21+00:00",
+      "last_checked_at": "2026-10-05T15:38:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Q8BERT: Quantized 8Bit BERT"
+    },
+    "DOI:10.1109/icmlcn64995.2025.11139372": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icmlcn64995.2025.11139372",
+      "identity_tokens": [
+        "DOI:10.1109/icmlcn64995.2025.11139372"
+      ],
+      "reason": "Unable to inspect the primary full text: the DOI/IEEE Xplore document endpoint did not load in this run. Abstract alone does not provide enough details on baselines, workload, metrics, or limitations for a concrete Research handoff.",
+      "first_checked_at": "2026-10-05T15:38:28+00:00",
+      "last_checked_at": "2026-10-05T15:38:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Bandit-Based Approach to Scheduling LLM Requests in Cloud-Edge Systems"
+    },
+    "arXiv:2006.10901": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.10901",
+      "identity_tokens": [
+        "arXiv:2006.10901"
+      ],
+      "reason": "疎なSpMM/SDDMM向けGPU kernelを設計し、V100でsingle-precision peakの27%に達し、sparse Transformer/MobileNetで1.2–2.1x高速化・最大12.8x memory削減を示す。推論kernel効率へ強く関連するが、LLM生成推論を最終適用先とするsystem評価ではないためborderline。",
+      "first_checked_at": "2026-10-05T15:38:29+00:00",
+      "last_checked_at": "2026-10-05T15:38:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sparse GPU Kernels for Deep Learning"
+    },
+    "arXiv:2504.05299": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.05299",
+      "identity_tokens": [
+        "arXiv:2504.05299"
+      ],
+      "reason": "mobile/edge deploymentを目的にVLMのarchitecture・tokenizationを小型化し、SmolVLM-256Mは推論時GPU memory 1GB未満、2.2B版もより大きなVLMに匹敵する性能を示す。推論resource効率へ直接関係するが、新規runtime/kernel/serving方式よりmodel設計・data curationが主貢献のためborderline。",
+      "first_checked_at": "2026-10-05T15:38:29+00:00",
+      "last_checked_at": "2026-10-05T15:38:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SmolVLM: Redefining small and efficient multimodal models"
     }
   }
 }

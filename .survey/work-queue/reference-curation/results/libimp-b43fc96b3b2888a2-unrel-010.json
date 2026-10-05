@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b43fc96b3b2888a2-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41586-025-09442-9",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41586-025-09442-9",
+    "identity_tokens": [
+      "DOI:10.1038/s41586-025-09442-9"
+    ],
+    "reason": "LLM PI agentとscientist agentsの協調でnanobody設計pipelineを構築し92候補を生成・実験検証するAI-for-science研究。agent orchestrationを用いるが、agent serving latency・memory・scheduler・tool execution効率を最適化するsystem研究ではない。",
+    "first_checked_at": "2026-10-05T15:38:30+00:00",
+    "last_checked_at": "2026-10-05T15:38:30+00:00",
+    "linked_from": [],
+    "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies"
+  },
+  "processed_at": "2026-10-05T15:38:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b43fc96b3b28",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
