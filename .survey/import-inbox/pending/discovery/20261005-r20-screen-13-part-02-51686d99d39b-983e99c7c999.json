@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-13-part-02-51686d99d39b",
+  "reference_main_sha": "489623932dd15119c489a9eaa19353a6cc7ba9dd",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03528",
+      "identity_tokens": [
+        "arXiv:2609.03528"
+      ],
+      "title": "LeanGRPO: Eliminating Redundant Recomputation in Diffusion RL",
+      "reason": "Diffusion reinforcement-learning training recomputation, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.03528",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03563",
+      "identity_tokens": [
+        "arXiv:2609.03563"
+      ],
+      "title": "FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow",
+      "reason": "Video diffusion/generative rendering, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2609.03563",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03591",
+      "identity_tokens": [
+        "arXiv:2609.03591"
+      ],
+      "title": "Scaling Bimanual Household Manipulation from 1,500 hours of Demonstrations to On-Policy Corrections",
+      "reason": "Vision-language-action robot demonstrations/training, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.03591",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03604",
+      "identity_tokens": [
+        "arXiv:2609.03604"
+      ],
+      "title": "On the Interaction Between Model Compression and Test-Time Adaptation",
+      "reason": "ResNet/ViT compression and test-time adaptation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.03604",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03667",
+      "identity_tokens": [
+        "arXiv:2609.03667"
+      ],
+      "title": "Out-of-Distribution Generalisation with Sequence Models in Offline Multi-Agent Reinforcement Learning",
+      "reason": "Offline multi-agent reinforcement-learning sequence models, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.03667",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    }
+  ]
+}
