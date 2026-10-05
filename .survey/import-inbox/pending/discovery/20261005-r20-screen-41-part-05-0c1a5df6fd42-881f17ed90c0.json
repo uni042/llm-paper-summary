@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-41-part-05-0c1a5df6fd42",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21731",
+      "identity_tokens": [
+        "arXiv:2607.21731"
+      ],
+      "title": "RED-PIM: Reducing Data Movement for Transformers using Processing-in-Memory",
+      "reason": "The full text identifies the evaluated language model as bert-base-uncased. RED-PIM is a generic Transformer/PIM attention design evaluated on BERT-base and non-LLM datasets, rather than a large-language-model inference/serving study.",
+      "source_url": "https://arxiv.org/abs/2607.21731",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.21752",
+      "identity_tokens": [
+        "arXiv:2607.21752"
+      ],
+      "title": "Parameter-free Adaptive Sparse Attention via Compression-Based Content Selection",
+      "reason": "The paper does not report serving latency, inference throughput or memory savings, and the reported convergence advantage is training-side at a small model scale. Sparse attention could be relevant to inference, but that effect is not established here.",
+      "source_url": "https://arxiv.org/abs/2607.21752",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21804",
+      "identity_tokens": [
+        "arXiv:2607.21804"
+      ],
+      "title": "Adversarial Prompts for Acceptance Collapse in Speculative Decoding",
+      "reason": "The paper develops an adversarial acceptance-collapse attack against speculative decoding; the contribution is security analysis, not efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2607.21804",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2601.11580-speculative-decoding-performance-or-illusion.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22757",
+      "identity_tokens": [
+        "arXiv:2607.22757"
+      ],
+      "title": "Hierarchical Grading in Large Language Models",
+      "reason": "The proposed hierarchical grading approach is motivated by evaluation quality; the abstract explicitly says inference cost is unchanged and does not claim serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.22757",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00042",
+      "identity_tokens": [
+        "arXiv:2608.00042"
+      ],
+      "title": "Trustworthiness Costs of Domain Adaptation in Small Language Models:A Cross-Architecture Empirical Study",
+      "reason": "The work measures trustworthiness costs of domain adaptation in small language models; the stated intervention is adaptation/training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.00042",
+      "first_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "last_checked_at": "2026-10-05T07:37:07.489878+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    }
+  ]
+}
