@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-05T18:19:04+00:00`
+Generated: `2026-10-05T19:00:52+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,7 +220,7 @@ ready総数: **651** / 未claim総数: **649** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **17322** / このworker向け: **500**
+未判定総数: **17326** / このworker向け: **500**
 
 | # | score | identity | title | published | venue | citations | 関連数 | 系統候補 | source |
 |---:|---:|---|---|---|---|---:|---:|---|---|
