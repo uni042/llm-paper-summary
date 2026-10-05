@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:48:24+00:00",
-  "record_count": 1131,
+  "updated_at": "2026-10-05T07:51:15+00:00",
+  "record_count": 1134,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17279,6 +17279,54 @@
         "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
       ],
       "title": "Lot Machine: Multimodal Lot Extraction from Auction Catalogs"
+    },
+    "DOI:10.1111/eje.70289": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1111/eje.70289",
+      "identity_tokens": [
+        "DOI:10.1111/eje.70289"
+      ],
+      "reason": "一次要旨は歯科薬理の設問生成におけるmulti-file JSON構成を比較する狭いアプリケーション研究で、サンプルも各条件n=5。一次Wiley全文URLへの取得を試したがWeb openがInternal Errorで本文の方法・結果・限界を確認できず、本文確認によるscope確定ができない。",
+      "first_checked_at": "2026-10-05T07:51:13+00:00",
+      "last_checked_at": "2026-10-05T07:51:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Optimising Large Language Models-Based Automated Question Generation for Dental Pharmacology: A Quantitative Evaluation of a Multi-File JavaScript Object Notation Architecture."
+    },
+    "DOI:10.1007/s10115-026-02867-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10115-026-02867-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10115-026-02867-2"
+      ],
+      "reason": "一次要旨がpacketに含まれず、一次DOI URLへの直接取得も失敗したため主題・LLM inferenceとの関係を確認できない。別の実行可能な一次資料経路が現時点でなく、推測で分類しない。",
+      "first_checked_at": "2026-10-05T07:51:13+00:00",
+      "last_checked_at": "2026-10-05T07:51:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Smart contract vulnerability detection using opcode sequences with variable length"
+    },
+    "arXiv:2608.29581": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29581",
+      "identity_tokens": [
+        "arXiv:2608.29581"
+      ],
+      "reason": "SemSpot proposes semantic-aware spot capacity for LLM-as-a-service and audits 1,535 cases across six agent benchmarks. It analyzes state resume, verified-segment commits and economic filters, but an empirical runtime/platform trace evaluation is explicitly future work; memory/bandwidth overhead may erase savings.",
+      "first_checked_at": "2026-10-05T07:51:15+00:00",
+      "last_checked_at": "2026-10-05T07:51:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+      ],
+      "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model"
     }
   }
 }

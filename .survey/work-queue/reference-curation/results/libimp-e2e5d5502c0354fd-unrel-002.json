@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2e5d5502c0354fd-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.29605",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.29605",
+    "identity_tokens": [
+      "arXiv:2608.29605"
+    ],
+    "reason": "要旨はagent memory managementのhindsight supervisionによる品質改善であり、inferenceコスト削減を評価するものではない。",
+    "first_checked_at": "2026-10-05T07:51:15+00:00",
+    "last_checked_at": "2026-10-05T07:51:15+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Hindsight Memory-PRM: Supervising Memory Management with Auditable Hindsight Credit"
+  },
+  "processed_at": "2026-10-05T07:51:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2e5d5502c03",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5a264c6b4cc78138-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05510",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05510",
+    "identity_tokens": [
+      "arXiv:2609.05510"
+    ],
+    "reason": "要旨は長期開発agentのmemory reliability/harness。推論計算やserving効率の研究ではない。",
+    "first_checked_at": "2026-10-05T07:51:14+00:00",
+    "last_checked_at": "2026-10-05T07:51:14+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Memory as Infrastructure: Reliability Engineering for Persistent Agent Memory in Months-Long LLM-Assisted Development"
+  },
+  "processed_at": "2026-10-05T07:51:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5a264c6b4cc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
