@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:48:42+00:00",
-  "record_count": 987,
+  "updated_at": "2026-10-05T05:51:33+00:00",
+  "record_count": 989,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14985,6 +14985,35 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models"
+    },
+    "arXiv:2610.00232": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00232",
+      "identity_tokens": [
+        "arXiv:2610.00232"
+      ],
+      "reason": "The fixed-state retrieval concept is related to bounded inference memory, but the primary evaluation does not establish a comparable inference-quality/resource benefit; scope fit remains weak.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Constant-Memory Recall: Learned Associations in a Fixed Matrix State"
+    },
+    "DOI:10.1007/s11432-025-4938-9": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-025-4938-9",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-025-4938-9"
+      ],
+      "reason": "The publisher abstract describes a 3D-IGZO CIM/CNM architecture for LM prefill/decoding, reporting 3.45× read frequency, 25.9× area savings versus SRAM CIM, and 1.2–3.0× energy efficiency versus off-chip HBM.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "A heterogeneous CIM/CNM architecture for LMs utilizing speed/density-optimized 3D CAA-IGZO DRAMs"
     }
   }
 }

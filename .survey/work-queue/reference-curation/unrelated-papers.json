@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:48:44+00:00",
-  "record_count": 2994,
+  "updated_at": "2026-10-05T05:51:34+00:00",
+  "record_count": 3012,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -43577,6 +43577,276 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "BiMamba2 Masked Discrete-Unit Prediction for Multilingual Speech Representation for Unsupervised Speech in the Wild Challenge"
+    },
+    "arXiv:2609.25693": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25693",
+      "identity_tokens": [
+        "arXiv:2609.25693"
+      ],
+      "reason": "C2FXNet is an object-detection model for adverse-weather scenes, not an LLM inference contribution.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "C2FXNet: Coarse-to-Fine Scene Expert for Unified Object Detection across Adverse Weather"
+    },
+    "arXiv:2609.25869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25869",
+      "identity_tokens": [
+        "arXiv:2609.25869"
+      ],
+      "reason": "The work concerns GPU execution for block-sparse attention in video diffusion; its target is video generation rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "Decoupling Logical Masks from GPU Execution for Dynamic Block-Sparse Attention"
+    },
+    "arXiv:2609.25881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25881",
+      "identity_tokens": [
+        "arXiv:2609.25881"
+      ],
+      "reason": "The paper addresses information dynamics in virtual try-on image generation; it is outside LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Delving into Asymmetric Information Dynamics for High-Fidelity Virtual Try-On"
+    },
+    "arXiv:2609.25939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25939",
+      "identity_tokens": [
+        "arXiv:2609.25939"
+      ],
+      "reason": "ClusterFewshot improves few-shot optimization workflows; it does not report an LLM inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "ClusterFewshot: Improving Few-shot Optimization for LLMs workflow"
+    },
+    "arXiv:2609.25949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25949",
+      "identity_tokens": [
+        "arXiv:2609.25949"
+      ],
+      "reason": "Flux optimizes optical circuit switch scheduling for LLM training; the stated scope is training infrastructure, not inference serving.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Flux: Optimal Scheduling of Optical Circuit Switches for LLM Training"
+    },
+    "DOI:10.54287/gujsa.1937530": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54287/gujsa.1937530",
+      "identity_tokens": [
+        "DOI:10.54287/gujsa.1937530"
+      ],
+      "reason": "The study compares QLoRA and LoRA fine-tuning performance/efficiency. Its efficiency target is training, which is outside the stated inference scope.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "QLoRA vs. LoRA: An Empirical Study of Performance–Efficiency Trade-offs in Fine-Tuning Mistral‑7B on Instruction‑Following Data"
+    },
+    "arXiv:2609.25538": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25538",
+      "identity_tokens": [
+        "arXiv:2609.25538"
+      ],
+      "reason": "Point Diffusion Mamba targets single-view 3D reconstruction with a diffusion/state-space model, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:51:32+00:00",
+      "last_checked_at": "2026-10-05T05:51:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Point Diffusion Mamba: Unified Diffusion-State-Space Modeling for Single-View 3D Reconstruction under Data Scarcity"
+    },
+    "arXiv:2609.25563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25563",
+      "identity_tokens": [
+        "arXiv:2609.25563"
+      ],
+      "reason": "AkasicMEM is an enterprise agent memory governance system; the abstract does not describe LLM inference-cost or serving optimization.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "AkasicMEM: Governed Enterprise Memory for Agents"
+    },
+    "arXiv:2609.25575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25575",
+      "identity_tokens": [
+        "arXiv:2609.25575"
+      ],
+      "reason": "Direct generator optimization changes training objectives for automated theorem-proving search success at a fixed search budget; it does not reduce LLM inference resources.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Direct Optimization of Generators for Search in Automated Theorem Proving"
+    },
+    "arXiv:2609.25686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25686",
+      "identity_tokens": [
+        "arXiv:2609.25686"
+      ],
+      "reason": "The paper studies how task state affects agent reliability and behavior; no inference-efficiency method or measurement is described.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "How Strongly Should Task State Influence an LLM Agent?"
+    },
+    "arXiv:2610.00238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00238",
+      "identity_tokens": [
+        "arXiv:2610.00238"
+      ],
+      "reason": "CAVE-Mem evaluates experience boundaries for agent-memory search; the abstract describes memory validation quality, not LLM serving or inference resource savings.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "CAVE-Mem: Boundary-Aware Experience Validation for Memory Search"
+    },
+    "arXiv:2610.00243": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00243",
+      "identity_tokens": [
+        "arXiv:2610.00243"
+      ],
+      "reason": "The study predicts plasma temperature profiles from diagnostic and spectral data; it is not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Fusing Global Diagnostic Signals and Spectral Data for Electron and Ion Temperature Profile Prediction on EAST via Attention-based Neural Networks"
+    },
+    "DOI:10.1007/s44443-026-01285-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01285-2",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01285-2"
+      ],
+      "reason": "CIPformer is an intra-day solar photovoltaic forecasting architecture; no LLM inference/serving contribution is described.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "CIPformer: an intra-day PV power forecasting model integrating adaptive time-series decomposition and channel-interaction-aware relational modeling"
+    },
+    "DOI:10.1080/13658816.2026.2733533": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/13658816.2026.2733533",
+      "identity_tokens": [
+        "DOI:10.1080/13658816.2026.2733533"
+      ],
+      "reason": "The work balances retrieval and recommendation for toponym origins in gazetteers, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Balancing factoid retrieval and candidate recommendation to identify toponym origins in gazetteers"
+    },
+    "DOI:10.3389/fmedt.2026.1918432": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fmedt.2026.1918432",
+      "identity_tokens": [
+        "DOI:10.3389/fmedt.2026.1918432"
+      ],
+      "reason": "The paper analyzes reliability and failure modes in ultrasound image segmentation; it does not address LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Beyond segmentation accuracy: understanding model reliability and failure modes in ultrasound image analysis"
+    },
+    "DOI:10.3389/fpls.2026.1953890": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2026.1953890",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2026.1953890"
+      ],
+      "reason": "The lightweight model targets pineapple segmentation and ripeness classification; it is a domain vision model rather than LLM inference optimization.",
+      "first_checked_at": "2026-10-05T05:51:33+00:00",
+      "last_checked_at": "2026-10-05T05:51:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md"
+      ],
+      "title": "PineRipeSeg: a lightweight texture-edge-aware network for pineapple instance segmentation and ripeness classification in field environments"
+    },
+    "DOI:10.3389/frai.2026.1903497": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1903497",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1903497"
+      ],
+      "reason": "RC-Mamba is a probabilistic time-series forecasting architecture; its abstract does not describe LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T05:51:34+00:00",
+      "last_checked_at": "2026-10-05T05:51:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "RC-Mamba: regime-conditioned selective state-space models for probabilistic time-series forecasting"
+    },
+    "DOI:10.38124/ijisrt/26sep333": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.38124/ijisrt/26sep333",
+      "identity_tokens": [
+        "DOI:10.38124/ijisrt/26sep333"
+      ],
+      "reason": "The paper evaluates long-context reasoning quality across Transformer and state-space LLM architectures; it does not propose or measure an inference-efficiency intervention.",
+      "first_checked_at": "2026-10-05T05:51:34+00:00",
+      "last_checked_at": "2026-10-05T05:51:34+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Comprehensive Evaluation of Long-Context Reasoning in Transformer and State-Space LLM Architectures"
     }
   }
 }

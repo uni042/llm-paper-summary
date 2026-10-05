@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7edfe22d4e41a586-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.54287/gujsa.1937530",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.54287/gujsa.1937530",
+    "identity_tokens": [
+      "DOI:10.54287/gujsa.1937530"
+    ],
+    "reason": "The study compares QLoRA and LoRA fine-tuning performance/efficiency. Its efficiency target is training, which is outside the stated inference scope.",
+    "first_checked_at": "2026-10-05T05:51:32+00:00",
+    "last_checked_at": "2026-10-05T05:51:32+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "QLoRA vs. LoRA: An Empirical Study of Performance–Efficiency Trade-offs in Fine-Tuning Mistral‑7B on Instruction‑Following Data"
+  },
+  "processed_at": "2026-10-05T05:51:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7edfe22d4e41",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
