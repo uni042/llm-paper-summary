@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-76a9a1e6981abd6d-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.28179",
+  "reason": "GPU robotics lacks the reusable numerical infrastructure of mature CPU stacks, instead relying on compiler frameworks that introduce overhead or repeatedly reimplementing numerical libraries. To address this, we introduce GLASS (GPU Linear Algebra Simple Subroutines), a header-only CUDA C++ library that provides thread-, warp-, block-, and NVIDIA-backed implementations of robotics-scale linear algebra and geometric computations under one composable device API. GLASS treats implementation choice,",
+  "title": "GLASS: Architecture-Tuned, Composable, Device-Side Linear Algebra for Edge Robotics and Beyond",
+  "identity_tokens": [
+    "arXiv:2609.28179"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+    "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+    "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a9a1e6981a",
+  "source_precheck_request_id": null
+}
