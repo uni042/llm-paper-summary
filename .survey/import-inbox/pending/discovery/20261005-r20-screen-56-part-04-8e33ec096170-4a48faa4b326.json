@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-56-part-04-8e33ec096170",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28405",
+      "identity_tokens": [
+        "arXiv:2606.28405"
+      ],
+      "title": "Enhancing Layer Interaction Using Key-Correlated Layer Attention",
+      "reason": "Key-correlated layer attention to improve model interactions, no LLM efficiency/runtime evidence.",
+      "source_url": "https://arxiv.org/abs/2606.28405",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s40831-026-01567-z",
+      "identity_tokens": [
+        "DOI:10.1007/s40831-026-01567-z"
+      ],
+      "title": "AI-Driven Smart Manufacturing in the Aluminum Industry: Current Advances and Future Directions",
+      "reason": "Primary Springer abstract reviews AI in aluminum processing/production and industrial anomaly detection/quality prediction, not LLM inference/serving.",
+      "source_url": "https://doi.org/10.1007/s40831-026-01567-z",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-59638-w",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-59638-w"
+      ],
+      "title": "Analyzing the impact of KV representation compression on explainability in lightweight transformer-based sentiment analysis",
+      "reason": "KV representation compression for lightweight transformer sentiment-analysis explainability, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1038/s41598-026-59638-w",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.36079/lamintang.ijai-01301.1050",
+      "identity_tokens": [
+        "DOI:10.36079/lamintang.ijai-01301.1050"
+      ],
+      "title": "Capability-Specific Degradation Patterns in Quantized Small Language Models",
+      "reason": "The publisher exposed the primary abstract, but the PDF link failed with “Cache miss” at https://lamintang.org/journal/index.php/ijai/article/view/1050/666; no secondary full text was used.",
+      "source_url": "https://doi.org/10.36079/lamintang.ijai-01301.1050",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24119",
+      "identity_tokens": [
+        "arXiv:2606.24119"
+      ],
+      "title": "When Top-1 Fails: Calibrating LoRA Monitors for Masked Diffusion LMs",
+      "reason": "LoRA monitors for masked-diffusion fine-tuning/training, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2606.24119",
+      "first_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "last_checked_at": "2026-10-05T10:13:12.795837+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    }
+  ]
+}
