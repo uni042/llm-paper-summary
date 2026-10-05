@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r19-screen-01-part-03-0d1665097623",
+  "reference_main_sha": "b5a8991654bcdfba2aac22313777649e1ca9b286",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.06346",
+      "identity_tokens": [
+        "arXiv:2608.06346"
+      ],
+      "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
+      "reason": "履歴圧縮は行うが目的は失敗診断であり、測定token数は単純prompt比約40倍。LLM推論の効率化という適合は弱い。",
+      "source_url": "https://arxiv.org/abs/2608.06346",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27267",
+      "identity_tokens": [
+        "arXiv:2607.27267"
+      ],
+      "title": "FAVA: Formal Authorization for Verified Agents with Evidence-Backed Permission Graphs",
+      "reason": "Large language model (LLM) agents autonomously interleave semantic reasoning with complex system operations. In these dynamic environments, static tool-level permissions are fundamentally insufficient; safe authorization is highly context-dependent and heavily reliant on evolving runtime states and data flows. We present FAVA (Formal Authorization for Verified Agents), a permission-carrying authorization framework for agent execution. FAVA utilizes an LLM-guided Permission In",
+      "source_url": "https://arxiv.org/abs/2607.27267",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05198",
+      "identity_tokens": [
+        "arXiv:2609.05198"
+      ],
+      "title": "What Matters in On-Policy Distillation? A Perspective on Data Efficiency and Data Selection",
+      "reason": "On-Policy Distillation (OPD) has emerged as a widely adopted post-training paradigm for enhancing large language models in reasoning domains. However, the data-centric mechanisms in OPD remain relatively underexplored. This paper presents an empirical study of data efficiency and data selection in OPD. We begin by investigating an extreme setting: training OPD on only one example, namely 1-shot OPD. Surprisingly, we find that 1-shot OPD is consistently effective across all sa",
+      "source_url": "https://arxiv.org/abs/2609.05198",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23283",
+      "identity_tokens": [
+        "arXiv:2608.23283"
+      ],
+      "title": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work",
+      "reason": "General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state maintenance, failure recovery, and verifiable delivery. We call this \\emph{working capability}: sustained, verifiable progress toward a real-world objective. Apodex 1.1 develops this capability along two complementary dimensions. \\emph{Environment Scaling} expands the diversity and v",
+      "source_url": "https://arxiv.org/abs/2608.23283",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11612",
+      "identity_tokens": [
+        "arXiv:2608.11612"
+      ],
+      "title": "Dion3: Full-Stack Orthogonal Updates",
+      "reason": "The Muon optimizer incurs a significant overhead cost due to its cubic-time Newton-Schulz orthogonalization step. When weights are sharded, communication overhead compounds this computational cost, eroding the benefits of Muon in many settings. We present Dion3, a revision of Muon that targets this overhead at every level of the stack. Our Gram Newton-Schulz algorithm reduces the FLOP cost of orthogonalization, our CuteDSL kernels accelerate it by exploiting symmetry, and our",
+      "source_url": "https://arxiv.org/abs/2608.11612",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
