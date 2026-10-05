@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-08-part-06-e0bd829c920c",
+  "reference_main_sha": "6768a2bc0c3a0c25d31da0568ec192c4f389513d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12754",
+      "identity_tokens": [
+        "arXiv:2609.12754"
+      ],
+      "title": "Learning the Lake: Reliable Experience for Adaptive Data Product Discovery",
+      "reason": "一次要旨: Data-product discovery searches a full lake even when workloads revisit related products and regions. Repetition permits contracted search, but similarity cannot justify a route because one omitted asset invalidates a conjunctive product. We study when serving experience can safely reduce this work. Evolving Discovery Memory records source-labelled query--product--region evidence above a fixed regional index. SafeLak",
+      "source_url": "https://arxiv.org/abs/2609.12754",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12815",
+      "identity_tokens": [
+        "arXiv:2609.12815"
+      ],
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "reason": "一次要旨: We present BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25$^\\circ$ global resolution able to accurately quantify both aleatoric and epistemic uncertainty. To overcome the associated computational bottlenecks, we devise an orthogonal 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, enabling us to fully lev",
+      "source_url": "https://arxiv.org/abs/2609.12815",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12851",
+      "identity_tokens": [
+        "arXiv:2609.12851"
+      ],
+      "title": "MedRoundsQA: A Persona and Difficulty Aware Evaluation for Multi-Turn Medical Consultations",
+      "reason": "一次要旨: Medical benchmarks are dominated by single-turn, multiple-choice clinical cases that poorly reflect real consultations. Practically, clinicians elicit evidence interactively and patient communication varies widely. We introduce MedRoundsQA, a multi-turn diagnostic benchmark derived from 1,387 board-exam cases across 17 specialties. Each case is converted into a structured 24-slot clinical record, and then instantiate",
+      "source_url": "https://arxiv.org/abs/2609.12851",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12855",
+      "identity_tokens": [
+        "arXiv:2609.12855"
+      ],
+      "title": "AlignDPO: Preference-Gated Alignment for Reducing Hallucination in Decoder-Only TTS",
+      "reason": "一次要旨: Decoder-only text-to-speech (TTS) models scale efficiently but remain prone to content hallucinations that arise from weak text-speech alignment during autoregressive generation. We find that robustness is governed by a non-monotone relation to the sharpness of the alignment-bearing attention heads: a moderate degree is best, whereas over-sharpening is no better than the unaligned backbone and even less robust. Guide",
+      "source_url": "https://arxiv.org/abs/2609.12855",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.12896",
+      "identity_tokens": [
+        "arXiv:2609.12896"
+      ],
+      "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+      "reason": "single-adapter storage/routing overhead is an inference-relevant motivation, yet its evidence here is mainly trained task performance and interaction counts, not serving efficiency; weak fit goes to borderline.",
+      "source_url": "https://arxiv.org/abs/2609.12896",
+      "first_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "last_checked_at": "2026-10-05T05:38:20.107455+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md"
+      ]
+    }
+  ]
+}
