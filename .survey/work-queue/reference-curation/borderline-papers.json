@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:22:52+00:00",
-  "record_count": 957,
+  "updated_at": "2026-10-05T05:25:34+00:00",
+  "record_count": 958,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14517,6 +14517,20 @@
         "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
       ],
       "title": "Energy-Efficient Retrieval-Augmented Generation: A Systematic Review of Retrieval, Reranking, Caching, and Context-Management Strategies"
+    },
+    "arXiv:2609.32472": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32472",
+      "identity_tokens": [
+        "arXiv:2609.32472"
+      ],
+      "reason": "Agent inference loopのsearch/context支出を下げる可能性はあるが、効果はretrieval round数の限定評価で、直接のinference latency/cost計測や汎用serving最適化は確認できずscope fitが弱い。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "AdaTutoRank: Learning to Rerank Document Sets via Adaptive Tutoring Optimization for RAG and Deep Research"
     }
   }
 }

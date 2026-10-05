@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:22:53+00:00",
-  "record_count": 2853,
+  "updated_at": "2026-10-05T05:25:35+00:00",
+  "record_count": 2872,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -41498,6 +41498,287 @@
         "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
       ],
       "title": "What Should We Freeze? Guarded Freezing: Connectivity Shapes the Fine-Tuning of Pretrained Models"
+    },
+    "arXiv:2609.32615": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32615",
+      "identity_tokens": [
+        "arXiv:2609.32615"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Stabilizing the Dynamic Low-Rank Training"
+    },
+    "arXiv:2609.32628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32628",
+      "identity_tokens": [
+        "arXiv:2609.32628"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "DraftAttention2: Fast Video Diffusion with Low-Resolution-Guided Mixed-Precision Attention"
+    },
+    "arXiv:2609.32635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32635",
+      "identity_tokens": [
+        "arXiv:2609.32635"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Trust the Brand, Lose Control: How Identity Hijacks LLM Agent Orchestration"
+    },
+    "arXiv:2609.32642": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32642",
+      "identity_tokens": [
+        "arXiv:2609.32642"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Ask Without Telling: Local SLMs Consult Cloud LLMs Without Revealing Task Intent"
+    },
+    "arXiv:2609.32658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32658",
+      "identity_tokens": [
+        "arXiv:2609.32658"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Contract Memory Compiler: Resolve, Then Traverse"
+    },
+    "arXiv:2609.32511": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32511",
+      "identity_tokens": [
+        "arXiv:2609.32511"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Learning from Others, Acting for You: Cross-User Memory Sharing for LLM Agents"
+    },
+    "arXiv:2609.32518": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32518",
+      "identity_tokens": [
+        "arXiv:2609.32518"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "UnStep: Training-Free Acceleration of Causal Video Diffusion with Fewer Steps Than Distillation"
+    },
+    "arXiv:2609.32520": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32520",
+      "identity_tokens": [
+        "arXiv:2609.32520"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "When Users Change Their Minds: Measuring and Repairing Intent Drift in LLM Agents"
+    },
+    "arXiv:2609.32522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32522",
+      "identity_tokens": [
+        "arXiv:2609.32522"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Beyond Dyadic Memory: Interaction-Aware Multimodal Memory with Adaptive Agentic Retrieval for Multi-Party Spoken Conversations"
+    },
+    "arXiv:2609.32525": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32525",
+      "identity_tokens": [
+        "arXiv:2609.32525"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:33+00:00",
+      "last_checked_at": "2026-10-05T05:25:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Does Transolver really need a Transformer?"
+    },
+    "arXiv:2609.32448": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32448",
+      "identity_tokens": [
+        "arXiv:2609.32448"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "ForkLeft: Entropy-First Rollouts for Prefix-Aligned Autoregressive-to-Diffusion Distillation"
+    },
+    "arXiv:2609.32453": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32453",
+      "identity_tokens": [
+        "arXiv:2609.32453"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "DRAM: Delta-rule Recurrent Associative Memory for Robot Manipulation Policies"
+    },
+    "arXiv:2609.32457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32457",
+      "identity_tokens": [
+        "arXiv:2609.32457"
+      ],
+      "reason": "transformer depth内でrepresentationを再訪・更新する機構の研究で、要旨は追加計算/表現品質を主題とし推論コスト削減を示していない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Write Back the $\\Delta$: Revisiting the Same Tokens with Fresh Representations"
+    },
+    "arXiv:2609.32493": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32493",
+      "identity_tokens": [
+        "arXiv:2609.32493"
+      ],
+      "reason": "一次要旨の主題はLLM/モデルのfine-tuning、post-training、distillation、RLまたはtraining-time quantizationであり、推論時効率化を評価対象としていない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "SoFT: Soft Targets for Generalizable LLM Fine-Tuning"
+    },
+    "arXiv:2609.32534": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32534",
+      "identity_tokens": [
+        "arXiv:2609.32534"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "DepthBench: Measuring How Residual Connections Enable More Computational Depth"
+    },
+    "arXiv:2609.32537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32537",
+      "identity_tokens": [
+        "arXiv:2609.32537"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:34+00:00",
+      "last_checked_at": "2026-10-05T05:25:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "RIPE-MambaSpike: Resolution-Independent Spiking-State-Space Interfaces for Parameter-Efficient Event-Based Vision"
+    },
+    "arXiv:2609.32584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32584",
+      "identity_tokens": [
+        "arXiv:2609.32584"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:35+00:00",
+      "last_checked_at": "2026-10-05T05:25:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EMIR$^2$: Evolution-Aware Memory with Intent-Guided Multi-Round Retrieval"
+    },
+    "arXiv:2609.32590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32590",
+      "identity_tokens": [
+        "arXiv:2609.32590"
+      ],
+      "reason": "一次要旨の主題はagent reliability/benchmark infrastructure、memory quality/management、intent/safety/privacy、またはattention semanticsで、推論資源・serving efficiency改善の具体的主張がない。",
+      "first_checked_at": "2026-10-05T05:25:35+00:00",
+      "last_checked_at": "2026-10-05T05:25:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Retrieved but Not Delivered: Multimodal Memory Delivery for Long-Term Agents"
+    },
+    "arXiv:2609.32591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32591",
+      "identity_tokens": [
+        "arXiv:2609.32591"
+      ],
+      "reason": "対象モデル/課題はgraph ML、pathology VLM、VLA/video diffusion、time-series、robotics、vision、MPC、またはimage super-resolutionであり、LLM推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T05:25:35+00:00",
+      "last_checked_at": "2026-10-05T05:25:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Think Fast, Plan Selectively: Adaptive Deliberation for Efficient Data-Driven MPC"
     }
   }
 }
