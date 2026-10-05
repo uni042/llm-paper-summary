@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:44:33+00:00",
-  "record_count": 893,
+  "updated_at": "2026-10-05T04:46:57+00:00",
+  "record_count": 895,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13354,6 +13354,34 @@
         "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
       ],
       "title": "Retrieval Capacity of Self-Attention Under Competition"
+    },
+    "arXiv:2609.38106": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38106",
+      "identity_tokens": [
+        "arXiv:2609.38106"
+      ],
+      "reason": "This is a fairness evaluation of pruning rather than a new inference-efficiency technique, and the disparity effect varies by dataset/language. Its relevance is secondary to the survey’s mechanism focus.",
+      "first_checked_at": "2026-10-05T04:46:57+00:00",
+      "last_checked_at": "2026-10-05T04:46:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs"
+    },
+    "arXiv:2609.38119": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38119",
+      "identity_tokens": [
+        "arXiv:2609.38119"
+      ],
+      "reason": "The paper does not report token/latency/throughput savings from the bounded memory, and its scope is long-video agent orchestration rather than a general LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-05T04:46:57+00:00",
+      "last_checked_at": "2026-10-05T04:46:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "VideoLoop: Looped Working Memory Against Semantic Thrashing in Long-Form Video Agents"
     }
   }
 }
