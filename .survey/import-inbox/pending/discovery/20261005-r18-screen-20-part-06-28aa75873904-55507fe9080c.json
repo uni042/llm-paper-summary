@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-20-part-06-28aa75873904",
+  "reference_main_sha": "c2906cd5d56fba2e688066c8ce9467ae8f42d253",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24411",
+      "identity_tokens": [
+        "arXiv:2609.24411"
+      ],
+      "title": "Zeva-Ego: Egocentric Mid-Training with In-Context Causal Learning for Robot Manipulation",
+      "reason": "Egocentric video offers a scalable source of physical interaction experience, yet translating it into robot-executable knowledge and enabling continual adaptation remain challenging. We introduce Zeva-Ego, a unified framework that learns physical priors from human experience and evolves through robot interaction. An Action-Centric Encoder (ACE) converts egocentric visual transitions into action-centered supervision for VLA mid-training, while In-Context Causal Learning (ICCL) enables parameter-free adaptation from action-effect feedback at deployment. Scaling Ego data to 10K hours improves RoboTwin success from 63.8% to 75.3%, matching 2K hours of robot demonstrations (74.7%), corresponding to an empirical data ratio of roughly 4-5:1. With accumulated interaction experience, ICCL further improves success from 58% to 89% within four attempts without parameter updates. These results demonstrate a scalable path toward embodied intelligence that learns from human experience and continuously improves through its own interaction.",
+      "source_url": "https://arxiv.org/abs/2609.24411",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24440",
+      "identity_tokens": [
+        "arXiv:2609.24440"
+      ],
+      "title": "Comparing Latent Concept Formation in State Space Models and Transformers via Sparse Autoencoders",
+      "reason": "The quadratic scaling of Transformer self-attention has driven the adoption of sub-quadratic Selective State Space Models (SSMs) like Mamba, which compress past context into a fixed-size recurrent hidden state. This strict informational bottleneck raises a foundational question for mechanistic interpretability: do SSMs and Transformers learn fundamentally distinct latent representations? In this work, we employ Sparse Autoencoders (SAEs) to conduct a large-scale, feature-level correspondence analysis between Mamba-130m and Pythia-70m over a 10-million token corpus. Contrary to hypotheses predicting widespread architectural divergence, we find no evidence of systematic representational divergence between architectures: across the observed Jaccard distribution, 99.98% of Mamba features cluster toward the upper alignment boundary, providing preliminary feature-level support for the Universality Hypothesis. We further identify and qualitatively characterize this microscopic fraction (0.02%) of diverging features, finding patterns consistent with the hypothesis that the recurrent bottleneck selectively limits the parsing of rigid syntax rather than broad semantic ontology. We demonstrate that while Pythia's unconstrained attention permits the monosemantic decomposition of distinct formatting edge-cases, Mamba is forced to compress unrelated syntactical anomalies into polysemantic\"junk drawer\"neurons to preserve state capacity. Collectively, these results suggest that architectural routing mechanisms may have negligible impact on core semantic understanding, with representational divergence confined to extreme structural margins.",
+      "source_url": "https://arxiv.org/abs/2609.24440",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24494",
+      "identity_tokens": [
+        "arXiv:2609.24494"
+      ],
+      "title": "CMAMBADEPTH: Self-supervised Monocular Depth Estimation with Channel Mamba and Hybrid Attention",
+      "reason": "Accurate monocular depth estimation serves as a core enabler for single camera scene understanding. However, existing self-supervised monocular depth estimation methods generally suffer from the bottleneck of inefficient cross-scale information interaction and difficulty in balancing local and global spatial modeling. In this paper, we propose CMambaDepth, a self-supervised framework that achieves efficient multi-scale feature fusion and fine-grained contextual modeling via channel-wise selective state propagation. Specifically, Bidirectional Channel Mamba (Bi-CMamba) aligns encoder features across scales and enables bidirectional information exchange among ordered scale groups. Unidirectional Channel Mamba (Uni-CMamba) progressively aggregates decoder features and retains fine-grained scale groups through a group selection mechanism for subsequent fusion. Furthermore, a Hybrid Attention Module (HAM) is introduced to combine large-kernel local context and Manhattan self-attention for complementary spatial modeling. Experimental results demonstrate that our method achieves highly competitive performance. Specifically, our model achieves an AbsRel of 0.094 and an RMSE of 4.156 on KITTI, and an AbsRel of 0.140 on DDAD. In the zero-shot cross-dataset generalization test on NYUv2, it attains an AbsRel of 0.232, outperforming the baseline RA-Depth by 7.2%.",
+      "source_url": "https://arxiv.org/abs/2609.24494",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24635",
+      "identity_tokens": [
+        "arXiv:2609.24635"
+      ],
+      "title": "Written as a Record, Read as an Address: What a Forward Pass Leaves in an Operation's KV Cache",
+      "reason": "When a language model reads an operation such as\"Swap the contents of Box F and Box B\", its forward pass writes keys and values for those tokens into the KV cache. Prior work on entity tracking establishes what models use: bindings are resolved at query time rather than stored as explicit latent state. We ask what they write at the operation span and how it is accessed. We split a forward pass into a frozen writer and a reader: the writer's cache is recomputed without gradients, while the reader sees only the instruction and operation tokens, with all state descriptions hidden, and is trained in isolation. Anything the reader recovers was therefore already present in the unmodified cache. On a synthetic boxes task, a base reader recovers $\\leq 0.06$ of queried bindings against $0.75$--$1.00$ after training, and recoverability tracks the operation's read/write footprint. We find two modes of access. Across Llama-3.1-8B and Mistral-7B, operation-span transplants causally redirect which visible state is read even when the two worlds hold identical values, revealing a routing record. Isolation training preserves routing and adds direct access to the payload, the value the operation read, from the single operand-name token in a narrow mid-depth band (layers 12--15 of 32 in Llama-3.1-8B, 14--17 in Mistral-7B) --- the same site that holds the routing record. The same recipe extends to further operations, ToMi and GSM8K, but is bounded by training coverage and costs open-book accuracy. Operation tokens thus leave localized, causally recoverable records that support both routing and direct payload access, though the model that writes them reads mainly the address they carry and not the value.",
+      "source_url": "https://arxiv.org/abs/2609.24635",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24657",
+      "identity_tokens": [
+        "arXiv:2609.24657"
+      ],
+      "title": "Circuit Hypernetworks for Quantum-Augmented Diffusion Language Models",
+      "reason": "Language models can be adapted by changing the computations applied to individual tokens. Quantum circuits offer one such approach, but evaluating wider circuits inside a large model can be computationally demanding. Here we introduce HyperQ, which adds token-conditioned quantum residual branches to a frozen masked-diffusion language model. A quantum residual branch is a module in each transformer block that reads a token's hidden state, emits the coordinates of that token's circuit, executes it, and adds the measured values back through a residual connection. The backbone remains frozen, and only the added branches are trained. Within each branch, a lightweight circuit hypernetwork emits token-specific rotation angles, coupling strengths, and measurement axes in a shared sparse circuit structure. The required expectation values have an exact classical expression whose evaluation cost grows linearly with the qubit count, enabling circuits from 16 to 64 qubits to be trained within a 1.1-billion-parameter backbone. Across downstream benchmarks, increasing circuit width raises the average score from 47.65 to 54.30. At 64 qubits, HyperQ exceeds the backbone and its low-rank-adapted counterpart by 4.71 and 3.67 points, respectively. HyperQ is fine-tuned on 20,000 prompt-response pairs, compared with 200,000 for the classical baselines. These findings support token-conditioned circuit emission as a tractable architectural approach to quantum-augmented language modelling.",
+      "source_url": "https://arxiv.org/abs/2609.24657",
+      "first_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "last_checked_at": "2026-10-05T05:00:34.561127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    }
+  ]
+}
