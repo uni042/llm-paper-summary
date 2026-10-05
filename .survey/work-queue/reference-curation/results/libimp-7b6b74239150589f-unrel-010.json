@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b6b74239150589f-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1809.10853",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1809.10853",
+    "identity_tokens": [
+      "arXiv:1809.10853"
+    ],
+    "reason": "頻度に応じた可変容量embeddingでlanguage modelの入力表現を改善し、主にtraining速度とperplexityを評価するarchitecture研究。推論runtime・serving最適化の直接評価がない。",
+    "first_checked_at": "2026-10-05T15:48:52+00:00",
+    "last_checked_at": "2026-10-05T22:23:03+00:00",
+    "linked_from": [],
+    "title": "Adaptive Input Representations for Neural Language Modeling"
+  },
+  "processed_at": "2026-10-05T22:23:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b6b74239150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

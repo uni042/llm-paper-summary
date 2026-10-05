@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T22:17:59+00:00",
-  "record_count": 2077,
+  "updated_at": "2026-10-05T22:23:08+00:00",
+  "record_count": 2087,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -3767,20 +3767,6 @@
       ],
       "title": "Small Language Models are the Future of Agentic AI"
     },
-    "arXiv:2502.12110": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.12110",
-      "identity_tokens": [
-        "arXiv:2502.12110"
-      ],
-      "reason": "主貢献はエージェント長期記憶の構造化・リンク生成・検索品質改善であり、現行サーベイの中心であるLLM推論実行効率、サービング、メモリ階層、通信、量子化、投機的復号などへの直接的なシステム効率寄与が弱い。",
-      "first_checked_at": "2026-09-27T17:15:51+00:00",
-      "last_checked_at": "2026-09-27T17:15:51+00:00",
-      "linked_from": [
-        "/LLM-paper-summary-library-first/research/2502.12110-a-mem-agentic-memory-for-llm-agents.md"
-      ],
-      "title": "A-MEM: Agentic Memory for LLM Agents"
-    },
     "arXiv:2402.12656": {
       "classification": "borderline",
       "canonical_id": "arXiv:2402.12656",
@@ -6651,15 +6637,16 @@
         "DOI:10.48550/arxiv.2303.06349",
         "arXiv:2303.06349"
       ],
-      "reason": "The paper establishes efficient linear recurrent inference for long sequences, but its experiments are on Long Range Arena tasks rather than language modeling or LLM generation.",
+      "reason": "線形recurrenceを安定化したLRU等で長系列modelの計算効率を改善するarchitecture研究。長文脈効率には関連するが、LLM inference serving/runtimeを最終適用先としたsystem評価ではないためborderline。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T22:22:59+00:00",
       "linked_from": [
         "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
         "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
     },
     "arXiv:1801.10198": {
@@ -31357,19 +31344,6 @@
       "borderline_recheck_count": 0,
       "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models"
     },
-    "DOI:10.1109/sc.2008.5214359": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/sc.2008.5214359",
-      "identity_tokens": [
-        "DOI:10.1109/sc.2008.5214359"
-      ],
-      "reason": "GPUのGEMM/LU/QR/Choleskyをblocking、CPU-GPU heterogeneity、memory-system測定で最適化し、vendor GEMM比最大60%高速化などを示す。LLM kernelの基礎演算最適化に直結するが、論文自体は汎用dense linear algebraでLLM/Transformer推論評価がないためborderline。",
-      "first_checked_at": "2026-10-05T15:55:18+00:00",
-      "last_checked_at": "2026-10-05T16:29:33+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Benchmarking GPUs to tune dense linear algebra"
-    },
     "DOI:10.1145/3447993.3483278": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3447993.3483278",
@@ -31528,9 +31502,9 @@
       "identity_tokens": [
         "arXiv:1902.06822"
       ],
-      "reason": "重み・活性化をMMSE基準でINT4へ量子化し、再学習なしで制約ハードウェアへ展開する推論向け量子化研究。メモリ帯域・計算・電力削減に直結するが、本文評価はImageNet上のCNN等の一般DNNでありLLM/Transformer推論を対象としないため境界扱い。",
+      "reason": "重み・活性化のMMSE量子化、hardware-aware partitioning、複数低精度tensorでINT4推論を実現し、limited-resource hardwareへのdeploymentを直接狙う。ただし評価対象は一般DNNでLLM/Transformer専用ではないためborderline。",
       "first_checked_at": "2026-10-05T16:12:48+00:00",
-      "last_checked_at": "2026-10-05T16:19:08+00:00",
+      "last_checked_at": "2026-10-05T22:23:01+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Low-bit Quantization of Neural Networks for Efficient Inference"
@@ -32095,6 +32069,163 @@
       ],
       "borderline_recheck_count": 0,
       "title": "LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models"
+    },
+    "arXiv:2511.21631": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21631",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.21631",
+        "arXiv:2511.21631"
+      ],
+      "reason": "Qwen3-VLはdense 2B/4B/8B/32BとMoE 30B-A3B/235B-A22Bを含み、256Kのマルチモーダル長文脈とlatency-quality trade-offを明示するため推論効率との接点はある。しかし主要貢献はinterleaved-MRoPE、DeepStack、text-based time alignmentによるVLM能力・品質向上で、runtime、serving、memory階層やkernel最適化そのものを主題としないためborderline。",
+      "first_checked_at": "2026-10-05T22:22:59+00:00",
+      "last_checked_at": "2026-10-05T22:22:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Qwen3-VL Technical Report"
+    },
+    "arXiv:2510.00615": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.00615",
+      "identity_tokens": [
+        "arXiv:2510.00615"
+      ],
+      "reason": "agentの観測・履歴を自然言語で圧縮してpeak tokenを26–54%削減するが、追加compressorによりwall-clock latencyが増える条件もある。agent memory効率には関連するがLLM runtime/serving system最適化が主目的ではないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:01+00:00",
+      "last_checked_at": "2026-10-05T22:23:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ACON: Optimizing Context Compression for Long-horizon LLM Agents"
+    },
+    "arXiv:2507.19457": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.19457",
+      "identity_tokens": [
+        "arXiv:2507.19457"
+      ],
+      "reason": "自然言語reflectionとPareto探索でprompt/workflowを最適化し、少ないrolloutで品質を上げる。推論時searchへの応用と推論費用低減に接点はあるが、主要貢献はprompt optimizerでserving/runtime systemではないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:02+00:00",
+      "last_checked_at": "2026-10-05T22:23:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning"
+    },
+    "DOI:10.1145/2939672.2945397": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "reason": "CNTKはcomputation graph、multi-GPU/server parallelism、memory sharing、recurrent-loop inference/executionを含む高性能DL frameworkで推論runtimeとの接点がある。ただしLLM/Transformer以前の汎用DNN frameworkで、現行LLM推論を直接評価しないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:04+00:00",
+      "last_checked_at": "2026-10-05T22:23:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
+    },
+    "arXiv:2410.10762": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10762",
+      "identity_tokens": [
+        "arXiv:2410.10762"
+      ],
+      "reason": "LLM呼出しnodeからなるworkflowをMCTSで自動探索し、小型modelでGPT-4oを一部task上4.55%のinference dollar costで上回る。agentic inference costに関連するが、主要貢献はworkflow generation/optimizationでserving runtimeではないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:04+00:00",
+      "last_checked_at": "2026-10-05T22:23:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AFlow: Automating Agentic Workflow Generation"
+    },
+    "arXiv:1712.05889": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1712.05889",
+      "identity_tokens": [
+        "arXiv:1712.05889"
+      ],
+      "reason": "Rayはtask/actor抽象と分散schedulerを統合し、強化学習など動的AI workloadを支える汎用分散frameworkである。後年LLM serving基盤の土台にもなるが、本論文自体の最終評価はLLM推論systemではないため現行サーベイではborderline。",
+      "first_checked_at": "2026-10-05T22:23:05+00:00",
+      "last_checked_at": "2026-10-05T22:23:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Ray: A Distributed Framework for Emerging AI Applications"
+    },
+    "arXiv:2409.02060": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.02060",
+      "identity_tokens": [
+        "arXiv:2409.02060"
+      ],
+      "reason": "open MoEのmodel/training recipe・分析が中心で、推論時expert配置・通信・offloadのsystem最適化を主貢献としない。",
+      "first_checked_at": "2026-10-05T22:23:06+00:00",
+      "last_checked_at": "2026-10-05T22:23:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OLMoE: Open Mixture-of-Experts Language Models"
+    },
+    "arXiv:2501.00663": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.00663",
+      "identity_tokens": [
+        "arXiv:2501.00663"
+      ],
+      "reason": "test-time memory moduleを持つarchitectureで長文脈推論に関係するが、主目的は記憶能力とモデルarchitectureで、推論system効率の最適化ではない。",
+      "first_checked_at": "2026-10-05T22:23:06+00:00",
+      "last_checked_at": "2026-10-05T22:23:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Titans: Learning to Memorize at Test Time"
+    },
+    "arXiv:2502.12110": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12110",
+      "identity_tokens": [
+        "arXiv:2502.12110"
+      ],
+      "reason": "Zettelkasten型のdynamic indexing/linkingとmemory evolutionでagentの外部記憶を整理する。推論時memory retrievalには関係するが、主要評価はagent task性能で、serving latency/throughput/memory footprintのsystem最適化を主目的としないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:07+00:00",
+      "last_checked_at": "2026-10-05T22:23:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A-MEM: Agentic Memory for LLM Agents"
+    },
+    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "reason": "CPU・memory・storage等を分離pool化するdistributed OSで、LLMのresource disaggregation/offloadの基礎に関連するが、論文自体は汎用OSでLLM/Transformer推論を評価しないためborderline。",
+      "first_checked_at": "2026-10-05T22:23:08+00:00",
+      "last_checked_at": "2026-10-05T22:23:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+    },
+    "arXiv:2410.00037": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.00037",
+      "identity_tokens": [
+        "arXiv:2410.00037"
+      ],
+      "reason": "低遅延full-duplex音声対話を実現するarchitectureだが、主貢献はspeech-text foundation model設計であり汎用LLM推論system最適化ではない。",
+      "first_checked_at": "2026-10-05T22:23:08+00:00",
+      "last_checked_at": "2026-10-05T22:23:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Moshi: a speech-text foundation model for real-time dialogue"
+    },
+    "arXiv:2005.08025": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.08025",
+      "identity_tokens": [
+        "arXiv:2005.08025"
+      ],
+      "reason": "IDE向け低遅延code completionの実用システムだが、推論runtimeの一般的手法よりcode generation製品設計・品質が中心。",
+      "first_checked_at": "2026-10-05T22:23:08+00:00",
+      "last_checked_at": "2026-10-05T22:23:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "IntelliCode compose: code generation using transformer"
     }
   }
 }

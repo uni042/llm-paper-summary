@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-31986d8d5bf38e6f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.06349",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.06349",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2303.06349",
+      "arXiv:2303.06349"
+    ],
+    "reason": "線形recurrenceを安定化したLRU等で長系列modelの計算効率を改善するarchitecture研究。長文脈効率には関連するが、LLM inference serving/runtimeを最終適用先としたsystem評価ではないためborderline。",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T22:22:59+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
+  },
+  "processed_at": "2026-10-05T22:22:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-31986d8d5bf3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

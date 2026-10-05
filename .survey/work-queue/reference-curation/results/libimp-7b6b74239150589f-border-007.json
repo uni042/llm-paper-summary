@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b6b74239150589f-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.19457",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.19457",
+    "identity_tokens": [
+      "arXiv:2507.19457"
+    ],
+    "reason": "自然言語reflectionとPareto探索でprompt/workflowを最適化し、少ないrolloutで品質を上げる。推論時searchへの応用と推論費用低減に接点はあるが、主要貢献はprompt optimizerでserving/runtime systemではないためborderline。",
+    "first_checked_at": "2026-10-05T22:23:02+00:00",
+    "last_checked_at": "2026-10-05T22:23:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T22:23:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b6b74239150",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

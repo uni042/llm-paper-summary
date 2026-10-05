@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b30e0495666b8e5-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2010.02559",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2010.02559",
+    "identity_tokens": [
+      "arXiv:2010.02559"
+    ],
+    "reason": "法律domain向けBERTの事前学習・domain adaptationと法務NLPタスク性能を比較する研究で、推論runtime/serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T15:43:15+00:00",
+    "last_checked_at": "2026-10-05T22:23:01+00:00",
+    "linked_from": [],
+    "title": "LEGAL-BERT: The Muppets straight out of Law School"
+  },
+  "processed_at": "2026-10-05T22:23:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b30e0495666",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

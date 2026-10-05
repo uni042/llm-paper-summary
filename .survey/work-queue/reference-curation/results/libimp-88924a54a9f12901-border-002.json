@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88924a54a9f12901-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/2939672.2945397",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/2939672.2945397",
+    "identity_tokens": [
+      "DOI:10.1145/2939672.2945397"
+    ],
+    "reason": "CNTKはcomputation graph、multi-GPU/server parallelism、memory sharing、recurrent-loop inference/executionを含む高性能DL frameworkで推論runtimeとの接点がある。ただしLLM/Transformer以前の汎用DNN frameworkで、現行LLM推論を直接評価しないためborderline。",
+    "first_checked_at": "2026-10-05T22:23:04+00:00",
+    "last_checked_at": "2026-10-05T22:23:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
+  },
+  "processed_at": "2026-10-05T22:23:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88924a54a9f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

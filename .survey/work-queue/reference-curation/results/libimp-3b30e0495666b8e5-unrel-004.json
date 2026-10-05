@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b30e0495666b8e5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1909.01315",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1909.01315",
+    "identity_tokens": [
+      "arXiv:1909.01315"
+    ],
+    "reason": "DGLはGNN向けgraph-centric frameworkとgeneralized sparse tensor operationsの速度・メモリ効率を扱うが、最終適用先はgraph neural networkでありLLM/Transformer推論systemではない。",
+    "first_checked_at": "2026-10-05T15:55:19+00:00",
+    "last_checked_at": "2026-10-05T22:23:00+00:00",
+    "linked_from": [],
+    "title": "Deep Graph Library: A Graph-Centric, Highly-Performant Package for Graph Neural Networks"
+  },
+  "processed_at": "2026-10-05T22:23:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b30e0495666",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9ed155457af06c9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12110",
+    "identity_tokens": [
+      "arXiv:2502.12110"
+    ],
+    "reason": "Zettelkasten型のdynamic indexing/linkingとmemory evolutionでagentの外部記憶を整理する。推論時memory retrievalには関係するが、主要評価はagent task性能で、serving latency/throughput/memory footprintのsystem最適化を主目的としないためborderline。",
+    "first_checked_at": "2026-10-05T22:23:07+00:00",
+    "last_checked_at": "2026-10-05T22:23:07+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A-MEM: Agentic Memory for LLM Agents"
+  },
+  "processed_at": "2026-10-05T22:23:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9ed155457af",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

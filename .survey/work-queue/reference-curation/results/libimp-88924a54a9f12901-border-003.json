@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88924a54a9f12901-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.10762",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.10762",
+    "identity_tokens": [
+      "arXiv:2410.10762"
+    ],
+    "reason": "LLM呼出しnodeからなるworkflowをMCTSで自動探索し、小型modelでGPT-4oを一部task上4.55%のinference dollar costで上回る。agentic inference costに関連するが、主要貢献はworkflow generation/optimizationでserving runtimeではないためborderline。",
+    "first_checked_at": "2026-10-05T22:23:04+00:00",
+    "last_checked_at": "2026-10-05T22:23:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AFlow: Automating Agentic Workflow Generation"
+  },
+  "processed_at": "2026-10-05T22:23:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88924a54a9f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

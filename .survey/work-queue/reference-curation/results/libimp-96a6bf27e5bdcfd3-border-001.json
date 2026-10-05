@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96a6bf27e5bdcfd3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.12110",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.12110",
+    "identity_tokens": [
+      "arXiv:2502.12110"
+    ],
+    "reason": "agent memoryの意味的構造化・検索が主題で長寿命agentには関係するが、GPU/KV/serving資源管理を主貢献とするruntime研究ではない。",
+    "first_checked_at": "2026-09-27T17:15:51+00:00",
+    "last_checked_at": "2026-10-05T22:23:05+00:00",
+    "linked_from": [
+      "/LLM-paper-summary-library-first/research/2502.12110-a-mem-agentic-memory-for-llm-agents.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A-MEM: Agentic Memory for LLM Agents"
+  },
+  "processed_at": "2026-10-05T22:23:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96a6bf27e5bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

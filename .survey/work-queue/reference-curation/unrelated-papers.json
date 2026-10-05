@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T22:18:02+00:00",
-  "record_count": 6509,
+  "updated_at": "2026-10-05T22:23:08+00:00",
+  "record_count": 6502,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -757,9 +757,9 @@
       "identity_tokens": [
         "arXiv:1909.08053"
       ],
-      "reason": "The primary source explicitly presents an intra-layer model-parallel method for training large Transformer models; experiments train models up to 8.3B parameters using 512 NVIDIA V100 GPUs (§1, §3-5). Its 15.1 PFLOP/s application throughput and 76% scaling efficiency describe distributed training. The conclusion's future work remains larger-scale pretraining and optimizer memory efficiency (§6). No inference-time efficiency method or evaluation is presented in the reviewed paper.",
+      "reason": "Transformerを数百GPUへ分割して大規模モデルを学習するintra-layer model parallelismが主題で、主要評価もtraining scaling efficiency・学習済みモデル品質。推論runtime/serving最適化を最終目的としない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
+      "last_checked_at": "2026-10-05T22:23:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "workers/discovery-01/ready/20260927-u/candidate-list.json#candidate[3]"
@@ -3453,11 +3453,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:1811.06965",
       "identity_tokens": [
+        "SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38",
         "arXiv:1811.06965"
       ],
-      "reason": "パイプライン並列と再計算で巨大ニューラルネット学習を拡張する研究で、最終用途が学習。",
+      "reason": "layer列を複数acceleratorへ分割しmicro-batch pipelineで巨大networkを学習するtraining library。ImageNetと多言語NMTの大規模trainingが主評価で、LLM推論serving方式ではない。",
       "first_checked_at": "2026-09-27T12:58:27+09:00",
-      "last_checked_at": "2026-09-30T09:49:12+00:00",
+      "last_checked_at": "2026-10-05T22:23:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -5121,9 +5122,9 @@
         "DOI:10.48550/arxiv.2104.04473",
         "arXiv:2104.04473"
       ],
-      "reason": "学習工程そのものの高速化・省メモリ化が最終目的であり、現行サーベイではTraining側が凍結対象のため除外。 旧判定: テンソル・パイプライン・データ並列を組み合わせ大規模言語モデル学習をGPUクラスタ上で効率化する直接的な分散学習システム研究。",
+      "reason": "tensor・pipeline・data parallelismを組み合わせ、trillion-parameter LMの分散学習を数千GPUへscaleするtraining system研究。提案interleaved pipeline scheduleの主要評価もtraining throughputであり推論対象外。",
       "first_checked_at": "2026-09-30T09:50:07+00:00",
-      "last_checked_at": "2026-09-30T09:50:07+00:00",
+      "last_checked_at": "2026-10-05T22:23:07+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "worker-worklist-30 discovery_review tail-to-head"
@@ -8958,20 +8959,6 @@
       ],
       "title": "MiniGPT4-Video: Advancing Multimodal LLMs for Video Understanding with Interleaved Visual-Textual Tokens"
     },
-    "arXiv:1712.05889": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1712.05889",
-      "identity_tokens": [
-        "arXiv:1712.05889"
-      ],
-      "reason": "汎用分散実行frameworkであり、LLM推論・KV・MoE・推論kernel・servingを対象にした研究ではない。",
-      "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-05T22:17:59+00:00",
-      "linked_from": [
-        "workers/discovery-02/ready/20260927-u-wave6/manifest.json#candidate[3]"
-      ],
-      "title": "Ray: A Distributed Framework for Emerging AI Applications"
-    },
     "arXiv:2008.12260": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2008.12260",
@@ -9055,20 +9042,6 @@
         "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[4]"
       ],
       "title": "OLLA: Optimizing the Lifetime and Location of Arrays to Reduce the Memory Usage of Neural Networks"
-    },
-    "arXiv:2409.02060": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2409.02060",
-      "identity_tokens": [
-        "arXiv:2409.02060"
-      ],
-      "reason": "Although the model uses 1.3B active parameters out of 6.9B total and discusses compute per forward pass, the stated contribution is an open MoE model and extensive MoE training experiments. The paper's conclusion centers on releasing model/data/code and training analyses, not an inference-reduction method.",
-      "first_checked_at": "2026-10-03T14:28:52+00:00",
-      "last_checked_at": "2026-10-03T14:28:52+00:00",
-      "linked_from": [
-        "workers/discovery-02/ready/20260927-u-discovery-02/manifest.json#candidate[4]"
-      ],
-      "title": "OLMoE: Open Mixture-of-Experts Language Models"
     },
     "arXiv:2502.10517": {
       "classification": "unrelated",
@@ -9838,9 +9811,9 @@
       "identity_tokens": [
         "DOI:10.1145/3600006.3613175"
       ],
-      "reason": "The primary paper identifies its subject as a scheduler for resource-adaptive deep-learning training jobs; its keywords state deep-learning training. Evaluations focus on job completion time, makespan and GPU-hours for DL-cluster training traces. It does not target LLM inference or serving; unrelated despite the worklist's inference destination.",
+      "reason": "異種GPUクラスタでelasticな深層学習jobを割り当て、学習job completion timeとGPU時間を改善するcluster scheduler。主対象はtraining job schedulingでLLM推論servingではないためunrelated。",
       "first_checked_at": "2026-10-03T15:16:51+00:00",
-      "last_checked_at": "2026-10-03T15:16:51+00:00",
+      "last_checked_at": "2026-10-05T22:23:04+00:00",
       "linked_from": [
         "workers/discovery-02/ready/20260927-u-wave5/manifest.json#candidate[8]"
       ],
@@ -15354,18 +15327,6 @@
       "last_checked_at": "2026-10-04T14:25:40+00:00",
       "linked_from": [],
       "title": "LRFU: A Spectrum of Policies that Subsumes the Least Recently Used and Least Frequently Used Policies"
-    },
-    "arXiv:2005.08025": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2005.08025",
-      "identity_tokens": [
-        "arXiv:2005.08025"
-      ],
-      "reason": "IDE内でTransformerによりコード補完・生成を行うモデル/開発支援研究で、LLM推論基盤の速度・memory・serving最適化を主題としない。",
-      "first_checked_at": "2026-10-04T14:25:40+00:00",
-      "last_checked_at": "2026-10-04T14:25:40+00:00",
-      "linked_from": [],
-      "title": "IntelliCode compose: code generation using transformer"
     },
     "DOI:10.15607/rss.2023.xix.025": {
       "classification": "unrelated",
@@ -20928,20 +20889,6 @@
         "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md"
       ],
       "title": "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models"
-    },
-    "arXiv:2001.04063": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2001.04063",
-      "identity_tokens": [
-        "arXiv:2001.04063"
-      ],
-      "reason": "future n-gram predictionとn-stream self-attentionをpre-training objectiveとして導入し、summarization/question generationの品質を改善するsequence-to-sequence事前学習研究。複数future token予測は行うが、推論時並列復号・latency削減を主貢献として評価しない。",
-      "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T16:29:34+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
-      ],
-      "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
     },
     "arXiv:2303.11381": {
       "classification": "unrelated",
@@ -26585,20 +26532,6 @@
         "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
       ],
       "title": "Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study with 100+ NLP Researchers"
-    },
-    "arXiv:2004.05986": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2004.05986",
-      "identity_tokens": [
-        "arXiv:2004.05986"
-      ],
-      "reason": "9 taskからなる中国語NLU benchmarkとpretrained Chinese model評価を提供するbenchmark研究。LLM推論runtime・memory・serving最適化を提案しない。",
-      "first_checked_at": "2026-10-05T02:14:50+00:00",
-      "last_checked_at": "2026-10-05T16:19:11+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md"
-      ],
-      "title": "CLUE: A Chinese Language Understanding Evaluation Benchmark"
     },
     "arXiv:2406.20094": {
       "classification": "unrelated",
@@ -90847,28 +90780,15 @@
       "linked_from": [],
       "title": "The Virtual Lab of AI agents designs new SARS-CoV-2 nanobodies"
     },
-    "arXiv:2511.21631": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2511.21631",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2511.21631",
-        "arXiv:2511.21631"
-      ],
-      "reason": "Qwen3-VLのマルチモーダル能力、256K文脈、dense/MoE構成、interleaved-MRoPE・DeepStack等のモデル設計を報告するtechnical report。latency-quality trade-offには言及するが、推論runtime・serving・memory最適化方式そのものを提案・評価するsystem研究ではない。",
-      "first_checked_at": "2026-10-05T15:43:14+00:00",
-      "last_checked_at": "2026-10-05T15:43:14+00:00",
-      "linked_from": [],
-      "title": "Qwen3-VL Technical Report"
-    },
     "arXiv:2503.20783": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2503.20783",
       "identity_tokens": [
         "arXiv:2503.20783"
       ],
-      "reason": "R1-Zero型強化学習のbase model依存性、GRPOの応答長bias、Dr. GRPOを分析するtraining研究。token efficiency改善は学習最適化の結果であり、推論runtime・serving効率化を主要目的としない。",
+      "reason": "R1-Zero型の強化学習を分析し、GRPOのresponse-length biasを補正するDr. GRPOと学習recipeを提案する研究。token efficiencyは改善するが対象はRL trainingの最適化で、推論runtime/serving最適化ではない。",
       "first_checked_at": "2026-10-05T15:43:14+00:00",
-      "last_checked_at": "2026-10-05T15:43:14+00:00",
+      "last_checked_at": "2026-10-05T22:22:59+00:00",
       "linked_from": [],
       "title": "Understanding R1-Zero-Like Training: A Critical Perspective"
     },
@@ -90878,9 +90798,9 @@
       "identity_tokens": [
         "arXiv:2508.02324"
       ],
-      "reason": "text renderingとimage editingを改善する画像生成foundation model研究。data pipeline、progressive training、MMDiT/Qwen2.5-VL/VAE dual encodingが中心で、LLM推論runtime・serving効率化を扱わない。",
+      "reason": "画像生成・画像編集foundation modelで、データpipeline、progressive training、Qwen2.5-VL/VAE二重encodingによるtext renderingとediting品質向上が主要貢献。LLM推論runtime/serving効率化を最終適用先としない。",
       "first_checked_at": "2026-10-05T15:43:14+00:00",
-      "last_checked_at": "2026-10-05T15:43:14+00:00",
+      "last_checked_at": "2026-10-05T22:22:59+00:00",
       "linked_from": [],
       "title": "Qwen-Image Technical Report"
     },
@@ -90908,9 +90828,9 @@
       "identity_tokens": [
         "arXiv:2506.09985"
       ],
-      "reason": "100万時間超のvideo/imageで自己教師ありworld modelを学習し、video understandingとrobot planningを実現するmodel/training研究。LLMとのalignmentも能力評価目的で、推論runtime・serving効率化ではない。",
+      "reason": "100万時間超の動画で自己教師ありworld modelを学習し、video understanding、LLM連携VQA、robot planningを評価する能力・学習研究。LLM推論runtimeやserving効率化は主題ではない。",
       "first_checked_at": "2026-10-05T15:43:15+00:00",
-      "last_checked_at": "2026-10-05T15:43:15+00:00",
+      "last_checked_at": "2026-10-05T22:23:00+00:00",
       "linked_from": [],
       "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning"
     },
@@ -90920,9 +90840,9 @@
       "identity_tokens": [
         "arXiv:2507.18071"
       ],
-      "reason": "sequence-level importance ratio/clippingを使うLLM強化学習algorithmで、GRPOよりtraining efficiencyとMoE RL安定性を改善する。主要貢献はtraining optimizationであり推論runtime・serving効率化ではない。",
+      "reason": "GSPOはsequence-level importance ratio/clippingでLLMの強化学習を安定化し、特にMoE RL trainingの効率・安定性を改善する学習アルゴリズム。推論時のMoE routingやservingを最終適用先としない。",
       "first_checked_at": "2026-10-05T15:43:15+00:00",
-      "last_checked_at": "2026-10-05T15:43:15+00:00",
+      "last_checked_at": "2026-10-05T22:23:00+00:00",
       "linked_from": [],
       "title": "Group Sequence Policy Optimization"
     },
@@ -90933,9 +90853,9 @@
         "DOI:10.18653/v1/n19-1388",
         "arXiv:1903.00089"
       ],
-      "reason": "最大102言語対を単一NMT modelで学習し、多言語translation qualityとmodeling trade-offを評価するtraining/capability研究。推論runtime・memory・serving最適化を扱わない。",
+      "reason": "最大102言語を単一NMTモデルで学習し、多言語翻訳品質とmodeling decisionのtrade-offを評価する能力・学習研究。推論runtime、serving、memory最適化を提案しない。",
       "first_checked_at": "2026-10-05T00:55:44+00:00",
-      "last_checked_at": "2026-10-05T15:43:15+00:00",
+      "last_checked_at": "2026-10-05T22:23:00+00:00",
       "linked_from": [
         "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
       ],
@@ -90947,9 +90867,9 @@
       "identity_tokens": [
         "arXiv:2010.02559"
       ],
-      "reason": "法律corpusでBERTを継続事前学習またはscratch学習し、法律NLPのdomain adaptation性能を比較するモデル学習研究。最終評価は法律タスク性能で、推論system効率化ではない。",
+      "reason": "法律domain向けBERTの事前学習・domain adaptationと法務NLPタスク性能を比較する研究で、推論runtime/serving効率化を扱わない。",
       "first_checked_at": "2026-10-05T15:43:15+00:00",
-      "last_checked_at": "2026-10-05T15:48:50+00:00",
+      "last_checked_at": "2026-10-05T22:23:01+00:00",
       "linked_from": [],
       "title": "LEGAL-BERT: The Muppets straight out of Law School"
     },
@@ -91438,18 +91358,6 @@
       "linked_from": [],
       "title": "A domain-specific supercomputer for training deep neural networks"
     },
-    "arXiv:2410.10762": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2410.10762",
-      "identity_tokens": [
-        "arXiv:2410.10762"
-      ],
-      "reason": "LLM-invoking nodeをcode workflowとして表現しMCTSでworkflowを自動探索・改善するagent capability/optimization研究。特定taskでGPT-4o比4.55%のdollar costを示すが、runtime/serving効率化ではなくworkflow品質・自動生成が主目的。",
-      "first_checked_at": "2026-10-05T15:48:48+00:00",
-      "last_checked_at": "2026-10-05T16:39:36+00:00",
-      "linked_from": [],
-      "title": "AFlow: Automating Agentic Workflow Generation"
-    },
     "DOI:10.48550/arxiv.2402.13718": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.48550/arxiv.2402.13718",
@@ -91457,9 +91365,9 @@
         "DOI:10.48550/arxiv.2402.13718",
         "arXiv:2402.13718"
       ],
-      "reason": "100K token超のlong-context能力を評価するbenchmark suiteで、長文脈LLMのretrieval/reasoning等を測る評価研究。推論runtime・KV-cache削減・serving最適化方式を提案しない。",
+      "reason": "平均100K超の長文脈LLM能力を測るbenchmarkで、長文脈runtime、KV cache、attention高速化手法そのものを提案・評価するsystem研究ではない。",
       "first_checked_at": "2026-10-05T15:48:49+00:00",
-      "last_checked_at": "2026-10-05T16:39:36+00:00",
+      "last_checked_at": "2026-10-05T22:23:05+00:00",
       "linked_from": [],
       "title": "∞Bench: Extending Long Context Evaluation Beyond 100K Tokens"
     },
@@ -91517,9 +91425,9 @@
       "identity_tokens": [
         "arXiv:1809.10853"
       ],
-      "reason": "語彙頻度に応じて入力embedding容量を変えるadaptive input representationを提案し、self-attentional language modelのtraining速度・perplexity・parameter数を評価する研究。主な高速化結果はtrainingであり、LLM推論runtime・memory・serving効率化を最終適用先としない。",
+      "reason": "頻度に応じた可変容量embeddingでlanguage modelの入力表現を改善し、主にtraining速度とperplexityを評価するarchitecture研究。推論runtime・serving最適化の直接評価がない。",
       "first_checked_at": "2026-10-05T15:48:52+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
+      "last_checked_at": "2026-10-05T22:23:03+00:00",
       "linked_from": [],
       "title": "Adaptive Input Representations for Neural Language Modeling"
     },
@@ -91613,9 +91521,9 @@
       "identity_tokens": [
         "arXiv:1909.01315"
       ],
-      "reason": "DGLはGNN向けの疎tensor演算、operator fusion、auto-batchingを提供し速度・メモリを改善するgraph deep learning基盤。最終適用先はGNNであり、LLM/Transformer推論systemではない。",
+      "reason": "DGLはGNN向けgraph-centric frameworkとgeneralized sparse tensor operationsの速度・メモリ効率を扱うが、最終適用先はgraph neural networkでありLLM/Transformer推論systemではない。",
       "first_checked_at": "2026-10-05T15:55:19+00:00",
-      "last_checked_at": "2026-10-05T16:43:47+00:00",
+      "last_checked_at": "2026-10-05T22:23:00+00:00",
       "linked_from": [],
       "title": "Deep Graph Library: A Graph-Centric, Highly-Performant Package for Graph Neural Networks"
     },
@@ -91623,12 +91531,15 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2020.findings-emnlp.217",
       "identity_tokens": [
-        "DOI:10.18653/v1/2020.findings-emnlp.217"
+        "DOI:10.18653/v1/2020.findings-emnlp.217",
+        "arXiv:2001.04063"
       ],
-      "reason": "future n-gram predictionとn-stream self-attentionで次の複数tokenを同時予測するが、目的はsequence-to-sequence事前学習を改善しsummarization/question generation品質を上げること。標準推論互換で、推論latency・throughput・memory削減を評価しないため対象外。",
-      "first_checked_at": "2026-10-05T15:55:19+00:00",
-      "last_checked_at": "2026-10-05T15:55:19+00:00",
-      "linked_from": [],
+      "reason": "future n-gram predictionとn-stream self-attentionによるsequence-to-sequence事前学習を提案し、summarization/question generation品質を評価するモデル学習研究。並列推論runtimeの高速化を最終適用先としない。",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T22:23:02+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
+      ],
       "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
     },
     "arXiv:2401.13919": {
@@ -91637,9 +91548,9 @@
       "identity_tokens": [
         "arXiv:2401.13919"
       ],
-      "reason": "LMM web agentが実サイトを操作し、15サイトのreal-world taskで59.1% success rate、GPT-4V evaluatorで85.3% human agreementを示すagent能力・benchmark研究。推論runtime/serving効率化は主題ではない。",
+      "reason": "実Webサイトを視覚情報付きで操作するmultimodal web agentと評価benchmarkを提案する能力研究。task successと自動評価が主要結果で、agent serving/runtime効率化を提案しない。",
       "first_checked_at": "2026-10-05T15:55:19+00:00",
-      "last_checked_at": "2026-10-05T16:43:44+00:00",
+      "last_checked_at": "2026-10-05T22:23:02+00:00",
       "linked_from": [],
       "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models"
     },
@@ -91649,9 +91560,9 @@
       "identity_tokens": [
         "arXiv:2303.10512"
       ],
-      "reason": "SVD形式のlow-rank updateとimportance scoreでfine-tuning用parameter budgetをweight matrix間へ適応配分するPEFT研究。評価はNLP/QA/NLGのfine-tuning性能で、推論runtime・serving効率化ではない。",
+      "reason": "SVD形式の低ランク更新へimportanceに応じてparameter budgetを配分するparameter-efficient fine-tuning研究。推論時のruntime・serving・memory最適化を主題としない。",
       "first_checked_at": "2026-10-05T15:55:19+00:00",
-      "last_checked_at": "2026-10-05T16:43:45+00:00",
+      "last_checked_at": "2026-10-05T22:23:03+00:00",
       "linked_from": [],
       "title": "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning"
     },
@@ -92117,9 +92028,9 @@
       "identity_tokens": [
         "DOI:10.18653/v1/w17-4418"
       ],
-      "reason": "新規・希少な固有表現をnoisy textから検出・分類する共有タスクとデータセットの評価報告。LLM推論runtime・memory・serving効率化を扱わない。",
+      "reason": "新規・新興entity recognitionのshared task結果をまとめるNLP評価研究で、LLM推論system最適化ではない。",
       "first_checked_at": "2026-10-05T16:12:49+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
+      "last_checked_at": "2026-10-05T22:23:03+00:00",
       "linked_from": [],
       "title": "Results of the WNUT2017 Shared Task on Novel and Emerging Entity Recognition"
     },
@@ -92130,9 +92041,9 @@
         "DOI:10.1109/ijcnn55064.2022.9891914",
         "arXiv:2202.05924"
       ],
-      "reason": "123のmilestone ML systemについて主にtraining computeの歴史的増加率を分析し、pre-deep-learning/deep-learning/large-scaleの三時代へ整理する計算資源trend研究。LLM推論runtime・memory・serving方式を提案しない。",
+      "reason": "123の主要ML systemのtraining computeを収集し、学習計算量の歴史的doubling trendを分析するsurvey/measurement研究。個別推論runtime・serving最適化方式を提案しない。",
       "first_checked_at": "2026-10-03T17:48:37+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
+      "last_checked_at": "2026-10-05T22:23:03+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json"
       ],
@@ -92235,27 +92146,15 @@
       "linked_from": [],
       "title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space"
     },
-    "arXiv:2507.19457": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2507.19457",
-      "identity_tokens": [
-        "arXiv:2507.19457"
-      ],
-      "reason": "GEPAはLLM trajectoryを自然言語でreflectionしpromptを進化させるprompt optimizerで、GRPOより少ないrolloutでtask qualityを高める。inference-time search例もあるが主要貢献はprompt optimization/learningで、推論runtime・memory・serving効率化ではない。",
-      "first_checked_at": "2026-10-05T16:19:07+00:00",
-      "last_checked_at": "2026-10-05T16:19:07+00:00",
-      "linked_from": [],
-      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning"
-    },
     "arXiv:2306.02707": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2306.02707",
       "identity_tokens": [
         "arXiv:2306.02707"
       ],
-      "reason": "GPT-4のexplanation trace・step-by-step reasoningを13B modelへimitation learningするprogressive training研究。BBH/AGIEval等のreasoning能力向上が主評価で、推論runtime・serving効率化ではない。",
+      "reason": "GPT-4/ChatGPTのexplanation traceを教師信号として13Bモデルをprogressive imitation learningする能力・学習研究。推論runtime/serving効率化を提案しない。",
       "first_checked_at": "2026-10-05T16:19:07+00:00",
-      "last_checked_at": "2026-10-05T16:39:35+00:00",
+      "last_checked_at": "2026-10-05T22:23:04+00:00",
       "linked_from": [],
       "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4"
     },
@@ -92263,12 +92162,15 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2020.coling-main.419",
       "identity_tokens": [
-        "DOI:10.18653/v1/2020.coling-main.419"
+        "DOI:10.18653/v1/2020.coling-main.419",
+        "arXiv:2004.05986"
       ],
-      "reason": "中国語自然言語理解の9タスクをまとめた評価ベンチマークで、事前学習済み中国語モデルの能力比較が主目的。推論ランタイム、メモリ階層、サービング最適化を提案しない。",
-      "first_checked_at": "2026-10-05T16:19:09+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
-      "linked_from": [],
+      "reason": "中国語NLUの9タスクbenchmarkとpretrained Chinese modelの能力評価を提供する評価研究。推論runtime/serving性能を測るbenchmarkではない。",
+      "first_checked_at": "2026-10-05T02:14:50+00:00",
+      "last_checked_at": "2026-10-05T22:23:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md"
+      ],
       "title": "CLUE: A Chinese Language Understanding Evaluation Benchmark"
     },
     "arXiv:2307.12856": {
@@ -92348,21 +92250,6 @@
         "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
       ],
       "title": "Efficient Attention: Attention with Linear Complexities"
-    },
-    "arXiv:1806.00187": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1806.00187",
-      "identity_tokens": [
-        "DOI:10.18653/v1/w18-6301",
-        "arXiv:1806.00187"
-      ],
-      "reason": "reduced precision・large batch・多数GPUでNMT学習を高速化するtraining systems研究。主要結果は学習時間とBLEUであり推論効率化ではない。",
-      "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T16:24:12+00:00",
-      "linked_from": [
-        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
-      ],
-      "title": "Scaling Neural Machine Translation"
     },
     "arXiv:2502.14786": {
       "classification": "unrelated",
@@ -92920,18 +92807,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
       ],
       "title": "Predictability and Surprise in Large Generative Models"
-    },
-    "DOI:10.1145/2939672.2945397": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1145/2939672.2945397",
-      "identity_tokens": [
-        "DOI:10.1145/2939672.2945397"
-      ],
-      "reason": "汎用deep-learning toolkit CNTKのtraining/evaluation、automatic differentiation、memory sharing、multi-server parallelization等を紹介するtutorial。speech/image/text一般を対象とし、LLM推論runtime専用の研究・評価ではない。",
-      "first_checked_at": "2026-10-05T16:39:38+00:00",
-      "last_checked_at": "2026-10-05T16:39:38+00:00",
-      "linked_from": [],
-      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit"
     },
     "arXiv:2308.00708": {
       "classification": "unrelated",
@@ -94103,6 +93978,45 @@
       "last_checked_at": "2026-10-05T22:18:02+00:00",
       "linked_from": [],
       "title": "MedDialog: Two Large-scale Medical Dialogue Datasets"
+    },
+    "DOI:10.18653/v1/w18-6301": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w18-6301",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w18-6301",
+        "arXiv:1806.00187"
+      ],
+      "reason": "reduced precisionとlarge-batch distributed trainingでNMTの学習を8/128 GPUへscaleし、学習時間を短縮する研究。主要結果はtraining throughput/time-to-accuracyであり推論systemではない。",
+      "first_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T22:23:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Scaling Neural Machine Translation"
+    },
+    "DOI:10.1109/sc.2008.5214359": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sc.2008.5214359",
+      "identity_tokens": [
+        "DOI:10.1109/sc.2008.5214359"
+      ],
+      "reason": "GPU上のdense linear algebraをbenchmark/tuningするHPC研究で、LLM/Transformer推論を最終適用先とするkernel・runtime研究ではない。",
+      "first_checked_at": "2026-10-05T22:23:02+00:00",
+      "last_checked_at": "2026-10-05T22:23:02+00:00",
+      "linked_from": [],
+      "title": "Benchmarking GPUs to tune dense linear algebra"
+    },
+    "arXiv:2506.01844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01844",
+      "identity_tokens": [
+        "arXiv:2506.01844"
+      ],
+      "reason": "効率性はrobotics向けVLAモデルの学習・実行全体を指し、LLM推論serving/メモリ/decoding最適化を主対象にしない。",
+      "first_checked_at": "2026-10-05T22:23:05+00:00",
+      "last_checked_at": "2026-10-05T22:23:05+00:00",
+      "linked_from": [],
+      "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
     }
   }
 }
