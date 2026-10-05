@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b68d0b5770bb441-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.19378",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.19378",
+    "identity_tokens": [
+      "arXiv:2607.19378"
+    ],
+    "reason": "一次abstractはgenomics/CV/imaging/PDE向けoperator設計を扱い、LLM inference/servingではない。",
+    "first_checked_at": "2026-10-05T10:46:35+00:00",
+    "last_checked_at": "2026-10-05T10:46:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Native Multi-Dimensional Subquadratic Operators via Input Dependent Long Convolutions"
+  },
+  "processed_at": "2026-10-05T10:46:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b68d0b5770b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

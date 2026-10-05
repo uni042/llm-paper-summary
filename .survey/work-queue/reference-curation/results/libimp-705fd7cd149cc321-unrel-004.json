@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-705fd7cd149cc321-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.00527",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.00527",
+    "identity_tokens": [
+      "arXiv:2607.00527"
+    ],
+    "reason": "一次要旨はAI-native game design survey/roadmapで、inference systemsの技術・性能評価ではない。",
+    "first_checked_at": "2026-10-05T10:46:36+00:00",
+    "last_checked_at": "2026-10-05T10:46:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "AI Native Games: A Survey and Roadmap"
+  },
+  "processed_at": "2026-10-05T10:46:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-705fd7cd149c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

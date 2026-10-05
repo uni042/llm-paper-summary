@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:43:44+00:00",
-  "record_count": 4516,
+  "updated_at": "2026-10-05T10:46:37+00:00",
+  "record_count": 4535,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -65774,6 +65774,288 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Differentiable Design for Morphogenesis I: Simulation and Simulacra"
+    },
+    "arXiv:2607.00601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00601",
+      "identity_tokens": [
+        "arXiv:2607.00601"
+      ],
+      "reason": "一次要旨はTaboo gameでのLLM constraint-following能力分析で、inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T10:46:34+00:00",
+      "last_checked_at": "2026-10-05T10:46:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "\"Don't Say It!\": Constraints, Compliance, and Communication when Language Models Play Taboo"
+    },
+    "arXiv:2607.00774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00774",
+      "identity_tokens": [
+        "arXiv:2607.00774"
+      ],
+      "reason": "一次要旨はVision Transformerのrepresentation/accuracy/parameter efficiencyに関する画像モデル研究で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:46:34+00:00",
+      "last_checked_at": "2026-10-05T10:46:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Soft Mixture-of-Recursions: Going Deeper with Recursive Vision Transformers"
+    },
+    "arXiv:2607.00839": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00839",
+      "identity_tokens": [
+        "arXiv:2607.00839"
+      ],
+      "reason": "一次要旨はmulti-label image classificationのsurveyで、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T10:46:34+00:00",
+      "last_checked_at": "2026-10-05T10:46:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Rethinking Multi-Label Image Classification With Deep Learning: Taxonomy, Challenge, and Outlook"
+    },
+    "arXiv:2607.00852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00852",
+      "identity_tokens": [
+        "arXiv:2607.00852"
+      ],
+      "reason": "一次要旨はGPT-2 hidden-state inversion/privacy analysisで、token reconstruction/accuracyの分析が主題。高速手法比較は研究対象の一部に過ぎず推論最適化手法ではない。",
+      "first_checked_at": "2026-10-05T10:46:34+00:00",
+      "last_checked_at": "2026-10-05T10:46:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Recovering Input Text from Hidden States: Study of Gradient-Based Inversion of Decoder-Only Language Models"
+    },
+    "arXiv:2607.01002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01002",
+      "identity_tokens": [
+        "arXiv:2607.01002"
+      ],
+      "reason": "一次要旨はLLM attention headのretrieval behavior解釈・ablationで、inference runtime/resource optimizationではない。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ],
+      "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads"
+    },
+    "arXiv:2607.01517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01517",
+      "identity_tokens": [
+        "arXiv:2607.01517"
+      ],
+      "reason": "一次abstractはParameter Golfのtraining手法・競技結果を扱い、推論時効率化ではない。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Parameter Golf: What Really Works?"
+    },
+    "arXiv:2607.02584": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02584",
+      "identity_tokens": [
+        "arXiv:2607.02584"
+      ],
+      "reason": "一次abstractはvideo generation用diffusion transformerのINT4 attention量子化であり、LLM推論の対象ではない。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.18610-pm-kvq-progressive-mixed-precision-kv-cache-quantization-for-long-cot-llms.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation"
+    },
+    "arXiv:2607.02616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02616",
+      "identity_tokens": [
+        "arXiv:2607.02616"
+      ],
+      "reason": "一次abstractはquantum circuit mapping/MLIRを扱い、LLM推論効率とは無関係。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "MLIR for Quantum Beyond Gate Cancellation: Quantum Circuit Mapping Reimagined"
+    },
+    "arXiv:2607.19378": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.19378",
+      "identity_tokens": [
+        "arXiv:2607.19378"
+      ],
+      "reason": "一次abstractはgenomics/CV/imaging/PDE向けoperator設計を扱い、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Native Multi-Dimensional Subquadratic Operators via Input Dependent Long Convolutions"
+    },
+    "arXiv:2607.25076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25076",
+      "identity_tokens": [
+        "arXiv:2607.25076"
+      ],
+      "reason": "一次abstractはagent operating-system abstractionsを扱うsystems概念で、LLM推論の効率改善方法・評価を示さない。",
+      "first_checked_at": "2026-10-05T10:46:35+00:00",
+      "last_checked_at": "2026-10-05T10:46:35+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "Towards an Agent Operating System - Lessons from Classical and Cloud OS"
+    },
+    "arXiv:2607.00293": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00293",
+      "identity_tokens": [
+        "arXiv:2607.00293"
+      ],
+      "reason": "一次要旨はmultimodal foundation-model pretrainingとcatastrophic forgetting抑制で、学習専用。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Rosetta: Composable Native Multimodal Pretraining"
+    },
+    "arXiv:2607.00302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00302",
+      "identity_tokens": [
+        "arXiv:2607.00302"
+      ],
+      "reason": "一次要旨はMLLMへのtactile alignment learning/training。本文abstractもLLM inference overheadを増やさないと述べるが、inference optimizationを実施していない。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Wake up for Touch! Mask-isolated Tactile Alignment Learning in MLLMs"
+    },
+    "arXiv:2607.00371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00371",
+      "identity_tokens": [
+        "arXiv:2607.00371"
+      ],
+      "reason": "一次要旨はvisual autoregressive image generationのtraining efficiency/quality。LLM推論対象外。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "MEPA: Multi-Scale Representation Alignment for Visual Autoregressive Modeling with Mixture of Experts"
+    },
+    "arXiv:2607.00527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00527",
+      "identity_tokens": [
+        "arXiv:2607.00527"
+      ],
+      "reason": "一次要旨はAI-native game design survey/roadmapで、inference systemsの技術・性能評価ではない。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "AI Native Games: A Survey and Roadmap"
+    },
+    "arXiv:2607.00579": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00579",
+      "identity_tokens": [
+        "arXiv:2607.00579"
+      ],
+      "reason": "一次要旨は3D foundation-model SfM post-processingのedge pose optimization。LLMではない。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "EPO: Boosting 3D Foundation Models with Edge-based Pose Optimization"
+    },
+    "arXiv:2607.01208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01208",
+      "identity_tokens": [
+        "arXiv:2607.01208"
+      ],
+      "reason": "一次abstractはcartridge distillationによるLLM内のstealth bias検出を扱い、inference cost/efficiency改善は目的でない。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation"
+    },
+    "arXiv:2607.01313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01313",
+      "identity_tokens": [
+        "arXiv:2607.01313"
+      ],
+      "reason": "一次abstractは制限APIからLLMのarchitecture特性をblack-box推定する分析・測定であり、推論を効率化する手法ではない。",
+      "first_checked_at": "2026-10-05T10:46:36+00:00",
+      "last_checked_at": "2026-10-05T10:46:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md"
+      ],
+      "title": "Black-Box Inference of LLM Architectural Properties with Restrictive API Access"
+    },
+    "arXiv:2607.01455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01455",
+      "identity_tokens": [
+        "arXiv:2607.01455"
+      ],
+      "reason": "一次abstractはembedding optimizer/Token Geometryの最適化で、training時のparameter learningを扱い、推論時の計算・memory削減ではない。",
+      "first_checked_at": "2026-10-05T10:46:37+00:00",
+      "last_checked_at": "2026-10-05T10:46:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Token Geometry"
+    },
+    "arXiv:2607.01464": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01464",
+      "identity_tokens": [
+        "arXiv:2607.01464"
+      ],
+      "reason": "一次abstractはsupervised political scalingのarchitecture比較で、LLM serving/inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T10:46:37+00:00",
+      "last_checked_at": "2026-10-05T10:46:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Comparing Architectures for Supervised Political Scaling"
     }
   }
 }
