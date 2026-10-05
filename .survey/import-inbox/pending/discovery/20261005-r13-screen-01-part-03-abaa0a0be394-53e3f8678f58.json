@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-01-part-03-abaa0a0be394",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1131",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1131"
+      ],
+      "title": "An Evaluation Dataset for Intent Classification and Out-of-Scope Prediction",
+      "reason": "Abstract presents a dataset for intent classification and out-of-scope prediction, not LLM inference or serving.",
+      "source_url": "https://aclanthology.org/D19-1131/",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41586-025-08744-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-08744-2"
+      ],
+      "title": "Mastering diverse control tasks through world models",
+      "reason": "The official Nature article page could not be retrieved as a usable primary abstract.",
+      "source_url": "https://doi.org/10.1038/s41586-025-08744-2",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04721",
+      "identity_tokens": [
+        "arXiv:1906.04721"
+      ],
+      "title": "Data-Free Quantization Through Weight Equalization and Bias Correction",
+      "reason": "Abstract evaluates data-free quantization on deep networks for computer-vision tasks, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/1906.04721",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2155620.2155650",
+      "identity_tokens": [
+        "DOI:10.1145/2155620.2155650"
+      ],
+      "title": "Bubble-up: Increasing utilization in modern warehouse scale computers via sensible co-locations",
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "source_url": "https://doi.org/10.1145/2155620.2155650",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.01390",
+      "identity_tokens": [
+        "arXiv:2308.01390"
+      ],
+      "title": "OpenFlamingo: An Open-Source Framework for Training Large Autoregressive Vision-Language Models",
+      "reason": "Abstract describes an open-source framework for training autoregressive vision-language models; its focus is training, outside scope.",
+      "source_url": "https://arxiv.org/abs/2308.01390",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2404.08856-on-speculative-decoding-for-multimodal-large-language-models.md"
+      ]
+    }
+  ]
+}
