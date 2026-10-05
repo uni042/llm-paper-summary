@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-08-part-01-c56febc52e56",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3831997",
+      "identity_tokens": [
+        "DOI:10.1145/3831997"
+      ],
+      "title": "EmbodiedRecall: A Ring-to-Glasses System for Preserving Valuable, Fleeting Moments in Daily Activities",
+      "reason": "要旨: Capturing meaningful everyday moments is challenging as they often occur when users are cognitively absorbed or physically occupied. While always-on recording reduces “misses,” it introduces severe privacy concerns and data triage fatigue. We present EmbodiedRecall, a ring-to-glasses system that operationalizes a。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://doi.org/10.1145/3831997",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832008",
+      "identity_tokens": [
+        "DOI:10.1145/3832008"
+      ],
+      "title": "UIAnchor: Anchoring UI Perception and Action Execution for Reliable Service-Composed Mobile Task Automation with GUI Agents",
+      "reason": "Full text could not be retrieved through DOI; mechanism, measurement conditions, and limitations remain unverified.",
+      "source_url": "https://doi.org/10.1145/3832008",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34253",
+      "identity_tokens": [
+        "arXiv:2609.34253"
+      ],
+      "title": "DreamingGoose: Staged Distillation from Autoregressive Transformers to Bidirectional Recurrent Diffusion Language Models",
+      "reason": "要旨: Pretrained autoregressive Transformers represent a large sunk investment in compute. Existing conversion methods reuse that investment by changing either the architecture (attention to recurrence) or the objective (next-token prediction to denoising), never both. We convert Qwen3 teachers at 1.7B and 8B into。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.34253",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36070",
+      "identity_tokens": [
+        "arXiv:2609.36070"
+      ],
+      "title": "Mixture-of-Kittens: MoE Megakernel for NVL72s",
+      "reason": "要旨: AI accelerator systems are rapidly consolidating into scale-up architectures, where tens to thousands of GPUs communicate over high-bandwidth, single-hop fabrics. We find that existing Mixture-of-Experts (MoE) training systems, optimized for conventional scale-out networks, transfer poorly to this setting, often。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.36070",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2506.04667-flashmoe-fast-distributed-moe-in-a-single-kernel.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33209",
+      "identity_tokens": [
+        "arXiv:2609.33209"
+      ],
+      "title": "Beyond Calibration: Do a Typed-Decision Model's Probabilities Obey the Probability Axioms?",
+      "reason": "要旨: Typed-decision models such as TypeSafe's Jev answer a declared yes/no or multiple-choice question about a state with a probability instead of text, and their evaluations report accuracy and calibration. Neither requires that the probabilities a model gives to logically related questions fit together item by item,。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.33209",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
