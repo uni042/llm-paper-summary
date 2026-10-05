@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r21-screen-01-part-07-e728e9d7b1a3",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.22793",
+      "identity_tokens": [
+        "arXiv:2606.22793"
+      ],
+      "title": "A Formula-Driven Survey and Research Agenda for On-Policy Distillation",
+      "reason": "一次survey本文のOPD taxonomy、systems/implementation case、speculative feedback sectionを確認。linked Draft-OPDとの技術的関係はあるが、OPD学習/feedback整理が中心で、推論時draft acceptanceやserving速度の新規実験を示さない。",
+      "source_url": "https://arxiv.org/abs/2606.22793",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.29343-draft-opd.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09932",
+      "identity_tokens": [
+        "arXiv:2606.09932"
+      ],
+      "title": "When RL Fails after SFT: Rejuvenating Model Plasticity for Robust SFT-to-RL Handoff",
+      "reason": "abstractはSFT後RLのmodel plasticityを回復するfine-tuning/post-training手法で、推論効率/servingコストは対象外。",
+      "source_url": "https://arxiv.org/abs/2606.09932",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12997",
+      "identity_tokens": [
+        "arXiv:2603.12997"
+      ],
+      "title": "Deconstructing the Failure of Ideal Noise Correction: A Three-Pillar Diagnosis",
+      "reason": "linked System-aware KV cache lineageを確認するため本文を読んだ。論文はnoisy-label classifierのloss correction、optimization dynamics、情報損失を扱い、LLM inference/serving/KV cacheの手法・評価は含まない。",
+      "source_url": "https://arxiv.org/abs/2603.12997",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TII.2025.3639733",
+      "identity_tokens": [
+        "DOI:10.1109/TII.2025.3639733"
+      ],
+      "title": "AMR-Net: Adaptive Temporal-Channel Multiresolution Network for Industrial Time-Series Prediction",
+      "reason": "一次abstractは産業時系列のmultiresolution CNN/RNNにconfidence-based early exitを加え15倍高速化するとし、DeeBERT lineageとの類似はある。非LLM time-series予測への適用に限るか本文で検証できない。",
+      "source_url": "https://doi.org/10.1109/TII.2025.3639733",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06973",
+      "identity_tokens": [
+        "arXiv:2601.06973"
+      ],
+      "title": "LLMs Can't Play Hangman: On the Necessity of a Private Working Memory for Language Agents",
+      "reason": "一次本文でprivate working memoryをsystem promptへ各turn注入する方式とGPT-OSS/Qwen3評価を確認。これはhidden-state一貫性能力の論文で、memory updates自体の推論token cost削減は示さず、linked MoE pruningとの関係も弱い。",
+      "source_url": "https://arxiv.org/abs/2601.06973",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
+      ]
+    }
+  ]
+}
