@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-09-part-04-84318febf7dd",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.06683",
+      "identity_tokens": [
+        "arXiv:2204.06683"
+      ],
+      "title": "Revisiting Transformer-based Models for Long Document Classification",
+      "reason": "Transformerの長入力計算資源に隣接するが、評価は分類専用encoderでLLM生成/servingではない。LLM推論への移転を示す実験がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2204.06683",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2022.3193354",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2022.3193354"
+      ],
+      "title": "A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization",
+      "reason": "候補packetに記載された一次資料URLを取得経路で開いたが、一次要旨を確認できなかった。検索snippetや題名から内容を推測せず、候補由来のID/title/URLのみ保持。",
+      "source_url": "https://doi.org/10.1109/JSSC.2022.3193354",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.13803",
+      "identity_tokens": [
+        "arXiv:2305.13803"
+      ],
+      "title": "NORM: Knowledge Distillation via N-to-One Representation Matching",
+      "reason": "一次要旨はrepresentation matchingによるknowledge distillationの方法で、学習時のモデル圧縮が主題。LLM inference効率の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2305.13803",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/technologies12060081",
+      "identity_tokens": [
+        "DOI:10.3390/technologies12060081"
+      ],
+      "title": "A Survey of Machine Learning in Edge Computing: Techniques, Frameworks, Applications, Issues, and Research Directions",
+      "reason": "候補packetに記載された一次資料URLを取得経路で開いたが、一次要旨を確認できなかった。検索snippetや題名から内容を推測せず、候補由来のID/title/URLのみ保持。",
+      "source_url": "https://doi.org/10.3390/technologies12060081",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3542929.3563510",
+      "identity_tokens": [
+        "DOI:10.1145/3542929.3563510"
+      ],
+      "title": "MISO: exploiting multi-instance GPU capability on multi-tenant GPU clusters",
+      "reason": "GPU共有/スケジューリングに隣接し、評価にはBERT NLP workloadも含むが、LLM推論servingの固有評価はない。LLMへの外挿根拠が不足するためborderline。",
+      "source_url": "https://arxiv.org/abs/2207.11428",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md"
+      ]
+    }
+  ]
+}
