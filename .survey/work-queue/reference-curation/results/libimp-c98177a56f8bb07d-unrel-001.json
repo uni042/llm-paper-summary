@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c98177a56f8bb07d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.00083",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.00083",
+    "identity_tokens": [
+      "arXiv:2607.00083"
+    ],
+    "reason": "Primary abstract reviewed: Language models have changed from unreliable text generators to highly-capable large models with trillions of parameters. Capability increases come hand-in-hand with increases in scale, making understanding the internal representations of models more challenging. Since millions of users increasing rely on language models to interact with external tools or make decisions in medium or high-stakes scenarios, we need to establish control over model behavior and know when to trust [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:34:44+00:00",
+    "last_checked_at": "2026-10-05T11:34:44+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+    ],
+    "title": "Harnessing the Latent Space: From Steering Vectors to Model Calibrators for Control and Trust"
+  },
+  "processed_at": "2026-10-05T11:34:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c98177a56f8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f02c10a852545ab-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.31497",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.31497",
+    "identity_tokens": [
+      "arXiv:2606.31497"
+    ],
+    "reason": "The method estimates cloud request/response timing and selects robot request locations with a communication-aware planner. Simulated outcomes improve task success/request reliability; the intervention is robot communication/motion planning, not model inference efficiency.",
+    "first_checked_at": "2026-10-05T11:34:43+00:00",
+    "last_checked_at": "2026-10-05T11:34:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Communication-Aware Robot Execution for Cloud Inference under Spatially Heterogeneous Connectivity"
+  },
+  "processed_at": "2026-10-05T11:34:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f02c10a8525",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

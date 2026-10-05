@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3facdd5eb65a382a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3805773.3806641",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3805773.3806641",
+    "identity_tokens": [
+      "DOI:10.1145/3805773.3806641"
+    ],
+    "reason": "Primary abstract reviewed: Red team reconnaissance remains largely manual, as existing tools lack autonomous decision-making. Abundant empirical knowledge exists on conducting reconnaissance, suggesting that well-orchestrated autonomous AI agents -- guided by this knowledge and structured methodologies -- could perform effectively, particularly in initial reconnaissance and vulnerability assessment. Our architecture uses an Openclaw agent running on a dedicated Linux machine (for security isolation), c [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:34:42+00:00",
+    "last_checked_at": "2026-10-05T11:34:42+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+    ],
+    "title": "OpenClaw RedTeam Recon: A Local OSS-LLM-Powered Autonomous Reconnaissance Agent"
+  },
+  "processed_at": "2026-10-05T11:34:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3facdd5eb65a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3facdd5eb65a382a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3807503.3819495",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3807503.3819495",
+    "identity_tokens": [
+      "DOI:10.1145/3807503.3819495"
+    ],
+    "reason": "Primary abstract reviewed: Deep neural networks are increasingly deployed in biomedical and healthcare applications, where robustness, adaptive knowledge reuse, and reliable prediction on rare or difficult cases are critical. However, biomedical datasets often evolve over time and contain rare patterns that can be easily forgotten during model updates. As a result, current DNN model building suffers from two serious problems: forgetting and difficult low-confidence test cases. In this paper, we propose [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+    "first_checked_at": "2026-10-05T11:34:42+00:00",
+    "last_checked_at": "2026-10-05T11:34:42+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+    ],
+    "title": "SkillNet: Open-Style Skill Acquisition and Adaptive Inference for Robust Biomedical Deep Learning"
+  },
+  "processed_at": "2026-10-05T11:34:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3facdd5eb65a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
