@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-97-part-08-1714e96ced42",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.13178",
+      "identity_tokens": [
+        "arXiv:2502.13178"
+      ],
+      "title": "Benchmarking Post-Training Quantization in LLMs: Comprehensive Taxonomy, Unified Evaluation, and Comparative Analysis",
+      "reason": "Taxonomy/benchmark, not new quantizer or serving system; emphasizes quality/robustness rather than end-to-end latency/throughput.",
+      "source_url": "https://arxiv.org/abs/2502.13178",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04393",
+      "identity_tokens": [
+        "arXiv:2502.04393"
+      ],
+      "title": "UniCP: A Unified Caching and Pruning Framework for Efficient Video Generation",
+      "reason": "UniCP optimizes diffusion-transformer video generation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2502.04393",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00500",
+      "identity_tokens": [
+        "arXiv:2502.00500"
+      ],
+      "title": "Video Latent Flow Matching: Optimal Polynomial Projections for Video Interpolation and Extrapolation",
+      "reason": "Video interpolation/extrapolation and generation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2502.00500",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.12.13.628435",
+      "identity_tokens": [
+        "DOI:10.1101/2024.12.13.628435"
+      ],
+      "title": "Paying attention to attention: High attention sites as indicators of protein family and function in language models",
+      "reason": "Protein-sequence PLM for biological interpretation/classification, not language-model serving efficiency.",
+      "source_url": "https://doi.org/10.1101/2024.12.13.628435",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.19530",
+      "identity_tokens": [
+        "arXiv:2411.19530"
+      ],
+      "title": "Quantized Delta Weight Is Safety Keeper",
+      "reason": "Primary contribution is security/robustness against fine-tuning attacks, without serving latency benchmarking or new runtime. Borderline for adjacent multi-tenant compression evidence.",
+      "source_url": "https://arxiv.org/abs/2411.19530",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    }
+  ]
+}
