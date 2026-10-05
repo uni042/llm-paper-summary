@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c88b51bb296422c3-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.06838",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.06838",
+    "identity_tokens": [
+      "arXiv:2608.06838"
+    ],
+    "reason": "Long-context training is increasingly important for large language models, and linear attention and state space models have become popular for improving long-context efficiency. However, efficiently parallelizing long-sequence training for recurrent and hybrid models remains challenging. We present StateFlow, a sequence pipeline parallelism system for models with linear recurrence. StateFlow partitions each sequence into chunks and schedules their execution while propagating boundary states and gradients across chunks, thereby reducing activation lifetimes and improving training throughput. StateFlow further uses profile-guided nonuniform chunking to balance recurrence and softmax attention computation in hybrid models, and overlaps state transitions that expose limited parallelism with surrounding computation. Applying StateFlow to models with up to 32B parameters and 256K context length, we achieve up to \\(2.22\\times\\) throughput improvements and \\(2.45\\times\\) memory reduction compared to conventional pipeline parallelism, enabling otherwise infeasible configurations.",
+    "first_checked_at": "2026-10-05T08:57:58+00:00",
+    "last_checked_at": "2026-10-05T08:57:58+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "StateFlow: Sequence Pipeline Parallelism for Long-Context Modeling with Linear Recurrence"
+  },
+  "processed_at": "2026-10-05T08:57:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c88b51bb2964",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

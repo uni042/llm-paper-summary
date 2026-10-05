@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4b5cec8166fb84aa-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1063/5.0328951",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1063/5.0328951",
+    "identity_tokens": [
+      "DOI:10.1063/5.0328951"
+    ],
+    "reason": "Advancements in laser-based secondary radiation sources are being made by controlling the pulse shape of ultrafast, high-power laser systems away from its best-compressed level (shortest duration). Pulse shaping at the femtosecond level relies on control over a combination of both the laser spectral intensity and phase. Devices such as an acousto-optic programmable dispersive filter are often used at high power (>1 TW) laser facilities to affect the spectral phase while largely preserving the spectral intensity and overall laser power. Using this type of controllable hardware, multiple machine-learning-based models were trained on experimental data. This was performed to capture all nonlinearities in the amplification process and to predict upstream laser input parameters needed to produce a specific output pulse shape at TW-level peak powers. Comparisons of algorithm performance are given for a variety of models and training dataset sizes, along with the results of experiments demonstrating the ability to produce a custom-defined pulse shape using dispersion-coefficient control, the first step toward arbitrary pulse-shaping control at the femtosecond level for high-power laser applications.",
+    "first_checked_at": "2026-10-05T08:57:57+00:00",
+    "last_checked_at": "2026-10-05T08:57:57+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Demonstration of machine-learning-based control for femtosecond-level pulse-shaping applications"
+  },
+  "processed_at": "2026-10-05T08:57:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4b5cec8166fb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

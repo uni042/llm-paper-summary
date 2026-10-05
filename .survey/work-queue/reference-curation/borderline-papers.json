@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:55:08+00:00",
-  "record_count": 1248,
+  "updated_at": "2026-10-05T08:57:58+00:00",
+  "record_count": 1254,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19187,6 +19187,104 @@
         "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
       ],
       "title": "NumCache: KV Cache Compression and Retrieval for Financial Document QA"
+    },
+    "arXiv:2608.07019": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07019",
+      "identity_tokens": [
+        "arXiv:2608.07019"
+      ],
+      "reason": "対象分野との接点は確認したが、測定対象が通信転送効率/タスク特化VLA/重み品質改善であり、LLM一般の推論・servingコスト改善への適合または利得が限定的。",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization"
+    },
+    "DOI:10.1109/aann71145.2026.11709067": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aann71145.2026.11709067",
+      "identity_tokens": [
+        "DOI:10.1109/aann71145.2026.11709067"
+      ],
+      "reason": "packetに一次要旨がなく、DOI/IEEE Xploreの一次資料本文も取得できなかった。タイトルだけでは対象性を推測せずborderlineに分類。試行: DOI resolverおよびIEEE Xplore document URL (retrieval internal error)。",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Post-Training Low-Bit Quantization for Edge-Sensor Neural Inference"
+    },
+    "DOI:10.1109/aann71145.2026.11709383": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aann71145.2026.11709383",
+      "identity_tokens": [
+        "DOI:10.1109/aann71145.2026.11709383"
+      ],
+      "reason": "packetに一次要旨がなく、DOI/IEEE Xploreの一次資料本文も取得できなかった。タイトルだけでは対象性を推測せずborderlineに分類。試行: DOI resolverおよびIEEE Xplore document URL (retrieval internal error)。",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Query-Aware Adaptive Document Compression for Efficient RAG Context Allocation"
+    },
+    "arXiv:2608.07279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07279",
+      "identity_tokens": [
+        "arXiv:2608.07279"
+      ],
+      "reason": "対象分野との接点は確認したが、測定対象が通信転送効率/タスク特化VLA/重み品質改善であり、LLM一般の推論・servingコスト改善への適合または利得が限定的。",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "Token Communication for Multimodal Large Language Model"
+    },
+    "arXiv:2608.07361": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07361",
+      "identity_tokens": [
+        "arXiv:2608.07361"
+      ],
+      "reason": "対象分野との接点は確認したが、測定対象が通信転送効率/タスク特化VLA/重み品質改善であり、LLM一般の推論・servingコスト改善への適合または利得が限定的。",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Depth-Wise Probing and Pruning of the Planning Token in a Driving Vision-Language-Action Model"
+    },
+    "arXiv:2608.07440": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07440",
+      "identity_tokens": [
+        "arXiv:2608.07440"
+      ],
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Blast Radius"
     }
   }
 }

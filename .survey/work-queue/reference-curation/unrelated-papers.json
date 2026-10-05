@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:55:09+00:00",
-  "record_count": 4021,
+  "updated_at": "2026-10-05T08:57:58+00:00",
+  "record_count": 4035,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -58546,6 +58546,220 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "RecCompl: Efficient Model Compilation for Industrial Scale Recommendation Models with PyTorch 2"
+    },
+    "arXiv:2608.07003": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07003",
+      "identity_tokens": [
+        "arXiv:2608.07003"
+      ],
+      "reason": "Training-free text-to-high-resolution image generation has recently attracted growing research attention. However, existing studies on this task primarily focus on adapting off-the-shelf U-Net-based diffusion models to high resolutions, with limited progress on adapting off-the-shelf Diffusion Transformer (DiT) models despite their strong text-to-image generation capabilities at limited resolutions. In this work, we find two key challenges particularly hindering the application of off-the-shelf DiT models for high-resolution image synthesis in a training-free manner, namely, spatial disorder and long generation time. To address these challenges, we propose a novel method tailored to adapt off-the-shelf DiT models for high-resolution image synthesis. Extensive experiments show the efficacy of our method. Our code is available at: https://github.com/zylwithxy/HRDiT.",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "HRDiT: Training-Free High-Resolution Image Generation with Off-the-Shelf Diffusion Transformer Models"
+    },
+    "arXiv:2608.07055": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07055",
+      "identity_tokens": [
+        "arXiv:2608.07055"
+      ],
+      "reason": "Benefiting from ultra-long behavior sequence modeling, existing recommender systems bring users a better experience via simultaneously considering their long-term and short-term interests. Nevertheless, extended sequence lengths introduce substantial burdens on training efficiency and serving throughput. Prior approaches typically utilize search-based or cluster-based compression on ultra-long sequences at the cost of fine-grained information, or rely on various lightweight target attention structures incapable of sufficient sequential feature extraction. In this paper, we balance the effectiveness and efficiency for ultra-long sequence modeling via full transformer modeling accompanied with a two-stage knowledge distillation framework. First, both teacher and student models take the full attention mechanism rather than pure target-sequence attention for effective sequence scaling. For student models, we propose several simple yet well-motivated token merge approaches, significantly compressing the sequence length while maintaining an acceptable performance. Then, a one-time teacher is heavily trained with full sequence tokens, further boosting the performance of student models via knowledge distillation. The proposed paradigm named TM20K has been successfully deployed in ByteDance's e-commerce advertising recommender system that extends the e-commerce sequence length to 20K, delivering substantial improvements in key business metrics (e.g., ADSS +1.036\\%) while keeping the training and serving cost nearly the same as the online state-of-the-art model (e.g., serving latency only +5.6\\%).",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Teacher Retains Full Tokens, Student Merges Efficiently: TM20K for E-Commerce Sequence Modeling in Ad Recommendation"
+    },
+    "arXiv:2608.07086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07086",
+      "identity_tokens": [
+        "arXiv:2608.07086"
+      ],
+      "reason": "Reinforcement learning systems are significantly more complex than other machine learning paradigms due to inherent properties, causing RL system design to jointly account for many tightly coupled factors. Despite advances in individual algorithmic components, their functional interdependencies remain underexplored: do they exhibit mutual synergy or counterproductive interference? To bridge this gap, we conduct a systematic investigation and find that the efficacy of different components exhibits significant task-dependency, and naively stacking state-of-the-art techniques does not necessarily yield performance gains; instead, it often triggers emergent challenges, such as compounded non-stationarity. Building upon these findings, we distill a suite of actionable insights into the principled coordination of these components. Guided by these insights, we propose ROSER, an RL framework that coordinates three critical dimensions: Model-based Representation, Optimization Stability, and Experience Replay. Across diverse continuous-control benchmarks, ROSER consistently outperforms vanilla baselines and achieves 17.60% gains over naive stack. Our findings underscore the necessity of a holistic perspective in RL system design and paves the way for developing sample-efficient agents.",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Beyond Isolation: Unlocking Reinforcement Learning Component Synergy for Sample-Efficient Continuous Control"
+    },
+    "arXiv:2608.07180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07180",
+      "identity_tokens": [
+        "arXiv:2608.07180"
+      ],
+      "reason": "Recent advances in deep reinforcement learning (RL) have shown that improving neural network architectures can yield substantial gains in sample efficiency and asymptotic performance without altering the underlying algorithms. In contrast, work on multi-objective reinforcement learning (MORL), which aims to discover a set of policies that balance trade-offs among conflicting objectives, has predominantly focused on algorithmic innovations, leaving the area of architectures underexplored. While the optimal policies and value functions can differ significantly depending on the trade-offs, MORL algorithms commonly represent them with simple feedforward networks conditioned on the trade-off. This raises the question of whether the performance of the algorithms could be improved with more expressive function approximators. In this paper, we integrate recent advances in neural network design: (i) observation and feature normalization, (ii) weight normalization, and (iii) modeling of distributional returns with an entropy-regularized MORL algorithm. The empirical results across standard continuous control benchmarks demonstrate that these changes substantially improve the quality of the produced solution sets without requiring major changes to the underlying algorithm.",
+      "first_checked_at": "2026-10-05T08:57:56+00:00",
+      "last_checked_at": "2026-10-05T08:57:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Momba: Network Modernization Improves Multi-Objective Reinforcement Learning"
+    },
+    "arXiv:2608.07616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07616",
+      "identity_tokens": [
+        "arXiv:2608.07616"
+      ],
+      "reason": "Vision transformers face significant computational overheads in high-resolution dense prediction due to the quadratic complexity of self-attention. Linear attention offers efficiency but sacrifices local context modeling. We propose \\textbf{HSMLA (Hierarchical Softmax Multi-scale Linear Attention)}, which combines ReLU-based linear attention for global context, selective softmax refinement for critical local features, and multi-scale token representations via depthwise convolutions. HSMLA achieves superior accuracy-efficiency trade-offs: up to $4.2\\times$ inference-time speedup across dense prediction tasks, $87.3%$ Dice with $3.2\\times$ speedup on CT organ segmentation, and $94.2%$ AUC with $4.1\\times$ speedup on pathology WSI.",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+      ],
+      "title": "HSMLA: Hierarchical Softmax Multi-scale Linear Attention for Efficient Vision Transformers"
+    },
+    "arXiv:2608.14691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14691",
+      "identity_tokens": [
+        "arXiv:2608.14691"
+      ],
+      "reason": "Sequence models are conventionally distinguished by their backbone, the mechanism that routes information across positions, such as attention or recurrence. This paper varies a choice that is prior to the backbone and shared by nearly all current models: the \\emph{substrate}, the number system in which the hidden state is represented together with the form of the map from state to prediction. The prevailing substrate is a real-valued state with an affine--softmax readout; we study a complex-valued alternative drawn from the mathematics of quantum theory, in which information is carried by the phases of the state and scores are quadratic Born forms. Prior work proved an idealized version of this substrate representationally stronger than any real model with a linear readout; we ask whether it also trains faster. Relaxing the two properties that block deployment, exact unitarity and the Born vocabulary readout, we instantiate it in the Mamba state-space model and an attention-based Transformer. At 253M parameters, matched to within $0.02\\%$ and trained under one fixed protocol on three byte-level corpora, the complex models reach every measured validation loss in approximately one third (state-space) and one half (attention) of the optimization steps of their real counterparts. The two backbones then diverge. Once the learning-rate warmup ends, the state-space advantage continues to widen, from $0.321$ to $0.354$ bits per character on OpenWebText and from $0.368$ to $0.396$ on FineWeb, which an artifact of the warmup ramp would not do; the attention advantage instead decays toward zero on every corpus, and is therefore an effect of early training.",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "The Quantum Shortcut: Complex Phase-State Dynamics Reduce the Optimization Steps of Sequence Models"
+    },
+    "DOI:10.1063/5.0328951": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1063/5.0328951",
+      "identity_tokens": [
+        "DOI:10.1063/5.0328951"
+      ],
+      "reason": "Advancements in laser-based secondary radiation sources are being made by controlling the pulse shape of ultrafast, high-power laser systems away from its best-compressed level (shortest duration). Pulse shaping at the femtosecond level relies on control over a combination of both the laser spectral intensity and phase. Devices such as an acousto-optic programmable dispersive filter are often used at high power (>1 TW) laser facilities to affect the spectral phase while largely preserving the spectral intensity and overall laser power. Using this type of controllable hardware, multiple machine-learning-based models were trained on experimental data. This was performed to capture all nonlinearities in the amplification process and to predict upstream laser input parameters needed to produce a specific output pulse shape at TW-level peak powers. Comparisons of algorithm performance are given for a variety of models and training dataset sizes, along with the results of experiments demonstrating the ability to produce a custom-defined pulse shape using dispersion-coefficient control, the first step toward arbitrary pulse-shaping control at the femtosecond level for high-power laser applications.",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Demonstration of machine-learning-based control for femtosecond-level pulse-shaping applications"
+    },
+    "arXiv:2608.06690": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06690",
+      "identity_tokens": [
+        "arXiv:2608.06690"
+      ],
+      "reason": "Most language-model access controls regulate behavior while leaving the same computation available to every request. We study a different systems question: can trusted authorization determine which newly trained parameters are reachable by the forward pass? Policy-Masked Private Experts freezes a pretrained sparse Mixture-of-Experts (MoE) model, trains a disjoint expert branch, and selects the public or private pool before top-k routing. The resulting claim is narrow but testable: under the declared trusted computing base (TCB), an unauthorized request executes no private expert. It does not imply that the public model lacks the same semantic capability. We test this separation between execution control and task utility in Qwen3-30B-A3B and DeepSeek-V2-Lite. Three Qwen BF16 seeds update all 32 private experts while the public fingerprint remains unchanged. Across 64 adversarial scenarios and 96 deny/fail-closed events, unauthorized private execution is zero; independent hooks exactly match 11,616 routed private rows and allow-deny-allow recovery is exact. On two prospectively frozen Qwen benchmarks, the private branch improves exact tool use by 5.0 percentage points (pp) (five versus zero discordances; one-sided Holm p = 0.03125, corresponding two-sided exact p = 0.0625) and 21.3 pp (percentile-bootstrap 95% CI [13.3, 29.3], Holm p = 0.000031). Three arm-blinded model evaluators retain a positive external effect of 18.7 pp (95% CI [9.3, 28.0]). A parameter-matched Lora has similar external utility, but a post-hoc request gate leaves 1,225 adapter calls under deny; the disjoint expert branch leaves none. DeepSeek reproduces the route invariant and gains 27.0 pp. A valid sealed evaluation is near-neutral. These results support auditable, reversible control over a trained parameter path, while showing that useful transfer remains distribution dependent.",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Policy-Masked Private Experts: Auditable and Reversible Capability Access Control in Sparse MoE Models"
+    },
+    "arXiv:2608.06727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06727",
+      "identity_tokens": [
+        "arXiv:2608.06727"
+      ],
+      "reason": "Transformer models for high-dimensional omics analysis process thousands of genes or pathways, although only a subset requires deep computation. Mixture-of-Recursions (MoR) improves efficiency through adaptive token-choice or expert-choice routing. We propose bioMoR, which, to the best of our knowledge, is the first framework to apply MoR to gene-level and pathway-level learning. Our contributions include identifying three locations for integrating structured biological knowledge within an MoR backbone: graph-based information sharing refines token embeddings, a structural bias guides self-attention toward biologically related tokens, and a graph-aware router uses neighborhood information to determine each token's recursion depth. These techniques are centered on our insight that additional knowledge of token interaction can effectively help models construct embeddings and select which tokens should be learned more deeply. Across eight benchmarks spanning diverse omics data types and evaluated under a unified five-fold cross-validation protocol, bioMoR improves average macro-F1 by 8.2 percentage points and balanced accuracy by 7.1 percentage points over the strongest biology-agnostic MoR baseline while using 75 percent fewer parameters and up to 58 percent fewer FLOPs than a non-recursive Transformer. The selected marker genes or pathways provide biological interpretability, while their token-specific recursion depths reveal how computation is allocated.",
+      "first_checked_at": "2026-10-05T08:57:57+00:00",
+      "last_checked_at": "2026-10-05T08:57:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "bioMoR: Biology-Guided Mixture-of-Recursions for Effective Genomic Learning"
+    },
+    "arXiv:2608.06838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06838",
+      "identity_tokens": [
+        "arXiv:2608.06838"
+      ],
+      "reason": "Long-context training is increasingly important for large language models, and linear attention and state space models have become popular for improving long-context efficiency. However, efficiently parallelizing long-sequence training for recurrent and hybrid models remains challenging. We present StateFlow, a sequence pipeline parallelism system for models with linear recurrence. StateFlow partitions each sequence into chunks and schedules their execution while propagating boundary states and gradients across chunks, thereby reducing activation lifetimes and improving training throughput. StateFlow further uses profile-guided nonuniform chunking to balance recurrence and softmax attention computation in hybrid models, and overlaps state transitions that expose limited parallelism with surrounding computation. Applying StateFlow to models with up to 32B parameters and 256K context length, we achieve up to \\(2.22\\times\\) throughput improvements and \\(2.45\\times\\) memory reduction compared to conventional pipeline parallelism, enabling otherwise infeasible configurations.",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "StateFlow: Sequence Pipeline Parallelism for Long-Context Modeling with Linear Recurrence"
+    },
+    "arXiv:2608.06894": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06894",
+      "identity_tokens": [
+        "arXiv:2608.06894"
+      ],
+      "reason": "Neural operators have become a central tool for solving partial differential equations (PDEs), with spectral operators offering efficient global mixing across spatial locations. However, many PDEs contain physics-sensitive local structures that are critical to the underlying physical behavior. For example, in Darcy flow, local material interfaces are often reflected by sharp changes in the permeability field and can strongly influence the solution. Existing spectral operators primarily adapt modal mixing based on center-point representations, making them insufficiently responsive to such localized structural variations. We propose the Edge-Conditioned Spectral Operator (ESO), a novel spectral operator framework that modulates global spectral mixing using local edge-wise variations. By incorporating the Pairwise-Variation Modal Mixer (PVMM) to inject local edge information into spectral mode selection, ESO preserves the global approximation capability of spectral neural operators while enabling the learned kernel to adapt to physics-sensitive local structures. Furthermore, we introduce a task-adaptive Physics-Aware Reweighting (PAR) that emphasizes physically important regions, identified by taskspecific physical quantities. Across nine PDE benchmarks, ESO consistently achieves state-of-the-art performance. Visual and region-wise analyses further demonstrate that ESO reduces solution errors near coefficient jumps, high-gradient flow structures, and other physically sensitive regions. The code is available at https://github.com/Tanpig-X/ESO.",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "From Points to Edges: Edge-Conditioned Spectral Operators for Physics-Sensitive PDE Learning"
+    },
+    "arXiv:2608.06940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06940",
+      "identity_tokens": [
+        "arXiv:2608.06940"
+      ],
+      "reason": "LLM judge panels are a standard evaluation tool, but prior work reports highly correlated panel errors: nine judges provide roughly the effective information of two independent ones, and aggregation closes only a small fraction of the gap. A natural remedy--a signal from a different evidence source, e.g., executing a test suite--produced no distinguishable change in the panel's effective-vote count at scale (-0.04, 95\\% CI [-0.10, +0.02]). Aggregate dependence and conditional decision utility are different questions. Elementary majority arithmetic fixes the affected set for single-ballot substitution: only decisions with a one-vote margin can change. The empirical question is whether panel error rates rise and useful substitutions concentrate there. They do: the entire accuracy gain concentrates on these pivotal queries, where it is large (+10.4 to +23.3 percentage points across three headline configurations), and is exactly zero elsewhere. We confirm the pattern across three code benchmarks and four panel sizes (a 9-judge extension and 56 dependent subsampling checks, gain +6.5 to +16.1 percentage points). On HumanEval+/MBPP+, a majority-side replacement rule raises overall accuracy from 82.44\\% to 85.62\\% while invoking the signal on 16.2\\% of queries; signal-only remains stronger at 87.60\\%. Thus population-level dependence diagnostics and margin-stratified utility are complementary, and the affected-set characterization yields a call-reduction rule for any specified single-ballot substitution policy.",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps"
+    },
+    "arXiv:2608.07226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07226",
+      "identity_tokens": [
+        "arXiv:2608.07226"
+      ],
+      "reason": "Compact AI systems make local language-model experimentation increasingly accessible, yet practical evidence for multi-node training on desktop-class accelerators remains limited. This report presents a proof-of-concept deployment of distributed NanoChat pretraining across two NVIDIA DGX Spark systems, each with a GB10 Grace Blackwell system-on-chip and 128 GB of unified memory, administered remotely over a Tailscale mesh VPN and connected for training by a dedicated 200 Gb/s QSFP56 direct fiber link. PyTorch torchrun, DDP, and NCCL were configured with one process per node, a depth-20 NanoChat model, a local batch size of 32 per node, and a 2,048-token context, giving a global batch of 131,072 tokens per step. The run sustained a step time of about 69.4 s (about 1,890 tokens/s), processing about 653 million tokens over four days. We document link configuration, container setup, interface binding, a step-zero evaluation bug that triggered NCCL timeouts, checkpointing, and troubleshooting lessons, as a reproducibility reference for small labs. We also built a cybersecurity fine-tuning dataset from 77 CISA advisories (338 training, 37 validation conversations) and ran a 17-question held-out evaluation comparing a baseline SFT checkpoint against a CTI-augmented checkpoint with an Ollama-hosted LLM judge. CTI-specific categories improved while general-knowledge categories regressed, for a small overall change from 2.06 to 2.29 on a 0-10 scale. The same cluster supports a 400-level AI course (CS 426) and a query engine for CompTIA Security+ POGIL activities in CBS 255, showing modest local infrastructure can serve both research and teaching. The study establishes feasibility rather than a scaling-efficiency claim, since single-node throughput used for comparison was estimated, not measured under matched conditions. Runbook and scripts are available (see Code Availability).",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Dual-Node NVIDIA DGX Spark over Tailscale: A Remote-Access Testbed for Distributed LLM Training and Cyber-Threat-Intelligence Fine-Tuning"
+    },
+    "arXiv:2608.07430": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07430",
+      "identity_tokens": [
+        "arXiv:2608.07430"
+      ],
+      "reason": "Diffusion Large Language Models (DLLMs) replace autoregressive next-token prediction with iterative parallel denoising, yet their internal safety mechanisms remain poorly understood. In this work, we investigate DLLMs both as targets and as adversaries, exposing mechanistic vulnerabilities in diffusion-based alignment. We first show that safety alignment in DLLMs remains sparse and transferable across architectures. DLLMs initialized from autoregressive predecessors inherit the same mechanistic safety footprint as their source models, enabling transfer attacks via direct safety neuron mapping and pruning. Self-pruning increases attack success rates (ASR) from 2.6% to 73.8% on LLaDA and from 1.9% to 86.6% on Dream, while transfer pruning from Qwen2.5 increases ASR from 1.9% to 73.2% on Dream and from 7.0% to 86.3% on Fast-dLLM. Building on these findings, we introduce SN-Guided Diffusion, a fully offline black-box jailbreak framework that steers the diffusion process away from safety-triggering regions using a weighted safety neuron loss, which achieves near-perfect prompt separability (AUROC = 1.0 for benign-vs-jailbreak discrimination). Across multiple open and proprietary targets, our method achieves a transfer ASR of up to 77.1% on Llama-3-8B-Instruct, 86.9% on Qwen2.5-7B-Instruct, and 74.3% against Gemini-2.5-Flash-Lite, while requiring only 20 generation episodes per prompt. Compared to prior jailbreaking frameworks, our method achieves competitive transferability with orders-of-magnitude lower generation cost. Our codebase is available at https://github.com/ellyoana/sn-guided-diffusion.",
+      "first_checked_at": "2026-10-05T08:57:58+00:00",
+      "last_checked_at": "2026-10-05T08:57:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits"
     }
   }
 }
