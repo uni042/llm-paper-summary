@@ -150,16 +150,7 @@ def recover_blocked_research(repo_root: Path) -> dict[str, int]:
             counts["hard_deleted"] += 1
             continue
 
-        represented = canonical_id in success_ids
-        if not represented and canonical_id:
-            record = dict(normalized_meta)
-            record.setdefault("source_url", normalized_meta.get("source"))
-            try:
-                represented = inbox.resolve_paper_identity.resolve(repo_root, record).get("status") == "represented"
-            except Exception:
-                represented = False
-
-        if represented:
+        if canonical_id in success_ids:
             _record_cleanup(
                 repo_root,
                 source,
@@ -193,36 +184,11 @@ def recover_blocked_research(repo_root: Path) -> dict[str, int]:
             counts["hard_deleted"] += 1
             continue
 
-        audit = inbox.paper_quality_gate.inspect_rendered_paper(
-            repo_root,
-            inbox.repo_relative(source, repo_root),
-            normalized_raw,
-        )
-        if audit.status == "FAIL" and any(
-            str(reason).startswith("日本語比率 ") for reason in audit.failures
-        ):
-            repaired_raw, changed = inbox.normalize_library_research_japanese(normalized_raw)
-            if changed:
-                repaired_audit = inbox.paper_quality_gate.inspect_rendered_paper(
-                    repo_root,
-                    inbox.repo_relative(source, repo_root),
-                    repaired_raw,
-                )
-                if repaired_audit.japanese_ratio > audit.japanese_ratio:
-                    normalized_raw = repaired_raw
-                    audit = repaired_audit
-
-        if audit.status == "FAIL":
-            _record_cleanup(
-                repo_root,
-                source,
-                "discarded_blocked_research_quality",
-                {"canonical_id": canonical_id, "failures": list(audit.failures)},
-            )
-            source.unlink(missing_ok=True)
-            counts["hard_deleted"] += 1
-            continue
-
+        # Do not duplicate the normal importer's expensive identity and quality
+        # checks here. A complete blocked artifact gets one bounded retry; the
+        # canonical importer then performs identity resolution, normalization and
+        # the full quality gate. If it blocks again, the retry-prefix rule above
+        # discards it on the next cleanup pass.
         source.write_text(normalized_raw, encoding="utf-8")
         target = _move_retry(source, pending, RESEARCH_RETRY_PREFIX)
         _record_cleanup(
