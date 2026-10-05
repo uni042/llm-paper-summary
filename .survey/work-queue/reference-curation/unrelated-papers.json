@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:35:36+00:00",
-  "record_count": 4187,
+  "updated_at": "2026-10-05T09:37:57+00:00",
+  "record_count": 4200,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -60964,6 +60964,193 @@
         "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
       ],
       "title": "LPA-MoE: A Lightweight Period-Aware MoE Model for Time Series Forecasting in Data Centers"
+    },
+    "DOI:10.1109/jssc.2026.3675444": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2026.3675444",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3675444"
+      ],
+      "reason": "This is a generic SRAM compute-in-memory macro for vector-matrix AI workloads, with no LLM-specific evaluation.",
+      "first_checked_at": "2026-10-05T09:37:55+00:00",
+      "last_checked_at": "2026-10-05T09:37:55+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md"
+      ],
+      "title": "OS-CIM: A 28-nm Output-Stationary SRAM Compute-in-Memory Macro Featuring Dynamic Look-Ahead Zero Weight Skipping and Runtime Partial Sum Quantization"
+    },
+    "DOI:10.1109/mwscas67364.2026.11680762": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mwscas67364.2026.11680762",
+      "identity_tokens": [
+        "DOI:10.1109/mwscas67364.2026.11680762"
+      ],
+      "reason": "The paper evaluates sparse-audio-feature keyword spotting, not language-model inference.",
+      "first_checked_at": "2026-10-05T09:37:55+00:00",
+      "last_checked_at": "2026-10-05T09:37:55+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Efficient Keyword Spotting via Top-k Selection of Sparse Audio Features"
+    },
+    "DOI:10.1109/jiot.2026.3694938": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3694938",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3694938"
+      ],
+      "reason": "The paper applies Taylor-series attention to wearable human-activity recognition, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:37:55+00:00",
+      "last_checked_at": "2026-10-05T09:37:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "TSA-Former: Linear Transformer With Taylor Series Attention for Sensor-Based Human Activity Recognition"
+    },
+    "DOI:10.1109/jssc.2026.3668132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2026.3668132",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3668132"
+      ],
+      "reason": "This is a generic edge-AI SRAM compute-in-memory macro; no LLM workload or inference evaluation is stated.",
+      "first_checked_at": "2026-10-05T09:37:55+00:00",
+      "last_checked_at": "2026-10-05T09:37:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A 28-nm Hybrid-Domain Outer Product-Based Floating-Point SRAM Computing-in-Memory Macro With Logarithm Bit-Width Residual ADC for Edge AI"
+    },
+    "DOI:10.1109/jssc.2026.3669815": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2026.3669815",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2026.3669815"
+      ],
+      "reason": "The coauthor dissertation chapter describes MITTA for multi-task NLP and vision inference, identifying BERT and ViT workloads; its methods include shared base-task weights/activations, sparse task deltas, INT8/INT4 and DVFS. It does not evaluate LLM inference.",
+      "first_checked_at": "2026-10-05T09:37:55+00:00",
+      "last_checked_at": "2026-10-05T09:37:55+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "MITTA: A Multi-Task Transformer Accelerator With Mixed Precision Structured Sparsity and Hierarchical Task-Adaptive Power Management"
+    },
+    "DOI:10.1109/iccvbic71195.2026.11689518": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccvbic71195.2026.11689518",
+      "identity_tokens": [
+        "DOI:10.1109/iccvbic71195.2026.11689518"
+      ],
+      "reason": "The primary abstract studies hierarchical summarization of Indian legal and governmental documents with BART; this is a domain application, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T09:37:56+00:00",
+      "last_checked_at": "2026-10-05T09:37:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Towards Accessible Legal AI: A Hierarchical Transformer-Based Approach for Summarizing Long Indian Legal and Policy Documents"
+    },
+    "DOI:10.1109/icisc69558.2026.11681425": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icisc69558.2026.11681425",
+      "identity_tokens": [
+        "DOI:10.1109/icisc69558.2026.11681425"
+      ],
+      "reason": "The abstract compares generic DNN early exit on CIFAR-10, AG News, and Dry Bean; it does not evaluate LLMs or LLM serving.",
+      "first_checked_at": "2026-10-05T09:37:56+00:00",
+      "last_checked_at": "2026-10-05T09:37:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Early Exit Neural Networks: A Comparative Study Against Static Models and Dynamic Models Across Multi-Domain Datasets"
+    },
+    "DOI:10.1109/icma69663.2026.11647664": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icma69663.2026.11647664",
+      "identity_tokens": [
+        "DOI:10.1109/icma69663.2026.11647664"
+      ],
+      "reason": "The paper proposes a Transformer for network-traffic forecasting and evaluates forecast accuracy, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:37:56+00:00",
+      "last_checked_at": "2026-10-05T09:37:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Research on the TSM-Transformer Algorithm for Network Traffic Forecast"
+    },
+    "DOI:10.1109/icsist70215.2026.11706184": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icsist70215.2026.11706184",
+      "identity_tokens": [
+        "DOI:10.1109/icsist70215.2026.11706184"
+      ],
+      "reason": "The abstract describes a generic attention-and-memory architecture without an LLM inference method or deployment-efficiency evaluation.",
+      "first_checked_at": "2026-10-05T09:37:56+00:00",
+      "last_checked_at": "2026-10-05T09:37:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Next-Generation Deep Learning Architectures Integrating Attention and Memory Mechanisms"
+    },
+    "DOI:10.1109/smartiot70864.2026.00028": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/smartiot70864.2026.00028",
+      "identity_tokens": [
+        "DOI:10.1109/smartiot70864.2026.00028"
+      ],
+      "reason": "The abstract proposes general DNN quantization repair but reports no LLM models or LLM inference experiments.",
+      "first_checked_at": "2026-10-05T09:37:56+00:00",
+      "last_checked_at": "2026-10-05T09:37:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "VQRC: Variational Quantum Residual Compensation for Deep Neural Network Compression"
+    },
+    "DOI:10.1109/tc.2025.3647020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tc.2025.3647020",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2025.3647020"
+      ],
+      "reason": "The paper optimizes power caps for generic latency-sensitive cloud applications and does not identify LLM workloads.",
+      "first_checked_at": "2026-10-05T09:37:57+00:00",
+      "last_checked_at": "2026-10-05T09:37:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Dynamic Power Capping for Latency-Sensitive Cloud Applications: A Prediction-Based Power Efficiency Approach"
+    },
+    "DOI:10.1109/tc.2026.3689634": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tc.2026.3689634",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2026.3689634"
+      ],
+      "reason": "The paper proposes generic heterogeneous GPU-memory pooling but reports no LLM serving or model-inference study.",
+      "first_checked_at": "2026-10-05T09:37:57+00:00",
+      "last_checked_at": "2026-10-05T09:37:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "UHM: Unified Transferring and Pooling Over Heterogeneous GPU Memories"
+    },
+    "DOI:10.1109/tcad.2025.3640508": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2025.3640508",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3640508"
+      ],
+      "reason": "The paper optimizes mapping of generic DNNs onto neuromorphic hardware; it is not an LLM inference paper.",
+      "first_checked_at": "2026-10-05T09:37:57+00:00",
+      "last_checked_at": "2026-10-05T09:37:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A Dimensional Order Search Based Mapping Algorithm for Deploying DNNs Onto Many-Core Neuromorphic IC"
     }
   }
 }

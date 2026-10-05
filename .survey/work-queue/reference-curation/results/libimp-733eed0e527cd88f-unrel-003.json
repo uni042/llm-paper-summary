@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-733eed0e527cd88f-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/jiot.2026.3694938",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/jiot.2026.3694938",
+    "identity_tokens": [
+      "DOI:10.1109/jiot.2026.3694938"
+    ],
+    "reason": "The paper applies Taylor-series attention to wearable human-activity recognition, not LLM inference.",
+    "first_checked_at": "2026-10-05T09:37:55+00:00",
+    "last_checked_at": "2026-10-05T09:37:55+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "TSA-Former: Linear Transformer With Taylor Series Attention for Sensor-Based Human Activity Recognition"
+  },
+  "processed_at": "2026-10-05T09:37:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-733eed0e527c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
