@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:49:17+00:00",
-  "record_count": 5342,
+  "updated_at": "2026-10-05T13:51:51+00:00",
+  "record_count": 5357,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -77640,6 +77640,223 @@
         "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md"
       ],
       "title": "GHOST: Geometry-Hierarchical Online Streaming Token Eviction for Efficient 3D Reconstruction"
+    },
+    "arXiv:2602.15756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15756",
+      "identity_tokens": [
+        "arXiv:2602.15756"
+      ],
+      "reason": "The note gives a counterexample about composability of approximate layerwise verification; it concerns inference proof correctness, not inference efficiency/compression.",
+      "first_checked_at": "2026-10-05T13:51:48+00:00",
+      "last_checked_at": "2026-10-05T13:51:48+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "A Note on Non-Composability of Layerwise Approximate Verification for Neural Inference"
+    },
+    "arXiv:2602.14386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14386",
+      "identity_tokens": [
+        "arXiv:2602.14386"
+      ],
+      "reason": "The work changes policy-gradient action granularity for complex reasoning during LLM training; it does not optimize inference.",
+      "first_checked_at": "2026-10-05T13:51:48+00:00",
+      "last_checked_at": "2026-10-05T13:51:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Beyond Token-Level Policy Gradients for Complex Reasoning with Large Language Models"
+    },
+    "arXiv:2602.14469": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14469",
+      "identity_tokens": [
+        "arXiv:2602.14469"
+      ],
+      "reason": "The paper studies post-hoc rationalization and train/inference mismatch in reasoning traces; it targets reliability, not efficiency.",
+      "first_checked_at": "2026-10-05T13:51:49+00:00",
+      "last_checked_at": "2026-10-05T13:51:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Measuring and Mitigating Post-hoc Rationalization in Reverse Chain-of-Thought Generation"
+    },
+    "arXiv:2602.15136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15136",
+      "identity_tokens": [
+        "arXiv:2602.15136"
+      ],
+      "reason": "This theoretical paper explains empirical Bayes performance from pretraining; it describes no inference/serving/compression optimization.",
+      "first_checked_at": "2026-10-05T13:51:49+00:00",
+      "last_checked_at": "2026-10-05T13:51:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Universal priors: solving empirical Bayes via Bayesian inference and pretraining"
+    },
+    "arXiv:2605.16709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16709",
+      "identity_tokens": [
+        "arXiv:2605.16709"
+      ],
+      "reason": "LLM watermarkingの検出/生成信頼性が主題で、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T13:51:49+00:00",
+      "last_checked_at": "2026-10-05T13:51:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Covert Multi-bit LLM Watermarking: An Information Theory and Coding Approach"
+    },
+    "arXiv:2605.15305": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15305",
+      "identity_tokens": [
+        "arXiv:2605.15305"
+      ],
+      "reason": "物理simulation transformerによるシミュレーションが主題で、LLM servingとは異なる。",
+      "first_checked_at": "2026-10-05T13:51:49+00:00",
+      "last_checked_at": "2026-10-05T13:51:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "WorldParticle: Unified World Simulation of Lagrangian Particle Dynamics via Transformer"
+    },
+    "arXiv:2605.15422": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15422",
+      "identity_tokens": [
+        "arXiv:2605.15422"
+      ],
+      "reason": "DualKVはRL post-training時の学習効率を扱う。推論時のserving/compression改善が主題ではない。",
+      "first_checked_at": "2026-10-05T13:51:50+00:00",
+      "last_checked_at": "2026-10-05T13:51:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "DualKV: Shared-Prompt Flash Attention for Efficient RL Training with Large Rollouts and Long Contexts"
+    },
+    "DOI:10.3389/frai.2026.1804338": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1804338",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1804338"
+      ],
+      "reason": "lifelong learning/継続学習の手法を扱い、推論時の計算・メモリ効率ではない。",
+      "first_checked_at": "2026-10-05T13:51:50+00:00",
+      "last_checked_at": "2026-10-05T13:51:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Dynamic nested hierarchies: self-evolving machine learning architectures for lifelong learning"
+    },
+    "arXiv:2605.11854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11854",
+      "identity_tokens": [
+        "arXiv:2605.11854"
+      ],
+      "reason": "DLMのpost-training/能力改善が対象で、serving効率化が主題ではない。",
+      "first_checked_at": "2026-10-05T13:51:50+00:00",
+      "last_checked_at": "2026-10-05T13:51:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Self-Distilled Trajectory-Aware Boltzmann Modeling: Bridging the Training-Inference Discrepancy in Diffusion Language Models"
+    },
+    "arXiv:2605.11931": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11931",
+      "identity_tokens": [
+        "arXiv:2605.11931"
+      ],
+      "reason": "multimodal reasoningのself-improvement trainingが主題で、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T13:51:50+00:00",
+      "last_checked_at": "2026-10-05T13:51:50+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Learn to Think: Improving Multimodal Reasoning through Vision-Aware Self-Improvement Training"
+    },
+    "arXiv:2605.12904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12904",
+      "identity_tokens": [
+        "arXiv:2605.12904"
+      ],
+      "reason": "tabular foundation modelのcontext最適化を扱い、対象はLLM推論servingではない。",
+      "first_checked_at": "2026-10-05T13:51:51+00:00",
+      "last_checked_at": "2026-10-05T13:51:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "VIP-COP: Context Optimization for Tabular Foundation Models"
+    },
+    "arXiv:2605.13907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13907",
+      "identity_tokens": [
+        "arXiv:2605.13907"
+      ],
+      "reason": "量子化RLの学習/post-trainingが主題で、言語モデル推論の効率化ではない。",
+      "first_checked_at": "2026-10-05T13:51:51+00:00",
+      "last_checked_at": "2026-10-05T13:51:51+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "AIS: Adaptive Importance Sampling for Quantized RL"
+    },
+    "arXiv:2605.13935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13935",
+      "identity_tokens": [
+        "arXiv:2605.13935"
+      ],
+      "reason": "diffusion language modelのpost-training研究であり、主な成果は能力/学習で推論コスト削減ではない。",
+      "first_checked_at": "2026-10-05T13:51:51+00:00",
+      "last_checked_at": "2026-10-05T13:51:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Beyond Mode-Seeking RL: Trajectory-Balance Post-Training for Diffusion Language Models"
+    },
+    "arXiv:2605.14113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14113",
+      "identity_tokens": [
+        "arXiv:2605.14113"
+      ],
+      "reason": "臨床応用・臨床性能を扱い、推論システム効率化の方法研究ではない。",
+      "first_checked_at": "2026-10-05T13:51:51+00:00",
+      "last_checked_at": "2026-10-05T13:51:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "ProtoMedAgent: Multimodal Clinical Interpretability via Privacy-Aware Agentic Workflows"
+    },
+    "arXiv:2605.11516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11516",
+      "identity_tokens": [
+        "arXiv:2605.11516"
+      ],
+      "reason": "6G AI-RANのposition paperで、edge quantizationは将来課題として列挙されるだけで新規手法・評価を示さない。",
+      "first_checked_at": "2026-10-05T13:51:51+00:00",
+      "last_checked_at": "2026-10-05T13:51:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Agents Should Replace Narrow Predictive AI as the Orchestrator in 6G AI-RAN"
     }
   }
 }

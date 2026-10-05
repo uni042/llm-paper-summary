@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8e53f14e06573469-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.11931",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.11931",
+    "identity_tokens": [
+      "arXiv:2605.11931"
+    ],
+    "reason": "multimodal reasoningのself-improvement trainingが主題で、推論効率化ではない。",
+    "first_checked_at": "2026-10-05T13:51:50+00:00",
+    "last_checked_at": "2026-10-05T13:51:50+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+    ],
+    "title": "Learn to Think: Improving Multimodal Reasoning through Vision-Aware Self-Improvement Training"
+  },
+  "processed_at": "2026-10-05T13:51:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8e53f14e0657",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

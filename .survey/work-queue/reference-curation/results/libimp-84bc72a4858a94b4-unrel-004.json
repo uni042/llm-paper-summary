@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84bc72a4858a94b4-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.15422",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.15422",
+    "identity_tokens": [
+      "arXiv:2605.15422"
+    ],
+    "reason": "DualKVはRL post-training時の学習効率を扱う。推論時のserving/compression改善が主題ではない。",
+    "first_checked_at": "2026-10-05T13:51:50+00:00",
+    "last_checked_at": "2026-10-05T13:51:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "DualKV: Shared-Prompt Flash Attention for Efficient RL Training with Large Rollouts and Long Contexts"
+  },
+  "processed_at": "2026-10-05T13:51:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84bc72a4858a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

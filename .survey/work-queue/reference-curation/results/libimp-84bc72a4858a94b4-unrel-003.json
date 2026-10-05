@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-84bc72a4858a94b4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.15305",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.15305",
+    "identity_tokens": [
+      "arXiv:2605.15305"
+    ],
+    "reason": "物理simulation transformerによるシミュレーションが主題で、LLM servingとは異なる。",
+    "first_checked_at": "2026-10-05T13:51:49+00:00",
+    "last_checked_at": "2026-10-05T13:51:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "WorldParticle: Unified World Simulation of Lagrangian Particle Dynamics via Transformer"
+  },
+  "processed_at": "2026-10-05T13:51:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-84bc72a4858a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

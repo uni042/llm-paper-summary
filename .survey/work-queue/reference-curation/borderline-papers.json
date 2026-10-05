@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:49:16+00:00",
-  "record_count": 1778,
+  "updated_at": "2026-10-05T13:51:49+00:00",
+  "record_count": 1780,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27503,6 +27503,35 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
       ],
       "title": "Boosting Inference with Guided Reasoning: Stochastic Exploration for Recursive Models"
+    },
+    "arXiv:2602.16839": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.16839",
+      "identity_tokens": [
+        "arXiv:2602.16839"
+      ],
+      "reason": "The principal efficiency contribution is for RL training; serving latency/throughput is not separately quantified.",
+      "first_checked_at": "2026-10-05T13:51:48+00:00",
+      "last_checked_at": "2026-10-05T13:51:48+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md"
+      ],
+      "title": "Training Large Reasoning Models Efficiently via Progressive Thought Encoding"
+    },
+    "arXiv:2605.16234": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16234",
+      "identity_tokens": [
+        "arXiv:2605.16234"
+      ],
+      "reason": "圧縮評価には参考となるが、効率化手法としての適合は弱い。",
+      "first_checked_at": "2026-10-05T13:51:49+00:00",
+      "last_checked_at": "2026-10-05T13:51:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "No Free Swap: Protocol-Dependent Layer Redundancy in Transformers"
     }
   }
 }
