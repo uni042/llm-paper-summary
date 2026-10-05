@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-99-part-05-7a7779f39eb2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7c3e56afbdb3283f59628c83f7ec433feca17394",
+      "identity_tokens": [
+        "SemanticScholar:7c3e56afbdb3283f59628c83f7ec433feca17394"
+      ],
+      "title": "Swushroomsia at SemEval-2025 Task 3: Probing LLMs' Collective Intelligence for Multilingual Hallucination Detection",
+      "reason": "ACL primary abstract identifies a multilingual hallucination-detection task system using multiple LLMs; it addresses detection quality, not efficiency.",
+      "source_url": "https://www.semanticscholar.org/paper/7c3e56afbdb3283f59628c83f7ec433feca17394",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06722",
+      "identity_tokens": [
+        "arXiv:2411.06722"
+      ],
+      "title": "Synthesize, Partition, then Adapt: Eliciting Diverse Samples from Foundation Models",
+      "reason": "SPA trains multiple model adaptations to diversify answers; the contribution is training/data attribution, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.06722",
+      "first_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "last_checked_at": "2026-10-05T12:57:26.892626+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    }
+  ]
+}
