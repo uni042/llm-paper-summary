@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-81-part-05-e387493fce56",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.14523",
+      "identity_tokens": [
+        "arXiv:2309.14523"
+      ],
+      "title": "Smooth Exact Gradient Descent Learning in Spiking Neural Networks",
+      "reason": "Develops exact-gradient learning for spiking neural network training dynamics, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2309.14523",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.19549",
+      "identity_tokens": [
+        "arXiv:2305.19549"
+      ],
+      "title": "Accurate and Structured Pruning for Efficient Automatic Speech Recognition",
+      "reason": "Structured pruning targets automatic speech recognition models, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2305.19549",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24840",
+      "identity_tokens": [
+        "arXiv:2603.24840"
+      ],
+      "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR",
+      "reason": "Online rollout pruning reduces sampling cost during RLVR training; this is training-time optimization, not deployed LLM inference.",
+      "source_url": "https://arxiv.org/abs/2603.24840",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01280",
+      "identity_tokens": [
+        "arXiv:2601.01280"
+      ],
+      "title": "Does Memory Need Graphs? A Unified Framework and Empirical Analysis for Long-Term Dialog Memory",
+      "reason": "Adjacent dialog-memory systems may affect inference context cost, but reported measurements do not establish end-to-end serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2601.01280",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725843.3756045",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756045"
+      ],
+      "title": "PyTorchSim: A Comprehensive, Fast, and Accurate NPU Simulation Framework",
+      "reason": "PyTorchSim is an NPU simulation framework for DNN hardware-design exploration, not an LLM inference/serving optimization paper.",
+      "source_url": "https://doi.org/10.1145/3725843.3756045",
+      "first_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "last_checked_at": "2026-10-05T11:49:15.800442+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md"
+      ]
+    }
+  ]
+}
