@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-05-part-06-49165496b128",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28126",
+      "identity_tokens": [
+        "arXiv:2607.28126"
+      ],
+      "title": "ConMem: Contribution-Aware Memory for Long-Horizon Manufacturing Inspection Logs",
+      "reason": "一次要旨は製造設備検査記録向けのmemory/RAG relevanceを扱い、LLM inference efficiencyの手法でない。",
+      "source_url": "https://arxiv.org/abs/2607.28126",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5028-5"
+      ],
+      "title": "A time scaling theory for multi-layer electronic systems",
+      "reason": "候補記載のSpringer DOI一次ページで要旨本文を取得できず、タイトルから適合性を判定しない。",
+      "source_url": "https://doi.org/10.1007/s11432-026-5028-5",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30552",
+      "identity_tokens": [
+        "arXiv:2606.30552"
+      ],
+      "title": "Training Vision-Language-Action Models with Dense Embodied Chain-of-Thought Supervision",
+      "reason": "一次要旨はVision-Language-Action modelのembodied chain-of-thought supervisionとtrainingを扱い、serving/inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2606.30552",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20905",
+      "identity_tokens": [
+        "arXiv:2606.20905"
+      ],
+      "title": "Vesta: A Generalist Embodied Reasoning Model",
+      "reason": "一次要旨はembodied reasoning modelの機能・品質を提示するもので、LLM inference efficiencyの寄与を示さない。",
+      "source_url": "https://arxiv.org/abs/2606.20905",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.04371",
+      "identity_tokens": [
+        "arXiv:2308.04371"
+      ],
+      "title": "Cumulative Reasoning with Large Language Models",
+      "reason": "一次要旨は複数LLM roleで累積reasoningを行う能力向上frameworkで、推論効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2308.04371",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    }
+  ]
+}
