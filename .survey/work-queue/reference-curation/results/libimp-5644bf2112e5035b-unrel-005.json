@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5644bf2112e5035b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.19487",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.19487",
+    "identity_tokens": [
+      "arXiv:2407.19487"
+    ],
+    "reason": "一次要旨はリポジトリ向けコード補完の検索器を強化学習する研究で、主眼は検索・タスク精度。LLM推論実行効率の寄与は示されない。",
+    "first_checked_at": "2026-10-05T12:35:27+00:00",
+    "last_checked_at": "2026-10-05T12:35:27+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"
+    ],
+    "title": "RLCoder: Reinforcement Learning for Repository-Level Code Completion"
+  },
+  "processed_at": "2026-10-05T12:35:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5644bf2112e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

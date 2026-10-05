@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbf4785195c82b3e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icaa58325.2023.00029",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icaa58325.2023.00029",
+    "identity_tokens": [
+      "DOI:10.1109/icaa58325.2023.00029"
+    ],
+    "reason": "Primary abstract reviewed at https://doi.org/10.1109/ICAA58325.2023.00029. Abstract summary: Large language models (LLMs) such as ChatGPT have been trained to generate human-like responses to natural language prompts. LLMs use a vast corpus of text data for training, and can generate coherent and contextually relevant responses to a wide range of questions and statements. Despite this remarkable progress, LLMs are prone Out of scope: Formal-methods prompting to reduce hallucination, not inference efficiency.",
+    "first_checked_at": "2026-10-05T12:35:28+00:00",
+    "last_checked_at": "2026-10-05T12:35:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "Dehallucinating Large Language Models Using Formal Methods Guided Iterative Prompting"
+  },
+  "processed_at": "2026-10-05T12:35:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbf4785195c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

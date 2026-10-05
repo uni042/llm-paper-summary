@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2956ddac5d7fe79-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.17651",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.17651",
+    "identity_tokens": [
+      "arXiv:2305.17651"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.17651. Abstract summary: Self-supervised learning (SSL) has achieved notable success in many speech processing tasks, but the large model size and heavy computational cost hinder the deployment. Knowledge distillation trains a small student model to mimic the behavior of a large teacher model. However, the student architecture usually needs to be manual Out of scope: Speech self-supervised model pruning/distillation, not LLM inference.",
+    "first_checked_at": "2026-10-05T12:35:29+00:00",
+    "last_checked_at": "2026-10-05T12:35:29+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+    ],
+    "title": "DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models"
+  },
+  "processed_at": "2026-10-05T12:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2956ddac5d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

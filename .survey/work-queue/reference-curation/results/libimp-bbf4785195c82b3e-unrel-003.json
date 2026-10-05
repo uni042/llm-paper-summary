@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbf4785195c82b3e-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2308.12792",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2308.12792",
+    "identity_tokens": [
+      "arXiv:2308.12792"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2308.12792. Abstract summary: This survey paper provides a comprehensive overview of the recent advancements and challenges in applying large language models to the field of audio signal processing. Audio processing, with its diverse signal representations and a wide range of sources--from human voices to musical instruments and environmental sounds--poses c Out of scope: Large audio model survey, no LLM serving optimization.",
+    "first_checked_at": "2026-10-05T12:35:28+00:00",
+    "last_checked_at": "2026-10-05T12:35:28+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "Sparks of Large Audio Models: A Survey and Outlook"
+  },
+  "processed_at": "2026-10-05T12:35:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbf4785195c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

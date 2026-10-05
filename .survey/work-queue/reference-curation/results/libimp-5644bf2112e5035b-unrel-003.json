@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5644bf2112e5035b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1038/s41422-024-00989-2",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1038/s41422-024-00989-2",
+    "identity_tokens": [
+      "DOI:10.1038/s41422-024-00989-2"
+    ],
+    "reason": "一次要旨はタンパク質変異効果の予測と遺伝子編集タンパク質設計を扱い、LLM推論・サービング効率とは別領域。",
+    "first_checked_at": "2026-10-05T12:35:27+00:00",
+    "last_checked_at": "2026-10-05T12:35:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "Zero-shot prediction of mutation effects with multimodal deep representation learning guides protein engineering"
+  },
+  "processed_at": "2026-10-05T12:35:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5644bf2112e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

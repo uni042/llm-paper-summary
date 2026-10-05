@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:32:45+00:00",
-  "record_count": 4985,
+  "updated_at": "2026-10-05T12:35:29+00:00",
+  "record_count": 5002,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -72524,6 +72524,249 @@
         "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
       ],
       "title": "A Contemporary Survey on Semantic Communications: Theory of Mind, Generative AI, and Deep Joint Source-Channel Coding"
+    },
+    "DOI:10.3390/fi16100365": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/fi16100365",
+      "identity_tokens": [
+        "DOI:10.3390/fi16100365"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.3390/fi16100365. Abstract summary: The evolution of network technologies has significantly transformed global communication, information sharing, and connectivity. Traditional networks, relying on static configurations and manual interventions, face substantial challenges such as complex management, inefficiency, and susceptibility to human error. The rise of art Out of scope: LLM-enabled network engineering survey/application, not model inference efficiency.",
+      "first_checked_at": "2026-10-05T12:35:26+00:00",
+      "last_checked_at": "2026-10-05T12:35:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md"
+      ],
+      "title": "Large Language Models Meet Next-Generation Networking Technologies: A Review"
+    },
+    "DOI:10.1109/comst.2023.3329027": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/comst.2023.3329027",
+      "identity_tokens": [
+        "DOI:10.1109/comst.2023.3329027"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/COMST.2023.3329027. Abstract summary: The computing demand for massive applications has led to the ubiquitous deployment of computing power. This trend results in the urgent need for higher-level computing resource scheduling services. The Computing and Network Convergence (CNC), a new type of infrastructure, has become a hot topic. To realize the visions of CNC, su Out of scope: General computing/network scheduling survey without LLM-serving focus.",
+      "first_checked_at": "2026-10-05T12:35:26+00:00",
+      "last_checked_at": "2026-10-05T12:35:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "A Survey on Scheduling Techniques in Computing and Network Convergence"
+    },
+    "arXiv:2506.17238": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17238",
+      "identity_tokens": [
+        "arXiv:2506.17238"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.17238. Abstract summary: Reasoning models are large language models that emit a long chain-of-thought before answering, providing both higher accuracy and explicit reasoning for their response. A major question has been whether language model reasoning generalizes beyond mathematics, programming, and logic, where most previous work has focused. We demon Out of scope: Scientific reasoning model RL/post-training and data efficiency, not inference.",
+      "first_checked_at": "2026-10-05T12:35:26+00:00",
+      "last_checked_at": "2026-10-05T12:35:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Training a Scientific Reasoning Model for Chemistry"
+    },
+    "arXiv:2506.01713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.01713",
+      "identity_tokens": [
+        "arXiv:2506.01713"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.01713. Abstract summary: Multimodal large language models (MLLMs) have shown promising capabilities in reasoning tasks, yet still struggle with complex problems requiring explicit self-reflection and self-correction, especially compared to their unimodal text-based counterparts. Existing reflection methods are simplistic and struggle to generate meaning Out of scope: Multimodal LLM reasoning RL training method.",
+      "first_checked_at": "2026-10-05T12:35:26+00:00",
+      "last_checked_at": "2026-10-05T12:35:26+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md"
+      ],
+      "title": "SRPO: Enhancing Multimodal LLM Reasoning via Reflection-Aware Reinforcement Learning"
+    },
+    "DOI:10.1038/s41598-024-76682-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-024-76682-6",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-024-76682-6"
+      ],
+      "reason": "一次要旨はLLMと人間労働の環境影響（電力・炭素・水・費用）の比較評価であり、LLM推論システムの効率化手法を提示していない。",
+      "first_checked_at": "2026-10-05T12:35:27+00:00",
+      "last_checked_at": "2026-10-05T12:35:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Reconciling the contrasting narratives on the environmental impact of large language models"
+    },
+    "DOI:10.1038/s41422-024-00989-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41422-024-00989-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41422-024-00989-2"
+      ],
+      "reason": "一次要旨はタンパク質変異効果の予測と遺伝子編集タンパク質設計を扱い、LLM推論・サービング効率とは別領域。",
+      "first_checked_at": "2026-10-05T12:35:27+00:00",
+      "last_checked_at": "2026-10-05T12:35:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "Zero-shot prediction of mutation effects with multimodal deep representation learning guides protein engineering"
+    },
+    "arXiv:2503.04338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.04338",
+      "identity_tokens": [
+        "arXiv:2503.04338"
+      ],
+      "reason": "一次要旨はGraph RAGのQA性能比較と変種提案で、推論性能・システム効率の研究ではない。",
+      "first_checked_at": "2026-10-05T12:35:27+00:00",
+      "last_checked_at": "2026-10-05T12:35:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md"
+      ],
+      "title": "In-depth Analysis of Graph-based RAG in a Unified Framework"
+    },
+    "arXiv:2407.19487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.19487",
+      "identity_tokens": [
+        "arXiv:2407.19487"
+      ],
+      "reason": "一次要旨はリポジトリ向けコード補完の検索器を強化学習する研究で、主眼は検索・タスク精度。LLM推論実行効率の寄与は示されない。",
+      "first_checked_at": "2026-10-05T12:35:27+00:00",
+      "last_checked_at": "2026-10-05T12:35:27+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"
+      ],
+      "title": "RLCoder: Reinforcement Learning for Repository-Level Code Completion"
+    },
+    "arXiv:2412.05270": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.05270",
+      "identity_tokens": [
+        "arXiv:2412.05270"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.05270. Abstract summary: Large language models (LLMs) are notoriously memory-intensive during training, particularly with the popular AdamW optimizer. This memory burden necessitates using more or higher-end GPUs or reducing batch sizes, limiting training scalability and throughput. To address this, various memory-efficient optimizers have been proposed Out of scope: APOLLO optimizes LLM training optimizer memory/throughput, training-only.",
+      "first_checked_at": "2026-10-05T12:35:28+00:00",
+      "last_checked_at": "2026-10-05T12:35:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ],
+      "title": "APOLLO: SGD-like Memory, AdamW-level Performance"
+    },
+    "arXiv:2407.06089": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06089",
+      "identity_tokens": [
+        "arXiv:2407.06089"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2407.06089. Abstract summary: The remarkable success of Large Language Models (LLMs) has ushered natural language processing (NLP) research into a new era. Despite their diverse capabilities, LLMs trained on different corpora exhibit varying strengths and weaknesses, leading to challenges in maximizing their overall efficiency and versatility. To address the Out of scope: LLM collaboration strategy survey, not inference-efficiency method.",
+      "first_checked_at": "2026-10-05T12:35:28+00:00",
+      "last_checked_at": "2026-10-05T12:35:28+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2404.18911-kangaroo-lossless-self-speculative-decoding-via-double-early-exiting.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md"
+      ],
+      "title": "Merge, Ensemble, and Cooperate! A Survey on Collaborative Strategies in the Era of Large Language Models"
+    },
+    "arXiv:2308.12792": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.12792",
+      "identity_tokens": [
+        "arXiv:2308.12792"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2308.12792. Abstract summary: This survey paper provides a comprehensive overview of the recent advancements and challenges in applying large language models to the field of audio signal processing. Audio processing, with its diverse signal representations and a wide range of sources--from human voices to musical instruments and environmental sounds--poses c Out of scope: Large audio model survey, no LLM serving optimization.",
+      "first_checked_at": "2026-10-05T12:35:28+00:00",
+      "last_checked_at": "2026-10-05T12:35:28+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "Sparks of Large Audio Models: A Survey and Outlook"
+    },
+    "DOI:10.1109/icaa58325.2023.00029": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icaa58325.2023.00029",
+      "identity_tokens": [
+        "DOI:10.1109/icaa58325.2023.00029"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/ICAA58325.2023.00029. Abstract summary: Large language models (LLMs) such as ChatGPT have been trained to generate human-like responses to natural language prompts. LLMs use a vast corpus of text data for training, and can generate coherent and contextually relevant responses to a wide range of questions and statements. Despite this remarkable progress, LLMs are prone Out of scope: Formal-methods prompting to reduce hallucination, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:35:28+00:00",
+      "last_checked_at": "2026-10-05T12:35:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "Dehallucinating Large Language Models Using Formal Methods Guided Iterative Prompting"
+    },
+    "arXiv:2112.07628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.07628",
+      "identity_tokens": [
+        "arXiv:2112.07628"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2112.07628. Abstract summary: We consider the problem of training a multi-layer over-parametrized neural network to minimize the empirical risk induced by a loss function. In the typical setting of over-parametrization, the network width $m$ is much larger than the data dimension $d$ and the number of training samples $n$ ($m=\\mathrm{poly}(n,d)$), which indu Out of scope: Subquadratic neural-network training/fine-tuning complexity, not inference.",
+      "first_checked_at": "2026-10-05T12:35:28+00:00",
+      "last_checked_at": "2026-10-05T12:35:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "Training Multi-Layer Over-Parametrized Neural Network in Subquadratic Time"
+    },
+    "DOI:10.1145/3708493.3712691": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3708493.3712691",
+      "identity_tokens": [
+        "DOI:10.1145/3708493.3712691"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3708493.3712691. Abstract summary: Large Language Models (LLMs) have demonstrated remarkable capabilities across a variety of software engineering and coding tasks. However, their application in the domain of code and compiler optimization remains underexplored. Training LLMs is resource-intensive, requiring substantial GPU hours and extensive data collection, wh Out of scope: LLM Compiler is a model for compiler optimization tasks, not LLM serving runtime.",
+      "first_checked_at": "2026-10-05T12:35:29+00:00",
+      "last_checked_at": "2026-10-05T12:35:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "LLM Compiler: Foundation Language Models for Compiler Optimization"
+    },
+    "arXiv:2404.04925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.04925",
+      "identity_tokens": [
+        "arXiv:2404.04925"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2404.04925. Abstract summary: Multilingual Large Language Models are capable of using powerful Large Language Models to handle and respond to queries in multiple languages, which achieves remarkable success in multilingual natural language processing tasks. Despite these breakthroughs, there still remains a lack of a comprehensive survey to summarize existin Out of scope: Multilingual LLM resource/taxonomy survey, not inference optimization.",
+      "first_checked_at": "2026-10-05T12:35:29+00:00",
+      "last_checked_at": "2026-10-05T12:35:29+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "title": "Multilingual Large Language Model: A Survey of Resources, Taxonomy and Frontiers"
+    },
+    "arXiv:2305.17651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17651",
+      "identity_tokens": [
+        "arXiv:2305.17651"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.17651. Abstract summary: Self-supervised learning (SSL) has achieved notable success in many speech processing tasks, but the large model size and heavy computational cost hinder the deployment. Knowledge distillation trains a small student model to mimic the behavior of a large teacher model. However, the student architecture usually needs to be manual Out of scope: Speech self-supervised model pruning/distillation, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:35:29+00:00",
+      "last_checked_at": "2026-10-05T12:35:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "DPHuBERT: Joint Distillation and Pruning of Self-Supervised Speech Models"
+    },
+    "arXiv:2303.15724": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.15724",
+      "identity_tokens": [
+        "arXiv:2303.15724"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2303.15724. Abstract summary: In this paper, we introduce SDM-UniPS, a groundbreaking Scalable, Detailed, Mask-free, and Universal Photometric Stereo network. Our approach can recover astonishingly intricate surface normal maps, rivaling the quality of 3D scanners, even when images are captured under unknown, spatially-varying lighting conditions in uncontro Out of scope: Photometric stereo vision reconstruction.",
+      "first_checked_at": "2026-10-05T12:35:29+00:00",
+      "last_checked_at": "2026-10-05T12:35:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Scalable, Detailed and Mask-Free Universal Photometric Stereo"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbf4785195c82b3e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2112.07628",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2112.07628",
+    "identity_tokens": [
+      "arXiv:2112.07628"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2112.07628. Abstract summary: We consider the problem of training a multi-layer over-parametrized neural network to minimize the empirical risk induced by a loss function. In the typical setting of over-parametrization, the network width $m$ is much larger than the data dimension $d$ and the number of training samples $n$ ($m=\\mathrm{poly}(n,d)$), which indu Out of scope: Subquadratic neural-network training/fine-tuning complexity, not inference.",
+    "first_checked_at": "2026-10-05T12:35:28+00:00",
+    "last_checked_at": "2026-10-05T12:35:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+    ],
+    "title": "Training Multi-Layer Over-Parametrized Neural Network in Subquadratic Time"
+  },
+  "processed_at": "2026-10-05T12:35:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbf4785195c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

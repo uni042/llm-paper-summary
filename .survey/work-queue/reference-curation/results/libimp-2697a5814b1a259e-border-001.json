@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2697a5814b1a259e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.20011",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.20011",
+    "identity_tokens": [
+      "arXiv:2410.20011"
+    ],
+    "reason": "Adjacent overview of efficient small models; topic is too broad and not a concrete LLM inference method.",
+    "first_checked_at": "2026-10-05T12:35:26+00:00",
+    "last_checked_at": "2026-10-05T12:35:26+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "A Survey of Small Language Models"
+  },
+  "processed_at": "2026-10-05T12:35:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2697a5814b1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
