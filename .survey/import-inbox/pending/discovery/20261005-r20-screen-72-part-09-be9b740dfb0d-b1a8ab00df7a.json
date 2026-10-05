@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-72-part-09-be9b740dfb0d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCA57654.2024.00065",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA57654.2024.00065"
+      ],
+      "title": "ASADI: Accelerating Sparse Attention Using Diagonal-based In-Situ Computing",
+      "reason": "The paper has quantitative transformer-attention efficiency results, but they are specific to a custom in-situ accelerator and PIM baseline; deployment transfer and comparable LLM serving measurements are not established.",
+      "source_url": "https://doi.org/10.1109/HPCA57654.2024.00065",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01326",
+      "identity_tokens": [
+        "arXiv:2602.01326"
+      ],
+      "title": "DreamOn: Diffusion Language Models For Code Infilling Beyond Fixed-size Canvas",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2602.01326. Primary abstract targets variable-length code infilling quality/flexibility in diffusion LMs; it does not report an inference-efficiency method or measurement.",
+      "source_url": "https://arxiv.org/abs/2602.01326",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.23738",
+      "identity_tokens": [
+        "arXiv:2512.23738"
+      ],
+      "title": "Enforcing Temporal Constraints for LLM Agents",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.23738. Primary abstract addresses temporal safety constraints for agents and constrained generation, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.23738",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03759",
+      "identity_tokens": [
+        "arXiv:2512.03759"
+      ],
+      "title": "Principled RL for Diffusion LLMs Emerges from a Sequence-Level Perspective",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.03759. Primary abstract develops sequence-level RL optimization for diffusion LMs during training; inference efficiency is not evaluated.",
+      "source_url": "https://arxiv.org/abs/2512.03759",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.00093",
+      "identity_tokens": [
+        "arXiv:2509.00093"
+      ],
+      "title": "More than Carbon: Cradle-to-Grave environmental impacts of GenAI training on the Nvidia A100 GPU",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.00093. Primary abstract assesses lifecycle environmental impacts of GenAI training, not inference/serving.",
+      "source_url": "https://arxiv.org/abs/2509.00093",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+      ]
+    }
+  ]
+}
