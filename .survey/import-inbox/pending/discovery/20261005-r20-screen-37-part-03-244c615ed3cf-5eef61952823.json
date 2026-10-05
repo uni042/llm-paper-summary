@@ -1,0 +1,98 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-37-part-03-244c615ed3cf",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JSSC.2026.3675444",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2026.3675444"
+      ],
+      "title": "OS-CIM: A 28-nm Output-Stationary SRAM Compute-in-Memory Macro Featuring Dynamic Look-Ahead Zero Weight Skipping and Runtime Partial Sum Quantization",
+      "reason": "This is a generic SRAM compute-in-memory macro for vector-matrix AI workloads, with no LLM-specific evaluation.",
+      "source_url": "https://doi.org/10.1109/JSSC.2026.3675444",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mc.2026.3695984",
+      "identity_tokens": [
+        "DOI:10.1109/mc.2026.3695984"
+      ],
+      "title": "Optimizing AI: A Reference Architecture to Streamline AI Inference and Performance Acceleration",
+      "reason": "No abstract was present in the input packet. The official DOI/publisher URL https://doi.org/10.1109/mc.2026.3695984 could not be retrieved; exact-title searching found only a non-primary repost, so the inference-architecture scope cannot be established from primary evidence.",
+      "source_url": "https://doi.org/10.1109/mc.2026.3695984",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/MERCon71835.2026.11691559",
+      "identity_tokens": [
+        "DOI:10.1109/MERCon71835.2026.11691559"
+      ],
+      "title": "HGCacheMem: A Robust Architectural Approach to Improve Contextual Coherence and Retrieval Speed in Agentic Systems",
+      "reason": "DOI/IEEE full-text page https://doi.org/10.1109/MERCon71835.2026.11691559 was inaccessible. Search surfaced only a software project description, not the scholarly article body. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/MERCon71835.2026.11691559",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MWSCAS67364.2026.11680762",
+      "identity_tokens": [
+        "DOI:10.1109/MWSCAS67364.2026.11680762"
+      ],
+      "title": "Efficient Keyword Spotting via Top-k Selection of Sparse Audio Features",
+      "reason": "The paper evaluates sparse-audio-feature keyword spotting, not language-model inference.",
+      "source_url": "https://doi.org/10.1109/MWSCAS67364.2026.11680762",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/NVMSA71223.2026.11658877",
+      "identity_tokens": [
+        "DOI:10.1109/NVMSA71223.2026.11658877"
+      ],
+      "title": "Poster: SAF: Semantic-Aware Flushing for Latency and Jitter Suppression in Continuous VLA Inference on Edge Devices",
+      "reason": "The IEEE indexed abstract was available, but primary full paper at https://doi.org/10.1109/NVMSA71223.2026.11658877 was not retrievable; direct IEEE page fetch failed (HTTP 418). Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/NVMSA71223.2026.11658877",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ]
+    }
+  ]
+}
