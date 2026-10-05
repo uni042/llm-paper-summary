@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Dynamic LLM-Powered Agent Network for Task-Oriented Agent Collaboration",
+      "source_url": "https://arxiv.org/abs/2310.02170",
+      "year": 2023,
+      "published": "2023-10-03",
+      "venue": null,
+      "citation_count": 347,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent studies show that collaborating multiple large language model (LLM) powered agents is a promising way for task solving. However, current approaches are constrained by using a fixed number of agents and static communication structures. In this work, we propose automatically selecting a team of agents from candidates to collaborate in a dynamic communication structure toward different tasks and domains. Specifically, we build a framework named Dynamic LLM-Powered Agent Network ($\\textbf{DyLAN}$) for LLM-powered agent collaboration, operating a two-stage paradigm: (1) Team Optimization and (2) Task Solving. During the first stage, we utilize an $\\textit{agent selection}$ algorithm, based on an unsupervised metric called $\\textit{Agent Importance Score}$, enabling the selection of best agents according to their contributions in a preliminary trial, oriented to the given task. Then, in the second stage, the selected agents collaborate dynamically according to the query. Empirically, we demonstrate that DyLAN outperforms strong baselines in code generation, decision-making, general reasoning, and arithmetic reasoning tasks with moderate computational cost. On specific subjects in MMLU, selecting a team of agents in the team optimization stage improves accuracy by up to 25.0% in DyLAN.",
+      "identifiers": [
+        "SemanticScholar:5c002fd415b0284fe188dbd5d57a0acbed06de55"
+      ],
+      "semantic_scholar_id": "5c002fd415b0284fe188dbd5d57a0acbed06de55",
+      "canonical_id": "arXiv:2310.02170",
+      "arxiv_id": "2310.02170",
+      "authors": [
+        "Zijun Liu",
+        "Yanzhe Zhang",
+        "Peng Li",
+        "Yang Liu",
+        "Diyi Yang"
+      ],
+      "priority": 347,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 347,
+        "citation_count": 347,
+        "total": 347,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1098,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DyLANはtaskに応じたagent teamを選び、推論中に低寄与agentをdeactivateするagent selectionとearly stoppingでmulti-agent collaborationの計算を抑える。reasoning/code generation等でmoderate computational costを保ちながら精度を改善しており、agentic inferenceで実行agent数・round数を動的制御する方式として対象内。",
+      "library_body_check": "full_text_relevance_review: 一次論文情報でTemporal Feed-Forward Network、Agent Importance Scoreによるteam optimization、LLM rankerによるinference-time agent selection、early stopping、MATH/HumanEval/MMLU等の評価を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-519d3405853c",
+    "round": "libimp-519d3405853c8a62-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-519d3405853c8a62-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-519d3405853c8a62-pre01.json",
+    "receipt": "sha256:03fcff31f95777ccb7af12c33d5ee87ecf7e2a75098437ac06d79c407eb0674a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-519d3405853c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

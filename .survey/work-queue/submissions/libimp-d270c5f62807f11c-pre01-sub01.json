@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Large Language Models as Tool Makers",
+      "source_url": "https://arxiv.org/abs/2305.17126",
+      "year": 2023,
+      "published": "2023-05-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 356,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent research has highlighted the potential of large language models (LLMs) to improve their problem-solving capabilities with the aid of suitable external tools. In our work, we further advance this concept by introducing a closed-loop framework, referred to as LLMs A s Tool Makers (LATM), where LLMs create their own reusable tools for problem-solving. Our approach consists of two phases: 1) tool making: an LLM acts as the tool maker that crafts tools for a set of tasks. 2) tool using: another LLM acts as the tool user, which applies the tool built by the tool maker for problem-solving. On the problem-solving server side, tool-making enables continual tool generation and caching as new requests emerge. This framework enables subsequent requests to access cached tools via their corresponding APIs, enhancing the efficiency of task resolution. Recognizing that tool-making requires more sophisticated capabilities, we assign this task to a powerful, albeit resource-intensive, model. Conversely, the simpler tool-using phase is delegated to a lightweight model. This strategic division of labor allows the once-off cost of tool-making to be spread over multiple instances of tool-using, significantly reducing average costs while maintaining strong performance. Furthermore, our method offers a functional cache through the caching and reuse of tools, which stores the functionality of a class of requests instead of the natural language responses from LLMs, thus extending the applicability of the conventional cache mechanism. We evaluate our approach across various complex reasoning tasks, including Big-Bench tasks. With GPT-4 as the tool maker and GPT-3.5 as the tool user, LATM demonstrates performance equivalent to using GPT-4 for both roles, but with a significantly reduced inference cost.",
+      "identifiers": [
+        "SemanticScholar:32dcd0887537cece54e214f531d2c384470b023f"
+      ],
+      "semantic_scholar_id": "32dcd0887537cece54e214f531d2c384470b023f",
+      "canonical_id": "arXiv:2305.17126",
+      "arxiv_id": "2305.17126",
+      "doi": "10.48550/arXiv.2305.17126",
+      "authors": [
+        "Tianle Cai",
+        "Xue-Zhi Wang",
+        "Teng-Yu Ma",
+        "Xin-Yun Chen",
+        "Denny Zhou"
+      ],
+      "priority": 366,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 356,
+        "citation_count": 356,
+        "total": 366,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1228,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "LATMは高価なLLMで再利用可能toolを一度生成し、以後は軽量LLMがcached toolを使う二段構成とfunctional cacheを導入する。streaming requestでtoolを再利用して平均serving/inference costを下げることを明示し、GPT-4 maker + GPT-3.5 userでGPT-4単独相当性能を低コストで示すためagentic inference efficiency対象。",
+      "library_body_check": "full_text_checked: 一次arXiv HTMLのIntroduction、Related Work、LATM pipeline、Section 4 Functional Cacheを確認。tool maker/user分業、dispatcher、cached reusable tools、serving cost reductionを本文で確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d270c5f62807",
+    "round": "libimp-d270c5f62807f11c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d270c5f62807f11c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d270c5f62807f11c-pre01.json",
+    "receipt": "sha256:38f268939903e1f9864fc04bcc6a939e6c9b4e5933277f1145529f0ebd42217b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d270c5f62807",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
