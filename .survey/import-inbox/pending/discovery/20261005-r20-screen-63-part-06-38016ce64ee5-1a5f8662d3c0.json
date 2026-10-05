@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-63-part-06-38016ce64ee5",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.09955",
+      "identity_tokens": [
+        "arXiv:2408.09955"
+      ],
+      "title": "MegaAgent: A Large-Scale Autonomous LLM-based Multi-Agent System Without Predefined SOPs",
+      "reason": "LLM-call batching and parallelism are present, but the evidence is application-level multi-agent scaling rather than isolated inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2408.09955",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.03203",
+      "identity_tokens": [
+        "arXiv:2407.03203"
+      ],
+      "title": "TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts",
+      "reason": "Training pipeline makes LLMs theorem-proving experts; no inference efficiency contribution. Primary abstract: Proving mathematical theorems using computer-verifiable formal languages like Lean significantly impacts mathematical reasoning. One approach to formal theorem proving involves generating complete proofs using Large Language Models (LLMs) based on Natural Language (NL) proofs. However, due to the scarcity of aligned NL and Formal Language (FL) theorem-proving data most modern LLMs exhibit suboptimal performance.This scarcity results in a paucity of methodologies for training ",
+      "source_url": "https://arxiv.org/abs/2407.03203",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10952",
+      "identity_tokens": [
+        "arXiv:2309.10952"
+      ],
+      "title": "LMDX: Language Model-based Document Information Extraction and Localization",
+      "reason": "LLM document extraction/localization capability work; abstract does not claim inference efficiency. Primary abstract: Large Language Models (LLM) have revolutionized Natural Language Processing (NLP), improving state-of-the-art and exhibiting emergent capabilities across various tasks. However, their application in extracting information from visually rich documents, which is at the core of many document processing workflows and involving the extraction of key entities from semi-structured documents, has not yet been successful. The main obstacles to adopting LLMs for this task include the a",
+      "source_url": "https://arxiv.org/abs/2309.10952",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14457",
+      "identity_tokens": [
+        "arXiv:2409.14457"
+      ],
+      "title": "Large Model-Based Agents: State-of-the-Art, Cooperation Paradigms, Security and Privacy, and Future Trends",
+      "reason": "Survey covers agent cooperation, security and privacy, not inference/serving performance optimization. Primary abstract: With the rapid advancement of large models (LMs), the development of general-purpose intelligent agents powered by LMs has become a reality. It is foreseeable that in the near future, LM-driven general AI agents will serve as essential tools in production tasks, capable of autonomous communication and collaboration without human intervention. This paper investigates scenarios involving the autonomous collaboration of future LM agents. We review the current state of LM agents,",
+      "source_url": "https://arxiv.org/abs/2409.14457",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.06448",
+      "identity_tokens": [
+        "arXiv:2404.06448"
+      ],
+      "title": "Automated Federated Pipeline for Parameter-Efficient Fine-Tuning of Large Language Models",
+      "reason": "Federated PEFT pipeline targets LLM training/communication cost; inference latency is unchanged per abstract. Primary abstract: Recently, there has been a surge in the development of advanced intelligent generative content (AIGC), especially large language models (LLMs). For many downstream tasks, it is necessary to fine-tune LLMs using private data. While federated learning offers a promising privacy-preserving solution to LLM fine-tuning, the substantial size of an LLM, combined with high computational and communication demands, makes it hard to apply to handle downstream tasks. More importantly, pr",
+      "source_url": "https://arxiv.org/abs/2404.06448",
+      "first_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "last_checked_at": "2026-10-05T10:41:09.111329+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ]
+    }
+  ]
+}
