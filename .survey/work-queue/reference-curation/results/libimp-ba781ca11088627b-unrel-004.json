@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba781ca11088627b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1371/journal.pone.0358866",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1371/journal.pone.0358866",
+    "identity_tokens": [
+      "DOI:10.1371/journal.pone.0358866"
+    ],
+    "reason": "Steel-defect image classification using MoE/SSM, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T05:36:06+00:00",
+    "last_checked_at": "2026-10-05T05:36:06+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "EMamba: A MoE-enhanced state space network for robust steel surface defect detection"
+  },
+  "processed_at": "2026-10-05T05:36:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba781ca11088",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

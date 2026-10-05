@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fe27ed41c9ad25e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.31796",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.31796",
+    "identity_tokens": [
+      "arXiv:2609.31796"
+    ],
+    "reason": "Robustness of activation probes under numerical nondeterminism; no serving-efficiency improvement.",
+    "first_checked_at": "2026-10-05T05:36:06+00:00",
+    "last_checked_at": "2026-10-05T05:36:06+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+    ],
+    "title": "Same Probe, Different Numbers: Are Activation Probes Robust to Inference-Time Numerical Non-Determinism?"
+  },
+  "processed_at": "2026-10-05T05:36:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe27ed41c9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

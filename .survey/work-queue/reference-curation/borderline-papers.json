@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:33:18+00:00",
-  "record_count": 968,
+  "updated_at": "2026-10-05T05:36:07+00:00",
+  "record_count": 971,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14698,6 +14698,48 @@
         "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md"
       ],
       "title": "Programs-of-Layers in LLMs through the Lens of Cortical Areas"
+    },
+    "arXiv:2609.32042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32042",
+      "identity_tokens": [
+        "arXiv:2609.32042"
+      ],
+      "reason": "Quantization is an inference compression setting, but evidence concerns tool-use accuracy/failure modes, including a synthetic environment without tool-latency variability; no efficiency tradeoff is measured.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Quantization Thresholds Replicate, Failure Modes Do Not: A Three-Model Study of Agentic Tool Use in Polish from 8-bit to 2-bit"
+    },
+    "arXiv:2609.31560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31560",
+      "identity_tokens": [
+        "arXiv:2609.31560"
+      ],
+      "reason": "No measured inference memory, latency, throughput or concrete LLM deployment/quantizer experiment was established in inspected sections, leaving inference-efficiency scope fit weak.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "title": "Generalization behavior of OPTQ and the role of regularization"
+    },
+    "arXiv:2609.32049": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32049",
+      "identity_tokens": [
+        "arXiv:2609.32049"
+      ],
+      "reason": "Latency is for a memory retrieval pipeline, not LLM serving/inference; no end-to-end generation latency or model inference resource reduction is demonstrated, so scope fit is weak.",
+      "first_checked_at": "2026-10-05T05:36:07+00:00",
+      "last_checked_at": "2026-10-05T05:36:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "EngramRAG: Dynamic Usage-Weighted Topology and Synaptic Consolidation for Multi-Hop Agentic Memory"
     }
   }
 }

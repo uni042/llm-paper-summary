@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4fe27ed41c9ad25e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.31918",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.31918",
+    "identity_tokens": [
+      "arXiv:2609.31918"
+    ],
+    "reason": "Benchmark of symbolic memorization in neural models, not an LLM inference-efficiency technique.",
+    "first_checked_at": "2026-10-05T05:36:06+00:00",
+    "last_checked_at": "2026-10-05T05:36:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "ROTE: Benchmarking Neural Memorization on Complexity-Controlled Symbolic Sequences"
+  },
+  "processed_at": "2026-10-05T05:36:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4fe27ed41c9a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:33:19+00:00",
-  "record_count": 2917,
+  "updated_at": "2026-10-05T05:36:07+00:00",
+  "record_count": 2934,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -42455,6 +42455,259 @@
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
       "title": "FragToken: Amplifying LLM Inference Costs through Noncanonical Token Generation"
+    },
+    "arXiv:2609.31938": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31938",
+      "identity_tokens": [
+        "arXiv:2609.31938"
+      ],
+      "reason": "Conv3D lowering for visual world-model decoders; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Cache-Aware Conv3D Lowering Across Embedded World-Model Decoders"
+    },
+    "arXiv:2609.31956": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31956",
+      "identity_tokens": [
+        "arXiv:2609.31956"
+      ],
+      "reason": "Analysis of Transformer MLP gate thresholds, not inference-cost reduction.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Transformer MLP Gate Thresholds Are Couplings to a Carried Reference Direction"
+    },
+    "arXiv:2609.32021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32021",
+      "identity_tokens": [
+        "arXiv:2609.32021"
+      ],
+      "reason": "Tool-call backdoor security and detection, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "SilentCall: Hidden Tool-Call Backdoors in Open-Weight Agents, and How to Catch Them"
+    },
+    "arXiv:2609.32041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32041",
+      "identity_tokens": [
+        "arXiv:2609.32041"
+      ],
+      "reason": "Persistent state for document intelligence, without an LLM inference/serving efficiency result.",
+      "first_checked_at": "2026-10-05T05:36:05+00:00",
+      "last_checked_at": "2026-10-05T05:36:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Amnesia by Design, Memory By Necessity: Persistent State for Document Intelligence"
+    },
+    "arXiv:2609.31796": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31796",
+      "identity_tokens": [
+        "arXiv:2609.31796"
+      ],
+      "reason": "Robustness of activation probes under numerical nondeterminism; no serving-efficiency improvement.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Same Probe, Different Numbers: Are Activation Probes Robust to Inference-Time Numerical Non-Determinism?"
+    },
+    "arXiv:2609.31812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31812",
+      "identity_tokens": [
+        "arXiv:2609.31812"
+      ],
+      "reason": "Pruning effects in MRI reconstruction models, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Beyond Sparsity: Weight Location and Network Context in Pruned MRI Reconstruction"
+    },
+    "arXiv:2609.31823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31823",
+      "identity_tokens": [
+        "arXiv:2609.31823"
+      ],
+      "reason": "LVLM perceptual-robustness benchmark, not a compute-efficiency method.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "SynDORBench: Evaluating LVLM Perceptual Robustness Under Physically Constrained Visibility Conditions"
+    },
+    "arXiv:2609.31918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31918",
+      "identity_tokens": [
+        "arXiv:2609.31918"
+      ],
+      "reason": "Benchmark of symbolic memorization in neural models, not an LLM inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "ROTE: Benchmarking Neural Memorization on Complexity-Controlled Symbolic Sequences"
+    },
+    "DOI:10.1007/s44443-026-01303-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01303-3",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01303-3"
+      ],
+      "reason": "Low-light image-enhancement model, outside LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MFLab: decoupled luminance-chrominance modeling with uncertainty-aware flow refinement for low-light image enhancement"
+    },
+    "DOI:10.1016/j.watres.2026.126951": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.watres.2026.126951",
+      "identity_tokens": [
+        "DOI:10.1016/j.watres.2026.126951"
+      ],
+      "reason": "Water-quality time-series forecasting network, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "DMFNet: A Dynamic Multilevel Fusion Network for long-term multivariate water quality forecasting."
+    },
+    "DOI:10.1186/s40562-026-00506-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40562-026-00506-w",
+      "identity_tokens": [
+        "DOI:10.1186/s40562-026-00506-w"
+      ],
+      "reason": "Hyperspectral geological mapping application using ViT/Mamba, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Enhanced hyperspectral classification for geological mapping based on spatial–spectral novel framework of vision transformers and mamba models on PRISMA data at Arabian–Nubian Shield"
+    },
+    "DOI:10.1371/journal.pone.0358866": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0358866",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0358866"
+      ],
+      "reason": "Steel-defect image classification using MoE/SSM, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "EMamba: A MoE-enhanced state space network for robust steel surface defect detection"
+    },
+    "DOI:10.3389/frai.2026.1945529": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1945529",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1945529"
+      ],
+      "reason": "3D-scene segmentation transformer with training-memory reduction; not LLM inference-time efficiency.",
+      "first_checked_at": "2026-10-05T05:36:06+00:00",
+      "last_checked_at": "2026-10-05T05:36:06+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Vision–language guided semantic-geometric transformer for memory-efficient 3D scene understanding"
+    },
+    "arXiv:2609.35852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35852",
+      "identity_tokens": [
+        "arXiv:2609.35852"
+      ],
+      "reason": "Statistical analysis of Transformer weight-scale fields, not a compression or inference method.",
+      "first_checked_at": "2026-10-05T05:36:07+00:00",
+      "last_checked_at": "2026-10-05T05:36:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields"
+    },
+    "arXiv:2609.35860": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35860",
+      "identity_tokens": [
+        "arXiv:2609.35860"
+      ],
+      "reason": "Heterogeneity in hallucination detection, not an inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T05:36:07+00:00",
+      "last_checked_at": "2026-10-05T05:36:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "The Detectability Gap: Hidden Heterogeneity in Hallucination Detection Across Language Models"
+    },
+    "DOI:10.1007/s10791-026-10613-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10791-026-10613-z",
+      "identity_tokens": [
+        "DOI:10.1007/s10791-026-10613-z"
+      ],
+      "reason": "Stock forecasting with heterogeneous deep models, not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T05:36:07+00:00",
+      "last_checked_at": "2026-10-05T05:36:07+00:00",
+      "linked_from": [
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Adaptive mixture of experts framework for multi horizon stock market forecasting using heterogeneous deep learning models"
+    },
+    "DOI:10.1007/s44443-026-01294-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01294-1",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01294-1"
+      ],
+      "reason": "Dynamic graph link prediction with external attention memory, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:36:07+00:00",
+      "last_checked_at": "2026-10-05T05:36:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PSEALP: patch-based structural external attention with node memory for dynamic link prediction"
     }
   }
 }
