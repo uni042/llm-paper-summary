@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-61-part-04-66d1fde0720e",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10361",
+      "identity_tokens": [
+        "arXiv:2606.10361"
+      ],
+      "title": "Near-Exponential Convergence Rates for kNN Classification based on Boltzmann Margin",
+      "reason": "Statistical convergence analysis for kNN classification, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.10361",
+      "first_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "last_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10369",
+      "identity_tokens": [
+        "arXiv:2606.10369"
+      ],
+      "title": "PADD: Path-Aligned Decompression Distillation for Non-Router Teacher to Guide MoE Student Learning",
+      "reason": "MoE student distillation and routing-policy training; training-focused, not inference-time optimization.",
+      "source_url": "https://arxiv.org/abs/2606.10369",
+      "first_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "last_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10435",
+      "identity_tokens": [
+        "arXiv:2606.10435"
+      ],
+      "title": "Parallel Causal Associative Fields: Gated Sparse Memory for Long-Context Language Modeling",
+      "reason": "Full text reports PCAF full autoregressive language-model pretraining throughput/memory on WikiText-103 and PG-19; the main comparison is explicitly training. No inference serving/decode optimization evidence.",
+      "source_url": "https://arxiv.org/abs/2606.10435",
+      "first_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "last_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10706",
+      "identity_tokens": [
+        "arXiv:2606.10706"
+      ],
+      "title": "Unifying Data, Memory, and Compute Efficiency in LLM Training: A Survey",
+      "reason": "Survey is explicitly about data, memory and compute efficiency in LLM training; training-only efficiency is out of scope.",
+      "source_url": "https://arxiv.org/abs/2606.10706",
+      "first_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "last_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10722",
+      "identity_tokens": [
+        "arXiv:2606.10722"
+      ],
+      "title": "Continual LLM Upcycling: A Predictor-Gated Bank-Wise Sparsity Training Recipe for Dense-to-Sparse LLMs",
+      "reason": "Dense-to-sparse LLM continual training/upcycling; not an inference-time method.",
+      "source_url": "https://arxiv.org/abs/2606.10722",
+      "first_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "last_checked_at": "2026-10-05T10:28:13.220614+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    }
+  ]
+}
