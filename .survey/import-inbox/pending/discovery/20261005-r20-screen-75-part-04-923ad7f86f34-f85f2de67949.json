@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-75-part-04-923ad7f86f34",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11268",
+      "identity_tokens": [
+        "arXiv:2410.11268"
+      ],
+      "title": "Bypassing the Exponential Dependency: Looped Transformers Efficiently Learn In-context by Multi-step Gradient Descent",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.11268. Primary abstract gives a theoretical study of looped-transformer in-context learning on linear tasks; it does not measure deployment inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.11268",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2406.13629",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2406.13629"
+      ],
+      "title": "InstructRAG: Instructing Retrieval-Augmented Generation with Explicit Denoising",
+      "reason": "Primary abstract reviewed at https://doi.org/10.48550/arXiv.2406.13629. Primary abstract focuses on denoising retrieved evidence to improve RAG answer accuracy, not reducing inference cost or latency.",
+      "source_url": "https://doi.org/10.48550/arXiv.2406.13629",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03146",
+      "identity_tokens": [
+        "arXiv:2405.03146"
+      ],
+      "title": "Quantifying the Capabilities of LLMs across Scale and Precision",
+      "reason": "The study supports quantization capability decisions, but does not provide a new inference-efficiency method or direct runtime measurements.",
+      "source_url": "https://arxiv.org/abs/2405.03146",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.10159",
+      "identity_tokens": [
+        "arXiv:2307.10159"
+      ],
+      "title": "FABRIC: Personalizing Diffusion Models with Iterative Feedback",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2307.10159. Primary abstract concerns human-feedback personalization for image diffusion models, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2307.10159",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.09094",
+      "identity_tokens": [
+        "arXiv:2207.09094"
+      ],
+      "title": "MoEC: Mixture of Expert Clusters",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2207.09094. Primary abstract addresses MoE overfitting and task quality in machine translation/NLU; its contribution is learning/regularization, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2207.09094",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md"
+      ]
+    }
+  ]
+}
