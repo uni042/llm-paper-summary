@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1030-scheduled-chat-30/r01",
+  "reference_main_sha": "4dd71fdec92178efed477a74f5bea6555e2286e1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/77726.255132",
+      "identity_tokens": [
+        "DOI:10.1145/77726.255132"
+      ],
+      "title": "The Tera computer system",
+      "reason": "Teraの大規模共有メモリ型並列計算機のアーキテクチャを扱う汎用HPCシステム研究。多数のhardware threadと細粒度並列実行が主題で、LLM/Transformer推論を最終適用先とする方式・評価ではない。",
+      "source_url": "https://doi.org/10.1145/77726.255132",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-4013",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-4013",
+        "arXiv:1902.01718"
+      ],
+      "title": "End-to-End Open-Domain Question Answering with BERTserini",
+      "reason": "Anserini情報検索とBERT readerを統合してWikipediaからopen-domain QAを行い、回答精度を改善するQA/IRシステム研究。LLM推論runtime、KV cache、serving、memory最適化を扱わない。",
+      "source_url": "https://arxiv.org/abs/1902.01718",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.02559",
+      "identity_tokens": [
+        "arXiv:2010.02559"
+      ],
+      "title": "LEGAL-BERT: The Muppets straight out of Law School",
+      "reason": "法律corpusでBERTを継続事前学習またはscratch学習し、法律NLPのdomain adaptation性能を比較するモデル学習研究。最終評価は法律タスク性能で、推論system効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2010.02559",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10158",
+      "identity_tokens": [
+        "arXiv:2303.10158"
+      ],
+      "title": "Data-centric Artificial Intelligence: A Survey",
+      "reason": "training data development、inference data development、data maintenanceを整理するdata-centric AIの包括survey。inference dataは扱うが、LLM推論runtime・serving・memory最適化の新規方式ではない。",
+      "source_url": "https://arxiv.org/abs/2303.10158",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.09842",
+      "identity_tokens": [
+        "arXiv:2304.09842"
+      ],
+      "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models",
+      "reason": "LLM plannerがvision model、web search、Python等のtoolを組み合わせ、ScienceQA/TabMWPのreasoning accuracyを改善するtool-use/agent能力研究。目的・評価は回答能力で、serving/runtime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2304.09842",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10631",
+      "identity_tokens": [
+        "arXiv:2310.10631"
+      ],
+      "title": "Llemma: An Open Language Model For Mathematics",
+      "reason": "Code Llamaを数学corpus Proof-Pile-2で継続事前学習し、MATH、tool use、formal theorem proving性能を改善する数学特化LLM研究。主貢献はmodel/data/trainingで、推論system効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.10631",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04284",
+      "identity_tokens": [
+        "arXiv:1906.04284"
+      ],
+      "title": "Analyzing the Structure of Attention in a Transformer Language Model",
+      "reason": "GPT-2 smallのattentionを可視化・分析し、品詞、依存関係、層深度とattention距離の関係を調べるinterpretability研究。推論runtime、sparse attention実装、KV cache最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1906.04284",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13848",
+      "identity_tokens": [
+        "arXiv:2410.13848"
+      ],
+      "title": "Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation",
+      "reason": "multimodal understandingと画像生成でvisual encoderを分離しつつ単一Transformerを共有し、両タスク品質を改善するmultimodal model architecture研究。推論systemの速度・memory・serving効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2410.13848",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.10852",
+      "identity_tokens": [
+        "arXiv:2109.10852"
+      ],
+      "title": "Pix2seq: A Language Modeling Framework for Object Detection",
+      "reason": "object detectionを画像条件付きtoken sequence生成として定式化し、COCOで検出精度を評価するcomputer vision/modeling研究。LLM推論system効率化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2109.10852",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.12836",
+      "identity_tokens": [
+        "arXiv:2009.12836"
+      ],
+      "title": "Normalization Techniques in Training DNNs: Methodology, Analysis and Application",
+      "reason": "DNN trainingの正規化手法をoptimization観点から整理し、normalization area/operation/representation recoveryへ分類するsurvey。明示的にtraining高速化・generalizationが主題で、推論system対象外。",
+      "source_url": "https://arxiv.org/abs/2009.12836",
+      "body_check": "abstract_screen_only: 一次資料の要旨・書誌情報で研究対象・主要手法・最終評価先を候補ごとに確認し、現行LLM推論システム調査の対象外であることが論文固有に明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T10:42:00+09:00",
+      "last_checked_at": "2026-10-05T10:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    }
+  ]
+}
