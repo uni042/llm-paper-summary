@@ -1,0 +1,159 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d270c5f62807f11c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d270c5f62807",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2202.08791",
+    "arXiv:2305.17126"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 2,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2329342feea247d1245783f2ab112f49388c111a",
+  "raw_search_result_count": 2,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 2,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-05T15:56:27.330316+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2202.08791",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:SemanticScholar:c49ac1f916d6d2edeb187e6619c8d23acd95eb21"
+    },
+    {
+      "requested_id": "arXiv:2305.17126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Large Language Models as Tool Makers",
+      "source_url": "https://arxiv.org/abs/2305.17126",
+      "year": 2023,
+      "published": "2023-05-26",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 356,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent research has highlighted the potential of large language models (LLMs) to improve their problem-solving capabilities with the aid of suitable external tools. In our work, we further advance this concept by introducing a closed-loop framework, referred to as LLMs A s Tool Makers (LATM), where LLMs create their own reusable tools for problem-solving. Our approach consists of two phases: 1) tool making: an LLM acts as the tool maker that crafts tools for a set of tasks. 2) tool using: another LLM acts as the tool user, which applies the tool built by the tool maker for problem-solving. On the problem-solving server side, tool-making enables continual tool generation and caching as new requests emerge. This framework enables subsequent requests to access cached tools via their corresponding APIs, enhancing the efficiency of task resolution. Recognizing that tool-making requires more sophisticated capabilities, we assign this task to a powerful, albeit resource-intensive, model. Conversely, the simpler tool-using phase is delegated to a lightweight model. This strategic division of labor allows the once-off cost of tool-making to be spread over multiple instances of tool-using, significantly reducing average costs while maintaining strong performance. Furthermore, our method offers a functional cache through the caching and reuse of tools, which stores the functionality of a class of requests instead of the natural language responses from LLMs, thus extending the applicability of the conventional cache mechanism. We evaluate our approach across various complex reasoning tasks, including Big-Bench tasks. With GPT-4 as the tool maker and GPT-3.5 as the tool user, LATM demonstrates performance equivalent to using GPT-4 for both roles, but with a significantly reduced inference cost.",
+      "identifiers": [
+        "SemanticScholar:32dcd0887537cece54e214f531d2c384470b023f"
+      ],
+      "semantic_scholar_id": "32dcd0887537cece54e214f531d2c384470b023f",
+      "canonical_id": "arXiv:2305.17126",
+      "arxiv_id": "2305.17126",
+      "doi": "10.48550/arXiv.2305.17126",
+      "authors": [
+        "Tianle Cai",
+        "Xue-Zhi Wang",
+        "Teng-Yu Ma",
+        "Xin-Yun Chen",
+        "Denny Zhou"
+      ],
+      "priority": 366,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 356,
+        "citation_count": 356,
+        "total": 366,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1228,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.17126",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2305.17126",
+        "id:SemanticScholar:32dcd0887537cece54e214f531d2c384470b023f",
+        "id:arXiv:2305.17126",
+        "title:large language models as tool makers",
+        "url:https://arxiv.org/abs/2305.17126"
+      ],
+      "record": {
+        "title": "Large Language Models as Tool Makers",
+        "source_url": "https://arxiv.org/abs/2305.17126",
+        "year": 2023,
+        "published": "2023-05-26",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 356,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent research has highlighted the potential of large language models (LLMs) to improve their problem-solving capabilities with the aid of suitable external tools. In our work, we further advance this concept by introducing a closed-loop framework, referred to as LLMs A s Tool Makers (LATM), where LLMs create their own reusable tools for problem-solving. Our approach consists of two phases: 1) tool making: an LLM acts as the tool maker that crafts tools for a set of tasks. 2) tool using: another LLM acts as the tool user, which applies the tool built by the tool maker for problem-solving. On the problem-solving server side, tool-making enables continual tool generation and caching as new requests emerge. This framework enables subsequent requests to access cached tools via their corresponding APIs, enhancing the efficiency of task resolution. Recognizing that tool-making requires more sophisticated capabilities, we assign this task to a powerful, albeit resource-intensive, model. Conversely, the simpler tool-using phase is delegated to a lightweight model. This strategic division of labor allows the once-off cost of tool-making to be spread over multiple instances of tool-using, significantly reducing average costs while maintaining strong performance. Furthermore, our method offers a functional cache through the caching and reuse of tools, which stores the functionality of a class of requests instead of the natural language responses from LLMs, thus extending the applicability of the conventional cache mechanism. We evaluate our approach across various complex reasoning tasks, including Big-Bench tasks. With GPT-4 as the tool maker and GPT-3.5 as the tool user, LATM demonstrates performance equivalent to using GPT-4 for both roles, but with a significantly reduced inference cost.",
+        "identifiers": [
+          "SemanticScholar:32dcd0887537cece54e214f531d2c384470b023f"
+        ],
+        "semantic_scholar_id": "32dcd0887537cece54e214f531d2c384470b023f",
+        "canonical_id": "arXiv:2305.17126",
+        "arxiv_id": "2305.17126",
+        "doi": "10.48550/arXiv.2305.17126",
+        "authors": [
+          "Tianle Cai",
+          "Xue-Zhi Wang",
+          "Teng-Yu Ma",
+          "Xin-Yun Chen",
+          "Denny Zhou"
+        ],
+        "priority": 366,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 356,
+          "citation_count": 356,
+          "total": 366,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1228,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:38f268939903e1f9864fc04bcc6a939e6c9b4e5933277f1145529f0ebd42217b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
