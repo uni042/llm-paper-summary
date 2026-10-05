@@ -138,23 +138,49 @@ def score_record(
 
     published, precision = _parse_published(record)
     age_days = (today - published).days if published is not None else None
-    max_age = int(freshness.get("max_age_days", 0) or 0)
     year_only_ok = freshness.get("year_only_is_fresh") is True
-    is_fresh = bool(
-        freshness.get("enabled", True)
-        and published is not None
-        and age_days is not None
-        and 0 <= age_days <= max_age
-        and (precision != "year" or year_only_ok)
+    count = citation_count(record)
+
+    window_mode = str(freshness.get("window_mode") or "days")
+    if window_mode == "rolling_months":
+        months = max(int(freshness.get("months", 12) or 12), 1)
+        today_month = today.year * 12 + today.month - 1
+        published_month = (
+            published.year * 12 + published.month - 1
+            if published is not None
+            else None
+        )
+        is_fresh = bool(
+            freshness.get("enabled", True)
+            and published_month is not None
+            and today_month - (months - 1) <= published_month <= today_month
+            and (precision != "year" or year_only_ok)
+        )
+    else:
+        max_age = int(freshness.get("max_age_days", 0) or 0)
+        is_fresh = bool(
+            freshness.get("enabled", True)
+            and published is not None
+            and age_days is not None
+            and 0 <= age_days <= max_age
+            and (precision != "year" or year_only_ok)
+        )
+
+    base_freshness_score = int(freshness.get("score", 0) or 0)
+    cited_freshness_score = int(
+        freshness.get("cited_score", base_freshness_score) or 0
     )
-    freshness_score = int(freshness.get("score", 0) or 0) if is_fresh else 0
+    freshness_score = (
+        cited_freshness_score if is_fresh and count > 0
+        else base_freshness_score if is_fresh
+        else 0
+    )
 
     venue_text = _venue_text(record)
     aliases = venue_policy.get("aliases") if isinstance(venue_policy.get("aliases"), list) else []
     matched_venue = _venue_matches(venue_text, aliases) if venue_policy.get("enabled", True) else None
     venue_score = int(venue_policy.get("score", 0) or 0) if matched_venue else 0
 
-    count = citation_count(record)
     per_citation = float(citation_policy.get("score_per_citation", 0) or 0)
     raw_citation_score = max(count * per_citation, 0.0) if citation_policy.get("enabled", True) else 0.0
     cap = citation_policy.get("max_score")
@@ -172,6 +198,7 @@ def score_record(
         "citation_count": count,
         "total": total,
         "is_fresh": is_fresh,
+        "is_recent_cited": bool(is_fresh and count > 0),
         "freshness_age_days": age_days,
         "matched_prestigious_venue": matched_venue,
     }
