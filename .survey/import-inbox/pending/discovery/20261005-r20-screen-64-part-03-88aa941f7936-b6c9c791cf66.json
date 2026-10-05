@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-64-part-03-88aa941f7936",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.03646",
+      "identity_tokens": [
+        "arXiv:2208.03646"
+      ],
+      "title": "A Length Adaptive Algorithm-Hardware Co-design of Transformer on FPGA Through Sparse Attention and Dynamic Pipelining",
+      "reason": "Generic Transformer/NLP hardware result is adjacent but no decoder-only LLM serving evidence or contemporary stack is measured.",
+      "source_url": "https://arxiv.org/abs/2208.03646",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.14318",
+      "identity_tokens": [
+        "arXiv:2508.14318"
+      ],
+      "title": "Power Stabilization for AI Training Datacenters",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.14318. Abstract summary: Large Artificial Intelligence (AI) training workloads spanning several tens of thousands of GPUs present unique power management challenges. These arise due to the high variability in power consumption during the training. Given the synchronous nature of these jobs, during every iteration there is a computation-heavy phase, wher Out of scope: AI training datacenter power stabilization, training-only.",
+      "source_url": "https://arxiv.org/abs/2508.14318",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.17520",
+      "identity_tokens": [
+        "arXiv:2507.17520"
+      ],
+      "title": "InstructVLA: Vision-Language-Action Instruction Tuning from Understanding to Manipulation",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2507.17520. Abstract summary: To operate effectively in the real world, robots should integrate multimodal reasoning with precise action generation. However, existing vision-language-action (VLA) models often sacrifice one for the other, narrow their abilities to task-specific manipulation data, and suffer catastrophic forgetting of pre-trained vision-langua Out of scope: Vision-language-action instruction tuning and robot capability training.",
+      "source_url": "https://arxiv.org/abs/2507.17520",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.21079",
+      "identity_tokens": [
+        "arXiv:2502.21079"
+      ],
+      "title": "Training-Free and Adaptive Sparse Attention for Efficient Long Video Generation",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.21079. Abstract summary: Generating high-quality long videos with Diffusion Transformers (DiTs) faces significant latency due to computationally intensive attention mechanisms. For instance, generating an 8s 720p video (110K tokens) with HunyuanVideo requires around 600 PFLOPs, with attention computations consuming about 500 PFLOPs. To tackle this, we p Out of scope: Sparse attention for video Diffusion Transformers, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2502.21079",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TASE.2025.3612154",
+      "identity_tokens": [
+        "DOI:10.1109/TASE.2025.3612154"
+      ],
+      "title": "Multi-Modal LLMs in Agriculture: A Comprehensive Review",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/TASE.2025.3612154. Abstract summary: Given the rapid emergence and applications of Multi-Modal Large Language Models (MM-LLMs) across various scientific fields, insights regarding their applicability in agriculture are still only partially explored. This paper conducts an in-depth review of MM-LLMs in agriculture, focusing on understanding how MM-LLMs can be develo Out of scope: Agriculture multimodal LLM survey/application, not inference-system optimization.",
+      "source_url": "https://doi.org/10.1109/TASE.2025.3612154",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+      ]
+    }
+  ]
+}
