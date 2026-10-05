@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T15:07:46+00:00",
-  "record_count": 5944,
+  "updated_at": "2026-10-05T15:10:32+00:00",
+  "record_count": 5974,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -86303,6 +86303,439 @@
         "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
       ],
       "title": "Spectral Convolutional Conditional Neural Processes"
+    },
+    "arXiv:2601.03938": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.03938",
+      "identity_tokens": [
+        "arXiv:2601.03938"
+      ],
+      "reason": "FOREVER studies memory replay for continual language-model learning; its contribution is training data/schedule efficiency, not inference.",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
+      ],
+      "title": "FOREVER: Forgetting Curve-Inspired Memory Replay for Language Model Continual Learning"
+    },
+    "arXiv:2510.26769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26769",
+      "identity_tokens": [
+        "arXiv:2510.26769"
+      ],
+      "reason": "SteerVLM uses lightweight activation steering to control VLM output behavior; the abstract reports robustness/control, not inference-performance benefits.",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "SteerVLM: Robust Model Control through Lightweight Activation Steering for Vision Language Models"
+    },
+    "arXiv:2510.19732": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19732",
+      "identity_tokens": [
+        "arXiv:2510.19732"
+      ],
+      "reason": "Memo targets memory-efficient training of embodied agents with reinforcement learning; it is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Memo: Training Memory-Efficient Embodied Agents with Reinforcement Learning"
+    },
+    "arXiv:2506.22419": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22419",
+      "identity_tokens": [
+        "arXiv:2506.22419"
+      ],
+      "reason": "The work benchmarks AI-agent reproduction of prior LLM speedrunning results; it evaluates research reproducibility rather than proposing a deployable inference/serving improvement.",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "The Automated LLM Speedrunning Benchmark: Reproducing NanoGPT Improvements"
+    },
+    "arXiv:2506.02522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02522",
+      "identity_tokens": [
+        "arXiv:2506.02522"
+      ],
+      "reason": "The co-evolution framework targets large-scale decision-making via LLM and RL; the abstract addresses task capabilities and learning, not inference efficiency.",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ],
+      "title": "Think Twice, Act Once: A Co-Evolution Framework of LLM and RL for Large-Scale Decision Making"
+    },
+    "DOI:10.1109/hpca61900.2025.00054": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00054",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00054"
+      ],
+      "reason": "NDP向けの統合compiler/simulatorとDRAM配置・workload schedulingを扱う汎用ML hardware研究。LLM inference/serving固有の方式・評価ではない。",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures"
+    },
+    "arXiv:2502.08512": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.08512",
+      "identity_tokens": [
+        "arXiv:2502.08512"
+      ],
+      "reason": "合成NLP datasetのdiversity評価指標を提案し、指標の性質と相関を評価する研究。推論効率化が主題ではない。",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Measuring Diversity in Synthetic Datasets"
+    },
+    "arXiv:2502.04573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04573",
+      "identity_tokens": [
+        "arXiv:2502.04573"
+      ],
+      "reason": "合成tabular taskによるzero-shot meta-learningモデルの学習・精度を扱う。LLM serving/inference効率の研究ではない。",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "Zero-shot Meta-learning for Tabular Prediction Tasks with Adversarially Pre-trained Transformer"
+    },
+    "arXiv:2502.00745": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00745",
+      "identity_tokens": [
+        "arXiv:2502.00745"
+      ],
+      "reason": "一般DNNのearly-exit判定法で、COCO画像captioningとGLUEを評価対象とする。LLMを対象にした推論/serving検証ではない。",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "BEEM: Boosting Performance of Early Exit DNNs using Multi-Exit Classifiers as Experts"
+    },
+    "DOI:10.1109/iccrd64588.2025.10963086": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iccrd64588.2025.10963086",
+      "identity_tokens": [
+        "DOI:10.1109/iccrd64588.2025.10963086"
+      ],
+      "reason": "This paper applies RAG/memory to a personalized discharge-care application and evaluates advice quality; no general inference-efficiency method is established.",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "Improving the RAG-based Personalized Discharge Care System by Introducing the Memory Mechanism"
+    },
+    "arXiv:2409.14195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14195",
+      "identity_tokens": [
+        "arXiv:2409.14195"
+      ],
+      "reason": "The survey organizes conversation-analysis tasks and techniques; LLMs are discussed as a field trend, not as an inference/serving optimization target.",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md"
+      ],
+      "title": "The Imperative of Conversation Analysis in the Era of LLMs: A Survey of Tasks, Techniques, and Trends"
+    },
+    "DOI:10.3390/app14146171": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app14146171",
+      "identity_tokens": [
+        "DOI:10.3390/app14146171"
+      ],
+      "reason": "MicroBERT distills BERT for resource-constrained NLP and evaluates GLUE task quality; the abstract does not establish generative LLM inference/serving results.",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "MicroBERT: Distilling MoE-Based Knowledge from BERT into a Lighter Model"
+    },
+    "arXiv:2407.10162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.10162",
+      "identity_tokens": [
+        "arXiv:2407.10162"
+      ],
+      "reason": "ChatLogic combines LLMs with logic programming to improve multi-step reasoning capability; no inference-time efficiency outcome is reported.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "ChatLogic: Integrating Logic Programming with Large Language Models for Multi-Step Reasoning"
+    },
+    "arXiv:2403.09053": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09053",
+      "identity_tokens": [
+        "arXiv:2403.09053"
+      ],
+      "reason": "This paper develops computational/statistical theory for distillation and sample/runtime complexity; it does not present an LLM compression or inference deployment method.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Towards a theory of model distillation"
+    },
+    "DOI:10.1109/iiswc55918.2022.00033": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/iiswc55918.2022.00033",
+      "identity_tokens": [
+        "DOI:10.1109/iiswc55918.2022.00033"
+      ],
+      "reason": "Demystifying BERT analyzes system implications of NLP model training; the abstract explicitly focuses on the training phase rather than inference.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Demystifying BERT: System Design Implications"
+    },
+    "arXiv:2604.07003": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07003",
+      "identity_tokens": [
+        "arXiv:2604.07003"
+      ],
+      "reason": "EmoMAS is an edge-deployable negotiation application using multiple agents, but the reported contribution is negotiation performance and agent coordination rather than measured inference efficiency.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "EmoMAS: Emotion-Aware Multi-Agent System for High-Stakes Edge-Deployable Negotiation with Bayesian Orchestration"
+    },
+    "arXiv:2601.10079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10079",
+      "identity_tokens": [
+        "arXiv:2601.10079"
+      ],
+      "reason": "Sparse-RL reduces KV memory during LLM reinforcement-learning rollouts; its target is training-time RL memory, not inference serving.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md"
+      ],
+      "title": "Sparse-RL: Breaking the Memory Wall in LLM Reinforcement Learning via Stable Sparse Rollouts"
+    },
+    "arXiv:2406.18312": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.18312",
+      "identity_tokens": [
+        "arXiv:2406.18312"
+      ],
+      "reason": "AI-native Memory is a vision/position piece proposing a memory pathway toward AGI; it does not evaluate an operational efficiency method.",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "AI-native Memory: A Pathway from LLMs Towards AGI"
+    },
+    "arXiv:2406.09897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09897",
+      "identity_tokens": [
+        "arXiv:2406.09897"
+      ],
+      "reason": "3D-RPE improves long-context position representation and NLU/language-modeling quality; the abstract does not report reduced inference cost or latency.",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "3D-RPE: Enhancing Long-Context Modeling Through 3D Rotary Position Encoding"
+    },
+    "DOI:10.1109/ispass61541.2024.00033": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ispass61541.2024.00033",
+      "identity_tokens": [
+        "DOI:10.1109/ispass61541.2024.00033"
+      ],
+      "reason": "This characterization studies neuro-symbolic AI workloads and hardware implications; it is not an LLM inference/serving study.",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Towards Cognitive AI Systems: Workload and Characterization of Neuro-Symbolic AI"
+    },
+    "DOI:10.1145/3620666.3651336": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620666.3651336",
+      "identity_tokens": [
+        "DOI:10.1145/3620666.3651336"
+      ],
+      "reason": "FEASTA accelerates sparse tensor algebra in general machine-learning workloads; the abstract does not establish LLM inference evaluation or a language-model serving contribution.",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "FEASTA: A Flexible and Efficient Accelerator for Sparse Tensor Algebra in Machine Learning"
+    },
+    "arXiv:2505.08140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.08140",
+      "identity_tokens": [
+        "arXiv:2505.08140"
+      ],
+      "reason": "The paper explains global reasoning failures through a bounded-bandwidth theoretical model and reasoning benchmarks; it does not propose a concrete efficiency optimization.",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Lost in Transmission: When and Why LLMs Fail to Reason Globally"
+    },
+    "arXiv:2411.08446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.08446",
+      "identity_tokens": [
+        "arXiv:2411.08446"
+      ],
+      "reason": "MoEの分散pre-training/fine-tuning時all-to-all通信を圧縮するtraining framework。推論時効率ではない。",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "LSH-MoE: Communication-efficient MoE Training via Locality-Sensitive Hashing"
+    },
+    "arXiv:2411.05288": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.05288",
+      "identity_tokens": [
+        "arXiv:2411.05288"
+      ],
+      "reason": "LLMのpipeline/vocabulary parallelismによる学習時のstage balance・training throughput向上が対象。",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Balancing Pipeline Parallelism with Vocabulary Parallelism"
+    },
+    "arXiv:2410.21759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.21759",
+      "identity_tokens": [
+        "arXiv:2410.21759"
+      ],
+      "reason": "低bit diffusion modelのLoRA fine-tuning/deploymentを扱い、対象はdiffusionであってLLMではない。",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "IntLoRA: Integral Low-rank Adaptation of Quantized Diffusion Models"
+    },
+    "arXiv:2504.19660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19660",
+      "identity_tokens": [
+        "arXiv:2504.19660"
+      ],
+      "reason": "The survey covers MoE applications in wireless communications and network resource optimization; it is not about LLM inference or serving systems.",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "Mixture of Experts for Decentralized Generative AI and Reinforcement Learning in Wireless Networks: A Comprehensive Survey"
+    },
+    "arXiv:2503.21210": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21210",
+      "identity_tokens": [
+        "arXiv:2503.21210"
+      ],
+      "reason": "FakeReasoning addresses AI-image forgery detection using multimodal models; the abstract reports detection/reasoning quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md"
+      ],
+      "title": "Toward Generalizable Forgery Detection and Reasoning"
+    },
+    "arXiv:2503.10568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10568",
+      "identity_tokens": [
+        "arXiv:2503.10568"
+      ],
+      "reason": "ARPG concerns visual autoregressive image generation and parallel image-token order; the target is image generation, outside the LLM inference survey scope.",
+      "first_checked_at": "2026-10-05T15:10:32+00:00",
+      "last_checked_at": "2026-10-05T15:10:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Autoregressive Image Generation with Randomized Parallel Decoding"
+    },
+    "arXiv:2502.12982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12982",
+      "identity_tokens": [
+        "arXiv:2502.12982"
+      ],
+      "reason": "Sailor2 is a multilingual model family produced through large-scale continued pretraining; the abstract concerns training and language quality, not inference optimization.",
+      "first_checked_at": "2026-10-05T15:10:32+00:00",
+      "last_checked_at": "2026-10-05T15:10:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ],
+      "title": "Sailor2: Sailing in South-East Asia with Inclusive Multilingual LLMs"
+    },
+    "arXiv:2502.09888": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.09888",
+      "identity_tokens": [
+        "arXiv:2502.09888"
+      ],
+      "reason": "Climber studies scaling laws for large recommendation models; its target workload is recommendation rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T15:10:32+00:00",
+      "last_checked_at": "2026-10-05T15:10:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "title": "Climber: Toward Efficient Scaling Laws for Large Recommendation Models"
     }
   }
 }

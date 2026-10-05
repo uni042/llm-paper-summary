@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:07:45+00:00",
-  "record_count": 1946,
+  "updated_at": "2026-10-05T15:10:31+00:00",
+  "record_count": 1952,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30099,6 +30099,97 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Inevitable Trade-off between Watermark Strength and Speculative Sampling Efficiency for Language Models"
+    },
+    "arXiv:2502.12063": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12063",
+      "identity_tokens": [
+        "arXiv:2502.12063"
+      ],
+      "reason": "transformer attention近似という技術的接点はあるが、一般的なattention approximationでありLLM inference/servingに対する有効性は示されていないため、関連が弱い。",
+      "first_checked_at": "2026-10-05T15:10:27+00:00",
+      "last_checked_at": "2026-10-05T15:10:27+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Low-Rank Thinning"
+    },
+    "DOI:10.1109/iiswc63097.2024.00024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iiswc63097.2024.00024",
+      "identity_tokens": [
+        "DOI:10.1109/iiswc63097.2024.00024"
+      ],
+      "reason": "Because the primary full paper could not be retrieved, detailed workload tables, methods and reproducibility are not verified; borderline pending full text.",
+      "first_checked_at": "2026-10-05T15:10:28+00:00",
+      "last_checked_at": "2026-10-05T15:10:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding Performance Implications of LLM Inference on CPUs"
+    },
+    "arXiv:2403.19591": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.19591",
+      "identity_tokens": [
+        "arXiv:2403.19591"
+      ],
+      "reason": "The hardware evidence is for generic/lightweight Transformers and semantic segmentation, not LLM inference benchmarks or generation-serving performance; scope fit is borderline.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Genetic Quantization-Aware Approximation for Non-Linear Operations in Transformers"
+    },
+    "arXiv:2405.13956": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13956",
+      "identity_tokens": [
+        "arXiv:2405.13956"
+      ],
+      "reason": "The efficiency mechanism is relevant to sequence modeling but transfer to generative LLM inference is not established; retain as borderline for scope fit.",
+      "first_checked_at": "2026-10-05T15:10:29+00:00",
+      "last_checked_at": "2026-10-05T15:10:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attention as an RNN"
+    },
+    "arXiv:2310.08797": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.08797",
+      "identity_tokens": [
+        "arXiv:2310.08797"
+      ],
+      "reason": "language-model compressionの共通点はあるが、本文のモデル・評価はBERT系で、本surveyが対象とするLLM inference/servingへの直接適用性が弱い。",
+      "first_checked_at": "2026-10-05T15:10:30+00:00",
+      "last_checked_at": "2026-10-05T15:10:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Comparative Analysis of Task-Agnostic Distillation Methods for Compressing Transformer Language Models"
+    },
+    "arXiv:2208.09015": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.09015",
+      "identity_tokens": [
+        "arXiv:2208.09015"
+      ],
+      "reason": "attention計算効率化は関連技術だが、本文の対象はBERT等のencoder系Transformerで、LLM inference/servingの適用性は未検証。",
+      "first_checked_at": "2026-10-05T15:10:31+00:00",
+      "last_checked_at": "2026-10-05T15:10:31+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Treeformer: Dense Gradient Trees for Efficient Attention Computation"
     }
   }
 }
