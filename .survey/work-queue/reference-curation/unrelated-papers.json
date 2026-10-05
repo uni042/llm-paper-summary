@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:00:23+00:00",
-  "record_count": 5116,
+  "updated_at": "2026-10-05T13:02:47+00:00",
+  "record_count": 5128,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -74398,6 +74398,177 @@
         "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
       ],
       "title": "Session Summary Podcast: Session 1: Systems for AI (LLMs) - 1"
+    },
+    "arXiv:2505.18522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18522",
+      "identity_tokens": [
+        "arXiv:2505.18522"
+      ],
+      "reason": "The abstract explicitly focuses on base-capability effects of sequence-model architectures, rather than attention/inference efficiency.",
+      "first_checked_at": "2026-10-05T13:02:44+00:00",
+      "last_checked_at": "2026-10-05T13:02:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "How Does Sequence Modeling Architecture Influence Base Capabilities of Pre-trained Language Models? Exploring Key Architecture Design Principles to Avoid Base Capabilities Degradation"
+    },
+    "arXiv:2512.13095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.13095",
+      "identity_tokens": [
+        "arXiv:2512.13095"
+      ],
+      "reason": "ADHintはRL post-trainingで推論trajectoryを教えるhintとsample efficiencyを扱う学習手法で、推論時の効率化を示すものではない。",
+      "first_checked_at": "2026-10-05T13:02:44+00:00",
+      "last_checked_at": "2026-10-05T13:02:44+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "ADHint: Adaptive Hints with Difficulty Priors for Reinforcement Learning"
+    },
+    "DOI:10.3390/app152312698": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app152312698",
+      "identity_tokens": [
+        "DOI:10.3390/app152312698"
+      ],
+      "reason": "対象は複数周期の時系列予測であり、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-05T13:02:44+00:00",
+      "last_checked_at": "2026-10-05T13:02:44+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Wavelet-Enhanced Transformer for Adaptive Multi-Period Time Series Forecasting"
+    },
+    "arXiv:2511.21622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.21622",
+      "identity_tokens": [
+        "arXiv:2511.21622"
+      ],
+      "reason": "AIのalgorithmic progressによる効率改善を歴史的に分析する研究で、LLM training FLOPs効率が主題でありservingの改善策ではない。",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "On the Origin of Algorithmic Progress in AI"
+    },
+    "arXiv:2511.17490": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17490",
+      "identity_tokens": [
+        "arXiv:2511.17490"
+      ],
+      "reason": "Video-R4はtext-rich video QAのvisual rumination/認識能力を改善する研究で、LLM推論効率化の寄与を示していない。",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md"
+      ],
+      "title": "Video-R4: Reinforcing Text-Rich Video Reasoning with Visual Rumination"
+    },
+    "arXiv:2511.12214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12214",
+      "identity_tokens": [
+        "arXiv:2511.12214"
+      ],
+      "reason": "対象はpedestrian trajectory prediction用のvirtual graph expert routingで、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "title": "ViTE: Virtual Graph Trajectory Expert Router for Pedestrian Trajectory Prediction"
+    },
+    "DOI:10.1145/3680207.3723487": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3680207.3723487",
+      "identity_tokens": [
+        "DOI:10.1145/3680207.3723487"
+      ],
+      "reason": "Confidantはmobile devices上でLLMをcollaborative trainingする研究で、学習分散化が主題。",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "Confidant: Customizing Transformer-based LLMs via Collaborative Training on Mobile Devices"
+    },
+    "arXiv:2510.20941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20941",
+      "identity_tokens": [
+        "arXiv:2510.20941"
+      ],
+      "reason": "長い法的precedent文書に対するLLMの理解を測るbenchmarkで、推論コストを最適化する方法ではない。",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "Do LLMs Truly Understand When a Precedent Is Overruled?"
+    },
+    "arXiv:2510.13117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13117",
+      "identity_tokens": [
+        "arXiv:2510.13117"
+      ],
+      "reason": "Masked diffusion language modelsのreasoning能力・計算特性を評価する研究で、推論効率化手法を提案していない。",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "On the Reasoning Abilities of Masked Diffusion Language Models"
+    },
+    "arXiv:2510.04162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04162",
+      "identity_tokens": [
+        "arXiv:2510.04162"
+      ],
+      "reason": "Draxはautomatic speech recognition用のdiscrete flow-matchingモデルで、一般LLM推論/servingではない。",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2312.11462-cascade-speculative-drafting-for-even-faster-llm-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "title": "Drax: Speech Recognition with Discrete Flow Matching"
+    },
+    "arXiv:2507.06795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.06795",
+      "identity_tokens": [
+        "arXiv:2507.06795"
+      ],
+      "reason": "The paper studies domain-adaptive continual pretraining for small industrial LLMs. Its contribution is training/domain adaptation rather than an inference-time efficiency method.",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "ixi-GEN: Efficient Industrial sLLMs through Domain Adaptive Continual Pretraining"
+    },
+    "arXiv:2505.20214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20214",
+      "identity_tokens": [
+        "arXiv:2505.20214"
+      ],
+      "reason": "The paper studies truthfulness behavior in multimodal reasoning models and does not propose an efficiency method.",
+      "first_checked_at": "2026-10-05T13:02:47+00:00",
+      "last_checked_at": "2026-10-05T13:02:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md"
+      ],
+      "title": "When Slower Isn't Truer: Inverse Scaling Law of Truthfulness in Multimodal Reasoning"
     }
   }
 }

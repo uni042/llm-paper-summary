@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da1335a3bfc2a5f4-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.17310",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.17310",
+    "identity_tokens": [
+      "arXiv:2506.17310"
+    ],
+    "reason": "The primary results establish long-context capability, not lower inference compute, memory, or latency; its efficiency fit is therefore uncertain.",
+    "first_checked_at": "2026-10-05T13:02:46+00:00",
+    "last_checked_at": "2026-10-05T13:02:46+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+      "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+    ],
+    "title": "PaceLLM: Brain-Inspired Large Language Models for Long-Context Understanding"
+  },
+  "processed_at": "2026-10-05T13:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da1335a3bfc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

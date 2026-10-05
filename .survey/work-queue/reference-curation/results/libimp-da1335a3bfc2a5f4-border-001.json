@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da1335a3bfc2a5f4-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.03306",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.03306",
+    "identity_tokens": [
+      "arXiv:2508.03306"
+    ],
+    "reason": "It is an evaluation-protocol contribution, not a retrieval acceleration or LLM inference optimization; its connection to this survey is limited to evaluating low-precision retrieval components.",
+    "first_checked_at": "2026-10-05T13:02:46+00:00",
+    "last_checked_at": "2026-10-05T13:02:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+    ],
+    "title": "Reliable Evaluation Protocol for Low-Precision Retrieval"
+  },
+  "processed_at": "2026-10-05T13:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da1335a3bfc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

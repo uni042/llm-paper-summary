@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-da1335a3bfc2a5f4-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.14200",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.14200",
+    "identity_tokens": [
+      "arXiv:2507.14200"
+    ],
+    "reason": "The primary optimization target is response quality and system scalability; it does not show reduced aggregate calls, latency, or cost, and aggregation can add inference work.",
+    "first_checked_at": "2026-10-05T13:02:46+00:00",
+    "last_checked_at": "2026-10-05T13:02:46+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+    ],
+    "title": "A Scalable Multi-LLM Collaboration System with Retrieval-based Selection and Exploration-Exploitation-Driven Enhancement"
+  },
+  "processed_at": "2026-10-05T13:02:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-da1335a3bfc2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

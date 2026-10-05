@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8208b7decf98a06c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.12214",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.12214",
+    "identity_tokens": [
+      "arXiv:2511.12214"
+    ],
+    "reason": "対象はpedestrian trajectory prediction用のvirtual graph expert routingで、LLM推論とは無関係。",
+    "first_checked_at": "2026-10-05T13:02:45+00:00",
+    "last_checked_at": "2026-10-05T13:02:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+    ],
+    "title": "ViTE: Virtual Graph Trajectory Expert Router for Pedestrian Trajectory Prediction"
+  },
+  "processed_at": "2026-10-05T13:02:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8208b7decf98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

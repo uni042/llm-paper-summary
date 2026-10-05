@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:00:23+00:00",
-  "record_count": 1682,
+  "updated_at": "2026-10-05T13:02:46+00:00",
+  "record_count": 1688,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26083,6 +26083,93 @@
         "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
       ],
       "title": "Binary Quadratic Quantization: Beyond First-Order Quantization for Real-Valued Matrix Compression"
+    },
+    "DOI:10.1109/icmlt65785.2025.11193187": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icmlt65785.2025.11193187",
+      "identity_tokens": [
+        "DOI:10.1109/icmlt65785.2025.11193187"
+      ],
+      "reason": "The publisher/DOI full text could not be retrieved in this run, so the method details and experimental claims could not be verified against the primary body.",
+      "first_checked_at": "2026-10-05T13:02:44+00:00",
+      "last_checked_at": "2026-10-05T13:02:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "S4T-GPTQ: A Space-for-Time Strategy For Optimizing GPTQ 4-bit Quantization"
+    },
+    "DOI:10.1109/icmlt65785.2025.11193324": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icmlt65785.2025.11193324",
+      "identity_tokens": [
+        "DOI:10.1109/icmlt65785.2025.11193324"
+      ],
+      "reason": "The publisher/DOI full text could not be retrieved in this run, preventing verification of the claimed efficiency gains and evaluation setup.",
+      "first_checked_at": "2026-10-05T13:02:44+00:00",
+      "last_checked_at": "2026-10-05T13:02:44+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md"
+      ],
+      "title": "VideoMamba-LLaVA: Efficient Video Question Answering with Selective Scanning and Lightweight Inference"
+    },
+    "DOI:10.1109/dsaa65442.2025.11247985": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dsaa65442.2025.11247985",
+      "identity_tokens": [
+        "DOI:10.1109/dsaa65442.2025.11247985"
+      ],
+      "reason": "The topic is directly on deployment quantization, but this is a secondary overview rather than a primary efficiency contribution; fit to a primary-paper Discovery queue is weak.",
+      "first_checked_at": "2026-10-05T13:02:45+00:00",
+      "last_checked_at": "2026-10-05T13:02:45+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "title": "Small and Fast LLMs on Commodity Hardware: Post-Training Quantization in llama. cpp"
+    },
+    "arXiv:2508.03306": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03306",
+      "identity_tokens": [
+        "arXiv:2508.03306"
+      ],
+      "reason": "It is an evaluation-protocol contribution, not a retrieval acceleration or LLM inference optimization; its connection to this survey is limited to evaluating low-precision retrieval components.",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+      ],
+      "title": "Reliable Evaluation Protocol for Low-Precision Retrieval"
+    },
+    "arXiv:2507.14200": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.14200",
+      "identity_tokens": [
+        "arXiv:2507.14200"
+      ],
+      "reason": "The primary optimization target is response quality and system scalability; it does not show reduced aggregate calls, latency, or cost, and aggregation can add inference work.",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "A Scalable Multi-LLM Collaboration System with Retrieval-based Selection and Exploration-Exploitation-Driven Enhancement"
+    },
+    "arXiv:2506.17310": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17310",
+      "identity_tokens": [
+        "arXiv:2506.17310"
+      ],
+      "reason": "The primary results establish long-context capability, not lower inference compute, memory, or latency; its efficiency fit is therefore uncertain.",
+      "first_checked_at": "2026-10-05T13:02:46+00:00",
+      "last_checked_at": "2026-10-05T13:02:46+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "PaceLLM: Brain-Inspired Large Language Models for Long-Context Understanding"
     }
   }
 }
