@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-103-part-05-611de9739f97",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2410.23320",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2410.23320"
+      ],
+      "title": "Lina-Speech: Gated Linear Attention is a Fast and Parameter-Efficient Learner for text-to-speech synthesis",
+      "reason": "対象はtext-to-speech専用encoder-decoderではなく汎用chat LLM servingとは異なり、評価も音声 synthesis taskの範囲。隣接技術としてborderline。",
+      "source_url": "https://doi.org/10.48550/arXiv.2410.23320",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3664647.3681419",
+      "identity_tokens": [
+        "DOI:10.1145/3664647.3681419"
+      ],
+      "title": "Adaptive Pruning of Channel Spatial Dependability in Convolutional Neural Networks",
+      "reason": "畳み込みネットワークのchannel/spatial pruning手法で、LLMの推論効率を扱わない。",
+      "source_url": "https://doi.org/10.1145/3664647.3681419",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17957",
+      "identity_tokens": [
+        "arXiv:2410.17957"
+      ],
+      "title": "MCUBERT: Memory-Efficient BERT Inference on Commodity Microcontrollers",
+      "reason": "BERT-tiny/miniのmicrocontroller上のテキスト分類向けinferenceであり、対象契約のLLM推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2410.17957",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.15894",
+      "identity_tokens": [
+        "arXiv:2410.15894"
+      ],
+      "title": "MVVM: Deploy Your AI Agents-Securely, Efficiently, Everywhere",
+      "reason": "対象はagent deployment/runtime lifecycle全体で、LFM decoding kernel/throughput最適化や独立したLLM serving benchmarkが中心ではない。効率主張の一般化に注意が要るためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.15894",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10181",
+      "identity_tokens": [
+        "arXiv:2410.10181"
+      ],
+      "title": "Scalable Multi-Domain Adaptation of Language Models using Modular Experts",
+      "reason": "本文でmodel-weight loadingとconcurrent adapters servingへの接点は確認したが、中心評価はdomain adaptation/trainingであり、inference/serving efficiencyの実測・機構の証拠が限定されるためborderline。",
+      "source_url": "https://arxiv.org/abs/2410.10181",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ]
+    }
+  ]
+}
