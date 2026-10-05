@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-91-part-06-50aefc973cb0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17633",
+      "identity_tokens": [
+        "arXiv:2601.17633"
+      ],
+      "title": "Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives",
+      "reason": "SSD内部near-data processingを使う汎用name-value store accelerator。LLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2601.17633",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01527",
+      "identity_tokens": [
+        "arXiv:2511.01527"
+      ],
+      "title": "TPS-Bench: Evaluating AI Agents' Tool Planning \\& Scheduling Abilities in Compounding Tasks",
+      "reason": "agent tool-planning/scheduling能力のbenchmarkで、効率改善は一次要旨に示されない。",
+      "source_url": "https://arxiv.org/abs/2511.01527",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.04655",
+      "identity_tokens": [
+        "arXiv:2510.04655"
+      ],
+      "title": "FT-MDT: Extracting Decision Trees from Medical Texts via a Novel Low-rank Adaptation Method",
+      "reason": "医療テキストからclinical decision treeを抽出するLoRA手法。推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2510.04655",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.01544",
+      "identity_tokens": [
+        "arXiv:2510.01544"
+      ],
+      "title": "Advancing Reasoning in Diffusion Language Models with Denoising Process Rewards",
+      "reason": "diffusion LMへのreasoning reward学習で、推論高速化/コストを主題としない。",
+      "source_url": "https://arxiv.org/abs/2510.01544",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15432",
+      "identity_tokens": [
+        "arXiv:2509.15432"
+      ],
+      "title": "SERVAL: Surprisingly Effective Zero-Shot Visual Document Retrieval Powered by Large Vision and Language Models",
+      "reason": "VLMによるvisual document retrieval研究でserving efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2509.15432",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ]
+    }
+  ]
+}
