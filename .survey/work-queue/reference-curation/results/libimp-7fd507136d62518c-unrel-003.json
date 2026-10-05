@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7fd507136d62518c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.00907",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.00907",
+    "identity_tokens": [
+      "arXiv:2610.00907"
+    ],
+    "reason": "STEERはforeign-key neighborhoodを使うRelational Foundation Models向けにLLMがschema edgeをrankするsamplingを行い、下流RFMのinput context rowsを平均約40%減らす。 本文上の主たるfoundation modelは relational/tabular modelで、LLMはschema relevance rankingに補助利用されるのみ。削減対象はRFMのdatabase contextでありLLM inferenceではない。",
+    "first_checked_at": "2026-10-05T03:59:34+00:00",
+    "last_checked_at": "2026-10-05T03:59:34+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+    ],
+    "title": "STEER: Reducing Inference Cost in Relational Foundation Models through Semantically Informed Sampling"
+  },
+  "processed_at": "2026-10-05T03:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7fd507136d62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

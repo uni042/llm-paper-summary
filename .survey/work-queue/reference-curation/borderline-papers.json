@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:57:01+00:00",
-  "record_count": 806,
+  "updated_at": "2026-10-05T03:59:33+00:00",
+  "record_count": 809,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11953,6 +11953,48 @@
         "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
       ],
       "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon"
+    },
+    "arXiv:2610.00964": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00964",
+      "identity_tokens": [
+        "arXiv:2610.00964"
+      ],
+      "reason": "本文・要旨でtoken数、prompt length削減、latency、costなど推論効率の比較が見当たらず、主張はtask accuracy改善。context curationの効率効果が実証されないためborderline。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "RPTune: Learned Context Curation for LLM Catalog Search"
+    },
+    "arXiv:2610.00872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00872",
+      "identity_tokens": [
+        "arXiv:2610.00872"
+      ],
+      "reason": "削減対象はmemory構築・検索経路のLLM calls/latencyで、base model inference kernel、serving capacity、token-generation efficiencyではない。agent application layerの最適化と本screen範囲の接続は間接的。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "MemFit: Efficient Long-Term Agentic Memory"
+    },
+    "arXiv:2610.00912": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00912",
+      "identity_tokens": [
+        "arXiv:2610.00912"
+      ],
+      "reason": "対象はOperations Researchの特定formulation workflowで、generic LLM serving/routerやmodel inference engineではなくapplication orchestration層。token-cost評価はあるが汎用serving寄与は限定される。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "OR for AI That Does OR: Routing LLMs up the Escalator inside the OSCAR Framework"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:57:01+00:00",
-  "record_count": 2417,
+  "updated_at": "2026-10-05T03:59:34+00:00",
+  "record_count": 2434,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35007,6 +35007,258 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Active Flow Expansion for Out-of-Distribution Discovery: from Theory to Molecules"
+    },
+    "DOI:10.1145/3700439": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3700439",
+      "identity_tokens": [
+        "DOI:10.1145/3700439"
+      ],
+      "reason": "大規模deep learningの訓練効率に関するsurveyであり、LLM推論時の効率化ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "On Efficient Training of Large-Scale Deep Learning Models"
+    },
+    "arXiv:2403.08946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.08946",
+      "identity_tokens": [
+        "arXiv:2403.08946"
+      ],
+      "reason": "LLM向け説明可能AIの戦略surveyであり、推論システム性能の研究ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Usable XAI: 10 Strategies Towards Exploiting Explainability in the LLM Era"
+    },
+    "arXiv:2405.11157": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.11157",
+      "identity_tokens": [
+        "arXiv:2405.11157"
+      ],
+      "reason": "LoRA libraryの構築・再利用とtask-generalizationの評価が主題で、要旨に推論時メモリ、latency、serving効率の改善がない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Towards Modular LLMs by Building and Reusing a Library of LoRAs"
+    },
+    "arXiv:2306.00946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.00946",
+      "identity_tokens": [
+        "arXiv:2306.00946"
+      ],
+      "reason": "合成flip-flop taskを用いたTransformerのattention glitches・推論誤りの診断研究であり、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Exposing Attention Glitches with Flip-Flop Language Modeling"
+    },
+    "DOI:10.1145/3822455.3838776": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3822455.3838776",
+      "identity_tokens": [
+        "DOI:10.1145/3822455.3838776"
+      ],
+      "reason": "LLM生成model transformationの非決定性を評価するcorrectness監査で、inference/serving効率化の研究ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Beyond Single-run Correctness: Nondeterminism-aware Evaluation of LLM-based Model Transformations"
+    },
+    "arXiv:2610.00940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00940",
+      "identity_tokens": [
+        "arXiv:2610.00940"
+      ],
+      "reason": "推論時reasoningの質を改善するmulti-path planning法だが、要旨に同品質での推論compute・latency・memory削減の主張がない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "ReHoPER: Receding-Horizon Planning for Enhanced Reasoning"
+    },
+    "arXiv:2610.00952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00952",
+      "identity_tokens": [
+        "arXiv:2610.00952"
+      ],
+      "reason": "recaptioned image-text supervision distributionの監査枠組みで、LLM推論最適化ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "A Matched-Budget Audit Framework for Recaptioned Image-Text Supervision Distributions"
+    },
+    "arXiv:2610.00977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00977",
+      "identity_tokens": [
+        "arXiv:2610.00977"
+      ],
+      "reason": "web applicationのaccess-control脆弱性をLLM agentで検出するセキュリティ応用であり、LLM runtime効率化を扱わない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "ABSENTIA: Detecting Broken Access Control Vulnerabilities in Web Applications"
+    },
+    "arXiv:2610.00979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00979",
+      "identity_tokens": [
+        "arXiv:2610.00979"
+      ],
+      "reason": "multi-environment LLM agentのselection/self-distillation訓練を扱い、推論時最適化ではない。",
+      "first_checked_at": "2026-10-05T03:59:33+00:00",
+      "last_checked_at": "2026-10-05T03:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "RISED: RubrIcs for agentic multi-environment Selection and sElf-Distillation"
+    },
+    "arXiv:2610.00890": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00890",
+      "identity_tokens": [
+        "arXiv:2610.00890"
+      ],
+      "reason": "agentic coding taskのcross-benchmark RL transferを扱う訓練・汎化研究で、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Cross-Benchmark Transfer from RL on Agentic Coding Tasks"
+    },
+    "arXiv:2610.00907": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00907",
+      "identity_tokens": [
+        "arXiv:2610.00907"
+      ],
+      "reason": "STEERはforeign-key neighborhoodを使うRelational Foundation Models向けにLLMがschema edgeをrankするsamplingを行い、下流RFMのinput context rowsを平均約40%減らす。 本文上の主たるfoundation modelは relational/tabular modelで、LLMはschema relevance rankingに補助利用されるのみ。削減対象はRFMのdatabase contextでありLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "STEER: Reducing Inference Cost in Relational Foundation Models through Semantically Informed Sampling"
+    },
+    "arXiv:2610.00930": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00930",
+      "identity_tokens": [
+        "arXiv:2610.00930"
+      ],
+      "reason": "Classifier-free guidanceを使う一般diffusion modelのactivation quantization手法であり、language model推論が対象ではない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Joint Branch-Space Transform Coding for Diffusion Activation Quantization with Classifier-Free Guidance"
+    },
+    "arXiv:2610.00991": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00991",
+      "identity_tokens": [
+        "arXiv:2610.00991"
+      ],
+      "reason": "Adapter ThicketsはRLVR訓練budgetを複数LoRAへ分散し、majority-vote accuracyを改善する。本文は全methodで問題あたり160 completionを固定して比較している。 提案はtraining budget配分でありinference computeを減らさず、等しい160 sample予算でqualityを比較している。学習時のaccuracy改善だけで対象推論効率には該当しない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Adapter Thickets: Splitting an RLVR Budget Beats Concentrating It"
+    },
+    "arXiv:2610.01013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01013",
+      "identity_tokens": [
+        "arXiv:2610.01013"
+      ],
+      "reason": "3D vision modelのsparse attention推論高速化であり、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "VASC: Value-Aware Sparse Attention with Cross-Layer Memory for Efficient 3D Reconstruction"
+    },
+    "arXiv:2610.01016": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01016",
+      "identity_tokens": [
+        "arXiv:2610.01016"
+      ],
+      "reason": "diffusion language model向けtext embeddingのdiffusibilityとmodel trainingを評価し、推論時効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Scaling and Distilling Text Embeddings for Better Diffusibility"
+    },
+    "arXiv:2610.01019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01019",
+      "identity_tokens": [
+        "arXiv:2610.01019"
+      ],
+      "reason": "ロボットworld modelの学習およびalternative futures生成が主題で、LLM推論システムを対象としない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "FutureWorlds: Learning Robotic World Models from Alternative Futures"
+    },
+    "arXiv:2610.01042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01042",
+      "identity_tokens": [
+        "arXiv:2610.01042"
+      ],
+      "reason": "LLM multi-agent間の通信内容・revision効果を評価する研究であり、推論cost/serving効率化を主題としない。",
+      "first_checked_at": "2026-10-05T03:59:34+00:00",
+      "last_checked_at": "2026-10-05T03:59:34+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Beyond Final Accuracy: Auditing Communication in LLM Multi-Agent Systems"
     }
   }
 }
