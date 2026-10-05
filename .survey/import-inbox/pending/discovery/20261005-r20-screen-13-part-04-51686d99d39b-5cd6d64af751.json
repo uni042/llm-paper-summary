@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-13-part-04-51686d99d39b",
+  "reference_main_sha": "489623932dd15119c489a9eaa19353a6cc7ba9dd",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03915",
+      "identity_tokens": [
+        "arXiv:2609.03915"
+      ],
+      "title": "RuleMem: Active Rule Memory for Long-Term Conversational Agents",
+      "reason": "Rule-based memory for agent quality; abstract gives no LLM inference-efficiency method or measurement.",
+      "source_url": "https://arxiv.org/abs/2609.03915",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04040",
+      "identity_tokens": [
+        "arXiv:2609.04040"
+      ],
+      "title": "Confidence-Gated Admission for Hardware Prefetching: When the Gate Matters More Than the Predictor",
+      "reason": "CPU hardware prefetching, not LLM-specific inference work.",
+      "source_url": "https://arxiv.org/abs/2609.04040",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04277",
+      "identity_tokens": [
+        "arXiv:2609.04277"
+      ],
+      "title": "FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models",
+      "reason": "VLA failure detection/annotation training, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.04277",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04417",
+      "identity_tokens": [
+        "arXiv:2609.04417"
+      ],
+      "title": "Tuning Collective Patterns to Alleviate Congestion in Shared AI Clusters",
+      "reason": "Distributed AI training collectives, training-only.",
+      "source_url": "https://arxiv.org/abs/2609.04417",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04534",
+      "identity_tokens": [
+        "arXiv:2609.04534"
+      ],
+      "title": "Adaptive Multilevel Discontinuous Galerkin Methods on GPUs",
+      "reason": "GPU methods for discontinuous Galerkin scientific computing, unrelated to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.04534",
+      "first_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "last_checked_at": "2026-10-05T06:01:56.251469+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
