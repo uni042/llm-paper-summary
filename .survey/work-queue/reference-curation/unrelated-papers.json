@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:29:40+00:00",
-  "record_count": 4631,
+  "updated_at": "2026-10-05T11:31:26+00:00",
+  "record_count": 4645,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -67427,6 +67427,210 @@
         "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
       ],
       "title": "FitRAG: Self-Improving LLM-Based Services through Feedback-Driven Adapter Lifecycle Management"
+    },
+    "DOI:10.1109/tai.2025.3646146": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tai.2025.3646146",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3646146"
+      ],
+      "reason": "Continuous sign-language recognition is a video/vision sequence task.",
+      "first_checked_at": "2026-10-05T11:31:24+00:00",
+      "last_checked_at": "2026-10-05T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "ConSignformer: Conformer-Based Framework for Continuous Sign Language Recognition"
+    },
+    "DOI:10.1109/tcc.2026.3689276": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3689276",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3689276"
+      ],
+      "reason": "MoE load balancing accelerates training, which is outside the inference-only scope.",
+      "first_checked_at": "2026-10-05T11:31:24+00:00",
+      "last_checked_at": "2026-10-05T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "BalanceMoE: An Efficient Dynamic Load Balance Framework to Accelerate Mixture-of-Expert Training"
+    },
+    "DOI:10.1109/tcc.2026.3696613": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3696613",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3696613"
+      ],
+      "reason": "Generic DNN batching/server allocation evaluated on ResNet-50 and RetinaNet; no LLM workload or LLM-specific result.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md"
+      ],
+      "title": "Optimizing Server Allocation for Multi-Tenant GPU Inference With Dynamic Batching: A Queueing Theoretic Approach"
+    },
+    "DOI:10.1109/tcc.2026.3710336": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3710336",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3710336"
+      ],
+      "reason": "Adversarial service diagnosis/monitoring is a reliability task, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "BGSG: A Bi-Level Genetic Algorithm to Stackelberg Diagnosis Game for Edge Service Performance Monitoring"
+    },
+    "DOI:10.1109/tcc.2026.3713395": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcc.2026.3713395",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3713395"
+      ],
+      "reason": "Cloud resource forecasting for capacity planning, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "ASP: An Adaptive Scaling Predictor With MoE-Enhanced Transformer for Cloud Resource Forecasting"
+    },
+    "DOI:10.1109/ted.2026.3698080": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ted.2026.3698080",
+      "identity_tokens": [
+        "DOI:10.1109/ted.2026.3698080"
+      ],
+      "reason": "Memristor fabrication and charge-transport characterization, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Semimetal Bi/MoS2 Memristor Exhibiting Ultrahigh Switching Ratio and Mechanistic Insights Into Transport via Low-Temperature Characterization"
+    },
+    "DOI:10.1109/tmc.2026.3667390": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3667390",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3667390"
+      ],
+      "reason": "ConvertNet handles continuous learning/retraining and reports learning/energy gains; training-time optimization is outside scope.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "ConvertNet: Training-Time Model Scaling for In-Vehicle Continuous Learning"
+    },
+    "DOI:10.1109/wccis70285.2026.11650851": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wccis70285.2026.11650851",
+      "identity_tokens": [
+        "DOI:10.1109/wccis70285.2026.11650851"
+      ],
+      "reason": "Attention methods for image restoration, not LLM inference.",
+      "first_checked_at": "2026-10-05T11:31:25+00:00",
+      "last_checked_at": "2026-10-05T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Comparative Study of Attention Mechanisms for Efficient Transformer-Based Image Restoration"
+    },
+    "DOI:10.1117/1.jei.35.4.043005": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/1.jei.35.4.043005",
+      "identity_tokens": [
+        "DOI:10.1117/1.jei.35.4.043005"
+      ],
+      "reason": "Video summarization driven by visual scanpaths; no LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Human–computer interactive video summarization system driven by visual scanpaths generation for long video understanding"
+    },
+    "DOI:10.14778/3836663.3836688": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3836663.3836688",
+      "identity_tokens": [
+        "DOI:10.14778/3836663.3836688"
+      ],
+      "reason": "Textual graph learning and representation fusion; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "UniTG: A Unified System for Efficient and Seamless Textual Graph Learning"
+    },
+    "DOI:10.2478/picbe-2026-0182": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2478/picbe-2026-0182",
+      "identity_tokens": [
+        "DOI:10.2478/picbe-2026-0182"
+      ],
+      "reason": "Parallel processing for smart-city ESG analytics, not LLM inference.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A Parallel Processing Framework for Big Data Analytics in Smart City ESG Compliance"
+    },
+    "DOI:10.3390/electronics15132877": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15132877",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15132877"
+      ],
+      "reason": "Lightweight bird detector and edge monitoring terminal, a vision application.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "title": "eBirdNet-Nano: An Operator-Aware Lightweight Detector and Edge AI Terminal for Endangered Bird Real-Time Monitoring"
+    },
+    "DOI:10.1109/tvlsi.2026.3687178": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tvlsi.2026.3687178",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2026.3687178"
+      ],
+      "reason": "SRAM compute-in-memory MAC macro for generic AI; the abstract does not identify LLM inference/serving as its target.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A Booth-Based Digital Compute-in-Memory Macro With Bitwise-Efficient Multiphase Accumulation"
+    },
+    "DOI:10.1109/ur69537.2026.11626824": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ur69537.2026.11626824",
+      "identity_tokens": [
+        "DOI:10.1109/ur69537.2026.11626824"
+      ],
+      "reason": "Physics-reasoning VLA for robotic manipulation focuses on task success, not inference efficiency.",
+      "first_checked_at": "2026-10-05T11:31:26+00:00",
+      "last_checked_at": "2026-10-05T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Physical Reasoning VLA Models for Enhancing Robotic Manipulation"
     }
   }
 }
