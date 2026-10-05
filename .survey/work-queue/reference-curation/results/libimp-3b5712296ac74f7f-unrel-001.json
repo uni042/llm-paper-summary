@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b5712296ac74f7f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.16231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.16231",
+    "identity_tokens": [
+      "arXiv:2606.16231"
+    ],
+    "reason": "The work instruction-tunes LLMs to generate GPU kernels; it optimizes kernel generation, not LLM inference performance.",
+    "first_checked_at": "2026-10-05T03:54:51+00:00",
+    "last_checked_at": "2026-10-05T03:54:51+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "From Tokens to Regions: CUDA-Sensitive Instruction Tuning for GPU Kernel Generation"
+  },
+  "processed_at": "2026-10-05T03:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b5712296ac7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

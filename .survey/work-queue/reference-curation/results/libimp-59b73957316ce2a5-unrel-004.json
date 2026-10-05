@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-59b73957316ce2a5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.18166",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.18166",
+    "identity_tokens": [
+      "arXiv:2606.18166"
+    ],
+    "reason": "The work evaluates LLMs for cyber-threat classification, not inference efficiency or serving systems.",
+    "first_checked_at": "2026-10-05T03:54:51+00:00",
+    "last_checked_at": "2026-10-05T03:54:51+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "Evaluating Open-Source LLMs for Multi-Label ATT&CK Technique Classification on CTI Reports"
+  },
+  "processed_at": "2026-10-05T03:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-59b73957316c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

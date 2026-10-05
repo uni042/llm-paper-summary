@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99fca197c875c389-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.19164",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.19164",
+    "identity_tokens": [
+      "arXiv:2606.19164"
+    ],
+    "reason": "The paper studies parameter merging for multi-task learning and quality, with no inference/serving efficiency contribution in the abstract.",
+    "first_checked_at": "2026-10-05T03:54:52+00:00",
+    "last_checked_at": "2026-10-05T03:54:52+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+    ],
+    "title": "Essential Subspace Merging for Multi-Task Learning"
+  },
+  "processed_at": "2026-10-05T03:54:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99fca197c875",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

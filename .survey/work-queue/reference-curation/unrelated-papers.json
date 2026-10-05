@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:52:08+00:00",
-  "record_count": 2386,
+  "updated_at": "2026-10-05T03:54:52+00:00",
+  "record_count": 2404,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -34560,6 +34560,266 @@
         "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
       ],
       "title": "GENATATORs: ab initio Gene Annotation With DNA Language Models"
+    },
+    "arXiv:2606.15405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15405",
+      "identity_tokens": [
+        "arXiv:2606.15405"
+      ],
+      "reason": "The abstract concerns anticipatory memory for LLM agents and memory-task quality, without an inference-efficiency claim.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "T-Mem: Memory That Anticipates, Not Archives"
+    },
+    "DOI:10.1145/3810201": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3810201",
+      "identity_tokens": [
+        "DOI:10.1145/3810201"
+      ],
+      "reason": "The contribution concerns knowledge sharing among personalized mobile models under label shift, not LLM serving/inference.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "title": "MACRA: Efficient Knowledge Sharing among Personalized Models against Label Shift in Mobile AI Applications"
+    },
+    "arXiv:2606.14010": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14010",
+      "identity_tokens": [
+        "arXiv:2606.14010"
+      ],
+      "reason": "This distills vision-language-action models for real-time robotics, outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "RT-VLA: Real-Time Vision-Language-Action Models via Knowledge Distillation"
+    },
+    "arXiv:2606.14259": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14259",
+      "identity_tokens": [
+        "arXiv:2606.14259"
+      ],
+      "reason": "The subject is the Adam-SGD optimization gap, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Beyond a Single Explanation of the Adam-SGD Gap"
+    },
+    "arXiv:2606.16231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16231",
+      "identity_tokens": [
+        "arXiv:2606.16231"
+      ],
+      "reason": "The work instruction-tunes LLMs to generate GPU kernels; it optimizes kernel generation, not LLM inference performance.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "From Tokens to Regions: CUDA-Sensitive Instruction Tuning for GPU Kernel Generation"
+    },
+    "arXiv:2606.16497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16497",
+      "identity_tokens": [
+        "arXiv:2606.16497"
+      ],
+      "reason": "The RL agent optimizes GPU kernels; the contribution is not efficiency of LLM inference/serving itself.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "daVinci-kernel: Co-Evolving Skill Selection, Summarization, and Utilization via RL for GPU Kernel Optimization"
+    },
+    "DOI:10.1145/3819802.3820580": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3819802.3820580",
+      "identity_tokens": [
+        "DOI:10.1145/3819802.3820580"
+      ],
+      "reason": "The paper studies correctness of AI-generated kernels, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "The Next Frontier for AI-Generated Kernels: Correctness"
+    },
+    "arXiv:2606.15308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15308",
+      "identity_tokens": [
+        "arXiv:2606.15308"
+      ],
+      "reason": "The work manipulates routing in multimodal LLM cascades as an attack; it does not propose an efficiency intervention.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Forced Deferral: Manipulating Routing Decisions in Multimodal LLM Cascades"
+    },
+    "arXiv:2606.15319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15319",
+      "identity_tokens": [
+        "arXiv:2606.15319"
+      ],
+      "reason": "The system manages streaming video-generation resources and quality, not language-model inference/serving.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Adaptive Resource Management and Quality Control for Streaming Video Generation"
+    },
+    "arXiv:2606.17816": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17816",
+      "identity_tokens": [
+        "arXiv:2606.17816"
+      ],
+      "reason": "The paper studies conservation laws in neural-network optimization/training dynamics, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Conservation Laws for Modern Neural Architectures"
+    },
+    "arXiv:2606.17890": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17890",
+      "identity_tokens": [
+        "arXiv:2606.17890"
+      ],
+      "reason": "The method edits rollouts during RL training of reasoning models; training-time rollout efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Dynamic Rollout Editing for Reducing Overthinking in RL-Trained Reasoning Models"
+    },
+    "arXiv:2606.18098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18098",
+      "identity_tokens": [
+        "arXiv:2606.18098"
+      ],
+      "reason": "Automated theorem proving for formal verification is the application; the abstract makes no inference/serving efficiency claim.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "IsabeLLM: Automated Theorem Proving Applied to Formally Verifying Consensus"
+    },
+    "arXiv:2606.18166": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18166",
+      "identity_tokens": [
+        "arXiv:2606.18166"
+      ],
+      "reason": "The work evaluates LLMs for cyber-threat classification, not inference efficiency or serving systems.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Evaluating Open-Source LLMs for Multi-Label ATT&CK Technique Classification on CTI Reports"
+    },
+    "arXiv:2606.18525": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18525",
+      "identity_tokens": [
+        "arXiv:2606.18525"
+      ],
+      "reason": "The attention method is a PDE/domain-decomposition solver, not language-model inference.",
+      "first_checked_at": "2026-10-05T03:54:51+00:00",
+      "last_checked_at": "2026-10-05T03:54:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "title": "Overlapping Schwarz Attention: Hierarchical Attention via Domain Decomposition"
+    },
+    "arXiv:2606.19164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19164",
+      "identity_tokens": [
+        "arXiv:2606.19164"
+      ],
+      "reason": "The paper studies parameter merging for multi-task learning and quality, with no inference/serving efficiency contribution in the abstract.",
+      "first_checked_at": "2026-10-05T03:54:52+00:00",
+      "last_checked_at": "2026-10-05T03:54:52+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Essential Subspace Merging for Multi-Task Learning"
+    },
+    "arXiv:2606.19535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19535",
+      "identity_tokens": [
+        "arXiv:2606.19535"
+      ],
+      "reason": "The contribution is a platform-triggered LLM backdoor attack, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T03:54:52+00:00",
+      "last_checked_at": "2026-10-05T03:54:52+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "FloatDoor: Platform-Triggered Backdoors in LLMs"
+    },
+    "arXiv:2606.19636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19636",
+      "identity_tokens": [
+        "arXiv:2606.19636"
+      ],
+      "reason": "The paper uses matched-compute activation interventions to diagnose whether estimated reasoning difficulty is hard or merely unreached; the mechanism modifies internal activations for analysis rather than changing ordinary decoding.",
+      "first_checked_at": "2026-10-05T03:54:52+00:00",
+      "last_checked_at": "2026-10-05T03:54:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Hard or Just Unreached? Diagnosing the Sampling Blind Spot in Math-Reasoning Difficulty Estimation"
+    },
+    "arXiv:2606.17522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17522",
+      "identity_tokens": [
+        "arXiv:2606.17522"
+      ],
+      "reason": "This is a theoretical expressivity analysis of deep transformers, not an LLM inference/serving systems contribution.",
+      "first_checked_at": "2026-10-05T03:54:52+00:00",
+      "last_checked_at": "2026-10-05T03:54:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "An expressivity analysis of hierarchical modelling in deep transformers via bounded-depth grammars"
     }
   }
 }

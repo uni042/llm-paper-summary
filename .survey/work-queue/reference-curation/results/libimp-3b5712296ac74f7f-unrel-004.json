@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b5712296ac74f7f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.15308",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.15308",
+    "identity_tokens": [
+      "arXiv:2606.15308"
+    ],
+    "reason": "The work manipulates routing in multimodal LLM cascades as an attack; it does not propose an efficiency intervention.",
+    "first_checked_at": "2026-10-05T03:54:51+00:00",
+    "last_checked_at": "2026-10-05T03:54:51+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "Forced Deferral: Manipulating Routing Decisions in Multimodal LLM Cascades"
+  },
+  "processed_at": "2026-10-05T03:54:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b5712296ac7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
