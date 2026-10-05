@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4788a1fc8471c45d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.26603",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.26603",
+    "identity_tokens": [
+      "arXiv:2509.26603"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.26603. Abstract summary: While previous AI Scientist systems can generate novel findings, they often lack the focus to produce scientifically valuable contributions that address pressing human-defined challenges. We introduce DeepScientist, a system designed to overcome this by conducting goal-oriented, fully autonomous scientific discovery over month-long timeli Out of scope: Autonomous scientific-discovery agent focused on generated findings, not inference efficiency.",
+    "first_checked_at": "2026-10-05T12:45:09+00:00",
+    "last_checked_at": "2026-10-05T12:45:09+00:00",
+    "linked_from": [
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+    ],
+    "title": "DeepScientist: Advancing Frontier-Pushing Scientific Findings Progressively"
+  },
+  "processed_at": "2026-10-05T12:45:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4788a1fc8471",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

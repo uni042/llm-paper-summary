@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:42:17+00:00",
-  "record_count": 5031,
+  "updated_at": "2026-10-05T12:45:11+00:00",
+  "record_count": 5044,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -73186,6 +73186,189 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md"
       ],
       "title": "How Far Can Transformers Reason? The Globality Barrier and Inductive Scratchpad"
+    },
+    "DOI:10.1038/s41467-025-59516-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-59516-5",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-59516-5"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1038/s41467-025-59516-5. Abstract summary: Efficient and accurate road distress detection is crucial for infrastructure maintenance and transportation safety. Traditional manual inspections are labor-intensive and time-consuming, while increasingly popular automated systems often rely on computationally intensive devices, limiting widespread adoption. To address these challenges,  Out of scope: Mobile road-distress vision model, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:45:08+00:00",
+      "last_checked_at": "2026-10-05T12:45:08+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Lightweight deep learning for real-time road distress detection on mobile devices"
+    },
+    "arXiv:2410.08527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08527",
+      "identity_tokens": [
+        "arXiv:2410.08527"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.08527. Abstract summary: Precise estimation of downstream performance in large language models (LLMs) prior to training is essential for guiding their development process. Scaling laws analysis utilizes the statistics of a series of significantly smaller sampling language models (LMs) to predict the performance of the target LLM. For downstream performance predic Out of scope: Scaling laws predict downstream performance before training; model-development planning, not inference.",
+      "first_checked_at": "2026-10-05T12:45:08+00:00",
+      "last_checked_at": "2026-10-05T12:45:08+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+      ],
+      "title": "Scaling Laws for Predicting Downstream Performance in LLMs"
+    },
+    "DOI:10.1016/j.patcog.2023.109558": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.patcog.2023.109558",
+      "identity_tokens": [
+        "DOI:10.1016/j.patcog.2023.109558"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1016/j.patcog.2023.109558. Abstract summary:  Out of scope: CANet detects small manufacturing defects in images; computer-vision application, not LLM serving.",
+      "first_checked_at": "2026-10-05T12:45:08+00:00",
+      "last_checked_at": "2026-10-05T12:45:08+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "CANet: Contextual Information and Spatial Attention Based Network for Detecting Small Defects in Manufacturing Industry"
+    },
+    "arXiv:2509.26603": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26603",
+      "identity_tokens": [
+        "arXiv:2509.26603"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.26603. Abstract summary: While previous AI Scientist systems can generate novel findings, they often lack the focus to produce scientifically valuable contributions that address pressing human-defined challenges. We introduce DeepScientist, a system designed to overcome this by conducting goal-oriented, fully autonomous scientific discovery over month-long timeli Out of scope: Autonomous scientific-discovery agent focused on generated findings, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:45:09+00:00",
+      "last_checked_at": "2026-10-05T12:45:09+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "DeepScientist: Advancing Frontier-Pushing Scientific Findings Progressively"
+    },
+    "arXiv:2506.09018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09018",
+      "identity_tokens": [
+        "arXiv:2506.09018"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.09018. Abstract summary: Autoregressive generative models naturally generate variable-length sequences, while non-autoregressive models struggle, often imposing rigid, token-wise structures. We propose Edit Flows, a non-autoregressive model that overcomes these limitations by defining a discrete flow over sequences through edit operations$\\unicode{x2013}$insertio Out of scope: Discrete flow/edit-operation generative modeling without an LLM serving-efficiency result.",
+      "first_checked_at": "2026-10-05T12:45:09+00:00",
+      "last_checked_at": "2026-10-05T12:45:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "Edit Flows: Flow Matching with Edit Operations"
+    },
+    "arXiv:2505.03556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.03556",
+      "identity_tokens": [
+        "arXiv:2505.03556"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2505.03556. Abstract summary: The 6G wireless communications aim to establish an intelligent world of ubiquitous connectivity, providing an unprecedented communication experience. Large artificial intelligence models (LAMs) are characterized by significantly larger scales (e.g., billions or trillions of parameters) compared to typical artificial intelligence (AI) mode Out of scope: Survey of large AI models for future wireless communications; no LLM inference optimization.",
+      "first_checked_at": "2026-10-05T12:45:09+00:00",
+      "last_checked_at": "2026-10-05T12:45:09+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "A Comprehensive Survey of Large AI Models for Future Communications: Foundations, Applications, and Challenges"
+    },
+    "arXiv:2409.12147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.12147",
+      "identity_tokens": [
+        "arXiv:2409.12147"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2409.12147. Abstract summary: Large Language Models'(LLM) reasoning can be improved using test-time aggregation strategies, i.e., generating multiple samples and voting among generated samples. While these improve performance, they often reach a saturation point. Refinement offers an alternative by using LLM-generated feedback to improve solution quality. However, ref Out of scope: Test-time refinement targets reasoning answer quality, not lower inference cost or latency.",
+      "first_checked_at": "2026-10-05T12:45:09+00:00",
+      "last_checked_at": "2026-10-05T12:45:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "MAgICoRe: Multi-Agent, Iterative, Coarse-to-Fine Refinement for Reasoning"
+    },
+    "arXiv:2305.18390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.18390",
+      "identity_tokens": [
+        "arXiv:2305.18390"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2305.18390. Abstract summary: This work examines the presence of modularity in pre-trained Transformers, a feature commonly found in human brains and thought to be vital for general intelligence. In analogy to human brains, we consider two main characteristics of modularity: (1) functional specialization of neurons: we evaluate whether each neuron is mainly specialize Out of scope: Studies neuron specialization/modularity in pretrained Transformers, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:45:10+00:00",
+      "last_checked_at": "2026-10-05T12:45:10+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Emergent Modularity in Pre-trained Transformers"
+    },
+    "arXiv:2412.04036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04036",
+      "identity_tokens": [
+        "arXiv:2412.04036"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.04036. Abstract summary: Social interactions are fundamental to human life. The recent emergence of large language models (LLMs)-based virtual assistants has demonstrated their potential to revolutionize human interactions and lifestyles. However, existing assistive systems mainly provide reactive services to individual users, rather than offering in-situ assista Out of scope: AR social-assistance application focuses on perception/in-situ interaction, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:45:10+00:00",
+      "last_checked_at": "2026-10-05T12:45:10+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md"
+      ],
+      "title": "SocialMind: LLM-based Proactive AR Social Assistive System with Human-like Perception for In-situ Live Interactions"
+    },
+    "arXiv:2410.01623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01623",
+      "identity_tokens": [
+        "arXiv:2410.01623"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.01623. Abstract summary: Low-rank training has emerged as a promising approach for reducing memory usage in training Large Language Models (LLMs). Previous methods either rely on decomposing weight matrices (e.g., LoRA), or seek to decompose gradient matrices (e.g., GaLore) to ensure reduced memory consumption. However, both of them constrain the training in a lo Out of scope: Low-rank-constrained LLM training method; training is outside inference scope.",
+      "first_checked_at": "2026-10-05T12:45:10+00:00",
+      "last_checked_at": "2026-10-05T12:45:10+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ],
+      "title": "Fira: Can We Achieve Full-rank Training of LLMs Under Low-rank Constraint?"
+    },
+    "arXiv:2206.11357": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.11357",
+      "identity_tokens": [
+        "arXiv:2206.11357"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2206.11357. Abstract summary: Training large neural network (NN) models requires extensive memory resources, and Activation Compressed Training (ACT) is a promising approach to reduce training memory footprint. This paper presents GACT, an ACT framework to support a broad range of machine learning tasks for generic NN architectures with limited domain knowledge. By an Out of scope: GACT compresses activations to reduce neural-network training memory; training-only.",
+      "first_checked_at": "2026-10-05T12:45:10+00:00",
+      "last_checked_at": "2026-10-05T12:45:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "GACT: Activation Compressed Training for Generic Network Architectures"
+    },
+    "arXiv:2603.04379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.04379",
+      "identity_tokens": [
+        "arXiv:2603.04379"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2603.04379. Abstract summary: We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as sel Out of scope: Real-time video generation model, not LLM/text-model inference.",
+      "first_checked_at": "2026-10-05T12:45:10+00:00",
+      "last_checked_at": "2026-10-05T12:45:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Helios: Real Real-Time Long Video Generation Model"
+    },
+    "arXiv:2406.07115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07115",
+      "identity_tokens": [
+        "arXiv:2406.07115"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2406.07115. Abstract summary: Tool-augmented large language models (LLMs) leverage tools, often in the form of APIs, to improve their reasoning capabilities on complex tasks. This enables them to act as intelligent agents interacting with the real world. The recently introduced ToolLLaMA model by Qin et al. [2023] utilizes the depth-first search-based decision tree (D Out of scope: Studies training-time preference learning from errors in tool-augmented inference trees; not inference cost/serving optimization.",
+      "first_checked_at": "2026-10-05T12:45:11+00:00",
+      "last_checked_at": "2026-10-05T12:45:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+      ],
+      "title": "Advancing Tool-Augmented Large Language Models: Integrating Insights from Errors in Inference Trees"
     }
   }
 }

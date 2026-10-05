@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-acbf015d98aec5b0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.02163",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.02163",
+    "identity_tokens": [
+      "arXiv:2601.02163"
+    ],
+    "reason": "Memory retrieval can affect context cost, but a reusable serving-efficiency gain is not isolated.",
+    "first_checked_at": "2026-10-05T12:45:11+00:00",
+    "last_checked_at": "2026-10-05T12:45:11+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+    ],
+    "title": "EverMemOS: A Self-Organizing Memory Operating System for Structured Long-Horizon Reasoning"
+  },
+  "processed_at": "2026-10-05T12:45:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-acbf015d98ae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

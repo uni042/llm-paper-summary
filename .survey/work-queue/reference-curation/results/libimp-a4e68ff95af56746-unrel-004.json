@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4e68ff95af56746-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.04379",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.04379",
+    "identity_tokens": [
+      "arXiv:2603.04379"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2603.04379. Abstract summary: We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs along three key dimensions: (1) robustness to long-video drifting without commonly used anti-drifting heuristics such as sel Out of scope: Real-time video generation model, not LLM/text-model inference.",
+    "first_checked_at": "2026-10-05T12:45:10+00:00",
+    "last_checked_at": "2026-10-05T12:45:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Helios: Real Real-Time Long Video Generation Model"
+  },
+  "processed_at": "2026-10-05T12:45:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4e68ff95af5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

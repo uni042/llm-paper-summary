@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4e68ff95af56746-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.05690",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.05690",
+    "identity_tokens": [
+      "arXiv:2506.05690"
+    ],
+    "reason": "RAG token-cost analysis is adjacent, but this is framework/benchmark analysis rather than an LLM-serving optimization method.",
+    "first_checked_at": "2026-10-05T12:45:10+00:00",
+    "last_checked_at": "2026-10-05T12:45:10+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+    ],
+    "title": "When to use Graphs in RAG: A Comprehensive Analysis for Graph Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-05T12:45:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4e68ff95af5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
