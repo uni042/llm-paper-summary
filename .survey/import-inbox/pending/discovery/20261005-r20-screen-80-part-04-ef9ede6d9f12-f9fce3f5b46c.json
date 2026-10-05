@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-80-part-04-ef9ede6d9f12",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15087",
+      "identity_tokens": [
+        "arXiv:2509.15087"
+      ],
+      "title": "Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning",
+      "reason": "LLM federated fine-tuningとLoRA allocationのtraining研究。",
+      "source_url": "https://arxiv.org/abs/2509.15087",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.16500",
+      "identity_tokens": [
+        "arXiv:2506.16500"
+      ],
+      "title": "SparseLoRA: Accelerating LLM Fine-Tuning with Contextual Sparsity",
+      "reason": "LLM fine-tuning accelerationを対象とし、推論ではなくtraining効率化。",
+      "source_url": "https://arxiv.org/abs/2506.16500",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3695053.3731047",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731047"
+      ],
+      "title": "Forest: Access-aware GPU UVM Management",
+      "reason": "GPU Unified Virtual Memoryのaccess-aware memory managementで、LLM推論の実験・方式を対象にしない一般GPU systems研究。",
+      "source_url": "https://doi.org/10.1145/3695053.3731047",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07851",
+      "identity_tokens": [
+        "arXiv:2506.07851"
+      ],
+      "title": "Learning to Focus: Causal Attention Distillation via Gradient-Guided Token Pruning",
+      "reason": "gradient差でconfounding tokensを特定しspan-pruningを行ってteacher-student causal attention distillationを実施。本文では処理はoffline/training中であり、推論cost増加はないと述べる。",
+      "source_url": "https://arxiv.org/abs/2506.07851",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11807",
+      "identity_tokens": [
+        "arXiv:2505.11807"
+      ],
+      "title": "Retrospex: Language Agent Meets Offline Reinforcement Learning Critic",
+      "reason": "offline RL criticによるLLM agentの経験活用と品質向上で、推論効率の寄与なし。",
+      "source_url": "https://arxiv.org/abs/2505.11807",
+      "first_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.979069+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    }
+  ]
+}
