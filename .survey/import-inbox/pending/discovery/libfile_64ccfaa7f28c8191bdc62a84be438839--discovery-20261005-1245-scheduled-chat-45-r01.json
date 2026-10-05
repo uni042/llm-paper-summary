@@ -1,0 +1,161 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1245-scheduled-chat-45/r01",
+  "reference_main_sha": "8c05e7b70974b192665239f034fbc24665e600a6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.24164",
+      "identity_tokens": [
+        "arXiv:2410.24164"
+      ],
+      "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+      "reason": "VLAによる汎用ロボット制御能力が主題で、LLM推論runtime・serving効率化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2410.24164",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でvision-language-action flow modelとrobot controlが最終適用先と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.15594",
+      "identity_tokens": [
+        "arXiv:2411.15594"
+      ],
+      "title": "A Survey on LLM-as-a-Judge",
+      "reason": "LLMを評価器として用いる信頼性・bias・benchmarkのsurveyで、推論system効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2411.15594",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM-as-a-Judgeのreliability taxonomy/evaluationが主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14734",
+      "identity_tokens": [
+        "arXiv:2503.14734"
+      ],
+      "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+      "reason": "humanoid robot向けVLA foundation modelの学習・能力が主題で、LLM推論runtime最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2503.14734",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgeneralist humanoid robot foundation modelが最終適用先と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.01315",
+      "identity_tokens": [
+        "arXiv:1909.01315"
+      ],
+      "title": "Deep Graph Library: A Graph-Centric, Highly-Performant Package for Graph Neural Networks",
+      "reason": "GNN向けgraph-centric libraryとsparse tensor実行の研究で、LLM/Transformer推論を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/1909.01315",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でGNN frameworkの速度・memory評価が主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14314",
+      "identity_tokens": [
+        "arXiv:2305.14314",
+        "DOI:10.52202/075280-0441"
+      ],
+      "title": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "reason": "4-bit量子化モデルへLoRAを学習するfine-tuning memory削減が主目的で、推論runtime・serving効率化の評価ではない。",
+      "source_url": "https://arxiv.org/abs/2305.14314",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で65Bを48GB GPUでfine-tuneするtraining memory削減が主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25080/majora-7b98e3ed-013",
+      "identity_tokens": [
+        "DOI:10.25080/majora-7b98e3ed-013"
+      ],
+      "title": "Dask: Parallel Computation with Blocked algorithms and Task Scheduling",
+      "reason": "汎用NumPy/out-of-core並列計算とmemory-aware task schedulingが主題で、LLM推論systemへの直接適用・評価がない。",
+      "source_url": "https://doi.org/10.25080/majora-7b98e3ed-013",
+      "body_check": "abstract_screen_only: SciPy一次論文要旨でblocked algorithmsと汎用parallel/out-of-core NumPyが主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro.2016.7783723",
+      "identity_tokens": [
+        "DOI:10.1109/micro.2016.7783723"
+      ],
+      "title": "Cambricon-X: An accelerator for sparse neural networks",
+      "reason": "疎DNN/CNN向けacceleratorであり、LLM/Transformer推論への直接評価がない。",
+      "source_url": "https://doi.org/10.1109/MICRO.2016.7783723",
+      "body_check": "abstract_screen_only: 一次書誌でsparse neural network acceleratorが対象で、LLM推論system固有研究ではないと確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3282307",
+      "identity_tokens": [
+        "DOI:10.1145/3282307"
+      ],
+      "title": "A New Golden Age for Computer Architecture",
+      "reason": "domain-specific architecture等を論じるcomputer architectureの展望で、LLM推論systemの個別方式・評価ではない。",
+      "source_url": "https://doi.org/10.1145/3282307",
+      "body_check": "abstract_screen_only: 一次出版社情報からcomputer architecture全般の展望・domain-specific設計が主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41591-024-03141-0",
+      "identity_tokens": [
+        "DOI:10.1038/s41591-024-03141-0"
+      ],
+      "title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+      "reason": "病理画像foundation model Virchowによる癌検出・biomarker予測が主題で、LLM推論runtime最適化ではない。",
+      "source_url": "https://doi.org/10.1038/s41591-024-03141-0",
+      "body_check": "abstract_screen_only: Nature Medicine一次本文要旨でcomputational pathologyとpan-cancer detectionが最終評価先と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13657",
+      "identity_tokens": [
+        "arXiv:2503.13657"
+      ],
+      "title": "Why Do Multi-Agent LLM Systems Fail?",
+      "reason": "multi-agent LLM systemの失敗taxonomyとtask performance改善が主題で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2503.13657",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で5 MAS framework・150超taskのfailure mode分析が主題と確認。",
+      "first_checked_at": "2026-10-05T13:02:00+09:00",
+      "last_checked_at": "2026-10-05T13:02:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    }
+  ]
+}
