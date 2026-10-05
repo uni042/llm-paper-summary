@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-58-part-09-21525363a34c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17378",
+      "identity_tokens": [
+        "arXiv:2606.17378"
+      ],
+      "title": "RISE: Relay Inference and Online Scheduling for Efficient Edge-Device Collaborative Diffusion Model Services",
+      "reason": "Edge-device collaborative text-to-image diffusion service; the served model is diffusion, not a language model.",
+      "source_url": "https://arxiv.org/abs/2606.17378",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17518",
+      "identity_tokens": [
+        "arXiv:2606.17518"
+      ],
+      "title": "SpecGen: Accelerating Agentic Kernel Optimization with Speculative Generation",
+      "reason": "Speculative generation accelerates agentic GPU-kernel optimization/search; LLM is a tool, not the served inference target.",
+      "source_url": "https://arxiv.org/abs/2606.17518",
+      "first_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "last_checked_at": "2026-10-05T10:18:20.107203+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ]
+    }
+  ]
+}
