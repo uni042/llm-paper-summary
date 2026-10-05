@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-51-part-06-bf43659f40c3",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICECCC70334.2026.11633162",
+      "identity_tokens": [
+        "DOI:10.1109/ICECCC70334.2026.11633162"
+      ],
+      "title": "BreakLoop: A Privacy-Preserving On-Device AI System for Obsessive-Compulsive Disorder",
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "source_url": "https://doi.org/10.1109/ICECCC70334.2026.11633162",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICECET65726.2026.11632715",
+      "identity_tokens": [
+        "DOI:10.1109/ICECET65726.2026.11632715"
+      ],
+      "title": "Deterministic Validation for Reliable LLM-Based Causal Knowledge Extraction",
+      "reason": "一次abstractはLLM出力の因果知識抽出を決定的にするpost-processing/quality validationであり、inference efficiencyの手法ではない。",
+      "source_url": "https://doi.org/10.1109/ICECET65726.2026.11632715",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICERA72709.2026.11666692",
+      "identity_tokens": [
+        "DOI:10.1109/ICERA72709.2026.11666692"
+      ],
+      "title": "EdgeCommerce: Autonomous Self-Optimizing LLM Inference for Real-Time E-Commerce at the Edge",
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "source_url": "https://doi.org/10.1109/ICERA72709.2026.11666692",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICERA72709.2026.11666706",
+      "identity_tokens": [
+        "DOI:10.1109/ICERA72709.2026.11666706"
+      ],
+      "title": "Kairos: SLO-Aware Scheduling and a Benchmark for Multi-Tenant LLM Inference Serving under Bursty, Heterogeneous Load",
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "source_url": "https://doi.org/10.1109/ICERA72709.2026.11666706",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICEST71230.2026.11623501",
+      "identity_tokens": [
+        "DOI:10.1109/ICEST71230.2026.11623501"
+      ],
+      "title": "Text Classification with Quantized Transformer Models: A Memory–Performance Trade-Off Analysis",
+      "reason": "一次abstractはRoBERTa-baseの4-bit LoRA/quantized fine-tuningとtrain memory削減を比較。モデルもencoder型で、推論時LLM効率の根拠はない。",
+      "source_url": "https://doi.org/10.1109/ICEST71230.2026.11623501",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
