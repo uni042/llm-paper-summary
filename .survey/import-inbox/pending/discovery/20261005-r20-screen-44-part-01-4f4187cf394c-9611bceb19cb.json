@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-44-part-01-4f4187cf394c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15241",
+      "identity_tokens": [
+        "arXiv:2607.15241"
+      ],
+      "title": "Beyond the Leaderboard: Design Lessons for Trustworthy Multimodal VQA",
+      "reason": "一次要旨は医療multimodal VQAのfaithfulness/explanation quality評価で、推論効率改善を扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.15241",
+      "first_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "last_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15271",
+      "identity_tokens": [
+        "arXiv:2607.15271"
+      ],
+      "title": "Online Neural Space Time Memory for Dynamic Novel View Synthesis",
+      "reason": "一次要旨はdynamic novel-view synthesisのtest-time memory更新でありLLM inferenceではない。",
+      "source_url": "https://arxiv.org/abs/2607.15271",
+      "first_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "last_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15449",
+      "identity_tokens": [
+        "arXiv:2607.15449"
+      ],
+      "title": "Relevant and Irrelevant: A Renormalization Group Analysis of Transformer Attention",
+      "reason": "一次要旨はTransformer attentionの表現論とsynthetic Markov-chain分析で、実用的推論効率手法を示さない。",
+      "source_url": "https://arxiv.org/abs/2607.15449",
+      "first_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "last_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18961",
+      "identity_tokens": [
+        "arXiv:2609.18961"
+      ],
+      "title": "MechSparse: Mechanism-Guided Sparse PEFT Selection Is Task-Shaped",
+      "reason": "一次要旨はPEFT training対象層を選ぶ方法で、inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2609.18961",
+      "first_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "last_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2631-8695/ae8bff",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae8bff"
+      ],
+      "title": "Causal-Dependency State Space Prompting: bounded-memory long-horizon reasoning for streaming IT incidents",
+      "reason": "本文未取得でefficiency contribution/評価条件を確定できない。",
+      "source_url": "https://doi.org/10.1088/2631-8695/ae8bff",
+      "first_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "last_checked_at": "2026-10-05T09:38:47.320107+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    }
+  ]
+}
