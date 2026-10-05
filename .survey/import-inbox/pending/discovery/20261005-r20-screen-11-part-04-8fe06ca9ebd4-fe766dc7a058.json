@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-11-part-04-8fe06ca9ebd4",
+  "reference_main_sha": "fcbbb0114c2efdcb713651d9494c10991463c621",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07478",
+      "identity_tokens": [
+        "arXiv:2609.07478"
+      ],
+      "title": "The Internal Anatomy of Strategic Choice in Large Language Models",
+      "reason": "一次要旨: Large language models act as strategic agents and models of human choice, yet choosing like a strategic agent does not mean computing like one. We recorded activations from four open-weight models --- dense and mixture-of-experts, including a matched base--instruct pair --- in one-shot play of 144 strict ordinal $2\\times2$ games. We followed a prespecified incentive from prompt, through activations, to choice. Dense models mirrored the unadjusted human decline with game complexity. Incentive and choice were detectable in every model, but models differed in whether incentive reached the choice, aligned with it and, where tested, whether strengthening it shifted preference. The base and instruction-tuned Qwen2.5 models chose almost identically at baseline yet differed in whether incentive reached choice. Fixed decision cues were distinguishable internally but changed choices selectively. Similar behaviour can rest on different computation; post-training can reshape the path from represented incentive to decision while leaving behaviour and decodable information largely intact.",
+      "source_url": "https://arxiv.org/abs/2609.07478",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07688",
+      "identity_tokens": [
+        "arXiv:2609.07688"
+      ],
+      "title": "Silent Metronome: Rhythmic Grounding for Live Music Accompaniment",
+      "reason": "一次要旨: Live accompaniment models generate music for an incoming audio stream, committing to each output frame before hearing what comes next. In this strictly causal setting the model must infer tempo, meter, and metrical phase from its own imperfect past, whereby compounding errors quickly become audible as rhythmic drift. Put simply, the model has ears but no temporal reference, so when the ears hear imperfect, ambiguous music, the model will produce a flawed output. We propose Silent Metronome (SiMe), which gives it the temporal reference, encoding the phase within the beat and within the bar as periodic functions, pairing them with tempo and time signature, and supplying the result as a separate conditioning channel. Because this reference is independent of the generated audio, it cannot drift. Complementary auxiliary heads shape the latent representation, including a novel head that predicts the model's own future tokens. With the metrical signal taken from ground-truth annotations, beat alignment improves by a factor of 3.2 over the strictly causal baseline and surpasses a non-causal reference granted a full second of look-ahead. Coherence between input and accompaniment stays within a single point of that reference. These results suggest that streaming accompaniment systems should treat rhythm as a signal to be shared, as human ensembles do, rather than inferred.",
+      "source_url": "https://arxiv.org/abs/2609.07688",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07740",
+      "identity_tokens": [
+        "arXiv:2609.07740"
+      ],
+      "title": "Scalability Analysis of Distributed Kolmogorov-Arnold Network Training on High-Performance Computing Systems",
+      "reason": "一次要旨: Kolmogorov-Arnold Networks (KANs) replace the fixed activation functions and linear weights of Multi-Layer Perceptrons (MLPs) with learnable univariate functions on network edges, offering improved interpretability and, in some settings, competitive parameter efficiency. While the approximation properties of KANs have received considerable attention, their behavior under distributed, multi-GPU training has not been systematically characterized. This paper presents an empirical scalability study of data-parallel KAN training on multi-node, multi-GPU high-performance computing (HPC) infrastructure, evaluated along four dimensions: strong scaling, weak scaling, communication overhead, and model-size scaling. Experiments were conducted on the FinisTerrae III supercomputer using up to 8 NVIDIA A100 GPUs across 4 nodes with PyTorch Distributed Data Parallel (DDP). KAN training reaches 74.7% parallel efficiency at 8 GPUs with a 5.97x speedup, consistent with conventional deep learning workloads. Weak scaling shows an initial single-to-multi-GPU throughput drop followed by strong stability. Communication overhead follows a non-monotonic pattern (1.3%-6.1%), driven primarily by All-Reduce algorithm selection and inter-node latency rather than KAN's edge-wise gradient structure. The parameter-to-memory ratio improves with model size even as training time scales unfavorably. These results indicate that operator-level and data-parallel optimizations for KAN are complementary. We provide deployment guidelines for GPU topology and model-size selection, and discuss the limitations of a synthetic-regression evaluation.",
+      "source_url": "https://arxiv.org/abs/2609.07740",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07782",
+      "identity_tokens": [
+        "arXiv:2609.07782"
+      ],
+      "title": "TrajectoryDB: A New Database for Agent Trajectories",
+      "reason": "一次要旨: AI agents generate rich execution trajectories that capture their interactions with large language models, tools, and external environments. These trajectories are increasingly valuable for downstream tasks such as memory extraction, model fine-tuning, runtime optimization, and security and cost monitoring. Yet trajectory data today is fragmented across files, databases, and observability systems, with no persistent data management system designed around its unique structure and access patterns. We argue that trajectories should be treated as a distinct data type. A trajectory combines hierarchical execution structure, large volumes of text whose analysis often requires semantic reasoning, and rich dependencies and lineage among events, intermediate states, and derived artifacts. These properties introduce new requirements throughout the data lifecycle. Ingestion must reconstruct and preserve execution structure and lineage; storage must efficiently organize large but highly redundant contexts while maintaining relationships among records; and query processing must jointly reason over structure, temporal order, semantics, and lineage. We therefore envision TrajectoryDB, a trajectory-native data management system that co-designs ingestion, storage, and query processing to efficiently manage and analyze agent execution trajectories.",
+      "source_url": "https://arxiv.org/abs/2609.07782",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07814",
+      "identity_tokens": [
+        "arXiv:2609.07814"
+      ],
+      "title": "Latent-MoE: Domain-Aware Mixture-of-Experts for PDEs with Multi-Regime Physics",
+      "reason": "一次要旨: Physics-informed neural networks (PINNs) struggle on PDEs whose governing physics varies across the domain. We trace this to a structural property of standard coordinate networks: their neural tangent kernel (NTK) is translation-variant and lets training points of large coordinate magnitude disproportionately influence predictions elsewhere, producing long-range coupling and gradient conflict during training. We show analytically and empirically that mixture-of-experts (MoE) architectures with centered, compact-support routers yield a uniformly banded NTK whose kernel-regression weights decay exponentially with distance, localizing the learning. Building on this, we propose \\emph{Latent-MoE}, which interleaves domain-aware MoE blocks within a shared backbone. Unlike FB-PINNs or X-PINNs, which rigidly partition both the domain and the parameters so that the parameters on different subdomains are updated independently, Latent-MoE is designed to preserve the localization benefit of domain-aware routing while allowing capacity to flow across regions through the shared backbone. On standard homogeneous-physics benchmarks Latent-MoE is competitive with established baselines; on benchmarks with multi-stage time-variable physics, where global models and rigid domain decompositions both fall into spurious solutions, it improves over them by more than an order of magnitude, with markedly reduced gradient conflict during training.",
+      "source_url": "https://arxiv.org/abs/2609.07814",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
