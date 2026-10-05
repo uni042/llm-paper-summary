@@ -57,6 +57,21 @@ class DiscoveryPrecheckSchemaContractTests(unittest.TestCase):
         self.assertEqual(normalized["identifiers"], payload["identifiers"])
         self.assertEqual(normalized["target_unseen"], 2)
 
+    def test_candidate_id_request_accepts_reconsideration_subset_only(self) -> None:
+        payload = request(3)
+        payload.update({
+            "provider": "candidate_id_lookup",
+            "source_url": "identifier://approved-public-apis",
+            "identifiers": ["arXiv:2407.21018", "arXiv:2407.21019"],
+            "reconsider_identifiers": ["arXiv:2407.21018"],
+        })
+        normalized = precheck._validate_request(payload)
+        self.assertEqual(normalized["reconsider_identifiers"], ["arXiv:2407.21018"])
+
+        payload["reconsider_identifiers"] = ["arXiv:2407.21999"]
+        with self.assertRaises(precheck.DiscoveryPrecheckRequestError):
+            precheck._validate_request(payload)
+
     def test_candidate_id_request_rejects_untrusted_records_metadata_and_source(self) -> None:
         base = request(3)
         base.update({
