@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97b244d65f46e779-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tip.2026.3729466",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tip.2026.3729466",
+    "identity_tokens": [
+      "DOI:10.1109/tip.2026.3729466"
+    ],
+    "reason": "一次要旨: Medical hyperspectral images (MHSIs) are highly promising for assisting with pathological diagnoses because of their rich spatial and spectral information. However, the existing methods inadequately model joint spatial–frequency correlations and struggle to dynamically separate nonstationary pathological details from global structures. To address these challenges, a fractional Fourier transformer (FracTrans) that is designed to explicitly model the nonstationary spatial–frequency correlations that are inherent in MHSIs is proposed in this paper. By integrating a learnable fractional Fourier transform (FrFT) into a self-attention mechanism, FracTrans achieves an adaptive spatial-frequency decomposition process that dynamically isolates high-frequency pathological details from low-frequency global trends. Furthermore, FracTrans integrates sliding local-channel spectral attention and global-channel spectral attention to model channelwise spectral dependencies and combines multiscale patch embedding with feature fusion to capture spectral–spatial correlations. To overcome the quadratic computational bottleneck of the standard self-attention mechanism, the FrTrans module incorporates a stochastic frequency-mode sampling mechanism, significantly accelerating the processing of high-dimensional MHSI data. A fivefold cross-validation conducted on multidimensional choledoch and gastric precancerous lesion datasets demonstrates that FracTrans significantly outperforms the mainstream methods. Ablation experiments further confirm that integrating the FrTrans module into the baseline yields a 7.35% accuracy improvement, substantiating its efficacy. Collectively, FracTrans provides an efficient and robust MHSI classification framework, showing broad potential for use in lesion detection and computer-aided diagnosis tasks. The source code is available at https://github.com/chenqikai908-stack/FracTrans.",
+    "first_checked_at": "2026-10-05T07:06:25+00:00",
+    "last_checked_at": "2026-10-05T07:06:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "A Dynamic Fractional Fourier Transformer With Local–Global Spectral Attention for Medical Hyperspectral Image Classification"
+  },
+  "processed_at": "2026-10-05T07:06:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97b244d65f46",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

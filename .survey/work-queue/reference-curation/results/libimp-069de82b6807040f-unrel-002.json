@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-069de82b6807040f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.07688",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.07688",
+    "identity_tokens": [
+      "arXiv:2609.07688"
+    ],
+    "reason": "一次要旨: Live accompaniment models generate music for an incoming audio stream, committing to each output frame before hearing what comes next. In this strictly causal setting the model must infer tempo, meter, and metrical phase from its own imperfect past, whereby compounding errors quickly become audible as rhythmic drift. Put simply, the model has ears but no temporal reference, so when the ears hear imperfect, ambiguous music, the model will produce a flawed output. We propose Silent Metronome (SiMe), which gives it the temporal reference, encoding the phase within the beat and within the bar as periodic functions, pairing them with tempo and time signature, and supplying the result as a separate conditioning channel. Because this reference is independent of the generated audio, it cannot drift. Complementary auxiliary heads shape the latent representation, including a novel head that predicts the model's own future tokens. With the metrical signal taken from ground-truth annotations, beat alignment improves by a factor of 3.2 over the strictly causal baseline and surpasses a non-causal reference granted a full second of look-ahead. Coherence between input and accompaniment stays within a single point of that reference. These results suggest that streaming accompaniment systems should treat rhythm as a signal to be shared, as human ensembles do, rather than inferred.",
+    "first_checked_at": "2026-10-05T07:06:24+00:00",
+    "last_checked_at": "2026-10-05T07:06:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Silent Metronome: Rhythmic Grounding for Live Music Accompaniment"
+  },
+  "processed_at": "2026-10-05T07:06:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-069de82b6807",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
