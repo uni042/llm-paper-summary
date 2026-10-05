@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:09:19+00:00",
-  "record_count": 3143,
+  "updated_at": "2026-10-05T06:12:08+00:00",
+  "record_count": 3157,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -45740,6 +45740,207 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "Understanding the Synergy between SFT, RLVR, and OPD in LLM Post-Training"
+    },
+    "DOI:10.3390/info17100943": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info17100943",
+      "identity_tokens": [
+        "DOI:10.3390/info17100943"
+      ],
+      "reason": "WeHMiT-Bench evaluates Chinese health-misinformation detection by LLMs; its contribution is a benchmark and explanation-quality assessment.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "WeHMiT-Bench: Evaluating Large Language Models for Explainable Health Misinformation Detection in WeChat Article Titles"
+    },
+    "arXiv:2609.26175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26175",
+      "identity_tokens": [
+        "arXiv:2609.26175"
+      ],
+      "reason": "EADC is a compliance evaluation benchmark for legal/regulatory reasoning; it does not introduce an inference efficiency technique.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "EADC: Evaluation of Advanced and Deep-level Compliance in Large Language Models"
+    },
+    "arXiv:2609.23989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23989",
+      "identity_tokens": [
+        "arXiv:2609.23989"
+      ],
+      "reason": "ACLArena compares continual-learning and post-training methods for integrating agent capabilities; this is a training-focused evaluation.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ACLArena: Agent Continue Learning in Multi-stage Post-training"
+    },
+    "arXiv:2609.24077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24077",
+      "identity_tokens": [
+        "arXiv:2609.24077"
+      ],
+      "reason": "LeaseGuard controls privileged agents’ access to shared resources to prevent incumbent preemption; it is resource safety/admission control, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "LeaseGuard: Incumbent-Preserving Admission Control for Privileged LLM Agents"
+    },
+    "arXiv:2609.24526": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24526",
+      "identity_tokens": [
+        "arXiv:2609.24526"
+      ],
+      "reason": "ME-VLM is a multimodal embodied model and training pipeline for perception/planning; the abstract reports capability integration, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ME-VLM: A Unified VLM for Embodied Cognition and Agent Coordination"
+    },
+    "arXiv:2609.24677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24677",
+      "identity_tokens": [
+        "arXiv:2609.24677"
+      ],
+      "reason": "TimeLitmus is a diagnostic benchmark for event-conditioned time-series prediction by LLMs; it evaluates reasoning faithfulness, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:12:07+00:00",
+      "last_checked_at": "2026-10-05T06:12:07+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TimeLitmus: A Diagnostic Benchmark for Cross-Modal Understanding and Explanation Faithfulness in Event-Conditioned Time-Series Prediction"
+    },
+    "DOI:10.1117/12.3125769": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3125769",
+      "identity_tokens": [
+        "DOI:10.1117/12.3125769"
+      ],
+      "reason": "Large language models, with their powerful natural language understanding and sequence generation capabilities, are gradually becoming a core component of automated educational feedback systems. However, their application in English as a Foreign Language (EFL) writing still faces challenges such as coarse intervention granularity and homogeneous feedback. This study proposes an adaptive EFL writing feedback generation framework that combines a dual-stream generative network, low-rank adaptation, and proximal policy optimization. Experiments were conducted on a longitudinal subset of the EF-Cambridge Open Language Database containing 17,859 essays written by 1,280 EFL learners. From this corpus, 2,500 expert-authored essay–feedback pairs were constructed and divided at the learner level into training, validation, and test sets in a ratio of 8:1:1, corresponding to 2,000, 250, and 250 pairs, respectively. The feedback generator was initialized from the Llama-2-7B-32K-Instruct checkpoint and trained on an eight-NVIDIA H100 GPU cluster. The system supported a maximum context length of 24,576 tokens. Under a batch size of 1 and a concurrency level of 1, the mean inter-token latency remained below 20 ms under the specified inference protocol. The normalized validation BLEU4 convergence ratio reached 99%, where this percentage represents convergence relative to the best validation checkpoint rather than an absolute BLEU-4 score. In a blind evaluation of all 250 test instances by three EFL experts, the pedagogical acceptability index reached 92.8%.",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "An LLM-based framework for personalized feedback generation and adaptive optimization in EFL writing"
+    },
+    "DOI:10.1371/journal.pone.0358224": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0358224",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0358224"
+      ],
+      "reason": "Vibration-based structural health monitoring (SHM) detects damage by identifying subtle changes in a structure’s dynamic response. Deep learning models have shown strong potential for automating this classification task. However, most existing architectures share a key limitation: they either process signals purely in the time domain, or apply a global frequency-domain transform that discards information about when each frequency component occurs. This is a serious drawback, because structural damage typically manifests as short, localised events confined to specific frequency bands. This paper proposes SpectralTCN, a temporal convolutional network augmented with a Wavelet Gating Module (WGM) that performs learnable, data-dependent multi-resolution filtering within each convolutional block. The WGM decomposes intermediate features via the Discrete Wavelet Transform (DWT) into physically interpretable sub-bands corresponding to distinct structural vibration modes, applies input-adaptive sigmoid gates independently at each decomposition level, and reconstructs the filtered signal via the Inverse DWT (IDWT) with a learnable residual connection initialised to zero. Unlike FFT-based approaches, the DWT simultaneously preserves both time and frequency information, enabling the network to detect both the timing and the spectral location of damage-induced anomalies. Combined with Generalized Mean (GeM) pooling and large-kernel causal depthwise convolutions, SpectralTCN is evaluated on two benchmark datasets: the Z24 Bridge benchmark and a finite element model (FEM)-derived dataset of the My Thuan cable-stayed bridge. Experiments against 10 baseline models and 4 ablation variants, evaluated via stratified 5-fold cross-validation, demonstrate the effectiveness and generalisation capability of the proposed approach: SpectralTCN attains the highest mean accuracy on both benchmarks (92.2% on Z24 and 92.1% on My Thuan) and outperforms the strongest baseline in the 5-fold cross-validation protocol. In addition, the proposed architecture operates on short, streaming acceleration windows with a purely convolutional backbone of moderate computational cost, making SpectralTCN suit",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SpectralTCN: A multi-resolution wavelet gating network for vibration-based structural damage detection"
+    },
+    "DOI:10.54097/ct35c812": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54097/ct35c812",
+      "identity_tokens": [
+        "DOI:10.54097/ct35c812"
+      ],
+      "reason": "Image restoration (IR) refers to the process of eliminating image degradations—such as noise, blur, and weather effects like rain or haze—while enhancing visual quality. Traditional IR methods typically target specific types of degradation, which limits their effectiveness in real-world scenarios involving complex distortions. To address this challenge, the All-in-One Image Restoration (AiOIR) paradigm has emerged, offering a unified framework adept at resolving multiple degradation types. These innovative models integrate degradation-specific adaptive learning with cross-task knowledge sharing, significantly enhancing their flexibility and versatility. This paper systematically reviews existing AiOIR techniques and provides an in-depth analysis of their innovations in architectural evolution and feature learning paradigms. To advance this dynamic field, we present a comprehensive and profound review of AiOIR technologies. The narrative structure of this article is organized as follows: first, we elaborate on the foundational concepts of AiOIR; second, we systematically categorize and review mainstream cutting-edge designs based on key factors such as prior features and generalization capability; building upon this, we highlight the core technological advancements in the field; finally, we critically evaluate the bottlenecks and challenges encountered by current models and identify future research directions, with the aim of inspiring broader academic exploration and innovation.",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Review of All-in-One Image Restoration Techniques"
+    },
+    "arXiv:2609.25192": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25192",
+      "identity_tokens": [
+        "arXiv:2609.25192"
+      ],
+      "reason": "Financial search is a highly demanding task for LLM agents, requiring not only a correct final answer but also temporally valid information retrieval, authoritative source selection, entity and period alignment, unit and definition consistency, and verifiable evidence for all conclusions. Existing benchmarks predominantly evaluate only the final answer, making it difficult to localize errors or assess whether an answer is well-founded. To address this gap, we introduce FinFIRST (Financial Information Retrieval, Sourcing and Traceability), the first financial benchmark to jointly evaluate answers and supporting evidence through atomic rubrics. FinFIRST comprises 123 expert-authored tasks spanning a graduated difficulty spectrum, constructed from aggregate patterns of real-world financial scenarios through an 18-field taxonomy, a six-axis coverage blueprint, a registry of 138 financial sources, contributions from over 50 finance experts, and a six-stage quality-control pipeline. Each task is accompanied by an evidence-grounded reference package decomposed into atomic criteria across three dimensions: raw-information acquisition, source verification, and computation and answer formation. We evaluate 15 model configurations under a unified tool setting. Claude-Opus-5 achieves the highest atomic score of 87.59%, while GPT-5.6-Sol attains the highest strict pass rate of 71.54%. Computation and answer formation consistently lag behind raw-information acquisition across systems. FinFIRST retains final-answer correctness as the primary objective while making the supporting research process measurable, verifiable, and diagnosable.",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "FinFIRST: Benchmarking Search Agents for Financial Information Retrieval, Sourcing and Traceability"
+    },
+    "arXiv:2609.25463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25463",
+      "identity_tokens": [
+        "arXiv:2609.25463"
+      ],
+      "reason": "Reasoning-oriented reinforcement learning enables large language models to solve mathematical, coding, and other multi-step tasks, but shifts a substantial portion of the training cost to rollout, where trajectories are generated for policy updates. Efficient rollout mechanisms are therefore essential to reduce this cost while maintaining the freshness, consistency, and statistical validity of training data. This survey provides a systematic taxonomy of recent research on rollout efficiency for reasoning-oriented reinforcement learning, classifying existing approaches from both mechanism and bottleneck perspectives. Based on this taxonomy, we analyze how different technique families address distinct sources of rollout inefficiency, examine opportunities and potential conflicts for combining them, identify gaps in the evaluation and reporting of efficiency gains, and discuss open challenges and future research directions.",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "Rollout Efficiency in Reinforcement Learning for Reasoning Large Language Models: A Taxonomy and Future Directions"
+    },
+    "arXiv:2609.26829": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26829",
+      "identity_tokens": [
+        "arXiv:2609.26829"
+      ],
+      "reason": "Rapidly growing AI workloads are driving large investments in AI datacenters. This survey classifies industrial AI accelerators into four architectural categories and compares their compute and memory organizations. It examines how node-, rack-, and pod-scale interconnects support collective communication, and traces architectural evolution across accelerator generations. The analysis connects advances in arithmetic throughput with changes in precision, data delivery, execution coordination, communication, power delivery, and cooling. It also discusses future design challenges arising from workload diversity, data movement, infrastructure constraints, and model evolution, showing how the trade-off between generality and specialization extends from individual accelerators to datacenter-scale systems. GitHub: github.com/Yufeng98/AI-datacenter",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Balancing Generality and Specialization: A Survey on AI Datacenter Hardware Architecture"
+    },
+    "DOI:10.1038/s44458-026-00152-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44458-026-00152-5",
+      "identity_tokens": [
+        "DOI:10.1038/s44458-026-00152-5"
+      ],
+      "reason": "The rapid growth of generative artificial intelligence is increasing global electricity demand and placing new pressure on power systems. Here we show that electricity use by data centers built for artificial intelligence could rise from about 118 terawatt-hours in 2024 to between 239 and 295 terawatt-hours by 2030, or about 1% of global electricity demand. New computing infrastructure is highly concentrated in North America, Western Europe, and the Asia-Pacific, which together account for more than 90% of projected computing capacity. Some regions, including Oregon, Ireland, and Iowa, face greater pressure from concentrated data-center loads, whereas larger systems such as Texas can absorb new demand more effectively. These results indicate that artificial intelligence infrastructure is becoming a structural part of power-system dynamics. The study combines large language model analysis of corporate, policy, and media sources with scenario-based projections of future electricity demand. AI data centers could consume 239 to 295 terawatt hours by 2030, about 1% of global electricity demand, with capacity concentrated in North America, Western Europe and Asia-Pacific, according to a framework combining large language model analysis and electricity demand scenarios",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+      ],
+      "title": "Artificial intelligence data centers could reach one percent of global electricity demand by 2030"
+    },
+    "DOI:10.1088/2631-8695/aeaacb": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/aeaacb",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/aeaacb"
+      ],
+      "reason": "The rapid growth of electric-vehicle (EV) charging infrastructure increases the need for accurate short-term occupancy forecasting. Existing methods mainly rely on historical numerical signals and often represent weather as raw physical variables, which may fail to capture the behavioral implications of adverse conditions such as heavy rain or strong wind. This paper proposes WeMamba, a weather-semantic spatiotemporal forecasting framework for EV charging occupancy prediction. WeMamba converts historical meteorological observations into natural-language prompts and encodes them with a frozen GPT-2 backbone to obtain semantic weather representations. The weather semantics are adaptively aligned with occupancy and price features, propagated over the charging graph, and modeled by a dual-path Mamba encoder that captures both short-window spectral fluctuations and temporal dynamics. Experiments on the Shenzhen EV charging dataset show that WeMamba achieves the best average RMSE and MAE among 18 baselines, with a 19.18% average MAE reduction over the strongest competing method. Ablation studies further confirm the effectiveness of weather-semantic encoding, graph propagation, and dual-path temporal modeling.",
+      "first_checked_at": "2026-10-05T06:12:08+00:00",
+      "last_checked_at": "2026-10-05T06:12:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multimodal semantic weather-aware Mamba: a dual-path framework for EV charging occupancy forecasting"
     }
   }
 }

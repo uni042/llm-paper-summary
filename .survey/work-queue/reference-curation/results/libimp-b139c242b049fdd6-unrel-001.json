@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b139c242b049fdd6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1117/12.3125769",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1117/12.3125769",
+    "identity_tokens": [
+      "DOI:10.1117/12.3125769"
+    ],
+    "reason": "Large language models, with their powerful natural language understanding and sequence generation capabilities, are gradually becoming a core component of automated educational feedback systems. However, their application in English as a Foreign Language (EFL) writing still faces challenges such as coarse intervention granularity and homogeneous feedback. This study proposes an adaptive EFL writing feedback generation framework that combines a dual-stream generative network, low-rank adaptation, and proximal policy optimization. Experiments were conducted on a longitudinal subset of the EF-Cambridge Open Language Database containing 17,859 essays written by 1,280 EFL learners. From this corpus, 2,500 expert-authored essay–feedback pairs were constructed and divided at the learner level into training, validation, and test sets in a ratio of 8:1:1, corresponding to 2,000, 250, and 250 pairs, respectively. The feedback generator was initialized from the Llama-2-7B-32K-Instruct checkpoint and trained on an eight-NVIDIA H100 GPU cluster. The system supported a maximum context length of 24,576 tokens. Under a batch size of 1 and a concurrency level of 1, the mean inter-token latency remained below 20 ms under the specified inference protocol. The normalized validation BLEU4 convergence ratio reached 99%, where this percentage represents convergence relative to the best validation checkpoint rather than an absolute BLEU-4 score. In a blind evaluation of all 250 test instances by three EFL experts, the pedagogical acceptability index reached 92.8%.",
+    "first_checked_at": "2026-10-05T06:12:08+00:00",
+    "last_checked_at": "2026-10-05T06:12:08+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "An LLM-based framework for personalized feedback generation and adaptive optimization in EFL writing"
+  },
+  "processed_at": "2026-10-05T06:12:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b139c242b049",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
