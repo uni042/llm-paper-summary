@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-78a21344c7b66618-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.19522",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.19522",
+    "identity_tokens": [
+      "arXiv:2607.19522"
+    ],
+    "reason": "一次要旨はstorm weather augmentation用diffusionでLLM推論ではない。",
+    "first_checked_at": "2026-10-05T10:11:50+00:00",
+    "last_checked_at": "2026-10-05T10:11:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Geospatial Diffusion-based Evolution Synthesis (GeoDES) for Storm-Centered Weather Augmentation"
+  },
+  "processed_at": "2026-10-05T10:11:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-78a21344c7b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

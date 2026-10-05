@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86f3e84796dafb76-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.17625",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.17625",
+    "identity_tokens": [
+      "arXiv:2607.17625"
+    ],
+    "reason": "一次要旨は動画vision Transformerのneural alignment/token selectionで、language model inferenceではない。",
+    "first_checked_at": "2026-10-05T10:11:50+00:00",
+    "last_checked_at": "2026-10-05T10:11:50+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Brain-Aligned Multi-Stream Video Transformers with Sparse Self-Selection"
+  },
+  "processed_at": "2026-10-05T10:11:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86f3e84796da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

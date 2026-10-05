@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-86f3e84796dafb76-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.17644",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.17644",
+    "identity_tokens": [
+      "arXiv:2607.17644"
+    ],
+    "reason": "一次要旨はMLA sequence parallelismのtraining-memory regressionとtraining communication修正が中心で、推論効率の寄与ではない。",
+    "first_checked_at": "2026-10-05T10:11:50+00:00",
+    "last_checked_at": "2026-10-05T10:11:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+    ],
+    "title": "A Training-Memory Regression in MLA Sequence Parallelism: Why Megatron-Core Forbids Absorption, and LAGA - a Communication-Efficient Fix"
+  },
+  "processed_at": "2026-10-05T10:11:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-86f3e84796da",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
