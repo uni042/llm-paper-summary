@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:37:57+00:00",
-  "record_count": 4200,
+  "updated_at": "2026-10-05T09:40:57+00:00",
+  "record_count": 4214,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -61151,6 +61151,206 @@
         "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
       ],
       "title": "A Dimensional Order Search Based Mapping Algorithm for Deploying DNNs Onto Many-Core Neuromorphic IC"
+    },
+    "DOI:10.1109/tmc.2026.3672496": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3672496",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3672496"
+      ],
+      "reason": "The paper accelerates federated LLM fine-tuning through forward-only training; the optimization targets training, outside scope.",
+      "first_checked_at": "2026-10-05T09:40:54+00:00",
+      "last_checked_at": "2026-10-05T09:40:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "FwdLLM+: Accelerating Forward-Only FedLLM With Low-Rank Perturbations"
+    },
+    "DOI:10.1109/tmc.2026.3674545": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2026.3674545",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2026.3674545"
+      ],
+      "reason": "The paper reduces communication/privacy costs for federated LLM knowledge learning and training, not inference serving.",
+      "first_checked_at": "2026-10-05T09:40:55+00:00",
+      "last_checked_at": "2026-10-05T09:40:55+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "Efficient and Privacy-Preserving Federated Knowledge Learning for Distributed LLM"
+    },
+    "DOI:10.14778/3827998.3828020": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3827998.3828020",
+      "identity_tokens": [
+        "DOI:10.14778/3827998.3828020"
+      ],
+      "reason": "The paper develops GPU analytical-query processing and an ML-compiler query engine, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:40:55+00:00",
+      "last_checked_at": "2026-10-05T09:40:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "TQP++: Bridging ML Compilers and Analytical Query Processing on GPUs"
+    },
+    "DOI:10.26599/bdma.2025.9020094": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020094",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2025.9020094"
+      ],
+      "reason": "The primary abstract describes drug-disease association prediction with heterogeneous graphs and graph attention; no LLM inference is involved.",
+      "first_checked_at": "2026-10-05T09:40:55+00:00",
+      "last_checked_at": "2026-10-05T09:40:55+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "DBG-DDA: A Dual-Branch Graph Learning Method for Drug-Disease Associations Prediction"
+    },
+    "DOI:10.3390/bios16080423": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bios16080423",
+      "identity_tokens": [
+        "DOI:10.3390/bios16080423"
+      ],
+      "reason": "The abstract concerns multimodal medical-image fusion, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:40:55+00:00",
+      "last_checked_at": "2026-10-05T09:40:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "MSFusion: Multi-Scale Cross-Modal Fusion with Adaptive Attention for Multimodal Medical Image Fusion"
+    },
+    "DOI:10.3390/jimaging12080377": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jimaging12080377",
+      "identity_tokens": [
+        "DOI:10.3390/jimaging12080377"
+      ],
+      "reason": "The paper is an efficient Swin vision Transformer for ImageNet; it does not study LLM inference.",
+      "first_checked_at": "2026-10-05T09:40:56+00:00",
+      "last_checked_at": "2026-10-05T09:40:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MoR–Swin: Efficient Vision Transformer Using Mixture of Recursions"
+    },
+    "DOI:10.3390/s26165097": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26165097",
+      "identity_tokens": [
+        "DOI:10.3390/s26165097"
+      ],
+      "reason": "The review concerns motor-imagery brain-computer-interface models, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:40:56+00:00",
+      "last_checked_at": "2026-10-05T09:40:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "A Comprehensive Review of Sequence and Generative Models in Motor Imagery (MI) Classification for Brain–Computer Interfaces (BCIs)"
+    },
+    "arXiv:2607.28940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28940",
+      "identity_tokens": [
+        "arXiv:2607.28940"
+      ],
+      "reason": "The paper optimizes Transformer-based recommendation and serving streams; its workload is recommender prediction, not LLM serving.",
+      "first_checked_at": "2026-10-05T09:40:56+00:00",
+      "last_checked_at": "2026-10-05T09:40:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "TransX: Scaling Transformer-based Recommendation via Behavioral and Serving Stream Crossings"
+    },
+    "DOI:10.1109/tcss.2026.3695671": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcss.2026.3695671",
+      "identity_tokens": [
+        "DOI:10.1109/tcss.2026.3695671"
+      ],
+      "reason": "The abstract focuses on training collaborative multi-agent reinforcement-learning policies with LLM agents; it does not propose inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T09:40:56+00:00",
+      "last_checked_at": "2026-10-05T09:40:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "ReMALIS: Inference-Guided Intention Propagation for Multiagent Stochastic Task Coordination With Large Language Models in Complex Networks Domains"
+    },
+    "DOI:10.1109/tcsvt.2026.3679352": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3679352",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3679352"
+      ],
+      "reason": "The paper concerns image-manipulation localization and vision features, not LLM inference.",
+      "first_checked_at": "2026-10-05T09:40:56+00:00",
+      "last_checked_at": "2026-10-05T09:40:56+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "MSFT-Net: Mixture Semantic-Agnostic Manipulation Trace Enhanced Architecture for Robust Image Manipulation Localization"
+    },
+    "DOI:10.1109/tcsvt.2026.3682663": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2026.3682663",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2026.3682663"
+      ],
+      "reason": "LLM-based guidance is used in a breast-ultrasound lesion detector; the contribution is clinical multimodal detection, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T09:40:57+00:00",
+      "last_checked_at": "2026-10-05T09:40:57+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "3D-IRMM-Net: An Interpretable Radiologist-Mimicking 3D Multimodal Network for Lesion Detection in ABUS With LLM-Based Guidance and Uncertainty Quantification"
+    },
+    "DOI:10.1109/tcad.2025.3641538": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2025.3641538",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3641538"
+      ],
+      "reason": "The abstract evaluates post-training quantization of hybrid vision transformers, not LLMs.",
+      "first_checked_at": "2026-10-05T09:40:57+00:00",
+      "last_checked_at": "2026-10-05T09:40:57+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "title": "Autonomous Model Quantization Framework for Hybrid Vision Transformers Based on Reinforcement Learning"
+    },
+    "DOI:10.1109/tce.2026.3674936": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tce.2026.3674936",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2026.3674936"
+      ],
+      "reason": "The paper explicitly proposes an edge-cloud collaboration training paradigm; training is outside the inference-only scope.",
+      "first_checked_at": "2026-10-05T09:40:57+00:00",
+      "last_checked_at": "2026-10-05T09:40:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "title": "Efficient Edge-Cloud Collaboration via Token Pruning and Quantized Feature Transmission for Consumer Electronics and Intelligent Vehicles"
+    },
+    "DOI:10.1109/tcsi.2026.3678854": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2026.3678854",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2026.3678854"
+      ],
+      "reason": "The paper is an HBM physical transceiver/crosstalk design, not an LLM inference method.",
+      "first_checked_at": "2026-10-05T09:40:57+00:00",
+      "last_checked_at": "2026-10-05T09:40:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A 0.53-pJ/bit 5 × 10 Gb/s/pin Single-Ended Transceiver With Reconfigurable 4-Aggressor Crosstalk Cancellation for HBM Interfaces"
     }
   }
 }

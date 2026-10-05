@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df40a0a36d4b1ec2-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tcsvt.2026.3682663",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tcsvt.2026.3682663",
+    "identity_tokens": [
+      "DOI:10.1109/tcsvt.2026.3682663"
+    ],
+    "reason": "LLM-based guidance is used in a breast-ultrasound lesion detector; the contribution is clinical multimodal detection, not LLM inference efficiency.",
+    "first_checked_at": "2026-10-05T09:40:57+00:00",
+    "last_checked_at": "2026-10-05T09:40:57+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "3D-IRMM-Net: An Interpretable Radiologist-Mimicking 3D Multimodal Network for Lesion Detection in ABUS With LLM-Based Guidance and Uncertainty Quantification"
+  },
+  "processed_at": "2026-10-05T09:40:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df40a0a36d4b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
