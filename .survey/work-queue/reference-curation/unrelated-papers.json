@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:09:43+00:00",
-  "record_count": 2469,
+  "updated_at": "2026-10-05T04:12:39+00:00",
+  "record_count": 2472,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -35758,6 +35758,49 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "ANNE: adaptive neuron network expansion for 2D medical image segmentation"
+    },
+    "DOI:10.1109/jiot.2026.3705393": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3705393",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3705393"
+      ],
+      "reason": "一次要旨とtitleはEnabling Edge IoT Intelligence: A Survey on Resource-Constrained Continual Learningを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+      "first_checked_at": "2026-10-05T04:12:38+00:00",
+      "last_checked_at": "2026-10-05T04:12:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "Enabling Edge IoT Intelligence: A Survey on Resource-Constrained Continual Learning"
+    },
+    "DOI:10.1109/jiot.2026.3718030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3718030",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3718030"
+      ],
+      "reason": "一次要旨とtitleはPG-Mamba: Physics-Guided Temporal Modeling and Symbolic Offloading for Edge Fall and Illegal-Crossing Monitoringを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+      "first_checked_at": "2026-10-05T04:12:38+00:00",
+      "last_checked_at": "2026-10-05T04:12:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "PG-Mamba: Physics-Guided Temporal Modeling and Symbolic Offloading for Edge Fall and Illegal-Crossing Monitoring"
+    },
+    "DOI:10.1109/jiot.2026.3718038": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jiot.2026.3718038",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3718038"
+      ],
+      "reason": "一次要旨とtitleはHeatPre: Efficient Diffusion-Inspired Precipitation Nowcasting for Edge Weather Intelligenceを対象とする応用・予測・認識・学習研究として記述しており、LLM推論/servingの効率機構を扱わない。",
+      "first_checked_at": "2026-10-05T04:12:39+00:00",
+      "last_checked_at": "2026-10-05T04:12:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "HeatPre: Efficient Diffusion-Inspired Precipitation Nowcasting for Edge Weather Intelligence"
     }
   }
 }

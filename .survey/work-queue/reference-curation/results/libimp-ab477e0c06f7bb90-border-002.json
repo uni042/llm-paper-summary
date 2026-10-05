@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ab477e0c06f7bb90-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.jmsy.2026.07.015",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.jmsy.2026.07.015",
+    "identity_tokens": [
+      "DOI:10.1016/j.jmsy.2026.07.015"
+    ],
+    "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+    "first_checked_at": "2026-10-05T04:12:38+00:00",
+    "last_checked_at": "2026-10-05T04:12:38+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "MARS: Multi-Agent Rescheduling Framework with Large Language Models for Human-Centric Manufacturing"
+  },
+  "processed_at": "2026-10-05T04:12:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab477e0c06f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
