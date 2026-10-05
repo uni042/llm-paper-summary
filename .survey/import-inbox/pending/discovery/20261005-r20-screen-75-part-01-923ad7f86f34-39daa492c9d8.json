@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-75-part-01-923ad7f86f34",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.15369",
+      "identity_tokens": [
+        "arXiv:2501.15369"
+      ],
+      "title": "iFormer: Integrating ConvNet and Transformer for Mobile Application",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2501.15369. Primary abstract describes a mobile hybrid vision network evaluated on ImageNet, COCO, and ADE20k; it is not a language model.",
+      "source_url": "https://arxiv.org/abs/2501.15369",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.16953",
+      "identity_tokens": [
+        "arXiv:2412.16953"
+      ],
+      "title": "Aristotle: Mastering Logical Reasoning with A Logic-Complete Decompose-Search-Resolve Framework",
+      "reason": "The measured reduction is specific to structured logical reasoning and search steps; transfer to broader LLM inference cost is uncertain.",
+      "source_url": "https://arxiv.org/abs/2412.16953",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.17153",
+      "identity_tokens": [
+        "arXiv:2412.17153"
+      ],
+      "title": "Distilled Decoding 1: One-step Sampling of Image Auto-regressive Models with Flow Matching",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.17153. Primary abstract concerns one-step sampling for image autoregressive generation and evaluates image-generation FID, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2412.17153",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04062",
+      "identity_tokens": [
+        "arXiv:2412.04062"
+      ],
+      "title": "ZipAR: Parallel Autoregressive Image Generation through Spatial Locality",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.04062. Primary abstract accelerates autoregressive visual/image generation using spatial locality; the target is image generation rather than LLM inference.",
+      "source_url": "https://arxiv.org/abs/2412.04062",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-024-06563-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-024-06563-2"
+      ],
+      "title": "Balancing precision and efficiency: an approximate multiplier with built-in error compensation for error-resilient applications",
+      "reason": "Packet contains no abstract and the DOI primary page could not be retrieved in this screen; without primary abstract/full text the approximate-multiplier paper cannot be assessed for LLM-inference relevance.",
+      "source_url": "https://doi.org/10.1007/s11227-024-06563-2",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2407.14417-mixture-of-experts-with-mixture-of-precisions-for-tuning-quality-of-service.md"
+      ]
+    }
+  ]
+}
