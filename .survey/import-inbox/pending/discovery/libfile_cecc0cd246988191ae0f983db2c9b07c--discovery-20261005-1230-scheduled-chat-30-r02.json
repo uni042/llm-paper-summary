@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1230-scheduled-chat-30/r02",
+  "reference_main_sha": "c3e45cccb9e41efcae0eb7f9739011783acb2408",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit",
+      "reason": "汎用deep-learning toolkit CNTKのtraining/evaluation、automatic differentiation、memory sharing、multi-server parallelization等を紹介するtutorial。speech/image/text一般を対象とし、LLM推論runtime専用の研究・評価ではない。",
+      "source_url": "https://www.kdd.org/kdd2016/papers/files/tut204-seide.pdf",
+      "body_check": "abstract_screen_only: KDD一次PDF要旨でCNTKの汎用training/evaluation toolkit、multi-GPU server scaling、speech/image/text利用が主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1503.01007",
+      "identity_tokens": [
+        "arXiv:1503.01007"
+      ],
+      "title": "Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets",
+      "reason": "trainable stack memoryをRNNへ付加し、counting/memorizationを要するalgorithmic sequenceを学習できるか検証するモデル能力研究。LLM推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1503.01007",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でstack-augmented recurrent networkによるalgorithmic sequence learningが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.08387",
+      "identity_tokens": [
+        "arXiv:2110.08387"
+      ],
+      "title": "Generated Knowledge Prompting for Commonsense Reasoning",
+      "reason": "LM自身が外部知識を生成し追加promptとして与えることでcommonsense reasoning精度を高めるprompting能力研究。推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2110.08387",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgenerated knowledge promptingとNumerSense/CommonsenseQA/QASCの精度改善が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2012.15828",
+      "identity_tokens": [
+        "arXiv:2012.15828"
+      ],
+      "title": "MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers",
+      "reason": "multi-head self-attention relation distillationでBERT/RoBERTa/XLM-Rを小型studentへ圧縮し、online servingの計算資源・latency制約を狙う。22MモデルでBERT_BASE比5.3倍、66Mモデルで2倍のspeedupを示すため推論向け圧縮として対象内。",
+      "source_url": "https://arxiv.org/abs/2012.15828",
+      "body_check": "full_text_checked: 一次arXiv HTMLのIntroduction/Resultsを確認。online servingのresource/latencyを問題設定に明記し、Q/K/V relation distillationでstudentを圧縮。GLUE/SQuAD評価表で22M student 5.3x、66M student 2.0x speedupを報告。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.09577",
+      "identity_tokens": [
+        "arXiv:1909.09577"
+      ],
+      "title": "NeMo: a toolkit for building AI applications using Neural Modules",
+      "reason": "typed neural modulesを組み合わせる汎用AI toolkitで、ASR/NLP module、distributed training、mixed precisionを提供するframework紹介。現行LLM推論engine/serving runtimeを対象としない。",
+      "source_url": "https://arxiv.org/abs/1909.09577",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でNeural Modulesのcomposition、ASR/NLP collections、distributed training/mixed precisionが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.00708",
+      "identity_tokens": [
+        "arXiv:2308.00708",
+        "DOI:10.1145/3643681"
+      ],
+      "title": "VeriGen: A Large Language Model for Verilog Code Generation",
+      "reason": "CodeGen-16B等をVerilogデータでfine-tuneし、hardware design code generationのfunctional/syntactic correctnessを評価する能力・学習研究。推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2308.00708",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でVerilog fine-tuning、testbenchによるfunctional correctness、GPT-3.5比較が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.00743",
+      "identity_tokens": [
+        "arXiv:2005.00743"
+      ],
+      "title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
+      "reason": "query-key dot-productをsynthetic attentionへ置換するTransformer architecture研究。60%高速というheadlineはC4 masked-language-modelingのtraining steps/sec（2x2 TPU v3、約524k steps）比較であり、生成LLM推論runtimeのspeedup評価ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2005.00743",
+      "body_check": "full_text_checked: 一次arXiv HTMLのmethod/experimentsを確認。Random/Dense Synthesizerを提案するが、速度表はC4 MLM trainingのSteps/Secで、autoregressive serving latency/throughput評価ではない。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 64
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.04444",
+      "identity_tokens": [
+        "arXiv:1808.04444"
+      ],
+      "title": "Character-Level Language Modeling with Deeper Self-Attention",
+      "reason": "64-layer Transformerと補助損失でcharacter-level language modelingのbits-per-characterを改善するモデル構造・学習研究。推論runtime・memory・serving効率化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/1808.04444",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtext8/enwik8のcharacter-level modeling、64-layer Transformer、auxiliary lossesが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1807.11205",
+      "identity_tokens": [
+        "arXiv:1807.11205"
+      ],
+      "title": "Highly Scalable Deep Learning Training System with Mixed-Precision: Training ImageNet in Four Minutes",
+      "reason": "mixed precision、大規模mini-batch、all-reduce最適化でImageNet学習を1024〜2048 GPUへscaleするtraining system。最終評価はtraining time/accuracyで推論対象外。",
+      "source_url": "https://arxiv.org/abs/1807.11205",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdistributed SGD、mixed-precision training、all-reduce、ImageNet training timeが主題と確認。学習専用のため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 66
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2906388.2906396",
+      "identity_tokens": [
+        "DOI:10.1145/2906388.2906396"
+      ],
+      "title": "MCDNN: An Approximation-Based Execution Framework for Deep Stream Processing Under Resource Constraints",
+      "reason": "mobile-cloud上のcontinuous computer vision DNNを対象にapproximate model scheduling、specialization/sharing、device/cloud配置を最適化するruntime研究。推論systemとして近接するが最終適用先は非LLMの動画分類であり現行LLM推論サーベイ範囲外。",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/mcdnn-an-approximation-based-execution-framework-for-deep-stream-processing-under-resource-constraints/",
+      "body_check": "abstract_screen_only: Microsoft Research一次ページ要旨でcloud-backed mobile computer vision、DNN classification stream、accuracy/resource trade-off runtimeが主題と確認。LLM/Transformer推論への適用・評価なしのため本文未読。",
+      "first_checked_at": "2026-10-05T12:54:00+09:00",
+      "last_checked_at": "2026-10-05T12:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 68
+    }
+  ]
+}
