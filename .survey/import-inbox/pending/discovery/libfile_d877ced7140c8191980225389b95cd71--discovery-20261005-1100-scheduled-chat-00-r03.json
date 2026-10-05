@@ -1,0 +1,163 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1100-scheduled-chat-00/r03",
+  "reference_main_sha": "6c8261fd9ada688fe726450f800a41b383299fcb",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3650212.3680384",
+      "identity_tokens": [
+        "DOI:10.1145/3650212.3680384",
+        "arXiv:2404.05427"
+      ],
+      "title": "AutoCodeRover: Autonomous Program Improvement",
+      "reason": "LLM agentがrepositoryから関連codeを探索しissueを解析してpatchを生成するautomated program repair研究。coding-agent能力・repair successが主目的で、agentic inference servingやKV-cache/runtime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.05427",
+      "body_check": "abstract_screen_only: 一次資料の題名・書誌情報からautonomous program repair/coding agentが最終適用先と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02707",
+      "identity_tokens": [
+        "arXiv:2306.02707"
+      ],
+      "title": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4",
+      "reason": "GPT-4のexplanation trace・step-by-step reasoningを13B modelへimitation learningするprogressive training研究。BBH/AGIEval等のreasoning能力向上が主評価で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.02707",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でGPT-4 explanation traceからのprogressive imitation learningとreasoning benchmark性能が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 56
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00858",
+      "identity_tokens": [
+        "arXiv:2312.00858"
+      ],
+      "title": "DeepCache: Accelerating Diffusion Models for Free",
+      "reason": "diffusion modelの隣接denoising step間でhigh-level featureをcache/reuseしStable Diffusion等を2.3–4.1倍高速化するが、最終適用先は画像diffusionでLLM/Transformer生成推論ではない。",
+      "source_url": "https://arxiv.org/abs/2312.00858",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でU-Net feature caching、Stable Diffusion/LDMの生成高速化が最終評価であることを確認し、現行LLM推論system対象外。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.04417",
+      "identity_tokens": [
+        "arXiv:2410.04417"
+      ],
+      "title": "SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference",
+      "reason": "text tokenとのself-attentionからvisual token重要度を測り、layerごとにtraining-freeでtokenをpruneし、pruned tokenをcompact representationへrecycleする。LLaVAでFLOPs 54%削減、CUDA latency 37%削減、元精度97%維持を報告し、VLM/LLM推論効率を直接改善するため対象内。",
+      "source_url": "https://arxiv.org/abs/2410.04417",
+      "body_check": "full_text_checked: 一次arXiv論文情報でtext-guided visual-token scoring、rank-based layer-adaptive sparsification、token recycling、LLaVAで54% FLOPs reduction・37% CUDA latency reduction・97% accuracy retentionを確認。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.01279",
+      "identity_tokens": [
+        "arXiv:2202.01279"
+      ],
+      "title": "PromptSource: An Integrated Development Environment and Repository for Natural Language Prompts",
+      "reason": "dataset-linked promptを作成・共有するtemplating language、IDE、2000超prompt repositoryを提供するprompt engineering tooling研究。LLM推論runtime・memory・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2202.01279",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprompt authoring/repository/IDEが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10762",
+      "identity_tokens": [
+        "arXiv:2410.10762"
+      ],
+      "title": "AFlow: Automating Agentic Workflow Generation",
+      "reason": "LLM-invoking nodeをcode workflowとして表現しMCTSでworkflowを自動探索・改善するagent capability/optimization研究。特定taskでGPT-4o比4.55%のdollar costを示すが、runtime/serving効率化ではなくworkflow品質・自動生成が主目的。",
+      "source_url": "https://arxiv.org/abs/2410.10762",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でagentic workflow generation、MCTS search、benchmark quality/costが主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2402.13718",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.13718",
+        "arXiv:2402.13718"
+      ],
+      "title": "∞Bench: Extending Long Context Evaluation Beyond 100K Tokens",
+      "reason": "100K token超のlong-context能力を評価するbenchmark suiteで、長文脈LLMのretrieval/reasoning等を測る評価研究。推論runtime・KV-cache削減・serving最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2402.13718",
+      "body_check": "abstract_screen_only: 一次資料の題名・書誌情報からlong-context evaluation benchmarkが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2204.03645",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2204.03645",
+        "arXiv:2204.03645"
+      ],
+      "title": "DaViT: Dual Attention Vision Transformers",
+      "reason": "spatial window attentionとchannel group attentionを組み合わせるvision Transformer architectureで、画像分類・検出・segmentation性能を改善するcomputer vision研究。LLM推論systemを最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2204.03645",
+      "body_check": "abstract_screen_only: 一次資料の題名・書誌情報からvision TransformerとCV taskが最終適用先と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1907.12009",
+      "identity_tokens": [
+        "arXiv:1907.12009"
+      ],
+      "title": "Representation Degeneration Problem in Training Natural Language Generation Models",
+      "reason": "weight tying下のNLG trainingでword embeddingがnarrow coneへdegenerateする現象を解析しregularizationで改善するtraining研究。language modeling/MT性能が主評価で推論runtime効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1907.12009",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でtraining時representation degenerationとregularizationが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.12856",
+      "identity_tokens": [
+        "arXiv:2307.12856"
+      ],
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis",
+      "reason": "LLM agentがinstructionをsub-instructionへ分解し、long HTMLをsummarizeしてPython programでweb操作するagent/application研究。real website task success改善が主目的で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2307.12856",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でweb automation agent、planning、HTML summarization、program synthesisとtask successが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T11:43:00+09:00",
+      "last_checked_at": "2026-10-05T11:43:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 64
+    }
+  ]
+}
