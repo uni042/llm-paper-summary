@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-02-part-06-ee156e3406df",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12703",
+      "identity_tokens": [
+        "arXiv:2608.12703"
+      ],
+      "title": "Alignment Drift in Single-Model Speculative Decoding for ASR: Mechanism, Correction, and Cost",
+      "reason": "本文はASR特有のaudio-position driftとspeculative decoding costを比較し、training時AnchorDraftでend-to-end speed向上を報告。ただし一般LLMではなく音声認識用decoderに限定。 primary taskはASRで、音響encoder/positioning固有の設計。一般LLM decodingへの移植可能性は未検証。",
+      "source_url": "https://arxiv.org/abs/2608.12703",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12720",
+      "identity_tokens": [
+        "arXiv:2608.12720"
+      ],
+      "title": "ERSkill: Evolving for Skill-Guided Adaptive Memory Retrieval",
+      "reason": "本文§3–§5の評価はagent memory retrieval benchmarkで回答指標中心。query-time latency、token use、memory/runtime costを最適化・報告する証拠は見つからない。 主眼はretrieval answer qualityとtraining/evolution procedureであり、inference-serving efficiencyは示されない。",
+      "source_url": "https://arxiv.org/abs/2608.12720",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12888",
+      "identity_tokens": [
+        "arXiv:2608.12888"
+      ],
+      "title": "When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory",
+      "reason": "本文はstateful lexical search/RRFとround-wise session deduplication等のagent-controlled retrievalを評価するが、主指標はaccuracyで、serving latency/costの効率比較は確認できない。 quality benchmark中心で、LLM calls/latency/token costsを同等条件で構造化memoryと比較していない。",
+      "source_url": "https://arxiv.org/abs/2608.12888",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12993",
+      "identity_tokens": [
+        "arXiv:2608.12993"
+      ],
+      "title": "A Theory of Probabilistic Power Provisioning for Data Centers with Distributed Energy Storage",
+      "reason": "一次要旨はdata-center battery/power provisioning theoryであり、LLM model inference optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2608.12993",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13721",
+      "identity_tokens": [
+        "arXiv:2608.13721"
+      ],
+      "title": "Capacity-Dependent Effects of Data Selection for Reasoning",
+      "reason": "一次要旨はreasoning SFTのtraining data selectionで、training duration/capacityの分析が中心。",
+      "source_url": "https://arxiv.org/abs/2608.13721",
+      "first_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "last_checked_at": "2026-10-05T03:06:23.567059+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    }
+  ]
+}
