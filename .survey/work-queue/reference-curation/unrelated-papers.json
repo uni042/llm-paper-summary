@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:58:36+00:00",
-  "record_count": 3701,
+  "updated_at": "2026-10-05T08:00:37+00:00",
+  "record_count": 3716,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -53922,6 +53922,221 @@
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
       "title": "NBS: No Bias Stereo"
+    },
+    "DOI:10.1007/s44443-026-00910-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-00910-4",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00910-4"
+      ],
+      "reason": "LLM context-parallel pretraining throughput; training scope.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "ATAC: Anchor-tail aware context parallelism for LLM training"
+    },
+    "DOI:10.1016/j.jenvman.2026.130728": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jenvman.2026.130728",
+      "identity_tokens": [
+        "DOI:10.1016/j.jenvman.2026.130728"
+      ],
+      "reason": "Industrial time-series Transformer, outside LLM scope.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Frequency-enhanced AutoEncoding decomposed transformer (FEADformer) for total phosphorus prediction in industrial recirculating cooling water systems."
+    },
+    "DOI:10.1061/9780784486962.010": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1061/9780784486962.010",
+      "identity_tokens": [
+        "DOI:10.1061/9780784486962.010"
+      ],
+      "reason": "The official NJIT repository abstract describes a wearable construction assistant that streams audio/vision to cloud LLM/RAG for guidance; it is an application system and reports no LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Talk, See, Support (TSS): A Wearable Multimodal, Intelligent, Agentic LLM-Powered Construction Assistant for Real-Time On-Site Guidance and Compliance Monitoring"
+    },
+    "DOI:10.1109/tip.2026.3725720": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3725720",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3725720"
+      ],
+      "reason": "The abstract concerns point-cloud 3D semantic segmentation with a broadcast-and-mixing Transformer, not language-model inference.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Broadcast-and-Mixing Transformer for 3D Semantic Segmentation"
+    },
+    "DOI:10.3389/friot.2026.1883673": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/friot.2026.1883673",
+      "identity_tokens": [
+        "DOI:10.3389/friot.2026.1883673"
+      ],
+      "reason": "The primary abstract is an edge-cloud IoT resource-management review spanning broad AI scheduling; foundation-model integration is only an emerging topic, not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Artificial intelligence-driven resource management in edge-cloud computing continuum for internet of things applications: new trends and future directions"
+    },
+    "DOI:10.3390/asi9090177": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/asi9090177",
+      "identity_tokens": [
+        "DOI:10.3390/asi9090177"
+      ],
+      "reason": "The abstract concerns semantic cache analysis for computational kernels in C programs; its target is source-level CPU cache analysis, not LLM serving.",
+      "first_checked_at": "2026-10-05T08:00:36+00:00",
+      "last_checked_at": "2026-10-05T08:00:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A Hybrid Method for Semantic Cache Analysis of Computational Kernels in C Programs"
+    },
+    "arXiv:2608.26902": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26902",
+      "identity_tokens": [
+        "arXiv:2608.26902"
+      ],
+      "reason": "Autoregressive video-generation memory routing, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "Tether the Subject, Release the Scene: Query-Aware Memory Routing for Long-Horizon Autoregressive Video Generation"
+    },
+    "arXiv:2608.26973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26973",
+      "identity_tokens": [
+        "arXiv:2608.26973"
+      ],
+      "reason": "Limited-data recursive Transformer pretraining.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Squeezing More from Limited Data with Recursive Transformers"
+    },
+    "arXiv:2608.27020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27020",
+      "identity_tokens": [
+        "arXiv:2608.27020"
+      ],
+      "reason": "LLM representation-measurement methodology, not efficiency.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Representation Measurements Under Function-Preserving Reparameterizations"
+    },
+    "arXiv:2608.27079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27079",
+      "identity_tokens": [
+        "arXiv:2608.27079"
+      ],
+      "reason": "Robot VLA online adaptation/training, not language-model serving.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation"
+    },
+    "arXiv:2608.27417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27417",
+      "identity_tokens": [
+        "arXiv:2608.27417"
+      ],
+      "reason": "VLM retrieval-head mechanistic analysis; no efficiency intervention.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information"
+    },
+    "arXiv:2608.27512": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27512",
+      "identity_tokens": [
+        "arXiv:2608.27512"
+      ],
+      "reason": "Quantization backdoor/security study, not an efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Quantization-Triggered Backdoors in Language Models: Cross-Quantizer Transferability and the Validation--Deployment Gap"
+    },
+    "arXiv:2608.27531": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27531",
+      "identity_tokens": [
+        "arXiv:2608.27531"
+      ],
+      "reason": "VLM jailbreak attack/security evaluation.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models"
+    },
+    "arXiv:2608.28706": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28706",
+      "identity_tokens": [
+        "arXiv:2608.28706"
+      ],
+      "reason": "Aerial object-detection ViT tokenization; not LLM/VLM inference.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Variable-Granularity Tokenization for High-Resolution Object Detection"
+    },
+    "arXiv:2609.25040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25040",
+      "identity_tokens": [
+        "arXiv:2609.25040"
+      ],
+      "reason": "Crop-disease VLM domain adaptation/accuracy, no efficiency method.",
+      "first_checked_at": "2026-10-05T08:00:37+00:00",
+      "last_checked_at": "2026-10-05T08:00:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "BananaVLM: A Domain-Adapted Vision Language Model for Banana Crop Disease Diagnosis"
     }
   }
 }

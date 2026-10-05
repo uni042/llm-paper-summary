@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b6bf0fa2d38cd9db-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.27417",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.27417",
+    "identity_tokens": [
+      "arXiv:2608.27417"
+    ],
+    "reason": "VLM retrieval-head mechanistic analysis; no efficiency intervention.",
+    "first_checked_at": "2026-10-05T08:00:37+00:00",
+    "last_checked_at": "2026-10-05T08:00:37+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+    ],
+    "title": "Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information"
+  },
+  "processed_at": "2026-10-05T08:00:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b6bf0fa2d38c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
