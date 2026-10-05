@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-74-part-02-3d0c7ade126b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.00458",
+      "identity_tokens": [
+        "arXiv:2505.00458"
+      ],
+      "title": "Memory-Centric Computing: Solving Computing’s Memory Problem",
+      "reason": "Memory-centric computing addresses general computer and memory-system design across applications, not specifically LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2505.00458",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.futures.2024.103453",
+      "identity_tokens": [
+        "DOI:10.1016/j.futures.2024.103453"
+      ],
+      "title": "The future of work of academics in the age of Artificial Intelligence: State-of-the-art and a research roadmap",
+      "reason": "The paper studies future academic work and AI adoption, not model inference efficiency.",
+      "source_url": "https://doi.org/10.1016/j.futures.2024.103453",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.02782",
+      "identity_tokens": [
+        "arXiv:2507.02782"
+      ],
+      "title": "Understanding and Improving Length Generalization in Recurrent Models",
+      "reason": "The recurrent-model paper improves long-context generalization using training interventions; its efficiency claim concerns training steps, not inference/serving.",
+      "source_url": "https://arxiv.org/abs/2507.02782",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.09720",
+      "identity_tokens": [
+        "arXiv:2502.09720"
+      ],
+      "title": "NestQuant: Nested Lattice Quantization for Matrix Products and LLMs",
+      "reason": "The inspected primary experiments emphasize perplexity/accuracy retention and do not establish end-to-end serving latency or throughput improvement for the proposed configuration.",
+      "source_url": "https://arxiv.org/abs/2502.09720",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00641",
+      "identity_tokens": [
+        "arXiv:2502.00641"
+      ],
+      "title": "Evaluating Small Language Models for News Summarization: Implications and Factors Influencing Performance",
+      "reason": "Although deployment on edge devices motivates the study, the reported evidence is quality-focused, so an inference-efficiency contribution is not established.",
+      "source_url": "https://arxiv.org/abs/2502.00641",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    }
+  ]
+}
