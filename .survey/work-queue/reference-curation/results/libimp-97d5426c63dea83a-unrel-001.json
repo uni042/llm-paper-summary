@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-97d5426c63dea83a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2021.acl-long.254",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2021.acl-long.254",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2021.acl-long.254",
+      "arXiv:2105.07624"
+    ],
+    "reason": "Abstract presents a hybrid table-and-text QA benchmark and model, without an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-04T23:27:41+00:00",
+    "last_checked_at": "2026-10-05T00:48:09+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
+    ],
+    "title": "TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance"
+  },
+  "processed_at": "2026-10-05T00:48:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-97d5426c63de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

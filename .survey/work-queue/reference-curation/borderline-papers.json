@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:17:55+00:00",
-  "record_count": 455,
+  "updated_at": "2026-10-05T00:48:10+00:00",
+  "record_count": 464,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6535,6 +6535,132 @@
         "papers/inference/05-speculative-decoding-moe/2025-self-speculative-decoding-for-on-device-moe-acceleration.md"
       ],
       "title": "Findings of the 2014 Workshop on Statistical Machine Translation"
+    },
+    "DOI:10.1038/s41586-025-08744-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41586-025-08744-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-025-08744-2"
+      ],
+      "reason": "The official Nature article page could not be retrieved as a usable primary abstract.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ],
+      "title": "Mastering diverse control tasks through world models"
+    },
+    "DOI:10.1145/2155620.2155650": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2155620.2155650",
+      "identity_tokens": [
+        "DOI:10.1145/2155620.2155650"
+      ],
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Bubble-up: Increasing utilization in modern warehouse scale computers via sensible co-locations"
+    },
+    "DOI:10.1109/slt.2012.6424228": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/slt.2012.6424228",
+      "identity_tokens": [
+        "DOI:10.1109/slt.2012.6424228"
+      ],
+      "reason": "IEEE Xplore requires a JavaScript robot check for this DOI page, preventing retrieval of its primary abstract.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
+      ],
+      "title": "Context dependent recurrent neural network language model"
+    },
+    "DOI:10.1016/j.crma.2012.03.014": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.crma.2012.03.014",
+      "identity_tokens": [
+        "DOI:10.1016/j.crma.2012.03.014"
+      ],
+      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.16138-namex-nash-expert-merging.md"
+      ],
+      "title": "Multiple-gradient descent algorithm (MGDA) for multiobjective optimization"
+    },
+    "DOI:10.25080/majora-7b98e3ed-013": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.25080/majora-7b98e3ed-013",
+      "identity_tokens": [
+        "DOI:10.25080/majora-7b98e3ed-013"
+      ],
+      "reason": "The DOI and official SciPy proceedings page could not be retrieved as a usable primary abstract.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ],
+      "title": "Dask: Parallel Computation with Blocked algorithms and Task Scheduling"
+    },
+    "DOI:10.1145/248156.248171": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/248156.248171",
+      "identity_tokens": [
+        "DOI:10.1145/248156.248171"
+      ],
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "first_checked_at": "2026-10-05T00:48:09+00:00",
+      "last_checked_at": "2026-10-05T00:48:09+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md"
+      ],
+      "title": "Start-time fair queueing: a scheduling algorithm for integrated services packet switching networks"
+    },
+    "arXiv:2302.09419": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.09419",
+      "identity_tokens": [
+        "arXiv:2302.09419"
+      ],
+      "reason": "本文で効率の中心はpretraining costで、compressionは概説にとどまりLLM inference/servingの具体的機構や評価がない。Researchへ進める根拠が不足するためborderline。",
+      "first_checked_at": "2026-10-05T00:48:10+00:00",
+      "last_checked_at": "2026-10-05T00:48:10+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT"
+    },
+    "DOI:10.3390/fi15060192": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/fi15060192",
+      "identity_tokens": [
+        "DOI:10.3390/fi15060192"
+      ],
+      "reason": "The official MDPI article page could not be retrieved as a usable primary abstract.",
+      "first_checked_at": "2026-10-05T00:48:10+00:00",
+      "last_checked_at": "2026-10-05T00:48:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "ChatGPT and Open-AI Models: A Preliminary Review"
+    },
+    "DOI:10.1145/2018436.2018443": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2018436.2018443",
+      "identity_tokens": [
+        "DOI:10.1145/2018436.2018443"
+      ],
+      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
+      "first_checked_at": "2026-10-05T00:48:10+00:00",
+      "last_checked_at": "2026-10-05T00:48:10+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06557-cascade-slo-aware-latency-budget-serving.md"
+      ],
+      "title": "Better never than late: meeting deadlines in datacenter networks"
     }
   }
 }
