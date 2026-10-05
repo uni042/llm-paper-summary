@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:14:21+00:00",
-  "record_count": 4879,
+  "updated_at": "2026-10-05T12:17:10+00:00",
+  "record_count": 4894,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -71005,6 +71005,226 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "T2Pdecoder enables protein-centric analyses from transcriptomic data"
+    },
+    "arXiv:2606.10361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10361",
+      "identity_tokens": [
+        "arXiv:2606.10361"
+      ],
+      "reason": "Statistical convergence analysis for kNN classification, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:17:06+00:00",
+      "last_checked_at": "2026-10-05T12:17:06+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ],
+      "title": "Near-Exponential Convergence Rates for kNN Classification based on Boltzmann Margin"
+    },
+    "arXiv:2606.10369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10369",
+      "identity_tokens": [
+        "arXiv:2606.10369"
+      ],
+      "reason": "MoE student distillation and routing-policy training; training-focused, not inference-time optimization.",
+      "first_checked_at": "2026-10-05T12:17:06+00:00",
+      "last_checked_at": "2026-10-05T12:17:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "PADD: Path-Aligned Decompression Distillation for Non-Router Teacher to Guide MoE Student Learning"
+    },
+    "arXiv:2606.10435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10435",
+      "identity_tokens": [
+        "arXiv:2606.10435"
+      ],
+      "reason": "Full text reports PCAF full autoregressive language-model pretraining throughput/memory on WikiText-103 and PG-19; the main comparison is explicitly training. No inference serving/decode optimization evidence.",
+      "first_checked_at": "2026-10-05T12:17:07+00:00",
+      "last_checked_at": "2026-10-05T12:17:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Parallel Causal Associative Fields: Gated Sparse Memory for Long-Context Language Modeling"
+    },
+    "arXiv:2606.10706": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10706",
+      "identity_tokens": [
+        "arXiv:2606.10706"
+      ],
+      "reason": "Survey is explicitly about data, memory and compute efficiency in LLM training; training-only efficiency is out of scope.",
+      "first_checked_at": "2026-10-05T12:17:07+00:00",
+      "last_checked_at": "2026-10-05T12:17:07+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "title": "Unifying Data, Memory, and Compute Efficiency in LLM Training: A Survey"
+    },
+    "arXiv:2606.10722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10722",
+      "identity_tokens": [
+        "arXiv:2606.10722"
+      ],
+      "reason": "Dense-to-sparse LLM continual training/upcycling; not an inference-time method.",
+      "first_checked_at": "2026-10-05T12:17:07+00:00",
+      "last_checked_at": "2026-10-05T12:17:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Continual LLM Upcycling: A Predictor-Gated Bank-Wise Sparsity Training Recipe for Dense-to-Sparse LLMs"
+    },
+    "arXiv:2606.10833": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10833",
+      "identity_tokens": [
+        "arXiv:2606.10833"
+      ],
+      "reason": "Engineering-reasoning VLM benchmark/evaluation framework, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:17:07+00:00",
+      "last_checked_at": "2026-10-05T12:17:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Do VLMs Reason Like Engineers? A Benchmark and a Stage-wise Evaluation"
+    },
+    "arXiv:2606.10896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10896",
+      "identity_tokens": [
+        "arXiv:2606.10896"
+      ],
+      "reason": "Flash-GMM accelerates GMM/ANN clustering, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:17:08+00:00",
+      "last_checked_at": "2026-10-05T12:17:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Flash-GMM: A Memory-Efficient Kernel for Scalable Soft Clustering"
+    },
+    "arXiv:2606.11052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11052",
+      "identity_tokens": [
+        "arXiv:2606.11052"
+      ],
+      "reason": "CoT fine-tuning and parameter restoration address recall quality after training, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T12:17:08+00:00",
+      "last_checked_at": "2026-10-05T12:17:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Attention Amnesia in Hybrid LLMs: When CoT Fine-Tuning Breaks Long-Range Recall, and How to Fix It"
+    },
+    "arXiv:2606.11169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11169",
+      "identity_tokens": [
+        "arXiv:2606.11169"
+      ],
+      "reason": "Piper is a distributed foundation-model training system; training efficiency is out of scope.",
+      "first_checked_at": "2026-10-05T12:17:08+00:00",
+      "last_checked_at": "2026-10-05T12:17:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Piper: A Programmable Distributed Training System"
+    },
+    "arXiv:2606.11396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11396",
+      "identity_tokens": [
+        "arXiv:2606.11396"
+      ],
+      "reason": "World modeling/parameter estimation for robot manipulation, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:17:08+00:00",
+      "last_checked_at": "2026-10-05T12:17:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "PLUME: Probabilistic Latent Unified World Modeling and Parameter Estimation for Multi-Finger Manipulation"
+    },
+    "DOI:10.1117/12.3100583": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3100583",
+      "identity_tokens": [
+        "DOI:10.1117/12.3100583"
+      ],
+      "reason": "Disaster-classification application/model choice does not propose or measure LLM inference optimization.",
+      "first_checked_at": "2026-10-05T12:17:09+00:00",
+      "last_checked_at": "2026-10-05T12:17:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Beyond training: engineering vision-language models for immediate disaster assessment"
+    },
+    "DOI:10.3390/electronics15122547": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15122547",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15122547"
+      ],
+      "reason": "Industrial local-LLM context management improves operator workflow response time; this is application-level turnaround, not inference runtime/resource efficiency.",
+      "first_checked_at": "2026-10-05T12:17:09+00:00",
+      "last_checked_at": "2026-10-05T12:17:09+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Local LLMs for Industrial Supervision and Control: An Edge AI Event-Driven Architecture for Proactive Operational Context Management in Real Industrial Environments"
+    },
+    "DOI:10.1109/icici68773.2026.11581014": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icici68773.2026.11581014",
+      "identity_tokens": [
+        "DOI:10.1109/icici68773.2026.11581014"
+      ],
+      "reason": "ARM/NPU co-design targets edge speech recognition, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:17:09+00:00",
+      "last_checked_at": "2026-10-05T12:17:09+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Latency-Aware Co-Design Framework for ARM– NPU Heterogeneous Edge Architectures, Enabling Real-Time Speech Recognition with Deterministic Timing Guarantees"
+    },
+    "DOI:10.1117/12.3094678": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3094678",
+      "identity_tokens": [
+        "DOI:10.1117/12.3094678"
+      ],
+      "reason": "Synthetic-to-real image augmentation is a computer-vision training method.",
+      "first_checked_at": "2026-10-05T12:17:09+00:00",
+      "last_checked_at": "2026-10-05T12:17:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Designing image augmentations to bridge the synthetic-to-real data gap"
+    },
+    "arXiv:2606.10299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10299",
+      "identity_tokens": [
+        "arXiv:2606.10299"
+      ],
+      "reason": "Spatial memory/occlusion reasoning for language agents addresses recall/visibility rather than inference resource efficiency.",
+      "first_checked_at": "2026-10-05T12:17:10+00:00",
+      "last_checked_at": "2026-10-05T12:17:10+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "What Spatial Memory Must Store: Occlusion as the Test for Language-Agent Memory"
     }
   }
 }

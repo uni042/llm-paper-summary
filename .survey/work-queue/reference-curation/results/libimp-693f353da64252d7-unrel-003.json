@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-693f353da64252d7-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10435",
+    "identity_tokens": [
+      "arXiv:2606.10435"
+    ],
+    "reason": "Full text reports PCAF full autoregressive language-model pretraining throughput/memory on WikiText-103 and PG-19; the main comparison is explicitly training. No inference serving/decode optimization evidence.",
+    "first_checked_at": "2026-10-05T12:17:07+00:00",
+    "last_checked_at": "2026-10-05T12:17:07+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "title": "Parallel Causal Associative Fields: Gated Sparse Memory for Long-Context Language Modeling"
+  },
+  "processed_at": "2026-10-05T12:17:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-693f353da642",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

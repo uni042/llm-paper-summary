@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca1c9cf3ec7246a8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.11169",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.11169",
+    "identity_tokens": [
+      "arXiv:2606.11169"
+    ],
+    "reason": "Piper is a distributed foundation-model training system; training efficiency is out of scope.",
+    "first_checked_at": "2026-10-05T12:17:08+00:00",
+    "last_checked_at": "2026-10-05T12:17:08+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Piper: A Programmable Distributed Training System"
+  },
+  "processed_at": "2026-10-05T12:17:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca1c9cf3ec72",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
