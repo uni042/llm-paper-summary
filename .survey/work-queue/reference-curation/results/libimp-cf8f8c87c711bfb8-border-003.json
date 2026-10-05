@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf8f8c87c711bfb8-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.25068",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.25068",
+    "identity_tokens": [
+      "arXiv:2607.25068"
+    ],
+    "reason": "一次本文取得不能のため、abstract-onlyで推測せずborderline。",
+    "first_checked_at": "2026-10-05T09:58:45+00:00",
+    "last_checked_at": "2026-10-05T09:58:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "How Often Should a Recommender Call an LLM? Value-Weighted Routing, Monitoring, and Seasonal Robustness"
+  },
+  "processed_at": "2026-10-05T09:58:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf8f8c87c711",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

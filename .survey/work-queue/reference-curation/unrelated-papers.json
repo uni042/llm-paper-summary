@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:53:09+00:00",
-  "record_count": 4276,
+  "updated_at": "2026-10-05T09:58:45+00:00",
+  "record_count": 4288,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -62269,6 +62269,177 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md"
       ],
       "title": "Not Forgotten: Implementation and Evaluation of a Personalized Episodic Memory for the Humanoid Robot Head Kim"
+    },
+    "DOI:10.3847/1538-4357/ae81ad": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3847/1538-4357/ae81ad",
+      "identity_tokens": [
+        "DOI:10.3847/1538-4357/ae81ad"
+      ],
+      "reason": "一次要旨はgamma-ray burst/redshift分析の天文学的ML応用で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Unveiling Nonlinear Patterns between Gamma-Ray Burst Observational Features and Redshift via Machine Learning"
+    },
+    "arXiv:2607.23580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23580",
+      "identity_tokens": [
+        "arXiv:2607.23580"
+      ],
+      "reason": "一次要旨はvector-sketch recognition/continuationの軽量state-space modelで、language model servingではない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "SketchMamba: A Lightweight State-Space Model for Joint Progressive Sketch Classification and Stroke Auto-Completion"
+    },
+    "arXiv:2607.23634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23634",
+      "identity_tokens": [
+        "arXiv:2607.23634"
+      ],
+      "reason": "一次要旨のVIAは科学task向けattention architecture/qualityを扱い、LLM inference latency、memory、costの改善を評価しない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Variational-Ising-Attention (VIA):TailoredAttentionMattersfor Science"
+    },
+    "arXiv:2607.23779": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23779",
+      "identity_tokens": [
+        "arXiv:2607.23779"
+      ],
+      "reason": "一次要旨はmulti-platform recommender systemで、LLM inference efficiency/serving optimizationを示さない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "ClawRec: A Claw-Native Recommender System"
+    },
+    "arXiv:2607.24554": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24554",
+      "identity_tokens": [
+        "arXiv:2607.24554"
+      ],
+      "reason": "一次要旨と本文§IV-E/graph-construction evaluationを確認。40.8% token削減はoffline graph-construction ingestion stageのみで、after indexingのonline retrieval/answer-generationは同じpipeline。対象のinference-time efficiencyではない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "DeCoRAG: Cognitive Decoupling and Semantic-Aware Cropping for Complex Document Understanding"
+    },
+    "arXiv:2607.24662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24662",
+      "identity_tokens": [
+        "arXiv:2607.24662"
+      ],
+      "reason": "要旨はtemporal graph generation drift-correction/sampling-budget theoretical resultで、language model/LLM servingではない。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "When Can You Correct Distribution Drift in Temporal Graph Generation? A Sharpening-Drift Tension and an Impossibility for Observation-Based Correction"
+    },
+    "arXiv:2607.24665": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24665",
+      "identity_tokens": [
+        "arXiv:2607.24665"
+      ],
+      "reason": "一次本文の§3 main resultsとsampling-step sensitivityを確認。MMOEは画像生成向けSiT-style diffusion transformersのexpert設計であり、中心評価はFIDに対するtraining-step convergenceと8-GPU H100上のtraining wall-clock（Table I）。sampling step ablationはあるがLLM inference/serving研究ではないため対象外。",
+      "first_checked_at": "2026-10-05T09:58:43+00:00",
+      "last_checked_at": "2026-10-05T09:58:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MMOE: Modernizing Diffusion Transformers with Efficient Expert Design"
+    },
+    "arXiv:2607.23838": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23838",
+      "identity_tokens": [
+        "arXiv:2607.23838"
+      ],
+      "reason": "一次要旨はRAG poisoning defense/security mitigationであり、推論効率化でなくanswer robustnessが目的。",
+      "first_checked_at": "2026-10-05T09:58:44+00:00",
+      "last_checked_at": "2026-10-05T09:58:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "TriShieldRAG: 3 Rings, One Blind Spot in Layered Defenses for Retrieval-Augmented Generation"
+    },
+    "arXiv:2607.23869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.23869",
+      "identity_tokens": [
+        "arXiv:2607.23869"
+      ],
+      "reason": "一次要旨はkernel-attention feature distributionを学習するmethodで、efficiencyの主張やLLM serving評価がない。",
+      "first_checked_at": "2026-10-05T09:58:44+00:00",
+      "last_checked_at": "2026-10-05T09:58:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "A Coulomb Particle Model for Learning Kernel Attention in Transformers"
+    },
+    "DOI:10.1145/3785462.3815796": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3785462.3815796",
+      "identity_tokens": [
+        "DOI:10.1145/3785462.3815796"
+      ],
+      "reason": "一次要旨はHPC user-supportアプリケーションでSFT/RAG等の品質比較が中心、LLM inference efficiencyは対象でない。",
+      "first_checked_at": "2026-10-05T09:58:44+00:00",
+      "last_checked_at": "2026-10-05T09:58:44+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A Comparative Study on LLM-enabled HPC User Support"
+    },
+    "arXiv:2607.24960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24960",
+      "identity_tokens": [
+        "arXiv:2607.24960"
+      ],
+      "reason": "一次要旨は重力波形surrogate modelingとwaveform mismatch評価で、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T09:58:45+00:00",
+      "last_checked_at": "2026-10-05T09:58:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Fast, accurate, and differentiable: a neural-network surrogate for NRSur7dq4 precessing binary black hole waveforms"
+    },
+    "DOI:10.3390/vehicles8080172": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/vehicles8080172",
+      "identity_tokens": [
+        "DOI:10.3390/vehicles8080172"
+      ],
+      "reason": "一次要旨は部分既知力学を扱うphysics-augmented dynamic-system modelingであり、LLM inference効率と無関係。",
+      "first_checked_at": "2026-10-05T09:58:45+00:00",
+      "last_checked_at": "2026-10-05T09:58:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "A Hybrid Physics-Augmented Neural Network for Dynamic System Modeling with Partially Known Dynamics"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf8f8c87c711bfb8-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24960",
+    "identity_tokens": [
+      "arXiv:2607.24960"
+    ],
+    "reason": "一次要旨は重力波形surrogate modelingとwaveform mismatch評価で、LLM inference/servingではない。",
+    "first_checked_at": "2026-10-05T09:58:45+00:00",
+    "last_checked_at": "2026-10-05T09:58:45+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "title": "Fast, accurate, and differentiable: a neural-network surrogate for NRSur7dq4 precessing binary black hole waveforms"
+  },
+  "processed_at": "2026-10-05T09:58:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf8f8c87c711",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

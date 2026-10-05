@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-05d5860ca7ea8689-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.23634",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.23634",
+    "identity_tokens": [
+      "arXiv:2607.23634"
+    ],
+    "reason": "一次要旨のVIAは科学task向けattention architecture/qualityを扱い、LLM inference latency、memory、costの改善を評価しない。",
+    "first_checked_at": "2026-10-05T09:58:43+00:00",
+    "last_checked_at": "2026-10-05T09:58:43+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Variational-Ising-Attention (VIA):TailoredAttentionMattersfor Science"
+  },
+  "processed_at": "2026-10-05T09:58:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-05d5860ca7ea",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

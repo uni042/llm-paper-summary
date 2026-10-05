@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-360375107a06121a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24554",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24554",
+    "identity_tokens": [
+      "arXiv:2607.24554"
+    ],
+    "reason": "一次要旨と本文§IV-E/graph-construction evaluationを確認。40.8% token削減はoffline graph-construction ingestion stageのみで、after indexingのonline retrieval/answer-generationは同じpipeline。対象のinference-time efficiencyではない。",
+    "first_checked_at": "2026-10-05T09:58:43+00:00",
+    "last_checked_at": "2026-10-05T09:58:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "DeCoRAG: Cognitive Decoupling and Semantic-Aware Cropping for Complex Document Understanding"
+  },
+  "processed_at": "2026-10-05T09:58:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-360375107a06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

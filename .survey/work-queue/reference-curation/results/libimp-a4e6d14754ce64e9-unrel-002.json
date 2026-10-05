@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4e6d14754ce64e9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.23869",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.23869",
+    "identity_tokens": [
+      "arXiv:2607.23869"
+    ],
+    "reason": "一次要旨はkernel-attention feature distributionを学習するmethodで、efficiencyの主張やLLM serving評価がない。",
+    "first_checked_at": "2026-10-05T09:58:44+00:00",
+    "last_checked_at": "2026-10-05T09:58:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "A Coulomb Particle Model for Learning Kernel Attention in Transformers"
+  },
+  "processed_at": "2026-10-05T09:58:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4e6d14754ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
