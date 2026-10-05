@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-67-part-03-efcfbbb59423",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.11110",
+      "identity_tokens": [
+        "arXiv:2501.11110"
+      ],
+      "title": "Chain-of-Reasoning: Towards Unified Mathematical Reasoning in Large Language Models via a Multi-Paradigm Perspective",
+      "reason": "Math reasoning framework targets answer quality, not serving resource use.",
+      "source_url": "https://arxiv.org/abs/2501.11110",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2410.11744-dyspec-faster-speculative-decoding-with-dynamic-token-tree-structure.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2",
+      "identity_tokens": [
+        "SemanticScholar:bd6f57cfd1d597fc107995df36601ec969d329a2"
+      ],
+      "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
+      "reason": "The official abstract is highly relevant, but I could not retrieve the primary body to check the evaluation conditions, comparison tables, or limitations; therefore final classification remains borderline.",
+      "source_url": "https://www.semanticscholar.org/paper/bd6f57cfd1d597fc107995df36601ec969d329a2",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.01025",
+      "identity_tokens": [
+        "arXiv:2509.01025"
+      ],
+      "title": "Any-Order Flexible Length Masked Diffusion",
+      "reason": "Masked-diffusion generation is adjacent, but the full text does not identify a measurable serving-efficiency contribution; fit remains weak.",
+      "source_url": "https://arxiv.org/abs/2509.01025",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.17119",
+      "identity_tokens": [
+        "arXiv:2504.17119"
+      ],
+      "title": "The Rise of Small Language Models in Healthcare: A Comprehensive Survey",
+      "reason": "It treats inference efficiency but only in a narrow healthcare SLM context, leaving transfer to general LLM serving uncertain.",
+      "source_url": "https://arxiv.org/abs/2504.17119",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19190",
+      "identity_tokens": [
+        "arXiv:2505.19190"
+      ],
+      "title": "I2MoE: Interpretable Multimodal Interaction-aware Mixture-of-Experts",
+      "reason": "Multimodal mixture-of-experts is proposed for modality interaction/fusion, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.19190",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ]
+    }
+  ]
+}
