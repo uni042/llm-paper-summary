@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04e85614019663c4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1907.05686",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1907.05686",
+    "identity_tokens": [
+      "arXiv:1907.05686"
+    ],
+    "reason": "Primary abstract read at https://arxiv.org/abs/1907.05686: Quantization targets conventional neural/image-classification networks rather than LLMs.",
+    "first_checked_at": "2026-10-05T01:42:16+00:00",
+    "last_checked_at": "2026-10-05T01:42:16+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md"
+    ],
+    "title": "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
+  },
+  "processed_at": "2026-10-05T01:42:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04e856140196",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

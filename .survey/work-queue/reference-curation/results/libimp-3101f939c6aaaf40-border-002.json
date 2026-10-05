@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3101f939c6aaaf40-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/isca.2016.41",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/isca.2016.41",
+    "identity_tokens": [
+      "DOI:10.1109/isca.2016.41"
+    ],
+    "reason": "Primary source https://doi.org/10.1109/isca.2016.41 attempted: IEEE DOI page returned Internal Error. No primary abstract could be checked.",
+    "first_checked_at": "2026-10-05T01:42:16+00:00",
+    "last_checked_at": "2026-10-05T01:42:16+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "Neurocube: A Programmable Digital Neuromorphic Architecture with High-Density 3D Memory"
+  },
+  "processed_at": "2026-10-05T01:42:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3101f939c6aa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
