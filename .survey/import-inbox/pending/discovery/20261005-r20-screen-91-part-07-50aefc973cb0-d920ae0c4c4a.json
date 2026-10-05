@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-91-part-07-50aefc973cb0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.05818",
+      "identity_tokens": [
+        "arXiv:2509.05818"
+      ],
+      "title": "Chatbot To Help Patients Understand Their Health",
+      "reason": "患者向けhealth chatbot applicationで効率化研究ではない。",
+      "source_url": "https://arxiv.org/abs/2509.05818",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00449",
+      "identity_tokens": [
+        "arXiv:2507.00449"
+      ],
+      "title": "Overcoming Long-Context Limitations of State-Space Models via Context-Dependent Sparse Attention",
+      "reason": "SSMへcontext-dependent sparse attentionを足しsub-quadratic long-context computationを狙うが、実serving speed/memory evidenceが薄い。",
+      "source_url": "https://arxiv.org/abs/2507.00449",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3695053.3731000",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731000"
+      ],
+      "title": "ANVIL: An In-Storage Accelerator for Name–Value Data Stores",
+      "reason": "SSD内name-value store向けin-storage accelerator。LLM inference向けでない。",
+      "source_url": "https://doi.org/10.1145/3695053.3731000",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.00479",
+      "identity_tokens": [
+        "arXiv:2506.00479"
+      ],
+      "title": "EffiVLM-BENCH: A Comprehensive Benchmark for Evaluating Training-Free Acceleration in Large Vision-Language Models",
+      "reason": "LVLM acceleration benchmarkでありadjacentだが、一般LLM servingへの直接性は弱い。",
+      "source_url": "https://arxiv.org/abs/2506.00479",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24593",
+      "identity_tokens": [
+        "arXiv:2505.24593"
+      ],
+      "title": "Decoding Knowledge Attribution in Mixture-of-Experts: A Framework of Basic-Refinement Collaboration and Efficiency Analysis",
+      "reason": "MoE attribution論文のlayer efficiencyはperformance gain指標で、runtime efficiencyとは異なる。",
+      "source_url": "https://arxiv.org/abs/2505.24593",
+      "first_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "last_checked_at": "2026-10-05T12:15:21.851506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ]
+    }
+  ]
+}
