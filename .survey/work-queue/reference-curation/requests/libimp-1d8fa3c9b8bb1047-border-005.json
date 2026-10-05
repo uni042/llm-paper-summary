@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1d8fa3c9b8bb1047-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.1145/2168836.2168847",
+  "reason": "data-parallel clusterでjob内部依存をsimulatorにより予測し、進捗に応じてresource allocationを動的制御してlatency SLOを満たすscheduler。LLM servingのSLO-aware schedulingに機構的に強く関連するが、評価先はMicrosoft Cosmos/SCOPEのdata-processing jobでLLM推論専用ではないためborderline。",
+  "title": "Jockey: guaranteed job latency in data parallel clusters",
+  "identity_tokens": [
+    "DOI:10.1145/2168836.2168847"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d8fa3c9b8bb",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
