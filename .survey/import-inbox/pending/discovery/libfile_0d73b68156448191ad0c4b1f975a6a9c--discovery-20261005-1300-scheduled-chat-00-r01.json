@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1300-scheduled-chat-00/r01",
+  "reference_main_sha": "b83a8be22ddaf009992493254d53b3e698a3e312",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/356571.356573",
+      "identity_tokens": [
+        "DOI:10.1145/356571.356573"
+      ],
+      "title": "Virtual Memory",
+      "reason": "仮想記憶の概念・実装を扱う古典的memory-system研究。LLMの階層メモリ／オフロード設計の基礎概念に直接つながるが、LLM/Transformer推論を最終適用先としないためborderline。",
+      "source_url": "https://doi.org/10.1145/356571.356573",
+      "body_check": "full_text_checked: 一次書誌・論文情報でvirtual memoryのmemory hierarchy管理が主題と確認。LLM推論専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 101
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2.268884",
+      "identity_tokens": [
+        "DOI:10.1109/2.268884"
+      ],
+      "title": "Caching strategies to improve disk system performance",
+      "reason": "disk systemのcache戦略によってI/O性能を改善するstorage-system研究。SSD/NVMeを含むLLM階層メモリ・cache設計の基礎技術として関連するが、LLM推論を対象とした方式・評価ではないためborderline。",
+      "source_url": "https://doi.org/10.1109/2.268884",
+      "body_check": "full_text_checked: 一次書誌情報でdisk caching strategyとsystem performance改善が主題と確認。LLM推論への直接評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 102
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.05542",
+      "identity_tokens": [
+        "arXiv:2108.05542"
+      ],
+      "title": "AMMUS : A Survey of Transformer-based Pretrained Models in Natural Language Processing",
+      "reason": "Transformer系pretrained modelを体系化するNLP surveyで、モデル分類・事前学習・下流適用が主題。推論runtime・memory hierarchy・serving最適化の新規方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2108.05542",
+      "body_check": "abstract_screen_only: 一次arXiv要旨からTransformer pretrained modelの包括surveyが主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 103
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3115/v1/p14-1134",
+      "identity_tokens": [
+        "DOI:10.3115/v1/p14-1134"
+      ],
+      "title": "A Discriminative Graph-Based Parser for the Abstract Meaning Representation",
+      "reason": "Abstract Meaning Representationをgraph-based discriminative parserで解析するsemantic parsing研究。LLM推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://aclanthology.org/P14-1134/",
+      "body_check": "abstract_screen_only: ACL Anthology一次書誌・論文情報でAMR semantic parsingが最終適用先と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 104
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.507",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.507"
+      ],
+      "title": "CCMatrix: Mining Billions of High-Quality Parallel Sentences on the Web",
+      "reason": "Common Crawlから38言語・数十億規模のparallel sentenceを採掘しNMT学習品質を評価するdata mining/training研究。推論runtime・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/1911.04944",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でparallel corpus miningとNMT学習・BLEU評価が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 105
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ieeestd.2019.8766229",
+      "identity_tokens": [
+        "DOI:10.1109/ieeestd.2019.8766229"
+      ],
+      "title": "IEEE Standard for Floating-Point Arithmetic",
+      "reason": "浮動小数点形式・演算・例外・丸め等を規定するIEEE標準であり、LLM推論systemの特定の最適化方式・評価研究ではない。",
+      "source_url": "https://doi.org/10.1109/ieeestd.2019.8766229",
+      "body_check": "abstract_screen_only: IEEE標準の対象がfloating-point arithmetic仕様であることが書誌から明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 106
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.02224",
+      "identity_tokens": [
+        "arXiv:2306.02224"
+      ],
+      "title": "Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions",
+      "reason": "Auto-GPT型agentをWebShop/ALFWorld等で評価し、expert opinionをpromptへ加えてdecision qualityを改善するagent capability研究。推論runtime・memory・serving効率化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/2306.02224",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でonline decision-making benchmarkとAdditional Opinionsによるtask performance向上が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 107
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.07566",
+      "identity_tokens": [
+        "arXiv:2107.07566"
+      ],
+      "title": "Internet-Augmented Dialogue Generation",
+      "reason": "Internet検索等の外部情報を利用してdialogue responseの知識性・品質を改善するretrieval-augmented dialogue研究。推論systemのlatency・memory・serving最適化を主目的としない。",
+      "source_url": "https://arxiv.org/abs/2107.07566",
+      "body_check": "abstract_screen_only: 一次論文情報でinternet-augmented dialogue generationの応答品質が主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 108
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-62385-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-62385-7"
+      ],
+      "title": "Towards generalist foundation model for radiology by leveraging web-scale 2D&3D medical data",
+      "reason": "2D/3D radiology画像とtextを統合するRadFM、MedMD/RadMD、RadBenchを構築し診断・VQA・report generation性能を評価する医療foundation model研究。推論system効率化が主貢献ではない。",
+      "source_url": "https://doi.org/10.1038/s41467-025-62385-7",
+      "body_check": "abstract_screen_only: Nature Communications一次本文のabstractでdataset構築、RadFM architecture、radiology task評価が主貢献と確認し、推論system対象外のため深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 109
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3531146.3533234",
+      "identity_tokens": [
+        "DOI:10.1145/3531146.3533234"
+      ],
+      "title": "Measuring the Carbon Intensity of AI in Cloud Instances",
+      "reason": "AI workloadのoperational carbon intensityを地域・時間帯別に測定し、cloud instanceの実行場所・時刻・pauseで排出量を減らす研究。LLM推論専用runtime・memory・serving方式の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2206.05229",
+      "body_check": "abstract_screen_only: ACM/arXiv一次要旨でsoftware carbon intensity計測とregion/time schedulingによる排出削減が主題と確認。LLM推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T13:18:00+09:00",
+      "last_checked_at": "2026-10-05T13:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 110
+    }
+  ]
+}
