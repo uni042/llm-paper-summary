@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:26:17+00:00",
-  "record_count": 1612,
+  "updated_at": "2026-10-05T01:28:58+00:00",
+  "record_count": 1629,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -23262,6 +23262,252 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
       ],
       "title": "HoneyComb: A Flexible LLM-Based Agent System for Materials Science"
+    },
+    "arXiv:2402.19047": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19047",
+      "identity_tokens": [
+        "arXiv:2402.19047"
+      ],
+      "reason": "一次要旨はselective state-space modelsの理論的性質・近似を扱い、LLM inference efficiencyの提案・評価は示さない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Theoretical Foundations of Deep Selective State-Space Models"
+    },
+    "arXiv:1810.03264": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1810.03264",
+      "identity_tokens": [
+        "arXiv:1810.03264"
+      ],
+      "reason": "一次要旨は分散機械学習におけるstalenessの一般的な影響を扱い、LLM inference/servingを対象としない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ],
+      "title": "Toward Understanding the Impact of Staleness in Distributed Machine Learning"
+    },
+    "arXiv:2608.13317": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13317",
+      "identity_tokens": [
+        "arXiv:2608.13317"
+      ],
+      "reason": "一次要旨はLLM multi-agent latent communicationのhidden-state alignmentとタスク精度を扱い、効率指標や推論資源削減の主張はない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems"
+    },
+    "arXiv:2111.05754": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.05754",
+      "identity_tokens": [
+        "arXiv:2111.05754"
+      ],
+      "reason": "一次要旨はlanguage modelをsparseにpretrainする手法が中心で、効率化の主張はtraining/deployment可能性に関するもので推論serving評価がない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ],
+      "title": "Prune Once for All: Sparse Pre-Trained Language Models"
+    },
+    "arXiv:1905.13678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.13678",
+      "identity_tokens": [
+        "arXiv:1905.13678"
+      ],
+      "reason": "一次要旨は一般neural networkのsparsityをtraining時に学ぶ方法で、LLM推論の対象外。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
+      ],
+      "title": "Learning Sparse Networks Using Targeted Dropout"
+    },
+    "arXiv:2503.05244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05244",
+      "identity_tokens": [
+        "arXiv:2503.05244"
+      ],
+      "reason": "一次要旨はgenerative writingのbenchmarkを提示する研究で、inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+      ],
+      "title": "WritingBench: A Comprehensive Benchmark for Generative Writing"
+    },
+    "arXiv:2608.26794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26794",
+      "identity_tokens": [
+        "arXiv:2608.26794"
+      ],
+      "reason": "一次要旨の対象はautoregressive video diffusion modelの長期video memoryで、LLM言語推論の対象外。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Ring Forcing: Towards Precise Long-Term Memory for Autoregressive Video Diffusion"
+    },
+    "arXiv:2608.01679": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01679",
+      "identity_tokens": [
+        "arXiv:2608.01679"
+      ],
+      "reason": "一次要旨はagent memory consolidationによるauthority collapseを測るbenchmarkであり、効率化の提案ではない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary"
+    },
+    "arXiv:2607.28126": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28126",
+      "identity_tokens": [
+        "arXiv:2607.28126"
+      ],
+      "reason": "一次要旨は製造設備検査記録向けのmemory/RAG relevanceを扱い、LLM inference efficiencyの手法でない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "ConMem: Contribution-Aware Memory for Long-Horizon Manufacturing Inspection Logs"
+    },
+    "arXiv:2606.30552": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30552",
+      "identity_tokens": [
+        "arXiv:2606.30552"
+      ],
+      "reason": "一次要旨はVision-Language-Action modelのembodied chain-of-thought supervisionとtrainingを扱い、serving/inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Training Vision-Language-Action Models with Dense Embodied Chain-of-Thought Supervision"
+    },
+    "arXiv:2606.20905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20905",
+      "identity_tokens": [
+        "arXiv:2606.20905"
+      ],
+      "reason": "一次要旨はembodied reasoning modelの機能・品質を提示するもので、LLM inference efficiencyの寄与を示さない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Vesta: A Generalist Embodied Reasoning Model"
+    },
+    "arXiv:2308.04371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.04371",
+      "identity_tokens": [
+        "arXiv:2308.04371"
+      ],
+      "reason": "一次要旨は複数LLM roleで累積reasoningを行う能力向上frameworkで、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Cumulative Reasoning with Large Language Models"
+    },
+    "arXiv:2607.26694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26694",
+      "identity_tokens": [
+        "arXiv:2607.26694"
+      ],
+      "reason": "一次要旨の対象はreal-time interactive long-video generation modelで、LLM inference/serving対象ではない。",
+      "first_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation"
+    },
+    "arXiv:2606.25161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25161",
+      "identity_tokens": [
+        "arXiv:2606.25161"
+      ],
+      "reason": "一次要旨はLLM agentのmemory consolidationを学習しtrustworthinessを改善する手法で、inference cost/latencyを主要評価しない。",
+      "first_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory"
+    },
+    "arXiv:2606.10677": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10677",
+      "identity_tokens": [
+        "arXiv:2606.10677"
+      ],
+      "reason": "一次要旨はlong-term LLM agent memoryのretrieval architectureとMemoryAgentBench品質を扱い、context/token/latency効率の改善を主張しない。",
+      "first_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Infini Memory: Maintainable Topic Documents for Long-Term LLM Agent Memory"
+    },
+    "arXiv:2402.01822": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01822",
+      "identity_tokens": [
+        "arXiv:2402.01822"
+      ],
+      "reason": "一次要旨はLLM guardrailsの設計と評価を扱い、inference efficiencyの寄与を示さない。",
+      "first_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+      ],
+      "title": "Building Guardrails for Large Language Models"
+    },
+    "arXiv:2512.24695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24695",
+      "identity_tokens": [
+        "arXiv:2512.24695"
+      ],
+      "reason": "一次要旨はNested Learningによる学習/architectureの見方を扱い、LLM serving効率の具体的手法を提示しない。",
+      "first_checked_at": "2026-10-05T01:28:58+00:00",
+      "last_checked_at": "2026-10-05T01:28:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Nested Learning: The Illusion of Deep Learning Architectures"
     }
   }
 }

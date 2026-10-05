@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6bf0cbd1347fc6f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26694",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26694",
+    "identity_tokens": [
+      "arXiv:2607.26694"
+    ],
+    "reason": "一次要旨の対象はreal-time interactive long-video generation modelで、LLM inference/serving対象ではない。",
+    "first_checked_at": "2026-10-05T01:28:58+00:00",
+    "last_checked_at": "2026-10-05T01:28:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Visko Orbis 1.0: A Live Model for Real-Time Interactive Long Video Generation"
+  },
+  "processed_at": "2026-10-05T01:28:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6bf0cbd1347",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

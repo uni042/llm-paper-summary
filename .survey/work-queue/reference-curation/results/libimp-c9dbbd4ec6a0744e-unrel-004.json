@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9dbbd4ec6a0744e-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.26794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.26794",
+    "identity_tokens": [
+      "arXiv:2608.26794"
+    ],
+    "reason": "一次要旨の対象はautoregressive video diffusion modelの長期video memoryで、LLM言語推論の対象外。",
+    "first_checked_at": "2026-10-05T01:28:57+00:00",
+    "last_checked_at": "2026-10-05T01:28:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Ring Forcing: Towards Precise Long-Term Memory for Autoregressive Video Diffusion"
+  },
+  "processed_at": "2026-10-05T01:28:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9dbbd4ec6a0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

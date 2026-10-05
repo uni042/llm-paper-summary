@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:26:17+00:00",
-  "record_count": 568,
+  "updated_at": "2026-10-05T01:28:57+00:00",
+  "record_count": 571,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -8280,6 +8280,49 @@
         "papers/inference/12-moe-parallelism-communication/2025-2511.15076-gpu-initiated-networking-for-nccl.md"
       ],
       "title": "Remote Memory Access Programming in MPI-3"
+    },
+    "DOI:10.1109/access.2024.3409745": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2024.3409745",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3409745"
+      ],
+      "reason": "対象分野は一次要旨から関連するが、一次本文を取得できず評価・限界を検証できないためborderline。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md"
+      ],
+      "title": "Measuring and Improving the Energy Efficiency of Large Language Models Inference"
+    },
+    "DOI:10.1109/sp46215.2023.10179464": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sp46215.2023.10179464",
+      "identity_tokens": [
+        "DOI:10.1109/sp46215.2023.10179464"
+      ],
+      "reason": "候補記載のIEEE DOI一次ページから要旨本文を取得できず、タイトルから対象外と推測しない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Robust Multi-tab Website Fingerprinting Attacks in the Wild"
+    },
+    "DOI:10.1007/s11432-026-5028-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5028-5"
+      ],
+      "reason": "候補記載のSpringer DOI一次ページで要旨本文を取得できず、タイトルから適合性を判定しない。",
+      "first_checked_at": "2026-10-05T01:28:57+00:00",
+      "last_checked_at": "2026-10-05T01:28:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "A time scaling theory for multi-layer electronic systems"
     }
   }
 }
