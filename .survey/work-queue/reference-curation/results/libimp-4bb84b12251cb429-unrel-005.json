@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4bb84b12251cb429-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.64898/2026.06.15.732063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.64898/2026.06.15.732063",
+    "identity_tokens": [
+      "DOI:10.64898/2026.06.15.732063"
+    ],
+    "reason": "The paper models single-cell perturbation prediction, not LLM inference or serving.",
+    "first_checked_at": "2026-10-05T03:47:25+00:00",
+    "last_checked_at": "2026-10-05T03:47:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Elucidating the Design Space of Generative Models for Single-Cell Perturbation Prediction"
+  },
+  "processed_at": "2026-10-05T03:47:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4bb84b12251c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

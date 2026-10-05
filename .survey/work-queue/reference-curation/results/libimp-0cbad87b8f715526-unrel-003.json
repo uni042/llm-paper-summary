@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cbad87b8f715526-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s10489-026-07363-2",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s10489-026-07363-2",
+    "identity_tokens": [
+      "DOI:10.1007/s10489-026-07363-2"
+    ],
+    "reason": "多変量時系列予測のPatchTST改良であり、LLM推論/servingや推論時圧縮を扱わない。",
+    "first_checked_at": "2026-10-05T03:47:24+00:00",
+    "last_checked_at": "2026-10-05T03:47:24+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "DFG-PatchTST: a dynamic fusion gated patch transformer for multicomponent time series forecasting"
+  },
+  "processed_at": "2026-10-05T03:47:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cbad87b8f71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

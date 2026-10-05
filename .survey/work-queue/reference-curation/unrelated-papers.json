@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:44:14+00:00",
-  "record_count": 2352,
+  "updated_at": "2026-10-05T03:47:25+00:00",
+  "record_count": 2366,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -34069,6 +34069,205 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
       ],
       "title": "Memory Makes the Difference: Evaluating How Different Memory Roles Shape Conversational Agents"
+    },
+    "arXiv:2607.00962": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00962",
+      "identity_tokens": [
+        "arXiv:2607.00962"
+      ],
+      "reason": "LHCでの偏極抽出を行う物理回帰・分類の研究であり、言語モデル推論と無関係。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Higher-order effects in amplitude-assisted polarisation extraction with machine-learning techniques"
+    },
+    "DOI:10.1007/s10489-026-07363-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10489-026-07363-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10489-026-07363-2"
+      ],
+      "reason": "多変量時系列予測のPatchTST改良であり、LLM推論/servingや推論時圧縮を扱わない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "DFG-PatchTST: a dynamic fusion gated patch transformer for multicomponent time series forecasting"
+    },
+    "DOI:10.1016/j.autcon.2026.106905": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.autcon.2026.106905",
+      "identity_tokens": [
+        "DOI:10.1016/j.autcon.2026.106905"
+      ],
+      "reason": "BIMとLLMの建設ワークフロー統合・用途・検証を扱うレビューで、LLM推論効率の機構・評価は主題でない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "BIM–LLM integration in AECO workflows: Applications, validation, and future directions"
+    },
+    "DOI:10.1016/j.bspc.2026.110147": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.bspc.2026.110147",
+      "identity_tokens": [
+        "DOI:10.1016/j.bspc.2026.110147"
+      ],
+      "reason": "医療画像セグメンテーションのニューラルネット構成に関する研究で、LLM推論対象外。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "MH-UNet: A multi-scale hybrid neural network for advanced medical image segmentation"
+    },
+    "arXiv:2607.20501": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20501",
+      "identity_tokens": [
+        "arXiv:2607.20501"
+      ],
+      "reason": "MKEvolveは複数agentでGPU kernel codeを生成・評価し、KernelBench等で生成kernelの正確性/性能を高めるframework。 高速化対象は生成されたGPU kernels一般で、LLM自身の推論・servingやLLM inference kernelsに焦点を置かない。LLMはコード生成の道具として使われるため対象外。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md"
+      ],
+      "title": "MKEvolve: A Modular Multi-Agent Framework for Kernel Code Generation"
+    },
+    "DOI:10.1145/3745756.3809212": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3745756.3809212",
+      "identity_tokens": [
+        "DOI:10.1145/3745756.3809212"
+      ],
+      "reason": "ViTを用いるエッジ動画解析であり、LLM推論・serving対象ではない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Ouroboros: Instilling Motion Awareness in ViTs for Efficient Video Analytics on the Edge"
+    },
+    "arXiv:2606.21619": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21619",
+      "identity_tokens": [
+        "arXiv:2606.21619"
+      ],
+      "reason": "制約付きコード生成におけるモデルと制約器の整合性・正確性評価が主題で、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "The Alignment Problem in Constrained Code Generation"
+    },
+    "arXiv:2606.21649": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21649",
+      "identity_tokens": [
+        "arXiv:2606.21649"
+      ],
+      "reason": "長文脈検索用embedding表現と訓練高速化を扱う。要旨の3.8倍高速化は訓練工程であり、LLM推論効率・serving研究ではない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "EvoEmbedding: Evolvable Representations for Long-Context Retrieval and Agentic Memory"
+    },
+    "arXiv:2607.09694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09694",
+      "identity_tokens": [
+        "arXiv:2607.09694"
+      ],
+      "reason": "Attention ResidualのルーティングFLOPsと訓練step throughputを改善するモデル訓練・設計研究で、推論時性能の実証は要旨にない。",
+      "first_checked_at": "2026-10-05T03:47:24+00:00",
+      "last_checked_at": "2026-10-05T03:47:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Low-Rank Attention Residuals"
+    },
+    "arXiv:2606.20138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20138",
+      "identity_tokens": [
+        "arXiv:2606.20138"
+      ],
+      "reason": "The abstract evaluates adaptive prompting and student engagement in high-school tutoring; its efficiency measure is fewer tutoring turns, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:47:25+00:00",
+      "last_checked_at": "2026-10-05T03:47:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "Learning to Prompt: Improving Student Engagement with Adaptive LLM-based High-School Tutoring"
+    },
+    "arXiv:2606.20246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20246",
+      "identity_tokens": [
+        "arXiv:2606.20246"
+      ],
+      "reason": "This is compression and real-time inference of vision-language-action robot policies, outside the LLM inference/serving target.",
+      "first_checked_at": "2026-10-05T03:47:25+00:00",
+      "last_checked_at": "2026-10-05T03:47:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Finetuning Vision-Language-Action Models Requires Fewer Layers Than You Think"
+    },
+    "arXiv:2606.20381": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20381",
+      "identity_tokens": [
+        "arXiv:2606.20381"
+      ],
+      "reason": "The contribution is an FP4 pretraining recipe and training stability; training-only efficiency is outside this screen.",
+      "first_checked_at": "2026-10-05T03:47:25+00:00",
+      "last_checked_at": "2026-10-05T03:47:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Rethinking Shrinkage Bias in LLM FP4 Pretraining: Geometric Origin, Systemic Impact, and UFP4 Recipe"
+    },
+    "DOI:10.64898/2026.06.15.732063": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.15.732063",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.15.732063"
+      ],
+      "reason": "The paper models single-cell perturbation prediction, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:47:25+00:00",
+      "last_checked_at": "2026-10-05T03:47:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Elucidating the Design Space of Generative Models for Single-Cell Perturbation Prediction"
+    },
+    "arXiv:2607.01966": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01966",
+      "identity_tokens": [
+        "arXiv:2607.01966"
+      ],
+      "reason": "電力系統の低圧需要を予測する時系列基盤モデルの適用評価であり、LLM推論システムを扱わない。",
+      "first_checked_at": "2026-10-05T03:47:25+00:00",
+      "last_checked_at": "2026-10-05T03:47:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Probabilistic Low-Voltage Peak Load Forecasting with Time Series Foundation Models Evaluated on Application-Oriented Metrics"
     }
   }
 }

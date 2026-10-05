@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0cbad87b8f715526-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.01088",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.01088",
+    "identity_tokens": [
+      "arXiv:2607.01088"
+    ],
+    "reason": "実測対象はロボット工場のrobotics foundation model multi-component serving。LLM serving一般への転用可能性は一次本文から確定できない。",
+    "first_checked_at": "2026-10-05T03:47:24+00:00",
+    "last_checked_at": "2026-10-05T03:47:24+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "ROSA: A Robotics Foundation Model Serving System for Robot Factories"
+  },
+  "processed_at": "2026-10-05T03:47:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0cbad87b8f71",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

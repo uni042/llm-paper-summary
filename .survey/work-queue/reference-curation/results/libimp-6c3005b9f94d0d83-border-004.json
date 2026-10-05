@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6c3005b9f94d0d83-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.00773",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.00773",
+    "identity_tokens": [
+      "arXiv:2607.00773"
+    ],
+    "reason": "一次本文はdiscrete diffusion samplingのテキスト生成も含むが、対象はautoregressive LLMではなく画像/テキスト生成のdiffusion sampler。Discovery scopeへの含有判断が必要。",
+    "first_checked_at": "2026-10-05T03:47:25+00:00",
+    "last_checked_at": "2026-10-05T03:47:25+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Accelerating Discrete Diffusion Models with Parallel-In-Time Sampling"
+  },
+  "processed_at": "2026-10-05T03:47:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6c3005b9f94d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
