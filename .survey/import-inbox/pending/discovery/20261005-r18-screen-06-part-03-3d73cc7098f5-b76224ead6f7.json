@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-06-part-03-3d73cc7098f5",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38098",
+      "identity_tokens": [
+        "arXiv:2609.38098"
+      ],
+      "title": "NeuronEye: Query-Guided Visual Concept Activation for Vision-Language Reasoning",
+      "reason": "NeuronEye improves visual concept grounding/accuracy in a VLM forward pass; the abstract does not claim reduced inference compute, latency, or memory.",
+      "source_url": "https://arxiv.org/abs/2609.38098",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38099",
+      "identity_tokens": [
+        "arXiv:2609.38099"
+      ],
+      "title": "Effective Dense Retrieval using Only In-Context Examples",
+      "reason": "RICE improves dense retrieval representations from in-context examples; it does not present an inference-efficiency or serving-cost contribution.",
+      "source_url": "https://arxiv.org/abs/2609.38099",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38106",
+      "identity_tokens": [
+        "arXiv:2609.38106"
+      ],
+      "title": "Pruning for Efficiency, Paying in Fairness: Demographic Disparities in Pruned Speech-LLMs",
+      "reason": "This is a fairness evaluation of pruning rather than a new inference-efficiency technique, and the disparity effect varies by dataset/language. Its relevance is secondary to the survey’s mechanism focus.",
+      "source_url": "https://arxiv.org/abs/2609.38106",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38114",
+      "identity_tokens": [
+        "arXiv:2609.38114"
+      ],
+      "title": "Self-Aligned Forcing: Streaming Video Diffusion with Differentiable Noisy History",
+      "reason": "Self-Aligned Forcing targets streaming video diffusion generation and reports inference throughput for video generation, not language-model inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.38114",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38119",
+      "identity_tokens": [
+        "arXiv:2609.38119"
+      ],
+      "title": "VideoLoop: Looped Working Memory Against Semantic Thrashing in Long-Form Video Agents",
+      "reason": "The paper does not report token/latency/throughput savings from the bounded memory, and its scope is long-video agent orchestration rather than a general LLM inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2609.38119",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
