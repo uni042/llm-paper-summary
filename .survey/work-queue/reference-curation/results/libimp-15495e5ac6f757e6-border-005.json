@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-15495e5ac6f757e6-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.04982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.04982",
+    "identity_tokens": [
+      "arXiv:2503.04982"
+    ],
+    "reason": "Adjacent benchmark evidence for multimodal compression, not a demonstrated serving optimization; retained as borderline for scope.",
+    "first_checked_at": "2026-10-05T15:28:24+00:00",
+    "last_checked_at": "2026-10-05T15:28:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+      "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LVLM-Compress-Bench: Benchmarking the Broader Impact of Large Vision-Language Model Compression"
+  },
+  "processed_at": "2026-10-05T15:28:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-15495e5ac6f7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

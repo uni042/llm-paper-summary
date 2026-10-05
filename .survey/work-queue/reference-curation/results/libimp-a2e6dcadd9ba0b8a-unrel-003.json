@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e6dcadd9ba0b8a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.15372",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.15372",
+    "identity_tokens": [
+      "arXiv:2310.15372"
+    ],
+    "reason": "The primary abstract studies how LMs consolidate knowledge from documents and proposes an epistemic evaluation; it does not concern inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T15:28:30+00:00",
+    "last_checked_at": "2026-10-05T15:28:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+    ],
+    "title": "EpiK-Eval: Evaluation for Language Models as Epistemic Models"
+  },
+  "processed_at": "2026-10-05T15:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e6dcadd9ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

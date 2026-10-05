@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8d0749a6a8b692bb-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.jmsy.2026.02.008",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.jmsy.2026.02.008",
+    "identity_tokens": [
+      "DOI:10.1016/j.jmsy.2026.02.008"
+    ],
+    "reason": "The input packet contains no abstract for this DOI record; an attempted open of the primary DOI URL returned an internal reader error, and no primary abstract/full text was available in the checked source.",
+    "first_checked_at": "2026-10-05T15:28:29+00:00",
+    "last_checked_at": "2026-10-05T15:28:29+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Leveraging large language models for smart manufacturing: Reviews, enablers, challenges, and opportunities"
+  },
+  "processed_at": "2026-10-05T15:28:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8d0749a6a8b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

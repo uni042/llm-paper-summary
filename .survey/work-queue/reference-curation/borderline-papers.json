@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:25:19+00:00",
-  "record_count": 1998,
+  "updated_at": "2026-10-05T15:28:35+00:00",
+  "record_count": 2013,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30925,6 +30925,242 @@
       ],
       "borderline_recheck_count": 0,
       "title": "The Lottery LLM Hypothesis, Rethinking What Abilities Should LLM Compression Preserve?"
+    },
+    "arXiv:2503.04982": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.04982",
+      "identity_tokens": [
+        "arXiv:2503.04982"
+      ],
+      "reason": "Adjacent benchmark evidence for multimodal compression, not a demonstrated serving optimization; retained as borderline for scope.",
+      "first_checked_at": "2026-10-05T15:28:24+00:00",
+      "last_checked_at": "2026-10-05T15:28:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LVLM-Compress-Bench: Benchmarking the Broader Impact of Large Vision-Language Model Compression"
+    },
+    "arXiv:2410.03007": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03007",
+      "identity_tokens": [
+        "arXiv:2410.03007"
+      ],
+      "reason": "The measured efficiency gain is concrete, but the specialized SpeechLM setting makes its fit to this survey adjacent rather than a direct general LLM contribution.",
+      "first_checked_at": "2026-10-05T15:28:26+00:00",
+      "last_checked_at": "2026-10-05T15:28:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FastAdaSP: Multitask-Adapted Efficient Inference for Large Speech Language Model"
+    },
+    "arXiv:2406.13167": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13167",
+      "identity_tokens": [
+        "arXiv:2406.13167"
+      ],
+      "reason": "This is an adjacent long-context prompting/retrieval approach, and the available evaluation does not make its inference-efficiency contribution sufficiently direct.",
+      "first_checked_at": "2026-10-05T15:28:26+00:00",
+      "last_checked_at": "2026-10-05T15:28:26+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QRMeM: Unleash the Length Limitation through Question then Reflection Memory Mechanism"
+    },
+    "DOI:10.1109/tnse.2025.3639401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnse.2025.3639401",
+      "identity_tokens": [
+        "DOI:10.1109/tnse.2025.3639401"
+      ],
+      "reason": "Relevant full-text sections are necessary to decide whether networking-system treatment meets this survey scope; the official DOI/publisher page returned an internal reader error and no accessible primary full text was located in this attempt.",
+      "first_checked_at": "2026-10-05T15:28:27+00:00",
+      "last_checked_at": "2026-10-05T15:28:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integration of Generative AI and Mobile Networking: A Comprehensive Survey"
+    },
+    "arXiv:2512.17436": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17436",
+      "identity_tokens": [
+        "arXiv:2512.17436"
+      ],
+      "reason": "There is plausible on-device inference relevance, but efficiency is an intended use and artifact release rather than an evaluated inference-efficiency result; scope is also home-centric VLM.",
+      "first_checked_at": "2026-10-05T15:28:27+00:00",
+      "last_checked_at": "2026-10-05T15:28:27+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Xiaomi MiMo-VL-Miloco Technical Report"
+    },
+    "arXiv:2505.16284": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16284",
+      "identity_tokens": [
+        "arXiv:2505.16284"
+      ],
+      "reason": "Full text establishes a theoretical complexity/expressivity constraint, not a concrete inference optimization: expressive transformers require large weights, constraining when nearly-linear attention is possible. Relevance is indirect background only.",
+      "first_checked_at": "2026-10-05T15:28:28+00:00",
+      "last_checked_at": "2026-10-05T15:28:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Only Large Weights (And Not Skip Connections) Can Prevent the Perils of Rank Collapse"
+    },
+    "arXiv:2505.14336": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.14336",
+      "identity_tokens": [
+        "arXiv:2505.14336"
+      ],
+      "reason": "Full text reports AVSR quality gains and claims negligible inference overhead but supplies no measured latency, memory, or energy evidence; the specialized speech-task fit is too weak for general inference-efficiency inclusion.",
+      "first_checked_at": "2026-10-05T15:28:28+00:00",
+      "last_checked_at": "2026-10-05T15:28:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling and Enhancing LLM-based AVSR: A Sparse Mixture of Projectors Approach"
+    },
+    "DOI:10.1109/icde65448.2025.00341": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icde65448.2025.00341",
+      "identity_tokens": [
+        "DOI:10.1109/icde65448.2025.00341"
+      ],
+      "reason": "Supplied abstract describes a tutorial on RAG data management/system design, a plausible serving topic but not a specific contribution.",
+      "first_checked_at": "2026-10-05T15:28:29+00:00",
+      "last_checked_at": "2026-10-05T15:28:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Retrieval-Augmented Large Language Models: Data Management and System Design"
+    },
+    "arXiv:2604.07345": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.07345",
+      "identity_tokens": [
+        "arXiv:2604.07345"
+      ],
+      "reason": "The work concerns capacity/power planning rather than inference-system optimization, so it is adjacent to the survey and does not provide a concrete candidate contribution.",
+      "first_checked_at": "2026-10-05T15:28:29+00:00",
+      "last_checked_at": "2026-10-05T15:28:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning"
+    },
+    "DOI:10.1016/j.jmsy.2026.02.008": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jmsy.2026.02.008",
+      "identity_tokens": [
+        "DOI:10.1016/j.jmsy.2026.02.008"
+      ],
+      "reason": "The input packet contains no abstract for this DOI record; an attempted open of the primary DOI URL returned an internal reader error, and no primary abstract/full text was available in the checked source.",
+      "first_checked_at": "2026-10-05T15:28:29+00:00",
+      "last_checked_at": "2026-10-05T15:28:29+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Leveraging large language models for smart manufacturing: Reviews, enablers, challenges, and opportunities"
+    },
+    "arXiv:2310.15494": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.15494",
+      "identity_tokens": [
+        "arXiv:2310.15494"
+      ],
+      "reason": "The topic is adjacent to inference-time memory optimization, but the primary evaluation shows a clear cost increase and no serving-efficiency benefit to advance.",
+      "first_checked_at": "2026-10-05T15:28:30+00:00",
+      "last_checked_at": "2026-10-05T15:28:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TRAMS: Training-free Memory Selection for Long-range Language Modeling"
+    },
+    "arXiv:2509.25684": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.25684",
+      "identity_tokens": [
+        "arXiv:2509.25684"
+      ],
+      "reason": "The proposed sparsity mechanism is plausibly efficiency-adjacent, but lack of demonstrated inference savings makes fit too weak to advance now.",
+      "first_checked_at": "2026-10-05T15:28:31+00:00",
+      "last_checked_at": "2026-10-05T15:28:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LD-MoLE: Learnable Dynamic Routing for Mixture of LoRA Experts"
+    },
+    "arXiv:2410.05938": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.05938",
+      "identity_tokens": [
+        "arXiv:2410.05938"
+      ],
+      "reason": "Latency comparison assumes VL-Mamba latency matches Cobra because VL-Mamba is not open-sourced; evidence is secondary and affected by backbone/training differences.",
+      "first_checked_at": "2026-10-05T15:28:32+00:00",
+      "last_checked_at": "2026-10-05T15:28:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EMMA: Empowering Multi-modal Mamba with Structural and Hierarchical Alignment"
+    },
+    "arXiv:2501.14713": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.14713",
+      "identity_tokens": [
+        "arXiv:2501.14713"
+      ],
+      "reason": "It reduces parameter footprint but increases measured compute time, making it a weak fit for inference efficiency.",
+      "first_checked_at": "2026-10-05T15:28:34+00:00",
+      "last_checked_at": "2026-10-05T15:28:34+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlexiGPT: Pruning and Extending Large Language Models with Low-Rank Weight Sharing"
+    },
+    "arXiv:2510.17206": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.17206",
+      "identity_tokens": [
+        "arXiv:2510.17206"
+      ],
+      "reason": "The paper is adjacent to diffusion inference, but the checked evidence does not support advancing it as an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T15:28:35+00:00",
+      "last_checked_at": "2026-10-05T15:28:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
+        "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Soft-Masked Diffusion Language Models"
     }
   }
 }

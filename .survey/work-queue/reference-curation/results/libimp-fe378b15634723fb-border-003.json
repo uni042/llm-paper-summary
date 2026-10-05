@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fe378b15634723fb-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.17206",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.17206",
+    "identity_tokens": [
+      "arXiv:2510.17206"
+    ],
+    "reason": "The paper is adjacent to diffusion inference, but the checked evidence does not support advancing it as an inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T15:28:35+00:00",
+    "last_checked_at": "2026-10-05T15:28:35+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+      "papers/inference/99-other-inference-systems/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
+      "papers/inference/99-other-inference-systems/2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Soft-Masked Diffusion Language Models"
+  },
+  "processed_at": "2026-10-05T15:28:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fe378b156347",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

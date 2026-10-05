@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2e6dcadd9ba0b8a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2211.06840",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2211.06840",
+    "identity_tokens": [
+      "arXiv:2211.06840"
+    ],
+    "reason": "The primary abstract explicitly addresses prompt-tuning convergence/training efficiency, which is outside the inference-time scope.",
+    "first_checked_at": "2026-10-05T15:28:31+00:00",
+    "last_checked_at": "2026-10-05T15:28:31+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+    ],
+    "title": "FPT: Improving Prompt Tuning Efficiency via Progressive Training"
+  },
+  "processed_at": "2026-10-05T15:28:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2e6dcadd9ba",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
