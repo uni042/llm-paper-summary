@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LongVILA: Scaling Long-Context Visual Language Models for Long Videos",
+      "source_url": "https://arxiv.org/abs/2408.10188",
+      "year": 2024,
+      "published": "2024-08-19",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 354,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context capability is critical for multi-modal foundation models, especially for long video understanding. We introduce LongVILA, a full-stack solution for long-context visual-language models by co-designing the algorithm and system. For model training, we upgrade existing VLMs to support long video understanding by incorporating two additional stages, i.e., long context extension and long video supervised fine-tuning. However, training on long video is computationally and memory intensive. We introduce the long-context Multi-Modal Sequence Parallelism (MM-SP) system that efficiently parallelizes long video training and inference, enabling 2M context length training on 256 GPUs without any gradient checkpointing. LongVILA efficiently extends the number of video frames of VILA from 8 to 2048, achieving 99.8% accuracy in 6,000-frame (more than 1 million tokens) video needle-in-a-haystack. LongVILA-7B demonstrates strong accuracy on 9 popular video benchmarks, e.g. 65.1% VideoMME with subtitle. Besides, MM-SP is 2.1x - 5.7x faster than ring style sequence parallelism and 1.1x - 1.4x faster than Megatron with a hybrid context and tensor parallelism. Moreover, it seamlessly integrates with Hugging Face Transformers.",
+      "identifiers": [
+        "SemanticScholar:3f03876b23b491bdc161816024044e13b02b46e5"
+      ],
+      "semantic_scholar_id": "3f03876b23b491bdc161816024044e13b02b46e5",
+      "canonical_id": "arXiv:2408.10188",
+      "arxiv_id": "2408.10188",
+      "doi": "10.48550/arXiv.2408.10188",
+      "authors": [
+        "Fuzhao Xue",
+        "Yu-Kang Chen",
+        "Da-Cheng Li",
+        "Qing-Hao Hu",
+        "Ligeng Zhu",
+        "Xiuyu Li",
+        "Yun-Hao Fang",
+        "Haotian Tang",
+        "Shang Yang",
+        "Zhijian Liu",
+        "Ethan He",
+        "Hongxu Yin",
+        "Pavlo Molchanov",
+        "Jan Kautz",
+        "L. Fan",
+        "Yu-Ke Zhu",
+        "Yao Lu",
+        "Song Han"
+      ],
+      "priority": 364,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 354,
+        "citation_count": 354,
+        "total": 364,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 777,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "長文脈VLM向けMulti-Modal Sequence Parallelismをtrainingとinferenceの双方へ適用し、modalityの不均衡と通信topologyを考慮して長動画処理を分散並列化するfull-stack system。2M contextを扱い、ring-style sequence parallelism比2.1–5.7倍、Megatronのhybrid context/tensor parallelism比1.1–1.4倍の高速化を報告し、長文脈推論systemにも直接適用するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文情報でMM-SPのtraining/inference両対応、2M context、通信設計、ring-style比2.1–5.7x・Megatron比1.1–1.4xを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Understanding the Potential of FPGA-based Spatial Acceleration for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2312.15159",
+      "year": 2023,
+      "published": "2023-12-23",
+      "venue": "ACM Transactions on Reconfigurable Technology and Systems",
+      "citation_count": 107,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in large language models (LLMs) boasting billions of parameters have generated a significant demand for efficient deployment in inference workloads. While hardware accelerators for Transformer-based models have been extensively studied, the majority of existing approaches rely on temporal architectures that reuse hardware units for different network layers and operators. However, these methods often encounter challenges in achieving low latency due to considerable memory access overhead. This article investigates the feasibility and potential of model-specific spatial acceleration for LLM inference on field-programmable gate arrays (FPGAs). Our approach involves the specialization of distinct hardware units for specific operators or layers, facilitating direct communication between them through a dataflow architecture while minimizing off-chip memory accesses. We introduce a comprehensive analytical model for estimating the performance of a spatial LLM accelerator, taking into account the on-chip compute and memory resources available on an FPGA. This model can be extended to multi-FPGA settings for distributed inference. Through our analysis, we can identify the most effective parallelization and buffering schemes for the accelerator and, crucially, determine the scenarios in which FPGA-based spatial acceleration can outperform its GPU-based counterpart. To enable more productive implementations of an LLM model on FPGAs, we further provide a library of high-level synthesis (HLS) kernels that are composable and reusable. This library will be made available as open-source. To validate the effectiveness of both our analytical model and HLS library, we have implemented Bidirectional Encoder Representations from Transformers (BERT) and Generative Pre-trained Transformers (GPT2) on an AMD Xilinx Alveo U280 FPGA device. Experimental results demonstrate our approach can achieve up to 13.4× speedup when compared to previous FPGA-based accelerators for the BERT model. For GPT generative inference, we attain a 2.2× speedup compared to Design for Excellence, an FPGA overlay, in the prefill stage, while achieving a 1.9× speedup and a 5.7× improvement in energy efficiency compared to the NVIDIA A100 GPU in the decode stage.",
+      "identifiers": [
+        "SemanticScholar:47beae741f6a4470dbd286d4f3f05ba2031c52d2"
+      ],
+      "semantic_scholar_id": "47beae741f6a4470dbd286d4f3f05ba2031c52d2",
+      "canonical_id": "arXiv:2312.15159",
+      "arxiv_id": "2312.15159",
+      "doi": "10.1145/3656177",
+      "authors": [
+        "Hong-Zheng Chen",
+        "Jiahao Zhang",
+        "Yixiao Du",
+        "Shaojie Xiang",
+        "Zichao Yue",
+        "Niansong Zhang",
+        "Yaohui Cai",
+        "Zhiru Zhang"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 107,
+        "citation_count": 107,
+        "total": 107,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1017,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのoperator/layerごとに専用hardware unitを配置し、dataflowで直接接続してoff-chip memory accessを減らすFPGA spatial acceleratorを解析・実装する。GPT生成推論のprefillで既存FPGA overlay比2.2倍、decodeでNVIDIA A100比1.9倍高速・5.7倍energy efficientを報告しており、LLM推論hardware-system最適化を直接扱う。",
+      "library_body_check": "full_text_checked: 一次arXiv本文情報でspatial dataflow、analytical model、HLS kernel library、BERT/GPT2実装、GPT prefill 2.2x、decode A100比1.9x speedup・5.7x energy efficiencyを確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
+      "source_url": "https://arxiv.org/abs/2305.18403",
+      "year": 2023,
+      "published": "2023-05-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 97,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs), such as LLaMA and T5, have shown exceptional performance across various tasks through fine-tuning. Although low-rank adaption (LoRA) has emerged to cheaply fine-tune these LLMs on downstream tasks, their deployment is still hindered by the vast model scale and computational costs. Post-training model pruning offers a way to compress LLMs. However, the current pruning methods designed for LLMs are not compatible with LoRA. This is due to their utilization of unstructured pruning on LLMs, impeding the merging of LoRA weights, or their dependence on the gradients of pre-trained weights to guide pruning, which can impose significant memory overhead. To this end, we propose LoRAPrune, a new framework that delivers an accurate structured pruned model in a highly memory-efficient manner. Specifically, we first design a LoRA-guided pruning criterion, which uses the weights and gradients of LoRA, rather than the gradients of pre-trained weights for importance estimation. We subsequently integrate this criterion into an iterative pruning process, effectively removing redundant channels and heads. Extensive experimental results demonstrate the superior performance of our LoRAPrune over existing approaches on the LLaMA series models. At a 50\\% compression rate, LoRAPrune demonstrates superior performance over LLM-Pruner, achieving a reduction in perplexity by 4.81 on WikiText2 and 3.46 on PTB, while also decreasing memory usage by 52.6%. Besides, LoRAPrune also matches semi-structural pruning across multiple LLMs, proving its wide applicability. The code is available at https://github.com/aim-uofa/LoRAPrune.",
+      "identifiers": [
+        "SemanticScholar:b463f5dd8ed6871ddeac03754c1c2d99547b08fe"
+      ],
+      "semantic_scholar_id": "b463f5dd8ed6871ddeac03754c1c2d99547b08fe",
+      "canonical_id": "arXiv:2305.18403",
+      "arxiv_id": "2305.18403",
+      "doi": "10.18653/v1/2024.findings-acl.178",
+      "authors": [
+        "Mingyang Zhang",
+        "Hao Chen",
+        "Chunhua Shen",
+        "Zhenyi Yang",
+        "Lin-Lin Ou",
+        "Xin-Yi Yu",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 97,
+        "citation_count": 97,
+        "total": 107,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1226,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "LoRAのweight/gradientだけでimportanceを推定し、attention headとFFN channelを構造的に削除するLLM圧縮方式。LLaMAで50% compression時にLLM-Prunerより低perplexityを保ちつつmemory usageを52.6%削減し、構造化pruningにより通常hardware上でdeployment計算量を削減できるため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文情報でLoRA-guided criterion、iterative structured pruning、LLaMA系列評価、50% compression、memory 52.6% reductionとdeployment目的を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Measuring and Improving the Energy Efficiency of Large Language Models Inference",
+      "source_url": "https://doi.org/10.1109/ACCESS.2024.3409745",
+      "year": 2024,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 106,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent improvements in the accuracy of machine learning (ML) models in the language domain have propelled their use in a multitude of products and services, touching millions of lives daily. These new levels of accuracy have been attained mainly through exponential growth in model size, creating a new category of models known as Large Language Models (LLMs) and leading to a substantial increase in computing and energy demands. While recent studies have focused on measuring and improving the energy consumption of LLMs during training, inference has received little attention. In this article, we present an approach to profile the energy consumption of LLMs during inference and leverage it to improve energy efficiency. For this, we deploy several state-of-the-art LLMs and observe how model size, number of layers, parallelized attention, and even vocabulary size affect their energy consumption. In addition, we leverage input batch size and different quantization levels to optimize their inference energy efficiency and latency.",
+      "identifiers": [
+        "SemanticScholar:9e2a96feceb90d9636616e7ce507c8c52d447cc5"
+      ],
+      "semantic_scholar_id": "9e2a96feceb90d9636616e7ce507c8c52d447cc5",
+      "doi": "10.1109/ACCESS.2024.3409745",
+      "canonical_id": "DOI:10.1109/ACCESS.2024.3409745",
+      "authors": [
+        "Mauricio Fadel Argerich",
+        "M. Patiño-Martínez"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 106,
+        "citation_count": 106,
+        "total": 106,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 826,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EnergyMeterでCPU・GPU・memory・storage別のLLM推論energyを測定し、model architecture、batch size、weight quantizationがenergy/tokenとlatencyへ与える影響を実測して運用最適化する。batch増加で最大20倍のenergy/token削減、量子化で条件によりenergy最大2倍・latency3倍超改善など、LLM推論効率を直接評価するため対象内。",
+      "library_body_check": "full_text_checked: IEEE一次本文でEnergyMeter設計、Pythia/BLOOM/LLaMA等の推論実験、CPU/GPU/memory/storage計測、batch sizeとquantizationによるenergy/latency最適化、最大20x energy/token reduction等を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Outlier Suppression+: Accurate quantization of large language models by equivalent and effective shifting and scaling",
+      "source_url": "https://arxiv.org/abs/2304.09145",
+      "year": 2023,
+      "published": "2023-04-18",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 95,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization~(PTQ) of transformer language models faces significant challenges due to the existence of detrimental outliers in activations. We observe that these outliers are concentrated in specific channels and are asymmetric across channels. To address this issue, we propose the Outlier Suppression+~(OS+) framework, which contains the channel-wise shifting for asymmetry and channel-wise scaling for concentration. We show that these operations can be seamlessly migrated into subsequent modules while maintaining equivalence. Second, we propose a fast and stable scheme to calculate effective shifting and scaling values. The channel-wise shifting aligns the center of each channel for removal of outlier asymmetry. The channel-wise scaling quantitatively evaluates changes brought by migration and quantization for better quantization burden balance. We validate our OS+ under both standard and fine-grained quantization settings with models including BERT, OPT, BLOOM, BLOOMZ, and LLaMA. Comprehensive results across various tasks demonstrate the superiority of our approach. Especially, with standard quantization, OS+ can achieve near-floating-point performance on both small models and large language models on 8-bit and 6-bit. Besides, we establish a new state-of-the-art for 4-bit BERT with 15.5\\% improvement. Our code is available at \\url{https://github.com/ModelTC/Outlier_Suppression_Plus}.",
+      "identifiers": [
+        "SemanticScholar:f3275146eb973c9726dc550a88cc552f0dfa5ea7"
+      ],
+      "semantic_scholar_id": "f3275146eb973c9726dc550a88cc552f0dfa5ea7",
+      "canonical_id": "arXiv:2304.09145",
+      "arxiv_id": "2304.09145",
+      "doi": "10.18653/v1/2023.emnlp-main.102",
+      "authors": [
+        "Xiuying Wei",
+        "Yunchen Zhang",
+        "Yuhang Li",
+        "Xiang-Guo Zhang",
+        "Ruihao Gong",
+        "Jin-Yang Guo",
+        "Xianglong Liu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 95,
+        "citation_count": 95,
+        "total": 105,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1266,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "activation outlierのchannel-wise asymmetry/concentrationを等価なshift/scaleとして後続moduleへ移し、post-training quantizationの誤差を抑えるOS+を提案する。OPT/BLOOM/BLOOMZ/LLaMA等で8/6-bitをほぼ浮動小数点品質に保ち、LLMの低bit推論を直接可能にするため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文情報でchannel-wise shifting/scaling、equivalent migration、PTQ、BERT/OPT/BLOOM/BLOOMZ/LLaMA評価、8/6-bit near-FP performanceを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-75f5d2391030",
+    "round": "libimp-75f5d23910303ce2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-75f5d23910303ce2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-75f5d23910303ce2-pre01.json",
+    "receipt": "sha256:7bfefcdb3e6c0a0dfdf24a20f5587e51335765c6746750178d138b54a16935b6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-75f5d2391030",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

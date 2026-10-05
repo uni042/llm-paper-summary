@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Q8BERT: Quantized 8Bit BERT",
+      "source_url": "https://arxiv.org/abs/1910.06188",
+      "year": 2019,
+      "published": "2019-10-14",
+      "venue": "2019 Fifth Workshop on Energy Efficient Machine Learning and Cognitive Computing - NeurIPS Edition (EMC2-NIPS)",
+      "citation_count": 598,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, pre-trained Transformer [1] based language models such as BERT [2] and GPT [3], have shown great improvement in many Natural Language Processing (NLP) tasks. However, these models contain a large amount of parameters. The emergence of even larger and more accurate models such as GPT2 [4] and Megatron11https://github.com/NVIDIA/Megatron-LM, suggest a trend of large pre-trained Transformer models. However, using these large models in production environments is a complex task requiring a large amount of compute, memory and power resources. In this work we show how to perform quantization-aware training during the fine-tuning phase of BERT in order to compress BERT by 4x with minimal accuracy loss. Furthermore, the produced quantized model can accelerate inference speed if it is optimized for 8bit Integer supporting hardware.",
+      "identifiers": [
+        "SemanticScholar:ce106590145e89ea4b621c99665862967ccf5dac"
+      ],
+      "semantic_scholar_id": "ce106590145e89ea4b621c99665862967ccf5dac",
+      "canonical_id": "arXiv:1910.06188",
+      "arxiv_id": "1910.06188",
+      "doi": "10.1109/EMC2-NIPS53020.2019.00016",
+      "authors": [
+        "Ofir Zafrir",
+        "Guy Boudoukh",
+        "Peter Izsak",
+        "Moshe Wasserblat"
+      ],
+      "priority": 608,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 598,
+        "citation_count": 598,
+        "total": 608,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2548,
+        "matched_prestigious_venue": "NeurIPS"
+      },
+      "reason": "BERTをquantization-aware fine-tuningで8-bit化し4倍圧縮、8-bit integer対応hardwareで推論高速化可能とする。Transformer inferenceのmemory/compute/power制約を直接対象とするため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv要旨で4x compression、minimal accuracy loss、8-bit integer hardwareでのinference accelerationを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3b0d93e0c294",
+    "round": "libimp-3b0d93e0c294379d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3b0d93e0c294379d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3b0d93e0c294379d-pre01.json",
+    "receipt": "sha256:3e0b7832320ea73630e5ce1d6e46f8797ff388325e3210dcbdcfdd7273204825"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3b0d93e0c294",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
