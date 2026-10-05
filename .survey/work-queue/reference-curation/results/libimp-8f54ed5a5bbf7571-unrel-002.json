@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8f54ed5a5bbf7571-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.05004",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.05004",
+    "identity_tokens": [
+      "arXiv:2508.05004"
+    ],
+    "reason": "一次要旨はreasoning LLMの自己進化・学習枠組みを提案する。推論時の効率化が主題ではない。",
+    "first_checked_at": "2026-10-05T01:36:00+00:00",
+    "last_checked_at": "2026-10-05T01:36:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+    ],
+    "title": "R-Zero: Self-Evolving Reasoning LLM from Zero Data"
+  },
+  "processed_at": "2026-10-05T01:36:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8f54ed5a5bbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
