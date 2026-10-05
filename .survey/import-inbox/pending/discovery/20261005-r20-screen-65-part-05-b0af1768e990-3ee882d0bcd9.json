@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-65-part-05-b0af1768e990",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16192",
+      "identity_tokens": [
+        "arXiv:2505.16192"
+      ],
+      "title": "VLM-R3: Region Recognition, Reasoning, and Refinement for Enhanced Multimodal Chain-of-Thought",
+      "reason": "一次要旨はVLMの領域認識と視覚的chain-of-thoughtの品質改善が主題で、推論効率の貢献を示していない。",
+      "source_url": "https://arxiv.org/abs/2505.16192",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05223",
+      "identity_tokens": [
+        "arXiv:2406.05223"
+      ],
+      "title": "CorDA: Context-Oriented Decomposition Adaptation of Large Language Models",
+      "reason": "一次要旨はLLMのパラメータ効率的な適応・忘却抑制を扱うファインチューニング手法で、推論/サービング効率の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2406.05223",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/075280-0386",
+      "identity_tokens": [
+        "DOI:10.52202/075280-0386"
+      ],
+      "title": "Blockwise Parallel Transformers for Large Context Models",
+      "reason": "一次要旨のblockwise parallel方式は長文脈モデルの学習時メモリ制約への対処であり、主題は訓練効率で推論サービングではない。",
+      "source_url": "https://doi.org/10.52202/075280-0386",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.17445",
+      "identity_tokens": [
+        "arXiv:2508.17445"
+      ],
+      "title": "TreePO: Bridging the Gap of Policy Optimization and Efficacy and Inference Efficiency with Heuristic Tree-based Modeling",
+      "reason": "本文のTreePOはRL post-trainingでのtree-based on-policy rollout/advantage estimationを扱う。報告されたGPU-hour節約はsampling design/training過程の費用で、配置済みLLMの推論・serving効率評価ではない。",
+      "source_url": "https://arxiv.org/abs/2508.17445",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19852",
+      "identity_tokens": [
+        "arXiv:2506.19852"
+      ],
+      "title": "Radial Attention: O(n log n) Sparse Attention with Energy Decay for Long Video Generation",
+      "reason": "一次要旨は長尺動画拡散モデルの疎注意を扱い、LLM推論システム対象ではない。",
+      "source_url": "https://arxiv.org/abs/2506.19852",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md"
+      ]
+    }
+  ]
+}
