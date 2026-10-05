@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-66-part-06-a10d6da209c0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16776",
+      "identity_tokens": [
+        "arXiv:2512.16776"
+      ],
+      "title": "Kling-Omni Technical Report",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.16776. Abstract summary: We present Kling-Omni, a generalist generative framework designed to synthesize high-fidelity videos directly from multimodal visual language inputs. Adopting an end-to-end perspective, Kling-Omni bridges the functional separation among diverse video generation, editing, and intelligent reasoning tasks, integrating them into a holistic sy Out of scope: Multimodal video generation framework; no LLM inference-optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2512.16776",
+      "first_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "last_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.00467",
+      "identity_tokens": [
+        "arXiv:2405.00467"
+      ],
+      "title": "Harnessing the Power of Multiple Minds: Lessons Learned from LLM Routing",
+      "reason": "Routing could reduce resource use, but the paper evaluates accuracy/model choice rather than efficiency.",
+      "source_url": "https://arxiv.org/abs/2405.00467",
+      "first_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "last_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.11113",
+      "identity_tokens": [
+        "arXiv:2310.11113"
+      ],
+      "title": "Revisiting Sentiment Analysis for Software Engineering in the Era of Large Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2310.11113. Abstract summary: Software development involves collaborative interactions where stakeholders express opinions across various platforms. Recognizing the sentiments conveyed in these interactions is crucial for the effective development and ongoing maintenance of software systems. For software products, analyzing the sentiment of user feedback, e.g., review Out of scope: Software sentiment-analysis task study, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2310.11113",
+      "first_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "last_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2306.16902",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2306.16902"
+      ],
+      "title": "From Query Tools to Causal Architects: Harnessing Large Language Models for Advanced Causal Discovery from Data",
+      "reason": "Primary abstract reviewed at https://doi.org/10.48550/arXiv.2306.16902. Abstract summary: Recovering the structure of causal graphical models from observational data is an essential yet challenging task for causal discovery in scientific scenarios. Domain-specific causal discovery usually relies on expert validation or prior analysis to improve the reliability of recovered causality, which is yet limited by the scarcity of exp Out of scope: LLM use for causal discovery focuses on causal structure recovery, not inference cost.",
+      "source_url": "https://doi.org/10.48550/arXiv.2306.16902",
+      "first_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "last_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9",
+      "identity_tokens": [
+        "SemanticScholar:f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9"
+      ],
+      "title": "Computer Science Review",
+      "reason": "The provided Semantic Scholar record has only the generic title “Computer Science Review” and no abstract or paper-specific primary citation. Lookup by the supplied record/title did not establish an identifiable article abstract; no subject matter was inferred.",
+      "source_url": "https://www.semanticscholar.org/paper/f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9",
+      "first_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "last_checked_at": "2026-10-05T10:46:21.061578+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ]
+    }
+  ]
+}
