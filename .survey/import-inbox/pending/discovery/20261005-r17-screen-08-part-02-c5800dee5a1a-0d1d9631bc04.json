@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-08-part-02-c5800dee5a1a",
+  "reference_main_sha": "779b87e2a74d421eab58598de1d09f9c0e3beeed",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01966",
+      "identity_tokens": [
+        "arXiv:2607.01966"
+      ],
+      "title": "Probabilistic Low-Voltage Peak Load Forecasting with Time Series Foundation Models Evaluated on Application-Oriented Metrics",
+      "reason": "電力系統の低圧需要を予測する時系列基盤モデルの適用評価であり、LLM推論システムを扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.01966",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.02501",
+      "identity_tokens": [
+        "arXiv:2607.02501"
+      ],
+      "title": "Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots",
+      "reason": "実測はVLA/WAMロボット制御runtimeのefficiencyで、通常のLLM inference/servingとの境界が曖昧。本文でVLAのlanguage backbone/一般LLM servingへ適用可能と確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.02501",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00712",
+      "identity_tokens": [
+        "arXiv:2607.00712"
+      ],
+      "title": "Towards Memory-Efficient Autoregressive Video Generation via Instance-Specific Parametric Absorption",
+      "reason": "KV cache圧縮対象は自己回帰動画生成モデルの動画履歴で、言語モデル推論の対象外。",
+      "source_url": "https://arxiv.org/abs/2607.00712",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00773",
+      "identity_tokens": [
+        "arXiv:2607.00773"
+      ],
+      "title": "Accelerating Discrete Diffusion Models with Parallel-In-Time Sampling",
+      "reason": "一次本文はdiscrete diffusion samplingのテキスト生成も含むが、対象はautoregressive LLMではなく画像/テキスト生成のdiffusion sampler。Discovery scopeへの含有判断が必要。",
+      "source_url": "https://arxiv.org/abs/2607.00773",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.00902",
+      "identity_tokens": [
+        "arXiv:2607.00902"
+      ],
+      "title": "MG-RWKV: Multi-Grained Context-Aware RWKV for Temporal Forgery Localization",
+      "reason": "RWKVを時間方向の映像偽造箇所検出へ適用するタスク特化モデル論文で、LLM推論/servingではない。",
+      "source_url": "https://arxiv.org/abs/2607.00902",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
