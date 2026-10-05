@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1700-scheduled-chat-00/r01",
+  "reference_main_sha": "bc26fd85002b4cc3145ff6843a321f289be73b41",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.08745",
+      "identity_tokens": [
+        "arXiv:2301.08745"
+      ],
+      "title": "Is ChatGPT A Good Translator? Yes With GPT-4 As The Engine",
+      "reason": "ChatGPT/GPT-4の機械翻訳品質、prompt、multilingual robustness、pivot promptingを評価する能力研究。主指標は翻訳品質と誤りであり、推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2301.08745",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmachine translation quality、prompt、robustness、GPT-4比較が主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2004.11886",
+      "identity_tokens": [
+        "arXiv:2004.11886"
+      ],
+      "title": "Lite Transformer with Long-Short Range Attention",
+      "reason": "モバイルNLP向けにLong-Short Range Attention (LSRA)を設計し、attentionとconvolutionへ長距離・局所文脈を分担させて推論計算量を削減する。本文はmobile inferenceを明示し、500M Mult-Adds制約、Transformer base比2.5倍の計算削減、pruning/quantization併用18.2倍model-size圧縮を評価するため対象内。",
+      "source_url": "https://arxiv.org/abs/2004.11886",
+      "body_check": "full_text_checked: 一次arXiv本文でmobile efficient inference、LSRA二分岐、500M Mult-Adds制約、ARM Cortex-A72想定、Transformer base比2.5x計算削減、18.2x model-size compressionを確認。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 31
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.05131",
+      "identity_tokens": [
+        "arXiv:2205.05131"
+      ],
+      "title": "UL2: Unifying Language Learning Paradigms",
+      "reason": "Mixture-of-Denoisersとmode switchingで複数のpre-training paradigmを統合し、20B modelのNLP能力を改善する学習研究。主貢献はpre-training objectiveとdownstream/zero-shot性能であり、推論runtime・memory・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2205.05131",
+      "body_check": "abstract_screen_only: 一次arXiv要旨・PDF冒頭でMixture-of-Denoisers、pre-training、50+ NLP task性能が主題と確認し、推論system対象外のため深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/291069.291026",
+      "identity_tokens": [
+        "DOI:10.1145/291069.291026"
+      ],
+      "title": "Active disks: programming model, algorithms and evaluation",
+      "reason": "disk内にprocessor/memoryを持たせapplication-specific codeをdata近傍で実行し、hostはcoordination/scheduling/results統合へ寄せるnear-data processing方式。LLMのSSD/NVMe offload・near-storage推論に機構的に直結する基礎研究だが、評価workloadはdata warehouse・image processing・satellite processingでLLM推論専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/291069.291026",
+      "body_check": "full_text_checked: 著者公開版の論文内容でdisk-resident processor、stream-based disklet programming、host coordination/scheduling、6 algorithmのactive-disk対conventional-disk simulation評価を確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.15222",
+      "identity_tokens": [
+        "arXiv:2006.15222"
+      ],
+      "title": "BERTology Meets Biology: Interpreting Attention in Protein Language Models",
+      "reason": "BERT/ALBERT/XLNet型protein language modelのattentionがprotein folding、binding site、biophysical propertyをどう表現するかを解析するinterpretability研究。最終適用先がprotein modelingで、LLM推論system効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2006.15222",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprotein Transformerのattention interpretabilityが主題と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.17434",
+      "identity_tokens": [
+        "arXiv:2410.17434"
+      ],
+      "title": "LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding",
+      "reason": "長動画MLLMのcontext制約に対し、DINOv2類似度によるframe削減、text-query guided selective feature reduction、inter-frame similarityによるspatial token pruningを段階適用する。本文では1fpsの1時間動画を8k contextへ収めるため平均2 token/frameまで圧縮し、長動画推論の入力token・context負荷を直接削減するため対象内。",
+      "source_url": "https://arxiv.org/abs/2410.17434",
+      "body_check": "full_text_checked: 一次arXiv HTML本文で3段spatiotemporal compression、8k context、1fps hour-long video、平均2 tokens/frame、DINOv2 window J=8とcross-modal query/STC処理を確認。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 36
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2202.10447",
+      "identity_tokens": [
+        "arXiv:2202.10447"
+      ],
+      "title": "Transformer Quality in Linear Time",
+      "reason": "Gated Attention Unitとlinear attention approximationで長系列Transformerを効率化するが、一次要旨で報告する主要高速化はWiki-40B/PG-19/C4上のtraining speedupであり、現行凍結範囲の学習効率が中心。LLM生成推論runtimeの直接評価を主貢献としない。",
+      "source_url": "https://arxiv.org/abs/2202.10447",
+      "body_check": "abstract_screen_only: 一次arXiv要旨で4.9x/12.1x/4.8xの主要speedupがtrainingとして報告されることを確認し、現行推論サーベイ範囲外として本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.15947",
+      "identity_tokens": [
+        "arXiv:2401.15947"
+      ],
+      "title": "MoE-LLaVA: Mixture of Experts for Large Vision-Language Models",
+      "reason": "soft routerで各tokenをtop-k expertだけへdispatchし、inactive expertを停止して総parameter数を増やしつつactivated parameterと計算量を固定するsparse LVLM。deployment計算効率へ直接関係するが、本文評価は主にvisual understanding/hallucination精度とactivated parameter数で、latency・throughput・memoryのsystem実測がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2401.15947",
+      "body_check": "full_text_checked: 一次arXiv HTML本文でtop-k routing、inactive expert、1.6B×4-Top2等のactivated/total parameter構成、3-stage MoE-Tuning、visual benchmark評価を確認。system runtime実測がないため境界扱い。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00157",
+      "identity_tokens": [
+        "arXiv:2402.00157"
+      ],
+      "title": "Large Language Models for Mathematical Reasoning: Progresses and Challenges",
+      "reason": "数学推論LLMの問題種別、dataset、解法、評価、課題を整理するsurvey。reasoning能力の体系化が目的で、推論runtime・token削減・memory・serving効率化の新規system方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2402.00157",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmathematical reasoningのsurveyが主題と確認し、推論system最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nargab/lqae150",
+      "identity_tokens": [
+        "DOI:10.1093/nargab/lqae150"
+      ],
+      "title": "Bilingual language model for protein sequence and structure",
+      "reason": "ProtT5をprotein sequenceと3Di structure token間の翻訳へfine-tuneし、protein structure関連taskを高速化する生命科学研究。高速化の最終適用先はprotein解析であり、LLM推論runtime・memory・serving systemではない。",
+      "source_url": "https://doi.org/10.1093/nargab/lqae150",
+      "body_check": "abstract_screen_only: 出版社書誌要旨でprotein sequence/structure bilingual model、AlphaFoldDB、3Di、protein downstream taskが主題と確認し、LLM推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T17:25:00+09:00",
+      "last_checked_at": "2026-10-05T17:25:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    }
+  ]
+}
