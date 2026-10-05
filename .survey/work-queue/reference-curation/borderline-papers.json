@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:25:03+00:00",
-  "record_count": 1843,
+  "updated_at": "2026-10-05T14:29:13+00:00",
+  "record_count": 1846,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28295,7 +28295,7 @@
       ],
       "reason": "The demonstrated gain is primarily task quality at similar compression and latency, so an inference-efficiency advantage is not established.",
       "first_checked_at": "2026-10-05T14:24:58+00:00",
-      "last_checked_at": "2026-10-05T14:24:58+00:00",
+      "last_checked_at": "2026-10-05T14:29:11+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
@@ -28310,7 +28310,7 @@
       ],
       "reason": "Relevant hardware efficiency mechanism, but the evaluated workloads and bit-serial hardware setting do not establish applicability to current LLM inference/serving.",
       "first_checked_at": "2026-10-05T14:24:58+00:00",
-      "last_checked_at": "2026-10-05T14:24:58+00:00",
+      "last_checked_at": "2026-10-05T14:29:11+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
       ],
@@ -28372,7 +28372,7 @@
       ],
       "reason": "The paper has a measured VLM latency/cache benefit, but scope is specialized to visual-token pruning and measured latency improvement is modest.",
       "first_checked_at": "2026-10-05T14:25:01+00:00",
-      "last_checked_at": "2026-10-05T14:25:01+00:00",
+      "last_checked_at": "2026-10-05T14:29:09+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
       ],
@@ -28454,6 +28454,54 @@
       ],
       "borderline_recheck_count": 0,
       "title": "GPR: Towards a Generative Pre-trained One-Model Paradigm for Large-Scale Advertising Recommendation"
+    },
+    "DOI:10.1109/hpca57654.2024.00065": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca57654.2024.00065",
+      "identity_tokens": [
+        "DOI:10.1109/hpca57654.2024.00065"
+      ],
+      "reason": "The paper has quantitative transformer-attention efficiency results, but they are specific to a custom in-situ accelerator and PIM baseline; deployment transfer and comparable LLM serving measurements are not established.",
+      "first_checked_at": "2026-10-05T14:29:07+00:00",
+      "last_checked_at": "2026-10-05T14:29:07+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ASADI: Accelerating Sparse Attention Using Diagonal-based In-Situ Computing"
+    },
+    "arXiv:2501.02430": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.02430",
+      "identity_tokens": [
+        "arXiv:2501.02430"
+      ],
+      "reason": "Efficiency gains apply to visual token processing in selected LVLMs; general LLM serving applicability is not established.",
+      "first_checked_at": "2026-10-05T14:29:10+00:00",
+      "last_checked_at": "2026-10-05T14:29:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FOLDER: Accelerating Multi-Modal Large Language Models with Enhanced Performance"
+    },
+    "arXiv:2508.02120": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.02120",
+      "identity_tokens": [
+        "arXiv:2508.02120"
+      ],
+      "reason": "対象テーマには直接合致するが、独自手法を提示しないsurveyである点がDiscovery収録として弱い。",
+      "first_checked_at": "2026-10-05T14:29:13+00:00",
+      "last_checked_at": "2026-10-05T14:29:13+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Don't Overthink It: A Survey of Efficient R1-style Large Reasoning Models"
     }
   }
 }
