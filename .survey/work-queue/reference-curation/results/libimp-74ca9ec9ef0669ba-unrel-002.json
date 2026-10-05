@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-74ca9ec9ef0669ba-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.35210",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.35210",
+    "identity_tokens": [
+      "arXiv:2609.35210"
+    ],
+    "reason": "This paper uses sparse crosscoders to interpret what on-policy distillation changes internally; it is an interpretability study, not an inference method.",
+    "first_checked_at": "2026-10-05T06:06:29+00:00",
+    "last_checked_at": "2026-10-05T06:06:29+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Understanding On-Policy Distillation: A Mechanistic Interpretability Perspective via Sparse Crosscoders"
+  },
+  "processed_at": "2026-10-05T06:06:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74ca9ec9ef06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:03:37+00:00",
-  "record_count": 3103,
+  "updated_at": "2026-10-05T06:06:30+00:00",
+  "record_count": 3123,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -45180,6 +45180,286 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "D$^3$-MOPD: Dynamic Domain ScheDuling for Efficient Multi-Teacher Distillation"
+    },
+    "arXiv:2609.34205": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34205",
+      "identity_tokens": [
+        "arXiv:2609.34205"
+      ],
+      "reason": "OPT-Zero is a self-play training framework for optimization modeling; the abstract focuses on training data and problem-solving capability.",
+      "first_checked_at": "2026-10-05T06:06:28+00:00",
+      "last_checked_at": "2026-10-05T06:06:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Learning to Optimize through Solver-Grounded Self-Play"
+    },
+    "arXiv:2609.34296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34296",
+      "identity_tokens": [
+        "arXiv:2609.34296"
+      ],
+      "reason": "Dr.Credit develops process credit assignment for training deep-research agents; it does not report inference-time cost reduction.",
+      "first_checked_at": "2026-10-05T06:06:28+00:00",
+      "last_checked_at": "2026-10-05T06:06:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Dr.Credit: Rubric-Grounded Process Credit Assignment for Deep Research Agents"
+    },
+    "arXiv:2609.34447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34447",
+      "identity_tokens": [
+        "arXiv:2609.34447"
+      ],
+      "reason": "Unbiased Top-k Estimation improves gradient estimation in on-policy distillation; it targets post-training computation, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:06:28+00:00",
+      "last_checked_at": "2026-10-05T06:06:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Unbiased Top-$k$ Estimation for On-Policy Distillation"
+    },
+    "arXiv:2609.34450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34450",
+      "identity_tokens": [
+        "arXiv:2609.34450"
+      ],
+      "reason": "ReproBench benchmarks end-to-end vulnerability reproduction by LLM agents; its contribution is cybersecurity evaluation rather than inference optimization.",
+      "first_checked_at": "2026-10-05T06:06:28+00:00",
+      "last_checked_at": "2026-10-05T06:06:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ReproBench: Benchmarking LLM Agents on Reproducing Vulnerability From Scratch"
+    },
+    "arXiv:2609.34463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34463",
+      "identity_tokens": [
+        "arXiv:2609.34463"
+      ],
+      "reason": "CoDeL trains an LLM-agent prompt-injection defense via co-evolution and LoRA; the abstract reports safety/training outcomes, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:06:28+00:00",
+      "last_checked_at": "2026-10-05T06:06:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CoDeL: Co-Evolutionary Defense against Indirect Prompt Injection in LLM-based Agents"
+    },
+    "arXiv:2610.01499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01499",
+      "identity_tokens": [
+        "arXiv:2610.01499"
+      ],
+      "reason": "VTR-Bench evaluates rendered text quality in video-generation outputs; it is a benchmark for a non-LLM generation modality, not an LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ],
+      "title": "VTR-Bench: A Systematic Benchmark for Evaluating Visual Text Rendering in Video Generation"
+    },
+    "arXiv:2609.38812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38812",
+      "identity_tokens": [
+        "arXiv:2609.38812"
+      ],
+      "reason": "The paper diagnoses terminal-agent self-verification accuracy and recovery; it does not reduce inference resources or serving cost.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Can Terminal Agents Trust Their Own Verification? Diagnosing and Improving Self-Verification"
+    },
+    "arXiv:2609.39420": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39420",
+      "identity_tokens": [
+        "arXiv:2609.39420"
+      ],
+      "reason": "QuantCode specializes models through continued pretraining and SFT for algorithmic-trading code; the abstract evaluates task quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "QuantCode Model: Specializing Language Models for Executable Algorithmic Trading Code"
+    },
+    "arXiv:2609.39692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39692",
+      "identity_tokens": [
+        "arXiv:2609.39692"
+      ],
+      "reason": "GFD-OPD distills diffusion models across scales; its target is diffusion image generation rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "GFD-OPD: Guidance-Folded On-Policy Distillation of Diffusion Models Across Scales"
+    },
+    "arXiv:2609.36730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36730",
+      "identity_tokens": [
+        "arXiv:2609.36730"
+      ],
+      "reason": "LibraryDesignBench evaluates whether agents create reusable software libraries; it reports agent quality and reuse behavior, not an inference/serving efficiency technique.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Can Agents Design Libraries for Agents?"
+    },
+    "arXiv:2609.34783": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34783",
+      "identity_tokens": [
+        "arXiv:2609.34783"
+      ],
+      "reason": "TQTS-Bench is a benchmark for LLM text-to-time-series-database querying; it evaluates task quality rather than inference cost.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TQTS-Bench: A Multi-Syntax Benchmark for Text-to-Query over Time-Series Databases"
+    },
+    "arXiv:2609.35210": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35210",
+      "identity_tokens": [
+        "arXiv:2609.35210"
+      ],
+      "reason": "This paper uses sparse crosscoders to interpret what on-policy distillation changes internally; it is an interpretability study, not an inference method.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Understanding On-Policy Distillation: A Mechanistic Interpretability Perspective via Sparse Crosscoders"
+    },
+    "arXiv:2609.35909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35909",
+      "identity_tokens": [
+        "arXiv:2609.35909"
+      ],
+      "reason": "RedHerring is a cybersecurity defense that intentionally diverts agent verification effort to safe decoys; resource diversion is an attack/defense outcome, not inference efficiency.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Cheap to Hypothesize, Costly to Verify: The Defense Surface of Agentic Vulnerability Discovery"
+    },
+    "arXiv:2609.35954": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35954",
+      "identity_tokens": [
+        "arXiv:2609.35954"
+      ],
+      "reason": "ROSS is a post-training method that learns from generated rollouts; the abstract does not present reduced inference cost as a contribution.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ROSS: Relearning from Self-Generated Rollouts through Selective Supervision"
+    },
+    "arXiv:2609.36246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36246",
+      "identity_tokens": [
+        "arXiv:2609.36246"
+      ],
+      "reason": "Learning from teacher continuations is a post-training/distillation method; it does not describe a serving or inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T06:06:29+00:00",
+      "last_checked_at": "2026-10-05T06:06:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Learning from Teacher Continuations at Student States"
+    },
+    "arXiv:2609.36987": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36987",
+      "identity_tokens": [
+        "arXiv:2609.36987"
+      ],
+      "reason": "CypherTurn is a conversational text-to-Cypher benchmark and evaluates multi-turn task accuracy; it proposes no inference-efficiency method.",
+      "first_checked_at": "2026-10-05T06:06:30+00:00",
+      "last_checked_at": "2026-10-05T06:06:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CypherTurn: A Multi-Turn Benchmark for Conversational Text-to-Cypher Evaluation and the Autonomy Divergence"
+    },
+    "arXiv:2609.37128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37128",
+      "identity_tokens": [
+        "arXiv:2609.37128"
+      ],
+      "reason": "SkillCome optimizes skill evolution with grouped trajectory comparisons and memory; it is a post-training capability method without a demonstrated inference resource reduction.",
+      "first_checked_at": "2026-10-05T06:06:30+00:00",
+      "last_checked_at": "2026-10-05T06:06:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SkillCome: Group Contrast Skill Optimization with Dual Memory"
+    },
+    "arXiv:2609.37539": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37539",
+      "identity_tokens": [
+        "arXiv:2609.37539"
+      ],
+      "reason": "SkillGym constructs training environments and trajectories for skill-use-agent fine-tuning; the efficiency target is absent and the contribution is training data/pipeline.",
+      "first_checked_at": "2026-10-05T06:06:30+00:00",
+      "last_checked_at": "2026-10-05T06:06:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SkillGym: Training Skill-Use Agents with Automatic Verifiable Environment Generation"
+    },
+    "arXiv:2609.38137": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38137",
+      "identity_tokens": [
+        "arXiv:2609.38137"
+      ],
+      "reason": "LongHarness Bench is an evaluation benchmark for long-context harness accuracy/cost tradeoffs; it does not propose or evaluate a new inference-efficiency system.",
+      "first_checked_at": "2026-10-05T06:06:30+00:00",
+      "last_checked_at": "2026-10-05T06:06:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "LongHarness Bench: Stress-Testing Language Model Harnesses for Long-Context Reasoning"
+    },
+    "arXiv:2609.38480": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38480",
+      "identity_tokens": [
+        "arXiv:2609.38480"
+      ],
+      "reason": "KlinikeBench evaluates clinical information gathering and diagnosis quality; it is not an LLM inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T06:06:30+00:00",
+      "last_checked_at": "2026-10-05T06:06:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "KlinikeBench: Evaluating Language Models Beyond Diagnostic Accuracy"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dedc2093e2a20529-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37539",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37539",
+    "identity_tokens": [
+      "arXiv:2609.37539"
+    ],
+    "reason": "SkillGym constructs training environments and trajectories for skill-use-agent fine-tuning; the efficiency target is absent and the contribution is training data/pipeline.",
+    "first_checked_at": "2026-10-05T06:06:30+00:00",
+    "last_checked_at": "2026-10-05T06:06:30+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "SkillGym: Training Skill-Use Agents with Automatic Verifiable Environment Generation"
+  },
+  "processed_at": "2026-10-05T06:06:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dedc2093e2a2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
