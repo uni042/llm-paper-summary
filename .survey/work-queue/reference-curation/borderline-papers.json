@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:30:30+00:00",
-  "record_count": 966,
+  "updated_at": "2026-10-05T05:33:18+00:00",
+  "record_count": 968,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14662,6 +14662,42 @@
         "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
       ],
       "title": "Does Uniform Discrete Diffusion Need Time?"
+    },
+    "arXiv:2609.31261": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31261",
+      "identity_tokens": [
+        "arXiv:2609.31261"
+      ],
+      "reason": "No demonstrated serving speed, memory or measured compute reduction for inference-time sparse projection; efficiency claim remains prospective.",
+      "first_checked_at": "2026-10-05T05:33:17+00:00",
+      "last_checked_at": "2026-10-05T05:33:17+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "MoSAR: Mixture of Semantic Attention Regimes for Learning Adaptive and Approximable Attention Geometries"
+    },
+    "arXiv:2609.31360": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31360",
+      "identity_tokens": [
+        "arXiv:2609.31360"
+      ],
+      "reason": "No runtime/throughput/compute savings are measured, and the one-shot routing reproduction fails; inference-efficiency benefit remains unproven.",
+      "first_checked_at": "2026-10-05T05:33:18+00:00",
+      "last_checked_at": "2026-10-05T05:33:18+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md"
+      ],
+      "title": "Programs-of-Layers in LLMs through the Lens of Cortical Areas"
     }
   }
 }
