@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-31-part-07-fda985919c2f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07003",
+      "identity_tokens": [
+        "arXiv:2608.07003"
+      ],
+      "title": "HRDiT: Training-Free High-Resolution Image Generation with Off-the-Shelf Diffusion Transformer Models",
+      "reason": "Training-free text-to-high-resolution image generation has recently attracted growing research attention. However, existing studies on this task primarily focus on adapting off-the-shelf U-Net-based diffusion models to high resolutions, with limited progress on adapting off-the-shelf Diffusion Transformer (DiT) models despite their strong text-to-image generation capabilities at limited resolutions. In this work, we find two key challenges particularly hindering the application of off-the-shelf DiT models for high-resolution image synthesis in a training-free manner, namely, spatial disorder and long generation time. To address these challenges, we propose a novel method tailored to adapt off-the-shelf DiT models for high-resolution image synthesis. Extensive experiments show the efficacy of our method. Our code is available at: https://github.com/zylwithxy/HRDiT.",
+      "source_url": "https://arxiv.org/abs/2608.07003",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07019",
+      "identity_tokens": [
+        "arXiv:2608.07019"
+      ],
+      "title": "ReQuant: Fixed-Grid Discrete Refinement for Post-Training Quantization",
+      "reason": "対象分野との接点は確認したが、測定対象が通信転送効率/タスク特化VLA/重み品質改善であり、LLM一般の推論・servingコスト改善への適合または利得が限定的。",
+      "source_url": "https://arxiv.org/abs/2608.07019",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07055",
+      "identity_tokens": [
+        "arXiv:2608.07055"
+      ],
+      "title": "Teacher Retains Full Tokens, Student Merges Efficiently: TM20K for E-Commerce Sequence Modeling in Ad Recommendation",
+      "reason": "Benefiting from ultra-long behavior sequence modeling, existing recommender systems bring users a better experience via simultaneously considering their long-term and short-term interests. Nevertheless, extended sequence lengths introduce substantial burdens on training efficiency and serving throughput. Prior approaches typically utilize search-based or cluster-based compression on ultra-long sequences at the cost of fine-grained information, or rely on various lightweight target attention structures incapable of sufficient sequential feature extraction. In this paper, we balance the effectiveness and efficiency for ultra-long sequence modeling via full transformer modeling accompanied with a two-stage knowledge distillation framework. First, both teacher and student models take the full attention mechanism rather than pure target-sequence attention for effective sequence scaling. For student models, we propose several simple yet well-motivated token merge approaches, significantly compressing the sequence length while maintaining an acceptable performance. Then, a one-time teacher is heavily trained with full sequence tokens, further boosting the performance of student models via knowledge distillation. The proposed paradigm named TM20K has been successfully deployed in ByteDance's e-commerce advertising recommender system that extends the e-commerce sequence length to 20K, delivering substantial improvements in key business metrics (e.g., ADSS +1.036\\%) while keeping the training and serving cost nearly the same as the online state-of-the-art model (e.g., serving latency only +5.6\\%).",
+      "source_url": "https://arxiv.org/abs/2608.07055",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07086",
+      "identity_tokens": [
+        "arXiv:2608.07086"
+      ],
+      "title": "Beyond Isolation: Unlocking Reinforcement Learning Component Synergy for Sample-Efficient Continuous Control",
+      "reason": "Reinforcement learning systems are significantly more complex than other machine learning paradigms due to inherent properties, causing RL system design to jointly account for many tightly coupled factors. Despite advances in individual algorithmic components, their functional interdependencies remain underexplored: do they exhibit mutual synergy or counterproductive interference? To bridge this gap, we conduct a systematic investigation and find that the efficacy of different components exhibits significant task-dependency, and naively stacking state-of-the-art techniques does not necessarily yield performance gains; instead, it often triggers emergent challenges, such as compounded non-stationarity. Building upon these findings, we distill a suite of actionable insights into the principled coordination of these components. Guided by these insights, we propose ROSER, an RL framework that coordinates three critical dimensions: Model-based Representation, Optimization Stability, and Experience Replay. Across diverse continuous-control benchmarks, ROSER consistently outperforms vanilla baselines and achieves 17.60% gains over naive stack. Our findings underscore the necessity of a holistic perspective in RL system design and paves the way for developing sample-efficient agents.",
+      "source_url": "https://arxiv.org/abs/2608.07086",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07180",
+      "identity_tokens": [
+        "arXiv:2608.07180"
+      ],
+      "title": "Momba: Network Modernization Improves Multi-Objective Reinforcement Learning",
+      "reason": "Recent advances in deep reinforcement learning (RL) have shown that improving neural network architectures can yield substantial gains in sample efficiency and asymptotic performance without altering the underlying algorithms. In contrast, work on multi-objective reinforcement learning (MORL), which aims to discover a set of policies that balance trade-offs among conflicting objectives, has predominantly focused on algorithmic innovations, leaving the area of architectures underexplored. While the optimal policies and value functions can differ significantly depending on the trade-offs, MORL algorithms commonly represent them with simple feedforward networks conditioned on the trade-off. This raises the question of whether the performance of the algorithms could be improved with more expressive function approximators. In this paper, we integrate recent advances in neural network design: (i) observation and feature normalization, (ii) weight normalization, and (iii) modeling of distributional returns with an entropy-regularized MORL algorithm. The empirical results across standard continuous control benchmarks demonstrate that these changes substantially improve the quality of the produced solution sets without requiring major changes to the underlying algorithm.",
+      "source_url": "https://arxiv.org/abs/2608.07180",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
