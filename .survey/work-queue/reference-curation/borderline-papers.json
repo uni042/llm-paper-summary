@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:52:57+00:00",
-  "record_count": 1671,
+  "updated_at": "2026-10-05T12:56:03+00:00",
+  "record_count": 1675,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25922,6 +25922,64 @@
         "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
       ],
       "title": "HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer"
+    },
+    "arXiv:2501.13484": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13484",
+      "identity_tokens": [
+        "arXiv:2501.13484"
+      ],
+      "reason": "PTQ makes inference efficiency plausible, but the body evidence does not verify a deployment benefit; retain as borderline pending runtime evidence.",
+      "first_checked_at": "2026-10-05T12:56:01+00:00",
+      "last_checked_at": "2026-10-05T12:56:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+      ],
+      "title": "MambaQuant: Quantizing the Mamba Family with Variance Aligned Rotation Methods"
+    },
+    "arXiv:2602.12684": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.12684",
+      "identity_tokens": [
+        "arXiv:2602.12684"
+      ],
+      "reason": "Real-time VLA execution is an adjacent domain, but transfer to general LLM serving remains uncertain.",
+      "first_checked_at": "2026-10-05T12:56:02+00:00",
+      "last_checked_at": "2026-10-05T12:56:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "Xiaomi-Robotics-0: An Open-Sourced Vision-Language-Action Model with Real-Time Execution"
+    },
+    "arXiv:2503.04992": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.04992",
+      "identity_tokens": [
+        "arXiv:2503.04992"
+      ],
+      "reason": "Inference acceleration is the stated motivation, but the primary body does not show practical serving acceleration; keep borderline pending runtime evidence.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Wanda++: Pruning Large Language Models via Regional Gradients"
+    },
+    "arXiv:2504.09724": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09724",
+      "identity_tokens": [
+        "arXiv:2504.09724"
+      ],
+      "reason": "This survey is relevant to adjacent VLM efficiency but has weak scope transfer to the project’s LLM-serving focus.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "title": "A Survey on Efficient Vision‐Language Models"
     }
   }
 }

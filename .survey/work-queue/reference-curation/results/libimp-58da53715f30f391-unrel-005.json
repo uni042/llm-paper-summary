@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-58da53715f30f391-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.16705",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.16705",
+    "identity_tokens": [
+      "arXiv:2306.16705"
+    ],
+    "reason": "Neural quantum states for ab-initio chemistry, unrelated to LLM inference.",
+    "first_checked_at": "2026-10-05T12:56:02+00:00",
+    "last_checked_at": "2026-10-05T12:56:02+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+    ],
+    "title": "NNQS-Transformer: An Efficient and Scalable Neural Network Quantum States Approach for Ab Initio Quantum Chemistry"
+  },
+  "processed_at": "2026-10-05T12:56:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-58da53715f30",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

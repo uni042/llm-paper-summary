@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:52:57+00:00",
-  "record_count": 5068,
+  "updated_at": "2026-10-05T12:56:04+00:00",
+  "record_count": 5084,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -73708,6 +73708,235 @@
         "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
       ],
       "title": "MegaScience: Pushing the Frontiers of Post-Training Datasets for Science Reasoning"
+    },
+    "arXiv:2502.14565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14565",
+      "identity_tokens": [
+        "arXiv:2502.14565"
+      ],
+      "reason": "Test-time self-verification/refinement targets output quality and adds inference work; it does not reduce serving cost/latency.",
+      "first_checked_at": "2026-10-05T12:56:01+00:00",
+      "last_checked_at": "2026-10-05T12:56:01+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+      ],
+      "title": "ReVISE: Learning to Refine at Test-Time via Intrinsic Self-Verification"
+    },
+    "arXiv:2408.06621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.06621",
+      "identity_tokens": [
+        "arXiv:2408.06621"
+      ],
+      "reason": "Knowledge unlearning method and parameter-efficient unlearning, not serving efficiency.",
+      "first_checked_at": "2026-10-05T12:56:01+00:00",
+      "last_checked_at": "2026-10-05T12:56:01+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Towards Robust and Parameter-Efficient Knowledge Unlearning for LLMs"
+    },
+    "DOI:10.14778/3598581.3598604": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3598581.3598604",
+      "identity_tokens": [
+        "DOI:10.14778/3598581.3598604"
+      ],
+      "reason": "Pipeline-parallel training framework, training-only.",
+      "first_checked_at": "2026-10-05T12:56:01+00:00",
+      "last_checked_at": "2026-10-05T12:56:01+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "SDPipe: A Semi-Decentralized Framework for Heterogeneity-aware Pipeline-parallel Training"
+    },
+    "arXiv:2506.09045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09045",
+      "identity_tokens": [
+        "arXiv:2506.09045"
+      ],
+      "reason": "Video diffusion generation acceleration, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:56:01+00:00",
+      "last_checked_at": "2026-10-05T12:56:01+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2508.16703-shadownpu-system-and-algorithm-co-design-for-npu-centric-on-device-llm-i.md"
+      ],
+      "title": "MagCache: Fast Video Generation with Magnitude-Aware Cache"
+    },
+    "arXiv:2508.20722": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20722",
+      "identity_tokens": [
+        "arXiv:2508.20722"
+      ],
+      "reason": "Agentic reinforcement learning trains a reasoning model; training-focused.",
+      "first_checked_at": "2026-10-05T12:56:02+00:00",
+      "last_checked_at": "2026-10-05T12:56:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "rStar2-Agent: Agentic Reasoning Technical Report"
+    },
+    "arXiv:2505.02795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.02795",
+      "identity_tokens": [
+        "arXiv:2505.02795"
+      ],
+      "reason": "Heterogeneous split PEFT framework addresses federated fine-tuning costs, not inference.",
+      "first_checked_at": "2026-10-05T12:56:02+00:00",
+      "last_checked_at": "2026-10-05T12:56:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+      ],
+      "title": "HSplitLoRA: A Heterogeneous Split Parameter-Efficient Fine-Tuning Framework for Large Language Models"
+    },
+    "arXiv:2412.09856": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.09856",
+      "identity_tokens": [
+        "arXiv:2412.09856"
+      ],
+      "reason": "Linear-complexity text-to-video diffusion generation, outside LLM serving.",
+      "first_checked_at": "2026-10-05T12:56:02+00:00",
+      "last_checked_at": "2026-10-05T12:56:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "LinGen: Towards High-Resolution Minute-Length Text-to-Video Generation with Linear Computational Complexity"
+    },
+    "arXiv:2306.16705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.16705",
+      "identity_tokens": [
+        "arXiv:2306.16705"
+      ],
+      "reason": "Neural quantum states for ab-initio chemistry, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T12:56:02+00:00",
+      "last_checked_at": "2026-10-05T12:56:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "NNQS-Transformer: An Efficient and Scalable Neural Network Quantum States Approach for Ab Initio Quantum Chemistry"
+    },
+    "arXiv:2305.00909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.00909",
+      "identity_tokens": [
+        "arXiv:2305.00909"
+      ],
+      "reason": "Syntactic code-generation approach focuses on generation quality/structure.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Outline, Then Details: Syntactically Guided Coarse-To-Fine Code Generation"
+    },
+    "arXiv:2605.15178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15178",
+      "identity_tokens": [
+        "arXiv:2605.15178"
+      ],
+      "reason": "Video diffusion world model acceleration, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer"
+    },
+    "arXiv:2507.13812": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.13812",
+      "identity_tokens": [
+        "arXiv:2507.13812"
+      ],
+      "reason": "Remote-sensing foundation model training/parameter utilization, not LLM serving.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "SkySense V2: A Unified Foundation Model for Multi-Modal Remote Sensing"
+    },
+    "arXiv:2504.04715": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04715",
+      "identity_tokens": [
+        "arXiv:2504.04715"
+      ],
+      "reason": "Audits provider substitution in LLM APIs; it detects service fidelity and proposes no inference-efficiency method.",
+      "first_checked_at": "2026-10-05T12:56:03+00:00",
+      "last_checked_at": "2026-10-05T12:56:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Are You Getting What You Pay For? Auditing Model Substitution in LLM APIs"
+    },
+    "arXiv:2412.12444": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.12444",
+      "identity_tokens": [
+        "arXiv:2412.12444"
+      ],
+      "reason": "LazyDiT accelerates diffusion transformer denoising, not LLM generation.",
+      "first_checked_at": "2026-10-05T12:56:04+00:00",
+      "last_checked_at": "2026-10-05T12:56:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ],
+      "title": "LazyDiT: Lazy Learning for the Acceleration of Diffusion Transformers"
+    },
+    "arXiv:2403.01267": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.01267",
+      "identity_tokens": [
+        "arXiv:2403.01267"
+      ],
+      "reason": "Selective pruning is used for LLM unlearning, not inference speed/compression.",
+      "first_checked_at": "2026-10-05T12:56:04+00:00",
+      "last_checked_at": "2026-10-05T12:56:04+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Dissecting Language Models: Machine Unlearning via Selective Pruning"
+    },
+    "arXiv:2503.11314": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.11314",
+      "identity_tokens": [
+        "arXiv:2503.11314"
+      ],
+      "reason": "Representation engineering elicits long-chain-of-thought ability, not serving-efficiency improvement.",
+      "first_checked_at": "2026-10-05T12:56:04+00:00",
+      "last_checked_at": "2026-10-05T12:56:04+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md",
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Unlocking General Long Chain-of-Thought Reasoning Capabilities of Large Language Models via Representation Engineering"
+    },
+    "arXiv:2410.21520": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.21520",
+      "identity_tokens": [
+        "arXiv:2410.21520"
+      ],
+      "reason": "LLM ensemble method targets missing-data imputation quality.",
+      "first_checked_at": "2026-10-05T12:56:04+00:00",
+      "last_checked_at": "2026-10-05T12:56:04+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ],
+      "title": "LLM-Forest: Ensemble Learning of LLMs with Graph-Augmented Prompts for Data Imputation"
     }
   }
 }
