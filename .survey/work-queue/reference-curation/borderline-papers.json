@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:53:14+00:00",
-  "record_count": 478,
+  "updated_at": "2026-10-05T00:55:43+00:00",
+  "record_count": 485,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6866,6 +6866,110 @@
         "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
       ],
       "title": "Revealing the Dark Secrets of BERT"
+    },
+    "DOI:10.52202/075280-2997": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/075280-2997",
+      "identity_tokens": [
+        "DOI:10.52202/075280-2997"
+      ],
+      "reason": "Official proceedings DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:55:42+00:00",
+      "last_checked_at": "2026-10-05T00:55:42+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.03555-karat-pnm-retrieval-sparse-attention.md"
+      ],
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    },
+    "DOI:10.1147/rd.282.0135": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1147/rd.282.0135",
+      "identity_tokens": [
+        "DOI:10.1147/rd.282.0135"
+      ],
+      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:55:42+00:00",
+      "last_checked_at": "2026-10-05T00:55:42+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md"
+      ],
+      "title": "An Introduction to Arithmetic Coding"
+    },
+    "arXiv:1802.06901": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1802.06901",
+      "identity_tokens": [
+        "arXiv:1802.06901"
+      ],
+      "reason": "The paper directly measures faster non-autoregressive decoding, but only for machine translation and image captioning; it does not evaluate LLM generation or transfer to autoregressive LLMs.",
+      "first_checked_at": "2026-10-05T00:55:42+00:00",
+      "last_checked_at": "2026-10-05T00:55:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement"
+    },
+    "DOI:10.1109/hpca.2018.00059": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca.2018.00059",
+      "identity_tokens": [
+        "DOI:10.1109/hpca.2018.00059"
+      ],
+      "reason": "Official IEEE DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Applied Machine Learning at Facebook: A Datacenter Infrastructure Perspective"
+    },
+    "DOI:10.1145/215399.215427": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/215399.215427",
+      "identity_tokens": [
+        "DOI:10.1145/215399.215427"
+      ],
+      "reason": "Official ACM DOI record was not retrievable as a usable primary abstract during screening.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "title": "LogGP: incorporating long messages into the LogP model—one step closer towards a realistic model for parallel computation"
+    },
+    "arXiv:1507.06149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1507.06149",
+      "identity_tokens": [
+        "arXiv:1507.06149"
+      ],
+      "reason": "The paper proposes parameter pruning and reports compression/accuracy on LeNet and AlexNet-like vision models, but does not evaluate Transformer/LLM inference or runtime savings.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Data-free Parameter Pruning for Deep Neural Networks"
+    },
+    "arXiv:2303.06349": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.06349",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.06349",
+        "arXiv:2303.06349"
+      ],
+      "reason": "The paper establishes efficient linear recurrent inference for long sequences, but its experiments are on Long Range Arena tasks rather than language modeling or LLM generation.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
     }
   }
 }

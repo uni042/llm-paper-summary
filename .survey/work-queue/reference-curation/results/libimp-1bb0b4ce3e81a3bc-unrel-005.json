@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1bb0b4ce3e81a3bc-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2001.04063",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2001.04063",
+    "identity_tokens": [
+      "arXiv:2001.04063"
+    ],
+    "reason": "Abstract presents future n-gram prediction for sequence-to-sequence pretraining; its contribution is training/prediction quality, not inference efficiency or serving.",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T00:55:43+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
+    ],
+    "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
+  },
+  "processed_at": "2026-10-05T00:55:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1bb0b4ce3e81",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

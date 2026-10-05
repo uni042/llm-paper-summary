@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T00:53:14+00:00",
-  "record_count": 1468,
+  "updated_at": "2026-10-05T00:55:44+00:00",
+  "record_count": 1481,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -21160,6 +21160,198 @@
         "papers/inference/99-other-inference-systems/2024-2412.04504-multi-bin-batching-for-increasing-llm-inference-throughput.md"
       ],
       "title": "How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering"
+    },
+    "arXiv:2401.01313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.01313",
+      "identity_tokens": [
+        "arXiv:2401.01313"
+      ],
+      "reason": "Abstract surveys hallucination mitigation techniques for LLMs; the focus is reliability, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md"
+      ],
+      "title": "A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models"
+    },
+    "arXiv:2001.04063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2001.04063",
+      "identity_tokens": [
+        "arXiv:2001.04063"
+      ],
+      "reason": "Abstract presents future n-gram prediction for sequence-to-sequence pretraining; its contribution is training/prediction quality, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.11131-speculative-streaming-fast-llm-inference-without-auxiliary-models.md"
+      ],
+      "title": "ProphetNet: Predicting Future N-gram for Sequence-to-Sequence Pre-training"
+    },
+    "arXiv:2303.11381": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.11381",
+      "identity_tokens": [
+        "arXiv:2303.11381"
+      ],
+      "reason": "Abstract presents multimodal prompting for reasoning and action with ChatGPT; it does not study inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
+      ],
+      "title": "MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action"
+    },
+    "arXiv:1808.09121": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.09121",
+      "identity_tokens": [
+        "arXiv:1808.09121"
+      ],
+      "reason": "Abstract introduces the WiC context-sensitive word-meaning evaluation dataset; no LLM inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2508.18983-smoe-expert-substitution-edge.md",
+        "papers/inference/99-other-inference-systems/2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md"
+      ],
+      "title": "WiC: the Word-in-Context Dataset for Evaluating Context-Sensitive Meaning Representations"
+    },
+    "arXiv:2104.06599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.06599",
+      "identity_tokens": [
+        "arXiv:2104.06599"
+      ],
+      "reason": "Abstract studies mixtures of soft prompts for querying language models, with the contribution centered on task adaptation rather than inference-time efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "title": "Learning How to Ask: Querying LMs with Mixtures of Soft Prompts"
+    },
+    "arXiv:2405.05941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.05941",
+      "identity_tokens": [
+        "arXiv:2405.05941"
+      ],
+      "reason": "Abstract evaluates robot manipulation policies in simulation; the subject is robotics policy evaluation, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
+      ],
+      "title": "Evaluating Real-World Robot Manipulation Policies in Simulation"
+    },
+    "arXiv:2306.09212": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.09212",
+      "identity_tokens": [
+        "arXiv:2306.09212"
+      ],
+      "reason": "Abstract introduces CMMLU as a Chinese language-understanding benchmark; it does not address inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2603.19172-dymoe-dynamic-expert-orchestration-with-mixed-precision-quantization-for.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.05257-mobe-mixture-of-basis-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2508.07785-grove-moe-heterogeneous-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.08738-slimqwen-pruning-distillation.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.30567-turingllm-dynamic-topk.md",
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "CMMLU: Measuring massive multitask language understanding in Chinese"
+    },
+    "arXiv:1904.03711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.03711",
+      "identity_tokens": [
+        "arXiv:1904.03711"
+      ],
+      "reason": "Abstract presents a learned database query optimizer; it is not about LLM inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ],
+      "title": "Neo: A Learned Query Optimizer"
+    },
+    "arXiv:2107.00641": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2107.00641",
+      "identity_tokens": [
+        "arXiv:2107.00641"
+      ],
+      "reason": "Abstract proposes focal self-attention for vision transformers and evaluates visual recognition; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "Focal Self-attention for Local-Global Interactions in Vision Transformers"
+    },
+    "arXiv:2012.07463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2012.07463",
+      "identity_tokens": [
+        "arXiv:2012.07463"
+      ],
+      "reason": "Abstract presents diff pruning for parameter-efficient transfer learning; its contribution is fine-tuning/training efficiency rather than inference-time efficiency.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md"
+      ],
+      "title": "Parameter-Efficient Transfer Learning with Diff Pruning"
+    },
+    "arXiv:2308.05374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.05374",
+      "identity_tokens": [
+        "arXiv:2308.05374"
+      ],
+      "reason": "Abstract surveys alignment evaluation for trustworthy LLMs; it does not focus on inference-time efficiency or serving.",
+      "first_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment"
+    },
+    "arXiv:2303.10130": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10130",
+      "identity_tokens": [
+        "arXiv:2303.10130"
+      ],
+      "reason": "Abstract estimates labor-market exposure to language-model capabilities; no inference-efficiency or serving contribution.",
+      "first_checked_at": "2026-10-05T00:55:44+00:00",
+      "last_checked_at": "2026-10-05T00:55:44+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md"
+      ],
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models"
+    },
+    "arXiv:1903.00089": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.00089",
+      "identity_tokens": [
+        "arXiv:1903.00089"
+      ],
+      "reason": "Abstract presents massively multilingual neural machine translation; no LLM inference-efficiency or serving contribution is identified.",
+      "first_checked_at": "2026-10-05T00:55:44+00:00",
+      "last_checked_at": "2026-10-05T00:55:44+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "title": "Massively Multilingual Neural Machine Translation"
     }
   }
 }

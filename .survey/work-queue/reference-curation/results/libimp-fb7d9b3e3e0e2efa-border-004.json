@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb7d9b3e3e0e2efa-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.06349",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.06349",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2303.06349",
+      "arXiv:2303.06349"
+    ],
+    "reason": "The paper establishes efficient linear recurrent inference for long sequences, but its experiments are on Long Range Arena tasks rather than language modeling or LLM generation.",
+    "first_checked_at": "2026-10-05T00:55:43+00:00",
+    "last_checked_at": "2026-10-05T00:55:43+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+      "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+    ],
+    "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
+  },
+  "processed_at": "2026-10-05T00:55:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb7d9b3e3e0e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
