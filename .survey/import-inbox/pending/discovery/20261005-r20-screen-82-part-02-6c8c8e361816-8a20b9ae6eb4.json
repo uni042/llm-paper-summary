@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-82-part-02-6c8c8e361816",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JIOT.2025.3600269",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2025.3600269"
+      ],
+      "title": "Privacy-Aware Split Federated Learning for LLM Fine-Tuning Over Internet of Things",
+      "reason": "The contribution is privacy-aware split federated LLM fine-tuning; its efficiency/privacy trade-offs concern training, not inference/serving.",
+      "source_url": "https://doi.org/10.1109/JIOT.2025.3600269",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.01463",
+      "identity_tokens": [
+        "arXiv:2512.01463"
+      ],
+      "title": "hls4ml: A Flexible, Open Source Platform for Deep Learning Acceleration on Reconfigurable Hardware",
+      "reason": "hls4ml is a general framework for translating deep-learning models to HLS hardware. The abstract does not identify an LLM inference/serving-specific result.",
+      "source_url": "https://arxiv.org/abs/2512.01463",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.13721",
+      "identity_tokens": [
+        "arXiv:2510.13721"
+      ],
+      "title": "NExT-OMNI: Towards Any-to-Any Omnimodal Foundation Models with Discrete Flow Matching",
+      "reason": "NExT-OMNI develops an any-to-any multimodal foundation model and training/generation framework; it does not present a scoped inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2510.13721",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07120",
+      "identity_tokens": [
+        "arXiv:2509.07120"
+      ],
+      "title": "Block-Sparse Global Attention for Efficient Multi-View Geometry Transformers",
+      "reason": "The proposed sparse global attention targets multi-view geometry transformers for computer vision, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2509.07120",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18074",
+      "identity_tokens": [
+        "arXiv:2507.18074"
+      ],
+      "title": "AlphaGo Moment for Model Architecture Discovery",
+      "reason": "ASI-Arch automates neural-architecture discovery; its contribution is research/architecture discovery rather than a demonstrated LLM inference/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2507.18074",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    }
+  ]
+}
