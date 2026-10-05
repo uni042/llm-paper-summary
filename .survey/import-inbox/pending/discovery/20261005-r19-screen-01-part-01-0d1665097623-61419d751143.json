@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r19-screen-01-part-01-0d1665097623",
+  "reference_main_sha": "b5a8991654bcdfba2aac22313777649e1ca9b286",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04172",
+      "identity_tokens": [
+        "arXiv:2609.04172"
+      ],
+      "title": "Rethinking On-Policy Distillation of Large Language Models II: One Training Example",
+      "reason": "On-policy distillation (OPD) combines student-generated rollouts with dense token-level supervision from a teacher. Existing work has mainly studied its algorithmic behavior, leaving the role of training data unclear. We examine this role at the data-minimal limit by training on a single query. One-shot OPD keeps improving for hundreds of steps and recovers most of full-data OPD's gain across task domains and model families. We explain this result through the states visited d",
+      "source_url": "https://arxiv.org/abs/2609.04172",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24696",
+      "identity_tokens": [
+        "arXiv:2608.24696"
+      ],
+      "title": "On-policy Distillation with Verifiable Reward",
+      "reason": "Reinforcement Learning with Verifiable Rewards (RLVR) and on-policy distillation (OPD) have become two widely adopted paradigms for post-training large language models. However, RLVR suffers from sparse task-level feedback, while OPD provides dense token-level guidance but ignores trajectory correctness, limiting its performance to that of the teacher. Combining them is a promising direction: OPD supplies dense supervisory signals, while RLVR provides task-level correctness. ",
+      "source_url": "https://arxiv.org/abs/2608.24696",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26524",
+      "identity_tokens": [
+        "arXiv:2606.26524"
+      ],
+      "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills",
+      "reason": "Agentic systems increasingly act through third-party skills, allowing model-generated decisions to affect files, communication channels, and cyber-physical devices. These skills often include natural-language specifications that define access permissions, disclosure limits, execution privileges, and required preconditions. Although such specifications describe the intended boundaries of skill behavior, they do not by themselves provide executable runtime enforcement. Enforcin",
+      "source_url": "https://arxiv.org/abs/2606.26524",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22504",
+      "identity_tokens": [
+        "arXiv:2606.22504"
+      ],
+      "title": "Lingering Authority: Revocable Resource-and-Effect Capabilities for Coding Agents",
+      "reason": "Coding agents often receive broad tool access for an entire task, even when a resource is needed only for one subgoal. We call this gap lingering authority: a temporary resource/effect capability remains exposed after the episode that justified it has closed. PORTICO is a reference monitor for revocable capabilities exposed to the planner. It compiles an explicit task contract into initial capabilities, grant rules, trusted closure predicates, and global deny rules. A request",
+      "source_url": "https://arxiv.org/abs/2606.22504",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04108",
+      "identity_tokens": [
+        "arXiv:2609.04108"
+      ],
+      "title": "Sequential Beats Joint: On the Interplay between On-Policy Distillation and RLVR",
+      "reason": "Reinforcement learning with verifiable rewards (RLVR) and on-policy distillation (OPD) have emerged as two dominant methods for post-training reasoning LLMs. Prior work uses OPD's dense token-level supervision to complement the sparse RL reward, fusing the two signals within a single step: either as a \\emph{weighted-additive combination} or a \\emph{teacher-modulated rescaling} of the RL advantage. In this paper, we show that a simple two-stage scheme, OPD-then-RL, consistentl",
+      "source_url": "https://arxiv.org/abs/2609.04108",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
