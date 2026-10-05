@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-31-part-01-fda985919c2f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817663",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817663"
+      ],
+      "title": "HierKV: A Coarse-to-Fine Approach with Vision-Aware Banzhaf Values for Multi-Modal KV Cache Compression",
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "source_url": "https://doi.org/10.1145/3770855.3817663",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817674",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817674"
+      ],
+      "title": "Accelerating Graph-Based RAG Retrieval via Locality-Aware Device-Cloud Collaboration",
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "source_url": "https://doi.org/10.1145/3770855.3817674",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817771",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817771"
+      ],
+      "title": "Taming Multi-Dimensional Tail: A Factorized Tail-Interaction Framework for Hyperscale Cloud Workload Forecasting",
+      "reason": "The adoption of AI-native cloud infrastructure is reshaping workload behavior in large-scale data centers, moving from stationary, homogeneous patterns to highly dynamic, heterogeneous ones. An empirical analysis of production cloud monitoring data shows that system reliability is increasingly governed by non-linear interactions in the multi-dimensional tail space, including long-range temporal backlogs, spatial resource fragmentation, and irreversible state rigidity. Accurately forecasting these tail-dominated behaviors is essential for capacity planning and reliability management. However, existing forecasting models face two limitations: learning is dominated by abundant normal workloads, leading to rare but critical tail events being underrepresented, and reliance on linear composition assumptions limits the ability to model joint tail anomalies across correlated temporal, spatial, and state dimensions. To address these challenges, we introduce the Factorized Tail-Interaction Framework (FTIF), a data-driven forecasting and risk perception framework explicitly designed for tail-sensitive cloud workloads. Firstly, an adaptive trend decoupler separates dominant workload trends from tail residuals using a gradient detachment mechanism and learnable gating mechanisms. Secondly, a factorized resonance module augments attention mechanisms with hyper-order factorization, injecting multiplicative inductive biases to capture non-linear interactions among multi-dimensional risk factors. Thirdly, a rank-rectified tail-focal optimization employs topology-preserving reweighting to align the learning objective with rare but operationally critical tail events. Experiments on real-world cloud datasets show that FTIF achieves an MSE of 0.0015 on the GenTD26 dataset and captures 94.95% of tail events in Spot scenarios, enabling finer-grained risk perception and robust modeling of joint tail anomalies.",
+      "source_url": "https://doi.org/10.1145/3770855.3817771",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817780",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817780"
+      ],
+      "title": "Self-Evolutionary Reinforced Knowledge Distillation for Multi-Modal Tool-Use Agents",
+      "reason": "Autonomous multi-modal agents are increasingly important in real-world applications due to their ability to reason about complex environments and orchestrate tool use. However, deploying multi-modal large language models (MLLMs) for tool use is often constrained by computational cost and inference latency, creating a pressing need for compact models that retain strong agentic capabilities. Training small multi-modal agents remains difficult: limited backbone capacity weakens multi-step reasoning, reward signals for tool use are often sparse and brittle, and naive distillation can fail to transfer the procedural knowledge required for reliable tool invocation and grounding. In this paper, we propose a two-stage self-evolutionary knowledge distillation framework that equips small MLLMs with robust and adaptive tool-use behaviors. Our method combines (i) mutual information-guided trajectory distillation, which selectively transfers high-utility segments of agentic trajectories from a larger teacher, and (ii) reinforcement-driven policy evolution with iterative teacher feedback. To stabilize learning and prevent semantic collapse, we introduce weighted semantic objectives and iteratively expand competence through error-driven optimization, hybrid experience replay, and group-relative policy refinement with multi-dimensional rewards over answer correctness, invocation validity, and tool effectiveness. Integrated with interactive tool modules, our approach enables small models to achieve strong performance across diverse tool-use benchmarks. Comprehensive experiments show consistent improvements over single-pass distillation and RL baselines. Overall, our framework provides a practical path to deploy efficient multi-modal agents without sacrificing tool-use reliability.",
+      "source_url": "https://doi.org/10.1145/3770855.3817780",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817799",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817799"
+      ],
+      "title": "When Compilation Breaks Your GNN: A Numerical Stability Perspective",
+      "reason": "Deep learning compilers like torch.compile accelerate GNNs through operator fusion and computation reordering, yet often introduce numerical instability that causes models to diverge under hyperparameters that work in eager mode. We trace this fragility to the interaction between compiler optimizations and GNN structure. Compilers reorder floating-point additions assuming associativity, but rounding errors from different summation orders, though typically negligible, can be catastrophically amplified by ill-conditioned computations. We show that GNN neighbor aggregation is structurally prone to such ill-conditioning: power-law degree distributions create highly variable aggregation lengths, while normalized features induce message cancellation during summation. This yields a long-tailed distribution of condition numbers across nodes, where a critical minority of aggregations amplify rounding differences into macroscopic output deviations. Based on this analysis, we propose Numerics-Aware Graph Compilation (NAGC), which estimates per-aggregation numerical risk through lightweight profiling and selectively applies aggressive optimizations only to well-conditioned operations. Experiments on Open Graph Benchmark datasets show that NAGC preserves over 95% of compilation speedups while reducing numerical deviation by 10 to 100 times and eliminating compilation-induced training failures.",
+      "source_url": "https://doi.org/10.1145/3770855.3817799",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
