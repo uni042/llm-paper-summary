@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r22-screen-01-part-03-1c4aeff91781",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03275",
+      "identity_tokens": [
+        "arXiv:2608.03275"
+      ],
+      "title": "MoEGen: Mixture-of-Experts for Instance-Adaptive LoRA Generation",
+      "reason": "The abstract is instance-adaptive LoRA generation/parameter-efficient adaptation; its goal is model adaptation, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.03275",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03473",
+      "identity_tokens": [
+        "arXiv:2608.03473"
+      ],
+      "title": "Certified Split Points for Parallel Lexing: Exact and Modulo Discarded Tokens",
+      "reason": "The paper certifies split points for parallel lexing; it has no LLM inference or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2608.03473",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.29678-toktier-stateful-agentic-tokenization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02441",
+      "identity_tokens": [
+        "arXiv:2608.02441"
+      ],
+      "title": "Agentic Commerce World: An Auditable and Verifiable Environment for Vibe Commerce",
+      "reason": "ACWorld defines buyer/merchant tasks over static catalogs and deterministic counterparties, with 10 integrity cases and trace reconstruction. It is a research benchmark for commerce-agent behavior; authors state it is not a production payment/security system and that its catalogs do not model live markets. No LLM inference/serving scheduling or efficiency method links it to the serving-disaggregation lineage.",
+      "source_url": "https://arxiv.org/abs/2608.02441",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29983",
+      "identity_tokens": [
+        "arXiv:2606.29983"
+      ],
+      "title": "Stabilizing Extrapolation in Looped Transformers via Learned Stochastic Stopping",
+      "reason": "The learned RL-Halting policy is trained by sampling loop depth and supervising the selected depth. Experiments are synthetic algorithmic length-generalization tasks; the main benefit is lower OOD variance and stability across inference-time loop counts, not demonstrated reductions to LLM serving cost or latency. Authors explicitly frame stopping as a training-time design choice and note learned schedules can stabilize a suboptimal computation.",
+      "source_url": "https://arxiv.org/abs/2606.29983",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/jhtt-11-2025-1080",
+      "identity_tokens": [
+        "DOI:10.1108/jhtt-11-2025-1080"
+      ],
+      "title": "Can tourists trust generative AI? A systematic evaluation of the quality of AI-generated tourism information",
+      "reason": "The primary abstract evaluates tourism response quality and prompting across GenAI platforms; it proposes no inference/serving optimization.",
+      "source_url": "https://doi.org/10.1108/jhtt-11-2025-1080",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
