@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-74f4dcfb1c7791a8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.11336",
+  "reason": "Statistical physics extracts macroscopic laws by averaging over the many microscopic degrees of freedom of a system. Disordered systems demand a second and far harder average, one over the quenched randomness itself. The classic analytical routes, the replica and cavity methods, become uncontrolled outside mean-field or tree-like limits, and conventional numerical algorithms like parallel tempering require expensive, independent equilibration for every disorder realization. In this work, we introduce a universal neural variational framework that amortizes inference across the disorder ensemble, eliminating both the need for per-instance Markov chain equilibration and the cost of retraining instance-specific variational ansatzes. Built on an encoder-decoder Transformer architecture, after training once, it produces an explicit approximation to the Boltzmann distribution given previously unseen disorder realizations without further optimization. We validate this framework on 2D Edwards-Anderson models, and apply it to the random-bond Ising model, successfully capturing the Binder cumulant crossings near the Nishimori multicritical point. These results shift the object of variational inference from the single instance to the disorder ensemble, opening a route to frustrated many-body systems where instance-by-instance computation is prohibitive.",
+  "title": "Universal sampling of spin systems across quenched disorder",
+  "identity_tokens": [
+    "arXiv:2609.11336"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74f4dcfb1c77",
+  "source_precheck_request_id": null
+}

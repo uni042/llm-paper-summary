@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-74f4dcfb1c7791a8-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.11752",
+  "reason": "For industrial content risk control, the real deployment constraint is not average accuracy but how much risk can be auto-handled under high precision and second-level latency. We present SIRF (Spec-Internalized Risk Foundation Model), which internalizes a platform's complex policies, synthesized without additional human annotation via EntiGraph, MAGA rewriting and account-level chain-of-thought (CoT), into the weights via continued pretraining (CPT), so rules are applied at high precision under an ultra-low-latency, verdict-only deployment. A controlled same-source comparison (Qwen3-8B-SFT vs. SIRF-8B-SFT, identical policy injection and verdict-only output form, differing only in policy-grounded CPT) attributes the gain to internalization: SIRF-8B-SFT reaches 71.3% Black Recall@P95, +15.1pp over the baseline, using only ~70M CPT tokens without harming general ability, and among included, logprob-available models under this interface it matches or exceeds far larger systems. SIRF is deployed as a tree-model adjudication layer (20% more mis-penalized samples recovered) and transfers to a freezing scenario at low cost (~70% relative mis-penalization reduction).",
+  "title": "SIRF: A Spec-Internalized Risk Foundation Model for Industrial Content Risk Control",
+  "identity_tokens": [
+    "arXiv:2609.11752"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74f4dcfb1c77",
+  "source_precheck_request_id": null
+}

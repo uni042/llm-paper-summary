@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ab8a3cfd528b21e3-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.11044",
+  "reason": "While accelerators for AI have seen great commercial success, it is challenging to replicate that success for other specialized domains due to a number of factors. We make the case that barriers for new accelerators can be lowered by starting with a baseline AI accelerator, and adding minimal logic to support new operators demanded by new specialized domains. This leads to a versatile chip that can be manufactured at high volume and deployed for a range of popular applications. We refer to this as the AI+X approach. This paper explores its potential for the emerging domain of Computational Pathology, which involves analysis of large whole-slide tissue images with a multi-stage pipeline. The pipeline requires support for a number of different kernels and operators - early stages perform segmentation and feature extraction, followed by graph creation with k nearest neighbor (kNN) algorithms, and finally inference with an iterative graph convolutional network (GCN) that alternates between Aggregation and Combination. We show that these stages execute inefficiently on a range of baseline CPU, GPU, AI, and GCN accelerators. That inefficiency is addressed with a combination of software re-structuring and small modifications to a baseline systolic AI accelerator. Many of the above kernels can be mapped to a systolic accelerator by offering a flexible datapath between processing elements and register access mechanisms. We add support for feature aggregation, load balanced execution, Euclidean distance calculation, binning, and counter aggregation. This additional flexibility and logic grows the area of a baseline AI chiplet by 1.1x, but by avoiding the memory wall and offering high parallelism, the proposed accelerator BEACON yields over an order of magnitude higher throughput for Computational Pathology than baseline CPU and GPU platforms.",
+  "title": "BEACON: A Versatile Accelerator for Computational Pathology Applications",
+  "identity_tokens": [
+    "arXiv:2609.11044"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab8a3cfd528b",
+  "source_precheck_request_id": null
+}

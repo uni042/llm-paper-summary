@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-76a8a369011284b7-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.11913",
+  "reason": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping a fixed context length. We construct two synthetic delay copy tasks, both involving finite distances between source and recall, where tokens are copied either fully or selectively, and test models on delays unseen during training. We address three questions: (A) Do positional encoding schemes such as RoPE and ALiBi improve distance resolution relative to no positional encoding (NoPE)? (B) How does data diversity, the number of inter-token distances seen in training, affect performance? (C) When is distance transfer learning positive or negative? We present a thorough investigation, finding that it is paramount to improve our understanding of the underlying mechanisms.",
+  "title": "Distance generalization in transformers: why bother with positional encoding?",
+  "identity_tokens": [
+    "arXiv:2609.11913"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76a8a3690112",
+  "source_precheck_request_id": null
+}

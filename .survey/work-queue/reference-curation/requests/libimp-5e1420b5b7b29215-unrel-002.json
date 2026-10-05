@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5e1420b5b7b29215-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1186/s40580-026-00575-9",
+  "reason": "Energy-efficient neural computing is increasingly limited not by computational throughput but by memory access and data movement. In-memory computing architectures offer a promising solution by collocating storage and computation, yet their practical realization remains constrained by static power dissipation, thermal challenges, and limited integration density in existing memory devices. Here, we demonstrate a vertically stackable charge-trap-flash (CTF)-based memcapacitor array that combines the high integration density of 3D NAND technology with the charge-domain computation. A continuous in-situ-doped N+ bottom readout electrode is introduced beneath the lightly doped active layer, decoupling lateral readout resistance from depletion-based capacitance modulation and alleviating the resistance–depletion trade-off of the previous architecture. The fabricated 24 × 48 memcapacitor array operates through transient charge displacement and demonstrates highly uniform array-level characteristics (σ/µ < 0.37%), reliable 16-state closed-loop weight programming, and linear charge-domain VMM with an error below 0.227%. When scaled toward modern 3D NAND dimensions, a verification–inference electrostatic mismatch introduces systematic VMM error, which is reduced by up to 84.6% through an intercell trapped-charge scheme in TCAD simulations. Geometric scaling based on the CV2 relation projects femtojoule-level intrinsic cell read energy at scaled dimensions. A hybrid hardware–software spiking neural network evaluation, in which only the final 24 × 10 layer is mapped to measured arrays, achieves 88.01% CIFAR-10 accuracy compared with 88.17% in software. These results establish vertically stackable memcapacitors as a scalable charge-domain computing platform combining reliable array-level operation with high-density vertical integration.",
+  "title": "Capacitive in-memory vector–matrix multiplication computing with charge-trap memcapacitors",
+  "identity_tokens": [
+    "DOI:10.1186/s40580-026-00575-9"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e1420b5b7b2",
+  "source_precheck_request_id": null
+}

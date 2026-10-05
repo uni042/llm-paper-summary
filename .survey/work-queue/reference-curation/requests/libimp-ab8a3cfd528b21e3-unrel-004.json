@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ab8a3cfd528b21e3-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.11149",
+  "reason": "How fast does a language model degrade when trained on its own outputs? Theory traces it to gradually accumulating errors, while experiments report repeated phrases within ten generations. Under a fixed sampling seed in vLLM, the fast loss of lexical diversity comes from the sampler. When vLLM serves a batch from one seeded sampling configuration, every request receives the same random draws, and a fixed seed replays them every generation. Fine-tuning raises the tokens that won, and the replayed draws let them win by more. Sharing across requests and replay across generations matter only together. Remove either one, by changing the shared seed every generation or by giving each request its own seed that repeats every generation, and the unique-4-gram fraction of two StableLM checkpoints stays near its starting value of about 0.98 through generation 3. Keep both, and the replayed shared seed takes seven checkpoints from five families to between 0.045 and 0.38 by then. Three generations of replay write the favoured phrases into the weights: decoded with one seed per request, the generation-3 weights of the replayed StableLM-2-1.6B chain recover most of their diversity, yet the phrase that filled every sample under the shared seed still opens 46% of them. Without replay, five checkpoints drift slowly, consistent with the gradual accumulation that theory describes, and three turn incoherent though their diversity scores stay high. One peer-reviewed model-collapse pipeline that fine-tunes Gemma-2-27B samples identical prompts under one seeded configuration, and three quarters of the rows it released for one iteration repeat nearly as often as one such batch copies them. A seed per request restores the fresh sample that stability analyses assume.",
+  "title": "Break Step: Recursive Training Resonates with Replayed Sampling Noise",
+  "identity_tokens": [
+    "arXiv:2609.11149"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+    "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ab8a3cfd528b",
+  "source_precheck_request_id": null
+}
