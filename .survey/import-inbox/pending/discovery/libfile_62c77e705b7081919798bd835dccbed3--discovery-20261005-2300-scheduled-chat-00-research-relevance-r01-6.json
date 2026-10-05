@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "a9b6014e1ad4700eb2d53421b56f3fd4ff087459",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12110",
+      "identity_tokens": [
+        "arXiv:2502.12110"
+      ],
+      "title": "A-MEM: Agentic Memory for LLM Agents",
+      "reason": "Zettelkasten型のdynamic indexing/linkingとmemory evolutionでagentの外部記憶を整理する。推論時memory retrievalには関係するが、主要評価はagent task性能で、serving latency/throughput/memory footprintのsystem最適化を主目的としないためborderline。",
+      "source_url": "https://arxiv.org/abs/2502.12110",
+      "body_check": "research_fulltext_relevance_review: 一次論文情報でstructured note生成、linking、memory evolution、6 foundation modelでのtask performance評価を確認。推論system資源効率が中心でないためborderline。",
+      "first_checked_at": "2026-10-05T23:50:00+09:00",
+      "last_checked_at": "2026-10-05T23:50:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
