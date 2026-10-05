@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:54:52+00:00",
-  "record_count": 2404,
+  "updated_at": "2026-10-05T03:57:01+00:00",
+  "record_count": 2417,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -34820,6 +34820,193 @@
         "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
       ],
       "title": "An expressivity analysis of hierarchical modelling in deep transformers via bounded-depth grammars"
+    },
+    "arXiv:2606.10861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10861",
+      "identity_tokens": [
+        "arXiv:2606.10861"
+      ],
+      "reason": "UI表示・エネルギー推定を通じて利用者の選択を変えるヒューマン・コンピュータ相互作用研究であり、LLM inference/serving内部の効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+      ],
+      "title": "From Perception to Action: Can UI Interventions Foster Sustainable LLM Chatbot"
+    },
+    "arXiv:2606.09150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09150",
+      "identity_tokens": [
+        "arXiv:2606.09150"
+      ],
+      "reason": "対象は高解像度streaming video diffusion生成で、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Ultra Flash: Scaling Real-Time Streaming Video Generation to High Resolutions"
+    },
+    "arXiv:2606.09395": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09395",
+      "identity_tokens": [
+        "arXiv:2606.09395"
+      ],
+      "reason": "ソフトウェア工学タスクでの構造化出力の正確性を比較する研究で、推論効率・servingを扱わない。",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Empirical Study for Structured Output Control in LLMs for Software Engineering"
+    },
+    "arXiv:2606.14597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14597",
+      "identity_tokens": [
+        "arXiv:2606.14597"
+      ],
+      "reason": "The transformer neural operator targets PDE solution generalization, not language models.",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Zero-shot generalization of transformer neural operators to larger domains"
+    },
+    "arXiv:2606.14674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14674",
+      "identity_tokens": [
+        "arXiv:2606.14674"
+      ],
+      "reason": "The paper studies composition of embodied-agent scaffolds and their performance, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "AgentSpec: Understanding Embodied Agent Scaffolds Through Controlled Composition"
+    },
+    "DOI:10.1145/3800645.3812979": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3800645.3812979",
+      "identity_tokens": [
+        "DOI:10.1145/3800645.3812979"
+      ],
+      "reason": "This surveys AI memory interfaces and design metaphors, not LLM inference/serving methods.",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Metaphors for Memory: Charting a Design Space of AI Memory Tools and Interfaces"
+    },
+    "arXiv:2606.13240": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13240",
+      "identity_tokens": [
+        "arXiv:2606.13240"
+      ],
+      "reason": "The work controls image diffusion sampling, not language-model inference.",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Towards More General Control of Diffusion Models Using Jeffrey Guidance"
+    },
+    "arXiv:2606.13426": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13426",
+      "identity_tokens": [
+        "arXiv:2606.13426"
+      ],
+      "reason": "The method accelerates continuous diffusion generation; the speculative-decoding analogy does not make it LLM inference.",
+      "first_checked_at": "2026-10-05T03:57:00+00:00",
+      "last_checked_at": "2026-10-05T03:57:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2403.10444-block-verification-accelerates-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2510.02358-diffuspec-unlocking-diffusion-language-models-for-speculative-decoding.md"
+      ],
+      "title": "Accelerating Speculative Diffusions via Block Verification"
+    },
+    "DOI:10.1109/tip.2026.3700932": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3700932",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3700932"
+      ],
+      "reason": "The task is cross-view image geolocalization, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:57:01+00:00",
+      "last_checked_at": "2026-10-05T03:57:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "HiSymGeo: Hierarchical Context Symbiosis for Cross-View Object-Level Image Geo-Localization"
+    },
+    "arXiv:2606.09483": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09483",
+      "identity_tokens": [
+        "arXiv:2606.09483"
+      ],
+      "reason": "会話記憶の組織化・推論能力の評価が中心であり、LLM推論性能やserving効率の改善を示していない。",
+      "first_checked_at": "2026-10-05T03:57:01+00:00",
+      "last_checked_at": "2026-10-05T03:57:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents"
+    },
+    "arXiv:2606.10154": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10154",
+      "identity_tokens": [
+        "arXiv:2606.10154"
+      ],
+      "reason": "量子化checkpointの安全性を評価する監査研究であり、推論効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:57:01+00:00",
+      "last_checked_at": "2026-10-05T03:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Quality Is Not a Safety Proxy Under Quantization"
+    },
+    "arXiv:2606.10199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10199",
+      "identity_tokens": [
+        "arXiv:2606.10199"
+      ],
+      "reason": "Insertion Language Modelの確率モデル・学習目的の定式化が主題で、要旨は推論効率またはservingの改善を報告していない。",
+      "first_checked_at": "2026-10-05T03:57:01+00:00",
+      "last_checked_at": "2026-10-05T03:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "A Continuous-Time Markov Chain Framework for Insertion Language Models"
+    },
+    "arXiv:2606.08802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08802",
+      "identity_tokens": [
+        "arXiv:2606.08802"
+      ],
+      "reason": "分子設計向けflow modelのcontinued pretrainingによるデータ外coverage拡大であり、LLM推論・serving対象ではない。",
+      "first_checked_at": "2026-10-05T03:57:01+00:00",
+      "last_checked_at": "2026-10-05T03:57:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Active Flow Expansion for Out-of-Distribution Discovery: from Theory to Molecules"
     }
   }
 }

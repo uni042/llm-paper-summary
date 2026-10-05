@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0fac4c275026469b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10861",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10861",
+    "identity_tokens": [
+      "arXiv:2606.10861"
+    ],
+    "reason": "UI表示・エネルギー推定を通じて利用者の選択を変えるヒューマン・コンピュータ相互作用研究であり、LLM inference/serving内部の効率化手法ではない。",
+    "first_checked_at": "2026-10-05T03:57:00+00:00",
+    "last_checked_at": "2026-10-05T03:57:00+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+    ],
+    "title": "From Perception to Action: Can UI Interventions Foster Sustainable LLM Chatbot"
+  },
+  "processed_at": "2026-10-05T03:57:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0fac4c275026",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
