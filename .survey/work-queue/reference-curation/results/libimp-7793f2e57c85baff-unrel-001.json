@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7793f2e57c85baff-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.05820",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.05820",
+    "identity_tokens": [
+      "arXiv:2609.05820"
+    ],
+    "reason": "Online quality-based learning to select LLM experts; no inference-cost or serving-efficiency contribution.",
+    "first_checked_at": "2026-10-05T07:09:19+00:00",
+    "last_checked_at": "2026-10-05T07:09:19+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+    ],
+    "title": "Online Learning with LLM Experts from Limited Feedback"
+  },
+  "processed_at": "2026-10-05T07:09:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7793f2e57c85",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

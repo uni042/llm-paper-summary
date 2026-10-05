@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:06:26+00:00",
-  "record_count": 3462,
+  "updated_at": "2026-10-05T07:09:20+00:00",
+  "record_count": 3481,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -50447,6 +50447,279 @@
         "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
       ],
       "title": "Where Should Language Sit in a Multimodal Model? Lessons from What Language Does to Human Perception and Cognition"
+    },
+    "arXiv:2609.06784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06784",
+      "identity_tokens": [
+        "arXiv:2609.06784"
+      ],
+      "reason": "一次要旨: AI inference often crosses regional boundaries as prompts travel to remote data centers and generated tokens return to users. Regional averages cannot represent the resulting differences in serving hardware, electricity, and network delivery. Request-level accounting needs a common boundary for the service, serving site, route, local comparator, uncertainty, and data provenance. GreenPassport Carbon Accounting (GPCA) associates these inputs with each request. It estimates serving and route carbon, then selects a reporting level from the available documentation. Our public-data implementation covers data-center instances, accelerators, model families, electricity mixes, routes, and cloud-region carbon intensity. Against six accounting baselines and four energy-prediction baselines, GPCA reduced median absolute percentage error by 56.3% and median absolute error by 15.5% relative to EcoLogits under the aligned accelerator-energy boundary. It produced zero rule overstatement in the deterministic conformance tests. In the buyer case, the clean-electricity CN-West scenario produced 0.0148 gCO2e per request, 88% below the local service at 0.1220 gCO2e per request.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2026-d42c81b62392-storellm-energy-efficient-large-language-model-inference-with-permanently-pre-stored-attention-matrices.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "GreenPassport: Request-Level Carbon Accounting for Cross-Border AI Inference"
+    },
+    "arXiv:2609.06852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06852",
+      "identity_tokens": [
+        "arXiv:2609.06852"
+      ],
+      "reason": "一次要旨: Although highly effective in vision and language domains, applying in-context learning to robotics remains challenging. Existing autoregressive in-context imitation methods discretize continuous actions and exacerbate the accumulation of early prediction errors through next-token prediction, limiting their generalization on unseen task configurations. Meanwhile, flow-matching policies have been explored for continuous robot control and can help mitigate compounding errors; however, in-context imitation learning within a flow-matching framework remains underexplored. To address these limitations, we introduce ContextFlow, a conditional flow-matching model that learns continuous action distributions for in-context imitation learning. ContextFlow conditions flow-based action prediction on demonstrations and observations, enabling robust generation from noisy action distributions. To better encode multimodal in-context demonstrations, we adapt perceiver-style multimodal context compressors that distill visual, proprioceptive, and action sequences into compact, task-relevant latent representations. On LIBERO, ContextFlow outperforms ICRT by 35 percentage points in average success rate on unseen task configurations, while matching the performance of the task-specific fine-tuned VLA model $\\pi_0$ without any fine-tuning on unseen tasks. On real robots, it generalizes to unseen configurations of both single-arm and bimanual tasks, achieving 40% success on a new pen-uncapping configuration. Project Page: https://dingjiansw101.github.io/contextflow-page/.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "ContextFlow: In-Context Flow Matching for Robot Manipulation"
+    },
+    "arXiv:2609.09213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09213",
+      "identity_tokens": [
+        "arXiv:2609.09213"
+      ],
+      "reason": "一次要旨: We study how physical-state inputs affect a 0.8B hybrid language model adapted for manipulation with 6.2M trainable parameters. Six conditions are trained on three LIBERO-Spatial tasks and evaluated over three seeds and 540 held-out rollouts. Conditioning recurrent decay gates on geometric increments yields 28.9% success, compared with 36.7% when those increments are shuffled during training and 24.4% without explicit object/goal geometry. Both geometry policies receive correct inputs at evaluation. A token adapter using the same increments scores 27.8%; differences vary across seeds and remain inconclusive. Token-clock conditioning scores 11.1%, including one seed that fails to converge. In separate robustness tests, a state-only relative-coordinate policy retains 7/10 success under frame relabeling, whereas all four tested visual policies fall to at most 3/20 after a 5 cm object displacement. These results show no reliable advantage from training-time geometric alignment under this recipe and illustrate the gap between coordinate invariance and physical-layout generalization. Episode records, seed-level analyses, and figure-generation code accompany the paper.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Geometry Conditioning in an Embodied SLM: Training Controls and Robustness Diagnostics in a 0.8B Hybrid Model"
+    },
+    "arXiv:2609.13260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13260",
+      "identity_tokens": [
+        "arXiv:2609.13260"
+      ],
+      "reason": "一次要旨: This paper proposes SpecAugment-Patch Merging, a simple yet effective method to accelerate Audio Spectrogram Transformer (AST) training. We first apply SpecAugment to mask input spectrograms at the patch level, and after positional embeddings are added, the method selects r pairs of masked patches and merges them, reducing the number of tokens processed by the Transformer. Increasing the number of merged pairs r from 0 to 100 keeps mAP on AudioSet nearly unchanged (34.07 to 34.08) while throughput increases from 43.3 to 49.3 samples/sec, which is a relatively 13.9% improvement. Similar patterns appear on ESC-50 and Speech Commands V2, where throughput steadily improves with only minor accuracy changes, demonstrating that this merging approach provides faster training with minimal performance loss.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "From Masking to Merging: Rethinking SpecAugment for Efficient Audio Spectrogram Transformer"
+    },
+    "arXiv:2609.22257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22257",
+      "identity_tokens": [
+        "arXiv:2609.22257"
+      ],
+      "reason": "Abstract describes automated fine-tuning search and training-stage strategy accumulation, not inference/serving.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Strategy Accumulation and Guided Execution for Automated LLM Fine-Tuning"
+    },
+    "DOI:10.1007/s00530-026-02641-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-026-02641-y",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-026-02641-y"
+      ],
+      "reason": "Publisher abstract describes semantic-segmentation U-Net/dynamic fusion, not LLMs.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "DFC-SA-UNet: dynamic fusion with lightweight self-attention for multi-domain semantic segmentation"
+    },
+    "DOI:10.1007/s44163-026-01750-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-01750-x",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-01750-x"
+      ],
+      "reason": "Systematic review of cross-lingual QA for Indic languages; no efficiency method.",
+      "first_checked_at": "2026-10-05T07:09:18+00:00",
+      "last_checked_at": "2026-10-05T07:09:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Systematic review and comparative synthesis of cross lingual question answering systems for low resource Indic languages"
+    },
+    "DOI:10.1145/3845987": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3845987",
+      "identity_tokens": [
+        "DOI:10.1145/3845987"
+      ],
+      "reason": "VAE for top-N recommendation, not language-model inference.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Information-Bottlenecked Variational Autoencoder for Top-N Recommendation via Gating Mechanism"
+    },
+    "arXiv:2609.05801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05801",
+      "identity_tokens": [
+        "arXiv:2609.05801"
+      ],
+      "reason": "Discrete-expert sequence restoration, not LLM serving.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Evidence-Aligned Local Composition of Discrete Experts for Sequence Restoration"
+    },
+    "arXiv:2609.05820": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05820",
+      "identity_tokens": [
+        "arXiv:2609.05820"
+      ],
+      "reason": "Online quality-based learning to select LLM experts; no inference-cost or serving-efficiency contribution.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Online Learning with LLM Experts from Limited Feedback"
+    },
+    "arXiv:2609.05871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05871",
+      "identity_tokens": [
+        "arXiv:2609.05871"
+      ],
+      "reason": "Audio-conditioned LLM acoustic information-loss/quality analysis, not efficiency.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Where Does the Sound Go? Tracing Acoustic Information Loss in Audio-Conditioned LLMs"
+    },
+    "arXiv:2609.05881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05881",
+      "identity_tokens": [
+        "arXiv:2609.05881"
+      ],
+      "reason": "Detects defective quantized LLM artifacts; reliability rather than efficient inference.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Broken on Arrival: Silently Defective LLM Artifacts in Public Model Registries and How to Catch Them"
+    },
+    "arXiv:2609.06008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06008",
+      "identity_tokens": [
+        "arXiv:2609.06008"
+      ],
+      "reason": "Time-series compression with a time-series foundation model, not LLM serving.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Cadence: Error-Bounded Lossy Compression of Demand Time Series with a Time-Series Foundation Model"
+    },
+    "arXiv:2609.06072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06072",
+      "identity_tokens": [
+        "arXiv:2609.06072"
+      ],
+      "reason": "Adapter consolidation for MoE fine-tuning; training-only.",
+      "first_checked_at": "2026-10-05T07:09:19+00:00",
+      "last_checked_at": "2026-10-05T07:09:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "ACE: Adapter Consolidation across Experts for Parameter-Efficient Fine-Tuning of MoE LLMs"
+    },
+    "arXiv:2609.06527": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06527",
+      "identity_tokens": [
+        "arXiv:2609.06527"
+      ],
+      "reason": "一次要旨: Large language models (LLMs) have shown strong potential for translating natural-language (NL) requirements into PL/SQL programs, attracting increasing attention from the database community. However, existing NL-to-PL/SQL efforts primarily focus on directly generating PL/SQL from complete NL requirements. In practice, PL/SQL development involves diverse scenarios, such as from-scratch development, code modification, debugging, and optimization, and may require either direct generation or multi-turn interaction. Yet, no comprehensive benchmark evaluates multi-scenario, direct and interactive, and multi-dialect NL-to-PL/SQL development. In this paper, we present ProcArena, an execution-based benchmark covering both Direct and Interactive modes. ProcArena comprises 3,998 executable tasks over 157 databases, spanning nine development subscenarios in PostgreSQL and Oracle. We construct challenging Direct tasks through Iterative Logic Enhancement and scenario-specific adapters, and derive paired Interactive tasks through Knowledge Integration and Requirement Perturbation while preserving executable targets. We further design a controlled Solver-User Simulator protocol that allows models to clarify user intent and inspect the database environment without exposing hidden execution feedback. Evaluating seven language models, we find that the best average scores are only 62.2% and 57.8% in Direct and Interactive, respectively, demonstrating that realistic NL-to-PL/SQL development remains challenging, particularly in interactive settings.",
+      "first_checked_at": "2026-10-05T07:09:20+00:00",
+      "last_checked_at": "2026-10-05T07:09:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ProcArena: A Multi-Scenario Benchmark for LLMs on Direct and Interactive PL/SQL Development from Natural Language"
+    },
+    "arXiv:2609.06674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06674",
+      "identity_tokens": [
+        "arXiv:2609.06674"
+      ],
+      "reason": "一次要旨: We present a new attack that reconstructs the text generated by locally hosted LLMs by observing CPU cache activity during detokenization. Unlike prior attacks that rely on deployment-specific assumptions, such as shared data memory, CPU offloading, or Mixture-of-Experts architectures, our approach targets the detokenizer, a component used in default LLM inference pipelines. To obtain clean signals, we use Flush+Reload on shared tokenizer code to detect when decoding occurs, which lets us perform Prime+Probe at the right moment and isolate token-dependent cache activity. We then apply a clustering-and-language-model pipeline to recover text from noisy cache observations. We evaluate the attack across multiple datasets, hardware platforms, inference frameworks, and model families, and show that it can recover semantically accurate outputs from real-world local LLM deployments, including agentic systems. This vulnerability is particularly significant because the most widely used tokenizer implementations are susceptible to the attack and are embedded in many popular local LLM products and agent frameworks, including systems such as OpenClaw (which we demonstrate), substantially broadening the practical attack surface.",
+      "first_checked_at": "2026-10-05T07:09:20+00:00",
+      "last_checked_at": "2026-10-05T07:09:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "title": "Detokenization Leaks: Reconstructing Local LLM Outputs From Cache Traces"
+    },
+    "arXiv:2609.06691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06691",
+      "identity_tokens": [
+        "arXiv:2609.06691"
+      ],
+      "reason": "一次要旨: Latency-critical cloud services place growing pressure on memory while requiring isolation, fairness, and predictable QoS. Near-data processing (NDP) reduces data movement by executing requests close to memory, and prior systems further improve locality through caching and replication. However, writes make replica maintenance expensive, while uneven compute and memory traffic can overload a few NDP units and increase tail latency. Existing throughput-oriented schedulers do not fully address these challenges for co-located cloud services. We present Gutenberg, a CPU+NDP for mutable, latency-critical cloud services. Gutenberg stages subpage updates in a CPU-resident delta buffer, allowing hot writable pages to remain replicated without eager full-page synchronization. It also adopts CPU helper cores to assist request execution when NDP execution or replica maintenance becomes costly. An online controller jointly decides page placement, replication, CPU/NDP execution, and routing using access patterns, queue pressure, and feedback from prior decisions. The system further enforces isolation and fair resource allocation across services. We also model-check CPU--NDP coordination protocol for correctness. We evaluate on TailBench using ZSim with Ramulator-calibrated memory timing. Across evaluated services, Gutenberg outperforms prior systems, reducing average and p99 latency by up to 80.4% and 85.8%. It also improves isolation and fairness while adapting to changing workload behaviors.",
+      "first_checked_at": "2026-10-05T07:09:20+00:00",
+      "last_checked_at": "2026-10-05T07:09:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Gutenberg: Taming Latency-Critical Cloud Services with Near-Data-Processing"
+    },
+    "arXiv:2609.06694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06694",
+      "identity_tokens": [
+        "arXiv:2609.06694"
+      ],
+      "reason": "一次要旨: Industrial and scientific computing rests on a few core kernels, and the stencil is among the most widely used: weather and climate models, seismic imaging, fluid dynamics, and image processing all run on it. No single stencil implementation is fastest: the optimal kernel changes qualitatively with stencil shape, grid shape, precision, and host application. For two decades the field has answered with general methods (DSLs, code generators, autotuners), because specialized solutions were too expensive to build per case, so all reuse one human-authored recipe. That reuse costs performance; we call the cost the generality tax. This premise no longer holds: code-synthesis agents now build a correct, specialized solution per case at acceptable cost. ForgeStencil automates this. A Kernel Agent synthesizes CUDA and forges a per-configuration map of specialized operators, removing the tax case by case. On an A100 the map beats the strongest public baseline in 37 of 37 cases: geometric mean 2.35x against same-precision f32 baselines and 1.95x for fp16, each reported under its own precision. The same change reaches end-to-end application performance. A generic operator library is tuned once for its own general case and reused across applications, so its shapes, layouts, and launch boundaries are optimal for none of them: using it is the application-level form of the tax. An App Agent instead forges a specialized solution per application, locating hotspots, rewriting application structure, and validating and integrating each change. Across 100 real industrial and scientific codes the end-to-end median speedup is 1.41x against each application's own GPU baseline. To our knowledge this is the first demonstration that per-case synthesis carries from a kernel library to complete applications at this breadth, and evidence that reuse is no longer the default in a domain built on it for two decades.",
+      "first_checked_at": "2026-10-05T07:09:20+00:00",
+      "last_checked_at": "2026-10-05T07:09:20+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "ForgeStencil: Automating Per-Case Stencil Specialization from Kernels to 100+ Real Applications"
+    },
+    "arXiv:2609.06721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.06721",
+      "identity_tokens": [
+        "arXiv:2609.06721"
+      ],
+      "reason": "一次要旨: AI companions are envisioned as always-on assistants that support users in daily life. With this regard, we introduce BuddyVQA, a benchmark for companion-style question answering (QA) on egocentric streaming video. BuddyVQA contains 21.6K questions linked to 6K highlight moments across 1,012 long, egocentric videos. It features two key characteristics that are common in daily first-person QA assistance but are largely overlooked in existing VideoQA benchmarks: ego-deictic expressions and interactively chained questions (e.g.,\"Where is it?\",\"How to get there?\"). These require models to infer a user's in-situation intent by resolving visual pronouns in the context of egocentric visual and QA contents, with both grounded in a long-form streaming setting. To tackle the challenges, we propose MyBuddy, a companion-style QA assistant that highlights a multimodal chain-of-thought reasoning mechanism to infer the final answer based on the historical QA and visual content. An additional question filter and multi-level memory are designed to facilitate efficient QA and visual information retrieval under streaming QA settings. Experiments show that MyBuddy significantly enhances the performance of foundation models on BuddyVQA. Moreover, these gains generalize to other streaming and common video QA benchmarks, demonstrating the applicability and effectiveness of our approach. Our code and dataset are available at https://github.com/QHUni/BuddyVQA",
+      "first_checked_at": "2026-10-05T07:09:20+00:00",
+      "last_checked_at": "2026-10-05T07:09:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Companion-style QA Assistance in Ego-Vision"
     }
   }
 }

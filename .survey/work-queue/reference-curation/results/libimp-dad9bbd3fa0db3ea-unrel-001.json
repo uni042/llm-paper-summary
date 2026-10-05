@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dad9bbd3fa0db3ea-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.06527",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.06527",
+    "identity_tokens": [
+      "arXiv:2609.06527"
+    ],
+    "reason": "一次要旨: Large language models (LLMs) have shown strong potential for translating natural-language (NL) requirements into PL/SQL programs, attracting increasing attention from the database community. However, existing NL-to-PL/SQL efforts primarily focus on directly generating PL/SQL from complete NL requirements. In practice, PL/SQL development involves diverse scenarios, such as from-scratch development, code modification, debugging, and optimization, and may require either direct generation or multi-turn interaction. Yet, no comprehensive benchmark evaluates multi-scenario, direct and interactive, and multi-dialect NL-to-PL/SQL development. In this paper, we present ProcArena, an execution-based benchmark covering both Direct and Interactive modes. ProcArena comprises 3,998 executable tasks over 157 databases, spanning nine development subscenarios in PostgreSQL and Oracle. We construct challenging Direct tasks through Iterative Logic Enhancement and scenario-specific adapters, and derive paired Interactive tasks through Knowledge Integration and Requirement Perturbation while preserving executable targets. We further design a controlled Solver-User Simulator protocol that allows models to clarify user intent and inspect the database environment without exposing hidden execution feedback. Evaluating seven language models, we find that the best average scores are only 62.2% and 57.8% in Direct and Interactive, respectively, demonstrating that realistic NL-to-PL/SQL development remains challenging, particularly in interactive settings.",
+    "first_checked_at": "2026-10-05T07:09:20+00:00",
+    "last_checked_at": "2026-10-05T07:09:20+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "ProcArena: A Multi-Scenario Benchmark for LLMs on Direct and Interactive PL/SQL Development from Natural Language"
+  },
+  "processed_at": "2026-10-05T07:09:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dad9bbd3fa0d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
