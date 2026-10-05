@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-93-part-04-66cdea009396",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14458",
+      "identity_tokens": [
+        "arXiv:2411.14458"
+      ],
+      "title": "Improving training time and GPU utilization in geo-distributed language model training",
+      "reason": "一次要旨はgeo-distributed language model trainingのtraining time/GPU utilizationを改善する研究で、inference/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2411.14458",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15281",
+      "identity_tokens": [
+        "arXiv:2410.15281"
+      ],
+      "title": "LLM4AD: Large Language Models for Autonomous Driving—Concept, Review, Benchmark, Experiments, and Future Trends",
+      "reason": "一次要旨はautonomous driving向けLLMの応用・benchmark・surveyであり、推論/serving最適化が中心ではない。",
+      "source_url": "https://arxiv.org/abs/2410.15281",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13333",
+      "identity_tokens": [
+        "arXiv:2410.13333"
+      ],
+      "title": "Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization",
+      "reason": "一次要旨は大規模modelのhybrid parallel trainingにおけるstraggler resilienceを扱う学習systems研究である。",
+      "source_url": "https://arxiv.org/abs/2410.13333",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13006",
+      "identity_tokens": [
+        "arXiv:2410.13006"
+      ],
+      "title": "LLM Chain Ensembles for Scalable and Accurate Data Annotation",
+      "reason": "一次要旨はLLM chain ensemblesによるdata annotation quality/scalabilityが中心で、inference costを減らす方法ではない。",
+      "source_url": "https://arxiv.org/abs/2410.13006",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01841",
+      "identity_tokens": [
+        "arXiv:2410.01841"
+      ],
+      "title": "A GEN AI Framework for Medical Note Generation",
+      "reason": "一次要旨はmedical note generationの応用frameworkで、LLM inference/serving efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2410.01841",
+      "first_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "last_checked_at": "2026-10-05T12:34:10.004379+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ]
+    }
+  ]
+}
