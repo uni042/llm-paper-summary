@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-55-part-03-c3c0aa4d78a2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27748",
+      "identity_tokens": [
+        "arXiv:2606.27748"
+      ],
+      "title": "Flexformer: Flexible Linear Transformer with Learnable Attention Kernel",
+      "reason": "The linear-complexity mechanism is relevant, but primary evidence is small-model/sequence-task evaluation and lacks LLM-scale end-to-end serving measurements.",
+      "source_url": "https://arxiv.org/abs/2606.27748",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27785",
+      "identity_tokens": [
+        "arXiv:2606.27785"
+      ],
+      "title": "Output-Space Allocation Costs for Calibration-Guided LLM Compression: An Empirical Study",
+      "reason": "The primary evidence is a compression-allocation accuracy/perplexity tradeoff without a demonstrated runtime-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2606.27785",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27793",
+      "identity_tokens": [
+        "arXiv:2606.27793"
+      ],
+      "title": "Position Bias Correction is Insufficient for One-Pass Attention Sorting",
+      "reason": "The method targets document reordering cost in a narrow synthetic RAG QA setup; one-pass quality remains materially below iterative sorting in one condition and end-to-end serving gains are not measured.",
+      "source_url": "https://arxiv.org/abs/2606.27793",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27797",
+      "identity_tokens": [
+        "arXiv:2606.27797"
+      ],
+      "title": "Optimizing Teacher-Student Partitioning for Scalable Knowledge Distillation on HPC Systems",
+      "reason": "Primary abstract reviewed: Knowledge Distillation (KD) enables training smaller student models under the guidance of larger teacher models, and the widely adopted TRL library implements it. Yet, TRL treats both models symmetrically, missing opportunities to exploit their pronounced asymmetry in memory footprint, and communication requirements. This paper presents an HPC-aware methodology for KD that decouples teacher and student partitioning e… Out of scope: Teacher/student partitioning for knowledge-distillation training.",
+      "source_url": "https://arxiv.org/abs/2606.27797",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27829",
+      "identity_tokens": [
+        "arXiv:2606.27829"
+      ],
+      "title": "CSD: Content-aware Speculative Decoding for Efficient Image Generation",
+      "reason": "Primary abstract reviewed: Speculative decoding (SD) has emerged as a key solution to accelerate the inference of autoregressive models. However, in the field of image generation, it faces the challenge of low acceptance rates, and directly relaxing its criteria leads to degradation in image quality. In this paper, we propose a novel content-aware speculative decoding algorithm, termed CSD, which integrates an entropy-based probability relaxat… Out of scope: Autoregressive image-generation decoding, not LLM text inference.",
+      "source_url": "https://arxiv.org/abs/2606.27829",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2411.00841-a-theoretical-perspective-for-speculative-decoding-algorithm.md"
+      ]
+    }
+  ]
+}
