@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-79-part-03-80b30b754d11",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.18797",
+      "identity_tokens": [
+        "arXiv:2411.18797"
+      ],
+      "title": "SEUF: Is Unlearning One Expert Enough for Mixture-of-Experts LLMs?",
+      "reason": "SEUF studies unlearning/removal of knowledge in MoE LLMs; it does not propose or evaluate inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.18797",
+      "first_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23463",
+      "identity_tokens": [
+        "arXiv:2410.23463"
+      ],
+      "title": "MDCure: A Scalable Pipeline for Multi-Document Instruction-Following",
+      "reason": "MDCure proposes multi-document instruction-following data/modeling for LLM task performance; no inference-cost or serving optimization is the contribution.",
+      "source_url": "https://arxiv.org/abs/2410.23463",
+      "first_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.14852",
+      "identity_tokens": [
+        "arXiv:2410.14852"
+      ],
+      "title": "FedSpaLLM: Federated Pruning of Large Language Models",
+      "reason": "Its connection to the target is indirect: the primary evaluation does not establish practical inference latency, memory, or serving gains from the resulting pruned models.",
+      "source_url": "https://arxiv.org/abs/2410.14852",
+      "first_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12246",
+      "identity_tokens": [
+        "arXiv:2406.12246"
+      ],
+      "title": "TroL: Traversal of Layers for Large Language and Vision Models",
+      "reason": "TroL traverses/iterates model layers to improve output quality; primary experiments show extra inference computation/latency rather than an inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2406.12246",
+      "first_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04801",
+      "identity_tokens": [
+        "arXiv:2406.04801"
+      ],
+      "title": "MoE Jetpack: From Dense Checkpoints to Adaptive Mixture of Experts for Vision Tasks",
+      "reason": "MoE Jetpack is a vision-task model conversion/training approach for adaptive experts, not LLM inference serving.",
+      "source_url": "https://arxiv.org/abs/2406.04801",
+      "first_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.977117+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ]
+    }
+  ]
+}
