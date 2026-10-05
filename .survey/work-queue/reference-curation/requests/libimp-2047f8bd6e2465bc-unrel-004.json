@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2047f8bd6e2465bc-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.06521",
+  "reason": "Data center power systems are increasingly exposed to weak-grid conditions due to the rapid growth of converter-dominated networks and highly dynamic artificial intelligence (AI) workloads. In centralized uninterruptible power supply (UPS) architectures, the front-end rectifier continuously processes the incoming facility power, making its dynamic performance critical for ensuring stable operation and reliable power delivery to information technology (IT) equipment. Under weak-grid conditions, conventional phase-locked loop (PLL)-based proportional-integral (PI) rectifier controllers may exhibit instability due to strong interactions between converter control dynamics and grid impedance. This paper investigates the stability of centralized UPS data center systems operating under weak-grid conditions using a detailed switching-level model developed in MATLAB/Simulink and validated in real time using an OPAL-RT platform. To enhance weak-grid stability and improve converter-grid interaction, a voltage-modulated direct power control (VM-DPC) strategy with adaptive reactive power support is applied to the front-end rectifier. The proposed approach directly regulates active and reactive power without PLL synchronization while dynamically supporting the point of common coupling (PCC) voltage during rapid IT load variations. Results demonstrate that conventional PI-based rectifier control becomes unstable under SCR<=2 conditions, leading to dc-link oscillations and degradation of downstream power delivery. In contrast, the proposed VM-DPC strategy restores stable operation, improves system damping, and maintains reliable power transfer to highly dynamic IT loads under weak-grid operation.",
+  "title": "Keeping Data Centers Online in Weak Grids: PLL-Free VM-DPC With Adaptive Reactive-Power Support for Centralized UPS Systems",
+  "identity_tokens": [
+    "arXiv:2608.06521"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2047f8bd6e24",
+  "source_precheck_request_id": null
+}
