@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:12:21+00:00",
-  "record_count": 3500,
+  "updated_at": "2026-10-05T07:14:50+00:00",
+  "record_count": 3517,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -50998,6 +50998,252 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "What Did I Just Say? Self-Listening for Full-Duplex Speech Models"
+    },
+    "arXiv:2610.00053": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00053",
+      "identity_tokens": [
+        "arXiv:2610.00053"
+      ],
+      "reason": "Fast FP4 pretraining, training-only.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Format-Aware Fusion for Fast FP4 Pretraining"
+    },
+    "arXiv:2610.00054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00054",
+      "identity_tokens": [
+        "arXiv:2610.00054"
+      ],
+      "reason": "Audits first-token readout of LLM judges/evaluation validity; no serving optimization.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "The First Token Is Not the Verdict: Hidden Costs of Reading LLM Judges Without Generating"
+    },
+    "arXiv:2610.00073": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00073",
+      "identity_tokens": [
+        "arXiv:2610.00073"
+      ],
+      "reason": "Evaluation framework for home-energy management; no LLM efficiency method.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "A Comprehensive Evaluation Framework for Conversational Home Energy Management Systems"
+    },
+    "arXiv:2609.03290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03290",
+      "identity_tokens": [
+        "arXiv:2609.03290"
+      ],
+      "reason": "CTR/recommendation context modeling, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "UniCon: A Unified Context-Centric Modeling Paradigm for CTR Prediction"
+    },
+    "arXiv:2609.05694": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05694",
+      "identity_tokens": [
+        "arXiv:2609.05694"
+      ],
+      "reason": "Graph transformer for olfaction, outside LLM serving.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "GraphNOSE: A Graph Transformer in Olfaction"
+    },
+    "arXiv:2609.05695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05695",
+      "identity_tokens": [
+        "arXiv:2609.05695"
+      ],
+      "reason": "Sparse-plus-low-rank embedding for radiotherapy, unrelated.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Sparse plus low-rank matrix embedding with applications in cancer radiotherapy optimization"
+    },
+    "arXiv:2609.05738": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05738",
+      "identity_tokens": [
+        "arXiv:2609.05738"
+      ],
+      "reason": "Neural rendering of scene primitives, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "RenderFormer-V2: Neural Rendering with Heterogeneous Scene Primitives"
+    },
+    "arXiv:2609.05770": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05770",
+      "identity_tokens": [
+        "arXiv:2609.05770"
+      ],
+      "reason": "Role-aware private training for MoE; training-only.",
+      "first_checked_at": "2026-10-05T07:14:48+00:00",
+      "last_checked_at": "2026-10-05T07:14:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "RAPTOR: Role-Aware Private Training for Mixture-of-Experts"
+    },
+    "arXiv:2609.13245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.13245",
+      "identity_tokens": [
+        "arXiv:2609.13245"
+      ],
+      "reason": "Speculative Jacobi decoding for autoregressive image generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "SJD-SV: Speculative Jacobi Decoding with Semantics Verification for Autoregressive Image Generation"
+    },
+    "arXiv:2609.03528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03528",
+      "identity_tokens": [
+        "arXiv:2609.03528"
+      ],
+      "reason": "Diffusion reinforcement-learning training recomputation, not LLM serving.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ],
+      "title": "LeanGRPO: Eliminating Redundant Recomputation in Diffusion RL"
+    },
+    "arXiv:2609.03563": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03563",
+      "identity_tokens": [
+        "arXiv:2609.03563"
+      ],
+      "reason": "Video diffusion/generative rendering, not language-model inference.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "FlashRender: Few-Step Generative Rendering via Camera-Controlled Video MeanFlow"
+    },
+    "arXiv:2609.03591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03591",
+      "identity_tokens": [
+        "arXiv:2609.03591"
+      ],
+      "reason": "Vision-language-action robot demonstrations/training, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Scaling Bimanual Household Manipulation from 1,500 hours of Demonstrations to On-Policy Corrections"
+    },
+    "arXiv:2609.03604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03604",
+      "identity_tokens": [
+        "arXiv:2609.03604"
+      ],
+      "reason": "ResNet/ViT compression and test-time adaptation, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "On the Interaction Between Model Compression and Test-Time Adaptation"
+    },
+    "arXiv:2609.03667": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03667",
+      "identity_tokens": [
+        "arXiv:2609.03667"
+      ],
+      "reason": "Offline multi-agent reinforcement-learning sequence models, not LLM serving.",
+      "first_checked_at": "2026-10-05T07:14:49+00:00",
+      "last_checked_at": "2026-10-05T07:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Out-of-Distribution Generalisation with Sequence Models in Offline Multi-Agent Reinforcement Learning"
+    },
+    "arXiv:2609.03340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03340",
+      "identity_tokens": [
+        "arXiv:2609.03340"
+      ],
+      "reason": "Abstract concerns agent state freshness and stale-plan safety, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T07:14:50+00:00",
+      "last_checked_at": "2026-10-05T07:14:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Fresh Memory, Stale Plans: Derivation Currency for Distributed LLM-Agent Memory"
+    },
+    "arXiv:2609.03355": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03355",
+      "identity_tokens": [
+        "arXiv:2609.03355"
+      ],
+      "reason": "Abstract concerns pretraining distillation and benchmark accuracy; it is training-only.",
+      "first_checked_at": "2026-10-05T07:14:50+00:00",
+      "last_checked_at": "2026-10-05T07:14:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "ALRA: Adaptive Local Relational Alignment for Logit-Based Pre-training Distillation of Autoregressive Language Models"
+    },
+    "arXiv:2609.03459": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03459",
+      "identity_tokens": [
+        "arXiv:2609.03459"
+      ],
+      "reason": "Recommendation-system embedding/flow modeling, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:14:50+00:00",
+      "last_checked_at": "2026-10-05T07:14:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "FlowTT: Exploiting Computation Flow Reuse in Irregular Tensor-Train Embedding"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4ff90c980851ba07-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.13245",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.13245",
+    "identity_tokens": [
+      "arXiv:2609.13245"
+    ],
+    "reason": "Speculative Jacobi decoding for autoregressive image generation, not LLM inference.",
+    "first_checked_at": "2026-10-05T07:14:49+00:00",
+    "last_checked_at": "2026-10-05T07:14:49+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+    ],
+    "title": "SJD-SV: Speculative Jacobi Decoding with Semantics Verification for Autoregressive Image Generation"
+  },
+  "processed_at": "2026-10-05T07:14:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4ff90c980851",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
