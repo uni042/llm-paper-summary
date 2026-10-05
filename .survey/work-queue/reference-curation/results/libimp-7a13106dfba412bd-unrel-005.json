@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a13106dfba412bd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34135",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34135",
+    "identity_tokens": [
+      "arXiv:2609.34135"
+    ],
+    "reason": "Evaluates transfer of evolved multi-agent skills and costs; no LLM inference-engine or inference-time efficiency mechanism.",
+    "first_checked_at": "2026-10-05T04:51:53+00:00",
+    "last_checked_at": "2026-10-05T04:51:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Evo2Team: When Do Evolved Skills Transfer? From Selection to Deployment"
+  },
+  "processed_at": "2026-10-05T04:51:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a13106dfba4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

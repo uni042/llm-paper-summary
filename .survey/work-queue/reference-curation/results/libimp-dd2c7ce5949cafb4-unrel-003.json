@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd2c7ce5949cafb4-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1186/s40677-026-00418-z",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1186/s40677-026-00418-z",
+    "identity_tokens": [
+      "DOI:10.1186/s40677-026-00418-z"
+    ],
+    "reason": "Remote-sensing landslide image detection; not LLM inference.",
+    "first_checked_at": "2026-10-05T04:51:53+00:00",
+    "last_checked_at": "2026-10-05T04:51:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Spectral-confusion-suppressed landslide recognition in high-resolution remote sensing images using geological-feature enhanced Cascade Mask R-CNN"
+  },
+  "processed_at": "2026-10-05T04:51:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd2c7ce5949c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

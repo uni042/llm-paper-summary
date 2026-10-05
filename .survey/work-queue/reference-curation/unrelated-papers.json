@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:49:14+00:00",
-  "record_count": 2662,
+  "updated_at": "2026-10-05T04:51:54+00:00",
+  "record_count": 2677,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -38616,6 +38616,237 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "Personalized State-Transition-Aware Memory for Clinical Agents"
+    },
+    "arXiv:2609.34240": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34240",
+      "identity_tokens": [
+        "arXiv:2609.34240"
+      ],
+      "reason": "Evaluation metric for coherence of generated text; not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T04:51:52+00:00",
+      "last_checked_at": "2026-10-05T04:51:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Coherence-Aware Distributional Evaluation of Open-Ended Text Generation"
+    },
+    "arXiv:2609.34244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34244",
+      "identity_tokens": [
+        "arXiv:2609.34244"
+      ],
+      "reason": "Plans parallelism for training large models on heterogeneous clusters; training-only throughput optimization.",
+      "first_checked_at": "2026-10-05T04:51:52+00:00",
+      "last_checked_at": "2026-10-05T04:51:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md"
+      ],
+      "title": "Heddle: Learning Structural Templates for Parallelism Planning on Heterogeneous GPU Clusters"
+    },
+    "arXiv:2609.34272": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34272",
+      "identity_tokens": [
+        "arXiv:2609.34272"
+      ],
+      "reason": "Diagnoses/corrects BF16 attention-gradient instability during pretraining; training stability, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:51:52+00:00",
+      "last_checked_at": "2026-10-05T04:51:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Broken Symmetry in BF16 Attention: Why FlashAttention Gradients Blow Up Late in Training"
+    },
+    "arXiv:2609.34273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34273",
+      "identity_tokens": [
+        "arXiv:2609.34273"
+      ],
+      "reason": "Studies query/key geometry during Transformer training; no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:51:52+00:00",
+      "last_checked_at": "2026-10-05T04:51:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Query Expansion and Key Specialization in Transformer Attention Geometry"
+    },
+    "arXiv:2609.34144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34144",
+      "identity_tokens": [
+        "arXiv:2609.34144"
+      ],
+      "reason": "Interactive-world-model acceleration for control response; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "CAST: Reconstruction-Coupled Acceleration of Interactive World Models"
+    },
+    "arXiv:2609.34162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34162",
+      "identity_tokens": [
+        "arXiv:2609.34162"
+      ],
+      "reason": "Scales LLM fine-tuning across heterogeneous GPUs; training-only efficiency.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "SlideDP: Scaling Host-Resident LLM Fine-Tuning Across Multiple GPUs"
+    },
+    "arXiv:2609.34167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34167",
+      "identity_tokens": [
+        "arXiv:2609.34167"
+      ],
+      "reason": "fMRI representation learning and biomedical prediction; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Natural Image Autoencoder-Based fMRI Representations for Trait and State Prediction"
+    },
+    "DOI:10.3390/electronics15194473": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15194473",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15194473"
+      ],
+      "reason": "Survey specifically covers LLM training energy mechanisms; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "A Survey on Energy-Efficiency Mechanisms for Large Language Model Training: Measurement, Optimization Mechanisms, Evidence Boundaries, and Future Research Directions"
+    },
+    "DOI:10.53941/tai.2026.100014": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.53941/tai.2026.100014",
+      "identity_tokens": [
+        "DOI:10.53941/tai.2026.100014"
+      ],
+      "reason": "Iterative attention refinement targets model quality and has about 8% additional inference latency/compute; no efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Rethinking Attention: Entropy-Guided Iterative Refinement for Language Models"
+    },
+    "arXiv:2609.34064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34064",
+      "identity_tokens": [
+        "arXiv:2609.34064"
+      ],
+      "reason": "Policy-robustness optimization during LLM-agent RL post-training; training-only method.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Learning Perturbation Robust Policies for LLM Agents with Stable Optimization"
+    },
+    "arXiv:2609.34135": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34135",
+      "identity_tokens": [
+        "arXiv:2609.34135"
+      ],
+      "reason": "Evaluates transfer of evolved multi-agent skills and costs; no LLM inference-engine or inference-time efficiency mechanism.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Evo2Team: When Do Evolved Skills Transfer? From Selection to Deployment"
+    },
+    "DOI:10.1021/acs.jcim.6c00304": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acs.jcim.6c00304",
+      "identity_tokens": [
+        "DOI:10.1021/acs.jcim.6c00304"
+      ],
+      "reason": "Molecular ADME/potency prediction benchmark and feature strategy; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Benchmarking Experiments\nwith External Data, Domain-Specific\nFeatures, and Learning Strategies for Modeling ADME and Potency of\nCoronavirus Main Protease Inhibitors"
+    },
+    "DOI:10.1108/atsip-02-2026-0003": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1108/atsip-02-2026-0003",
+      "identity_tokens": [
+        "DOI:10.1108/atsip-02-2026-0003"
+      ],
+      "reason": "Transformer token mixers for learned video compression; compression inference is for video codecs rather than LLM serving.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Benchmarking token mixers for efficient transformer-based learned video compression"
+    },
+    "DOI:10.1186/s40677-026-00418-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40677-026-00418-z",
+      "identity_tokens": [
+        "DOI:10.1186/s40677-026-00418-z"
+      ],
+      "reason": "Remote-sensing landslide image detection; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:51:53+00:00",
+      "last_checked_at": "2026-10-05T04:51:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Spectral-confusion-suppressed landslide recognition in high-resolution remote sensing images using geological-feature enhanced Cascade Mask R-CNN"
+    },
+    "DOI:10.3389/fgeed.2026.1954329": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fgeed.2026.1954329",
+      "identity_tokens": [
+        "DOI:10.3389/fgeed.2026.1954329"
+      ],
+      "reason": "3D medical-image segmentation architecture; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:51:54+00:00",
+      "last_checked_at": "2026-10-05T04:51:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MambaGLA-NPC: a 3D framework integrating CNN and state space models for robust multi-center nasopharyngeal carcinoma segmentation"
     }
   }
 }
