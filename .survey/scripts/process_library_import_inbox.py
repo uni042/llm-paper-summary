@@ -41,6 +41,7 @@ import paper_quality_gate  # noqa: E402
 import paper_identity  # noqa: E402
 import paper_taxonomy  # noqa: E402
 import research_job_reconciliation  # noqa: E402
+import reference_relevance_ledger  # noqa: E402
 import resolve_paper_identity  # noqa: E402
 import survey  # noqa: E402
 
@@ -895,6 +896,10 @@ def merge_library_reason(provider_record: dict[str, Any], library_records: list[
                 candidate["lineage"] = record.get("lineage")
             candidate["library_body_check"] = record.get("body_check")
             candidate["library_source_run_file"] = record.get("source_run_file")
+            if record.get("origin"):
+                candidate["origin"] = record.get("origin")
+            if record.get("borderline_recheck_count_before") is not None:
+                candidate["borderline_recheck_count_before"] = record.get("borderline_recheck_count_before")
             break
     return candidate
 
@@ -923,6 +928,7 @@ def create_relevance_requests(repo_root: Path, token: str, records: list[dict[st
             "worker_id": "library-import-inbox",
             "run_key": f"library-import-{hashlib.sha256(token.encode('utf-8')).hexdigest()[:12]}",
             "source_precheck_request_id": record.get("source_precheck_request_id"),
+            "reconsidered_from_borderline": record.get("origin") == "borderline_reconsideration",
         }
         write_json_if_absent(request_path, request)
         if not result_path.exists():
@@ -1051,6 +1057,15 @@ def create_accept_pipeline(
             queue_result = read_json(queue_result_path)
             if queue_result.get("ok") is not True:
                 failures.append(submission_id)
+                continue
+            for candidate in candidates:
+                if candidate.get("origin") != "borderline_reconsideration":
+                    continue
+                reference_relevance_ledger.clear_borderline(
+                    repo_root / reference_relevance_ledger.DEFAULT_BORDERLINE_LEDGER,
+                    canonical_id=str(candidate.get("canonical_id") or ""),
+                    identity_tokens=list(candidate.get("identity_tokens") or []),
+                )
 
     candidate_gaps.extend(missing_ids)
     return waiting, submission_waiting, failures, sorted(set(candidate_gaps)), counts
