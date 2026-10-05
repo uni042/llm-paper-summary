@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-55-part-01-c3c0aa4d78a2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28600",
+      "identity_tokens": [
+        "arXiv:2608.28600"
+      ],
+      "title": "SHAPE of Chain-of-Thought in Math Reasoning",
+      "reason": "Primary abstract reviewed: Large language models (LLMs) achieve strong performance on mathematical reasoning benchmarks, yet the mathematically meaningful skills underlying their reasoning remain underexplored. We introduce \\texttt{SHAPE}, a framework that analyzes Chain-of-Thought (CoT) trajectories through two lenses developed in mathematics education: (1) semantic spaces: the model's evolving mathematical interpretations of a problem (e.g.,… Out of scope: CoT pattern analysis and post-training for reasoning accuracy, not runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.28600",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.compbiolchem.2026.109217",
+      "identity_tokens": [
+        "DOI:10.1016/j.compbiolchem.2026.109217"
+      ],
+      "title": "Role of Artificial Intelligence in bioinformatics: Revolutionizing molecular docking and DNA tokenization",
+      "reason": "Primary abstract reviewed: Bioinformatics has become a crucial discipline that connects biology and computational analysis, extracting meaningful insights from complex biological datasets. Traditional bioinformatics approaches, which rely on statistical models and manual analysis, are often inadequate for handling such complexity. The integration of artificial intelligence (AI) and machine learning (ML) has revolutionized bioinformatics by pro… Out of scope: Bioinformatics review on molecular docking/genomics, not LLM runtime.",
+      "source_url": "https://doi.org/10.1016/j.compbiolchem.2026.109217",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/s26134108",
+      "identity_tokens": [
+        "DOI:10.3390/s26134108"
+      ],
+      "title": "PA-DFNet: Polarity-Aware Attention Network with Feature Dynamic Fusion for Point Cloud Classification and Semantic Segmentation",
+      "reason": "Primary abstract reviewed: Point cloud segmentation constitutes a core task in 3D computer vision. However, prevailing models suffer from inherent limitations, including the absence of polarity correlation (i.e., spatial attribute-containing features derived from the separation and calculation of positive/negative correlations within point cloud query–key pairs), inefficient feature fusion, loss of fine-grained geometric details, and excessive… Out of scope: Point-cloud vision classification/segmentation, not LLM inference.",
+      "source_url": "https://doi.org/10.3390/s26134108",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28745",
+      "identity_tokens": [
+        "arXiv:2606.28745"
+      ],
+      "title": "FreqOrtho-SR: Frequency-Guided Orthogonal Expert Learning for Real-World Image Super-Resolution",
+      "reason": "Primary abstract reviewed: Diffusion prior-based methods have shown impressive results in real-world image super-resolution (ISR), yet two key challenges persist: balancing pixel-level fidelity with semantic quality, and adapting to diverse degradations. Existing dual-branch approaches freeze the pixel module during semantic training, but the semantic branch can still expand capacity within the pixel subspace, precluding genuine perceptual imp… Out of scope: Image super-resolution training/generation, not language-model serving.",
+      "source_url": "https://arxiv.org/abs/2606.28745",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28754",
+      "identity_tokens": [
+        "arXiv:2606.28754"
+      ],
+      "title": "SHIFT: Dynamic Compute Relocation Framework for Communication-Aware Chiplet-Based Systems",
+      "reason": "The abstract and results are in-scope, but the evidence is limited to a simulated chiplet architecture and selected workloads; transfer to deployed inference systems is unverified.",
+      "source_url": "https://arxiv.org/abs/2606.28754",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md"
+      ]
+    }
+  ]
+}
