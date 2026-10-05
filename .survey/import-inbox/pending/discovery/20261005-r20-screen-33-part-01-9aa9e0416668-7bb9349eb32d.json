@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-33-part-01-9aa9e0416668",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05104",
+      "identity_tokens": [
+        "arXiv:2608.05104"
+      ],
+      "title": "BnBERT-iPET: Sparse Few-Shot Language Modeling for Bengali via Lottery Ticket Pruning",
+      "reason": "Deep neural networks have shown impressive success in NLP tasks owing to their complex structure and huge number of edges. Achieving state-of-the-art performance in natural language processing with a large pre-trained model such as BERT is expensive and time-consuming, carries a large carbon footprint, and is difficult to realize on machines with minimal computational capability. This creates a barrier to training complex models for resource-constrained languages such as Bengali. However, in a complex neural model, not all edges are equally impactful, and the contributions of some of them can be neglected. Pruning promises to reduce the memory footprint of regular networks, shorten the training time of ever-growing networks, and increase inference efficiency without sacrificing comparable performance. In this work, we introduce BnBERT-iPET, a sparse few-shot language modeling approach for Bengali, and experimentally show that a lightweight few-shot-learned language model retaining only 10% of the edges of an initial model such as BERT can perform neck and neck with much larger models on challenging tasks for a resource-constrained language such as Bengali. By learning from few shots through iterative pattern exploiting training and achieving 90% sparsity with the Lottery Ticket Hypothesis pruning technique, our pruned BnBERT-iPET model proves to be a tough competitor to state-of-the-art language models such as Bangla Electra, Indic-BERT, and XLM-RoBERTa on downstream tasks over standard benchmark datasets of the Bengali language.",
+      "source_url": "https://arxiv.org/abs/2608.05104",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05127",
+      "identity_tokens": [
+        "arXiv:2608.05127"
+      ],
+      "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
+      "reason": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, rely on high-dimensional geometric constructions but incur unfavorable dimension-dependent variance. In this work, we propose Subsampled Stochastic TurboQuant (SSTQ), a framework that combines a bounded Kashin representation, data-independent coordinate subsampling, and privacy-aware one-dimensional quantization. SSTQ includes two variants: (1) a Flat Randomized Response variant that is unbiased and, for a fixed codebook bit-width, frame redundancy, and dimension-independent Kashin level, achieves reconstruction MSE that scales linearly with the ambient dimension $d$, while using only $\\lceil \\log_2 N \\rceil + b$ bits per message. Here, $N = \\Theta(d)$ denotes the frame size in the Kashin transform and $b$ is the codebook bit-width; and (2) a metric-aware truncated-Laplace variant that removes the exponential dependence on bit-width at the cost of a non-vanishing bias. We also derive a convex uniform-surrogate codebook objective whose worst-case codebook-dependent upper bound improves from $O(4^b)$ to $O(2^b)$. Experiments on synthetic regression, Fashion-MNIST, and CIFAR-10 compare the per-message privacy-utility and uplink-communication trade-offs of SSTQ with those of established baselines, demonstrating favorable utility and communication efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.05127",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05137",
+      "identity_tokens": [
+        "arXiv:2608.05137"
+      ],
+      "title": "SmartMage: Dynamic Modality Orchestration for 3D Scene Understanding",
+      "reason": "SmartMage routes modalities and experts for 3D-scene MLLM tasks. Table 5 reports training time per iteration falling from 91.61/125.2s to 47.44s, while inference TTFT/E2E (112.5/538.2ms) is comparable to baselines (115/527 and 135/551.6ms).",
+      "source_url": "https://arxiv.org/abs/2608.05137",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05228",
+      "identity_tokens": [
+        "arXiv:2608.05228"
+      ],
+      "title": "TriQua: Reconciling Granularity and Context in Factuality Evaluation",
+      "reason": "The\"decompose-then-verify\"paradigm for LLM factuality evaluation faces a fundamental trade-off: atomic facts, i.e., one sentence conveying one unit of information, often omit essential context, while broader statements lack the granularity needed for precise assessment. To address this, we introduce TriQua, a framework that flexibly models facts based on their complexity. Simple claims are extracted as standard triples, while complex claims are represented as hyperrelational facts by attaching auxiliary contextual qualifiers. This adaptive structure preserves the necessary context for accurate retrieval and verification without sacrificing atomicity. Furthermore, TriQua's verification process directly annotates concrete errors within specific triples and qualifiers, providing fine-grained explainability for error detection. Alongside the framework, we propose TriQuaScore to quantify the factuality of these structured fact units. Empirical evaluations show that TriQuaScore strongly aligns with human annotated factuality scores, TriQua achieves robust decomposition quality, and outperforms existing decomposition-based frameworks in evidence-based fact verification.",
+      "source_url": "https://arxiv.org/abs/2608.05228",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05240",
+      "identity_tokens": [
+        "arXiv:2608.05240"
+      ],
+      "title": "One Qubit Can Beat One Bit: Quantum Advantage for Post-Training Quantization",
+      "reason": "推論時量子化を扱うが、本文の主張は現行GPU serving accelerationではなく、仮想的な量子readoutでの再構成risk優位。実用推論効率への適合が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.05240",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ]
+    }
+  ]
+}
