@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f9fb624571acf6e0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.24027",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.24027",
+    "identity_tokens": [
+      "arXiv:2607.24027"
+    ],
+    "reason": "Diffusion video-generation inference, not LLM inference.",
+    "first_checked_at": "2026-10-05T01:10:46+00:00",
+    "last_checked_at": "2026-10-05T01:10:46+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md"
+    ],
+    "title": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification"
+  },
+  "processed_at": "2026-10-05T01:10:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f9fb624571ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

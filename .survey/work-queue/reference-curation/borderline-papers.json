@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:08:22+00:00",
-  "record_count": 515,
+  "updated_at": "2026-10-05T01:10:46+00:00",
+  "record_count": 518,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -7435,6 +7435,53 @@
         "papers/inference/09-kernel-runtime-compilation/2025-2504.17577-tilelang-a-composable-tiled-programming-model-for-ai-systems.md"
       ],
       "title": "HOPO: Accelerating Multimodal Neural Networks Inference via Holistic Parallelism Optimization"
+    },
+    "arXiv:2608.08888": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08888",
+      "identity_tokens": [
+        "arXiv:2608.08888"
+      ],
+      "reason": "Latent-feedback architecture mostly improves training-token/capability efficiency; negligible decoding overhead is claimed but no measured inference-speed improvement is shown.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Full-bandwidth transformer"
+    },
+    "arXiv:2608.04893": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.04893",
+      "identity_tokens": [
+        "arXiv:2608.04893"
+      ],
+      "reason": "Causal audit of relayed KV-cache content focuses on correctness attribution and does not evaluate latency/memory/throughput or propose an efficiency method.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "When Does Latent Communication Pay? A Causal Audit of Relayed KV Caches in Multi-Agent LLMs"
+    },
+    "DOI:10.1109/tc.2025.3626150": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2025.3626150",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2025.3626150"
+      ],
+      "reason": "Official IEEE DOI/article text could not be opened; non-primary abstract mirrors were excluded.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "MATA: A Memory-Efficient Attention Accelerator for LLMs Exploiting Look-Back KV Cache Pruning"
     }
   }
 }

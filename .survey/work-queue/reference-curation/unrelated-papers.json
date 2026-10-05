@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:08:22+00:00",
-  "record_count": 1535,
+  "updated_at": "2026-10-05T01:10:46+00:00",
+  "record_count": 1552,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -22149,6 +22149,246 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "Radial attenuation attention for image classification"
+    },
+    "arXiv:1903.01611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.01611",
+      "identity_tokens": [
+        "arXiv:1903.01611"
+      ],
+      "reason": "Training-time pruning on vision networks; no LLM inference/serving.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "The Lottery Ticket Hypothesis at Scale"
+    },
+    "arXiv:2406.01326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.01326",
+      "identity_tokens": [
+        "arXiv:2406.01326"
+      ],
+      "reason": "Visual table understanding model and benchmark; no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "TabPedia: Towards Comprehensive Visual Table Understanding with Concept Synergy"
+    },
+    "arXiv:2608.25774": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25774",
+      "identity_tokens": [
+        "arXiv:2608.25774"
+      ],
+      "reason": "Tabular foundation model for prediction, not LLM serving.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "EXAONE Tabular 1.0 : Technical Report"
+    },
+    "arXiv:2608.20318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.20318",
+      "identity_tokens": [
+        "arXiv:2608.20318"
+      ],
+      "reason": "Benchmark for agents to improve training algorithms.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement"
+    },
+    "arXiv:2606.25449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25449",
+      "identity_tokens": [
+        "arXiv:2606.25449"
+      ],
+      "reason": "Correctness/effects of lossy agent memory, not efficiency method.",
+      "first_checked_at": "2026-10-05T01:10:45+00:00",
+      "last_checked_at": "2026-10-05T01:10:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Reclaim Evaluation: A Lossy Memory Is Worse Than an Empty One"
+    },
+    "arXiv:2307.09476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.09476",
+      "identity_tokens": [
+        "arXiv:2307.09476"
+      ],
+      "reason": "Language-model behavior/interpretability study, not efficiency.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Overthinking the Truth: Understanding how Language Models Process False Demonstrations"
+    },
+    "arXiv:2206.04674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.04674",
+      "identity_tokens": [
+        "arXiv:2206.04674"
+      ],
+      "reason": "Multimodal generalist model rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "Uni-Perceiver-MoE: Learning Sparse Generalist Models with Conditional MoEs"
+    },
+    "DOI:10.1177/22104968261453132": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1177/22104968261453132",
+      "identity_tokens": [
+        "DOI:10.1177/22104968261453132"
+      ],
+      "reason": "Survey of external knowledge integration/RAG, not serving efficiency.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "External Knowledge Integration in Large Language Models: A Survey on Methods, Challenges, and Future Directions"
+    },
+    "arXiv:2311.17541": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17541",
+      "identity_tokens": [
+        "arXiv:2311.17541"
+      ],
+      "reason": "LLM agent framework functionality without efficiency evidence.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ],
+      "title": "TaskWeaver: A Code-First Agent Framework"
+    },
+    "DOI:10.14778/3594512.3594527": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3594512.3594527",
+      "identity_tokens": [
+        "DOI:10.14778/3594512.3594527"
+      ],
+      "reason": "ANN index construction/search, not LLM inference.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ],
+      "title": "Towards Efficient Index Construction and Approximate Nearest Neighbor Search in High-Dimensional Spaces"
+    },
+    "DOI:10.1109/tpami.2021.3084839": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2021.3084839",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2021.3084839"
+      ],
+      "reason": "CNN weight quantization, evaluated on CNNs rather than LLMs.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.01815-kv-cache-transform-coding-for-compact-storage-in-llm-inference.md"
+      ],
+      "title": "Transform Quantization for CNN Compression"
+    },
+    "DOI:10.1145/3297858.3304064": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3297858.3304064",
+      "identity_tokens": [
+        "DOI:10.1145/3297858.3304064"
+      ],
+      "reason": "OS huge-page management without LLM serving evaluation.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md"
+      ],
+      "title": "HawkEye: Efficient Fine-grained OS Support for Huge Pages"
+    },
+    "DOI:10.1016/j.inffus.2023.102038": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2023.102038",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2023.102038"
+      ],
+      "reason": "LLM prompting in traffic-imputation application, not inference optimization.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "title": "Semantic understanding and prompt engineering for large-scale traffic data imputation"
+    },
+    "arXiv:2303.17605": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.17605",
+      "identity_tokens": [
+        "arXiv:2303.17605"
+      ],
+      "reason": "Vision Transformer sparsity for image tasks, not LLM.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md"
+      ],
+      "title": "SparseViT: Revisiting Activation Sparsity for Efficient High-Resolution Vision Transformer"
+    },
+    "DOI:10.1016/j.engappai.2026.115542": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.115542",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.115542"
+      ],
+      "reason": "Train fault diagnosis application with attention-enhanced transformer.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "Physical fault testing and hybrid intelligent diagnosis of high-speed train secondary suspension systems based on time-frequency networks and sparse attention-enhanced transformers"
+    },
+    "arXiv:2608.09892": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09892",
+      "identity_tokens": [
+        "arXiv:2608.09892"
+      ],
+      "reason": "Robot-policy deployment/evaluation ecosystem, not LLM efficiency.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment"
+    },
+    "arXiv:2607.24027": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.24027",
+      "identity_tokens": [
+        "arXiv:2607.24027"
+      ],
+      "reason": "Diffusion video-generation inference, not LLM inference.",
+      "first_checked_at": "2026-10-05T01:10:46+00:00",
+      "last_checked_at": "2026-10-05T01:10:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md"
+      ],
+      "title": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification"
     }
   }
 }
