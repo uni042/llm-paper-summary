@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r21-screen-01-part-04-e728e9d7b1a3",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17038",
+      "identity_tokens": [
+        "arXiv:2602.17038"
+      ],
+      "title": "Phase-Aware Mixture of Experts for Agentic Reinforcement Learning",
+      "reason": "abstractはagentic RLのphase-aware MoE policy training。routingは学習時のタスク専門化で、推論効率・配備コストを評価する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2602.17038",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18363",
+      "identity_tokens": [
+        "arXiv:2606.18363"
+      ],
+      "title": "Guava: Distilling Frontier VLMs into a Compact Agent through a Robotic Manipulation Harness",
+      "reason": "一次本文の軌跡生成・SFT/RL学習・実機評価を確認。Guavaは4B VLMのembodied agent能力を少数trajectoryから学習するharnessで、本文は成功率/generalizationを評価し、推論コスト・serving効率の改善を示さない。serving lineageは弱い。",
+      "source_url": "https://arxiv.org/abs/2606.18363",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26324",
+      "identity_tokens": [
+        "arXiv:2607.26324"
+      ],
+      "title": "Planning Waste-to-Energy-Coupled AI Data Centers Through Grade-Matched Cooling and Corridor Screening",
+      "reason": "linked System-aware KV cache lineageを確認した。本文の主題はWtEとAI DCの熱供給・吸収冷却の距離/規模計画であり、KV cacheまたはLLM推論の計算・memory・latency・throughputを改善しない。",
+      "source_url": "https://arxiv.org/abs/2607.26324",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TITS.2025.3629117",
+      "identity_tokens": [
+        "DOI:10.1109/TITS.2025.3629117"
+      ],
+      "title": "Deep Reinforcement Learning-Based Task Offloading With Collaborative Inference in UAV-Assisted Mobile Edge Computing Networks",
+      "reason": "一次abstractはDNN partition point選択、UAV edge offload、trajectory/resource allocationにより一般DNNの遅延/energyを下げるとする。DeeBERTとのlineage signalはあるが、LLM token generation/KV servingとは対象が異なる。",
+      "source_url": "https://doi.org/10.1109/TITS.2025.3629117",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s44220-026-00640-6",
+      "identity_tokens": [
+        "DOI:10.1038/s44220-026-00640-6"
+      ],
+      "title": "Transforming artificial intelligence into artificial wisdom",
+      "reason": "既存GLaM/MoE lineageと用語上の接点はある一方、読めたprimary abstractはmental-health perspectiveであり、MoEは将来方向として触れるだけ。全文がsubscription previewで確認できず、技術的内容の有無を最終的に解消できないためborderline。",
+      "source_url": "https://doi.org/10.1038/s44220-026-00640-6",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
