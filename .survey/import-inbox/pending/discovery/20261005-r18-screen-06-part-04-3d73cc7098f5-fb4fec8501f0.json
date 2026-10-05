@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-06-part-04-3d73cc7098f5",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38140",
+      "identity_tokens": [
+        "arXiv:2609.38140"
+      ],
+      "title": "Breaking the Uniformity Trap: Scaling Video Diffusion Model via SplitMoE",
+      "reason": "SplitMoE is an MoE architecture for video diffusion; its results concern video model convergence, routing, and generation quality.",
+      "source_url": "https://arxiv.org/abs/2609.38140",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38142",
+      "identity_tokens": [
+        "arXiv:2609.38142"
+      ],
+      "title": "AdviSD: Learning to Advise Frontier LLMs via Targeted Multi-Turn Self-Distillation",
+      "reason": "AdviSD trains an advisor via self-distillation/reinforcement learning; it avoids extra executor rollouts during training, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38142",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38149",
+      "identity_tokens": [
+        "arXiv:2609.38149"
+      ],
+      "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
+      "reason": "LIFT introduces latent feedback during LM pretraining; its central contribution and evaluation are training architecture/data efficiency, not deployed inference optimization.",
+      "source_url": "https://arxiv.org/abs/2609.38149",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38239",
+      "identity_tokens": [
+        "arXiv:2609.38239"
+      ],
+      "title": "Inference-Layer Security: Defending Against Adversarial Inference and Infrastructure Abuse",
+      "reason": "Inference-Layer Security studies abuse detection and safety controls for an LLM service; it does not target inference cost or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38239",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38257",
+      "identity_tokens": [
+        "arXiv:2609.38257"
+      ],
+      "title": "How Should Diffusion Language Models Edit Code?",
+      "reason": "The work evaluates diffusion language models on code-editing interfaces and regeneration quality; it does not propose inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2609.38257",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    }
+  ]
+}
