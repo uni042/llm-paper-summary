@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r21-screen-01-part-03-e728e9d7b1a3",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04401",
+      "identity_tokens": [
+        "arXiv:2606.04401"
+      ],
+      "title": "TANDEM: Bi-Level Data Mixture Optimization with Twin Networks",
+      "reason": "一次abstractはLLM training data domain mixture最適化であり、学習データ配分/性能向上が対象。GLaM link以外にinference servingへの寄与を示さない。",
+      "source_url": "https://arxiv.org/abs/2606.04401",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14038",
+      "identity_tokens": [
+        "arXiv:2602.14038"
+      ],
+      "title": "Choosing How to Remember: Adaptive Memory Structures for LLM Agents",
+      "reason": "一次本文はFluxMemの短・中・長期メモリ、線形/graph/hierarchical構造選択、BMM memory fusionとPersonaMem/LoCoMo品質評価を示す。これはLLM agentの外部会話記憶であり、KV cache/serving効率ではなく関連が弱い。",
+      "source_url": "https://arxiv.org/abs/2602.14038",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/EIBDCT69742.2026.11566691",
+      "identity_tokens": [
+        "DOI:10.1109/EIBDCT69742.2026.11566691"
+      ],
+      "title": "Lightweight Edge-Cloud Cooperative Inference for Small and Medium Models under WAN Constraints",
+      "reason": "abstractは圧縮edge modelとconfidence-based WAN offloadによる小中規模分類器の推論を扱い、DeeBERT lineageにも近い。一方、実験はAG News/SST-2/CIFAR10でLLM生成servingではない。",
+      "source_url": "https://doi.org/10.1109/EIBDCT69742.2026.11566691",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28084",
+      "identity_tokens": [
+        "arXiv:2605.28084"
+      ],
+      "title": "SMILE-Next: Teaching Large Language Models to Detect, Classify, and Reason about Laughter",
+      "reason": "一次本文では笑い理解専用LLMのLoRA MoLEを評価。MoEを足しても単一expertより約1–2%の推論latency増に留まるが、改善目標は笑い分類/推論品質で、serving効率向上ではない。GLaM/MoEとの接点はあるものの適用範囲が狭い。",
+      "source_url": "https://arxiv.org/abs/2605.28084",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09298",
+      "identity_tokens": [
+        "arXiv:2603.09298"
+      ],
+      "title": "CORAL: Scalable Multi-Task Robot Learning via LoRA Experts",
+      "reason": "一次本文は単一凍結VLA backboneにtask別LoRA expertを付け、命令でrouting/swapするCORALを確認。VLA実機配備でstorageを約100倍削減し推論追加遅延なしとするが、LLM/VLAモデル圧縮・servingへの直接的な一般化は未検証。",
+      "source_url": "https://arxiv.org/abs/2603.09298",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
