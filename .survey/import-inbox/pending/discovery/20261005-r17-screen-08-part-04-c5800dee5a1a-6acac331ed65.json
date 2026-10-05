@@ -1,0 +1,97 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-08-part-04-c5800dee5a1a",
+  "reference_main_sha": "779b87e2a74d421eab58598de1d09f9c0e3beeed",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2026.104617",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2026.104617"
+      ],
+      "title": "Cross-modal Spatiotemporal Prediction in Transportation: A Survey of Modeling Paradigms, Representations, Alignment, and Reasoning",
+      "reason": "交通時空間予測のcross-modal手法をまとめるsurveyで、LLM推論/serving対象外。",
+      "source_url": "https://doi.org/10.1016/j.inffus.2026.104617",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.iot.2026.102020",
+      "identity_tokens": [
+        "DOI:10.1016/j.iot.2026.102020"
+      ],
+      "title": "Small language models for on-device IoT intelligence: A survey on architectures, optimization, and deployment",
+      "reason": "Survey abstractはon-device small language modelのarchitecture/optimization/deploymentを扱うため候補性はあるが、publisher full text取得不能でscope適合・具体的内容を確認できない。",
+      "source_url": "https://doi.org/10.1016/j.iot.2026.102020",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103940",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103940"
+      ],
+      "title": "A survey on memory-centric neural network accelerators for edge intelligence: Architectures, technologies, and emerging trends",
+      "reason": "edge向けメモリ中心アクセラレータの一般的なneural network hardware surveyで、abstractにLLM/言語モデルを対象とする根拠がない。",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103940",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/JLT.2026.3688671",
+      "identity_tokens": [
+        "DOI:10.1109/JLT.2026.3688671"
+      ],
+      "title": "All-Optical Network Coding-Enabled Efficient Collective Communication Over OTN-Interconnected Inter-DC Networks",
+      "reason": "光ネットワーク間のcollective communicationを扱う通信網研究で、AI/LLM inference workloadを対象としていない。",
+      "source_url": "https://doi.org/10.1109/JLT.2026.3688671",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/LRA.2026.3683324",
+      "identity_tokens": [
+        "DOI:10.1109/LRA.2026.3683324"
+      ],
+      "title": "Dynamic Maclaurin-Series-Based Vision-Language-Action Model",
+      "reason": "VLA architectureとMaclaurin-seriesの設計が推論効率に関係する可能性があるが、一次本文を取得できずcompression/runtime効果と対象性を確認できない。",
+      "source_url": "https://doi.org/10.1109/LRA.2026.3683324",
+      "first_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "last_checked_at": "2026-10-05T03:42:56.348644+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
