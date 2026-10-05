@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:22:03+00:00",
-  "record_count": 1732,
+  "updated_at": "2026-10-05T13:24:48+00:00",
+  "record_count": 1738,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26820,6 +26820,97 @@
         "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
       ],
       "title": "Hydra: Harnessing Expert Popularity for Efficient Mixture-of-Expert Inference on Chiplet System"
+    },
+    "DOI:10.1145/3806200": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806200",
+      "identity_tokens": [
+        "DOI:10.1145/3806200"
+      ],
+      "reason": "ACM DOI fetch returned HTTP 403; the Imperial repository record advertises an accepted-manuscript PDF but direct fetch timed out (400). Without body review, retain the adjacent performance-diagnosis paper as borderline.",
+      "first_checked_at": "2026-10-05T13:24:47+00:00",
+      "last_checked_at": "2026-10-05T13:24:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ],
+      "title": "LLMRCA: Multilevel Root Cause Analysis for LLM Applications Using Multimodal Observability Data"
+    },
+    "arXiv:2603.23971": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23971",
+      "identity_tokens": [
+        "arXiv:2603.23971"
+      ],
+      "reason": "Evidence depends on evaluated providers, model versions, API prices, task mix, and variable repeated-run token consumption; measurement/monitoring is adjacent to optimization.",
+      "first_checked_at": "2026-10-05T13:24:47+00:00",
+      "last_checked_at": "2026-10-05T13:24:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "The Price Reversal Phenomenon: When Cheaper Reasoning Models End Up Costing More"
+    },
+    "arXiv:2603.22866": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22866",
+      "identity_tokens": [
+        "arXiv:2603.22866"
+      ],
+      "reason": "The work is specific to low-altitude wireless-network agents and one simulated task; it does not establish general-purpose LLM serving gains.",
+      "first_checked_at": "2026-10-05T13:24:47+00:00",
+      "last_checked_at": "2026-10-05T13:24:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "Aerial Agentic AI: Synergizing LLM and SLM for Low-Altitude Wireless Networks"
+    },
+    "arXiv:2603.21354": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21354",
+      "identity_tokens": [
+        "arXiv:2603.21354"
+      ],
+      "reason": "This is a vision/synthesis paper; measurements are from referenced project work, not an independent evaluation in this paper.",
+      "first_checked_at": "2026-10-05T13:24:47+00:00",
+      "last_checked_at": "2026-10-05T13:24:47+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.09472-warmserve-one-for-many-gpu-prewarming.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/survey/03-inference-engines/2025-2506.21901-survey-llm-inference-systems.md"
+      ],
+      "title": "The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project"
+    },
+    "arXiv:2506.17249": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17249",
+      "identity_tokens": [
+        "arXiv:2506.17249"
+      ],
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "first_checked_at": "2026-10-05T13:24:47+00:00",
+      "last_checked_at": "2026-10-05T13:24:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Improving Prediction Certainty Estimation for Reliable Early Exiting via Null Space Projection"
+    },
+    "arXiv:2604.01161": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01161",
+      "identity_tokens": [
+        "arXiv:2604.01161"
+      ],
+      "reason": "Shorter traces correlate with less verification and uncertainty management, so token reduction is not evidence of efficiency at preserved quality; this is a reasoning robustness study rather than serving optimization.",
+      "first_checked_at": "2026-10-05T13:24:48+00:00",
+      "last_checked_at": "2026-10-05T13:24:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Reasoning Shift: How Context Silently Shortens LLM Reasoning"
     }
   }
 }

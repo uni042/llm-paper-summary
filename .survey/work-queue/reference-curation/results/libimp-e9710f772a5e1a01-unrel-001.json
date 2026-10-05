@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9710f772a5e1a01-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.02979",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.02979",
+    "identity_tokens": [
+      "arXiv:2604.02979"
+    ],
+    "reason": "The primary abstract describes autoregressive video-diffusion denoising acceleration, not LLM inference/serving/compression.",
+    "first_checked_at": "2026-10-05T13:24:48+00:00",
+    "last_checked_at": "2026-10-05T13:24:48+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+    ],
+    "title": "Not All Frames Deserve Full Computation: Accelerating Autoregressive Video Generation via Selective Computation and Predictive Extrapolation"
+  },
+  "processed_at": "2026-10-05T13:24:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9710f772a5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9710f772a5e1a01-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.00555",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.00555",
+    "identity_tokens": [
+      "arXiv:2604.00555"
+    ],
+    "reason": "The abstract studies ontology grounding and agent accuracy/role consistency, not inference efficiency or serving.",
+    "first_checked_at": "2026-10-05T13:24:48+00:00",
+    "last_checked_at": "2026-10-05T13:24:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Ontology-Constrained Neural Reasoning in Enterprise Agentic Systems: A Neurosymbolic Architecture for Domain-Grounded AI Agents"
+  },
+  "processed_at": "2026-10-05T13:24:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9710f772a5e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
