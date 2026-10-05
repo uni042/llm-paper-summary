@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b0fdd023bef859a7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.03777",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.03777",
+    "identity_tokens": [
+      "arXiv:2307.03777"
+    ],
+    "reason": "3D医療画像のdiffusion modelを使うOOD検出法。",
+    "first_checked_at": "2026-10-05T14:32:00+00:00",
+    "last_checked_at": "2026-10-05T14:32:00+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+    ],
+    "title": "Unsupervised 3D out-of-distribution detection with latent diffusion models"
+  },
+  "processed_at": "2026-10-05T14:32:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b0fdd023bef8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

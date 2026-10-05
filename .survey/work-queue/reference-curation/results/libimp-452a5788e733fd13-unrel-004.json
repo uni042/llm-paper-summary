@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-452a5788e733fd13-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.09442",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.09442",
+    "identity_tokens": [
+      "arXiv:2508.09442"
+    ],
+    "reason": "LLM KV-cacheのprivacy threatとmitigationが主題。cacheを高速化手段として扱うが効率改善を寄与にしない。",
+    "first_checked_at": "2026-10-05T14:31:58+00:00",
+    "last_checked_at": "2026-10-05T14:31:58+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+    ],
+    "title": "Shadow in the Cache: Unveiling and Mitigating Privacy Risks of KV-cache in LLM Inference"
+  },
+  "processed_at": "2026-10-05T14:31:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-452a5788e733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
