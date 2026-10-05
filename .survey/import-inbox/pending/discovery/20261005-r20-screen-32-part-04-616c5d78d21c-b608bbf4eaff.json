@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-32-part-04-616c5d78d21c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06609",
+      "identity_tokens": [
+        "arXiv:2608.06609"
+      ],
+      "title": "Automated item evaluation: Predicting item acceptance and rejection using LLM-generated critiques",
+      "reason": "Automated item evaluation (AIE) refers to the use of computational methods to assess item quality without requiring manual expert review or field testing of the items under evaluation. We aimed to build a near-comprehensive AIE model by predicting item acceptance and rejection from item text using historical rejection data from a large-scale standardized testing program. The dataset contained 52,759 English language arts (ELA) and mathematics items with 34% permanently rejected from future operational use. Rejection reasons included poor psychometric properties, content issues, bias and sensitivity concerns, and non-content issues. We fine-tuned a DeBERTaV3-large classifier on raw item text, a second DeBERTa classifier on Qwen3-generated item critiques, and a fusion model combining representations from both. The fusion model achieved the strongest overall performance (Accuracy = .75, F1 = .64, AUC = .80, Sensitivity = .64, Specificity = .81). Prediction for math (F1 = .73, AUC = .86) was considerably more accurate than ELA (F1 = .51, AUC = .72). Lowering the decision threshold from .5 to .25 raised average sensitivity for ELA and math to .88 and .91, while reducing specificity to .31 and .56, respectively, which may be preferable in automated item generation contexts where generating items is cheaper than evaluating them. Incorporating item critiques alongside raw item text improved performance across most rejection reasons. The model assigned higher rejection probabilities to more difficult items. However, the fusion model struggled to identify items flagged for bias, sensitivity, fairness, or accessibility, especially for ELA. These findings suggest that text-based AIE is feasible in some areas and may offer a practical tool for reducing the burden of manual review and field testing, while also underscoring the importance of human review for items with fairness concerns.",
+      "source_url": "https://arxiv.org/abs/2608.06609",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23582",
+      "identity_tokens": [
+        "arXiv:2608.23582"
+      ],
+      "title": "Transformer Accelerator (TFA): A Macro-Op INT8 Hardware Chip for Transformer Inference and Machine Translation",
+      "reason": "transformer推論hardwareとして関連するが、現状のprimary evidenceは小型T5のRTLデモと投影に限られ、LLM推論への適用は未実証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.23582",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3838601",
+      "identity_tokens": [
+        "DOI:10.1145/3838601"
+      ],
+      "title": "Global Scheduling of Transient Parameter Materialization for Sharded Training",
+      "reason": "Parameter-sharded training reduces device-memory use by storing model parameters as shards and reconstructing full parameters only before the computations that consume them. This materialization is implemented through frequent all-gathers, which can become exposed waits in each forward–backward training iteration. Hiding these waits is not only a communication-volume problem. It requires deciding where to launch each all-gather and how long the materialized full-parameter buffer should remain live. All-gather prefetching can overlap communication with earlier computation but extends buffer lifetime. Retaining a buffer after its forward-pass use can eliminate a re-gather before backward-pass reuse, but consumes transient memory headroom needed by other materialization decisions. We present Chorus, a compiler-runtime framework for transient parameter materialization in memory-constrained sharded training. Chorus addresses a limitation of local runtime policies that make decisions at hooks, module boundaries, or configuration thresholds. They can issue individual prefetches or suppress individual releases, but they do not jointly compare future all-gather opportunities, buffer lifetimes, and memory-headroom conflicts across the iteration. Chorus lowers the forward and backward passes into a whole-iteration graph that makes all-gathers, use-site waits, and releases explicit. It then builds a profile-guided block model and solves a mixed-integer scheduling problem that jointly chooses all-gather launch positions and iteration-local retention decisions under time-varying memory headroom. The selected schedule is realized by graph rewriting, which moves communication while preserving use-site waits, fuses compatible prefetch operations, and removes redundant releases and re-gathers. Cross-iteration persistent retention is finalized during warmup using measured runtime memory behavior. We implement Chorus on top of torch.compile and evaluate it on 7B to 13B dense Transformer models and one MoE model across 4 to 16 A100 GPUs. In the ZeRO-style stack, Chorus improves throughput by 1.10 × over DeepCompile across the primary workloads. In the FSDP-style stack, the Chorus implementation on SimpleFSDP improves throughput by 1.14 × over SimpleFSDP across the corresponding dense-model workloads. The benefits are greatest in network-constrained settings, where all-gather stalls are more exposed. Chorus stays within the configured memory budget and achieves a 1.35 × compilation-time speedup over DeepCompile.",
+      "source_url": "https://doi.org/10.1145/3838601",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0345722",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0345722"
+      ],
+      "title": "RSFNet: A retention-based network with spatial–frequency joint enhancement for infrared small target detection",
+      "reason": "Infrared Small Target Detection (ISTD) is crucial for applications such as traffic monitoring and maritime surveillance. However, it remains highly challenging due to weak target signals and the absence of rich texture information, often resulting in low detection accuracy. Existing deep learning-based ISTD methods typically struggle to balance the trade-off between modeling long-range dependencies and avoiding feature oversmoothing. To this end, we propose RSFNet, a retention-based network with spatial–frequency joint enhancement for ISTD. RSFNet introduces a bidirectional 2D decay–retention attention mechanism into the vision Transformer (ViT) framework, which effectively suppresses background noise while capturing long-range dependencies. In addition, we design a Spatial–Frequency Joint Enhancement Module (SFE) to facilitate the transfer of salient target features from the encoder to the decoder. SFE integrates spatial and frequency domain features to facilitate global–local information interaction. Extensive experiments conducted on multiple publicly available ISTD datasets demonstrate that RSFNet significantly outperforms state-of-the-art (SOTA) methods in both detection accuracy and training efficiency, with a nearly 32% reduction in training time.",
+      "source_url": "https://doi.org/10.1371/journal.pone.0345722",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.31449/inf.v50i14.10934",
+      "identity_tokens": [
+        "DOI:10.31449/inf.v50i14.10934"
+      ],
+      "title": "A Lightweight BERT-Variant Optimized for WebGPU-Based Real-TimeInference in Web Browsers",
+      "reason": "Large Language Models (LLMs) achieve state-of-the-art performance across natural language processingtasks but remain computationally intensive, limiting their deployment in browser-based environments.This study investigates the feasibility of real-time transformer inference entirely within web browsers usingWebGPU acceleration. We propose a lightweight BERT-inspired architecture optimized for GPUparallelmatrix operations through TensorFlow.js with the WebGPU backend. The model is evaluated ona 4,000-sample IMDB sentiment classification dataset and achieves 65–70% classification accuracy withper-sample inference latency of 8–9 ms in Google Chrome using an NVIDIA T400 GPU (4 GB VRAM).Batch inference throughput reaches approximately 6,600 inferences per minute, while GPU utilization remainsstable between 26–77%. Compared to CPU-based TensorFlow.js execution, WebGPU significantlyreduces inference latency and enables fully client-side training and inference without server dependencies.Although accuracy is lower than full-scale BERT benchmarks, the results demonstrate that simplified transformerarchitectures can operate efficiently in browser environments under resource constraints. This workestablishes a practical framework for deploying real-time edge NLP applications using open web standardsand GPU acceleration.",
+      "source_url": "https://doi.org/10.31449/inf.v50i14.10934",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    }
+  ]
+}
