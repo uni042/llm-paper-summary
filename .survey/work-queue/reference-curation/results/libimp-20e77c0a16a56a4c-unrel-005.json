@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20e77c0a16a56a4c-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.03913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.03913",
+    "identity_tokens": [
+      "arXiv:2608.03913"
+    ],
+    "reason": "Primary abstract: Dense pretrained transformers do not naturally expose interpretable units for circuit extraction. Existing approaches obtain such units by learning auxiliary sparse representations or training sparse models, incurring substantial additional computation while p Circuit extraction/interpretability cost, not serving efficiency.",
+    "first_checked_at": "2026-10-05T03:26:04+00:00",
+    "last_checked_at": "2026-10-05T03:26:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Sparse Weight Decomposition for Efficient Circuit Extraction"
+  },
+  "processed_at": "2026-10-05T03:26:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20e77c0a16a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
