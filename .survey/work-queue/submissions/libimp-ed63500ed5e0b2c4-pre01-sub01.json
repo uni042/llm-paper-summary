@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Moshi: a speech-text foundation model for real-time dialogue",
+      "source_url": "https://arxiv.org/abs/2410.00037",
+      "year": 2024,
+      "published": "2024-09-17",
+      "venue": "arXiv.org",
+      "citation_count": 802,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce Moshi, a speech-text foundation model and full-duplex spoken dialogue framework. Current systems for spoken dialogue rely on pipelines of independent components, namely voice activity detection, speech recognition, textual dialogue and text-to-speech. Such frameworks cannot emulate the experience of real conversations. First, their complexity induces a latency of several seconds between interactions. Second, text being the intermediate modality for dialogue, non-linguistic information that modifies meaning -- such as emotion or non-speech sounds -- is lost in the interaction. Finally, they rely on a segmentation into speaker turns, which does not take into account overlapping speech, interruptions and interjections. Moshi solves these independent issues altogether by casting spoken dialogue as speech-to-speech generation. Starting from a text language model backbone, Moshi generates speech as tokens from the residual quantizer of a neural audio codec, while modeling separately its own speech and that of the user into parallel streams. This allows for the removal of explicit speaker turns, and the modeling of arbitrary conversational dynamics. We moreover extend the hierarchical semantic-to-acoustic token generation of previous work to first predict time-aligned text tokens as a prefix to audio tokens. Not only this\"Inner Monologue\"method significantly improves the linguistic quality of generated speech, but we also illustrate how it can provide streaming speech recognition and text-to-speech. Our resulting model is the first real-time full-duplex spoken large language model, with a theoretical latency of 160ms, 200ms in practice, and is available at https://github.com/kyutai-labs/moshi.",
+      "identifiers": [
+        "SemanticScholar:ae4aa7b0c5a327dae63ad20e00b58bcc6176b3b8"
+      ],
+      "semantic_scholar_id": "ae4aa7b0c5a327dae63ad20e00b58bcc6176b3b8",
+      "canonical_id": "arXiv:2410.00037",
+      "arxiv_id": "2410.00037",
+      "doi": "10.48550/arXiv.2410.00037",
+      "authors": [
+        "Alexandre Défossez",
+        "Laurent Mazaré",
+        "Manu Orsini",
+        "Amélie Royer",
+        "Patrick Pérez",
+        "Hervé Jégou",
+        "Edouard Grave",
+        "Neil Zeghidour"
+      ],
+      "priority": 802,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 802,
+        "citation_count": 802,
+        "total": 802,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 748,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Moshiはtext LLM backboneと階層型audio language modelを統合し、入力音声と出力音声を並列autoregressive streamとして常時処理するfull-duplex実時間会話LLM。streaming architectureにより理論160 ms、実測約200 msのlatencyを実現し、従来pipelineの数秒latencyを推論architectureそのものから削減するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTML本文のIntroduction/Model/Evaluationを確認。multi-stream audio LM、hierarchical streaming generation、text/audio tokenの時間整列、5分context、理論160 ms・実測約200 msのreal-time inferenceを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ed63500ed5e0",
+    "round": "libimp-ed63500ed5e0b2c4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ed63500ed5e0b2c4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ed63500ed5e0b2c4-pre01.json",
+    "receipt": "sha256:9075591153bee4eb064f81092b9130201d06de82cc7642064d71fd10003a4830"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ed63500ed5e0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
