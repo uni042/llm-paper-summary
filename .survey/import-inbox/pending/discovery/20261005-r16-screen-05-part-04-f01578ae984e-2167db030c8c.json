@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-05-part-04-f01578ae984e",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15846",
+      "identity_tokens": [
+        "arXiv:2607.15846"
+      ],
+      "title": "DSTAR: Accelerating Diffusion Transformers via Spatial and Temporal Redundancy Reduction",
+      "reason": "The primary abstract accelerates image/video diffusion transformers; the workload is visual diffusion generation, outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2607.15846",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16183",
+      "identity_tokens": [
+        "arXiv:2607.16183"
+      ],
+      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+      "reason": "The primary abstract develops thermodynamic computing hardware for general machine-learning workloads; it does not study LLM inference/serving systems.",
+      "source_url": "https://arxiv.org/abs/2607.16183",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16190",
+      "identity_tokens": [
+        "arXiv:2607.16190"
+      ],
+      "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+      "reason": "The primary abstract optimizes sparse attention for video diffusion generation; it is not an LLM inference workload.",
+      "source_url": "https://arxiv.org/abs/2607.16190",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14852",
+      "identity_tokens": [
+        "arXiv:2607.14852"
+      ],
+      "title": "Towards Human-like Physical Intelligence: Lifelong Vision-Language-Action Learning for Robotic Manipulation",
+      "reason": "The primary abstract addresses lifelong learning for vision-language-action robot manipulation, a continual training/control task.",
+      "source_url": "https://arxiv.org/abs/2607.14852",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13028",
+      "identity_tokens": [
+        "arXiv:2607.13028"
+      ],
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+      "reason": "The primary abstract presents a procedural autonomous-driving simulator and RL training stack; policy simulation/inference is not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2607.13028",
+      "first_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "last_checked_at": "2026-10-05T02:23:18.115058+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
