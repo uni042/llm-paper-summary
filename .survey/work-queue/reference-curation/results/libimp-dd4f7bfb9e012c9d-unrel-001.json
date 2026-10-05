@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd4f7bfb9e012c9d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.21058",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.21058",
+    "identity_tokens": [
+      "arXiv:2508.21058"
+    ],
+    "reason": "Abstract studies sparse attention for long video generation with diffusion transformers, not LLMs. Primary abstract: Long video generation is fundamentally a long context memory problem: models must retain and retrieve salient events across a long range without collapsing or drifting. However, scaling diffusion transformers to generate long-context videos is fundamentally limited by the quadratic cost of self-attention, which makes memory and computation intractable and difficult to optimize for long sequences. We recast long-context video generation as an internal information retrieval tas",
+    "first_checked_at": "2026-10-05T12:24:53+00:00",
+    "last_checked_at": "2026-10-05T12:24:53+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
+    "title": "Mixture of Contexts for Long Video Generation"
+  },
+  "processed_at": "2026-10-05T12:24:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd4f7bfb9e01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

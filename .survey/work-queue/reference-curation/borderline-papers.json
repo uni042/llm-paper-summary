@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:21:59+00:00",
-  "record_count": 1626,
+  "updated_at": "2026-10-05T12:24:54+00:00",
+  "record_count": 1630,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25268,6 +25268,63 @@
         "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
       ],
       "title": "Functional Interpolation for Relative Positions Improves Long Context Transformers"
+    },
+    "SemanticScholar:9427ddb25ff6d596ee7a748ca0a66ef7da9f2fb8": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:9427ddb25ff6d596ee7a748ca0a66ef7da9f2fb8",
+      "identity_tokens": [
+        "SemanticScholar:9427ddb25ff6d596ee7a748ca0a66ef7da9f2fb8"
+      ],
+      "reason": "Packet has no abstract. Attempted the primary TechRxiv full article URL; browser returned Internal Error, so the paper's abstract/scope could not be checked from the primary source.",
+      "first_checked_at": "2026-10-05T12:24:52+00:00",
+      "last_checked_at": "2026-10-05T12:24:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md"
+      ],
+      "title": "A Survey on Model Context Protocol: Architecture, State-of-the-art, Challenges and Future Directions"
+    },
+    "arXiv:2508.21046": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.21046",
+      "identity_tokens": [
+        "arXiv:2508.21046"
+      ],
+      "reason": "Efficiency gains are concrete, but the evaluated architecture/workload is task-specific VLA robotics, leaving transfer to general LLM inference uncertain.",
+      "first_checked_at": "2026-10-05T12:24:52+00:00",
+      "last_checked_at": "2026-10-05T12:24:52+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md"
+      ],
+      "title": "CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification"
+    },
+    "arXiv:2410.14052": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.14052",
+      "identity_tokens": [
+        "arXiv:2410.14052"
+      ],
+      "reason": "Quantified efficiency applies to RAG memory ingestion rather than LLM query inference/serving, so scope fit is weak.",
+      "first_checked_at": "2026-10-05T12:24:52+00:00",
+      "last_checked_at": "2026-10-05T12:24:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "From Isolated Conversations to Hierarchical Schemas: Dynamic Tree Memory Representation for LLMs"
+    },
+    "arXiv:2505.01821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.01821",
+      "identity_tokens": [
+        "arXiv:2505.01821"
+      ],
+      "reason": "Potential background for edge-cloud deployment, but it is a broad survey and its LLM-specific inference evidence is limited; no concrete paper-level serving result to advance.",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "Edge-Cloud Collaborative Computing on Distributed Intelligence and Model Optimization: A Survey"
     }
   }
 }

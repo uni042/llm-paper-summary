@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:22:00+00:00",
-  "record_count": 4922,
+  "updated_at": "2026-10-05T12:24:55+00:00",
+  "record_count": 4934,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -71626,6 +71626,175 @@
         "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
       ],
       "title": "Is This the Subspace You Are Looking for? An Interpretability Illusion for Subspace Activation Patching"
+    },
+    "arXiv:2407.18232": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18232",
+      "identity_tokens": [
+        "arXiv:2407.18232"
+      ],
+      "reason": "Abstract targets 3D point-cloud object detection with linear group RNNs; it does not study LLM inference or serving. Primary abstract: The benefit of transformers in large-scale 3D point cloud perception tasks, such as 3D object detection, is limited by their quadratic computation cost when modeling long-range relationships. In contrast, linear RNNs have low computational complexity and are suitable for long-range modeling. Toward this goal, we propose a simple and effective window-based framework built on LInear grOup RNN (i.e., perform linear RNN for grouped features) for accurate 3D object detection, call",
+      "first_checked_at": "2026-10-05T12:24:52+00:00",
+      "last_checked_at": "2026-10-05T12:24:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "LION: Linear Group RNN for 3D Object Detection in Point Clouds"
+    },
+    "arXiv:2508.03680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.03680",
+      "identity_tokens": [
+        "arXiv:2508.03680"
+      ],
+      "reason": "Abstract presents RL infrastructure to train LLM agents and decouple execution from training; this is training-only. Primary abstract: We present Agent Lightning, a flexible and extensible framework that enables Reinforcement Learning (RL)-based training of Large Language Models (LLMs) for any AI agent. Unlike existing methods that tightly couple RL training with agent or rely on sequence concatenation with masking, Agent Lightning achieves complete decoupling between agent execution and training, allowing seamless integration with existing agents developed via diverse ways (e.g., using frameworks like LangC",
+      "first_checked_at": "2026-10-05T12:24:53+00:00",
+      "last_checked_at": "2026-10-05T12:24:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning"
+    },
+    "arXiv:2604.03128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03128",
+      "identity_tokens": [
+        "arXiv:2604.03128"
+      ],
+      "reason": "Self-distillation/RLVR training update method, outside inference serving.",
+      "first_checked_at": "2026-10-05T12:24:53+00:00",
+      "last_checked_at": "2026-10-05T12:24:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Self-Distilled RLVR"
+    },
+    "arXiv:2508.21058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.21058",
+      "identity_tokens": [
+        "arXiv:2508.21058"
+      ],
+      "reason": "Abstract studies sparse attention for long video generation with diffusion transformers, not LLMs. Primary abstract: Long video generation is fundamentally a long context memory problem: models must retain and retrieve salient events across a long range without collapsing or drifting. However, scaling diffusion transformers to generate long-context videos is fundamentally limited by the quadratic cost of self-attention, which makes memory and computation intractable and difficult to optimize for long sequences. We recast long-context video generation as an internal information retrieval tas",
+      "first_checked_at": "2026-10-05T12:24:53+00:00",
+      "last_checked_at": "2026-10-05T12:24:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "Mixture of Contexts for Long Video Generation"
+    },
+    "arXiv:2503.15547": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.15547",
+      "identity_tokens": [
+        "arXiv:2503.15547"
+      ],
+      "reason": "Contribution is prompt-flow security and privilege-escalation mitigation for agents, not inference efficiency. Primary abstract: Large Language Models (LLMs) are combined with tools to create powerful LLM agents that provide a wide range of services. Unlike traditional software, LLM agent's behavior is determined at runtime by natural language prompts from either user or tool's data. This flexibility enables a new computing paradigm with unlimited capabilities and programmability, but also introduces new security risks, vulnerable to privilege escalation attacks. Moreover, user prompts are prone to be",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "Prompt Flow Integrity to Prevent Privilege Escalation in LLM Agents"
+    },
+    "DOI:10.1109/jas.2025.125327": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jas.2025.125327",
+      "identity_tokens": [
+        "DOI:10.1109/jas.2025.125327"
+      ],
+      "reason": "Survey/framework concerns embodied AI, smart manufacturing and Industry 5.0, not LLM serving optimization. Primary abstract: As embodied intelligence (EI), large language models (LLMs), and cloud computing continue to advance, Industry 5.0 facilitates the development of industrial artificial intelligence (IndAI) through cyber-physical-social systems (CPSSs) with a human-centric focus. These technologies are organized by the system-wide approach of Industry 5.0, in order to empower the manufacturing industry to achieve broader societal goals of job creation, economic growth, and green production. Th",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "When Embodied AI Meets Industry 5.0: Human-Centered Smart Manufacturing"
+    },
+    "arXiv:2501.04437": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04437",
+      "identity_tokens": [
+        "arXiv:2501.04437"
+      ],
+      "reason": "Survey covers LLM applications in intelligent transportation, not inference/serving efficiency. Primary abstract: Intelligent Transportation Systems (ITS) are crucial for the development and operation of smart cities, addressing key challenges in efficiency, productivity, and environmental sustainability. This paper comprehensively reviews the transformative potential of Large Language Models (LLMs) in optimizing ITS. Initially, we provide an extensive overview of ITS, highlighting its components, operational principles, and overall effectiveness. We then delve into the theoretical backg",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Integrating LLMs With ITS: Recent Advances, Potentials, Challenges, and Future Directions"
+    },
+    "arXiv:2503.07067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.07067",
+      "identity_tokens": [
+        "arXiv:2503.07067"
+      ],
+      "reason": "Contrastive distillation changes the training objective/data use and reports student capability; no inference efficiency is claimed. Primary abstract: Despite the success of distillation in large language models (LLMs), most prior work applies identical loss functions to both teacher- and student-generated data. These strategies overlook the synergy between loss formulations and data types, leading to a suboptimal performance boost in student models. To address this, we propose DistiLLM-2, a contrastive approach that simultaneously increases the likelihood of teacher responses and decreases that of student responses by harn",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "title": "DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs"
+    },
+    "DOI:10.1007/s44267-024-00065-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44267-024-00065-8",
+      "identity_tokens": [
+        "DOI:10.1007/s44267-024-00065-8"
+      ],
+      "reason": "Broad overview of large AI models and industrial applications; not a focused inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "An overview of large AI models and their applications"
+    },
+    "arXiv:2407.11087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.11087",
+      "identity_tokens": [
+        "arXiv:2407.11087"
+      ],
+      "reason": "RWKV-based medical-image restoration model; efficiency is within imaging architecture, not language-model serving.",
+      "first_checked_at": "2026-10-05T12:24:54+00:00",
+      "last_checked_at": "2026-10-05T12:24:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Restore-RWKV: Efficient and Effective Medical Image Restoration With RWKV"
+    },
+    "arXiv:2307.10757": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.10757",
+      "identity_tokens": [
+        "arXiv:2307.10757"
+      ],
+      "reason": "Compact speech-emotion pretrained model; task-specific speech representation and quality, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:24:55+00:00",
+      "last_checked_at": "2026-10-05T12:24:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Vesper: A Compact and Effective Pretrained Model for Speech Emotion Recognition"
+    },
+    "arXiv:2505.14069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14069",
+      "identity_tokens": [
+        "arXiv:2505.14069"
+      ],
+      "reason": "Process-reward training for agentic RAG; training efficiency/cost, not inference-time serving.",
+      "first_checked_at": "2026-10-05T12:24:55+00:00",
+      "last_checked_at": "2026-10-05T12:24:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning"
     }
   }
 }

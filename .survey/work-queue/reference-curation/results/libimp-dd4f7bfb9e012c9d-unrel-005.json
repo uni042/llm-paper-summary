@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd4f7bfb9e012c9d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.07067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.07067",
+    "identity_tokens": [
+      "arXiv:2503.07067"
+    ],
+    "reason": "Contrastive distillation changes the training objective/data use and reports student capability; no inference efficiency is claimed. Primary abstract: Despite the success of distillation in large language models (LLMs), most prior work applies identical loss functions to both teacher- and student-generated data. These strategies overlook the synergy between loss formulations and data types, leading to a suboptimal performance boost in student models. To address this, we propose DistiLLM-2, a contrastive approach that simultaneously increases the likelihood of teacher responses and decreases that of student responses by harn",
+    "first_checked_at": "2026-10-05T12:24:54+00:00",
+    "last_checked_at": "2026-10-05T12:24:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+    ],
+    "title": "DistiLLM-2: A Contrastive Approach Boosts the Distillation of LLMs"
+  },
+  "processed_at": "2026-10-05T12:24:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd4f7bfb9e01",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
