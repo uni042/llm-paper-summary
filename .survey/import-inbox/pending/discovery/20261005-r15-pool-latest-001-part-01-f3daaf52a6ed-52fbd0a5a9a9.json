@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-001-part-01-f3daaf52a6ed",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.14476",
+      "identity_tokens": [
+        "arXiv:2503.14476"
+      ],
+      "title": "DAPO: An Open-Source LLM Reinforcement Learning System at Scale",
+      "reason": "DAPO is RLHF policy optimization and an open RL system: training-stage contribution, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2503.14476",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.02515-livemem-maintaining-memory-state-continuity-in-long-running-llm-inferenc.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2026-2609.07108-online-draft-co-training-for-speculative-decoding-in-large-scale-long-context-rl-post-training.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.14786",
+      "identity_tokens": [
+        "arXiv:2502.14786"
+      ],
+      "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features",
+      "reason": "Vision-language encoder family offers model-size cost/performance choices, but its contribution/evaluation is vision representation/training rather than LLM serving; scope is adjacent and weak.",
+      "source_url": "https://arxiv.org/abs/2502.14786",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.00566",
+      "identity_tokens": [
+        "arXiv:2303.00566"
+      ],
+      "title": "Structured Pruning for Deep Convolutional Neural Networks: A Survey",
+      "reason": "Survey concerns structured pruning for deep CNNs, outside LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2303.00566",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.02245",
+      "identity_tokens": [
+        "arXiv:2003.02245"
+      ],
+      "title": "Data Augmentation using Pre-trained Transformer Models",
+      "reason": "Transformer-based data augmentation for NLP training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2003.02245",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2024.3389497",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3389497"
+      ],
+      "title": "GPT (Generative Pre-Trained Transformer)— A Comprehensive Review on Enabling Technologies, Potential Applications, Emerging Challenges, and Future Directions",
+      "reason": "Broad GPT technology/application/challenges review, not a focused inference-efficiency contribution; full text could not be retrieved.",
+      "source_url": "https://arxiv.org/abs/2305.10435",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.26763-sara.md"
+      ]
+    }
+  ]
+}
