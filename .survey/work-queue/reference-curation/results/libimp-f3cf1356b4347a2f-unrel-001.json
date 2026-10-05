@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f3cf1356b4347a2f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icce-taiwan71481.2026.11652374",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icce-taiwan71481.2026.11652374",
+    "identity_tokens": [
+      "DOI:10.1109/icce-taiwan71481.2026.11652374"
+    ],
+    "reason": "一次abstractは時系列異常検知用Anomaly Transformerの表現・判別品質を改善する研究で、LLM推論効率ではない。",
+    "first_checked_at": "2026-10-05T11:19:38+00:00",
+    "last_checked_at": "2026-10-05T11:19:38+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Enhanced Transformer Powered Time-Series Anomaly Detection via Contrastive Embedding and Unified Discrimination"
+  },
+  "processed_at": "2026-10-05T11:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f3cf1356b434",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

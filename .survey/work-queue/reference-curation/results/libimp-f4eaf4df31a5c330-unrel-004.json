@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4eaf4df31a5c330-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/icdcece68961.2026.11645838",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/icdcece68961.2026.11645838",
+    "identity_tokens": [
+      "DOI:10.1109/icdcece68961.2026.11645838"
+    ],
+    "reason": "一次abstractはOPT-1.3BのQLoRA/LoRA/full fine-tuningコスト・精度比較が主題で、inference efficiencyではない。",
+    "first_checked_at": "2026-10-05T11:19:38+00:00",
+    "last_checked_at": "2026-10-05T11:19:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+    ],
+    "title": "Efficient Adaptation of Large Language Models for Sentiment Classification: A Comparative Study of QLoRA, LoRA, and Full Fine-Tuning Under Resource Constraints"
+  },
+  "processed_at": "2026-10-05T11:19:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4eaf4df31a5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

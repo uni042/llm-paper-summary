@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:01:43+00:00",
-  "record_count": 1485,
+  "updated_at": "2026-10-05T11:19:38+00:00",
+  "record_count": 1493,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -22992,6 +22992,133 @@
         "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
       ],
       "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving"
+    },
+    "DOI:10.1109/icest71230.2026.11623542": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icest71230.2026.11623542",
+      "identity_tokens": [
+        "DOI:10.1109/icest71230.2026.11623542"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:36+00:00",
+      "last_checked_at": "2026-10-05T11:19:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Small vs. Large Language Models in Retrieval-Augmented Generation for Serbian"
+    },
+    "DOI:10.1109/iceccc70334.2026.11633162": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iceccc70334.2026.11633162",
+      "identity_tokens": [
+        "DOI:10.1109/iceccc70334.2026.11633162"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:37+00:00",
+      "last_checked_at": "2026-10-05T11:19:37+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "title": "BreakLoop: A Privacy-Preserving On-Device AI System for Obsessive-Compulsive Disorder"
+    },
+    "DOI:10.1109/icera72709.2026.11666692": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icera72709.2026.11666692",
+      "identity_tokens": [
+        "DOI:10.1109/icera72709.2026.11666692"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:37+00:00",
+      "last_checked_at": "2026-10-05T11:19:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "EdgeCommerce: Autonomous Self-Optimizing LLM Inference for Real-Time E-Commerce at the Edge"
+    },
+    "DOI:10.1109/icera72709.2026.11666706": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icera72709.2026.11666706",
+      "identity_tokens": [
+        "DOI:10.1109/icera72709.2026.11666706"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:37+00:00",
+      "last_checked_at": "2026-10-05T11:19:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Kairos: SLO-Aware Scheduling and a Benchmark for Multi-Tenant LLM Inference Serving under Bursty, Heterogeneous Load"
+    },
+    "DOI:10.1109/icce-taiwan71481.2026.11652842": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icce-taiwan71481.2026.11652842",
+      "identity_tokens": [
+        "DOI:10.1109/icce-taiwan71481.2026.11652842"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:38+00:00",
+      "last_checked_at": "2026-10-05T11:19:38+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "title": "A Comparative Study of Fine-Tuned Small Models for Inference"
+    },
+    "DOI:10.1109/icce70609.2026.11658407": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icce70609.2026.11658407",
+      "identity_tokens": [
+        "DOI:10.1109/icce70609.2026.11658407"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:38+00:00",
+      "last_checked_at": "2026-10-05T11:19:38+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "LP-WRR: Towards Adaptive Performance-Aware Load Balancing"
+    },
+    "DOI:10.1109/iccsc71566.2026.11650301": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccsc71566.2026.11650301",
+      "identity_tokens": [
+        "DOI:10.1109/iccsc71566.2026.11650301"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:38+00:00",
+      "last_checked_at": "2026-10-05T11:19:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Coverage-Aware Evidence Packing for Budgeted Multi-Hop RAG on Small Language Models"
+    },
+    "DOI:10.1109/iccsc71566.2026.11650507": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccsc71566.2026.11650507",
+      "identity_tokens": [
+        "DOI:10.1109/iccsc71566.2026.11650507"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:19:38+00:00",
+      "last_checked_at": "2026-10-05T11:19:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Signal-Centric Memory Architectures for Reliable Long-Context Artificial Intelligence"
     }
   }
 }

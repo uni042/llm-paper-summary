@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-56cbfeff6c96a8be-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icera72709.2026.11666692",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icera72709.2026.11666692",
+    "identity_tokens": [
+      "DOI:10.1109/icera72709.2026.11666692"
+    ],
+    "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+    "first_checked_at": "2026-10-05T11:19:37+00:00",
+    "last_checked_at": "2026-10-05T11:19:37+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "EdgeCommerce: Autonomous Self-Optimizing LLM Inference for Real-Time E-Commerce at the Edge"
+  },
+  "processed_at": "2026-10-05T11:19:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-56cbfeff6c96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
