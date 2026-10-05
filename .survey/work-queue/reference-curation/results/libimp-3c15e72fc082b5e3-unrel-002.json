@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c15e72fc082b5e3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.26363",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.26363",
+    "identity_tokens": [
+      "arXiv:2609.26363"
+    ],
+    "reason": "DHSched coordinates ownership and control-path correctness for stateful real-time avatar sessions and reports large concurrent-session and migration-integrity evaluations. It does not optimize LLM generation or inference resource use.",
+    "first_checked_at": "2026-10-05T05:54:03+00:00",
+    "last_checked_at": "2026-10-05T05:54:03+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+    ],
+    "title": "DHSched: Stateless Control for Stateful Real-Time Avatar Serving"
+  },
+  "processed_at": "2026-10-05T05:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c15e72fc082",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

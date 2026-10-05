@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:51:33+00:00",
-  "record_count": 989,
+  "updated_at": "2026-10-05T05:54:03+00:00",
+  "record_count": 990,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15014,6 +15014,20 @@
         "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
       ],
       "title": "A heterogeneous CIM/CNM architecture for LMs utilizing speed/density-optimized 3D CAA-IGZO DRAMs"
+    },
+    "arXiv:2609.25963": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25963",
+      "identity_tokens": [
+        "arXiv:2609.25963"
+      ],
+      "reason": "Although the method compresses model weights, the paper evidence inspected is limited to compression and quality metrics and does not establish inference-serving savings; weak scope evidence warrants borderline.",
+      "first_checked_at": "2026-10-05T05:54:03+00:00",
+      "last_checked_at": "2026-10-05T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "GeoPair: Geometry-Preserving Cross-Layer Factorization for Training-Free Transformer Compression"
     }
   }
 }

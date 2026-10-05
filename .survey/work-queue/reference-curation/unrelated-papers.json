@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:51:34+00:00",
-  "record_count": 3012,
+  "updated_at": "2026-10-05T05:54:04+00:00",
+  "record_count": 3027,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -43847,6 +43847,251 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "A Comprehensive Evaluation of Long-Context Reasoning in Transformer and State-Space LLM Architectures"
+    },
+    "arXiv:2609.26363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26363",
+      "identity_tokens": [
+        "arXiv:2609.26363"
+      ],
+      "reason": "DHSched coordinates ownership and control-path correctness for stateful real-time avatar sessions and reports large concurrent-session and migration-integrity evaluations. It does not optimize LLM generation or inference resource use.",
+      "first_checked_at": "2026-10-05T05:54:03+00:00",
+      "last_checked_at": "2026-10-05T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ],
+      "title": "DHSched: Stateless Control for Stateful Real-Time Avatar Serving"
+    },
+    "arXiv:2609.26365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26365",
+      "identity_tokens": [
+        "arXiv:2609.26365"
+      ],
+      "reason": "The paper coordinates power grids and AI data centers through checkpoint-aware workload scheduling and grid flexibility; it is not an LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T05:54:03+00:00",
+      "last_checked_at": "2026-10-05T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md"
+      ],
+      "title": "Privacy-Preserving Coordinated Operation of Power Grids and AI Data Centers: A Checkpoint-Aware Three-Phase Scheme"
+    },
+    "arXiv:2609.26389": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26389",
+      "identity_tokens": [
+        "arXiv:2609.26389"
+      ],
+      "reason": "TimeInteract targets interactive streaming time-series forecasting; it does not concern LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:54:03+00:00",
+      "last_checked_at": "2026-10-05T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "TimeInteract: Towards Real-Time Interactive Intelligence for Streaming Time Series"
+    },
+    "arXiv:2609.26425": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26425",
+      "identity_tokens": [
+        "arXiv:2609.26425"
+      ],
+      "reason": "QuantWM compresses KV state for video world models; the contribution is video-world-model inference rather than LLM inference/serving under the stated survey scope.",
+      "first_checked_at": "2026-10-05T05:54:03+00:00",
+      "last_checked_at": "2026-10-05T05:54:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "title": "QuantWM: Temporally Consistent 2-Bit KV Cache Quantization for Video World Models"
+    },
+    "arXiv:2609.26590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26590",
+      "identity_tokens": [
+        "arXiv:2609.26590"
+      ],
+      "reason": "GTR is a gated token recurrence model for dense prediction; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "GTR: Gated Token Recurrence for Efficient Dense Prediction"
+    },
+    "arXiv:2609.26621": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26621",
+      "identity_tokens": [
+        "arXiv:2609.26621"
+      ],
+      "reason": "The paper studies output divergence across BF16/FP16/FP32 and adds a gated FP32 output-head recomputation to improve decoding agreement, at an added latency below 4% for tested batch sizes. Its objective is precision correctness, with extra inference work, rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference"
+    },
+    "arXiv:2609.26635": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26635",
+      "identity_tokens": [
+        "arXiv:2609.26635"
+      ],
+      "reason": "MambaVoice is a hybrid architecture for singing-voice source separation; it is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "MambaVoice: Lightweight Audiovisual Singing Voice Separation Via A Hybrid Mamba-Transformer Model"
+    },
+    "arXiv:2609.26718": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26718",
+      "identity_tokens": [
+        "arXiv:2609.26718"
+      ],
+      "reason": "LYRA modifies attention scoring to improve distant-evidence use under proximal-context interference and evaluates quality on long-context benchmarks. Appendix C states asymptotic prefill/decoding complexity and KV-cache size remain unchanged; analytical added FLOPs are below 0.04%, so this is a quality-alignment method with negligible overhead, not an inference-efficiency reduction.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/13-sparse-attention/2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "The Sirens'Song: When Proximal Background Context Overshadows Distant Evidence"
+    },
+    "arXiv:2609.26777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26777",
+      "identity_tokens": [
+        "arXiv:2609.26777"
+      ],
+      "reason": "SWE-Serve benchmarks agentic software-engineering production inference serving but the abstract presents a benchmark/evaluation rather than an inference optimization method or resource-saving system.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving"
+    },
+    "arXiv:2609.27142": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27142",
+      "identity_tokens": [
+        "arXiv:2609.27142"
+      ],
+      "reason": "MINER enhances image retrieval using frozen dual encoders and region embeddings; it is not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "MINER: Multi-crop INference-time Enhancement for Rare-Object Retrieval with Frozen Dual Encoders"
+    },
+    "arXiv:2609.26780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26780",
+      "identity_tokens": [
+        "arXiv:2609.26780"
+      ],
+      "reason": "SpeakerMem-R1 is a speaker-centered memory design for multi-party dialogue; no inference-cost or serving optimization is described.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SpeakerMem-R1: Speaker-Centered Dual-Track Memory for Multi-Party Dialogue"
+    },
+    "arXiv:2609.26789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26789",
+      "identity_tokens": [
+        "arXiv:2609.26789"
+      ],
+      "reason": "Polylogarithmic collective tree exploration is an algorithmic result for asynchronous multi-agent tree traversal, unrelated to language-model serving.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Polylogarithmic Collective Tree Exploration"
+    },
+    "arXiv:2609.26891": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26891",
+      "identity_tokens": [
+        "arXiv:2609.26891"
+      ],
+      "reason": "JAZ presents a minimalist LLM agent framework and reports workflow task/cost results, but the abstract does not identify a concrete inference/serving efficiency method; cost comparison is application-level harness performance.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity"
+    },
+    "arXiv:2609.26927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26927",
+      "identity_tokens": [
+        "arXiv:2609.26927"
+      ],
+      "reason": "The paper presents socio-affective multi-agent simulation architecture; it does not concern LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations"
+    },
+    "arXiv:2609.27083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27083",
+      "identity_tokens": [
+        "arXiv:2609.27083"
+      ],
+      "reason": "The work models 5G aerial wireless propagation with Transformer and GRU components; this is a radio-environment prediction application, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T05:54:04+00:00",
+      "last_checked_at": "2026-10-05T05:54:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "AI-Enabled Wireless Propagation Modeling and Radio Environment Maps for 5G Aerial Wireless Networks"
     }
   }
 }
