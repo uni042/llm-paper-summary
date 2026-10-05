@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1800-scheduled-chat-00/r02",
+  "reference_main_sha": "f19160848187c7810dd47fcb1a3195e1fbb7f83b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.08307",
+      "identity_tokens": [
+        "arXiv:2002.08307"
+      ],
+      "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
+      "reason": "BERTの重み枝刈りを事前学習段階で行い、30–40%程度のpruningではtransfer性能を損なわないことを分析する。モデル圧縮は推論配備に関連するが、主目的・評価はtransfer learningへの影響で、推論latency・memory・throughputのsystem実測がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2002.08307",
+      "body_check": "full_text_checked: 一次arXiv論文情報でBERT weight pruning、30–40% pruning regime、pre-training/transfer performanceへの影響、task-specific fine-tuningでprunabilityが改善しない点を確認。推論system実測がないため境界扱い。",
+      "first_checked_at": "2026-10-05T18:24:00+09:00",
+      "last_checked_at": "2026-10-05T18:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3240765.3240801",
+      "identity_tokens": [
+        "DOI:10.1145/3240765.3240801"
+      ],
+      "title": "DNNBuilder: an Automated Tool for Building High-Performance DNN Hardware Accelerators for FPGAs",
+      "reason": "FPGA向けDNN acceleratorを自動生成し、fine-grained layer pipeline、column-based cache、memory bandwidth/resource-aware design-space explorationでlatencyとBRAMを削減する。推論acceleratorとして関連するが、評価対象はAlexNet/ZF/VGG16/YOLOでLLM/Transformer推論専用ではないためborderline。",
+      "source_url": "https://doi.org/10.1145/3240765.3240801",
+      "body_check": "full_text_checked: IEEE/ACM一次abstractでlayer pipeline、column cache、external-memory-aware DSE、7.7x latency reduction、43x BRAM reduction、最大5.15x performanceを確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T18:24:00+09:00",
+      "last_checked_at": "2026-10-05T18:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1534530.1534544",
+      "identity_tokens": [
+        "DOI:10.1145/1534530.1534544"
+      ],
+      "title": "Write amplification analysis in flash-based solid state drives",
+      "reason": "NAND SSDのwrite amplificationをover-provisioning、garbage collection、reclaim policy、static/dynamic data分離の観点から解析するstorage基礎研究。SSD/NVMe階層メモリやLLM offload設計の基礎として関連するが、LLM推論を対象としないためborderline。",
+      "source_url": "https://doi.org/10.1145/1534530.1534544",
+      "body_check": "full_text_checked: IBM Research公開abstractでlog-structured SSDのwrite amplification確率モデル、over-provisioning、garbage collection、wear leveling、static/dynamic data separationを確認。LLM専用評価がないため境界扱い。",
+      "first_checked_at": "2026-10-05T18:24:00+09:00",
+      "last_checked_at": "2026-10-05T18:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10639",
+      "identity_tokens": [
+        "arXiv:2310.10639"
+      ],
+      "title": "Zero-Shot Robotic Manipulation with Pretrained Image-Editing Diffusion Models",
+      "reason": "画像編集diffusion modelを高位plannerとしてrobot manipulationのsubgoal画像を生成し、低位policyで実行するrobotics研究。CALVIN/実ロボットでgeneralizationを評価するが、LLM推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2310.10639",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でimage-editing diffusionによるrobotic planning、goal-conditioned policy、CALVIN/real-world manipulationが主題と確認し本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:24:00+09:00",
+      "last_checked_at": "2026-10-05T18:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.11235",
+      "identity_tokens": [
+        "arXiv:2309.11235"
+      ],
+      "title": "OpenChat: Advancing Open-source Language Models with Mixed-Quality Data",
+      "reason": "mixed-quality instruction dataを利用するConditioned-RLFTでopen-source LLMのalignment性能を改善する学習研究。SFT/RLFTのtraining data品質とbenchmark精度が主題で、推論runtime・memory・serving効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2309.11235",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でC-RLFT、mixed-quality data、single-stage supervised learningとtask performanceが主題と確認し、推論system対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T18:24:00+09:00",
+      "last_checked_at": "2026-10-05T18:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    }
+  ]
+}
