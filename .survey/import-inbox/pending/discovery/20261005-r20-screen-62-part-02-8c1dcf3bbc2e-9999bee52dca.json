@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-62-part-02-8c1dcf3bbc2e",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14757",
+      "identity_tokens": [
+        "arXiv:2606.14757"
+      ],
+      "title": "Spatial Priors via Space Filling Curves for Small and Limited Data Vision Transformers",
+      "reason": "Spatial-attention bias for vision transformers, evaluated for image recognition/pretraining rather than language-model serving.",
+      "source_url": "https://arxiv.org/abs/2606.14757",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14760",
+      "identity_tokens": [
+        "arXiv:2606.14760"
+      ],
+      "title": "GeoRoPE: Ground-Aware Rotary Adaptation for Remote Sensing Foundation Models",
+      "reason": "RoPE adaptation for remote-sensing foundation models and cross-resolution image tasks, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.14760",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11276-026-04169-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11276-026-04169-5"
+      ],
+      "title": "Advances in edge-intelligent controllers for open radio access networks",
+      "reason": "Packet has no abstract. The supplied primary DOI page was attempted but is inaccessible in the available reader. A secondary bibliographic summary indicates O-RAN edge-controller inference/deployment, but primary scope cannot be confirmed.",
+      "source_url": "https://doi.org/10.1007/s11276-026-04169-5",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11831-026-10656-x",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10656-x"
+      ],
+      "title": "A Comprehensive Survey of Lightweight Large Language Models: Architectures, Techniques, and Challenges",
+      "reason": "Packet has no abstract. The supplied primary Springer DOI page was attempted but is inaccessible in the available reader. A secondary record describes a lightweight-LLM survey, but its primary scope and full-text evidence could not be verified.",
+      "source_url": "https://doi.org/10.1007/s11831-026-10656-x",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3820171.3806856",
+      "identity_tokens": [
+        "DOI:10.1145/3820171.3806856"
+      ],
+      "title": "Minos: Systematically Classifying Performance and Power Characteristics of GPU Workloads on HPC Clusters",
+      "reason": "Generic GPU/HPC workload profiling and power prediction, without an LLM-specific serving contribution.",
+      "source_url": "https://doi.org/10.1145/3820171.3806856",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    }
+  ]
+}
