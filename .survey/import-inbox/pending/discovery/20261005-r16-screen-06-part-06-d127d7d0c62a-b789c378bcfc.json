@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-06-part-06-d127d7d0c62a",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23567",
+      "identity_tokens": [
+        "arXiv:2606.23567"
+      ],
+      "title": "Scheduling Thoughts: Learning the Order of Thought in Diffusion Language Models",
+      "reason": "Diffusion LMのunmasking order policyはreasoning accuracyを上げるが、本文評価で推論手順/denoising cost削減の具体的証拠を確認できず、効率寄与が不確か。",
+      "source_url": "https://arxiv.org/abs/2606.23567",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23607",
+      "identity_tokens": [
+        "arXiv:2606.23607"
+      ],
+      "title": "Scaling Linear Mode Connectivity and Merging to Billion Parameter Pretrained Transformers",
+      "reason": "billion-parameter pretrained transformer weight merging/connectivityの分析で、推論効率が対象ではない。",
+      "source_url": "https://arxiv.org/abs/2606.23607",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23791",
+      "identity_tokens": [
+        "arXiv:2606.23791"
+      ],
+      "title": "One Generator, Any Process: LLM-Conditioning for the LHC",
+      "reason": "LLM conditioningによるLHC物理過程生成が対象で、推論効率の寄与ではない。",
+      "source_url": "https://arxiv.org/abs/2606.23791",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22496",
+      "identity_tokens": [
+        "arXiv:2606.22496"
+      ],
+      "title": "Enabling Cloud-Level Accuracy in Edge AI through IoT Data Preprocessing",
+      "reason": "IoT data preprocessingを用いたedge AI vision taskのaccuracy向上で、LLM推論ではない。",
+      "source_url": "https://arxiv.org/abs/2606.22496",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21906",
+      "identity_tokens": [
+        "arXiv:2606.21906"
+      ],
+      "title": "Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding",
+      "reason": "Confident DecodingはLLM層選択で推論品質改善を主張するが、本文はbaselineより計算/latencyを削減せず、追加overheadを示すため効率研究としてはborderline。",
+      "source_url": "https://arxiv.org/abs/2606.21906",
+      "first_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "last_checked_at": "2026-10-05T02:21:19.993038+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md"
+      ]
+    }
+  ]
+}
