@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-03-part-06-f9ffdc682d1b",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1806.00187",
+      "identity_tokens": [
+        "arXiv:1806.00187"
+      ],
+      "title": "Scaling Neural Machine Translation",
+      "reason": "arXiv要旨はneural machine translationをreduced precision/large batchesで高速にtrainingするGPU scalingを報告する。",
+      "source_url": "https://arxiv.org/abs/1806.00187",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.06762",
+      "identity_tokens": [
+        "arXiv:2006.06762"
+      ],
+      "title": "Ansor : Generating High-Performance Tensor Programs for Deep Learning",
+      "reason": "Ansorは一般DNN tensor program compiler/auto-tunerで、CPU/GPU kernelおよびend-to-end DNNを評価し、workload例にはBERTも含む。一方、LLM autoregressive decodeやLLM servingの測定はなく、BERTを含む汎用compilerという間接適用可能性だけでは対象内と確定できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2006.06762",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2512.22219-mirage-persistent-kernel-mega-kernel-runtime.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.08921",
+      "identity_tokens": [
+        "arXiv:2408.08921"
+      ],
+      "title": "Graph Retrieval-Augmented Generation: A Survey",
+      "reason": "GraphRAG surveyはretrieval/generation構成、評価法、効率化の研究課題を整理し、retrieved contextのcompressionによるinference acceleration等をfuture directionとして述べる。既存提案のserving効率を実証する一次研究ではなく、survey自体に具体的な改善測定がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2408.08921",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2749469.2749475",
+      "identity_tokens": [
+        "DOI:10.1145/2749469.2749475"
+      ],
+      "title": "Heracles: Improving resource efficiency at scale",
+      "reason": "指定ACM DOIのprimary publisher pageをこの取得手段から利用できず、usable abstractを得られなかった。",
+      "source_url": "https://doi.org/10.1145/2749469.2749475",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.16682-kairos-stateful-context-aware-power-efficient-agentic-inference-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3303753.3303754",
+      "identity_tokens": [
+        "DOI:10.14778/3303753.3303754"
+      ],
+      "title": "Fast Approximate Nearest Neighbor Search With The Navigating Spreading-out Graph",
+      "reason": "NSGは汎用approximate nearest-neighbor graph search/indexであり、本文の評価はSIFT/GIST/RAND/GAUSS等のvector datasetにおけるrecall、memory、search性能である。RAG検索への基盤としての隣接性はあるが、LLM/RAG workloadやend-to-end serving効果は評価していないためborderline。",
+      "source_url": "https://arxiv.org/abs/1707.00143",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ]
+    }
+  ]
+}
