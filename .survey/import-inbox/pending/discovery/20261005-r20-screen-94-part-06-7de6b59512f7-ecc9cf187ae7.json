@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-94-part-06-7de6b59512f7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.05938",
+      "identity_tokens": [
+        "arXiv:2410.05938"
+      ],
+      "title": "EMMA: Empowering Multi-modal Mamba with Structural and Hierarchical Alignment",
+      "reason": "Latency comparison assumes VL-Mamba latency matches Cobra because VL-Mamba is not open-sourced; evidence is secondary and affected by backbone/training differences.",
+      "source_url": "https://arxiv.org/abs/2410.05938",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ]
+    }
+  ]
+}
