@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ca0f8466a280b5a0-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3478535",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3478535",
+    "identity_tokens": [
+      "DOI:10.1145/3478535",
+      "arXiv:2101.02703"
+    ],
+    "reason": "black-box predictorの出力をholdout setで較正し、将来データ上の期待損失を有限標本保証付きで制御する不確実性定量化研究。分類、画像segmentation、protein structure等が評価先で、LLM推論システム最適化ではない。",
+    "first_checked_at": "2026-10-05T16:43:47+00:00",
+    "last_checked_at": "2026-10-05T16:43:47+00:00",
+    "linked_from": [],
+    "title": "Distribution-Free, Risk-Controlling Prediction Sets"
+  },
+  "processed_at": "2026-10-05T16:43:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ca0f8466a280",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

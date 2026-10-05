@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:39:40+00:00",
-  "record_count": 2053,
+  "updated_at": "2026-10-05T16:43:48+00:00",
+  "record_count": 2052,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6567,20 +6567,6 @@
       ],
       "title": "Start-time fair queueing: a scheduling algorithm for integrated services packet switching networks"
     },
-    "arXiv:2302.09419": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2302.09419",
-      "identity_tokens": [
-        "arXiv:2302.09419"
-      ],
-      "reason": "本文で効率の中心はpretraining costで、compressionは概説にとどまりLLM inference/servingの具体的機構や評価がない。Researchへ進める根拠が不足するためborderline。",
-      "first_checked_at": "2026-10-05T00:48:10+00:00",
-      "last_checked_at": "2026-10-05T00:48:10+00:00",
-      "linked_from": [
-        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
-      ],
-      "title": "A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT"
-    },
     "DOI:10.3390/fi15060192": {
       "classification": "borderline",
       "canonical_id": "DOI:10.3390/fi15060192",
@@ -9112,21 +9098,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Catalyzer: Sub-millisecond Startup for Serverless Computing with Initialization-less Booting"
-    },
-    "arXiv:2409.16040": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2409.16040",
-      "identity_tokens": [
-        "arXiv:2409.16040"
-      ],
-      "reason": "Time-MoE reports sparse-MoE inference speed/memory, but targets time-series forecasting rather than LLMs, so scope fit is weak.",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
-      "linked_from": [
-        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
-        "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
-      ],
-      "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts"
     },
     "DOI:10.1145/3149371": {
       "classification": "borderline",
@@ -31379,9 +31350,9 @@
       "identity_tokens": [
         "DOI:10.1145/291069.291026"
       ],
-      "reason": "disk内にprocessor/memoryを持たせapplication-specific codeをdata近傍で実行し、hostはcoordination/scheduling/results統合へ寄せるnear-data processing方式。LLMのSSD/NVMe offload・near-storage推論に機構的に直結する基礎研究だが、評価workloadはdata warehouse・image processing・satellite processingでLLM推論専用ではないためborderline。",
+      "reason": "ストレージ装置側へ計算を移してI/O量を削減するactive diskのプログラミングモデルとアルゴリズムを評価する階層メモリ／near-storage computingの基礎研究。LLMのCPU/SSD/NVMeオフロードと機構上の接点は強いが、LLM/Transformer推論を最終適用先としないため境界扱い。",
       "first_checked_at": "2026-10-05T15:55:16+00:00",
-      "last_checked_at": "2026-10-05T15:55:16+00:00",
+      "last_checked_at": "2026-10-05T16:43:46+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Active disks: programming model, algorithms and evaluation"
@@ -31738,6 +31709,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Primer: Searching for Efficient Transformers for Language Modeling"
+    },
+    "DOI:10.1145/2168836.2168847": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2168836.2168847",
+      "identity_tokens": [
+        "DOI:10.1145/2168836.2168847"
+      ],
+      "reason": "data-parallel clusterでjob内部依存をsimulatorにより予測し、進捗に応じてresource allocationを動的制御してlatency SLOを満たすscheduler。LLM servingのSLO-aware schedulingに機構的に強く関連するが、評価先はMicrosoft Cosmos/SCOPEのdata-processing jobでLLM推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:43:45+00:00",
+      "last_checked_at": "2026-10-05T16:43:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Jockey: guaranteed job latency in data parallel clusters"
     }
   }
 }

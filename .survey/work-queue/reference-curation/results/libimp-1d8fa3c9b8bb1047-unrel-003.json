@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1d8fa3c9b8bb1047-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1810.09305",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1810.09305",
+    "identity_tokens": [
+      "arXiv:1810.09305"
+    ],
+    "reason": "23万超のarticle-summary pairからなるabstractive summarization datasetを構築し既存modelのbaselineを評価するdataset研究。推論system効率化ではない。",
+    "first_checked_at": "2026-10-05T16:43:45+00:00",
+    "last_checked_at": "2026-10-05T16:43:45+00:00",
+    "linked_from": [],
+    "title": "WikiHow: A Large Scale Text Summarization Dataset"
+  },
+  "processed_at": "2026-10-05T16:43:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1d8fa3c9b8bb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
