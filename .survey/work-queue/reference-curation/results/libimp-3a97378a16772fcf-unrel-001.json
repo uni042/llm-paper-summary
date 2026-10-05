@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a97378a16772fcf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.cub.2026.06.020",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.cub.2026.06.020",
+    "identity_tokens": [
+      "DOI:10.1016/j.cub.2026.06.020"
+    ],
+    "reason": "一次abstractは脳科学からAI一般のenergy efficiencyを考察するreviewで、LLM inference/servingを対象とした具体的手法・評価を提示しない。",
+    "first_checked_at": "2026-10-05T10:49:25+00:00",
+    "last_checked_at": "2026-10-05T10:49:25+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "Looking to the brain to improve energy efficiency of AI."
+  },
+  "processed_at": "2026-10-05T10:49:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a97378a1677",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

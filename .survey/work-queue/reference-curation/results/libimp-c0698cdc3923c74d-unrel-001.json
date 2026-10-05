@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c0698cdc3923c74d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.08400",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.08400",
+    "identity_tokens": [
+      "arXiv:2608.08400"
+    ],
+    "reason": "一次abstractはcloud-edge infrastructureの運用複雑性に関するempirical interview/architecture分析で、LLM inference効率を評価しない。",
+    "first_checked_at": "2026-10-05T10:49:26+00:00",
+    "last_checked_at": "2026-10-05T10:49:26+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+    ],
+    "title": "Empirical Analysis of Cloud-Edge Infrastructure Complexity: Practitioner Pain Points and Architectural Directions"
+  },
+  "processed_at": "2026-10-05T10:49:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c0698cdc3923",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
