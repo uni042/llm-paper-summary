@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0eb9e1c11a2c1a92-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1912.10077",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1912.10077",
+    "identity_tokens": [
+      "arXiv:1912.10077"
+    ],
+    "reason": "arXiv要旨はTransformerのsequence-to-sequence関数に対するuniversal approximation propertyを証明し、簡易attention alternativesを評価する。",
+    "first_checked_at": "2026-10-05T01:03:25+00:00",
+    "last_checked_at": "2026-10-05T01:03:25+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Are Transformers universal approximators of sequence-to-sequence functions?"
+  },
+  "processed_at": "2026-10-05T01:03:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0eb9e1c11a2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:01:02+00:00",
-  "record_count": 1496,
+  "updated_at": "2026-10-05T01:03:26+00:00",
+  "record_count": 1512,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -21584,6 +21584,242 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
       ],
       "title": "Large Language Models Are Reasoning Teachers"
+    },
+    "DOI:10.1109/wacvw60836.2024.00106": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacvw60836.2024.00106",
+      "identity_tokens": [
+        "DOI:10.1109/wacvw60836.2024.00106"
+      ],
+      "reason": "arXiv要旨はautonomous driving/transportation/map systems向けmultimodal LLMのsurveyで、tools/datasets/challengesを整理する。",
+      "first_checked_at": "2026-10-05T01:03:25+00:00",
+      "last_checked_at": "2026-10-05T01:03:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
+      ],
+      "title": "A Survey on Multimodal Large Language Models for Autonomous Driving"
+    },
+    "arXiv:1912.10077": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1912.10077",
+      "identity_tokens": [
+        "arXiv:1912.10077"
+      ],
+      "reason": "arXiv要旨はTransformerのsequence-to-sequence関数に対するuniversal approximation propertyを証明し、簡易attention alternativesを評価する。",
+      "first_checked_at": "2026-10-05T01:03:25+00:00",
+      "last_checked_at": "2026-10-05T01:03:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Are Transformers universal approximators of sequence-to-sequence functions?"
+    },
+    "arXiv:2206.08916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08916",
+      "identity_tokens": [
+        "arXiv:2206.08916"
+      ],
+      "reason": "arXiv要旨は90以上のvision/language datasetで学習した統合multimodal model Unified-IOとtask性能を報告する。",
+      "first_checked_at": "2026-10-05T01:03:25+00:00",
+      "last_checked_at": "2026-10-05T01:03:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ],
+      "title": "Unified-IO: A Unified Model for Vision, Language, and Multi-Modal Tasks"
+    },
+    "DOI:10.1007/s11432-024-4235-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11432-024-4235-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-024-4235-6"
+      ],
+      "reason": "arXiv要旨はGPT-4/Gemini等のmultimodal model OCR能力を測る29-dataset OCRBenchを提案する。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.04454-phase-aware-expert-merging.md",
+        "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md"
+      ],
+      "title": "OCRBench: on the hidden mystery of OCR in large multimodal models"
+    },
+    "arXiv:2310.10631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10631",
+      "identity_tokens": [
+        "arXiv:2310.10631"
+      ],
+      "reason": "arXiv要旨はCode Llamaを数学corpus上でcontinued-pretrainしたopen math language model Llemmaとbenchmark結果を紹介する。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Llemma: An Open Language Model For Mathematics"
+    },
+    "arXiv:1906.04284": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.04284",
+      "identity_tokens": [
+        "arXiv:1906.04284"
+      ],
+      "reason": "arXiv要旨はGPT-2 Smallにおけるattention headとsyntax/dependencyとの対応を分析する。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md",
+        "papers/inference/13-sparse-attention/2025-2502.08363-top-theta-attention.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Analyzing the Structure of Attention in a Transformer Language Model"
+    },
+    "arXiv:2410.13848": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13848",
+      "identity_tokens": [
+        "arXiv:2410.13848"
+      ],
+      "reason": "arXiv要旨はmultimodal understanding/generationのautoregressive Janusでvisual encoderを分離しtask performanceを示す。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md",
+        "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+      ],
+      "title": "Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation"
+    },
+    "arXiv:2109.10852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2109.10852",
+      "identity_tokens": [
+        "arXiv:2109.10852"
+      ],
+      "reason": "arXiv要旨はobject detectionをimage-conditioned language modelingとして表現するPix2SeqとCOCO性能を扱う。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Pix2seq: A Language Modeling Framework for Object Detection"
+    },
+    "DOI:10.48550/arxiv.2305.07759": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2305.07759",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.07759",
+        "arXiv:2305.07759"
+      ],
+      "reason": "arXiv要旨はGPT-3.5/4生成のTinyStoriesで10M未満の小型LMをtraining/evaluationする方法を扱う。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2410.06916-swift-on-the-fly-self-speculative-decoding-for-llm-inference-acceleratio.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/99-other-inference-systems/2025-2509.12211-tinyserve-query-aware-cache-selection.md"
+      ],
+      "title": "TinyStories: How Small Can Language Models Be and Still Speak Coherent English?"
+    },
+    "arXiv:1605.06065": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1605.06065",
+      "identity_tokens": [
+        "arXiv:1605.06065"
+      ],
+      "reason": "arXiv要旨はfew-shot/one-shot learningのためmemory-augmented neural networkと外部memory accessを扱う。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "One-shot Learning with Memory-Augmented Neural Networks"
+    },
+    "arXiv:2410.02713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02713",
+      "identity_tokens": [
+        "arXiv:2410.02713"
+      ],
+      "reason": "arXiv要旨はsynthetic video instruction datasetとLLaVA-Videoのinstruction tuningを提案しvideo benchmark性能を評価する。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.26498-rps-serve-modality-aware-scheduling.md",
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+      ],
+      "title": "LLaVA-Video: Video Instruction Tuning With Synthetic Data"
+    },
+    "arXiv:2303.10158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10158",
+      "identity_tokens": [
+        "arXiv:2303.10158"
+      ],
+      "reason": "arXiv要旨はtraining data、inference data、data maintenanceを含む一般data-centric AI surveyである。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Data-centric Artificial Intelligence: A Survey"
+    },
+    "arXiv:2304.09842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.09842",
+      "identity_tokens": [
+        "arXiv:2304.09842"
+      ],
+      "reason": "ChameleonはLLM plannerがLLM/vision/web/Python等のtoolを選択・合成する推論能力の枠組み。本文の評価は各taskのaccuracy/qualityで、serving資源効率やinference accelerationを提案・測定していない。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md",
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ],
+      "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models"
+    },
+    "arXiv:1904.10631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1904.10631",
+      "identity_tokens": [
+        "arXiv:1904.10631"
+      ],
+      "reason": "一次要旨はWideResNetとDynamicConv Transformer等のtraining memory削減。学習時効率でありLLM推論対象外。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2026-2602.02108-out-of-the-memory-barrier-a-highly-memory-efficient-training-system-for-llms-with-million-token-contexts.md"
+      ],
+      "title": "Low-Memory Neural Network Training: A Technical Report"
+    },
+    "DOI:10.18653/v1/d18-1044": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1044",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1044"
+      ],
+      "reason": "一次要旨はニューラル機械翻訳のsemi-autoregressive複数語出力法。旧来の翻訳生成で、LLM推論/serving論文ではない。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2607.05147-dspark-confidence-scheduled-speculative-decoding.md"
+      ],
+      "title": "Semi-Autoregressive Neural Machine Translation"
+    },
+    "arXiv:2607.20368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20368",
+      "identity_tokens": [
+        "arXiv:2607.20368"
+      ],
+      "reason": "一次要旨はautoregressive video diffusionによる長時間動画外挿の学習・生成であり、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T01:03:26+00:00",
+      "last_checked_at": "2026-10-05T01:03:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "Self Gradient Forcing: Native Long Video Extrapolation"
     }
   }
 }

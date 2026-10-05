@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0b9bb116419989a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.13848",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.13848",
+    "identity_tokens": [
+      "arXiv:2410.13848"
+    ],
+    "reason": "arXiv要旨はmultimodal understanding/generationのautoregressive Janusでvisual encoderを分離しtask performanceを示す。",
+    "first_checked_at": "2026-10-05T01:03:26+00:00",
+    "last_checked_at": "2026-10-05T01:03:26+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md",
+      "papers/inference/99-other-inference-systems/2026-2608.01785-horizonserve-coordinating-request-scheduling-with-gpu-sharing-for-omni-model-serving.md"
+    ],
+    "title": "Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation"
+  },
+  "processed_at": "2026-10-05T01:03:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0b9bb116419",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

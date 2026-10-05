@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0eb9e1c11a2c1a92-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3447579",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3447579",
+    "identity_tokens": [
+      "DOI:10.1145/3447579"
+    ],
+    "reason": "本文はrequest-sequence cachingでmachine-learned adviceを用いるonline eviction strategyの理論保証とBerkeley/CitiBike trace評価を扱う。LLM KV cache、prompt cache、model-serving workloadへの適用や実測はなく、一般cache policyとの概念的隣接に留まるためborderline。",
+    "first_checked_at": "2026-10-05T01:03:25+00:00",
+    "last_checked_at": "2026-10-05T01:03:25+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md"
+    ],
+    "title": "Competitive caching with machine learned advice"
+  },
+  "processed_at": "2026-10-05T01:03:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0eb9e1c11a2c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
