@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Griffin: Mixing Gated Linear Recurrences with Local Attention for Efficient Language Models",
+      "source_url": "https://arxiv.org/abs/2402.19427",
+      "year": 2024,
+      "published": "2024-02-29",
+      "venue": "arXiv.org",
+      "citation_count": 280,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent neural networks (RNNs) have fast inference and scale efficiently on long sequences, but they are difficult to train and hard to scale. We propose Hawk, an RNN with gated linear recurrences, and Griffin, a hybrid model that mixes gated linear recurrences with local attention. Hawk exceeds the reported performance of Mamba on downstream tasks, while Griffin matches the performance of Llama-2 despite being trained on over 6 times fewer tokens. We also show that Griffin can extrapolate on sequences significantly longer than those seen during training. Our models match the hardware efficiency of Transformers during training, and during inference they have lower latency and significantly higher throughput. We scale Griffin up to 14B parameters, and explain how to shard our models for efficient distributed training.",
+      "identifiers": [
+        "SemanticScholar:d53fe76bd2795a19ddf52d012917782f6f6f2c1e"
+      ],
+      "semantic_scholar_id": "d53fe76bd2795a19ddf52d012917782f6f6f2c1e",
+      "canonical_id": "arXiv:2402.19427",
+      "arxiv_id": "2402.19427",
+      "authors": [
+        "Soham De",
+        "Samuel L. Smith",
+        "Anushan Fernando",
+        "Aleksandar Botev",
+        "George Cristian-Muraru",
+        "Albert Gu",
+        "Ruba Haroun",
+        "Leonard Berrada",
+        "Yu-Tian Chen",
+        "S. Srinivasan",
+        "Guillaume Desjardins",
+        "Arnaud Doucet",
+        "D. Budden",
+        "Y. W. Teh",
+        "Razvan Pascanu",
+        "N. de Freitas",
+        "Caglar Gulcehre"
+      ],
+      "priority": 280,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 280,
+        "citation_count": 280,
+        "total": 280,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 949,
+        "matched_prestigious_venue": null
+      },
+      "reason": "gated linear recurrenceとlocal attentionを混合し、global attentionの系列長に伴うKV memory増加を避けるlanguage model architecture。14Bまでscaleし、推論でTransformerより低latency・高throughputを示すため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv本文/要旨でRG-LRU、local attention、bounded state/KV、14B scaling、inference latency/throughput優位を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fc98b496b286",
+    "round": "libimp-fc98b496b2862026-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fc98b496b2862026-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fc98b496b2862026-pre01.json",
+    "receipt": "sha256:79b3fa076c23495cc433aa22bd43236948f5143e2fce8819ed18dec673e9ac2a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fc98b496b286",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
