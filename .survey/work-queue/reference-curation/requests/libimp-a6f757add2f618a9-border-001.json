@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a6f757add2f618a9-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2110.02037",
+  "reason": "order-agnostic autoregressive/discrete diffusionを統合し、test timeにgeneration budgetへ合わせて並列生成step数を調整できる。text8で1000-step discrete diffusion相当を250 stepで達成するが、汎用離散生成modelが主対象で現代LLM serving/runtimeの直接評価ではないためborderline。",
+  "title": "Autoregressive Diffusion Models",
+  "identity_tokens": [
+    "arXiv:2110.02037"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a6f757add2f6",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
