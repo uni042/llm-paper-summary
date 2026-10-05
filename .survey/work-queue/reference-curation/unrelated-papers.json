@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:19:32+00:00",
-  "record_count": 4906,
+  "updated_at": "2026-10-05T12:22:00+00:00",
+  "record_count": 4922,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -71398,6 +71398,234 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "Bernstein-Schur Kernels: Random Features by Sketched Modulation and Radial Randomization"
+    },
+    "arXiv:2606.09924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09924",
+      "identity_tokens": [
+        "arXiv:2606.09924"
+      ],
+      "reason": "Single-path dynamic inference for ResNet/PointNet vision tasks; no language-model workload.",
+      "first_checked_at": "2026-10-05T12:21:57+00:00",
+      "last_checked_at": "2026-10-05T12:21:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Sigma-Branch: Hierarchical Single-Path Network Reconstruction for Dynamic Inference With Reduced Active Parameters"
+    },
+    "arXiv:2606.14753": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14753",
+      "identity_tokens": [
+        "arXiv:2606.14753"
+      ],
+      "reason": "Sub-quadratic vision encoder for image captioning; computes image features, with no LLM-decoder inference optimization demonstrated.",
+      "first_checked_at": "2026-10-05T12:21:57+00:00",
+      "last_checked_at": "2026-10-05T12:21:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Beyond Self-Attention: Sub-Quadratic Vision Transformers for Fast Image Captioning"
+    },
+    "DOI:10.1038/s41893-025-01681-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41893-025-01681-y",
+      "identity_tokens": [
+        "DOI:10.1038/s41893-025-01681-y"
+      ],
+      "reason": "National AI-server water/carbon-footprint scenario analysis and mitigation; no LLM inference-system method or measured serving optimization.",
+      "first_checked_at": "2026-10-05T12:21:57+00:00",
+      "last_checked_at": "2026-10-05T12:21:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA"
+    },
+    "arXiv:2606.08545": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08545",
+      "identity_tokens": [
+        "arXiv:2606.08545"
+      ],
+      "reason": "Verifier-aware LLM generation for BIM specification authoring; task quality/workflow productivity, not inference-system efficiency.",
+      "first_checked_at": "2026-10-05T12:21:57+00:00",
+      "last_checked_at": "2026-10-05T12:21:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Ishigaki-IDS: An Open-Weight Verifier-Aware Model for Information Delivery Specification Drafting in Building Information Modeling"
+    },
+    "arXiv:2606.08573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08573",
+      "identity_tokens": [
+        "arXiv:2606.08573"
+      ],
+      "reason": "Test-time memory adapter for speech-emotion recognition; task adaptation and quality rather than efficient LLM serving.",
+      "first_checked_at": "2026-10-05T12:21:58+00:00",
+      "last_checked_at": "2026-10-05T12:21:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Titans-as-a-Layer: Test-Time Memory for Conversational Speech Emotion Recognition"
+    },
+    "arXiv:2606.08662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08662",
+      "identity_tokens": [
+        "arXiv:2606.08662"
+      ],
+      "reason": "Number-theoretic-transform sparsity theory and polynomial identity testing, unrelated to LLM systems.",
+      "first_checked_at": "2026-10-05T12:21:58+00:00",
+      "last_checked_at": "2026-10-05T12:21:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+      ],
+      "title": "Uncertainty Principles for the Number Theoretic Transform"
+    },
+    "arXiv:2606.08814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08814",
+      "identity_tokens": [
+        "arXiv:2606.08814"
+      ],
+      "reason": "MoE routing method improves specialization/task performance; abstract offers no inference-cost or serving-system contribution.",
+      "first_checked_at": "2026-10-05T12:21:58+00:00",
+      "last_checked_at": "2026-10-05T12:21:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "STAR: Rethinking MoE Routing as Structure-Aware Subspace Learning"
+    },
+    "DOI:10.1365/s40702-026-01283-y": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1365/s40702-026-01283-y",
+      "identity_tokens": [
+        "DOI:10.1365/s40702-026-01283-y"
+      ],
+      "reason": "Conceptual agentic public-transit passenger-information framework; application architecture, not inference optimization.",
+      "first_checked_at": "2026-10-05T12:21:58+00:00",
+      "last_checked_at": "2026-10-05T12:21:58+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Agentenbasierte Fahrgastinformationssysteme für den ÖPNV"
+    },
+    "DOI:10.3390/systems14060659": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/systems14060659",
+      "identity_tokens": [
+        "DOI:10.3390/systems14060659"
+      ],
+      "reason": "GNN/deep-RL warehouse order picking and routing, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:21:59+00:00",
+      "last_checked_at": "2026-10-05T12:21:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Graph Neural Networks and Deep Reinforcement Learning for Warehouse Order Picking and Representation Learning"
+    },
+    "DOI:10.64898/2026.06.03.729714": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.03.729714",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.03.729714"
+      ],
+      "reason": "Generative model comparison on brain-connectivity graph data, outside LLM inference.",
+      "first_checked_at": "2026-10-05T12:21:59+00:00",
+      "last_checked_at": "2026-10-05T12:21:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Comparative Evaluation of Deep Generative Models for Capturing Topological Features in Brain Structural Connectivity"
+    },
+    "arXiv:2606.08476": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08476",
+      "identity_tokens": [
+        "arXiv:2606.08476"
+      ],
+      "reason": "Context parallelism for LLM training, explicitly a training-time communication optimization.",
+      "first_checked_at": "2026-10-05T12:21:59+00:00",
+      "last_checked_at": "2026-10-05T12:21:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "FlashCP: Load-Balanced Communication-Efficient Context Parallelism for LLM Training"
+    },
+    "arXiv:2606.08501": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08501",
+      "identity_tokens": [
+        "arXiv:2606.08501"
+      ],
+      "reason": "Reinforcement-learning alignment for diffusion-LLM reasoning trajectories; training method, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:21:59+00:00",
+      "last_checked_at": "2026-10-05T12:21:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "title": "Back on Track: Aligning Rewards and States for Reasoning in Diffusion Large Language Models"
+    },
+    "arXiv:2501.07278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07278",
+      "identity_tokens": [
+        "arXiv:2501.07278"
+      ],
+      "reason": "Survey of lifelong learning in LLM-based agents, focused on continual learning and task performance rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T12:21:59+00:00",
+      "last_checked_at": "2026-10-05T12:21:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Lifelong Learning of Large Language Model Based Agents: A Roadmap"
+    },
+    "DOI:10.3390/biomedinformatics4020062": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/biomedinformatics4020062",
+      "identity_tokens": [
+        "DOI:10.3390/biomedinformatics4020062"
+      ],
+      "reason": "Healthcare LLM applications, datasets and ethical/technical challenges; no inference-systems contribution.",
+      "first_checked_at": "2026-10-05T12:22:00+00:00",
+      "last_checked_at": "2026-10-05T12:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Recent Advances in Large Language Models for Healthcare"
+    },
+    "arXiv:2407.21792": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.21792",
+      "identity_tokens": [
+        "arXiv:2407.21792"
+      ],
+      "reason": "Meta-analysis of AI safety benchmarks and capability correlations, not inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T12:22:00+00:00",
+      "last_checked_at": "2026-10-05T12:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Safetywashing: Do AI Safety Benchmarks Actually Measure Safety Progress?"
+    },
+    "arXiv:2311.17030": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17030",
+      "identity_tokens": [
+        "arXiv:2311.17030"
+      ],
+      "reason": "Mechanistic interpretability and activation-patching analysis, not inference systems.",
+      "first_checked_at": "2026-10-05T12:22:00+00:00",
+      "last_checked_at": "2026-10-05T12:22:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Is This the Subspace You Are Looking for? An Interpretability Illusion for Subspace Activation Patching"
     }
   }
 }

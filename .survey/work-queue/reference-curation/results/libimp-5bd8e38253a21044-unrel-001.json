@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5bd8e38253a21044-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.08545",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.08545",
+    "identity_tokens": [
+      "arXiv:2606.08545"
+    ],
+    "reason": "Verifier-aware LLM generation for BIM specification authoring; task quality/workflow productivity, not inference-system efficiency.",
+    "first_checked_at": "2026-10-05T12:21:57+00:00",
+    "last_checked_at": "2026-10-05T12:21:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Ishigaki-IDS: An Open-Weight Verifier-Aware Model for Information Delivery Specification Drafting in Building Information Modeling"
+  },
+  "processed_at": "2026-10-05T12:21:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5bd8e38253a2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

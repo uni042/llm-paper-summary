@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2c819015164a06f8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.09924",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.09924",
+    "identity_tokens": [
+      "arXiv:2606.09924"
+    ],
+    "reason": "Single-path dynamic inference for ResNet/PointNet vision tasks; no language-model workload.",
+    "first_checked_at": "2026-10-05T12:21:57+00:00",
+    "last_checked_at": "2026-10-05T12:21:57+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2502.04416-analytical-ffn-to-moe-restructuring.md",
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Sigma-Branch: Hierarchical Single-Path Network Reconstruction for Dynamic Inference With Reduced Active Parameters"
+  },
+  "processed_at": "2026-10-05T12:21:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2c819015164a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
