@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-11-part-05-8fe06ca9ebd4",
+  "reference_main_sha": "fcbbb0114c2efdcb713651d9494c10991463c621",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07912",
+      "identity_tokens": [
+        "arXiv:2609.07912"
+      ],
+      "title": "Interactive Debugger for Performance Portable Python HPC Kernels",
+      "reason": "一次要旨: We propose PKDB, the first interactive debugger for GPU and multithreaded low-level kernels written in Python. Python is widely used in high performance computing (HPC), with frameworks such as PyKokkos translating Python-embedded domain-specific languages to native code that runs across OpenMP-threaded CPUs and various GPUs. Yet interactive debugging support for such code is absent: developers resort to print statements, framework-specific assertions, or CPU-only execution, the last of which requires altering the program or its data and can mask device-specific bugs. PKDB enables standard interactive debugging like breakpoints, stepping, and variable inspection while preserving actual on-device execution without source modification. Beyond these fundamentals, PKDB introduces two advanced capabilities that exploit the dynamic nature of Python and PyKokkos: (i) Live code evaluation, which lets developers execute arbitrary Python expressions or entire kernels in the middle of a paused kernel without restarting the process; (ii) Kernel call site substitution, which allows an actively running kernel to be updated and reloaded on the fly, so only the kernel is recompiled and re-executed without restarting the application. Our performance evaluation on Intel, AMD, and NVIDIA CPUs, and NVIDIA and AMD GPUs shows that PKDB introduces limited overhead and is practical for everyday use while introducing critical debugging features to the Python HPC ecosystem.",
+      "source_url": "https://arxiv.org/abs/2609.07912",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08040",
+      "identity_tokens": [
+        "arXiv:2609.08040"
+      ],
+      "title": "VEX-Bench: Benchmarking LLM Agents for Assessing Exploitability of Software Supply Chain Vulnerabilities",
+      "reason": "一次要旨: The software supply chain has become an increasingly exposed attack surface because of its reliance on intricate yet fragile dependencies. Existing defenses such as GitHub Dependabot often raise many false alerts because their coarse-grained matching cannot determine whether a vulnerable dependency is actually exploitable. Security analysts typically spend substantial time assessing vulnerability exploitability case by case. Recent LLM agents have emerged as promising candidates for this task given their advanced capabilities in coding and cybersecurity, yet no existing benchmark evaluates them on it. Prior benchmarks target zero-day settings, where agents detect and exploit previously unknown vulnerabilities. In contrast, software supply chain security focuses on how known vulnerabilities in upstream dependencies affect downstream projects. This requires agents to reason across repositories and determine whether an upstream vulnerability is exploitable in the downstream project. To address this gap, we introduce VEX-Bench, the first benchmark for evaluating LLM agents'ability to assess the exploitability of software supply chain vulnerabilities. It contains 75 real-world cases mined from GitHub and labeled by security experts, covering Python, Java, and Go. We evaluate nine models across three agent harnesses. While GPT-5.5 and Claude Opus 4.6 reach approximately 80% F1 on binary vulnerability-status classification, only GPT-5.5 surpasses 70% macro-F1 on fine-grained justification classification. This gap highlights the challenge of moving beyond binary exploitability assessment to identifying fine-grained exploitability reasons. Code and data: https://github.com/steven1518/vex-bench",
+      "source_url": "https://arxiv.org/abs/2609.08040",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09229",
+      "identity_tokens": [
+        "arXiv:2609.09229"
+      ],
+      "title": "Compute-Bounded Security Assurance - Coverage, Verification, and Response under Resource Constraints",
+      "reason": "一次要旨: Additional inference compute can increase the number of correctly resolved security-assurance tasks, but repeated success, unique coverage, accepted evidence, and operational protection are different quantities. We develop a resource-constrained framework that separates them. For repeated conditionally independent attempts with latent success probability $\\Theta$, coverage is $C_n = 1 - E[(1-\\Theta)^n]$, and its limiting value is $1 - P(\\Theta = 0)$. Positive pairwise outcome correlation does not by itself imply a ceiling below one: we construct two models with the same mean success and pairwise correlation but different limiting coverage. We distinguish this result from the effective sample size used to estimate a mean, and show why finite-budget observations cannot generally identify an asymptotic support ceiling. We then connect coverage to fallible evidence checking, proper scoring of factual grounding, complete resource accounting, service capacity, and a response model that includes mitigation delay. A conceptual defensive architecture separates evidence analysis, adjudication, and operational authority. An evaluation protocol specifies held-out tasks, paired comparisons, negative cases, and uncertainty reporting. The contribution is a consistent theoretical synthesis and a set of counterexamples to invalid extrapolations, rather than an empirical scaling law. All numerical illustrations are analytic; no model-parity result, hardware benchmark, or general attacker-defender equilibrium is claimed.",
+      "source_url": "https://arxiv.org/abs/2609.09229",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22262",
+      "identity_tokens": [
+        "arXiv:2609.22262"
+      ],
+      "title": "Large language models in medical time series analysis",
+      "reason": "一次要旨: Medical time series (MedTS), including electrocardiograms (ECG), electroencephalograms (EEG), photoplethysmography (PPG), and vital-sign recordings, are central to clinical diagnosis and health monitoring. As large language models (LLMs) have advanced, a growing body of work has examined how their reasoning, generation, and knowledge-integration capabilities can support MedTS analysis. Yet existing studies remain scattered, and the field still lacks a clear view of how these models should be designed, integrated into clinical workflows, and evaluated. This review synthesizes recent work on large language models for medical time series analysis (MedTSLLMs), covering both methodological progress and issues related to real-world deployment. We review model architectures, data resources, and processing pipelines, and prompt design strategies adapted for diverse clinical scenarios. We further organize existing MedTS applications, ranging from diagnostic interpretation and report generation to longitudinal health monitoring and physiological signal synthesis, highlighting task-specific design choices, common evaluation protocols, and empirical findings reported across studies. By bringing together current practices and open challenges, this review aims to provide a clearer foundation for developing, evaluating, and deploying MedTSLLMs responsibly in healthcare. We also maintain a regularly updated list of MedTSLLM studies and resources at: https://github.com/hy727/MedTSLLM-Review.",
+      "source_url": "https://arxiv.org/abs/2609.22262",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/aea3a9",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/aea3a9"
+      ],
+      "title": "MoEST-Net: mixture-of-experts spatio-temporal transformer network for long-term land-use change detection in high-resolution remote sensing imagery",
+      "reason": "一次要旨: Long-term land-use change detection requires models that distinguish persistent land-cover transitions from seasonal appearance changes while remaining efficient over extended image sequences. MoEST-Net is a Mixture-of-Experts spatio-temporal Transformer designed for this setting. Its temporal-scale expert grid uses hierarchical routing to select a small subset of experts for sequences containing 3–8 observations, while a seasonal-disentanglement branch models vegetation phenology and an adaptive gate suppresses season-related responses in the change representation. A change-aware load-balancing objective further adjusts expert use to the spatial sparsity of changed regions. Evaluation on six change-detection benchmarks yields F1 scores of 93.52% on LEVIR-CD and 96.18% on WHU-CD, with larger gains on datasets containing stronger seasonal and scene variation. On long-term sequences, gradual-change recall increases from 62.35% for the bi-temporal repeat baseline to 85.42%. The model contains 22.4 M parameters and requires 18.5 GFLOPs, providing a practical balance between detection accuracy and active computation for long-term land-use monitoring.",
+      "source_url": "https://doi.org/10.1088/2631-8695/aea3a9",
+      "first_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "last_checked_at": "2026-10-05T05:51:06.162949+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
