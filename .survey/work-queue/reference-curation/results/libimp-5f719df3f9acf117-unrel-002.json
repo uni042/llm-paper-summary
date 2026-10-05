@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f719df3f9acf117-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.28974",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.28974",
+    "identity_tokens": [
+      "arXiv:2609.28974"
+    ],
+    "reason": "Post-training quantization (PTQ) reduces the cost of on-device text-to-speech (TTS), but published evaluations cover one system or method. We evaluate PTQ across TTS architectures under one protocol with three core models, weight and activation ablations of eight more, and two held-out models quantized blind. Four-bit per-channel weights reduce UTMOS, a predicted mean opinion score, by 2.8 on Supertonic and 0.07 on Kokoro, and per-tensor scaling can cause severe degradation even at 8 bits. The same bit width yields",
+    "first_checked_at": "2026-10-05T05:38:57+00:00",
+    "last_checked_at": "2026-10-05T05:38:57+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures"
+  },
+  "processed_at": "2026-10-05T05:38:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f719df3f9ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

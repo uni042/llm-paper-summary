@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:36:07+00:00",
-  "record_count": 971,
+  "updated_at": "2026-10-05T05:38:57+00:00",
+  "record_count": 976,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14740,6 +14740,78 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
       ],
       "title": "EngramRAG: Dynamic Usage-Weighted Topology and Synaptic Consolidation for Multi-Hop Agentic Memory"
+    },
+    "arXiv:2609.29382": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29382",
+      "identity_tokens": [
+        "arXiv:2609.29382"
+      ],
+      "reason": "早期退出による計算削減は確認できるが、主対象がロボットVLA/action expertで、LLM推論/servingへの適合は弱い。",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs"
+    },
+    "arXiv:2609.29397": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29397",
+      "identity_tokens": [
+        "arXiv:2609.29397"
+      ],
+      "reason": "低bit language modelという隣接性はあるが、本文の貢献はtraining比較で、LLM推論時効率の証拠がない。",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Baseline Shape Decides the Verdict: A Controlled Re-Examination of Ternary Language Models at 60K Parameters"
+    },
+    "arXiv:2609.29735": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29735",
+      "identity_tokens": [
+        "arXiv:2609.29735"
+      ],
+      "reason": "LLM agentのmemory/context管理に隣接するが、推論効率への直接効果が確認できず、対象適合は限定的。",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "C3M: Cross-Session Multimodal Memory Maintenance for Long-Horizon Tasks"
+    },
+    "arXiv:2609.30017": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30017",
+      "identity_tokens": [
+        "arXiv:2609.30017"
+      ],
+      "reason": "LLM inferenceへの適用例は挙げるものの、手法のLLM serving実証がなく対象適合と実効性が未確定。",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Canopy: Exploiting Piecewise Smooth Tree Priors for Multi-Fidelity Bandits"
+    },
+    "arXiv:2609.30087": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30087",
+      "identity_tokens": [
+        "arXiv:2609.30087"
+      ],
+      "reason": "LLM callを選択する可能性はあるが、本文はQA正確度が焦点で、cost/latency削減やその評価を示さない。",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "Return or Revise? Learning When Revision Helps Retrieval-Augmented QA"
     }
   }
 }

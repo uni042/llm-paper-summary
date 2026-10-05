@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:36:07+00:00",
-  "record_count": 2934,
+  "updated_at": "2026-10-05T05:38:57+00:00",
+  "record_count": 2949,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -42708,6 +42708,226 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "PSEALP: patch-based structural external attention with node memory for dynamic link prediction"
+    },
+    "arXiv:2609.29246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29246",
+      "identity_tokens": [
+        "arXiv:2609.29246"
+      ],
+      "reason": "High-bandwidth flash (HBF) is introduced to address the memory wall, which can co-package a dense NAND stack with the GPU, targeting the performance gap between near-accelerator bandwidth and flash density. HBF, however, is neither a large HBM nor a fast NVMe SSD. Its usable bandwidth depends on how GPU cache-line requests map onto NAND pages, how concurrency spreads across channel-affine die sets, and how media management interacts with the GPU memory pipeline. To our knowledge, existing GPU, SSD, or HBF simulator",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "HBF-Sim: An Extensible HBF Simulator for Large-scale GPU Memory Systems"
+    },
+    "arXiv:2609.29370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29370",
+      "identity_tokens": [
+        "arXiv:2609.29370"
+      ],
+      "reason": "Science, technology, and innovation policies are crucial for competitiveness, yet their diversity and scale make them difficult to map and monitor consistently. Existing approaches rely heavily on manual survey efforts, which are costly and challenging to scale across countries. Large language models (LLMs) enable new possibilities for extracting and structuring information from long and unstructured policy documents. This paper presents an application of LLMs as\"AI respondents\"for generating structured survey resp",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "From Policy Documents to Structured Survey Responses: Evaluating Large Language Models for Policy Monitoring"
+    },
+    "arXiv:2609.29376": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29376",
+      "identity_tokens": [
+        "arXiv:2609.29376"
+      ],
+      "reason": "Automatic 12-lead electrocardiogram (ECG) classification requires representations that jointly capture local waveform morphology, long-range temporal dynamics, and cross-lead dependencies, yet integrating these properties within a single efficient architecture remains challenging. This paper introduces a hybrid CNN-SSM-Attention backbone for 12-lead ECG classification. A convolutional stem performs early waveform tokenization and temporal reduction, mixed state-space and depthwise-convolutional blocks model tempora",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A Hybrid CNN--State-Space--Attention Backbone with Joint-Embedding Predictive Pretraining for 12-Lead ECG Classification"
+    },
+    "arXiv:2609.29421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29421",
+      "identity_tokens": [
+        "arXiv:2609.29421"
+      ],
+      "reason": "Rufus-Air is an open and reproducible post-training recipe on GLM-4.5-Air-Base (106B-A12B), organized as a serial pipeline of eight stages: SFT, Reasoning RL, Coding RL, Instruction-Following RL, General Agent, Coding Agent, Search Agent, and RLHF. We document the data, reward design, infrastructure, stage order, and stagewise results needed to reproduce the recipe. Stages progress from basic to advanced capabilities and from hard, verifiable rewards to softer judge-based signals. Training builds on open-source com",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Rufus-Air: An Open LLM Post-Training Recipe"
+    },
+    "arXiv:2609.29848": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29848",
+      "identity_tokens": [
+        "arXiv:2609.29848"
+      ],
+      "reason": "A language model can fail a syntactic test in two distinct ways: by not encoding the relevant structure, or by encoding it but failing to use it at the output. Behavioral evaluation alone cannot tell these apart. We propose a three-level evaluation framework (behavioral deployment, LM-head readout, and probe recoverability) measured on the same items under the same binary decision. Using a compact trilingual (English, Chinese, German) control-dependency benchmark, we find that probe recoverability exceeds or equals",
+      "first_checked_at": "2026-10-05T05:38:56+00:00",
+      "last_checked_at": "2026-10-05T05:38:56+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "title": "Encoded but Not Decoded: Layer-Localized Evidence for a Three-Level Gap in LLM Syntax"
+    },
+    "arXiv:2609.30009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30009",
+      "identity_tokens": [
+        "arXiv:2609.30009"
+      ],
+      "reason": "Financial institutions operate under dense, frequently amended rulebooks, and answering a compliance question correctly requires not only fluency but verifiable grounding in the authoritative text. Large language models are attractive for this task, yet the models that firms can realistically deploy on-premise are compact ones, and compact models hallucinate obligations. We study whether a carefully domain-adapted retrieval-augmented generation pipeline closes that gap. Our retriever is built in three stages on top",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "Automated Regulatory Compliance Question Answering in Financial Services with Domain-Adapted Retrieval-Augmented Generation"
+    },
+    "arXiv:2609.30057": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30057",
+      "identity_tokens": [
+        "arXiv:2609.30057"
+      ],
+      "reason": "LLM agents automate GPU kernel optimization by repeatedly composing candidates and measuring their duration on real GPUs. Existing systems preserve measurement fidelity by reserving a GPU for an entire agent session or benchmarking command. However, this results in poor utilization because only a small fraction of command execution requires exclusive GPU access. Sharing GPUs could recover this idle capacity, but introduces contention that compromises measurement fidelity and misdirects the agent's search. We presen",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity"
+    },
+    "arXiv:2609.30092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30092",
+      "identity_tokens": [
+        "arXiv:2609.30092"
+      ],
+      "reason": "While Vision-Language-Action (VLA) models demonstrate impressive capabilities in robotic manipulation, their memoryless nature renders them brittle to test-time environment shifts, particularly hardware shifts caused by wear or imperfect calibration. Enabling these models to self-adapt during deployment without requiring continuous on-site recalibration remains a critical bottleneck for real-world scalability. In this work, we introduce Self-Adaptive VLA, a novel post-training recipe that enables the policy to iter",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Self-Adaptive VLA for Robust Robot Deployment"
+    },
+    "arXiv:2609.30177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30177",
+      "identity_tokens": [
+        "arXiv:2609.30177"
+      ],
+      "reason": "Query understanding (QU) plays a critical role in production search systems, translating raw user queries into search execution plans that drive downstream retrieval and ranking. While large language models (LLMs) have enabled QU to be framed as a structured multi-task generation problem (e.g., intent classification, query expansion), optimizing such models to produce search-engine-coupled outputs remains challenging: static, label-based supervision fails to capture how each component actually interacts with the un",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "Search-Aware Reinforcement Learning for Multi-Component Query Understanding in Roblox Game Search"
+    },
+    "arXiv:2609.30258": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30258",
+      "identity_tokens": [
+        "arXiv:2609.30258"
+      ],
+      "reason": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. Th",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning"
+    },
+    "arXiv:2609.28862": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28862",
+      "identity_tokens": [
+        "arXiv:2609.28862"
+      ],
+      "reason": "GPU acceleration is now routine across robotics, but cloud-hosted GPU continuous integration (CI) runners are expensive, resulting in severe under-testing of GPU-accelerated code. We present pytest-gpu-proof, an open-source pytest plugin offering a practical middle ground. Tests can be run on a local machine, signed with a receipt of exactly what ran and what it produced, and integrated into standard CPU CI workflows (e.g., GitHub Actions). The tool is open source and on PyPI, and we are actively integrating it acr",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "pytest-gpu-proof: Enabling Cloud-CPU Continuous Integration for GPU Code with Local GPU Attestation"
+    },
+    "arXiv:2609.28974": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28974",
+      "identity_tokens": [
+        "arXiv:2609.28974"
+      ],
+      "reason": "Post-training quantization (PTQ) reduces the cost of on-device text-to-speech (TTS), but published evaluations cover one system or method. We evaluate PTQ across TTS architectures under one protocol with three core models, weight and activation ablations of eight more, and two held-out models quantized blind. Four-bit per-channel weights reduce UTMOS, a predicted mean opinion score, by 2.8 on Supertonic and 0.07 on Kokoro, and per-tensor scaling can cause severe degradation even at 8 bits. The same bit width yields",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Same Bit Width, Different Outcomes: Post-Training Quantization of Text-to-Speech Across Architectures"
+    },
+    "arXiv:2609.29045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29045",
+      "identity_tokens": [
+        "arXiv:2609.29045"
+      ],
+      "reason": "Open-weight LLMs give downstream users control over the inference stack, but this flexibility can undermine post-release guarantees that sensitive knowledge has been modified or removed. Model editing and machine unlearning are used to modify or remove targeted knowledge without retraining models from scratch. However, existing security evaluations of these techniques face two critical limitations. First, they typically require access to either the original pre-edit/unlearning model or auxiliary classifiers to dete",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+      ],
+      "title": "The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning"
+    },
+    "arXiv:2609.29051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29051",
+      "identity_tokens": [
+        "arXiv:2609.29051"
+      ],
+      "reason": "On-policy self-distillation (OPSD) has become a popular recipe for post-training LLM agents. It supervises the agent model at the token level with a stronger teacher view of the same model, obtained by conditioning on privileged information (PI). In this work, we show that in multi-turn agents, this paradigm teaches the student to act with confidence but without the information behind it. The trained agent behaves as if it had privileged information it never observed, and its performance falls well short of plain R",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
+      ],
+      "title": "From Self-Distillation to Self-Practice: Privileged Information for Multi-Turn Agents"
+    },
+    "arXiv:2609.29067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29067",
+      "identity_tokens": [
+        "arXiv:2609.29067"
+      ],
+      "reason": "Tile-based programming models, such as Triton and cuTile, aim to simplify high-performance kernel development, but their practical performance, tuning behavior, and usability remain difficult to compare systematically. We present TileBench, a controlled benchmark for evaluating Triton and cuTile on NVIDIA B200 GPUs under matched operator semantics and comparable implementation structures. TileBench contains 45 operators covering diverse AI-kernel patterns and memory/computation behaviors. Each task provides a PyTor",
+      "first_checked_at": "2026-10-05T05:38:57+00:00",
+      "last_checked_at": "2026-10-05T05:38:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "TileBench: A Controlled Benchmark for Performance Evaluation and Bottleneck Diagnosis of Tile-Based Programming Models"
     }
   }
 }

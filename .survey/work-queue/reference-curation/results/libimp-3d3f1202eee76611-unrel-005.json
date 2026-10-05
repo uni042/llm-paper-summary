@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3d3f1202eee76611-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30258",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30258",
+    "identity_tokens": [
+      "arXiv:2609.30258"
+    ],
+    "reason": "Distributed learning in embodied reinforcement-learning agents offers a degree of privacy by retaining raw sensor data on-device and transmitting only policy gradients to the server. Yet temporal structure can amplify this leakage beyond single-frame attacks. We introduce Temporal Reconstruction Attack on Consecutive Encodings (TRACE), an amortized temporal gradient-inversion attack that autoregressively reconstructs the sequence of private observation-action trajectories from per-step policy-learning gradients. Th",
+    "first_checked_at": "2026-10-05T05:38:57+00:00",
+    "last_checked_at": "2026-10-05T05:38:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Temporal Gradient Inversion for Private Trajectory Reconstruction in Embodied Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T05:38:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3d3f1202eee7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

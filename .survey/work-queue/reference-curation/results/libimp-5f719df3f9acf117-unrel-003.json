@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f719df3f9acf117-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.29045",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.29045",
+    "identity_tokens": [
+      "arXiv:2609.29045"
+    ],
+    "reason": "Open-weight LLMs give downstream users control over the inference stack, but this flexibility can undermine post-release guarantees that sensitive knowledge has been modified or removed. Model editing and machine unlearning are used to modify or remove targeted knowledge without retraining models from scratch. However, existing security evaluations of these techniques face two critical limitations. First, they typically require access to either the original pre-edit/unlearning model or auxiliary classifiers to dete",
+    "first_checked_at": "2026-10-05T05:38:57+00:00",
+    "last_checked_at": "2026-10-05T05:38:57+00:00",
+    "linked_from": [
+      "papers/survey/03-inference-engines/2025-2505.01658-survey-inference-engines-large-language-models.md"
+    ],
+    "title": "The Tokens Remember: When Tokenization Bypasses Knowledge Editing and Unlearning"
+  },
+  "processed_at": "2026-10-05T05:38:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f719df3f9ac",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
