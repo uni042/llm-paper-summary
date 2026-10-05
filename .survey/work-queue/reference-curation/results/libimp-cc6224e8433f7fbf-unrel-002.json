@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc6224e8433f7fbf-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.29246",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.29246",
+    "identity_tokens": [
+      "arXiv:2607.29246"
+    ],
+    "reason": "複数報酬RLのpolicy decomposition/optimizationを扱い、推論時serving効率化ではない。",
+    "first_checked_at": "2026-10-05T03:31:01+00:00",
+    "last_checked_at": "2026-10-05T03:31:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Don't Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL"
+  },
+  "processed_at": "2026-10-05T03:31:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc6224e8433f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

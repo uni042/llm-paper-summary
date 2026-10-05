@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:28:31+00:00",
-  "record_count": 2263,
+  "updated_at": "2026-10-05T03:31:02+00:00",
+  "record_count": 2275,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -32759,6 +32759,183 @@
         "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
       ],
       "title": "AdaPIM: A CIM-Based General-Purpose Vision Accelerator With Adaptive Inter-Macro Parallelism and Multi-Level Feature Reuse"
+    },
+    "arXiv:2607.29078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29078",
+      "identity_tokens": [
+        "arXiv:2607.29078"
+      ],
+      "reason": "On-policy distillationの切替・ヒステリシスを扱う訓練時手法であり、学習専用効率化は対象外。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "DASH-OPD: Discrepancy-Aware Switching with Hysteresis for On-Policy Distillation"
+    },
+    "arXiv:2607.29246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29246",
+      "identity_tokens": [
+        "arXiv:2607.29246"
+      ],
+      "reason": "複数報酬RLのpolicy decomposition/optimizationを扱い、推論時serving効率化ではない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Don't Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL"
+    },
+    "arXiv:2607.29440": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.29440",
+      "identity_tokens": [
+        "arXiv:2607.29440"
+      ],
+      "reason": "マルチモーダルagent向けanalytic memoryの能力・記憶方式が中心で、要旨に推論効率の主張がない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Beyond Retrieval: Analytic Memory for Multimodal Agents"
+    },
+    "arXiv:2608.00155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00155",
+      "identity_tokens": [
+        "arXiv:2608.00155"
+      ],
+      "reason": "Self-evolving agentのstreaming task性能を評価する研究で、推論時効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "AgentStream: How Well Do Self-Evolving LLM Agents Perform Under Streaming Tasks?"
+    },
+    "arXiv:2608.13596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13596",
+      "identity_tokens": [
+        "arXiv:2608.13596"
+      ],
+      "reason": "モデルscale間の知識転送をactivation-guided pruningで行う学習/モデル準備時の研究で、要旨にserving効率評価がない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Training-Free Knowledge Transfer Across Model Scales through Activation-Guided Pruning"
+    },
+    "arXiv:2607.27958": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27958",
+      "identity_tokens": [
+        "arXiv:2607.27958"
+      ],
+      "reason": "マルチagent memoryの信頼性・オンライン更新を扱い、推論コスト/速度の改善ではない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Σ-Mem: An Online Reliability Memory for LLM-based Multi-Agent Systems"
+    },
+    "arXiv:2607.28070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28070",
+      "identity_tokens": [
+        "arXiv:2607.28070"
+      ],
+      "reason": "産業推薦のcross-field interaction/sequence compressionであり、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "title": "CCFormer: Efficient Cross-Field Interaction and Hierarchical Sequence Compression for Industrial Recommendation at Tencent"
+    },
+    "arXiv:2607.28308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28308",
+      "identity_tokens": [
+        "arXiv:2607.28308"
+      ],
+      "reason": "MoE routingのexpert表現重複を解析する研究で、要旨に推論時効率化手法・評価が示されない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2407.09590-task-agnostic-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2506.23266-sub-moe-subspace-expert-merging.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Beyond Geometric Complementarity: Coherent Overlap in Sparse Mixture-of-Experts Routing"
+    },
+    "arXiv:2607.26455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26455",
+      "identity_tokens": [
+        "arXiv:2607.26455"
+      ],
+      "reason": "長期parametric memoryのforgetting dynamicsを測るベンチマークで、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:31:01+00:00",
+      "last_checked_at": "2026-10-05T03:31:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "ForgetBench: Benchmarking Forgetting Dynamics of Long-Term Parametric Memory in Language Models"
+    },
+    "arXiv:2607.25216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25216",
+      "identity_tokens": [
+        "arXiv:2607.25216"
+      ],
+      "reason": "Generative recommendationのsemantic ID構造を扱い、LLM inference/servingの効率化ではない。",
+      "first_checked_at": "2026-10-05T03:31:02+00:00",
+      "last_checked_at": "2026-10-05T03:31:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "TopoGR: Revealing and Preserving Latent Structure of Semantic ID in Generative Recommendation"
+    },
+    "arXiv:2607.25487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25487",
+      "identity_tokens": [
+        "arXiv:2607.25487"
+      ],
+      "reason": "小型vision-language-actionモデルのChain-of-Thought distillationであり、訓練時研究。",
+      "first_checked_at": "2026-10-05T03:31:02+00:00",
+      "last_checked_at": "2026-10-05T03:31:02+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "CoTinyVLA: Chain-of-Thought Distillation for a Sub-Billion-Parameter Vision-Language-Action Model"
+    },
+    "arXiv:2607.25853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25853",
+      "identity_tokens": [
+        "arXiv:2607.25853"
+      ],
+      "reason": "LLM agentのhierarchical skill graphを扱う能力・計画研究で、推論効率化の主張がない。",
+      "first_checked_at": "2026-10-05T03:31:02+00:00",
+      "last_checked_at": "2026-10-05T03:31:02+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs"
     }
   }
 }

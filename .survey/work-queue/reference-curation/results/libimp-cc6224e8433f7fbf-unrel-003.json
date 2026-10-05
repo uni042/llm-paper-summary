@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cc6224e8433f7fbf-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.29440",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.29440",
+    "identity_tokens": [
+      "arXiv:2607.29440"
+    ],
+    "reason": "マルチモーダルagent向けanalytic memoryの能力・記憶方式が中心で、要旨に推論効率の主張がない。",
+    "first_checked_at": "2026-10-05T03:31:01+00:00",
+    "last_checked_at": "2026-10-05T03:31:01+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "Beyond Retrieval: Analytic Memory for Multimodal Agents"
+  },
+  "processed_at": "2026-10-05T03:31:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cc6224e8433f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
