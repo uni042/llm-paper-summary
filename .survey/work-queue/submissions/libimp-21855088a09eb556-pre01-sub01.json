@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficiently Modeling Long Sequences with Structured State Spaces",
+      "source_url": "https://arxiv.org/abs/2111.00396",
+      "year": 2021,
+      "published": "2021-10-31",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 4420,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A central goal of sequence modeling is designing a single principled model that can address sequence data across a range of modalities and tasks, particularly on long-range dependencies. Although conventional models including RNNs, CNNs, and Transformers have specialized variants for capturing long dependencies, they still struggle to scale to very long sequences of $10000$ or more steps. A promising recent approach proposed modeling sequences by simulating the fundamental state space model (SSM) \\( x'(t) = Ax(t) + Bu(t), y(t) = Cx(t) + Du(t) \\), and showed that for appropriate choices of the state matrix \\( A \\), this system could handle long-range dependencies mathematically and empirically. However, this method has prohibitive computation and memory requirements, rendering it infeasible as a general sequence modeling solution. We propose the Structured State Space sequence model (S4) based on a new parameterization for the SSM, and show that it can be computed much more efficiently than prior approaches while preserving their theoretical strengths. Our technique involves conditioning \\( A \\) with a low-rank correction, allowing it to be diagonalized stably and reducing the SSM to the well-studied computation of a Cauchy kernel. S4 achieves strong empirical results across a diverse range of established benchmarks, including (i) 91\\% accuracy on sequential CIFAR-10 with no data augmentation or auxiliary losses, on par with a larger 2-D ResNet, (ii) substantially closing the gap to Transformers on image and language modeling tasks, while performing generation $60\\times$ faster (iii) SoTA on every task from the Long Range Arena benchmark, including solving the challenging Path-X task of length 16k that all prior work fails on, while being as efficient as all competitors.",
+      "identifiers": [
+        "SemanticScholar:ac2618b2ce5cdcf86f9371bcca98bc5e37e46f51"
+      ],
+      "semantic_scholar_id": "ac2618b2ce5cdcf86f9371bcca98bc5e37e46f51",
+      "canonical_id": "arXiv:2111.00396",
+      "arxiv_id": "2111.00396",
+      "authors": [
+        "Albert Gu",
+        "Karan Goel",
+        "Christopher Ré"
+      ],
+      "priority": 4430,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4420,
+        "citation_count": 4420,
+        "total": 4430,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1800,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "構造化状態空間モデル（Structured State Space Model; S4）は長系列処理の計算・メモリ効率と高速自己回帰生成を直接扱い、後続のMamba系推論研究の基礎となるため収録候補。",
+      "library_body_check": "一次論文相当のarXiv本文を確認。HiPPO由来の状態行列を正規行列＋低ランク補正として扱い、Cauchy kernelへ還元して長系列の並列学習と再帰生成を両立する。Long Range Arena、言語・画像生成を評価し、Transformer比で生成60倍高速という結果まで本文で確認した。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-21855088a09e",
+    "round": "libimp-21855088a09eb556-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-21855088a09eb556-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-21855088a09eb556-pre01.json",
+    "receipt": "sha256:56cffb772417bf8af46fd62c2f427352e8b66945f37975219890333380c49b11"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-21855088a09e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
