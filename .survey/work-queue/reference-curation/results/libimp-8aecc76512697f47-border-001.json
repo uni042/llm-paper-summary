@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8aecc76512697f47-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/2507157.2508063",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/2507157.2508063",
+    "identity_tokens": [
+      "DOI:10.1145/2507157.2508063"
+    ],
+    "reason": "一次ACM DOI URLを取得できず、primary abstract未確認。書誌情報以外は推測しない。",
+    "first_checked_at": "2026-10-05T01:31:06+00:00",
+    "last_checked_at": "2026-10-05T01:31:06+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md"
+    ],
+    "title": "Learning to rank for recommender systems"
+  },
+  "processed_at": "2026-10-05T01:31:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8aecc7651269",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
