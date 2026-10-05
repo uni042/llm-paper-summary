@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:43:18+00:00",
-  "record_count": 2052,
+  "updated_at": "2026-10-05T02:45:28+00:00",
+  "record_count": 2069,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -29671,6 +29671,262 @@
         "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
       ],
       "title": "CreativityNeuro: Steering Language Model Weights to Improve Divergent Thinking and Reduce Mode Collapse"
+    },
+    "arXiv:2606.24102": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24102",
+      "identity_tokens": [
+        "arXiv:2606.24102"
+      ],
+      "reason": "language-grounded EHR foundation modelsのmedical event representationが対象。推論効率ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "PORTER: Language-Grounded Event Representations for Portable Structured EHR Foundation Models"
+    },
+    "arXiv:2606.24756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24756",
+      "identity_tokens": [
+        "arXiv:2606.24756"
+      ],
+      "reason": "Vision Transformerのfew-shot learning向けHebbian memory routingで、LLM inference対象ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Adaptive Hebbian Memory Routing in Vision Transformers for Few-Shot Learning"
+    },
+    "arXiv:2606.22794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22794",
+      "identity_tokens": [
+        "arXiv:2606.22794"
+      ],
+      "reason": "VLA向けfast-to-slow architectureでrobot policyを扱う研究。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "UniFS: Unified Fast-to-Slow Hierarchical Architecture for Vision-Language-Action Models"
+    },
+    "arXiv:2606.23019": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23019",
+      "identity_tokens": [
+        "arXiv:2606.23019"
+      ],
+      "reason": "video Diffusion Transformer用sparse attentionで、LLM/DLMではなくvideo generationを高速化する研究。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "ScalingAttention: Discovering Intrinsic Sparse Attention Topology for Video Diffusion Transformers"
+    },
+    "arXiv:2606.23271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23271",
+      "identity_tokens": [
+        "arXiv:2606.23271"
+      ],
+      "reason": "LLM knowledge synthesisのデータ生成/学習改善が主題で、推論効率ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Scaling LLM Knowledge Boundaries via Distribution-Optimized Synthesis"
+    },
+    "arXiv:2606.27216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27216",
+      "identity_tokens": [
+        "arXiv:2606.27216"
+      ],
+      "reason": "Muon optimizerのNewton-Schulz training updatesを効率化する論文で、推論時の資源削減ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Hierarchical Muon: Tiled Newton-Schulz Updates for Efficient Muon Optimization"
+    },
+    "arXiv:2606.27361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27361",
+      "identity_tokens": [
+        "arXiv:2606.27361"
+      ],
+      "reason": "Autoregressive Boltzmann generatorsの確率モデル/科学計算研究で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Autoregressive Boltzmann Generators"
+    },
+    "arXiv:2606.25313": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.25313",
+      "identity_tokens": [
+        "arXiv:2606.25313"
+      ],
+      "reason": "programmable probabilistic computer (p-bits)のハードウェア設計で、LLM model servingではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Programmable Probabilistic Computer with 1,000,000 p-bits"
+    },
+    "arXiv:2606.26183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26183",
+      "identity_tokens": [
+        "arXiv:2606.26183"
+      ],
+      "reason": "mixture-of-dynamic-expertsによるrobot manipulation policyで、LLM推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "LiMoDE: Rethinking Lifelong Robot Manipulation from a Mixture-of-Dynamic-Experts Perspective"
+    },
+    "arXiv:2606.23607": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23607",
+      "identity_tokens": [
+        "arXiv:2606.23607"
+      ],
+      "reason": "billion-parameter pretrained transformer weight merging/connectivityの分析で、推論効率が対象ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Scaling Linear Mode Connectivity and Merging to Billion Parameter Pretrained Transformers"
+    },
+    "arXiv:2606.23791": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23791",
+      "identity_tokens": [
+        "arXiv:2606.23791"
+      ],
+      "reason": "LLM conditioningによるLHC物理過程生成が対象で、推論効率の寄与ではない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md"
+      ],
+      "title": "One Generator, Any Process: LLM-Conditioning for the LHC"
+    },
+    "arXiv:2606.22496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22496",
+      "identity_tokens": [
+        "arXiv:2606.22496"
+      ],
+      "reason": "IoT data preprocessingを用いたedge AI vision taskのaccuracy向上で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+      ],
+      "title": "Enabling Cloud-Level Accuracy in Edge AI through IoT Data Preprocessing"
+    },
+    "arXiv:2606.21943": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21943",
+      "identity_tokens": [
+        "arXiv:2606.21943"
+      ],
+      "reason": "LLM post-training RL algorithmsのtaxonomy surveyで、推論効率研究ではない。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Modularized Reinforcement Learning on LLMs: From MDP Creation to Exploration and Learning"
+    },
+    "arXiv:2607.01789": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01789",
+      "identity_tokens": [
+        "arXiv:2607.01789"
+      ],
+      "reason": "MoE parameter-efficient fine-tuningにおけるexpert prune/growが対象で、training adaptationを効率化する研究。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "title": "EPnG: Adaptive Expert Prune-and-Grow for Parameter-Efficient MoE Fine-tuning"
+    },
+    "DOI:10.1145/3745756.3809201": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3745756.3809201",
+      "identity_tokens": [
+        "DOI:10.1145/3745756.3809201"
+      ],
+      "reason": "carbon-aware edge ML system designの実演はvision visitor detectionであり、LLM serving/推論最適化ではない。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+      ],
+      "title": "A Greener Edge: A Framework on Carbon-aware Edge ML System Design"
+    },
+    "arXiv:2606.21803": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21803",
+      "identity_tokens": [
+        "arXiv:2606.21803"
+      ],
+      "reason": "test-time trainingでlong-context QAの精度を改善する研究。抄録は追加適応による性能向上で、推論コスト削減を示さない。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Test-Time Training with Next-Token Prediction"
+    },
+    "arXiv:2606.20543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20543",
+      "identity_tokens": [
+        "arXiv:2606.20543"
+      ],
+      "reason": "autoregressive image generationの2D spatial speculative decodingで、language-model inference対象ではない。",
+      "first_checked_at": "2026-10-05T02:45:28+00:00",
+      "last_checked_at": "2026-10-05T02:45:28+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "SSD: Spatially Speculative Decoding Accelerates Autoregressive Image Generation"
     }
   }
 }

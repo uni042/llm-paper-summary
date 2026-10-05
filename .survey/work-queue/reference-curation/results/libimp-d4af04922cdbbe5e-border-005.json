@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d4af04922cdbbe5e-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.21906",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.21906",
+    "identity_tokens": [
+      "arXiv:2606.21906"
+    ],
+    "reason": "Confident DecodingはLLM層選択で推論品質改善を主張するが、本文はbaselineより計算/latencyを削減せず、追加overheadを示すため効率研究としてはborderline。",
+    "first_checked_at": "2026-10-05T02:45:27+00:00",
+    "last_checked_at": "2026-10-05T02:45:27+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+      "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md"
+    ],
+    "title": "Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding"
+  },
+  "processed_at": "2026-10-05T02:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d4af04922cdb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

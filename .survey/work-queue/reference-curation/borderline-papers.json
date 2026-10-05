@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:43:18+00:00",
-  "record_count": 719,
+  "updated_at": "2026-10-05T02:45:27+00:00",
+  "record_count": 722,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10567,6 +10567,54 @@
         "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
       ],
       "title": "Can Language Models Actually Retrieve In-Context? Drowning in Documents at Million Token Scale"
+    },
+    "arXiv:2607.16237": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16237",
+      "identity_tokens": [
+        "arXiv:2607.16237"
+      ],
+      "reason": "recursive reasoning model向け4-bit量子化の誤差蓄積を検証しper-block scalingで精度を回復するが、serve throughputやmemory/energy改善を直接評価していない。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+        "papers/inference/99-other-inference-systems/2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md"
+      ],
+      "title": "Quantizing Recursive Reasoning Models"
+    },
+    "arXiv:2606.23567": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23567",
+      "identity_tokens": [
+        "arXiv:2606.23567"
+      ],
+      "reason": "Diffusion LMのunmasking order policyはreasoning accuracyを上げるが、本文評価で推論手順/denoising cost削減の具体的証拠を確認できず、効率寄与が不確か。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Scheduling Thoughts: Learning the Order of Thought in Diffusion Language Models"
+    },
+    "arXiv:2606.21906": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21906",
+      "identity_tokens": [
+        "arXiv:2606.21906"
+      ],
+      "reason": "Confident DecodingはLLM層選択で推論品質改善を主張するが、本文はbaselineより計算/latencyを削減せず、追加overheadを示すため効率研究としてはborderline。",
+      "first_checked_at": "2026-10-05T02:45:27+00:00",
+      "last_checked_at": "2026-10-05T02:45:27+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
+        "papers/inference/04-conditional-computation/2025-diffskip-differential-layer-skipping-in-large-language-models.md"
+      ],
+      "title": "Deeper is Not Always Better: Mitigating the Alignment Tax via Confident Layer Decoding"
     }
   }
 }
