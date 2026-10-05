@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6b969c0385b83b1f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.03504",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.03504",
+    "identity_tokens": [
+      "arXiv:2507.03504"
+    ],
+    "reason": "In this paper, we propose Binarized Change Detection (BiCD), the first binary neural network (BNN) designed specifically for change detection. Conventional network binarization approaches, which directly quantize both weights and activations in change detection models, severely limit the network's ability to represent input data and distinguish between changed and unchanged regions. This results in significantly lower detection accuracy compared to real-valued networks. To overcome these challenges, BiCD enhances both the representational power and feature separability of BNNs, improving detection performance. Specifically, we introduce an auxiliary objective based on the Information Bottleneck (IB) principle, guiding the encoder to retain essential input information while promoting better feature discrimination. Since directly computing mutual information under the IB principle is intractable, we design a compact, learnable auxiliary module as an approximation target, leading to a simple yet effective optimization strategy that minimizes both reconstruction loss and standard change detection loss. Extensive experiments on street-view and remote sensing datasets demonstrate that BiCD establishes a new benchmark for BNN-based change detection, achieving state-of-the-art performance in this domain.",
+    "first_checked_at": "2026-10-05T13:22:02+00:00",
+    "last_checked_at": "2026-10-05T13:22:02+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+    ],
+    "title": "Information-Bottleneck Driven Binary Neural Network for Change Detection"
+  },
+  "processed_at": "2026-10-05T13:22:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6b969c0385b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

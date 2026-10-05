@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a8835855b492e02b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.22828",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.22828",
+    "identity_tokens": [
+      "arXiv:2507.22828"
+    ],
+    "reason": "As Vision-Language Models (VLMs) become increasingly integrated into user-facing applications, they are often deployed in split DNN configurations, where the visual encoder (e.g., ResNet or ViT) runs on user-side devices and only intermediate features are transmitted to the cloud for downstream processing. While this setup reduces communication overhead, the intermediate data features containing sensitive information can also expose users to privacy risks. Prior work has attempted to reconstruct images from these features to infer semantics, but such approaches often produce blurry images that obscure semantic details. In contrast, the potential to directly recover high-level semantic content - such as image labels or captions - via a cross-modality inversion attack remains largely unexplored. To address this gap, we propose CapRecover, a general cross-modality feature inversion framework that directly decodes semantic information from intermediate features without requiring image reconstruction. Additionally, CapRecover can be used to reverse engineer traditional neural networks for computer vision tasks, such as ViT, ResNet, and others. We evaluate CapRecover across multiple widely used datasets and victim models. Our results demonstrate that CapRecover can accurately recover both image labels and captions without reconstructing a single pixel. Specifically, it achieves up to 92.71% Top-1 accuracy on the CIFAR-10 dataset for label recovery, and generates fluent and relevant captions from ResNet50's intermediate features on COCO2017 dataset, with ROUGE-L scores up to 0.52. Furthermore, an in-depth analysis of ResNet-based models reveals that deeper convolutional layers encode significantly more semantic information, whereas shallow layers contribute minimally to semantic leakage. Furthermore, we propose a straightforward and effective protection approach that adds random noise to the intermediate image features at each middle layer and subsequently removes the noise in the following layer. Our experiments indicate that this approach effectively prevents information leakage without additional training costs",
+    "first_checked_at": "2026-10-05T13:22:04+00:00",
+    "last_checked_at": "2026-10-05T13:22:04+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+    ],
+    "title": "CapRecover: A Cross-Modality Feature Inversion Attack Framework on Vision Language Models"
+  },
+  "processed_at": "2026-10-05T13:22:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8835855b492",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

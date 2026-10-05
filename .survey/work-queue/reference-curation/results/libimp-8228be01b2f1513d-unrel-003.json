@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8228be01b2f1513d-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3696630.3728706",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3696630.3728706",
+    "identity_tokens": [
+      "DOI:10.1145/3696630.3728706"
+    ],
+    "reason": "Conventional AI-powered smart home assistants primarily function as voice-activated control systems with limited adaptability and contextual understanding. Similarly, while traditional artificial intelligence has advanced autonomous building research, it often relies on predefined rules and struggles with real-time decisionmaking in dynamic building environments. This paper introduces a novel Generative AI-driven framework that integrates Large Language Models (LLMs) to create a smart generative AI-based virtual assistant and an operation automation system for building infrastructure. The AI systems autonomously manage building operations by analyzing real-time occupancy patterns and adjusting environmental conditions based on predefined comfort thresholds. The proposed system also facilitates seamless human-building interaction through an LLM-powered virtual assistant. The framework is validated through a prototype implementation in a real-world building equipped with smart appliances, with evaluations focusing on the AI systems' accuracy, reliability, and scalability. The findings demonstrate that the prototype system can autonomously adjust building conditions, optimize energy usage, and provide intelligent assistance for building operation tasks.",
+    "first_checked_at": "2026-10-05T13:22:04+00:00",
+    "last_checked_at": "2026-10-05T13:22:04+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+    ],
+    "title": "Smart Building Operations and Virtual Assistants Using LLM"
+  },
+  "processed_at": "2026-10-05T13:22:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8228be01b2f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
