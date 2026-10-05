@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-72a03a4dc4da2f71-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3770855.3817771",
+  "reason": "The adoption of AI-native cloud infrastructure is reshaping workload behavior in large-scale data centers, moving from stationary, homogeneous patterns to highly dynamic, heterogeneous ones. An empirical analysis of production cloud monitoring data shows that system reliability is increasingly governed by non-linear interactions in the multi-dimensional tail space, including long-range temporal backlogs, spatial resource fragmentation, and irreversible state rigidity. Accurately forecasting these tail-dominated behaviors is essential for capacity planning and reliability management. However, existing forecasting models face two limitations: learning is dominated by abundant normal workloads, leading to rare but critical tail events being underrepresented, and reliance on linear composition assumptions limits the ability to model joint tail anomalies across correlated temporal, spatial, and state dimensions. To address these challenges, we introduce the Factorized Tail-Interaction Framework (FTIF), a data-driven forecasting and risk perception framework explicitly designed for tail-sensitive cloud workloads. Firstly, an adaptive trend decoupler separates dominant workload trends from tail residuals using a gradient detachment mechanism and learnable gating mechanisms. Secondly, a factorized resonance module augments attention mechanisms with hyper-order factorization, injecting multiplicative inductive biases to capture non-linear interactions among multi-dimensional risk factors. Thirdly, a rank-rectified tail-focal optimization employs topology-preserving reweighting to align the learning objective with rare but operationally critical tail events. Experiments on real-world cloud datasets show that FTIF achieves an MSE of 0.0015 on the GenTD26 dataset and captures 94.95% of tail events in Spot scenarios, enabling finer-grained risk perception and robust modeling of joint tail anomalies.",
+  "title": "Taming Multi-Dimensional Tail: A Factorized Tail-Interaction Framework for Hyperscale Cloud Workload Forecasting",
+  "identity_tokens": [
+    "DOI:10.1145/3770855.3817771"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-72a03a4dc4da",
+  "source_precheck_request_id": null
+}
