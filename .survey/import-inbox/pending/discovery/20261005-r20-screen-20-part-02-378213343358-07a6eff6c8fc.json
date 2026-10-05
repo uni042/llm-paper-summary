@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-20-part-02-378213343358",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28949",
+      "identity_tokens": [
+        "arXiv:2608.28949"
+      ],
+      "title": "The information geometry of product-reference discrete diffusion: Interaction growth complexity and optimal scheduling",
+      "reason": "Potential diffusion-LM application is indirect and untested; lane fit is weak.",
+      "source_url": "https://arxiv.org/abs/2608.28949",
+      "first_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "last_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29618",
+      "identity_tokens": [
+        "arXiv:2609.29618"
+      ],
+      "title": "An Exploratory Ablation of a Small MLA--SSM Hybrid Language Model",
+      "reason": "Preliminary, implementation-dominated measurements do not establish a practical inference gain.",
+      "source_url": "https://arxiv.org/abs/2609.29618",
+      "first_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "last_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00138-026-01901-1",
+      "identity_tokens": [
+        "DOI:10.1007/s00138-026-01901-1"
+      ],
+      "title": "Long-sequence modeling for sparse-view computed tomography reconstruction",
+      "reason": "Springer primary abstract confirms sparse-view CT reconstruction, not LLM inference.",
+      "source_url": "https://doi.org/10.1007/s00138-026-01901-1",
+      "first_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "last_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10515-026-00676-z",
+      "identity_tokens": [
+        "DOI:10.1007/s10515-026-00676-z"
+      ],
+      "title": "NavAI: an application-agnostic llm framework for navigation tasks in virtual reality environments",
+      "reason": "一次要旨がなく、出版社DOIも取得失敗で本文内容を確認できない。推測せずborderline。",
+      "source_url": "https://doi.org/10.1007/s10515-026-00676-z",
+      "first_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "last_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIP.2026.3726450",
+      "identity_tokens": [
+        "DOI:10.1109/TIP.2026.3726450"
+      ],
+      "title": "Unity in Diversity: Multi-Expert Knowledge Adversarial Learning and Collaboration for Generalizable Vehicle Re-Identification",
+      "reason": "Vehicle re-identification image representation learning.",
+      "source_url": "https://doi.org/10.1109/TIP.2026.3726450",
+      "first_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "last_checked_at": "2026-10-05T06:28:21.739447+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ]
+    }
+  ]
+}
