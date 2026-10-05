@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-19-part-04-a1a063f6ecd4",
+  "reference_main_sha": "0db32737ee15a836d1c701bc3103731c45ee6d70",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54287/gujsa.1937530",
+      "identity_tokens": [
+        "DOI:10.54287/gujsa.1937530"
+      ],
+      "title": "QLoRA vs. LoRA: An Empirical Study of Performance–Efficiency Trade-offs in Fine-Tuning Mistral‑7B on Instruction‑Following Data",
+      "reason": "The study compares QLoRA and LoRA fine-tuning performance/efficiency. Its efficiency target is training, which is outside the stated inference scope.",
+      "source_url": "https://doi.org/10.54287/gujsa.1937530",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25538",
+      "identity_tokens": [
+        "arXiv:2609.25538"
+      ],
+      "title": "Point Diffusion Mamba: Unified Diffusion-State-Space Modeling for Single-View 3D Reconstruction under Data Scarcity",
+      "reason": "Point Diffusion Mamba targets single-view 3D reconstruction with a diffusion/state-space model, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.25538",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25563",
+      "identity_tokens": [
+        "arXiv:2609.25563"
+      ],
+      "title": "AkasicMEM: Governed Enterprise Memory for Agents",
+      "reason": "AkasicMEM is an enterprise agent memory governance system; the abstract does not describe LLM inference-cost or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2609.25563",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25575",
+      "identity_tokens": [
+        "arXiv:2609.25575"
+      ],
+      "title": "Direct Optimization of Generators for Search in Automated Theorem Proving",
+      "reason": "Direct generator optimization changes training objectives for automated theorem-proving search success at a fixed search budget; it does not reduce LLM inference resources.",
+      "source_url": "https://arxiv.org/abs/2609.25575",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25686",
+      "identity_tokens": [
+        "arXiv:2609.25686"
+      ],
+      "title": "How Strongly Should Task State Influence an LLM Agent?",
+      "reason": "The paper studies how task state affects agent reliability and behavior; no inference-efficiency method or measurement is described.",
+      "source_url": "https://arxiv.org/abs/2609.25686",
+      "first_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "last_checked_at": "2026-10-05T04:54:13.210163+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
