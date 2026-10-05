@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-09-part-05-f67a62d01326",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11708-026-1076-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11708-026-1076-y"
+      ],
+      "title": "Language models as QSPR predictors: Unleashing potential through in-context learning and instruction tuning",
+      "reason": "Primary publisher abstract: FuelProp-LM predicts multiple fuel physicochemical properties from molecular SMILES using instruction tuning and in-context learning. Four open-source LLMs were fine-tuned on 100,000 PubChem entries; evaluation covers 10 fuel-property datasets. The work concerns chemistry/QSPR capability and does not study LLM inference or serving efficiency.",
+      "source_url": "https://journal.hep.com.cn/fie/EN/10.1007/s11708-026-1076-y",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40580-026-00575-9",
+      "identity_tokens": [
+        "DOI:10.1186/s40580-026-00575-9"
+      ],
+      "title": "Capacitive in-memory vector–matrix multiplication computing with charge-trap memcapacitors",
+      "reason": "Energy-efficient neural computing is increasingly limited not by computational throughput but by memory access and data movement. In-memory computing architectures offer a promising solution by collocating storage and computation, yet their practical realization remains constrained by static power dissipation, thermal challenges, and limited integration density in existing memory devices. Here, we demonstrate a vertically stackable charge-trap-flash (CTF)-based memcapacitor array that combines the high integration density of 3D NAND technology with the charge-domain computation. A continuous in-situ-doped N+ bottom readout electrode is introduced beneath the lightly doped active layer, decoupling lateral readout resistance from depletion-based capacitance modulation and alleviating the resistance–depletion trade-off of the previous architecture. The fabricated 24 × 48 memcapacitor array operates through transient charge displacement and demonstrates highly uniform array-level characteristics (σ/µ < 0.37%), reliable 16-state closed-loop weight programming, and linear charge-domain VMM with an error below 0.227%. When scaled toward modern 3D NAND dimensions, a verification–inference electrostatic mismatch introduces systematic VMM error, which is reduced by up to 84.6% through an intercell trapped-charge scheme in TCAD simulations. Geometric scaling based on the CV2 relation projects femtojoule-level intrinsic cell read energy at scaled dimensions. A hybrid hardware–software spiking neural network evaluation, in which only the final 24 × 10 layer is mapped to measured arrays, achieves 88.01% CIFAR-10 accuracy compared with 88.17% in software. These results establish vertically stackable memcapacitors as a scalable charge-domain computing platform combining reliable array-level operation with high-density vertical integration.",
+      "source_url": "https://doi.org/10.1186/s40580-026-00575-9",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/ai7090358",
+      "identity_tokens": [
+        "DOI:10.3390/ai7090358"
+      ],
+      "title": "The Efficiency-Decentralization-Security Trilemma: A Co-Design Framework for Lightweight, Decentralized AI in Cyber-Physical Systems",
+      "reason": "Smart systems, the Industrial Internet of Things, and cyber-physical networks increasingly make decisions on the devices where data is generated, on nodes short of memory, compute, energy, and bandwidth, and exposed to real adversaries. Two research currents have grown to meet this: one makes artificial intelligence small and distributed (quantization, pruning, distillation, TinyML, federated and split learning), the other makes it safe (defenses against poisoning, backdoors, inversion, and evasion). This review argues that the two are entangled rather than parallel. Operators that shrink a model or scatter it across nodes also redraw its attack surface, each carrying a security dividend and a security liability, and because a node’s resources are finite and shared, model capacity and defense strength compete for one multi-dimensional budget. We formalize this as an efficiency-decentralization-security (EDS) design tension, explicitly a tension and not an impossibility, and show with published measurements that the coupling is non-monotonic. Around this thesis we build three artifacts, following an explicit design-science research process: an evidence-graded scoring matrix that separates each operator’s security dividend from its liability across seven axes and reports the direction of every effect separately from the confidence in the evidence behind it; a resource-aware threat model that judges attack and defense feasibility against a tiered device, gateway, network, and server budget with stated units; and a co-design framework whose decision workflow terminates in a defense-selection program and a verification step under adaptive attack. We work the framework through an industrial predictive-maintenance scenario with the resource arithmetic computed line by line, and evaluate it retrospectively against six published edge-AI systems. The result is a decision-support guide for building edge AI that is efficient, decentralized, and secure at once.",
+      "source_url": "https://doi.org/10.3390/ai7090358",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app16189003",
+      "identity_tokens": [
+        "DOI:10.3390/app16189003"
+      ],
+      "title": "A Knowledge Graph-Augmented Large Language Model Framework for Context-Aware Question-Answering and Intelligent Feedback Generation",
+      "reason": "This study proposes EQAS (Empowered Question-Answering System), a hybrid framework designed to support context-aware question-answering and intelligent feedback generation in domain-specific knowledge environments. EQAS integrates fine-tuned transformer-based models, instruction-guided large language models, domain-specific knowledge graphs, and LangChain-based vector retrieval to improve contextual relevance, response quality, and feedback consistency. To evaluate the proposed framework, a benchmark dataset consisting of 10,000 real-world question–answer pairs was constructed from authentic user interactions and domain-related information resources. Experimental evaluation across established transformer-based architectures and recent instruction-tuned large language models showed that the Llama-3.3-70B-Instruct baseline achieved the highest standalone QA performance (F1: 77.42; EM: 44.60), while the EQAS transformer-based configuration achieved an F1 score of 75.48 and an Exact Match score of 41.80. A controlled ablation analysis using Llama-3.3-70B-Instruct as the fixed QA backbone further showed that incorporating knowledge graph enhancement increased the F1 score from 77.42 to 79.93 and the Exact Match score from 44.60 to 46.82, corresponding to absolute improvements of 2.51 and 2.22 points, respectively. A complementary human-centered evaluation of 1000 generative responses by three NLP researchers yielded an overall quality score of 4.34/5 across correctness, clarity, sufficiency, and helpfulness, with an overall Krippendorff’s α of 0.80. Furthermore, the framework provides context-sensitive explanatory feedback that can support user understanding and knowledge acquisition during information-seeking interactions. The findings suggest that EQAS offers a scalable solution for intelligent question-answering, feedback support, and knowledge assistance in complex information environments. The proposed framework highlights the potential of combining large language models with structured knowledge representations to support context-aware question-answering and explanatory feedback generation in domain-specific information environments.",
+      "source_url": "https://doi.org/10.3390/app16189003",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15184114",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15184114"
+      ],
+      "title": "FCA-Transformer: A Feature Pyramid Time Series Forecasting Model Driven by Cross-Attention Mechanism",
+      "reason": "Multivariate time series forecasting requires modeling both hierarchical temporal dynamics and complex inter-variable dependencies, a dual requirement that often degrades predictive performance and incurs high computational costs in standard Transformer architectures. Unlike current channel-independent models that ignore vital cross-variable synergies, or dense-attention frameworks that suffer from quadratic computational noise, our approach extracts structurally sparse dependencies. To address these specific limitations, this study introduces the FCA-Transformer. The proposed framework integrates a Feature Pyramid Network (FPN) to isolate macroscopic trends from high-frequency localized fluctuations via hierarchical downsampling. Concurrently, a structured Transformer-based Cross-Attention (TCA) mechanism employs Dimensional Segmentation with Weighting (DSW) and a Two-Stage Attention (TSA) layer to map topological variable interactions, effectively extracting robust cross-variable pathways and mitigating distributional noise. Extensive empirical evaluations across three real-world multivariate benchmarks (ETTh1, Electricity, and Exchange Rate) demonstrate that the FCA-Transformer achieves an average reduction of up to 4.39% in MSE and 5.11% in MAE compared to leading baselines. These findings indicate that the proposed architecture successfully reconciles multi-scale feature extraction with lightweight dependency modeling, enhancing structural generalization and providing a scalable framework for real-time temporal analysis in complex industrial environments.",
+      "source_url": "https://doi.org/10.3390/electronics15184114",
+      "first_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "last_checked_at": "2026-10-05T05:42:24.714784+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
