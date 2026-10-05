@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-94-part-01-7de6b59512f7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.09861",
+      "identity_tokens": [
+        "arXiv:2511.09861"
+      ],
+      "title": "Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs",
+      "reason": "The primary abstract restricts the study to thermal imbalance and concurrent multi-GPU LLM training; it does not propose or evaluate inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.09861",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+        "papers/inference/99-other-inference-systems/2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.23926",
+      "identity_tokens": [
+        "arXiv:2510.23926"
+      ],
+      "title": "Improving the Straight-Through Estimator with Zeroth-Order Information",
+      "reason": "The primary abstract studies quantized-parameter optimization during quantization-aware pretraining/fine-tuning; reported gains concern training time and accuracy, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2510.23926",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725843.3756017",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756017"
+      ],
+      "title": "ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration",
+      "reason": "The primary abstract proposes a generic processor/PIM memory protocol and scheduling design without an LLM inference or serving workload.",
+      "source_url": "https://doi.org/10.1145/3725843.3756017",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725843.3756127",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756127"
+      ],
+      "title": "FALA: Locality-Aware PIM-Host Cooperation for Graph Processing with Fine-Grained Column Access",
+      "reason": "The primary abstract targets graph-processing workloads and PIM/cache cooperation; it does not establish an LLM inference efficiency contribution.",
+      "source_url": "https://doi.org/10.1145/3725843.3756127",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.07580",
+      "identity_tokens": [
+        "arXiv:2507.07580"
+      ],
+      "title": "COALA: Numerically Stable and Efficient Framework for Context-Aware Low-Rank Approximation",
+      "reason": "The primary abstract presents numerically stable low-rank approximation for neural-network compression/fine-tuning, without an LLM inference or serving evaluation.",
+      "source_url": "https://arxiv.org/abs/2507.07580",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    }
+  ]
+}
