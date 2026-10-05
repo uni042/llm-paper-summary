@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-74-part-03-3d0c7ade126b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.00658",
+      "identity_tokens": [
+        "arXiv:2501.00658"
+      ],
+      "title": "Understanding and Mitigating Bottlenecks of State Space Models through the Lens of Recency and Over-smoothing",
+      "reason": "The paper analyzes SSM quality/representation bottlenecks and proposes polarization for recall/generalization; it does not establish an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2501.00658",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.17770",
+      "identity_tokens": [
+        "arXiv:2410.17770"
+      ],
+      "title": "Small Singular Values Matter: A Random Matrix Analysis of Transformer Models",
+      "reason": "The contribution is representational analysis/guidance rather than a demonstrated inference-compression method; no serving latency, throughput, or memory savings are established.",
+      "source_url": "https://arxiv.org/abs/2410.17770",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07054",
+      "identity_tokens": [
+        "arXiv:2410.07054"
+      ],
+      "title": "Mitigating the Language Mismatch and Repetition Issues in LLM-based Machine Translation via Model Editing",
+      "reason": "The intervention edits LLM components to reduce translation errors and preserve quality; the abstract does not propose reducing inference cost, latency, or resource use.",
+      "source_url": "https://arxiv.org/abs/2410.07054",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.00487",
+      "identity_tokens": [
+        "arXiv:2410.00487"
+      ],
+      "title": "Self-Updatable Large Language Models by Integrating Context into Model Parameters",
+      "reason": "SELF-PARAM integrates information into model parameters through a training objective to improve memory/retention; this is not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2410.00487",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.15504",
+      "identity_tokens": [
+        "arXiv:2407.15504"
+      ],
+      "title": "Fundamental Limits of Prompt Compression: A Rate-Distortion Framework for Black-Box Language Models",
+      "reason": "Natural-language test data consists of ten short prompts with four queries each, and the work does not establish end-to-end serving latency/cost improvements on realistic long contexts.",
+      "source_url": "https://arxiv.org/abs/2407.15504",
+      "first_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "last_checked_at": "2026-10-05T11:08:32.896366+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    }
+  ]
+}
