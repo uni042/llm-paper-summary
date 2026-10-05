@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-13-part-01-9d6895b6ef45",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37485",
+      "identity_tokens": [
+        "arXiv:2609.37485"
+      ],
+      "title": "PoE-Fuse: Precision-Weighted Expert Fusion for Bi-Temporal Change Understanding",
+      "reason": "衛星画像間のbi-temporal change理解・損傷評価向けのvision-language expert融合であり、LLM推論/serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.37485",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-026-05728-1",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-026-05728-1"
+      ],
+      "title": "Wavelet transform vision state space model for underwater image enhancement",
+      "reason": "packetのabstract欄が空で、対象性を一次要旨から判定できない。Springerの一次URLを開いたが取得できず、外部索引の要約を代用しない。",
+      "source_url": "https://doi.org/10.1007/s11760-026-05728-1",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831782",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831782"
+      ],
+      "title": "From Side Information and Knowledge Graphs to Large Language Models: Two Decades of Knowledge Integration in Recommender Systems",
+      "reason": "推薦システムにおける知識統合研究の歴史的surveyで、LLM推論/serving最適化の研究ではない。",
+      "source_url": "https://doi.org/10.1145/3773078.3831782",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831831",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831831"
+      ],
+      "title": "Beyond Index-Only RoPE: Integrating Time and Order for Generative Recommendation",
+      "reason": "生成推薦向けRoPEの時間・順序統合と品質評価であり、LLM推論効率化ではない。",
+      "source_url": "https://doi.org/10.1145/3773078.3831831",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3773078.3831868",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831868"
+      ],
+      "title": "TransAct V2: Production System for Lifelong User Sequence Modeling at Scale",
+      "reason": "ユーザー系列推薦の本番予測システム。要旨はsequence model運用を述べるが、LLM推論/servingや推論時効率化ではない。",
+      "source_url": "https://doi.org/10.1145/3773078.3831868",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    }
+  ]
+}
