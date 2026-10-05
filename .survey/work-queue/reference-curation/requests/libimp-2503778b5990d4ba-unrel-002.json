@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2503778b5990d4ba-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1145/3458817.3476205",
+  "reason": "GPU/CPU/NVMeを階層利用して巨大modelのtraining stateをoffloadし、trillion-parameter級の学習を可能にするtraining system。512 V100で25 PFLOPS等、評価はtraining throughput/scalabilityであり推論は対象外。",
+  "title": "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning",
+  "identity_tokens": [
+    "DOI:10.1145/3458817.3476205",
+    "arXiv:2104.07857"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2503778b5990",
+  "source_precheck_request_id": null
+}
