@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:42:16+00:00",
-  "record_count": 604,
+  "updated_at": "2026-10-05T01:45:00+00:00",
+  "record_count": 609,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -8800,6 +8800,79 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.10726-cachesolidarity-prefix-cache-side-channel-defense.md"
       ],
       "title": "Exposing private information by timing web applications"
+    },
+    "DOI:10.1145/3729218": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3729218",
+      "identity_tokens": [
+        "DOI:10.1145/3729218"
+      ],
+      "reason": "Primary source https://doi.org/10.1145/3729218 attempted: ACM DOI page returned Internal Error. No primary abstract could be checked.",
+      "first_checked_at": "2026-10-05T01:44:59+00:00",
+      "last_checked_at": "2026-10-05T01:44:59+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A Survey of Reasoning with Foundation Models: Concepts, Methodologies, and Outlook"
+    },
+    "arXiv:2303.07226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.07226",
+      "identity_tokens": [
+        "arXiv:2303.07226"
+      ],
+      "reason": "The paper claims computational-cost improvements in VLMs, but does not isolate inference-time serving cost from training and matched-compute task quality.",
+      "first_checked_at": "2026-10-05T01:44:59+00:00",
+      "last_checked_at": "2026-10-05T01:44:59+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "Scaling Vision-Language Models with Sparse Mixture of Experts"
+    },
+    "arXiv:2106.01540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.01540",
+      "identity_tokens": [
+        "arXiv:2106.01540"
+      ],
+      "reason": "Generic linear attention work shows sequence-modeling speed/memory gains but does not establish LLM serving or modern inference benefits; relevance to current inference systems is indirect.",
+      "first_checked_at": "2026-10-05T01:44:59+00:00",
+      "last_checked_at": "2026-10-05T01:44:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Luna: Linear Unified Nested Attention"
+    },
+    "DOI:10.1016/j.inffus.2025.102963": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.102963",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.102963"
+      ],
+      "reason": "Primary source https://doi.org/10.1016/j.inffus.2025.102963 attempted: Elsevier DOI page returned Internal Error. No primary abstract could be checked.",
+      "first_checked_at": "2026-10-05T01:45:00+00:00",
+      "last_checked_at": "2026-10-05T01:45:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2604.10603-moeits-a-green-ai-approach-for-simplifying-moe-llms.md"
+      ],
+      "title": "A survey of large language models for healthcare: from data, technology, and applications to accountability and ethics"
+    },
+    "DOI:10.15607/rss.2024.xx.120": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.15607/rss.2024.xx.120",
+      "identity_tokens": [
+        "DOI:10.15607/rss.2024.xx.120"
+      ],
+      "reason": "Primary source https://doi.org/10.15607/rss.2024.xx.120 attempted: RSS DOI page returned Internal Error. No primary abstract could be checked.",
+      "first_checked_at": "2026-10-05T01:45:00+00:00",
+      "last_checked_at": "2026-10-05T01:45:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+      ],
+      "title": "DROID: A Large-Scale In-The-Wild Robot Manipulation Dataset"
     }
   }
 }
