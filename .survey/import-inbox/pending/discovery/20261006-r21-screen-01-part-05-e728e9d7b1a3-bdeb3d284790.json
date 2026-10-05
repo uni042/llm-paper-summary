@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r21-screen-01-part-05-e728e9d7b1a3",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759779",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759779"
+      ],
+      "title": "A Sample-Free Compilation Framework for Efficient Dynamic Tensor Computation",
+      "reason": "一次abstractはHelix dynamic tensor compilerのshape-free compilationと汎用CPU/GPU execution speedupを示す。DeeBERT lineageとcompute relevanceはあるが、モデル/LLM serving上の統合・効果は本文で確認できない。",
+      "source_url": "https://doi.org/10.1145/3712285.3759779",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03634",
+      "identity_tokens": [
+        "arXiv:2604.03634"
+      ],
+      "title": "Algebraic Diversity: Group-Theoretic Spectral Estimation from Single Observations",
+      "reason": "abstractはgroup-theoretic spectral estimation from observationsの統計理論で、LLM/Transformer inference systemの寄与がない。",
+      "source_url": "https://arxiv.org/abs/2604.03634",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03688",
+      "identity_tokens": [
+        "arXiv:2607.03688"
+      ],
+      "title": "PathMark: Protecting Intellectual Property of Mixture-of-Expert LLMs via Path Watermarks",
+      "reason": "abstract/titleの対象はMixture-of-Experts LLMの知的財産保護watermarkingで、モデルの推論速度/memory/servingを改善しない。",
+      "source_url": "https://arxiv.org/abs/2607.03688",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03417",
+      "identity_tokens": [
+        "arXiv:2606.03417"
+      ],
+      "title": "A unified multi-task framework enables interpretable chest radiograph analysis",
+      "reason": "abstractは胸部X線の診断解釈性/多タスクframeworkを評価。inference settingの記述はあるが、効率改善や配信技術を提示しない。",
+      "source_url": "https://arxiv.org/abs/2606.03417",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.114285",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.114285"
+      ],
+      "title": "Layer-dependent dynamic spectral weighting for efficient transformer models",
+      "reason": "一次publisher abstractは後段Transformer層でspectral weightingを適用し推論速度/validation loss改善とする。直接効率候補だが、記事のfull textを取得できず、測定条件や限界を評価できない。",
+      "source_url": "https://doi.org/10.1016/j.engappai.2026.114285",
+      "first_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "last_checked_at": "2026-10-05T19:27:32.642084+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
