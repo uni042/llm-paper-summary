@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-290f6d2f138adb3f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1088/1361-6501/ae8927",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1088/1361-6501/ae8927",
+    "identity_tokens": [
+      "DOI:10.1088/1361-6501/ae8927"
+    ],
+    "reason": "一次要旨/タイトルはLLM inference、serving、推論時の効率化を扱わない（別分野、LLM以外のmodel、または学習専用の効率化）。",
+    "first_checked_at": "2026-10-05T10:31:46+00:00",
+    "last_checked_at": "2026-10-05T10:31:46+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+    ],
+    "title": "Damage localization of lamb waves based on residual convolutional neural network and transformer hybrid network"
+  },
+  "processed_at": "2026-10-05T10:31:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-290f6d2f138a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61e465dab0b6b028-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.09967",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.09967",
+    "identity_tokens": [
+      "arXiv:2607.09967"
+    ],
+    "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+    "first_checked_at": "2026-10-05T10:31:47+00:00",
+    "last_checked_at": "2026-10-05T10:31:47+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Learning in Curved Weight Space:Exponential-Linear Weight Reparameterization for Improved Optimization"
+  },
+  "processed_at": "2026-10-05T10:31:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-61e465dab0b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
