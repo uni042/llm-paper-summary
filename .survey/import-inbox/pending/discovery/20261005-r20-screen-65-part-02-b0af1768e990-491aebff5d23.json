@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-65-part-02-b0af1768e990",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01077",
+      "identity_tokens": [
+        "arXiv:2404.01077"
+      ],
+      "title": "Efficient Prompting Methods for Large Language Models: A Survey",
+      "reason": "効率的promptingは隣接するが、本稿自体はサーベイで独自の効率化system/contributionを示さず、個別研究を具体的に特定できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2404.01077",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.06786",
+      "identity_tokens": [
+        "arXiv:2312.06786"
+      ],
+      "title": "Mixture-of-Linear-Experts for Long-term Time Series Forecasting",
+      "reason": "一次要旨は線形専門家混合による時系列予測精度を扱い、LLM推論システムを対象としていない。",
+      "source_url": "https://arxiv.org/abs/2312.06786",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21318",
+      "identity_tokens": [
+        "arXiv:2505.21318"
+      ],
+      "title": "Beyond Chemical QA: Evaluating LLM's Chemical Reasoning with Modular Chemical Operations",
+      "reason": "一次要旨は化学推論ベンチマークと段階的操作の評価であり、推論効率化の手法ではない。",
+      "source_url": "https://arxiv.org/abs/2505.21318",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19237",
+      "identity_tokens": [
+        "arXiv:2405.19237"
+      ],
+      "title": "ConceptPrune: Concept Editing in Diffusion Models via Skilled Neuron Pruning",
+      "reason": "一次要旨は拡散モデルからの危険概念除去・重み剪定であり、LLMサービング効率の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2405.19237",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22200",
+      "identity_tokens": [
+        "arXiv:2510.22200"
+      ],
+      "title": "LongCat-Video Technical Report",
+      "reason": "一次要旨は13.6B拡散Transformerによる長尺動画生成で、LLM推論/サービングとは異なる生成モデル領域。",
+      "source_url": "https://arxiv.org/abs/2510.22200",
+      "first_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "last_checked_at": "2026-10-05T10:44:15.955554+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ]
+    }
+  ]
+}
