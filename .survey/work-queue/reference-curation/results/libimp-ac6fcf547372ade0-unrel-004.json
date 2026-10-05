@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac6fcf547372ade0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.26088",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.26088",
+    "identity_tokens": [
+      "arXiv:2608.26088"
+    ],
+    "reason": "PPE is a geospatial prediction workflow using foundation-model embeddings; it is an application pipeline, not LLM inference optimization.",
+    "first_checked_at": "2026-10-05T08:05:22+00:00",
+    "last_checked_at": "2026-10-05T08:05:22+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings"
+  },
+  "processed_at": "2026-10-05T08:05:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac6fcf547372",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

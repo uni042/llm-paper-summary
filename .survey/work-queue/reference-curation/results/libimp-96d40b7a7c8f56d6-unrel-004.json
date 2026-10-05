@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-96d40b7a7c8f56d6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.22145",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.22145",
+    "identity_tokens": [
+      "arXiv:2609.22145"
+    ],
+    "reason": "The paper studies detection of training-data exposure in diffusion LLMs; it is a privacy-evaluation method, not inference optimization.",
+    "first_checked_at": "2026-10-05T08:05:21+00:00",
+    "last_checked_at": "2026-10-05T08:05:21+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+    ],
+    "title": "Weak Ties, Strong Signals: Efficient Training Data Detection in Diffusion LLMs via Independent Token Sampling"
+  },
+  "processed_at": "2026-10-05T08:05:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-96d40b7a7c8f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

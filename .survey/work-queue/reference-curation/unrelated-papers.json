@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:02:44+00:00",
-  "record_count": 3733,
+  "updated_at": "2026-10-05T08:05:22+00:00",
+  "record_count": 3744,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -54384,6 +54384,172 @@
         "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
       ],
       "title": "Reassembling Distributed Risk: Trajectory-Conditioned Action Generation for Multi-Turn Agent Safety"
+    },
+    "arXiv:2609.29555": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29555",
+      "identity_tokens": [
+        "arXiv:2609.29555"
+      ],
+      "reason": "The work studies visual representations and history caching for navigation world models; these are visual flow-transformer models, not language-model inference.",
+      "first_checked_at": "2026-10-05T08:05:20+00:00",
+      "last_checked_at": "2026-10-05T08:05:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Visual Representation and History Modeling for Navigation World Models"
+    },
+    "DOI:10.1007/s44163-026-02054-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-02054-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02054-w"
+      ],
+      "reason": "The abstract explicitly frames this as an architectural placement of persistent adaptation for hybrid local/cloud LLMs, not a new inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-05T08:05:20+00:00",
+      "last_checked_at": "2026-10-05T08:05:20+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Local LLMs as a plasticity layer for fixed cloud LLMs"
+    },
+    "DOI:10.2196/96002": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.2196/96002",
+      "identity_tokens": [
+        "DOI:10.2196/96002"
+      ],
+      "reason": "This is a clinical-guideline appraisal evaluation of human/AI agents; it does not study LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T08:05:20+00:00",
+      "last_checked_at": "2026-10-05T08:05:20+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Improvement of Clinical Practice Guideline Appraisal by Human Experts and AI Agents by Using Structured Guidance: Systematic Review, Meta-Analysis, and Validation Study"
+    },
+    "DOI:10.3389/fcimb.2026.1837493": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fcimb.2026.1837493",
+      "identity_tokens": [
+        "DOI:10.3389/fcimb.2026.1837493"
+      ],
+      "reason": "This is a healthcare time-series Transformer for CD4 trajectory prediction, not an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Time Series Transformer for long-term CD4 trajectory prediction in HIV patients: a novel deep learning approach"
+    },
+    "arXiv:2608.26344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26344",
+      "identity_tokens": [
+        "arXiv:2608.26344"
+      ],
+      "reason": "MoganColBERT-TR is a Turkish late-interaction retrieval model, not an LLM inference or serving method.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "MoganColBERT-TR: A Late-Interaction Multi-Vector Retrieval Model for Turkish"
+    },
+    "arXiv:2608.26402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26402",
+      "identity_tokens": [
+        "arXiv:2608.26402"
+      ],
+      "reason": "SILK addresses model-weight integrity for root-of-trust-protected AI systems; its contribution is security, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "SILK: Closing the Time-of-Check-to-Time-of-Use Gap in RoT-Protected AI Systems"
+    },
+    "arXiv:2609.22145": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22145",
+      "identity_tokens": [
+        "arXiv:2609.22145"
+      ],
+      "reason": "The paper studies detection of training-data exposure in diffusion LLMs; it is a privacy-evaluation method, not inference optimization.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "title": "Weak Ties, Strong Signals: Efficient Training Data Detection in Diffusion LLMs via Independent Token Sampling"
+    },
+    "arXiv:2608.25977": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25977",
+      "identity_tokens": [
+        "arXiv:2608.25977"
+      ],
+      "reason": "The paper analyzes MBTI behavior across quantized LLMs; quantization is an evaluation condition, not a proposed inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs"
+    },
+    "arXiv:2608.26067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26067",
+      "identity_tokens": [
+        "arXiv:2608.26067"
+      ],
+      "reason": "StreamPI is a temporal-modeling framework for vision-language-action robotics, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T08:05:21+00:00",
+      "last_checked_at": "2026-10-05T08:05:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models"
+    },
+    "arXiv:2608.26088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26088",
+      "identity_tokens": [
+        "arXiv:2608.26088"
+      ],
+      "reason": "PPE is a geospatial prediction workflow using foundation-model embeddings; it is an application pipeline, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T08:05:22+00:00",
+      "last_checked_at": "2026-10-05T08:05:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings"
+    },
+    "arXiv:2608.26222": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26222",
+      "identity_tokens": [
+        "arXiv:2608.26222"
+      ],
+      "reason": "NeuronFuzz improves LLM safety evaluation through neuron-guided fuzzing; the target is evaluation efficiency, not model inference/serving.",
+      "first_checked_at": "2026-10-05T08:05:22+00:00",
+      "last_checked_at": "2026-10-05T08:05:22+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+      ],
+      "title": "NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation"
     }
   }
 }

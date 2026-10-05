@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac6fcf547372ade0-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.26067",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.26067",
+    "identity_tokens": [
+      "arXiv:2608.26067"
+    ],
+    "reason": "StreamPI is a temporal-modeling framework for vision-language-action robotics, not LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T08:05:21+00:00",
+    "last_checked_at": "2026-10-05T08:05:21+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models"
+  },
+  "processed_at": "2026-10-05T08:05:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac6fcf547372",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
