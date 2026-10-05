@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-101-part-05-b03be9458386",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3754598.3754670",
+      "identity_tokens": [
+        "DOI:10.1145/3754598.3754670"
+      ],
+      "title": "Power Capping of GPU Servers for Machine Learning Inference Optimization",
+      "reason": "The topic is directly relevant to inference-server efficiency, but the full primary evaluation and its operating limits were inaccessible, preventing verification of the claimed throughput/latency improvement.",
+      "source_url": "https://doi.org/10.1145/3754598.3754670",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.dt.2025.09.004",
+      "identity_tokens": [
+        "DOI:10.1016/j.dt.2025.09.004"
+      ],
+      "title": "Command-agent: Reconstructing warfare simulation and command decision-making using large language models",
+      "reason": "Packetに一次要旨なし。DOIの一次publisher pageを開いたが403 Forbiddenで取得できず、要旨を一次資料から確認できなかった。",
+      "source_url": "https://doi.org/10.1016/j.dt.2025.09.004",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2025/57",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2025/57"
+      ],
+      "title": "SAP: Privacy-Preserving Fine-Tuning on Language Models with Split-and-Privatize Framework",
+      "reason": "SAPはprivacy-preserving fine-tuningの学習手法で、推論時の効率化ではない。",
+      "source_url": "https://doi.org/10.24963/ijcai.2025/57",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-503",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-503"
+      ],
+      "title": "Ultra-Low Bit Post-Training Quantization of Large Speech Models via K-Means Clustering and Mixed Precision Allocation",
+      "reason": "対象はWhisper等の大規模音声モデルの低bit量子化で、音声認識モデル特化でありLLM推論範囲外。",
+      "source_url": "https://doi.org/10.21437/interspeech.2025-503",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ero.2025.06.012",
+      "identity_tokens": [
+        "DOI:10.1016/j.ero.2025.06.012"
+      ],
+      "title": "From chat to act: large language model agents and agentic AI as the next frontier of AI in rheumatology",
+      "reason": "リウマチ診療でのLLM agent/RAG応用を論じる医学領域のレビューで、推論効率化手法ではない。",
+      "source_url": "https://doi.org/10.1016/j.ero.2025.06.012",
+      "first_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "last_checked_at": "2026-10-05T13:00:04.005810+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ]
+    }
+  ]
+}
