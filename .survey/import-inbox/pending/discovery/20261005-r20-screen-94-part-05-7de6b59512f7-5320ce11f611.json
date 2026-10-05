@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-94-part-05-7de6b59512f7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.01805",
+      "identity_tokens": [
+        "arXiv:2501.01805"
+      ],
+      "title": "End-to-End Long Document Summarization using Gradient Caching",
+      "reason": "The primary abstract focuses on long-document summarization model training and gradient memory, not inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2501.01805",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.emnlp-main.1804",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.1804"
+      ],
+      "title": "Training compute-optimal transformer encoder models",
+      "reason": "The ACL primary abstract studies compute-optimal masked-language-model encoder pretraining and reports training FLOPs savings; it is training-only efficiency, outside scope.",
+      "source_url": "https://doi.org/10.18653/v1/2025.emnlp-main.1804",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-3466",
+      "identity_tokens": [
+        "DOI:10.52202/085713-3466"
+      ],
+      "title": "FreqExit: Enabling Early-Exit Inference for Visual Autoregressive Models via Frequency-Aware Guidance",
+      "reason": "The primary abstract targets visual autoregressive image-generation inference, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.52202/085713-3466",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-4432",
+      "identity_tokens": [
+        "DOI:10.52202/085713-4432"
+      ],
+      "title": "Omni-DNA: A Genomic Model Supporting Sequence Understanding, Long-context, and Textual Annotation",
+      "reason": "The primary abstract concerns genomic model pretraining/task adaptation; the LLM analogy is architectural and does not establish general LLM inference efficiency.",
+      "source_url": "https://doi.org/10.52202/085713-4432",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.16077",
+      "identity_tokens": [
+        "arXiv:2410.16077"
+      ],
+      "title": "CartesianMoE: Boosting Knowledge Sharing among Experts via Cartesian Product Routing in Mixture-of-Experts",
+      "reason": "The primary abstract improves expert knowledge sharing and model quality in MoE LLMs; it does not report an inference optimization beyond standard MoE cost motivation.",
+      "source_url": "https://arxiv.org/abs/2410.16077",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ]
+    }
+  ]
+}
