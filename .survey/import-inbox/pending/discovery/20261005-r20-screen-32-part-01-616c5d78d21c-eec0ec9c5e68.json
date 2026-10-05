@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-32-part-01-616c5d78d21c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app16167903",
+      "identity_tokens": [
+        "DOI:10.3390/app16167903"
+      ],
+      "title": "Dimension-Constrained Organizational Relay for Long-Context LLMs",
+      "reason": "長文生成の文脈制御と関連するが、一次本文を取得できず、推論時コスト削減の実測も要旨では確認できないためborderline。",
+      "source_url": "https://doi.org/10.3390/app16167903",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05543",
+      "identity_tokens": [
+        "arXiv:2608.05543"
+      ],
+      "title": "omni-macos: On-Device Omni-Modal Search on Apple Silicon",
+      "reason": "We present omni-macos, a search engine that embeds text, code, documents, images, audio and video into one representation space and runs its encoder, index and store on the Mac that already holds the files, so no indexed file, no typed query and no vector ever leaves the machine. It keeps a background indexer and an interactive search box inside one memory budget the user sets: it embeds and stores each distinct chunk once, re-encodes only the chunks an edit changes, hands the GPU smaller units while the user is typing, answers queries from a one-bit replica of the index with exact rescoring, and propagates that budget to the allocators that draw on unified memory. We measure on five Macs spanning an eightfold range of accelerator width and a thirty-twofold range of memory, each indexing the files it already holds.",
+      "source_url": "https://arxiv.org/abs/2608.05543",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05565",
+      "identity_tokens": [
+        "arXiv:2608.05565"
+      ],
+      "title": "EffectLearner: World-Aware Object-Effect Reasoning for Real-World Video Object Removal",
+      "reason": "Video object removal must eliminate not only the target object but also its induced effects while maintaining high-fidelity and spatiotemporally coherent restoration. Existing methods mainly learn object-effect correspondences implicitly from predefined effect categories and fixed data distributions, limiting their generalization to complex real-world scenes involving compositional effects, spatially detached or weakly correlated effects, long-tail physical phenomena, and dynamically evolving interactions. We propose EffectLearner, a semantic-reasoning-enhanced framework that combines a VLM-based Object-Effect Reasoner with a DiT-based Video Eraser. Guided by a structured effect-analysis prompt, the Reasoner performs cross-modal reasoning over a target-highlighted video and extracts compact effect-aware context, which guides the Video Eraser toward comprehensive object-effect removal. Motion-aware mask guidance and motion-consistency supervision further improve removal coverage and spatiotemporal stability under object motion and evolving scene dynamics. To fully exploit the framework in challenging real-world scenarios, we further construct EffectWorld, a paired video dataset specifically designed for complex object-induced effects, and introduce a progressive training curriculum that combines common supervision with complex-effect data. On the standard ROSE-Bench, EffectLearner outperforms existing baselines on most metrics and achieves clear advantages on both EffectWorld-Eval and the challenging EffectWorld-Wild, demonstrating its ability to deliver high-quality video object removal in complex real-world scenes.",
+      "source_url": "https://arxiv.org/abs/2608.05565",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05727",
+      "identity_tokens": [
+        "arXiv:2608.05727"
+      ],
+      "title": "LILAC: An Idempotent Neural Speech Codec",
+      "reason": "Neural Audio Codecs are widely adopted in speech generation and editing. However, existing neural audio codecs are not idempotent: across the paper's twelve baseline systems, every configuration tested rewrites, on average, at least 15% of its tokens in a single decode-re-encode pass. This poses a problem for utilizing Neural Audio Codecs as token interfaces in pipelines where re-encoding decoded outputs can occur. We present LILAC, a fully convolutional 24 kHz speech codec at 9.375 Hz and 0.75 kbit/s that is codec idempotent by construction; re-encoding the decoded audio of any valid token stream returns the identical stream. LILAC achieves idempotency while maintaining competitive quality, reaching UTMOS 4.14 and 4.24 on LibriSpeech and LibriTTS-R test sets, comparable to SOTA sub-1 kbit/s Neural Audio Codecs.",
+      "source_url": "https://arxiv.org/abs/2608.05727",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05729",
+      "identity_tokens": [
+        "arXiv:2608.05729"
+      ],
+      "title": "Unified Agent: Managing Interactions across Devices",
+      "reason": "As capabilities rapidly increase, AI agents can move from running inside one app to acting across a user's devices over time. Yet existing agent systems still fall short in this scenario. This is because observations are scattered across devices and moments, but mainstream systems are not designed around this fact: a single agent that treats devices as tools lacks effective state management for all devices across time, and multi-agent systems coordinate across agents but do not maintain the compact carried state a cross-device, cross-time request needs. We argue that the agent should maintain an effectively designed state that organizes engagement evidence, stated facts, and the standing request in a compact, action-ready form for deciding its action given the current observation. To compare state designs, we construct a benchmark of user-agent interaction across devices and time. We instantiate this principle in Unified Agent, a stateful agent that carries interaction evidence across devices and moments and uses it with the current observation to act. In the default setting, it significantly outperforms our adaptations of four published designs. Across changes in multimodal large language model (MLLM) family, capability, and reasoning effort, it remains ahead of all compared systems, demonstrating that the state-design advantage is robust across MLLM settings. Our code and data will be publicly available on GitHub.",
+      "source_url": "https://arxiv.org/abs/2608.05729",
+      "first_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "last_checked_at": "2026-10-05T07:05:25.569990+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
