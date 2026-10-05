@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-27-part-05-bd878e92cff8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13365",
+      "identity_tokens": [
+        "arXiv:2608.13365"
+      ],
+      "title": "When Local Variance Optimality Is Not Enough: RoPE-Aligned Q/K Rotations for Dynamic 4-Bit Quantisation",
+      "reason": "LLM quantization is relevant, but contribution is quantization-quality analysis without measured inference efficiency; fit to serving-efficiency scope is weak.",
+      "source_url": "https://arxiv.org/abs/2608.13365",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.18879-commvq-commutative-vector-quantization-for-kv-cache-compression.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13662",
+      "identity_tokens": [
+        "arXiv:2608.13662"
+      ],
+      "title": "Ontology-Grounded Project Memory for Coding Agents",
+      "reason": "Coding agents have become the primary means of generating new code in many software projects, and the resulting velocity of changes makes keeping track of the reasons behind those changes challenging. This paper introduces MOOSEDev, a system designed to give coding agents structured, ontology-grounded project memory. The system captures architectural decisions, lessons, constraints, and rationales in a knowledge graph exposed to agents via a Model Context Protocol (MCP) interface. Records carry lifecycle status, provenance, and supersession links, queryable via MOOSE, a proprietary neurosymbolic engine that treats the symbolic layer as the primary reasoning substrate. We compared MOOSEDev against a production vector-memory tool on a neutral public corpus of 835 typed records. MOOSEDev returned the expected answer set essentially in full (0.98-1.00) on supersession, set-completeness, and negation questions, whereas the baseline's top-k retrieval surfaced between 6% and 27%. Conversely, relevance recall and token cost were largely equivalent between the two systems. We also describe a temporal commit-history bootstrap of our own codebase, a pre-registered live trial, and lessons learned.",
+      "source_url": "https://arxiv.org/abs/2608.13662",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13668",
+      "identity_tokens": [
+        "arXiv:2608.13668"
+      ],
+      "title": "The Query Knows What to Forget: A Second Erase Direction for Linear Attention",
+      "reason": "Linear attention keeps a state of fixed size. At long context, many stored items share this state, and interference between them degrades retrieval. Gated DeltaNet-2 (GDN-2), like every delta-rule model before it, derives its erase vector from the key of the current token. However, the interference in its reads is measured through the query, and the erase step cannot reach it. We introduce the Query-derived Erase Direction (QED). QED adds a second erase direction derived from the query and orthogonal to the key. In the fast-weight view, a key-directed delta edit cannot change the key-orthogonal part of a read. It uses the editable part to cancel old-state content measured along the query. It also improves retrieval at every length past the training window, and it about doubles the usable context length on S-NIAH-1.",
+      "source_url": "https://arxiv.org/abs/2608.13668",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13681",
+      "identity_tokens": [
+        "arXiv:2608.13681"
+      ],
+      "title": "Fine-Tuning Qwen3-27B for C-to-Rust Code Translation: A Three-Stage Curriculum of Pretraining, Debugging-Aware SFT, and Task-Specific SFT",
+      "reason": "Translating C code into safe, idiomatic Rust is a longstanding software-engineering goal because it can eliminate entire classes of memory-safety vulnerabilities while preserving the functional behavior of legacy systems. Large language models (LLMs) have shown promise for this task but typically underperform when applied off-the-shelf, since general-purpose pretraining rarely emphasizes idiomatic Rust generation, cross-language semantic equivalence, or the ability to reason about and repair compiler/runtime feedback. In this report we describe a three-stage fine-tuning curriculum applied to Qwen3-27B that is designed to progressively specialize the model for the C-to-Rust (C2Rust) translation task: (1) continued pretraining on Rust-centric corpora to strengthen the model's prior over idiomatic Rust syntax and standard-library usage; (2) supervised fine-tuning (SFT) on the microsoft/Verus_Training_Data dataset to instill debugging and self-repair behavior over Rust code; and (3) task-specific SFT on paired C/Rust solutions derived from LeetCode problems to teach direct semantic translation. We evaluate the resulting model using the agentic, static-analysis-guided verification framework of SACTOR, which performs structure-aware, two-phase (unidiomatic to idiomatic) translation with foreign-function-interface (FFI)-based end-to-end (E2E) testing. We report success rate, idiomaticity (Clippy lint counts, unsafe-code fraction), and failure-mode analyses, and compare our fine-tuned model against baseline Qwen3-27B and other LLMs evaluated under the same framework.",
+      "source_url": "https://arxiv.org/abs/2608.13681",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13757",
+      "identity_tokens": [
+        "arXiv:2608.13757"
+      ],
+      "title": "A Barrier-Free Synchronization Algorithm for Multi-Engine AI Accelerators",
+      "reason": "Multi-engine AI accelerators such as AWS Trainium comprise specialized compute engines that execute in parallel, and the compiler must synchronize the data dependencies between them. For straight-line code this is simple: each dependency reduces to waiting for a threshold count of instruction completions, which the compiler computes statically. Loops admit no such static threshold; a simple solution inserts all-engine barriers at iteration boundaries, resetting synchronization state so each loop body can be treated as straight-line, at the cost of parallelism. We present a barrier-free synchronization algorithm that instead enforces each dependency precisely across structured control flow with arbitrarily nested, dynamically bounded loops. The key idea is to compute dynamic thresholds at runtime from tracked loop iteration counts. We implemented it as a compiler backend pass at the AWS Neuron ISA level. On a suite of ML kernels, it reduces latency 10-45% relative to the barrier-based baseline, achieves a 3.3x speedup on a synchronization-bound microbenchmark, and often matches or exceeds hand-tuned manual allocation. Issuing a consumer too early violates its dependency, while issuing too late unnecessarily stalls execution. We formally characterize the minimum synchronization required for correctness and verify in the Lean proof assistant, via bisimulation, that our algorithm meets this criterion.",
+      "source_url": "https://arxiv.org/abs/2608.13757",
+      "first_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "last_checked_at": "2026-10-05T06:55:43.166649+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md"
+      ]
+    }
+  ]
+}
