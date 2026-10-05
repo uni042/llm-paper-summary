@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-57-part-09-b35170733e46",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21249",
+      "identity_tokens": [
+        "arXiv:2606.21249"
+      ],
+      "title": "Does RoPE Prevent or Degrade Retrieval Heads? A Mechanistic Analysis Across Model Families",
+      "reason": "Primary abstract reviewed: Retrieval heads, attention heads that copy information from earlier context to the current position, have been proposed as the mechanistic substrate for long-context recall. Rotary position embeddings (RoPE) rotate queries and keys by frequencies decaying with a base hyperparameter theta, and a natural hypothesis is that this rotation either prevents retrieval heads from formin… This is a analysis of transformer representation/routing or retrieval-head mechanisms, not a system/algorithm contribution to inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.21249",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21257",
+      "identity_tokens": [
+        "arXiv:2606.21257"
+      ],
+      "title": "An Empirical Study of OpenPangu Quantization on Ascend NPUs",
+      "reason": "本文確認後も関連は弱い。主題は効率化に隣接するが、実用的なLLM推論/serving効率を示す根拠が不足しているためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.21257",
+      "first_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "last_checked_at": "2026-10-05T10:09:38.315876+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ]
+    }
+  ]
+}
