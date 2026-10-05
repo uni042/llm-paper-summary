@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:28:03+00:00",
-  "record_count": 961,
+  "updated_at": "2026-10-05T05:30:30+00:00",
+  "record_count": 966,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14579,6 +14579,89 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "Change the Product, Keep the Parameters: Associative Algebra Layers for Transformers"
+    },
+    "arXiv:2609.30797": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30797",
+      "identity_tokens": [
+        "arXiv:2609.30797"
+      ],
+      "reason": "HasMemはcontinuous memory表現をsoftenし位置数を減らす一方、主評価はtask recallであり、LLM inference token/cost/latency/serving測定がない。",
+      "first_checked_at": "2026-10-05T05:30:28+00:00",
+      "last_checked_at": "2026-10-05T05:30:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "HasMem: Hard-Origin Adaptively Softened Memory for Long-Term LLM Agents"
+    },
+    "arXiv:2609.37454": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37454",
+      "identity_tokens": [
+        "arXiv:2609.37454"
+      ],
+      "reason": "local-cloud multi-agent underwriting prototypeだが、効率化手法としての根拠が弱く、20 synthetic scenariosで平均268.8秒とmonolithic 6.4秒より大幅に長い。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Governing the Edge: Automating Commercial Property and Casualty Insurance Underwriting via a Hybrid Local-Cloud Multi-Agent Framework"
+    },
+    "arXiv:2609.30692": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30692",
+      "identity_tokens": [
+        "arXiv:2609.30692"
+      ],
+      "reason": "Raspberry Pi 5上のローカルLLM音声assistantを実装し4-bit GGUFとend-to-end latencyを測るが、独自推論最適化ではなく比較条件にも限界がある。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "LUMO (Lightweight Unified Multilingual Orchestrator): A Privacy Preserving Offline Voice Assistant"
+    },
+    "arXiv:2609.30882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30882",
+      "identity_tokens": [
+        "arXiv:2609.30882"
+      ],
+      "reason": "長尺YouTube transcriptのsummary/RAG/screeningをLLM分類に入力する圧縮影響研究で、accuracy harmを示すが、推論効率やcost/latencyを測らない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Effects of Transcript Compression on LLM-based Medical Misinformation Detection in Japanese YouTube Videos"
+    },
+    "arXiv:2609.30977": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30977",
+      "identity_tokens": [
+        "arXiv:2609.30977"
+      ],
+      "reason": "time-agnostic uniform discrete diffusion LMは競合品質で8M少ないparametersの構成もあるが、論文はaccuracy/perplexityとtime sensitivityを研究し、inference latency/computeの削減を測っていない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Does Uniform Discrete Diffusion Need Time?"
     }
   }
 }

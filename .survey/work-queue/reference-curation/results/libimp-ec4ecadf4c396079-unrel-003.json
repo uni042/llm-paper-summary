@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ec4ecadf4c396079-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30906",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30906",
+    "identity_tokens": [
+      "arXiv:2609.30906"
+    ],
+    "reason": "tool selectionのagentic reinforcement learning framework。主眼はtrainingを伴う選択品質で、serving/inference efficiencyの測定・改善がない。",
+    "first_checked_at": "2026-10-05T05:30:30+00:00",
+    "last_checked_at": "2026-10-05T05:30:30+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "ToolSearcher: Optimizing Tool Selection at Scale via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T05:30:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec4ecadf4c39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

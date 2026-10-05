@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:28:04+00:00",
-  "record_count": 2888,
+  "updated_at": "2026-10-05T05:30:30+00:00",
+  "record_count": 2903,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -42034,6 +42034,225 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "Retrospective Distillation Attribution via Normalized Response Similarity"
+    },
+    "arXiv:2609.30749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30749",
+      "identity_tokens": [
+        "arXiv:2609.30749"
+      ],
+      "reason": "LLM data-science code translationのbenchmark構築/評価で、推論効率手法を扱わない。",
+      "first_checked_at": "2026-10-05T05:30:28+00:00",
+      "last_checked_at": "2026-10-05T05:30:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "ORCA: Evaluating LLMs on Data Science Code Translation"
+    },
+    "arXiv:2609.30756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30756",
+      "identity_tokens": [
+        "arXiv:2609.30756"
+      ],
+      "reason": "image communicationのvisual token選択をencoder計算効率化する研究で、LLM推論/servingではない。",
+      "first_checked_at": "2026-10-05T05:30:28+00:00",
+      "last_checked_at": "2026-10-05T05:30:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Selective Amortization of Full-Budget Counterfactual Reasoning for Visual Token Communication"
+    },
+    "arXiv:2609.30766": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30766",
+      "identity_tokens": [
+        "arXiv:2609.30766"
+      ],
+      "reason": "agentic RLのenvironment provisioning/initialization効率化で、学習iterationの環境費用が対象。LLM推論時の効率化ではない。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "WeEnv: The Environment for Agentic Reinforcement Learning at WeChat"
+    },
+    "arXiv:2609.30813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30813",
+      "identity_tokens": [
+        "arXiv:2609.30813"
+      ],
+      "reason": "shared agent memoryへのclaim admission/epistemic safety benchmarkで、LLM inference optimizationではない。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory"
+    },
+    "DOI:10.1186/s40807-026-00270-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1186/s40807-026-00270-7",
+      "identity_tokens": [
+        "DOI:10.1186/s40807-026-00270-7"
+      ],
+      "reason": "solar PV forecastingに使うtransformer variantsのreviewで、LLM inferenceとは無関係。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "A review of deep learning transformer variants used in solar PV forecasting"
+    },
+    "arXiv:2609.30682": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30682",
+      "identity_tokens": [
+        "arXiv:2609.30682"
+      ],
+      "reason": "scientific image understanding向けmasked autoencoder/ViTのpretraining研究。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Structure-Guided Masked Autoencoders for Ultra-High Resolution Scientific Image Understanding"
+    },
+    "arXiv:2609.30724": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30724",
+      "identity_tokens": [
+        "arXiv:2609.30724"
+      ],
+      "reason": "video moment retrieval/highlight detectionのDETR architectureでありLLM推論ではない。",
+      "first_checked_at": "2026-10-05T05:30:29+00:00",
+      "last_checked_at": "2026-10-05T05:30:29+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "EviDETR: Preserving Query-Relevant Temporal Evidence for Moment Retrieval and Highlight Detection"
+    },
+    "arXiv:2609.30880": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30880",
+      "identity_tokens": [
+        "arXiv:2609.30880"
+      ],
+      "reason": "time-series demand forecasting modelのpretraining/forecastingでLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "EXAONE Demand 1.0: A Time Series Foundation Model for Demand Forecasting"
+    },
+    "arXiv:2609.30906": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30906",
+      "identity_tokens": [
+        "arXiv:2609.30906"
+      ],
+      "reason": "tool selectionのagentic reinforcement learning framework。主眼はtrainingを伴う選択品質で、serving/inference efficiencyの測定・改善がない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "ToolSearcher: Optimizing Tool Selection at Scale via Reinforcement Learning"
+    },
+    "arXiv:2609.30973": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30973",
+      "identity_tokens": [
+        "arXiv:2609.30973"
+      ],
+      "reason": "cascaded SSMのLipschitz robustnessを扱うDNN architecture研究で、LLM推論効率が主題ではない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "LipSSM: Structurally Lipschitz-Bounded Cascaded State-Space Model via Metric Transfer between Consecutive SSM Layers"
+    },
+    "arXiv:2609.30836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30836",
+      "identity_tokens": [
+        "arXiv:2609.30836"
+      ],
+      "reason": "SLM tool-use reliabilityをplan/tool output constraintsで上げる研究。inference-time compute/cost低減の評価や最適化はなく、品質・制約遵守が主題。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "PTC-Decoder: Towards Intelligent SLMs on Offline Resource-Constrained Edge Devices"
+    },
+    "arXiv:2609.30841": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30841",
+      "identity_tokens": [
+        "arXiv:2609.30841"
+      ],
+      "reason": "diffusion LM jailbreak/safetyのenergy landscape理論分析であり、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Why Jailbreaks Succeed in Diffusion Language Models: An Energy Landscape Analysis"
+    },
+    "arXiv:2609.30842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30842",
+      "identity_tokens": [
+        "arXiv:2609.30842"
+      ],
+      "reason": "contact-rich robot manipulationのimpedance cloningでLLM推論と無関係。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Impedance Cloning: Learning Equilibrium Point Parameters for Contact-Rich Manipulation"
+    },
+    "arXiv:2609.30846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30846",
+      "identity_tokens": [
+        "arXiv:2609.30846"
+      ],
+      "reason": "Parakeet-CTC Conformer ASRのinteger-only mobile NPU deployment。高速化対象は音声認識モデルで、LLMではない。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "I-Parakeet: Integer-Only Conformer ASR on Mobile NPU"
+    },
+    "arXiv:2609.30861": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30861",
+      "identity_tokens": [
+        "arXiv:2609.30861"
+      ],
+      "reason": "agent reusable skill updatesのoverfitting regularization/training-quality研究。",
+      "first_checked_at": "2026-10-05T05:30:30+00:00",
+      "last_checked_at": "2026-10-05T05:30:30+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SkillEvoReg: Regularizing Agent Skill Evolution Against Overfitting"
     }
   }
 }

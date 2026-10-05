@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ecf6f0cae78dafc9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30836",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30836",
+    "identity_tokens": [
+      "arXiv:2609.30836"
+    ],
+    "reason": "SLM tool-use reliabilityをplan/tool output constraintsで上げる研究。inference-time compute/cost低減の評価や最適化はなく、品質・制約遵守が主題。",
+    "first_checked_at": "2026-10-05T05:30:30+00:00",
+    "last_checked_at": "2026-10-05T05:30:30+00:00",
+    "linked_from": [
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "PTC-Decoder: Towards Intelligent SLMs on Offline Resource-Constrained Edge Devices"
+  },
+  "processed_at": "2026-10-05T05:30:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ecf6f0cae78d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
