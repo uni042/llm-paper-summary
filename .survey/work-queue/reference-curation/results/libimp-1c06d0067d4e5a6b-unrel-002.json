@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c06d0067d4e5a6b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.15645",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.15645",
+    "identity_tokens": [
+      "arXiv:2509.15645"
+    ],
+    "reason": "対象は3D Gaussian Splattingの大規模scene trainingとhost offloadingで、LLM推論とは無関係。",
+    "first_checked_at": "2026-10-05T13:05:37+00:00",
+    "last_checked_at": "2026-10-05T13:05:37+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "GS-Scale: Unlocking Large-Scale 3D Gaussian Splatting Training via Host Offloading"
+  },
+  "processed_at": "2026-10-05T13:05:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c06d0067d4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

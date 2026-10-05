@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c06d0067d4e5a6b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.07759",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.07759",
+    "identity_tokens": [
+      "arXiv:2509.07759"
+    ],
+    "reason": "長文書retrievalのPLM/LLM研究をまとめるsurveyであり、LLM推論圧縮・serving効率化の一次手法ではない。",
+    "first_checked_at": "2026-10-05T13:05:37+00:00",
+    "last_checked_at": "2026-10-05T13:05:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "A Survey of Long-Document Retrieval in the PLM and LLM Era"
+  },
+  "processed_at": "2026-10-05T13:05:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c06d0067d4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

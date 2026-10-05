@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:02:47+00:00",
-  "record_count": 5128,
+  "updated_at": "2026-10-05T13:05:40+00:00",
+  "record_count": 5140,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -74569,6 +74569,181 @@
         "papers/inference/16-weight-quantization-compression/2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md"
       ],
       "title": "When Slower Isn't Truer: Inverse Scaling Law of Truthfulness in Multimodal Reasoning"
+    },
+    "arXiv:2509.15645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.15645",
+      "identity_tokens": [
+        "arXiv:2509.15645"
+      ],
+      "reason": "対象は3D Gaussian Splattingの大規模scene trainingとhost offloadingで、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T13:05:37+00:00",
+      "last_checked_at": "2026-10-05T13:05:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "GS-Scale: Unlocking Large-Scale 3D Gaussian Splatting Training via Host Offloading"
+    },
+    "arXiv:2509.07759": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07759",
+      "identity_tokens": [
+        "arXiv:2509.07759"
+      ],
+      "reason": "長文書retrievalのPLM/LLM研究をまとめるsurveyであり、LLM推論圧縮・serving効率化の一次手法ではない。",
+      "first_checked_at": "2026-10-05T13:05:37+00:00",
+      "last_checked_at": "2026-10-05T13:05:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "A Survey of Long-Document Retrieval in the PLM and LLM Era"
+    },
+    "arXiv:2509.07177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07177",
+      "identity_tokens": [
+        "arXiv:2509.07177"
+      ],
+      "reason": "EnergyGPTはエネルギー領域向け専門LLMの開発/適用を扱い、モデル推論効率化は主題ではない。",
+      "first_checked_at": "2026-10-05T13:05:37+00:00",
+      "last_checked_at": "2026-10-05T13:05:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "Towards EnergyGPT: A Large Language Model Specialized for the Energy Sector"
+    },
+    "arXiv:2507.21117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.21117",
+      "identity_tokens": [
+        "arXiv:2507.21117"
+      ],
+      "reason": "対象はLLMによるrecommendation system課題のreviewで、モデル推論/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T13:05:38+00:00",
+      "last_checked_at": "2026-10-05T13:05:38+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.06823-emoe.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md"
+      ],
+      "title": "A Comprehensive Review on Harnessing Large Language Models to Overcome Recommender System Challenges"
+    },
+    "arXiv:2507.11500": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.11500",
+      "identity_tokens": [
+        "arXiv:2507.11500"
+      ],
+      "reason": "ARMORは安全性とmeticulous reasoningのalignment/post-trainingを扱い、推論効率化を示していない。",
+      "first_checked_at": "2026-10-05T13:05:38+00:00",
+      "last_checked_at": "2026-10-05T13:05:38+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "ARMOR: Aligning Secure and Safe Large Language Models via Meticulous Reasoning"
+    },
+    "arXiv:2507.08799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.08799",
+      "identity_tokens": [
+        "arXiv:2507.08799"
+      ],
+      "reason": "KV Cache Steeringはcache介入でLLM出力を制御する手法で、cache容量/推論計算を削減する寄与を要旨が示していない。",
+      "first_checked_at": "2026-10-05T13:05:38+00:00",
+      "last_checked_at": "2026-10-05T13:05:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "KV Cache Steering for Controlling Frozen LLMs"
+    },
+    "arXiv:2507.07877": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.07877",
+      "identity_tokens": [
+        "arXiv:2507.07877"
+      ],
+      "reason": "Edge-ASRはautomatic speech recognitionモデルの量子化で、speech model特化かつ一般LLM inferenceの対象外。",
+      "first_checked_at": "2026-10-05T13:05:38+00:00",
+      "last_checked_at": "2026-10-05T13:05:38+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "title": "Edge-ASR: Towards Low-Bit Quantization of Automatic Speech Recognition Models"
+    },
+    "DOI:10.24963/ijcai.2025/57": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.24963/ijcai.2025/57",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2025/57"
+      ],
+      "reason": "SAPはprivacy-preserving fine-tuningの学習手法で、推論時の効率化ではない。",
+      "first_checked_at": "2026-10-05T13:05:39+00:00",
+      "last_checked_at": "2026-10-05T13:05:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ],
+      "title": "SAP: Privacy-Preserving Fine-Tuning on Language Models with Split-and-Privatize Framework"
+    },
+    "DOI:10.21437/interspeech.2025-503": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.21437/interspeech.2025-503",
+      "identity_tokens": [
+        "DOI:10.21437/interspeech.2025-503"
+      ],
+      "reason": "対象はWhisper等の大規模音声モデルの低bit量子化で、音声認識モデル特化でありLLM推論範囲外。",
+      "first_checked_at": "2026-10-05T13:05:39+00:00",
+      "last_checked_at": "2026-10-05T13:05:39+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "title": "Ultra-Low Bit Post-Training Quantization of Large Speech Models via K-Means Clustering and Mixed Precision Allocation"
+    },
+    "DOI:10.1016/j.ero.2025.06.012": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ero.2025.06.012",
+      "identity_tokens": [
+        "DOI:10.1016/j.ero.2025.06.012"
+      ],
+      "reason": "リウマチ診療でのLLM agent/RAG応用を論じる医学領域のレビューで、推論効率化手法ではない。",
+      "first_checked_at": "2026-10-05T13:05:39+00:00",
+      "last_checked_at": "2026-10-05T13:05:39+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ],
+      "title": "From chat to act: large language model agents and agentic AI as the next frontier of AI in rheumatology"
+    },
+    "arXiv:2510.02386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.02386",
+      "identity_tokens": [
+        "arXiv:2510.02386"
+      ],
+      "reason": "対象はreasoning benchmark contamination検出の脆弱性分析で、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T13:05:40+00:00",
+      "last_checked_at": "2026-10-05T13:05:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "On The Fragility of Benchmark Contamination Detection in Reasoning Models"
+    },
+    "arXiv:2509.24380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24380",
+      "identity_tokens": [
+        "arXiv:2509.24380"
+      ],
+      "reason": "Agentic Services Computingの分野横断的なサービス設計/運用を論じる研究で、LLM inferenceの具体的効率化手法が示されていない。",
+      "first_checked_at": "2026-10-05T13:05:40+00:00",
+      "last_checked_at": "2026-10-05T13:05:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "title": "Agentic Services Computing"
     }
   }
 }

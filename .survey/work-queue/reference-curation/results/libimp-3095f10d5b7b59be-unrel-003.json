@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3095f10d5b7b59be-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.11500",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.11500",
+    "identity_tokens": [
+      "arXiv:2507.11500"
+    ],
+    "reason": "ARMORは安全性とmeticulous reasoningのalignment/post-trainingを扱い、推論効率化を示していない。",
+    "first_checked_at": "2026-10-05T13:05:38+00:00",
+    "last_checked_at": "2026-10-05T13:05:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+    ],
+    "title": "ARMOR: Aligning Secure and Safe Large Language Models via Meticulous Reasoning"
+  },
+  "processed_at": "2026-10-05T13:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3095f10d5b7b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

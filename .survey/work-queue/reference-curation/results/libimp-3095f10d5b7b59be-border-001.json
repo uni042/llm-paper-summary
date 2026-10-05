@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3095f10d5b7b59be-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.16781",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.16781",
+    "identity_tokens": [
+      "arXiv:2507.16781"
+    ],
+    "reason": "Cooling affects AI infrastructure energy and performance, but the measured study is chiefly training/stress-test benchmarking and the inference-specific applicability is not established.",
+    "first_checked_at": "2026-10-05T13:05:37+00:00",
+    "last_checked_at": "2026-10-05T13:05:37+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "title": "Cooling Matters: Benchmarking Large Language Models and Vision-Language Models on Liquid-Cooled Versus Air-Cooled H100 GPU Systems"
+  },
+  "processed_at": "2026-10-05T13:05:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3095f10d5b7b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
