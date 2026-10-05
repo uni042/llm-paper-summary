@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08378030a838db2f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.16633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.16633",
+    "identity_tokens": [
+      "arXiv:2509.16633"
+    ],
+    "reason": "MPA improves VQA model training/knowledge transfer from large to small VLMs; its contribution is training data/optimization, not inference-time efficiency.",
+    "first_checked_at": "2026-10-05T15:33:52+00:00",
+    "last_checked_at": "2026-10-05T15:33:52+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+    ],
+    "title": "When Big Models Train Small Ones: Label-Free Model Parity Alignment for Efficient Visual Question Answering using Small VLMs"
+  },
+  "processed_at": "2026-10-05T15:33:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08378030a838",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b18b1ecfa11a6a5f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.00002",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.00002",
+    "identity_tokens": [
+      "arXiv:2504.00002"
+    ],
+    "reason": "Simplified sensor-context app and limited platforms/models; authors say output quality was not comprehensively validated. Deployment measurements, not an optimization method.",
+    "first_checked_at": "2026-10-05T15:33:59+00:00",
+    "last_checked_at": "2026-10-05T15:33:59+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Are We There Yet? A Measurement Study of Efficiency for LLM Applications on Mobile Devices"
+  },
+  "processed_at": "2026-10-05T15:34:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b18b1ecfa11a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

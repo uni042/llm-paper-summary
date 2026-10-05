@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-983a695109d78bf4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.901",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2026.acl-long.901",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2026.acl-long.901"
+    ],
+    "reason": "自然Slothの一次要旨は長い生成を悪用するDoS攻撃とmulti-tenant servingへのリスクを扱い、推論処理を効率化する方法ではない。",
+    "first_checked_at": "2026-10-05T15:33:59+00:00",
+    "last_checked_at": "2026-10-05T15:33:59+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md"
+    ],
+    "title": "NaturalSloth: Revisiting Denial-of-Service Attacks on Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:33:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-983a695109d7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

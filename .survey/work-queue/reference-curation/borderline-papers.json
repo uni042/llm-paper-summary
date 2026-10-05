@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:31:29+00:00",
-  "record_count": 2028,
+  "updated_at": "2026-10-05T15:34:00+00:00",
+  "record_count": 2042,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31394,6 +31394,229 @@
       ],
       "borderline_recheck_count": 0,
       "title": "C-Transformer: An Energy-Efficient Homogeneous DNN-Transformer/SNN-Transformer Processor for Large Language Models"
+    },
+    "arXiv:2509.15250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.15250",
+      "identity_tokens": [
+        "arXiv:2509.15250"
+      ],
+      "reason": "Method and measurements are specific to embodied VLN agents/datasets and navigation success/path length, not general LLM serving. This is an adjacent multimodal task-specific pruning result.",
+      "first_checked_at": "2026-10-05T15:33:52+00:00",
+      "last_checked_at": "2026-10-05T15:33:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Walk and Read Less: Improving the Efficiency of Vision-and-Language Navigation via Tuning-Free Multimodal Token Pruning"
+    },
+    "arXiv:2511.04700": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.04700",
+      "identity_tokens": [
+        "arXiv:2511.04700"
+      ],
+      "reason": "The method is RAG-context selection and improves quality, but its own measured latency is higher than the listed baselines; its fit to an efficiency survey is weak.",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Separate the Wheat from the Chaff: Winnowing Down Divergent Views in Retrieval Augmented Generation"
+    },
+    "arXiv:2510.13870": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.13870",
+      "identity_tokens": [
+        "arXiv:2510.13870"
+      ],
+      "reason": "The primary full text supports a potential reduction in denoising steps, but the efficiency benefit is indirect and is not shown as measured serving latency or a broadly applicable inference-cost reduction.",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking the Potential of Diffusion Language Models through Template Infilling"
+    },
+    "DOI:10.48550/arxiv.2504.02010": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2504.02010",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.02010",
+        "arXiv:2504.02010"
+      ],
+      "reason": "Comparative/mechanistic compression study, not a new compression or serving mechanism; no end-to-end serving latency/throughput.",
+      "first_checked_at": "2026-10-05T15:33:55+00:00",
+      "last_checked_at": "2026-10-05T15:33:55+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Reasoning Meets Compression: Benchmarking Compressed Large Reasoning Models on Complex Reasoning Tasks"
+    },
+    "arXiv:2506.06708": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.06708",
+      "identity_tokens": [
+        "arXiv:2506.06708"
+      ],
+      "reason": "The topic is directly adjacent to efficient inference, but this record is a broad survey rather than a concrete primary method/evaluation for the Discovery queue.",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Retentive Network"
+    },
+    "arXiv:2505.14871": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.14871",
+      "identity_tokens": [
+        "arXiv:2505.14871"
+      ],
+      "reason": "The compression mechanism is relevant, but the primary reported quality at the shown 0.6 ratio is sharply degraded and requires LoRA recovery; practical fit remains weak.",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Saten: Sparse Augmented Tensor Networks for Post-Training Compression of Large Language Models"
+    },
+    "arXiv:2510.08600": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.08600",
+      "identity_tokens": [
+        "arXiv:2510.08600"
+      ],
+      "reason": "It complements deployment compression pipelines but its own contribution restores accuracy, not inference efficiency, so direct inclusion is uncertain.",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recover-LoRA: Data-Free Accuracy Recovery of Degraded Language Models via Low-Rank Adaptation"
+    },
+    "arXiv:2509.09001": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.09001",
+      "identity_tokens": [
+        "arXiv:2509.09001"
+      ],
+      "reason": "Sub-quadratic attention is potentially relevant to inference efficiency, but the evidence is theoretical expressivity and synthetic reasoning tasks without a practical LLM runtime evaluation.",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast attention mechanisms: a tale of parallelism"
+    },
+    "arXiv:2507.03052": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.03052",
+      "identity_tokens": [
+        "arXiv:2507.03052"
+      ],
+      "reason": "The model-compression method is in scope conceptually, but the central 8:16 inference acceleration remains a projection and is not experimentally demonstrated on supported hardware.",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From 2:4 to 8:16 sparsity patterns in LLMs for Outliers and Weights with Variance Correction"
+    },
+    "arXiv:2502.13178": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.13178",
+      "identity_tokens": [
+        "arXiv:2502.13178"
+      ],
+      "reason": "Taxonomy/benchmark, not new quantizer or serving system; emphasizes quality/robustness rather than end-to-end latency/throughput.",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md",
+        "papers/survey/08-low-bit-llm/2025-2409.16694-low-bit-llm-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking Post-Training Quantization in LLMs: Comprehensive Taxonomy, Unified Evaluation, and Comparative Analysis"
+    },
+    "arXiv:2411.19530": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.19530",
+      "identity_tokens": [
+        "arXiv:2411.19530"
+      ],
+      "reason": "Primary contribution is security/robustness against fine-tuning attacks, without serving latency benchmarking or new runtime. Borderline for adjacent multi-tenant compression evidence.",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantized Delta Weight Is Safety Keeper"
+    },
+    "arXiv:2511.10480": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.10480",
+      "identity_tokens": [
+        "arXiv:2511.10480"
+      ],
+      "reason": "Adjacent systems-design evidence may inform serving optimization, but the work mainly supplies a workload simulator and does not propose or validate a deployable inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scalable Synthesis of Distributed Llm Workloads Through Symbolic Tensor Graphs"
+    },
+    "arXiv:2504.00002": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00002",
+      "identity_tokens": [
+        "arXiv:2504.00002"
+      ],
+      "reason": "Simplified sensor-context app and limited platforms/models; authors say output quality was not comprehensively validated. Deployment measurements, not an optimization method.",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Are We There Yet? A Measurement Study of Efficiency for LLM Applications on Mobile Devices"
+    },
+    "arXiv:2506.12220": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12220",
+      "identity_tokens": [
+        "arXiv:2506.12220"
+      ],
+      "reason": "The contribution is theoretical expressivity/simulation; no practical LLM inference implementation, serving benchmark, or measured resource reduction was found in the checked sections.",
+      "first_checked_at": "2026-10-05T15:34:00+00:00",
+      "last_checked_at": "2026-10-05T15:34:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Two Heads Are Better than One: Simulating Large Transformers with Small Ones"
     }
   }
 }

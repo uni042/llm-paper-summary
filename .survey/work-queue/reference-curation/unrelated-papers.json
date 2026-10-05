@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T15:31:30+00:00",
-  "record_count": 6208,
+  "updated_at": "2026-10-05T15:34:01+00:00",
+  "record_count": 6252,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -90112,6 +90112,641 @@
         "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
       ],
       "title": "Chronos: Prescheduled circuit switching for LLM training"
+    },
+    "arXiv:2509.24074": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24074",
+      "identity_tokens": [
+        "arXiv:2509.24074"
+      ],
+      "reason": "ResFormer is an NLP sequence-classification architecture and benchmark result, not generative LLM inference/serving or compression.",
+      "first_checked_at": "2026-10-05T15:33:52+00:00",
+      "last_checked_at": "2026-10-05T15:33:52+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "ResFormer: All-Time Reservoir Memory for Long Sequence Classification"
+    },
+    "arXiv:2509.16633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.16633",
+      "identity_tokens": [
+        "arXiv:2509.16633"
+      ],
+      "reason": "MPA improves VQA model training/knowledge transfer from large to small VLMs; its contribution is training data/optimization, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T15:33:52+00:00",
+      "last_checked_at": "2026-10-05T15:33:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "When Big Models Train Small Ones: Label-Free Model Parity Alignment for Efficient Visual Question Answering using Small VLMs"
+    },
+    "arXiv:2509.18136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18136",
+      "identity_tokens": [
+        "arXiv:2509.18136"
+      ],
+      "reason": "The paper builds a dataset and analyzes LLM structure/performance trends; no inference, serving, or compression method is proposed in the abstract.",
+      "first_checked_at": "2026-10-05T15:33:52+00:00",
+      "last_checked_at": "2026-10-05T15:33:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2505.03531-faster-moe-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "From Parameters to Performance: A Data-Driven Study on LLM Structure and Development"
+    },
+    "DOI:10.1007/s11227-025-07664-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11227-025-07664-2",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-07664-2"
+      ],
+      "reason": "Publisher abstract describes multi-object tracking with super-resolution and DETR attention on MOT datasets, not LLM inference or deployment.",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Multi-object tracking based on spatial super-resolution and spatiotemporal convolutional self-attention"
+    },
+    "arXiv:2511.08028": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.08028",
+      "identity_tokens": [
+        "arXiv:2511.08028"
+      ],
+      "reason": "一次要旨はGraph Transformerの表現力・位置埋め込み・理論を扱っている。",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Generalizable Insights for Graph Transformers in Theory and Practice"
+    },
+    "arXiv:2511.07198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07198",
+      "identity_tokens": [
+        "arXiv:2511.07198"
+      ],
+      "reason": "一次要旨はLLMの複数領域へのfine-tuningと領域干渉の低減を扱っている。",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
+      ],
+      "title": "Synergy over Discrepancy: A Partition-Based Approach to Multi-Domain LLM Fine-Tuning"
+    },
+    "arXiv:2510.25739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25739",
+      "identity_tokens": [
+        "arXiv:2510.25739"
+      ],
+      "reason": "一次要旨は自己回帰型text-to-image生成の高速化を扱い、言語モデルではなく画像生成モデルを対象とする。",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "title": "Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation"
+    },
+    "arXiv:2511.00056": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00056",
+      "identity_tokens": [
+        "arXiv:2511.00056"
+      ],
+      "reason": "一次要旨はLLMのpre-training/fine-tuningにおけるメモリ効率的なoptimization algorithmを提案する。",
+      "first_checked_at": "2026-10-05T15:33:53+00:00",
+      "last_checked_at": "2026-10-05T15:33:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "title": "MISA: Memory-Efficient LLMs Optimization with Module-wise Importance Sampling"
+    },
+    "arXiv:2510.19980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19980",
+      "identity_tokens": [
+        "arXiv:2510.19980"
+      ],
+      "reason": "一次要旨は時系列予測におけるadaptive masking lossとrepresentation consistencyを扱う。",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Abstain Mask Retain Core: Time Series Prediction by Adaptive Masking Loss with Representation Consistency"
+    },
+    "arXiv:2510.21834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21834",
+      "identity_tokens": [
+        "arXiv:2510.21834"
+      ],
+      "reason": "一次要旨はpruning後に失われた構成要素の補償で性能精度を回復する方法を扱っている。",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ],
+      "title": "Restoring Pruned Large Language Models via Lost Component Compensation"
+    },
+    "arXiv:2510.16743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16743",
+      "identity_tokens": [
+        "arXiv:2510.16743"
+      ],
+      "reason": "一次要旨は学習curveとNLP probabilistic scaling lawsのzero-shot予測を扱う。",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Zero-Shot Performance Prediction for Probabilistic Scaling Laws"
+    },
+    "arXiv:2510.21788": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21788",
+      "identity_tokens": [
+        "arXiv:2510.21788"
+      ],
+      "reason": "一次要旨は候補expertの出力をbandit学習で集約するonline decision frameworkを扱う。",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Online Mixture of Experts: No-Regret Learning for Optimal Collective Decision-Making"
+    },
+    "DOI:10.1145/3699760": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3699760",
+      "identity_tokens": [
+        "DOI:10.1145/3699760"
+      ],
+      "reason": "GPTWall uses an edge LLM for privacy, but contribution/evaluation is policy authoring and leak-detection quality, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "title": "Governing Open Vocabulary Data Leaks Using an Edge LLM through Programming by Example"
+    },
+    "arXiv:2410.19836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.19836",
+      "identity_tokens": [
+        "arXiv:2410.19836"
+      ],
+      "reason": "DINOv2 vision features for segmentation/localization, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T15:33:54+00:00",
+      "last_checked_at": "2026-10-05T15:33:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Upsampling DINOv2 Features for Unsupervised Vision Tasks and Weakly Supervised Materials Segmentation"
+    },
+    "arXiv:2504.14519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14519",
+      "identity_tokens": [
+        "arXiv:2504.14519"
+      ],
+      "reason": "SlimPipe optimizes activation memory/pipeline bubbles for long-context LLM training, not inference.",
+      "first_checked_at": "2026-10-05T15:33:55+00:00",
+      "last_checked_at": "2026-10-05T15:33:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "SlimPipe: Memory-Thrifty and Efficient Pipeline Parallelism for Long-Context LLM Training"
+    },
+    "arXiv:2504.00661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.00661",
+      "identity_tokens": [
+        "arXiv:2504.00661"
+      ],
+      "reason": "DynMoLE improves MoLE fine-tuning/training convergence; efficiency is training-centric.",
+      "first_checked_at": "2026-10-05T15:33:55+00:00",
+      "last_checked_at": "2026-10-05T15:33:55+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md"
+      ],
+      "title": "DynMoLE: Boosting Mixture of LoRA Experts Fine-Tuning with a Hybrid Routing Mechanism"
+    },
+    "DOI:10.1109/tcsi.2024.3497187": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2024.3497187",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2024.3497187"
+      ],
+      "reason": "Hardware article evaluates ResNet-50 and ViT-B vision workloads; no LLM inference target.",
+      "first_checked_at": "2026-10-05T15:33:55+00:00",
+      "last_checked_at": "2026-10-05T15:33:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md"
+      ],
+      "title": "GSLP-CIM: A 28-nm Globally Systolic and Locally Parallel CNN/Transformer Accelerator With Scalable and Reconfigurable eDRAM Compute-in-Memory Macro for Flexible Dataflow"
+    },
+    "DOI:10.1109/tkde.2025.3527551": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tkde.2025.3527551",
+      "identity_tokens": [
+        "DOI:10.1109/tkde.2025.3527551"
+      ],
+      "reason": "Broad brain/cognitive deep-learning survey, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T15:33:55+00:00",
+      "last_checked_at": "2026-10-05T15:33:55+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md"
+      ],
+      "title": "Brain and Cognitive Science Inspired Deep Learning: A Comprehensive Survey"
+    },
+    "arXiv:2503.20507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.20507",
+      "identity_tokens": [
+        "arXiv:2503.20507"
+      ],
+      "reason": "一次要旨はHPC hybrid storageのdata placementとmigrationをmulti-agent RLで最適化する。",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.09921-hilos-near-storage-processing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Harmonia: Enhancing Data Placement and Migration in Hybrid Storage Systems via Multi-Agent Reinforcement Learning"
+    },
+    "arXiv:2506.08306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08306",
+      "identity_tokens": [
+        "arXiv:2506.08306"
+      ],
+      "reason": "一次要旨は天文観測データ向けの多目的圧縮benchmark datasetを作成する。",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "AstroCompress: A benchmark dataset for multi-purpose compression of astronomical data"
+    },
+    "arXiv:2506.06990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.06990",
+      "identity_tokens": [
+        "arXiv:2506.06990"
+      ],
+      "reason": "一次要旨はk-meansの局所最適性保証とアルゴリズム修正を扱う。",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "title": "Modified K-means Algorithm with Local Optimality Guarantees"
+    },
+    "DOI:10.1145/3721145.3730429": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3721145.3730429",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3730429"
+      ],
+      "reason": "一次要旨は大規模GNN trainingのGPUメモリ壁をmicro-batchingで扱う。",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Cherry: Breaking the GPU Memory Wall for Large-Scale GNN Training via Micro-Batching"
+    },
+    "arXiv:2506.00771": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.00771",
+      "identity_tokens": [
+        "arXiv:2506.00771"
+      ],
+      "reason": "一次要旨はSE(3)-equivariant latent spaceで3D分子を操作する手法を扱う。",
+      "first_checked_at": "2026-10-05T15:33:56+00:00",
+      "last_checked_at": "2026-10-05T15:33:56+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Manipulating 3D Molecules in a Fixed-Dimensional SE(3)-Equivariant Latent Space"
+    },
+    "arXiv:2505.14173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14173",
+      "identity_tokens": [
+        "arXiv:2505.14173"
+      ],
+      "reason": "一次要旨はneural machine translation向けMoE expert routingを扱う。",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "title": "THOR-MoE: Hierarchical Task-Guided and Context-Responsive Routing for Neural Machine Translation"
+    },
+    "arXiv:2505.03320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.03320",
+      "identity_tokens": [
+        "arXiv:2505.03320"
+      ],
+      "reason": "一次要旨はMambaの長文脈性能をCoT summarizationのdistillation/fine-tuningで高める。",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Recall with Reasoning: Chain-of-Thought Distillation for Mamba's Long-Context Memory and Extrapolation"
+    },
+    "arXiv:2504.09712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09712",
+      "identity_tokens": [
+        "arXiv:2504.09712"
+      ],
+      "reason": "一次要旨はLLM jailbreak/safety generalization vulnerabilityのred-teamingを扱う。",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ],
+      "title": "The Structural Safety Generalization Problem"
+    },
+    "DOI:10.1145/3721888.3722091": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3721888.3722091",
+      "identity_tokens": [
+        "DOI:10.1145/3721888.3722091"
+      ],
+      "reason": "一次要旨はWi-Fi sensingでon-device LLMを用いるsemantic-location mobile-computing applicationを扱う。",
+      "first_checked_at": "2026-10-05T15:33:57+00:00",
+      "last_checked_at": "2026-10-05T15:33:57+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+      ],
+      "title": "SELLMA: Semantic Location through On-Device LLMs and WiFi Sensing"
+    },
+    "arXiv:2507.01004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.01004",
+      "identity_tokens": [
+        "arXiv:2507.01004"
+      ],
+      "reason": "The primary experiments and reported gains concern distributed training, not inference or serving.",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "ZeCO: Zero Communication Overhead Sequence Parallelism for Linear Attention"
+    },
+    "arXiv:2506.12597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12597",
+      "identity_tokens": [
+        "arXiv:2506.12597"
+      ],
+      "reason": "一次要旨はdense pretrained LLMをMoEへupcycleするinstruction-tuning algorithmを提案する。",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "title": "Automatic Expert Discovery in LLM Upcycling via Sparse Interpolated Mixture-of-Experts"
+    },
+    "arXiv:2502.04393": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04393",
+      "identity_tokens": [
+        "arXiv:2502.04393"
+      ],
+      "reason": "UniCP optimizes diffusion-transformer video generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "UniCP: A Unified Caching and Pruning Framework for Efficient Video Generation"
+    },
+    "arXiv:2502.00500": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00500",
+      "identity_tokens": [
+        "arXiv:2502.00500"
+      ],
+      "reason": "Video interpolation/extrapolation and generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T15:33:58+00:00",
+      "last_checked_at": "2026-10-05T15:33:58+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/99-other-inference-systems/2024-2409.17422-discovering-the-gems-in-early-layers-accelerating-long-context-llms-with.md"
+      ],
+      "title": "Video Latent Flow Matching: Optimal Polynomial Projections for Video Interpolation and Extrapolation"
+    },
+    "DOI:10.1101/2024.12.13.628435": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.12.13.628435",
+      "identity_tokens": [
+        "DOI:10.1101/2024.12.13.628435"
+      ],
+      "reason": "Protein-sequence PLM for biological interpretation/classification, not language-model serving efficiency.",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md"
+      ],
+      "title": "Paying attention to attention: High attention sites as indicators of protein family and function in language models"
+    },
+    "DOI:10.18653/v1/2026.acl-long.901": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.901",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.901"
+      ],
+      "reason": "自然Slothの一次要旨は長い生成を悪用するDoS攻撃とmulti-tenant servingへのリスクを扱い、推論処理を効率化する方法ではない。",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md"
+      ],
+      "title": "NaturalSloth: Revisiting Denial-of-Service Attacks on Large Language Models"
+    },
+    "DOI:10.18653/v1/2026.findings-acl.945": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.945",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.945"
+      ],
+      "reason": "一次要旨は知識・推論・共同問題解決の限界をgraph-assisted LLMで補う概説で、推論効率化の提案は示していない。",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
+      ],
+      "title": "Graph-Assisted Large Language Models: A Perspective on Mitigating Intrinsic Limitations"
+    },
+    "DOI:10.18653/v1/2026.findings-eacl.52": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.52",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-eacl.52"
+      ],
+      "reason": "ACL Anthologyの一次要旨は、合成データを用いてデータ制約下の言語モデルをスケールする学習法を記述している。",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "Scaling Data-Constrained Language Models with Synthetic Data"
+    },
+    "arXiv:2512.00940": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00940",
+      "identity_tokens": [
+        "arXiv:2512.00940"
+      ],
+      "reason": "一次要旨の中心は複数タスク設定向けのmemory-integrated reconfigurable adaptersで、LLM inference/servingの効率化を示していない。",
+      "first_checked_at": "2026-10-05T15:33:59+00:00",
+      "last_checked_at": "2026-10-05T15:33:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Memory-Integrated Reconfigurable Adapters: A Unified Framework for Settings with Multiple Tasks"
+    },
+    "arXiv:2503.17069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17069",
+      "identity_tokens": [
+        "arXiv:2503.17069"
+      ],
+      "reason": "PVChat contribution is personalized video-LLM training/adaptation, not inference efficiency.",
+      "first_checked_at": "2026-10-05T15:34:00+00:00",
+      "last_checked_at": "2026-10-05T15:34:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ],
+      "title": "PVChat: Personalized Video Chat with One-Shot Learning"
+    },
+    "arXiv:2503.16653": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16653",
+      "identity_tokens": [
+        "arXiv:2503.16653"
+      ],
+      "reason": "Autoregressive mesh generation, not natural-language or multimodal LLM inference.",
+      "first_checked_at": "2026-10-05T15:34:00+00:00",
+      "last_checked_at": "2026-10-05T15:34:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "iFlame: Interleaving Full and Linear Attention for Efficient Mesh Generation"
+    },
+    "DOI:10.1145/3710848.3710881": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3710848.3710881",
+      "identity_tokens": [
+        "DOI:10.1145/3710848.3710881"
+      ],
+      "reason": "Accelerates GNN sparse operations, not LLM inference.",
+      "first_checked_at": "2026-10-05T15:34:00+00:00",
+      "last_checked_at": "2026-10-05T15:34:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "Accelerating GNNs on GPU Sparse Tensor Cores through N:M Sparsity-Oriented Graph Reordering"
+    },
+    "arXiv:2502.14344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14344",
+      "identity_tokens": [
+        "arXiv:2502.14344"
+      ],
+      "reason": "Training convergence in binary spiking neural networks, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T15:34:00+00:00",
+      "last_checked_at": "2026-10-05T15:34:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "Towards Accurate Binary Spiking Neural Networks: Learning with Adaptive Gradient Modulation Mechanism"
+    },
+    "arXiv:2506.17864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17864",
+      "identity_tokens": [
+        "arXiv:2506.17864"
+      ],
+      "reason": "QueueEDIT addresses sequential factual model editing and retention, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T15:34:01+00:00",
+      "last_checked_at": "2026-10-05T15:34:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "QueueEDIT: Structural Self-Correction for Sequential Model Editing in LLMs"
+    },
+    "arXiv:2506.17506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17506",
+      "identity_tokens": [
+        "arXiv:2506.17506"
+      ],
+      "reason": "VeriLocc uses an LLM to optimize GPU compiler register allocation; the target is compiler/code generation, not LLM serving or inference.",
+      "first_checked_at": "2026-10-05T15:34:01+00:00",
+      "last_checked_at": "2026-10-05T15:34:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+      ],
+      "title": "VeriLocc: End-to-End Cross-Architecture Register Allocation via LLM"
+    },
+    "DOI:10.1145/3695053.3731009": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3695053.3731009",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731009"
+      ],
+      "reason": "LazyGPU is a general GPU memory-request architecture for broad data-parallel workloads; the abstract does not establish LLM-specific inference/serving relevance.",
+      "first_checked_at": "2026-10-05T15:34:01+00:00",
+      "last_checked_at": "2026-10-05T15:34:01+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "The Sparsity-Aware LazyGPU Architecture"
+    },
+    "arXiv:2506.08487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08487",
+      "identity_tokens": [
+        "arXiv:2506.08487"
+      ],
+      "reason": "VaNeu audits fairness and reasoning behavior of small language models; it is an evaluation framework, not an efficiency method.",
+      "first_checked_at": "2026-10-05T15:34:01+00:00",
+      "last_checked_at": "2026-10-05T15:34:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Beyond Bias Scores: Unmasking Vacuous Neutrality in Small Language Models"
     }
   }
 }

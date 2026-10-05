@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17e2e6cc573003d1-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.21788",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.21788",
+    "identity_tokens": [
+      "arXiv:2510.21788"
+    ],
+    "reason": "一次要旨は候補expertの出力をbandit学習で集約するonline decision frameworkを扱う。",
+    "first_checked_at": "2026-10-05T15:33:54+00:00",
+    "last_checked_at": "2026-10-05T15:33:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+    ],
+    "title": "Online Mixture of Experts: No-Regret Learning for Optimal Collective Decision-Making"
+  },
+  "processed_at": "2026-10-05T15:33:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17e2e6cc5730",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

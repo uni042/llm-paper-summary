@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6fd601998162443a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.20507",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.20507",
+    "identity_tokens": [
+      "arXiv:2503.20507"
+    ],
+    "reason": "一次要旨はHPC hybrid storageのdata placementとmigrationをmulti-agent RLで最適化する。",
+    "first_checked_at": "2026-10-05T15:33:56+00:00",
+    "last_checked_at": "2026-10-05T15:33:56+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2024-2409.15654-cambricon-llm-chiplet-flash-inference.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.09921-hilos-near-storage-processing.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "Harmonia: Enhancing Data Placement and Migration in Hybrid Storage Systems via Multi-Agent Reinforcement Learning"
+  },
+  "processed_at": "2026-10-05T15:33:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6fd601998162",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
