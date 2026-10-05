@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-37-part-06-244c615ed3cf",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3690706",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2026.3690706"
+      ],
+      "title": "EMSTrans: An Efficient Hardware Accelerator for Transformer With Multi-Level Sparsity Awareness",
+      "reason": "DOI/IEEE full-text page https://doi.org/10.1109/TCSI.2026.3690706 was inaccessible, and searches did not locate a primary full-text copy. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/TCSI.2026.3690706",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSI.2026.3692866",
+      "identity_tokens": [
+        "DOI:10.1109/TCSI.2026.3692866"
+      ],
+      "title": "DSLA: An Energy-Efficient Dual-Sparsity LLM Accelerator With HiMix-BFP",
+      "reason": "IEEE full text at https://doi.org/10.1109/TCSI.2026.3692866 was inaccessible; searches found metadata/abstract only, not a primary full-text copy or body sections. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/TCSI.2026.3692866",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSS.2026.3695671",
+      "identity_tokens": [
+        "DOI:10.1109/TCSS.2026.3695671"
+      ],
+      "title": "ReMALIS: Inference-Guided Intention Propagation for Multiagent Stochastic Task Coordination With Large Language Models in Complex Networks Domains",
+      "reason": "The abstract focuses on training collaborative multi-agent reinforcement-learning policies with LLM agents; it does not propose inference efficiency or serving.",
+      "source_url": "https://doi.org/10.1109/TCSS.2026.3695671",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2026.3679352",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2026.3679352"
+      ],
+      "title": "MSFT-Net: Mixture Semantic-Agnostic Manipulation Trace Enhanced Architecture for Robust Image Manipulation Localization",
+      "reason": "The paper concerns image-manipulation localization and vision features, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2026.3679352",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCSVT.2026.3682663",
+      "identity_tokens": [
+        "DOI:10.1109/TCSVT.2026.3682663"
+      ],
+      "title": "3D-IRMM-Net: An Interpretable Radiologist-Mimicking 3D Multimodal Network for Lesion Detection in ABUS With LLM-Based Guidance and Uncertainty Quantification",
+      "reason": "LLM-based guidance is used in a breast-ultrasound lesion detector; the contribution is clinical multimodal detection, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1109/TCSVT.2026.3682663",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
