@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-50-part-08-60a50eeddc1f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00016",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00016"
+      ],
+      "title": "BridgeScheduler: Non-Intrusive Sensing and Collaborative Scheduling for Hybrid Edge-Cloud Environments",
+      "reason": "BridgeScheduler targets generic mobile edge-cloud application scheduling and cloud variability; the abstract does not establish LLM inference/serving as its workload or contribution.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00016",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2505.24095-skywalker-cross-region-load-balancer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00021",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00021"
+      ],
+      "title": "Two-level Network Bandwidth Allocation for Multi-tenant AI Clouds in Kubernetes",
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the full evaluation and workload composition could not be checked.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00021",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00037",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00037"
+      ],
+      "title": "BYSTANDER: State-Aware End-to-End Latency Prediction for Heterogeneous LLM Inference Scheduling",
+      "reason": "The IEEE Xplore article route required JavaScript/anti-bot verification, and the primary full text could not be read.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00037",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.08509-ssjf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00722-demystifying-cost-efficiency-in-llm-serving-over-heterogeneous-gpus.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00039",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00039"
+      ],
+      "title": "Reducing Memory Requirements of LLM Inference Through Online rANS Decompression",
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the implementation, comparison conditions and limitations could not be reviewed.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00039",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/03-expert-prefetch/2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00045",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00045"
+      ],
+      "title": "PRISM: Workload-Aware Autonomous Network Fault Recovery for Hyperscale AI Training Fabrics",
+      "reason": "PRISM addresses fault recovery in hyperscale AI training fabrics and explicitly targets training collectives, not inference.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00045",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.25059-r2ccl-resilient-collective-serving.md"
+      ]
+    }
+  ]
+}
