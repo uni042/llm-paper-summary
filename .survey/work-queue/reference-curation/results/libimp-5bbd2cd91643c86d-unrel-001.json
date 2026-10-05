@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5bbd2cd91643c86d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3394171.3413901",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3394171.3413901",
+    "identity_tokens": [
+      "DOI:10.1145/3394171.3413901"
+    ],
+    "reason": "要旨はimage captioning専用の非自己回帰latent generationと画像条件付きcaption latencyで、汎用LLM inference対象外。",
+    "first_checked_at": "2026-10-05T22:59:34+00:00",
+    "last_checked_at": "2026-10-05T22:59:34+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+    ],
+    "title": "Iterative Back Modification for Faster Image Captioning"
+  },
+  "processed_at": "2026-10-05T22:59:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5bbd2cd91643",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

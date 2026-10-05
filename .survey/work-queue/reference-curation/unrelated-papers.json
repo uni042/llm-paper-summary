@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T22:27:29+00:00",
-  "record_count": 6510,
+  "updated_at": "2026-10-05T22:59:37+00:00",
+  "record_count": 6548,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -94108,6 +94108,539 @@
       "last_checked_at": "2026-10-05T22:27:25+00:00",
       "linked_from": [],
       "title": "A-MEM: Agentic Memory for LLM Agents"
+    },
+    "DOI:10.1016/j.ins.2026.123498": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123498",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123498"
+      ],
+      "reason": "packet要旨欄が空のため一次publisher ScienceDirect概要を確認。LogPDGMoEはシステムログ異常検知用MoEでLLM推論/servingと異なる。",
+      "first_checked_at": "2026-10-05T22:59:29+00:00",
+      "last_checked_at": "2026-10-05T22:59:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "LogPDGMoE: Log anomaly detection method based on MoE with parallel dual-noise gating network"
+    },
+    "arXiv:2603.19873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19873",
+      "identity_tokens": [
+        "arXiv:2603.19873"
+      ],
+      "reason": "要旨はEarth-observation vision transformerのfine-tuning前層選択/剪定。対象は画像モデル。",
+      "first_checked_at": "2026-10-05T22:59:29+00:00",
+      "last_checked_at": "2026-10-05T22:59:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "SIMPLER: Efficient Foundation Model Adaptation via Similarity-Guided Layer Pruning for Earth Observation"
+    },
+    "arXiv:2603.09205": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.09205",
+      "identity_tokens": [
+        "arXiv:2603.09205"
+      ],
+      "reason": "要旨は感情によるLLMのattention/推論挙動分析で、推論コスト改善法を提案しない。",
+      "first_checked_at": "2026-10-05T22:59:29+00:00",
+      "last_checked_at": "2026-10-05T22:59:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Emotion is Not Just a Label: Latent Emotional Factors in LLM Processing"
+    },
+    "arXiv:2603.07572": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07572",
+      "identity_tokens": [
+        "arXiv:2603.07572"
+      ],
+      "reason": "要旨はindustrial time-series MLLM分析枠組みで、servingや推論効率化が主題でない。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "TS-MLLM: A Multi-Modal Large Language Model-based Framework for Industrial Time-Series Big Data Analysis"
+    },
+    "DOI:10.1109/wacv61042.2026.00213": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacv61042.2026.00213",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61042.2026.00213"
+      ],
+      "reason": "要旨は小物体検出用のsegmentation/geometric priorとfeature routingで、LLM推論対象外。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "SPAR-Det: Segmentation-guided and Prior-Aided Routing for Small Object Detection"
+    },
+    "arXiv:2605.13769": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13769",
+      "identity_tokens": [
+        "arXiv:2605.13769"
+      ],
+      "reason": "要旨は25M未満の小規模MoE対denseの事前学習損失比較に限定し、推論時の圧縮・効率化手法や推論評価を報告していない。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Dense vs Sparse Pretraining at Tiny Scale: Active-Parameter vs Total-Parameter Matching"
+    },
+    "arXiv:2605.09013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09013",
+      "identity_tokens": [
+        "arXiv:2605.09013"
+      ],
+      "reason": "要旨は衛星massive-MIMO上の画像semantic communicationで、LLM推論/serving機構ではない。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Semantic Communication for Multi-Satellite Massive MIMO Transmission: A Mixture of Cooperative Modes Framework"
+    },
+    "arXiv:2605.08322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08322",
+      "identity_tokens": [
+        "arXiv:2605.08322"
+      ],
+      "reason": "routed experts間のdebate反復を追加する。中心評価はタスク性能で、LLM latency/memory/throughputの改善評価なし。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "SDG-MoE: Signed Debate Graph Mixture-of-Experts"
+    },
+    "arXiv:2604.19344": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.19344",
+      "identity_tokens": [
+        "arXiv:2604.19344"
+      ],
+      "reason": "要旨は視覚入力を使う四足ロボットparkour方策のMoE学習で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T22:59:30+00:00",
+      "last_checked_at": "2026-10-05T22:59:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Quadruped Parkour Learning: Sparsely Gated Mixture of Experts with Visual Input"
+    },
+    "DOI:10.1109/isqed69900.2026.11534770": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isqed69900.2026.11534770",
+      "identity_tokens": [
+        "DOI:10.1109/isqed69900.2026.11534770"
+      ],
+      "reason": "要旨はYOLOv8系をedgeでmodel-hopする物体追跡手法で、LLMではない。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Uncertainty-Guided Adaptive Model Hopping for Efficient Object Tracking on Edge Devices"
+    },
+    "DOI:10.1007/s10462-025-11259-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10462-025-11259-x",
+      "identity_tokens": [
+        "DOI:10.1007/s10462-025-11259-x"
+      ],
+      "reason": "要旨はECG診断向けtransformer/LLM surveyで、推論効率化の具体的手法はない。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "A survey of transformers and large language models for ECG diagnosis: advances, challenges, and future directions"
+    },
+    "arXiv:2410.08368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08368",
+      "identity_tokens": [
+        "arXiv:2410.08368"
+      ],
+      "reason": "要旨はimage/video向けadaptive visual tokenizationでありLLM推論ではない。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "ElasticTok: Adaptive Tokenization for Image and Video"
+    },
+    "arXiv:1908.05915": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1908.05915",
+      "identity_tokens": [
+        "arXiv:1908.05915"
+      ],
+      "reason": "要旨はplaceholderによるbidirectional sequence generation手法で、推論効率/serving改善の主張がない。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Attending to Future Tokens for Bidirectional Sequence Generation"
+    },
+    "arXiv:2011.05363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2011.05363",
+      "identity_tokens": [
+        "arXiv:2011.05363"
+      ],
+      "reason": "要旨はdiscrete energy-based modelの学習アルゴリズムで、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Learning Discrete Energy-based Models via Auxiliary-variable Local Exploration"
+    },
+    "arXiv:2602.04304": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04304",
+      "identity_tokens": [
+        "arXiv:2602.04304"
+      ],
+      "reason": "training-free VAQ selects layer/crop and uses positive/counterfactual streams for logit correction. Qwen-VL/LLaVAのVQA accuracyが中心、推論cost削減なし。",
+      "first_checked_at": "2026-10-05T22:59:32+00:00",
+      "last_checked_at": "2026-10-05T22:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Beyond Static Cropping: Layer-Adaptive Visual Localization and Decoding Enhancement"
+    },
+    "arXiv:2512.15764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.15764",
+      "identity_tokens": [
+        "arXiv:2512.15764"
+      ],
+      "reason": "要旨はSLMのgradient-guided block選択fine-tuningを扱う学習時コスト削減で、推論効率ではない。",
+      "first_checked_at": "2026-10-05T22:59:32+00:00",
+      "last_checked_at": "2026-10-05T22:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "AdaGradSelect: An adaptive gradient-guided layer selection method for efficient fine-tuning of SLMs"
+    },
+    "DOI:10.1038/s41598-025-28612-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-28612-3",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-28612-3"
+      ],
+      "reason": "macro forecast向けBPNN最適化。transformer/LLM/cache/servingなし。",
+      "first_checked_at": "2026-10-05T22:59:32+00:00",
+      "last_checked_at": "2026-10-05T22:59:32+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "An enhanced bat algorithm based intelligent inspired architecture for resilient macroeconomic prediction"
+    },
+    "DOI:10.1609/aaai.v35i4.16421": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v35i4.16421",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v35i4.16421"
+      ],
+      "reason": "要旨は動画captioningの非自己回帰生成で、タスク特化でありLLM serving/汎用推論効率ではない。",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Non-Autoregressive Coarse-to-Fine Video Captioning"
+    },
+    "arXiv:2502.02542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02542",
+      "identity_tokens": [
+        "arXiv:2502.02542"
+      ],
+      "reason": "context-injected decoys increase reasoning tokens (abstract reports up to 13x/46x/12x); studies attack/mitigation, not optimization.",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "OverThink: Slowdown Attacks on Reasoning LLMs"
+    },
+    "arXiv:2002.03079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.03079",
+      "identity_tokens": [
+        "arXiv:2002.03079"
+      ],
+      "reason": "要旨はblank filling/text editing向けiterative language modelと効率的学習を提案するが推論時cost改善を主張しない。",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Blank Language Models"
+    },
+    "arXiv:1911.02215": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.02215",
+      "identity_tokens": [
+        "arXiv:1911.02215"
+      ],
+      "reason": "要旨はneural machine translation専用の非自己回帰decodingで、LLM推論/servingへの具体的接続やlinked lineageなし。",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Guiding Non-Autoregressive Neural Machine Translation Decoding with Reordering Information"
+    },
+    "arXiv:2002.08024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.08024",
+      "identity_tokens": [
+        "arXiv:2002.08024"
+      ],
+      "reason": "要旨はtask-oriented dialogue state trackingのslot-value生成で、汎用LLM推論/serving手法でなくlinked lineageなし。",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Non-Autoregressive Dialog State Tracking"
+    },
+    "DOI:10.1145/3394171.3413901": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3394171.3413901",
+      "identity_tokens": [
+        "DOI:10.1145/3394171.3413901"
+      ],
+      "reason": "要旨はimage captioning専用の非自己回帰latent generationと画像条件付きcaption latencyで、汎用LLM inference対象外。",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Iterative Back Modification for Faster Image Captioning"
+    },
+    "arXiv:2410.11042": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.11042",
+      "identity_tokens": [
+        "arXiv:2410.11042"
+      ],
+      "reason": "要旨はLLM layer間topological featureの解釈指標で、推論計算を削減する手法ではない。",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Persistent Topological Features in Large Language Models"
+    },
+    "arXiv:2501.04066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04066",
+      "identity_tokens": [
+        "arXiv:2501.04066"
+      ],
+      "reason": "lithography image detection clientsのtraining/aggregation/distillation; no inference cache or LLM serving.",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "Federated Knowledge Distillation for Multi-Model Architectures Lithography Hotspot Detection"
+    },
+    "arXiv:2509.18052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.18052",
+      "identity_tokens": [
+        "arXiv:2509.18052"
+      ],
+      "reason": "systematic audit of social simulation studies, not serving infrastructure or inference optimization.",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies"
+    },
+    "arXiv:2604.13536": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.13536",
+      "identity_tokens": [
+        "arXiv:2604.13536"
+      ],
+      "reason": "filesystem stages mutations for commit, snapshots for correction and gates accesses; tests coding-agent tasks, no inference efficiency metrics.",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "title": "Don't Let AI Agents YOLO Your Files: Information and Control in Agent-Native Filesystems"
+    },
+    "arXiv:2411.02992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.02992",
+      "identity_tokens": [
+        "arXiv:2411.02992"
+      ],
+      "reason": "要旨はmultimodal sequential recommendation向けPEFT/fine-tuning efficiencyで、主な対象はtraining adaptation。推論時LLM/serving改善でない。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Efficient and Effective Adaptation of Multimodal Foundation Models in Sequential Recommendation"
+    },
+    "arXiv:2108.02359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.02359",
+      "identity_tokens": [
+        "arXiv:2108.02359"
+      ],
+      "reason": "要旨はvideo captioning向けObject-Oriented non-autoregressive生成でありLLM対象外。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "O2NA: An Object-Oriented Non-Autoregressive Approach for Controllable Video Captioning"
+    },
+    "arXiv:2502.17516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.17516",
+      "identity_tokens": [
+        "arXiv:2502.17516"
+      ],
+      "reason": "要旨はmultimodal foundation modelのmechanistic interpretability調査で推論コスト改善ではない。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "A Survey on Mechanistic Interpretability for Multi-Modal Foundation Models"
+    },
+    "DOI:10.3390/plants14132082": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/plants14132082",
+      "identity_tokens": [
+        "DOI:10.3390/plants14132082"
+      ],
+      "reason": "要旨はcotton disease vision分類向けMobileViT軽量化/early exit/QATでありLLM対象外。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Resource-Efficient Cotton Network: A Lightweight Deep Learning Framework for Cotton Disease and Pest Classification"
+    },
+    "arXiv:2505.23947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23947",
+      "identity_tokens": [
+        "arXiv:2505.23947"
+      ],
+      "reason": "要旨はprior-fitted Bayesian prediction/事前学習計算の展望でLLM推論/servingでない。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Position: The Future of Bayesian Prediction Is Prior-Fitted"
+    },
+    "arXiv:2505.13737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13737",
+      "identity_tokens": [
+        "arXiv:2505.13737"
+      ],
+      "reason": "要旨はLlama attention headの因果的解釈で、推論計算を改善する実行機構ではない。",
+      "first_checked_at": "2026-10-05T22:59:35+00:00",
+      "last_checked_at": "2026-10-05T22:59:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Causal Head Gating: A Framework for Interpreting Roles of Attention Heads in Transformers"
+    },
+    "DOI:10.1109/wacv61042.2026.00759": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/wacv61042.2026.00759",
+      "identity_tokens": [
+        "DOI:10.1109/wacv61042.2026.00759"
+      ],
+      "reason": "要旨は低照度画像改善のvision transformer/MoEで、LLM serving対象でない。",
+      "first_checked_at": "2026-10-05T22:59:36+00:00",
+      "last_checked_at": "2026-10-05T22:59:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "ISALux: Illumination and Semantics-Aware Transformer Employing Mixture of Experts for Low Light Image Enhancement"
+    },
+    "arXiv:2603.03564": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03564",
+      "identity_tokens": [
+        "arXiv:2603.03564"
+      ],
+      "reason": "要旨は画像・動画・3Dを扱うlarge vision modelのMoE設計でありLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T22:59:36+00:00",
+      "last_checked_at": "2026-10-05T22:59:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Modeling Cross-vision Synergy for Unified Large Vision Model"
+    },
+    "arXiv:2608.11623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11623",
+      "identity_tokens": [
+        "arXiv:2608.11623"
+      ],
+      "reason": "要旨は時系列予測向けに凍結LLMを適応する周波数MoEで、推論効率/serving改善の具体的方法が主題でない。",
+      "first_checked_at": "2026-10-05T22:59:36+00:00",
+      "last_checked_at": "2026-10-05T22:59:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "FM-LLM: A frequency-enhanced mixture-of-experts framework for adapting LLMs to time series forecasting"
+    },
+    "DOI:10.1016/j.neucom.2026.132621": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.132621",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.132621"
+      ],
+      "reason": "packet要旨欄が空のため一次publisher ScienceDirect概要を確認。手法はopen-knowledge-graph embedding expertsでLLM servingでない。",
+      "first_checked_at": "2026-10-05T22:59:37+00:00",
+      "last_checked_at": "2026-10-05T22:59:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Mixture of embedding experts for open knowledge graphs"
+    },
+    "arXiv:2603.12269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12269",
+      "identity_tokens": [
+        "arXiv:2603.12269"
+      ],
+      "reason": "difficulty-aware early exitをvision DNNで評価。LM workloadなし。",
+      "first_checked_at": "2026-10-05T22:59:37+00:00",
+      "last_checked_at": "2026-10-05T22:59:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "DART: Input-Difficulty-AwaRe Adaptive Threshold for Early-Exit DNNs"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-218cccca3e453621-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.09013",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.09013",
+    "identity_tokens": [
+      "arXiv:2605.09013"
+    ],
+    "reason": "要旨は衛星massive-MIMO上の画像semantic communicationで、LLM推論/serving機構ではない。",
+    "first_checked_at": "2026-10-05T22:59:30+00:00",
+    "last_checked_at": "2026-10-05T22:59:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "Semantic Communication for Multi-Satellite Massive MIMO Transmission: A Mixture of Cooperative Modes Framework"
+  },
+  "processed_at": "2026-10-05T22:59:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-218cccca3e45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

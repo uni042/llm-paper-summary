@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T22:27:28+00:00",
-  "record_count": 2095,
+  "updated_at": "2026-10-05T22:59:34+00:00",
+  "record_count": 2100,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32331,6 +32331,81 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Glow: Graph Lowering Compiler Techniques for Neural Networks"
+    },
+    "arXiv:1905.12790": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1905.12790",
+      "identity_tokens": [
+        "arXiv:1905.12790"
+      ],
+      "reason": "一次本文§3–6を確認。BERT型undirected masked sequence modelへdecoding orderを適用しWMT14英独翻訳でconstant-timeとquality/speedを評価。LLM推論との概念的関連はあるが、翻訳専用の古い実験で現行LLM servingへの実証なし。",
+      "first_checked_at": "2026-10-05T22:59:31+00:00",
+      "last_checked_at": "2026-10-05T22:59:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Generalized Framework of Sequence Generation with Application to Undirected Sequence Models"
+    },
+    "DOI:10.1007/s11263-026-02753-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11263-026-02753-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-02753-y"
+      ],
+      "reason": "一次abstract/full textを取得できず、タイトルだけで除外しない。一次DOI landing pageとpublisher検索を試したが本文内容を確認できなかった。",
+      "first_checked_at": "2026-10-05T22:59:32+00:00",
+      "last_checked_at": "2026-10-05T22:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Entropy-Guided Condensing for Vision Transformer"
+    },
+    "DOI:10.1109/csitss67709.2025.11295492": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/csitss67709.2025.11295492",
+      "identity_tokens": [
+        "DOI:10.1109/csitss67709.2025.11295492"
+      ],
+      "reason": "要旨はLLM query routingとDistilBERT classifierを主張し関連性は高い。一次IEEE Xplore DOI pageとpublisher検索を試したが本文取得に失敗。二次catalogの数値は根拠にせず、primary claim未検証としてborderline。",
+      "first_checked_at": "2026-10-05T22:59:32+00:00",
+      "last_checked_at": "2026-10-05T22:59:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Smart Meta-Controller: Energy Efficient Dynamic Routing for Large Language Model Inference Systems"
+    },
+    "arXiv:2006.01112": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2006.01112",
+      "identity_tokens": [
+        "arXiv:2006.01112"
+      ],
+      "reason": "一次本文§3–5はbounded-context Markov Transformer/cascaded decodingでO(MK²logL) parallel generationを構成し、5つのMT datasetでspeed/quality tradeoffを示す。2020年の翻訳専用研究で現行LLM serving測定がなく関係は弱い。",
+      "first_checked_at": "2026-10-05T22:59:33+00:00",
+      "last_checked_at": "2026-10-05T22:59:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cascaded Text Generation with Markov Transformers"
+    },
+    "DOI:10.1007/s11227-026-08777-y": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08777-y",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08777-y"
+      ],
+      "reason": "一次abstract/full textを取得できず、Springer DOI/publisher検索を試行。二次catalog summaryは技術判断の根拠に使わない。",
+      "first_checked_at": "2026-10-05T22:59:34+00:00",
+      "last_checked_at": "2026-10-05T22:59:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DNN task computation offloading and resource allocation optimization strategy based on probabilistic early exit"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fc3592089addf6b1-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.12269",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.12269",
+    "identity_tokens": [
+      "arXiv:2603.12269"
+    ],
+    "reason": "difficulty-aware early exitをvision DNNで評価。LM workloadなし。",
+    "first_checked_at": "2026-10-05T22:59:37+00:00",
+    "last_checked_at": "2026-10-05T22:59:37+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+    ],
+    "title": "DART: Input-Difficulty-AwaRe Adaptive Threshold for Early-Exit DNNs"
+  },
+  "processed_at": "2026-10-05T22:59:37+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc3592089add",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

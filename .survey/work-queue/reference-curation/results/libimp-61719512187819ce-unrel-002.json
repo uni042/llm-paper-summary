@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-61719512187819ce-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.13536",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.13536",
+    "identity_tokens": [
+      "arXiv:2604.13536"
+    ],
+    "reason": "filesystem stages mutations for commit, snapshots for correction and gates accesses; tests coding-agent tasks, no inference efficiency metrics.",
+    "first_checked_at": "2026-10-05T22:59:34+00:00",
+    "last_checked_at": "2026-10-05T22:59:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+    ],
+    "title": "Don't Let AI Agents YOLO Your Files: Information and Control in Agent-Native Filesystems"
+  },
+  "processed_at": "2026-10-05T22:59:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-617195121878",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
