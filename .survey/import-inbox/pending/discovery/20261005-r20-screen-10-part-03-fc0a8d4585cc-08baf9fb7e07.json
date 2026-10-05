@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-10-part-03-fc0a8d4585cc",
+  "reference_main_sha": "a4706318190fcd2711b52e99952a34fb38a38a37",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.53941/tgina.2026.100005",
+      "identity_tokens": [
+        "DOI:10.53941/tgina.2026.100005"
+      ],
+      "title": "Program Graph Learning for Software Vulnerability Analysis: A Survey",
+      "reason": "The abstract is a survey of program-graph learning for software vulnerability analysis, not LLM inference systems.",
+      "source_url": "https://doi.org/10.53941/tgina.2026.100005",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08156",
+      "identity_tokens": [
+        "arXiv:2609.08156"
+      ],
+      "title": "When Metrics Reward the Worst Translations: Internalizing Cultural Reasoning for Social Media Translation Evaluation",
+      "reason": "arXiv abstract studies cultural adequacy in translation evaluation and RL-based metric alignment, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.08156",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08183",
+      "identity_tokens": [
+        "arXiv:2609.08183"
+      ],
+      "title": "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training with Routing Harness",
+      "reason": "No cost/latency/throughput outcome or routing-policy efficiency comparison is reported. The serving-time router is context for the training pipeline, so inference-efficiency fit is weak.",
+      "source_url": "https://arxiv.org/abs/2609.08183",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08279",
+      "identity_tokens": [
+        "arXiv:2609.08279"
+      ],
+      "title": "What Eviction Destroys: A Restore-Counterfactual Audit of Forgetting in Agent Memory",
+      "reason": "It is an audit/evaluation method, not a new memory-compression or serving optimization; one main benchmark/readers and specified policy classes limit generalization.",
+      "source_url": "https://arxiv.org/abs/2609.08279",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08341",
+      "identity_tokens": [
+        "arXiv:2609.08341"
+      ],
+      "title": "TV-Regulated OPD: Direction Matters in On-Policy Distillation",
+      "reason": "arXiv abstract studies on-policy distillation stability during model training, not inference-time execution.",
+      "source_url": "https://arxiv.org/abs/2609.08341",
+      "first_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "last_checked_at": "2026-10-05T05:43:19.290468+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
