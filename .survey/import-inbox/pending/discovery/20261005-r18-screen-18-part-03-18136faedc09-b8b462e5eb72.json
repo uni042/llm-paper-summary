@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-18-part-03-18136faedc09",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27297",
+      "identity_tokens": [
+        "arXiv:2609.27297"
+      ],
+      "title": "Large Knowledge Model: A Knowledge Foundation for Agentic Science at Scale",
+      "reason": "Agentic science envisions many autonomous agents investigating concurrently while building on a shared, evolving body of scientific knowledge. This requires a knowledge foundation that supports high-concurrency access, preserves traceable and reusable reasoning, and grows incrementally. We propose the Large Knowledge Model (LKM), a growing, agent-native knowledge foundation that provides a general representation of scientific knowledge across disciplines. LKM organizes the scientific literature ",
+      "source_url": "https://arxiv.org/abs/2609.27297",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27306",
+      "identity_tokens": [
+        "arXiv:2609.27306"
+      ],
+      "title": "Discrete Diffusion Models via Evolving Variational Autoregressive Networks",
+      "reason": "Conventional score-based diffusion models learn scores without representing normalized densities, whereas tractable normalized models support both sampling and direct likelihood evaluation. A recent tensor-network approach provides such a representation but is largely restricted to low-dimensional lattices. Here we introduce a discrete diffusion model that parameterizes normalized probability distributions using variational autoregressive networks. Explicit Markov jump operators govern the forwa",
+      "source_url": "https://arxiv.org/abs/2609.27306",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27367",
+      "identity_tokens": [
+        "arXiv:2609.27367"
+      ],
+      "title": "Seal, Then Sample: Sampled Layerwise Proofs for Verifiable LLM Inference from GPT-2 to 70B",
+      "reason": "LLM inferenceの検証可能性を扱うが、主対象はproof生成・監査コストで、推論自体の速度/メモリ/serving効率を改善する仕事ではない。",
+      "source_url": "https://arxiv.org/abs/2609.27367",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27411",
+      "identity_tokens": [
+        "arXiv:2609.27411"
+      ],
+      "title": "When Labels Are Scarce: An Oscillatory State Space Model for Vibration Diagnosis",
+      "reason": "Machine fault diagnosis from vibration requires learning from scarce labelled fault recordings while meeting the computational constraints of edge devices for local inference. We introduce DualRes, a compact oscillatory state-space model that combines two complementary spectral views of vibration, capturing rapid changes and fine frequency structure. Time-aligned views are processed by selective oscillatory memory, which learns how long to retain temporal patterns. The encoder contains 39,528 pa",
+      "source_url": "https://arxiv.org/abs/2609.27411",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27437",
+      "identity_tokens": [
+        "arXiv:2609.27437"
+      ],
+      "title": "Mamba-Family State-Space Model Kernels on a Programmable CGLA",
+      "reason": "LLM系Mambaのprogrammable kernel実装だが、報告されたMamba-130Mの0.345 tok/sは同じ実装環境のCPU/GPU baselineとの比較がなく、効率向上を示せない。",
+      "source_url": "https://arxiv.org/abs/2609.27437",
+      "first_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "last_checked_at": "2026-10-05T04:50:18.799929+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
