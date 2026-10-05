@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:09:15+00:00",
-  "record_count": 2791,
+  "updated_at": "2026-10-05T05:12:07+00:00",
+  "record_count": 2806,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -40583,6 +40583,231 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "VisionHOPE: Visual Backbones as Self-Modifying Learning Systems"
+    },
+    "arXiv:2609.33379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33379",
+      "identity_tokens": [
+        "arXiv:2609.33379"
+      ],
+      "reason": "Proposes natural-language policy gradients for agent improvement through external policy memory; the primary contribution is agent learning, not inference efficiency.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "NLPG: Natural-Language Policy Gradients for Self-Evolving Language Agents"
+    },
+    "arXiv:2609.33384": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33384",
+      "identity_tokens": [
+        "arXiv:2609.33384"
+      ],
+      "reason": "Presents 4-bit quantization for video diffusion transformers; target model/application is video generation rather than LLM inference.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "PulseQuant: Propagation-Guided Subspace Correction for 4-Bit Video Diffusion Transformers"
+    },
+    "arXiv:2609.33462": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33462",
+      "identity_tokens": [
+        "arXiv:2609.33462"
+      ],
+      "reason": "Training-free geometric grounding improves VLM spatial reasoning; abstract presents quality gains, not efficiency gains.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "SphMind: Towards Robust, Training-Free VLM-based Spatial Reasoning with a 360 Camera"
+    },
+    "arXiv:2609.33496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33496",
+      "identity_tokens": [
+        "arXiv:2609.33496"
+      ],
+      "reason": "Post-training quantization for image/video diffusion models; not language-model inference.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Chameleon: Dynamic Format Adapter for Efficient Diffusion"
+    },
+    "arXiv:2609.33517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33517",
+      "identity_tokens": [
+        "arXiv:2609.33517"
+      ],
+      "reason": "Governs temporal validity of agent memories for correctness; does not target inference cost and reports more tokens for some comparisons.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "TRACE: Governing Memory Validity in Evolving Multi-Agent Systems"
+    },
+    "arXiv:2609.33548": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33548",
+      "identity_tokens": [
+        "arXiv:2609.33548"
+      ],
+      "reason": "Ternary zeroth-order optimization for fine-tuning BitNet; training-time optimization.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "TerMeZO: Ternary Sparse Zeroth-Order Optimization for Fine-tuning BitNet Models at the Edge"
+    },
+    "arXiv:2609.33566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33566",
+      "identity_tokens": [
+        "arXiv:2609.33566"
+      ],
+      "reason": "Observer state-space models for time-series forecasting; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Correct then Forecast: Observer State-Space Models for Time Series Forecasting"
+    },
+    "arXiv:2609.33400": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33400",
+      "identity_tokens": [
+        "arXiv:2609.33400"
+      ],
+      "reason": "Action-boundary detection from video features; not an LLM inference or serving technique.",
+      "first_checked_at": "2026-10-05T05:12:06+00:00",
+      "last_checked_at": "2026-10-05T05:12:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Groupwise Selective State-Space Filtering for Accurate and Streaming Action Boundary Detection"
+    },
+    "arXiv:2609.33408": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33408",
+      "identity_tokens": [
+        "arXiv:2609.33408"
+      ],
+      "reason": "Mamba-based sparse-radar micro-Doppler sensing; outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "StarBOA: Real-Time Mamba State-Space Unrolling for Sparse Radar Micro-Doppler in ISAC Networks"
+    },
+    "arXiv:2609.33450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33450",
+      "identity_tokens": [
+        "arXiv:2609.33450"
+      ],
+      "reason": "Fine-tunes a VLM for sports-person attribute extraction and confidence routing; perception accuracy, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Native Association: Confidence-Aware Human Perception in the Wild with a Foundation VLM"
+    },
+    "arXiv:2609.33591": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33591",
+      "identity_tokens": [
+        "arXiv:2609.33591"
+      ],
+      "reason": "Quantized softmax is studied during Transformer pretraining and changes gradients; training-only.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Pretraining Transformers with Quantized Softmax in Attention"
+    },
+    "arXiv:2609.33601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33601",
+      "identity_tokens": [
+        "arXiv:2609.33601"
+      ],
+      "reason": "Quantization-aware distillation/QAT trains low-bit activation models; deployment operators are discussed, but contribution is training-time.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "JustQuant: You Don't Need Smoothing, SVD, or Rotation for 4-Bit Activation Quantization"
+    },
+    "arXiv:2609.33618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33618",
+      "identity_tokens": [
+        "arXiv:2609.33618"
+      ],
+      "reason": "Reinforcement-learns parallel tool actions to improve agent task success; abstract gives no inference-cost/serving efficiency evidence.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "ParaAgent: Reinforcing Parallel Acting in Open-World Tool Environments"
+    },
+    "arXiv:2609.33659": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33659",
+      "identity_tokens": [
+        "arXiv:2609.33659"
+      ],
+      "reason": "Learns multimodal embeddings with evidence-aligned readout; representation-learning contribution, not inference efficiency.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Learning Multimodal Embeddings with Evidence-Aligned Readout"
+    },
+    "arXiv:2609.33662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33662",
+      "identity_tokens": [
+        "arXiv:2609.33662"
+      ],
+      "reason": "Audit-first selective updates under imperfect verification; a training/update policy, not model inference efficiency.",
+      "first_checked_at": "2026-10-05T05:12:07+00:00",
+      "last_checked_at": "2026-10-05T05:12:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Audit-First VAPO: Risk-Certified Selective Updates under Imperfect Verification"
     }
   }
 }

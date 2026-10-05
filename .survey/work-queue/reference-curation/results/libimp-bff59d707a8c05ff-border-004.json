@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bff59d707a8c05ff-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33443",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33443",
+    "identity_tokens": [
+      "arXiv:2609.33443"
+    ],
+    "reason": "Real-time LLM integration is relevant at the edge of scope, but the primary contribution is speech-model context injection and no inference-efficiency gain is measured.",
+    "first_checked_at": "2026-10-05T05:12:06+00:00",
+    "last_checked_at": "2026-10-05T05:12:06+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+    ],
+    "title": "Context Spanning: A Communication Framework for Full-Duplex Speech Models and External LLM Backends"
+  },
+  "processed_at": "2026-10-05T05:12:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bff59d707a8c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

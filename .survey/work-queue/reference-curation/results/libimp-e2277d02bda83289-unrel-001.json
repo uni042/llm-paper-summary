@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2277d02bda83289-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33591",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33591",
+    "identity_tokens": [
+      "arXiv:2609.33591"
+    ],
+    "reason": "Quantized softmax is studied during Transformer pretraining and changes gradients; training-only.",
+    "first_checked_at": "2026-10-05T05:12:07+00:00",
+    "last_checked_at": "2026-10-05T05:12:07+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+    ],
+    "title": "Pretraining Transformers with Quantized Softmax in Attention"
+  },
+  "processed_at": "2026-10-05T05:12:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2277d02bda8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
