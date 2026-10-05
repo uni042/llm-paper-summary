@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:39:43+00:00",
-  "record_count": 712,
+  "updated_at": "2026-10-05T02:41:37+00:00",
+  "record_count": 714,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10440,6 +10440,37 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "Contraction-Gauge Preconditioning for Quantized Matrix Multiplication"
+    },
+    "arXiv:2607.19338": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.19338",
+      "identity_tokens": [
+        "arXiv:2607.19338"
+      ],
+      "reason": "The potentially relevant abstract cannot be substantiated because the withdrawn primary manuscript and PDF are unavailable; keep it borderline rather than infer method/evaluation details.",
+      "first_checked_at": "2026-10-05T02:41:36+00:00",
+      "last_checked_at": "2026-10-05T02:41:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents"
+    },
+    "arXiv:2607.14144": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14144",
+      "identity_tokens": [
+        "arXiv:2607.14144"
+      ],
+      "reason": "The contribution is primarily theoretical capability/access analysis; the inspected evidence does not present a concrete inference efficiency method or measured serving result for the target scope.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "The Capability Convergence Hypothesis: Capability from Access Structure, Not Scale"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:39:44+00:00",
-  "record_count": 2023,
+  "updated_at": "2026-10-05T02:41:37+00:00",
+  "record_count": 2041,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -29247,6 +29247,271 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "MXAttention: Data-Free Optimal Scaling and Pre-Normalization Quantization for MXFP4 Attention"
+    },
+    "arXiv:2607.17620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17620",
+      "identity_tokens": [
+        "arXiv:2607.17620"
+      ],
+      "reason": "The primary abstract proposes a LoRA optimizer for parameter-efficient model fine-tuning; it targets training rather than inference.",
+      "first_checked_at": "2026-10-05T02:41:36+00:00",
+      "last_checked_at": "2026-10-05T02:41:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md"
+      ],
+      "title": "PoLoRA: A Preconditioned Orthogonalized LoRA Optimizer"
+    },
+    "arXiv:2607.17762": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.17762",
+      "identity_tokens": [
+        "arXiv:2607.17762"
+      ],
+      "reason": "The primary abstract uses LLM-driven evolutionary search to discover wireless-communication algorithms; the LLM is an algorithm-discovery tool, not the inference system being optimized.",
+      "first_checked_at": "2026-10-05T02:41:36+00:00",
+      "last_checked_at": "2026-10-05T02:41:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Autonomous Discovery of Wireless Communications Algorithms"
+    },
+    "arXiv:2607.21636": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21636",
+      "identity_tokens": [
+        "arXiv:2607.21636"
+      ],
+      "reason": "The primary abstract evaluates fidelity metrics for synthetic tabular data, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T02:41:36+00:00",
+      "last_checked_at": "2026-10-05T02:41:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Measuring the Dependency Gap: Diagnosing Inter-Column Fidelity in Tabular Generative Models"
+    },
+    "arXiv:2607.16972": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16972",
+      "identity_tokens": [
+        "arXiv:2607.16972"
+      ],
+      "reason": "The primary abstract proposes direct supervision for continuous chain-of-thought model training and faster training; it does not optimize inference/serving.",
+      "first_checked_at": "2026-10-05T02:41:36+00:00",
+      "last_checked_at": "2026-10-05T02:41:36+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Training Continuous Chain of Thought Models: A Tale of Two Regimes"
+    },
+    "arXiv:2607.15846": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.15846",
+      "identity_tokens": [
+        "arXiv:2607.15846"
+      ],
+      "reason": "The primary abstract accelerates image/video diffusion transformers; the workload is visual diffusion generation, outside LLM inference scope.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "DSTAR: Accelerating Diffusion Transformers via Spatial and Temporal Redundancy Reduction"
+    },
+    "arXiv:2607.16183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16183",
+      "identity_tokens": [
+        "arXiv:2607.16183"
+      ],
+      "reason": "The primary abstract develops thermodynamic computing hardware for general machine-learning workloads; it does not study LLM inference/serving systems.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing"
+    },
+    "arXiv:2607.16190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16190",
+      "identity_tokens": [
+        "arXiv:2607.16190"
+      ],
+      "reason": "The primary abstract optimizes sparse attention for video diffusion generation; it is not an LLM inference workload.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation"
+    },
+    "arXiv:2607.14852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.14852",
+      "identity_tokens": [
+        "arXiv:2607.14852"
+      ],
+      "reason": "The primary abstract addresses lifelong learning for vision-language-action robot manipulation, a continual training/control task.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Towards Human-like Physical Intelligence: Lifelong Vision-Language-Action Learning for Robotic Manipulation"
+    },
+    "arXiv:2607.13028": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.13028",
+      "identity_tokens": [
+        "arXiv:2607.13028"
+      ],
+      "reason": "The primary abstract presents a procedural autonomous-driving simulator and RL training stack; policy simulation/inference is not LLM serving.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale"
+    },
+    "arXiv:2607.05577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.05577",
+      "identity_tokens": [
+        "arXiv:2607.05577"
+      ],
+      "reason": "The primary abstract develops narratology-grounded memory for long-form fiction writing agents; its contribution is memory/retrieval quality, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Narrative World Model: Narratology-Grounded Writer Memory for Long-Form Fiction"
+    },
+    "arXiv:2607.04364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04364",
+      "identity_tokens": [
+        "arXiv:2607.04364"
+      ],
+      "reason": "The primary abstract studies continual reinforcement-learning policy optimization and forgetting in vision-language models, a training problem.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "RL Forgets! Towards Continual Policy Optimization"
+    },
+    "arXiv:2607.04469": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04469",
+      "identity_tokens": [
+        "arXiv:2607.04469"
+      ],
+      "reason": "The primary abstract adds a partial forward coordination pass to improve diffusion-language-model answer quality; it does not claim a decoding-efficiency improvement.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Don't Commit Alone: Joint Token Commitment in Diffusion Language Models"
+    },
+    "arXiv:2607.03751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03751",
+      "identity_tokens": [
+        "arXiv:2607.03751"
+      ],
+      "reason": "The primary abstract improves task generalization of embodied VLA policies with action evaluation; its target is robotic control, not LLM serving.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Look Before You Leap: Distilling Tree Search into Action Evaluation for Frozen VLA Models"
+    },
+    "arXiv:2607.03012": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03012",
+      "identity_tokens": [
+        "arXiv:2607.03012"
+      ],
+      "reason": "The primary abstract reduces video-diffusion attention latency for text-to-video generation, outside LLM inference scope.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "HyperVAttention: Efficient Sparse Attention with Spatio-Temporal Clustering for Video Diffusion"
+    },
+    "arXiv:2607.12204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.12204",
+      "identity_tokens": [
+        "arXiv:2607.12204"
+      ],
+      "reason": "The primary abstract studies auditable removal and readout behavior for a support-vector memory, not LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "title": "What a Deletion Certificate Covers, and Where It Expires: Auditable Removal from a Support-Vector Memory"
+    },
+    "arXiv:2607.10165": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.10165",
+      "identity_tokens": [
+        "arXiv:2607.10165"
+      ],
+      "reason": "The primary abstract proposes affective conditioning for style-specialist image-generation models, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "EmoStyle: Affective Conditioning of Style-Specialist Experts for Emotional Image Generation"
+    },
+    "arXiv:2608.00024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00024",
+      "identity_tokens": [
+        "arXiv:2608.00024"
+      ],
+      "reason": "The primary abstract targets diversity/control in text diffusion generation; the paper says its guidance adds inference-time work and treats latency as a tradeoff, not an efficiency improvement.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Exploring More to Solve More: Boosting Diversity in Text Diffusion Models via Entropy-Based Guidance"
+    },
+    "arXiv:2607.06216": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06216",
+      "identity_tokens": [
+        "arXiv:2607.06216"
+      ],
+      "reason": "The primary abstract concerns a visual world model for high-frame-rate autonomous interaction, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T02:41:37+00:00",
+      "last_checked_at": "2026-10-05T02:41:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "MoWorld: A Flash World Model"
     }
   }
 }
