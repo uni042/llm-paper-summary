@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:05:21+00:00",
-  "record_count": 1161,
+  "updated_at": "2026-10-05T08:07:54+00:00",
+  "record_count": 1167,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17765,6 +17765,97 @@
         "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
       ],
       "title": "When Pruning Meets Interpretability: Preserving Sparse Autoencoder Robustness in LLMs"
+    },
+    "arXiv:2608.24971": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24971",
+      "identity_tokens": [
+        "arXiv:2608.24971"
+      ],
+      "reason": "The paper explicitly says validation is synthetic/theoretical, lacks full-scale transformer benchmark and throughput tests, and actual memory savings depend on alignment/metadata. Applicability to LLM inference is not yet demonstrated.",
+      "first_checked_at": "2026-10-05T08:07:52+00:00",
+      "last_checked_at": "2026-10-05T08:07:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "title": "HCC+: Hyperbolic Guarding for Certified Attention Retrieval"
+    },
+    "DOI:10.1007/s12065-026-01255-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s12065-026-01255-7",
+      "identity_tokens": [
+        "DOI:10.1007/s12065-026-01255-7"
+      ],
+      "reason": "The primary abstract is available but the article body is behind subscription/access restrictions; methods, tables, baselines, and limits cannot be validated from the retrieved primary material, so retain as borderline.",
+      "first_checked_at": "2026-10-05T08:07:52+00:00",
+      "last_checked_at": "2026-10-05T08:07:52+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "MEPO-SLM: multi-objective evolutionary prompt optimization for energy-efficient small language models on edge devices"
+    },
+    "arXiv:2608.24024": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24024",
+      "identity_tokens": [
+        "arXiv:2608.24024"
+      ],
+      "reason": "The method improves voting quality but still uses parallel rollouts; the paper does not establish lower total inference cost or serving load. Fit to an efficiency-focused survey is weak.",
+      "first_checked_at": "2026-10-05T08:07:53+00:00",
+      "last_checked_at": "2026-10-05T08:07:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "Beyond Confidence: Test-Time Scaling for Multi-Turn Search Agents via Retrieval Grounding"
+    },
+    "arXiv:2608.24509": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24509",
+      "identity_tokens": [
+        "arXiv:2608.24509"
+      ],
+      "reason": "The target is tool-execution orchestration and capacity overflow, not model-token inference, model serving, or LLM-generation cost. Its relevance to the project’s inference-efficiency scope is adjacent and weak.",
+      "first_checked_at": "2026-10-05T08:07:53+00:00",
+      "last_checked_at": "2026-10-05T08:07:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PeakBench: Benchmarking Resource-Aware Tool Invocation in LLM Agents"
+    },
+    "arXiv:2608.24615": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24615",
+      "identity_tokens": [
+        "arXiv:2608.24615"
+      ],
+      "reason": "This is a language- and model-specific evaluation of existing quantizers, not a new inference-efficiency method; the transferability and deployment-performance evidence are limited.",
+      "first_checked_at": "2026-10-05T08:07:53+00:00",
+      "last_checked_at": "2026-10-05T08:07:53+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Quantization Effects on Bangla Language Understanding in Large Language Models: A Systematic Evaluation"
+    },
+    "arXiv:2608.24215": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24215",
+      "identity_tokens": [
+        "arXiv:2608.24215"
+      ],
+      "reason": "The contribution is a small social-simulation port, not an inference-efficiency evaluation; no measured inference latency, serving throughput, GPU-memory reduction, or token-cost comparison is reported. Memory compression is adjacent but scope fit remains weak.",
+      "first_checked_at": "2026-10-05T08:07:54+00:00",
+      "last_checked_at": "2026-10-05T08:07:54+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Agentopia on a Consumer GPU: A Reduced-Scale Long-Horizon Port with an 8B Model"
     }
   }
 }

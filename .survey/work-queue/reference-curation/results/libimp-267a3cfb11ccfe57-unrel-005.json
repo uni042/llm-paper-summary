@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-267a3cfb11ccfe57-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1186/s44147-026-01192-3",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1186/s44147-026-01192-3",
+    "identity_tokens": [
+      "DOI:10.1186/s44147-026-01192-3"
+    ],
+    "reason": "Primary abstract concerns real-time dispatch of distributed energy resources with equilibrium networks, not language models.",
+    "first_checked_at": "2026-10-05T08:07:53+00:00",
+    "last_checked_at": "2026-10-05T08:07:53+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "Permutation-equivariant deep equilibrium networks for real-time single-bus DER dispatch with O(1) parameter scaling"
+  },
+  "processed_at": "2026-10-05T08:07:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-267a3cfb11cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
