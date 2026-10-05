@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d891f0ec547c2bd0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26057",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26057",
+    "identity_tokens": [
+      "arXiv:2607.26057"
+    ],
+    "reason": "一次要旨はtrajectory-relayed on-policy distillation training。学習手法でありLLM推論高速化ではない。",
+    "first_checked_at": "2026-10-05T01:08:22+00:00",
+    "last_checked_at": "2026-10-05T01:08:22+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+    ],
+    "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation"
+  },
+  "processed_at": "2026-10-05T01:08:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d891f0ec547c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

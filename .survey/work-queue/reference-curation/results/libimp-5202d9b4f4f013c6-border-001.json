@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5202d9b4f4f013c6-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3797905.3800551",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3797905.3800551",
+    "identity_tokens": [
+      "DOI:10.1145/3797905.3800551"
+    ],
+    "reason": "ACM一次資料ページでabstract本文を取得できず、compiler対象/評価を確認できない。",
+    "first_checked_at": "2026-10-05T01:08:21+00:00",
+    "last_checked_at": "2026-10-05T01:08:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "CKTI: A Domain-Specific Compiler for Lowering CUDA Kernels to Triton-IR"
+  },
+  "processed_at": "2026-10-05T01:08:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5202d9b4f4f0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

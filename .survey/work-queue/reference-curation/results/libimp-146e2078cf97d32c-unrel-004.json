@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-146e2078cf97d32c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.10402",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.10402",
+    "identity_tokens": [
+      "arXiv:2606.10402"
+    ],
+    "reason": "一次要旨は科学的発見用distributed AI-agent platformと数学課題。LLM inference efficiencyではない。",
+    "first_checked_at": "2026-10-05T01:08:21+00:00",
+    "last_checked_at": "2026-10-05T01:08:21+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+    ],
+    "title": "Harnessing the Collective Intelligence of AI Agents in the Wild for New Discoveries"
+  },
+  "processed_at": "2026-10-05T01:08:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-146e2078cf97",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
