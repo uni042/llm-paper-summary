@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-69-part-04-ede7ceb104cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.14560",
+      "identity_tokens": [
+        "arXiv:2510.14560"
+      ],
+      "title": "Eyes Wide Open: Ego Proactive Video-LLM for Streaming Video",
+      "reason": "Compression is tightly scoped to egocentric streaming VideoLLM interaction; general LLM inference transfer is uncertain.",
+      "source_url": "https://arxiv.org/abs/2510.14560",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12913",
+      "identity_tokens": [
+        "arXiv:2502.12913"
+      ],
+      "title": "GSQ-Tuning: Group-Shared Exponents Integer in Fully Quantized Training for LLMs On-Device Fine-tuning",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.12913. GSQ-Tuning targets quantized on-device fine-tuning/training, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2502.12913",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md",
+        "papers/inference/99-other-inference-systems/2024-2402.12065-wkvquant-quantizing-weight-and-key-value-cache-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.15238",
+      "identity_tokens": [
+        "arXiv:2412.15238"
+      ],
+      "title": "Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning tasks",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.15238. Dipper improves ensemble reasoning diversity/quality; ensembling adds computation and no efficiency gain is claimed.",
+      "source_url": "https://arxiv.org/abs/2412.15238",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00383",
+      "identity_tokens": [
+        "arXiv:2412.00383"
+      ],
+      "title": "Unified Parameter-Efficient Unlearning for LLMs",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.00383. Unified Parameter-Efficient Unlearning is outside inference-efficiency scope.",
+      "source_url": "https://arxiv.org/abs/2412.00383",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09836",
+      "identity_tokens": [
+        "arXiv:2410.09836"
+      ],
+      "title": "Learning Pattern-Specific Experts for Time Series Forecasting Under Patch-level Distribution Shift",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.09836. Addresses time-series forecasting under distribution shift, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2410.09836",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ]
+    }
+  ]
+}
