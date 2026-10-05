@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hyena Hierarchy: Towards Larger Convolutional Language Models",
+      "source_url": "https://arxiv.org/abs/2302.10866",
+      "year": 2023,
+      "published": "2023-02-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 575,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in deep learning have relied heavily on the use of large Transformers due to their ability to learn at scale. However, the core building block of Transformers, the attention operator, exhibits quadratic cost in sequence length, limiting the amount of context accessible. Existing subquadratic methods based on low-rank and sparse approximations need to be combined with dense attention layers to match Transformers, indicating a gap in capability. In this work, we propose Hyena, a subquadratic drop-in replacement for attention constructed by interleaving implicitly parametrized long convolutions and data-controlled gating. In recall and reasoning tasks on sequences of thousands to hundreds of thousands of tokens, Hyena improves accuracy by more than 50 points over operators relying on state-spaces and other implicit and explicit methods, matching attention-based models. We set a new state-of-the-art for dense-attention-free architectures on language modeling in standard datasets (WikiText103 and The Pile), reaching Transformer quality with a 20% reduction in training compute required at sequence length 2K. Hyena operators are twice as fast as highly optimized attention at sequence length 8K, and 100x faster at sequence length 64K.",
+      "identifiers": [
+        "SemanticScholar:998ac3e945857cf2676ee7efdbaf443a0c6f820a"
+      ],
+      "semantic_scholar_id": "998ac3e945857cf2676ee7efdbaf443a0c6f820a",
+      "canonical_id": "arXiv:2302.10866",
+      "arxiv_id": "2302.10866",
+      "doi": "10.48550/arXiv.2302.10866",
+      "authors": [
+        "Michael Poli",
+        "Stefano Massaroli",
+        "Eric Nguyen",
+        "Daniel Y. Fu",
+        "Tri Dao",
+        "S. Baccus",
+        "Y. Bengio",
+        "S. Ermon",
+        "Christopher Ré"
+      ],
+      "priority": 585,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 575,
+        "citation_count": 575,
+        "total": 585,
+        "is_fresh": false,
+        "freshness_age_days": 1322,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "attentionを暗黙的long convolutionとdata-controlled gatingで置換するsubquadratic operator。sequence 8Kで高度最適化attentionの約2倍、64Kで約100倍高速と報告し、長文language modelの計算効率を直接改善するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文・公式論文情報で方式、計算量・runtime評価、最終適用先を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Resurrecting Recurrent Neural Networks for Long Sequences",
+      "source_url": "https://arxiv.org/abs/2303.06349",
+      "year": 2023,
+      "published": "2023-03-11",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 563,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recurrent Neural Networks (RNNs) offer fast inference on long sequences but are hard to optimize and slow to train. Deep state-space models (SSMs) have recently been shown to perform remarkably well on long sequence modeling tasks, and have the added benefits of fast parallelizable training and RNN-like fast inference. However, while SSMs are superficially similar to RNNs, there are important differences that make it unclear where their performance boost over RNNs comes from. In this paper, we show that careful design of deep RNNs using standard signal propagation arguments can recover the impressive performance of deep SSMs on long-range reasoning tasks, while also matching their training speed. To achieve this, we analyze and ablate a series of changes to standard RNNs including linearizing and diagonalizing the recurrence, using better parameterizations and initializations, and ensuring proper normalization of the forward pass. Our results provide new insights on the origins of the impressive performance of deep SSMs, while also introducing an RNN block called the Linear Recurrent Unit that matches both their performance on the Long Range Arena benchmark and their computational efficiency.",
+      "identifiers": [
+        "SemanticScholar:f393aff1593c2d370ec0ae004910d18e40524967"
+      ],
+      "semantic_scholar_id": "f393aff1593c2d370ec0ae004910d18e40524967",
+      "canonical_id": "arXiv:2303.06349",
+      "arxiv_id": "2303.06349",
+      "authors": [
+        "Antonio Orvieto",
+        "Samuel L. Smith",
+        "Albert Gu",
+        "Anushan Fernando",
+        "Caglar Gulcehre",
+        "Razvan Pascanu",
+        "Soham De"
+      ],
+      "priority": 573,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v1",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 563,
+        "citation_count": 563,
+        "total": 573,
+        "is_fresh": false,
+        "freshness_age_days": 1304,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "線形化・対角化したrecurrence、安定parameterization、normalizationからLinear Recurrent Unitを構成し、RNN-likeな高速推論とSSM級の計算効率を長系列で実現する。長sequence推論の代替architectureとして対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文・公式論文情報で方式、計算量・runtime評価、最終適用先を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d6e363f7f718",
+    "round": "libimp-d6e363f7f718ffe6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d6e363f7f718ffe6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d6e363f7f718ffe6-pre01.json",
+    "receipt": "sha256:fec44b93744e4947b38b6148feabda7a23e34cbe26a312553551e12ae1934b59"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d6e363f7f718",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
