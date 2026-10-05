@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-5e74aaaf8297a83f-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1007/s44443-026-01284-3",
+  "reason": "Unsupervised multivariate time-series anomaly detection seeks to detect rare abnormal events in correlated sensor streams when dense anomaly labels are unavailable. Although Transformer-based methods have strengthened long-range representation learning, many still depend on fixed patch construction or costly attention operations, which can limit their ability to model transient local deviations together with cross-variable interactions. We propose SIGMA-AD, an unsupervised multivariate time-series anomaly detection framework that integrates adaptive semantic patching, dual-stream Mamba modeling, hybrid graph learning, and robust dynamic scoring. Adaptive Semantic Patching forms local tokens through statistics-aware differentiable temporal resampling, retaining local variation while preserving a regular token layout. The temporal encoder contains a channel-independent Mamba stream for variable-specific dynamics and a graph-enhanced channel-mixing Mamba stream for inter-variable dependencies. A Hybrid Dual-track Graph module further combines a stable structural prior with dynamically learned semantic relations, guided by an auxiliary graph reconstruction objective. Robust Dynamic Scoring then maps reconstruction errors to normalized anomaly scores through percentile clipping and causal rolling statistics. Experiments on five public benchmark datasets show that SIGMA-AD obtains the best average point-adjusted F1 score under the adopted percentile-search benchmark protocol and ranks first on three of the five datasets. Five-seed evaluation against Autoformer, DLinear, and TimesNet further shows that SIGMA-AD achieves the highest mean F1 on MSL, SWaT, and SMD, as well as the highest cross-dataset average among the four repeatedly evaluated models. Additional raw, unadjusted evaluation reveals a trade-off between point-adjusted interval triggering and raw timestamp-level coverage.",
+  "title": "SIGMA-AD: spatio-temporal integrated graph Mamba architecture for multivariate time-series anomaly detection",
+  "identity_tokens": [
+    "DOI:10.1007/s44443-026-01284-3"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5e74aaaf8297",
+  "source_precheck_request_id": null
+}
