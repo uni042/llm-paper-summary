@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:10:46+00:00",
-  "record_count": 1552,
+  "updated_at": "2026-10-05T01:12:49+00:00",
+  "record_count": 1567,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -22389,6 +22389,224 @@
         "papers/inference/99-other-inference-systems/2026-2608.19758-flashprefill-v2-block-sparse-prefill-attention-for-long-context-llm-serving.md"
       ],
       "title": "Sol-Attn: Accelerating Video Generation Inference via On-the-Fly Attention Sparsification"
+    },
+    "DOI:10.1515/jdis-2026-0058": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1515/jdis-2026-0058",
+      "identity_tokens": [
+        "DOI:10.1515/jdis-2026-0058"
+      ],
+      "reason": "ChatGPT research-quality scoring versus citations, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "In Which Fields Do ChatGPT Scores Align More Closely with Research Quality than Do Citation Rates?"
+    },
+    "arXiv:2607.27834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27834",
+      "identity_tokens": [
+        "arXiv:2607.27834"
+      ],
+      "reason": "Agent memory update/recovery protocol, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "MemTxn: A Transaction Boundary for Source-Supported Updates and Complete-State Recovery in Agent Memory"
+    },
+    "arXiv:2502.18439": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18439",
+      "identity_tokens": [
+        "arXiv:2502.18439"
+      ],
+      "reason": "Multi-agent RL post-training, training-only contribution.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+      ],
+      "title": "MAPoRL: Multi-Agent Post-Co-Training for Collaborative Large Language Models with Reinforcement Learning"
+    },
+    "arXiv:2609.01343": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.01343",
+      "identity_tokens": [
+        "arXiv:2609.01343"
+      ],
+      "reason": "MoE compute-matched scaling law saves training FLOPs, not inference.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers"
+    },
+    "DOI:10.1145/3797905.3800541": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3797905.3800541",
+      "identity_tokens": [
+        "DOI:10.1145/3797905.3800541"
+      ],
+      "reason": "All-to-allv optimization for MoE training communications, not inference.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
+      ],
+      "title": "Skew-aware Adaptive All-to-allv Algorithms for Dynamic Deep Learning Workloads"
+    },
+    "arXiv:2607.16051": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16051",
+      "identity_tokens": [
+        "arXiv:2607.16051"
+      ],
+      "reason": "Looped MoE model capability under matched training compute; no inference efficiency evaluation.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Loop the Loopies!"
+    },
+    "arXiv:2606.22844": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.22844",
+      "identity_tokens": [
+        "arXiv:2606.22844"
+      ],
+      "reason": "Agentic memory retrieval correctness, no inference cost optimization.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "RaMem: Contextual Reinstatement for Long-term Agentic Memory"
+    },
+    "arXiv:2606.13177": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13177",
+      "identity_tokens": [
+        "arXiv:2606.13177"
+      ],
+      "reason": "Agent memory storage-budget compression, not LLM inference-context/serving optimization.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "MemRefine: LLM-Guided Compression for Long-Term Agent Memory"
+    },
+    "arXiv:2606.08417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.08417",
+      "identity_tokens": [
+        "arXiv:2606.08417"
+      ],
+      "reason": "Generative language model evaluation metrics, not efficiency.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      ],
+      "title": "Hacking Generative Perplexity: Why Unconditional Text Evaluation Needs Distributional Metrics"
+    },
+    "arXiv:2409.03752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.03752",
+      "identity_tokens": [
+        "arXiv:2409.03752"
+      ],
+      "reason": "Survey of attention-head functions/interpretability, not inference serving.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2606.24467-compresskv-semantic-retrieval-guided-compression.md"
+      ],
+      "title": "Attention heads of large language models"
+    },
+    "arXiv:2407.15362": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.15362",
+      "identity_tokens": [
+        "arXiv:2407.15362"
+      ],
+      "reason": "一次要旨はcomputational pathology foundation modelのmulti-modal pretrainingとoncology task能力評価。LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A multimodal knowledge-enhanced whole-slide pathology foundation model"
+    },
+    "arXiv:2303.00980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.00980",
+      "identity_tokens": [
+        "arXiv:2303.00980"
+      ],
+      "reason": "LiGOは小型Transformer parameterを大型modelへ拡張しtraining-from-scratch costを減らすtraining-only手法。",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ],
+      "title": "Learning to Grow Pretrained Models for Efficient Transformer Training"
+    },
+    "arXiv:2608.25593": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25593",
+      "identity_tokens": [
+        "arXiv:2608.25593"
+      ],
+      "reason": "JIT-Agentの要旨はtask performance/harness generationを主題としinference latency/token/memoryやserving効率を評価しない。",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution"
+    },
+    "DOI:10.1007/s12599-022-00755-x": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12599-022-00755-x",
+      "identity_tokens": [
+        "DOI:10.1007/s12599-022-00755-x"
+      ],
+      "reason": "Human-chatbot response-time experiment, not backend LLM serving.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.07966-metakv-adaptive-kv-cache-compression-for-constrained-llm-inference.md"
+      ],
+      "title": "Opposing Effects of Response Time in Human-Chatbot Interaction"
+    },
+    "arXiv:2608.11632": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11632",
+      "identity_tokens": [
+        "arXiv:2608.11632"
+      ],
+      "reason": "Agent persistent-state transaction/governance system, not inference efficiency.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Beyond Memory: A Transactional Continuity Kernel for Long-Lived AI Agents"
     }
   }
 }

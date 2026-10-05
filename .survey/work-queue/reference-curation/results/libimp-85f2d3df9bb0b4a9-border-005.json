@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-85f2d3df9bb0b4a9-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.07408",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.07408",
+    "identity_tokens": [
+      "arXiv:2608.07408"
+    ],
+    "reason": "WorldTrace compresses visual KV cache for interactive video-world-model generation using addressable virtual-position summary slots and evaluates scene recall/temporal consistency on LoopBench. Appendix D.2 distinguishes the setting from LLM KV compression: its cache accumulates visual chunks under denoising-timestep queries, with no LLM inference evaluation.",
+    "first_checked_at": "2026-10-05T01:12:49+00:00",
+    "last_checked_at": "2026-10-05T01:12:49+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+    ],
+    "title": "Addressable Memory for Video World Models"
+  },
+  "processed_at": "2026-10-05T01:12:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-85f2d3df9bb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e7ed1fb7723f4b8-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3797905.3800541",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3797905.3800541",
+    "identity_tokens": [
+      "DOI:10.1145/3797905.3800541"
+    ],
+    "reason": "All-to-allv optimization for MoE training communications, not inference.",
+    "first_checked_at": "2026-10-05T01:12:49+00:00",
+    "last_checked_at": "2026-10-05T01:12:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+      "papers/inference/99-other-inference-systems/2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md"
+    ],
+    "title": "Skew-aware Adaptive All-to-allv Algorithms for Dynamic Deep Learning Workloads"
+  },
+  "processed_at": "2026-10-05T01:12:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e7ed1fb7723",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

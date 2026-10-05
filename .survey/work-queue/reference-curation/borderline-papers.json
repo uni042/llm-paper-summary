@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:10:46+00:00",
-  "record_count": 518,
+  "updated_at": "2026-10-05T01:12:49+00:00",
+  "record_count": 523,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -7482,6 +7482,81 @@
         "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
       ],
       "title": "MATA: A Memory-Efficient Attention Accelerator for LLMs Exploiting Look-Back KV Cache Pruning"
+    },
+    "arXiv:2111.08566": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.08566",
+      "identity_tokens": [
+        "arXiv:2111.08566"
+      ],
+      "reason": "SPANN uses memory/disk hybrid inverted indexes and query-aware pruning for billion-scale ANN. Evaluation compares recall/search latency on vector datasets against ANN baselines; no LLM/RAG workload or end-to-end LLM serving effect is measured, leaving only indirect retrieval adjacency.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md",
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ],
+      "title": "SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search"
+    },
+    "arXiv:2608.07408": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07408",
+      "identity_tokens": [
+        "arXiv:2608.07408"
+      ],
+      "reason": "WorldTrace compresses visual KV cache for interactive video-world-model generation using addressable virtual-position summary slots and evaluates scene recall/temporal consistency on LoopBench. Appendix D.2 distinguishes the setting from LLM KV compression: its cache accumulates visual chunks under denoising-timestep queries, with no LLM inference evaluation.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Addressable Memory for Video World Models"
+    },
+    "arXiv:2410.03226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03226",
+      "identity_tokens": [
+        "arXiv:2410.03226"
+      ],
+      "reason": "Video-LLM frame selection improves QA with fixed-size frame sets, but does not directly demonstrate inference token/latency savings.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Frame-Voyager: Learning to Query Frames for Video Large Language Models"
+    },
+    "arXiv:2609.29769": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29769",
+      "identity_tokens": [
+        "arXiv:2609.29769"
+      ],
+      "reason": "Benchmark-specific judge model comparison reports cost/time differences but is not a general LLM inference/serving optimization method.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "JEV vs. LLMs as Rubric Judges: Cheaper, Faster, and Wrong in the Same Places"
+    },
+    "arXiv:2608.11403": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11403",
+      "identity_tokens": [
+        "arXiv:2608.11403"
+      ],
+      "reason": "Self-consistency/gate failure analysis focuses on accuracy rather than introducing an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T01:12:49+00:00",
+      "last_checked_at": "2026-10-05T01:12:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "When Self-Consistency Backfires: Majority Vote Hurts the Majority of Hard Science Problems for Small LLMs"
     }
   }
 }
