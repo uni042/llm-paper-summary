@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-69-part-02-ede7ceb104cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.05477",
+      "identity_tokens": [
+        "arXiv:2207.05477"
+      ],
+      "title": "HelixFold: An Efficient Implementation of AlphaFold2 using PaddlePaddle",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2207.05477. HelixFold optimizes AlphaFold2 protein-structure prediction, outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2207.05477",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.15910",
+      "identity_tokens": [
+        "arXiv:2502.15910"
+      ],
+      "title": "Modality-Aware Neuron Pruning for Unlearning in Multimodal Large Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.15910. MANU addresses multimodal-model unlearning and privacy, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.15910",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.00791",
+      "identity_tokens": [
+        "arXiv:2502.00791"
+      ],
+      "title": "Vision-centric Token Compression in Large Language Model",
+      "reason": "Vist uses a vision encoder for distant text and is evaluated on its particular long-context/ICL design; text-only serving generalization needs validation.",
+      "source_url": "https://arxiv.org/abs/2502.00791",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17509",
+      "identity_tokens": [
+        "arXiv:2410.17509"
+      ],
+      "title": "WAGLE: Strategic Weight Attribution for Effective and Modular Unlearning in Large Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.17509. WAGLE improves selective data-unlearning effectiveness; abstract does not claim inference-cost/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2410.17509",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.09846",
+      "identity_tokens": [
+        "arXiv:2410.09846"
+      ],
+      "title": "A Quantum Circuit-Based Compression Perspective for Parameter-Efficient Learning",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.09846. Quantum parameter adaptation is for parameter-efficient fine-tuning; quantum machinery is confined to training.",
+      "source_url": "https://arxiv.org/abs/2410.09846",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08045-beyond-classical-attention-quantum-attention-for-scalable-computation.md"
+      ]
+    }
+  ]
+}
