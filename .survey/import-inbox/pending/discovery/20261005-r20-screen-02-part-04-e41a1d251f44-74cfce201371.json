@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-02-part-04-e41a1d251f44",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23367",
+      "identity_tokens": [
+        "arXiv:2609.23367"
+      ],
+      "title": "LLM-Based FORM Code Generation with Verification-Driven Fine-Tuning",
+      "reason": "FORM is a domain-specific symbolic manipulation language widely used in particle physics for processing the very large algebraic expressions arising from multi-loop Feynman diagram calculations. Despite its central role in precision theoretical physics, no artificial-intelligence tooling exists, to our knowledge, for assisting physicists in writing FORM code. We show that contemporary large language models (LLMs), including frontier models with hundreds of billions of parameters, achieve a zero-percent execution pass rate on our instruction-following and tutorial-style FORM tasks without documentation in a single attempt, establishing FORM as a genuine zero-shot language for LLMs at the time of writing. We then present a verification-driven data generation pipeline that uses the FORM binary itself as an execution oracle to produce and validate a corpus of 4,633 training examples spanning deterministic computations, open-ended programs, tutorial code, and knowledge question-answer pairs. Fine-tuning a compact open-weights model (Qwen3-8B) with quantized low-rank adaptation (QLoRA) yields a specialist that, evaluated on four complementary benchmarks (840 tasks, single attempt each), decisively outperforms frontier models with up to 756B parameters in execution rate and in strict, FORM-verified output matching on the larger benchmarks, and remains statistically indistinguishable from them on the smaller, harder ones. General reasoning and coding capabilities are preserved within 2.6 percentage points.",
+      "source_url": "https://arxiv.org/abs/2609.23367",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23465",
+      "identity_tokens": [
+        "arXiv:2609.23465"
+      ],
+      "title": "Propose, Verify, Commit: Evidence-Grounded Memory for Long-Horizon Multi-Actor Conversations",
+      "reason": "Despite an LLM memory system, its primary claim is evidence-grounded recall accuracy and it explicitly disclaims latency/token-cost optimization, so it does not meet this survey’s inference-efficiency scope.",
+      "source_url": "https://arxiv.org/abs/2609.23465",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23495",
+      "identity_tokens": [
+        "arXiv:2609.23495"
+      ],
+      "title": "Pay More Attention To Text In High-Resolution MLLMs",
+      "reason": "Failures of high-resolution MLLMs are commonly attributed to a visual problem, motivating zooming, cropping, and related visual interventions to recover fine-grained evidence or suppress interference. Yet recent studies suggest that relevant visual evidence is already encoded in intermediate representations, indicating that visual-side improvements alone insufficient. This raises a natural question: does the remaining bottleneck lie in the text that guides visual search? We identify a previously overlooked linguistic bottleneck: questions formulated for answering do not necessarily specify the visual evidence required for localization. To address this mismatch, we introduce EviSpec, a training-free compiler that derives complementary evidence specifications while preserving the original question for final reasoning. We further validate it through matched-control experiments that isolate the roles of evidence specification and localization. With the search budget fixed, structured evidence specifications yield an 8.6% relative gain over generic requests. With evidence geometry matched, the evidence localized by EviSpec yields a 14.8% relative gain over random evidence. Together, these controls isolate the benefit of specifying what evidence to seek rather than merely expanding visual access. Across all five MLLMs, EviSpec consistently improves upon the corresponding baseline on each of the three benchmarks, yielding average relative gains of \\textbf{10.4%, 8.8%, and 12.4%} on V\\textsuperscript{*}Bench, HR-Bench-4K, and HR-Bench-8K, respectively. Beyond high-resolution reasoning, EviSpec also achieves state-of-the-art performance on VQA and hallucination-focused benchmarks.",
+      "source_url": "https://arxiv.org/abs/2609.23495",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23686",
+      "identity_tokens": [
+        "arXiv:2609.23686"
+      ],
+      "title": "One Patch, Three Roles: What Is Actually Coupled in Autoregressive Time-Series Forecasting?",
+      "reason": "Patch-based autoregressive time-series forecasting often ties input representation, learned transitions, and recursive execution to one patch length. We ask which of these roles can be adjusted separately. A supporting atomic-encoding study finds greater sensitivity to model width than to atom grouping on the evaluated grid. Our main finding is that a frozen parent's recursive trajectory is easier to fit than the observed future with lightweight parallel exits. Autoregressive Trajectory Distillation (ATD) turns this into selectable ATD-1/2/4/8 execution, with ATD-1 exactly recovering the parent. On a paired four-data-set comparison, ATD-8 reaches $5.54\\times$ end-to-end speedup with stable quality across widths. Fewer calls do not automatically remove the parent's existing forecast error: ATD improves trajectory fidelity in all 21 seed runs but forecast accuracy in only 15 against matched clean-future supervision. We further find a correctable residual projection along a train-selected periodic history direction. Spectrum Tangent applies this correction without adding neural parameters or Transformer calls. At horizon 720, it reduces mean squared error (MSE) and mean absolute error (MAE) by 2.54% and 2.33% over seven data sets and two output widths, while remaining $3.24\\times$ faster than recursive inference. Level and shape projections sometimes disagree. Trajectory compressibility, the fidelity-accuracy mismatch, and the correction recur across three public AR parents. Together these results separate representation, transition, and execution as AR design axes. Code is available at https://github.com/RowanFFF/ATD-Spectrum-Tangent.",
+      "source_url": "https://arxiv.org/abs/2609.23686",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23703",
+      "identity_tokens": [
+        "arXiv:2609.23703"
+      ],
+      "title": "Financial Language Models as Applied Artificial Intelligence Systems for News-Based Trading under Market Frictions",
+      "reason": "Financial language models can transform unstructured firm-specific news into structured decision signals, but financial AI research lacks an integrated deployment framework for evaluating whether those signals remain useful in financial decision systems. Computer science research has developed strong methods for time-series forecasting, text classification, multimodal stock prediction, graph-based market modeling, and machine-learning operations, yet these streams do not provide a domain-specific protocol that jointly tests financial language-model outputs under event-time observability, probability calibration, execution timing, transaction costs, liquidity constraints, capacity limits, operational diagnostics, and statistical inference. We introduce MFAST, a Market-Friction-Aware Sentiment-to-Trading framework that converts timestamped financial text into auditable, reproducible, and market-feasible trading decisions. The application is news-based trading, where firm-specific text must be linked to securities before portfolio decisions can be evaluated. The framework links Refinitiv News Analytics to Center for Research in Security Prices (CRSP) equity data, restricts the primary out-of-sample evaluation to post-release news outside disclosed foundation-model data-freshness periods, and adds a public replication arm using open financial text and public price data. Results show that decoder-only language models outperform encoder baselines and dictionary sentiment in classification, calibration, return prediction, and net portfolio performance, while operational diagnostics reveal trade-offs among accuracy, latency, memory, throughput, and inference cost. The paper shows that credible evaluation of financial language models requires an end-to-end engineering approach combining language understanding, temporal discipline, market-friction-aware deployment, and reproducible validation.",
+      "source_url": "https://arxiv.org/abs/2609.23703",
+      "first_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "last_checked_at": "2026-10-05T05:14:28.154977+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
