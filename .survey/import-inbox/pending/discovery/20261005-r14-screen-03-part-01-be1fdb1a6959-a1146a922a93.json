@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-03-part-01-be1fdb1a6959",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.15362",
+      "identity_tokens": [
+        "arXiv:2407.15362"
+      ],
+      "title": "A multimodal knowledge-enhanced whole-slide pathology foundation model",
+      "reason": "一次要旨はcomputational pathology foundation modelのmulti-modal pretrainingとoncology task能力評価。LLM推論効率ではない。",
+      "source_url": "https://arxiv.org/abs/2407.15362",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.08566",
+      "identity_tokens": [
+        "arXiv:2111.08566"
+      ],
+      "title": "SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search",
+      "reason": "SPANN uses memory/disk hybrid inverted indexes and query-aware pruning for billion-scale ANN. Evaluation compares recall/search latency on vector datasets against ANN baselines; no LLM/RAG workload or end-to-end LLM serving effect is measured, leaving only indirect retrieval adjacency.",
+      "source_url": "https://arxiv.org/abs/2111.08566",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2606.09441-sift-selective-index-for-fast-compute-of-rag-prefill-by-exploiting-attention-invariance.md",
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.00980",
+      "identity_tokens": [
+        "arXiv:2303.00980"
+      ],
+      "title": "Learning to Grow Pretrained Models for Efficient Transformer Training",
+      "reason": "LiGOは小型Transformer parameterを大型modelへ拡張しtraining-from-scratch costを減らすtraining-only手法。",
+      "source_url": "https://arxiv.org/abs/2303.00980",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25593",
+      "identity_tokens": [
+        "arXiv:2608.25593"
+      ],
+      "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+      "reason": "JIT-Agentの要旨はtask performance/harness generationを主題としinference latency/token/memoryやserving効率を評価しない。",
+      "source_url": "https://arxiv.org/abs/2608.25593",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.07408",
+      "identity_tokens": [
+        "arXiv:2608.07408"
+      ],
+      "title": "Addressable Memory for Video World Models",
+      "reason": "WorldTrace compresses visual KV cache for interactive video-world-model generation using addressable virtual-position summary slots and evaluates scene recall/temporal consistency on LoopBench. Appendix D.2 distinguishes the setting from LLM KV compression: its cache accumulates visual chunks under denoising-timestep queries, with no LLM inference evaluation.",
+      "source_url": "https://arxiv.org/abs/2608.07408",
+      "first_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "last_checked_at": "2026-10-05T00:37:27.701881+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    }
+  ]
+}
