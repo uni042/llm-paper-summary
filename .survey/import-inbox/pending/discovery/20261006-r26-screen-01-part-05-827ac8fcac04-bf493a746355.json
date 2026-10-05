@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r26-screen-01-part-05-827ac8fcac04",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01035-4",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01035-4"
+      ],
+      "title": "A multi-modal mixture-of-experts deep network with cross-pathway attention fusion and hierarchical Tree-SHAP attribution for interpretable heterogeneous prediction",
+      "reason": "clinical/tabular prediction向け multimodal MoEとTree-SHAP説明手法で、LLM inference servingを対象としない。",
+      "source_url": "https://doi.org/10.1007/s44443-026-01035-4",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.21.753373",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.21.753373"
+      ],
+      "title": "ErrorRoute: Budgeted Utility-Aware Resolution Routing for 3D Medical Image Segmentation",
+      "reason": "3D medical image segmentation向けbudgeted resolution routingで、医用画像推論のscopeでありLLM servingと無関係。",
+      "source_url": "https://doi.org/10.64898/2026.09.21.753373",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24061",
+      "identity_tokens": [
+        "arXiv:2609.24061"
+      ],
+      "title": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker verification",
+      "reason": "speaker verification向けCNN-Transformer MoEで、LLM推論効率の対象外。",
+      "source_url": "https://arxiv.org/abs/2609.24061",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24294",
+      "identity_tokens": [
+        "arXiv:2609.24294"
+      ],
+      "title": "Toward GPU-Resident Climate Models: A Feasibility Study on Lossy Compression for the Spherical Harmonic Transform's Communication Bottleneck",
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "source_url": "https://arxiv.org/abs/2609.24294",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24328",
+      "identity_tokens": [
+        "arXiv:2609.24328"
+      ],
+      "title": "A Distributional Optimisation Perspective on Combining Models in Deep Learning",
+      "reason": "deep learning model combinationのtraining/optimization理論で、LLM inference serving efficiencyを対象としない。",
+      "source_url": "https://arxiv.org/abs/2609.24328",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
