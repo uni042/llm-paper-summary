@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e450b43f23b8c5b7-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.36958",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.36958",
+    "identity_tokens": [
+      "arXiv:2609.36958"
+    ],
+    "reason": "Call-count reduction relates to inference cost, but the main contribution is verifier auditing/decision quality and the evidence is task-specific.",
+    "first_checked_at": "2026-10-05T04:39:13+00:00",
+    "last_checked_at": "2026-10-05T04:39:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "VStress: Correlation-Aware Auditing and Adaptive Budget Allocation for Repeated Verifiers"
+  },
+  "processed_at": "2026-10-05T04:39:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e450b43f23b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

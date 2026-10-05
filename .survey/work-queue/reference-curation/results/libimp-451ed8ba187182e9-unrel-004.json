@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-451ed8ba187182e9-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37040",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37040",
+    "identity_tokens": [
+      "arXiv:2609.37040"
+    ],
+    "reason": "自然言語autoencoderの監査用説明位置を選び、説明生成コストを抑える研究であり、LLMの通常推論/servingを効率化する手法ではない。",
+    "first_checked_at": "2026-10-05T04:39:11+00:00",
+    "last_checked_at": "2026-10-05T04:39:11+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Selecting The Most Informative Tokens in Natural Language Autoencoders"
+  },
+  "processed_at": "2026-10-05T04:39:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-451ed8ba1871",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

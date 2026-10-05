@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:36:24+00:00",
-  "record_count": 881,
+  "updated_at": "2026-10-05T04:39:13+00:00",
+  "record_count": 885,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13155,6 +13155,75 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
       ],
       "title": "What Makes Recurrence Effective in Looped Language Models?"
+    },
+    "arXiv:2609.37007": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37007",
+      "identity_tokens": [
+        "arXiv:2609.37007"
+      ],
+      "reason": "効率改善はQwen3-TTSのon-device codec-token generationに特化し、測定対象はRVQ inner loop。general text LLM servingへの転移は未確認。",
+      "first_checked_at": "2026-10-05T04:39:11+00:00",
+      "last_checked_at": "2026-10-05T04:39:11+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2403.09919-recurrent-drafter-for-fast-speculative-decoding-in-large-language-models.md"
+      ],
+      "title": "RVQ Position Aware Speculative Decoding for On Device Text to Speech"
+    },
+    "arXiv:2609.36781": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36781",
+      "identity_tokens": [
+        "arXiv:2609.36781"
+      ],
+      "reason": "The paper establishes a positional representation property, but the reviewed evaluation does not show net task-quality benefit or serving-speed measurement.",
+      "first_checked_at": "2026-10-05T04:39:12+00:00",
+      "last_checked_at": "2026-10-05T04:39:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Aperture: Merge-Consistent Rotary States for Compressed Tokens"
+    },
+    "arXiv:2609.36828": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36828",
+      "identity_tokens": [
+        "arXiv:2609.36828"
+      ],
+      "reason": "Quantization can generally reduce deployment cost, but this paper evaluates calibration quality rather than an efficiency gain attributable to its method.",
+      "first_checked_at": "2026-10-05T04:39:12+00:00",
+      "last_checked_at": "2026-10-05T04:39:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Calibrate the Decisions That Change the Future: On-Policy Post-Training Quantization for Multimodal Large Language Models"
+    },
+    "arXiv:2609.36958": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36958",
+      "identity_tokens": [
+        "arXiv:2609.36958"
+      ],
+      "reason": "Call-count reduction relates to inference cost, but the main contribution is verifier auditing/decision quality and the evidence is task-specific.",
+      "first_checked_at": "2026-10-05T04:39:13+00:00",
+      "last_checked_at": "2026-10-05T04:39:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "VStress: Correlation-Aware Auditing and Adaptive Budget Allocation for Repeated Verifiers"
     }
   }
 }
