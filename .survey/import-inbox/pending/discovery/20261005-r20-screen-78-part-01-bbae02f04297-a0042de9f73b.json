@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-78-part-01-bbae02f04297",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.05185",
+      "identity_tokens": [
+        "arXiv:2412.05185"
+      ],
+      "title": "LinVT: Empower Your Image-level Large Language Model to Understand Videos",
+      "reason": "The primary text introduces a video tokenizer that condenses redundant visual information, so a resource effect is plausible. However, the reported results emphasize video-understanding accuracy and training-data efficiency; no inference latency, memory, or compute comparison establishing LLM-serving efficiency was found in the checked sections. Keep as borderline for this inference-focused scope.",
+      "source_url": "https://arxiv.org/abs/2412.05185",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03227",
+      "identity_tokens": [
+        "arXiv:2410.03227"
+      ],
+      "title": "ALR2: A Retrieve-then-Reason Framework for Long-context Question Answering",
+      "reason": "ALR2 uses retrieval before reasoning to improve long-context QA accuracy; the primary abstract reports no inference-compute, latency, memory, or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2410.03227",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02231",
+      "identity_tokens": [
+        "arXiv:2409.02231"
+      ],
+      "title": "SmileyLlama: modifying large language models for directed chemical space exploration",
+      "reason": "SmileyLlama is created through supervised fine-tuning and preference optimization for chemical generation; no inference-efficiency contribution is reported.",
+      "source_url": "https://arxiv.org/abs/2409.02231",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TSC.2024.3422828",
+      "identity_tokens": [
+        "DOI:10.1109/TSC.2024.3422828"
+      ],
+      "title": "SpotDAG: An RL-Based Algorithm for DAG Workflow Scheduling in Heterogeneous Cloud Environments",
+      "reason": "SpotDAG schedules generic cloud DAG workflows on spot instances; it is not an LLM inference or serving method.",
+      "source_url": "https://doi.org/10.1109/TSC.2024.3422828",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16731",
+      "identity_tokens": [
+        "arXiv:2402.16731"
+      ],
+      "title": "PyGim : An Efficient Graph Neural Network Library for Real Processing-In-Memory Architectures",
+      "reason": "PyGim targets graph neural network kernels on processing-in-memory hardware, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2402.16731",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    }
+  ]
+}
