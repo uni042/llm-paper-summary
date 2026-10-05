@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-86-part-06-5b30acea82bb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.14148",
+      "identity_tokens": [
+        "arXiv:2206.14148"
+      ],
+      "title": "Memory Safe Computations with XLA Compiler",
+      "reason": "The paper presents memory-safe computation in the XLA compiler for general computations, with no LLM inference/serving contribution.",
+      "source_url": "https://arxiv.org/abs/2206.14148",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.02.10.637097",
+      "identity_tokens": [
+        "DOI:10.1101/2025.02.10.637097"
+      ],
+      "title": "Large language models possess some ecological knowledge, but how much?",
+      "reason": "The work measures ecological knowledge in LLMs; it is a knowledge benchmark, not an inference efficiency technique.",
+      "source_url": "https://doi.org/10.1101/2025.02.10.637097",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arXiv.2601.15165",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2601.15165"
+      ],
+      "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
+      "reason": "The paper studies reasoning quality and generation order in diffusion language models; the primary abstract presents no concrete inference-efficiency intervention or efficiency result.",
+      "source_url": "https://doi.org/10.48550/arXiv.2601.15165",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10131-4",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10131-4"
+      ],
+      "title": "Collective intelligence for AI-assisted chemical synthesis",
+      "reason": "The official Nature abstract describes an LLM-based collective-intelligence framework for chemical synthesis; it does not study inference/serving efficiency.",
+      "source_url": "https://doi.org/10.1038/s41586-026-10131-4",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.26144",
+      "identity_tokens": [
+        "arXiv:2510.26144"
+      ],
+      "title": "The FM Agent",
+      "reason": "FM Agent is a scientific-agent framework; its speedup concerns GPU-kernel optimization tasks, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2510.26144",
+      "first_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "last_checked_at": "2026-10-05T12:00:43.176639+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
+      ]
+    }
+  ]
+}
