@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1d447908ea908f0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34786",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34786",
+    "identity_tokens": [
+      "arXiv:2609.34786"
+    ],
+    "reason": "compact learned promptsを用いたtime-series foundation modelのcontext/inference cost削減であり、LLM inference/serving対象ではない。",
+    "first_checked_at": "2026-10-05T04:56:14+00:00",
+    "last_checked_at": "2026-10-05T04:56:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "Instance-Adaptive Prompts as Context for Time-Series Foundation Models"
+  },
+  "processed_at": "2026-10-05T04:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1d447908ea9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

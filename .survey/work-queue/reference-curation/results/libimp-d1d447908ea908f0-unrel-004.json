@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1d447908ea908f0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34754",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34754",
+    "identity_tokens": [
+      "arXiv:2609.34754"
+    ],
+    "reason": "Draft-KVはLLM間latent communicationがreceiver accuracyへ因果的に使われるかを評価するもので、推論資源・latency・圧縮効率を改善しない。",
+    "first_checked_at": "2026-10-05T04:56:14+00:00",
+    "last_checked_at": "2026-10-05T04:56:14+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2411.02820-droidspeak-kv-cache-sharing-for-cross-llm-communication-and-multi-llm-se.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+    ],
+    "title": "Draft-KV: Learning Useful Latent Communication Between Language Models"
+  },
+  "processed_at": "2026-10-05T04:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1d447908ea9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

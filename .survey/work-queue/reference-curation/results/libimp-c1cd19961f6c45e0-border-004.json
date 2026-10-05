@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1cd19961f6c45e0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.34633",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.34633",
+    "identity_tokens": [
+      "arXiv:2609.34633"
+    ],
+    "reason": "Compact memory addressing might matter for agent inference efficiency, but no direct inference-cost evidence is reported; follow-up fit remains uncertain.",
+    "first_checked_at": "2026-10-05T04:56:13+00:00",
+    "last_checked_at": "2026-10-05T04:56:13+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "GenMem: Generative Symbolic Memory for Self-Evolving Harness"
+  },
+  "processed_at": "2026-10-05T04:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1cd19961f6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

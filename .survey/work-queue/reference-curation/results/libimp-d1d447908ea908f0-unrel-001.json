@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1d447908ea908f0-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34645",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34645",
+    "identity_tokens": [
+      "arXiv:2609.34645"
+    ],
+    "reason": "NereusはLLM reinforcement-learning post-trainingにおけるrollout/training resource parallelism最適化を扱い、通常のinference/serving効率化を対象としない。",
+    "first_checked_at": "2026-10-05T04:56:14+00:00",
+    "last_checked_at": "2026-10-05T04:56:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Nereus: Adaptive Parallelism for LLM Post-Training"
+  },
+  "processed_at": "2026-10-05T04:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1d447908ea9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

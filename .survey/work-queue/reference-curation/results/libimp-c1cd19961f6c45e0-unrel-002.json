@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c1cd19961f6c45e0-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34572",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34572",
+    "identity_tokens": [
+      "arXiv:2609.34572"
+    ],
+    "reason": "Studies reasoning-model response to confidence signals; behavioral finding without inference optimization.",
+    "first_checked_at": "2026-10-05T04:56:13+00:00",
+    "last_checked_at": "2026-10-05T04:56:13+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+    ],
+    "title": "Nudgeability: Reasoning Models Follow Confidence Signals Without Tracking Their Own Competence"
+  },
+  "processed_at": "2026-10-05T04:56:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c1cd19961f6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
