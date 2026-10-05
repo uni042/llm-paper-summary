@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-100-part-04-84ba1b8ae17b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICMLCA66850.2025.11336326",
+      "identity_tokens": [
+        "DOI:10.1109/ICMLCA66850.2025.11336326"
+      ],
+      "title": "RankStack-MoE: A Multi-Stage Mixture-of-Experts Framework with Curriculum Learning for Predicting High-Value User Conversion",
+      "reason": "The MoE framework targets user-conversion prediction and curriculum learning, not LLM inference/serving efficiency.",
+      "source_url": "https://doi.org/10.1109/ICMLCA66850.2025.11336326",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICMLCA66850.2025.11336448",
+      "identity_tokens": [
+        "DOI:10.1109/ICMLCA66850.2025.11336448"
+      ],
+      "title": "Compression of Super-Resolution Model for Ocean Multimodal Data",
+      "reason": "The work compresses a super-resolution model for ocean data, not an LLM or language-model inference system.",
+      "source_url": "https://doi.org/10.1109/ICMLCA66850.2025.11336448",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21930",
+      "identity_tokens": [
+        "arXiv:2509.21930"
+      ],
+      "title": "DynaNav: Dynamic Feature and Layer Selection for Efficient Visual Navigation",
+      "reason": "The method targets visual navigation with vision foundation models; the abstract does not describe LLM inference or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2509.21930",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2307.02628-skipdecode-autoregressive-skip-decoding-with-batching-and-caching-for-efficient-.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.07909",
+      "identity_tokens": [
+        "arXiv:2509.07909"
+      ],
+      "title": "Uncovering Scaling Laws for Large Language Models via Inverse Problems",
+      "reason": "This is a position paper on using inverse problems to infer training scaling laws, not an inference/serving/compression technique.",
+      "source_url": "https://arxiv.org/abs/2509.07909",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2502.15197-tetris-optimal-draft-token-selection-for-batch-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.09228",
+      "identity_tokens": [
+        "arXiv:2508.09228"
+      ],
+      "title": "Objective Soups: Multilingual Multi-Task Modeling for Speech Processing",
+      "reason": "The work optimizes multilingual speech-model training with multi-objective gradients; it is not an LLM inference or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2508.09228",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ]
+    }
+  ]
+}
