@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-044639249da668c4-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.13657",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.13657",
+    "identity_tokens": [
+      "arXiv:2503.13657"
+    ],
+    "reason": "multi-agent LLM systemの失敗taxonomyとtask performance改善が主題で、推論runtime・serving効率化ではない。",
+    "first_checked_at": "2026-10-05T02:14:49+00:00",
+    "last_checked_at": "2026-10-05T16:03:28+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Why Do Multi-Agent LLM Systems Fail?"
+  },
+  "processed_at": "2026-10-05T16:03:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-044639249da6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

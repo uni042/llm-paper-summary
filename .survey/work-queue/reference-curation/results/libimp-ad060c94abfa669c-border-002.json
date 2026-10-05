@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad060c94abfa669c-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2110.02037",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2110.02037",
+    "identity_tokens": [
+      "arXiv:2110.02037"
+    ],
+    "reason": "自己回帰拡散モデル（Autoregressive Diffusion Models; ARDM）は因果マスク不要で、テスト時に生成budgetへ適応可能な並列生成を行い、discrete diffusionより少ないstepで同等性能へ到達する。生成推論効率へ直接関係するが、最終評価は一般的な高次元離散データとlossless compressionで現代LLM/Transformer推論system専用ではないためborderline。",
+    "first_checked_at": "2026-10-05T16:03:30+00:00",
+    "last_checked_at": "2026-10-05T16:03:30+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Autoregressive Diffusion Models"
+  },
+  "processed_at": "2026-10-05T16:03:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad060c94abfa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

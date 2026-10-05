@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:00:04+00:00",
+  "updated_at": "2026-10-05T16:03:30+00:00",
   "record_count": 2050,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -6552,20 +6552,6 @@
       ],
       "title": "Context dependent recurrent neural network language model"
     },
-    "DOI:10.25080/majora-7b98e3ed-013": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.25080/majora-7b98e3ed-013",
-      "identity_tokens": [
-        "DOI:10.25080/majora-7b98e3ed-013"
-      ],
-      "reason": "The DOI and official SciPy proceedings page could not be retrieved as a usable primary abstract.",
-      "first_checked_at": "2026-10-05T00:48:09+00:00",
-      "last_checked_at": "2026-10-05T00:48:09+00:00",
-      "linked_from": [
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
-      ],
-      "title": "Dask: Parallel Computation with Blocked algorithms and Task Scheduling"
-    },
     "DOI:10.1145/248156.248171": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/248156.248171",
@@ -6684,20 +6670,6 @@
         "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
       ],
       "title": "The State of Sparsity in Deep Neural Networks"
-    },
-    "DOI:10.52202/075280-0441": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.52202/075280-0441",
-      "identity_tokens": [
-        "DOI:10.52202/075280-0441"
-      ],
-      "reason": "Official proceedings DOI record was not retrievable as a usable primary abstract during screening.",
-      "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md"
-      ],
-      "title": "QLoRA: Efficient Finetuning of Quantized LLMs"
     },
     "DOI:10.18653/v1/w16-2301": {
       "classification": "borderline",
@@ -9227,34 +9199,6 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Catalyzer: Sub-millisecond Startup for Serverless Computing with Initialization-less Booting"
-    },
-    "DOI:10.1145/3307681.3325400": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3307681.3325400",
-      "identity_tokens": [
-        "DOI:10.1145/3307681.3325400"
-      ],
-      "reason": "Parsl is general Python parallel task/workflow execution; measured overhead/throughput does not establish LLM serving optimization.",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
-      ],
-      "title": "Parsl: Pervasive Parallel Programming in Python"
-    },
-    "DOI:10.18653/v1/w15-3001": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.18653/v1/w15-3001",
-      "identity_tokens": [
-        "DOI:10.18653/v1/w15-3001"
-      ],
-      "reason": "Primary ACL DOI page retrieval failed; no primary abstract/full text was available to verify scope.",
-      "first_checked_at": "2026-10-05T02:04:35+00:00",
-      "last_checked_at": "2026-10-05T02:04:35+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md"
-      ],
-      "title": "Findings of the 2015 Workshop on Statistical Machine Translation"
     },
     "arXiv:2410.21276": {
       "classification": "borderline",
@@ -31719,6 +31663,68 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length"
+    },
+    "arXiv:2510.04618": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.04618",
+      "identity_tokens": [
+        "arXiv:2510.04618"
+      ],
+      "reason": "ACEはagent memory/contextをincrementalに蓄積・整理してcontext collapseを避け、adaptation latencyとrollout costも削減する。agentic inference効率に関連するが、主要貢献はcontext adaptation手法と能力改善でserving runtimeそのものではないためborderline。",
+      "first_checked_at": "2026-10-05T16:03:28+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
+    },
+    "DOI:10.1145/780822.781137": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/780822.781137",
+      "identity_tokens": [
+        "DOI:10.1145/780822.781137"
+      ],
+      "reason": "コンパイラが低CPU利用率区間を特定して動的電圧スケーリング（dynamic voltage scaling; DVS）を適用し、SPECfp95で性能低下5%未満のまま最大28%のシステムenergy削減を実測する。LLM推論の電力制御へ機構的関連はあるが、最終適用先は汎用CPU/SPECでLLM・Transformer推論評価がないためborderline。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2607.16473-enpu-component-level-dvfs-npu-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The design, implementation, and evaluation of a compiler algorithm for CPU energy reduction"
+    },
+    "arXiv:2110.02037": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.02037",
+      "identity_tokens": [
+        "arXiv:2110.02037"
+      ],
+      "reason": "自己回帰拡散モデル（Autoregressive Diffusion Models; ARDM）は因果マスク不要で、テスト時に生成budgetへ適応可能な並列生成を行い、discrete diffusionより少ないstepで同等性能へ到達する。生成推論効率へ直接関係するが、最終評価は一般的な高次元離散データとlossless compressionで現代LLM/Transformer推論system専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Autoregressive Diffusion Models"
+    },
+    "DOI:10.1145/3445814.3446714": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3445814.3446714",
+      "identity_tokens": [
+        "DOI:10.1145/3445814.3446714",
+        "arXiv:2101.09355"
+      ],
+      "reason": "サーバーレス関数snapshotの作成・復元・storage I/Oを実測し、snapshot機構を最適化するsystems研究。LLM serverless materializationやagent sandbox checkpointへ直接応用可能だが、原論文は汎用serverless functionを最終対象としLLM推論評価がないためborderline。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.29069-rethinking-ai-cloud-infrastructure-for-agentic-serving-systems-with-the-aries-experimentation-framework.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking, Analysis, and Optimization of Serverless Function Snapshots"
     }
   }
 }

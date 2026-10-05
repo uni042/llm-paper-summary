@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f2e32f41ae94f98-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2010.15327",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2010.15327",
+    "identity_tokens": [
+      "arXiv:2010.15327"
+    ],
+    "reason": "networkの幅・深さが内部表現と誤りpatternへ与える影響を分析するrepresentation/interpretability研究。推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T16:03:29+00:00",
+    "last_checked_at": "2026-10-05T16:03:29+00:00",
+    "linked_from": [],
+    "title": "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth"
+  },
+  "processed_at": "2026-10-05T16:03:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f2e32f41ae9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ad060c94abfa669c-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2110.07577",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2110.07577",
+    "identity_tokens": [
+      "arXiv:2110.07577"
+    ],
+    "reason": "Adapter、prefix tuning、LoRA等のparameter-efficient language model tuningをsubmoduleとして統合し、gatingでtask/dataに適した手法を学習するfine-tuning研究。GLUE性能向上が主評価で、推論runtime・memory・serving効率化ではない。",
+    "first_checked_at": "2026-10-05T16:03:31+00:00",
+    "last_checked_at": "2026-10-05T16:03:31+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+    ],
+    "title": "UniPELT: A Unified Framework for Parameter-Efficient Language Model Tuning"
+  },
+  "processed_at": "2026-10-05T16:03:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ad060c94abfa",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

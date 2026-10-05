@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T16:00:05+00:00",
-  "record_count": 6351,
+  "updated_at": "2026-10-05T16:03:31+00:00",
+  "record_count": 6361,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -870,11 +870,12 @@
       "canonical_id": "arXiv:2305.14314",
       "identity_tokens": [
         "DOI:10.48550/arxiv.2305.14314",
+        "DOI:10.52202/075280-0441",
         "arXiv:2305.14314"
       ],
-      "reason": "4-bit NF4、double quantization、paged optimizerを用いて65Bモデルを48GB GPU 1枚で微調整可能にする学習メモリ削減手法。量子化を用いるが目的・評価はfine-tuningで、推論向け量子化・配備最適化ではない。",
+      "reason": "4-bit量子化モデルへLoRAを学習するfine-tuning memory削減が主目的で、推論runtime・serving効率化の評価ではない。",
       "first_checked_at": "2026-09-27T00:01:48+09:00",
-      "last_checked_at": "2026-10-04T23:24:23+00:00",
+      "last_checked_at": "2026-10-05T16:03:27+00:00",
       "linked_from": [
         ".survey/work-queue/worker-worklist-00.json",
         "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
@@ -26344,9 +26345,9 @@
       "identity_tokens": [
         "arXiv:2402.17152"
       ],
-      "reason": "生成推薦用sequential transducerの論文。推薦モデルのarchitecture/品質評価であり、LLM推論・serving効率を扱わない。",
+      "reason": "HSTUとGenerative Recommendersを推薦システム向けに提案し、長系列でFlashAttention2系Transformerより高速な結果も示すが、最終適用先は大規模推薦でLLM/言語生成推論systemではない。",
       "first_checked_at": "2026-10-05T02:12:07+00:00",
-      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
       ],
@@ -26358,9 +26359,9 @@
       "identity_tokens": [
         "arXiv:2502.02013"
       ],
-      "reason": "言語モデル内部表現の解析と下流task性能が主題。推論時計算・メモリ・servingの効率化は要旨の貢献でない。",
+      "reason": "中間layer表現のinformation/geometry/invarianceを分析し、embedding taskで最終layerより強い表現を示すrepresentation analysis研究。推論runtime・memory・serving効率化を提案しない。",
       "first_checked_at": "2026-10-05T02:12:07+00:00",
-      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
       ],
@@ -26372,9 +26373,9 @@
       "identity_tokens": [
         "DOI:10.2196/59505"
       ],
-      "reason": "医療におけるmultimodal LLMのapplication/challengeを扱うviewpoint/surveyで、推論効率の機構・評価が主題ではない。",
+      "reason": "医療におけるmultimodal LLMの基礎、応用、技術・倫理課題、将来方向を整理するhealthcare perspective/review。推論runtime・serving効率化の新規方式を提案しない。",
       "first_checked_at": "2026-10-05T02:12:07+00:00",
-      "last_checked_at": "2026-10-05T02:12:07+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
       "linked_from": [
         "papers/inference/08-edge-on-device-llm-systems/2026-35c4f3816b37-vlmcache-efficient-on-device-vision-language-model-inference.md"
       ],
@@ -26551,9 +26552,9 @@
       "identity_tokens": [
         "arXiv:2410.24164"
       ],
-      "reason": "vision-language-action flow modelによるrobot controlと訓練/行動性能が主題で、LLM serving効率ではない。",
+      "reason": "VLAによる汎用ロボット制御能力が主題で、LLM推論runtime・serving効率化を提案しない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T16:03:27+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md",
         "papers/inference/99-other-inference-systems/2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md"
@@ -26566,9 +26567,9 @@
       "identity_tokens": [
         "arXiv:2411.15594"
       ],
-      "reason": "LLM-as-a-judgeの能力・評価設定のsurveyで、推論効率やserving systemは対象でない。",
+      "reason": "LLMを評価器として用いる信頼性・bias・benchmarkのsurveyで、推論system効率化ではない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T16:03:27+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md"
       ],
@@ -26580,9 +26581,9 @@
       "identity_tokens": [
         "arXiv:2503.14734"
       ],
-      "reason": "humanoid robot向けgeneralist foundation modelとVLA能力が主題で、LLM inference/serving効率ではない。",
+      "reason": "humanoid robot向けVLA foundation modelの学習・能力が主題で、LLM推論runtime最適化ではない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
+      "last_checked_at": "2026-10-05T16:03:27+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md"
       ],
@@ -26594,9 +26595,9 @@
       "identity_tokens": [
         "arXiv:2503.13657"
       ],
-      "reason": "複数LLMエージェントの実行traceを分析し14種のfailure mode taxonomyとMAST-Dataを構築する信頼性・評価研究。system designを扱うが、推論ランタイムの速度・メモリ・スループット最適化が主目的ではない。",
+      "reason": "multi-agent LLM systemの失敗taxonomyとtask performance改善が主題で、推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T15:38:26+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
       "linked_from": [
         "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md",
         "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
@@ -30199,9 +30200,9 @@
       "identity_tokens": [
         "DOI:10.1109/micro.2016.7783723"
       ],
-      "reason": "疎なニューラルネットワーク向け専用アクセラレータで、圧縮DNNの不規則な疎行列計算を高速化する汎用ハードウェア研究。LLM/Transformer推論を最終適用先とせず、LLM固有の推論評価がない。",
+      "reason": "疎DNN/CNN向けacceleratorであり、LLM/Transformer推論への直接評価がない。",
       "first_checked_at": "2026-10-05T02:59:43+00:00",
-      "last_checked_at": "2026-10-05T15:38:25+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
       "linked_from": [],
       "title": "Cambricon-X: An accelerator for sparse neural networks"
     },
@@ -30211,11 +30212,11 @@
       "identity_tokens": [
         "DOI:10.1145/3282307"
       ],
-      "reason": "汎用計算機アーキテクチャの潮流、domain-specific architecture、セキュリティ等を論じる展望論文で、LLM推論システムの具体的最適化方式を提案・評価しない。",
+      "reason": "domain-specific architecture等を論じるcomputer architectureの展望で、LLM推論systemの個別方式・評価ではない。",
       "first_checked_at": "2026-10-05T02:59:43+00:00",
-      "last_checked_at": "2026-10-05T15:38:25+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
       "linked_from": [],
-      "title": "A new golden age for computer architecture"
+      "title": "A New Golden Age for Computer Architecture"
     },
     "DOI:10.1038/s41591-024-03141-0": {
       "classification": "unrelated",
@@ -30223,9 +30224,9 @@
       "identity_tokens": [
         "DOI:10.1038/s41591-024-03141-0"
       ],
-      "reason": "Virchowを用いた病理画像のpan-cancer検出・biomarker予測が主題で、最終適用先は臨床計算病理。LLM推論ランタイム・メモリ・サービング最適化ではない。",
+      "reason": "病理画像foundation model Virchowによる癌検出・biomarker予測が主題で、LLM推論runtime最適化ではない。",
       "first_checked_at": "2026-10-05T02:59:43+00:00",
-      "last_checked_at": "2026-10-05T15:38:26+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
       "linked_from": [],
       "title": "A foundation model for clinical-grade computational pathology and rare cancers detection"
     },
@@ -91798,11 +91799,11 @@
       "identity_tokens": [
         "arXiv:1909.01315"
       ],
-      "reason": "Deep Graph Library (DGL) はグラフを中心抽象として疎・不規則なグラフ構造を扱い、演算融合と自動バッチ化でGNN実行を高速化する汎用グラフ深層学習基盤。評価対象はGNNとその派生であり、LLM/Transformer推論サービングを最終適用先としないため対象外。",
+      "reason": "GNN向けgraph-centric libraryとsparse tensor実行の研究で、LLM/Transformer推論を最終適用先としない。",
       "first_checked_at": "2026-10-05T15:55:19+00:00",
-      "last_checked_at": "2026-10-05T15:55:19+00:00",
+      "last_checked_at": "2026-10-05T16:03:27+00:00",
       "linked_from": [],
-      "title": "Deep Graph Library: Towards Efficient and Scalable Deep Learning on Graphs"
+      "title": "Deep Graph Library: A Graph-Centric, Highly-Performant Package for Graph Neural Networks"
     },
     "DOI:10.18653/v1/2020.findings-emnlp.217": {
       "classification": "unrelated",
@@ -91875,18 +91876,6 @@
       "last_checked_at": "2026-10-05T15:55:20+00:00",
       "linked_from": [],
       "title": "On the Performance Variability of Production Cloud Services"
-    },
-    "arXiv:2510.04618": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2510.04618",
-      "identity_tokens": [
-        "arXiv:2510.04618"
-      ],
-      "reason": "ACEはagent contextをgeneration/reflection/curationで進化させ、agent/finance benchmark性能とadaptation latency/rollout costを改善するcontext adaptation研究。推論runtime、KV cache、serving scheduler等の実行基盤最適化が主要貢献ではない。",
-      "first_checked_at": "2026-10-05T15:55:21+00:00",
-      "last_checked_at": "2026-10-05T15:55:21+00:00",
-      "linked_from": [],
-      "title": "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models"
     },
     "DOI:10.1145/3240765.3240801": {
       "classification": "unrelated",
@@ -91995,6 +91984,151 @@
       "last_checked_at": "2026-10-05T16:00:05+00:00",
       "linked_from": [],
       "title": "Sparsity: Optimization Framework for Sparse Matrix Kernels"
+    },
+    "DOI:10.25080/majora-7b98e3ed-013": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.25080/majora-7b98e3ed-013",
+      "identity_tokens": [
+        "DOI:10.25080/majora-7b98e3ed-013"
+      ],
+      "reason": "汎用NumPy/out-of-core並列計算とmemory-aware task schedulingが主題で、LLM推論systemへの直接適用・評価がない。",
+      "first_checked_at": "2026-10-05T16:03:28+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
+      "linked_from": [],
+      "title": "Dask: Parallel Computation with Blocked algorithms and Task Scheduling"
+    },
+    "DOI:10.1145/3697010": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3697010",
+      "identity_tokens": [
+        "DOI:10.1145/3697010",
+        "arXiv:2308.02828"
+      ],
+      "reason": "同一promptへのChatGPT code generation出力の非決定性を829問題で測る再現性・評価研究。temperature=0でも非決定性が残ることを示すが、推論runtime・memory・serving最適化ではない。",
+      "first_checked_at": "2026-10-05T16:03:28+00:00",
+      "last_checked_at": "2026-10-05T16:03:28+00:00",
+      "linked_from": [],
+      "title": "An Empirical Study of the Non-determinism of ChatGPT in Code Generation"
+    },
+    "DOI:10.1145/3081333.3081360": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3081333.3081360",
+      "identity_tokens": [
+        "DOI:10.1145/3081333.3081360"
+      ],
+      "reason": "mobile GPUへCNN convolutionをoffloadして連続vision inferenceを高速・省電力化するsystem研究だが、対象はVGG等の一般DNN/CNNでLLM/Transformer推論を最終適用先としない。",
+      "first_checked_at": "2026-10-05T16:03:29+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
+      "linked_from": [],
+      "title": "DeepMon: Mobile GPU-based Deep Learning Framework for Continuous Vision Applications"
+    },
+    "arXiv:2010.15327": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.15327",
+      "identity_tokens": [
+        "arXiv:2010.15327"
+      ],
+      "reason": "networkの幅・深さが内部表現と誤りpatternへ与える影響を分析するrepresentation/interpretability研究。推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-05T16:03:29+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
+      "linked_from": [],
+      "title": "Do Wide and Deep Networks Learn the Same Things? Uncovering How Neural Network Representations Vary with Width and Depth"
+    },
+    "DOI:10.1145/3307681.3325400": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3307681.3325400",
+      "identity_tokens": [
+        "DOI:10.1145/3307681.3325400",
+        "arXiv:1905.02158"
+      ],
+      "reason": "Python向け汎用parallel scripting libraryで、HPC上のdynamic dependency graph実行・elastic provisioning等を扱う。LLM推論を最終適用先とするruntimeではない。",
+      "first_checked_at": "2026-10-05T16:03:29+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
+      "linked_from": [],
+      "title": "Parsl: Pervasive Parallel Programming in Python"
+    },
+    "DOI:10.18653/v1/w15-3001": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/w15-3001",
+      "identity_tokens": [
+        "DOI:10.18653/v1/w15-3001"
+      ],
+      "reason": "WMT 2015 shared tasksと統計的機械翻訳結果をまとめる会議報告。LLM推論runtime・serving最適化を提案しない。",
+      "first_checked_at": "2026-10-05T16:03:29+00:00",
+      "last_checked_at": "2026-10-05T16:03:29+00:00",
+      "linked_from": [],
+      "title": "Findings of the 2015 Workshop on Statistical Machine Translation"
+    },
+    "arXiv:1611.01540": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1611.01540",
+      "identity_tokens": [
+        "arXiv:1611.01540"
+      ],
+      "reason": "half-rectified neural networkのloss landscape、bad local minima、level-set geometryとgradient descent conditioningを理論・実証解析するoptimization研究であり、LLM推論runtime・memory・serving効率化を扱わない。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ],
+      "title": "Topology and Geometry of Half-Rectified Network Optimization"
+    },
+    "arXiv:2410.10934": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10934",
+      "identity_tokens": [
+        "arXiv:2410.10934"
+      ],
+      "reason": "agentic systemを別agentで評価し、code generation用DevAI benchmarkとstep-wise feedbackで評価信頼性を高めるagent evaluation研究。推論サービングのlatency・memory・throughput最適化は主目的ではない。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.22705-concur-agentic-admission-control.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ],
+      "title": "Agent-as-a-Judge: Evaluate Agents with Agents"
+    },
+    "arXiv:2309.12499": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12499",
+      "identity_tokens": [
+        "arXiv:2309.12499"
+      ],
+      "reason": "repository-level codingをplanning problemとして、dependency analysisとadaptive planningでLLM呼出しのmulti-step edit chainを生成しcodebase変更成功率を高めるagent/coding能力研究。推論runtime・KV cache・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T16:03:30+00:00",
+      "last_checked_at": "2026-10-05T16:03:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md"
+      ],
+      "title": "CodePlan: Repository-level Coding using LLMs and Planning"
+    },
+    "arXiv:2302.12066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.12066",
+      "identity_tokens": [
+        "arXiv:2302.12066"
+      ],
+      "reason": "CLIPへcounting-contrastive lossを追加してobject counting能力を改善し、CountBench・image retrieval・text-conditioned image generationで評価するVLM training/capability研究。推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T16:03:31+00:00",
+      "last_checked_at": "2026-10-05T16:03:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md"
+      ],
+      "title": "Teaching CLIP to Count to Ten"
+    },
+    "arXiv:2110.07577": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.07577",
+      "identity_tokens": [
+        "arXiv:2110.07577"
+      ],
+      "reason": "Adapter、prefix tuning、LoRA等のparameter-efficient language model tuningをsubmoduleとして統合し、gatingでtask/dataに適した手法を学習するfine-tuning研究。GLUE性能向上が主評価で、推論runtime・memory・serving効率化ではない。",
+      "first_checked_at": "2026-10-05T16:03:31+00:00",
+      "last_checked_at": "2026-10-05T16:03:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2402.18789-flexllm-token-level-co-serving-of-llm-inference-and-finetuning.md"
+      ],
+      "title": "UniPELT: A Unified Framework for Parameter-Efficient Language Model Tuning"
     }
   }
 }
