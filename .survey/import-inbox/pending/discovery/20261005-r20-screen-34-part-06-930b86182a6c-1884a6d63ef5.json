@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-34-part-06-930b86182a6c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02162",
+      "identity_tokens": [
+        "arXiv:2608.02162"
+      ],
+      "title": "Lossless Tensor Compression as Program Synthesis",
+      "reason": "Brevis compresses archived model checkpoint tensors losslessly for storage/transfer; the abstract does not show inference-time compressed execution.",
+      "source_url": "https://arxiv.org/abs/2608.02162",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2601.21198-zipmoe-lossless-compression-cache-affinity-scheduling.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2025-2502.00922-huff-llm-end-to-end-lossless-compression-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02217",
+      "identity_tokens": [
+        "arXiv:2608.02217"
+      ],
+      "title": "VC-Tooler: Learning Compositional and Adaptive Visual Tool Use",
+      "reason": "VC-Tooler studies multimodal visual tool-use capability, not inference cost or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.02217",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02415",
+      "identity_tokens": [
+        "arXiv:2608.02415"
+      ],
+      "title": "Training-Free versus Training-Based Intent Classification in LLMs: Accuracy, Robustness, and Failure Modes",
+      "reason": "Borderline because its routing-classifier overhead is measured but actual serving-level compute or latency savings from routing are not established.",
+      "source_url": "https://arxiv.org/abs/2608.02415",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2503.16163-specache-speculative-kv-caching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02504",
+      "identity_tokens": [
+        "arXiv:2608.02504"
+      ],
+      "title": "Token Radius Attention for Efficient Video Generation",
+      "reason": "TRA targets video diffusion transformer generation, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.02504",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02508",
+      "identity_tokens": [
+        "arXiv:2608.02508"
+      ],
+      "title": "RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States",
+      "reason": "RoMeRL is reinforcement learning for agent-memory utility states; the abstract centers on learning memory reward, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.02508",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
