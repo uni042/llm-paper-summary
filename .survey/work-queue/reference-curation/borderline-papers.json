@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:17:12+00:00",
-  "record_count": 1059,
+  "updated_at": "2026-10-05T07:19:38+00:00",
+  "record_count": 1063,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -16145,6 +16145,64 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "Read-Polarity-Aware Row-Wise Offset Encoding for Readout-Energy Reduction in 8T SRAM Compute-in-Memory"
+    },
+    "DOI:10.1145/3793230.3837771": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3793230.3837771",
+      "identity_tokens": [
+        "DOI:10.1145/3793230.3837771"
+      ],
+      "reason": "Weak scope fit: abstract covers six workloads and LLM traces as one workload family; article details are needed to verify whether inference-specific serving effects are central.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "title": "BASIC-Prefetcher: Bin-based Address and Size-Informed Caching for AI-Driven SSD Workloads"
+    },
+    "arXiv:2609.00759": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00759",
+      "identity_tokens": [
+        "arXiv:2609.00759"
+      ],
+      "reason": "Weak fit: primary contribution is ICL task success and compiler/checklist tooling; full system substantially increases online tokens and extra LLM calls. Evaluation is CL-bench-specific and its questions/schema are coupled.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Compile, Don't Memorize: A Context Compilation Architecture (CCA) for In-Context Learning"
+    },
+    "arXiv:2609.02250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02250",
+      "identity_tokens": [
+        "arXiv:2609.02250"
+      ],
+      "reason": "Runtime-call elimination is relevant in principle, but application-specific evidence does not establish a general inference-efficiency method.",
+      "first_checked_at": "2026-10-05T07:19:38+00:00",
+      "last_checked_at": "2026-10-05T07:19:38+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "RideSkill: A Hierarchical Algorithm for Generalized Ride Sharing with LLM-Driven Automatic Evolution"
+    },
+    "arXiv:2609.02451": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.02451",
+      "identity_tokens": [
+        "arXiv:2609.02451"
+      ],
+      "reason": "The analysis may inform future compression choices, but the paper’s measured contribution is sensitivity estimation rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T07:19:38+00:00",
+      "last_checked_at": "2026-10-05T07:19:38+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression"
     }
   }
 }

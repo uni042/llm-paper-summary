@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a295f0bf8c7c6202-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.02250",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.02250",
+    "identity_tokens": [
+      "arXiv:2609.02250"
+    ],
+    "reason": "Runtime-call elimination is relevant in principle, but application-specific evidence does not establish a general inference-efficiency method.",
+    "first_checked_at": "2026-10-05T07:19:38+00:00",
+    "last_checked_at": "2026-10-05T07:19:38+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "RideSkill: A Hierarchical Algorithm for Generalized Ride Sharing with LLM-Driven Automatic Evolution"
+  },
+  "processed_at": "2026-10-05T07:19:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a295f0bf8c7c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

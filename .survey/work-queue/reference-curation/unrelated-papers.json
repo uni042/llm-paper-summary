@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:17:12+00:00",
-  "record_count": 3531,
+  "updated_at": "2026-10-05T07:19:38+00:00",
+  "record_count": 3546,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -51448,6 +51448,222 @@
         "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
       ],
       "title": "Adaptive Multilevel Discontinuous Galerkin Methods on GPUs"
+    },
+    "arXiv:2609.22220": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22220",
+      "identity_tokens": [
+        "arXiv:2609.22220"
+      ],
+      "reason": "Mutation analysis evaluates correctness-checker adequacy for GPU kernels, not LLM runtime efficiency.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Measuring the Checker: Mutation Analysis for GPU-Kernel Benchmark Oracles"
+    },
+    "arXiv:2609.22225": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22225",
+      "identity_tokens": [
+        "arXiv:2609.22225"
+      ],
+      "reason": "The study evaluates LLM choice behavior against cognitive theory; no inference-efficiency method is proposed.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Do LLMs Choose Like Humans? Using Cognitive Theory to Evaluate LLM Decision-Making"
+    },
+    "DOI:10.1038/s41598-026-55486-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-55486-w",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-55486-w"
+      ],
+      "reason": "AC-RPX predicts refrigerant deficiency using an adapted LLM for explanations; its contribution is domain adaptation/accuracy, not serving efficiency.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Explainable and domain-adaptive prediction models for refrigerant charging in air conditioning systems within industrial processes"
+    },
+    "DOI:10.1038/s41598-026-58622-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-026-58622-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-026-58622-8"
+      ],
+      "reason": "The paper structures Japanese clinical SOAP notes with a locally deployed QLoRA LLM and reports extraction quality; no inference optimization is stated.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Hierarchical multi-label structuring of Japanese SOAP clinical notes with large language models"
+    },
+    "DOI:10.1038/s44401-026-00137-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s44401-026-00137-5",
+      "identity_tokens": [
+        "DOI:10.1038/s44401-026-00137-5"
+      ],
+      "reason": "This is a medical-methods scoping review spanning pretraining/fine-tuning/prompting; it does not report a specific inference-efficiency study.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Generative large language models in medicine: a scoping review of recent methodological advances"
+    },
+    "arXiv:2609.02881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02881",
+      "identity_tokens": [
+        "arXiv:2609.02881"
+      ],
+      "reason": "Graph Machine is an architectural pretraining study; its sparse retrieval is evaluated during pretraining, with no LLM serving-efficiency result.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Graph Machine: Towards Better Pretraining via Edges"
+    },
+    "arXiv:2609.03150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03150",
+      "identity_tokens": [
+        "arXiv:2609.03150"
+      ],
+      "reason": "SpawnLoRA addresses adapter interference during MoE+LoRA fine-tuning; its experiments concern training adaptation and quality.",
+      "first_checked_at": "2026-10-05T07:19:36+00:00",
+      "last_checked_at": "2026-10-05T07:19:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Routing Is Not Enough: Diagnosing Intra-Adapter Subspace Contention in MoE+LoRA Fine-Tuning"
+    },
+    "arXiv:2609.03151": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03151",
+      "identity_tokens": [
+        "arXiv:2609.03151"
+      ],
+      "reason": "BASP reduces communication and end-to-end time for LLM training, explicitly outside the inference/serving scope.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2023-2311.09431-striped-attention.md"
+      ],
+      "title": "BASP: Communication-Efficient Batch-Aware Sequence Parallelism for LLM Training"
+    },
+    "arXiv:2609.03221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03221",
+      "identity_tokens": [
+        "arXiv:2609.03221"
+      ],
+      "reason": "Fairness audit measures stochastic decision variation and decoding settings; it does not optimize inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Instability Floors: Separating Bias from Noise in Fairness Audits of Clinical LLM Agents with FairMedAgent"
+    },
+    "arXiv:2609.04271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04271",
+      "identity_tokens": [
+        "arXiv:2609.04271"
+      ],
+      "reason": "Q-MET is quantum-assisted training/pruning for Wi-Fi human-activity recognition, not an LLM inference method.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Quantum-Assisted Memory-Efficient Training for Parameter-Intensive Wi-Fi-Based Human Activity Recognition"
+    },
+    "arXiv:2609.00590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00590",
+      "identity_tokens": [
+        "arXiv:2609.00590"
+      ],
+      "reason": "CRAFT reduces compute/energy for fine-tuning SLMs for 6G reasoning; the contribution and reported energy comparison are training-stage.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "CRAFT: Fine-Tuning Pre-hoc Explainability in AI-native 6G RAN"
+    },
+    "arXiv:2609.00746": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00746",
+      "identity_tokens": [
+        "arXiv:2609.00746"
+      ],
+      "reason": "The paper diagnoses text-capability loss caused by VLM adaptation and tests training-time interventions; no inference cost reduction is studied.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Text Capability Loss in Vision-Language Adaptation: An Attention-Sink Diagnosis"
+    },
+    "arXiv:2609.00760": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00760",
+      "identity_tokens": [
+        "arXiv:2609.00760"
+      ],
+      "reason": "The work analyzes mechanisms of knowledge- and safety-based refusals, not inference efficiency.",
+      "first_checked_at": "2026-10-05T07:19:37+00:00",
+      "last_checked_at": "2026-10-05T07:19:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "A Unified Mechanistic Analysis of Knowledge- and Safety-Based Refusals"
+    },
+    "arXiv:2609.02639": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02639",
+      "identity_tokens": [
+        "arXiv:2609.02639"
+      ],
+      "reason": "LoRA initialization for fine-tuning, training-only.",
+      "first_checked_at": "2026-10-05T07:19:38+00:00",
+      "last_checked_at": "2026-10-05T07:19:38+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "TaRA: Training-Aware Low-Rank Adaptation Initialization"
+    },
+    "arXiv:2609.02684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.02684",
+      "identity_tokens": [
+        "arXiv:2609.02684"
+      ],
+      "reason": "ONNX compression for 3D point-cloud models, not LLM inference.",
+      "first_checked_at": "2026-10-05T07:19:38+00:00",
+      "last_checked_at": "2026-10-05T07:19:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "title": "H3DNAS: Hardware-Aware ONNX-Native 3D Point Cloud Model Compression"
     }
   }
 }
