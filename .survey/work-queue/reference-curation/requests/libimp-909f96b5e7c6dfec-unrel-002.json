@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-909f96b5e7c6dfec-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "DOI:10.1007/s10586-026-06507-w",
+  "reason": "一次資料の要旨: As the scale of big data continues to expand, traditional single-machine processing methods have been replaced by distributed computing frameworks. With the limited potential for further CPU performance improvements, GPU-accelerated computing has emerged as a trend, particularly for single-instruction multiple-data (SIMD) and computationally intensive tasks. However, with the clustering of GPUs, traditional scheduling algorithms face limitations such as resource waste and inefficient allocation. To meet the diverse needs of big data applications, it is necessary to optimize the task scheduling and architecture of computing frameworks to enhance processing efficiency and adaptability. Addressing these challenges, this paper proposes a novel distributed computing framework, GDSF, based on a thorough examination of existing computing frameworks and task scheduling algorithms, combined with the computational characteristics of GPUs and the mechanism for multi-task GPU sharing. This framework incorporates various task scheduling strategies to ensure effective scheduling for both dependent and independent task models, achieving an optimal match between tasks and GPU resources. Experiments conducted on a real heterogeneous CPU-GPU cluster using diverse GPU workloads demonstrate that the performance of the GDSF computing framework and its scheduling algorithms meets the expected research objectives.",
+  "title": "Design and implementation of distributed computing framework based on GPU",
+  "identity_tokens": [
+    "DOI:10.1007/s10586-026-06507-w"
+  ],
+  "linked_from": [
+    "papers/inference/12-moe-parallelism-communication/2026-2601.03992-edge-gpu-ndp-moe-scheduling.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-909f96b5e7c6",
+  "source_precheck_request_id": null
+}
