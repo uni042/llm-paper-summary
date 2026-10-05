@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6a0f2e5fe2469c91-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.31160",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.31160",
+    "identity_tokens": [
+      "arXiv:2606.31160"
+    ],
+    "reason": "一次本文はVLA自律走行plannerのautoregressive reasoning accelerationを実験するが、一般LLM inference/servingへの適用範囲が本文から確定できない。",
+    "first_checked_at": "2026-10-05T03:52:08+00:00",
+    "last_checked_at": "2026-10-05T03:52:08+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+    ],
+    "title": "Reasoning-aware Speculative Decoding for Efficient Vision-Language-Action Models in Autonomous Driving"
+  },
+  "processed_at": "2026-10-05T03:52:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6a0f2e5fe246",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:49:52+00:00",
-  "record_count": 799,
+  "updated_at": "2026-10-05T03:52:08+00:00",
+  "record_count": 800,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11835,6 +11835,22 @@
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
       "title": "Fixed RAG Compression Collapses Measured Reader Scaling"
+    },
+    "arXiv:2606.31160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31160",
+      "identity_tokens": [
+        "arXiv:2606.31160"
+      ],
+      "reason": "一次本文はVLA自律走行plannerのautoregressive reasoning accelerationを実験するが、一般LLM inference/servingへの適用範囲が本文から確定できない。",
+      "first_checked_at": "2026-10-05T03:52:08+00:00",
+      "last_checked_at": "2026-10-05T03:52:08+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md"
+      ],
+      "title": "Reasoning-aware Speculative Decoding for Efficient Vision-Language-Action Models in Autonomous Driving"
     }
   }
 }
