@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-35-part-04-d6e9124db595",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25014",
+      "identity_tokens": [
+        "arXiv:2609.25014"
+      ],
+      "title": "Not All 4-bit Quantizers Are Equal: Deployment-Time Mitigation of PII Leakage in Fine-Tuned Small Language Models",
+      "reason": "Organizations fine-tune small language models on private data and then compress them to 4 bits for resource-efficient deployment. We show that the compression method also affects privacy. What separates the methods is not the bit width but whether they tune their rounding on a small sample of text, the calibration corpus. On our primary model, when each planted record's own opening text is used as the prompt, the two calibration-based methods we test, Activation-aware Weight Quantization (AWQ) and Gradient-based Post-Training Quantization (GPTQ), each reproduce none of the planted records, while the calibration-corpus-free GGUF Q4_K_M format reproduces 5.3% of them. Tracked across five open models with 0.5-7 billion parameters, AWQ leaks least at every size and in both families, with little accuracy loss at 3-7 billion. Controlled experiments associate the difference with calibration-induced rounding error in channels involved in rare-token prediction. Choosing the 4-bit method is therefore a deployment-time privacy decision, not only a question of speed and quality.",
+      "source_url": "https://arxiv.org/abs/2609.25014",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00391",
+      "identity_tokens": [
+        "arXiv:2608.00391"
+      ],
+      "title": "The Gate, Not the Cache: Gate Provenance Bounds the Closed-Loop Reliability of Training-Free VLA Token Skipping",
+      "reason": "本文で確認した内容は隣接領域または限定的な効率評価にとどまり、LLM推論/serving効率への適合が弱いためborderlineとする。 This is VLA robot-control evaluation; general LLM inference scope is weak.",
+      "source_url": "https://arxiv.org/abs/2608.00391",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00437",
+      "identity_tokens": [
+        "arXiv:2608.00437"
+      ],
+      "title": "Distilling Reasoning Traces into Advisory Prompts for Software Engineering Tasks",
+      "reason": "Language models are widely used for generating and otherwise processing code (e.g., identifying code hallucinations, possible inputs, or predicting outputs); however, LLMs can make mistakes, which can be serious. One key issue is that models are trained on (still) largely human-written, and thus imperfect, code; it's not easy to find sufficiently large code corpora that are entirely free of bugs. Thus, other inference-time ways of reducing LLM errors, without additional training, are desirable.\"Reasoning\"or\"thinking\"modes, exposed as a togglable feature by hybrid reasoning models, do reduce errors; however, reasoning consumes additional resources. This paper asks if better performance can be achieved without always incurring the cost of reasoning. Human students of programming learn to avoid mistakes by (a) identifying them, (b) reflecting upon the cognitive lapses that led to them (essentially,\"thinking through\"the errors), (c) inferring general rules or lessons from these reflections, and (d) internalizing these lessons into rules. In tutorial sessions with an instructor, this is a common Socratic interaction. Examples of such internalizable rules might include the nugget\"Before coding, restate the requirements to clarify them.\"Inspired by this process, this paper describes an approach where we first identify examples in which\"thinking mode\"in a (low-resource) LLM avoids errors. These errors, and their avoidance via\"thinking\"in the same LLM, are then examined by a bigger LLM to generate summary explanations; these are then summarized by a large LLM into brief advisory prompts. This approach works on many modest-sized models; in some cases, the\"advisory prompts\"thus learned can also be gainfully transferred to other models. We also present investigations into the natur",
+      "source_url": "https://arxiv.org/abs/2608.00437",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.00605",
+      "identity_tokens": [
+        "arXiv:2608.00605"
+      ],
+      "title": "Escaping Confidence Trap: Evolutionary Decoding for Mathematical Reasoning in Diffusion LLMs",
+      "reason": "本文で確認した内容は隣接領域または限定的な効率評価にとどまり、LLM推論/serving効率への適合が弱いためborderlineとする。 The reported method increases decode work and does not establish latency or serving-efficiency gains; efficiency relevance is weak.",
+      "source_url": "https://arxiv.org/abs/2608.00605",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00894",
+      "identity_tokens": [
+        "arXiv:2608.00894"
+      ],
+      "title": "Rethinking Agentic Kernel Generation for Emerging Accelerators",
+      "reason": "Emerging accelerators often lack mature compiler backends, motivating neural agents that generate and repair kernels from architectural documentation and simulator feedback. This approach repeatedly reconstructs workload-invariant machine semantics--including instruction behavior, legality constraints, synchronization rules, and memory protocols--for every workload. We argue that these semantics should be compiled once into a persistent symbolic artifact, while neural reasoning should focus on workload-dependent mapping decisions. We present Zomboss, a compiler-mediated agentic framework for kernel generation that places neural search within a verified compiler boundary. Zomboss compiles machine semantics and legality constraints into a reusable mapping interface, then uses a neural agent to optimize workload-dependent decisions within the validated mapping space. Across 20 Gemmini and 36 PLENA workload instances, Zomboss returns a correct verified kernel on all 56 instances. Relative to the compiler default, Zomboss achieves geometric-mean speedups of $3.34\\times$ on Gemmini and $1.10\\times$ on PLENA. Relative to direct agentic generation, it reduces inference tokens by 71.2% on Gemmini and 54.2% on PLENA. These results show that a compiler-defined symbolic interface turns native kernel synthesis into verified design-space exploration: compiler infrastructure preserves legality and correctness, while neural guidance improves workload-specific performance with lower search cost and complete coverage.",
+      "source_url": "https://arxiv.org/abs/2608.00894",
+      "first_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "last_checked_at": "2026-10-05T07:14:41.587925+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ]
+    }
+  ]
+}
