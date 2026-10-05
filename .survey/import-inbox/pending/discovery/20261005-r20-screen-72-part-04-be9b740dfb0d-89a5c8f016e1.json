@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-72-part-04-be9b740dfb0d",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MCOM.002.2400276",
+      "identity_tokens": [
+        "DOI:10.1109/MCOM.002.2400276"
+      ],
+      "title": "On Combining XAI and LLMs for Trustworthy Zero-Touch Network and Service Management in 6G",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/MCOM.002.2400276. Primary abstract applies XAI and LLMs to 6G service management; it does not optimize LLM inference/serving.",
+      "source_url": "https://doi.org/10.1109/MCOM.002.2400276",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arXiv.2409.01071",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2409.01071"
+      ],
+      "title": "VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges",
+      "reason": "Efficiency evidence is confined to a specialized video LVLM architecture and visual-context workload.",
+      "source_url": "https://doi.org/10.48550/arXiv.2409.01071",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/0142159X.2024.2387802",
+      "identity_tokens": [
+        "DOI:10.1080/0142159X.2024.2387802"
+      ],
+      "title": "Preparing for Artificial General Intelligence (AGI) in Health Professions Education: AMEE Guide No. 172",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1080/0142159X.2024.2387802. Primary abstract is an education guide on AGI in health-professions education, outside scope.",
+      "source_url": "https://doi.org/10.1080/0142159X.2024.2387802",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.20584",
+      "identity_tokens": [
+        "arXiv:2407.20584"
+      ],
+      "title": "Pruning Large Language Models with Semi-Structural Adaptive Sparse Training",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2407.20584. Primary abstract proposes adaptive sparse training/pruning for LLMs; its method is training-oriented rather than inference-time or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2407.20584",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3458817.3476138",
+      "identity_tokens": [
+        "DOI:10.1145/3458817.3476138"
+      ],
+      "title": "E.T.: Re-Thinking Self-Attention for Transformer Models on GPUs",
+      "reason": "The abstract suggests GPU attention acceleration for BERT-family models, but without primary full text the mechanism, evaluation, and applicability cannot be confirmed.",
+      "source_url": "https://doi.org/10.1145/3458817.3476138",
+      "first_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "last_checked_at": "2026-10-05T11:06:03.887253+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    }
+  ]
+}
