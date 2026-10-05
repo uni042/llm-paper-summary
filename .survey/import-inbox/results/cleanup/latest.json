@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-05T22:20:38+00:00",
+  "updated_at": "2026-10-05T22:25:59+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -2760,6 +2760,19 @@
       "processed_at": "2026-10-05T22:20:38+00:00",
       "canonical_id": "arXiv:1811.03115",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding(1).md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-cc2c245e03ec--libfile_c76cd67f4fcc8191a840d9df9a9637aa--2006.02464-clockwork.md",
+      "processed_at": "2026-10-05T22:25:59+00:00",
+      "canonical_id": "arXiv:2006.02464",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-cc2c245e03ec--libfile_c76cd67f4fcc8191a840d9df9a9637aa--2006.02464-clockwork.md"
+    },
+    {
+      "status": "deleted_stale_blocked_research",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-97ee9f2dc9c2--libfile_54f27b0becdc81919c7e97422419c095--1811.03115-blockwise-parallel-decoding(1).md",
+      "processed_at": "2026-10-05T22:25:59+00:00",
+      "canonical_id": "arXiv:1811.03115"
     }
   ]
 }
