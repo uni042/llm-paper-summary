@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r19-screen-01-part-02-0d1665097623",
+  "reference_main_sha": "b5a8991654bcdfba2aac22313777649e1ca9b286",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09096",
+      "identity_tokens": [
+        "arXiv:2608.09096"
+      ],
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
+      "reason": "Large Language Models (LLMs) have driven rapid progress in autonomous agents, yet standard evaluations remain confined to static task solving. An emerging frontier is harness evolution---the agent's capacity to autonomously optimize its own operating harness. However, systematically benchmarking this capability remains challenging, as existing evaluations fail to isolate harness improvements from base model strength, prevent task-specific overfitting, or capture long-horizon ",
+      "source_url": "https://arxiv.org/abs/2608.09096",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09802",
+      "identity_tokens": [
+        "arXiv:2608.09802"
+      ],
+      "title": "SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring",
+      "reason": "As AI coding agents take on increasingly complex, long-horizon software engineering tasks, existing benchmarks are rapidly saturating and their evaluation quality has come under serious scrutiny: a recent audit found that nearly 60% of unsolved SWE-bench Verified instances contain flawed tests -- either overly narrow tests that reject correct solutions or overly broad tests that check unstated requirements -- and that frontier models can verbatim reproduce gold patches from t",
+      "source_url": "https://arxiv.org/abs/2608.09802",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18271",
+      "identity_tokens": [
+        "arXiv:2608.18271"
+      ],
+      "title": "Rethinking Privileged Information in On-Policy Self-Distillation",
+      "reason": "On-policy self-distillation (OPSD) trains a student on its own responses using token-level supervision from the same model conditioned on privileged reference information. We investigate whether performance gains from OPSD show that the student learned the information in the reference or instead reflect recovery of reasoning behavior already present in the base model. We perform OPSD experiments on science and mathematics datasets using Qwen3 models ranging from 1.7B to 8B. O",
+      "source_url": "https://arxiv.org/abs/2608.18271",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14277",
+      "identity_tokens": [
+        "arXiv:2608.14277"
+      ],
+      "title": "SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning",
+      "reason": "On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, response length explosion, and training instability. In this work, we study this setting by transferring proof-reasoning capabilities from the long-context reasoning model SU-01 to sh",
+      "source_url": "https://arxiv.org/abs/2608.14277",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09836",
+      "identity_tokens": [
+        "arXiv:2608.09836"
+      ],
+      "title": "Mismatch Matters: On-Policy Distillation Beyond Token Agreement",
+      "reason": "On-policy distillation (OPD) has emerged as a core component of modern LLM post-training pipelines, yet we reveal a failure mode: degenerate agreement, where students exploit repetitive loops to achieve near-perfect token agreement with the teacher despite globally flawed responses. We therefore shift our focus from agreement to teacher-student mismatch, and find that mismatch tokens can be mainly categorized into two types: student-excess tokens and student-deficit tokens. S",
+      "source_url": "https://arxiv.org/abs/2608.09836",
+      "first_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "last_checked_at": "2026-10-05T04:57:01.813689+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    }
+  ]
+}
