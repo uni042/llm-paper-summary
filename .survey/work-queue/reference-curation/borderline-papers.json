@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:56:01+00:00",
-  "record_count": 1144,
+  "updated_at": "2026-10-05T07:58:36+00:00",
+  "record_count": 1150,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17492,6 +17492,100 @@
         "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
       ],
       "title": "Resource Constraints and Performance in Agentic AI Systems"
+    },
+    "arXiv:2608.26641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26641",
+      "identity_tokens": [
+        "arXiv:2608.26641"
+      ],
+      "reason": "Decoding is inference-time but efficiency improvement is not shown; weak fit.",
+      "first_checked_at": "2026-10-05T07:58:34+00:00",
+      "last_checked_at": "2026-10-05T07:58:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Information-Guided Frontier Decoding: Contextual Utility-Driven Commitment in dMLLMs"
+    },
+    "DOI:10.64898/2026.08.28.747902": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.08.28.747902",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.28.747902"
+      ],
+      "reason": "Potentially useful compression but domain-specific and primary body unavailable; do not accept from abstract alone.",
+      "first_checked_at": "2026-10-05T07:58:35+00:00",
+      "last_checked_at": "2026-10-05T07:58:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Calibration-free compression brings Evo 2 to its full million-token context on a single GPU"
+    },
+    "arXiv:2608.28949": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28949",
+      "identity_tokens": [
+        "arXiv:2608.28949"
+      ],
+      "reason": "Potential diffusion-LM application is indirect and untested; lane fit is weak.",
+      "first_checked_at": "2026-10-05T07:58:35+00:00",
+      "last_checked_at": "2026-10-05T07:58:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "The information geometry of product-reference discrete diffusion: Interaction growth complexity and optimal scheduling"
+    },
+    "arXiv:2609.29618": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29618",
+      "identity_tokens": [
+        "arXiv:2609.29618"
+      ],
+      "reason": "Preliminary, implementation-dominated measurements do not establish a practical inference gain.",
+      "first_checked_at": "2026-10-05T07:58:35+00:00",
+      "last_checked_at": "2026-10-05T07:58:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "An Exploratory Ablation of a Small MLA--SSM Hybrid Language Model"
+    },
+    "DOI:10.1007/s10515-026-00676-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10515-026-00676-z",
+      "identity_tokens": [
+        "DOI:10.1007/s10515-026-00676-z"
+      ],
+      "reason": "一次要旨がなく、出版社DOIも取得失敗で本文内容を確認できない。推測せずborderline。",
+      "first_checked_at": "2026-10-05T07:58:36+00:00",
+      "last_checked_at": "2026-10-05T07:58:36+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "NavAI: an application-agnostic llm framework for navigation tasks in virtual reality environments"
+    },
+    "arXiv:2608.28378": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.28378",
+      "identity_tokens": [
+        "arXiv:2608.28378"
+      ],
+      "reason": "Indirect, training-driven interaction efficiency is weak fit to inference/serving lane.",
+      "first_checked_at": "2026-10-05T07:58:36+00:00",
+      "last_checked_at": "2026-10-05T07:58:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PersonaForge: Realistic Multi-Turn User Simulation for Agentic Systems"
     }
   }
 }
