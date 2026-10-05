@@ -1,5 +1,7 @@
 import importlib.util
+import json
 import sys
+import tempfile
 from pathlib import Path
 import unittest
 
@@ -89,6 +91,73 @@ class WorkerWorklistIdentityTests(unittest.TestCase):
             1,
         )
 
+
+    def test_empty_discovery_pool_refills_from_borderline_with_repeat_penalty(self):
+        module = _load()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            config_path = root / ".survey/config/candidate-priority.json"
+            config_path.parent.mkdir(parents=True)
+            config_path.write_text(
+                json.dumps({
+                    "schema_version": 1,
+                    "policy_name": "test",
+                    "freshness": {"enabled": False},
+                    "prestigious_venue": {"enabled": False},
+                    "citations": {"enabled": True, "score_per_citation": 1, "max_score": None},
+                    "borderline_reconsideration": {"refill_target": 2, "repeat_penalty": 100000000},
+                    "fallback_priority": 0,
+                }),
+                encoding="utf-8",
+            )
+            ledger_path = root / ".survey/work-queue/reference-curation/borderline-papers.json"
+            ledger_path.parent.mkdir(parents=True)
+            ledger_path.write_text(
+                json.dumps({
+                    "schema_version": 1,
+                    "classification": "borderline",
+                    "records": {
+                        "arXiv:2001.00001": {
+                            "canonical_id": "arXiv:2001.00001",
+                            "identity_tokens": ["arXiv:2001.00001"],
+                            "title": "A",
+                            "citation_count": 5,
+                            "borderline_recheck_count": 0,
+                        },
+                        "arXiv:2001.00002": {
+                            "canonical_id": "arXiv:2001.00002",
+                            "identity_tokens": ["arXiv:2001.00002"],
+                            "title": "B",
+                            "citation_count": 1000,
+                            "borderline_recheck_count": 1,
+                        },
+                        "arXiv:2001.00003": {
+                            "canonical_id": "arXiv:2001.00003",
+                            "identity_tokens": ["arXiv:2001.00003"],
+                            "title": "C",
+                            "citation_count": 1,
+                            "borderline_recheck_count": 0,
+                        },
+                    },
+                }),
+                encoding="utf-8",
+            )
+
+            rows, pending = module._discovery_candidates(root)
+            self.assertEqual(pending, 2)
+            self.assertEqual([row["canonical_id"] for row in rows], [
+                "arXiv:2001.00001",
+                "arXiv:2001.00003",
+            ])
+            self.assertTrue(all(row["source_kind"] == "borderline_reconsideration" for row in rows))
+            self.assertEqual(rows[0]["priority_breakdown"]["borderline_recheck_penalty"], 0)
+
+            penalized = module._borderline_reconsideration_candidates(
+                root, cache={}, config=json.loads(config_path.read_text(encoding="utf-8"))
+            )
+            by_id = {row["canonical_id"]: row for row in penalized}
+            self.assertEqual(by_id["arXiv:2001.00002"]["priority"], 1000 - 100000000)
+            self.assertEqual(by_id["arXiv:2001.00002"]["priority_breakdown"]["borderline_recheck_count"], 1)
 
     def test_split_uses_three_disjoint_workers(self):
         module = _load()
