@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:24:49+00:00",
-  "record_count": 5234,
+  "updated_at": "2026-10-05T13:27:15+00:00",
+  "record_count": 5249,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -76095,6 +76095,218 @@
         "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
       ],
       "title": "MetricHMSR:Metric Human Mesh and Scene Recovery from Monocular Images"
+    },
+    "arXiv:2603.15967": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15967",
+      "identity_tokens": [
+        "arXiv:2603.15967"
+      ],
+      "reason": "The abstract is a kidney-pathology image benchmark, not language-model inference or serving.",
+      "first_checked_at": "2026-10-05T13:27:13+00:00",
+      "last_checked_at": "2026-10-05T13:27:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A Comprehensive Benchmark of Histopathology Foundation Models for Kidney Digital Pathology Images"
+    },
+    "arXiv:2603.15990": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15990",
+      "identity_tokens": [
+        "arXiv:2603.15990"
+      ],
+      "reason": "The paper predicts LoRA attributes and retrieves adapters from weights; it does not optimize inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T13:27:13+00:00",
+      "last_checked_at": "2026-10-05T13:27:13+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "W2T: LoRA Weights Already Know What They Can Do"
+    },
+    "arXiv:2603.13702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13702",
+      "identity_tokens": [
+        "arXiv:2603.13702"
+      ],
+      "reason": "The abstract concerns time-series forecasting channel/patch routing, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T13:27:13+00:00",
+      "last_checked_at": "2026-10-05T13:27:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "title": "Routing Channel-Patch Dependencies in Time Series Forecasting with Graph Spectral Decomposition"
+    },
+    "arXiv:2603.13782": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13782",
+      "identity_tokens": [
+        "arXiv:2603.13782"
+      ],
+      "reason": "The paper detects path deviation in frozen VLA models and triggers robot control; it does not target LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T13:27:13+00:00",
+      "last_checked_at": "2026-10-05T13:27:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Your Vision-Language-Action Model Already Has Attention Heads For Path Deviation Detection"
+    },
+    "DOI:10.1145/3779212.3790149": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3779212.3790149",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790149"
+      ],
+      "reason": "The abstract describes a general CXL-pod memory allocator and key-value-store workloads, not LLM inference/serving or compression.",
+      "first_checked_at": "2026-10-05T13:27:13+00:00",
+      "last_checked_at": "2026-10-05T13:27:13+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+      ],
+      "title": "Cxlalloc: Safe and Efficient Memory Allocation for a CXL Pod"
+    },
+    "arXiv:2603.16063": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16063",
+      "identity_tokens": [
+        "arXiv:2603.16063"
+      ],
+      "reason": "The abstract concerns linear-attention adaptation for vision transformers and vision tasks, not LLM inference/serving/compression.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "ViT-AdaLA: Adapting Vision Transformers with Linear Attention"
+    },
+    "arXiv:2603.03790": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03790",
+      "identity_tokens": [
+        "arXiv:2603.03790"
+      ],
+      "reason": "The paper proposes prompting and a benchmark for reasoning quality, not inference cost, serving, or compression.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "title": "T2S-Bench & Structure-of-Thought: Benchmarking and Prompting Comprehensive Text-to-Structure Reasoning"
+    },
+    "DOI:10.1002/advs.202523540": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.202523540",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202523540"
+      ],
+      "reason": "The publisher abstract concerns oxide thin-film transistor engineering for DRAM retention, not LLM inference.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Threshold‐Voltage Modulation and N2O Plasma Passivation for Enhanced Retention and Memory Window in Capacitorless 2T0C DRAM Oxide Thin‐Film Transistors"
+    },
+    "arXiv:2603.02333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02333",
+      "identity_tokens": [
+        "arXiv:2603.02333"
+      ],
+      "reason": "The paper studies memorization/privacy leakage in diffusion language models, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Characterizing Memorization in Diffusion Language Models: Generalized Extraction and Sampling Effects"
+    },
+    "arXiv:2602.23349": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.23349",
+      "identity_tokens": [
+        "arXiv:2602.23349"
+      ],
+      "reason": "FlashOptim reduces optimizer/gradient-state memory during training and checkpointing; training efficiency is outside inference/serving scope.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "FlashOptim: Optimizers for Memory Efficient Training"
+    },
+    "arXiv:2602.20595": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.20595",
+      "identity_tokens": [
+        "arXiv:2602.20595"
+      ],
+      "reason": "OptiLeak optimizes a prompt-reconstruction attack against shared KV caches; objective is privacy attack cost, not serving efficiency.",
+      "first_checked_at": "2026-10-05T13:27:14+00:00",
+      "last_checked_at": "2026-10-05T13:27:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2509.00105-adaptcache-adaptive-kv-storage-hierarchy.md"
+      ],
+      "title": "OptiLeak: Efficient Prompt Reconstruction via Reinforcement Learning in Multi-tenant LLM Services"
+    },
+    "DOI:10.3390/electronics15061179": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15061179",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15061179"
+      ],
+      "reason": "The review concerns spiking neural networks and cardiac wearable electronics, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T13:27:15+00:00",
+      "last_checked_at": "2026-10-05T13:27:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Neuromorphic Computing for Long-Term Cardiac Health: A Review of Spiking Neural Networks in Low-Power Wearable Electronics"
+    },
+    "DOI:10.1038/s41377-026-02209-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41377-026-02209-5",
+      "identity_tokens": [
+        "DOI:10.1038/s41377-026-02209-5"
+      ],
+      "reason": "The abstract demonstrates photonic matrix operations, image recognition, networking and encryption, not LLM inference/serving workloads.",
+      "first_checked_at": "2026-10-05T13:27:15+00:00",
+      "last_checked_at": "2026-10-05T13:27:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "LightIN: a versatile silicon-integrated photonic field programmable gate array with an intelligent configuration framework for next-generation AI clusters"
+    },
+    "arXiv:2603.07236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07236",
+      "identity_tokens": [
+        "arXiv:2603.07236"
+      ],
+      "reason": "The abstract concerns a neural-memory framework for text-guided image editing, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T13:27:15+00:00",
+      "last_checked_at": "2026-10-05T13:27:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "HY-WU (Part I): An Extensible Functional Neural Memory Framework and An Instantiation in Text-Guided Image Editing"
+    },
+    "arXiv:2603.03761": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03761",
+      "identity_tokens": [
+        "arXiv:2603.03761"
+      ],
+      "reason": "AgentSelect is an agent-recommendation benchmark/dataset; the abstract addresses recommendation quality and coverage, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T13:27:15+00:00",
+      "last_checked_at": "2026-10-05T13:27:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "AgentSelect: Benchmark for Narrative Query-to-Agent Recommendation"
     }
   }
 }

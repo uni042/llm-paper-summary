@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9f2221370dfb7e4e-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1002/advs.202523540",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1002/advs.202523540",
+    "identity_tokens": [
+      "DOI:10.1002/advs.202523540"
+    ],
+    "reason": "The publisher abstract concerns oxide thin-film transistor engineering for DRAM retention, not LLM inference.",
+    "first_checked_at": "2026-10-05T13:27:14+00:00",
+    "last_checked_at": "2026-10-05T13:27:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+    ],
+    "title": "Threshold‐Voltage Modulation and N2O Plasma Passivation for Enhanced Retention and Memory Window in Capacitorless 2T0C DRAM Oxide Thin‐Film Transistors"
+  },
+  "processed_at": "2026-10-05T13:27:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9f2221370dfb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
