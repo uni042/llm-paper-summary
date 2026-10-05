@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5de965cf3b181a78-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.15650",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.15650",
+    "identity_tokens": [
+      "arXiv:2607.15650"
+    ],
+    "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+    "first_checked_at": "2026-10-05T10:26:01+00:00",
+    "last_checked_at": "2026-10-05T10:26:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "DiTango: Cost-Effective Parallel Diffusion Generation with Selective Attention State Reuse"
+  },
+  "processed_at": "2026-10-05T10:26:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5de965cf3b18",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

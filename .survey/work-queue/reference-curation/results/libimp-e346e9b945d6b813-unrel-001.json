@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e346e9b945d6b813-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.11359",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.11359",
+    "identity_tokens": [
+      "arXiv:2607.11359"
+    ],
+    "reason": "一次要旨はquantization前のtraining方法とvision tasksでLLM推論手法ではない。",
+    "first_checked_at": "2026-10-05T10:26:02+00:00",
+    "last_checked_at": "2026-10-05T10:26:02+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md"
+    ],
+    "title": "Efficient Tuning Before Low-Bit Post-Training Quantization for Stochastic Gradient Descent-optimized Models"
+  },
+  "processed_at": "2026-10-05T10:26:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e346e9b945d6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

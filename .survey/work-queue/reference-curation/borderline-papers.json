@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:22:33+00:00",
-  "record_count": 1387,
+  "updated_at": "2026-10-05T10:26:02+00:00",
+  "record_count": 1391,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -21386,6 +21386,72 @@
         "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
       ],
       "title": "Cost-Optimal Foundation Model Deployment Portfolio for Transportation Management"
+    },
+    "arXiv:2607.12216": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.12216",
+      "identity_tokens": [
+        "arXiv:2607.12216"
+      ],
+      "reason": "3商用モデル、固定4096 token条件を中心にcoordination overheadがtask evidenceを圧迫する挙動を測定。task blockを保つablationではcoordination比率95%まで正答し、一般的semantic interferenceではなくbudget displacementと結論を限定。inference resource削減を直接測る研究ではない。",
+      "first_checked_at": "2026-10-05T10:26:00+00:00",
+      "last_checked_at": "2026-10-05T10:26:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "RCWT: Measuring Task-Budget Displacement from Coordination Content in LLM Calls"
+    },
+    "arXiv:2607.13088": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.13088",
+      "identity_tokens": [
+        "arXiv:2607.13088"
+      ],
+      "reason": "本文はedge/on-prem LLMのsecurity/privacyとquantization・pruning等の効率施策を一体評価する枠組みとSOESを提示。個別のinference最適化法よりdeployment risk/scoreに重点があるため、実務効率の直接研究としては隣接的。",
+      "first_checked_at": "2026-10-05T10:26:00+00:00",
+      "last_checked_at": "2026-10-05T10:26:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Securing LLMs in the Wild: Privacy and Security Challenges at the Edge"
+    },
+    "DOI:10.1145/3806645.3807580": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806645.3807580",
+      "identity_tokens": [
+        "DOI:10.1145/3806645.3807580"
+      ],
+      "reason": "一次本文を取得できず、abstract-onlyでは評価・限界を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T10:26:02+00:00",
+      "last_checked_at": "2026-10-05T10:26:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Accelerating Block Low-Rank Foundation Model Inference on Memory-Constrained GPUs"
+    },
+    "DOI:10.1145/3806645.3807814": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806645.3807814",
+      "identity_tokens": [
+        "DOI:10.1145/3806645.3807814"
+      ],
+      "reason": "一次本文を取得できず、abstract-onlyでは評価・限界を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T10:26:02+00:00",
+      "last_checked_at": "2026-10-05T10:26:02+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md",
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ],
+      "title": "Omnia: Efficient RAG Serving through Speculative Scheduling"
     }
   }
 }

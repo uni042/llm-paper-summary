@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-780cceb76da14d03-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.65206/pajes.1920115",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.65206/pajes.1920115",
+    "identity_tokens": [
+      "DOI:10.65206/pajes.1920115"
+    ],
+    "reason": "一次要旨はTransformer attention dimensionによるmachine translation accuracyでserving効率ではない。",
+    "first_checked_at": "2026-10-05T10:26:01+00:00",
+    "last_checked_at": "2026-10-05T10:26:01+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Assessing the role of key and value dimensionality in multi-head attention mechanisms"
+  },
+  "processed_at": "2026-10-05T10:26:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-780cceb76da1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

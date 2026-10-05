@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5de965cf3b181a78-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.12216",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.12216",
+    "identity_tokens": [
+      "arXiv:2607.12216"
+    ],
+    "reason": "3商用モデル、固定4096 token条件を中心にcoordination overheadがtask evidenceを圧迫する挙動を測定。task blockを保つablationではcoordination比率95%まで正答し、一般的semantic interferenceではなくbudget displacementと結論を限定。inference resource削減を直接測る研究ではない。",
+    "first_checked_at": "2026-10-05T10:26:00+00:00",
+    "last_checked_at": "2026-10-05T10:26:00+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "RCWT: Measuring Task-Budget Displacement from Coordination Content in LLM Calls"
+  },
+  "processed_at": "2026-10-05T10:26:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5de965cf3b18",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
