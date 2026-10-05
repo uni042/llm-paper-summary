@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a5b7a86207f9fee5-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8",
+    "identity_tokens": [
+      "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8"
+    ],
+    "reason": "一次USENIX要旨で対象はtext-to-image diffusion model servingと確認。LLM対象外。",
+    "first_checked_at": "2026-10-05T14:53:05+00:00",
+    "last_checked_at": "2026-10-05T14:53:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md"
+    ],
+    "title": "Katz: Efficient Workflow Serving for Diffusion Models with Many Adapters"
+  },
+  "processed_at": "2026-10-05T14:53:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a5b7a86207f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

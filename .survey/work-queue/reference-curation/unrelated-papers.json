@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:49:24+00:00",
-  "record_count": 5756,
+  "updated_at": "2026-10-05T14:53:05+00:00",
+  "record_count": 5785,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -83603,6 +83603,421 @@
         "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
       ],
       "title": "Retrospex: Language Agent Meets Offline Reinforcement Learning Critic"
+    },
+    "arXiv:2309.14523": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.14523",
+      "identity_tokens": [
+        "arXiv:2309.14523"
+      ],
+      "reason": "Develops exact-gradient learning for spiking neural network training dynamics, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ],
+      "title": "Smooth Exact Gradient Descent Learning in Spiking Neural Networks"
+    },
+    "arXiv:2305.19549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.19549",
+      "identity_tokens": [
+        "arXiv:2305.19549"
+      ],
+      "reason": "Structured pruning targets automatic speech recognition models, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Accurate and Structured Pruning for Efficient Automatic Speech Recognition"
+    },
+    "arXiv:2603.24840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24840",
+      "identity_tokens": [
+        "arXiv:2603.24840"
+      ],
+      "reason": "Online rollout pruning reduces sampling cost during RLVR training; this is training-time optimization, not deployed LLM inference.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR"
+    },
+    "DOI:10.1145/3725843.3756045": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3725843.3756045",
+      "identity_tokens": [
+        "DOI:10.1145/3725843.3756045"
+      ],
+      "reason": "PyTorchSim is an NPU simulation framework for DNN hardware-design exploration, not an LLM inference/serving optimization paper.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md"
+      ],
+      "title": "PyTorchSim: A Comprehensive, Fast, and Accurate NPU Simulation Framework"
+    },
+    "arXiv:2403.16520": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.16520",
+      "identity_tokens": [
+        "arXiv:2403.16520"
+      ],
+      "reason": "Introduces a 3D multimodal representation learner for Alzheimer disease classification, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "CMViM: Contrastive Masked Vim Autoencoder for 3D Multi-modal Representation Learning for AD classification"
+    },
+    "arXiv:2403.07536": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.07536",
+      "identity_tokens": [
+        "arXiv:2403.07536"
+      ],
+      "reason": "Geometric-algebra transformer architecture targets large biomedical meshes; it is a domain-specific 3D modeling paper, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "LaB-GATr: geometric algebra transformers for large biomedical surface and volume meshes"
+    },
+    "arXiv:2401.07004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.07004",
+      "identity_tokens": [
+        "arXiv:2401.07004"
+      ],
+      "reason": "Extends LLM context length using RoPE adaptation; the stated contribution is context capability rather than inference cost/serving optimization.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "Extending LLMs' Context Window with 100 Samples"
+    },
+    "arXiv:2310.03686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.03686",
+      "identity_tokens": [
+        "arXiv:2310.03686"
+      ],
+      "reason": "DecoderLens is an interpretability method for encoder-decoder transformer internals; it does not optimize inference or serving.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "DecoderLens: Layerwise Interpretation of Encoder-Decoder Transformers"
+    },
+    "arXiv:2410.01231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01231",
+      "identity_tokens": [
+        "arXiv:2410.01231"
+      ],
+      "reason": "The contribution is approximate-nearest-neighbor proximity-graph index construction; RAG retrieval is application context, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "Revisiting the Index Construction of Proximity Graph-Based Approximate Nearest Neighbor Search"
+    },
+    "arXiv:2407.14088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.14088",
+      "identity_tokens": [
+        "arXiv:2407.14088"
+      ],
+      "reason": "Studies model size effects for fine-tuned data-to-text generation; no inference/serving-efficiency method is proposed.",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ],
+      "title": "Impact of Model Size on Fine-tuned LLM Performance in Data-to-Text Generation: A State-of-the-Art Investigation"
+    },
+    "DOI:10.1145/3620665.3640390": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3620665.3640390",
+      "identity_tokens": [
+        "DOI:10.1145/3620665.3640390"
+      ],
+      "reason": "Optimizes dynamic-shape neural-network operators on accelerators; abstract does not identify an LLM inference/serving contribution.",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2310.12072-speed-speculative-pipelined-execution-for-efficient-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "Optimizing Dynamic-Shape Neural Networks on Accelerators via On-the-Fly Micro-Kernel Polymerization"
+    },
+    "arXiv:2410.14067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.14067",
+      "identity_tokens": [
+        "arXiv:2410.14067"
+      ],
+      "reason": "SSMの複素parameterizationを理論解析する研究。",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "title": "Provable Benefits of Complex Parameterizations for Structured State Space Models"
+    },
+    "arXiv:2410.04798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04798",
+      "identity_tokens": [
+        "arXiv:2410.04798"
+      ],
+      "reason": "DAPE V2でTransformer length extrapolationと性能を改善するが、推論効率化が主題でない。",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09054-keyformer-kv-cache-reduction-through-key-tokens-selection-for-efficient-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "title": "DAPE V2: Process Attention Score as Feature Map for Length Extrapolation"
+    },
+    "arXiv:2408.08506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.08506",
+      "identity_tokens": [
+        "arXiv:2408.08506"
+      ],
+      "reason": "LLM fine-tuningとtree expansionを用いた長編小説生成の品質研究。",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Ex3: Automatic Novel Writing by Extracting, Excelsior and Expanding"
+    },
+    "arXiv:2405.16528": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.16528",
+      "identity_tokens": [
+        "arXiv:2405.16528"
+      ],
+      "reason": "量子化済みLLMのpre-trainingを省メモリ化するtraining手法。",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "LoQT: Low-Rank Adapters for Quantized Pretraining"
+    },
+    "DOI:10.1162/tacl_a_00622": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00622",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00622"
+      ],
+      "reason": "continual pre-trainingでbackdoorを除去するsecurity/training研究。",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Removing Backdoors in Pre-trained Models by Regularized Continual Pre-training"
+    },
+    "arXiv:2604.10905": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10905",
+      "identity_tokens": [
+        "arXiv:2604.10905"
+      ],
+      "reason": "Audio Flamingo音声言語modelのdata・training・能力を拡張する研究。",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Audio Flamingo Next: Next-Generation Open Audio-Language Models for Speech, Sound, and Music"
+    },
+    "arXiv:2603.19217": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19217",
+      "identity_tokens": [
+        "arXiv:2603.19217"
+      ],
+      "reason": "long audio-video理解のomnimodal LLM benchmarkで、主題は理解能力評価。",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs"
+    },
+    "arXiv:2509.23292": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23292",
+      "identity_tokens": [
+        "arXiv:2509.23292"
+      ],
+      "reason": "Studies how tools are applied during tool-integrated reasoning to improve reasoning behavior; it does not propose inference or serving cost reduction.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2025-2510.26730-expertflow-adaptive-prefetch.md",
+        "papers/inference/06-moe-quantization-compression/2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md"
+      ],
+      "title": "Learning How to Use Tools, Not Just When: Pattern-Aware Tool-Integrated Reasoning"
+    },
+    "arXiv:2508.10399": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10399",
+      "identity_tokens": [
+        "arXiv:2508.10399"
+      ],
+      "reason": "A broad embodied-AI decision-making and learning survey, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "Large Model Empowered Embodied AI: A Survey on Decision-Making and Embodied Learning"
+    },
+    "arXiv:2506.18623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.18623",
+      "identity_tokens": [
+        "arXiv:2506.18623"
+      ],
+      "reason": "Structured pruning compresses self-supervised speaker-diarization models; the target is audio diarization rather than LLM inference.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Efficient and Robust Speaker Diarization via Structured Pruning of Self-Supervised Models"
+    },
+    "arXiv:2505.24111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.24111",
+      "identity_tokens": [
+        "arXiv:2505.24111"
+      ],
+      "reason": "Fine-tunes before structured pruning of self-supervised speech models for speaker diarization; not LLM inference.",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Fine-tune Before Structured Pruning: Towards Compact and Accurate Self-Supervised Models for Speaker Diarization"
+    },
+    "arXiv:2505.17604": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17604",
+      "identity_tokens": [
+        "arXiv:2505.17604"
+      ],
+      "reason": "Semantic token communication for edge transformer inference targets joint source-channel coding and feature transmission, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ],
+      "title": "Adaptive Semantic Token Communication for Transformer-Based Edge Inference"
+    },
+    "arXiv:2504.14582": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14582",
+      "identity_tokens": [
+        "arXiv:2504.14582"
+      ],
+      "reason": "The paper reports an image super-resolution challenge and its methods/results, not language-model inference.",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "NTIRE 2025 Challenge on Image Super-Resolution ($\\times 4$): Methods and Results"
+    },
+    "arXiv:2504.18574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.18574",
+      "identity_tokens": [
+        "arXiv:2504.18574"
+      ],
+      "reason": "recurrent language modelのretrieval skillを説明する分析研究で効率化methodではない。",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Understanding the Skill Gap in Recurrent Language Models: The Role of the Gather-and-Aggregate Mechanism"
+    },
+    "arXiv:2503.03379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.03379",
+      "identity_tokens": [
+        "arXiv:2503.03379"
+      ],
+      "reason": "spiking neural network hardware accelerationでLLM対象外。",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Prosperity: Accelerating Spiking Neural Networks via Product Sparsity"
+    },
+    "DOI:10.18653/v1/2025.findings-naacl.107": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-naacl.107",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-naacl.107"
+      ],
+      "reason": "SimSMoEでMoE representational collapseを防ぐpre-training/fine-tuning研究。",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "SimSMoE: Toward Efficient Training Mixture of Experts via Solving Representational Collapse"
+    },
+    "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8",
+      "identity_tokens": [
+        "SemanticScholar:98fb4f127e5eda67f9271e2a9cbb49778233a9a8"
+      ],
+      "reason": "一次USENIX要旨で対象はtext-to-image diffusion model servingと確認。LLM対象外。",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md"
+      ],
+      "title": "Katz: Efficient Workflow Serving for Diffusion Models with Many Adapters"
+    },
+    "arXiv:2412.04139": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04139",
+      "identity_tokens": [
+        "arXiv:2412.04139"
+      ],
+      "reason": "LLMのmonosemanticity/mechanistic interpretability研究。",
+      "first_checked_at": "2026-10-05T14:53:05+00:00",
+      "last_checked_at": "2026-10-05T14:53:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ],
+      "title": "Monet: Mixture of Monosemantic Experts for Transformers"
     }
   }
 }

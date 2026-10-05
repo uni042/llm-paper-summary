@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:49:22+00:00",
-  "record_count": 1907,
+  "updated_at": "2026-10-05T14:53:04+00:00",
+  "record_count": 1916,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29470,6 +29470,148 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Agentic AI and the rise of in silico team science in biomedical research"
+    },
+    "arXiv:2601.01280": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01280",
+      "identity_tokens": [
+        "arXiv:2601.01280"
+      ],
+      "reason": "Adjacent dialog-memory systems may affect inference context cost, but reported measurements do not establish end-to-end serving efficiency.",
+      "first_checked_at": "2026-10-05T14:53:01+00:00",
+      "last_checked_at": "2026-10-05T14:53:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Does Memory Need Graphs? A Unified Framework and Empirical Analysis for Long-Term Dialog Memory"
+    },
+    "arXiv:2310.04573": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.04573",
+      "identity_tokens": [
+        "arXiv:2310.04573"
+      ],
+      "reason": "Relevant topic, but no focused current serving experiment or clearly actionable efficiency result.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can pruning make Large Language Models more efficient?"
+    },
+    "DOI:10.1109/cai59869.2024.00108": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cai59869.2024.00108",
+      "identity_tokens": [
+        "DOI:10.1109/cai59869.2024.00108"
+      ],
+      "reason": "The primary article is plausibly relevant to LLM performance/inference, but its methods and evaluation could not be verified without full text.",
+      "first_checked_at": "2026-10-05T14:53:02+00:00",
+      "last_checked_at": "2026-10-05T14:53:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performance Analysis of Llama 2 Among Other LLMs"
+    },
+    "DOI:10.1109/tcsi.2024.3350661": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsi.2024.3350661",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2024.3350661"
+      ],
+      "reason": "The primary article is plausibly relevant to LLM performance/inference, but its methods and evaluation could not be verified without full text.",
+      "first_checked_at": "2026-10-05T14:53:03+00:00",
+      "last_checked_at": "2026-10-05T14:53:03+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantization and Hardware Architecture Co-Design for Matrix-Vector Multiplications of Large Language Models"
+    },
+    "arXiv:2602.18397": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18397",
+      "identity_tokens": [
+        "arXiv:2602.18397"
+      ],
+      "reason": "VLA action-expert/robotics pipeline固有で、LLM text inference/servingではなく隣接scope。",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2507.14397-liminal-exploring-the-frontiers-of-llm-decode-performance.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Fast Can I Run My VLA? Demystifying VLA Inference Performance with VLA-Perf"
+    },
+    "arXiv:2602.05665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05665",
+      "identity_tokens": [
+        "arXiv:2602.05665"
+      ],
+      "reason": "Adjacent to agent memory/retrieval, but no direct inference/serving efficiency evaluation.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Graph-based Agent Memory: Taxonomy, Techniques, and Applications"
+    },
+    "DOI:10.26599/tst.2025.9010166": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26599/tst.2025.9010166",
+      "identity_tokens": [
+        "DOI:10.26599/tst.2025.9010166"
+      ],
+      "reason": "A relevant edge-inference survey is plausible, but its full text was inaccessible and evidence cannot be verified.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.02532-specexec-massively-parallel-speculative-decoding-for-interactive-llm-inference-on-consumer-devices.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Inference for Edge Large Language Models: A Survey"
+    },
+    "arXiv:2411.17691": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.17691",
+      "identity_tokens": [
+        "arXiv:2411.17691"
+      ],
+      "reason": "The topic is adjacent to inference quantization, but the paper provides no direct serving-efficiency contribution.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Low-Bit Quantization Favors Undertrained LLMs: Scaling Laws for Quantized LLMs with 100T Training Tokens"
+    },
+    "arXiv:2410.13780": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.13780",
+      "identity_tokens": [
+        "arXiv:2410.13780"
+      ],
+      "reason": "The theoretical connection is plausible but lacks direct LLM inference evidence or an implementation evaluation.",
+      "first_checked_at": "2026-10-05T14:53:04+00:00",
+      "last_checked_at": "2026-10-05T14:53:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.11235-qtip-quantization-with-trellises-and-incoherence-processing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Optimal Quantization for Matrix Multiplication"
     }
   }
 }
