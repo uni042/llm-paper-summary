@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-09-part-01-84318febf7dd",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.07511",
+      "identity_tokens": [
+        "arXiv:2503.07511"
+      ],
+      "title": "PointVLA: Injecting the 3D World into Vision-Language-Action Models",
+      "reason": "一次要旨は3D点群をVLAへ注入するrobotic manipulation用vision-language-action architectureであり、LLM推論効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2503.07511",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ipdpsw55747.2022.00171",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw55747.2022.00171"
+      ],
+      "title": "Designing Effective Sparse Expert Models",
+      "reason": "候補packetに記載された一次資料URLを取得経路で開いたが、一次要旨を確認できなかった。検索snippetや題名から内容を推測せず、候補由来のID/title/URLのみ保持。",
+      "source_url": "https://doi.org/10.1109/IPDPSW55747.2022.00171",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1075",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1075"
+      ],
+      "title": "ChID: A Large-scale Chinese IDiom Dataset for Cloze Test",
+      "reason": "一次要旨は中国語成語cloze dataset ChIDと理解モデルのbenchmarkを提示する。LLM推論の計算/serving効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/1906.01265",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.08165",
+      "identity_tokens": [
+        "arXiv:2003.08165"
+      ],
+      "title": "Neuroevolution of self-interpretable agents",
+      "reason": "一次要旨は進化的手法で自己解釈可能agentを生成する研究であり、LLM推論効率評価ではない。",
+      "source_url": "https://arxiv.org/abs/2003.08165",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.08514",
+      "identity_tokens": [
+        "arXiv:2206.08514"
+      ],
+      "title": "A Unified Evaluation of Textual Backdoor Learning: Frameworks and Benchmarks",
+      "reason": "一次要旨はtextual backdoor learningのframework/benchmarkによる評価研究で、推論効率化を扱わない。",
+      "source_url": "https://arxiv.org/abs/2206.08514",
+      "first_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "last_checked_at": "2026-10-05T01:29:10.700111+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md"
+      ]
+    }
+  ]
+}
