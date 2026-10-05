@@ -15,6 +15,6 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-03 · [A Review on Edge Large Language Models: Design, Execution, and Applications](2025-2410.11845-edge-llm-review.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：8  
   エッジLLMを配備前圧縮・実行時最適化・アプリケーションのライフサイクルで整理し、量子化から資源スケジューリング、フレームワーク、ハードウェア協調設計まで横断するACM CSURレビュー。
 <!-- survey:auto:end -->
