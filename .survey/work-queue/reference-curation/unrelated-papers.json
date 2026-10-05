@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T23:50:08+00:00",
-  "record_count": 6619,
+  "updated_at": "2026-10-05T23:59:24+00:00",
+  "record_count": 6655,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -95637,6 +95637,510 @@
         "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
       ],
       "title": "OOD Generalization as a Bifurcation Problem"
+    },
+    "arXiv:2609.18752": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.18752",
+      "identity_tokens": [
+        "arXiv:2609.18752"
+      ],
+      "reason": "underwater visual retrieval用query-conditioned image enhancement expert routerであり、LLM inference servingと接続しない。",
+      "first_checked_at": "2026-10-05T23:59:16+00:00",
+      "last_checked_at": "2026-10-05T23:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "QMSR: Query-Conditioned Mask-wise Expert Routing for Robust Open-Vocabulary Underwater Object Retrieval"
+    },
+    "arXiv:2609.19076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19076",
+      "identity_tokens": [
+        "arXiv:2609.19076"
+      ],
+      "reason": "double-descentをstatistical mechanicsで説明する理論論文で、inference system最適化ではない。",
+      "first_checked_at": "2026-10-05T23:59:16+00:00",
+      "last_checked_at": "2026-10-05T23:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Double descent is the principle of least action"
+    },
+    "arXiv:2609.19363": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19363",
+      "identity_tokens": [
+        "arXiv:2609.19363"
+      ],
+      "reason": "CIFAR patch benchmarkのattention Q/K Stiefel-manifold optimizerであり、attention routingの学習法であってLLM inference systemの高速化を示さない。",
+      "first_checked_at": "2026-10-05T23:59:16+00:00",
+      "last_checked_at": "2026-10-05T23:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Directions That Don't Drift: Stiefel Manifold Routing for Transformer Attention"
+    },
+    "arXiv:2609.28506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28506",
+      "identity_tokens": [
+        "arXiv:2609.28506"
+      ],
+      "reason": "time-series forecasting向けfrozen router/foundation-model benchmarkであり、paper abstractが明示するようにagentもLLMも使わず、LLM servingと無関係。",
+      "first_checked_at": "2026-10-05T23:59:16+00:00",
+      "last_checked_at": "2026-10-05T23:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split"
+    },
+    "DOI:10.1007/s44443-026-01157-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01157-9",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01157-9"
+      ],
+      "reason": "multi-UAV air combat向けmulti-agent reinforcement learning architectureであり、LLM inference efficiencyが対象でない。",
+      "first_checked_at": "2026-10-05T23:59:16+00:00",
+      "last_checked_at": "2026-10-05T23:59:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "REMP: A transformer with role-specific experts and multi-scale positional encoding for autonomous multi-UAV air combat"
+    },
+    "arXiv:2609.32069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32069",
+      "identity_tokens": [
+        "arXiv:2609.32069"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:17+00:00",
+      "last_checked_at": "2026-10-05T23:59:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Find Something You Can't Do: Agentic Real-World Reinforcement Learning for Self-Improving VLA Models"
+    },
+    "arXiv:2609.29204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29204",
+      "identity_tokens": [
+        "arXiv:2609.29204"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:17+00:00",
+      "last_checked_at": "2026-10-05T23:59:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "AdaHVLA: Adaptive Harnesses for Long-Horizon Vision-Language-Action Execution"
+    },
+    "arXiv:2609.29773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29773",
+      "identity_tokens": [
+        "arXiv:2609.29773"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:17+00:00",
+      "last_checked_at": "2026-10-05T23:59:17+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "Breaking the Environment Wall: A Unified Framework for Preparing and Evolving Agent-Native Environments"
+    },
+    "arXiv:2609.29867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29867",
+      "identity_tokens": [
+        "arXiv:2609.29867"
+      ],
+      "reason": "音声強調モデルのdynamic depth/early-exit推論法であり、speech enhancement特化で、LLM inference/serving lineageとの接点がない。",
+      "first_checked_at": "2026-10-05T23:59:17+00:00",
+      "last_checked_at": "2026-10-05T23:59:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Does per-frame early exit pay? A compute-matched study of dynamic depth for on-device speech enhancement"
+    },
+    "arXiv:2609.27307": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27307",
+      "identity_tokens": [
+        "arXiv:2609.27307"
+      ],
+      "reason": "GUI agentのon-policy self-distillation学習とtask successが主題で、inference compute/token/latency改善を示さない。",
+      "first_checked_at": "2026-10-05T23:59:18+00:00",
+      "last_checked_at": "2026-10-05T23:59:18+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "Learn How to Act from Your Own Interactions: On-Policy Self-Distillation for GUI Agents"
+    },
+    "arXiv:2609.31600": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31600",
+      "identity_tokens": [
+        "arXiv:2609.31600"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:18+00:00",
+      "last_checked_at": "2026-10-05T23:59:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "New LoRA Skills Should Read but Never Write"
+    },
+    "arXiv:2609.31620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31620",
+      "identity_tokens": [
+        "arXiv:2609.31620"
+      ],
+      "reason": "visual representation autoencoderとimage diffusion decoderのfeature fusion学習法であり、LLM inference/servingを対象としない。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders"
+    },
+    "arXiv:2609.31932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31932",
+      "identity_tokens": [
+        "arXiv:2609.31932"
+      ],
+      "reason": "衛星搭載federated learningのtraining/resource-aware MoE pruningであり、LLM serving inference最適化ではない。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Resource-Aware Federated Mixture-of-Experts with Adaptive Pruning for Onboard Learning in LEO Satellite Constellations"
+    },
+    "arXiv:2609.24539": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24539",
+      "identity_tokens": [
+        "arXiv:2609.24539"
+      ],
+      "reason": "multimodal object re-identification手法で、LLM推論効率と無関係。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Incentive Noise and Structural Prior Infusion for Multi-modal Object Re-Identification"
+    },
+    "arXiv:2609.22824": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22824",
+      "identity_tokens": [
+        "arXiv:2609.22824"
+      ],
+      "reason": "speech enhancement向けadaptive depth/expert refinementで、LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Adaptive Depth and Expert Refinement for Efficient Speech Enhancement"
+    },
+    "arXiv:2609.22554": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22554",
+      "identity_tokens": [
+        "arXiv:2609.22554"
+      ],
+      "reason": "weight operatorsはfunctional parameter reuse/continual adaptation/compositional generalizationを目的とする学習・表現構成案。inference時compositionという語はあるが、LLM対象のserving cost/latency/throughputを示す効率化法ではない。",
+      "first_checked_at": "2026-10-05T23:59:20+00:00",
+      "last_checked_at": "2026-10-05T23:59:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "The Ups and Downs of Backprop Weights"
+    },
+    "arXiv:2609.33867": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33867",
+      "identity_tokens": [
+        "arXiv:2609.33867"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:20+00:00",
+      "last_checked_at": "2026-10-05T23:59:20+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md"
+      ],
+      "title": "R$^2$ Flow: Recursive Self-Improvement via Recursive Skill Evolution"
+    },
+    "arXiv:2609.32141": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32141",
+      "identity_tokens": [
+        "arXiv:2609.32141"
+      ],
+      "reason": "tabular/vision prediction向けactivation-regime linear modelsであり、LLM inference/serving対象でも効率化評価でもない。",
+      "first_checked_at": "2026-10-05T23:59:20+00:00",
+      "last_checked_at": "2026-10-05T23:59:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "REALM: Regime-Switching, Explainable, and Activation-Induced Linear Models"
+    },
+    "arXiv:2609.32248": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32248",
+      "identity_tokens": [
+        "arXiv:2609.32248"
+      ],
+      "reason": "LLM model leaderboardの統計的有意性/FWER制御手法で、leaderboard評価の妥当性が主題。推論資源効率の手法ではない。",
+      "first_checked_at": "2026-10-05T23:59:20+00:00",
+      "last_checked_at": "2026-10-05T23:59:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "Anytime-Valid LLM Leaderboards via Benchmark-weighted and Block-Factorized e-Processes"
+    },
+    "arXiv:2609.32533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32533",
+      "identity_tokens": [
+        "arXiv:2609.32533"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:20+00:00",
+      "last_checked_at": "2026-10-05T23:59:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "LLMAdBench: A Human Preference Benchmark for Advertising in LLM Responses"
+    },
+    "arXiv:2609.32551": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32551",
+      "identity_tokens": [
+        "arXiv:2609.32551"
+      ],
+      "reason": "human-object interaction motion generation/completionとmultimodal understandingが主題で、LLM推論効率と接続しない。",
+      "first_checked_at": "2026-10-05T23:59:21+00:00",
+      "last_checked_at": "2026-10-05T23:59:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Harnessing Coupled Stream Completion For Human-Object Interaction Modeling"
+    },
+    "DOI:10.1007/s44443-026-01035-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-026-01035-4",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-01035-4"
+      ],
+      "reason": "clinical/tabular prediction向け multimodal MoEとTree-SHAP説明手法で、LLM inference servingを対象としない。",
+      "first_checked_at": "2026-10-05T23:59:21+00:00",
+      "last_checked_at": "2026-10-05T23:59:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "A multi-modal mixture-of-experts deep network with cross-pathway attention fusion and hierarchical Tree-SHAP attribution for interpretable heterogeneous prediction"
+    },
+    "DOI:10.64898/2026.09.21.753373": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.21.753373",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.21.753373"
+      ],
+      "reason": "3D medical image segmentation向けbudgeted resolution routingで、医用画像推論のscopeでありLLM servingと無関係。",
+      "first_checked_at": "2026-10-05T23:59:22+00:00",
+      "last_checked_at": "2026-10-05T23:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "ErrorRoute: Budgeted Utility-Aware Resolution Routing for 3D Medical Image Segmentation"
+    },
+    "arXiv:2609.24061": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24061",
+      "identity_tokens": [
+        "arXiv:2609.24061"
+      ],
+      "reason": "speaker verification向けCNN-Transformer MoEで、LLM推論効率の対象外。",
+      "first_checked_at": "2026-10-05T23:59:22+00:00",
+      "last_checked_at": "2026-10-05T23:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "MECT: Mixture of Experts with CNN-Transformer Network for Speaker verification"
+    },
+    "arXiv:2609.24294": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24294",
+      "identity_tokens": [
+        "arXiv:2609.24294"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:22+00:00",
+      "last_checked_at": "2026-10-05T23:59:22+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.17172-cccl-compression-coupled-collective-communication.md"
+      ],
+      "title": "Toward GPU-Resident Climate Models: A Feasibility Study on Lossy Compression for the Spherical Harmonic Transform's Communication Bottleneck"
+    },
+    "arXiv:2609.24328": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24328",
+      "identity_tokens": [
+        "arXiv:2609.24328"
+      ],
+      "reason": "deep learning model combinationのtraining/optimization理論で、LLM inference serving efficiencyを対象としない。",
+      "first_checked_at": "2026-10-05T23:59:22+00:00",
+      "last_checked_at": "2026-10-05T23:59:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "A Distributional Optimisation Perspective on Combining Models in Deep Learning"
+    },
+    "arXiv:2609.27603": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27603",
+      "identity_tokens": [
+        "arXiv:2609.27603"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:22+00:00",
+      "last_checked_at": "2026-10-05T23:59:22+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "When Context Misleads: In-context Learning with Jurisdiction in Large Language Models"
+    },
+    "arXiv:2609.25692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25692",
+      "identity_tokens": [
+        "arXiv:2609.25692"
+      ],
+      "reason": "graph domain adaptationのrepresentation learning研究で、LLM推論効率の対象外。",
+      "first_checked_at": "2026-10-05T23:59:23+00:00",
+      "last_checked_at": "2026-10-05T23:59:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Graph Domain Adaptation Does Not End with Representation Learning"
+    },
+    "arXiv:2609.25773": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25773",
+      "identity_tokens": [
+        "arXiv:2609.25773"
+      ],
+      "reason": "video reasoning model向けmulti-hop benchmark/explorationで、推論resource節約を測るserving methodではない。",
+      "first_checked_at": "2026-10-05T23:59:23+00:00",
+      "last_checked_at": "2026-10-05T23:59:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2606.13392-minimax-sparse-attention.md"
+      ],
+      "title": "Video-HopChain: Multi-Hop Questions and Confidence-Gated Exploration for Video Reasoning Models"
+    },
+    "arXiv:2609.25853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25853",
+      "identity_tokens": [
+        "arXiv:2609.25853"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:23+00:00",
+      "last_checked_at": "2026-10-05T23:59:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "MemoryAthena: Adaptive Routing over Latent and Generated Memories"
+    },
+    "arXiv:2609.26310": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26310",
+      "identity_tokens": [
+        "arXiv:2609.26310"
+      ],
+      "reason": "node classification向けgraph neural networkのexpert transfer研究で、LLM inference/servingと無関係。",
+      "first_checked_at": "2026-10-05T23:59:23+00:00",
+      "last_checked_at": "2026-10-05T23:59:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "PreGS: A Parameter-Transfer-Based Multi-Expert Graph Neural Network for Node Classification"
+    },
+    "DOI:10.1101/gr.281431.125": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/gr.281431.125",
+      "identity_tokens": [
+        "DOI:10.1101/gr.281431.125"
+      ],
+      "reason": "single-cell multimodal data integration/denoising向けβ-VAE MoEで、LLM inference servingと無関係。",
+      "first_checked_at": "2026-10-05T23:59:23+00:00",
+      "last_checked_at": "2026-10-05T23:59:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Unifying multimodal single-cell data with a mixture-of-experts β-variational autoencoder framework"
+    },
+    "arXiv:2609.16778": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16778",
+      "identity_tokens": [
+        "arXiv:2609.16778"
+      ],
+      "reason": "image forensics向けV-JEPA/MoE vision modelで、LLM serving/inference optimizationと無関係。",
+      "first_checked_at": "2026-10-05T23:59:24+00:00",
+      "last_checked_at": "2026-10-05T23:59:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Unifying Semantic Priors and High-Frequency Traces: Enhancing V-JEPA with Mixture-of-Experts for Robust Synthetic Image Forensics"
+    },
+    "arXiv:2609.17817": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17817",
+      "identity_tokens": [
+        "arXiv:2609.17817"
+      ],
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "first_checked_at": "2026-10-05T23:59:24+00:00",
+      "last_checked_at": "2026-10-05T23:59:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ],
+      "title": "Reflections on Trusting Trust, Revisited: Contaminating Self-Modifying AI Coding Agents with Poisoned Benchmarks"
+    },
+    "arXiv:2609.17886": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.17886",
+      "identity_tokens": [
+        "arXiv:2609.17886"
+      ],
+      "reason": "EEG foundation model fine-tuningのaccuracy評価で、追加moduleのruntime/memory overhead報告はあるが、LLM推論効率の対象外。",
+      "first_checked_at": "2026-10-05T23:59:24+00:00",
+      "last_checked_at": "2026-10-05T23:59:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "title": "Dataset-Dependent Effects of Cross-Depth Aggregation and Soft-Routed Experts in EEG Foundation Model Fine-Tuning"
+    },
+    "DOI:10.1021/acs.analchem.6c01881": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acs.analchem.6c01881",
+      "identity_tokens": [
+        "DOI:10.1021/acs.analchem.6c01881"
+      ],
+      "reason": "infrared spectroscopy向けself-supervised chemometricsのpretraining/robustness研究で、LLM inference/servingと無関係。",
+      "first_checked_at": "2026-10-05T23:59:24+00:00",
+      "last_checked_at": "2026-10-05T23:59:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "A3M-CIR: An Attention-Aware Adversarial\nMasking Based Self-Supervised Chemometric Framework for Robust Infrared\nSpectral Analysis"
     }
   }
 }

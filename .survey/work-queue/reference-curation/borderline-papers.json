@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T23:50:02+00:00",
-  "record_count": 2110,
+  "updated_at": "2026-10-05T23:59:21+00:00",
+  "record_count": 2115,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -32558,6 +32558,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Component-Weighted Centroid Search for Exact Incremental BPE"
+    },
+    "arXiv:2609.32763": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32763",
+      "identity_tokens": [
+        "arXiv:2609.32763"
+      ],
+      "reason": "一次arXiv abstractは既知画像の知識ベース改変を評価するmultimodal benchmarkで、推論性能改善ではない。本文PDF/HTMLは取得を試したが、primary full textを読めず、linked lineageとの関係を本文で確定できない。",
+      "first_checked_at": "2026-10-05T23:59:18+00:00",
+      "last_checked_at": "2026-10-05T23:59:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mandela-Bench: Multimodal Models Remember Canonical Images Instead of Seeing Them"
+    },
+    "arXiv:2609.32913": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32913",
+      "identity_tokens": [
+        "arXiv:2609.32913"
+      ],
+      "reason": "一次本文はweak teacherとfrozen partnerの交互CoTによるweak-to-strong transfer。複数条件で推論token数が減る一方、同論文のmodeled costはKimiで21.1%増、Nemotron等も条件依存。推論費用改善が一貫せず、主貢献は推論協調による精度向上。",
+      "first_checked_at": "2026-10-05T23:59:18+00:00",
+      "last_checked_at": "2026-10-05T23:59:18+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Allspark: Weak to Strong Transfer via Alternating Chain of Thought"
+    },
+    "arXiv:2609.25286": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25286",
+      "identity_tokens": [
+        "arXiv:2609.25286"
+      ],
+      "reason": "一次本文はenterprise data agentのquery-conditioned evidence routing/compressionを評価するが、明示的にtoken最小化が目的でなく、保守的なpost-answer verificationによりtoken/tool使用量が大きい。cost/quality点もreasonerとverification条件が揃わずPareto最適化されていない。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learned Enterprise Data Comprehension: Compression and Routing for Data Agents"
+    },
+    "arXiv:2609.19934": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19934",
+      "identity_tokens": [
+        "arXiv:2609.19934"
+      ],
+      "reason": "本文のDepth Control Protocolはrecursive LMのdepth truncationによる品質変化を複数要因へ分解する診断法。depthを短くするinference compute操作自体は扱うが、新しい推論最適化を提案せず、著者もFLOP-matched superiorityを主張しない。",
+      "first_checked_at": "2026-10-05T23:59:19+00:00",
+      "last_checked_at": "2026-10-05T23:59:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Depth Truncation: Controlled Evaluation of Depth Utilization in Recursive Language Models"
+    },
+    "DOI:10.64898/2026.09.07.749983": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.09.07.749983",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.07.749983"
+      ],
+      "reason": "abstractが空で一次DOIページも取得不能。題名は抗体CDR設計向けflow-matching MoEを示すが、本文根拠なしにLLM推論との関係を推測して除外できないためborderline。",
+      "first_checked_at": "2026-10-05T23:59:21+00:00",
+      "last_checked_at": "2026-10-05T23:59:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ForceFlowAb: physics-aware mixture-of-experts flow matching model for antibody CDRs design"
     }
   }
 }
