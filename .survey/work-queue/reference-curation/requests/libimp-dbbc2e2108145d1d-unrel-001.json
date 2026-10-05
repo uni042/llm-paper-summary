@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-dbbc2e2108145d1d-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2404.02060",
+  "reason": "LongICLBenchを提案し、2K〜50Kトークン・28〜174ラベルの長文脈in-context learning能力を15モデルで評価するbenchmark研究。長文脈推論の能力限界を測るが、runtime、KV cache、attention kernel、serving等の推論効率化手法を提案しない。",
+  "title": "Long-context LLMs Struggle with Long In-context Learning",
+  "identity_tokens": [
+    "arXiv:2404.02060"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2405.10480-lean-attention-hardware-aware-scalable-attention-mechanism.md",
+    "papers/inference/13-sparse-attention/2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md",
+    "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbbc2e210814",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
