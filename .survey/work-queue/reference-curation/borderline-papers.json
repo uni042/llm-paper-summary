@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:39:51+00:00",
-  "record_count": 1888,
+  "updated_at": "2026-10-05T14:42:32+00:00",
+  "record_count": 1894,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29163,6 +29163,102 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Optimizing the Deployment of Tiny Transformers on Low-Power MCUs"
+    },
+    "arXiv:2412.05185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.05185",
+      "identity_tokens": [
+        "arXiv:2412.05185"
+      ],
+      "reason": "The primary text introduces a video tokenizer that condenses redundant visual information, so a resource effect is plausible. However, the reported results emphasize video-understanding accuracy and training-data efficiency; no inference latency, memory, or compute comparison establishing LLM-serving efficiency was found in the checked sections. Keep as borderline for this inference-focused scope.",
+      "first_checked_at": "2026-10-05T14:42:26+00:00",
+      "last_checked_at": "2026-10-05T14:42:26+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LinVT: Empower Your Image-level Large Language Model to Understand Videos"
+    },
+    "SemanticScholar:1ef23ac36e05ca85e64938e5161b951fbd9d9cf7": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:1ef23ac36e05ca85e64938e5161b951fbd9d9cf7",
+      "identity_tokens": [
+        "SemanticScholar:1ef23ac36e05ca85e64938e5161b951fbd9d9cf7"
+      ],
+      "reason": "一次本文PDFは公式PMLRのDownload linkから取得を試みたが、web fetchがHTTP 400 “Unsupported content-type: application/octet-stream”で失敗。本文の実験・条件・限界は未確認。",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06706-multi-candidate-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerated Speculative Sampling Based on Tree Monte Carlo"
+    },
+    "arXiv:2308.03449": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.03449",
+      "identity_tokens": [
+        "arXiv:2308.03449"
+      ],
+      "reason": "encoder-only model pruningが対象で、生成型LLMのautoregressive servingや推論throughput測定への直接適合が弱い。",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accurate Retraining-free Pruning for Pretrained Encoder-based Language Models"
+    },
+    "arXiv:2503.14376": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.14376",
+      "identity_tokens": [
+        "arXiv:2503.14376"
+      ],
+      "reason": "対象はlinear RNN/xLSTMで、一般的LLM/Transformer servingの高速化ではない。対象scopeに近接する別model familyとして弱い。",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tiled Flash Linear Attention: More Efficient Linear RNN and xLSTM Kernels"
+    },
+    "arXiv:2510.07293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.07293",
+      "identity_tokens": [
+        "arXiv:2510.07293"
+      ],
+      "reason": "主貢献はbenchmarkと既存cost-reduction techniquesの評価で、新規serving/圧縮方式は提案しない。Audio LLM特化でもあるため追加価値は限定的。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AudioMarathon: A Comprehensive Benchmark for Long-Context Audio Understanding and Efficiency in Audio LLMs"
+    },
+    "arXiv:2505.16508": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16508",
+      "identity_tokens": [
+        "arXiv:2505.16508"
+      ],
+      "reason": "platform-level benchmarking/design insightsが主で、新規の推論最適化手法や再利用可能systemを提示しない。",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-First Language Model Inference: Models, Metrics, and Tradeoffs"
     }
   }
 }

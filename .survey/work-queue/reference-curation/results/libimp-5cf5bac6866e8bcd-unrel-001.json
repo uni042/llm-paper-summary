@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5cf5bac6866e8bcd-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2503.09022",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2503.09022",
+    "identity_tokens": [
+      "arXiv:2503.09022"
+    ],
+    "reason": "Collaborative LLM inferenceに対するprompt inversion/privacy attackを提案・評価する安全性研究。推論効率向上が目的ではない。",
+    "first_checked_at": "2026-10-05T14:42:29+00:00",
+    "last_checked_at": "2026-10-05T14:42:29+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+    ],
+    "title": "Prompt Inversion Attack Against Collaborative Inference of Large Language Models"
+  },
+  "processed_at": "2026-10-05T14:42:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5cf5bac6866e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

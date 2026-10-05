@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd08f777f30efbd6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.07293",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.07293",
+    "identity_tokens": [
+      "arXiv:2510.07293"
+    ],
+    "reason": "主貢献はbenchmarkと既存cost-reduction techniquesの評価で、新規serving/圧縮方式は提案しない。Audio LLM特化でもあるため追加価値は限定的。",
+    "first_checked_at": "2026-10-05T14:42:31+00:00",
+    "last_checked_at": "2026-10-05T14:42:31+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "AudioMarathon: A Comprehensive Benchmark for Long-Context Audio Understanding and Efficiency in Audio LLMs"
+  },
+  "processed_at": "2026-10-05T14:42:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd08f777f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

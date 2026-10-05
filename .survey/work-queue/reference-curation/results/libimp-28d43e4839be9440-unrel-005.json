@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28d43e4839be9440-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2402.16731",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2402.16731",
+    "identity_tokens": [
+      "arXiv:2402.16731"
+    ],
+    "reason": "PyGim targets graph neural network kernels on processing-in-memory hardware, not LLM inference.",
+    "first_checked_at": "2026-10-05T14:42:27+00:00",
+    "last_checked_at": "2026-10-05T14:42:27+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+    ],
+    "title": "PyGim : An Efficient Graph Neural Network Library for Real Processing-In-Memory Architectures"
+  },
+  "processed_at": "2026-10-05T14:42:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28d43e4839be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

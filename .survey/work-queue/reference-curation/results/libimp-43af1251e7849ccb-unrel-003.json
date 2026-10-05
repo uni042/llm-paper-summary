@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-43af1251e7849ccb-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.13565",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.13565",
+    "identity_tokens": [
+      "arXiv:2311.13565"
+    ],
+    "reason": "長文QA用のevidence retrievalにLLMを適用する研究で、回答に必要な証拠検索が主題。モデル推論の高速化/圧縮は示されない。",
+    "first_checked_at": "2026-10-05T14:42:28+00:00",
+    "last_checked_at": "2026-10-05T14:42:28+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+    ],
+    "title": "Drilling Down into the Discourse Structure with LLMs for Long Document Question Answering"
+  },
+  "processed_at": "2026-10-05T14:42:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-43af1251e784",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

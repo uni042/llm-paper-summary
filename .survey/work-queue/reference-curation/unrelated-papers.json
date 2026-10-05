@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:39:51+00:00",
-  "record_count": 5662,
+  "updated_at": "2026-10-05T14:42:33+00:00",
+  "record_count": 5693,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -82244,6 +82244,447 @@
         "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
       ],
       "title": "FlexNN: A Dataflow-aware Flexible Deep Learning Accelerator for Energy-Efficient Edge Devices"
+    },
+    "arXiv:2410.03227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03227",
+      "identity_tokens": [
+        "arXiv:2410.03227"
+      ],
+      "reason": "ALR2 uses retrieval before reasoning to improve long-context QA accuracy; the primary abstract reports no inference-compute, latency, memory, or serving optimization.",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "ALR2: A Retrieve-then-Reason Framework for Long-context Question Answering"
+    },
+    "arXiv:2409.02231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02231",
+      "identity_tokens": [
+        "arXiv:2409.02231"
+      ],
+      "reason": "SmileyLlama is created through supervised fine-tuning and preference optimization for chemical generation; no inference-efficiency contribution is reported.",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "title": "SmileyLlama: modifying large language models for directed chemical space exploration"
+    },
+    "DOI:10.1109/tsc.2024.3422828": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tsc.2024.3422828",
+      "identity_tokens": [
+        "DOI:10.1109/tsc.2024.3422828"
+      ],
+      "reason": "SpotDAG schedules generic cloud DAG workflows on spot instances; it is not an LLM inference or serving method.",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ],
+      "title": "SpotDAG: An RL-Based Algorithm for DAG Workflow Scheduling in Heterogeneous Cloud Environments"
+    },
+    "arXiv:2402.16731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.16731",
+      "identity_tokens": [
+        "arXiv:2402.16731"
+      ],
+      "reason": "PyGim targets graph neural network kernels on processing-in-memory hardware, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:42:27+00:00",
+      "last_checked_at": "2026-10-05T14:42:27+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "PyGim : An Efficient Graph Neural Network Library for Real Processing-In-Memory Architectures"
+    },
+    "arXiv:2402.12535": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.12535",
+      "identity_tokens": [
+        "arXiv:2402.12535"
+      ],
+      "reason": "高エネルギー物理等のpoint-cloud processing向けPoint Transformerの研究で、LLM対象外。",
+      "first_checked_at": "2026-10-05T14:42:28+00:00",
+      "last_checked_at": "2026-10-05T14:42:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ],
+      "title": "Locality-Sensitive Hashing-Based Efficient Point Transformer with Applications in High-Energy Physics"
+    },
+    "arXiv:2311.13565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.13565",
+      "identity_tokens": [
+        "arXiv:2311.13565"
+      ],
+      "reason": "長文QA用のevidence retrievalにLLMを適用する研究で、回答に必要な証拠検索が主題。モデル推論の高速化/圧縮は示されない。",
+      "first_checked_at": "2026-10-05T14:42:28+00:00",
+      "last_checked_at": "2026-10-05T14:42:28+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "Drilling Down into the Discourse Structure with LLMs for Long Document Question Answering"
+    },
+    "arXiv:2604.08542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08542",
+      "identity_tokens": [
+        "arXiv:2604.08542"
+      ],
+      "reason": "長時間動画の3D scene reconstructionを扱い、言語モデル推論の効率化と無関係。",
+      "first_checked_at": "2026-10-05T14:42:28+00:00",
+      "last_checked_at": "2026-10-05T14:42:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2411.01783-context-parallelism-for-scalable-million-token-inference.md"
+      ],
+      "title": "Scal3R: Scalable Test-Time Training for Large-Scale 3D Reconstruction"
+    },
+    "arXiv:2505.24575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.24575",
+      "identity_tokens": [
+        "arXiv:2505.24575"
+      ],
+      "reason": "NexusSum is a multi-agent narrative summarization framework assessed for summarization quality; the abstract reports no inference cost reduction.",
+      "first_checked_at": "2026-10-05T14:42:28+00:00",
+      "last_checked_at": "2026-10-05T14:42:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "NexusSum: Hierarchical LLM Agents for Long-Form Narrative Summarization"
+    },
+    "arXiv:2505.23811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23811",
+      "identity_tokens": [
+        "arXiv:2505.23811"
+      ],
+      "reason": "LayerIF estimates layer training quality with influence functions for downstream adaptation; it concerns training analysis rather than inference/serving.",
+      "first_checked_at": "2026-10-05T14:42:28+00:00",
+      "last_checked_at": "2026-10-05T14:42:28+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "LayerIF: Estimating Layer Quality for Large Language Models using Influence Functions"
+    },
+    "DOI:10.1109/hpca61900.2025.00104": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/hpca61900.2025.00104",
+      "identity_tokens": [
+        "DOI:10.1109/hpca61900.2025.00104"
+      ],
+      "reason": "RpcNIC offloads generic datacenter RPC work onto SmartNIC hardware; it does not optimize LLM inference.",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md"
+      ],
+      "title": "RpcNIC: Enabling Efficient Datacenter RPC Offloading on PCIe-attached SmartNICs"
+    },
+    "arXiv:2502.12346": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.12346",
+      "identity_tokens": [
+        "arXiv:2502.12346"
+      ],
+      "reason": "QuZO is a quantized zeroth-order fine-tuning method; quantization is discussed as inference context, but the proposed work is fine-tuning rather than inference optimization.",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md"
+      ],
+      "title": "QuZO: Quantized Zeroth-Order Fine-Tuning for Large Language Models"
+    },
+    "arXiv:2502.10993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.10993",
+      "identity_tokens": [
+        "arXiv:2502.10993"
+      ],
+      "reason": "RoseRAG targets robustness and answer quality for small-model RAG; the abstract does not establish an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "RoseRAG: Robust Retrieval-augmented Generation with Small-scale LLMs via Margin-aware Preference Optimization"
+    },
+    "arXiv:2503.09022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09022",
+      "identity_tokens": [
+        "arXiv:2503.09022"
+      ],
+      "reason": "Collaborative LLM inferenceに対するprompt inversion/privacy attackを提案・評価する安全性研究。推論効率向上が目的ではない。",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ],
+      "title": "Prompt Inversion Attack Against Collaborative Inference of Large Language Models"
+    },
+    "arXiv:2503.09291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09291",
+      "identity_tokens": [
+        "arXiv:2503.09291"
+      ],
+      "reason": "Distributed LLM inferenceの中間表現からpromptを推定する攻撃研究。推論コスト最適化ではなくプライバシー・securityが主題。",
+      "first_checked_at": "2026-10-05T14:42:29+00:00",
+      "last_checked_at": "2026-10-05T14:42:29+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ],
+      "title": "Prompt Inference Attack on Distributed Large Language Model Inference Frameworks"
+    },
+    "arXiv:2506.12947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12947",
+      "identity_tokens": [
+        "arXiv:2506.12947"
+      ],
+      "reason": "Processing-using-DRAMにおけるread disturbanceの実機信頼性評価であり、LLM推論手法ではない。",
+      "first_checked_at": "2026-10-05T14:42:30+00:00",
+      "last_checked_at": "2026-10-05T14:42:30+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "PuDHammer: Experimental Analysis of Read Disturbance Effects of Processing-using-DRAM in Real DRAM Chips"
+    },
+    "arXiv:2505.21501": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21501",
+      "identity_tokens": [
+        "arXiv:2505.21501"
+      ],
+      "reason": "Vision Transformerのartifact tokenとregister tokenを扱う視覚表現の研究で、言語モデル推論を対象としない。",
+      "first_checked_at": "2026-10-05T14:42:30+00:00",
+      "last_checked_at": "2026-10-05T14:42:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "Vision Transformers with Self-Distilled Registers"
+    },
+    "arXiv:2505.12781": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12781",
+      "identity_tokens": [
+        "arXiv:2505.12781"
+      ],
+      "reason": "Low-Rank CloneによるSmall Language Modelのknowledge distillation/pre-training効率化が主題。推論時の効率改善ではない。",
+      "first_checked_at": "2026-10-05T14:42:30+00:00",
+      "last_checked_at": "2026-10-05T14:42:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "A Token is Worth over 1,000 Tokens: Efficient Knowledge Distillation through Low-Rank Clone"
+    },
+    "DOI:10.18653/v1/2025.acl-long.251": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.251",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.251"
+      ],
+      "reason": "LLMのreasoningを妨害するstepwise attackの研究で、効率化ではなく安全性・攻撃が目的。",
+      "first_checked_at": "2026-10-05T14:42:30+00:00",
+      "last_checked_at": "2026-10-05T14:42:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Stepwise Reasoning Disruption Attack of LLMs"
+    },
+    "DOI:10.1109/micro61859.2024.00088": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro61859.2024.00088",
+      "identity_tokens": [
+        "DOI:10.1109/micro61859.2024.00088"
+      ],
+      "reason": "GPU uncoreのcovert/side-channelを調査するhardware security研究。LLM推論最適化ではない。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md"
+      ],
+      "title": "Veiled Pathways: Investigating Covert and Side Channels Within GPU Uncore"
+    },
+    "arXiv:2410.05078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05078",
+      "identity_tokens": [
+        "arXiv:2410.05078"
+      ],
+      "reason": "事前学習Transformerをbyte-levelデータ圧縮器として評価する研究で、モデル推論の高速化・圧縮ではない。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "Compression via Pre-trained Transformers: A Study on Byte-Level Multimodal Data"
+    },
+    "arXiv:2406.07138": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.07138",
+      "identity_tokens": [
+        "arXiv:2406.07138"
+      ],
+      "reason": "CREAMでLLMのcontext lengthを拡張するfine-tuning手法。長文対応が主題で、推論コスト低減の根拠は要旨にない。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "An Efficient Recipe for Long Context Extension via Middle-Focused Positional Encoding"
+    },
+    "arXiv:2403.19115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.19115",
+      "identity_tokens": [
+        "arXiv:2403.19115"
+      ],
+      "reason": "Hierarchical RoPEでcode LLMのcontext-length extrapolationを改善する研究。文脈長・品質の拡張であり推論効率化ではない。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "HiRoPE: Length Extrapolation for Code Models Using Hierarchical Position"
+    },
+    "arXiv:2403.03823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.03823",
+      "identity_tokens": [
+        "arXiv:2403.03823"
+      ],
+      "reason": "TV番組要約のmultimodal taskに対するモジュール構成が主題で、推論効率を改善する寄与は要旨にない。",
+      "first_checked_at": "2026-10-05T14:42:31+00:00",
+      "last_checked_at": "2026-10-05T14:42:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "A Modular Approach for Multimodal Summarization of TV Shows"
+    },
+    "arXiv:2512.07086": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.07086",
+      "identity_tokens": [
+        "arXiv:2512.07086"
+      ],
+      "reason": "無限reasoningによるblack-box LLM serviceへのDoS攻撃が主題。LLMの推論効率を改善する研究ではない。",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+      ],
+      "title": "ThinkTrap: Denial-of-Service Attacks against Black-box LLM Services via Infinite Thinking"
+    },
+    "arXiv:2509.12235": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.12235",
+      "identity_tokens": [
+        "arXiv:2509.12235"
+      ],
+      "reason": "SFT後のRL fine-tuningがOOD generalizationへ与える影響を調べるtraining研究。推論時効率化ではない。",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "RL Fine-Tuning Heals OOD Forgetting in SFT"
+    },
+    "DOI:10.1109/tsusc.2025.3542779": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tsusc.2025.3542779",
+      "identity_tokens": [
+        "DOI:10.1109/tsusc.2025.3542779"
+      ],
+      "reason": "Data centerの電源供給・power management最適化のsurvey/分析であり、LLM推論の手法研究ではない。",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Power Management Optimization for Data Centers: A Power Supply Perspective"
+    },
+    "arXiv:2210.07913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.07913",
+      "identity_tokens": [
+        "arXiv:2210.07913"
+      ],
+      "reason": "Pareto Testing calibrates generic trained models for statistical risk constraints and runtime cost; the abstract does not describe an LLM-specific inference or serving method.",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "title": "Efficiently Controlling Multiple Risks with Pareto Testing"
+    },
+    "arXiv:2510.16670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16670",
+      "identity_tokens": [
+        "arXiv:2510.16670"
+      ],
+      "reason": "Capsule Prompt Tuning is a PEFT/adaptation method focused on prompt learning and training burden; no deployment inference-efficiency result is established.",
+      "first_checked_at": "2026-10-05T14:42:32+00:00",
+      "last_checked_at": "2026-10-05T14:42:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "title": "All You Need is One: Capsule Prompt Tuning with a Single Vector"
+    },
+    "arXiv:2510.15731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.15731",
+      "identity_tokens": [
+        "arXiv:2510.15731"
+      ],
+      "reason": "This is an analysis of attention sinks in masked diffusion language models, not an inference optimization method for LLM serving.",
+      "first_checked_at": "2026-10-05T14:42:33+00:00",
+      "last_checked_at": "2026-10-05T14:42:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Attention Sinks in Diffusion Language Models"
+    },
+    "arXiv:2507.18537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18537",
+      "identity_tokens": [
+        "arXiv:2507.18537"
+      ],
+      "reason": "TTS-VAR accelerates visual autoregressive generation; its target is visual generation models rather than LLM inference.",
+      "first_checked_at": "2026-10-05T14:42:33+00:00",
+      "last_checked_at": "2026-10-05T14:42:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "title": "TTS-VAR: A Test-Time Scaling Framework for Visual Auto-Regressive Generation"
+    },
+    "DOI:10.1145/3695053.3731023": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3695053.3731023",
+      "identity_tokens": [
+        "DOI:10.1145/3695053.3731023"
+      ],
+      "reason": "Fair-CO2 attributes cloud data-center emissions to workloads; it is an accounting method, not an LLM inference efficiency method.",
+      "first_checked_at": "2026-10-05T14:42:33+00:00",
+      "last_checked_at": "2026-10-05T14:42:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
+      ],
+      "title": "Fair-CO2: Fair Attribution for Cloud Carbon Emissions"
     }
   }
 }

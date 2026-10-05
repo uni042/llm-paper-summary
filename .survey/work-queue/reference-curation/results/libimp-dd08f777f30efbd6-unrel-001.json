@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd08f777f30efbd6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.07086",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.07086",
+    "identity_tokens": [
+      "arXiv:2512.07086"
+    ],
+    "reason": "無限reasoningによるblack-box LLM serviceへのDoS攻撃が主題。LLMの推論効率を改善する研究ではない。",
+    "first_checked_at": "2026-10-05T14:42:32+00:00",
+    "last_checked_at": "2026-10-05T14:42:32+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md"
+    ],
+    "title": "ThinkTrap: Denial-of-Service Attacks against Black-box LLM Services via Infinite Thinking"
+  },
+  "processed_at": "2026-10-05T14:42:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd08f777f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28d43e4839be9440-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.05185",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.05185",
+    "identity_tokens": [
+      "arXiv:2412.05185"
+    ],
+    "reason": "The primary text introduces a video tokenizer that condenses redundant visual information, so a resource effect is plausible. However, the reported results emphasize video-understanding accuracy and training-data efficiency; no inference latency, memory, or compute comparison establishing LLM-serving efficiency was found in the checked sections. Keep as borderline for this inference-focused scope.",
+    "first_checked_at": "2026-10-05T14:42:26+00:00",
+    "last_checked_at": "2026-10-05T14:42:26+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LinVT: Empower Your Image-level Large Language Model to Understand Videos"
+  },
+  "processed_at": "2026-10-05T14:42:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28d43e4839be",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

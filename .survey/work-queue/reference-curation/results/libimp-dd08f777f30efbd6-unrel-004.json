@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dd08f777f30efbd6-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/tsusc.2025.3542779",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/tsusc.2025.3542779",
+    "identity_tokens": [
+      "DOI:10.1109/tsusc.2025.3542779"
+    ],
+    "reason": "Data centerの電源供給・power management最適化のsurvey/分析であり、LLM推論の手法研究ではない。",
+    "first_checked_at": "2026-10-05T14:42:32+00:00",
+    "last_checked_at": "2026-10-05T14:42:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+    ],
+    "title": "Power Management Optimization for Data Centers: A Power Supply Perspective"
+  },
+  "processed_at": "2026-10-05T14:42:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dd08f777f30e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
