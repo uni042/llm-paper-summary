@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9e52af2197ec5e55-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.22702",
+  "reason": "Accurate flood forecasts several days in advance are essential for flood control, water-resource management, and emergency response. A central challenge is to produce high-resolution forecasts across continental domains where hydrological behavior varies widely from place to place. We developed Hapi, a U-Net Swin Transformer that uses fine three-dimensional patches and hierarchical shifted-window attention to forecast river discharge, surface runoff, snow water equivalent, and soil wetness index across the contiguous United States. The model produces medium-range forecasts (24--72~h) at $0.05^{\\circ}$ resolution with adaptive task weighting and required only 0.11 seconds for a four-variable 72-h CONUS forecast on one A100 GPU. In a held-out 2024 potential-skill evaluation with ERA5-Land inputs prescribed over the forecast horizon, Hapi achieved the highest F1-score for floods in 20 of 21 comparisons across seven GloFAS return periods and three forecast leads. Independent validation against observed daily discharge at 3{,}881 U.S. Geological Survey gauges showed that Hapi achieved the highest median Nash--Sutcliffe efficiency at every lead, supported by regional-cluster bootstrap intervals. In a matched 24-h comparison of loss formulations, adaptive task balancing produced the lowest discharge errors and the highest F1-score for floods.",
+  "title": "Hapi: A Multivariable Land-Surface Transformer for Medium-Range Hydrological Forecasting at Continental Scale",
+  "identity_tokens": [
+    "arXiv:2609.22702"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e52af2197ec",
+  "source_precheck_request_id": null
+}

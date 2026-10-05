@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f10aceb6cd67de4b-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.23321",
+  "reason": "Low-rank adaptation (LoRA) has become a key technology for serving large-scale personalized large language models and diffusion models in the cloud. However, the co-occurrence patterns, resource contention relationships, and evolutionary regularities of adapters under production inference workloads have not been systematically or quantitatively studied. Based on GenTD26, Alibaba's production diffusion model inference dataset, this paper adopts a graph-theoretic framework to construct an adapter co-occurrence network and conducts a characterization from both static structure and dynamic evolution. Our main findings are as follows. (1) The co-occurrence network is extremely sparse, and adapter usage frequency follows a significant heavy-tailed distribution. (2) Introducing the first adapter incurs a 66.1% execution-latency overhead, with diminishing marginal costs afterwards. (3) Co-occurrence relationships are driven by base models: in 90.6% of multi-adapter requests, all adapters share the same dominant base model; 66.2% of significant co-occurrence edges connect same-model adapter pairs; and in 85.8% of multi-adapter requests, all adapter pairs form significant co-occurrence edges. (4) The adapter ecosystem exhibits a core-periphery bipolar structure, with a weekly Jaccard similarity of 0.696 at the model level and a churn rate of 54.5% for the top-10 hottest models within a 12-hour window. Based on these findings, we propose a preloading strategy built on top-k co-occurrence statistics; offline experiments show that it covers 81.0% of test-set co-occurrence pairs at k=3, and sensitivity analyses across frequency thresholds and time windows verify the robustness of the conclusions. These results provide a data-driven basis for cache preloading, adaptive scheduling, and GPU memory management in LoRA inference services.",
+  "title": "Co-occurrence Patterns of LoRA Adapters in Production Diffusion Model Inference Services",
+  "identity_tokens": [
+    "arXiv:2609.23321"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2310.18547-punica-multitenant-lora-serving.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+    "papers/inference/99-other-inference-systems/2024-2401.11240-caraserve-cpu-assisted-lora-serving.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f10aceb6cd67",
+  "source_precheck_request_id": null
+}
