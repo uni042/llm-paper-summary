@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:00:37+00:00",
-  "record_count": 1152,
+  "updated_at": "2026-10-05T08:02:44+00:00",
+  "record_count": 1155,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17621,6 +17621,50 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "ClusterAttention: A training-free speedup of bidirectional attention"
+    },
+    "arXiv:2608.25729": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25729",
+      "identity_tokens": [
+        "arXiv:2608.25729"
+      ],
+      "reason": "The paper is a video-MLLM resampling study with a visual-token bottleneck, but its reported efficiency optimization is for training rather than reduced LLM inference cost.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "LongVU-TTT: Causal Test-Time Training for Visual Resampling in Long Video Understanding"
+    },
+    "arXiv:2608.25761": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25761",
+      "identity_tokens": [
+        "arXiv:2608.25761"
+      ],
+      "reason": "The study analyzes inference-time compute budgets for grammar-constrained SQL generation, but its contribution is a task-specific accuracy tradeoff rather than a general inference-efficiency method.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Beam Search, Self-Consistency, and the Limits of Inference-Time Scaling for Grammar-Constrained Text-to-SQL in Small Language Models"
+    },
+    "arXiv:2608.25336": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25336",
+      "identity_tokens": [
+        "arXiv:2608.25336"
+      ],
+      "reason": "The paper is primarily a provenance and reliability protocol for statistical reporting; inference-efficiency evidence is a secondary cost analysis.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Provenance Before Prose: Claim-Locked Reporting for Statistical Text Generation"
     }
   }
 }

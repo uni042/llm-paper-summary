@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e4bb32adf45bb503-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.25711",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.25711",
+    "identity_tokens": [
+      "arXiv:2608.25711"
+    ],
+    "reason": "ReDiR is a generation-time safety defense for multi-turn agents; its abstract does not present an inference-cost reduction.",
+    "first_checked_at": "2026-10-05T08:02:44+00:00",
+    "last_checked_at": "2026-10-05T08:02:44+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "title": "Reassembling Distributed Risk: Trajectory-Conditioned Action Generation for Multi-Turn Agent Safety"
+  },
+  "processed_at": "2026-10-05T08:02:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e4bb32adf45b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

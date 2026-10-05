@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:00:37+00:00",
-  "record_count": 3716,
+  "updated_at": "2026-10-05T08:02:44+00:00",
+  "record_count": 3733,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -54137,6 +54137,253 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "BananaVLM: A Domain-Adapted Vision Language Model for Banana Crop Disease Diagnosis"
+    },
+    "DOI:10.3390/molecules31173008": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/molecules31173008",
+      "identity_tokens": [
+        "DOI:10.3390/molecules31173008"
+      ],
+      "reason": "The abstract proposes molecular graph representation learning for property prediction; it is unrelated to LLM inference or serving.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "MSGRL: A Motif-Driven Self-Supervised Graph Representation Learning Framework for Interpretable Molecular Property Prediction"
+    },
+    "DOI:10.64898/2026.08.23.746542": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.08.23.746542",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.23.746542"
+      ],
+      "reason": "The abstract evaluates a U-Net-style MRI missing-modality segmentation controller, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "NeuroMesh: A Bottleneck Topology Controller for Missing-Modality Brain Tumor Segmentation — A Mechanistic Pilot Study on BraTS"
+    },
+    "arXiv:2608.25276": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25276",
+      "identity_tokens": [
+        "arXiv:2608.25276"
+      ],
+      "reason": "The work is a bit-flip denial-of-wallet attack on MoE LLMs; its contribution is an attack/security result rather than an efficiency method.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Groundhog Bit-Flip Attack: Seeding Infinite Generation Loops in Mixture-of-Experts LLMs through Bit Flips"
+    },
+    "arXiv:2608.25299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25299",
+      "identity_tokens": [
+        "arXiv:2608.25299"
+      ],
+      "reason": "PointRL trains point-level vision-language grounding from annotations; this is task learning, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "PointRL: Learning Point-Level Vision-Language Grounding from Verifiable Annotation Evidence"
+    },
+    "arXiv:2608.25321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25321",
+      "identity_tokens": [
+        "arXiv:2608.25321"
+      ],
+      "reason": "The paper is a physical side-channel extraction attack against LLM accelerator assets, not an inference optimization.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+      ],
+      "title": "LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing"
+    },
+    "arXiv:2608.25777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25777",
+      "identity_tokens": [
+        "arXiv:2608.25777"
+      ],
+      "reason": "LocalLSTC studies a control architecture for locally deployed GUI agents and weaker reasoning backbones; the abstract does not claim inference-efficiency improvements.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md"
+      ],
+      "title": "LocalLSTC: A Long Short-Term Control Architecture for Locally Deployed GUI Agents"
+    },
+    "arXiv:2608.25881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25881",
+      "identity_tokens": [
+        "arXiv:2608.25881"
+      ],
+      "reason": "LOBSTER is an active-learning method for selecting training annotations for summarization; this is training-data efficiency, outside scope.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Loss-Based Active Learning for Neural Abstractive Summarization"
+    },
+    "arXiv:2608.25930": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25930",
+      "identity_tokens": [
+        "arXiv:2608.25930"
+      ],
+      "reason": "The work proposes confound control for deep neural-network predictions and is not about LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:02:43+00:00",
+      "last_checked_at": "2026-10-05T08:02:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Controlling for Omitted Variable Bias in Deep Neural Networks"
+    },
+    "arXiv:2608.25371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25371",
+      "identity_tokens": [
+        "arXiv:2608.25371"
+      ],
+      "reason": "The abstract studies backdoor attacks in capacity-bounded Vision MoE dispatch, not language-model inference efficiency.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Capacity Overflow: A Blind Spot for Backdoor Attacks in Vision MoE"
+    },
+    "arXiv:2608.25380": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25380",
+      "identity_tokens": [
+        "arXiv:2608.25380"
+      ],
+      "reason": "APT accelerates image/video Diffusion Transformers; the abstract does not concern diffusion language models or LLM inference.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "APT: Accelerating Diffusion Transformers via Attention Probability-Guided Pruning and Quantization"
+    },
+    "arXiv:2608.25382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25382",
+      "identity_tokens": [
+        "arXiv:2608.25382"
+      ],
+      "reason": "This is a user study comparing screen-reader document and Q&A interfaces, not an LLM inference or serving technique.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "Q&A or Document-Based? The Effects of Interface Type on How Screen Reader Users Access Interconnected Documents"
+    },
+    "arXiv:2608.25386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25386",
+      "identity_tokens": [
+        "arXiv:2608.25386"
+      ],
+      "reason": "The abstract explicitly targets autoregressive image-generation training cost; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Efficient Training with Foresight: Multi-Token Auxiliary Supervision for Autoregressive Image Generation"
+    },
+    "arXiv:2608.25396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25396",
+      "identity_tokens": [
+        "arXiv:2608.25396"
+      ],
+      "reason": "SPFR concerns distributed agent discovery and routing; it does not propose an LLM inference-cost or serving optimization.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "SPFR: Semantic Potential Field Routing for the Distributed Internet of Agents"
+    },
+    "arXiv:2608.25479": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25479",
+      "identity_tokens": [
+        "arXiv:2608.25479"
+      ],
+      "reason": "The work targets interactive 4D video generation and control, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control"
+    },
+    "arXiv:2608.25570": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25570",
+      "identity_tokens": [
+        "arXiv:2608.25570"
+      ],
+      "reason": "KOPE uses agents to optimize generated hardware kernels; the abstract concerns the kernel-optimization workflow, not optimization of LLM inference/serving itself.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md"
+      ],
+      "title": "Beyond Scaling: Self-Evolving LLM Agents for Hardware Kernel Optimization via an Experience-Driven Workflow and Experience Graph Memory"
+    },
+    "arXiv:2608.25661": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25661",
+      "identity_tokens": [
+        "arXiv:2608.25661"
+      ],
+      "reason": "The paper compares and develops an RCA-agent harness for root-cause analysis; no LLM inference-efficiency contribution is stated.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "From General Agents to RCA Experts: A Self-Evolving Harness for Root Cause Analysis"
+    },
+    "arXiv:2608.25711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25711",
+      "identity_tokens": [
+        "arXiv:2608.25711"
+      ],
+      "reason": "ReDiR is a generation-time safety defense for multi-turn agents; its abstract does not present an inference-cost reduction.",
+      "first_checked_at": "2026-10-05T08:02:44+00:00",
+      "last_checked_at": "2026-10-05T08:02:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Reassembling Distributed Risk: Trajectory-Conditioned Action Generation for Multi-Turn Agent Safety"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f2cbf52ba06e69e-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.25321",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.25321",
+    "identity_tokens": [
+      "arXiv:2608.25321"
+    ],
+    "reason": "The paper is a physical side-channel extraction attack against LLM accelerator assets, not an inference optimization.",
+    "first_checked_at": "2026-10-05T08:02:43+00:00",
+    "last_checked_at": "2026-10-05T08:02:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+      "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+    ],
+    "title": "LLMscope: Extracting LLM Assets from Edge AI Chips via Optical Probing"
+  },
+  "processed_at": "2026-10-05T08:02:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f2cbf52ba06",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

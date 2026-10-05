@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-850fda9eff64299d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.25761",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.25761",
+    "identity_tokens": [
+      "arXiv:2608.25761"
+    ],
+    "reason": "The study analyzes inference-time compute budgets for grammar-constrained SQL generation, but its contribution is a task-specific accuracy tradeoff rather than a general inference-efficiency method.",
+    "first_checked_at": "2026-10-05T08:02:43+00:00",
+    "last_checked_at": "2026-10-05T08:02:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Beam Search, Self-Consistency, and the Limits of Inference-Time Scaling for Grammar-Constrained Text-to-SQL in Small Language Models"
+  },
+  "processed_at": "2026-10-05T08:02:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-850fda9eff64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
