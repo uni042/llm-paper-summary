@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b3e81dbcaa1700d-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2310.03589",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2310.03589",
+    "identity_tokens": [
+      "arXiv:2310.03589"
+    ],
+    "reason": "時系列予測用foundation modelを構築しzero-shot forecasting性能・簡便性を評価するtime-series研究。zero-shot inference efficiencyへの言及はあるが、LLM/Transformer推論runtime・memory・servingの最適化方式ではない。",
+    "first_checked_at": "2026-10-05T15:48:46+00:00",
+    "last_checked_at": "2026-10-05T15:48:46+00:00",
+    "linked_from": [],
+    "title": "TimeGPT-1"
+  },
+  "processed_at": "2026-10-05T15:48:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b3e81dbcaa1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

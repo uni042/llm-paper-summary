@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b3e81dbcaa1700d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2411.04468",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2411.04468",
+    "identity_tokens": [
+      "arXiv:2411.04468"
+    ],
+    "reason": "Orchestratorがbrowser/file/code等の専門agentを計画・再計画して複雑taskを解くmulti-agent capability研究。GAIA/AssistantBench/WebArenaのtask性能とagent modularityが主評価で、agent serving runtime・latency・memory効率化ではない。",
+    "first_checked_at": "2026-10-05T02:04:36+00:00",
+    "last_checked_at": "2026-10-05T15:48:45+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2605.22566-graphflow-agent-workflow-serving.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md"
+    ],
+    "title": "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks"
+  },
+  "processed_at": "2026-10-05T15:48:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b3e81dbcaa1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

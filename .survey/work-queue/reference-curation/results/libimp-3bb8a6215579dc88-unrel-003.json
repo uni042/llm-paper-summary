@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3bb8a6215579dc88-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11432-024-4235-6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11432-024-4235-6",
+    "identity_tokens": [
+      "DOI:10.1007/s11432-024-4235-6",
+      "arXiv:2305.07895"
+    ],
+    "reason": "29 datasetを統合してGPT-4V/Gemini等のLarge Multimodal ModelのOCR、text-centric VQA、document VQA、KIE、数式認識能力を評価するbenchmark研究。推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-03T17:47:42+00:00",
+    "last_checked_at": "2026-10-05T15:48:46+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2601.15370-composing-weight-data-sparsity.md",
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2608.04454-phase-aware-expert-merging.md",
+      "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md",
+      "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+      "worker-worklist-30"
+    ],
+    "title": "OCRBench: on the hidden mystery of OCR in large multimodal models"
+  },
+  "processed_at": "2026-10-05T15:48:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3bb8a6215579",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

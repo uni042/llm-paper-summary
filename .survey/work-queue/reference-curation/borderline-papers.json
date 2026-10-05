@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:43:22+00:00",
-  "record_count": 2045,
+  "updated_at": "2026-10-05T15:48:51+00:00",
+  "record_count": 2043,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6636,34 +6636,6 @@
       ],
       "title": "How many words do we read per minute? A review and meta-analysis of reading rate"
     },
-    "arXiv:2301.12900": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2301.12900",
-      "identity_tokens": [
-        "arXiv:2301.12900"
-      ],
-      "reason": "一般Transformerへ適用可能なpruning frameworkだが、実測scopeは画像/graph/分類およびLSTMでLLM推論への適用根拠がない。target model実験が新規に必要なため本文だけからResearch適合を明確化できずborderline。",
-      "first_checked_at": "2026-10-05T00:50:53+00:00",
-      "last_checked_at": "2026-10-05T00:50:53+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2025-2504.05586-finding-fantastic-experts.md"
-      ],
-      "title": "DepGraph: Towards Any Structural Pruning"
-    },
-    "DOI:10.1145/77726.255132": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/77726.255132",
-      "identity_tokens": [
-        "DOI:10.1145/77726.255132"
-      ],
-      "reason": "The official ACM DOI page returned HTTP 403, so its primary abstract could not be retrieved.",
-      "first_checked_at": "2026-10-05T00:50:53+00:00",
-      "last_checked_at": "2026-10-05T00:50:53+00:00",
-      "linked_from": [
-        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
-      ],
-      "title": "The Tera computer system"
-    },
     "DOI:10.1109/12.48862": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/12.48862",
@@ -9227,20 +9199,6 @@
       ],
       "title": "SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features"
     },
-    "arXiv:2307.06304": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2307.06304",
-      "identity_tokens": [
-        "arXiv:2307.06304"
-      ],
-      "reason": "NaViT handles variable-resolution vision inputs, but evaluations are vision-only rather than LLM inference; scope fit is weak.",
-      "first_checked_at": "2026-10-05T02:01:50+00:00",
-      "last_checked_at": "2026-10-05T02:01:50+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
-      ],
-      "title": "Patch n' Pack: NaViT, a Vision Transformer for any Aspect Ratio and Resolution"
-    },
     "arXiv:1612.04426": {
       "classification": "borderline",
       "canonical_id": "arXiv:1612.04426",
@@ -9416,22 +9374,6 @@
         "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
       ],
       "title": "Block Pruning For Faster Transformers"
-    },
-    "arXiv:2502.17419": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2502.17419",
-      "identity_tokens": [
-        "arXiv:2502.17419"
-      ],
-      "reason": "Reasoning-LLM survey discusses inference-time reasoning but is a broad taxonomy, not a specific efficiency method with serving measurements.",
-      "first_checked_at": "2026-10-05T02:04:36+00:00",
-      "last_checked_at": "2026-10-05T02:04:36+00:00",
-      "linked_from": [
-        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md",
-        "papers/inference/07-kv-cache-optimization-compression/2025-2510.06175-vecinfer-efficient-llm-inference-with-low-bit-kv-cache-via-outlier-suppr.md",
-        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md"
-      ],
-      "title": "From System 1 to System 2: A Survey of Reasoning Large Language Models"
     },
     "arXiv:2502.17416": {
       "classification": "borderline",
@@ -31662,6 +31604,32 @@
       ],
       "borderline_recheck_count": 0,
       "title": "AI and Memory Wall"
+    },
+    "DOI:10.1145/1022594.1022596": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1022594.1022596",
+      "identity_tokens": [
+        "DOI:10.1145/1022594.1022596"
+      ],
+      "reason": "microprocessor・memory・network・diskでbandwidth改善がlatency改善を大幅に上回る長期傾向を分析し、cache・replication・prediction等の対処を論じるsystems基礎研究。LLM推論のmemory/I/O bottleneck理解に有用だがLLM/Transformerを対象としないためborderline。",
+      "first_checked_at": "2026-10-05T15:48:45+00:00",
+      "last_checked_at": "2026-10-05T15:48:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Latency Lags Bandwidth"
+    },
+    "DOI:10.1145/3132747.3132780": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3132747.3132780",
+      "identity_tokens": [
+        "DOI:10.1145/3132747.3132780"
+      ],
+      "reason": "microsecond-scale network task向けにshared-memory data structure、multi-queue NIC、IPIを使うwork-conserving schedulerでcore間負荷を再配分しtail latencyを抑えるOS/runtime研究。LLM servingのSLO schedulingに機構上強く関連するが、評価先は汎用RPC/in-memory databaseでLLM推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T15:48:47+00:00",
+      "last_checked_at": "2026-10-05T15:48:47+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ZygOS: Achieving Low Tail Latency for Microsecond-scale Networked Tasks"
     }
   }
 }

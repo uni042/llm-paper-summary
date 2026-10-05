@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d722f204ab797601-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2009.12836",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2009.12836",
+    "identity_tokens": [
+      "arXiv:2009.12836"
+    ],
+    "reason": "DNN trainingの正規化手法をoptimization観点から整理し、normalization area/operation/representation recoveryへ分類するsurvey。明示的にtraining高速化・generalizationが主題で、推論system対象外。",
+    "first_checked_at": "2026-10-05T15:48:51+00:00",
+    "last_checked_at": "2026-10-05T15:48:51+00:00",
+    "linked_from": [],
+    "title": "Normalization Techniques in Training DNNs: Methodology, Analysis and Application"
+  },
+  "processed_at": "2026-10-05T15:48:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d722f204ab79",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

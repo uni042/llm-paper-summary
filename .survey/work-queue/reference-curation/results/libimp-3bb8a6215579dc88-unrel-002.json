@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3bb8a6215579dc88-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2206.08916",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2206.08916",
+    "identity_tokens": [
+      "arXiv:2206.08916"
+    ],
+    "reason": "画像・pixel map・mask・box・languageを共通token sequenceへ変換し、90超datasetで単一Transformerをjoint trainingするunified multimodal model研究。16 benchmark等のtask能力が主評価で、推論runtime・memory・serving最適化ではない。",
+    "first_checked_at": "2026-10-05T01:03:25+00:00",
+    "last_checked_at": "2026-10-05T15:48:46+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+    ],
+    "title": "Unified-IO: A Unified Model for Vision, Language, and Multi-Modal Tasks"
+  },
+  "processed_at": "2026-10-05T15:48:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3bb8a6215579",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
