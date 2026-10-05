@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-05T11:18:51+00:00",
+  "updated_at": "2026-10-05T14:28:09+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -2697,6 +2697,38 @@
       "record_count": 10,
       "run_key": "20261002-1143-scheduled-chat-45",
       "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-0693b67dd064--libfile_5f97df85cbb081918da669fd8c89c40a--discovery-20261002-1143-scheduled-chat-45.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-702a84644746--20261005-r20-screen-71-part-07-635aea8c170c-41a61a329592.json",
+      "processed_at": "2026-10-05T14:28:09+00:00",
+      "record_count": 5,
+      "run_key": "20261005-r20-screen-71-part-07-635aea8c170c",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-702a84644746--20261005-r20-screen-71-part-07-635aea8c170c-41a61a329592.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-d15d00229476--20261005-r20-screen-71-part-08-635aea8c170c-6e43db9212b5.json",
+      "processed_at": "2026-10-05T14:28:09+00:00",
+      "record_count": 5,
+      "run_key": "20261005-r20-screen-71-part-08-635aea8c170c",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-d15d00229476--20261005-r20-screen-71-part-08-635aea8c170c-6e43db9212b5.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-c85bf0f7bcc2--20261005-r20-screen-71-part-09-635aea8c170c-fb69907b2d69.json",
+      "processed_at": "2026-10-05T14:28:09+00:00",
+      "record_count": 5,
+      "run_key": "20261005-r20-screen-71-part-09-635aea8c170c",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-c85bf0f7bcc2--20261005-r20-screen-71-part-09-635aea8c170c-fb69907b2d69.json"
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-b33dde6b060b--20261005-r20-screen-72-part-01-be9b740dfb0d-ecdd0934f451.json",
+      "processed_at": "2026-10-05T14:28:09+00:00",
+      "record_count": 5,
+      "run_key": "20261005-r20-screen-72-part-01-be9b740dfb0d",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-b33dde6b060b--20261005-r20-screen-72-part-01-be9b740dfb0d-ecdd0934f451.json"
     }
   ]
 }
