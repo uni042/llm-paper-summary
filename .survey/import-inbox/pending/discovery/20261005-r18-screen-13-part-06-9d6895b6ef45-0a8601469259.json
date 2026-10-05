@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-13-part-06-9d6895b6ef45",
+  "reference_main_sha": "f18d609d8cc981aa36806ef69ae09a59e780b7e0",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832877",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832877"
+      ],
+      "title": "BR-MoE: A Memory-Budget-Aware Co-Design Framework for Efficient MoE Inference on Resource-Constrained GPUs",
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "source_url": "https://doi.org/10.1145/3832810.3832877",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2026-commitmoe-efficient-fallback-free-moe-inference-with-offloading-under-gpu-memory.md",
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3832810.3832878",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832878"
+      ],
+      "title": "Edge-Cloud Collaborative RAG with Multi-State Semantic Caching",
+      "reason": "要旨はLLM推論/servingまたは関連kernel/cache効率化を示すが、一次本文を確認できないため採否・評価条件が未検証。 将来の再試行で解決する見込みを確認できないためborderlineへ確定。",
+      "source_url": "https://doi.org/10.1145/3832810.3832878",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832890",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832890"
+      ],
+      "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool",
+      "reason": "disaggregated memory pool内のdata offload管理で、LLM workloadやLLM推論への適用を要旨が示していない。",
+      "source_url": "https://doi.org/10.1145/3832810.3832890",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832891",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832891"
+      ],
+      "title": "Memory-Aware Joint Optimisation of Partitioning and Scheduling for Pipeline-Parallel Training",
+      "reason": "pipeline parallel trainingのpartitioning/scheduling最適化。学習専用。",
+      "source_url": "https://doi.org/10.1145/3832810.3832891",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832892",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832892"
+      ],
+      "title": "Async-Checkpoint: Redesigning Gradient Checkpointing with Asynchronous Execution",
+      "reason": "backpropagationにおけるgradient checkpointingの再設計。学習専用。",
+      "source_url": "https://doi.org/10.1145/3832810.3832892",
+      "first_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "last_checked_at": "2026-10-05T04:39:02.330424+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
