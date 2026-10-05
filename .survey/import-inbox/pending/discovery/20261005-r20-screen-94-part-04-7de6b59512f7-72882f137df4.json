@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-94-part-04-7de6b59512f7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/HPCA61900.2025.00047",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA61900.2025.00047"
+      ],
+      "title": "AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing",
+      "reason": "The primary abstract concerns generic DIMM near-memory asynchronous execution and host/NMA scheduling; it identifies no LLM inference/serving application.",
+      "source_url": "https://doi.org/10.1109/HPCA61900.2025.00047",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.05967",
+      "identity_tokens": [
+        "arXiv:2502.05967"
+      ],
+      "title": "µnit Scaling: Simple and Scalable FP8 LLM Training",
+      "reason": "The primary abstract explicitly studies FP8 LLM training and training throughput; it does not present inference-efficiency results.",
+      "source_url": "https://arxiv.org/abs/2502.05967",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.04043",
+      "identity_tokens": [
+        "arXiv:2502.04043"
+      ],
+      "title": "Probe-Free Low-Rank Activation Intervention",
+      "reason": "The primary abstract’s aim is truthfulness/toxicity intervention quality; efficient optimization of the intervention itself is not a demonstrated LLM serving/inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2502.04043",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00075",
+      "identity_tokens": [
+        "arXiv:2502.00075"
+      ],
+      "title": "BTS: Harmonizing Specialized Experts into a Generalist LLM",
+      "reason": "The primary abstract proposes training-time expert stitching and reports downstream quality; no inference-time efficiency result is provided.",
+      "source_url": "https://arxiv.org/abs/2502.00075",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.14713",
+      "identity_tokens": [
+        "arXiv:2501.14713"
+      ],
+      "title": "FlexiGPT: Pruning and Extending Large Language Models with Low-Rank Weight Sharing",
+      "reason": "It reduces parameter footprint but increases measured compute time, making it a weak fit for inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2501.14713",
+      "first_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "last_checked_at": "2026-10-05T12:36:06.276794+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    }
+  ]
+}
