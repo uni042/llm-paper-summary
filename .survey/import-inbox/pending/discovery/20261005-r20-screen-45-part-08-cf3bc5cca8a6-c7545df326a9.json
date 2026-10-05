@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-45-part-08-cf3bc5cca8a6",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09992",
+      "identity_tokens": [
+        "arXiv:2607.09992"
+      ],
+      "title": "Trusted Floors Under Untrusted Learners: A Runtime Assured-SLO Guard for ML Serving",
+      "reason": "2xV100とserving simulatorを用い、assured-class missをguardあり0.0、miscalibrated learner単独0.86–0.94と報告。ただし一般ML serving/SLO保護でLLM特化ではなく、実deploymentや大規模/datacenterの検証も限定。",
+      "source_url": "https://arxiv.org/abs/2607.09992",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.08784-slos-serve-multi-slo-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.23022-scorpio-heterogeneous-slo-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02987-prefill-decode-contention-optimal-control.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.09999",
+      "identity_tokens": [
+        "arXiv:2607.09999"
+      ],
+      "title": "Silent Failures in Quantized LLM Reasoning: A Taxonomy-Based Analysis of Hollow Convergence and Failure Mode Shifts",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2607.09999",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12365",
+      "identity_tokens": [
+        "arXiv:2608.12365"
+      ],
+      "title": "FluctlightDB: A Memory Model of Data for AI Agents",
+      "reason": "一次要旨は対象となるLLM inference/servingの効率化を扱わず、別領域（または品質・学習・benchmarkのみ）を対象とするため範囲外。",
+      "source_url": "https://arxiv.org/abs/2608.12365",
+      "first_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "last_checked_at": "2026-10-05T09:36:50.458170+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
