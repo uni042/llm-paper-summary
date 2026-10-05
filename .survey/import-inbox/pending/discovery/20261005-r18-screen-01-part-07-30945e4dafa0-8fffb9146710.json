@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-01-part-07-30945e4dafa0",
+  "reference_main_sha": "205a8db249ac7bd68c69d64fb27f9d2dff87cfb6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38830",
+      "identity_tokens": [
+        "arXiv:2609.38830"
+      ],
+      "title": "SparLeak: Privacy Leakage from Sparse Attention in LLM Inference on Shared GPUs",
+      "reason": "Sparse-attention work is a privacy-leakage/security attack study, not an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2609.38830",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38980",
+      "identity_tokens": [
+        "arXiv:2609.38980"
+      ],
+      "title": "SCORE-LM: State-Space Radar Representations with Language Models for Fault Diagnosis",
+      "reason": "Compact radar fault-diagnosis model plus language interface is a domain-specific classifier; not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38980",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38981",
+      "identity_tokens": [
+        "arXiv:2609.38981"
+      ],
+      "title": "Vosti: Specifying, Implementing, and Verifying Deterministic LLM Inference",
+      "reason": "Primary contribution is reproducibility/correctness, with relative performance parity against a specific invariant mode but not an efficiency improvement over standard production defaults. Keep borderline for inference-scope adjacency.",
+      "source_url": "https://arxiv.org/abs/2609.38981",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38984",
+      "identity_tokens": [
+        "arXiv:2609.38984"
+      ],
+      "title": "Sparse-WAM: Accelerating World Action Models via Action-Guided Sparse Imagination",
+      "reason": "Sparse-WAM accelerates embodied world-action/video models, not language model inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.38984",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39052",
+      "identity_tokens": [
+        "arXiv:2609.39052"
+      ],
+      "title": "A Robustified Greedy Algorithm for Online Transportation with Improved Competitive Guarantees",
+      "reason": "Online transportation/competitive-ratio algorithm, unrelated to LLM inference.",
+      "source_url": "https://arxiv.org/abs/2609.39052",
+      "first_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "last_checked_at": "2026-10-05T03:57:56.416618+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
