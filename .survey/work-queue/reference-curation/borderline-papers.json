@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:12:06+00:00",
-  "record_count": 927,
+  "updated_at": "2026-10-05T05:14:50+00:00",
+  "record_count": 931,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13959,6 +13959,63 @@
         "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
       ],
       "title": "Context Spanning: A Communication Framework for Full-Duplex Speech Models and External LLM Backends"
+    },
+    "arXiv:2609.33992": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33992",
+      "identity_tokens": [
+        "arXiv:2609.33992"
+      ],
+      "reason": "The system addresses inference availability under adversarial routing, not an ordinary efficiency gain; survey fit is weak despite serving/queueing evidence.",
+      "first_checked_at": "2026-10-05T05:14:49+00:00",
+      "last_checked_at": "2026-10-05T05:14:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "GateDrain: Availability Attacks and Admission-Side Defense for Confidence-Gated Edge-Cloud Inference"
+    },
+    "arXiv:2609.33822": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33822",
+      "identity_tokens": [
+        "arXiv:2609.33822"
+      ],
+      "reason": "Agent-harness evaluation has some intermediate-step cost relevance, but the overall result is quality/harness adaptation rather than a demonstrated LLM inference or serving efficiency method.",
+      "first_checked_at": "2026-10-05T05:14:50+00:00",
+      "last_checked_at": "2026-10-05T05:14:50+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Vestrum: Improving Agent Harnesses by Adapting Their Verification, Structure and Memory"
+    },
+    "arXiv:2609.33843": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33843",
+      "identity_tokens": [
+        "arXiv:2609.33843"
+      ],
+      "reason": "Selective escalation is related to cascades, but the paper cannot measure an end-to-end cascade because no escalation target was run; weak efficiency evidence.",
+      "first_checked_at": "2026-10-05T05:14:50+00:00",
+      "last_checked_at": "2026-10-05T05:14:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Laya as a Typed Probabilistic Assessor: An Independent Reproduction and a Preregistered Study of Calibration and Selective Escalation"
+    },
+    "arXiv:2609.33916": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33916",
+      "identity_tokens": [
+        "arXiv:2609.33916"
+      ],
+      "reason": "It includes real decode measurements, but its main performance contribution and comparisons are narrow and do not establish an inference-serving improvement over existing kernels.",
+      "first_checked_at": "2026-10-05T05:14:50+00:00",
+      "last_checked_at": "2026-10-05T05:14:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Validating Memory-Optimal Transformer Kernels on Real Hardware: From Formal Derivation to Measured Performance Across Two HPC Clusters"
     }
   }
 }

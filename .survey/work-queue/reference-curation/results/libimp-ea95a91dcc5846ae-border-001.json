@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea95a91dcc5846ae-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33843",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33843",
+    "identity_tokens": [
+      "arXiv:2609.33843"
+    ],
+    "reason": "Selective escalation is related to cascades, but the paper cannot measure an end-to-end cascade because no escalation target was run; weak efficiency evidence.",
+    "first_checked_at": "2026-10-05T05:14:50+00:00",
+    "last_checked_at": "2026-10-05T05:14:50+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+    ],
+    "title": "Laya as a Typed Probabilistic Assessor: An Independent Reproduction and a Preregistered Study of Calibration and Selective Escalation"
+  },
+  "processed_at": "2026-10-05T05:14:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea95a91dcc58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
