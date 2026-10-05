@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Random Feature Attention",
+      "source_url": "https://arxiv.org/abs/2103.02143",
+      "year": 2021,
+      "published": "2021-03-03",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 465,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are state-of-the-art models for a variety of sequence modeling tasks. At their core is an attention function which models pairwise interactions between the inputs at every timestep. While attention is powerful, it does not scale efficiently to long sequences due to its quadratic time and space complexity in the sequence length. We propose RFA, a linear time and space attention that uses random feature methods to approximate the softmax function, and explore its application in transformers. RFA can be used as a drop-in replacement for conventional softmax attention and offers a straightforward way of learning with recency bias through an optional gating mechanism. Experiments on language modeling and machine translation demonstrate that RFA achieves similar or better performance compared to strong transformer baselines. In the machine translation experiment, RFA decodes twice as fast as a vanilla transformer. Compared to existing efficient transformer variants, RFA is competitive in terms of both accuracy and efficiency on three long text classification datasets. Our analysis shows that RFA's efficiency gains are especially notable on long sequences, suggesting that RFA will be particularly useful in tasks that require working with large inputs, fast decoding speed, or low memory footprints.",
+      "identifiers": [
+        "SemanticScholar:9ed25f101f19ea735ca300848948ed64064b97ca"
+      ],
+      "semantic_scholar_id": "9ed25f101f19ea735ca300848948ed64064b97ca",
+      "canonical_id": "arXiv:2103.02143",
+      "arxiv_id": "2103.02143",
+      "authors": [
+        "Hao Peng",
+        "Nikolaos Pappas",
+        "Dani Yogatama",
+        "Roy Schwartz",
+        "Noah A. Smith",
+        "Lingpeng Kong"
+      ],
+      "priority": 475,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 465,
+        "citation_count": 465,
+        "total": 475,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2042,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "RFAはsoftmax attentionをrandom feature mapで近似し、causal attentionをrecurrent stateとして更新して時間・空間計算量を系列長に対して線形化する。machine translationで約2倍decode高速化、2048-token出力で12倍decode高速化かつsoftmax attentionの10%未満のmemoryを報告し、autoregressive推論の速度・memoryを直接改善するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv HTMLのIntroduction、§3.1 causal RFA、§3.4 complexity、§4 experimentsを確認。random featureによるsoftmax近似、S_t/z_t recurrent update、linear time/space、MT約2x decode、2048出力12x speedup・<10% memoryを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-08cbb0bb60c4",
+    "round": "libimp-08cbb0bb60c4256f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-08cbb0bb60c4256f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-08cbb0bb60c4256f-pre01.json",
+    "receipt": "sha256:6dc2fe3225968238e832dfb045db7d57de2ed1b41867c92a1a1c7f0c364b29fb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-08cbb0bb60c4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
