@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2faa9e76b1de2b4a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1511.06297",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1511.06297",
+    "identity_tokens": [
+      "arXiv:1511.06297"
+    ],
+    "reason": "Generic neural-network conditional computation policy, not LLM/language-model inference.",
+    "first_checked_at": "2026-10-05T02:17:26+00:00",
+    "last_checked_at": "2026-10-05T02:17:26+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+      "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md",
+      "papers/inference/04-conditional-computation/2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+      "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+      "papers/inference/99-other-inference-systems/2023-2311.15436-learning-to-skip-for-language-modeling.md",
+      "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+    ],
+    "title": "Conditional Computation in Neural Networks for faster models"
+  },
+  "processed_at": "2026-10-05T02:17:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2faa9e76b1de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

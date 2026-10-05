@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2faa9e76b1de2b4a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2307.02485",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2307.02485",
+    "identity_tokens": [
+      "arXiv:2307.02485"
+    ],
+    "reason": "LLM-based cooperative embodied agents and task performance, not inference efficiency.",
+    "first_checked_at": "2026-10-05T02:17:26+00:00",
+    "last_checked_at": "2026-10-05T02:17:26+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-2602.23592-keep-kv-cache-centric-embodied-memory.md"
+    ],
+    "title": "Building Cooperative Embodied Agents Modularly with Large Language Models"
+  },
+  "processed_at": "2026-10-05T02:17:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2faa9e76b1de",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

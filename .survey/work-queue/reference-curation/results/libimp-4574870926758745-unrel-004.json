@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4574870926758745-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1905.06566",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1905.06566",
+    "identity_tokens": [
+      "arXiv:1905.06566"
+    ],
+    "reason": "HiBERTは文書レベルのpre-trainingとsummarization qualityが中心で、LLM inference servingを扱わない。",
+    "first_checked_at": "2026-10-05T02:17:26+00:00",
+    "last_checked_at": "2026-10-05T02:17:26+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
+    ],
+    "title": "HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization"
+  },
+  "processed_at": "2026-10-05T02:17:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-457487092675",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
