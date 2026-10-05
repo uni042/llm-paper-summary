@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-1200-scheduled-chat-00/r01",
+  "reference_main_sha": "b83a8be22ddaf009992493254d53b3e698a3e312",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.14024",
+      "identity_tokens": [
+        "arXiv:2212.14024"
+      ],
+      "title": "Demonstrate-Search-Predict: Composing retrieval and language models for knowledge-intensive NLP",
+      "reason": "凍結した言語モデルと検索モデルを自然言語パイプラインとして合成し、open-domain/multi-hop/conversational QAの品質を改善するRAG/推論プログラム研究。主評価は回答性能であり、推論ランタイム、メモリ、サービング効率の削減方式ではない。",
+      "source_url": "https://arxiv.org/abs/2212.14024",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でDSPの目的がLM/RMを組み合わせたknowledge-intensive NLPの回答品質向上であり、推論システム効率化ではないことが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/291069.291026",
+      "identity_tokens": [
+        "DOI:10.1145/291069.291026"
+      ],
+      "title": "Active disks: programming model, algorithms and evaluation",
+      "reason": "ストレージ装置側へ計算を移してI/O量を削減するactive diskのプログラミングモデルとアルゴリズムを評価する階層メモリ／near-storage computingの基礎研究。LLMのCPU/SSD/NVMeオフロードと機構上の接点は強いが、LLM/Transformer推論を最終適用先としないため境界扱い。",
+      "source_url": "https://doi.org/10.1145/291069.291026",
+      "body_check": "full_text_checked: ACM一次論文の問題設定・active disk programming model・I/O削減評価を確認。LLM推論への直接評価がないためborderline。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.14249",
+      "identity_tokens": [
+        "arXiv:2501.14249"
+      ],
+      "title": "A benchmark of expert-level academic questions to assess AI capabilities",
+      "reason": "専門家レベルの学術質問でAI能力を測るHumanity's Last Exam系benchmark研究。推論時の能力評価が目的であり、LLMランタイム、KVキャッシュ、サービング、圧縮などの効率化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2501.14249",
+      "body_check": "abstract_screen_only: 一次arXiv情報でexpert-level academic question benchmarkによるAI capability assessmentが主題と確認し、推論システム最適化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.15222",
+      "identity_tokens": [
+        "arXiv:2006.15222"
+      ],
+      "title": "BERTology Meets Biology: Interpreting Attention in Protein Language Models",
+      "reason": "protein language modelのattentionを解析し、タンパク質配列の構造・機能との対応を調べるinterpretability研究。最終適用先はprotein modelingで、LLM推論の速度・メモリ・サービング最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2006.15222",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprotein language modelのattention解釈が主題と確認し、LLM推論システム対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.19852",
+      "identity_tokens": [
+        "arXiv:2310.19852"
+      ],
+      "title": "AI Alignment: A Comprehensive Survey",
+      "reason": "robustness・interpretability・controllability・ethicalityを軸にalignment training、assurance、governanceを整理する包括survey。LLM推論ランタイムやサービング効率化の新規方式を提案・評価しない。",
+      "source_url": "https://arxiv.org/abs/2310.19852",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でAI alignmentのtaxonomy/surveyが主題と確認し、推論システム効率化ではないため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.17492",
+      "identity_tokens": [
+        "arXiv:2306.17492"
+      ],
+      "title": "Preference Ranking Optimization for Human Alignment",
+      "reason": "人間選好の順位を直接学習するPreference Ranking Optimizationを提案する教師あり微調整（supervised fine-tuning）／alignment学習研究。主評価はalignment品質で、推論ランタイム・メモリ・サービング効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2306.17492",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でPROがLLMのhuman alignment用SFTアルゴリズムであることを確認し、学習専用のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3478535",
+      "identity_tokens": [
+        "DOI:10.1145/3478535",
+        "arXiv:2101.02703"
+      ],
+      "title": "Distribution-Free, Risk-Controlling Prediction Sets",
+      "reason": "black-box predictorの出力をholdout setで較正し、将来データ上の期待損失を有限標本保証付きで制御する不確実性定量化研究。分類、画像segmentation、protein structure等が評価先で、LLM推論システム最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2101.02703",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdistribution-free prediction setとrisk controlが主題と確認し、LLM推論システム対象外のため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 77
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2202.10447",
+      "identity_tokens": [
+        "arXiv:2202.10447"
+      ],
+      "title": "Transformer Quality in Linear Time",
+      "reason": "Gated Attention Unitとアクセラレータ親和的な線形注意近似を組み合わせたFLASHを提案し、自己回帰言語モデルで長系列の計算量を線形化する。8K文脈を含む言語モデル評価でTransformer品質を維持しつつ大幅な実行高速化を示しており、長文脈推論効率化へ直接つながるため対象内。",
+      "source_url": "https://arxiv.org/abs/2202.10447",
+      "body_check": "full_text_checked: 一次論文でGated Attention Unit、線形注意近似、短文脈/8K長文脈の言語モデル評価と実行速度比較を確認。自己回帰推論へ適用可能な線形時間architectureとしてaccept。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 78
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.17157",
+      "identity_tokens": [
+        "arXiv:2310.17157"
+      ],
+      "title": "Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time",
+      "reason": "入力ごとに必要なattention headとMLP parameterのcontextual sparsityを低コスト予測し、非同期かつhardware-awareに疎実行するDejaVuを提案する。OPT-175BでFasterTransformer比2倍超、Hugging Face実装比6倍超の推論latency短縮を品質を損なわず報告しており、LLM推論高速化を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2310.17157",
+      "body_check": "full_text_checked: 一次arXiv本文情報でcontextual sparsity予測、asynchronous/hardware-aware implementation、OPT-175Bのwall-clock latency評価（FasterTransformer比>2x、Hugging Face比>6x）を確認。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 79
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2407.04620",
+      "identity_tokens": [
+        "arXiv:2407.04620"
+      ],
+      "title": "Learning to (Learn at Test Time): RNNs with Expressive Hidden States",
+      "reason": "隠れ状態自体を学習モデルとし、推論系列上で自己教師あり更新するTest-Time Training layerを提案する。TTT-Linear/TTT-MLPは系列長に対して線形計算量で、125M〜1.3B規模の言語モデル評価において長文脈性能を維持し、予備的システム最適化後のTTT-Linearは8K文脈でTransformerより高速となるため対象内。",
+      "source_url": "https://arxiv.org/abs/2407.04620",
+      "body_check": "full_text_checked: 一次arXiv論文でTTT-Linear/TTT-MLPのhidden-state update、linear complexity、125M〜1.3B評価、8K contextでTTT-LinearがTransformerより高速、TTT-MLPのmemory I/O課題を確認。",
+      "first_checked_at": "2026-10-05T12:24:00+09:00",
+      "last_checked_at": "2026-10-05T12:24:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 80
+    }
+  ]
+}
