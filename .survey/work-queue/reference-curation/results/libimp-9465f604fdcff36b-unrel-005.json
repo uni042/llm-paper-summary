@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9465f604fdcff36b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37697",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37697",
+    "identity_tokens": [
+      "arXiv:2609.37697"
+    ],
+    "reason": "RSEは6G radio Layer-3 protocol emulation向け11M sequence modelで、LLM推論の効率化研究ではない。",
+    "first_checked_at": "2026-10-05T04:44:32+00:00",
+    "last_checked_at": "2026-10-05T04:44:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Sequence Models for Layer-3 Protocol Emulation"
+  },
+  "processed_at": "2026-10-05T04:44:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9465f604fdcf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

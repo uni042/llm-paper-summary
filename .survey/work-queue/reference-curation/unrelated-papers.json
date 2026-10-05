@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:41:49+00:00",
-  "record_count": 2619,
+  "updated_at": "2026-10-05T04:44:33+00:00",
+  "record_count": 2632,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -37984,6 +37984,203 @@
         "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
       ],
       "title": "HELIX: Purified and Unified - Rethinking Feature Interaction and Sequence Modeling for Large-Scale Recommendation"
+    },
+    "arXiv:2609.37730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37730",
+      "identity_tokens": [
+        "arXiv:2609.37730"
+      ],
+      "reason": "HyBrainはEEG seizure prediction/detection用のspatiotemporal graph model。LLM inference/servingとは別領域。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Spatiotemporal Hyperedges for EEG Seizure Detection and Prediction"
+    },
+    "arXiv:2609.37751": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37751",
+      "identity_tokens": [
+        "arXiv:2609.37751"
+      ],
+      "reason": "Cross-Entropy Guided RoutingはMoE routerを改善するtraining supervisionで、本文/abstractとも推論時modifierを加えずnative sparse execution budgetを維持する品質向上が主張であり、推論効率の低減は示さない。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Cross-Entropy Guided Routing in Mixture-of-Experts Large Language Models"
+    },
+    "arXiv:2609.37611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37611",
+      "identity_tokens": [
+        "arXiv:2609.37611"
+      ],
+      "reason": "Selective Lookaheadはattention-based streaming speech-recognition modelのlatency研究であり、LLM推論/servingではない。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Selective Lookahead for Attention-Based Streaming ASR"
+    },
+    "arXiv:2609.37673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37673",
+      "identity_tokens": [
+        "arXiv:2609.37673"
+      ],
+      "reason": "KUPAS MASTERは専門家経験をagent向けcorpusに編集し品質を高めるplatform。効率的なLLM inferenceの機構/評価はない。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "KUPAS MASTER: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora"
+    },
+    "arXiv:2609.37675": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37675",
+      "identity_tokens": [
+        "arXiv:2609.37675"
+      ],
+      "reason": "LEMON-ZESTはprotein-language-model tokenizationと生物配列homologyを扱うdomain-specific PLMであり、対象はLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling"
+    },
+    "arXiv:2609.37697": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37697",
+      "identity_tokens": [
+        "arXiv:2609.37697"
+      ],
+      "reason": "RSEは6G radio Layer-3 protocol emulation向け11M sequence modelで、LLM推論の効率化研究ではない。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Sequence Models for Layer-3 Protocol Emulation"
+    },
+    "arXiv:2609.38008": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38008",
+      "identity_tokens": [
+        "arXiv:2609.38008"
+      ],
+      "reason": "HybridCUA studies GUI/CLI orchestration for computer-use agents; its contribution is agent task orchestration rather than inference efficiency.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ],
+      "title": "HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents"
+    },
+    "arXiv:2609.38018": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38018",
+      "identity_tokens": [
+        "arXiv:2609.38018"
+      ],
+      "reason": "ARCUS reduces GRPO training rollouts; the efficiency target is model-training data/rollouts, outside inference scope.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Prompts Live on an Arc: Gaussian Curricula in Fisher--Rao Coordinates for Rollout-Efficient GRPO"
+    },
+    "arXiv:2609.38072": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38072",
+      "identity_tokens": [
+        "arXiv:2609.38072"
+      ],
+      "reason": "RS-OPSD distills remote-sensing VQA capability into a vision model; its target is remote-sensing application and training, not general LLM inference systems.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "RS-OPSD: Reliable Privileged On-Policy-Self-Distillation for Ultra-High-Resolution Remote Sensing VQA"
+    },
+    "arXiv:2609.37809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37809",
+      "identity_tokens": [
+        "arXiv:2609.37809"
+      ],
+      "reason": "Pixel-level attention is evaluated for satellite-based canopy-height regression and other remote-sensing tasks, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Pixel-Level Transformers in Remote Sensing: A Canopy Height Case Study"
+    },
+    "arXiv:2609.37829": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37829",
+      "identity_tokens": [
+        "arXiv:2609.37829"
+      ],
+      "reason": "DIET prunes experts from video diffusion transformers for video generation; this is a visual diffusion model rather than an LLM inference/serving study.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.12013-moe-pruner-router-hints.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.02753-lexi-layer-adaptive-active-experts-for-efficient-moe-model-inference.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.16105-diep-differentiable-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2512.18425-moe-pathfinder-trajectory-pruning.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "DIET: Deletion-response Expert Trimming for Video Diffusion Transformers"
+    },
+    "arXiv:2609.37834": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37834",
+      "identity_tokens": [
+        "arXiv:2609.37834"
+      ],
+      "reason": "The work optimizes agent harness self-improvement/search on math and coding benchmarks, not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Mixture of Self-Improving Branches For Agent Harness Optimization"
+    },
+    "arXiv:2609.37850": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37850",
+      "identity_tokens": [
+        "arXiv:2609.37850"
+      ],
+      "reason": "RelayVSR accelerates video super-resolution with a generative model and lightweight video network; its target is video restoration, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "RelayVSR: Large-Small Model Collaboration for Efficient Real-World Video Super-Resolution"
     }
   }
 }

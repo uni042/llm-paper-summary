@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:41:48+00:00",
-  "record_count": 889,
+  "updated_at": "2026-10-05T04:44:33+00:00",
+  "record_count": 893,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13287,6 +13287,73 @@
         "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
       ],
       "title": "When Should Agents Check External State? Budgeting Observations for Stored Intentions"
+    },
+    "arXiv:2609.37617": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37617",
+      "identity_tokens": [
+        "arXiv:2609.37617"
+      ],
+      "reason": "audio-conditioned transcription/translation/QAとmobile phone設定に特化。per-window replayではslowdownsがゼロではなく、native-corpus timing/output parityは未確立と本文が明記。LLM scope fitは隣接。",
+      "first_checked_at": "2026-10-05T04:44:32+00:00",
+      "last_checked_at": "2026-10-05T04:44:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.11850-pearl-parallel-speculative-decoding-with-adaptive-draft-length.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "AS$^2$D: Accelerating On-Demand Audio Understanding on Mobile Devices"
+    },
+    "arXiv:2609.37887": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37887",
+      "identity_tokens": [
+        "arXiv:2609.37887"
+      ],
+      "reason": "The primary contribution is a statistical complexity/certification framework; it does not establish serving latency or throughput improvements. Some independent-probe transfer bounds do not meet the stated 1% criterion.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Behavioral Capacity Certificates for Quantized Language Models"
+    },
+    "arXiv:2609.37930": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37930",
+      "identity_tokens": [
+        "arXiv:2609.37930"
+      ],
+      "reason": "The evaluation is document-level information extraction and does not measure LLM prefill latency, throughput, or serving memory. Shorter agent memory may reduce downstream context cost, but that inference benefit is not established here.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Learning What to Remember: Long-horizon Counterfactual Memory Optimization"
+    },
+    "arXiv:2609.37879": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37879",
+      "identity_tokens": [
+        "arXiv:2609.37879"
+      ],
+      "reason": "It informs attention pruning design, but does not demonstrate deployed inference latency, throughput, or memory benefit; corpus/protocol comparisons also have unresolved pairing limits.",
+      "first_checked_at": "2026-10-05T04:44:33+00:00",
+      "last_checked_at": "2026-10-05T04:44:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "title": "Retrieval Capacity of Self-Attention Under Competition"
     }
   }
 }

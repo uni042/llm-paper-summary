@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9465f604fdcff36b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37673",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37673",
+    "identity_tokens": [
+      "arXiv:2609.37673"
+    ],
+    "reason": "KUPAS MASTERは専門家経験をagent向けcorpusに編集し品質を高めるplatform。効率的なLLM inferenceの機構/評価はない。",
+    "first_checked_at": "2026-10-05T04:44:32+00:00",
+    "last_checked_at": "2026-10-05T04:44:32+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "KUPAS MASTER: Distilling the Tacit Expertise of Master Practitioners into Agent-Ready Experience Corpora"
+  },
+  "processed_at": "2026-10-05T04:44:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9465f604fdcf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

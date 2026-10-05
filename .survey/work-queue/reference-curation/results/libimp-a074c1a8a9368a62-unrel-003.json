@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a074c1a8a9368a62-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38008",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38008",
+    "identity_tokens": [
+      "arXiv:2609.38008"
+    ],
+    "reason": "HybridCUA studies GUI/CLI orchestration for computer-use agents; its contribution is agent task orchestration rather than inference efficiency.",
+    "first_checked_at": "2026-10-05T04:44:33+00:00",
+    "last_checked_at": "2026-10-05T04:44:33+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+    ],
+    "title": "HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents"
+  },
+  "processed_at": "2026-10-05T04:44:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a074c1a8a936",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
