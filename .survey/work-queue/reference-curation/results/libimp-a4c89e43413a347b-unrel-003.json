@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a4c89e43413a347b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.17633",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.17633",
+    "identity_tokens": [
+      "arXiv:2605.17633"
+    ],
+    "reason": "Segment Anything系の画像領域分割を扱い、LLM推論効率化ではない。",
+    "first_checked_at": "2026-10-05T13:49:16+00:00",
+    "last_checked_at": "2026-10-05T13:49:16+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "SparseSAM: Structured Sparsification of Activations in Segment Anything Models"
+  },
+  "processed_at": "2026-10-05T13:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a4c89e43413a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

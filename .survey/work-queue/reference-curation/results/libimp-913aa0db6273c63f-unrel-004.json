@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-913aa0db6273c63f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26137",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26137",
+    "identity_tokens": [
+      "arXiv:2605.26137"
+    ],
+    "reason": "参照画像から3D assetを生成するアプリケーション・生成品質/所要時間が中心で、LLM推論ではない。",
+    "first_checked_at": "2026-10-05T13:49:16+00:00",
+    "last_checked_at": "2026-10-05T13:49:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+    ],
+    "title": "AssetGen: Deployable 3D Asset Generation at Interactive Speed"
+  },
+  "processed_at": "2026-10-05T13:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-913aa0db6273",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

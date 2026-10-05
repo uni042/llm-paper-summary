@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:46:41+00:00",
-  "record_count": 5326,
+  "updated_at": "2026-10-05T13:49:17+00:00",
+  "record_count": 5342,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -77404,6 +77404,242 @@
         "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md"
       ],
       "title": "Identity Testing for Circuits with Exponentiation Gates"
+    },
+    "arXiv:2605.19999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19999",
+      "identity_tokens": [
+        "arXiv:2605.19999"
+      ],
+      "reason": "benchmark contaminationの検出・評価研究で、推論時の計算効率化手法ではない。",
+      "first_checked_at": "2026-10-05T13:49:14+00:00",
+      "last_checked_at": "2026-10-05T13:49:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "LLM Benchmark Datasets Should Be Contamination-Resistant"
+    },
+    "arXiv:2605.20441": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20441",
+      "identity_tokens": [
+        "arXiv:2605.20441"
+      ],
+      "reason": "学習過程・training dynamicsの診断研究で、対象は推論効率ではない。",
+      "first_checked_at": "2026-10-05T13:49:14+00:00",
+      "last_checked_at": "2026-10-05T13:49:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Weight Decay Regimes in Grokking Transformers: Cheap Online Diagnostics"
+    },
+    "arXiv:2605.17968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17968",
+      "identity_tokens": [
+        "arXiv:2605.17968"
+      ],
+      "reason": "function graph transformerの理論解析が主題で、実運用LLM推論の最適化を扱わない。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Function graph transformers universally approximate operators between function spaces"
+    },
+    "arXiv:2605.22668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22668",
+      "identity_tokens": [
+        "arXiv:2605.22668"
+      ],
+      "reason": "画像向けdiffusion transformerの設計研究で、言語モデル推論の効率化ではない。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "SEGA: Spectral-Energy Guided Attention for Resolution Extrapolation in Diffusion Transformers"
+    },
+    "arXiv:2605.22939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22939",
+      "identity_tokens": [
+        "arXiv:2605.22939"
+      ],
+      "reason": "diffusion language modelのfine-tuning/学習方法が主題で、推論効率化の結果ではない。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Learnability-Informed Fine-Tuning of Diffusion Language Models"
+    },
+    "arXiv:2605.21466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21466",
+      "identity_tokens": [
+        "arXiv:2605.21466"
+      ],
+      "reason": "動画編集向け生成・操作研究で、LLM inference/serving/compressionを対象としない。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "StreamEdit: Training-Free Video Editing via Few-Step Streaming Video Generation"
+    },
+    "arXiv:2605.19391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19391",
+      "identity_tokens": [
+        "arXiv:2605.19391"
+      ],
+      "reason": "非Gaussian diffusionの理論的性質が主題で、推論システム効率化の実証がない。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Tweedie's Formulae and Diffusion Generative Models Beyond Gaussian"
+    },
+    "arXiv:2605.23191": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23191",
+      "identity_tokens": [
+        "arXiv:2605.23191"
+      ],
+      "reason": "RankMixer/推薦モデルの表現rankと推薦精度を扱い、LLM推論・servingの計算効率を研究対象としていない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md"
+      ],
+      "title": "Expand More, Shrink Less: Shaping Effective-Rank Dynamics for Dense Scaling in Recommendation"
+    },
+    "arXiv:2605.24060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24060",
+      "identity_tokens": [
+        "arXiv:2605.24060"
+      ],
+      "reason": "会話メモリbenchmarkの評価targetとscoringの研究で、LLM推論効率化手法ではない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Same Ranking, Different Winner: How Scoring Targets Shape LLM Memory Benchmarks"
+    },
+    "arXiv:2605.26137": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26137",
+      "identity_tokens": [
+        "arXiv:2605.26137"
+      ],
+      "reason": "参照画像から3D assetを生成するアプリケーション・生成品質/所要時間が中心で、LLM推論ではない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "AssetGen: Deployable 3D Asset Generation at Interactive Speed"
+    },
+    "arXiv:2605.21997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21997",
+      "identity_tokens": [
+        "arXiv:2605.21997"
+      ],
+      "reason": "agent runtimeのevent sourcingと復旧設計を扱い、モデル推論の計算量・serving最適化を扱わない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems"
+    },
+    "arXiv:2605.17294": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17294",
+      "identity_tokens": [
+        "arXiv:2605.17294"
+      ],
+      "reason": "画像編集diffusionの生成手法で、言語モデル推論・servingを扱わない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "HierEdit: Region-Aware Hierarchical Diffusion for Efficient High-Resolution Editing"
+    },
+    "arXiv:2605.17471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17471",
+      "identity_tokens": [
+        "arXiv:2605.17471"
+      ],
+      "reason": "quantization-aware trainingの学習高速化が主眼で、推論時効率の成果とは異なる。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "WinQ: Accelerating Quantization-Aware Training of Language Models Around Saddle Points"
+    },
+    "arXiv:2605.17633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17633",
+      "identity_tokens": [
+        "arXiv:2605.17633"
+      ],
+      "reason": "Segment Anything系の画像領域分割を扱い、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "SparseSAM: Structured Sparsification of Activations in Segment Anything Models"
+    },
+    "arXiv:2605.16732": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16732",
+      "identity_tokens": [
+        "arXiv:2605.16732"
+      ],
+      "reason": "diffusion transformerの量子化を対象とし、言語モデルではない。",
+      "first_checked_at": "2026-10-05T13:49:17+00:00",
+      "last_checked_at": "2026-10-05T13:49:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "DiRotQ: Rotation-Aware Quantization for 4-bit Diffusion Transformers"
+    },
+    "arXiv:2605.15852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15852",
+      "identity_tokens": [
+        "arXiv:2605.15852"
+      ],
+      "reason": "3D再構成のKV cache技術であり、LLM推論のKV cacheではない。",
+      "first_checked_at": "2026-10-05T13:49:17+00:00",
+      "last_checked_at": "2026-10-05T13:49:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.18517-kvsharer-efficient-inference-via-layer-wise-dissimilar-kv-cache-sharing.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md"
+      ],
+      "title": "GHOST: Geometry-Hierarchical Online Streaming Token Eviction for Efficient 3D Reconstruction"
     }
   }
 }

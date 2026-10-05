@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6435a8f49063ad6f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.24048",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.24048",
+    "identity_tokens": [
+      "arXiv:2605.24048"
+    ],
+    "reason": "選択段階のquery削減は関連する一方、総推論cost比較に必須の項目が欠ける。",
+    "first_checked_at": "2026-10-05T13:49:15+00:00",
+    "last_checked_at": "2026-10-05T13:49:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+    ],
+    "title": "Mixture of Complementary Agents for Robust LLM Ensemble"
+  },
+  "processed_at": "2026-10-05T13:49:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6435a8f49063",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

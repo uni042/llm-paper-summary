@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-230b4a959dc57a43-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.19999",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.19999",
+    "identity_tokens": [
+      "arXiv:2605.19999"
+    ],
+    "reason": "benchmark contaminationの検出・評価研究で、推論時の計算効率化手法ではない。",
+    "first_checked_at": "2026-10-05T13:49:14+00:00",
+    "last_checked_at": "2026-10-05T13:49:14+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+    ],
+    "title": "LLM Benchmark Datasets Should Be Contamination-Resistant"
+  },
+  "processed_at": "2026-10-05T13:49:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-230b4a959dc5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

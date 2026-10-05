@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-913aa0db6273c63f-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.21997",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.21997",
+    "identity_tokens": [
+      "arXiv:2605.21997"
+    ],
+    "reason": "agent runtimeのevent sourcingと復旧設計を扱い、モデル推論の計算量・serving最適化を扱わない。",
+    "first_checked_at": "2026-10-05T13:49:16+00:00",
+    "last_checked_at": "2026-10-05T13:49:16+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+    ],
+    "title": "The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems"
+  },
+  "processed_at": "2026-10-05T13:49:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-913aa0db6273",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

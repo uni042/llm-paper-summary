@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:46:39+00:00",
-  "record_count": 1774,
+  "updated_at": "2026-10-05T13:49:16+00:00",
+  "record_count": 1778,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -27444,6 +27444,65 @@
         "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
       ],
       "title": "BlockPIM: Optimizing Memory Management for PIM-enabled Long-Context LLM Inference"
+    },
+    "arXiv:2605.18490": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18490",
+      "identity_tokens": [
+        "arXiv:2605.18490"
+      ],
+      "reason": "evidence retrievalのinference token効率に関係するが、scopeと評価規模が限られる。",
+      "first_checked_at": "2026-10-05T13:49:14+00:00",
+      "last_checked_at": "2026-10-05T13:49:14+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ],
+      "title": "Single-Round Vector RAG vs an LLM-Compiled Wiki: A Preregistered Comparison on a Small Multi-Domain Research Corpus"
+    },
+    "DOI:10.1145/3802111": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3802111",
+      "identity_tokens": [
+        "DOI:10.1145/3802111"
+      ],
+      "reason": "一次本文の取得失敗により証拠不足。本文未確認のまま関連性を推測しない。",
+      "first_checked_at": "2026-10-05T13:49:14+00:00",
+      "last_checked_at": "2026-10-05T13:49:14+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2025-2502.15734-cache-craft-managing-chunk-caches-for-efficient-retrieval-augmented-gene.md"
+      ],
+      "title": "Skyline Retrieval meets Set-Cover Chunk Merging: A Cost-Effective RAG-Sketch for Long-Context LLM QA"
+    },
+    "arXiv:2605.24048": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24048",
+      "identity_tokens": [
+        "arXiv:2605.24048"
+      ],
+      "reason": "選択段階のquery削減は関連する一方、総推論cost比較に必須の項目が欠ける。",
+      "first_checked_at": "2026-10-05T13:49:15+00:00",
+      "last_checked_at": "2026-10-05T13:49:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ],
+      "title": "Mixture of Complementary Agents for Robust LLM Ensemble"
+    },
+    "arXiv:2605.25230": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25230",
+      "identity_tokens": [
+        "arXiv:2605.25230"
+      ],
+      "reason": "性能向上のための確率的trajectory探索が中心で、調査対象の推論効率化との適合は弱い。",
+      "first_checked_at": "2026-10-05T13:49:16+00:00",
+      "last_checked_at": "2026-10-05T13:49:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Boosting Inference with Guided Reasoning: Stochastic Exploration for Recursive Models"
     }
   }
 }
