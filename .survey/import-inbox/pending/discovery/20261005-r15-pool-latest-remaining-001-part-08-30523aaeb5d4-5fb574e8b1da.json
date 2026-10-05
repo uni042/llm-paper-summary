@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-remaining-001-part-08-30523aaeb5d4",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1812.06162",
+      "identity_tokens": [
+        "arXiv:1812.06162"
+      ],
+      "title": "An Empirical Model of Large-Batch Training",
+      "reason": "large-batch trainingの経験的モデルを扱い、推論時効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1812.06162",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md",
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/93597.98720",
+      "identity_tokens": [
+        "DOI:10.1145/93597.98720"
+      ],
+      "title": "Encapsulation of parallelism in the Volcano query processing system",
+      "reason": "一次資料の要旨/本文を直接確認できなかった。タイトル以外の内容を推定しない。",
+      "source_url": "https://doi.org/10.1145/93597.98720",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/366622.366647",
+      "identity_tokens": [
+        "DOI:10.1145/366622.366647"
+      ],
+      "title": "Algorithm 65: find",
+      "reason": "一次資料の要旨/本文を直接確認できなかった。タイトル以外の内容を推定しない。",
+      "source_url": "https://doi.org/10.1145/366622.366647",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2610.01763-topk-guided-adaptive-budget-aware-activation-sparsity-for-efficient-llm-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.06566",
+      "identity_tokens": [
+        "arXiv:1905.06566"
+      ],
+      "title": "HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization",
+      "reason": "HiBERTは文書レベルのpre-trainingとsummarization qualityが中心で、LLM inference servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/1905.06566",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2020.emnlp-main.19",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.emnlp-main.19"
+      ],
+      "title": "ETC: Encoding Long and Structured Inputs in Transformers",
+      "reason": "ETCはglobal-local attentionで長入力の二次attention costを減らす直接的な技術だが、本文はencoderのみを対象としdecoderを将来課題として残す。LLM decoder servingへの直接的評価はなく、長文prefillの基礎技術として隣接するに留まるためborderline。",
+      "source_url": "https://doi.org/10.18653/v1/2020.emnlp-main.19",
+      "first_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "last_checked_at": "2026-10-05T01:39:06.419179+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ]
+    }
+  ]
+}
