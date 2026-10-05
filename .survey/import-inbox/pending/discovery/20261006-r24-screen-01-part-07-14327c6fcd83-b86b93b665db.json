@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r24-screen-01-part-07-14327c6fcd83",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02013",
+      "identity_tokens": [
+        "arXiv:2610.02013"
+      ],
+      "title": "BranchIP: Learning Adaptive Equivariant Computation for Interatomic Potentials",
+      "reason": "Adaptive equivariant computation for interatomic potentials is a scientific simulation model, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2610.02013",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02491",
+      "identity_tokens": [
+        "arXiv:2610.02491"
+      ],
+      "title": "What Does a Token Cost? A Mixture-of-Agents Measurement of Sufficient Per-Token Compute",
+      "reason": "The sufficient-compute map supports routing/drafting experiments but needs a known reference sequence and exhaustive model panel; a usable controller without that oracle input remains unresolved.",
+      "source_url": "https://arxiv.org/abs/2610.02491",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02568",
+      "identity_tokens": [
+        "arXiv:2610.02568"
+      ],
+      "title": "Mitigating Social Sycophancy via Pluralistic Preference Optimization",
+      "reason": "Lineage link was checked in the primary text; PlurPO is social-sycophancy preference post-training, not inference efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2610.02568",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02584",
+      "identity_tokens": [
+        "arXiv:2610.02584"
+      ],
+      "title": "Dense Mixture-of-Experts as a Reparameterized Wide FFN: A Granularity Sweep at Fixed Compute",
+      "reason": "Dense all-experts-active FFN granularity study does not reduce LLM inference computation or memory.",
+      "source_url": "https://arxiv.org/abs/2610.02584",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.02593",
+      "identity_tokens": [
+        "arXiv:2610.02593"
+      ],
+      "title": "Fisher-Guided Submodular Data Selection for Continual Pre-Training of Large Language Models",
+      "reason": "Fisher-guided continual-pretraining data selection is a training-only contribution excluded by scope.",
+      "source_url": "https://arxiv.org/abs/2610.02593",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
