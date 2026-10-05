@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-52-part-06-55b1fad8d87a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/INFINITYS69204.2026.11665967",
+      "identity_tokens": [
+        "DOI:10.1109/INFINITYS69204.2026.11665967"
+      ],
+      "title": "Design and Implementation of a Large Language Model-Based Smart Assistant to Support Daily Activities",
+      "reason": "要旨は教育/RAG/assistant/LLM applicationの利用・機能評価を扱い、inference engine、serving、runtime効率化を研究対象にしていない。 Primary abstract: This paper presents NARA (Natural Adaptive Reasoning Assistant), a locally deployable intelligent voice assistant leveraging open-source Large Language Models (LLMs) as the central reasoning engine. NARA integrates speech recognition, text-to-speech synthesis, IoT device control via MQTT, computer vision (YOLOv12 for person detection, YOLO11n-cls for food cl",
+      "source_url": "https://doi.org/10.1109/INFINITYS69204.2026.11665967",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IRI69576.2026.00111",
+      "identity_tokens": [
+        "DOI:10.1109/IRI69576.2026.00111"
+      ],
+      "title": "TVDM-LLM: Schema-Aware Natural Language Querying for Transportation Surveillance Video Databases",
+      "reason": "要旨は教育/RAG/assistant/LLM applicationの利用・機能評価を扱い、inference engine、serving、runtime効率化を研究対象にしていない。 Primary abstract: The Transportation Video Database Model (TVDM) [5] provides a formal schema for indexing and querying transportation surveillance video, supporting queries over vehicle trajectories, speeds, spatial relations, and traffic violations. Despite its expressiveness, TVDM requires users to compose formal media-stream query expressions - a significant barrier for n",
+      "source_url": "https://doi.org/10.1109/IRI69576.2026.00111",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISPDC69862.2026.00023",
+      "identity_tokens": [
+        "DOI:10.1109/ISPDC69862.2026.00023"
+      ],
+      "title": "From Microbenchmarks to LLM Inference an End-To-End Analysis on the Energy Efficiency of the Grace Hopper Superchip",
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "source_url": "https://doi.org/10.1109/ISPDC69862.2026.00023",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISSET70600.2026.11682279",
+      "identity_tokens": [
+        "DOI:10.1109/ISSET70600.2026.11682279"
+      ],
+      "title": "Hardware-Aware Mixed-Precision Scheduling for Edge MoE Inference on GPU-NDP Systems",
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "source_url": "https://doi.org/10.1109/ISSET70600.2026.11682279",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2512.04476-context-aware-moe-cxl-ndp.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISSET70600.2026.11682413",
+      "identity_tokens": [
+        "DOI:10.1109/ISSET70600.2026.11682413"
+      ],
+      "title": "A Dynamic Mixed-Precision DIMM-NDP Accelerator for Efficient Edge MoE Inference",
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "source_url": "https://doi.org/10.1109/ISSET70600.2026.11682413",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ]
+    }
+  ]
+}
