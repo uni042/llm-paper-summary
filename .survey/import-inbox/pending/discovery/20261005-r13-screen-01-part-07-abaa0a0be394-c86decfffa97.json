@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-01-part-07-abaa0a0be394",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-4013",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-4013"
+      ],
+      "title": "End-to-End Open-Domain Question Answering with BERTserini",
+      "reason": "Abstract presents an open-domain QA pipeline combining BERT with search, without an LLM inference-efficiency or serving contribution.",
+      "source_url": "https://aclanthology.org/N19-4013/",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/12.48862",
+      "identity_tokens": [
+        "DOI:10.1109/12.48862"
+      ],
+      "title": "Executing a Program on the MIT Tagged-Token Dataflow Architecture",
+      "reason": "IEEE Xplore requires a JavaScript robot check for this DOI page, preventing retrieval of its primary abstract.",
+      "source_url": "https://doi.org/10.1109/12.48862",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.10169",
+      "identity_tokens": [
+        "arXiv:2307.10169",
+        "DOI:10.48550/arxiv.2307.10169"
+      ],
+      "title": "Challenges and Applications of Large Language Models",
+      "reason": "Abstract surveys LLM challenges and applications broadly, without an inference-efficiency or serving focus.",
+      "source_url": "https://arxiv.org/abs/2307.10169",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.03917-coupled-quantization.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15533",
+      "identity_tokens": [
+        "arXiv:2211.15533"
+      ],
+      "title": "The Stack: 3 TB of permissively licensed source code",
+      "reason": "Abstract presents a permissively licensed source-code dataset for language-model training, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2211.15533",
+      "first_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "last_checked_at": "2026-10-05T00:21:09.311162+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md"
+      ]
+    }
+  ]
+}
