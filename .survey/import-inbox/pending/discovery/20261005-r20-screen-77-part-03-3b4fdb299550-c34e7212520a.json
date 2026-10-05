@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-77-part-03-3b4fdb299550",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12947",
+      "identity_tokens": [
+        "arXiv:2506.12947"
+      ],
+      "title": "PuDHammer: Experimental Analysis of Read Disturbance Effects of Processing-using-DRAM in Real DRAM Chips",
+      "reason": "Processing-using-DRAMにおけるread disturbanceの実機信頼性評価であり、LLM推論手法ではない。",
+      "source_url": "https://arxiv.org/abs/2506.12947",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21501",
+      "identity_tokens": [
+        "arXiv:2505.21501"
+      ],
+      "title": "Vision Transformers with Self-Distilled Registers",
+      "reason": "Vision Transformerのartifact tokenとregister tokenを扱う視覚表現の研究で、言語モデル推論を対象としない。",
+      "source_url": "https://arxiv.org/abs/2505.21501",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12781",
+      "identity_tokens": [
+        "arXiv:2505.12781"
+      ],
+      "title": "A Token is Worth over 1,000 Tokens: Efficient Knowledge Distillation through Low-Rank Clone",
+      "reason": "Low-Rank CloneによるSmall Language Modelのknowledge distillation/pre-training効率化が主題。推論時の効率改善ではない。",
+      "source_url": "https://arxiv.org/abs/2505.12781",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.14376",
+      "identity_tokens": [
+        "arXiv:2503.14376"
+      ],
+      "title": "Tiled Flash Linear Attention: More Efficient Linear RNN and xLSTM Kernels",
+      "reason": "対象はlinear RNN/xLSTMで、一般的LLM/Transformer servingの高速化ではない。対象scopeに近接する別model familyとして弱い。",
+      "source_url": "https://arxiv.org/abs/2503.14376",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.251",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.251"
+      ],
+      "title": "Stepwise Reasoning Disruption Attack of LLMs",
+      "reason": "LLMのreasoningを妨害するstepwise attackの研究で、効率化ではなく安全性・攻撃が目的。",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.251",
+      "first_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "last_checked_at": "2026-10-05T11:24:14.638920+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    }
+  ]
+}
