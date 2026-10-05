@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-066d9ca320572244-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.06973",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.06973",
+    "identity_tokens": [
+      "arXiv:2601.06973"
+    ],
+    "reason": "一次本文でprivate working memoryをsystem promptへ各turn注入する方式とGPT-OSS/Qwen3評価を確認。これはhidden-state一貫性能力の論文で、memory updates自体の推論token cost削減は示さず、linked MoE pruningとの関係も弱い。",
+    "first_checked_at": "2026-10-05T21:28:39+00:00",
+    "last_checked_at": "2026-10-05T21:28:39+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "LLMs Can't Play Hangman: On the Necessity of a Private Working Memory for Language Agents"
+  },
+  "processed_at": "2026-10-05T21:28:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-066d9ca32057",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11723770aec2be6c-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.00223",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.00223",
+    "identity_tokens": [
+      "arXiv:2610.00223"
+    ],
+    "reason": "一次abstractはNoor LLMの訓練・配備推定を含むcarbon footprint評価で、inference costが重要と指摘するが、推論効率を改善する方法ではない。GLaM lineageとの接点と実際のserving推定範囲が本文で確かめられないため保留幅のあるborderline。",
+    "first_checked_at": "2026-10-05T21:28:39+00:00",
+    "last_checked_at": "2026-10-05T21:28:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Holistic Assessment of the Carbon Footprint of Noor, a Very Large Arabic Language Model"
+  },
+  "processed_at": "2026-10-05T21:28:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11723770aec2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

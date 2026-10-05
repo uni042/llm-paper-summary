@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4189df0aac15066-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.04401",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.04401",
+    "identity_tokens": [
+      "arXiv:2606.04401"
+    ],
+    "reason": "一次abstractはLLM training data domain mixture最適化であり、学習データ配分/性能向上が対象。GLaM link以外にinference servingへの寄与を示さない。",
+    "first_checked_at": "2026-10-05T21:28:45+00:00",
+    "last_checked_at": "2026-10-05T21:28:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "title": "TANDEM: Bi-Level Data Mixture Optimization with Twin Networks"
+  },
+  "processed_at": "2026-10-05T21:28:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4189df0aac1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4189df0aac15066-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.09298",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.09298",
+    "identity_tokens": [
+      "arXiv:2603.09298"
+    ],
+    "reason": "一次本文は単一凍結VLA backboneにtask別LoRA expertを付け、命令でrouting/swapするCORALを確認。VLA実機配備でstorageを約100倍削減し推論追加遅延なしとするが、LLM/VLAモデル圧縮・servingへの直接的な一般化は未検証。",
+    "first_checked_at": "2026-10-05T21:28:45+00:00",
+    "last_checked_at": "2026-10-05T21:28:45+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CORAL: Scalable Multi-Task Robot Learning via LoRA Experts"
+  },
+  "processed_at": "2026-10-05T21:28:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4189df0aac1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

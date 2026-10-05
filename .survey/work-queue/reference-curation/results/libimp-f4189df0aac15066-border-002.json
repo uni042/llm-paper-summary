@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f4189df0aac15066-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.14038",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.14038",
+    "identity_tokens": [
+      "arXiv:2602.14038"
+    ],
+    "reason": "一次本文はFluxMemの短・中・長期メモリ、線形/graph/hierarchical構造選択、BMM memory fusionとPersonaMem/LoCoMo品質評価を示す。これはLLM agentの外部会話記憶であり、KV cache/serving効率ではなく関連が弱い。",
+    "first_checked_at": "2026-10-05T21:28:44+00:00",
+    "last_checked_at": "2026-10-05T21:28:44+00:00",
+    "linked_from": [
+      "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Choosing How to Remember: Adaptive Memory Structures for LLM Agents"
+  },
+  "processed_at": "2026-10-05T21:28:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f4189df0aac1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

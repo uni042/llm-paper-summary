@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:47:49+00:00",
-  "record_count": 2052,
+  "updated_at": "2026-10-05T21:28:45+00:00",
+  "record_count": 2073,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31722,6 +31722,321 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DepGraph: Towards Any Structural Pruning"
+    },
+    "DOI:10.1109/tnnls.2020.2979670": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tnnls.2020.2979670",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2020.2979670"
+      ],
+      "reason": "IEEEの一次abstractはNLP全般の広範なsurveyで、linked Mask-Predictとの接点を除けば直接の推論効率寄与は特定できない。関連する非autoregressive generationの扱いを確認する必要がある。",
+      "first_checked_at": "2026-10-05T21:28:37+00:00",
+      "last_checked_at": "2026-10-05T21:28:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of the Usages of Deep Learning for Natural Language Processing"
+    },
+    "arXiv:2606.22793": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.22793",
+      "identity_tokens": [
+        "arXiv:2606.22793"
+      ],
+      "reason": "一次survey本文のOPD taxonomy、systems/implementation case、speculative feedback sectionを確認。linked Draft-OPDとの技術的関係はあるが、OPD学習/feedback整理が中心で、推論時draft acceptanceやserving速度の新規実験を示さない。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2605.29343-draft-opd.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Formula-Driven Survey and Research Agenda for On-Policy Distillation"
+    },
+    "DOI:10.1109/tii.2025.3639733": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tii.2025.3639733",
+      "identity_tokens": [
+        "DOI:10.1109/tii.2025.3639733"
+      ],
+      "reason": "一次abstractは産業時系列のmultiresolution CNN/RNNにconfidence-based early exitを加え15倍高速化するとし、DeeBERT lineageとの類似はある。非LLM time-series予測への適用に限るか本文で検証できない。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AMR-Net: Adaptive Temporal-Channel Multiresolution Network for Industrial Time-Series Prediction"
+    },
+    "arXiv:2601.06973": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06973",
+      "identity_tokens": [
+        "arXiv:2601.06973"
+      ],
+      "reason": "一次本文でprivate working memoryをsystem promptへ各turn注入する方式とGPT-OSS/Qwen3評価を確認。これはhidden-state一貫性能力の論文で、memory updates自体の推論token cost削減は示さず、linked MoE pruningとの関係も弱い。",
+      "first_checked_at": "2026-10-05T21:28:39+00:00",
+      "last_checked_at": "2026-10-05T21:28:39+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2604.04356-ream-router-weighted-expert-merging.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLMs Can't Play Hangman: On the Necessity of a Private Working Memory for Language Agents"
+    },
+    "arXiv:2610.00223": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00223",
+      "identity_tokens": [
+        "arXiv:2610.00223"
+      ],
+      "reason": "一次abstractはNoor LLMの訓練・配備推定を含むcarbon footprint評価で、inference costが重要と指摘するが、推論効率を改善する方法ではない。GLaM lineageとの接点と実際のserving推定範囲が本文で確かめられないため保留幅のあるborderline。",
+      "first_checked_at": "2026-10-05T21:28:39+00:00",
+      "last_checked_at": "2026-10-05T21:28:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Holistic Assessment of the Carbon Footprint of Noor, a Very Large Arabic Language Model"
+    },
+    "arXiv:2606.10040": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10040",
+      "identity_tokens": [
+        "arXiv:2606.10040"
+      ],
+      "reason": "一次本文の方法・実験・限界を確認。これはLLMではなくvideo-action diffusion型World-Action Modelで、低解像度未来・compact expert・非対称denoisingによりロボット制御の実時間を短縮する。LLM推論へ直接適用できる根拠はなく、関連はTransformer推論効率の隣接領域に限られる。",
+      "first_checked_at": "2026-10-05T21:28:39+00:00",
+      "last_checked_at": "2026-10-05T21:28:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient-WAM: A 1B-Parameter World-Action Model with Low-Cost Future Imagination"
+    },
+    "arXiv:2606.18363": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.18363",
+      "identity_tokens": [
+        "arXiv:2606.18363"
+      ],
+      "reason": "一次本文の軌跡生成・SFT/RL学習・実機評価を確認。Guavaは4B VLMのembodied agent能力を少数trajectoryから学習するharnessで、本文は成功率/generalizationを評価し、推論コスト・serving効率の改善を示さない。serving lineageは弱い。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Guava: Distilling Frontier VLMs into a Compact Agent through a Robotic Manipulation Harness"
+    },
+    "DOI:10.1109/tits.2025.3629117": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tits.2025.3629117",
+      "identity_tokens": [
+        "DOI:10.1109/tits.2025.3629117"
+      ],
+      "reason": "一次abstractはDNN partition point選択、UAV edge offload、trajectory/resource allocationにより一般DNNの遅延/energyを下げるとする。DeeBERTとのlineage signalはあるが、LLM token generation/KV servingとは対象が異なる。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep Reinforcement Learning-Based Task Offloading With Collaborative Inference in UAV-Assisted Mobile Edge Computing Networks"
+    },
+    "DOI:10.1038/s44220-026-00640-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s44220-026-00640-6",
+      "identity_tokens": [
+        "DOI:10.1038/s44220-026-00640-6"
+      ],
+      "reason": "既存GLaM/MoE lineageと用語上の接点はある一方、読めたprimary abstractはmental-health perspectiveであり、MoEは将来方向として触れるだけ。全文がsubscription previewで確認できず、技術的内容の有無を最終的に解消できないためborderline。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transforming artificial intelligence into artificial wisdom"
+    },
+    "DOI:10.1145/3712285.3759779": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3712285.3759779",
+      "identity_tokens": [
+        "DOI:10.1145/3712285.3759779"
+      ],
+      "reason": "一次abstractはHelix dynamic tensor compilerのshape-free compilationと汎用CPU/GPU execution speedupを示す。DeeBERT lineageとcompute relevanceはあるが、モデル/LLM serving上の統合・効果は本文で確認できない。",
+      "first_checked_at": "2026-10-05T21:28:41+00:00",
+      "last_checked_at": "2026-10-05T21:28:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Sample-Free Compilation Framework for Efficient Dynamic Tensor Computation"
+    },
+    "DOI:10.1016/j.engappai.2026.114285": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2026.114285",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2026.114285"
+      ],
+      "reason": "一次publisher abstractは後段Transformer層でspectral weightingを適用し推論速度/validation loss改善とする。直接効率候補だが、記事のfull textを取得できず、測定条件や限界を評価できない。",
+      "first_checked_at": "2026-10-05T21:28:42+00:00",
+      "last_checked_at": "2026-10-05T21:28:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Layer-dependent dynamic spectral weighting for efficient transformer models"
+    },
+    "arXiv:2603.25336": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.25336",
+      "identity_tokens": [
+        "arXiv:2603.25336"
+      ],
+      "reason": "一次本文はVGGTの3D vision用global attentionをhead感度別にsparsifyする方式。A40 runtimeは既存SparseVGGTと同水準で性能を維持し、推論効率を扱うが、専用vision geometry modelでLLMには評価されていない。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HeSS: Head Sensitivity Score for Sparsity Redistribution in VGGT"
+    },
+    "DOI:10.1016/j.neucom.2025.132562": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.132562",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.132562"
+      ],
+      "reason": "attention-head lineageおよびcausal language-model適用との技術的接点はある。しかし報告された推論速度は低下し、契約のinference-efficiency scopeに合う利点が示されていない。本文に基づく適用条件・制約の精査ができず、weak-fitとしてborderline。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic spectral weighting in CausalSelfAttention: Enhancing transformer performance through frequency-based head modulation"
+    },
+    "DOI:10.1016/j.asoc.2025.114398": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.114398",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.114398"
+      ],
+      "reason": "linked DeeBERT early-exit lineageとの接点を確認するためprimary sourceを調べた。取得できたabstractとindexed excerptsでは対象は運転者画像認識用CNNで、LLM/Transformer inferenceへの直接適用は見えない。一方、ScienceDirect full textが取得できず、linked lineageとの方法的接続や適用限界を全文で確認できないためborderlineとする。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Attention distillation for low-cost driver behavior recognition"
+    },
+    "arXiv:2608.16630": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16630",
+      "identity_tokens": [
+        "arXiv:2608.16630"
+      ],
+      "reason": "一次本文のworking-set/coherence model、実験設計、token-count caveatを確認。repository-scale agentで同等pass結果でも累積input tokensが12.8倍違う観測はcontext lineageに直結するが、新たなruntime効率化手法ではなく診断研究。",
+      "first_checked_at": "2026-10-05T21:28:44+00:00",
+      "last_checked_at": "2026-10-05T21:28:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2603.09023-pichay-demand-paging-context-windows.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Working Set of a Coding Agent: Coherence Debt in Repository-Scale Tasks"
+    },
+    "arXiv:2608.13900": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13900",
+      "identity_tokens": [
+        "arXiv:2608.13900"
+      ],
+      "reason": "一次本文のsemantic state memory、checkpoint/recovery/isolation設計とKramaBench実験を確認。DeltaBox lineageとの強い概念的一致はあるが、ACID-AgentはQwen条件でClaude Codeよりtask score改善と同時にcode stepsを増やし、token/cost効果はbackboneで混在する。",
+      "first_checked_at": "2026-10-05T21:28:44+00:00",
+      "last_checked_at": "2026-10-05T21:28:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agentic Transaction: Towards ACID-Compliant Agent Systems"
+    },
+    "arXiv:2608.02680": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02680",
+      "identity_tokens": [
+        "arXiv:2608.02680"
+      ],
+      "reason": "一次本文ではagent traceのargument-level dependencyを検証してworkflowへcompileし、intent API callsを34から11に減らす例を確認。ただしoffline compilation costは測らず、著者自身がnet efficiency結果を主張しない。serving/scheduling lineageに関係するが実用効率は未確定。",
+      "first_checked_at": "2026-10-05T21:28:44+00:00",
+      "last_checked_at": "2026-10-05T21:28:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TraceCompiler: Skill-Guided Mining and Compilation of LLM Agent Traces into Mostly Deterministic Workflows"
+    },
+    "arXiv:2602.14038": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14038",
+      "identity_tokens": [
+        "arXiv:2602.14038"
+      ],
+      "reason": "一次本文はFluxMemの短・中・長期メモリ、線形/graph/hierarchical構造選択、BMM memory fusionとPersonaMem/LoCoMo品質評価を示す。これはLLM agentの外部会話記憶であり、KV cache/serving効率ではなく関連が弱い。",
+      "first_checked_at": "2026-10-05T21:28:44+00:00",
+      "last_checked_at": "2026-10-05T21:28:44+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Choosing How to Remember: Adaptive Memory Structures for LLM Agents"
+    },
+    "DOI:10.1109/eibdct69742.2026.11566691": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eibdct69742.2026.11566691",
+      "identity_tokens": [
+        "DOI:10.1109/eibdct69742.2026.11566691"
+      ],
+      "reason": "abstractは圧縮edge modelとconfidence-based WAN offloadによる小中規模分類器の推論を扱い、DeeBERT lineageにも近い。一方、実験はAG News/SST-2/CIFAR10でLLM生成servingではない。",
+      "first_checked_at": "2026-10-05T21:28:44+00:00",
+      "last_checked_at": "2026-10-05T21:28:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Edge-Cloud Cooperative Inference for Small and Medium Models under WAN Constraints"
+    },
+    "arXiv:2605.28084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28084",
+      "identity_tokens": [
+        "arXiv:2605.28084"
+      ],
+      "reason": "一次本文では笑い理解専用LLMのLoRA MoLEを評価。MoEを足しても単一expertより約1–2%の推論latency増に留まるが、改善目標は笑い分類/推論品質で、serving効率向上ではない。GLaM/MoEとの接点はあるものの適用範囲が狭い。",
+      "first_checked_at": "2026-10-05T21:28:45+00:00",
+      "last_checked_at": "2026-10-05T21:28:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SMILE-Next: Teaching Large Language Models to Detect, Classify, and Reason about Laughter"
+    },
+    "arXiv:2603.09298": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09298",
+      "identity_tokens": [
+        "arXiv:2603.09298"
+      ],
+      "reason": "一次本文は単一凍結VLA backboneにtask別LoRA expertを付け、命令でrouting/swapするCORALを確認。VLA実機配備でstorageを約100倍削減し推論追加遅延なしとするが、LLM/VLAモデル圧縮・servingへの直接的な一般化は未検証。",
+      "first_checked_at": "2026-10-05T21:28:45+00:00",
+      "last_checked_at": "2026-10-05T21:28:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CORAL: Scalable Multi-Task Robot Learning via LoRA Experts"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T16:47:50+00:00",
-  "record_count": 6442,
+  "updated_at": "2026-10-05T21:28:45+00:00",
+  "record_count": 6460,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -93182,6 +93182,259 @@
       "last_checked_at": "2026-10-05T16:47:49+00:00",
       "linked_from": [],
       "title": "How many words do we read per minute? A review and meta-analysis of reading rate"
+    },
+    "arXiv:1905.12616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.12616",
+      "identity_tokens": [
+        "arXiv:1905.12616"
+      ],
+      "reason": "abstractはGroverによるneural fake-news生成・検出のsecurity/robustnessを扱い、推論高速化/serving手法を提示しない。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Defending Against Neural Fake News"
+    },
+    "arXiv:1906.03351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.03351",
+      "identity_tokens": [
+        "arXiv:1906.03351"
+      ],
+      "reason": "abstractはautoregressive生成文を識別するresidual energy modelの一般化を研究し、inference efficiencyには触れない。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Real or Fake? Learning to Discriminate Machine from Human Generated Text"
+    },
+    "DOI:10.1145/3838726": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3838726",
+      "identity_tokens": [
+        "DOI:10.1145/3838726"
+      ],
+      "reason": "abstractは自動運転stackの生成AI応用survey。LLM-guided drivingやonboard deployment課題には触れるが、モデル推論/servingを改善する手法はない。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Generative AI for Autonomous Driving: Frontiers and Opportunities"
+    },
+    "arXiv:2004.15015": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2004.15015",
+      "identity_tokens": [
+        "arXiv:2004.15015"
+      ],
+      "reason": "abstractはblack-box MT model stealing/attack対策であり、提案defenseはむしろinference speedを低下させると記載。",
+      "first_checked_at": "2026-10-05T21:28:38+00:00",
+      "last_checked_at": "2026-10-05T21:28:38+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Imitation Attacks and Defenses for Black-box Machine Translation Systems"
+    },
+    "arXiv:2606.09932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09932",
+      "identity_tokens": [
+        "arXiv:2606.09932"
+      ],
+      "reason": "abstractはSFT後RLのmodel plasticityを回復するfine-tuning/post-training手法で、推論効率/servingコストは対象外。",
+      "first_checked_at": "2026-10-05T21:28:39+00:00",
+      "last_checked_at": "2026-10-05T21:28:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "When RL Fails after SFT: Rejuvenating Model Plasticity for Robust SFT-to-RL Handoff"
+    },
+    "arXiv:2603.12997": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.12997",
+      "identity_tokens": [
+        "arXiv:2603.12997"
+      ],
+      "reason": "linked System-aware KV cache lineageを確認するため本文を読んだ。論文はnoisy-label classifierのloss correction、optimization dynamics、情報損失を扱い、LLM inference/serving/KV cacheの手法・評価は含まない。",
+      "first_checked_at": "2026-10-05T21:28:39+00:00",
+      "last_checked_at": "2026-10-05T21:28:39+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "Deconstructing the Failure of Ideal Noise Correction: A Three-Pillar Diagnosis"
+    },
+    "DOI:10.18653/v1/2020.acl-main.705": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2020.acl-main.705",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.acl-main.705"
+      ],
+      "reason": "ACL primary abstractはBERT teacherをSeq2Seq studentのtext-generation training supervisionに使う品質向上法。モデル圧縮や推論効率が主題ではない。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Distilling Knowledge Learned in BERT for Text Generation"
+    },
+    "arXiv:2606.11709": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11709",
+      "identity_tokens": [
+        "arXiv:2606.11709"
+      ],
+      "reason": "linked Kimi K3 serving lineage signalを確認するため本文を読んだ。論文の寄与はreasoning/post-training時の学習信号と学習効率であり、LLM serving scheduling/disaggregation、推論計算・memory・latency改善を扱わない。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "title": "RLCSD: Reinforcement Learning with Contrastive On-Policy Self-Distillation"
+    },
+    "arXiv:2512.24683": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.24683",
+      "identity_tokens": [
+        "arXiv:2512.24683"
+      ],
+      "reason": "linked System-aware KV cache lineageを確認した。寄与はデータセンターへの熱供給・cooling・grid/sitingのインフラ計画であり、KV cache管理やLLM serving/inference algorithmの改善ではない。",
+      "first_checked_at": "2026-10-05T21:28:40+00:00",
+      "last_checked_at": "2026-10-05T21:28:40+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "Waste-to-Energy-Coupled AI Data Centers: Cooling Efficiency and Grid Resilience"
+    },
+    "arXiv:2602.17038": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17038",
+      "identity_tokens": [
+        "arXiv:2602.17038"
+      ],
+      "reason": "abstractはagentic RLのphase-aware MoE policy training。routingは学習時のタスク専門化で、推論効率・配備コストを評価する研究ではない。",
+      "first_checked_at": "2026-10-05T21:28:41+00:00",
+      "last_checked_at": "2026-10-05T21:28:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Phase-Aware Mixture of Experts for Agentic Reinforcement Learning"
+    },
+    "arXiv:2607.26324": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26324",
+      "identity_tokens": [
+        "arXiv:2607.26324"
+      ],
+      "reason": "linked System-aware KV cache lineageを確認した。本文の主題はWtEとAI DCの熱供給・吸収冷却の距離/規模計画であり、KV cacheまたはLLM推論の計算・memory・latency・throughputを改善しない。",
+      "first_checked_at": "2026-10-05T21:28:41+00:00",
+      "last_checked_at": "2026-10-05T21:28:41+00:00",
+      "linked_from": [
+        "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+      ],
+      "title": "Planning Waste-to-Energy-Coupled AI Data Centers Through Grade-Matched Cooling and Corridor Screening"
+    },
+    "arXiv:2604.03634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03634",
+      "identity_tokens": [
+        "arXiv:2604.03634"
+      ],
+      "reason": "abstractはgroup-theoretic spectral estimation from observationsの統計理論で、LLM/Transformer inference systemの寄与がない。",
+      "first_checked_at": "2026-10-05T21:28:42+00:00",
+      "last_checked_at": "2026-10-05T21:28:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Algebraic Diversity: Group-Theoretic Spectral Estimation from Single Observations"
+    },
+    "arXiv:2607.03688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03688",
+      "identity_tokens": [
+        "arXiv:2607.03688"
+      ],
+      "reason": "abstract/titleの対象はMixture-of-Experts LLMの知的財産保護watermarkingで、モデルの推論速度/memory/servingを改善しない。",
+      "first_checked_at": "2026-10-05T21:28:42+00:00",
+      "last_checked_at": "2026-10-05T21:28:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "PathMark: Protecting Intellectual Property of Mixture-of-Expert LLMs via Path Watermarks"
+    },
+    "arXiv:2606.03417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03417",
+      "identity_tokens": [
+        "arXiv:2606.03417"
+      ],
+      "reason": "abstractは胸部X線の診断解釈性/多タスクframeworkを評価。inference settingの記述はあるが、効率改善や配信技術を提示しない。",
+      "first_checked_at": "2026-10-05T21:28:42+00:00",
+      "last_checked_at": "2026-10-05T21:28:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "A unified multi-task framework enables interpretable chest radiograph analysis"
+    },
+    "arXiv:2603.13768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13768",
+      "identity_tokens": [
+        "arXiv:2603.13768"
+      ],
+      "reason": "primary abstractは大規模audio language modelの内部情報流を因果追跡する分析研究で、推論効率化を目的としない。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Causal Tracing of Audio-Text Fusion in Large Audio Language Models"
+    },
+    "arXiv:2603.03067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.03067",
+      "identity_tokens": [
+        "arXiv:2603.03067"
+      ],
+      "reason": "abstractはhumanoid robot terrain control向けMoE expert routing/contrastive RL。LLM servingや言語モデル推論コストへの方法ではない。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "CMoE: Contrastive Mixture of Experts for Motion Control and Terrain Adaptation of Humanoid Robots"
+    },
+    "DOI:10.1063/5.0296911": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1063/5.0296911",
+      "identity_tokens": [
+        "DOI:10.1063/5.0296911"
+      ],
+      "reason": "abstractはattention headの反復・biasを説明するphysics theory/AI safety研究。推論負荷の低減・serving方法を提案しない。",
+      "first_checked_at": "2026-10-05T21:28:43+00:00",
+      "last_checked_at": "2026-10-05T21:28:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "title": "Physics of generative AI’s atom: Repetition, bias, and beyond"
+    },
+    "arXiv:2606.04401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.04401",
+      "identity_tokens": [
+        "arXiv:2606.04401"
+      ],
+      "reason": "一次abstractはLLM training data domain mixture最適化であり、学習データ配分/性能向上が対象。GLaM link以外にinference servingへの寄与を示さない。",
+      "first_checked_at": "2026-10-05T21:28:45+00:00",
+      "last_checked_at": "2026-10-05T21:28:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "TANDEM: Bi-Level Data Mixture Optimization with Twin Networks"
     }
   }
 }
