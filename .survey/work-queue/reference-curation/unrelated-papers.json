@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:56:14+00:00",
-  "record_count": 2713,
+  "updated_at": "2026-10-05T04:58:59+00:00",
+  "record_count": 2731,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -39384,6 +39384,283 @@
         "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
       ],
       "title": "Instance-Adaptive Prompts as Context for Time-Series Foundation Models"
+    },
+    "arXiv:2609.35110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35110",
+      "identity_tokens": [
+        "arXiv:2609.35110"
+      ],
+      "reason": "一次本文はMiniMax-H3をvideo diffusion generation pipelineとして扱い、resolution stages間のlatent mappingとkernel/system optimizationで動画生成を高速化する。LLM inference/servingの候補ではない。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Sol-H3: Recursive Self-Improvement for MiniMax-H3 Inference Acceleration on Sol-Engine across Cloud and Edge"
+    },
+    "arXiv:2609.35117": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35117",
+      "identity_tokens": [
+        "arXiv:2609.35117"
+      ],
+      "reason": "tool-mediated interactionsによるLLM refusal behavior分析で、効率化研究ではない。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Tool Mediation Alters Refusal Mechanisms in Large Language Models"
+    },
+    "arXiv:2609.35140": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35140",
+      "identity_tokens": [
+        "arXiv:2609.35140"
+      ],
+      "reason": "RL post-trainingのunified GPU kernel optimizationを扱うが、training/rollout throughput改善が対象で inference servingではない。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "AReaL-TIK: Stateful Agentic Optimization of Unified RL Kernels through an Optimization IR"
+    },
+    "arXiv:2609.35158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35158",
+      "identity_tokens": [
+        "arXiv:2609.35158"
+      ],
+      "reason": "agentic reinforcement-learningのrollout/training GPU schedulingとthroughput改善で、学習工程専用。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md"
+      ],
+      "title": "PEARL: Adaptive Prefill-Decode Execution with Elasticity for Agentic Reinforcement Learning"
+    },
+    "arXiv:2609.34809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34809",
+      "identity_tokens": [
+        "arXiv:2609.34809"
+      ],
+      "reason": "VLMのfeature-binding/reasoning behaviorを調べる分析研究で、推論効率化の機構・測定がない。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "From Perception to Integration: Revisiting the Internal Dynamics of Reasoning in Vision-Language Models"
+    },
+    "arXiv:2609.34814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34814",
+      "identity_tokens": [
+        "arXiv:2609.34814"
+      ],
+      "reason": "対象はdiffusion transformerによるlong-video generationのsparse attentionで、LLM inference/servingとは異なる生成系。",
+      "first_checked_at": "2026-10-05T04:58:57+00:00",
+      "last_checked_at": "2026-10-05T04:58:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "WaveAlign: Cache-Aware Query-Row Scheduling for Sparse Attention in Long-Video Generation"
+    },
+    "arXiv:2609.34857": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34857",
+      "identity_tokens": [
+        "arXiv:2609.34857"
+      ],
+      "reason": "reasoning model confidence calibrationの学習/readout研究で、推論計算効率やserving最適化の寄与を示さない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Beyond Verbalized Confidence: Calibrating Reasoners with Differentiable Readouts"
+    },
+    "arXiv:2609.34879": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34879",
+      "identity_tokens": [
+        "arXiv:2609.34879"
+      ],
+      "reason": "tool-agent repairによるtask fulfillment改善であり、serving/inference costの削減を主張していない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "One Readout, Many Repairs: Diffusion-Guided Hierarchical Search for Tool-Agent Repair"
+    },
+    "arXiv:2609.34895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34895",
+      "identity_tokens": [
+        "arXiv:2609.34895"
+      ],
+      "reason": "online video object segmentationの長期tracking手法で、LLM効率化対象外。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "LVMT: Video Mask Transformer for Long-term Video Segmentation"
+    },
+    "arXiv:2609.34902": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34902",
+      "identity_tokens": [
+        "arXiv:2609.34902"
+      ],
+      "reason": "simultaneous machine translationの2D attention設計だが、同期翻訳quality/latencyの要旨でありLLM serving/inference efficiency研究ではない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Dual-Stream Simultaneous Translation via 2D Grid Attention"
+    },
+    "arXiv:2609.34929": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34929",
+      "identity_tokens": [
+        "arXiv:2609.34929"
+      ],
+      "reason": "指定分布からのlanguage-model sampling behavior/alignmentの検証で、cost/throughput optimizationは扱わない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Sample What You Say: Aligning Language Models to Sample the Distributions They State"
+    },
+    "arXiv:2609.34971": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34971",
+      "identity_tokens": [
+        "arXiv:2609.34971"
+      ],
+      "reason": "LLM agent tool-schema/action-space biasの測定・緩和が主題で、inference performance/resource cost改善を示さない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Action-Space Shaping for LLM Agents: Measuring and Mitigating Tool-Schema Bias"
+    },
+    "arXiv:2609.34975": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34975",
+      "identity_tokens": [
+        "arXiv:2609.34975"
+      ],
+      "reason": "GRPO/LLM reasoningのhint-annealing training手法で、inference-only efficiencyの研究ではない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Teach to Learn: Hint Annealing for Self-improving LLM Reasoning"
+    },
+    "arXiv:2609.34992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34992",
+      "identity_tokens": [
+        "arXiv:2609.34992"
+      ],
+      "reason": "probability simplex上のdecoding strategyの理論/implementationだが、abstractはquality/distributional behavior中心でserving/inference costの改善を示していない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Composable Decoding on the Probability Simplex: Theory and Implementation"
+    },
+    "arXiv:2609.35039": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35039",
+      "identity_tokens": [
+        "arXiv:2609.35039"
+      ],
+      "reason": "robotic harvesting VLA policyのrejectability/calibrationが主題で、推論効率化の根拠がない。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in Robotic Harvesting"
+    },
+    "arXiv:2609.35054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35054",
+      "identity_tokens": [
+        "arXiv:2609.35054"
+      ],
+      "reason": "deep speech enhancement modelのperceptual quality loss分析で、LLM推論/serving効率化対象外。",
+      "first_checked_at": "2026-10-05T04:58:58+00:00",
+      "last_checked_at": "2026-10-05T04:58:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Perceptual Quality Loss or Loss of Perceptual Quality?"
+    },
+    "arXiv:2609.35083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35083",
+      "identity_tokens": [
+        "arXiv:2609.35083"
+      ],
+      "reason": "DNA sequenceのbiological synthesis/generative modelsを扱う研究でLLM inference効率対象外。",
+      "first_checked_at": "2026-10-05T04:58:59+00:00",
+      "last_checked_at": "2026-10-05T04:58:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Continuous Variational Synthesis"
+    },
+    "arXiv:2609.35108": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35108",
+      "identity_tokens": [
+        "arXiv:2609.35108"
+      ],
+      "reason": "LLM introspection/activation interventionに関するmechanistic studyで、inference cost削減やcompressionを扱わない。",
+      "first_checked_at": "2026-10-05T04:58:59+00:00",
+      "last_checked_at": "2026-10-05T04:58:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "A mechanistic study of language model introspection"
     }
   }
 }

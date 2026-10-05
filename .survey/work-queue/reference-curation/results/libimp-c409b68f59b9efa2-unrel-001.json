@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c409b68f59b9efa2-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34902",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34902",
+    "identity_tokens": [
+      "arXiv:2609.34902"
+    ],
+    "reason": "simultaneous machine translationの2D attention設計だが、同期翻訳quality/latencyの要旨でありLLM serving/inference efficiency研究ではない。",
+    "first_checked_at": "2026-10-05T04:58:58+00:00",
+    "last_checked_at": "2026-10-05T04:58:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "Dual-Stream Simultaneous Translation via 2D Grid Attention"
+  },
+  "processed_at": "2026-10-05T04:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c409b68f59b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

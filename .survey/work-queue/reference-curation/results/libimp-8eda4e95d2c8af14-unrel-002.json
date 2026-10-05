@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8eda4e95d2c8af14-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.34814",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.34814",
+    "identity_tokens": [
+      "arXiv:2609.34814"
+    ],
+    "reason": "対象はdiffusion transformerによるlong-video generationのsparse attentionで、LLM inference/servingとは異なる生成系。",
+    "first_checked_at": "2026-10-05T04:58:57+00:00",
+    "last_checked_at": "2026-10-05T04:58:57+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+      "papers/inference/13-sparse-attention/2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md",
+      "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "WaveAlign: Cache-Aware Query-Row Scheduling for Sparse Attention in Long-Video Generation"
+  },
+  "processed_at": "2026-10-05T04:58:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8eda4e95d2c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
