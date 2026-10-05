@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-87-part-05-d22c8c005629",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.19591",
+      "identity_tokens": [
+        "arXiv:2403.19591"
+      ],
+      "title": "Genetic Quantization-Aware Approximation for Non-Linear Operations in Transformers",
+      "reason": "The hardware evidence is for generic/lightweight Transformers and semantic segmentation, not LLM inference benchmarks or generation-serving performance; scope fit is borderline.",
+      "source_url": "https://arxiv.org/abs/2403.19591",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.09053",
+      "identity_tokens": [
+        "arXiv:2403.09053"
+      ],
+      "title": "Towards a theory of model distillation",
+      "reason": "This paper develops computational/statistical theory for distillation and sample/runtime complexity; it does not present an LLM compression or inference deployment method.",
+      "source_url": "https://arxiv.org/abs/2403.09053",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/IISWC55918.2022.00033",
+      "identity_tokens": [
+        "DOI:10.1109/IISWC55918.2022.00033"
+      ],
+      "title": "Demystifying BERT: System Design Implications",
+      "reason": "Demystifying BERT analyzes system implications of NLP model training; the abstract explicitly focuses on the training phase rather than inference.",
+      "source_url": "https://doi.org/10.1109/IISWC55918.2022.00033",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07003",
+      "identity_tokens": [
+        "arXiv:2604.07003"
+      ],
+      "title": "EmoMAS: Emotion-Aware Multi-Agent System for High-Stakes Edge-Deployable Negotiation with Bayesian Orchestration",
+      "reason": "EmoMAS is an edge-deployable negotiation application using multiple agents, but the reported contribution is negotiation performance and agent coordination rather than measured inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.07003",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.10079",
+      "identity_tokens": [
+        "arXiv:2601.10079"
+      ],
+      "title": "Sparse-RL: Breaking the Memory Wall in LLM Reinforcement Learning via Stable Sparse Rollouts",
+      "reason": "Sparse-RL reduces KV memory during LLM reinforcement-learning rollouts; its target is training-time RL memory, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2601.10079",
+      "first_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "last_checked_at": "2026-10-05T12:00:10.910927+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md"
+      ]
+    }
+  ]
+}
