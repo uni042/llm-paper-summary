@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r22-screen-01-part-01-1c4aeff91781",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07097",
+      "identity_tokens": [
+        "arXiv:2605.07097"
+      ],
+      "title": "Every Feedforward Neural Network Definable in an o-Minimal Structure Has Finite Sample Complexity",
+      "reason": "The abstract is a general PAC learnability result for fixed feedforward networks; it proposes no LLM inference/serving mechanism or efficiency evaluation.",
+      "source_url": "https://arxiv.org/abs/2605.07097",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04446",
+      "identity_tokens": [
+        "arXiv:2605.04446"
+      ],
+      "title": "Misrouter: Exploiting Routing Mechanisms for Input-Only Attacks on Mixture-of-Experts LLMs",
+      "reason": "Misrouter optimizes adversarial prompts to steer a MoE service toward weakly aligned experts and tests safety bypass/output quality on surrogate and public services. The objective and evaluation concern security attacks, not inference cost, memory, latency, throughput, or serving mechanisms. Authors identify limited route controllability, coupled objectives, and output-quality degradation as limitations. The shared MoE architecture alone does not create an in-scope serving-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2605.04446",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPAMI.2026.3689998",
+      "identity_tokens": [
+        "DOI:10.1109/TPAMI.2026.3689998"
+      ],
+      "title": "NVC-1B: Scaling up Neural Video Coding Models",
+      "reason": "The primary abstract concerns scaling a neural video-coding model and video-compression quality, not LLM inference or serving.",
+      "source_url": "https://doi.org/10.1109/TPAMI.2026.3689998",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22198",
+      "identity_tokens": [
+        "arXiv:2603.22198"
+      ],
+      "title": "Mixture of Mini Experts: Overcoming the Linear Layer Bottleneck in Multiple Instance Learning",
+      "reason": "The abstract improves multiple-instance learning for pathology image classification with a mixture-of-experts layer; it is not an LLM inference/serving method.",
+      "source_url": "https://arxiv.org/abs/2603.22198",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16160",
+      "identity_tokens": [
+        "arXiv:2602.16160"
+      ],
+      "title": "Uncertainty-Guided Inference-Time Depth Adaptation for Transformer-Based Visual Tracking",
+      "reason": "The abstract adapts depth for visual object tracking; the evaluated task is single-object tracking rather than LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2602.16160",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
