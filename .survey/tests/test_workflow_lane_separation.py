@@ -63,9 +63,9 @@ class WorkflowLaneSeparationTests(unittest.TestCase):
         self.assertIn("Immutable submission failure result was persisted to main.", text)
 
 
-    def test_discovery_precheck_foreground_uses_four_way_batch_and_single_writer(self):
+    def test_discovery_precheck_foreground_uses_six_way_batch_and_single_writer(self):
         text = self._text("discovery-precheck.yml")
-        self.assertIn("DISCOVERY_PRECHECK_PARALLELISM: '4'", text)
+        self.assertIn("DISCOVERY_PRECHECK_PARALLELISM: '6'", text)
         self.assertIn("process_discovery_precheck_batch.py", text)
         self.assertIn('--parallelism "$DISCOVERY_PRECHECK_PARALLELISM"', text)
         self.assertIn("group: discovery-precheck-main", text)
