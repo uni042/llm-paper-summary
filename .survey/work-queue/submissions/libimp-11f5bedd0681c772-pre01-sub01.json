@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "EdgeShard: Efficient LLM Inference via Collaborative Edge Computing",
+      "source_url": "https://doi.org/10.1109/JIOT.2024.3524255",
+      "year": 2025,
+      "published": "2025-05-15",
+      "venue": "IEEE Internet of Things Journal",
+      "citation_count": 306,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown great success in content generation and intelligent intelligent decision making for IoT systems. Traditionally, LLMs are deployed on the cloud, incurring prolonged latency, high bandwidth costs, and privacy concerns. More recently, edge computing has been considered promising in addressing such concerns because the edge devices are closer to data sources. However, edge devices are cursed by their limited resources and can hardly afford LLMs. Existing studies address such a limitation by offloading heavy workloads from edge to cloud or compressing LLMs via model quantization. These methods either still rely heavily on the remote cloud or suffer substantial accuracy loss. This work is the first to deploy LLMs on a collaborative edge computing environment, in which edge devices and cloud servers share resources and collaborate to infer LLMs with high efficiency and no accuracy loss. We design EdgeShard, a novel approach to partition a computation-intensive LLM into affordable shards and deploy them on distributed devices. The partition and distribution are nontrivial, considering device heterogeneity, bandwidth limitations, and model complexity. To this end, we formulate an adaptive joint device selection and model partition problem and design an efficient dynamic programming algorithm to optimize the inference latency and throughput. Extensive experiments of the popular Llama2 serial models on a real-world testbed reveal that EdgeShard achieves up to 50% latency reduction and $2 \\times $ throughput improvement over the state-of-the-art.",
+      "identifiers": [
+        "SemanticScholar:007e7d6cb64a7dfcdcad9fc6f4f0ba69fdc88203"
+      ],
+      "semantic_scholar_id": "007e7d6cb64a7dfcdcad9fc6f4f0ba69fdc88203",
+      "doi": "10.1109/JIOT.2024.3524255",
+      "canonical_id": "DOI:10.1109/JIOT.2024.3524255",
+      "authors": [
+        "Ming-Jin Zhang",
+        "Xiaoming Shen",
+        "Jian-Nong Cao",
+        "Ze-Yang Cui",
+        "Shan Jiang"
+      ],
+      "priority": 306,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 306,
+        "citation_count": 306,
+        "total": 306,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMをshardへ分割し、heterogeneous edge deviceとcloudへ協調配置する。device selectionとmodel partitionを動的計画法でjoint optimizationし、Llama2実機testbedで最大50% latency削減・2倍throughputを報告しており、distributed edge LLM inferenceを直接扱うためaccept。",
+      "library_body_check": "full_text_relevance_review: IEEE一次本文情報でcollaborative edge LLM inference、adaptive device selection/model partition、dynamic programming、Llama2 real-world testbed、最大50% latency reduction・2x throughputを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-11f5bedd0681",
+    "round": "libimp-11f5bedd0681c772-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-11f5bedd0681c772-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-11f5bedd0681c772-pre01.json",
+    "receipt": "sha256:e5eacd493c6d7000388927b96afd6591a4d60c27c6ef8144ccf2f5f351015318"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-11f5bedd0681",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
