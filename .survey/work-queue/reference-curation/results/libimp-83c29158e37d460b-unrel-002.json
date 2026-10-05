@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83c29158e37d460b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.21217",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.21217",
+    "identity_tokens": [
+      "arXiv:2609.21217"
+    ],
+    "reason": "一次要旨: Automotive Ethernet carries heterogeneous multi-protocol traffic in modern in-vehicle networks, where labeled attack data are rarely available and the strongest prior unsupervised detector still relies on handcrafted traffic features. This article presents X-SPUR, an explainable, surprisal-based, protocol-aware unsupervised reasoning framework that instead r",
+    "first_checked_at": "2026-10-05T06:17:39+00:00",
+    "last_checked_at": "2026-10-05T06:17:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "X-SPUR: Explainable Surprisal-Based Protocol-Aware Unsupervised Reasoning for Automotive Ethernet Intrusion Detection"
+  },
+  "processed_at": "2026-10-05T06:17:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83c29158e37d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

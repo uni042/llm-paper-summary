@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3342c41fd5e59be3-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.23134",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.23134",
+    "identity_tokens": [
+      "arXiv:2609.23134"
+    ],
+    "reason": "一次要旨: Machine-learned interatomic potentials (MLIPs) have emerged as a promising alternative to classical force fields and first-principles theory for predicting the properties of chemical and material systems. Many MLIPs are graph neural networks with O(3)-equivariant features, whose accuracy comes at substantial computational cost. Here we introduce the edge clu",
+    "first_checked_at": "2026-10-05T06:17:38+00:00",
+    "last_checked_at": "2026-10-05T06:17:38+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+    ],
+    "title": "ECENet: An Edge Cluster Expansion Line-Graph Neural Network"
+  },
+  "processed_at": "2026-10-05T06:17:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3342c41fd5e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
