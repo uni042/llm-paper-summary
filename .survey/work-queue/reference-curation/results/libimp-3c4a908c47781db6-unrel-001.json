@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3c4a908c47781db6-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.16864",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.16864",
+    "identity_tokens": [
+      "arXiv:2505.16864"
+    ],
+    "reason": "video diffusion生成のtoken carving/解像度制御で、対象は動画生成DiTでありLLM推論ではない。",
+    "first_checked_at": "2026-10-05T12:58:31+00:00",
+    "last_checked_at": "2026-10-05T12:58:31+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+      "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+    ],
+    "title": "Training-Free Efficient Video Generation via Dynamic Token Carving"
+  },
+  "processed_at": "2026-10-05T12:58:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3c4a908c4778",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

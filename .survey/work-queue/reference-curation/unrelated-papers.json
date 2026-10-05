@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:56:04+00:00",
-  "record_count": 5084,
+  "updated_at": "2026-10-05T12:58:32+00:00",
+  "record_count": 5100,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -73937,6 +73937,238 @@
         "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
       ],
       "title": "LLM-Forest: Ensemble Learning of LLMs with Graph-Augmented Prompts for Data Imputation"
+    },
+    "arXiv:2505.16831": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16831",
+      "identity_tokens": [
+        "arXiv:2505.16831"
+      ],
+      "reason": "要旨はLLM unlearningの可逆性・評価指標を研究し、serving/inference efficiencyの方法を提案しない。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ],
+      "title": "Unlearning Isn't Deletion: Investigating Reversibility of Machine Unlearning in LLMs"
+    },
+    "arXiv:2411.19443": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.19443",
+      "identity_tokens": [
+        "arXiv:2411.19443"
+      ],
+      "reason": "要旨はiterative retrievalと回答品質の向上が主題。反復retrieveに追加推論負荷があると述べるが、その効率低減手法ではない。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Auto-RAG: Autonomous Retrieval-Augmented Generation for Large Language Models"
+    },
+    "arXiv:2409.02097": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02097",
+      "identity_tokens": [
+        "arXiv:2409.02097"
+      ],
+      "reason": "画像diffusionモデルの線形attentionによる高解像度生成であり、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "LinFusion: 1 GPU, 1 Minute, 16K Image"
+    },
+    "arXiv:2505.21996": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.21996",
+      "identity_tokens": [
+        "arXiv:2505.21996"
+      ],
+      "reason": "interactive video world modelの一貫性・retrievalが主題で、LLM serving/inference効率ではない。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Learning World Models for Interactive Video Generation"
+    },
+    "arXiv:2203.00854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.00854",
+      "identity_tokens": [
+        "arXiv:2203.00854"
+      ],
+      "reason": "FastFoldはAlphaFold向けのprotein-structure training/inference implementationだが、一般LLMのserving研究ではなく、学習時間・生物分子推論が対象。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "FastFold: Reducing AlphaFold Training Time from 11 Days to 67 Hours"
+    },
+    "arXiv:2506.10707": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.10707",
+      "identity_tokens": [
+        "arXiv:2506.10707"
+      ],
+      "reason": "tabular in-context learnerのsemantic capabilityと予測性能が主題で、LLM推論実行効率の方法/評価が示されない。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "ConTextTab: A Semantics-Aware Tabular In-Context Learner"
+    },
+    "arXiv:2410.17215": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17215",
+      "identity_tokens": [
+        "arXiv:2410.17215"
+      ],
+      "reason": "MiniPLMの本文は小規模student LMを作るpre-training向け知識蒸留とteacher-data refinementが中心。教師推論はoffline化して学習コストを抑えるが、提案対象はtraining data/pre-trainingであり、LLM inference/serving最適化ではない。",
+      "first_checked_at": "2026-10-05T12:58:30+00:00",
+      "last_checked_at": "2026-10-05T12:58:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "MiniPLM: Knowledge Distillation for Pre-Training Language Models"
+    },
+    "arXiv:2512.03052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03052",
+      "identity_tokens": [
+        "arXiv:2512.03052"
+      ],
+      "reason": "3D asset generation modelとrepresentationが主題でありLLM inference対象外。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "LATTICE: Democratize High-Fidelity 3D Generation at Scale"
+    },
+    "arXiv:2505.16864": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16864",
+      "identity_tokens": [
+        "arXiv:2505.16864"
+      ],
+      "reason": "video diffusion生成のtoken carving/解像度制御で、対象は動画生成DiTでありLLM推論ではない。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
+      ],
+      "title": "Training-Free Efficient Video Generation via Dynamic Token Carving"
+    },
+    "arXiv:2604.12946": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12946",
+      "identity_tokens": [
+        "arXiv:2604.12946"
+      ],
+      "reason": "looped LMでtrain/test-time computeを増やして品質を向上する研究。計算効率を削減する目的ではない。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Parcae: Scaling Laws For Stable Looped Language Models"
+    },
+    "DOI:10.3389/fpls.2025.1522985": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpls.2025.1522985",
+      "identity_tokens": [
+        "DOI:10.3389/fpls.2025.1522985"
+      ],
+      "reason": "農業画像の植物病害分類とrobustnessが主題で、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md"
+      ],
+      "title": "Plant disease classification in the wild using vision transformers and mixture of experts"
+    },
+    "arXiv:2412.02141": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.02141",
+      "identity_tokens": [
+        "arXiv:2412.02141"
+      ],
+      "reason": "病理画像MLLMのbenchmark/説明性能とtrainingが主題で、inference system efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "WSI-LLaVA: A Multimodal Large Language Model for Whole Slide Image"
+    },
+    "DOI:10.48550/arxiv.2312.11556": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2312.11556",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.11556",
+        "arXiv:2312.11556"
+      ],
+      "reason": "画像からSVGを生成するmultimodal modelと評価が主題で、LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T12:58:31+00:00",
+      "last_checked_at": "2026-10-05T12:58:31+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "title": "StarVector: Generating Scalable Vector Graphics Code from Images"
+    },
+    "arXiv:2510.08396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.08396",
+      "identity_tokens": [
+        "arXiv:2510.08396"
+      ],
+      "reason": "FlyLoRA targets parameter-efficient fine-tuning/task merging, not inference serving.",
+      "first_checked_at": "2026-10-05T12:58:32+00:00",
+      "last_checked_at": "2026-10-05T12:58:32+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "FlyLoRA: Boosting Task Decoupling and Parameter Efficiency via Implicit Rank-Wise Mixture-of-Experts"
+    },
+    "DOI:10.1109/isca59077.2024.00070": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isca59077.2024.00070",
+      "identity_tokens": [
+        "DOI:10.1109/isca59077.2024.00070"
+      ],
+      "reason": "Cambricon-D accelerates diffusion models, not LLMs.",
+      "first_checked_at": "2026-10-05T12:58:32+00:00",
+      "last_checked_at": "2026-10-05T12:58:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ],
+      "title": "Cambricon-D: Full-Network Differential Acceleration for Diffusion Models"
+    },
+    "arXiv:2508.11126": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.11126",
+      "identity_tokens": [
+        "arXiv:2508.11126"
+      ],
+      "reason": "Agentic-programming survey describes coding-agent methods and architectures, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:58:32+00:00",
+      "last_checked_at": "2026-10-05T12:58:32+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.21465-shadowkv-low-rank-key-value-offload.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "AI Agentic Programming: A Survey of Techniques, Challenges, and Opportunities"
     }
   }
 }
