@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-103-part-04-611de9739f97",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TIFS.2025.3550071",
+      "identity_tokens": [
+        "DOI:10.1109/TIFS.2025.3550071"
+      ],
+      "title": "Kindle Federated Generalization With Domain Specialized and Invariant Knowledge",
+      "reason": "Federated generalizationとdomain adaptationを扱う学習研究で、LLM inference/servingの寄与がない。",
+      "source_url": "https://doi.org/10.1109/TIFS.2025.3550071",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HiPC62374.2024.00018",
+      "identity_tokens": [
+        "DOI:10.1109/HiPC62374.2024.00018"
+      ],
+      "title": "CAR-LLM: Cloud Accelerator Recommender for Large Language Models",
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "source_url": "https://doi.org/10.1109/HiPC62374.2024.00018",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04787",
+      "identity_tokens": [
+        "arXiv:2412.04787"
+      ],
+      "title": "Direct Quantized Training of Language Models with Stochastic Rounding",
+      "reason": "確率的丸めを使う量子化モデルの直接trainingが主題で、推論時の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2412.04787",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2024.3442430",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2024.3442430"
+      ],
+      "title": "Efficient, Scalable, and Sustainable DNN Training on SoC-Clustered Edge Servers",
+      "reason": "SoCクラスタedge serverでのDNN trainingの効率・scale・持続可能性が対象で、推論が対象外。",
+      "source_url": "https://doi.org/10.1109/TMC.2024.3442430",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IPCCC59868.2024.10850369",
+      "identity_tokens": [
+        "DOI:10.1109/IPCCC59868.2024.10850369"
+      ],
+      "title": "DP-Prune: Global Optimal Strategy for Retraining-Free Pruning of Transformer Models",
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "source_url": "https://doi.org/10.1109/IPCCC59868.2024.10850369",
+      "first_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "last_checked_at": "2026-10-05T13:07:53.688153+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
