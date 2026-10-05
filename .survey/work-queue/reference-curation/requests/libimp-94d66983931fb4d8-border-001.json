@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-94d66983931fb4d8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2204.06683",
+  "reason": "Transformerの長入力計算資源に隣接するが、評価は分類専用encoderでLLM生成/servingではない。LLM推論への移転を示す実験がないためborderline。",
+  "title": "Revisiting Transformer-based Models for Long Document Classification",
+  "identity_tokens": [
+    "arXiv:2204.06683"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-94d66983931f",
+  "source_precheck_request_id": null
+}
