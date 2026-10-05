@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-03-part-07-a30193d93412",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22455",
+      "identity_tokens": [
+        "arXiv:2609.22455"
+      ],
+      "title": "Apollo Restore: A Foundation LLM for Historical Greek Optimized for Fill-in-the-Middle Restoration of Ancient Greek Texts",
+      "reason": "一次要旨: We present Apollo Restore, a 24-billion-parameter large language model for restoring lacunae---physical gaps---in fragmentary Ancient Greek texts. Fine-tuned from Mistral Small with a fill-in-the-middle objective, Apollo Restore reconstructs missing spans without requiring oracle knowledge of their length. To our knowledge, it is the first large-scale decode",
+      "source_url": "https://arxiv.org/abs/2609.22455",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22506",
+      "identity_tokens": [
+        "arXiv:2609.22506"
+      ],
+      "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN",
+      "reason": "一次要旨: Vision Transformers devote most of their parameters to MLPs for channel mixing, but still rely on quadratic multi-head self-attention for token interactions. While linear attention fixes the complexity problem, bringing it down to O(N), it is usually just paired with the same fixed-activation MLP as before. Kolmogorov-Arnold Networks take a different approac",
+      "source_url": "https://arxiv.org/abs/2609.22506",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22645",
+      "identity_tokens": [
+        "arXiv:2609.22645"
+      ],
+      "title": "Extreme-Scale Ising Machines with Cluster Mean-Field Theory",
+      "reason": "一次要旨: Scaling analog and digital Ising machines to larger problems requires overcoming finite device capacity and the cost of communication between devices. We present cluster mean-field theory (CMFT), a framework that partitions a large interaction graph into clusters sized to fit available hardware. Each cluster performs local updates independently, while intera",
+      "source_url": "https://arxiv.org/abs/2609.22645",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25081",
+      "identity_tokens": [
+        "arXiv:2609.25081"
+      ],
+      "title": "ufakzeka-1: Building and Evaluating a 151M-Parameter Turkish Language Model from Scratch",
+      "reason": "一次要旨: We describe ufakzeka-1, a 151M-parameter (182M with embeddings) decoder-only Turkish language model pretrained from scratch on 13.5B tokens of openly licensed text and instruction-tuned for chat, at a total cost of about \\$286 in cloud GPU, API and notebook time. The contribution is not the model's capability, which is what a model this size can be expected ",
+      "source_url": "https://arxiv.org/abs/2609.25081",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38198",
+      "identity_tokens": [
+        "arXiv:2609.38198"
+      ],
+      "title": "FlashDiffusion: Fused Tiled Kernel Spectral Decomposition",
+      "reason": "一次要旨: Diffusion maps, and kernel methods more generally, provide an interpretable nonlinear spectral representation basis for geometric learning. In the geometric limit, small bandwidth, these matrices tend to be high rank and thus require materializing dense Gaussian kernels requires $O(N^2)$ memory. We introduce FlashDiffusion, a matrix-free method that evaluate",
+      "source_url": "https://arxiv.org/abs/2609.38198",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
