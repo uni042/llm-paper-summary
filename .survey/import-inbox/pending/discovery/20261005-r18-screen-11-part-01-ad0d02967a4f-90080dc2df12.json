@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-11-part-01-ad0d02967a4f",
+  "reference_main_sha": "0fc5ffbc59c09d4b9c4e4ccf2fb7787ea01be6c6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36221",
+      "identity_tokens": [
+        "arXiv:2609.36221"
+      ],
+      "title": "How Language Models Differ in Redistributing Attention-Head Activity Under Serial Demand",
+      "reason": "Mechanistic measurement of attention-head activity redistribution across serial-demand tasks; it does not target inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36221",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36237",
+      "identity_tokens": [
+        "arXiv:2609.36237"
+      ],
+      "title": "Transversal Pooling Neural Networks",
+      "reason": "Introduces affine-equivariant pooling networks for general learning and cyclone prediction, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.36237",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36337",
+      "identity_tokens": [
+        "arXiv:2609.36337"
+      ],
+      "title": "Adapting Linear-Time Architectures for Tabular In-Context Learning",
+      "reason": "Compares linear-time architectures for tabular in-context learning; the application is tabular ICL rather than LLM serving optimization.",
+      "source_url": "https://arxiv.org/abs/2609.36337",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36357",
+      "identity_tokens": [
+        "arXiv:2609.36357"
+      ],
+      "title": "HyperZip: Efficient Data Compression through Personalized Diffusion LLMs with Hypernetworks",
+      "reason": "LLM圧縮タスクにおける推論速度とlossless compression率の限定的fitで、汎用servingへの転移が未確定。",
+      "source_url": "https://arxiv.org/abs/2609.36357",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36364",
+      "identity_tokens": [
+        "arXiv:2609.36364"
+      ],
+      "title": "Compress to Remember: Learning Compact Memory via On-Policy Distillation for Long Video Generation",
+      "reason": "Learns compact memory representations for long video generation, not language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2609.36364",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
