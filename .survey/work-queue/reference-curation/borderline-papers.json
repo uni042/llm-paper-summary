@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T03:19:24+00:00",
-  "record_count": 750,
+  "updated_at": "2026-10-05T03:21:48+00:00",
+  "record_count": 754,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -11075,6 +11075,71 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "Hybrid Gated Attention"
+    },
+    "DOI:10.1145/3789240.3829200": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829200",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829200"
+      ],
+      "reason": "No body-level method, evaluation conditions, or limitations could be verified, so it cannot be advanced from the abstract alone.",
+      "first_checked_at": "2026-10-05T03:21:46+00:00",
+      "last_checked_at": "2026-10-05T03:21:46+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md",
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
+      "title": "Connex: Endpoint Mobility Primitives for Dynamic LLM Serving"
+    },
+    "arXiv:2608.08055": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08055",
+      "identity_tokens": [
+        "arXiv:2608.08055"
+      ],
+      "reason": "The paper’s central contribution is memory correctness/retrieval rather than inference efficiency, and its cost evidence is not a matched serving-efficiency comparison.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SodaMem: Evidence-Grounded Temporal Graph Memory for LLM Agents"
+    },
+    "DOI:10.1145/3770855.3817872": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817872",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817872"
+      ],
+      "reason": "The ACM DOI page and author-linked PDF both returned HTTP 403, so evaluation numbers, conditions, and limitations remain unverified.",
+      "first_checked_at": "2026-10-05T03:21:48+00:00",
+      "last_checked_at": "2026-10-05T03:21:48+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ],
+      "title": "Parallelizing LLM Agent Execution with Contrastive Task Allocation"
+    },
+    "DOI:10.1145/3770855.3818419": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818419",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818419"
+      ],
+      "reason": "This is an applied recommendation-system deployment report, and neither a specific inference optimization nor body-level efficiency evidence could be confirmed.",
+      "first_checked_at": "2026-10-05T03:21:48+00:00",
+      "last_checked_at": "2026-10-05T03:21:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "From Habits to Discovery: Deploying LLMs for Personalized Generative Recommendations at Spotify"
     }
   }
 }

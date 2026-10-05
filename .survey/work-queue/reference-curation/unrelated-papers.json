@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:19:24+00:00",
-  "record_count": 2216,
+  "updated_at": "2026-10-05T03:21:48+00:00",
+  "record_count": 2232,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -32058,6 +32058,238 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Generation as Auxiliary Supervision: Enhancing Visual Understanding at Zero Inference Overhead via Decoupled Embedding Prediction"
+    },
+    "arXiv:2608.10952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10952",
+      "identity_tokens": [
+        "arXiv:2608.10952"
+      ],
+      "reason": "The abstract is about multi-scale latents for image compression, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Multiple Scale Latents for Learned Image Compression"
+    },
+    "DOI:10.1145/3789240.3829124": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829124",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829124"
+      ],
+      "reason": "The work optimizes disaggregated reinforcement-learning generation/training orchestration; the stated workload is post-training, outside inference-serving efficiency scope.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "title": "Dynamic Compute and Network Orchestration for Disaggregated RL"
+    },
+    "DOI:10.1145/3789240.3829152": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829152",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829152"
+      ],
+      "reason": "The work describes communication infrastructure for large-scale LLM training; training startup/network/memory optimization is outside inference scope.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md"
+      ],
+      "title": "Connecting 100K+ GPUs: Building the Communication Stack for Large-Scale LLM Training"
+    },
+    "DOI:10.64898/2026.08.05.743059": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.08.05.743059",
+      "identity_tokens": [
+        "DOI:10.64898/2026.08.05.743059"
+      ],
+      "reason": "The paper studies neural encoding-model prediction accuracy in the human auditory cortex, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Neural prediction decorrelation reveals that adversarial robustness substantially improves DNN prediction accuracy across the entire human auditory cortex"
+    },
+    "arXiv:2608.08965": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08965",
+      "identity_tokens": [
+        "arXiv:2608.08965"
+      ],
+      "reason": "The abstract proposes underwater image enhancement experts for restoration quality, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "CoRe-UIE: Rethinking Coexisting and Region-wise Degradation for Underwater Image Enhancement"
+    },
+    "arXiv:2608.09558": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09558",
+      "identity_tokens": [
+        "arXiv:2608.09558"
+      ],
+      "reason": "The work proves approximation properties of prompts on random transformers and studies prompt costs theoretically; it is not an LLM serving optimization or evaluated inference-efficiency method.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Training-Free Universal Approximation by Prompting Random Transformers"
+    },
+    "arXiv:2608.10296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10296",
+      "identity_tokens": [
+        "arXiv:2608.10296"
+      ],
+      "reason": "The abstract studies architectural choices for long-context extension and reports training cost/quality; it does not present an inference-time efficiency method.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Cracks in the Foundation: Seemingly Minor Architectural Choices Impact Long Context Extension"
+    },
+    "arXiv:2608.08809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08809",
+      "identity_tokens": [
+        "arXiv:2608.08809"
+      ],
+      "reason": "The work provides an abstraction for training elastic retrievers/rerankers; its stated optimization target is training, outside inference scope.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Tevatron-Elastic: A Unified Abstraction for Training Elastic Retrievers and Rerankers"
+    },
+    "arXiv:2608.07110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07110",
+      "identity_tokens": [
+        "arXiv:2608.07110"
+      ],
+      "reason": "The paper composes test-time training rules and compares model quality/training variants; it does not report an inference-efficiency or serving-cost improvement.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules"
+    },
+    "arXiv:2608.07147": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07147",
+      "identity_tokens": [
+        "arXiv:2608.07147"
+      ],
+      "reason": "The work proposes a reinforcement-learning policy-optimization method for coding-agent training; training-only gains are outside inference scope.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "DiDPO: Diff-in-Diff Policy Optimization for Coding Agent Training"
+    },
+    "arXiv:2608.07333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07333",
+      "identity_tokens": [
+        "arXiv:2608.07333"
+      ],
+      "reason": "The work targets temporal-correlation robustness in graph neural networks for time-series forecasting, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "When GNNs Fail: Quantifying and Overcoming Temporal Correlation Volatility in Time Series"
+    },
+    "DOI:10.1007/s10579-026-09938-4": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10579-026-09938-4",
+      "identity_tokens": [
+        "DOI:10.1007/s10579-026-09938-4"
+      ],
+      "reason": "This is a survey of hallucination mechanisms, evaluation and mitigation; it does not propose an inference-efficiency or serving method.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2410.05004-hcache-fast-state-restoration-llm-serving.md"
+      ],
+      "title": "Hallucinations in generative artificial intelligence and large language models: tests, datasets, detection and correction methods"
+    },
+    "arXiv:2608.06291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06291",
+      "identity_tokens": [
+        "arXiv:2608.06291"
+      ],
+      "reason": "FastKron accelerates Hessian-based quantization computation and Hessian estimation, i.e. offline quantizer preparation, rather than runtime LLM inference.",
+      "first_checked_at": "2026-10-05T03:21:47+00:00",
+      "last_checked_at": "2026-10-05T03:21:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "FastKron: Efficient Quantization with Kronecker-Factored Hessians"
+    },
+    "arXiv:2608.08300": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08300",
+      "identity_tokens": [
+        "arXiv:2608.08300"
+      ],
+      "reason": "The abstract evaluates memory formatting to reduce over-personalization and preserve utility; it reports no inference cost, latency, or memory-efficiency improvement.",
+      "first_checked_at": "2026-10-05T03:21:48+00:00",
+      "last_checked_at": "2026-10-05T03:21:48+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Mitigating Over-Personalization in LLMs via Structured Memory"
+    },
+    "DOI:10.1145/3770855.3818885": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818885",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818885"
+      ],
+      "reason": "The work trains MoE foundation models for biological and natural-language understanding; its claimed advances are training/task quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T03:21:48+00:00",
+      "last_checked_at": "2026-10-05T03:21:48+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Caduceus: MoE Foundation Models for Unifying Biological and Natural Language"
+    },
+    "arXiv:2608.06876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06876",
+      "identity_tokens": [
+        "arXiv:2608.06876"
+      ],
+      "reason": "The abstract studies federated video-anomaly recognition alignment and communication during federated learning; it is not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T03:21:48+00:00",
+      "last_checked_at": "2026-10-05T03:21:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "FedVAR: Prototype-aligned federated framework for Video Anomaly Recognition"
     }
   }
 }
