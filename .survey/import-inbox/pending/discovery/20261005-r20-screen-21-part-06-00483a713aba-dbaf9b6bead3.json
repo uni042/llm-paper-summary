@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-21-part-06-00483a713aba",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25941",
+      "identity_tokens": [
+        "arXiv:2608.25941"
+      ],
+      "title": "When Pruning Meets Interpretability: Preserving Sparse Autoencoder Robustness in LLMs",
+      "reason": "The central contribution concerns SAE interpretability under pruning; the proposed layer allocation has only preliminary compression evidence and no serving-cost evaluation.",
+      "source_url": "https://arxiv.org/abs/2608.25941",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25977",
+      "identity_tokens": [
+        "arXiv:2608.25977"
+      ],
+      "title": "When Personality Meets Quantization: A Layer-wise MBTI Analysis of Quantized LLMs",
+      "reason": "The paper analyzes MBTI behavior across quantized LLMs; quantization is an evaluation condition, not a proposed inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2608.25977",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26067",
+      "identity_tokens": [
+        "arXiv:2608.26067"
+      ],
+      "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+      "reason": "StreamPI is a temporal-modeling framework for vision-language-action robotics, not LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.26067",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26088",
+      "identity_tokens": [
+        "arXiv:2608.26088"
+      ],
+      "title": "Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings",
+      "reason": "PPE is a geospatial prediction workflow using foundation-model embeddings; it is an application pipeline, not LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2608.26088",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26222",
+      "identity_tokens": [
+        "arXiv:2608.26222"
+      ],
+      "title": "NeuronFuzz: Safety Neuron Guided Fuzzing for LLM Safety Evaluation",
+      "reason": "NeuronFuzz improves LLM safety evaluation through neuron-guided fuzzing; the target is evaluation efficiency, not model inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.26222",
+      "first_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "last_checked_at": "2026-10-05T06:26:00.809443+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+      ]
+    }
+  ]
+}
