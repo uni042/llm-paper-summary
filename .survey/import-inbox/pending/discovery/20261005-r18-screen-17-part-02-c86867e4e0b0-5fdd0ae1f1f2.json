@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-17-part-02-c86867e4e0b0",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29246",
+      "identity_tokens": [
+        "arXiv:2609.29246"
+      ],
+      "title": "HBF-Sim: An Extensible HBF Simulator for Large-scale GPU Memory Systems",
+      "reason": "High-bandwidth flash (HBF) is introduced to address the memory wall, which can co-package a dense NAND stack with the GPU, targeting the performance gap between near-accelerator bandwidth and flash density. HBF, however, is neither a large HBM nor a fast NVMe SSD. Its usable bandwidth depends on how GPU cache-line requests map onto NAND pages, how concurrency spreads across channel-affine die sets, and how media management interacts with the GPU memory pipeline. To our knowledge, existing GPU, SSD, or HBF simulator",
+      "source_url": "https://arxiv.org/abs/2609.29246",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29370",
+      "identity_tokens": [
+        "arXiv:2609.29370"
+      ],
+      "title": "From Policy Documents to Structured Survey Responses: Evaluating Large Language Models for Policy Monitoring",
+      "reason": "Science, technology, and innovation policies are crucial for competitiveness, yet their diversity and scale make them difficult to map and monitor consistently. Existing approaches rely heavily on manual survey efforts, which are costly and challenging to scale across countries. Large language models (LLMs) enable new possibilities for extracting and structuring information from long and unstructured policy documents. This paper presents an application of LLMs as\"AI respondents\"for generating structured survey resp",
+      "source_url": "https://arxiv.org/abs/2609.29370",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29376",
+      "identity_tokens": [
+        "arXiv:2609.29376"
+      ],
+      "title": "A Hybrid CNN--State-Space--Attention Backbone with Joint-Embedding Predictive Pretraining for 12-Lead ECG Classification",
+      "reason": "Automatic 12-lead electrocardiogram (ECG) classification requires representations that jointly capture local waveform morphology, long-range temporal dynamics, and cross-lead dependencies, yet integrating these properties within a single efficient architecture remains challenging. This paper introduces a hybrid CNN-SSM-Attention backbone for 12-lead ECG classification. A convolutional stem performs early waveform tokenization and temporal reduction, mixed state-space and depthwise-convolutional blocks model tempora",
+      "source_url": "https://arxiv.org/abs/2609.29376",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29382",
+      "identity_tokens": [
+        "arXiv:2609.29382"
+      ],
+      "title": "Decoupled Early Exits for Task-Dependent Compute Allocation in Flow-Matching VLAs",
+      "reason": "早期退出による計算削減は確認できるが、主対象がロボットVLA/action expertで、LLM推論/servingへの適合は弱い。",
+      "source_url": "https://arxiv.org/abs/2609.29382",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29397",
+      "identity_tokens": [
+        "arXiv:2609.29397"
+      ],
+      "title": "Baseline Shape Decides the Verdict: A Controlled Re-Examination of Ternary Language Models at 60K Parameters",
+      "reason": "低bit language modelという隣接性はあるが、本文の貢献はtraining比較で、LLM推論時効率の証拠がない。",
+      "source_url": "https://arxiv.org/abs/2609.29397",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
