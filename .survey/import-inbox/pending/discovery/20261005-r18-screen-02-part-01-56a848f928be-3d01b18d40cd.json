@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-02-part-01-56a848f928be",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39120",
+      "identity_tokens": [
+        "arXiv:2609.39120"
+      ],
+      "title": "Is Better Teacher Supervision Enough? Unlocking Student-side Learning in Multimodal On-Policy Distillation",
+      "reason": "Multimodal on-policy distillation improves student perception and explicitly requires no added inference operations; contribution is training/distillation quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.39120",
+      "first_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "last_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39134",
+      "identity_tokens": [
+        "arXiv:2609.39134"
+      ],
+      "title": "Feature-Aware Token Attack for Compression-Triggered Stealthy Failures in Large Vision-Language Models",
+      "reason": "Feature-aware adversarial token attack measures compression-triggered VLM failures and detector robustness; it proposes no inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.39134",
+      "first_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "last_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39137",
+      "identity_tokens": [
+        "arXiv:2609.39137"
+      ],
+      "title": "ID Balancing: Stable Training of Extremely Sparse MoE via PID-Based Load Control",
+      "reason": "PID-based expert load balancing is a sparse-MoE training stability method; evaluated contribution is training, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2609.39137",
+      "first_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "last_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md",
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39188",
+      "identity_tokens": [
+        "arXiv:2609.39188"
+      ],
+      "title": "Attention Function as an Intrinsic Inductive Bias: How Models'Behavior Diverges in Novel Contexts",
+      "reason": "The paper analyzes attention inductive bias and out-of-distribution behavior; abstract gives no inference cost or efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.39188",
+      "first_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "last_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39198",
+      "identity_tokens": [
+        "arXiv:2609.39198"
+      ],
+      "title": "DSDyn-VLA: A Dual-Stream Dynamic Manipulation Framework with Motion Perception, Future Awareness, and Realtime Correction",
+      "reason": "The target is embodied VLA control and the method compensates for action-loop delay; transfer to the survey’s LLM inference/serving scope is weak.",
+      "source_url": "https://arxiv.org/abs/2609.39198",
+      "first_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "last_checked_at": "2026-10-05T04:04:34.388563+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
