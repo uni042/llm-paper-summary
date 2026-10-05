@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-08-part-02-555afa5ca702",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.09642",
+      "identity_tokens": [
+        "arXiv:2503.09642"
+      ],
+      "title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+      "reason": "Primary abstract read at https://arxiv.org/abs/2503.09642: Video model training cost and training/system optimization; outside inference-only scope.",
+      "source_url": "https://arxiv.org/abs/2503.09642",
+      "first_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "last_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca.2016.41",
+      "identity_tokens": [
+        "DOI:10.1109/isca.2016.41"
+      ],
+      "title": "Neurocube: A Programmable Digital Neuromorphic Architecture with High-Density 3D Memory",
+      "reason": "Primary source https://doi.org/10.1109/isca.2016.41 attempted: IEEE DOI page returned Internal Error. No primary abstract could be checked.",
+      "source_url": "https://doi.org/10.1109/isca.2016.41",
+      "first_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "last_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3037697.3037700",
+      "identity_tokens": [
+        "DOI:10.1145/3037697.3037700"
+      ],
+      "title": "Prophet: Precise QoS Prediction on Non-Preemptive Accelerators to Improve Utilization in Warehouse-Scale Computers",
+      "reason": "Primary source https://doi.org/10.1145/3037697.3037700 attempted: ACM DOI page returned Internal Error. No primary abstract could be checked.",
+      "source_url": "https://doi.org/10.1145/3037697.3037700",
+      "first_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "last_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.00200",
+      "identity_tokens": [
+        "arXiv:2405.00200"
+      ],
+      "title": "In-Context Learning with Long-Context Models: An In-Depth Exploration",
+      "reason": "Primary abstract read at https://arxiv.org/abs/2405.00200: Studies in-context learning quality with long-context models, no inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2405.00200",
+      "first_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "last_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md",
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1208",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1208"
+      ],
+      "title": "Content Selection in Deep Learning Models of Summarization",
+      "reason": "Primary abstract read at https://arxiv.org/abs/1810.12343: Neural summarization content selection, not LLM runtime efficiency.",
+      "source_url": "https://arxiv.org/abs/1810.12343",
+      "first_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "last_checked_at": "2026-10-05T01:12:49.680786+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    }
+  ]
+}
