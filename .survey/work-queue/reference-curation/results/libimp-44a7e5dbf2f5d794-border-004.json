@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44a7e5dbf2f5d794-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3830418.3843888",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3830418.3843888",
+    "identity_tokens": [
+      "DOI:10.1145/3830418.3843888"
+    ],
+    "reason": "DOI一次ACMページがWeb取得手段からinaccessible。primary abstractを取得できない。",
+    "first_checked_at": "2026-10-05T01:14:57+00:00",
+    "last_checked_at": "2026-10-05T01:14:57+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "XTRA: Unifying Cache Coherence and Concurrency Control for Distributed Transactions in a CXL Pod"
+  },
+  "processed_at": "2026-10-05T01:14:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44a7e5dbf2f5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
