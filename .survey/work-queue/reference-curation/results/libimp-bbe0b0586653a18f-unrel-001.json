@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bbe0b0586653a18f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00921",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00921",
+    "identity_tokens": [
+      "arXiv:2608.00921"
+    ],
+    "reason": "The work optimizes data-center load flexibility for grid services using bandits; it does not optimize LLM serving/inference itself.",
+    "first_checked_at": "2026-10-05T09:15:38+00:00",
+    "last_checked_at": "2026-10-05T09:15:38+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+    ],
+    "title": "Refined Thompson Learning for Adaptive Bandits: Power-Efficient Flexibility Scheduling Across Data Centers"
+  },
+  "processed_at": "2026-10-05T09:15:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bbe0b0586653",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
