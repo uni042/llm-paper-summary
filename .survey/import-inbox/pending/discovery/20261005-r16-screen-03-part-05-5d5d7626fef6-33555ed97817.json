@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-03-part-05-5d5d7626fef6",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.07925",
+      "identity_tokens": [
+        "arXiv:2609.07925"
+      ],
+      "title": "FrogNano: Training a 4B Coding Agent via Online Task Synthesis",
+      "reason": "coding agentのオンラインtask synthesis/trainingが主題で、serving時推論最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.07925",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06872",
+      "identity_tokens": [
+        "arXiv:2609.06872"
+      ],
+      "title": "Exact Record Omission in Delta Attention: A Transport Criterion, Its Cost, and a Replay Certificate",
+      "reason": "Delta Attentionで会話recordを厳密に削除/訂正する状態遷移とreplay costの分析。推論serve最適化との関係は間接的。",
+      "source_url": "https://arxiv.org/abs/2609.06872",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.05824",
+      "identity_tokens": [
+        "arXiv:2609.05824"
+      ],
+      "title": "Beyond Top-$k$ Skill Retrieval: Diversity-Aware Skill Routing for LLM Agents",
+      "reason": "Diversity-aware skill retrievalはagent skill選択の品質/多様性を扱うが、本文に推論token・latency・cost改善の測定を確認できず、効率寄与が不確か。",
+      "source_url": "https://arxiv.org/abs/2609.05824",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04434",
+      "identity_tokens": [
+        "arXiv:2609.04434"
+      ],
+      "title": "What Attention Recalls and Recurrence Controls in Hybrid Language Models",
+      "reason": "hybrid LMにおけるattention/recurrenceの記憶挙動分析であり、推論効率化の技法を提案する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.04434",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00830",
+      "identity_tokens": [
+        "arXiv:2609.00830"
+      ],
+      "title": "Visual Attention Faithfulness in Vision-Language Models is Heterogeneous",
+      "reason": "VLM visual attentionのfaithfulnessを調べる解釈可能性/評価研究で、推論cost最適化が主題でない。",
+      "source_url": "https://arxiv.org/abs/2609.00830",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    }
+  ]
+}
