@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e4333c46516b10b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.26566",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.26566",
+    "identity_tokens": [
+      "arXiv:2607.26566"
+    ],
+    "reason": "Text-to-image (T2I) workflows are increasingly deployed on serverless platforms because users often compose customized workflows and invoke them intermittently. Existing platforms typically deploy each workflow as an opaque GPU function, provisioning, placing, and scaling all constituent models in the workflow together. This monolithic design obscures workflow structure, inflates scaling overhead, forces users to manage low-level GPU coordination, and limits fine-grained fairness in multi-tenant clusters. In this paper, we present ServerlessT2I, a serverless-native system that decomposes a T2I workflow into loosely coupled model functions that can be independently managed and scheduled. By explicitly managing individual model execution, ServerlessT2I enables per-model scaling, declarative workflow composition, transparent GPU-resident communication, and fairness-aware scheduling. To make this decomposition efficient, ServerlessT2I harvests slack GPU memory left idle by compute-bound T2I inference to build a data plane that reduces model loading and data communication overheads. \\sys{} further introduces a fair scheduler for multi-tenant serving. Using production traces, ServerlessT2I sustains up to 2$\\times$ higher request rates than existing T2I workflow serving systems with the same GPU budget; for a fixed request rate, it saves up to 3$\\times$ GPU resources while satisfying service level objectives (SLOs).",
+    "first_checked_at": "2026-10-05T09:47:41+00:00",
+    "last_checked_at": "2026-10-05T09:47:41+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2412.18169-kunserve-elastic-and-efficient-large-language-model-serving-with-paramet.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
+      "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md",
+      "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+    ],
+    "title": "ServerlessT2I: Efficient Text-to-Image Workflow Serving on a Serverless Platform"
+  },
+  "processed_at": "2026-10-05T09:47:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e4333c46516",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

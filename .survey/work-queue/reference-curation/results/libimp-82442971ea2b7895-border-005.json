@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82442971ea2b7895-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.28627",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.28627",
+    "identity_tokens": [
+      "arXiv:2607.28627"
+    ],
+    "reason": "一次本文または一次記録から対象に隣接する内容は確認できるが、LLM推論効率への適合・効率の実証が弱いか本文を取得できず、不確実性が残るためborderlineとする。 This is a vision-language input-retrieval method, not a general LLM serving optimization; direct system-level efficiency evidence is limited.",
+    "first_checked_at": "2026-10-05T09:47:42+00:00",
+    "last_checked_at": "2026-10-05T09:47:42+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval"
+  },
+  "processed_at": "2026-10-05T09:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82442971ea2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

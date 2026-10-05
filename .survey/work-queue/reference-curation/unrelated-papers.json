@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T09:44:46+00:00",
-  "record_count": 4229,
+  "updated_at": "2026-10-05T09:47:43+00:00",
+  "record_count": 4244,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -61574,6 +61574,239 @@
         "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
       ],
       "title": "Z-Loss Backward Geometry in Dense Output Heads and Sparse Routers"
+    },
+    "arXiv:2607.26504": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26504",
+      "identity_tokens": [
+        "arXiv:2607.26504"
+      ],
+      "reason": "Many discrete reasoning tasks, such as code generation, are inherently non-causal: programmers move between high-level structure and local details, a process we call any-order inference. For autoregressive language models, which lack a native any-order interface, non-causal abilities such as infilling and next-edit prediction require hand-designed mechanisms. Can we instead design models that natively support any-order inference? Masked diffusion models have recently emerged as compelling candidates, as their any-order training objective naturally offers an any-order prediction interface. This interface, however, does not automatically yield any-order inference. We demonstrate that this interface-inference gap stems from positional uncertainty: fixed-canvas, token-level models may know what semantic component should appear without knowing where to place it. In light of this, we propose two complementary approaches: (1) Insertion-based masked diffusion, building on FlexMDM (Kim et al, 2025), relaxes fixed-position commitments via insertions, enabling generation across non-contiguous regions. (2) Latent-space masked diffusion shifts prediction to coarser semantic segments, enabling search over latent generation orders. Empirically, we train a 7B FlexMDM for Python coding and a 125M LatentMDM for GSM8K and show that both approaches induce distinct any-order inference behaviors and improve downstream performance. We release our codebase at https://github.com/SeunggeunKimkr/genuine-any-order.",
+      "first_checked_at": "2026-10-05T09:47:41+00:00",
+      "last_checked_at": "2026-10-05T09:47:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "From Interface to Inference: Eliciting Any-Order Inference from Any-Order Models"
+    },
+    "arXiv:2607.26515": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26515",
+      "identity_tokens": [
+        "arXiv:2607.26515"
+      ],
+      "reason": "We present, to our knowledge, the first end-to-end FP4 RL post-training, in which both the rollout and training policies, including their forward and backward passes, operate at 4-bit precision. A systematic study reveals that the dominant source of degradation in FP4 RL is not training-side quantization error but rollout activation quantization: outliers stretch the dynamic range so far that a large number of activation values underflow to zero under FP4. Counterintuitively, restoring the training policy to higher precision while keeping the rollout in FP4 makes accuracy worse than full FP4 baseline, exposing rollout-training mismatch as the principal failure mode and ruling out standard pretraining-style fixes. We address this with Rollout Residual Quantization (Rollout-ResQ): a single residual correction term constrained to a hardware-friendly sparsity pattern, added only to the FP4 rollout matmul -- a lightweight correction that recovers most of the precision lost to outlier-driven underflow without inflating the rollout's compute footprint. On Qwen2.5-3B and Qwen2.5-Math-7B, Rollout-ResQ paired with the HiFloat4 (HiF4) format -- whose three-level hierarchical scaling preserves resolution under FP4's tight 4-bit budget -- closes the accuracy gap to BF16 from 4.9% to 1.1%, bringing fully quantized FP4 RL within striking distance of full precision. Applied to the open-standard MXFP4, the same recipe narrows the gap from 13.6% to 5.3%, revealing that FP4 format choice is a key factor that determines the ceiling on recoverable accuracy. Together, these results establish HiF4 as the enabling format for end-to-end FP4 RL post-training, and Rollout-ResQ as the activation-side mechanism that makes the gap to BF16 closable.",
+      "first_checked_at": "2026-10-05T09:47:41+00:00",
+      "last_checked_at": "2026-10-05T09:47:41+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "HiFloat4 Format for End-To-End Reinforcement Learning Post-Training of Large Language Models"
+    },
+    "arXiv:2607.26566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26566",
+      "identity_tokens": [
+        "arXiv:2607.26566"
+      ],
+      "reason": "Text-to-image (T2I) workflows are increasingly deployed on serverless platforms because users often compose customized workflows and invoke them intermittently. Existing platforms typically deploy each workflow as an opaque GPU function, provisioning, placing, and scaling all constituent models in the workflow together. This monolithic design obscures workflow structure, inflates scaling overhead, forces users to manage low-level GPU coordination, and limits fine-grained fairness in multi-tenant clusters. In this paper, we present ServerlessT2I, a serverless-native system that decomposes a T2I workflow into loosely coupled model functions that can be independently managed and scheduled. By explicitly managing individual model execution, ServerlessT2I enables per-model scaling, declarative workflow composition, transparent GPU-resident communication, and fairness-aware scheduling. To make this decomposition efficient, ServerlessT2I harvests slack GPU memory left idle by compute-bound T2I inference to build a data plane that reduces model loading and data communication overheads. \\sys{} further introduces a fair scheduler for multi-tenant serving. Using production traces, ServerlessT2I sustains up to 2$\\times$ higher request rates than existing T2I workflow serving systems with the same GPU budget; for a fixed request rate, it saves up to 3$\\times$ GPU resources while satisfying service level objectives (SLOs).",
+      "first_checked_at": "2026-10-05T09:47:41+00:00",
+      "last_checked_at": "2026-10-05T09:47:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.18169-kunserve-elastic-and-efficient-large-language-model-serving-with-paramet.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.02015-muxserve-flexible-spatial-temporal-multiplexing-for-multiple-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2501.14417-deepflow-serverless-llm-serving-at-scale.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+      ],
+      "title": "ServerlessT2I: Efficient Text-to-Image Workflow Serving on a Serverless Platform"
+    },
+    "arXiv:2607.26697": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26697",
+      "identity_tokens": [
+        "arXiv:2607.26697"
+      ],
+      "reason": "The longitudinal triple splitting in the CERN Proton Synchrotron (PS) is a key rf manipulation defining the 25 ns bunch spacing delivered to the Large Hadron Collider (LHC). We present an automated optimization of this manipulation based on machine learning. Successive manipulations with rf systems at multiple harmonics of the revolution frequency are performed in the PS. Each bunch injected from the PS Booster (PSB) is split into twelve bunches with ideally identical longitudinal beam parameters. Precise rf voltage and phase settings are required to minimize bunch-by-bunch variations in intensity, longitudinal emittance, and bunch shape. Our setup combines two distinct parts: a convolutional neural network providing an initial phase correction from the evolution of longitudinal bunch profiles during the splitting process, and two sequential Soft-Actor-Critic (SAC) reinforcement-learning agents that refine cavity phases and voltages. The models are trained on data from Beam Longitudinal Dynamics (BLonD) tracking simulations augmented by simulated uncertainties, including noise evaluated from measurements, to enable training and robust transfer to the machine. First tests in 2022 reached target splitting quality in fewer than ten optimization steps on average, matching or outperforming manual adjustments. This led to operational deployment of an on-demand version, followed by a fully autonomous controller in March 2025. This controller has been available to operations since, representing one of the first reinforcement-learning-based systems for beam quality optimization deployed in the CERN injector complex.",
+      "first_checked_at": "2026-10-05T09:47:41+00:00",
+      "last_checked_at": "2026-10-05T09:47:41+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Reinforcement Learning applied to Optimization of LHC beams in the CERN Proton Synchrotron"
+    },
+    "arXiv:2607.26710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26710",
+      "identity_tokens": [
+        "arXiv:2607.26710"
+      ],
+      "reason": "The rapid growth of AI workloads is turning data centers into large-scale, volatile, yet spatiotemporally flexible grid loads, creating an urgent need for coordinated electricity-computing scheduling. Under stringent grid constraints, schedules from general-purpose large language models (LLMs) are often infeasible, causing line-flow violations and unserved load. We present PowerAtlas, an LLM-agent framework for electricity-computing co-scheduling that integrates historical instances, domain knowledge, and physical constraints to produce joint decisions satisfying both grid operational rules and the service-level agreements (SLAs) of computing tasks. Working with a provincial power utility in China, we built an experimental electricity-computing network and validated the decision loop on real data-center data; from de-identified operational data we further constructed ECBench, a benchmark of 2,000 scheduling instances with oracle-optimal solutions. Experiments across eleven LLMs demonstrate the effectiveness of PowerAtlas under realistic physical operating conditions, with consistent feasibility and cost gains across three open-weight backbones. Our code is publicly available at https://github.com/JAVA-Jiang/PowerAtlas.",
+      "first_checked_at": "2026-10-05T09:47:41+00:00",
+      "last_checked_at": "2026-10-05T09:47:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md"
+      ],
+      "title": "PowerAtlas: Towards Electricity-Computing Co-Scheduling for Power Systems"
+    },
+    "arXiv:2607.26427": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.26427",
+      "identity_tokens": [
+        "arXiv:2607.26427"
+      ],
+      "reason": "Modern recommender systems adopt Generator-Evaluator (G-E) for list-wise reranking: a generator produces sequences from candidates and an evaluator scores them at sequence-level to filter out the optimal one for exposure. Auto-Regressive(AR), working as the backbone for generative recommendation, suffers two limitations. First, its complexity grows linearly with list length, forcing the system to generate fewer lists under rigorous latency constraints and thus limiting exploration. Second, teacher-forcing creates a train-test mismatch; cumulative errors worsen with length and degrade quality. To address these problems, we propose Pair-Space Generation (PSG), a reformulation that elevates the generation atom from individual items to ordered item pairs. Given $n$ candidate items, PSG operates over pair vocabulary of size $n(n-1)$ per request, generates only $L/2$ tokens. Pair token representations are produced on-the-fly by a pretrained pair-token representation module optimized over large scale exposure logs, eliminating the data sparsity that would otherwise plague a quadratic sized vocabulary. We establish three theoretical guarantees: (i) PSG is bijective with item-space generation and induces an equivalent family of sequence distributions, thus incurring no loss of expressiveness; (ii) generation in pair-token space achieves approximately a $2\\times$ to $4\\times$ speedup theoretically under moderate settings and $1.83\\times$ in the real industrial environmental settings; and (iii) under outcome-only rewards, the worst-case suboptimality of PSG is bounded by $O((L/2)^2 \\bar{\\epsilon})$, representing a nearly $4\\times$ improvement over item-space generation. Beyond benchmark-based validation, PSG has also been deployed on Kuaishou, delivering a 0.178\\% lift in per-user stay time on the platform, which serves over 400 million daily active users.",
+      "first_checked_at": "2026-10-05T09:47:42+00:00",
+      "last_checked_at": "2026-10-05T09:47:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "PSG: Pair-Space Generation for Efficient Generative Reranking"
+    },
+    "arXiv:2607.28144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28144",
+      "identity_tokens": [
+        "arXiv:2607.28144"
+      ],
+      "reason": "We present ReGenVC, an end-to-end generative video codec that compresses talking-head video to an ultra-low bitrate and decodes it in real time. The encoder reduces a source clip to a compact bitstream -- a neurally compressed first frame, per-frame pose keypoints, and metadata -- totaling about 26 kB for a 77-frame sequence. The decoder is a four-step distilled diffusion transformer that reconstructs the video conditioned on the transmitted pose and reference frame. Compared with x264/x265, ReGenVC reduces the bitrate to roughly one tenth of that required by traditional codecs (about 26 kB vs. 250--280 kB for essentially artifact-free reconstruction); at a matched ultra-low bitrate, conventional codecs collapse into blocking artifacts while ReGenVC stays sharp by exploiting a strong generative prior. The central obstacle to deploying such a codec is decoder latency: multi-step sampling with transformer and VAE components is too slow for interactive use. We make the decoder real-time through four-step distillation and three model-preserving system techniques: (i) eight-GPU unified sequence parallelism (Ulysses&Ring), (ii) a spatially-split VAE, and (iii) a three-stage overlapped pipeline; an analytical timing model characterizes the real-time feasibility region. On an 8-GPU node, the system sustains 24 fps output (972 ms per 25-frame window, within the 1000 ms budget), enabling a live browser stream without observed frame underruns. A hybrid CPU-GPU deployment further runs the encoder on the CPU at 24 fps and offloads the decoder-side one-shot conditioning encoders to the CPU, reducing the per-GPU memory peak from 21.1 GB to about 7.7 GB. To our knowledge, ReGenVC is the first end-to-end generative video codec to combine ultra-low-bitrate encoding with real-time decoding on an 8-GPU system.",
+      "first_checked_at": "2026-10-05T09:47:42+00:00",
+      "last_checked_at": "2026-10-05T09:47:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "ReGenVC: End-to-End Real-Time Generative Video Coding at Ultra-Low Bitrate"
+    },
+    "arXiv:2607.28223": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28223",
+      "identity_tokens": [
+        "arXiv:2607.28223"
+      ],
+      "reason": "一次本文でGPU cluster queue admissionとmodel-serving request schedulingを別問題と明示しており、候補は対象範囲外と確認した。",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.07347-throughput-optimal-scheduling-llm-inference-ai-agents.md"
+      ],
+      "title": "Queue-Theoretic Admission Control for Multi-Tenant GPU Clusters"
+    },
+    "arXiv:2607.28268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28268",
+      "identity_tokens": [
+        "arXiv:2607.28268"
+      ],
+      "reason": "Combinatorial problems appear in numerous industrial applications. A common approach is to formulate these problems as declarative constraint models that can subsequently be compiled to and solved by a range of back-end solvers. Recent work shows that Large Language Models (LLMs) can produce correct models from natural language, but even a correct model can be expensive to solve because performance remains sensitive to modelling choices. In this work, we investigate whether LLMs can automate performance-oriented model reformulation. Inspired by Automatic Heuristic Design (AHD), we use an evolutionary framework in which an LLM proposes candidate reformulations that are verified and benchmarked against the user-defined baseline model. We compare AHD-adapted search strategies that control which prior attempts, instructions, and measured feedback enter each prompt. Existing retention strategies prioritize recency or performance, but do not explicitly diversify the context. To cover this gap, we introduce Profile-Diverse Retention (PDR), which applies Maximal Marginal Relevance (MMR) to instance-level runtime vectors to retain behaviourally diverse attempts. We systematically evaluate the strategies on eight CSPLib problems using validation-based final model selection. The results show that: (i) iterative reformulation can produce substantial held-out speedups; (ii) strategies that keep the retained context diverse outperform those that retain only recent or the fastest attempts; and (iii) validation-based selection improves the held-out speedup of every strategy.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "LLM-Guided Evolutionary Search for Constraint Model Reformulation to Improve Solver Efficiency"
+    },
+    "arXiv:2607.28319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28319",
+      "identity_tokens": [
+        "arXiv:2607.28319"
+      ],
+      "reason": "This work presents Fairness Pruning, a lightweight structural intervention method designed for the management and future mitigation of demographic bias in large language models (LLMs). As a foundational empirical validation of this method, this work focuses on causal bias localization. Using minimally contrastive prompt pairs and inference-time activation capture, the method identifies neurons that react differentially when processing demographic attributes in GLU architectures, evaluating the signal at the down_proj input. Empirical evaluation was conducted on models of up to 3 billion parameters (Llama-3.2 family and Salamandra-2B), combining standardized benchmark evaluation with qualitative text generation experiments. Results demonstrate that zeroing the identified neurons alters how the model responds to associated demographic variables. However, rather than producing flat mitigation, the intervention causes bidirectional bias destabilization: because BiasScore is unsigned, candidate sets mix neurons that push toward and against the stereotype, and the net effect on aggregate bias depends on which sign dominates. The intervention is extremely surgical: zeroing at most 40 neurons in Llama-3.2-1B (less than 0.031% of total MLP width) achieves a mean retention of 99.49% in reasoning and general knowledge capabilities. These findings empirically confirm that demographic bias processing and model capabilities operate on dissociable circuits, establishing the methodological foundations for transitioning from blind zeroing toward directional behavior modulation.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Fairness Pruning: Locating Demographic Bias in GLU-MLP Layers via Differential Activations"
+    },
+    "arXiv:2607.28733": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.28733",
+      "identity_tokens": [
+        "arXiv:2607.28733"
+      ],
+      "reason": "In this paper, we describe a physics-informed neural network (PINN) framework for the asymptotic Plateau problem: the construction of minimal discs in hyperbolic space H\n 4\n meeting the sphere at infinity along a prescribed knot. By a conjecture of Joel Fine, signed counts of such discs recover coefficients of the HOMFLY polynomial of the knot. Two aspects of the framework are described in detail. The first one concerns how to encode the geometry in the architecture: the network is one ingredient of a composite map whose boundary behavior automatically matches the prescribed knot for every value of the learnable parameters, and which meets the sphere at infinity orthogonally (therefore satisfying the asymptotically minimal condition by construction). The loss then reduces to a single interior term, involving the tension field of the minimality condition, and no weighting of boundary against interior penalties is needed. The second aspect is the cost of evaluating such loss. We compute the value, Jacobian and Hessian of the model by propagating second-order jets forward through the network in closed form, in place of nested reverse-mode automatic differentiation, and we compile the resulting computational graph once instead of rebuilding it at every optimization step. On identical hardware and in double precision, these two changes reduce the cost of a training step by a factor of between forty and fifty. We hope these methodological discussions can be useful for researchers in differential geometry and geometric analysis who wish to deploy PINNs on problems of their own.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "A user's guide to PINNs in geometric analysis: lessons from the asymptotic Plateau problem"
+    },
+    "arXiv:2608.07542": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07542",
+      "identity_tokens": [
+        "arXiv:2608.07542"
+      ],
+      "reason": "Autonomous research loops driven by large language models can run machine-learning experiments at scale but tend to drift toward local refinements of whichever metric they optimise rather than testing the hypotheses that motivate the experiments. We address this structurally and present an AI Scientist for studying generalisation in quadruped robot navigation policies in simulation. Building on the autoresearch paradigm of Karpathy, our loop adds three components: an immutable experiment card that pairs each iteration's prediction with its outcome under a fixed schema, so a falsified hypothesis cannot be retconned; specialised subagents restricted to mechanical roles; and kkanbu, a preference oracle that holds the user's research taste as a typed knowledge graph and is the only component permitted to make subjective judgements. To isolate the oracle we run the identical loop twice across eleven research streams, with and without kkanbu. Neither arm drifts: both falsify roughly three quarters of their own hypotheses, and the best trained policy comes from the oracle-less arm. What the oracle changes is direction, not score: it alone explores test-time adaptation, it authored the winning designs where its arm led, and it carried lessons across streams that the other arm repeatedly re-derived. The scaffold keeps the loop honest; kkanbu decides where it looks.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "An AI Scientist that Doesn't Drift: Taste, Structure, and Falsifiable Findings in a Quadruped Navigation Research Loop"
+    },
+    "arXiv:2608.14648": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14648",
+      "identity_tokens": [
+        "arXiv:2608.14648"
+      ],
+      "reason": "In this study, we revisit three widely used techniques in vector search and utilize them to optimize vector embedding indexing through clustering: dimensionality reduction, quantization, and dimension pruning. We propose an indexing pipeline in which these techniques are applied before clustering, and we focus on how they affect storage footprint, clustering time, and the quality of the resulting centroids for vector search tasks. Our results reveal that using full-precision vectors for clustering is excessive, as even 1-bit codes can achieve near-optimal clustering quality (within 1% of ideal) while reducing storage requirements by 60x and delivering attractive performance gains (Figure 1). We open-source our implementations at https://github.com/cwida/SuperKMeans.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "Stop Indexing at Full Precision: Revisiting Clustering for Vector Embeddings"
+    },
+    "arXiv:2608.14649": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14649",
+      "identity_tokens": [
+        "arXiv:2608.14649"
+      ],
+      "reason": "We present dLLM-SetScore, a training-free method that uses discrete masked-diffusion language models for multi-label text classification. For each candidate label, it asks a short yes/no question and compares the probabilities of the two answer tokens at one masked position. The method uses no task-specific fine-tuning or training on textual-entailment datasets; a 200-example labelled validation slice selects thresholds, temperature, and prompt wording. We first show that placing all labels in one prompt creates a strong slot-position asymmetry: the first answer slot is predicted positive on $99.4\\%$ of GoEmotions examples and $100\\%$ of Reuters examples. Per-label scoring places every label in the same syntactic position, making predictions invariant to label order and avoiding this artifact. We evaluate LLaDA-8B and Dream-7B on six datasets against NLI models, an autoregressive LLM, SetFit, and supervised classifiers. On the five datasets shared by both diffusion families, Instruct checkpoints improve macro-F1 in 9 of 10 comparisons and micro-F1 in 8 of 10, although these comparisons do not identify the cause. Within our protocol, LLaDA-Instruct records the highest training-free values for both Reuters and ECtHR metrics. We prove permutation invariance, characterize thresholded decisions under weighted Hamming loss, and derive shortlist ceilings for recall and F1. An exploratory local Joint Set Refinement step lowers F1 from biased and unbiased initializations and is retained as a negative result.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Discrete Diffusion Language Models Are Training-Free Multi-Label Classifiers"
+    },
+    "arXiv:2609.20283": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20283",
+      "identity_tokens": [
+        "arXiv:2609.20283"
+      ],
+      "reason": "Modern segmenters often fail after the expensive computation has already been done: a useful mask is present among the model's query-conditioned candidates, but the deployed selection rule does not expose it. We study this output-selection bottleneck in frozen DETR-family models. A ground-truth-only oracle first shows substantial hidden headroom in already-computed mask proposals. This raises a simple question: How can we better use the masks a segmenter has already computed but does not expose? We then ask whether that headroom can be recovered without adding queries, generating new masks, rerunning the backbone, or updating weights. HYDRA is a small selector trained only on cached frozen outputs. At inference time, it scores the cached candidates against an explicit keep-baseline option and acts only when a held-out calibrated margin indicates the selected candidate is sufficiently better. Trained on training-split caches and calibrated on held-out data, HYDRA improves Mask2Former, MaskDINO, and OneFormer by up to +7.41 dataset mIoU points on ADE20k and COCO, and improves SAM 3 by +9.4 class-macro prompt-IoU points on average across eight domains while preserving useful predictions through calibration. Paired LoRA controls show that lightweight weight adaptation does not remove the bottleneck: exposed predictions are often flat or worse, while routing over the adapted candidates still recovers accuracy. Finally, we connect the effect to query specialization under bipartite matching and verify it in a controlled TinyDETR study. These results show that frozen segmenters should be evaluated not only by the masks they expose, but also by the useful candidates they suppress.",
+      "first_checked_at": "2026-10-05T09:47:43+00:00",
+      "last_checked_at": "2026-10-05T09:47:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Queries Knew More Than We Thought: Uncovering Latent Knowledge in Segmentation Models"
     }
   }
 }
