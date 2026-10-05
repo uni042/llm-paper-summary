@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:17:11+00:00",
-  "record_count": 2829,
+  "updated_at": "2026-10-05T05:19:28+00:00",
+  "record_count": 2837,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -41142,6 +41142,128 @@
         "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
       ],
       "title": "TransAct V2: Production System for Lifelong User Sequence Modeling at Scale"
+    },
+    "DOI:10.1145/3837053.3837355": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3837053.3837355",
+      "identity_tokens": [
+        "DOI:10.1145/3837053.3837355"
+      ],
+      "reason": "LEO compute cloudのstateful application storage handoff/endurance。LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T05:19:27+00:00",
+      "last_checked_at": "2026-10-05T05:19:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "The Storage Wall in LEO Compute Clouds"
+    },
+    "DOI:10.1145/3832810.3832890": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832890",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832890"
+      ],
+      "reason": "disaggregated memory pool内のdata offload管理で、LLM workloadやLLM推論への適用を要旨が示していない。",
+      "first_checked_at": "2026-10-05T05:19:27+00:00",
+      "last_checked_at": "2026-10-05T05:19:27+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "MEDO: Adaptive Multi-Stream Data Offloading for Efficient Management of Disaggregated Memory Pool"
+    },
+    "DOI:10.1145/3832810.3832891": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832891",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832891"
+      ],
+      "reason": "pipeline parallel trainingのpartitioning/scheduling最適化。学習専用。",
+      "first_checked_at": "2026-10-05T05:19:27+00:00",
+      "last_checked_at": "2026-10-05T05:19:27+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Memory-Aware Joint Optimisation of Partitioning and Scheduling for Pipeline-Parallel Training"
+    },
+    "DOI:10.1145/3832810.3832892": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832892",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832892"
+      ],
+      "reason": "backpropagationにおけるgradient checkpointingの再設計。学習専用。",
+      "first_checked_at": "2026-10-05T05:19:27+00:00",
+      "last_checked_at": "2026-10-05T05:19:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "Async-Checkpoint: Redesigning Gradient Checkpointing with Asynchronous Execution"
+    },
+    "DOI:10.1145/3832810.3832867": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832867",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832867"
+      ],
+      "reason": "PIM kernelをLLMで自動合成する研究であり、最適化対象はPIM kernel開発で、LLM自体の推論効率ではない。",
+      "first_checked_at": "2026-10-05T05:19:28+00:00",
+      "last_checked_at": "2026-10-05T05:19:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "PIM-Forge: Toward Autonomous PIM Kernel Synthesis through Constraint-Guided Hardware Exploration"
+    },
+    "DOI:10.1145/3832810.3832874": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832874",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832874"
+      ],
+      "reason": "dynamic tensor programのgraph fusion/auto-tuning frameworkで、特定のLLM inference・servingの貢献を要旨が示していない。",
+      "first_checked_at": "2026-10-05T05:19:28+00:00",
+      "last_checked_at": "2026-10-05T05:19:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/13-sparse-attention/2024-2407.02490-minference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "MAGSAT: Memory-Access-Guided Fusion and Shape-Adaptive Auto-Tuning for Dynamic Tensor Programs"
+    },
+    "DOI:10.1145/3832810.3832905": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832905",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832905"
+      ],
+      "reason": "serverless WebAssembly workflowのserialization overhead削減であり、LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T05:19:28+00:00",
+      "last_checked_at": "2026-10-05T05:19:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ],
+      "title": "AeroFlow:Accelerating Serverless Workflows through Serialization-Free WebAssembly Execution"
+    },
+    "DOI:10.1145/3832810.3832915": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3832810.3832915",
+      "identity_tokens": [
+        "DOI:10.1145/3832810.3832915"
+      ],
+      "reason": "MoE training向けGEMM高速化。要旨の対象は学習で、inferenceではない。",
+      "first_checked_at": "2026-10-05T05:19:28+00:00",
+      "last_checked_at": "2026-10-05T05:19:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
+      ],
+      "title": "RapidGEMM: An Efficient Tile-agnostic GEMM for Mixture-of-Experts Training"
     }
   }
 }
