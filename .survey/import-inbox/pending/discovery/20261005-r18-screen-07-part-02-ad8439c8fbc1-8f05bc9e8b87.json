@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-07-part-02-ad8439c8fbc1",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38597",
+      "identity_tokens": [
+        "arXiv:2609.38597"
+      ],
+      "title": "PixelUMM: Encoder-Free Unified Image and Video Understanding and Generation",
+      "reason": "Unified image/video understanding and generation architecture; abstract reports task quality, not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.38597",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38598",
+      "identity_tokens": [
+        "arXiv:2609.38598"
+      ],
+      "title": "Reinforcement Learning with Complex (valued) Memories",
+      "reason": "Complex-valued recurrent architectures for reinforcement-learning memory tasks; not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.38598",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38599",
+      "identity_tokens": [
+        "arXiv:2609.38599"
+      ],
+      "title": "JARQ: Joint Alternating Refinement for Quantization",
+      "reason": "The gain is model quality at unchanged inference cost, rather than an inference-efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2609.38599",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38641",
+      "identity_tokens": [
+        "arXiv:2609.38641"
+      ],
+      "title": "Vision-Language-Action Autonomous Driving Agent with Language-based Memory",
+      "reason": "Vision-language-action driving system and training recipe for road scenarios; application/training contribution, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38641",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38642",
+      "identity_tokens": [
+        "arXiv:2609.38642"
+      ],
+      "title": "ChartRevise: A Dataset and Evaluation Protocol for Exact Chart Editing via Code",
+      "reason": "Chart-editing dataset and evaluation protocol; not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38642",
+      "first_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "last_checked_at": "2026-10-05T04:17:18.163903+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
