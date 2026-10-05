@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-05-part-07-49165496b128",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.05754",
+      "identity_tokens": [
+        "arXiv:2111.05754"
+      ],
+      "title": "Prune Once for All: Sparse Pre-Trained Language Models",
+      "reason": "一次要旨はlanguage modelをsparseにpretrainする手法が中心で、効率化の主張はtraining/deployment可能性に関するもので推論serving評価がない。",
+      "source_url": "https://arxiv.org/abs/2111.05754",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.13678",
+      "identity_tokens": [
+        "arXiv:1905.13678"
+      ],
+      "title": "Learning Sparse Networks Using Targeted Dropout",
+      "reason": "一次要旨は一般neural networkのsparsityをtraining時に学ぶ方法で、LLM推論の対象外。",
+      "source_url": "https://arxiv.org/abs/1905.13678",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05244",
+      "identity_tokens": [
+        "arXiv:2503.05244"
+      ],
+      "title": "WritingBench: A Comprehensive Benchmark for Generative Writing",
+      "reason": "一次要旨はgenerative writingのbenchmarkを提示する研究で、inference efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2503.05244",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2604.09557-speed-bench-speculative-decoding-benchmark.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26794",
+      "identity_tokens": [
+        "arXiv:2608.26794"
+      ],
+      "title": "Ring Forcing: Towards Precise Long-Term Memory for Autoregressive Video Diffusion",
+      "reason": "一次要旨の対象はautoregressive video diffusion modelの長期video memoryで、LLM言語推論の対象外。",
+      "source_url": "https://arxiv.org/abs/2608.26794",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01679",
+      "identity_tokens": [
+        "arXiv:2608.01679"
+      ],
+      "title": "When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary",
+      "reason": "一次要旨はagent memory consolidationによるauthority collapseを測るbenchmarkであり、効率化の提案ではない。",
+      "source_url": "https://arxiv.org/abs/2608.01679",
+      "first_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "last_checked_at": "2026-10-05T01:02:47.419916+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
