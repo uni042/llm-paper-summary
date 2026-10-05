@@ -93,6 +93,6 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
-  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：8  
   S4（Structured State Space Sequence モデル）は、長系列で自己注意の計算量とメモリ量が系列長の二乗に増える問題に対し、状態空間モデルを実用的な系列層として再設計する。Long Range Arenaでは平均86%台の精度を報告し、当時のTransformer系・効率的注意系を大きく上回った。
 <!-- survey:auto:end -->

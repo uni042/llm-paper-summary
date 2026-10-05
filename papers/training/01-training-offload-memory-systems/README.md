@@ -51,7 +51,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
-  実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/AIS-SNU/Smart-Infinity) ・ リポジトリ内被引用：15  
   SSD上のパラメータと最適化状態をCPU・GPUへ毎回戻さず、FPGA搭載SmartSSD内でAdam更新を実行して、PCIeを通る状態転送量と学習のI/O待ちを減らす方式。
 
 - **2024-08 · [SSDTrain: An Activation Offloading Framework to SSDs for Faster Large Language Model Training](2024-2408.10013-ssdtrain-an-activation-offloading-framework-to-ssds-for-faster-large-language-mo.md)**  
@@ -71,12 +71,12 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 ### 5年前（2021-11〜2022-10）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：50  
   学習パラメータ・勾配・最適化状態をGPU、CPU DRAM、NVMe SSDへ分散し、各SSDの読み込みと先読みをGPU計算に重ねて、GPU総容量を超える巨大モデルを収める方式。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：41  
   データ並列で重複する最適化器状態・勾配・パラメータをGPU間分割し、必要時だけ通信することで、モデル並列の細粒度通信を避けつつ巨大モデル学習のメモリ効率を高める基盤方式。
 <!-- survey:auto:end -->

@@ -112,6 +112,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   従来のメモリ内処理（PIM）/ニアメモリ計算（NMC）アクセラレータはCNNの高い演算密度を前提にしたデータフローが多く、Transformerの注意機構やトークン逐次処理へそのまま適用すると層間データ移動が支配的になる。
 <!-- survey:auto:end -->

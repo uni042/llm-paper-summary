@@ -865,7 +865,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](2023-2312.00752-mamba-selective-state-space-linear-time-inference.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：67  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：69  
   入力依存の選択的状態空間層とGPU向け融合走査を統合し、注意機構なしでTransformer級品質と4〜5倍の生成スループットを両立する。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
@@ -936,6 +936,10 @@
   実装：✓ ・ リポジトリ内被引用：13  
   各投機位置で複数候補をサンプリングして木として一括検証し、ターゲット分布を保ったまま単一路の投機的復号より受理率を高める。
 
+- **2024-01 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：13  
+  Infini-注意機構は長文を固定長セグメントへ分け、現在セグメントには通常の局所注意、過去セグメントには固定サイズの圧縮メモリを使う。古い全KVを保存するのではなく、キーと値の外積を再帰的に累積した長期メモリへ問い合わせることで、文脈長が伸びてもメモリ量を一定に保つ。
+
 - **2024-10 · [ConServe: Fine-Grained GPU Harvesting for LLM Online and Offline Co-Serving](2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   SLO予測付きトークン調整・層単位プリエンプション・増分KV退避で、オンライン遅延を守りながら遊休GPUをオフライン推論へ回す共同サービング方式。
@@ -943,10 +947,6 @@
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
   実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts) ・ リポジトリ内被引用：12  
   一方で専門家間の負荷偏り、全対全通信通信、専門家配置、メモリ容量が実システムの律速になる。
-
-- **2024-01 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
-  Infini-注意機構は長文を固定長セグメントへ分け、現在セグメントには通常の局所注意、過去セグメントには固定サイズの圧縮メモリを使う。古い全KVを保存するのではなく、キーと値の外積を再帰的に累積した長期メモリへ問い合わせることで、文脈長が伸びてもメモリ量を一定に保つ。
 
 - **2024-07 · [Gated Linear Attention Transformers with Hardware-Efficient Training](2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md)**  
   実装：[✓](https://github.com/sustcsonglin/flash-linear-attention) ・ リポジトリ内被引用：11  
@@ -972,6 +972,10 @@
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：7  
   一般的な疎な混合専門家モデル（MoE）はTop-1やTop-2のように、全トークンへ同じ数の専門家を割り当てる。推論時の最大専門家数を2へ制限した設定で、動的方式はTop-2より平均活性専門家数を減らし、活性パラメータを90%未満へ抑えながら下流タスク平均を0.7ポイント上回る。
 
+- **2024-07 · [Mixture of A Million Experts：百万専門家を扱うPEER層](2024-2407.04153-mixture-of-a-million-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
+
 - **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   本論文は、LLMクラウドでGPUの演算能力よりデータセンターの電力供給枠が先に制約になる状況を扱う。訓練は同期的にGPUが動くためピークが揃い、電力の過剰収容余地は約3%しかない。評価では同一電力予算へ30%多いサーバを配置しつつ設定した遅延SLOと電力ブレーキ0回を狙えることを示す。
@@ -979,10 +983,6 @@
 - **2023-12 · [Lookahead: An Inference Acceleration Framework for Large Language Model with Lossless Generation Accuracy](2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   自己回帰LLMは通常1回の前向き計算で1トークンを確定する。投機的な候補列をまとめて検証すれば複数トークンを受理できるが、単一枝では途中の1トークンが対象モデル予測と違った時点で、その後ろの候補をすべて捨てる。このため候補列を長くしても、実際に受理できる有効復号長（Effective Decoding Length; EDL）は伸びにくい。
-
-- **2024-07 · [Mixture of A Million Experts：百万専門家を扱うPEER層](2024-2407.04153-mixture-of-a-million-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  通常のトランスフォーマーのフィードフォワード層は幅を増やすと計算量と活性値メモリも線形に増える。疎な混合専門家モデルは総パラメータと一トークン当たり計算を分離できるが、従来はルータ計算、専門家配置、学習安定性の制約から専門家数を数十から数千程度に抑えることが多かった。
 
 - **2024-10 · [Minions: Accelerating Large Language Model Inference with Aggregated Speculative Execution](2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -1099,11 +1099,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：191  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：192  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：137  
+  実装：✓ ・ リポジトリ内被引用：138  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -1111,7 +1111,7 @@
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：109  
+  実装：✓ ・ リポジトリ内被引用：110  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -1147,7 +1147,7 @@
   短い系列で学習したLLMが学習長を越えると崩れる原因を理論・実験で分解し、局所注意と距離制約を組み合わせる学習不要方式で2K/4K学習モデルを最大200Mトークンへ拡張する。元モデル比でデコード2.7倍高速、メモリ7.5倍削減を報告する。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：22  
   位置補間（Position Interpolation; PI）は位置番号を訓練範囲へ圧縮してこの問題を緩和するが、すべてのRoPE周波数を同じ比率で縮めるため、短距離の局所位置関係まで必要以上に変形する。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -1215,12 +1215,16 @@
   正規表現のFSM状態ごとに「次に許されるLLM語彙」を事前索引化し、毎トークンの全語彙走査を平均O(1)参照へ置き換え、さらにLALR(1)構文解析へ拡張して構造化出力を高速化する。
 
 - **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
-  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：4  
   交差注意の全encoderキーをk近傍探索索引へ退避し、各decoderヘッドが上位kだけ取得することで既存encoder-decoderモデルを500kトークン入力まで拡張する。
 
 - **2023-09 · [Pruning Large Language Models via Accuracy Predictor](2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   枝刈り構成と精度の対応を非ニューラル予測器で学び、探索空間を段階的に絞って手設計より良いLLM圧縮構成を自動選択する。
+
+- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
+  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：2  
+  自己整合性（自己整合性）は、同じ問題へ複数の推論経路を生成し、最終回答の多数決で精度を上げる。しかし従来は簡単な問題にも難しい問題にも同じ本数を生成するため、すでに回答がほぼ確定した問題へ余分なLLM呼び出しを続ける。適応的-Consistencyは生成途中の回答一致度を観測し、十分な確信に達した問題だけ早期停止する。
 
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1230,22 +1234,18 @@
   実装：✓ ・ リポジトリ内被引用：1  
   本論文はTransformer/LLMの注意計算を量子アルゴリズムで高速化できる条件を理論的に調べる。
 
-- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
-  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：1  
-  自己整合性（自己整合性）は、同じ問題へ複数の推論経路を生成し、最終回答の多数決で精度を上げる。しかし従来は簡単な問題にも難しい問題にも同じ本数を生成するため、すでに回答がほぼ確定した問題へ余分なLLM呼び出しを続ける。適応的-Consistencyは生成途中の回答一致度を観測し、十分な確信に達した問題だけ早期停止する。
-
 - **2023-02 · [With Shared Microexponents, A Little Shifting Goes a Long Way](2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
+  実装：✓ ・ リポジトリ内被引用：1  
   本研究はこの設計空間をブロックデータ表現（Block Data Representation; BDR）として整理し、その中から共有microexponent（MX）形式を提案する。
 
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：249  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：250  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：73  
+  実装：✓ ・ リポジトリ内被引用：74  
   モデル規模、疎性、遅延・処理量目標、GPU台数、メモリ階層が異なるため、一つの演算カーネルだけではTransformer推論全体を最適化できない。DeepSpeed Inferenceは、GPU内実行では演算融合と通信を意識したモデル並列、GPU容量を超える場合はCPU/NVMeから必要な重みを流す異種メモリ推論を統合する。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
@@ -1257,7 +1257,7 @@
   注意行列を保存せず安定な逐次ソフトマックス集約とチャンク化で厳密な自己注意を計算し、16,384トークン推論時の注意メモリを59倍削減する。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   GLaM（Generalist Language モデル）は、密モデルの全パラメータを毎トークン実行する代わりに、混合専門家モデル（MoE）のルータで一部専門家だけを活性化することで、総モデル容量と実際の計算量を分離する。最大構成は1.2兆パラメータでGPT-3の約7倍の総パラメータを持つが、論文は推論FLOPsをGPT-3の約半分と報告する。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
@@ -1267,7 +1267,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   非構造枝刈りはパラメータ数を大きく減らせても、ゼロが不規則に散るため通常GPU カーネルでは速度へ変換しにくい。中心となるHybrid方式は、FFNでは完全な隠れ dimensionを、注意機構では32×32 ブロックを徐々に削る。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
@@ -1281,7 +1281,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：✓ ・ リポジトリ内被引用：39  
+  実装：✓ ・ リポジトリ内被引用：40  
   標準Transformerのself-注意機構は系列長Lに対してL×Lのスコア matrixを作るため、計算量・メモリがO(L²)で増える。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
@@ -1307,19 +1307,19 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：86  
+  実装：✓ ・ リポジトリ内被引用：87  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
-  実装：✓ ・ リポジトリ内被引用：13  
+  実装：✓ ・ リポジトリ内被引用：14  
   Transformerの多頭自己注意は同じ層に複数の注意ヘッドを置くが、全ヘッドが同じ程度に必要とは限らない。本論文はニューラル機械翻訳を対象に、各ヘッドが最終予測へどれだけ寄与するか、どのような言語的役割を持つか、そしてヘッド単位で削除しても品質を維持できるかを一つの実験系で調べる。
 
 - **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   LayerDropはTransformerの層全体を学習中に確率的に落とす構造化dropoutである。通常のdropoutが要素単位の正則化なのに対し、LayerDropは「ある層が存在しない」経路を学習中から経験させる。その結果、学習後に層を間引いてもモデルが破綻しにくく、1個の大モデルから推論時の計算予算に応じた複数深度を取り出せる。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   本論文は、多頭注意（multi-head 注意機構）の全ヘッドが推論時にも必要なのかを実験的に検証し、かなりの割合が冗長であることを示す。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
@@ -1347,6 +1347,6 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：122  
+  実装：✓ ・ リポジトリ内被引用：123  
   各入力に対して全専門家を実行せず、学習可能なゲートが上位少数だけを選択することで、総容量を大きくしながら一例あたりの計算を限定する。論文は最大1370億パラメータのモデルを構築し、現代のGPUクラスタ上で計算効率の低下を小さく抑えつつ、従来より1000倍超のモデル容量を扱えると報告する。
 <!-- survey:auto:end -->

@@ -233,7 +233,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 7年前（2019-11〜2020-10）
 
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
-  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：9  
   モデルが大きくても、特に小バッチや自己回帰復号ではカーネル起動とGPUメモリ往復が相対的に大きくなり、理論FLOPsほどGPUを使い切れない。中心機構は三つある。標準機械翻訳ベンチマークではTensorFlow実装に対して最大14倍、同時期のCUDA専用FasterTransformerに対して最大1.4倍の高速化を報告する。
 
 ### 8年前（2018-11〜2019-10）

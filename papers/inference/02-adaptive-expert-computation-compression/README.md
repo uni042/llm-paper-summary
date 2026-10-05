@@ -403,7 +403,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   共有入力上の専門家知識類似度で冗長専門家をグループ化し、専門家とルータを同時統合することで、タスク非依存にMoEのメモリと推論時間を削減する。
 
 - **2024-06 · [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   AdaMoEは計算しないnull専門家をTop-k候補に加え、簡単なトークンほどnullを選ばせて実FFN数を減らし、トークンごとの計算量を適応させる。
 
 - **2024-09 · [STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning](2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md)**  
@@ -425,32 +425,32 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   翻訳時ゲート統計で言語別に重要な専門家を選び、NLLB-200の専門家を最大80%枝刈りして単一32GB GPU推論を可能にする方式。
 
 - **2023-03 · [Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers](2023-2303.01610-smoe-dropout-self-slimmable.md)**  
-  実装：[✓](https://github.com/VITA-Group/Random-MoE-as-Dropout) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/VITA-Group/Random-MoE-as-Dropout) ・ リポジトリ内被引用：9  
   固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。
 
 - **2023-06 · [Soft Merging of Experts with Adaptive Routing](2023-2306.03745-smear-soft-merging-adaptive-routing.md)**  
-  実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：8  
   経路選択確率でエキスパート重みを入力ごとに合成して離散選択を消し、標準的な誤差逆伝播のまま適応的な専門化と単一エキスパート相当の活性計算を両立する。
 
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：71  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-06 · [Task-Specific Expert Pruning for Sparse Mixture-of-Experts](2022-2206.00277-task-specific-expert-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
+  実装：✓ ・ リポジトリ内被引用：41  
   下流タスク微調整中のゲート寄与から専門家を段階的に1つまで削り、混合専門家事前学習の利得をほぼ保った密モデルへ変換する方式。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：37  
+  実装：✓ ・ リポジトリ内被引用：38  
   専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。
 
 - **2022-05 · [MoEfication: Transformer Feed-forward Layers are Mixtures of Experts](2021-2110.01786-moefication.md)**  
-  実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/thunlp/MoEfication) ・ リポジトリ内被引用：19  
   密なTransformerのフィードフォワード層を共活性化するニューロン単位で専門家化し、入力ごとに一部だけを実行する疎推論方式。
 
 - **2022-01 · [One Student Knows All Experts Know: From Sparse to Dense](2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   事前学習済みMoEの専門家FFNを上位K抽出またはSVDで単一の密モデルへ統合し、MoE教師による蒸留で補正するOneSを提案。NLPでMoE利得88.2%を保持し、TPU v3-8上でWideNet比3.7倍の推論高速化を示す。
 <!-- survey:auto:end -->

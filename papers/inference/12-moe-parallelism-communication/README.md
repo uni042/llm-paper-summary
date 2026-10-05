@@ -170,7 +170,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture-of-Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   前層表現をルーティング専門家、現層表現を共有専門家へ分けて全対全通信と計算を並行化し、MoE推論の通信待ちを隠す。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
@@ -186,7 +186,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
-  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：10  
   しかし実際の専門家負荷はゲートの選択、top-k、capacity factor、入力分布によって変動し、論文では同一学習中でも必要専門家 capacityが最大4.38倍変化する。Tutelの中心であるFlexは、MoEパラメータと入力の配置を複数の並列方式で共有できる形へ統一し、テンソル移動なしで並列方式を切り替える。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
