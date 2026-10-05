@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-07-part-08-21cfe6e760d5",
+  "reference_main_sha": "235401c8887c00559105d5905d77ce1c6e45b5c3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14399",
+      "identity_tokens": [
+        "arXiv:2609.14399"
+      ],
+      "title": "MOSCOPT: Mixture-of-Skills Collective Optimization for LLM Agents",
+      "reason": "Natural language prompts and skills serve as the strategic backbone of LLM-based agents. Recent advances in prompt and skill optimization have achieved notable gains, yet all existing methods optimize a \\emph{single} text template---missing the synergy among multiple complementary strategies. We propose MOSCOPT, a text-native, parameter-free algorithm that jointly optimizes a pool of $N$ skills and a gating skill $G$ that dynamically selects $K$ skills per step. To effectively optimize the skills, we build the EditAdam with internally maintained dual states. Through the three-phase interleaved updates with EditAdam, the system monotonically improves without gradient or parameter tuning. Extensive experiments and detailed ablations across 5 benchmarks and 3 target LLMs demonstrate that MOSCOPT consistently outperforms all baselines, and confirm that both the mixture-of-skills architecture with selective activation and the collective evolution with three-phase interleaving are essential to its superior performance. Code is released https://github.com/zhangzhenyu13/SummerClaw/tree/master/summerclaw/agent_trainer/algorithms/moscopt.",
+      "source_url": "https://arxiv.org/abs/2609.14399",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14413",
+      "identity_tokens": [
+        "arXiv:2609.14413"
+      ],
+      "title": "A Hybrid Dependency-Aware Framework for Task Decomposition and Dynamic Agent Generation in Oracle-to-PostgreSQL Migration",
+      "reason": "Large language model (LLM)-based database migration is often treated as direct code transformation, although enterprise Oracle systems contain heterogeneous SQL and PL/SQL artifacts with different dependencies, execution order, complexity, and validation needs. This paper proposes a hybrid dependency-aware framework that identifies migration tasks, builds a cross-file dependency graph, condenses cyclic dependencies, and uses task specifications to generate specialized migration agents at runtime. The deterministic path combines ANTLR-based parsing with typed dependency extraction, while an LLM fallback is invoked only for units that cannot be parsed reliably. On a corpus of 116 Oracle files, the pipeline produced 1,037 units with zero coverage gaps and 1,271 AST-derived dependencies. The fallback processed 165 parse-error units, recovered 496 additional validated dependencies, eliminated unresolved-dependency units, and increased resolved internal edges from 446 to 527. The graph contained four dependency-respecting phases, while cycle handling was validated separately using Tarjan SCC condensation. A complementary experiment on 1,006 PL/SQL files regenerated 623 scripts (~62%), of which 380 (~61%) executed successfully in PostgreSQL 16. Tables achieved about 85% regeneration success, whereas no query regenerations succeeded under the evaluated specification-mediated baseline, and procedural objects remained strongly dependent on schema context. These results motivate dependency-aware context delivery, task-specific validation, and differentiated agent routing. The paper also formalizes task-to-agent mapping, introduces monitoring and diagnostics for execution feedback, and defines a controlled comparison of monolithic, static-decomposition, dependency-aware, and dynamically orchestrated migration strategies.",
+      "source_url": "https://arxiv.org/abs/2609.14413",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14715",
+      "identity_tokens": [
+        "arXiv:2609.14715"
+      ],
+      "title": "Depth and Scale in the Sub-150M Regime: JugnuLM-53M vs JugnuLM-110M",
+      "reason": "We scale our conventional sub-150M pretraining recipe from 53.5M to 109.7M parameters, holding the method fixed (Qwen3-style decoder with grouped-query attention, RoPE, SwiGLU, RMSNorm, QK-Norm, and a z-loss; FineWeb-Edu data) and changing only the geometry to a deep-and-thin 23-layer x 576-hidden design. The larger model improves across the board -- BLiMP 78.1 ->81.3, ARC-Easy 51.4 ->52.5, WikiText-2 byte-perplexity 2.04 ->1.95 -- and its 81.3% BLiMP essentially matches GPT-X2-125M (81.28) at about 12% fewer parameters. Notably the 110M model achieves this on fewer training tokens (about 8B vs 12B), so the gain is attributable to capacity and depth, not more data. Both models are deliberately conventional; this report is a clean scaling control and the baseline rung (R0) of an ablation study of what further improves models in this regime. An ablation ladder follows: value residuals (R1) and the Muon optimizer (R2) lift ARC-Easy by a cumulative +3.6 (52.5 ->56.1) at a near-flat BLiMP and are kept; a diverse data blend (R3) and two logit-distillation settings (R4a/R4b) are not kept -- honest negatives. R3 pins ARC-Easy to FineWeb-Edu's educational filtering rather than raw diversity; distillation from a 1.7B teacher can reach the class-leading ARC-Easy (56.99, matching GPT-X2-125M) but only at a perplexity cost that dialing KD down then erases -- so R2 remains the best kept stack.",
+      "source_url": "https://arxiv.org/abs/2609.14715",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14739",
+      "identity_tokens": [
+        "arXiv:2609.14739"
+      ],
+      "title": "Building Legal Reward Models for Grounding and Abstention",
+      "reason": "Large language models are increasingly used in high-stakes domains such as law, where systems must ground their reasoning in retrieved evidence and abstain when that evidence is insufficient. However, existing reward models are largely optimised for general preferences rather than contextual grounding, limiting their ability to evaluate these behaviours in retrieval-augmented generation (RAG) settings. We introduce a framework for transforming existing legal QA datasets into contextual preference data and use it to construct LegalRewardBench (LRB), a benchmark for evaluating grounded legal generation under noisy and insufficient retrieval conditions. Across general and legal contextual evaluation, we find that contextual DPO improves grounded evaluation, but performance is sensitive to preference-data construction. Length-balanced augmentation substantially improves grounded legal evaluation, with the strongest configuration combining length-balanced legal and general contextual preference data and improving performance by up to $\\mathbf{+25.6}$pp over baseline. We further find evidence of cross-jurisdiction transfer: models contextually refined primarily on Victorian criminal-law data improve grounded evaluation on external US legal benchmarks, including a $\\mathbf{+16.2}$pp improvement on \\textsc{Housing Statute QA}. Together, these results provide a reproducible foundation for constructing and evaluating grounded legal reward models in retrieval-augmented settings.",
+      "source_url": "https://arxiv.org/abs/2609.14739",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.14803",
+      "identity_tokens": [
+        "arXiv:2609.14803"
+      ],
+      "title": "Another Blueprint In The Wall: How to Ask Frontier AI Like a Kid?",
+      "reason": "This paper reports experiments across six frontier model types from OpenAI, Anthropic, xAI, and Google DeepMind. Ten independent sessions per model type used the same three stage prompt sequence, progressing from architectural preference to a full ASCII backbone. Under the school audience framing, responses repeatedly converged on a shared architectural pattern built around persistent latent state, adaptive computation, memory, specialist routing, verification, stopping control, and delayed decoding. Most runs remained close to this common structure, while a small number developed markedly greater engineering specificity. The audience framing appears to be an important condition of this effect. In additional control runs that removed the school framing while retaining the architectural request, responses became substantially more heterogeneous and failed to reproduce the same stable motif convergence. One observation is particularly striking. GPT-5.6 Sol produced an unusually elaborate successor architecture whose organization closely overlaps with the architecture independently sketched by GPT-6 Astra. Because the prompts explicitly ask each model to imagine an architectural future, this resemblance raises a testable question: whether the overlap reflects exposure to related architectural concepts, a shared learned design prior, or independent convergence toward similar computational principles. The paper uses the term epistemic jailbreak for the accompanying loss of discipline in technical provenance as requested specificity increases. The experiments establish a repeatable behavioral pattern and do not authenticate proprietary implementation claims. What we leave to the community is a harder question: are these models independently imagining the same architectural future, or do such motifs somehow propagate between model families?",
+      "source_url": "https://arxiv.org/abs/2609.14803",
+      "first_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "last_checked_at": "2026-10-05T05:30:40.150208+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
