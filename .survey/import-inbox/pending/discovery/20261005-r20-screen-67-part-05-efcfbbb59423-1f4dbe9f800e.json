@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-67-part-05-efcfbbb59423",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.04992",
+      "identity_tokens": [
+        "arXiv:2503.04992"
+      ],
+      "title": "Wanda++: Pruning Large Language Models via Regional Gradients",
+      "reason": "Inference acceleration is the stated motivation, but the primary body does not show practical serving acceleration; keep borderline pending runtime evidence.",
+      "source_url": "https://arxiv.org/abs/2503.04992",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.00909",
+      "identity_tokens": [
+        "arXiv:2305.00909"
+      ],
+      "title": "Outline, Then Details: Syntactically Guided Coarse-To-Fine Code Generation",
+      "reason": "Syntactic code-generation approach focuses on generation quality/structure.",
+      "source_url": "https://arxiv.org/abs/2305.00909",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15178",
+      "identity_tokens": [
+        "arXiv:2605.15178"
+      ],
+      "title": "SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer",
+      "reason": "Video diffusion world model acceleration, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2605.15178",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.13812",
+      "identity_tokens": [
+        "arXiv:2507.13812"
+      ],
+      "title": "SkySense V2: A Unified Foundation Model for Multi-Modal Remote Sensing",
+      "reason": "Remote-sensing foundation model training/parameter utilization, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2507.13812",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09724",
+      "identity_tokens": [
+        "arXiv:2504.09724"
+      ],
+      "title": "A Survey on Efficient Vision‐Language Models",
+      "reason": "This survey is relevant to adjacent VLM efficiency but has weak scope transfer to the project’s LLM-serving focus.",
+      "source_url": "https://arxiv.org/abs/2504.09724",
+      "first_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "last_checked_at": "2026-10-05T10:54:05.664787+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ]
+    }
+  ]
+}
