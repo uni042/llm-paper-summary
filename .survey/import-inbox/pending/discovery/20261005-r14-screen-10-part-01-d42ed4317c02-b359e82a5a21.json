@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r14-screen-10-part-01-d42ed4317c02",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.20639",
+      "identity_tokens": [
+        "arXiv:2506.20639"
+      ],
+      "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation",
+      "reason": "本文は主にRL学習の推定分散・性能改善で、推論step削減の品質差は扱うが、推論効率指標の測定が足りない。LLM推論との関連はあるためborderlineへ回す。",
+      "source_url": "https://arxiv.org/abs/2506.20639",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.01710",
+      "identity_tokens": [
+        "arXiv:2503.01710"
+      ],
+      "title": "Spark-TTS: An Efficient LLM-Based Text-to-Speech Model with Single-Stream Decoupled Speech Tokens",
+      "reason": "LLMを使う音声生成の関連研究だが、確認した本文評価は主に音声品質で推論速度・効率の実測がなく、TTS固有のcodec設計から一般servingへの移転根拠が不足する。",
+      "source_url": "https://arxiv.org/abs/2503.01710",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2339530.2339677",
+      "identity_tokens": [
+        "DOI:10.1145/2339530.2339677"
+      ],
+      "title": "Maximum inner-product search using cone trees",
+      "reason": "一般的なmaximum-inner-product vector searchであり、LLM推論/servingやRAG retrievalに適用した評価が本文にない。周辺領域としてborderline_listへ回す。",
+      "source_url": "https://arxiv.org/abs/1202.6101",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.03429",
+      "identity_tokens": [
+        "arXiv:1901.03429"
+      ],
+      "title": "On the Turing Completeness of Modern Neural Network Architectures",
+      "reason": "一次要旨はTransformer/Neural GPUの計算理論的Turing completenessを証明する研究で、LLM推論効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1901.03429",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p17-1106",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p17-1106"
+      ],
+      "title": "Visualizing and Understanding Neural Machine Translation",
+      "reason": "ACL一次要旨はNMT内部状態の解釈・誤訳分析の可視化手法で、推論効率やservingを扱わない。",
+      "source_url": "https://doi.org/10.18653/v1/P17-1106",
+      "first_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "last_checked_at": "2026-10-05T01:16:32.890515+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    }
+  ]
+}
