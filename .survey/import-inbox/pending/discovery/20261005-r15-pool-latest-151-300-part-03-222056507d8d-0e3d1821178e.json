@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-151-300-part-03-222056507d8d",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jssc.2018.2865489",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2018.2865489"
+      ],
+      "title": "UNPU: An Energy-Efficient Deep Neural Network Accelerator With Fully Variable Weight Bit Precision",
+      "reason": "Mobile CNN/DNN accelerator demonstrated on VGG-16, no language model.",
+      "source_url": "https://pure.kaist.ac.kr/en/publications/unpu-an-energy-efficient-deep-neural-network-accelerator-with-ful/",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/mm.2020.2985963",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2020.2985963"
+      ],
+      "title": "MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings",
+      "reason": "DNN mapping/cost-model and hardware design tool, not LLM serving.",
+      "source_url": "https://research.nvidia.com/publication/2020-04_maestro-data-centric-approach-understand-reuse-performance-and-hardware-cost",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3373376.3378514",
+      "identity_tokens": [
+        "DOI:10.1145/3373376.3378514"
+      ],
+      "title": "Interstellar: Using Halide's Scheduling Language to Analyze DNN Accelerators",
+      "reason": "DNN accelerator mapping analysis, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/1809.04070",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3352460.3358284",
+      "identity_tokens": [
+        "DOI:10.1145/3352460.3358284"
+      ],
+      "title": "TensorDIMM: A Practical Near-Memory Processing Architecture for Embeddings and Tensor Operations in Deep Learning",
+      "reason": "Near-memory embeddings/tensor operations, not language-model inference.",
+      "source_url": "https://www.csl.cornell.edu/~zhiruz/pdfs/matraptor-micro2020.pdf",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.05639-tokenstack-heterogeneous-hbm-pim-runtime.md",
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/micro50266.2020.00068",
+      "identity_tokens": [
+        "DOI:10.1109/micro50266.2020.00068"
+      ],
+      "title": "MatRaptor: A Sparse-Sparse Matrix Multiplication Accelerator Based on Row-Wise Product",
+      "reason": "Sparse matrix accelerator for graph/scientific/data workloads.",
+      "source_url": "https://www.csl.cornell.edu/~zhiruz/pdfs/matraptor-micro2020.pdf",
+      "first_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "last_checked_at": "2026-10-05T01:48:14.418338+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.05632-systematic-study-multicore-npu-llm-serving.md"
+      ]
+    }
+  ]
+}
