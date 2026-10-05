@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a04462a2bfb655a6-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11793",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11793",
+    "identity_tokens": [
+      "arXiv:2608.11793"
+    ],
+    "reason": "CAD plan parsing is a fundamental task in Building Information Modeling (BIM), aiming to automatically extract architectural elements including walls, doors, windows, and furniture from 2D engineering drawings. Existing Transformer-based methods capture global semantic dependencies via self-attention, yet they infer spatial relationships merely from semantic features without explicitly characterizing the intrinsic geometric symmetry of building layouts. Such methods tend to produce mismatched correspondences in long-range matching and complex symmetric spatial layouts. To tackle this limitation, we propose PolarSym, a polar-coordinate geometry-aware attention framework for CAD plan parsing. The framework decouples geometric relationships of buildings into two complementary components, direction and distance, which are modeled independently. Structural consistency is strengthened by directional constraints, while long-range symmetric correspondences are built with distance constraints. A dynamic gating mechanism is adopted to synergistically fuse the two geometric information branches while maintaining the vanilla Transformer architecture. This design boosts geometric modeling capacity with negligible extra computation. Experiments on a public CAD plan parsing dataset show that PolarSym surpasses the reproduced SymPoint V2 baseline by 1.73% PQ, 1.54% RQ and 4.31% mIoU under identical training settings. PolarSym also converges faster and yields more stable optimization. Ablation experiments verify the complementary effects of direction and distance modeling. Our results reveal that PolarSym improves the geometric awareness of Transformers at low computational cost, offering an effective geometric modeling paradigm for CAD plan parsing.",
+    "first_checked_at": "2026-10-05T08:37:56+00:00",
+    "last_checked_at": "2026-10-05T08:37:56+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "PolarSym: Polar Geometry-aware Attention for CAD Floorplan Parsing"
+  },
+  "processed_at": "2026-10-05T08:37:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a04462a2bfb6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

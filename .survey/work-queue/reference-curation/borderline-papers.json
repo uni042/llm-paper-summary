@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:35:28+00:00",
-  "record_count": 1204,
+  "updated_at": "2026-10-05T08:37:56+00:00",
+  "record_count": 1207,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18464,6 +18464,48 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "When Local Variance Optimality Is Not Enough: RoPE-Aligned Q/K Rotations for Dynamic 4-Bit Quantisation"
+    },
+    "arXiv:2608.12599": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.12599",
+      "identity_tokens": [
+        "arXiv:2608.12599"
+      ],
+      "reason": "Weak fit/evidence: Ahead-of-time constraint compilation reduces relapse against matched-budget verifier-retry; additional adaptive repair adds no detectable gain. Delivery costs 1.49× tokens and closed-loop probing about 15× per task without amortization.",
+      "first_checked_at": "2026-10-05T08:37:54+00:00",
+      "last_checked_at": "2026-10-05T08:37:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues"
+    },
+    "arXiv:2608.11775": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11775",
+      "identity_tokens": [
+        "arXiv:2608.11775"
+      ],
+      "reason": "Directly studies inference-time context compression, but evaluates information retention and quality rather than compute/memory efficiency; scope connection is weak.",
+      "first_checked_at": "2026-10-05T08:37:55+00:00",
+      "last_checked_at": "2026-10-05T08:37:55+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "The Sleeping Agent: What Gist-Based Context Compression Loses and Why"
+    },
+    "arXiv:2608.11786": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11786",
+      "identity_tokens": [
+        "arXiv:2608.11786"
+      ],
+      "reason": "This restores quality after LLM quantization, but does not contribute a serving-efficiency method or measure realized runtime/memory savings; scope fit is weak.",
+      "first_checked_at": "2026-10-05T08:37:56+00:00",
+      "last_checked_at": "2026-10-05T08:37:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Language-Conditional Dequantization: Recovering What Quantization Steals from Non-English Languages"
     }
   }
 }
