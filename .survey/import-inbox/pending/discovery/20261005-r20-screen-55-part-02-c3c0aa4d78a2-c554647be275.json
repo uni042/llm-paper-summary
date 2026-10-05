@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-55-part-02-c3c0aa4d78a2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28835",
+      "identity_tokens": [
+        "arXiv:2606.28835"
+      ],
+      "title": "Fisher-Routed Mixture of Experts for Federated Class-Incremental Learning",
+      "reason": "Primary abstract reviewed: Federated Learning (FL) emerged as a promising distributed machine learning paradigm. However, extending FL to the class incremental learning scenarios introduces unique challenges: 1) Capacity conflict and catastrophic forgetting from the shared model overloading, 2) Heterogeneity from Non-Independent and Identically Distributed (Non-IID) data, and 3) Synchronized class misalignment. In this paper, we propose \\textb… Out of scope: Federated continual-learning training/convergence, not inference.",
+      "source_url": "https://arxiv.org/abs/2606.28835",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28962",
+      "identity_tokens": [
+        "arXiv:2606.28962"
+      ],
+      "title": "FlipGuard: Defending Large Language Models Against Quantization-Conditioned Backdoor Attacks",
+      "reason": "Primary abstract reviewed: Model quantization is essential for the efficient deployment of Large Language Models (LLMs), but introduces a critical vulnerability: Quantization-Conditioned Backdoor (QCB) attacks. In these attacks, malicious behaviors remain dormant in full-precision models and activate only after specific quantization distortions, bypassing standard security audits. To mitigate this, we introduce FlipGuard, a proactive defense f… Out of scope: Quantization backdoor security defense, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.28962",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.16836-llm-fp4-4-bit-floating-point-quantized-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.29066",
+      "identity_tokens": [
+        "arXiv:2606.29066"
+      ],
+      "title": "$x$-Prediction Flow: Efficient Continuous Decoding for Masked Diffusion Language Models",
+      "reason": "The decoding-step reduction is relevant, but the reviewed evidence does not establish wall-clock inference/serving gains and the evaluation is limited to diffusion-step budgets.",
+      "source_url": "https://arxiv.org/abs/2606.29066",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.26.734178",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.26.734178"
+      ],
+      "title": "System Identification and Control for Optogenetics in Mammalian Nucleocytoplasmic Transport",
+      "reason": "Primary abstract reviewed: Optogenetics enables experiments in out-of-equilibrium conditions to clarify biological mechanisms and quantify biophysical parameters. However, modelling and control techniques to study mammalian cell biology under optogenetic perturbation remain underutilised. Here, we benchmark these methods within mammalian cells by steering nucleocytoplasmic transport via the optogenetic LEXY protein in outcome-driven microscopy… Out of scope: Biological optogenetic system-identification/control study.",
+      "source_url": "https://doi.org/10.64898/2026.06.26.734178",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27634",
+      "identity_tokens": [
+        "arXiv:2606.27634"
+      ],
+      "title": "Continual Learning for Sequential Personalization of Small Language Models: A Stability Monitoring Analysis",
+      "reason": "Primary abstract reviewed: Small Language Models (SLMs) are increasingly being considered for deployment on edge devices such as laptops, enabling private, low-latency, and locally personalized applications. However, personalization requires models to adapt over time to evolving user- or task-specific data, placing them in a continual learning setting. This creates the risk of catastrophic forgetting, where learning new information degrades pe… Out of scope: Sequential LoRA personalization and forgetting during adaptation, not inference.",
+      "source_url": "https://arxiv.org/abs/2606.27634",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ]
+    }
+  ]
+}
