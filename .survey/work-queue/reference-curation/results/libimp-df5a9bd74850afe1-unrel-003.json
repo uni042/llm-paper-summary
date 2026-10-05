@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-df5a9bd74850afe1-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.15281",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.15281",
+    "identity_tokens": [
+      "arXiv:2508.15281"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.15281. Primary abstract concerns multimodal semantic-ID tokenization for recommendation tasks, outside LLM inference/serving efficiency.",
+    "first_checked_at": "2026-10-05T14:37:33+00:00",
+    "last_checked_at": "2026-10-05T14:37:33+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+    ],
+    "title": "MMQ: Multimodal Mixture-of-Quantization Tokenization for Semantic ID Generation and User Behavioral Adaptation"
+  },
+  "processed_at": "2026-10-05T14:37:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-df5a9bd74850",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

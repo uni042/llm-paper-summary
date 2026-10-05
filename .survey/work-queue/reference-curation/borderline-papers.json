@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:34:49+00:00",
-  "record_count": 1869,
+  "updated_at": "2026-10-05T14:37:32+00:00",
+  "record_count": 1878,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -28865,6 +28865,152 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Balancing precision and efficiency: an approximate multiplier with built-in error compensation for error-resilient applications"
+    },
+    "arXiv:2501.16007": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.16007",
+      "identity_tokens": [
+        "arXiv:2501.16007"
+      ],
+      "reason": "The contribution is verifiable inference/trust, and the measured efficiency reduction concerns proof-storage overhead rather than LLM inference execution.",
+      "first_checked_at": "2026-10-05T14:37:28+00:00",
+      "last_checked_at": "2026-10-05T14:37:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TOPLOC: A Locality Sensitive Hashing Scheme for Trustless Verifiable Inference"
+    },
+    "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86",
+      "identity_tokens": [
+        "SemanticScholar:8e8582198850220ffeeb65ca1049f6ac1419aa86"
+      ],
+      "reason": "Packet contains no primary abstract. The Semantic Scholar record page supplied no abstract/full text in this screen; relevance of GPU multi-NIC communication to LLM serving cannot be inferred from title alone.",
+      "first_checked_at": "2026-10-05T14:37:28+00:00",
+      "last_checked_at": "2026-10-05T14:37:28+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink"
+    },
+    "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae",
+      "identity_tokens": [
+        "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae"
+      ],
+      "reason": "Packet contains no primary abstract. The Semantic Scholar record supplied no primary source text in this screen; title alone does not establish whether this distillation work improves inference efficiency.",
+      "first_checked_at": "2026-10-05T14:37:28+00:00",
+      "last_checked_at": "2026-10-05T14:37:28+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving Language Model Distillation through Hidden State Matching"
+    },
+    "arXiv:2405.15039": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.15039",
+      "identity_tokens": [
+        "arXiv:2405.15039"
+      ],
+      "reason": "The measured acceleration is real but narrowly limited to BERT/ALBERT encoder classification; transfer to generative LLM inference is uncertain.",
+      "first_checked_at": "2026-10-05T14:37:28+00:00",
+      "last_checked_at": "2026-10-05T14:37:28+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CEEBERT: Cross-Domain Inference in Early Exit BERT"
+    },
+    "DOI:10.1109/dipca70202.2026.11565905": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dipca70202.2026.11565905",
+      "identity_tokens": [
+        "DOI:10.1109/dipca70202.2026.11565905"
+      ],
+      "reason": "The primary abstract indicates an LLM-on-Arm inference optimization, but the primary full text was unavailable, so the system/evaluation and practical limits cannot be verified.",
+      "first_checked_at": "2026-10-05T14:37:29+00:00",
+      "last_checked_at": "2026-10-05T14:37:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Roofline-Guided Mixed Quantization and Kernel Co-Optimization for Efficient Large Language Model Inference on Arm CPUs"
+    },
+    "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546",
+      "identity_tokens": [
+        "SemanticScholar:67b578b4838d884172dd3afcdcd0f5291a3e3546"
+      ],
+      "reason": "Packet abstract is empty and its title field is only a generic proceedings sentence. The exact primary work/identity could not be established from the supplied source URL, so its scope is unverified.",
+      "first_checked_at": "2026-10-05T14:37:30+00:00",
+      "last_checked_at": "2026-10-05T14:37:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "This paper is included in the Proceedings of the 2022 USENIX Annual Technical Conference."
+    },
+    "arXiv:2405.03146": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03146",
+      "identity_tokens": [
+        "arXiv:2405.03146"
+      ],
+      "reason": "The study supports quantization capability decisions, but does not provide a new inference-efficiency method or direct runtime measurements.",
+      "first_checked_at": "2026-10-05T14:37:30+00:00",
+      "last_checked_at": "2026-10-05T14:37:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantifying the Capabilities of LLMs across Scale and Precision"
+    },
+    "DOI:10.18653/v1/2023.emnlp-main.892": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.892",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.emnlp-main.892"
+      ],
+      "reason": "It is an LLM post-training quantization method, but the reviewed evidence is quality/perplexity rather than measured serving-efficiency; practical speed gains are not established in this paper.",
+      "first_checked_at": "2026-10-05T14:37:31+00:00",
+      "last_checked_at": "2026-10-05T14:37:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Frustratingly Easy Post-Training Quantization Scheme for LLMs"
+    },
+    "arXiv:2508.14896": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14896",
+      "identity_tokens": [
+        "arXiv:2508.14896"
+      ],
+      "reason": "It is a useful dLLM quantization quality study, but the reviewed body does not establish practical inference-efficiency gains or runtime.",
+      "first_checked_at": "2026-10-05T14:37:32+00:00",
+      "last_checked_at": "2026-10-05T14:37:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs"
     }
   }
 }

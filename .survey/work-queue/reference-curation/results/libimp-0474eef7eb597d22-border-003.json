@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0474eef7eb597d22-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae",
+    "identity_tokens": [
+      "SemanticScholar:b49ec6b01dc7f3b27566469043e409b95d9411ae"
+    ],
+    "reason": "Packet contains no primary abstract. The Semantic Scholar record supplied no primary source text in this screen; title alone does not establish whether this distillation work improves inference efficiency.",
+    "first_checked_at": "2026-10-05T14:37:28+00:00",
+    "last_checked_at": "2026-10-05T14:37:28+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Improving Language Model Distillation through Hidden State Matching"
+  },
+  "processed_at": "2026-10-05T14:37:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0474eef7eb59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

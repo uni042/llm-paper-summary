@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0474eef7eb597d22-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.15039",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.15039",
+    "identity_tokens": [
+      "arXiv:2405.15039"
+    ],
+    "reason": "The measured acceleration is real but narrowly limited to BERT/ALBERT encoder classification; transfer to generative LLM inference is uncertain.",
+    "first_checked_at": "2026-10-05T14:37:28+00:00",
+    "last_checked_at": "2026-10-05T14:37:28+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md",
+      "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "CEEBERT: Cross-Domain Inference in Early Exit BERT"
+  },
+  "processed_at": "2026-10-05T14:37:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0474eef7eb59",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

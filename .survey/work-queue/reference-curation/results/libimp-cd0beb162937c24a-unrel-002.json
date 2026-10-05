@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd0beb162937c24a-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.19870",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.19870",
+    "identity_tokens": [
+      "arXiv:2508.19870"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.19870. Primary abstract is a survey of zero-trust security for multi-LLM edge agents, not an evaluated inference-efficiency method.",
+    "first_checked_at": "2026-10-05T14:37:32+00:00",
+    "last_checked_at": "2026-10-05T14:37:32+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md"
+    ],
+    "title": "Secure Multi-LLM Agentic AI and Agentification for Edge General Intelligence by Zero-Trust: A Survey"
+  },
+  "processed_at": "2026-10-05T14:37:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd0beb162937",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

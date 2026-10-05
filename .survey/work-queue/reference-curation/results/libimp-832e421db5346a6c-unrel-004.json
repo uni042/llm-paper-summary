@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-832e421db5346a6c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.07365",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.07365",
+    "identity_tokens": [
+      "arXiv:2502.07365"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2502.07365. Primary abstract proposes distillation/pretraining to preserve short-text quality in long-context LLMs; the work is training-focused.",
+    "first_checked_at": "2026-10-05T14:37:30+00:00",
+    "last_checked_at": "2026-10-05T14:37:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md"
+    ],
+    "title": "LongReD: Mitigating Short-Text Degradation of Long-Context Large Language Models via Restoration Distillation"
+  },
+  "processed_at": "2026-10-05T14:37:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-832e421db534",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
