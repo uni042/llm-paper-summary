@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-2330-scheduled-chat-30/r02",
+  "reference_main_sha": "7774b07391cf69ae484fa5a931eb53c2426266c3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.14680",
+      "identity_tokens": [
+        "arXiv:2203.14680"
+      ],
+      "title": "Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space",
+      "reason": "Transformer FFN各層の更新を語彙空間へ投影して、概念・予測形成を分析するinterpretability研究。FFNを削減・配置・高速化する推論system方式を提案せず、最終適用先は内部表現の理解であるため対象外。",
+      "source_url": "https://arxiv.org/abs/2203.14680",
+      "body_check": "abstract_screen_only: 一次arXiv要旨・書誌からFFN更新のvocabulary-space projectionとprediction interpretationが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-06T00:02:00+09:00",
+      "last_checked_at": "2026-10-06T00:02:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
