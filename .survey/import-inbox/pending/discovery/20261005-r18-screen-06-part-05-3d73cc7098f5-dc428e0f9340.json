@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-06-part-05-3d73cc7098f5",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38274",
+      "identity_tokens": [
+        "arXiv:2609.38274"
+      ],
+      "title": "Which Models Work Well Together? Measuring Heterogeneity for LLM Team Selection",
+      "reason": "This paper selects heterogeneous LLM teams for answer quality/complementarity; its efficiency claim is team selection rather than inference-system optimization.",
+      "source_url": "https://arxiv.org/abs/2609.38274",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38275",
+      "identity_tokens": [
+        "arXiv:2609.38275"
+      ],
+      "title": "When Correct Memory Goes Wrong: Fuzzing Persistent Memory Use in LLM Agents",
+      "reason": "U-Fuzz evaluates persistent-memory failure discovery in LLM agents; its objective is testing/security coverage, not efficient inference.",
+      "source_url": "https://arxiv.org/abs/2609.38275",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38353",
+      "identity_tokens": [
+        "arXiv:2609.38353"
+      ],
+      "title": "TAGGRAPH: Tag-Augmented Graphs for Graph Retrieval of Agent Persistent Histories",
+      "reason": "TAGGRAPH compares retrieval strategies for agent histories; it is a retrieval benchmark/evaluation without an inference-cost optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2609.38353",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38368",
+      "identity_tokens": [
+        "arXiv:2609.38368"
+      ],
+      "title": "Composition, Not Conversation: VLMs Lose the Scene, Not the Thread",
+      "reason": "Layered-VQA studies VLM scene composition and grounding behavior; it evaluates capability, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38368",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38374",
+      "identity_tokens": [
+        "arXiv:2609.38374"
+      ],
+      "title": "Doc2LoRA Provides Decodable Representations of Scientific Ideas",
+      "reason": "Doc2LoRA represents scientific ideas for search and generation; the abstract does not present an LLM inference/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2609.38374",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    }
+  ]
+}
