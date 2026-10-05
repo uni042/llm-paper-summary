@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-17-part-05-c86867e4e0b0",
+  "reference_main_sha": "12c975f71aeffbfd167fcd58a4a45525168e4488",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30352",
+      "identity_tokens": [
+        "arXiv:2609.30352"
+      ],
+      "title": "Strategic Self-Consistency",
+      "reason": "Self-consistency has become a popular technique for enhancing the reasoning abilities of large language models by generating multiple reasoning paths and selecting the final answer through a majority vote. However, because model providers typically charge users in proportion to the number of reasoning paths generated, they have a financial incentive to artificially increase the path count. In this work, we show that an unfaithful provider can exploit this incentive using a simple, efficient algorithm while avoiding",
+      "source_url": "https://arxiv.org/abs/2609.30352",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30379",
+      "identity_tokens": [
+        "arXiv:2609.30379"
+      ],
+      "title": "DanLing NestedTensor: Composable Multi-Ragged Tensors for Deep Learning",
+      "reason": "Variable-size inputs are common in deep learning, but dense batching allocates a shared envelope and spends computation on padding. The cost multiplies across varying axes: an explicit pair state allocates $BN_{\\max}^2$ positions instead of $\\sum_i N_i^2$. Packing removes that waste, but composing packed operations still requires the logical axes and sample boundaries a flat buffer no longer exposes. We present DanLing NestedTensor, a PyTorch tensor abstraction that makes multi-ragged structure a property of the te",
+      "source_url": "https://arxiv.org/abs/2609.30379",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30454",
+      "identity_tokens": [
+        "arXiv:2609.30454"
+      ],
+      "title": "Auditing System-1 Models on Biosecurity-Relevant Benchmarks: Calibration, Selective Prediction, and Permutation Instability in a Non-Generative Model",
+      "reason": "Non-generative\"System-1\"models return structured probabilistic decisions in a single forward pass, without autoregressive decoding, at a small fraction of the inference cost of a generative model. This makes them of interest as inexpensive components in larger pipelines, but their reliability on biosecurity-relevant tasks has not been systematically examined. We audit one commercial System-1 model on 6,020 multiple-choice items drawn from the Weapons of Mass Destruction Proxy (WMDP), a paraphrase-robust WMDP-Bio va",
+      "source_url": "https://arxiv.org/abs/2609.30454",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30569",
+      "identity_tokens": [
+        "arXiv:2609.30569"
+      ],
+      "title": "Atelier: Learning Local Self-Supervised Features for CryoEM Volumes via Hypernetworks",
+      "reason": "CryoEM map interpretation requires features that are spatially localized, consistent across samples, and informative across spatial scales. Most deep learning methods for map annotation extract features from fixed voxel grids. However, implicit neural representations (INRs) are able to model volumetric data as scale-agnostic, coordinate-conditioned functions. INRs are therefore attractive for cryoEM, but fitting a separate INR for each map is too expensive for large-scale feature extraction and produces representat",
+      "source_url": "https://arxiv.org/abs/2609.30569",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30572",
+      "identity_tokens": [
+        "arXiv:2609.30572"
+      ],
+      "title": "Entropy Regularization: A Free Correction to Cross-Entropy for Verified Demonstrations",
+      "reason": "Large language models are often post-trained on expert demonstrations using cross-entropy (CE), even when the downstream objective is not to imitate the demonstrated solution but to produce any output accepted by a verifier. This mismatch is seen in verifiable domains with multiple correct solutions, such as mathematical reasoning and code generation, where training data may contain only one expert solution per problem. We show that minimizing cross-entropy can be misaligned with minimizing verifier risk; two polic",
+      "source_url": "https://arxiv.org/abs/2609.30572",
+      "first_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "last_checked_at": "2026-10-05T04:55:11.437145+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
