@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d943b86a0932254c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3704435",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3704435",
+    "identity_tokens": [
+      "DOI:10.1145/3704435",
+      "DOI:10.48550/arxiv.2304.08354",
+      "arXiv:2304.08354"
+    ],
+    "reason": "foundation modelによるtool useのtaxonomy、training、evaluation、open problemを体系化するsurveyで、agent capabilityが主題。推論runtime・tool-call scheduling・serving効率化の新方式ではない。",
+    "first_checked_at": "2026-10-03T15:16:50+00:00",
+    "last_checked_at": "2026-10-05T16:07:15+00:00",
+    "linked_from": [
+      ".survey/work-queue/worker-worklist-00.json"
+    ],
+    "title": "Tool Learning with Foundation Models"
+  },
+  "processed_at": "2026-10-05T16:07:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d943b86a0932",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

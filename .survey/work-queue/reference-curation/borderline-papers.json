@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:03:30+00:00",
+  "updated_at": "2026-10-05T16:07:16+00:00",
   "record_count": 2050,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -9448,35 +9448,6 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2604.07472-fast-heterogeneous-serving-allocation.md"
       ],
       "title": "Making AI Less 'Thirsty'"
-    },
-    "DOI:10.1145/3123939.3123977": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3123939.3123977",
-      "identity_tokens": [
-        "DOI:10.1145/3123939.3123977"
-      ],
-      "reason": "一次資料の要旨/本文を直接確認できなかった。タイトル以外の内容を推定しない。",
-      "first_checked_at": "2026-10-05T02:14:49+00:00",
-      "last_checked_at": "2026-10-05T02:14:49+00:00",
-      "linked_from": [
-        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md",
-        "papers/inference/17-pim-near-data-acceleration/2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md"
-      ],
-      "title": "DRISA: A DRAM-based Reconfigurable In-Situ Accelerator"
-    },
-    "DOI:10.1109/mse.2007.44": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1109/mse.2007.44",
-      "identity_tokens": [
-        "DOI:10.1109/mse.2007.44"
-      ],
-      "reason": "一次資料の要旨/本文を直接確認できなかった。タイトル以外の内容を推定しない。",
-      "first_checked_at": "2026-10-05T02:14:50+00:00",
-      "last_checked_at": "2026-10-05T02:14:50+00:00",
-      "linked_from": [
-        "papers/inference/01-offload-hierarchical-memory/2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md"
-      ],
-      "title": "FreePDK: An Open-Source Variation-Aware Design Kit"
     },
     "arXiv:1905.05702": {
       "classification": "borderline",
@@ -31510,9 +31481,9 @@
       "identity_tokens": [
         "DOI:10.1109/tcad.2004.839485"
       ],
-      "reason": "off-chip access時間とon-chip computation時間の比を使って細粒度DVFSを制御し、energy/performance trade-offを調整するarchitecture研究。LLM推論のpower-aware GPU/NPU制御に機構的に関連するが、LLM/Transformer専用ではないためborderline。",
+      "reason": "off-chip access時間とon-chip computation時間の比に基づいて細粒度DVFSを制御しenergy/performance trade-offを最適化するarchitecture研究。推論energy最適化へ応用可能だがLLM/Transformer推論を対象としないためborderline。",
       "first_checked_at": "2026-10-05T15:43:20+00:00",
-      "last_checked_at": "2026-10-05T15:43:20+00:00",
+      "last_checked_at": "2026-10-05T16:07:16+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Fine-grained dynamic voltage and frequency scaling for precise energy and performance trade-off based on the ratio of off-chip access to on-chip computation times"
@@ -31725,6 +31696,32 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Benchmarking, Analysis, and Optimization of Serverless Function Snapshots"
+    },
+    "arXiv:1903.04611": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1903.04611",
+      "identity_tokens": [
+        "arXiv:1903.04611"
+      ],
+      "reason": "PCIe、NVLink、NVSwitch、GPUDirect等を複数GPU/HPC platformで実測し、topology・routing由来のNUMA効果と通信性能を分析する。分散LLM推論の通信設計に直接有用だが、論文自体は汎用multi-GPU/HPC評価でLLM推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:07:16+00:00",
+      "last_checked_at": "2026-10-05T16:07:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating Modern GPU Interconnect: PCIe, NVLink, NV-SLI, NVSwitch and GPUDirect"
+    },
+    "DOI:10.1145/3085572": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3085572",
+      "identity_tokens": [
+        "DOI:10.1145/3085572"
+      ],
+      "reason": "HBM/NVM等を含むoff-chip memory interconnectのpower/performanceをmodel化し、channel topologyの再設計で性能・電力を改善するmemory-system研究。LLM階層メモリ設計に強く関連するがLLM推論専用評価がないためborderline。",
+      "first_checked_at": "2026-10-05T16:07:16+00:00",
+      "last_checked_at": "2026-10-05T16:07:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CACTI 7: New Tools for Interconnect Exploration in Innovative Off-Chip Memories"
     }
   }
 }
