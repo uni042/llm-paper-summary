@@ -1,0 +1,160 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-2100-scheduled-chat-00/r02",
+  "reference_main_sha": "9f12f4919285e53d8a6a9ae49bbf75ddf7e52220",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.10668",
+      "identity_tokens": [
+        "arXiv:2309.10668"
+      ],
+      "title": "Language Modeling Is Compression",
+      "reason": "言語モデルとlossless compressionの理論的等価性を分析し、Chinchilla等を汎用compressorとして評価する研究。推論runtime・memory hierarchy・serving最適化を提案するsystem研究ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2309.10668",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でprediction-compression equivalence、compression rate、scaling/tokenization/ICL分析が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.03466",
+      "identity_tokens": [
+        "arXiv:2203.03466"
+      ],
+      "title": "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer",
+      "reason": "μPで小型model上の最適hyperparameterを大規模modelへzero-shot transferし、大規模pretrainingのtuning costを削減する研究。主要目的はtraining hyperparameter tuningで、推論system効率化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2203.03466",
+      "body_check": "abstract_screen_only: 一次論文要旨でμTransfer、pretraining hyperparameter transfer、BERT/GPT-3 tuning cost削減が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 69
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.05566",
+      "identity_tokens": [
+        "arXiv:1903.05566"
+      ],
+      "title": "Benchmarking Natural Language Understanding Services for building Conversational Agents",
+      "reason": "Dialogflow、LUIS、Rasa、Watson等のNLU serviceをintent/entity recognition精度で比較するbenchmark研究。LLM推論runtime・memory・serving効率化を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/1903.05566",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でNLU serviceのintent/entity accuracy比較と25K utterance datasetが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02957",
+      "identity_tokens": [
+        "arXiv:2405.02957"
+      ],
+      "title": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents",
+      "reason": "LLM-powered患者・看護師・医師agentによる病院simulacrumを構築し、doctor agentのevolutionとMedQA性能を評価する医療agent能力研究。agent serving runtime・scheduler・memory効率化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2405.02957",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でhospital simulation、agent evolution、medical task performanceが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 71
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.14160",
+      "identity_tokens": [
+        "arXiv:2305.14160"
+      ],
+      "title": "Label Words are Anchors: An Information Flow Perspective for Understanding In-Context Learning",
+      "reason": "ICLのlabel wordをinformation anchorとして解析し、demonstration compressionでinferenceを高速化する応用を示す。推論入力圧縮には直接関係するが、主貢献はICL内部機構の解釈で、system-level latency/throughput最適化が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2305.14160",
+      "body_check": "full_text_relevance_review: 一次arXiv論文情報でlabel-word information flow、anchor re-weighting、demonstration compressionによるinference accelerationを確認。主目的がICL mechanism analysisのためborderline。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 72
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.04062",
+      "identity_tokens": [
+        "arXiv:2302.04062"
+      ],
+      "title": "Machine Learning for Synthetic Data Generation: a Review",
+      "reason": "機械学習によるsynthetic data generationを用途・生成model・privacy・fairnessの観点で整理するreview。LLM推論runtime・memory・serving最適化の新規方式を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2302.04062",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でsynthetic data generationのsystematic reviewが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 73
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16666",
+      "identity_tokens": [
+        "arXiv:2603.16666"
+      ],
+      "title": "Fast-WAM: Do World Action Models Need Test-time Future Imagination?",
+      "reason": "World Action Modelでtest-time future video generationを省略し190 ms、既存方式比4倍超高速化するが、最終適用先はembodied robot controlでLLM/Transformer推論systemではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2603.16666",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でWAM、robotic control、future imagination省略、LIBERO/RoboTwin評価が主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 74
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3415478.3415530",
+      "identity_tokens": [
+        "DOI:10.14778/3415478.3415530"
+      ],
+      "title": "PyTorch distributed",
+      "reason": "PyTorch Distributed Data Parallelのgradient bucketing、compute/communication overlap、gradient synchronization省略によりdistributed trainingを高速化するtraining system。主要評価は256 GPUまでのdata-parallel training scalabilityで、推論system範囲外のためunrelated。",
+      "source_url": "https://arxiv.org/abs/2006.15704",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でdistributed data-parallel training、gradient communication optimization、256-GPU scalabilityが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/jiot.2024.3524255",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2024.3524255"
+      ],
+      "title": "EdgeShard: Efficient LLM Inference via Collaborative Edge Computing",
+      "reason": "LLMをshardへ分割し、heterogeneous edge deviceとcloudへ協調配置する。device selectionとmodel partitionを動的計画法でjoint optimizationし、Llama2実機testbedで最大50% latency削減・2倍throughputを報告しており、distributed edge LLM inferenceを直接扱うためaccept。",
+      "source_url": "https://doi.org/10.1109/JIOT.2024.3524255",
+      "body_check": "full_text_relevance_review: IEEE一次本文情報でcollaborative edge LLM inference、adaptive device selection/model partition、dynamic programming、Llama2 real-world testbed、最大50% latency reduction・2x throughputを確認。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 76
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07521",
+      "identity_tokens": [
+        "arXiv:2310.07521"
+      ],
+      "title": "Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity",
+      "reason": "LLM factualityの原因、評価、改善、standalone/RAG構成を体系化するsurvey。信頼性・知識処理が主題で、推論runtime・memory・serving効率化の新規system方式を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2310.07521",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でLLM factualityのsurveyが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T21:36:00+09:00",
+      "last_checked_at": "2026-10-05T21:36:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 77
+    }
+  ]
+}
