@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-39-part-01-d98c0a9b093a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27497",
+      "identity_tokens": [
+        "arXiv:2607.27497"
+      ],
+      "title": "SkillSmith: Learning to Compose Parametric Skills and Textual Knowledge",
+      "reason": "要旨はpast experienceからprefix weightsを合成するagent skill adaptationが主題で、推論serving効率の成果ではない。",
+      "source_url": "https://arxiv.org/abs/2607.27497",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27523",
+      "identity_tokens": [
+        "arXiv:2607.27523"
+      ],
+      "title": "Hierarchical Reranking for Scalable Financial RAG System",
+      "reason": "要旨はfinancial RAGのreranking精度・factual consistency評価が中心で、LLM serving/inference効率改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2607.27523",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20269",
+      "identity_tokens": [
+        "arXiv:2609.20269"
+      ],
+      "title": "Placement Is Free, Composition Is Not: The Latin Square as a Provably-Balanced Construction for Heterogeneous Sequence-Mixer Stacks",
+      "reason": "要旨はsequence-mixer構成のtraining/evaluation loss差を調べる研究で、inference-time efficiencyの方法・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2609.20269",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.20278",
+      "identity_tokens": [
+        "arXiv:2609.20278"
+      ],
+      "title": "Labeled Incidence Structures for Native Transformer Modeling of Text, Knowledge Graphs, and Hypergraphs",
+      "reason": "要旨はTransformer positional/structural addressingの表現力診断で、servingやinference efficiencyを評価していない。",
+      "source_url": "https://arxiv.org/abs/2609.20278",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.202514899",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202514899"
+      ],
+      "title": "Deep Contrastive Learning for High‐Throughput Prediction of Drug Resistance Mutations from Sequences",
+      "reason": "要旨の対象はdrug resistance mutation predictionと生物医学分類精度であり、LLM inferenceではない。",
+      "source_url": "https://doi.org/10.1002/advs.202514899",
+      "first_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "last_checked_at": "2026-10-05T07:27:59.875812+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ]
+    }
+  ]
+}
