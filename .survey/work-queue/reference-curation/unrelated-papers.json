@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:58:50+00:00",
-  "record_count": 3065,
+  "updated_at": "2026-10-05T06:01:09+00:00",
+  "record_count": 3084,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -44648,6 +44648,272 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "Learnable Classifier-Free Guidance Null Embeddings for Enhanced Controllable Speech Synthesis"
+    },
+    "arXiv:2607.27267": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.27267",
+      "identity_tokens": [
+        "arXiv:2607.27267"
+      ],
+      "reason": "Large language model (LLM) agents autonomously interleave semantic reasoning with complex system operations. In these dynamic environments, static tool-level permissions are fundamentally insufficient; safe authorization is highly context-dependent and heavily reliant on evolving runtime states and data flows. We present FAVA (Formal Authorization for Verified Agents), a permission-carrying authorization framework for agent execution. FAVA utilizes an LLM-guided Permission In",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+      ],
+      "title": "FAVA: Formal Authorization for Verified Agents with Evidence-Backed Permission Graphs"
+    },
+    "arXiv:2609.05198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05198",
+      "identity_tokens": [
+        "arXiv:2609.05198"
+      ],
+      "reason": "On-Policy Distillation (OPD) has emerged as a widely adopted post-training paradigm for enhancing large language models in reasoning domains. However, the data-centric mechanisms in OPD remain relatively underexplored. This paper presents an empirical study of data efficiency and data selection in OPD. We begin by investigating an extreme setting: training OPD on only one example, namely 1-shot OPD. Surprisingly, we find that 1-shot OPD is consistently effective across all sa",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "What Matters in On-Policy Distillation? A Perspective on Data Efficiency and Data Selection"
+    },
+    "arXiv:2608.23283": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.23283",
+      "identity_tokens": [
+        "arXiv:2608.23283"
+      ],
+      "reason": "General-purpose language models can reason and synthesize knowledge, but complex work also requires sustained interaction with files, information sources, and executable code, together with state maintenance, failure recovery, and verifiable delivery. We call this \\emph{working capability}: sustained, verifiable progress toward a real-world objective. Apodex 1.1 develops this capability along two complementary dimensions. \\emph{Environment Scaling} expands the diversity and v",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work"
+    },
+    "arXiv:2608.11612": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11612",
+      "identity_tokens": [
+        "arXiv:2608.11612"
+      ],
+      "reason": "The Muon optimizer incurs a significant overhead cost due to its cubic-time Newton-Schulz orthogonalization step. When weights are sharded, communication overhead compounds this computational cost, eroding the benefits of Muon in many settings. We present Dion3, a revision of Muon that targets this overhead at every level of the stack. Our Gram Newton-Schulz algorithm reduces the FLOP cost of orthogonalization, our CuteDSL kernels accelerate it by exploiting symmetry, and our",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Dion3: Full-Stack Orthogonal Updates"
+    },
+    "arXiv:2608.12679": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12679",
+      "identity_tokens": [
+        "arXiv:2608.12679"
+      ],
+      "reason": "Large Language Models (LLMs) are increasingly deployed in discovery domains such as math and science. The usual approach is to present the problem to the model and use its answer as the proposed solution. However, beyond this best guess, discovery can be enhanced by increasing test-time compute. In a process called pass@k, the model is allowed to explore the solution space and generate diverse candidate solutions. Unfortunately, the standard approach to post-training LLMs thr",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Beyond the Best Guess: Improving LLM Solution Coverage with Evolution Strategies"
+    },
+    "arXiv:2607.25565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.25565",
+      "identity_tokens": [
+        "arXiv:2607.25565"
+      ],
+      "reason": "Recovering an editable design file from a raster image is a common and costly bottleneck in modern design workflows, yet remains challenging since editability depends on recovering multi-modal attributes, such as typography, vector geometry, colors, grouping, and layer ordering. We present ReDesign, an agentic framework that grows an editable layer hierarchy by selecting and composing specialized tools across modalities. To keep this long decision process reliable despite imp",
+      "first_checked_at": "2026-10-05T06:01:08+00:00",
+      "last_checked_at": "2026-10-05T06:01:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ],
+      "title": "ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition"
+    },
+    "arXiv:2607.03691": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03691",
+      "identity_tokens": [
+        "arXiv:2607.03691"
+      ],
+      "reason": "Coding agents, autonomous systems that use large language models (LLMs) to resolve software engineering tasks, rely on agent harness: a middleware layer in between a developer and a large language model that orchestrates system prompts, tool execution, context management, and iterative reasoning loops. While these agent harnesses evolve at extreme velocities, no study has examined how this evolution affects agent quality (i.e., effectiveness and efficiency) over time. Practit",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+      ],
+      "title": "Don't Blame the Large Language Model: How Agent Harness Evolution Shapes Coding Agent Quality"
+    },
+    "arXiv:2609.37377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37377",
+      "identity_tokens": [
+        "arXiv:2609.37377"
+      ],
+      "reason": "On-policy distillation (OPD) trains students using teacher feedback on their own sampled responses, yet how prompt choice shapes transfer across teacher-student pairs remains poorly understood. We systematically study prompt quantity, source, and selection across RL- and SFT-continuation pairs and cross-model settings. We find that OPD can be highly prompt-efficient: a few prompts can approach large-pool performance, with four DAPO prompts matching the observed mathematics sc",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Beyond Prompt Count: How Data Shapes Transfer in On-Policy Distillation"
+    },
+    "arXiv:2609.19553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19553",
+      "identity_tokens": [
+        "arXiv:2609.19553"
+      ],
+      "reason": "Model fusion integrates the capabilities from source models into a single target model. As of June 2026, Hugging Face hosts more than 2M models. This growing pool provides a rich base for model reuse and capability integration. Yet existing surveys often cover only separate parts of this space, and they do not provide a unified definition or a systematic taxonomy. This survey defines model fusion and organizes prior work into three levels: parameter-level, representation-leve",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "From Parameters to Behaviors: A Survey of Model Fusion for Large Language Models"
+    },
+    "arXiv:2608.06352": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06352",
+      "identity_tokens": [
+        "arXiv:2608.06352"
+      ],
+      "reason": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets d",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks"
+    },
+    "arXiv:2609.08798": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.08798",
+      "identity_tokens": [
+        "arXiv:2609.08798"
+      ],
+      "reason": "Weak-to-strong generalization asks whether stronger models can learn from weaker supervisors and surpass them. This question is particularly important for successive model generations and multi-domain consolidation, where repeating frontier-scale post-training from scratch can be prohibitively expensive. Yet conventional distillation treats the weak teacher as an optimization target, potentially imposing its capacity ceiling on the student. We introduce On-Policy Reverse Dist",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Eliciting Weak-to-Strong Generalization with On-Policy Reverse Distillation"
+    },
+    "arXiv:2609.05295": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05295",
+      "identity_tokens": [
+        "arXiv:2609.05295"
+      ],
+      "reason": "On-policy distillation (OPD) provides dense, per-token supervision for language model post-training, but its effectiveness is bottlenecked by teacher quality: external teachers suffer from distribution mismatch, while self-distillation with privileged conditioning is limited by in-context learning capacity. We propose \\textbf{RISE} (\\textbf{R}ecursive \\textbf{I}mprovement via \\textbf{S}elf-\\textbf{E}xtrapolating Policy Distillation), which constructs a synthetic teacher direc",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "RISE: Recursive Improvement via Self-Extrapolating Policy Distillation"
+    },
+    "arXiv:2608.19741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19741",
+      "identity_tokens": [
+        "arXiv:2608.19741"
+      ],
+      "reason": "Recent agent benchmarks increasingly ground evaluation in executable environments, from code repair to web navigation, app APIs, and function calling. Yet completing consequential work beyond code requires more than producing a plausible response or valid tool call: agents must gather missing information over multiple turns, follow domain policies, coordinate dependent tools, and realize the correct persistent state transition without collateral effects. In this paper, we int",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows"
+    },
+    "arXiv:2608.18524": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18524",
+      "identity_tokens": [
+        "arXiv:2608.18524"
+      ],
+      "reason": "Equipping Large Language Models (LLMs) with multi-turn tool-calling capabilities is essential for building autonomous agents. However, progress is fundamentally limited by the reliance on full-length trajectory imitation. For tasks involving multiple order-independent sub-goals, the optimal solution space forms a vast combinatorial diamond lattice. Forcing this rich topology into monolithic trajectories causes a severe topological collapse, indiscriminately penalizing valid a",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "DART-SD: Diamond-topology Aware Retrieval and Tuning for Self-Distillation of Multi-Turn Tool-Calling Agents"
+    },
+    "arXiv:2608.09096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09096",
+      "identity_tokens": [
+        "arXiv:2608.09096"
+      ],
+      "reason": "Large Language Models (LLMs) have driven rapid progress in autonomous agents, yet standard evaluations remain confined to static task solving. An emerging frontier is harness evolution---the agent's capacity to autonomously optimize its own operating harness. However, systematically benchmarking this capability remains challenging, as existing evaluations fail to isolate harness improvements from base model strength, prevent task-specific overfitting, or capture long-horizon",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?"
+    },
+    "arXiv:2608.09802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09802",
+      "identity_tokens": [
+        "arXiv:2608.09802"
+      ],
+      "reason": "As AI coding agents take on increasingly complex, long-horizon software engineering tasks, existing benchmarks are rapidly saturating and their evaluation quality has come under serious scrutiny: a recent audit found that nearly 60% of unsolved SWE-bench Verified instances contain flawed tests -- either overly narrow tests that reject correct solutions or overly broad tests that check unstated requirements -- and that frontier models can verbatim reproduce gold patches from t",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring"
+    },
+    "arXiv:2608.18271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18271",
+      "identity_tokens": [
+        "arXiv:2608.18271"
+      ],
+      "reason": "On-policy self-distillation (OPSD) trains a student on its own responses using token-level supervision from the same model conditioned on privileged reference information. We investigate whether performance gains from OPSD show that the student learned the information in the reference or instead reflect recovery of reasoning behavior already present in the base model. We perform OPSD experiments on science and mathematics datasets using Qwen3 models ranging from 1.7B to 8B. O",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Rethinking Privileged Information in On-Policy Self-Distillation"
+    },
+    "arXiv:2608.14277": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14277",
+      "identity_tokens": [
+        "arXiv:2608.14277"
+      ],
+      "reason": "On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, response length explosion, and training instability. In this work, we study this setting by transferring proof-reasoning capabilities from the long-context reasoning model SU-01 to sh",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning"
+    },
+    "arXiv:2608.09836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09836",
+      "identity_tokens": [
+        "arXiv:2608.09836"
+      ],
+      "reason": "On-policy distillation (OPD) has emerged as a core component of modern LLM post-training pipelines, yet we reveal a failure mode: degenerate agreement, where students exploit repetitive loops to achieve near-perfect token agreement with the teacher despite globally flawed responses. We therefore shift our focus from agreement to teacher-student mismatch, and find that mismatch tokens can be mainly categorized into two types: student-excess tokens and student-deficit tokens. S",
+      "first_checked_at": "2026-10-05T06:01:09+00:00",
+      "last_checked_at": "2026-10-05T06:01:09+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Mismatch Matters: On-Policy Distillation Beyond Token Agreement"
     }
   }
 }

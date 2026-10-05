@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1deb7b2769cd4943-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.12679",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.12679",
+    "identity_tokens": [
+      "arXiv:2608.12679"
+    ],
+    "reason": "Large Language Models (LLMs) are increasingly deployed in discovery domains such as math and science. The usual approach is to present the problem to the model and use its answer as the proposed solution. However, beyond this best guess, discovery can be enhanced by increasing test-time compute. In a process called pass@k, the model is allowed to explore the solution space and generate diverse candidate solutions. Unfortunately, the standard approach to post-training LLMs thr",
+    "first_checked_at": "2026-10-05T06:01:08+00:00",
+    "last_checked_at": "2026-10-05T06:01:08+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+    ],
+    "title": "Beyond the Best Guess: Improving LLM Solution Coverage with Evolution Strategies"
+  },
+  "processed_at": "2026-10-05T06:01:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1deb7b2769cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

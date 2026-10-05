@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1deb7b2769cd4943-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.03691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.03691",
+    "identity_tokens": [
+      "arXiv:2607.03691"
+    ],
+    "reason": "Coding agents, autonomous systems that use large language models (LLMs) to resolve software engineering tasks, rely on agent harness: a middleware layer in between a developer and a large language model that orchestrates system prompts, tool execution, context management, and iterative reasoning loops. While these agent harnesses evolve at extreme velocities, no study has examined how this evolution affects agent quality (i.e., effectiveness and efficiency) over time. Practit",
+    "first_checked_at": "2026-10-05T06:01:09+00:00",
+    "last_checked_at": "2026-10-05T06:01:09+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2602.02443-expert-sample-test-time-scaling.md"
+    ],
+    "title": "Don't Blame the Large Language Model: How Agent Harness Evolution Shapes Coding Agent Quality"
+  },
+  "processed_at": "2026-10-05T06:01:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1deb7b2769cd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
