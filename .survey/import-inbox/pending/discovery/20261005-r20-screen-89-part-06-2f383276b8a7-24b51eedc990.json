@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-89-part-06-2f383276b8a7",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.15787",
+      "identity_tokens": [
+        "arXiv:2506.15787"
+      ],
+      "title": "SLR: Automated Synthesis for Scalable Logical Reasoning",
+      "reason": "SLR automates synthesis and curriculum training for logical reasoning; its cited inference-time compute is an evaluation burden, not a contribution to inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2506.15787",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12281",
+      "identity_tokens": [
+        "arXiv:2505.12281"
+      ],
+      "title": "Bishop: Sparsified Bundling Spiking Transformers on Heterogeneous Cores with Error-constrained Pruning",
+      "reason": "Bishop is a spiking-transformer accelerator for spiking neural networks and reports SNN hardware results; it does not evaluate LLM inference.",
+      "source_url": "https://arxiv.org/abs/2505.12281",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.12637",
+      "identity_tokens": [
+        "arXiv:2504.12637"
+      ],
+      "title": "Scaling Instruction-tuned LLMs to Million-token Contexts via Hierarchical Synthetic Data Generation",
+      "reason": "The work proposes hierarchical synthetic data generation and RoPE scaling for long-context instruction tuning; its efficiency contribution is training-time data generation/context extension.",
+      "source_url": "https://arxiv.org/abs/2504.12637",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18821",
+      "identity_tokens": [
+        "arXiv:2502.18821"
+      ],
+      "title": "CAMEx: Curvature-aware Merging of Experts",
+      "reason": "CAMEx addresses expert merging during pretraining/fine-tuning and optimization trajectories; the abstract does not establish inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2502.18821",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18277",
+      "identity_tokens": [
+        "arXiv:2502.18277"
+      ],
+      "title": "Self-Adjust Softmax",
+      "reason": "Self-Adjust Softmax is motivated by gradient vanishing and evaluates model task performance; the abstract does not claim inference acceleration, compression or serving savings.",
+      "source_url": "https://arxiv.org/abs/2502.18277",
+      "first_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "last_checked_at": "2026-10-05T12:24:18.191402+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ]
+    }
+  ]
+}
