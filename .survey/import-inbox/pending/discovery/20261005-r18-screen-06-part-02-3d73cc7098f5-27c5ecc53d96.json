@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-06-part-02-3d73cc7098f5",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37887",
+      "identity_tokens": [
+        "arXiv:2609.37887"
+      ],
+      "title": "Behavioral Capacity Certificates for Quantized Language Models",
+      "reason": "The primary contribution is a statistical complexity/certification framework; it does not establish serving latency or throughput improvements. Some independent-probe transfer bounds do not meet the stated 1% criterion.",
+      "source_url": "https://arxiv.org/abs/2609.37887",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37930",
+      "identity_tokens": [
+        "arXiv:2609.37930"
+      ],
+      "title": "Learning What to Remember: Long-horizon Counterfactual Memory Optimization",
+      "reason": "The evaluation is document-level information extraction and does not measure LLM prefill latency, throughput, or serving memory. Shorter agent memory may reduce downstream context cost, but that inference benefit is not established here.",
+      "source_url": "https://arxiv.org/abs/2609.37930",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38008",
+      "identity_tokens": [
+        "arXiv:2609.38008"
+      ],
+      "title": "HybridCUA: Learning to Orchestrate GUI and CLI for Computer-Use Agents",
+      "reason": "HybridCUA studies GUI/CLI orchestration for computer-use agents; its contribution is agent task orchestration rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.38008",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38018",
+      "identity_tokens": [
+        "arXiv:2609.38018"
+      ],
+      "title": "Prompts Live on an Arc: Gaussian Curricula in Fisher--Rao Coordinates for Rollout-Efficient GRPO",
+      "reason": "ARCUS reduces GRPO training rollouts; the efficiency target is model-training data/rollouts, outside inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.38018",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38072",
+      "identity_tokens": [
+        "arXiv:2609.38072"
+      ],
+      "title": "RS-OPSD: Reliable Privileged On-Policy-Self-Distillation for Ultra-High-Resolution Remote Sensing VQA",
+      "reason": "RS-OPSD distills remote-sensing VQA capability into a vision model; its target is remote-sensing application and training, not general LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2609.38072",
+      "first_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "last_checked_at": "2026-10-05T04:13:12.051669+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
