@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-54-part-03-3b5fc280f42f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3808189",
+      "identity_tokens": [
+        "DOI:10.1145/3808189"
+      ],
+      "title": "SmartDispatch: Dynamic Substitution of NumPy-Style APIs on Heterogeneous CPU-GPU Systems",
+      "reason": "Primary abstract reviewed: The popularity of Python in various application domains has driven widespread adoption of NumPy-style APIs. To improve performance, libraries such as PyTorch, JAX, CuPy, and cuPyNumeric offer GPU-compatible counterparts to NumPy functions. However, substituting NumPy with these alternatives is not always beneficial due to the overheads of type conversion, data transfer, and kernel launch costs. We present SmartDispatch, a runtime framework that dynamically substitutes NumPy-s [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.1145/3808189",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.33407/itlt.v113i3.6614",
+      "identity_tokens": [
+        "DOI:10.33407/itlt.v113i3.6614"
+      ],
+      "title": "AI CHATBOTS IN RESEARCH PRACTICE: POSSIBILITIES FOR SEARCHING AND ANALYSING SCIENTIFIC SOURCES",
+      "reason": "Primary abstract reviewed: In modern research practice, AI chatbots are gaining recognition as effective digital assistants that facilitate the search and analysis of scientific literature. In this context, the article presents a comprehensive analysis of the features of using AI chatbots in research practice, particularly for searching and analysing scientific sources. The research methodology is based on a mixed approach that combines a desk review of scientific sources with a comparative assessment  [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.33407/itlt.v113i3.6614",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/signals7040059",
+      "identity_tokens": [
+        "DOI:10.3390/signals7040059"
+      ],
+      "title": "Time Is of the Essence: A Comparative Study of Continuous (NCDE) and Discrete (LSTM) Time Models for User Anomaly Detection",
+      "reason": "Primary abstract reviewed: User Behaviour Analytics (UBA) relies heavily on sequential data to detect anomalies such as insider threats. Traditional approaches often model user behaviour as discrete sequences of events using Recurrent Neural Networks (RNNs) like Long Short-Term Memory (LSTM) networks. These methods implicitly treat time steps as uniform, ignoring the irregular time intervals inherent in user logs. In this paper, we present the first application of Neural Controlled Differential Equatio [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.3390/signals7040059",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.56211/sudo.v5i2.1777",
+      "identity_tokens": [
+        "DOI:10.56211/sudo.v5i2.1777"
+      ],
+      "title": "Pengembangan Sistem Generator MIDI Berbasis Web Menggunakan Arsitektur RWKV",
+      "reason": "一次本文で手法・評価・限界を検証できず、abstractのみでは適合性を確定できないためborderline。",
+      "source_url": "https://doi.org/10.56211/sudo.v5i2.1777",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7717/peerj-cs.3966",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.3966"
+      ],
+      "title": "A unified Big-O-based framework for comparative complexity analysis of CNN and Transformer architectures",
+      "reason": "Primary abstract reviewed: Convolutional neural networks (CNNs) and Transformer-based architectures are widely adopted across vision and sequence modeling tasks, yet their computational efficiency is often evaluated using empirical benchmarks without a unified theoretical framework. While metrics such as latency, floating-point operations (FLOPs), and memory usage provide practical insight, they do not explicitly characterize how computational costs scale with increasing input resolution or sequence le [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.7717/peerj-cs.3966",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
