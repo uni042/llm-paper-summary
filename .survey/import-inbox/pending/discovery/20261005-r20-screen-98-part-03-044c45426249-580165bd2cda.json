@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-98-part-03-044c45426249",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.19980",
+      "identity_tokens": [
+        "arXiv:2510.19980"
+      ],
+      "title": "Abstain Mask Retain Core: Time Series Prediction by Adaptive Masking Loss with Representation Consistency",
+      "reason": "一次要旨は時系列予測におけるadaptive masking lossとrepresentation consistencyを扱う。",
+      "source_url": "https://arxiv.org/abs/2510.19980",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21834",
+      "identity_tokens": [
+        "arXiv:2510.21834"
+      ],
+      "title": "Restoring Pruned Large Language Models via Lost Component Compensation",
+      "reason": "一次要旨はpruning後に失われた構成要素の補償で性能精度を回復する方法を扱っている。",
+      "source_url": "https://arxiv.org/abs/2510.21834",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.16743",
+      "identity_tokens": [
+        "arXiv:2510.16743"
+      ],
+      "title": "Zero-Shot Performance Prediction for Probabilistic Scaling Laws",
+      "reason": "一次要旨は学習curveとNLP probabilistic scaling lawsのzero-shot予測を扱う。",
+      "source_url": "https://arxiv.org/abs/2510.16743",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21788",
+      "identity_tokens": [
+        "arXiv:2510.21788"
+      ],
+      "title": "Online Mixture of Experts: No-Regret Learning for Optimal Collective Decision-Making",
+      "reason": "一次要旨は候補expertの出力をbandit学習で集約するonline decision frameworkを扱う。",
+      "source_url": "https://arxiv.org/abs/2510.21788",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.13870",
+      "identity_tokens": [
+        "arXiv:2510.13870"
+      ],
+      "title": "Unlocking the Potential of Diffusion Language Models through Template Infilling",
+      "reason": "The primary full text supports a potential reduction in denoising steps, but the efficiency benefit is indirect and is not shown as measured serving latency or a broadly applicable inference-cost reduction.",
+      "source_url": "https://arxiv.org/abs/2510.13870",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ]
+    }
+  ]
+}
