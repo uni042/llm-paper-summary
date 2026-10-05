@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-51-part-02-bf43659f40c3",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CSF68417.2026.00019",
+      "identity_tokens": [
+        "DOI:10.1109/CSF68417.2026.00019"
+      ],
+      "title": "CHIP: Efficient Homomorphic Encryption-Based CNN Batch Inference Using Channel-Interleaved Packing with Small Rotation Key Set",
+      "reason": "一次abstractはhomomorphic encryption下のCNN batch inference最適化であり、対象はCNNでLLMではない。",
+      "source_url": "https://doi.org/10.1109/CSF68417.2026.00019",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/DOCS70981.2026.11698563",
+      "identity_tokens": [
+        "DOI:10.1109/DOCS70981.2026.11698563"
+      ],
+      "title": "Evolving Jailbreak Templates via LLaDA-Based Mutation",
+      "reason": "一次abstractはdiffusion LLMを用いたjailbreak-template生成/攻撃成功率の研究で、モデル推論効率を改善しない。",
+      "source_url": "https://doi.org/10.1109/DOCS70981.2026.11698563",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ECNCT70535.2026.11661395",
+      "identity_tokens": [
+        "DOI:10.1109/ECNCT70535.2026.11661395"
+      ],
+      "title": "Biomedical Word Sense Disambiguation via Multi-Source Knowledge Fusion and Dynamic Enhancement",
+      "reason": "一次abstractはBERT/Reformerによるbiomedical word-sense disambiguationとtraining時hard-sample miningを扱い、LLM inference/serving対象ではない。",
+      "source_url": "https://doi.org/10.1109/ECNCT70535.2026.11661395",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ECNCT70535.2026.11661406",
+      "identity_tokens": [
+        "DOI:10.1109/ECNCT70535.2026.11661406"
+      ],
+      "title": "SGR-DSGS: A Stack Graph Representation and Dynamic Safe Grasp Scoring Framework for Intelligent Robotic Depalletizing of Tobacco Cartons Using Dual 3D Vision",
+      "reason": "一次abstractは3D visionを用いる倉庫robotic depalletizingであり、LLM推論効率とは無関係。",
+      "source_url": "https://doi.org/10.1109/ECNCT70535.2026.11661406",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/EDGE72783.2026.00030",
+      "identity_tokens": [
+        "DOI:10.1109/EDGE72783.2026.00030"
+      ],
+      "title": "Lang2Graph: Towards Leveraging Human Language for Indoor Topology Inference Using LLMs",
+      "reason": "一次abstractはLLMを用いたindoor topology taskの性能要因/graph inferenceを調べる応用研究で、推論時資源・serving最適化を扱わない。",
+      "source_url": "https://doi.org/10.1109/EDGE72783.2026.00030",
+      "first_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "last_checked_at": "2026-10-05T09:54:40.208539+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    }
+  ]
+}
