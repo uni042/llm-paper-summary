@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "I-BERT: Integer-only BERT Quantization",
+      "source_url": "https://arxiv.org/abs/2101.01321",
+      "year": 2021,
+      "published": "2021-01-05",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 487,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer based models, like BERT and RoBERTa, have achieved state-of-the-art results in many Natural Language Processing tasks. However, their memory footprint, inference latency, and power consumption are prohibitive efficient inference at the edge, and even at the data center. While quantization can be a viable solution for this, previous work on quantizing Transformer based models use floating-point arithmetic during inference, which cannot efficiently utilize integer-only logical units such as the recent Turing Tensor Cores, or traditional integer-only ARM processors. In this work, we propose I-BERT, a novel quantization scheme for Transformer based models that quantizes the entire inference with integer-only arithmetic. Based on lightweight integer-only approximation methods for nonlinear operations, e.g., GELU, Softmax, and Layer Normalization, I-BERT performs an end-to-end integer-only BERT inference without any floating point calculation. We evaluate our approach on GLUE downstream tasks using RoBERTa-Base/Large. We show that for both cases, I-BERT achieves similar (and slightly higher) accuracy as compared to the full-precision baseline. Furthermore, our preliminary implementation of I-BERT shows a speedup of 2.4-4.0x for INT8 inference on a T4 GPU system as compared to FP32 inference. The framework has been developed in PyTorch and has been open-sourced.",
+      "identifiers": [
+        "SemanticScholar:d06bda5e759c8e8569754d8f7235cf1a9a1e9985"
+      ],
+      "semantic_scholar_id": "d06bda5e759c8e8569754d8f7235cf1a9a1e9985",
+      "canonical_id": "arXiv:2101.01321",
+      "arxiv_id": "2101.01321",
+      "authors": [
+        "Sehoon Kim",
+        "A. Gholami",
+        "Z. Yao",
+        "Michael W. Mahoney",
+        "K. Keutzer"
+      ],
+      "priority": 497,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 487,
+        "citation_count": 487,
+        "total": 497,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2099,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "Transformer推論全体をinteger-only化し、GELU・Softmax・LayerNormも整数近似kernelで処理する量子化方式。T4上のINT8 BERTでFP32比2.4–4.0倍高速化を示し、推論latency・memory・hardware utilizationを直接改善するため対象内。",
+      "library_body_check": "full_text_checked: 一次PDFのIntroduction、integer-only GELU/Softmax/LayerNorm、end-to-end INT8 computational graph、GLUE評価、TensorRT/T4速度評価を確認。全推論でdequantization/floating-pointを使わず、INT8で最大4x speedupを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a68d87b247c8",
+    "round": "libimp-a68d87b247c88798-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a68d87b247c88798-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a68d87b247c88798-pre01.json",
+    "receipt": "sha256:e4bdb09622651353d9f5701eba4687510b023a87744dee8e021a15be1606eb64"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a68d87b247c8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

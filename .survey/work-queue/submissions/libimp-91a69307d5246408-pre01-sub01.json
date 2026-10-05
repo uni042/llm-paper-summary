@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2503.04697",
+      "year": 2025,
+      "published": "2025-03-06",
+      "venue": "arXiv.org",
+      "citation_count": 388,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning language models have shown an uncanny ability to improve performance at test-time by ``thinking longer''-that is, by generating longer chain-of-thought sequences and hence using more compute. However, the length of their chain-of-thought reasoning is not controllable, making it impossible to allocate test-time compute to achieve a desired level of performance. We introduce Length Controlled Policy Optimization (LCPO), a simple reinforcement learning method that optimizes for accuracy and adherence to user-specified length constraints. We use LCPO to train L1, a reasoning language model that produces outputs satisfying a length constraint given in its prompt. L1's length control allows for smoothly trading off computational cost and accuracy on a wide range of tasks, and outperforms the state-of-the-art S1 method for length control. Furthermore, we uncover an unexpected short chain-of-thought capability in models trained with LCPO. Specifically, using LCPO we derive Short Reasoning Models (SRMs), that exhibit similar reasoning patterns as full-length reasoning models, but can generate CoT lengths comparable to non-reasoning models. They demonstrate significant performance gains, for instance, our 1.5B L1 model surpasses GPT-4o at equal reasoning lengths. Overall, LCPO enables precise control over reasoning length, allowing for fine-grained allocation of test-time compute and accuracy. We release code and models at https://www.cmu-l3.github.io/l1",
+      "identifiers": [
+        "SemanticScholar:0681d80cd58b6135534cf279a69f5f999f47ebca"
+      ],
+      "semantic_scholar_id": "0681d80cd58b6135534cf279a69f5f999f47ebca",
+      "canonical_id": "arXiv:2503.04697",
+      "arxiv_id": "2503.04697",
+      "doi": "10.48550/arXiv.2503.04697",
+      "authors": [
+        "Pranjal Aggarwal",
+        "S. Welleck"
+      ],
+      "priority": 388,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 388,
+        "citation_count": 388,
+        "total": 388,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 578,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Length Controlled Policy Optimization (LCPO)で指定長に従うreasoning modelを学習し、推論時のChain-of-Thought長を直接制御して計算コストと精度を連続的に配分する。短い推論モデル（SRM）も導出し、同じ推論長で1.5B L1がGPT-4oを上回る例を報告しており、test-time compute削減を直接扱うため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv本文でLCPOのaccuracy+length-constraint objective、prompt指定length、test-time compute/accuracy trade-off、Short Reasoning Models、1.5B L1対GPT-4oのequal-reasoning-length結果を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-91a69307d524",
+    "round": "libimp-91a69307d5246408-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-91a69307d5246408-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-91a69307d5246408-pre01.json",
+    "receipt": "sha256:139c11fb9047a0d2536d5a12611d4194ef4beabe9e7adae677ebd2b26e934fb3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-91a69307d524",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

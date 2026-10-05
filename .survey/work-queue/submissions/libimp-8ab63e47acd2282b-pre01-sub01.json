@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Selective KV-Cache Sharing to Mitigate Timing Side-Channels in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2508.08438",
+      "year": 2025,
+      "published": "2025-08-11",
+      "venue": "arXiv.org",
+      "citation_count": 28,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Global KV-cache sharing is an effective optimization for accelerating large language model (LLM) inference, yet it introduces an API-visible timing side channel that lets adversaries infer sensitive user inputs from shared entries, leading to cross-tenant privacy risks. To address this problem, we introduce SafeKV (Secure and Flexible KV-cache Sharing), a system-level co-design of privacy enforcement and KV-cache management. SafeKV integrates lightweight detection and isolation directly into the serving runtime to eliminate cross-tenant reuse of sensitive KV-cache blocks under our threat model, while recovering most of the performance benefits of global sharing. Our key contributions are: (1) a three-tier asynchronous detection pipeline that decouples privacy classification from inference and supports streaming workloads, (2) a unified radix-tree-based memory manager with path compression and sensitivity-aware eviction for scalable selective isolation, and (3) an RDR-guided (Reuse Diversity Ratio) runtime safeguard that detects and bounds residual leakage. On large LLM backends, SafeKV reduces the time-to-first-token (TTFT) overhead compared to full isolation by up to 40.58% and raises throughput by up to 2.66x. Overall, SafeKV restores the efficiency of KV reuse while enforcing strong, practical privacy for multi-tenant LLM inference.",
+      "identifiers": [
+        "SemanticScholar:370ea3e5e8f544c9d34dc8bb153bbce5c6811665"
+      ],
+      "semantic_scholar_id": "370ea3e5e8f544c9d34dc8bb153bbce5c6811665",
+      "canonical_id": "arXiv:2508.08438",
+      "arxiv_id": "2508.08438",
+      "doi": "10.48550/arXiv.2508.08438",
+      "authors": [
+        "Kexin Chu",
+        "Zecheng Lin",
+        "Dawei Xiang",
+        "Zixu Shen",
+        "Jian-Chang Su",
+        "Cheng Chu",
+        "Yi-Wei Yang",
+        "Wen-Hui Zhang",
+        "Wen-Fei Wu",
+        "Wei Zhang"
+      ],
+      "priority": 28,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 28,
+        "citation_count": 28,
+        "total": 28,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 420,
+        "matched_prestigious_venue": null
+      },
+      "reason": "global KV cache共有のtiming side-channelを抑えつつcache reuse性能を維持するSafeKVを提案し、HBM/DRAM/SSDを跨ぐpublic/private cache管理を行う。per-user isolation比TTFT最大40.58%、throughput最大2.66倍改善し、Qwen3-235Bのcache-induced TTFT overheadを50.41%から11.74%へ低減するため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv要旨でselective KV sharing、multi-tier radix-tree cache、HBM/DRAM/SSD、94–97% timing attack mitigation、TTFT/throughput定量値を確認。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Towards Resource-Efficient Serverless LLM Inference with SLINFER",
+      "source_url": "https://arxiv.org/abs/2507.00507",
+      "year": 2025,
+      "published": "2025-07-01",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of LLMs has driven demand for private serverless deployments, characterized by moderate-sized models and infrequent requests. While existing serverless solutions follow exclusive GPU allocation, we take a step back to explore modern platforms and find that: Emerging CPU architectures with built-in accelerators are capable of serving LLMs but remain underutilized, and both CPUs and GPUs can accommodate multiple LLMs simultaneously. We propose SLINFER, a resource-efficient serverless inference scheme tailored for small- to mid-sized LLMs that enables elastic and on-demand sharing across heterogeneous hardware. SLINFER tackles three fundamental challenges: (1) precise, fine-grained compute resource allocation at token-level to handle fluctuating computational demands; (2) a coordinated and forward-looking memory scaling mechanism to detect out-ofmemory hazards and reduce operational overhead; and (3) a dual approach that consolidates fragmented instances through proactive preemption and reactive bin-packing. Experimental results on 4 32-core CPUs and 4 A100 GPUs show that SLINFER improves serving capacity by 47% - 62% through sharing, while further leveraging CPUs boosts this to 86% - 154%.",
+      "identifiers": [
+        "SemanticScholar:604ac48db0b4dc0592664460fd45b30001cd1a8e"
+      ],
+      "semantic_scholar_id": "604ac48db0b4dc0592664460fd45b30001cd1a8e",
+      "canonical_id": "arXiv:2507.00507",
+      "arxiv_id": "2507.00507",
+      "doi": "10.1109/HPCA68181.2026.11408548",
+      "authors": [
+        "Chuhao Xu",
+        "Zi-Jun Li",
+        "Quan Chen",
+        "Han Zhao",
+        "Xueyan Tang",
+        "Minyi Guo"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 461,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "CPU/GPU異種hardwareをelasticに共有するserverless LLM inference schemeで、token-level resource allocation、forward-looking memory scaling、preemption/bin-packingを統合する。4 CPU+4 A100でsharingによりcapacity 47–62%、CPU活用込み86–154%向上を報告するため対象内。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv要旨でserverless LLM serving、heterogeneous CPU/GPU sharing、token-level allocation、OOM-aware memory scaling、instance consolidation、capacity improvementを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8ab63e47acd2",
+    "round": "libimp-8ab63e47acd2282b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8ab63e47acd2282b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8ab63e47acd2282b-pre01.json",
+    "receipt": "sha256:1dd9d774f9875cca1e92d48aa5ad0143110c2a997261474237981ad9e28ec16e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8ab63e47acd2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

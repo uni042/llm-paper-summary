@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference",
+      "source_url": "https://arxiv.org/abs/2105.11618",
+      "year": 2021,
+      "published": "2021-05-25",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 85,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing pre-trained language models (PLMs) are often computationally expensive in inference, making them impractical in various resource-limited real-world applications. To address this issue, we propose a dynamic token reduction approach to accelerate PLMs’ inference, named TR-BERT, which could flexibly adapt the layer number of each token in inference to avoid redundant calculation. Specially, TR-BERT formulates the token reduction process as a multi-step token selection problem and automatically learns the selection strategy via reinforcement learning. The experimental results on several downstream NLP tasks show that TR-BERT is able to speed up BERT by 2-5 times to satisfy various performance demands. Moreover, TR-BERT can also achieve better performance with less computation in a suite of long-text tasks since its token-level layer number adaption greatly accelerates the self-attention operation in PLMs. The source code and experiment details of this paper can be obtained from https://github.com/thunlp/TR-BERT.",
+      "identifiers": [
+        "SemanticScholar:6da4b231148bf26677233d1f778d08a5d26f4313"
+      ],
+      "semantic_scholar_id": "6da4b231148bf26677233d1f778d08a5d26f4313",
+      "canonical_id": "arXiv:2105.11618",
+      "arxiv_id": "2105.11618",
+      "doi": "10.18653/V1/2021.NAACL-MAIN.463",
+      "authors": [
+        "Deming Ye",
+        "Yankai Lin",
+        "Yufei Huang",
+        "Maosong Sun"
+      ],
+      "priority": 95,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 85,
+        "citation_count": 85,
+        "total": 95,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1959,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "各tokenが通過するlayer数を動的に変えるtoken reductionをmulti-step selectionとして定式化し、reinforcement learningで選択policyを学習する。BERT inferenceを2–5倍高速化し長文ではself-attention計算も削減するため、Transformer推論のconditional computationとしてaccept。",
+      "library_body_check": "full_text_relevance_review: 一次arXiv論文情報でdynamic token reduction、RL-based multi-step selection、token-level layer adaptation、BERT 2–5x inference speedupを確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-eab38c7a420d",
+    "round": "libimp-eab38c7a420d2ff9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-eab38c7a420d2ff9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-eab38c7a420d2ff9-pre01.json",
+    "receipt": "sha256:6aa42920466b96613758ed8fce1f90d4aa72e1283cc2f053265986024ab38c15"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-eab38c7a420d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
