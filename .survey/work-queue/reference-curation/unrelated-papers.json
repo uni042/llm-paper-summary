@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:25:07+00:00",
-  "record_count": 3849,
+  "updated_at": "2026-10-05T08:27:47+00:00",
+  "record_count": 3864,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -56071,6 +56071,219 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
       ],
       "title": "Deep Academic Survey: Stateful Agentic Closed-Loop Paradigm for Academic Survey Automation"
+    },
+    "arXiv:2608.16268": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16268",
+      "identity_tokens": [
+        "arXiv:2608.16268"
+      ],
+      "reason": "Primary abstract concerns federated medical-image modeling, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:27:45+00:00",
+      "last_checked_at": "2026-10-05T08:27:45+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "CoM$^3$eT: A foundation model for medical image analysis through federated, multidimensional context integration"
+    },
+    "arXiv:2608.16357": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16357",
+      "identity_tokens": [
+        "arXiv:2608.16357"
+      ],
+      "reason": "Primary abstract proposes a distributed agent-memory reconciliation protocol without an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:27:45+00:00",
+      "last_checked_at": "2026-10-05T08:27:45+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories"
+    },
+    "arXiv:2608.16429": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16429",
+      "identity_tokens": [
+        "arXiv:2608.16429"
+      ],
+      "reason": "Primary abstract reduces inference cost for TabICLv2, a tabular in-context-learning classifier rather than an LLM.",
+      "first_checked_at": "2026-10-05T08:27:45+00:00",
+      "last_checked_at": "2026-10-05T08:27:45+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Localized TabICLv2: Scaling Tabular In-Context Learning through k-NN"
+    },
+    "arXiv:2608.16455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16455",
+      "identity_tokens": [
+        "arXiv:2608.16455"
+      ],
+      "reason": "Primary abstract applies graph analysis to mathematical-software communities, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Graph-Based Discovery of Mathematical Software Communities and Publication-to-Community Prediction"
+    },
+    "arXiv:2608.16568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16568",
+      "identity_tokens": [
+        "arXiv:2608.16568"
+      ],
+      "reason": "Primary abstract surveys quantum-computing applications in science, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ],
+      "title": "Scientific applications of quantum computing: challenges and opportunities"
+    },
+    "arXiv:2608.16585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16585",
+      "identity_tokens": [
+        "arXiv:2608.16585"
+      ],
+      "reason": "Primary abstract optimizes video-diffusion-transformer attention for video generation, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "SQuad: Sub-Quadratic Attention Distillation for Efficient Video Generation"
+    },
+    "arXiv:2608.16620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16620",
+      "identity_tokens": [
+        "arXiv:2608.16620"
+      ],
+      "reason": "Primary abstract reports post-training of an agentic tool-use model but no inference-efficiency/serving contribution.",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Palmyra x6 Technical Report: An Agentic, Tool-Use Model Post-Trained via Anchored Supervised Fine-Tuning"
+    },
+    "arXiv:2608.16811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16811",
+      "identity_tokens": [
+        "arXiv:2608.16811"
+      ],
+      "reason": "対象は3Dレーザーナノプリント用ナノフォトニック素子の逆設計・製造制約最適化で、LLM推論効率ではない。",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Fabrication-Aware Inverse Design of Nanophotonic Devices for 3D Laser-Nanoprinting"
+    },
+    "arXiv:2608.17087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17087",
+      "identity_tokens": [
+        "arXiv:2608.17087"
+      ],
+      "reason": "線形時相論理の代数的微分意味論・評価エンジンを扱い、LLM推論/serving効率への寄与は要旨にない。",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Backward through Time, Algebraically"
+    },
+    "arXiv:2609.22109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22109",
+      "identity_tokens": [
+        "arXiv:2609.22109"
+      ],
+      "reason": "選択的on-policy蒸留の学習率感度を分析する研究で、training-onlyである。",
+      "first_checked_at": "2026-10-05T08:27:46+00:00",
+      "last_checked_at": "2026-10-05T08:27:46+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "A Shared Learning Rate Is Not a Neutral Control in Selective On-Policy Distillation"
+    },
+    "DOI:10.1021/acsomega.6c07010": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acsomega.6c07010",
+      "identity_tokens": [
+        "DOI:10.1021/acsomega.6c07010"
+      ],
+      "reason": "有機フォトトランジスタ記憶素子の電荷移動・ドーパント配置を扱う材料研究で、LLMとは無関係。",
+      "first_checked_at": "2026-10-05T08:27:47+00:00",
+      "last_checked_at": "2026-10-05T08:27:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Boosting the Dopant Accommodation in Charge-Transfer Supramolecular Electrets Using Carbohydrate Block Copolymers in Phototransistor Memory"
+    },
+    "DOI:10.1093/bioadv/vbag235": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioadv/vbag235",
+      "identity_tokens": [
+        "DOI:10.1093/bioadv/vbag235"
+      ],
+      "reason": "タンパク質言語モデルによる核酸結合タンパク質分類と解釈性の研究で、LLM推論効率の対象外。",
+      "first_checked_at": "2026-10-05T08:27:47+00:00",
+      "last_checked_at": "2026-10-05T08:27:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ],
+      "title": "Interpretable prediction of nucleic acid-binding proteins using a protein language model"
+    },
+    "DOI:10.1093/bioinformatics/btag618": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/bioinformatics/btag618",
+      "identity_tokens": [
+        "DOI:10.1093/bioinformatics/btag618"
+      ],
+      "reason": "ペプチド向けinstruction tuningと生物学的配列設計/予測の研究で、寄与はfine-tuningとタスク精度。",
+      "first_checked_at": "2026-10-05T08:27:47+00:00",
+      "last_checked_at": "2026-10-05T08:27:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Bridging linguistic reasoning and biophysical reality toward peptide engineering via instruction-tuned language modeling"
+    },
+    "DOI:10.1111/febs.70707": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1111/febs.70707",
+      "identity_tokens": [
+        "DOI:10.1111/febs.70707"
+      ],
+      "reason": "CRISPR/Casタンパク質の構造・配列設計による小型化研究で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T08:27:47+00:00",
+      "last_checked_at": "2026-10-05T08:27:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Structure- and deep learning-guided engineering of a size-minimized CRISPR/Cas."
+    },
+    "DOI:10.1117/12.3104743": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3104743",
+      "identity_tokens": [
+        "DOI:10.1117/12.3104743"
+      ],
+      "reason": "放射線検出器のANN読み出し系であり、LLM serving効率でなく計測器信号再構成が対象。",
+      "first_checked_at": "2026-10-05T08:27:47+00:00",
+      "last_checked_at": "2026-10-05T08:27:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "i-RASE: intelligent radiation sensor readout systems for real-time photon-by-photon radiation detection"
     }
   }
 }

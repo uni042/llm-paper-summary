@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e08aba25d7100761-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1093/bioadv/vbag235",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1093/bioadv/vbag235",
+    "identity_tokens": [
+      "DOI:10.1093/bioadv/vbag235"
+    ],
+    "reason": "タンパク質言語モデルによる核酸結合タンパク質分類と解釈性の研究で、LLM推論効率の対象外。",
+    "first_checked_at": "2026-10-05T08:27:47+00:00",
+    "last_checked_at": "2026-10-05T08:27:47+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+    ],
+    "title": "Interpretable prediction of nucleic acid-binding proteins using a protein language model"
+  },
+  "processed_at": "2026-10-05T08:27:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e08aba25d710",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

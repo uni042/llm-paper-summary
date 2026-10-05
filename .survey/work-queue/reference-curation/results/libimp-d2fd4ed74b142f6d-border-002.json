@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d2fd4ed74b142f6d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.17007",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.17007",
+    "identity_tokens": [
+      "arXiv:2608.17007"
+    ],
+    "reason": "一次本文から手法と評価は確認したが、対象scopeへの適合が狭い、またはLLM servingへの一般化に不確実性が残るためborderlineへ分類。",
+    "first_checked_at": "2026-10-05T08:27:46+00:00",
+    "last_checked_at": "2026-10-05T08:27:46+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
+    ],
+    "title": "SkillEffect: Checked Lowering for Memory-Bounded Agent Tools"
+  },
+  "processed_at": "2026-10-05T08:27:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d2fd4ed74b14",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
