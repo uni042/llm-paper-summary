@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c713ffc7fbc76409-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.17379",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.17379",
+    "identity_tokens": [
+      "arXiv:2608.17379"
+    ],
+    "reason": "一次要旨はLLM自身を使ったGPU kernel optimization能力のbenchmark/adaptationであり、LLM servingの最適化手法を評価する研究ではない。",
+    "first_checked_at": "2026-10-05T03:17:01+00:00",
+    "last_checked_at": "2026-10-05T03:17:01+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+      "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+      "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+      "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+      "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+    ],
+    "title": "PTXBench: Benchmarking and Adapting LLMs for GPU Kernel Optimization with Architecture-specific PTX"
+  },
+  "processed_at": "2026-10-05T03:17:02+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c713ffc7fbc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

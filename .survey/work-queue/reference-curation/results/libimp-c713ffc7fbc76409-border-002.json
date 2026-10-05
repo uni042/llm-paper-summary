@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c713ffc7fbc76409-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.18578",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.18578",
+    "identity_tokens": [
+      "arXiv:2608.18578"
+    ],
+    "reason": "本文§3–§5はINT4/NF4量子化で高interference条件のretrieval accuracyが悪化する診断であり、quantizationによるserving cost削減や新しい最適化法は提案しない。 限定retrieval task上の信頼性評価。低bit deploymentでのmemory/latency便益とのquality-cost frontierは扱わない。",
+    "first_checked_at": "2026-10-05T03:17:01+00:00",
+    "last_checked_at": "2026-10-05T03:17:01+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+    ],
+    "title": "Compress and Forget: bitsandbytes Quantization Amplifies Proactive Interference in LLMs"
+  },
+  "processed_at": "2026-10-05T03:17:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c713ffc7fbc7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

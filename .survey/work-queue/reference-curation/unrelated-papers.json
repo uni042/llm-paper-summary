@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:14:25+00:00",
-  "record_count": 2188,
+  "updated_at": "2026-10-05T03:17:02+00:00",
+  "record_count": 2204,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -31640,6 +31640,244 @@
         "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
       ],
       "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing"
+    },
+    "arXiv:2608.21199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21199",
+      "identity_tokens": [
+        "arXiv:2608.21199"
+      ],
+      "reason": "一次要旨はtabular in-context foundation model Tydraの表データ予測であり、LLM推論系の効率化対象ではない。",
+      "first_checked_at": "2026-10-05T03:17:00+00:00",
+      "last_checked_at": "2026-10-05T03:17:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Tydra: An Efficient Hybrid Model for Tabular Data"
+    },
+    "arXiv:2608.21338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21338",
+      "identity_tokens": [
+        "arXiv:2608.21338"
+      ],
+      "reason": "一次要旨は高エネルギー物理のGPU event generation/normalizing flowsであり、language model inferenceではない。",
+      "first_checked_at": "2026-10-05T03:17:00+00:00",
+      "last_checked_at": "2026-10-05T03:17:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Efficient Event Generation for High-Multiplicity LHC Processes: An End-to-End GPU Workflow with Normalizing Flows"
+    },
+    "arXiv:2608.19567": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19567",
+      "identity_tokens": [
+        "arXiv:2608.19567"
+      ],
+      "reason": "一次要旨はtext-to-3D diffusion生成の高速化で、対象モデル/servingはLLMでない。",
+      "first_checked_at": "2026-10-05T03:17:00+00:00",
+      "last_checked_at": "2026-10-05T03:17:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Block3D: Efficient Text-to-3D Generation via Block-Wise Diffusion"
+    },
+    "arXiv:2608.18474": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18474",
+      "identity_tokens": [
+        "arXiv:2608.18474"
+      ],
+      "reason": "一次要旨はmultilingual word/sentence alignment用encoder modelであり、LLM inference/servingの効率化ではない。",
+      "first_checked_at": "2026-10-05T03:17:00+00:00",
+      "last_checked_at": "2026-10-05T03:17:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "OmniAlign: A Unified Multilingual Aligner for Word and Sentence Alignment"
+    },
+    "arXiv:2608.16647": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16647",
+      "identity_tokens": [
+        "arXiv:2608.16647"
+      ],
+      "reason": "一次要旨はon-policy distillationのgeneralization/training behaviorを扱う学習研究で、inference-serving efficiencyではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models"
+    },
+    "arXiv:2608.17148": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17148",
+      "identity_tokens": [
+        "arXiv:2608.17148"
+      ],
+      "reason": "一次要旨はagent memory privacy boundary/security invariantの提案・synthetic auditで、inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Authorization Before Context: A Model-Neutral Audience Boundary Against Cross-Audience Memory Leakage in Agentic Systems"
+    },
+    "arXiv:2608.15522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.15522",
+      "identity_tokens": [
+        "arXiv:2608.15522"
+      ],
+      "reason": "一次要旨はaudio-visual diffusion generationのsynchrony-aware sparsificationであり、language model servingの対象外。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "Efficient Audio-Visual Generation via Synchrony-Aware Cross-Modal Sparse Attention"
+    },
+    "arXiv:2608.13921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13921",
+      "identity_tokens": [
+        "arXiv:2608.13921"
+      ],
+      "reason": "一次要旨はpersonal-memory conflict benchmark/action policy評価であり、推論・serving効率化に関する寄与がない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "When Personal Memory Has No Single Answer: Evaluating LLM Agents under Irreducible Conflict"
+    },
+    "arXiv:2608.14106": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14106",
+      "identity_tokens": [
+        "arXiv:2608.14106"
+      ],
+      "reason": "一次要旨はtime-series foundation modelによる株式予測/calibration objectiveで、LLM inference systemsではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Forecast Collapse in Time-Series Foundation Models"
+    },
+    "arXiv:2608.14150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14150",
+      "identity_tokens": [
+        "arXiv:2608.14150"
+      ],
+      "reason": "一次要旨はASR challengeのtraining data augmentation/fine-tuningであり、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Leading-Silence Augmentation and Multi-Stage Synthetic Supervision for the Second MLC-SLM Challenge"
+    },
+    "arXiv:2608.14278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14278",
+      "identity_tokens": [
+        "arXiv:2608.14278"
+      ],
+      "reason": "一次要旨はparticle reconstruction for high-energy physicsであり、language model inferenceではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Pairton: Iterative Reconstruction of Short-Lived Particles"
+    },
+    "arXiv:2608.14498": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14498",
+      "identity_tokens": [
+        "arXiv:2608.14498"
+      ],
+      "reason": "一次要旨はVLM reinforcement-learning post-training runtimeのGPU phase schedulingで、学習/post-training専用効率化。契約scopeから除外。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.19867-semi-pd-phase-wise-disaggregated-unified-storage.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training"
+    },
+    "arXiv:2608.18484": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18484",
+      "identity_tokens": [
+        "arXiv:2608.18484"
+      ],
+      "reason": "一次要旨と本文はvideo-generation/world-model transformer sparse attentionで、language model inferenceを対象にしていない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models"
+    },
+    "arXiv:2608.19161": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19161",
+      "identity_tokens": [
+        "arXiv:2608.19161"
+      ],
+      "reason": "一次要旨はlatent multi-agent communicationのsecurity monitoring/steeringが主題で、serving efficiencyではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication"
+    },
+    "arXiv:2608.17379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17379",
+      "identity_tokens": [
+        "arXiv:2608.17379"
+      ],
+      "reason": "一次要旨はLLM自身を使ったGPU kernel optimization能力のbenchmark/adaptationであり、LLM servingの最適化手法を評価する研究ではない。",
+      "first_checked_at": "2026-10-05T03:17:01+00:00",
+      "last_checked_at": "2026-10-05T03:17:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md",
+        "papers/inference/09-kernel-runtime-compilation/2026-2601.00227-flashinfer-bench-ai-driven-kernel-deployment.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "PTXBench: Benchmarking and Adapting LLMs for GPU Kernel Optimization with Architecture-specific PTX"
+    },
+    "arXiv:2608.17445": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17445",
+      "identity_tokens": [
+        "arXiv:2608.17445"
+      ],
+      "reason": "一次要旨はLLM decomposition attackに対するservice defense/securityを扱い、推論効率化ではない。",
+      "first_checked_at": "2026-10-05T03:17:02+00:00",
+      "last_checked_at": "2026-10-05T03:17:02+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services"
     }
   }
 }
