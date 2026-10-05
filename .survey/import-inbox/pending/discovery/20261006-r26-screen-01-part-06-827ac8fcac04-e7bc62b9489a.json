@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r26-screen-01-part-06-827ac8fcac04",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24539",
+      "identity_tokens": [
+        "arXiv:2609.24539"
+      ],
+      "title": "Incentive Noise and Structural Prior Infusion for Multi-modal Object Re-Identification",
+      "reason": "multimodal object re-identification手法で、LLM推論効率と無関係。",
+      "source_url": "https://arxiv.org/abs/2609.24539",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25286",
+      "identity_tokens": [
+        "arXiv:2609.25286"
+      ],
+      "title": "Learned Enterprise Data Comprehension: Compression and Routing for Data Agents",
+      "reason": "一次本文はenterprise data agentのquery-conditioned evidence routing/compressionを評価するが、明示的にtoken最小化が目的でなく、保守的なpost-answer verificationによりtoken/tool使用量が大きい。cost/quality点もreasonerとverification条件が揃わずPareto最適化されていない。",
+      "source_url": "https://arxiv.org/abs/2609.25286",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22824",
+      "identity_tokens": [
+        "arXiv:2609.22824"
+      ],
+      "title": "Adaptive Depth and Expert Refinement for Efficient Speech Enhancement",
+      "reason": "speech enhancement向けadaptive depth/expert refinementで、LLM inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2609.22824",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22554",
+      "identity_tokens": [
+        "arXiv:2609.22554"
+      ],
+      "title": "The Ups and Downs of Backprop Weights",
+      "reason": "weight operatorsはfunctional parameter reuse/continual adaptation/compositional generalizationを目的とする学習・表現構成案。inference時compositionという語はあるが、LLM対象のserving cost/latency/throughputを示す効率化法ではない。",
+      "source_url": "https://arxiv.org/abs/2609.22554",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19934",
+      "identity_tokens": [
+        "arXiv:2609.19934"
+      ],
+      "title": "Beyond Depth Truncation: Controlled Evaluation of Depth Utilization in Recursive Language Models",
+      "reason": "本文のDepth Control Protocolはrecursive LMのdepth truncationによる品質変化を複数要因へ分解する診断法。depthを短くするinference compute操作自体は扱うが、新しい推論最適化を提案せず、著者もFLOP-matched superiorityを主張しない。",
+      "source_url": "https://arxiv.org/abs/2609.19934",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
