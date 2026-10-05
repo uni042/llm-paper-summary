@@ -340,13 +340,11 @@ def classify_explicit_identifier_lookups(
         output[index] = base
 
     if filter_records:
-        filter_reconsideration_tokens = {
-            token
-            for position in filter_positions
-            if (requested := paper_identity.safe_norm_id(lookup_rows[position].get("requested_id")))
-            and requested in reconsider_identifiers
-            for token in paper_identity.identity_tokens(filter_records[filter_positions.index(position)])
-        }
+        filter_reconsideration_tokens: set[str] = set()
+        for position, record in zip(filter_positions, filter_records):
+            requested = paper_identity.safe_norm_id(lookup_rows[position].get("requested_id"))
+            if requested and requested in reconsider_identifiers:
+                filter_reconsideration_tokens.update(paper_identity.identity_tokens(record))
         filtered = filter_search_batch(
             filter_records,
             snapshot_dir=snapshot_dir,
