@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-04-part-05-6ba65cfc0faf",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03682",
+      "identity_tokens": [
+        "arXiv:2608.03682"
+      ],
+      "title": "PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud",
+      "reason": "VLA/WAM physical-AI inference engineで、LLM対象外。",
+      "source_url": "https://arxiv.org/abs/2608.03682",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02109",
+      "identity_tokens": [
+        "arXiv:2608.02109"
+      ],
+      "title": "Same Semantics, Different Paths: Self-Improving Alignment for Vision-Text Compression",
+      "reason": "vision-text compressionの意味整合を行う学習手法で推論時効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.02109",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02113",
+      "identity_tokens": [
+        "arXiv:2608.02113"
+      ],
+      "title": "MemArbiter: Decision-Time Memory Arbitration for Long-Horizon LLM Agents",
+      "reason": "memory/context managementとの関連はあるが評価はfixed-budget action qualityで、効率改善を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.02113",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00916",
+      "identity_tokens": [
+        "arXiv:2608.00916"
+      ],
+      "title": "Tevatron Meets Megatron: Expert-Parallel LLM Reranker Training on an Academic Budget",
+      "reason": "MoE reranker training infrastructureが主貢献。serving throughputは比較評価に含むがserving/inference optimizationが本題ではない。",
+      "source_url": "https://arxiv.org/abs/2608.00916",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01326",
+      "identity_tokens": [
+        "arXiv:2608.01326"
+      ],
+      "title": "Context Compaction Theory",
+      "reason": "理論的枠組みと限定case studyであり、実用推論効率の改善を示す機構はない。",
+      "source_url": "https://arxiv.org/abs/2608.01326",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    }
+  ]
+}
