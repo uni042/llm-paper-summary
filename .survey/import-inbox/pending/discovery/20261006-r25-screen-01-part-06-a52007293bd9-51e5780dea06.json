@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r25-screen-01-part-06-a52007293bd9",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34184",
+      "identity_tokens": [
+        "arXiv:2609.34184"
+      ],
+      "title": "CASS: Contribution-Aware Structured Sparsity for Model Merging",
+      "reason": "structured sparsityでmodel merging時の寄与を制御する手法。推論時の量子化・圧縮・serving性能を測定していない。",
+      "source_url": "https://arxiv.org/abs/2609.34184",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34218",
+      "identity_tokens": [
+        "arXiv:2609.34218"
+      ],
+      "title": "Loop Dropout: Regularizing Shared Updates in Looped Language Models",
+      "reason": "looped language modelのshared-updateを正則化する訓練法で、推論効率の評価・改善ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34218",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34475",
+      "identity_tokens": [
+        "arXiv:2609.34475"
+      ],
+      "title": "Causal Routing for Unlearning",
+      "reason": "Causal routingを用いたunlearningが目的であり、推論効率・serving改善ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34475",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34605",
+      "identity_tokens": [
+        "arXiv:2609.34605"
+      ],
+      "title": "PMOPD: Task Ordering, Cycling, and Parameter-Update Subspace Protection in Multi-Teacher On-Policy Distillation",
+      "reason": "一次本文で手法・評価を確認した結果、主題はLLM training/safety/benchmark/model capabilityであり、対象のinference efficiency/serving改善と技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.34605",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34745",
+      "identity_tokens": [
+        "arXiv:2609.34745"
+      ],
+      "title": "No Pain, More Gain: Iterative Merging for Effective Multi-Teacher On-Policy Distillation",
+      "reason": "一次本文で手法・評価を確認した結果、主題はLLM training/safety/benchmark/model capabilityであり、対象のinference efficiency/serving改善と技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.34745",
+      "first_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "last_checked_at": "2026-10-05T23:37:41.005160+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    }
+  ]
+}
