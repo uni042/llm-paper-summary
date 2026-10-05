@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-05-part-04-66acb62f5481",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37391",
+      "identity_tokens": [
+        "arXiv:2609.37391"
+      ],
+      "title": "Rethinking Soft Tokens for Parallel Decoding in Diffusion Language Models",
+      "reason": "本文の主要結果はsame decoding configurationでのquality向上で、denoising steps, wall latency, FLOPs削減は示していない。直接のefficiency evidenceが弱くborderline。",
+      "source_url": "https://arxiv.org/abs/2609.37391",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37399",
+      "identity_tokens": [
+        "arXiv:2609.37399"
+      ],
+      "title": "MEDEM: Multi-Engine DL Accelerator Design Methodology",
+      "reason": "MEDEMは一般的なmulti-engine deep-learning acceleratorの設計空間探索を扱う。abstractはLLM inference/servingへの適用やLLM実測を示さず、対象scopeとの接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.37399",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37443",
+      "identity_tokens": [
+        "arXiv:2609.37443"
+      ],
+      "title": "Learning to Retrieve Missing Evidence for Long-Term Memory QA",
+      "reason": "MERAはlong-term memory QAのretrieval plannerを学習し回答精度を評価する研究。本文でもonline token useは数万token/質問であり、推論効率を改善する寄与は示されていない。",
+      "source_url": "https://arxiv.org/abs/2609.37443",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37509",
+      "identity_tokens": [
+        "arXiv:2609.37509"
+      ],
+      "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations",
+      "reason": "ScaGNNは複数散乱simulationのboundary-element solverを近似するgraph modelであり、LLM推論とは無関係。",
+      "source_url": "https://arxiv.org/abs/2609.37509",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37522",
+      "identity_tokens": [
+        "arXiv:2609.37522"
+      ],
+      "title": "Graph-Conditioned On-Policy Agent Distillation from Off-the-Shelf Teachers",
+      "reason": "GC-OPDはteacher feedbackとexecution graphでlanguage agentを改善するon-policy distillation/training手法で、inference-time optimizationではない。",
+      "source_url": "https://arxiv.org/abs/2609.37522",
+      "first_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "last_checked_at": "2026-10-05T04:12:56.184640+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
