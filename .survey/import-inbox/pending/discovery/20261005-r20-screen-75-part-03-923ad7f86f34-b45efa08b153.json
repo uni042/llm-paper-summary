@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-75-part-03-923ad7f86f34",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.09782",
+      "identity_tokens": [
+        "arXiv:2510.09782"
+      ],
+      "title": "The Geometry of Reasoning: Flowing Logics in Representation Space",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2510.09782. Primary abstract is a theoretical/interpretability analysis of reasoning representations and does not propose inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2510.09782",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19870",
+      "identity_tokens": [
+        "arXiv:2508.19870"
+      ],
+      "title": "Secure Multi-LLM Agentic AI and Agentification for Edge General Intelligence by Zero-Trust: A Survey",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.19870. Primary abstract is a survey of zero-trust security for multi-LLM edge agents, not an evaluated inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2508.19870",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.14896",
+      "identity_tokens": [
+        "arXiv:2508.14896"
+      ],
+      "title": "Quantization Meets dLLMs: A Systematic Study of Post-training Quantization for Diffusion LLMs",
+      "reason": "It is a useful dLLM quantization quality study, but the reviewed body does not establish practical inference-efficiency gains or runtime.",
+      "source_url": "https://arxiv.org/abs/2508.14896",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.07629-squeezellm-dense-and-sparse-quantization.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14917-slim-llm-salience-driven-mixed-precision-quantization-for-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09016",
+      "identity_tokens": [
+        "arXiv:2506.09016"
+      ],
+      "title": "SPEED-RL: Faster Training of Reasoning Models via Online Curriculum Learning",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.09016. Primary abstract accelerates reinforcement-learning training through prompt curriculum selection; training-only efficiency is outside scope.",
+      "source_url": "https://arxiv.org/abs/2506.09016",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2310.07177-online-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.21804",
+      "identity_tokens": [
+        "arXiv:2410.21804"
+      ],
+      "title": "Efficient and Effective Weight-Ensembling Mixture of Experts for Multi-Task Model Merging",
+      "reason": "Primary full text establishes the work is a ViT/vision model-merging paper, outside the LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2410.21804",
+      "first_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "last_checked_at": "2026-10-05T11:14:28.188657+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ]
+    }
+  ]
+}
