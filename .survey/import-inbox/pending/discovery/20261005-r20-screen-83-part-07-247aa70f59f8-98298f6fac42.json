@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-83-part-07-247aa70f59f8",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.01146",
+      "identity_tokens": [
+        "arXiv:2505.01146"
+      ],
+      "title": "Retrieval-Augmented Generation in Biomedicine: A Survey of Technologies, Datasets, and Clinical Applications",
+      "reason": "biomedical RAG surveyはnaive/advanced/modular architectureを分類し、retrieval/re-ranking/agentic workflowのlatencyを扱う。本文はcross-encoder遅延やmodular RAGの遅延増を比較する。 医療RAGに特化したsurveyで、LLM inference/servingの一般的最適化法が中心でない。latency値は複数別論文/architectureからの整理で同一条件比較でない。",
+      "source_url": "https://arxiv.org/abs/2505.01146",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.17789",
+      "identity_tokens": [
+        "arXiv:2504.17789"
+      ],
+      "title": "Token-Shuffle: Towards High-Resolution Image Generation with Autoregressive Models",
+      "reason": "autoregressive image generationのimage-token reductionで、画像 synthesis効率化。言語モデル推論の対象外。",
+      "source_url": "https://arxiv.org/abs/2504.17789",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14557",
+      "identity_tokens": [
+        "arXiv:2504.14557"
+      ],
+      "title": "Enhancing LLM-based Quantum Code Generation with Multi-Agent Optimization and Quantum Error Correction",
+      "reason": "quantum code generationのmulti-agent correctness/optimization研究で、inference system efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2504.14557",
+      "first_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "last_checked_at": "2026-10-05T11:47:12.489094+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    }
+  ]
+}
