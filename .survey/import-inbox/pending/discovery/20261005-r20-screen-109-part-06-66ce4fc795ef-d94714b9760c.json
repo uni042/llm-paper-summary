@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-109-part-06-66ce4fc795ef",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12904",
+      "identity_tokens": [
+        "arXiv:2605.12904"
+      ],
+      "title": "VIP-COP: Context Optimization for Tabular Foundation Models",
+      "reason": "tabular foundation modelのcontext最適化を扱い、対象はLLM推論servingではない。",
+      "source_url": "https://arxiv.org/abs/2605.12904",
+      "first_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "last_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13907",
+      "identity_tokens": [
+        "arXiv:2605.13907"
+      ],
+      "title": "AIS: Adaptive Importance Sampling for Quantized RL",
+      "reason": "量子化RLの学習/post-trainingが主題で、言語モデル推論の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2605.13907",
+      "first_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "last_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.13935",
+      "identity_tokens": [
+        "arXiv:2605.13935"
+      ],
+      "title": "Beyond Mode-Seeking RL: Trajectory-Balance Post-Training for Diffusion Language Models",
+      "reason": "diffusion language modelのpost-training研究であり、主な成果は能力/学習で推論コスト削減ではない。",
+      "source_url": "https://arxiv.org/abs/2605.13935",
+      "first_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "last_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14113",
+      "identity_tokens": [
+        "arXiv:2605.14113"
+      ],
+      "title": "ProtoMedAgent: Multimodal Clinical Interpretability via Privacy-Aware Agentic Workflows",
+      "reason": "臨床応用・臨床性能を扱い、推論システム効率化の方法研究ではない。",
+      "source_url": "https://arxiv.org/abs/2605.14113",
+      "first_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "last_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11516",
+      "identity_tokens": [
+        "arXiv:2605.11516"
+      ],
+      "title": "Agents Should Replace Narrow Predictive AI as the Orchestrator in 6G AI-RAN",
+      "reason": "6G AI-RANのposition paperで、edge quantizationは将来課題として列挙されるだけで新規手法・評価を示さない。",
+      "source_url": "https://arxiv.org/abs/2605.11516",
+      "first_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "last_checked_at": "2026-10-05T13:40:11.922006+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
