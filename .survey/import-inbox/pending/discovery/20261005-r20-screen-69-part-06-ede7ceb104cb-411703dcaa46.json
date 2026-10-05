@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-69-part-06-ede7ceb104cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23653",
+      "identity_tokens": [
+        "arXiv:2509.23653"
+      ],
+      "title": "Don't Settle Too Early: Self-Reflective Remasking for Diffusion Language Models",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2509.23653. Self-reflective remasking focuses on diffusion language-model quality, not LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2509.23653",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/info16090723",
+      "identity_tokens": [
+        "DOI:10.3390/info16090723"
+      ],
+      "title": "Machine Translation in the Era of Large Language Models:A Survey of Historical and Emerging Problems",
+      "reason": "Primary abstract reviewed at https://doi.org/10.3390/info16090723. Machine-translation survey, not an LLM inference optimization.",
+      "source_url": "https://doi.org/10.3390/info16090723",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.07861",
+      "identity_tokens": [
+        "arXiv:2501.07861"
+      ],
+      "title": "ReARTeR: Retrieval-Augmented Reasoning with Trustworthy Process Rewarding",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2501.07861. ReARTeR improves RAG reasoning quality via post-training/test-time search; no inference-efficiency gain claimed.",
+      "source_url": "https://arxiv.org/abs/2501.07861",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3704905",
+      "identity_tokens": [
+        "DOI:10.1145/3704905"
+      ],
+      "title": "Automated Program Refinement: Guide and Verify Code Large Language Model with Refinement Calculus",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3704905. Automated program refinement focuses on correctness of generated code, not inference efficiency.",
+      "source_url": "https://doi.org/10.1145/3704905",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.01709",
+      "identity_tokens": [
+        "arXiv:2501.01709"
+      ],
+      "title": "MoVE-KD: Knowledge Distillation for VLMs with Mixture of Visual Encoders",
+      "reason": "This single-encoder distillation is for VLM visual encoders; no direct LLM-service inference latency/throughput is reported in checked body.",
+      "source_url": "https://arxiv.org/abs/2501.01709",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.10890-one-student-knows-all-experts-know-from-sparse-to-dense.md"
+      ]
+    }
+  ]
+}
