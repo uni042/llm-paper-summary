@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:13:28+00:00",
-  "record_count": 5182,
+  "updated_at": "2026-10-05T13:16:07+00:00",
+  "record_count": 5194,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -75345,6 +75345,177 @@
         "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
       ],
       "title": "Skill: Similarity-Aware Knowledge Distillation for Speech Self-Supervised Learning"
+    },
+    "DOI:10.1145/3664647.3681419": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3664647.3681419",
+      "identity_tokens": [
+        "DOI:10.1145/3664647.3681419"
+      ],
+      "reason": "畳み込みネットワークのchannel/spatial pruning手法で、LLMの推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T13:16:04+00:00",
+      "last_checked_at": "2026-10-05T13:16:04+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "title": "Adaptive Pruning of Channel Spatial Dependability in Convolutional Neural Networks"
+    },
+    "arXiv:2410.17957": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.17957",
+      "identity_tokens": [
+        "arXiv:2410.17957"
+      ],
+      "reason": "BERT-tiny/miniのmicrocontroller上のテキスト分類向けinferenceであり、対象契約のLLM推論/servingではない。",
+      "first_checked_at": "2026-10-05T13:16:04+00:00",
+      "last_checked_at": "2026-10-05T13:16:04+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md"
+      ],
+      "title": "MCUBERT: Memory-Efficient BERT Inference on Commodity Microcontrollers"
+    },
+    "DOI:10.1109/tifs.2025.3550071": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tifs.2025.3550071",
+      "identity_tokens": [
+        "DOI:10.1109/tifs.2025.3550071"
+      ],
+      "reason": "Federated generalizationとdomain adaptationを扱う学習研究で、LLM inference/servingの寄与がない。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ],
+      "title": "Kindle Federated Generalization With Domain Specialized and Invariant Knowledge"
+    },
+    "arXiv:2412.04787": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04787",
+      "identity_tokens": [
+        "arXiv:2412.04787"
+      ],
+      "reason": "確率的丸めを使う量子化モデルの直接trainingが主題で、推論時の最適化ではない。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md"
+      ],
+      "title": "Direct Quantized Training of Language Models with Stochastic Rounding"
+    },
+    "DOI:10.1109/tmc.2024.3442430": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tmc.2024.3442430",
+      "identity_tokens": [
+        "DOI:10.1109/tmc.2024.3442430"
+      ],
+      "reason": "SoCクラスタedge serverでのDNN trainingの効率・scale・持続可能性が対象で、推論が対象外。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ],
+      "title": "Efficient, Scalable, and Sustainable DNN Training on SoC-Clustered Edge Servers"
+    },
+    "arXiv:2501.18475": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.18475",
+      "identity_tokens": [
+        "arXiv:2501.18475"
+      ],
+      "reason": "量子化LLMのLoRA初期化・fine-tuning品質を改善する手法で、学習時の適応が主題であり推論実行コストの低減が要旨にない。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "title": "CLoQ: Enhancing Fine-Tuning of Quantized LLMs via Calibrated LoRA Initialization"
+    },
+    "DOI:10.1371/journal.pone.0317042": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0317042",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0317042"
+      ],
+      "reason": "Quora重複質問分類でLLM fine-tuning手法の精度を比較するタスク研究で、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Enhancing semantical text understanding with fine-tuned large language models: A case study on Quora Question Pair duplicate identification"
+    },
+    "DOI:10.48550/arxiv.2501.03905": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2501.03905",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.03905",
+        "arXiv:2501.03905"
+      ],
+      "reason": "Mixture-of-Expertsモデルの分散training fabricで、要旨もtrainingの効率・scaleに限定されている。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md"
+      ],
+      "title": "mFabric: An Efficient and Scalable Fabric for Mixture-of-Experts Training"
+    },
+    "arXiv:2410.08407": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08407",
+      "identity_tokens": [
+        "arXiv:2410.08407"
+      ],
+      "reason": "distillation後の公平性・biasの変化を評価する研究で、効率化の機構・評価がない。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "What is Left After Distillation? How Knowledge Transfer Impacts Fairness and Bias"
+    },
+    "arXiv:2410.04060": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04060",
+      "identity_tokens": [
+        "arXiv:2410.04060"
+      ],
+      "reason": "LoRA型のlow-rank tensor adaptationによるLLM fine-tuningで、推論時圧縮やserving効率の検討ではない。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "LoRTA: Low Rank Tensor Adaptation of Large Language Models"
+    },
+    "arXiv:2409.13530": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.13530",
+      "identity_tokens": [
+        "arXiv:2409.13530"
+      ],
+      "reason": "時系列データ向け長文脈foundation modelの研究で、自然言語LLM推論が対象外。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+      ],
+      "title": "Towards Long-Context Time Series Foundation Models"
+    },
+    "arXiv:2409.06067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.06067",
+      "identity_tokens": [
+        "arXiv:2409.06067"
+      ],
+      "reason": "MLLMを補助に使うfederated learningの学習手法で、LLM自身の推論効率化ではない。",
+      "first_checked_at": "2026-10-05T13:16:07+00:00",
+      "last_checked_at": "2026-10-05T13:16:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.18311-coreinfer-accelerating-large-language-model-inference-with-semantics-ins.md"
+      ],
+      "title": "MLLM-LLaVA-FL: Multimodal Large Language Model Assisted Federated Learning"
     }
   }
 }

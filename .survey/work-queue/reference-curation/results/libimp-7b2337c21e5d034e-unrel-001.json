@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b2337c21e5d034e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.18475",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.18475",
+    "identity_tokens": [
+      "arXiv:2501.18475"
+    ],
+    "reason": "量子化LLMのLoRA初期化・fine-tuning品質を改善する手法で、学習時の適応が主題であり推論実行コストの低減が要旨にない。",
+    "first_checked_at": "2026-10-05T13:16:05+00:00",
+    "last_checked_at": "2026-10-05T13:16:05+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+    ],
+    "title": "CLoQ: Enhancing Fine-Tuning of Quantized LLMs via Calibrated LoRA Initialization"
+  },
+  "processed_at": "2026-10-05T13:16:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b2337c21e5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

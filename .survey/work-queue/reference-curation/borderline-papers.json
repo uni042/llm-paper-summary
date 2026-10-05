@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T13:13:28+00:00",
-  "record_count": 1714,
+  "updated_at": "2026-10-05T13:16:06+00:00",
+  "record_count": 1722,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -26559,6 +26559,123 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
       ],
       "title": "HiTVideo: Hierarchical Tokenizers for Enhancing Text-to-Video Generation with Autoregressive Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2410.23320": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2410.23320",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.23320",
+        "arXiv:2410.23320"
+      ],
+      "reason": "対象はtext-to-speech専用encoder-decoderではなく汎用chat LLM servingとは異なり、評価も音声 synthesis taskの範囲。隣接技術としてborderline。",
+      "first_checked_at": "2026-10-05T13:16:03+00:00",
+      "last_checked_at": "2026-10-05T13:16:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Lina-Speech: Gated Linear Attention is a Fast and Parameter-Efficient Learner for text-to-speech synthesis"
+    },
+    "arXiv:2410.15894": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.15894",
+      "identity_tokens": [
+        "arXiv:2410.15894"
+      ],
+      "reason": "対象はagent deployment/runtime lifecycle全体で、LFM decoding kernel/throughput最適化や独立したLLM serving benchmarkが中心ではない。効率主張の一般化に注意が要るためborderline。",
+      "first_checked_at": "2026-10-05T13:16:04+00:00",
+      "last_checked_at": "2026-10-05T13:16:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md"
+      ],
+      "title": "MVVM: Deploy Your AI Agents-Securely, Efficiently, Everywhere"
+    },
+    "arXiv:2410.10181": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10181",
+      "identity_tokens": [
+        "arXiv:2410.10181"
+      ],
+      "reason": "本文でmodel-weight loadingとconcurrent adapters servingへの接点は確認したが、中心評価はdomain adaptation/trainingであり、inference/serving efficiencyの実測・機構の証拠が限定されるためborderline。",
+      "first_checked_at": "2026-10-05T13:16:04+00:00",
+      "last_checked_at": "2026-10-05T13:16:04+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ],
+      "title": "Scalable Multi-Domain Adaptation of Language Models using Modular Experts"
+    },
+    "DOI:10.1109/hipc62374.2024.00018": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hipc62374.2024.00018",
+      "identity_tokens": [
+        "DOI:10.1109/hipc62374.2024.00018"
+      ],
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "first_checked_at": "2026-10-05T13:16:04+00:00",
+      "last_checked_at": "2026-10-05T13:16:04+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md"
+      ],
+      "title": "CAR-LLM: Cloud Accelerator Recommender for Large Language Models"
+    },
+    "DOI:10.1109/ipccc59868.2024.10850369": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ipccc59868.2024.10850369",
+      "identity_tokens": [
+        "DOI:10.1109/ipccc59868.2024.10850369"
+      ],
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "DP-Prune: Global Optimal Strategy for Retraining-Free Pruning of Transformer Models"
+    },
+    "arXiv:2501.05554": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.05554",
+      "identity_tokens": [
+        "arXiv:2501.05554"
+      ],
+      "reason": "本文の確認範囲ではfull-context比のaccuracy改善はあっても、context token削減量、end-to-end inference latency/cost、serving throughputが定量比較されていない。推論効率の直接証拠が弱いためborderline。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+      ],
+      "title": "LLMQuoter: Enhancing RAG Capabilities Through Efficient Quote Extraction From Large Contexts"
+    },
+    "DOI:10.1109/access.2025.3605110": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3605110",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3605110"
+      ],
+      "reason": "一次本文を取得できず、主張・実験条件・対象範囲を確認できないため、採否を確定せずborderlineとする。",
+      "first_checked_at": "2026-10-05T13:16:05+00:00",
+      "last_checked_at": "2026-10-05T13:16:05+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.03111-lorc-low-rank-compression-for-llms-kv-cache-with-a-progressive-compression-strategy.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2409.04992-instattention-instinfer-in-storage-attention-offloading.md",
+        "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md"
+      ],
+      "title": "Make Large Language Models Efficient: A Review"
+    },
+    "arXiv:2409.20364": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.20364",
+      "identity_tokens": [
+        "arXiv:2409.20364"
+      ],
+      "reason": "新規のserving/inference efficiency mechanismや詳細な広範囲performance characterizationでなく、単一applicationとresponse-speed referenceに限られる。",
+      "first_checked_at": "2026-10-05T13:16:06+00:00",
+      "last_checked_at": "2026-10-05T13:16:06+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.08671-deepspeed-fastgen-dynamic-splitfuse.md"
+      ],
+      "title": "Efficient Driving Behavior Narration and Reasoning on Edge Device Using Large Language Models"
     }
   }
 }

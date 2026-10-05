@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b2337c21e5d034e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.05554",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.05554",
+    "identity_tokens": [
+      "arXiv:2501.05554"
+    ],
+    "reason": "本文の確認範囲ではfull-context比のaccuracy改善はあっても、context token削減量、end-to-end inference latency/cost、serving throughputが定量比較されていない。推論効率の直接証拠が弱いためborderline。",
+    "first_checked_at": "2026-10-05T13:16:05+00:00",
+    "last_checked_at": "2026-10-05T13:16:05+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md"
+    ],
+    "title": "LLMQuoter: Enhancing RAG Capabilities Through Efficient Quote Extraction From Large Contexts"
+  },
+  "processed_at": "2026-10-05T13:16:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b2337c21e5d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
