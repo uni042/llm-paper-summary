@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-54-part-08-3b5fc280f42f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.31449/inf.v50i12.12935",
+      "identity_tokens": [
+        "DOI:10.31449/inf.v50i12.12935"
+      ],
+      "title": "Context-Aware Extractive Summarization Using Pretrained Models for LongDocuments",
+      "reason": "Primary abstract reviewed: Recently, significant advancements have been made in models for automatic text summarization, primarilybecause of the emergence of modern technologies such as transformers and pre-training. However,handling long documents remains a major challenge for most models. Current research addresses thischallenge either by designing recurring chained models or by truncating the text to fit the input size. Insufficientattention has been given to preserving the context of the original t [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.31449/inf.v50i12.12935",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.54097/jd5aet13",
+      "identity_tokens": [
+        "DOI:10.54097/jd5aet13"
+      ],
+      "title": "Latency-Bounded Embedding Table Partitioning Across Heterogeneous Accelerators for Large-Scale Recommendation Serving",
+      "reason": "Primary abstract reviewed: Large-scale recommendation systems (RS) are among the most computationally demanding workloads deployed in modern data centers, characterized by the co-existence of memory-intensive embedding table lookups and compute-intensive dense neural network operations. As model sizes grow to encompass hundreds of embedding tables with billions of parameters, deploying these models under strict service-level objective (SLO) constraints becomes increasingly challenging. This paper propo [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://doi.org/10.54097/jd5aet13",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29462",
+      "identity_tokens": [
+        "arXiv:2606.29462"
+      ],
+      "title": "MIRROR: Aligning Semantic Relations from Language to Image via Gromov-Wasserstein",
+      "reason": "Primary abstract reviewed: Multimodal Large Language Models (MLLMs) inherit rich relational priors from their language backbones, yet often fail when asked to apply these relationships in visual contexts. We trace this failure to a structural blind spot: projection-based alignment trains each visual token to carry the right semantics, but never asks whether the relationships between concepts survive the crossing from language to vision. To address this, we propose MIRROR (Mapping Inter-concept Relation [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2606.29462",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02558",
+      "identity_tokens": [
+        "arXiv:2607.02558"
+      ],
+      "title": "MLSYSIM: First-Principles Infrastructure Modeling for Machine Learning Systems",
+      "reason": "Primary abstract reviewed: As machine learning shifts from laboratory curiosity to critical infrastructure, the systems that sustain it span an extraordinary range, from sub-milliwatt microcontrollers to multi-gigawatt datacenter fleets. Reasoning across this range is hard: empirical profiling requires the target hardware in hand, while cycle-accurate simulation costs hours per configuration, leaving no tool for rapid, full-stack architectural reasoning. We present MLSYSIM (Machine Learning Systems Inf [excerpt]. This candidate addresses a different task (e.g. model training, application accuracy, security, data, or non-LLM workload), not LLM inference/serving efficiency; no plausible in-scope contribution is stated.",
+      "source_url": "https://arxiv.org/abs/2607.02558",
+      "first_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "last_checked_at": "2026-10-05T10:03:40.410684+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    }
+  ]
+}
