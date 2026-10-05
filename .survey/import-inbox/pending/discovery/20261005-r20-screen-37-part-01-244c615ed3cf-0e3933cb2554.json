@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-37-part-01-244c615ed3cf",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICCVBIC71195.2026.11689518",
+      "identity_tokens": [
+        "DOI:10.1109/ICCVBIC71195.2026.11689518"
+      ],
+      "title": "Towards Accessible Legal AI: A Hierarchical Transformer-Based Approach for Summarizing Long Indian Legal and Policy Documents",
+      "reason": "The primary abstract studies hierarchical summarization of Indian legal and governmental documents with BART; this is a domain application, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1109/ICCVBIC71195.2026.11689518",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICISC69558.2026.11681425",
+      "identity_tokens": [
+        "DOI:10.1109/ICISC69558.2026.11681425"
+      ],
+      "title": "Early Exit Neural Networks: A Comparative Study Against Static Models and Dynamic Models Across Multi-Domain Datasets",
+      "reason": "The abstract compares generic DNN early exit on CIFAR-10, AG News, and Dry Bean; it does not evaluate LLMs or LLM serving.",
+      "source_url": "https://doi.org/10.1109/ICISC69558.2026.11681425",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICMA69663.2026.11647664",
+      "identity_tokens": [
+        "DOI:10.1109/ICMA69663.2026.11647664"
+      ],
+      "title": "Research on the TSM-Transformer Algorithm for Network Traffic Forecast",
+      "reason": "The paper proposes a Transformer for network-traffic forecasting and evaluates forecast accuracy, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/ICMA69663.2026.11647664",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICSIST70215.2026.11706162",
+      "identity_tokens": [
+        "DOI:10.1109/ICSIST70215.2026.11706162"
+      ],
+      "title": "Carbon- and Cost-Aware Scheduling of Cloud AI Inference Workloads Across Geo-Distributed Regions",
+      "reason": "DOI/publisher page https://doi.org/10.1109/ICSIST70215.2026.11706162 could not be retrieved; exact-title searching did not surface a primary full-text copy. Only packet abstract was available; no body section could be checked. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.1109/ICSIST70215.2026.11706162",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICSIST70215.2026.11706184",
+      "identity_tokens": [
+        "DOI:10.1109/ICSIST70215.2026.11706184"
+      ],
+      "title": "Next-Generation Deep Learning Architectures Integrating Attention and Memory Mechanisms",
+      "reason": "The abstract describes a generic attention-and-memory architecture without an LLM inference method or deployment-efficiency evaluation.",
+      "source_url": "https://doi.org/10.1109/ICSIST70215.2026.11706184",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
