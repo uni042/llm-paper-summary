@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:33:29+00:00",
-  "record_count": 878,
+  "updated_at": "2026-10-05T04:36:24+00:00",
+  "record_count": 881,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13099,6 +13099,62 @@
         "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
       ],
       "title": "How Divergence Becomes Decision Flips in Compressed Language Models"
+    },
+    "arXiv:2609.36437": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36437",
+      "identity_tokens": [
+        "arXiv:2609.36437"
+      ],
+      "reason": "This is specialized cryptographic verifiability/auditing cost, not ordinary serving latency or throughput; proof estimates do not establish end-to-end serving gains.",
+      "first_checked_at": "2026-10-05T04:36:23+00:00",
+      "last_checked_at": "2026-10-05T04:36:23+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md"
+      ],
+      "title": "Bits Under ZK-LLM: Evaluating Zero-Knowledge-Friendly Quantization for Verifiable Private LLM Inference"
+    },
+    "arXiv:2609.36763": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36763",
+      "identity_tokens": [
+        "arXiv:2609.36763"
+      ],
+      "reason": "Specialized satellite VLM setting limits generality, and solver-speed figures must not be confused with inference throughput.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2310.01334-merge-then-compress-demystify-efficient-smoe-with-hints-from-its-routing-policy.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2402.14800-not-all-experts-are-equal-efficient-expert-pruning-and-skipping-for-mixture-of-e.md",
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/06-moe-quantization-compression/2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ],
+      "title": "SCORAS-MoE: Joint Compression and Resource-Adaptive Deployment of MoE-VLMs in LEO Satellite Networks"
+    },
+    "arXiv:2609.36636": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36636",
+      "identity_tokens": [
+        "arXiv:2609.36636"
+      ],
+      "reason": "The operational-efficiency connection is indirect; the paper is mainly an empirical analysis of reasoning quality under extra recurrent compute.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "What Makes Recurrence Effective in Looped Language Models?"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:33:30+00:00",
-  "record_count": 2573,
+  "updated_at": "2026-10-05T04:36:25+00:00",
+  "record_count": 2590,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -37294,6 +37294,266 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Leto: Fast In-Place Recovery for LLM Training on Surviving Hardware"
+    },
+    "DOI:10.3390/math14193557": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/math14193557",
+      "identity_tokens": [
+        "DOI:10.3390/math14193557"
+      ],
+      "reason": "Continual-learning MoE routing and expert interference; efficiency concerns training/continual learning, outside inference scope.",
+      "first_checked_at": "2026-10-05T04:36:23+00:00",
+      "last_checked_at": "2026-10-05T04:36:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "CARE-MoE: Conflict-Aware Routing-Guided Expert Mixture-of-Experts for Continual Learning"
+    },
+    "arXiv:2609.36435": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36435",
+      "identity_tokens": [
+        "arXiv:2609.36435"
+      ],
+      "reason": "Learns compact user memory through on-policy optimization; main contribution is training/personalization without an inference-serving efficiency evaluation.",
+      "first_checked_at": "2026-10-05T04:36:23+00:00",
+      "last_checked_at": "2026-10-05T04:36:23+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "title": "MemFold: Learning Compact Soft Memory for Long-Context Personalization via On-Policy Optimization"
+    },
+    "arXiv:2609.36453": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36453",
+      "identity_tokens": [
+        "arXiv:2609.36453"
+      ],
+      "reason": "Multivariate time-series forecasting architecture; not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T04:36:23+00:00",
+      "last_checked_at": "2026-10-05T04:36:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Channel-Dependent State Space Model for Multivariate Time Series Forecasting"
+    },
+    "arXiv:2609.36457": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36457",
+      "identity_tokens": [
+        "arXiv:2609.36457"
+      ],
+      "reason": "Benchmark/study of temporal fact retention in conversational memory; no inference-efficiency mechanism or evaluation.",
+      "first_checked_at": "2026-10-05T04:36:23+00:00",
+      "last_checked_at": "2026-10-05T04:36:23+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Memory Consolidation Flattens the Temporal Shape of User Facts"
+    },
+    "arXiv:2609.36688": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36688",
+      "identity_tokens": [
+        "arXiv:2609.36688"
+      ],
+      "reason": "Generative recommendation model consolidating retrieval/ranking/reward components; recommendation serving, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "GRP v0.1 Technical Report"
+    },
+    "arXiv:2609.36707": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36707",
+      "identity_tokens": [
+        "arXiv:2609.36707"
+      ],
+      "reason": "Post-training distillation for legal-clause identification; task-specific training method, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "LAURA: Knowledge Distillation for Interpretable Ambiguous Clause Identification in Legal Contracts"
+    },
+    "arXiv:2609.36734": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36734",
+      "identity_tokens": [
+        "arXiv:2609.36734"
+      ],
+      "reason": "Selective knowledge distillation trains a smaller LLM; training method rather than inference-time efficiency.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models"
+    },
+    "arXiv:2609.36770": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36770",
+      "identity_tokens": [
+        "arXiv:2609.36770"
+      ],
+      "reason": "Self-supervised collaborative vision expert population; vision training/specialization, not LLM serving.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
+      ],
+      "title": "Emergent Specialization in Populations of Self-Supervised Collaborative Vision Experts Without a Shared Gate or Cross-Agent Gradients"
+    },
+    "arXiv:2609.36587": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36587",
+      "identity_tokens": [
+        "arXiv:2609.36587"
+      ],
+      "reason": "Studies reporting-preference behavior induced by RLVR training; training/evaluation study, not inference efficiency.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Learned Reporting Preferences in RLVR Can Conflict with the Current Request"
+    },
+    "arXiv:2609.36601": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36601",
+      "identity_tokens": [
+        "arXiv:2609.36601"
+      ],
+      "reason": "On-policy distillation supervision allocation and rollout construction; training-only method.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "SAKI: Maximal-Coupling-Routed Teacher Supervision for On-Policy Distillation"
+    },
+    "arXiv:2609.36608": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36608",
+      "identity_tokens": [
+        "arXiv:2609.36608"
+      ],
+      "reason": "Act-first rollouts accelerate on-policy distillation data collection; training throughput, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Act First, Reason Later: Accelerating On-Policy Distillation for Multi-Turn Agents via Reference-Conditioned Inverse Dynamics"
+    },
+    "arXiv:2609.36687": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36687",
+      "identity_tokens": [
+        "arXiv:2609.36687"
+      ],
+      "reason": "Streaming neural codec for electromyography biosignals; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "MyoCodec: A Streaming Neural Codec for Electromyography"
+    },
+    "arXiv:2609.36525": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36525",
+      "identity_tokens": [
+        "arXiv:2609.36525"
+      ],
+      "reason": "Tests consistency of medical-model results across distributed deployments; reliability evaluation, not an LLM inference-efficiency method.",
+      "first_checked_at": "2026-10-05T04:36:24+00:00",
+      "last_checked_at": "2026-10-05T04:36:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Reliability Testing of Medical Model Performance under Distributed Deployment"
+    },
+    "arXiv:2609.36529": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36529",
+      "identity_tokens": [
+        "arXiv:2609.36529"
+      ],
+      "reason": "Linear-attention architecture for general sequence modeling; abstract does not establish an LLM serving contribution.",
+      "first_checked_at": "2026-10-05T04:36:25+00:00",
+      "last_checked_at": "2026-10-05T04:36:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Triadic Linear Attention: Three-Dimensional Recurrent States for Long-Context Sequence Modeling"
+    },
+    "arXiv:2609.36546": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36546",
+      "identity_tokens": [
+        "arXiv:2609.36546"
+      ],
+      "reason": "Interactive-policy distillation; training-only teacher/student data generation.",
+      "first_checked_at": "2026-10-05T04:36:25+00:00",
+      "last_checked_at": "2026-10-05T04:36:25+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Interactive-Policy Distillation with Bidirectional Propose-and-Verify"
+    },
+    "arXiv:2609.36556": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36556",
+      "identity_tokens": [
+        "arXiv:2609.36556"
+      ],
+      "reason": "Benchmark for anomaly detection in multi-agent systems; no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:36:25+00:00",
+      "last_checked_at": "2026-10-05T04:36:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "MAADBench: The Refreshable Paradigm for Anomaly Detection in Multi-Agent Systems"
+    },
+    "arXiv:2609.36585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36585",
+      "identity_tokens": [
+        "arXiv:2609.36585"
+      ],
+      "reason": "LoRA training improves in-context reasoning capability; no inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:36:25+00:00",
+      "last_checked_at": "2026-10-05T04:36:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Transformers Stop Thinking Too Early, and a Tiny LoRA Fixes It"
     }
   }
 }

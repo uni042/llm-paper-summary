@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2d7fb80925a23bcf-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.36734",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.36734",
+    "identity_tokens": [
+      "arXiv:2609.36734"
+    ],
+    "reason": "Selective knowledge distillation trains a smaller LLM; training method rather than inference-time efficiency.",
+    "first_checked_at": "2026-10-05T04:36:24+00:00",
+    "last_checked_at": "2026-10-05T04:36:24+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models"
+  },
+  "processed_at": "2026-10-05T04:36:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2d7fb80925a2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
