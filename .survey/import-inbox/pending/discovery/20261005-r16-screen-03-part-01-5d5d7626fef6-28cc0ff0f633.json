@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-03-part-01-5d5d7626fef6",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19317",
+      "identity_tokens": [
+        "arXiv:2606.19317"
+      ],
+      "title": "Explaining Attention with Program Synthesis",
+      "reason": "中心的貢献はTransformer attention headをプログラムで説明する解釈可能性研究。推論計算削減を目的とせず、代替headでperplexityが上がるという品質評価。",
+      "source_url": "https://arxiv.org/abs/2606.19317",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10635-z",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10635-z"
+      ],
+      "title": "Optical metasurfaces for general vision processing on the edge",
+      "reason": "Nature論文の題名と一次抄録が扱うのは光学メタサーフェスによるエッジ視覚処理であり、LLM推論の効率化ではない。",
+      "source_url": "https://doi.org/10.1038/s41586-026-10635-z",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805622.3810825",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810825"
+      ],
+      "title": "DapQ-DiT: Distribution-Aware Post-Training Quantization for Efficient Generative Tasks in Diffusion Transformers",
+      "reason": "抄録はDiffusion Transformerによる画像・動画生成向けPTQ。低ビット化の効率貢献はあるが対象モデル群がLLMではなく生成DiT。",
+      "source_url": "https://doi.org/10.1145/3805622.3810825",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15621",
+      "identity_tokens": [
+        "arXiv:2606.15621"
+      ],
+      "title": "Re-feeding Is Not Replaying: Measuring Replay Noise in Counterfactual Token-Credit Estimation",
+      "reason": "counterfactual token-credit測定でre-feed replayの測定誤差を分析する評価・方法論研究。推論高速化/資源削減手法が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2606.15621",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15980",
+      "identity_tokens": [
+        "arXiv:2606.15980"
+      ],
+      "title": "Do Activation Monitors Survive Model Updates? Benchmarking, Predicting, and Repairing Activation-Monitor Staleness",
+      "reason": "主題はactivation monitorのモデル更新後stalenessのbenchmark/repairであり、推論効率の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2606.15980",
+      "first_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "last_checked_at": "2026-10-05T02:13:21.391764+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    }
+  ]
+}
