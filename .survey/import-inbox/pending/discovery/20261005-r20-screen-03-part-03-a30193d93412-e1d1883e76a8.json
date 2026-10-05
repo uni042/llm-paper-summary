@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-03-part-03-a30193d93412",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21383",
+      "identity_tokens": [
+        "arXiv:2609.21383"
+      ],
+      "title": "Prediction Dynamics in Depth-Recurrent Language Models",
+      "reason": "本文分析はcompleted trajectoriesに対するretrospective margin/depth診断が中心。prefixから将来更新を予測する実験はretrospective comparatorを下回り、早期終了policyや推論計算削減は実証されず、改善可能性が未確定。",
+      "source_url": "https://arxiv.org/abs/2609.21383",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21391",
+      "identity_tokens": [
+        "arXiv:2609.21391"
+      ],
+      "title": "WS-NeRF: A Mamba-Driven World-State-Aware Adaptive Deblurring Neural Radiance Field",
+      "reason": "一次要旨: Neural Radiance Fields (NeRF) have attracted extensive attention in recent years due to their strong capability for high-quality 3D reconstruction and novel view synthesis from multi-view images. Existing methods usually rely on high-quality sharp inputs, while real-world image acquisition is highly susceptible to blur degradation, which severely affects the",
+      "source_url": "https://arxiv.org/abs/2609.21391",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21502",
+      "identity_tokens": [
+        "arXiv:2609.21502"
+      ],
+      "title": "Adaptive World Memory 3D Foundation Model for Scalable 3D Mapping, Localization, and Rendering",
+      "reason": "一次要旨: Recent 3D foundation models enable generalizable geometric reasoning from RGB images but remain limited in persistent memory, scalability, and renderable scene modeling. We present a memory-centric 3D foundation model for scalable robotic localization, reconstruction, and Gaussian rendering. Its core is an adaptive world memory mechanism that combines transf",
+      "source_url": "https://arxiv.org/abs/2609.21502",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21509",
+      "identity_tokens": [
+        "arXiv:2609.21509"
+      ],
+      "title": "The Communication Bottleneck: A Round-Trip Study of Tree-Structured Expression Serialization in Language Models",
+      "reason": "一次要旨: When language models reason in chain-of-thought or exchange free-text intermediates, they serialize structured information into natural language. How much tree-structured compositional content survives this bottleneck? We propose a round-trip protocol that answers this question empirically for tree-structured expressions. A generator converts a procedurally ",
+      "source_url": "https://arxiv.org/abs/2609.21509",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21515",
+      "identity_tokens": [
+        "arXiv:2609.21515"
+      ],
+      "title": "ServeGuard: Verifiable, Bounded-Residual Confinement of Operator-Invisible Channels Without Revealing the Certified Read Factor",
+      "reason": "一次要旨: Third-party adapters for open-weight language models ship as opaque weight matrices; a recipient cannot check whether an adapter hides a backdoor without trusting the publisher or inspecting the weights, the publisher's core asset. For one important class (payloads placed where a safety monitor is structurally blind), detection is unsound as a defense: every",
+      "source_url": "https://arxiv.org/abs/2609.21515",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    }
+  ]
+}
