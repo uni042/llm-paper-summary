@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-64-part-01-88aa941f7936",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00371",
+      "identity_tokens": [
+        "arXiv:2402.00371"
+      ],
+      "title": "What Does the Bot Say? Opportunities and Risks of Large Language Models in Social Media Bot Detection",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2402.00371. Abstract summary: Social media bot detection has always been an arms race between advancements in machine learning bot detectors and adversarial bot strategies to evade detection. In this work, we bring the arms race to the next level by investigating the opportunities and risks of state-of-the-art large language models (LLMs) in social bot detec Out of scope: Social bot detection accuracy/security evaluation, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2402.00371",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00672",
+      "identity_tokens": [
+        "arXiv:2507.00672"
+      ],
+      "title": "Toward Edge General Intelligence With Multiple-Large Language Model (Multi-LLM): Architecture, Trust, and Orchestration",
+      "reason": "Relevant edge/LLM systems overview, but it is a broad survey rather than a concrete inference-efficiency method/evaluation.",
+      "source_url": "https://arxiv.org/abs/2507.00672",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2025-2503.16893-improving-the-end-to-end-efficiency-of-offline-inference-for-multi-llm-a.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3570361.3592505",
+      "identity_tokens": [
+        "DOI:10.1145/3570361.3592505"
+      ],
+      "title": "Efficient Federated Learning for Modern NLP",
+      "reason": "Primary abstract reviewed at https://doi.org/10.1145/3570361.3592505. Abstract summary: Transformer-based pre-trained models have revolutionized NLP for superior performance and generality. Fine-tuning pre-trained models for downstream tasks often requires private data, for which federated learning is the de-facto approach (i.e., FedNLP). However, our measurements show that FedNLP is prohibitively slow due to the l Out of scope: Federated fine-tuning and convergence speed are training costs, not inference.",
+      "source_url": "https://doi.org/10.1145/3570361.3592505",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.01699",
+      "identity_tokens": [
+        "arXiv:2410.01699"
+      ],
+      "title": "Accelerating Auto-regressive Text-to-Image Generation with Training-free Speculative Jacobi Decoding",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.01699. Abstract summary: The current large auto-regressive models can generate high-quality, high-resolution images, but these models require hundreds or even thousands of steps of next-token prediction during inference, resulting in substantial time consumption. In existing studies, Jacobi decoding, an iterative parallel decoding algorithm, has been us Out of scope: Autoregressive text-to-image generation is a visual-generation workload, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2410.01699",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/13-sparse-attention/2024-2406.14909-mixture-of-attention-spans-optimizing-llm-inference-efficiency-with-heterogeneous-sliding-window-lengths.md",
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.13873",
+      "identity_tokens": [
+        "arXiv:2405.13873"
+      ],
+      "title": "FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering",
+      "reason": "There is a direct cost result, but it is tied to one specialized KG-QA workflow rather than a general inference system.",
+      "source_url": "https://arxiv.org/abs/2405.13873",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ]
+    }
+  ]
+}
