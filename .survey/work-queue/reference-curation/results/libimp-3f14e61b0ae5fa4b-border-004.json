@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f14e61b0ae5fa4b-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.36357",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.36357",
+    "identity_tokens": [
+      "arXiv:2609.36357"
+    ],
+    "reason": "LLM圧縮タスクにおける推論速度とlossless compression率の限定的fitで、汎用servingへの転移が未確定。",
+    "first_checked_at": "2026-10-05T05:06:24+00:00",
+    "last_checked_at": "2026-10-05T05:06:24+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+      "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+      "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+    ],
+    "title": "HyperZip: Efficient Data Compression through Personalized Diffusion LLMs with Hypernetworks"
+  },
+  "processed_at": "2026-10-05T05:06:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f14e61b0ae5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

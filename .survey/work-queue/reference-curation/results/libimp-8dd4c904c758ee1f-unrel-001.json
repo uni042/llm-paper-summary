@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8dd4c904c758ee1f-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.36159",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.36159",
+    "identity_tokens": [
+      "arXiv:2609.36159"
+    ],
+    "reason": "潜在思考の表現監督training objectiveが主題。要旨は同一training computeでの品質改善と推論時追加パラメータなしを報告するだけで、inference cost削減は示さない。",
+    "first_checked_at": "2026-10-05T05:06:25+00:00",
+    "last_checked_at": "2026-10-05T05:06:25+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Principled Thoughts for Latent Recursive LLM Systems"
+  },
+  "processed_at": "2026-10-05T05:06:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8dd4c904c758",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

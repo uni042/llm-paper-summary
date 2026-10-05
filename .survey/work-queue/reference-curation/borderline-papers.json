@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:04:08+00:00",
-  "record_count": 916,
+  "updated_at": "2026-10-05T05:06:25+00:00",
+  "record_count": 920,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -13753,6 +13753,67 @@
         "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
       ],
       "title": "MS-GLA: Multi-Scale Gated Linear Attention for Addressing Representational Bottlenecks via Multi-Temporal Resolution"
+    },
+    "arXiv:2609.36357": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36357",
+      "identity_tokens": [
+        "arXiv:2609.36357"
+      ],
+      "reason": "LLM圧縮タスクにおける推論速度とlossless compression率の限定的fitで、汎用servingへの転移が未確定。",
+      "first_checked_at": "2026-10-05T05:06:24+00:00",
+      "last_checked_at": "2026-10-05T05:06:24+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "HyperZip: Efficient Data Compression through Personalized Diffusion LLMs with Hypernetworks"
+    },
+    "arXiv:2610.01936": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01936",
+      "identity_tokens": [
+        "arXiv:2610.01936"
+      ],
+      "reason": "一次本文で確認できたのはRAG領域のsurvey taxonomyであり、効率最適化の一次手法・実測を扱わない。",
+      "first_checked_at": "2026-10-05T05:06:24+00:00",
+      "last_checked_at": "2026-10-05T05:06:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "Mapping the RAG landscape: a four-axis taxonomy of efficiency, defense, interactivity, and reasoning"
+    },
+    "arXiv:2609.36104": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36104",
+      "identity_tokens": [
+        "arXiv:2609.36104"
+      ],
+      "reason": "複数LLM呼出しのquality/cost scaling分析であり、費用削減を目的とした具体的な効率化手法ではない。accuracyの伸びもtask/architecture依存。",
+      "first_checked_at": "2026-10-05T05:06:25+00:00",
+      "last_checked_at": "2026-10-05T05:06:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "An Exact Generate - Transform Decomposition of Small-LLM Team Scaling Across Orchestration Architectures"
+    },
+    "arXiv:2609.36116": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36116",
+      "identity_tokens": [
+        "arXiv:2609.36116"
+      ],
+      "reason": "typed action scoringを効率的に拡張する設計意図はあるが、本文実験は主にagent task qualityで、latency・throughput・token・memory比較の証拠がない。",
+      "first_checked_at": "2026-10-05T05:06:25+00:00",
+      "last_checked_at": "2026-10-05T05:06:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Dyad: Extending Large Language Models with Native Typed Decision-Making"
     }
   }
 }
