@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a82d39de5a452ba9-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.08691",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.08691",
+    "identity_tokens": [
+      "arXiv:2502.08691"
+    ],
+    "reason": "LLM-agent social simulation system/application, not inference efficiency.",
+    "first_checked_at": "2026-10-05T02:22:46+00:00",
+    "last_checked_at": "2026-10-05T02:22:46+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2025-2510.18586-tokencake-agent-kv-cache-serving.md",
+      "papers/inference/15-inference-simulation-emulation/2026-2601.21473-scalesim-serving-large-scale-multi-agent-simulation-with-invocation-dist.md"
+    ],
+    "title": "AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society"
+  },
+  "processed_at": "2026-10-05T02:22:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a82d39de5a45",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

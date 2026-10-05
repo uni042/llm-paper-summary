@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be78876afa62377e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.31650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.31650",
+    "identity_tokens": [
+      "arXiv:2606.31650"
+    ],
+    "reason": "Runtime context reduction is present, yet no isolated inference latency/throughput or deployed-serving result is established; scope fit remains adjacent.",
+    "first_checked_at": "2026-10-05T02:22:47+00:00",
+    "last_checked_at": "2026-10-05T02:22:47+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+    ],
+    "title": "ECHO: Prune to act, trace to learn with selective turn memory in agentic RL"
+  },
+  "processed_at": "2026-10-05T02:22:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be78876afa62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

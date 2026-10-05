@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:20:12+00:00",
-  "record_count": 688,
+  "updated_at": "2026-10-05T02:22:47+00:00",
+  "record_count": 692,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10042,6 +10042,80 @@
         "papers/inference/13-sparse-attention/2025-2502.13189-moba.md"
       ],
       "title": "Star-Transformer"
+    },
+    "DOI:10.1145/3744255.3811741": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3744255.3811741",
+      "identity_tokens": [
+        "DOI:10.1145/3744255.3811741"
+      ],
+      "reason": "The candidate title and packet abstract describe empirical LLM inference energy/accuracy analysis, but the primary DOI record could not be fetched (HTTP 403) and no author-hosted primary full text was located in the attempted searches.",
+      "first_checked_at": "2026-10-05T02:22:46+00:00",
+      "last_checked_at": "2026-10-05T02:22:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Assessing the Sustainability of LLM Inference through Energy–Accuracy Analysis"
+    },
+    "arXiv:2502.06768": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.06768",
+      "identity_tokens": [
+        "arXiv:2502.06768"
+      ],
+      "reason": "masked diffusion modelのdecode token orderを適応させ難しいinfilling subproblemを避ける。Sudoku等でaccuracy改善を示すが、latency/FLOPs/iteration削減は評価しない。推論アルゴリズムとは関係するものの効率適合が未解決。",
+      "first_checked_at": "2026-10-05T02:22:46+00:00",
+      "last_checked_at": "2026-10-05T02:22:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md",
+        "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md"
+      ],
+      "title": "Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions"
+    },
+    "DOI:10.1145/3797905.3807874": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3797905.3807874",
+      "identity_tokens": [
+        "DOI:10.1145/3797905.3807874"
+      ],
+      "reason": "Primary abstract establishes direct scope fit, but the exact conference full text could not be examined; details and limits remain unverified.",
+      "first_checked_at": "2026-10-05T02:22:47+00:00",
+      "last_checked_at": "2026-10-05T02:22:47+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.11181-tetriinfer.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Latency-SLO-Aware Memory Offloading for Large Language Model Inference"
+    },
+    "arXiv:2606.31650": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.31650",
+      "identity_tokens": [
+        "arXiv:2606.31650"
+      ],
+      "reason": "Runtime context reduction is present, yet no isolated inference latency/throughput or deployed-serving result is established; scope fit remains adjacent.",
+      "first_checked_at": "2026-10-05T02:22:47+00:00",
+      "last_checked_at": "2026-10-05T02:22:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "ECHO: Prune to act, trace to learn with selective turn memory in agentic RL"
     }
   }
 }
