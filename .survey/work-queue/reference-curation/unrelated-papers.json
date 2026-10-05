@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:38:51+00:00",
-  "record_count": 5287,
+  "updated_at": "2026-10-05T13:41:36+00:00",
+  "record_count": 5295,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -76845,6 +76845,120 @@
         "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
       ],
       "title": "Pushing Mixture of Experts to the Limit: Extremely Parameter Efficient MoE for Instruction Tuning"
+    },
+    "arXiv:2602.19980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.19980",
+      "identity_tokens": [
+        "arXiv:2602.19980"
+      ],
+      "reason": "The paper compares AR and diffusion-model planning accuracy/training behavior; it does not propose inference efficiency.",
+      "first_checked_at": "2026-10-05T13:41:35+00:00",
+      "last_checked_at": "2026-10-05T13:41:35+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md"
+      ],
+      "title": "Discrete Diffusion Models Exploit Asymmetry to Solve Lookahead Planning Tasks"
+    },
+    "arXiv:2602.17144": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17144",
+      "identity_tokens": [
+        "arXiv:2602.17144"
+      ],
+      "reason": "PiCCE studies learning-to-defer model quality and expert selection, not LLM serving/inference efficiency.",
+      "first_checked_at": "2026-10-05T13:41:35+00:00",
+      "last_checked_at": "2026-10-05T13:41:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ],
+      "title": "When More Experts Hurt: Underfitting in Multi-Expert Learning to Defer"
+    },
+    "arXiv:2603.00110": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.00110",
+      "identity_tokens": [
+        "arXiv:2603.00110"
+      ],
+      "reason": "PhysGen is a video-world-model robotics method. KV caching/L-MTP are implementation ingredients for the robotics task, not the paper’s inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T13:41:35+00:00",
+      "last_checked_at": "2026-10-05T13:41:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation"
+    },
+    "arXiv:2602.16034": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.16034",
+      "identity_tokens": [
+        "arXiv:2602.16034"
+      ],
+      "reason": "FeDecider addresses federated cross-domain recommendation and low-rank adapter aggregation; it is a training/federated-learning method.",
+      "first_checked_at": "2026-10-05T13:41:35+00:00",
+      "last_checked_at": "2026-10-05T13:41:35+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ],
+      "title": "FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation"
+    },
+    "arXiv:2602.15257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.15257",
+      "identity_tokens": [
+        "arXiv:2602.15257"
+      ],
+      "reason": "The visual-document model paper studies continued pretraining, fine-tuning, and preference optimization for long-context capability; its scope is training, not inference efficiency.",
+      "first_checked_at": "2026-10-05T13:41:36+00:00",
+      "last_checked_at": "2026-10-05T13:41:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "How to Train Your Long-Context Visual Document Model"
+    },
+    "DOI:10.1002/advs.202524215": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.202524215",
+      "identity_tokens": [
+        "DOI:10.1002/advs.202524215"
+      ],
+      "reason": "The photocatalyst work uses an LLM ensemble for literature extraction and scientific discovery; its contribution is data extraction/application accuracy, not LLM efficiency.",
+      "first_checked_at": "2026-10-05T13:41:36+00:00",
+      "last_checked_at": "2026-10-05T13:41:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13999-reap-one-shot-moe-compression.md"
+      ],
+      "title": "Prompt Engineering Accelerates the Data‐Driven Discovery of Photocatalysts via an LLM‐Based Model Ensemble Strategy"
+    },
+    "DOI:10.3390/bdcc10020060": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bdcc10020060",
+      "identity_tokens": [
+        "DOI:10.3390/bdcc10020060"
+      ],
+      "reason": "The paper analyzes and repairs reliability defects in LLM inference engines; its goal is correctness/reliability rather than efficiency.",
+      "first_checked_at": "2026-10-05T13:41:36+00:00",
+      "last_checked_at": "2026-10-05T13:41:36+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2412.18934-dovetail-cpu-gpu-heterogeneous-speculative-decoding.md"
+      ],
+      "title": "Reliability of LLM Inference Engines from a Static Perspective: Root Cause Analysis and Repair Suggestion via Natural Language Reports"
+    },
+    "arXiv:2602.11495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11495",
+      "identity_tokens": [
+        "arXiv:2602.11495"
+      ],
+      "reason": "The study detects jailbreak attacks from model representations and targets security accuracy, not inference efficiency.",
+      "first_checked_at": "2026-10-05T13:41:36+00:00",
+      "last_checked_at": "2026-10-05T13:41:36+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md"
+      ],
+      "title": "Jailbreaking Leaves a Trace: Understanding and Detecting Jailbreak Attacks from Internal Representations of Large Language Models"
     }
   }
 }

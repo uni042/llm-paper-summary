@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9120f8dcb76fa15d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.00110",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.00110",
+    "identity_tokens": [
+      "arXiv:2603.00110"
+    ],
+    "reason": "PhysGen is a video-world-model robotics method. KV caching/L-MTP are implementation ingredients for the robotics task, not the paper’s inference-efficiency contribution.",
+    "first_checked_at": "2026-10-05T13:41:35+00:00",
+    "last_checked_at": "2026-10-05T13:41:35+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation"
+  },
+  "processed_at": "2026-10-05T13:41:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9120f8dcb76f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

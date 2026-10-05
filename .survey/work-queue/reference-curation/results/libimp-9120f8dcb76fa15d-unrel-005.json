@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9120f8dcb76fa15d-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.16034",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.16034",
+    "identity_tokens": [
+      "arXiv:2602.16034"
+    ],
+    "reason": "FeDecider addresses federated cross-domain recommendation and low-rank adapter aggregation; it is a training/federated-learning method.",
+    "first_checked_at": "2026-10-05T13:41:35+00:00",
+    "last_checked_at": "2026-10-05T13:41:35+00:00",
+    "linked_from": [
+      "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+    ],
+    "title": "FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation"
+  },
+  "processed_at": "2026-10-05T13:41:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9120f8dcb76f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
