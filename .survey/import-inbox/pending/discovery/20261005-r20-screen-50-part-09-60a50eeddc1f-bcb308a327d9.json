@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-50-part-09-60a50eeddc1f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00050",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00050"
+      ],
+      "title": "Pick and Spin: Cold-Start-Aware Routing for Self-Hosted LLM Serving",
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; a separate author preprint with a different title was found, but its version and reported metrics do not match the conference abstract closely enough to substitute for the published body.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00050",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00054",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00054"
+      ],
+      "title": "InferScale: Kubernetes-Native Predictive Autoscaling for SLO-Aware AI Inference",
+      "reason": "Although the autoscaler is for AI inference services, its reported real workload is ResNet-50 ONNX plus tenant contention; the primary abstract does not establish an LLM inference contribution.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00054",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00055",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00055"
+      ],
+      "title": "Dynamic Pipeline Inference Optimization for LLMs: Load-Aware Partitioning, Updating, and Migration",
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; the distributed-cluster evaluation and comparison details could not be checked.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00055",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.17707-pipeboost-resilient-pipelined-serverless-scaling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CLOUD72782.2026.00057",
+      "identity_tokens": [
+        "DOI:10.1109/CLOUD72782.2026.00057"
+      ],
+      "title": "AnchorDL: Dual-Locality-based Scheduling for Serverless Inference Workflows",
+      "reason": "AnchorDL schedules generic deep-learning model inference workflows; its abstract does not establish LLM inference/serving as the workload.",
+      "source_url": "https://doi.org/10.1109/CLOUD72782.2026.00057",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CoDIT70676.2026.11631239",
+      "identity_tokens": [
+        "DOI:10.1109/CoDIT70676.2026.11631239"
+      ],
+      "title": "A Hybrid Generative AI and Optimization Approach for Resilient Emergency Department Layouts",
+      "reason": "The LLM is used to propose emergency-department layouts before optimization; the paper evaluates a healthcare planning application, not inference efficiency.",
+      "source_url": "https://doi.org/10.1109/CoDIT70676.2026.11631239",
+      "first_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "last_checked_at": "2026-10-05T09:54:23.001966+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    }
+  ]
+}
