@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-85-part-07-03cfc3081cf0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.17283",
+      "identity_tokens": [
+        "arXiv:2404.17283"
+      ],
+      "title": "Reinforcement Retrieval Leveraging Fine-grained Feedback for Fact Checking News Claims with Black-Box LLM",
+      "reason": "black-box LLMを使うfact-checking retrieval modelのreinforcement trainingを扱い、推論時効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2404.17283",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.10386",
+      "identity_tokens": [
+        "arXiv:2404.10386"
+      ],
+      "title": "I/O in Machine Learning Applications on HPC Systems: A 360-degree Survey",
+      "reason": "一次本文§3.4では一般ML workloadのI/Oをsurveyし、推論例もBERTのonline/offline data handlingを説明するに留まる。LLM-serving固有の方式や評価ではなく、対象範囲に対する関連性が弱い。",
+      "source_url": "https://arxiv.org/abs/2404.10386",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fdata.2024.1357926",
+      "identity_tokens": [
+        "DOI:10.3389/fdata.2024.1357926"
+      ],
+      "title": "Sentiment analysis of COP9-related tweets: a comparative study of pre-trained models and traditional techniques",
+      "reason": "感情分析データセット上で分類モデルの精度を比較する研究で、推論効率方式を評価しない。",
+      "source_url": "https://doi.org/10.3389/fdata.2024.1357926",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.11487",
+      "identity_tokens": [
+        "arXiv:2603.11487"
+      ],
+      "title": "Attention Sinks Are Provably Necessary in Softmax Transformers: Evidence from Trigger-Conditional Tasks",
+      "reason": "attention sinkの理論的必要性を示す機構分析で、serving効率改善を提案しない。",
+      "source_url": "https://arxiv.org/abs/2603.11487",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.05890",
+      "identity_tokens": [
+        "arXiv:2603.05890"
+      ],
+      "title": "Lost in Stories: Consistency Bugs in Long Story Generation by LLMs",
+      "reason": "長文story generationの一貫性errorを測るbenchmark研究で、推論効率化が主題でない。",
+      "source_url": "https://arxiv.org/abs/2603.05890",
+      "first_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "last_checked_at": "2026-10-05T11:54:40.849797+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
