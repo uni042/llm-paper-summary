@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7280962a4eab4c81-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.19909",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.19909",
+    "identity_tokens": [
+      "arXiv:2609.19909"
+    ],
+    "reason": "Collaborative fine-tuning on edge devices adapts large language models to domain-specific data while keeping each device's data local. State-of-the-art (SOTA) collaborative fine-tuning techniques are largely designed for GPU-based edge devices and rely on pipeline parallelism (PP). However, many edge platforms, including IoT gateways, smart-home hubs, and in-vehicle computers, are primarily CPU-based. This paper reports that PP is ineffective on CPU-based edge devices because the same CPU handles both model computation and communication, which causes severe CPU contention. Our analysis shows that this leads to 5.75$\\times$ higher computation stall ratios than on GPU devices on average. Tensor parallelism (TP) can alleviate this contention by separating computation and communication, but existing TP techniques assume homogeneous devices. On heterogeneous CPU edge devices, we find that this assumption causes faster workers to remain idle for up to 34% while waiting for slower devices at synchronization points. To address the limitations, we propose Xronos, a collaborative fine-tuning framework for heterogeneous CPU edge devices. Xronos uses TP as its execution backbone and combines lightweight profiling with heterogeneity-aware tensor partitioning to reduce the straggler bottleneck. Across diverse devices, models, and benchmark tasks, Xronos reduces fine-tuning time by 18% (TP) to 56% (PP) and the ratio of device idle time by $\\sim$5.9$\\times$ over SOTA techniques, while maintaining the accuracy.",
+    "first_checked_at": "2026-10-05T06:23:11+00:00",
+    "last_checked_at": "2026-10-05T06:23:11+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+    ],
+    "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs"
+  },
+  "processed_at": "2026-10-05T06:23:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7280962a4eab",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

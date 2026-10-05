@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T06:20:29+00:00",
-  "record_count": 999,
+  "updated_at": "2026-10-05T06:23:11+00:00",
+  "record_count": 1000,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -15190,6 +15190,22 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
       ],
       "title": "Prediction Dynamics in Depth-Recurrent Language Models"
+    },
+    "arXiv:2609.19868": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.19868",
+      "identity_tokens": [
+        "arXiv:2609.19868"
+      ],
+      "reason": "推論方式とKV cache再利用はscopeに近い一方、本文に速度・効率の比較評価がなく、効率研究としての寄与を現資料で確定できない。",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "Zarya: A Hybrid Autoregressive--Masked Diffusion Language Model with Flexible Training and Dual-Mode Inference"
     }
   }
 }

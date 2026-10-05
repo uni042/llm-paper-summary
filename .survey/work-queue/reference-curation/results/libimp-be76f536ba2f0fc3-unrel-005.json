@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-be76f536ba2f0fc3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38198",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38198",
+    "identity_tokens": [
+      "arXiv:2609.38198"
+    ],
+    "reason": "一次要旨: Diffusion maps, and kernel methods more generally, provide an interpretable nonlinear spectral representation basis for geometric learning. In the geometric limit, small bandwidth, these matrices tend to be high rank and thus require materializing dense Gaussian kernels requires $O(N^2)$ memory. We introduce FlashDiffusion, a matrix-free method that evaluate",
+    "first_checked_at": "2026-10-05T06:23:12+00:00",
+    "last_checked_at": "2026-10-05T06:23:12+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+      "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+    ],
+    "title": "FlashDiffusion: Fused Tiled Kernel Spectral Decomposition"
+  },
+  "processed_at": "2026-10-05T06:23:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-be76f536ba2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

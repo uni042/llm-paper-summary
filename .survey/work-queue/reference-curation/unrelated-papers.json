@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T06:20:30+00:00",
-  "record_count": 3209,
+  "updated_at": "2026-10-05T06:23:12+00:00",
+  "record_count": 3228,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -46700,6 +46700,312 @@
         "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
       ],
       "title": "Detecting Pretraining Data in Large Language Models from a Free-Energy Perspective"
+    },
+    "arXiv:2609.19610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19610",
+      "identity_tokens": [
+        "arXiv:2609.19610"
+      ],
+      "reason": "Understanding humans over long horizons requires agents to infer not only what people need in the moment, but also how routines form, why they repeat, and when they change. We introduce SimLife, a scalable platform for simulating long-term household life with rich visual observations, ground-truth action logs, and synthetic dialogues with audio. Built on SimLife, SimLife-BP evaluates long-context pattern understanding: the ability to infer latent behavioral rules from weeks or months of everyday observations. The benchmark contains 106 episodes averaging 15.49 hours and 38.57 in-game days, and 1,439 question-answer pairs. Each task probes direct, counterfactual, noisy, and inverse reasoning under different levels of rule hints. Evaluating frontier models and architectures, we find that current models often achieve surface-level prediction without comprehensive rule understanding, rely on frequency-based heuristics rather than if-then reasoning over evidence, and struggle to adapt when behavioral patterns change. These findings suggest that long-context pattern understanding remains a major bottleneck for future embodied agents, while SimLife opens a broader space for studying memory, personalization, adaptation, and long-horizon planning in everyday human-AI interaction.",
+      "first_checked_at": "2026-10-05T06:23:10+00:00",
+      "last_checked_at": "2026-10-05T06:23:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "SIMLIFE: Pattern Understanding for Long-Horizon Human-Agent Partnership"
+    },
+    "arXiv:2609.19611": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19611",
+      "identity_tokens": [
+        "arXiv:2609.19611"
+      ],
+      "reason": "Tensor programs, as used in deep learning models, are a prime target for optimization, as small performance improvements can have a large impact across training or inference workloads. However, such optimizations are complicated and can produce subtle bugs. Traditionally, correctness is assumed when differential testing against a reference on random inputs fails to reveal bugs. However, the inputs to these programs are massive tensors, and finding bugs can require generating extremely low likelihood inputs with precise relationships among their values. We propose a novel way to find bugs more consistently by flipping the quantifiers. Rather than generating a single input and checking all output tensor locations for equivalence, what if you could check a single output tensor location's equivalence for all inputs? We implement this idea in a system, \\dirigo, by using a novel symbolic execution strategy. We demonstrate that \\dirigo can find bugs effectively in a public dataset of 6,988 AI-written CUDA kernels that are all marked correct by differential testing. Of these, \\dirigo finds 600 kernels that are actually buggy, and finds 97.3\\% of those bugs within two minutes.",
+      "first_checked_at": "2026-10-05T06:23:10+00:00",
+      "last_checked_at": "2026-10-05T06:23:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "The Output-Space Hypothesis: Enumerative Equivalence Checking for Tensor Programs"
+    },
+    "arXiv:2609.19702": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19702",
+      "identity_tokens": [
+        "arXiv:2609.19702"
+      ],
+      "reason": "Autoregressive image generation has emerged as a paradigm for multimodal AI systems due to its compatibility with transformer-based LLM serving infrastructures. However, generating thousands of visual tokens per request makes decoding increasingly bottlenecked by KV cache accesses during attention computation. Sparse attention is particularly attractive for this workload because many visual generation applications tolerate moderate quality degradation in exchange for improved performance and efficiency. While sparse attention has been extensively explored for text-based LLM inference, it remains unclear whether its sparsity assumptions generalize effectively to autoregressive image generation. We present the first systematic characterization of attention sparsity in autoregressive image generation across diverse workloads and representative open-source models. Our analysis reveals several distinguishing properties, including a pronounced prefill-decode asymmetry, strong attention concentration on prompt and local tokens, and a unique diagonal attention sparsity pattern arising from the spatial locality of visual tokens. Motivated by these observations, we propose a diagonal-aware sparse attention mechanism that selectively skips KV entries along the diagonal attention direction within a recent window. Implemented on top of a GPU-based serving system using FlexGen, FlashAttention-2, and custom kernels, our approach achieves up to 3.1x throughput and 1.19x latency improvements with less than 2% quality degradation compared to dense inference.",
+      "first_checked_at": "2026-10-05T06:23:10+00:00",
+      "last_checked_at": "2026-10-05T06:23:10+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2408.03675-nacl-a-general-and-effective-kv-cache-eviction-framework-for-llms.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18599-oaken-hybrid-kv-cache-quantization.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Understanding and Exploiting Diagonal Attention Sparsity in Autoregressive Image Generation"
+    },
+    "arXiv:2609.19729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19729",
+      "identity_tokens": [
+        "arXiv:2609.19729"
+      ],
+      "reason": "Autoregressive (AR) video generation degrades over long horizons due to an overlooked train-inference discrepancy we term KV eviction mismatch: models train on short clips where all context frames reside in the KV cache, but at inference, memory constraints force distant frames to be evicted from the KV cache - removing context the model was conditioned on. Rather than simulating eviction via context truncation - which discards temporal information the model still needs and degrades motion coherence - we keep the context but while progressively reducing the influence of distant frames, making their eventual eviction negligible. To guide this design, we introduce the positional response $R( \\Delta, \\, t_{\\text{denoise}})$, a perturbation-based sensitivity measure revealing that context influence decays steeply with temporal distance and varies systematically across denoising steps. Motivated by this analysis, we propose Recency Forcing, which applies a non-positive, timestep-dependent bias, termed Temporal Response Bias (TRB), on pre-softmax attention logits derived directly from $R$, closing the train-inference gap without modifying context length or training objectives. We further introduce Biased Attention Reparameterization (BAR), an exact reformulation that moves the bias outside the softmax, making TRB a standard FlashAttention call at zero overhead. Recency Forcing operates in both training-free mode and training-based mode. Experiments on VBench and VBench-Long demonstrate state-of-the-art long-horizon generation quality at no additional inference cost.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Recency Forcing: Bridging the Long-Horizon Gap in Autoregressive Video Generation"
+    },
+    "arXiv:2609.19768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19768",
+      "identity_tokens": [
+        "arXiv:2609.19768"
+      ],
+      "reason": "Multivariate ocean forecasting must exploit shared evolution in a coupled ocean system while adapting to the heterogeneous statistical and dynamical characteristics of different prediction variables and locations. Fully shared models may lack the flexibility to handle this heterogeneity, whereas fully independent models discard the common ocean context shared across variables. The key question is how to retain shared context in a unified model while allowing computation to specialize according to the prediction target and local state. We propose OceanMoE, a structured conditional sparse Mixture-of-Experts framework that combines sharing and specialization for multivariate ocean forecasting. OceanMoE fuses cross-variable information to construct target-specific local representations and uses them to perform content-conditioned sparse routing at each spatial location, with the number of active experts adapted to router confidence. In the decoder, routing is augmented with a learned geographic bias parameterized by spherical-harmonic spatial bases, while shared residual and seasonal pathways provide common cross-variable and month-dependent context. Experiments on long-horizon autoregressive ORAS5 forecasting show that OceanMoE lowers aggregate forecasting error in both evaluated settings and maintains lower geometric-mean normalized RMSE than the corresponding baselines over most later rollout months. Routing analyses further show that expert allocation varies with prediction targets and spatial locations. These results support structured conditional computation as a modeling strategy for balancing shared ocean context with adaptive specialization.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "OceanMoE: Structured Conditional Sparse Computation for Long-Horizon Multivariate Ocean Forecasting"
+    },
+    "arXiv:2609.19793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19793",
+      "identity_tokens": [
+        "arXiv:2609.19793"
+      ],
+      "reason": "Recent advances in artificial intelligence (AI) are reshaping smart glasses from egocentric capture and display devices into platforms for wearable intelligence. Smart glasses increasingly serve as wearable AI systems that connect first-person observation with real-time assistance under strict form-factor constraints. We frame this transition through the lens of \\emph{AI smart glasses} and define them as a system-level concept in which egocentric sensing, resource-aware computing, intelligent reasoning, multimodal interaction, and real-world application constraints are co-designed for personalized assistance in the physical world. To systematically study this perspective, we organize the survey around four connected dimensions. First, we examine the hardware foundation that bounds sensing, computation, feedback delivery, and sustained deployment. Second, we study wearable intelligence, where egocentric signals are transformed into perceptual, contextual, and agentic capabilities. Third, we discuss interaction design, through which users request, receive, correct, and regulate assistance during ongoing activity. Fourth, we analyze application scenarios across healthcare, accessibility, situated learning, daily life assistance, cultural tourism, and industrial support, showing how domain requirements reshape system design and evaluation. We further identify five cross-cutting research challenges for future AI smart glasses: next-generation hardware, trustworthy egocentric intelligence, lifelong personalized memory, proactive intelligence, and embodied foundation models. By centering smart glasses as wearable-intelligence platforms, this survey provides a unified framework for organizing technologies, applications, and open challenges in this emerging area.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "AI Smart Glasses for Wearable Intelligence: From Egocentric Sensing to Agentic Personalization"
+    },
+    "arXiv:2609.19856": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19856",
+      "identity_tokens": [
+        "arXiv:2609.19856"
+      ],
+      "reason": "Voice activity detection (VAD) fronts most voice-agent pipelines, yet production detectors treat all human speech, background talkers included, as valid activity; in crowded settings this floods recognition, stalls turn-taking, and triggers false barge-in. We formalize Foreground VAD (FVAD): a frame-synchronous, enrollment-free task in which only the dominant speaker, defined by sustained presence rather than instantaneous loudness, is positive, and which reduces to conventional VAD when a single speaker is present. We show that foreground selectivity is largely governed by training supervision: the crucial ingredient is an augmentation recipe pairing foreground-only labels with competing-speaker mixing, generated fully automatically without human annotation. To quantify selectivity we introduce the Background False-Alarm Rate (BG-FAR), gated by foreground F1, and build a controlled benchmark, Mix-Interference, complemented by an adapted VOiCES for real-world far-field evaluation. Across equal-size backbones, Mamba and LSTM perform on par while a longer-context attention model is no better, suggesting that training supervision plays a substantially larger role than temporal modeling capacity in achieving foreground selectivity. The resulting lightweight streaming model, Mamba-FVAD, outperforms commercial VADs and enrollment-based speaker-aware systems in foreground selectivity while staying competitive on conventional VAD, at 1-2 ms per-frame CPU latency.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Foreground Voice Activity Detection: Learning Speaker Selectivity from Supervision"
+    },
+    "arXiv:2609.19909": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19909",
+      "identity_tokens": [
+        "arXiv:2609.19909"
+      ],
+      "reason": "Collaborative fine-tuning on edge devices adapts large language models to domain-specific data while keeping each device's data local. State-of-the-art (SOTA) collaborative fine-tuning techniques are largely designed for GPU-based edge devices and rely on pipeline parallelism (PP). However, many edge platforms, including IoT gateways, smart-home hubs, and in-vehicle computers, are primarily CPU-based. This paper reports that PP is ineffective on CPU-based edge devices because the same CPU handles both model computation and communication, which causes severe CPU contention. Our analysis shows that this leads to 5.75$\\times$ higher computation stall ratios than on GPU devices on average. Tensor parallelism (TP) can alleviate this contention by separating computation and communication, but existing TP techniques assume homogeneous devices. On heterogeneous CPU edge devices, we find that this assumption causes faster workers to remain idle for up to 34% while waiting for slower devices at synchronization points. To address the limitations, we propose Xronos, a collaborative fine-tuning framework for heterogeneous CPU edge devices. Xronos uses TP as its execution backbone and combines lightweight profiling with heterogeneity-aware tensor partitioning to reduce the straggler bottleneck. Across diverse devices, models, and benchmark tasks, Xronos reduces fine-tuning time by 18% (TP) to 56% (PP) and the ratio of device idle time by $\\sim$5.9$\\times$ over SOTA techniques, while maintaining the accuracy.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "title": "Xronos: Heterogeneity-Aware Tensor Parallelism for Collaborative LLM Fine-Tuning on Edge CPUs"
+    },
+    "arXiv:2609.19924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19924",
+      "identity_tokens": [
+        "arXiv:2609.19924"
+      ],
+      "reason": "Large Language Models (LLMs) transform vast collections of unstructured text into semantic patterns used for language generation and reasoning tasks. Behind their ease of use lies a complex process: words become tokens, tokens become vectors, and vectors ultimately give rise to streams of bits that flow through High-Performance Computing (HPC) systems. As modern LLMs grow to billions or trillions of parameters, this path increasingly unfolds across thousands of interconnected accelerators, making the underlying communication fabric a critical and often opaque component of model training. This tutorial aims to walk the reader through the journey from words to network traffic, shedding light on how language is translated into communication flows within HPC training systems. Using concrete examples from Dante's Divine Comedy, we illustrate how model architecture, tokenization, embeddings, and parallelization strategies shape the volume, structure, and timing of data exchanged across the network. We combine architectural analysis with analytical traffic models and numerical examples to characterize the communication requirements of LLM training. We try to demystify how words travel across the network and provide practical insights into the network requirements needed to support the journey from text to trained model.",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "The Life of a Token: from Words to Bits on the Wire"
+    },
+    "arXiv:2609.22455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22455",
+      "identity_tokens": [
+        "arXiv:2609.22455"
+      ],
+      "reason": "一次要旨: We present Apollo Restore, a 24-billion-parameter large language model for restoring lacunae---physical gaps---in fragmentary Ancient Greek texts. Fine-tuned from Mistral Small with a fill-in-the-middle objective, Apollo Restore reconstructs missing spans without requiring oracle knowledge of their length. To our knowledge, it is the first large-scale decode",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Apollo Restore: A Foundation LLM for Historical Greek Optimized for Fill-in-the-Middle Restoration of Ancient Greek Texts"
+    },
+    "arXiv:2609.22506": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22506",
+      "identity_tokens": [
+        "arXiv:2609.22506"
+      ],
+      "reason": "一次要旨: Vision Transformers devote most of their parameters to MLPs for channel mixing, but still rely on quadratic multi-head self-attention for token interactions. While linear attention fixes the complexity problem, bringing it down to O(N), it is usually just paired with the same fixed-activation MLP as before. Kolmogorov-Arnold Networks take a different approac",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN"
+    },
+    "arXiv:2609.22645": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22645",
+      "identity_tokens": [
+        "arXiv:2609.22645"
+      ],
+      "reason": "一次要旨: Scaling analog and digital Ising machines to larger problems requires overcoming finite device capacity and the cost of communication between devices. We present cluster mean-field theory (CMFT), a framework that partitions a large interaction graph into clusters sized to fit available hardware. Each cluster performs local updates independently, while intera",
+      "first_checked_at": "2026-10-05T06:23:11+00:00",
+      "last_checked_at": "2026-10-05T06:23:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Extreme-Scale Ising Machines with Cluster Mean-Field Theory"
+    },
+    "arXiv:2609.25081": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25081",
+      "identity_tokens": [
+        "arXiv:2609.25081"
+      ],
+      "reason": "一次要旨: We describe ufakzeka-1, a 151M-parameter (182M with embeddings) decoder-only Turkish language model pretrained from scratch on 13.5B tokens of openly licensed text and instruction-tuned for chat, at a total cost of about \\$286 in cloud GPU, API and notebook time. The contribution is not the model's capability, which is what a model this size can be expected",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "ufakzeka-1: Building and Evaluating a 151M-Parameter Turkish Language Model from Scratch"
+    },
+    "arXiv:2609.38198": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38198",
+      "identity_tokens": [
+        "arXiv:2609.38198"
+      ],
+      "reason": "一次要旨: Diffusion maps, and kernel methods more generally, provide an interpretable nonlinear spectral representation basis for geometric learning. In the geometric limit, small bandwidth, these matrices tend to be high rank and thus require materializing dense Gaussian kernels requires $O(N^2)$ memory. We introduce FlashDiffusion, a matrix-free method that evaluate",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "FlashDiffusion: Fused Tiled Kernel Spectral Decomposition"
+    },
+    "DOI:10.1002/inf2.70191": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/inf2.70191",
+      "identity_tokens": [
+        "DOI:10.1002/inf2.70191"
+      ],
+      "reason": "The relentless demand for faster, smaller and more energy‐efficient integrated circuits has pushed the semiconductor industry to the performance, power and area (PPA) wall, where interconnect delay and energy dissipation dominate system efficiency. While 2.5D and TSV‐based 3D integration offer partial relief, they suffer from long interconnects, thermal hotspots and reliability concerns. Monolithic 3D integration (M3DI) provides a transformative TSV‐free paradigm, enabling nanoscale vertical interconnects between front‐end‐of‐line logic and back‐end‐of‐line memory tiers, thereby maximizing PPA efficiency and reducing latency. Here we demonstrate M3DI of two‐dimensional (2D) electronics, integrating single‐crystalline MoS\n 2\n field‐effect transistors with nanocrystalline WS\n 2\n memristors in a vertically stacked 1T1R architecture. These atomically thin devices are BEOL‐compatible and scalable, offering uniform threshold and Ion/Ioff distributions for logic, and stable filamentary switching with narrow SET/RESET variability for memory. The resulting arrays achieve ultra‐dense integration, reproducible operation and low‐latency performance within a compact footprint. Beyond binary switching, the M3DI‐1T1R chip exhibits synaptic functionalities including multistate non‐volatile memory, spike‐timing‐dependent plasticity and array‐level uniformity, essential for neuromorphic and AI hardware. This work establishes 2D‐material‐based M3DI as a compelling foundation for next‐generation intelligent and energy‐efficient computing systems beyond CMOS scaling and von Neumann architectures.\n \n \n \n \n image",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "<scp>3D</scp>\n                    integration of\n                    <scp>2D</scp>\n                    electronics for\n                    <scp>AI</scp>\n                    hardware"
+    },
+    "DOI:10.1007/s44163-026-02108-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-02108-z",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-02108-z"
+      ],
+      "reason": "With the rapid development of deep learning technology, multimodal content generation has shown substantial application potential in fields such as medical imaging, industrial inspection, and creative design. However, existing methods face semantic gap problems in cross-modal feature fusion and struggle to simultaneously guarantee generation quality and semantic consistency. This work addresses the task of multimodal-conditioned image quality enhancement: given a reference image, a text description, and pixel-level semantic labels as joint conditions, the goal is to generate an output image that simultaneously achieves higher pixel-level fidelity, stronger text-image semantic alignment, and improved perceptual realism compared to existing single- or dual-modal approaches. This task is distinct from image fusion (no text or label input) and from pure text-to-image generation (no reference image), and requires the model to exploit complementary information across all three modalities. In response to these challenges, this work proposes a novel multimodal content generation and enhancement framework MCGE-Net, achieving high-quality intelligent imaging generation through three core innovations: hierarchical cross-modal attention mechanism (HCMA), dynamic feature alignment module (DFA), and multi-scale enhancement network (MSEN). The HCMA achieves deep fusion of different modal features at both fine-grained and coarse-grained levels, effectively capturing local correspondences and global semantic associations, with a learnable gating parameter that dynamically balances the two levels on a per-sample basis. The DFA narrows the cross-modal semantic gap through an instance-adaptive weight generation mechanism, significantly improving multimodal consistency. The MSEN adopts a pyramid structure to perform channel-attention-guided feature enhancement at multiple scales, balancing overall structure and local details. Comprehensive experiments on the MIID-50K dataset (50,000 image-text-label triplets covering medical imaging, natural scenes, and industrial inspection) and on the public MS-COCO 2017 benchmark demonstrate that MCGE-Net outperforms state-of-the-art methods including ControlNet across all evaluation metrics, achieving PSNR 32.1 dB, SSIM 0.903, FID 24.8, and Semantic Consistency 89.5% on MIID-50K, and FID 20.4 and CLIP-Score 33.8 on MS-COCO 2017. All improvements over the strongest baseline are statistically significant (p < 0.001, Bonferroni-corrected). MCGE-Net also maintains competitive inference efficiency (1.23 s per sample), substantially faster than diffusion-based methods such as Stable Diffusion (2.34 s) and Imagen (2.67 s). Ablation experiments validate the effectiveness of each module, cross-scenario generalization experiments confirm the robustness of the method, and a user study with 50 professional participants further validates the visual quality of generated content. Failure case analysis identifies three characteristic limitations (semantic drift on long-tail categories, scale-boundary artifacts, and label-boundary blur), providing concrete directions for future work. Preliminary results suggest potential applicability in medical imaging enhancement, industrial visual inspection, and content creation, though domain-specific validation remains necessary before deployment in safety-critical settings.",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Multimodal content generation and enhancement for smart imaging"
+    },
+    "DOI:10.1145/3847108": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3847108",
+      "identity_tokens": [
+        "DOI:10.1145/3847108"
+      ],
+      "reason": "Retrieval-augmented generation (RAG) has attracted significant attention for enhancing large language models (LLMs) in domain-specific and knowledge-intensive tasks by utilizing external documents retrieved by retrievers. However, LLMs often struggle to determine which retrieved documents are relevant and how they relate to one another. We argue that this difficulty arises from a semantic gap between retrievers and LLMs due to differences in their training objectives and architectures. Existing methods either align retrievers and LLMs through costly fine-tuning or feedback signals, but they still do not explicitly strengthen document relationship modeling during generation. This paper proposes ConRAG, a novel enhanced RAG framework to establish an information connection between retrievers and LLMs in RAG, thereby enhancing relationship modeling of LLMs. Specifically, ConRAG employs a lightweight Con-Former model, placed between a retriever and an LLM to capture and transmit semantic information. Then, a semantics injection strategy is employed to integrate the semantic information into the LLM's generation. Accordingly, we employ three tasks for feature modeling and alignment: two relationship modeling tasks to consolidate the local and global perceptions of document relevance and one generative alignment task to facilitate the interpretation of LLM. Notably, ConRAG is suitable for low-resource scenarios where LLMs and retrievers are frozen. Further analysis shows that retriever-derived information helps the LLM better identify relevant evidence and model relationships among documents, leading to more effective generation. The source code is available at https://github.com/yefd/ConRAG.",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Enabling Retriever-LLM Connection Across the Semantic Gap in Retrieval-Augmented Generation"
+    },
+    "DOI:10.47852/bonviewjdsis620210441": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.47852/bonviewjdsis620210441",
+      "identity_tokens": [
+        "DOI:10.47852/bonviewjdsis620210441"
+      ],
+      "reason": "Causal discovery in nonstationary multivariate financial time series is a fundamental challenge. Classical algorithms, such as Peter–Clark (PC) algorithm and Peter–Clark momentary conditional independence (PCMCI+), assume stationarity and fail in realworld environments characterized by market regime shifts and structural breaks,yielding spurious edges and structurally inconsistent causal graphs. To address this, we propose the Regime-Enhanced Intelligent Granger Network (REIGN), a novel causal discovery framework specifically engineered for nonstationary time series. REIGN integrates three synergistic capabilities: (i) data-driven regime segmentation via Pruned Exact Linear Time changepoint detection, partitioning the series into locally stationary windows; (ii) zero-shot large language model prior injection to constrain the neural search space using domain knowledge; and (iii) a coarse-to-fine MessagePassing Graph Neural Network that optimizes a continuous directed acyclic graph-constrained adjacency matrix via an augmented Lagrangian objective. Regime-specific models are then aggregated through a confidence-weighted ensemble to yield a consistent global summary graph. Empirical evaluation on a nonstationary Vector Autoregressive benchmark demonstrates REIGN’s superiority. REIGN achieves an Optimal F1 score of 0.529, substantially outperforming PCMCI+ (F1 = 0 .415) and PC (F1 = 0 .214) in structural edge recovery. Furthermore, REIGN dominates across the area under the receiver operating characteristic curve (AUROC; 0.513 vs 0.406) and the area under the precision–recall curve (AUPR; 0.400 vs 0.338) metrics, establishing a robust new benchmark for neural time-series causal discovery in nonstationary environments.\n \nReceived: 18 May 2026 | Revised: 29 June 2026 | Accepted: 20 July 2026\n \nConflicts of Interest\nThe authors declare that they have no conflicts of interest to this work.\n \nData Availability Statement\nThe data that support the findings of this study are openly available on GitHub at https://github.com/vinhqdang/ REIGN_Regime-Enhanced-Intelligent-Granger-Network.\n \nAuthor Contribution Statement\nQuang-Vinh Dang: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Writing – original draft, Supervision, Project administration. Minh Ngoc Dinh: Validation, Formal analysis, Writing – review & editing, Supervision, Project administration. Dat Le: Validation, Investigation, Resources, Writing – review & editing. Dinh-Minh Nguyen: Conceptualization, Software, Data curation, Visualization.",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "REIGN: Regime-Enhanced Intelligent Granger Network for Nonstationary Causal Discovery"
+    },
+    "DOI:10.64898/2026.09.17.752279": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.17.752279",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.17.752279"
+      ],
+      "reason": "Designing functional non-coding RNA (ncRNA) is fundamental to synthetic biology and RNA therapeutics, yet generative modelling for ncRNA has received far less attention than protein design. We present RNA-MDLM, a framework that extends Masked Discrete Language Models (MDLM) to the conditional generation and inpainting of ncRNA. We make two additions: first, conditioning on RNA-type representations from a pretrained RNA language model, and second, a modified classifier-free guidance scheme (Mod-CFG) that interpolates among conditional, unconditional, and random-sequence probabilities for better control. We also introduce REPAINT GAMES, a benchmark of seven structured masking tasks to probe a model’s performance on sequence patterns, structural motifs, and base-pairing per RNA type. Our model is trained on 4.6 million ncRNA sequences spanning six evaluable classes. It produces sequences whose composition and folding statistics closely match natural RNAs. Through extensive ablation studies, we find that the embedding-conditioned model achieves the best balance of structural fidelity, biological novelty, and inpainting accuracy, and its class label steers generation far more strongly than a plain label baseline. We further show that a model trained on a smaller, class-balanced subset can appear more realistic mainly by copying abundant natural sequences rather than learning their rules. We also benchmark against a masked-diffusion model and a family-specific VAE on ribozyme families, and find that a type-conditioned model like ours and a perfamily model are solving different tasks, which must be accounted for in a fair comparison. We will release the code and the trained models.",
+      "first_checked_at": "2026-10-05T06:23:12+00:00",
+      "last_checked_at": "2026-10-05T06:23:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Conditional Generation and Inpainting of Non-Coding RNA Sequences with Masked Discrete Diffusion"
     }
   }
 }
