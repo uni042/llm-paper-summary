@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:29:36+00:00",
-  "record_count": 2052,
+  "updated_at": "2026-10-05T16:34:22+00:00",
+  "record_count": 2054,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6672,22 +6672,6 @@
       ],
       "title": "Findings of the 2016 Conference on Machine Translation"
     },
-    "arXiv:1802.06901": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:1802.06901",
-      "identity_tokens": [
-        "arXiv:1802.06901"
-      ],
-      "reason": "The paper directly measures faster non-autoregressive decoding, but only for machine translation and image captioning; it does not evaluate LLM generation or transfer to autoregressive LLMs.",
-      "first_checked_at": "2026-10-05T00:55:42+00:00",
-      "last_checked_at": "2026-10-05T00:55:42+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
-        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
-        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
-      ],
-      "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement"
-    },
     "arXiv:2303.06349": {
       "classification": "borderline",
       "canonical_id": "arXiv:2303.06349",
@@ -9150,27 +9134,14 @@
       "identity_tokens": [
         "DOI:10.1145/3149371"
       ],
-      "reason": "TinyLFU is general cache admission; results use generic cache traces, not LLM prompt/KV/model serving, so application is only an unverified analogy.",
+      "reason": "recent access frequencyをcompactなapproximate LFU structureで保持し、eviction candidateより新規itemをcacheへadmitすべきか判断する汎用cache admission policy。KV cache保持・階層memory policyへの機構的関連は強いが、LLM推論を対象に評価していないためborderline。",
       "first_checked_at": "2026-10-05T02:04:36+00:00",
-      "last_checked_at": "2026-10-05T02:04:36+00:00",
+      "last_checked_at": "2026-10-05T16:34:16+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2026-5497c425b6df-to-keep-or-not-to-keep-learning-kv-cache-retention-in-disaggregated-llm-.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "TinyLFU: A Highly Efficient Cache Admission Policy"
-    },
-    "DOI:10.1145/3651890.3672265": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3651890.3672265",
-      "identity_tokens": [
-        "DOI:10.1145/3651890.3672265"
-      ],
-      "reason": "Primary ACM DOI page retrieval failed; no primary abstract/full text was available to verify scope.",
-      "first_checked_at": "2026-10-05T02:04:36+00:00",
-      "last_checked_at": "2026-10-05T02:04:36+00:00",
-      "linked_from": [
-        "papers/inference/12-moe-parallelism-communication/2026-2605.00254-network-topologies-cost-effective-moe-serving.md"
-      ],
-      "title": "Alibaba HPN: A Data Center Network for Large Language Model Training"
     },
     "arXiv:2109.04838": {
       "classification": "borderline",
@@ -31645,19 +31616,6 @@
       "borderline_recheck_count": 0,
       "title": "Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free"
     },
-    "DOI:10.1145/1964218.1964225": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/1964218.1964225",
-      "identity_tokens": [
-        "DOI:10.1145/1964218.1964225"
-      ],
-      "reason": "Structural Simulation Toolkit (SST)は大規模計算機アーキテクチャを構成要素で組み立て、並列離散事象シミュレーションする基盤。推論システムのsimulation/emulation研究へ利用可能だが、論文自体は汎用HPC/architecture simulatorでLLM推論を最終適用先としないためborderline。",
-      "first_checked_at": "2026-10-05T16:19:09+00:00",
-      "last_checked_at": "2026-10-05T16:19:09+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "The structural simulation toolkit"
-    },
     "DOI:10.1145/3123939.3123982": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/3123939.3123982",
@@ -31722,6 +31680,77 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Repeat After Me: Transformers are Better than State Space Models at Copying"
+    },
+    "DOI:10.18653/v1/d18-1149": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d18-1149",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1149",
+        "arXiv:1802.06901"
+      ],
+      "reason": "非自己回帰sequence generationでdecodingを大幅高速化しつつAR相当の品質を狙うため生成推論効率へ直接関連する。一方、評価は機械翻訳・image captioningで現代LLM serving/systemではないためborderline。",
+      "first_checked_at": "2026-10-05T00:55:42+00:00",
+      "last_checked_at": "2026-10-05T16:34:15+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative Refinement"
+    },
+    "arXiv:2203.05740": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.05740",
+      "identity_tokens": [
+        "arXiv:2203.05740"
+      ],
+      "reason": "PTQ reconstruction中にactivation quantizationを確率的にdropして低bit modelのflatnessと精度を改善し、2-bit activationまで拡張する。推論向け量子化に直接関係するが、評価は主にCVとBERT系NLP taskのaccuracyでLLM生成推論のlatency/memory実測がないためborderline。",
+      "first_checked_at": "2026-10-05T16:34:16+00:00",
+      "last_checked_at": "2026-10-05T16:34:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "QDrop: Randomly Dropping Quantization for Extremely Low-bit Post-Training Quantization"
+    },
+    "arXiv:2002.08307": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2002.08307",
+      "identity_tokens": [
+        "arXiv:2002.08307"
+      ],
+      "reason": "BERTの重み枝刈りを事前学習段階で行い、30–40%程度のpruningではtransfer性能を損なわないことを分析する。モデル圧縮は推論配備に関連するが、主目的・評価はtransfer learningへの影響で、推論latency・memory・throughputのsystem実測がないためborderline。",
+      "first_checked_at": "2026-10-05T16:34:20+00:00",
+      "last_checked_at": "2026-10-05T16:34:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning"
+    },
+    "DOI:10.1145/3240765.3240801": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3240765.3240801",
+      "identity_tokens": [
+        "DOI:10.1145/3240765.3240801"
+      ],
+      "reason": "FPGA向けDNN acceleratorを自動生成し、fine-grained layer pipeline、column-based cache、memory bandwidth/resource-aware design-space explorationでlatencyとBRAMを削減する。推論acceleratorとして関連するが、評価対象はAlexNet/ZF/VGG16/YOLOでLLM/Transformer推論専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T16:34:20+00:00",
+      "last_checked_at": "2026-10-05T16:34:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DNNBuilder: an Automated Tool for Building High-Performance DNN Hardware Accelerators for FPGAs"
+    },
+    "DOI:10.1145/1534530.1534544": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/1534530.1534544",
+      "identity_tokens": [
+        "DOI:10.1145/1534530.1534544"
+      ],
+      "reason": "NAND SSDのwrite amplificationをover-provisioning、garbage collection、reclaim policy、static/dynamic data分離の観点から解析するstorage基礎研究。SSD/NVMe階層メモリやLLM offload設計の基礎として関連するが、LLM推論を対象としないためborderline。",
+      "first_checked_at": "2026-10-05T16:34:20+00:00",
+      "last_checked_at": "2026-10-05T16:34:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Write amplification analysis in flash-based solid state drives"
     }
   }
 }

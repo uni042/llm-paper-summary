@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f9ec5aca71878f5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2305.16264",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2305.16264",
+    "identity_tokens": [
+      "arXiv:2305.16264"
+    ],
+    "reason": "データ制約下でLLM学習時の反復データ・パラメータ数・計算予算の最適配分を調べるスケーリング則研究。400超のtraining run、最大9B/900B training tokensを用い、推論runtime・memory・serving最適化を最終適用先としない。",
+    "first_checked_at": "2026-10-05T16:12:48+00:00",
+    "last_checked_at": "2026-10-05T16:34:18+00:00",
+    "linked_from": [],
+    "title": "Scaling Data-Constrained Language Models"
+  },
+  "processed_at": "2026-10-05T16:34:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f9ec5aca718",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

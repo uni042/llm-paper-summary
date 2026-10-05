@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-52c46ae4f2a906fe-unrel-009",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1145/3651890.3672265",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1145/3651890.3672265",
+    "identity_tokens": [
+      "DOI:10.1145/3651890.3672265"
+    ],
+    "reason": "LLM trainingの400Gbps級bursty flowと同期iterationに合わせ、2-tier dual-plane・dual-ToRで15K GPU規模のdata-center networkを設計する。LLM system研究だが最終適用先が明示的にtraining networkで、推論servingは評価しないため現行凍結範囲でunrelated。",
+    "first_checked_at": "2026-10-05T16:34:18+00:00",
+    "last_checked_at": "2026-10-05T16:34:18+00:00",
+    "linked_from": [],
+    "title": "Alibaba HPN: A Data Center Network for Large Language Model Training"
+  },
+  "processed_at": "2026-10-05T16:34:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-52c46ae4f2a9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
