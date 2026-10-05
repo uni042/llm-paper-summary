@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T01:52:17+00:00",
-  "record_count": 628,
+  "updated_at": "2026-10-05T01:54:14+00:00",
+  "record_count": 636,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -9141,6 +9141,123 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2503.22562-niyama-breaking-the-silos-of-llm-inference-serving.md"
       ],
       "title": "Web servers under overload: How scheduling can help"
+    },
+    "DOI:10.1145/3177754": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3177754",
+      "identity_tokens": [
+        "DOI:10.1145/3177754"
+      ],
+      "reason": "一次ACM DOIページ https://doi.org/10.1145/3177754 は403 Forbiddenとなり、primary abstractを取得できなかった。検索snippetや書誌題名で内容を補わない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "RAPL in Action"
+    },
+    "DOI:10.1109/hoti.2015.13": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hoti.2015.13",
+      "identity_tokens": [
+        "DOI:10.1109/hoti.2015.13"
+      ],
+      "reason": "一次IEEE DOIページ https://doi.org/10.1109/HOTI.2015.13 はアクセス時に本文要旨を取得できなかった。primary abstract未確認のため内容を推測しない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29207-kernelflume-elastic-core-attention-scaling.md",
+        "papers/inference/12-moe-parallelism-communication/2025-2511.15076-gpu-initiated-networking-for-nccl.md",
+        "papers/inference/99-other-inference-systems/2026-2608.08340-oprag-resource-deterministic-rag-runtime.md"
+      ],
+      "title": "UCX: An Open Source Framework for HPC Network APIs and Beyond"
+    },
+    "arXiv:2107.05407": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2107.05407",
+      "identity_tokens": [
+        "arXiv:2107.05407"
+      ],
+      "reason": "適応計算による計算費用削減は扱うが、評価対象は現代LLMではなく、LLM inference/servingへの具体的な移転が本文から確認できないためborderline。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.13682-layerroute-adaptive-layer-skipping-with-lora-preserved-quality-for-effic.md",
+        "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md"
+      ],
+      "title": "PonderNet: Learning to Ponder"
+    },
+    "arXiv:2011.14203": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2011.14203",
+      "identity_tokens": [
+        "arXiv:2011.14203"
+      ],
+      "reason": "一次本文は言語モデル推論の具体的なenergy/latency最適化を示すが、BERT encoderと専用acceleratorに限定され、LLM servingへの一般化が確認できないためborderline。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+      ],
+      "title": "EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference"
+    },
+    "arXiv:2506.20639": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.20639",
+      "identity_tokens": [
+        "arXiv:2506.20639"
+      ],
+      "reason": "本文は主にRL学習の推定分散・性能改善で、推論step削減の品質差は扱うが、推論効率指標の測定が足りない。LLM推論との関連はあるためborderlineへ回す。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md"
+      ],
+      "title": "DiffuCoder: Understanding and Improving Masked Diffusion Models for Code Generation"
+    },
+    "arXiv:2503.01710": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.01710",
+      "identity_tokens": [
+        "arXiv:2503.01710"
+      ],
+      "reason": "LLMを使う音声生成の関連研究だが、確認した本文評価は主に音声品質で推論速度・効率の実測がなく、TTS固有のcodec設計から一般servingへの移転根拠が不足する。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md"
+      ],
+      "title": "Spark-TTS: An Efficient LLM-Based Text-to-Speech Model with Single-Stream Decoupled Speech Tokens"
+    },
+    "DOI:10.1145/2339530.2339677": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2339530.2339677",
+      "identity_tokens": [
+        "DOI:10.1145/2339530.2339677"
+      ],
+      "reason": "一般的なmaximum-inner-product vector searchであり、LLM推論/servingやRAG retrievalに適用した評価が本文にない。周辺領域としてborderline_listへ回す。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+      ],
+      "title": "Maximum inner-product search using cone trees"
+    },
+    "DOI:10.1145/3452296.3472888": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3452296.3472888",
+      "identity_tokens": [
+        "DOI:10.1145/3452296.3472888"
+      ],
+      "reason": "一次ACM DOIページ https://doi.org/10.1145/3452296.3472888 は403 Forbiddenで、primary abstractを取得できなかった。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18572-strata-hierarchical-context-caching-for-long-context-language-model-serv.md"
+      ],
+      "title": "Understanding host network stack overheads"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd6807d25e6c248f-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/2339530.2339677",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/2339530.2339677",
+    "identity_tokens": [
+      "DOI:10.1145/2339530.2339677"
+    ],
+    "reason": "一般的なmaximum-inner-product vector searchであり、LLM推論/servingやRAG retrievalに適用した評価が本文にない。周辺領域としてborderline_listへ回す。",
+    "first_checked_at": "2026-10-05T01:54:14+00:00",
+    "last_checked_at": "2026-10-05T01:54:14+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md"
+    ],
+    "title": "Maximum inner-product search using cone trees"
+  },
+  "processed_at": "2026-10-05T01:54:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd6807d25e6c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

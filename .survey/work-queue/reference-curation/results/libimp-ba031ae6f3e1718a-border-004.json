@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba031ae6f3e1718a-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2011.14203",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2011.14203",
+    "identity_tokens": [
+      "arXiv:2011.14203"
+    ],
+    "reason": "一次本文は言語モデル推論の具体的なenergy/latency最適化を示すが、BERT encoderと専用acceleratorに限定され、LLM servingへの一般化が確認できないためborderline。",
+    "first_checked_at": "2026-10-05T01:54:14+00:00",
+    "last_checked_at": "2026-10-05T01:54:14+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2409.09071-elastic-on-device-llm-service.md"
+    ],
+    "title": "EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference"
+  },
+  "processed_at": "2026-10-05T01:54:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba031ae6f3e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

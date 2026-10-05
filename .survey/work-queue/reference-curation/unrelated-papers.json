@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T01:52:17+00:00",
-  "record_count": 1739,
+  "updated_at": "2026-10-05T01:54:14+00:00",
+  "record_count": 1751,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -25079,6 +25079,174 @@
         "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
       ],
       "title": "Generative Judge for Evaluating Alignment"
+    },
+    "arXiv:2401.00908": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.00908",
+      "identity_tokens": [
+        "arXiv:2401.00908"
+      ],
+      "reason": "一次要旨はlayoutを利用する文書理解LLMのモデル機能と画像encoder回避を説明するが、推論効率評価ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2604.26837-spin-sparse-attention-hierarchical-memory.md"
+      ],
+      "title": "DocLLM: A layout-aware generative language model for multimodal document understanding"
+    },
+    "arXiv:2212.14402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.14402",
+      "identity_tokens": [
+        "arXiv:2212.14402"
+      ],
+      "reason": "一次要旨はGPT-3.5のBar Exam成績を測る能力評価研究で、推論手法/効率化ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "GPT Takes the Bar Exam"
+    },
+    "DOI:10.18653/v1/2024.acl-long.106": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2024.acl-long.106",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.acl-long.106"
+      ],
+      "reason": "ACL一次要旨はLoRA expert/routerによるsupervised fine-tuning時の世界知識保持を扱い、推論効率が研究対象ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.14900-furina-router-free-linear-expert-aggregation.md"
+      ],
+      "title": "LoRAMoE: Alleviating World Knowledge Forgetting in Large Language Models via MoE-Style Plugin"
+    },
+    "arXiv:2010.03633": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.03633",
+      "identity_tokens": [
+        "arXiv:2010.03633"
+      ],
+      "reason": "一次要旨はsimplicial complex上のgraph neural networkと欠損データ補完であり、LLM inference対象外。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.13997-hodgecover-topological-compression.md"
+      ],
+      "title": "Simplicial Neural Networks"
+    },
+    "arXiv:2403.18802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18802",
+      "identity_tokens": [
+        "arXiv:2403.18802"
+      ],
+      "reason": "一次要旨はLongFact/SAFEによるLLMのfactuality benchmark/evaluation手法で、serving効率は対象外。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.14946-evicpress-joint-compression-eviction.md"
+      ],
+      "title": "Long-form factuality in large language models"
+    },
+    "arXiv:2310.15308": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.15308",
+      "identity_tokens": [
+        "arXiv:2310.15308"
+      ],
+      "reason": "一次要旨はvision foundation modelの統合を目的とし、効率削減対象はmulti-task trainingでありLLM推論ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "SAM-CLIP: Merging Vision Foundation Models towards Semantic and Spatial Understanding"
+    },
+    "arXiv:1901.03429": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.03429",
+      "identity_tokens": [
+        "arXiv:1901.03429"
+      ],
+      "reason": "一次要旨はTransformer/Neural GPUの計算理論的Turing completenessを証明する研究で、LLM推論効率化ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "On the Turing Completeness of Modern Neural Network Architectures"
+    },
+    "DOI:10.18653/v1/p17-1106": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p17-1106",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p17-1106"
+      ],
+      "reason": "ACL一次要旨はNMT内部状態の解釈・誤訳分析の可視化手法で、推論効率やservingを扱わない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Visualizing and Understanding Neural Machine Translation"
+    },
+    "arXiv:2312.03209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.03209",
+      "identity_tokens": [
+        "arXiv:2312.03209"
+      ],
+      "reason": "一次要旨はimage synthesis diffusion networkのblock cachingによる画像生成加速で、LLMではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching"
+    },
+    "arXiv:2302.02676": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.02676",
+      "identity_tokens": [
+        "arXiv:2302.02676"
+      ],
+      "reason": "一次要旨は言語feedbackを使ったLM fine-tuning/alignment手法で、推論時効率化を扱わない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md"
+      ],
+      "title": "Chain of Hindsight Aligns Language Models with Feedback"
+    },
+    "DOI:10.18653/v1/2021.naacl-main.474": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.474",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.naacl-main.474"
+      ],
+      "reason": "arXiv一次要旨はMediaSum dialogue summarization datasetとtransfer-learningの構築/利用を報告し、推論効率手法ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "MediaSum: A Large-scale Media Interview Dataset for Dialogue Summarization"
+    },
+    "arXiv:2406.03372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.03372",
+      "identity_tokens": [
+        "arXiv:2406.03372"
+      ],
+      "reason": "一次要旨はphysical neural networkの学習方式と将来展望を扱い、LLM servingの推論研究ではない。",
+      "first_checked_at": "2026-10-05T01:54:14+00:00",
+      "last_checked_at": "2026-10-05T01:54:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Training of physical neural networks"
     }
   }
 }

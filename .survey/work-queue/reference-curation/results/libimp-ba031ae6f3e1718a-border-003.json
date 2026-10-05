@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba031ae6f3e1718a-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2107.05407",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2107.05407",
+    "identity_tokens": [
+      "arXiv:2107.05407"
+    ],
+    "reason": "適応計算による計算費用削減は扱うが、評価対象は現代LLMではなく、LLM inference/servingへの具体的な移転が本文から確認できないためborderline。",
+    "first_checked_at": "2026-10-05T01:54:14+00:00",
+    "last_checked_at": "2026-10-05T01:54:14+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2609.13682-layerroute-adaptive-layer-skipping-with-lora-preserved-quality-for-effic.md",
+      "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md"
+    ],
+    "title": "PonderNet: Learning to Ponder"
+  },
+  "processed_at": "2026-10-05T01:54:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba031ae6f3e1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
