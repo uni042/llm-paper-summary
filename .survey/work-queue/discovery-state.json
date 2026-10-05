@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-05T15:56:59+00:00",
-  "last_run_key": "library-import-a5f3d9bcba1d",
-  "last_round": "libimp-a5f3d9bcba1de46f-pre01",
+  "updated_at": "2026-10-05T16:00:57+00:00",
+  "last_run_key": "library-import-d270c5f62807",
+  "last_round": "libimp-d270c5f62807f11c-pre01",
   "paper_stock_zero_count": 3,
   "consecutive_empty_rounds": 0,
   "last_empty_round_reason": null,
@@ -10,54 +10,6 @@
   "next_action_when_round_empty": "change_axis_and_discover_again",
   "history_limit": 384,
   "history": [
-    {
-      "run_key": "manual-stress-2026-09-20",
-      "round": "refcuration-stress-20260920-offset300-a",
-      "axis": "structured references stress probe at raw offset 300",
-      "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 300. Strong systems/memory/kernel/scheduling papers were retained; model reports, datasets, evaluation platforms, and agent application frameworks were classified out.",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 20,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 20,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2305.17118",
-        "arXiv:2311.09431",
-        "arXiv:2402.04617",
-        "arXiv:2406.11430",
-        "arXiv:2407.02490"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Probe relation_count≈3 references next; yield remains high at relation_count≈5.",
-      "source_submission": "work-queue/submissions/refcuration-stress-20260920-offset300-a-retry1.json"
-    },
-    {
-      "run_key": "manual-stress-2026-09-20",
-      "round": "refcuration-stress-20260920-offset300-b",
-      "axis": "structured references stress probe at raw offset 300",
-      "query_summary": "Evaluated a 20-record structured-reference buffer around raw offset 300. Strong systems/memory/kernel/scheduling papers were retained; model reports, datasets, evaluation platforms, and agent application frameworks were classified out.",
-      "candidate_count": 20,
-      "duplicate_filtered_count": 0,
-      "novel_candidate_count": 20,
-      "final_duplicate_filtered_count": 0,
-      "post_final_dedupe_count": 20,
-      "accepted_count": 5,
-      "duplicate_ratio": 0.0,
-      "final_duplicate_ratio": 0.0,
-      "accepted_canonical_ids": [
-        "arXiv:2407.15891",
-        "arXiv:2408.10284",
-        "arXiv:2410.18248",
-        "arXiv:2412.14838",
-        "arXiv:2503.06823"
-      ],
-      "duplicate_canonical_ids": [],
-      "next_axis_hint": "Probe relation_count≈3 references next; yield remains high at relation_count≈5.",
-      "source_submission": "work-queue/submissions/refcuration-stress-20260920-offset300-b-retry1.json"
-    },
     {
       "run_key": "manual-stress-2026-09-20",
       "round": "refcuration-stress-20260920-offset300-c",
@@ -11927,6 +11879,74 @@
       "duplicate_ratio": 0.0,
       "final_duplicate_ratio": 0.0,
       "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-519d3405853c8a62-pre01",
+      "precheck_request_id": "libimp-519d3405853c8a62-pre01",
+      "run_key": "library-import-519d3405853c",
+      "round": "libimp-519d3405853c8a62-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-519d3405853c8a62-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-519d3405853c8a62-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
+    },
+    {
+      "round_identity": "precheck:libimp-d270c5f62807f11c-pre01",
+      "precheck_request_id": "libimp-d270c5f62807f11c-pre01",
+      "run_key": "library-import-d270c5f62807",
+      "round": "libimp-d270c5f62807f11c-pre01",
+      "axis": "library-candidate-intake",
+      "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。",
+      "provider": "candidate_id_lookup",
+      "source_url": "identifier://approved-public-apis",
+      "citation_direction": null,
+      "seed_canonical_id": null,
+      "preload_id": null,
+      "candidate_count": 1,
+      "duplicate_filtered_count": 0,
+      "final_duplicate_filtered_count": 0,
+      "accepted_count": 1,
+      "accepted_canonical_ids": [],
+      "duplicate_canonical_ids": [],
+      "next_axis_hint": null,
+      "source_submission": "work-queue/submissions/libimp-d270c5f62807f11c-pre01-sub01.json",
+      "source_submissions": [
+        "work-queue/submissions/libimp-d270c5f62807f11c-pre01-sub01.json"
+      ],
+      "round_submission_indices": [
+        1
+      ],
+      "round_submission_count": 1,
+      "round_accounted": true,
+      "novel_candidate_count": 1,
+      "post_final_dedupe_count": 1,
+      "duplicate_ratio": 0.0,
+      "final_duplicate_ratio": 0.0,
+      "round_complete": true
     }
   ],
   "axes": {
@@ -20298,16 +20318,16 @@
       "next_axis_hint": "今回runで新着、storage/hierarchical memory、MoE、network/runtime、scheduling/kernel、agent/multimodal、speculative/length predictionを横断済み。次回は新着差分とforward/backward citationから再開する"
     },
     "library-candidate-intake": {
-      "last_run_key": "library-import-a5f3d9bcba1d",
-      "rounds": 117,
-      "candidate_count": 370,
+      "last_run_key": "library-import-d270c5f62807",
+      "rounds": 119,
+      "candidate_count": 372,
       "duplicate_filtered_count": 105,
-      "novel_candidate_count": 265,
+      "novel_candidate_count": 267,
       "final_duplicate_filtered_count": 3,
-      "post_final_dedupe_count": 262,
-      "accepted_count": 262,
-      "duplicate_ratio": 0.28378378378378377,
-      "final_duplicate_ratio": 0.011320754716981131,
+      "post_final_dedupe_count": 264,
+      "accepted_count": 264,
+      "duplicate_ratio": 0.28225806451612906,
+      "final_duplicate_ratio": 0.011235955056179775,
       "next_axis_hint": null
     },
     "explicit-library-accept": {
