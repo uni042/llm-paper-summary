@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:44:31+00:00",
-  "record_count": 1227,
+  "updated_at": "2026-10-05T08:47:09+00:00",
+  "record_count": 1228,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18820,6 +18820,20 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "DOCSCHISEL: Adaptive Tool Documentation Optimization Framework for LLM Agents"
+    },
+    "arXiv:2608.10103": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10103",
+      "identity_tokens": [
+        "arXiv:2608.10103"
+      ],
+      "reason": "本文確認後も対象scopeへの適合が間接的/限定的、または推論時の実効効率を評価から確定できないためborderlineとする。",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Hand-Written PTX Tensor-Core GEMM Kernels: A Multi-Precision Study on NVIDIA L4"
     }
   }
 }

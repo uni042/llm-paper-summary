@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:44:31+00:00",
-  "record_count": 3964,
+  "updated_at": "2026-10-05T08:47:11+00:00",
+  "record_count": 3982,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -57733,6 +57733,261 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "UserToolBench: A User-Profile-Hidden Benchmark for Personalized Decision Making in Tool-Use LLMs"
+    },
+    "arXiv:2608.10154": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10154",
+      "identity_tokens": [
+        "arXiv:2608.10154"
+      ],
+      "reason": "This work fine-tunes a multimodal model to reproduce response probabilities for educational measurement; its contribution is prediction accuracy, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Multimodal Item Parameter Estimation using Simulated Response Probabilitie"
+    },
+    "arXiv:2608.10172": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10172",
+      "identity_tokens": [
+        "arXiv:2608.10172"
+      ],
+      "reason": "Intrinsic Structure studies identifiability in mechanistic interpretability and does not target runtime inference cost.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Intrinsic Structure: Spectral Identifiability for Mechanistic Interpretability"
+    },
+    "arXiv:2608.10203": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10203",
+      "identity_tokens": [
+        "arXiv:2608.10203"
+      ],
+      "reason": "The paper reduces convolutional activation dimensionality for OOD/adversarial detection; it is a CNN detection method rather than LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "A Convolutional Layer Activation Dimensionality Reduction for Out-of-Distribution and Adversarial Attack Detection Methods"
+    },
+    "arXiv:2608.10214": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10214",
+      "identity_tokens": [
+        "arXiv:2608.10214"
+      ],
+      "reason": "Decodable But Not Detachable studies parametric modularity and causal neuron removal in LLMs, but its contribution is interpretability/analysis, not an evaluated inference-efficiency technique.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Decodable But Not Detachable: Training Data Granularity Determines Parametric Modularity in Large Language Models"
+    },
+    "arXiv:2608.10251": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10251",
+      "identity_tokens": [
+        "arXiv:2608.10251"
+      ],
+      "reason": "Off-Axis studies internal concept computation for mechanistic interpretability and does not claim inference efficiency.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Off-Axis, On Purpose: Where a Transformer Computes Concepts and Why it Does So"
+    },
+    "arXiv:2608.10260": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10260",
+      "identity_tokens": [
+        "arXiv:2608.10260"
+      ],
+      "reason": "OmniLens lowers training memory/parameter cost for interpretability probes; savings apply to analyzing hidden states, not to the LLM’s inference/serving workload being surveyed.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Interpreting Language Model Hidden States at Scale"
+    },
+    "arXiv:2608.10290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10290",
+      "identity_tokens": [
+        "arXiv:2608.10290"
+      ],
+      "reason": "Comprendia is an interactive code-comprehension tool that uses LLM explanations; no model inference-efficiency method or evaluation is described.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Comprendia: AI-Augmented Code Comprehension"
+    },
+    "arXiv:2609.26182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26182",
+      "identity_tokens": [
+        "arXiv:2609.26182"
+      ],
+      "reason": "Modality-Gated Deep Adapters preserve embedding outputs while adding a modality; the abstract focuses on exact behavioral preservation and adaptation, not inference cost.",
+      "first_checked_at": "2026-10-05T08:47:09+00:00",
+      "last_checked_at": "2026-10-05T08:47:09+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Modality-Gated Deep Adapters: Adding a Modality to a Frozen Embedding Model with Exact Preservation"
+    },
+    "arXiv:2609.26188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.26188",
+      "identity_tokens": [
+        "arXiv:2609.26188"
+      ],
+      "reason": "End-to-end visual odometry is a robotics perception task and does not concern LLM inference.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "End-to-End Visual Odometry with RNNs and Attention"
+    },
+    "DOI:10.1002/1873-3468.70429": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/1873-3468.70429",
+      "identity_tokens": [
+        "DOI:10.1002/1873-3468.70429"
+      ],
+      "reason": "The protein-design perspective discusses deep-learning/physics pipelines for biomolecule design, outside LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "The sweet spot in protein design-Where deep learning meets first principles."
+    },
+    "DOI:10.1021/acsphotonics.6c01125": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1021/acsphotonics.6c01125",
+      "identity_tokens": [
+        "DOI:10.1021/acsphotonics.6c01125"
+      ],
+      "reason": "The paper demonstrates an optical resonator for analog optical neural-network computing, not LLM inference/serving or a language-model deployment evaluation.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Dual-Mode MOSCAP Silicon Microring Resonator for Energy-Efficient Analog Optical Computing"
+    },
+    "DOI:10.1093/nar/gkag822": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1093/nar/gkag822",
+      "identity_tokens": [
+        "DOI:10.1093/nar/gkag822"
+      ],
+      "reason": "MOSAIC predicts DNA methylation across species and tasks; its contribution is transfer/fairness in a biological prediction domain, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "MOSAIC enables selective transfer and fairness-aware generalization in cross-species DNA methylation prediction"
+    },
+    "DOI:10.1109/tip.2026.3720512": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tip.2026.3720512",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2026.3720512"
+      ],
+      "reason": "The information-bottleneck architecture search targets temporal action detection in videos, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Information-Bottleneck-Guided Hybrid Neural Architecture Search for Temporal Action Detection in Untrimmed Videos"
+    },
+    "DOI:10.3389/fpsyg.2026.1874556": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fpsyg.2026.1874556",
+      "identity_tokens": [
+        "DOI:10.3389/fpsyg.2026.1874556"
+      ],
+      "reason": "The paper studies sociocultural representation effects in cognitive architectures using LLM and ConceptNet knowledge sources, not inference efficiency.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "New knowledge source pipelines for sociocultural representations in a cognitive architecture"
+    },
+    "DOI:10.3390/bdcc10080267": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bdcc10080267",
+      "identity_tokens": [
+        "DOI:10.3390/bdcc10080267"
+      ],
+      "reason": "Sentiment-analysis accuracy and adaptive early exit are evaluated in an agentic mixture system, but the agents are statistical/deep-learning/attention models, not LLM serving; this is a task application.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "A Self-Adaptive Agentic Mixture-of-Agent Families with Agent-to-Agent Communication for Automatic Sentiment Analysis"
+    },
+    "DOI:10.3390/electronics15163544": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15163544",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15163544"
+      ],
+      "reason": "This is a software defect-prediction quality study of code encoders, not LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Do Pre-Trained Code Models Add Value Beyond Software Metrics in Class-Level Defect Prediction? An Empirical Study of Input Coverage, Long-Code Aggregation, and Cross-Version Generalization"
+    },
+    "DOI:10.64882/ijrt.v14.i3.1755": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64882/ijrt.v14.i3.1755",
+      "identity_tokens": [
+        "DOI:10.64882/ijrt.v14.i3.1755"
+      ],
+      "reason": "The experiments compress ResNet/CNN image classifiers, not LLMs.",
+      "first_checked_at": "2026-10-05T08:47:10+00:00",
+      "last_checked_at": "2026-10-05T08:47:10+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Improving Performance–Efficiency Trade-offs Through Model Compression and Optimization Strategies"
+    },
+    "arXiv:2608.08447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08447",
+      "identity_tokens": [
+        "arXiv:2608.08447"
+      ],
+      "reason": "The contribution measures multilingual reasoning-language consistency and quantization effects on capability, not inference cost or system efficiency.",
+      "first_checked_at": "2026-10-05T08:47:11+00:00",
+      "last_checked_at": "2026-10-05T08:47:11+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Hidden Language Consistency Phenomena in Reasoning LLMs"
     }
   }
 }
