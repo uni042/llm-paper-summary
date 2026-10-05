@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-104-part-05-2895ef787856",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3591750",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3591750"
+      ],
+      "title": "Automated Skin Cancer Report Generation via a Knowledge-Distilled Vision-Language Model",
+      "reason": "Artificial Intelligence (AI)’s capacity to analyze dermoscopic images promises a groundbreaking leap in skin cancer diagnostics, offering exceptional accuracy and an effortlessly non-invasive image acquisition process. However, this immense potential, which has ignited widespread research enthusiasm, is critically undermined due to the lack of transparency and interpretability. The automated generation of articulate and comprehensive diagnostic reports will bridge this critical gap by not only illuminate the AI’s diagnostic rational but also substantially reduce the demanding workload of the medical professionals. This study presents a multimodal vision-language model (VLM) trained using a two-stage knowledge distillation (KD) framework to generate structured medical reports from dermoscopic images, with descriptive features based on the 7-point melanoma checklist. The reports are organized into clinically relevant sections—Findings, Impression, and Differential Diagnosis—aligned with dermatological standards. Experimental evaluation demonstrates the system’s ability to produce accurate and interpretable reports. Human feedback from a medical professional, assessing clinical relevance, completeness, and interpretability, supports the utility of the generated reports, while computational metrics validate their accuracy and alignment with reference pseudo-reports, achieving a SacreBLEU score of 55.59, a ROUGE-1 score of 0.5438, a ROUGE-L score of 0.3828, and a BERTScore F1 of 0.9025. These findings underscore the model’s ability to generalize effectively to unseen data, enabled by its multimodal design, clinical alignment, and explainability.",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3591750",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.13163",
+      "identity_tokens": [
+        "arXiv:2508.13163"
+      ],
+      "title": "Sustainable AI Training via Hardware–Software Co-Design on NVIDIA, AMD, and Emerging GPU Architectures",
+      "reason": "In particular, large-scale deep learning and artificial intelligence model training uses a lot of computational power and energy, so it poses serious sustainability issues. The fast rise in model complexity has resulted in exponential increases in energy consumption, increasing the demand for techniques maximizing computational efficiency and lowering environmental impact. This work explores environmentally driven performance optimization methods especially intended for advanced GPU architectures from NVIDIA, AMD, and other emerging GPU architectures. Our main focus is on investigating hardware-software co-design techniques meant to significantly increase memorylevel and kernel-level operations, so improving performance-perwatt measures. Our thorough research encompasses evaluations of specialized tensor and matrix cores, advanced memory optimization methods, and creative integration approaches that taken together result in notable energy efficiency increases. We also discuss important software-level optimizations that augment hardware capability including mixed-precision arithmetic, advanced energy-aware scheduling algorithms, and compilerdriven kernel enhancements. Moreover, we methodically point out important research gaps and suggest future directions necessary to create really sustainable artificial intelligence systems. This paper emphasizes how major increases in training efficiency can be obtained by co-design of hardware and software, so lowering the environmental impact of artificial intelligence without compromising performance. To back up our analysis, we use real-world case studies from top companies like Meta, Google, Amazon, and others that show how these sustainable AI training methods are used in the real world. With this thorough analysis, we show that a comprehensive co-design approach can significantly increase training efficiency and lower the carbon footprint of AI without compromising performance.",
+      "source_url": "https://arxiv.org/abs/2508.13163",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3731545.3731580",
+      "identity_tokens": [
+        "DOI:10.1145/3731545.3731580"
+      ],
+      "title": "FluidFaaS: A Dynamic Pipelined Solution for Serverless Computing with Strong Isolation-based GPU Sharing",
+      "reason": "本文では対象範囲への一般化が弱い/寄与が限定的であるか、本文取得失敗のため裏付けが不足しておりborderline。",
+      "source_url": "https://doi.org/10.1145/3731545.3731580",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.14304",
+      "identity_tokens": [
+        "arXiv:2507.14304"
+      ],
+      "title": "Aligning Large Language Models to Low-Resource Languages through LLM-Based Selective Translation: A Systematic Study",
+      "reason": "Multilingual large language models (LLMs) often demonstrate a performance gap between English and non-English languages, particularly in low-resource settings. Aligning these models to low-resource languages is essential yet challenging due to limited high-quality data. While English alignment datasets are readily available, curating equivalent data in other languages is expensive and time-consuming. A common workaround is to translate existing English alignment data; however, standard translation techniques often fail to preserve critical elements such as code, mathematical expressions, and structured formats like JSON. In this work, we investigate LLM-based selective translation, a technique that selectively translates only the translatable parts of a text while preserving non-translatable content and sentence structure. We conduct a systematic study to explore key questions around this approach, including its effectiveness compared to vanilla translation, the importance of filtering noisy outputs, and the benefits of mixing translated samples with original English data during alignment. Our experiments focus on the low-resource Indic language Hindi and compare translations generated by Google Cloud Translation (GCP) and Llama-3.1-405B. The results highlight the promise of selective translation as a practical and effective method for improving multilingual alignment in LLMs.",
+      "source_url": "https://arxiv.org/abs/2507.14304",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-10641-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-10641-7"
+      ],
+      "title": "Chaotic billiards optimized hybrid transformer and XGBoost model for robust and sustainable time series forecasting",
+      "reason": "Accurate wind speed forecasting plays a key role in supporting renewable energy systems, improving flight safety, and enhancing weather prediction. However, the variability and non-stationary nature of wind patterns make reliable forecasting a difficult task. To address these issues, this research proposes a hybrid approach that combines Wavelet Transform (WT) decomposition, an Encoder-Decoder Transformer, and XGBoost in an ensemble setup. To fine-tune model parameters efficiently, the method incorporates the Chaotic Billiards Optimizer (CBO) alongside the Adam optimizer. In this framework, WT helps break down wind speed signals into different frequency bands, capturing both short-term changes and long-term behavior. The Transformer model focuses on learning complex time-based dependencies, while XGBoost adds robustness to the final predictions by reducing overfitting and improving generalization. The model forecasts wind speed values on an hourly basis, up to 24 h ahead. The use of CBO ensures efficient convergence with minimal parameter tuning, making the model suitable for large-scale datasets compared to conventional optimizers, including Adam, Particle Swarm Optimization (PSO) and Genetic Algorithms (GA). When tested on real wind speed data collected from Egypt via the Open-Meteo platform, the proposed model showed strong performance. It achieved a Mean Absolute Error (MAE) of 0.0218, Mean Squared Error (MSE) of 0.0008, and Root Mean Squared Error (RMSE) of 0.0290, along with an R² score of 0.9625, MAPE of 11.97%, and an Explained Variance Score (EVS) of 0.9521. These results were better than those from models like Linear Regression, SVR, LSTM, and even standalone Transformer and XGBoost. Overall, this hybrid method provides a reliable and efficient solution for wind speed forecasting in the context of sustainable energy planning.",
+      "source_url": "https://doi.org/10.1038/s41598-025-10641-7",
+      "first_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "last_checked_at": "2026-10-05T13:07:45.807460+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md"
+      ]
+    }
+  ]
+}
