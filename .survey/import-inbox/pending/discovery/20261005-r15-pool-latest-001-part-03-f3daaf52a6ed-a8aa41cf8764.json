@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-pool-latest-001-part-03-f3daaf52a6ed",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1808.10583",
+      "identity_tokens": [
+        "arXiv:1808.10583"
+      ],
+      "title": "AISHELL-2: Transforming Mandarin ASR Research Into Industrial Scale",
+      "reason": "AISHELL-2 is a Mandarin ASR corpus/dataset, not an inference optimization.",
+      "source_url": "https://arxiv.org/abs/1808.10583",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.18314-anyexperts-on-demand-expert-allocation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2102.04803",
+      "identity_tokens": [
+        "arXiv:2102.04803"
+      ],
+      "title": "DetCo: Unsupervised Contrastive Learning for Object Detection",
+      "reason": "DetCo is self-supervised object-detection representation learning, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2102.04803",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.17179",
+      "identity_tokens": [
+        "arXiv:2309.17179"
+      ],
+      "title": "Alphazero-like Tree-Search can Guide Large Language Model Decoding and Training",
+      "reason": "Tree search guides LLM decoding but adds inference computation and wall time rather than improving efficiency; it is a quality/compute tradeoff.",
+      "source_url": "https://arxiv.org/abs/2309.17179",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.03601",
+      "identity_tokens": [
+        "arXiv:2307.03601"
+      ],
+      "title": "GPT4RoI: Instruction Tuning Large Language Model on Region-of-Interest",
+      "reason": "GPT4RoI instruction-tunes an LLM for region-of-interest visual understanding; capability/tuning work.",
+      "source_url": "https://arxiv.org/abs/2307.03601",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.05561",
+      "identity_tokens": [
+        "arXiv:2401.05561"
+      ],
+      "title": "TrustLLM: Trustworthiness in Large Language Models",
+      "reason": "TrustLLM is a trustworthiness evaluation benchmark/framework, not an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2401.05561",
+      "first_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "last_checked_at": "2026-10-05T01:39:14.432117+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    }
+  ]
+}
