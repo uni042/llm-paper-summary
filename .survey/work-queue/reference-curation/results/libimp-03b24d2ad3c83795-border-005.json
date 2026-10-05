@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-03b24d2ad3c83795-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.engappai.2026.115449",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.engappai.2026.115449",
+    "identity_tokens": [
+      "DOI:10.1016/j.engappai.2026.115449"
+    ],
+    "reason": "packetに一次abstractがなく、今回利用できた一次資料から要旨本文を確認できなかった。title単独では対象範囲との関連を確定しない。",
+    "first_checked_at": "2026-10-05T04:09:43+00:00",
+    "last_checked_at": "2026-10-05T04:09:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "Learnable multi-scale decomposition with integrated autocorrelation and confidence-aware time series forecasting"
+  },
+  "processed_at": "2026-10-05T04:09:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-03b24d2ad3c8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
