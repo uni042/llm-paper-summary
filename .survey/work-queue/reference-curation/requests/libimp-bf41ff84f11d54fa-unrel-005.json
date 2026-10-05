@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-bf41ff84f11d54fa-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2311.03099",
+  "reason": "DAREはSFT delta parameterをdrop/rescaleして複数モデルをmergeするweight-merging手法。本文はタスク性能を評価するが、sparsified deltaはbase weightsへmergeされ、推論時の疎実行、model footprint、serving latencyの改善を実証していない。",
+  "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch",
+  "identity_tokens": [
+    "arXiv:2311.03099"
+  ],
+  "linked_from": [
+    "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bf41ff84f11d",
+  "source_precheck_request_id": null
+}
