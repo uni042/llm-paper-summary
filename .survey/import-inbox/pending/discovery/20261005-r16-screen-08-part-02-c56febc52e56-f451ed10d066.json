@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-08-part-02-c56febc52e56",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32192",
+      "identity_tokens": [
+        "arXiv:2609.32192"
+      ],
+      "title": "CoMemBench: Benchmarking Collaborative Memory Boundaries across Multi-Agent Workflow Topologies",
+      "reason": "This is principally a memory-boundary benchmark, not an inference-efficiency improvement method.",
+      "source_url": "https://arxiv.org/abs/2609.32192",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32805",
+      "identity_tokens": [
+        "arXiv:2609.32805"
+      ],
+      "title": "Decision-Sufficient State Representations: Measuring and Reducing Write-Time Regret",
+      "reason": "Memory/decision quality is the focus; no serving latency/throughput/cost improvement is demonstrated.",
+      "source_url": "https://arxiv.org/abs/2609.32805",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31862",
+      "identity_tokens": [
+        "arXiv:2609.31862"
+      ],
+      "title": "Prompting Particle Physics: Tokenized Multi-modal Foundation Models for Combinatorially Many Tasks",
+      "reason": "要旨: Reconstruction and simulation at a collider experiment are long chains of specialised algorithms, each tuned to a single step. We explore how one model can serve many of those steps at once, while still producing the intermediate objects (tracks, calorimeter cells, clusters, particles and jets) that make the chain。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.31862",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28900",
+      "identity_tokens": [
+        "arXiv:2609.28900"
+      ],
+      "title": "Codetta: High-Capacity, Keyless, and Undetectable Multi-Agent Collusion",
+      "reason": "要旨: Multi-agent systems built on large language models (LLMs) are increasingly deployed in high-stakes settings such as finance, healthcare, and software engineering, where agents coordinate through natural-language messages. The same channels, however, let colluding agents exfiltrate confidential information or。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://arxiv.org/abs/2609.28900",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.22.753630",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.22.753630"
+      ],
+      "title": "Coevolutionary mining of prokaryotic non-coding elements with a genome language model",
+      "reason": "要旨: Microbial genomes encode non-coding RNAs (ncRNAs) and nucleic-acid-interacting proteins essential to biology and biotechnology. However, discovery of these systems remains protein-centric and based on similarity to known sequences. Here, we introduce Minerva, a framework for coevolutionary mining that uses genome。要旨上の主題は対象契約のLLM inference/serving効率、推論時圧縮に該当しない。",
+      "source_url": "https://doi.org/10.64898/2026.09.22.753630",
+      "first_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "last_checked_at": "2026-10-05T02:33:00.003460+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
