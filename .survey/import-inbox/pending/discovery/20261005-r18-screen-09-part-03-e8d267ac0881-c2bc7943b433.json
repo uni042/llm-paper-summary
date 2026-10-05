@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-09-part-03-e8d267ac0881",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34902",
+      "identity_tokens": [
+        "arXiv:2609.34902"
+      ],
+      "title": "Dual-Stream Simultaneous Translation via 2D Grid Attention",
+      "reason": "simultaneous machine translationの2D attention設計だが、同期翻訳quality/latencyの要旨でありLLM serving/inference efficiency研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34902",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34929",
+      "identity_tokens": [
+        "arXiv:2609.34929"
+      ],
+      "title": "Sample What You Say: Aligning Language Models to Sample the Distributions They State",
+      "reason": "指定分布からのlanguage-model sampling behavior/alignmentの検証で、cost/throughput optimizationは扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.34929",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34971",
+      "identity_tokens": [
+        "arXiv:2609.34971"
+      ],
+      "title": "Action-Space Shaping for LLM Agents: Measuring and Mitigating Tool-Schema Bias",
+      "reason": "LLM agent tool-schema/action-space biasの測定・緩和が主題で、inference performance/resource cost改善を示さない。",
+      "source_url": "https://arxiv.org/abs/2609.34971",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34975",
+      "identity_tokens": [
+        "arXiv:2609.34975"
+      ],
+      "title": "Teach to Learn: Hint Annealing for Self-improving LLM Reasoning",
+      "reason": "GRPO/LLM reasoningのhint-annealing training手法で、inference-only efficiencyの研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34975",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34992",
+      "identity_tokens": [
+        "arXiv:2609.34992"
+      ],
+      "title": "Composable Decoding on the Probability Simplex: Theory and Implementation",
+      "reason": "probability simplex上のdecoding strategyの理論/implementationだが、abstractはquality/distributional behavior中心でserving/inference costの改善を示していない。",
+      "source_url": "https://arxiv.org/abs/2609.34992",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
