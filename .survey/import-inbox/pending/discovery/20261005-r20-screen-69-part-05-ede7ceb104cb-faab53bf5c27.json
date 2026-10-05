@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-69-part-05-ede7ceb104cb",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.03777",
+      "identity_tokens": [
+        "arXiv:2410.03777"
+      ],
+      "title": "Determine-Then-Ensemble: Necessity of Top-k Union for Large Language Model Ensembling",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2410.03777. Studies ensemble accuracy/quality for LLMs, not reducing inference cost.",
+      "source_url": "https://arxiv.org/abs/2410.03777",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.00800",
+      "identity_tokens": [
+        "arXiv:2406.00800"
+      ],
+      "title": "MagR: Weight Magnitude Reduction for Enhancing Post-Training Quantization",
+      "reason": "MagR is PTQ preprocessing; it reports perplexity/quantization quality but no direct latency, throughput, or energy gain attributable to MagR itself.",
+      "source_url": "https://arxiv.org/abs/2406.00800",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.13850",
+      "identity_tokens": [
+        "arXiv:2309.13850"
+      ],
+      "title": "Statistical Perspective of Top-K Sparse Softmax Gating Mixture of Experts",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2309.13850. Statistical analysis of sparse softmax MoE gating, not a concrete inference optimization with runtime results.",
+      "source_url": "https://arxiv.org/abs/2309.13850",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.03024",
+      "identity_tokens": [
+        "arXiv:2512.03024"
+      ],
+      "title": "TokenPowerBench: Benchmarking the Power Consumption of LLM Inference",
+      "reason": "This is an inference-energy measurement benchmark rather than an optimization method.",
+      "source_url": "https://arxiv.org/abs/2512.03024",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.00891",
+      "identity_tokens": [
+        "arXiv:2512.00891"
+      ],
+      "title": "Accelerating Streaming Video Large Language Models via Hierarchical Token Compression",
+      "reason": "Gains target streaming VideoLLMs and video-token/ViT processing; text LLM inference applicability is not shown.",
+      "source_url": "https://arxiv.org/abs/2512.00891",
+      "first_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "last_checked_at": "2026-10-05T10:58:07.054461+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.11550-ada-kv.md"
+      ]
+    }
+  ]
+}
