@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-97-part-07-1714e96ced42",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17069",
+      "identity_tokens": [
+        "arXiv:2503.17069"
+      ],
+      "title": "PVChat: Personalized Video Chat with One-Shot Learning",
+      "reason": "PVChat contribution is personalized video-LLM training/adaptation, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2503.17069",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2410.11842-moh-mixture-of-head-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.16653",
+      "identity_tokens": [
+        "arXiv:2503.16653"
+      ],
+      "title": "iFlame: Interleaving Full and Linear Attention for Efficient Mesh Generation",
+      "reason": "Autoregressive mesh generation, not natural-language or multimodal LLM inference.",
+      "source_url": "https://arxiv.org/abs/2503.16653",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00002",
+      "identity_tokens": [
+        "arXiv:2504.00002"
+      ],
+      "title": "Are We There Yet? A Measurement Study of Efficiency for LLM Applications on Mobile Devices",
+      "reason": "Simplified sensor-context app and limited platforms/models; authors say output quality was not comprehensively validated. Deployment measurements, not an optimization method.",
+      "source_url": "https://arxiv.org/abs/2504.00002",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3710848.3710881",
+      "identity_tokens": [
+        "DOI:10.1145/3710848.3710881"
+      ],
+      "title": "Accelerating GNNs on GPU Sparse Tensor Cores through N:M Sparsity-Oriented Graph Reordering",
+      "reason": "Accelerates GNN sparse operations, not LLM inference.",
+      "source_url": "https://doi.org/10.1145/3710848.3710881",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.14344",
+      "identity_tokens": [
+        "arXiv:2502.14344"
+      ],
+      "title": "Towards Accurate Binary Spiking Neural Networks: Learning with Adaptive Gradient Modulation Mechanism",
+      "reason": "Training convergence in binary spiking neural networks, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2502.14344",
+      "first_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "last_checked_at": "2026-10-05T12:47:22.048648+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ]
+    }
+  ]
+}
