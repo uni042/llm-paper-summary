@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-55-part-05-c3c0aa4d78a2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28533",
+      "identity_tokens": [
+        "arXiv:2606.28533"
+      ],
+      "title": "CMSL: Constructive Multi-Sequence Learning for Recommendation Systems",
+      "reason": "Primary abstract reviewed: Sequence learning has emerged as the promising paradigm in recommendation systems, surpassing traditional Deep Learning Recommendation Models (DLRM) by capturing the temporal nuances of user behavior. However, current state-of-the-art architectures operate under a limiting analogy: they treat user history as a monolithic chronological sequence like a sentence in a Large Language Model (LLM). We observe a fundamental … Out of scope: Recommendation-system sequence modeling.",
+      "source_url": "https://arxiv.org/abs/2606.28533",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28560",
+      "identity_tokens": [
+        "arXiv:2606.28560"
+      ],
+      "title": "Depth-Staggered Fibonacci Spacing for Sparse Attention: Static Schedules Beat Learned Dilation and Extrapolate Where Dense Attention Fails",
+      "reason": "Although sparse attention is an inference-relevant mechanism, the direct efficiency evidence is negative for the learned variant and the main static result is a small-model quality/extrapolation study without serving-latency gains.",
+      "source_url": "https://arxiv.org/abs/2606.28560",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.16246",
+      "identity_tokens": [
+        "arXiv:2607.16246"
+      ],
+      "title": "Let the Data Decide: Supervision Analysis, Capability Trade-offs, and Adaptive Objective Routing in Continued Pre-Training via Off-Policy Distillation",
+      "reason": "Primary abstract reviewed: Off-policy distillation is now central to large language model pre-training, yet how training data, objective parameterization, and model capabilities interact remains poorly characterized. We studies top-$k$-truncated, temperature-scaled off-policy distillation by decomposing this problem into two questions: an \\emph{objective-to-capability} analysis of how the training objective shapes token-level supervision and d… Out of scope: Continued-pretraining distillation objectives and data routing.",
+      "source_url": "https://arxiv.org/abs/2607.16246",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26141",
+      "identity_tokens": [
+        "arXiv:2608.26141"
+      ],
+      "title": "AdaThinking-E: One-Token Entropy Regulation for Adaptive Thinking",
+      "reason": "Adaptive token reduction is an indirect efficiency signal in a narrow multimodal document-reasoning setting; no serving latency/throughput or broad workload evidence is shown.",
+      "source_url": "https://arxiv.org/abs/2608.26141",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26142",
+      "identity_tokens": [
+        "arXiv:2608.26142"
+      ],
+      "title": "Position Is All You Need: A Free Lunch Token Compression Strategy for MLLM-based Referring Expression Segmentation",
+      "reason": "There is measured efficiency, but the application is a specialized vision segmentation task rather than general LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.26142",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    }
+  ]
+}
