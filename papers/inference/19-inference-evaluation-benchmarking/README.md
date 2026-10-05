@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（17本）
+## 自動生成の論文一覧（18本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -81,4 +81,10 @@
 - **2023-10 · [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本論文は新しい高速化方式を提案するのではなく、LLaMA 7B/13B/65Bを実機で動かし、スループットとGPUエネルギーを同時に測ることで、推論構成の交換条件を明らかにする。V100 32GBでは最低8枚、A100 80GBでは最低4枚が必要で、V100では8/16/32分割まで拡張する。
+
+### 6年前（2020-11〜2021-10）
+
+- **2021-10 · [Efficiently Modeling Long Sequences with Structured State Spaces](2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md)**  
+  実装：[✓](https://github.com/HazyResearch/state-spaces) ・ リポジトリ内被引用：7  
+  S4（Structured State Space Sequence モデル）は、長系列で自己注意の計算量とメモリ量が系列長の二乗に増える問題に対し、状態空間モデルを実用的な系列層として再設計する。Long Range Arenaでは平均86%台の精度を報告し、当時のTransformer系・効率的注意系を大きく上回った。
 <!-- survey:auto:end -->

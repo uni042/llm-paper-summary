@@ -3,12 +3,16 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（324本）
+## 自動生成の論文一覧（326本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+
+- **2026-01 · [Double: Breaking the Acceleration Limit via Double Retrieval Speculative Parallelism](2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  通常の投機的復号は、小さなドラフトモデルが複数トークンを先読みし、大きなターゲットモデルが一括検証することでターゲット呼び出し回数を減らす。しかし並列投機的復号では、ドラフト生成とターゲット検証を重ねても、ドラフトモデル自身が1トークンずつ自己回帰生成するため、ターゲットとドラフトの単トークン遅延比が高速化の上限になる。
 
 - **2026-01 · [DART: Diffusion-Inspired Speculative Decoding for Fast LLM Inference](2026-2601.19278-dart-diffusion-inspired-speculative-decoding-for-fast-llm-inference.md)**  
   実装：[✓](https://github.com/fvliang/DART) ・ リポジトリ内被引用：7  
@@ -1141,6 +1145,10 @@
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
   Gistingは、毎要求で長い指示文を再エンコードする代わりに、その指示を少数の「gistトークン」へ圧縮し、後続入力がその圧縮表現だけを参照するよう学習する。モデルごとの新しいアダプタを保存するのではなく、タスク指示を通常のキー・値キャッシュ（Key-Value Cache; KVキャッシュ）として再利用可能な短い状態へ変換する。
+
+- **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
+  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：19  
+  Sheared LLaMAは、大型モデルを単に疎にするのではなく、既存ランタイムで扱いやすい指定済みの小型密形状へ切り出し、その後の継続事前学習を効率化する方式である。50B追加トークンで同規模open モデルを上回り、OpenLLaMA-3B-v2相当水準をscratch学習比約3%のcomputeで達成する結果を示す。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
