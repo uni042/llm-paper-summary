@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-04-part-03-d0f195462420",
+  "reference_main_sha": "776103fd59bd25420f08d3eb76f785478ac6909a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36525",
+      "identity_tokens": [
+        "arXiv:2609.36525"
+      ],
+      "title": "Reliability Testing of Medical Model Performance under Distributed Deployment",
+      "reason": "Tests consistency of medical-model results across distributed deployments; reliability evaluation, not an LLM inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.36525",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36529",
+      "identity_tokens": [
+        "arXiv:2609.36529"
+      ],
+      "title": "Triadic Linear Attention: Three-Dimensional Recurrent States for Long-Context Sequence Modeling",
+      "reason": "Linear-attention architecture for general sequence modeling; abstract does not establish an LLM serving contribution.",
+      "source_url": "https://arxiv.org/abs/2609.36529",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36546",
+      "identity_tokens": [
+        "arXiv:2609.36546"
+      ],
+      "title": "Interactive-Policy Distillation with Bidirectional Propose-and-Verify",
+      "reason": "Interactive-policy distillation; training-only teacher/student data generation.",
+      "source_url": "https://arxiv.org/abs/2609.36546",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36556",
+      "identity_tokens": [
+        "arXiv:2609.36556"
+      ],
+      "title": "MAADBench: The Refreshable Paradigm for Anomaly Detection in Multi-Agent Systems",
+      "reason": "Benchmark for anomaly detection in multi-agent systems; no inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.36556",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.36585",
+      "identity_tokens": [
+        "arXiv:2609.36585"
+      ],
+      "title": "Transformers Stop Thinking Too Early, and a Tiny LoRA Fixes It",
+      "reason": "LoRA training improves in-context reasoning capability; no inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2609.36585",
+      "first_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "last_checked_at": "2026-10-05T04:10:30.664384+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ]
+    }
+  ]
+}
