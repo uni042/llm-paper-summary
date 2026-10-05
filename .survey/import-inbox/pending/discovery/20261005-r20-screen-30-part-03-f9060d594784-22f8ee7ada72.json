@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-30-part-03-f9060d594784",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08650",
+      "identity_tokens": [
+        "arXiv:2608.08650"
+      ],
+      "title": "The Evolution of Mixture-of-Experts Architectures in Large Language Models: Routing, Topology, Load Balancing, and Expert Parallelism",
+      "reason": "It contains relevant MoE serving background, but the contribution is primarily a broad survey and pretraining analysis rather than inference-efficiency research.",
+      "source_url": "https://arxiv.org/abs/2608.08650",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08740",
+      "identity_tokens": [
+        "arXiv:2608.08740"
+      ],
+      "title": "Memory-Efficient Activation Checkpointing with Sliding Window and Hirschberg's Algorithm for 0/1 Knapsack Solving in PyTorch",
+      "reason": "The method reduces memory/runtime of activation-checkpointing knapsack solving for model training, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2608.08740",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08853",
+      "identity_tokens": [
+        "arXiv:2608.08853"
+      ],
+      "title": "Beyond Routing: Decoupling Expert Dispatch and Aggregation in Sparse Mixture-of-Experts",
+      "reason": "FDAA is a post-compute expert-aggregation head trained to improve MoE language-model quality; the paper does not target runtime inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.08853",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08922",
+      "identity_tokens": [
+        "arXiv:2608.08922"
+      ],
+      "title": "Clustered Attractor Manifolds and Dynamical Condensation in Self-Attention",
+      "reason": "This is theoretical analysis of self-attention dynamics and attractors, not an inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2608.08922",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08961",
+      "identity_tokens": [
+        "arXiv:2608.08961"
+      ],
+      "title": "Gradient Under Microscope: Benchmarking Resource Utilization of Memory-Efficient Gradient Computation Methods",
+      "reason": "This benchmark compares gradient/activation strategies for transformer training, so its efficiency scope is training-only.",
+      "source_url": "https://arxiv.org/abs/2608.08961",
+      "first_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "last_checked_at": "2026-10-05T07:04:19.710062+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    }
+  ]
+}
