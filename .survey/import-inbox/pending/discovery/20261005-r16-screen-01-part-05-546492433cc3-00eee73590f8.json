@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-01-part-05-546492433cc3",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27331",
+      "identity_tokens": [
+        "arXiv:2609.27331"
+      ],
+      "title": "JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning",
+      "reason": "Primary abstract evaluates a StarCraft II controller using language-model planning; it reports application-level gameplay/cost rather than improving LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.27331",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05736",
+      "identity_tokens": [
+        "arXiv:2609.05736"
+      ],
+      "title": "Beyond Prompts: Measuring and Optimizing LLM Tool-Agent Harnesses",
+      "reason": "本文確認により、主たる貢献が対象範囲外または対象の推論/serving効率を改善する証拠がないと判断。",
+      "source_url": "https://arxiv.org/abs/2609.05736",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03715",
+      "identity_tokens": [
+        "arXiv:2609.03715"
+      ],
+      "title": "MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?",
+      "reason": "Primary abstract evaluates a compact visuomotor VLA policy for robotic manipulation; it is not an LLM inference/serving method.",
+      "source_url": "https://arxiv.org/abs/2609.03715",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26846",
+      "identity_tokens": [
+        "arXiv:2608.26846"
+      ],
+      "title": "Evaluating Confidence-Gated Retrieval with Matched Trajectory Replay",
+      "reason": "Primary abstract introduces a matched-trajectory evaluation protocol for confidence-gated retrieval; it studies action-choice evaluation rather than reducing inference cost or serving latency.",
+      "source_url": "https://arxiv.org/abs/2608.26846",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md",
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27384",
+      "identity_tokens": [
+        "arXiv:2608.27384"
+      ],
+      "title": "FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference",
+      "reason": "Primary abstract accelerates flow-matching VLA action decoding for robot control, not LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.27384",
+      "first_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "last_checked_at": "2026-10-05T02:11:28.146433+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    }
+  ]
+}
