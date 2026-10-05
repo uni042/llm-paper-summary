@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:44:53+00:00",
-  "record_count": 2979,
+  "updated_at": "2026-10-05T05:48:44+00:00",
+  "record_count": 2994,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -43362,6 +43362,221 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "MemBodied: Recurrent Associative Memory for Vision-Language-Action Models"
+    },
+    "arXiv:2609.28784": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28784",
+      "identity_tokens": [
+        "arXiv:2609.28784"
+      ],
+      "reason": "In this paper, we investigate how script knowledge is distributed across the layers of LLMs using two complementary interpretability methods: logistic regression probing and logit-lens analysis. Our probing experiments reveal a clear asymmetry: both the input script and the instructed output script are encoded in the earliest layers of the network, while, in contrast, commitment to the actual output script emerges only in the final layers, with the model's intermediate representations defaulting",
+      "first_checked_at": "2026-10-05T05:48:42+00:00",
+      "last_checked_at": "2026-10-05T05:48:42+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "title": "Script Choice in LLMs: Evidence for Late-Layer Commitment"
+    },
+    "arXiv:2609.28273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28273",
+      "identity_tokens": [
+        "arXiv:2609.28273"
+      ],
+      "reason": "State tracking from sequential observations can require both retaining information and updating it by composing observed operations. We extend Mamba-3's diagonal transition with an input-dependent low-rank reflection term to support noncommutative state tracking, in which the order of operations matters. The rank-one update couples state coordinates along an input-dependent direction, enabling non-diagonal state transitions within a single Mamba-3 block. The extension preserves Mamba-3's exponen",
+      "first_checked_at": "2026-10-05T05:48:42+00:00",
+      "last_checked_at": "2026-10-05T05:48:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Non-Commutative State Tracking with Input-Dependent Low-Rank Updates in Mamba-3"
+    },
+    "arXiv:2609.28358": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28358",
+      "identity_tokens": [
+        "arXiv:2609.28358"
+      ],
+      "reason": "Microscaling quantization techniques are increasingly used to represent neural network parameters with 8 bits or fewer while preserving near-full precision accuracy. However, applying these methods efficiently in convolutional layers is not straightforward. A naive approach transfers full-precision weights and activations to processing units and quantizes each tensor twice, resulting in much more memory movement than expected. Additional overhead comes from the activation tensors, whose sizes gr",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "MicroQonv: Reshaping Convolution Tensors for Efficient Microscaling in Training and Inference"
+    },
+    "arXiv:2609.28471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28471",
+      "identity_tokens": [
+        "arXiv:2609.28471"
+      ],
+      "reason": "Our results show that contrastive learning outperforms a classification-based approach to authorship verification under the tested settings. We identify loss function, batch size, training duration, pre-trained model, input context length, and random text span data augmentation as important factors of model performance. Based on these considerations, we develop a ModernBERT Bi-Encoder model that achieves 98.4% accuracy on the PAN21 authorship verification task.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Contrastive Learning for Authorship Verification"
+    },
+    "arXiv:2609.28568": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28568",
+      "identity_tokens": [
+        "arXiv:2609.28568"
+      ],
+      "reason": "Almost every language model in service was trained by one family of software. That concentration makes a question hard to settle: how much of what is known about training a language model describes language models, and how much describes that software? Settling it needs a second implementation able to carry a model through a whole lifecycle rather than reproduce one operator. We report such a lifecycle. Using numbat, a machine-learning stack written in Zig with no third-party runtime dependencie",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Pretraining and adapting a language model on a dependency-free stack: GPT-2 124M from random weights, reproduced against llm.c, and a clinical adapter for Qwen3-0.6B"
+    },
+    "arXiv:2609.28809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28809",
+      "identity_tokens": [
+        "arXiv:2609.28809"
+      ],
+      "reason": "The paper introduces a recursive latent-stream architecture to expose internal computation for mechanistic interpretability; it reports per-parameter language-model quality but no inference resource reduction or serving contribution.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "Stream Recursion Model (SRM)"
+    },
+    "arXiv:2609.28836": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28836",
+      "identity_tokens": [
+        "arXiv:2609.28836"
+      ],
+      "reason": "The work is a multimodal Alzheimer diagnosis model using imaging, tabular inputs and TabPFN in-context learning; its contribution is clinical prediction/generalization rather than LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "M$^2$PFN: End-to-End Disentangled Alignment for Generalizable Multimodal In-Context Learning in Alzheimer's Disease"
+    },
+    "arXiv:2609.28854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28854",
+      "identity_tokens": [
+        "arXiv:2609.28854"
+      ],
+      "reason": "This is a diagnostic study of incentive-misaligned witnesses in CRM question answering and compute-step controls; it proposes no inference-efficiency method.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Persuaded, Not Informed: Incentive-Misaligned Witnesses Defeat In-Context Grounding"
+    },
+    "arXiv:2609.30382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30382",
+      "identity_tokens": [
+        "arXiv:2609.30382"
+      ],
+      "reason": "The state-space model estimates photon energy from detector signals; its scientific instrumentation task is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Selective state space model for photon energy estimation in microwave kinetic inductance detectors"
+    },
+    "arXiv:2609.35830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.35830",
+      "identity_tokens": [
+        "arXiv:2609.35830"
+      ],
+      "reason": "The paper concerns translating and maintaining LHCb documentation, not model inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "Translating LHCb's Documentation: First experiences and ensuring maintenance"
+    },
+    "arXiv:2609.28575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28575",
+      "identity_tokens": [
+        "arXiv:2609.28575"
+      ],
+      "reason": "Long-conversation memory benchmarks increasingly test recall and prompted knowledge updates, and recent work studies evolving user beliefs and memory state. TWIST is a proposed benchmark suite for a complementary, unmeasured property: intervention quality -- whether a deployed memory system, exercised through its own ingest/recall/vet surface, acts correctly at belief change points. Four tracks cover unprompted tension detection, vetting outgoing drafts against the record, answering with current",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment"
+    },
+    "arXiv:2609.28580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28580",
+      "identity_tokens": [
+        "arXiv:2609.28580"
+      ],
+      "reason": "Although hyperspectral images (HSIs) provide rich spectral-spatial information, accurate pixel-level classification remains challenging because of spectral-spatial heterogeneity and complex spatial structures. Existing vision state space models (Mamba) typically construct sequences according to predefined spatial neighborhoods, without explicitly accounting for semantic similarity or spatial non-stationarity. To address this limitation, we propose Token Clustering and Semantic Sequence Mamba (ST",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Token Clustering and Semantic Sequence Mamba for Hyperspectral Image Classification"
+    },
+    "arXiv:2609.28589": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28589",
+      "identity_tokens": [
+        "arXiv:2609.28589"
+      ],
+      "reason": "Industrial recommendation systems typically operate as a \\emph{cascade} of retrieval, pre-rank, and fine-rank, but these stages are usually trained and served as separate models, causing repeated user-sequence encoding, isolated optimization, and duplicated engineering effort. Building on OneTrans'model-level unification, we present OneTrans-V2, one Transformer that unifies the entire cascade. It encodes the user behavior sequence once as a shared context while preserving stage-specific candidat",
+      "first_checked_at": "2026-10-05T05:48:43+00:00",
+      "last_checked_at": "2026-10-05T05:48:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "OneTrans-V2: Unifying Retrieval, Pre-rank, and Fine-rank with One Transformer in Industrial Recommender"
+    },
+    "arXiv:2609.28739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28739",
+      "identity_tokens": [
+        "arXiv:2609.28739"
+      ],
+      "reason": "Automatic speech recognition models are audited for demographic fairness at full precision, yet the models that ship to production have been quantized, pruned, and distilled. We ask whether post-training weight compression, which alters model weights rather than the audio signal or its feature representation, redistributes error burden across demographic groups. Across the Whisper family on Fair-Speech, Common Voice 25, and AfriSpeech-200, 50% Wanda pruning of Whisper-large-v3 sharply widens the",
+      "first_checked_at": "2026-10-05T05:48:44+00:00",
+      "last_checked_at": "2026-10-05T05:48:44+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "title": "Temporal Taxation Compounds Under Post-Training Compression of Whisper Models"
+    },
+    "arXiv:2609.28758": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28758",
+      "identity_tokens": [
+        "arXiv:2609.28758"
+      ],
+      "reason": "We describe our submission to the Unsupervised Speech in the Wild (UPS) Challenge at Interspeech 2026, a bidirectional Mamba-2 (BiMamba2) encoder trained with masked discrete-unit prediction following the HuBERT-style paradigm. The 47.88M-parameter model is trained on 250 hours of speech across 67 languages from the MLCommons Unsupervised People's Speech dataset, with no labeled data. The objective combines masked k-means pseudo-label prediction with language identification supervision and VICRe",
+      "first_checked_at": "2026-10-05T05:48:44+00:00",
+      "last_checked_at": "2026-10-05T05:48:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "BiMamba2 Masked Discrete-Unit Prediction for Multilingual Speech Representation for Unsupervised Speech in the Wild Challenge"
     }
   }
 }

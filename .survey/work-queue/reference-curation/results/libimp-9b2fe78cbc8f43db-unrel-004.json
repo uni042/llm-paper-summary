@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b2fe78cbc8f43db-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.30382",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.30382",
+    "identity_tokens": [
+      "arXiv:2609.30382"
+    ],
+    "reason": "The state-space model estimates photon energy from detector signals; its scientific instrumentation task is outside LLM inference/serving.",
+    "first_checked_at": "2026-10-05T05:48:43+00:00",
+    "last_checked_at": "2026-10-05T05:48:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "Selective state space model for photon energy estimation in microwave kinetic inductance detectors"
+  },
+  "processed_at": "2026-10-05T05:48:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b2fe78cbc8f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

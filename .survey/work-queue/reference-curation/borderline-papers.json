@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T05:44:53+00:00",
-  "record_count": 986,
+  "updated_at": "2026-10-05T05:48:42+00:00",
+  "record_count": 987,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -14970,6 +14970,21 @@
         "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
       ],
       "title": "SlackDrive: Reclaiming Runtime Slack for Adaptive Driving Inference"
+    },
+    "arXiv:2609.28272": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28272",
+      "identity_tokens": [
+        "arXiv:2609.28272"
+      ],
+      "reason": "diffusion LLMの学習法であり、entropyが早く収束する指標と平均精度+1.92を報告するが、実generation step数・wall-clock速度・計算量削減の実測がない。",
+      "first_checked_at": "2026-10-05T05:48:42+00:00",
+      "last_checked_at": "2026-10-05T05:48:42+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Towards Efficient Reasoning: Learning Causal Shortcuts for Diffusion Language Models"
     }
   }
 }
