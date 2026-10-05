@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-26-part-03-38e9105520ae",
+  "reference_main_sha": "6d84f0e17cb066ce10881407965adca75fa9e635",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3828750",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3828750"
+      ],
+      "title": "ARK: Avoiding Routing Collisions for KV Cache Transfer in Disaggregated LLM Inference",
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "source_url": "https://doi.org/10.1145/3789240.3828750",
+      "first_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "last_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2510.09665-lmcache.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3789240.3829117",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829117"
+      ],
+      "title": "STORM: Enabling Traffic Scheduling for RDMA",
+      "reason": "汎用RDMAトラフィック・データセンターネットワークのスケジューリングが主題で、LLM推論特化の根拠がない。",
+      "source_url": "https://doi.org/10.1145/3789240.3829117",
+      "first_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "last_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829201",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829201"
+      ],
+      "title": "Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism",
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "source_url": "https://doi.org/10.1145/3789240.3829201",
+      "first_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "last_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2405.01814-attention-offloading.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.02263-megascale-infer-disaggregated-expert-parallelism.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3789240.3829347",
+      "identity_tokens": [
+        "DOI:10.1145/3789240.3829347"
+      ],
+      "title": "DynamoServe: A Distributed Tiered Memory System for Multi-tenant LLM Serving",
+      "reason": "要旨上はLLM推論/servingに直接関連するが、一次本文を取得できず、機構・評価・限界を確認できないためborderlineとする。再確認できる一次本文URLまたは著者公開版は今回確認できなかった。",
+      "source_url": "https://doi.org/10.1145/3789240.3829347",
+      "first_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "last_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3828692",
+      "identity_tokens": [
+        "DOI:10.1145/3828692"
+      ],
+      "title": "Animated Pictures for Slide Presentations: From the Shallows to the Depths of a Domain-Specific Language (Functional Pearl)",
+      "reason": "スライド用アニメーションDSLの設計で、LLM推論資源の削減を扱わない。",
+      "source_url": "https://doi.org/10.1145/3828692",
+      "first_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "last_checked_at": "2026-10-05T06:51:37.952883+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
