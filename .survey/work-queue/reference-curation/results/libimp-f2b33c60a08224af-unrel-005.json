@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f2b33c60a08224af-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00894",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00894",
+    "identity_tokens": [
+      "arXiv:2608.00894"
+    ],
+    "reason": "Emerging accelerators often lack mature compiler backends, motivating neural agents that generate and repair kernels from architectural documentation and simulator feedback. This approach repeatedly reconstructs workload-invariant machine semantics--including instruction behavior, legality constraints, synchronization rules, and memory protocols--for every workload. We argue that these semantics should be compiled once into a persistent symbolic artifact, while neural reasoning should focus on workload-dependent mapping decisions. We present Zomboss, a compiler-mediated agentic framework for kernel generation that places neural search within a verified compiler boundary. Zomboss compiles machine semantics and legality constraints into a reusable mapping interface, then uses a neural agent to optimize workload-dependent decisions within the validated mapping space. Across 20 Gemmini and 36 PLENA workload instances, Zomboss returns a correct verified kernel on all 56 instances. Relative to the compiler default, Zomboss achieves geometric-mean speedups of $3.34\\times$ on Gemmini and $1.10\\times$ on PLENA. Relative to direct agentic generation, it reduces inference tokens by 71.2% on Gemmini and 54.2% on PLENA. These results show that a compiler-defined symbolic interface turns native kernel synthesis into verified design-space exploration: compiler infrastructure preserves legality and correctness, while neural guidance improves workload-specific performance with lower search cost and complete coverage.",
+    "first_checked_at": "2026-10-05T09:18:00+00:00",
+    "last_checked_at": "2026-10-05T09:18:00+00:00",
+    "linked_from": [
+      "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+    ],
+    "title": "Rethinking Agentic Kernel Generation for Emerging Accelerators"
+  },
+  "processed_at": "2026-10-05T09:18:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f2b33c60a082",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

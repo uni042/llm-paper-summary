@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-aa538b51c00285f8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00521-026-12392-6",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00521-026-12392-6",
+    "identity_tokens": [
+      "DOI:10.1007/s00521-026-12392-6"
+    ],
+    "reason": "Due to their outstanding performance, Vision Transformers (ViTs) are becoming one of the most widely used architectures for computer vision tasks. However, the interpretation of the output returned by a ViT is still a challenging problem, and yet its solution is crucial for users to gain confidence in these new architectures. In this setting, some methods to address this issue rely only on attention scores; they cannot offer any causal guarantee because the highlighted patches do not necessarily drive the prediction. Other methods use mask-based perturbations; they are computationally expensive because they must repeatedly test many mask combinations of the image and rerun the model to measure confidence changes. To address these limitations, we present SImilarity-based GRAphs for Vision Transformer Explainability (SIGRATE), a hybrid framework that combines attention cues with graph-based mask generation to leverage the strengths of both approaches and overcome their weaknesses. For each attention layer of a ViT, SIGRATE extracts the embeddings of the image patches and constructs the corresponding similarity graph; then, it generates a set of binary masks starting from specific patches and performing walks in the similarity graph. Finally, it merges the masks of all attention layers into a heatmap using the coverage bias formula. We have tested SIGRATE on two ViT models (i.e., ViT-Base and DeiT-Base) and on two datasets, i.e., a subset of the ImageNet validation set and BloodMNIST. Our experiments show that SIGRATE provides promising performance in terms of Insertion, Deletion, and Pointing Game. Finally, we have performed a qualitative analysis demonstrating SIGRATE’s capabilities, as well as a hyperparameter analysis and an ablation study showing the impact of design",
+    "first_checked_at": "2026-10-05T09:17:59+00:00",
+    "last_checked_at": "2026-10-05T09:17:59+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+    ],
+    "title": "Generating masks from similarity-based graphs for vision transformer explainability"
+  },
+  "processed_at": "2026-10-05T09:17:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-aa538b51c002",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
