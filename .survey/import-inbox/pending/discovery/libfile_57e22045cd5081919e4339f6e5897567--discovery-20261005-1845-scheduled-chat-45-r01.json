@@ -1,0 +1,162 @@
+{
+  "schema_version": 12,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261005-1845-scheduled-chat-45/r01",
+  "reference_main_sha": "547e456a69ab60e0ac3d301072e8dad7f246af62",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01428",
+      "identity_tokens": [
+        "arXiv:2608.01428"
+      ],
+      "title": "When Replanning Becomes the Bottleneck: Budgeted Replanning for Embodied Agents",
+      "reason": "BRACE/E-RECAPはLLMベースの再計画でトークン予算と遅延SLOを制御し、文脈トークンを62–92%削減してSLO違反を大幅に低減する。エージェント推論の遅延・文脈圧縮を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2608.01428",
+      "body_check": "full_text_relevance_review: arXiv一次資料でBRACEのbudgeted replanning、E-RECAPのprogressive token pruning、62–92% token削減とSLO違反低減を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "worklist_rank": 401
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.00867",
+      "identity_tokens": [
+        "arXiv:2608.00867"
+      ],
+      "title": "NUNA: Characterizing and Mitigating Non-Uniform Network Access in Multi-Die GPU Scale-Up Systems",
+      "reason": "NUNA-aware placement/routingでGPU間collectiveを最大1.8倍高速化し、ML推論のoutput-token時間を平均7%、最大28%短縮する。分散LLM推論の通信最適化として対象内。",
+      "source_url": "https://arxiv.org/abs/2608.00867",
+      "body_check": "full_text_relevance_review: arXiv一次資料でNAR/NAP、collective最大1.8x、推論output-token時間平均7%・最大28%改善を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 402
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.29575",
+      "identity_tokens": [
+        "arXiv:2607.29575"
+      ],
+      "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+      "reason": "LLM servingのdecode attention帯域飽和を解析し、SLIM性能モデルとBCAでthroughput/latencyを予測・最適化し最大55GBのGPUメモリ割当を回避する。サービング性能モデルとして対象内。",
+      "source_url": "https://arxiv.org/abs/2607.29575",
+      "body_check": "full_text_relevance_review: arXiv一次資料でdecode attentionのDRAM bandwidth saturation、BCA、SLIMのthroughput/latency予測、最大55GB回避を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 403
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.26444",
+      "identity_tokens": [
+        "arXiv:2607.26444"
+      ],
+      "title": "StrataCL: Fabric-Native Communication Library for Production Supernodes",
+      "reason": "fabric-native通信ライブラリによりMoE dispatch/combineを含むcollectiveを最適化し、production LLM inference throughput 1.9x、P99 TTFT 2.2x改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2607.26444",
+      "body_check": "full_text_relevance_review: arXiv一次資料でregistration-on-allocation、NPU-driven SDMA、LLM inference throughput 1.9x、P99 TTFT 2.2x改善を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 405
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.25669",
+      "identity_tokens": [
+        "arXiv:2607.25669"
+      ],
+      "title": "OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs",
+      "reason": "OmniLLMのaudio/video token予算をquery intentとcontentに応じて配分し、25% token retentionでGPU memory 22%削減・end-to-end 1.64x高速化。マルチモーダルLLM推論圧縮として対象内。",
+      "source_url": "https://arxiv.org/abs/2607.25669",
+      "body_check": "full_text_relevance_review: arXiv一次資料でskill-driven inter/intra-modal budget allocation、Qwen2.5-Omni-7Bで25% retention、22% memory削減、1.64x speedupを確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 406
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.25018",
+      "identity_tokens": [
+        "arXiv:2607.25018"
+      ],
+      "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+      "reason": "小型/大型LLM間のdeferralをconformal predictionで制御し、精度保証付きで推論コストを削減するmulti-tier inference framework。モデルrouting/カスケード推論として対象内。",
+      "source_url": "https://arxiv.org/abs/2607.25018",
+      "body_check": "full_text_relevance_review: arXiv一次資料でconformal set sizeによるaccept/defer、finite-sample accuracy guarantee、18 benchmarkでのcascade cost/accuracy評価を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 407
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22432",
+      "identity_tokens": [
+        "arXiv:2607.22432"
+      ],
+      "title": "TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters",
+      "reason": "GPU kernelからmulti-GPUまでtile単位で性能をモデル化し、end-to-end vLLM servingで13.52% wMAPEを達成。LLM servingの性能予測・kernel最適化に直接利用される。",
+      "source_url": "https://arxiv.org/abs/2607.22432",
+      "body_check": "full_text_relevance_review: arXiv一次資料でcompute-memory overlap、cache/network modeling、32 GPU fused kernelsとend-to-end vLLM serving評価を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 408
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19686",
+      "identity_tokens": [
+        "arXiv:2607.19686"
+      ],
+      "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
+      "reason": "Multi-mask diffusionとconsistency distillationでfew-step language generationを可能にし、生成ステップ削減による推論高速化を狙う拡散言語モデル研究。",
+      "source_url": "https://arxiv.org/abs/2607.19686",
+      "body_check": "full_text_relevance_review: arXiv一次資料でmulti-mask forward process、drafting capability、discrete-state consistency distillation、few-step generation評価を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 409
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20327",
+      "identity_tokens": [
+        "arXiv:2607.20327"
+      ],
+      "title": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference",
+      "reason": "SLMがtoken-level control tokenで大型LLMへのhandoffを判断し、精度と推論コストを最適化する。設定により総コストをUSD49.36からUSD1.78へ削減。",
+      "source_url": "https://arxiv.org/abs/2607.20327",
+      "body_check": "full_text_relevance_review: arXiv一次資料でtoken-level SLM-LLM handoff、Collaborate Engine、cost-aware alignment、1.90% LLM token ratioと大幅コスト削減を確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 410
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19456",
+      "identity_tokens": [
+        "arXiv:2607.19456"
+      ],
+      "title": "MoA-Structured Decode Attention DNF Derivation, KV-Cache Accumulation, GQA/MQA, and OpenACC Kernel",
+      "reason": "decode attentionをMoAから導出し、K^T buffer除去、coalesced OpenACC kernel、O(dk+dv) KV append、GQA/MQAのKV traffic削減を示す。推論kernel/KV最適化として対象内。",
+      "source_url": "https://arxiv.org/abs/2607.19456",
+      "body_check": "full_text_relevance_review: arXiv一次資料でmemory-optimal decode DNF、OpenACC GPU kernel、multi-step KV cache、GQA/MQA traffic reductionを確認。",
+      "first_checked_at": "2026-10-05T18:50:00+09:00",
+      "last_checked_at": "2026-10-05T18:58:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 411
+    }
+  ]
+}
