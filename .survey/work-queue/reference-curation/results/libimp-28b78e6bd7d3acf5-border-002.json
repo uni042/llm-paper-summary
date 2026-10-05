@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-28b78e6bd7d3acf5-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.05863",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.05863",
+    "identity_tokens": [
+      "arXiv:2608.05863"
+    ],
+    "reason": "compressed memory servingに関連するが貢献はdiagnostics/correctnessで、eviction-safe benefit未確認、推論効率改善を実証しない。",
+    "first_checked_at": "2026-10-05T02:37:18+00:00",
+    "last_checked_at": "2026-10-05T02:37:18+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+    ],
+    "title": "Runtime Observability for Heterogeneous Attention Memory"
+  },
+  "processed_at": "2026-10-05T02:37:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-28b78e6bd7d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

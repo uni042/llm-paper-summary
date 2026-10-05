@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e208287d34d0593b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.00916",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.00916",
+    "identity_tokens": [
+      "arXiv:2608.00916"
+    ],
+    "reason": "MoE reranker training infrastructureが主貢献。serving throughputは比較評価に含むがserving/inference optimizationが本題ではない。",
+    "first_checked_at": "2026-10-05T02:37:19+00:00",
+    "last_checked_at": "2026-10-05T02:37:19+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Tevatron Meets Megatron: Expert-Parallel LLM Reranker Training on an Academic Budget"
+  },
+  "processed_at": "2026-10-05T02:37:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e208287d34d0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

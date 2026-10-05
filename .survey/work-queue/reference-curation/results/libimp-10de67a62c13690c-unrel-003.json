@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10de67a62c13690c-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.08029",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.08029",
+    "identity_tokens": [
+      "arXiv:2608.08029"
+    ],
+    "reason": "latent safety probesの再現性研究で効率化が主題でない。",
+    "first_checked_at": "2026-10-05T02:37:18+00:00",
+    "last_checked_at": "2026-10-05T02:37:18+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+    ],
+    "title": "Do All LLMs Know When They're Being Harmful? A Reproducibility Study of Latent-Space Safety Probes Across Model Families"
+  },
+  "processed_at": "2026-10-05T02:37:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10de67a62c13",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

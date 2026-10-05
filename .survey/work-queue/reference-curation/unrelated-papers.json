@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:34:44+00:00",
-  "record_count": 1993,
+  "updated_at": "2026-10-05T02:37:19+00:00",
+  "record_count": 2007,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -28809,6 +28809,207 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "Numbat: Building and Verifying a Self-Contained Machine-Learning Stack"
+    },
+    "arXiv:2608.09333": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09333",
+      "identity_tokens": [
+        "arXiv:2608.09333"
+      ],
+      "reason": "自動運転VLMの協調latent reasoningで、LLM inference/serving optimizationではない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "DH-VLM: Dual-Horizon Cooperative Latent Reasoning for Autonomous Driving"
+    },
+    "arXiv:2608.09765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.09765",
+      "identity_tokens": [
+        "arXiv:2608.09765"
+      ],
+      "reason": "映画Audio Descriptionのtask/data/benchmark論文で、推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "REFRAMED: Towards Realistic Audio Description Generation for Movies"
+    },
+    "arXiv:2608.08029": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08029",
+      "identity_tokens": [
+        "arXiv:2608.08029"
+      ],
+      "reason": "latent safety probesの再現性研究で効率化が主題でない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "Do All LLMs Know When They're Being Harmful? A Reproducibility Study of Latent-Space Safety Probes Across Model Families"
+    },
+    "arXiv:2608.07360": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.07360",
+      "identity_tokens": [
+        "arXiv:2608.07360"
+      ],
+      "reason": "代数的グラフ連結性定理とLean証明でLLM対象外。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Maximizing Algebraic Connectivity with $2(n-2)$ Edges: The Large Vertex Number Case"
+    },
+    "arXiv:2608.04854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.04854",
+      "identity_tokens": [
+        "arXiv:2608.04854"
+      ],
+      "reason": "LLMによるremanufacturing automationのdomain review/frameworkで効率化ではない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Transforming remanufacturing automation with large language models: A forward-looking analysis with case studies"
+    },
+    "arXiv:2608.05237": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05237",
+      "identity_tokens": [
+        "arXiv:2608.05237"
+      ],
+      "reason": "video diffusionの品質とparallel denoisingで、language modelではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md"
+      ],
+      "title": "In-Context Forcing: Uncovering Context Effects in Autoregressive Video Diffusion"
+    },
+    "arXiv:2608.03610": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03610",
+      "identity_tokens": [
+        "arXiv:2608.03610"
+      ],
+      "reason": "multilingual ASRのon-policy distillation/training最適化で推論効率を扱わない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Language-Specialized Multi-Teacher On-Policy Distillation for Multilingual LLM-Based ASR"
+    },
+    "arXiv:2608.12004": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12004",
+      "identity_tokens": [
+        "arXiv:2608.12004"
+      ],
+      "reason": "LLMをTriton kernel generatorとして評価するbenchmarkで、LLM inference自身の効率化ではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "RealisticTritonBench: A Benchmark for Triton-Kernel Generation in Real-World AI Frameworks"
+    },
+    "arXiv:2608.12569": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12569",
+      "identity_tokens": [
+        "arXiv:2608.12569"
+      ],
+      "reason": "dense retriever query embedding tuningによるranking品質改善でLLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Test-Time Optimization of Query Embeddings with Ranking Aware Reward Maximization"
+    },
+    "arXiv:2608.10402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10402",
+      "identity_tokens": [
+        "arXiv:2608.10402"
+      ],
+      "reason": "LLM agentic RLのtraining throughput/goodput改善であり学習専用効率化。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling"
+    },
+    "arXiv:2608.11095": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11095",
+      "identity_tokens": [
+        "arXiv:2608.11095"
+      ],
+      "reason": "agentic coding prompt膨張とinstruction-following分析でserving効率ではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding"
+    },
+    "arXiv:2608.03682": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03682",
+      "identity_tokens": [
+        "arXiv:2608.03682"
+      ],
+      "reason": "VLA/WAM physical-AI inference engineで、LLM対象外。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud"
+    },
+    "arXiv:2608.02109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02109",
+      "identity_tokens": [
+        "arXiv:2608.02109"
+      ],
+      "reason": "vision-text compressionの意味整合を行う学習手法で推論時効率化ではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Same Semantics, Different Paths: Self-Improving Alignment for Vision-Text Compression"
+    },
+    "arXiv:2608.00916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.00916",
+      "identity_tokens": [
+        "arXiv:2608.00916"
+      ],
+      "reason": "MoE reranker training infrastructureが主貢献。serving throughputは比較評価に含むがserving/inference optimizationが本題ではない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Tevatron Meets Megatron: Expert-Parallel LLM Reranker Training on an Academic Budget"
     }
   }
 }

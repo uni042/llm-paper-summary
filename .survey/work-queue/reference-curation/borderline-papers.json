@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:34:44+00:00",
-  "record_count": 702,
+  "updated_at": "2026-10-05T02:37:19+00:00",
+  "record_count": 708,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -10273,6 +10273,104 @@
         "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
       ],
       "title": "ReTrace: Rejected-Trajectory Conditioning for Speculative Decoding"
+    },
+    "arXiv:2608.08253": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.08253",
+      "identity_tokens": [
+        "arXiv:2608.08253"
+      ],
+      "reason": "主貢献はtransaction governanceとmemory correctnessで、外部agent-task performanceやLLM inference latencyのbenchmarkがなく、scope fitが弱い。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "SuperLocalMemory 4.0: The Governed Memory Operating System for AI Agents"
+    },
+    "arXiv:2608.05687": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05687",
+      "identity_tokens": [
+        "arXiv:2608.05687"
+      ],
+      "reason": "diffusion decodingとの隣接性はあるが本文の成果はaccuracy分析で、効率化の主張がない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Answer First, Reason Later: When Commitment Order Costs Accuracy in Diffusion Language Models"
+    },
+    "arXiv:2608.05863": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05863",
+      "identity_tokens": [
+        "arXiv:2608.05863"
+      ],
+      "reason": "compressed memory servingに関連するが貢献はdiagnostics/correctnessで、eviction-safe benefit未確認、推論効率改善を実証しない。",
+      "first_checked_at": "2026-10-05T02:37:18+00:00",
+      "last_checked_at": "2026-10-05T02:37:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.05527-gear-an-efficient-kv-cache-compression-recipe-for-near-lossless-generati.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Runtime Observability for Heterogeneous Attention Memory"
+    },
+    "arXiv:2608.11981": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11981",
+      "identity_tokens": [
+        "arXiv:2608.11981"
+      ],
+      "reason": "圧縮手法への言及はあるが、主題と評価はtrustworthinessで推論効率への適合が弱い。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ],
+      "title": "Benchmarking Trustworthiness of SLMs: Pre-trained vs. Compressed"
+    },
+    "arXiv:2608.02113": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02113",
+      "identity_tokens": [
+        "arXiv:2608.02113"
+      ],
+      "reason": "memory/context managementとの関連はあるが評価はfixed-budget action qualityで、効率改善を示していない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "MemArbiter: Decision-Time Memory Arbitration for Long-Horizon LLM Agents"
+    },
+    "arXiv:2608.01326": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01326",
+      "identity_tokens": [
+        "arXiv:2608.01326"
+      ],
+      "reason": "理論的枠組みと限定case studyであり、実用推論効率の改善を示す機構はない。",
+      "first_checked_at": "2026-10-05T02:37:19+00:00",
+      "last_checked_at": "2026-10-05T02:37:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Context Compaction Theory"
     }
   }
 }
