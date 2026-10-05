@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      DISCOVERY_PRECHECK_PARALLELISM: '4'
+      DISCOVERY_PRECHECK_PARALLELISM: '6'
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout latest main
