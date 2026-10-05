@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-18-part-08-4d3dfd00f0be",
+  "reference_main_sha": "5c080f2dff631e8df5a95866e8efefd815ceab1d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.29581",
+      "identity_tokens": [
+        "arXiv:2608.29581"
+      ],
+      "title": "Bridging Agent Semantics with Spot Capacity: An Elastic and Recoverable Service Model",
+      "reason": "SemSpot proposes semantic-aware spot capacity for LLM-as-a-service and audits 1,535 cases across six agent benchmarks. It analyzes state resume, verified-segment commits and economic filters, but an empirical runtime/platform trace evaluation is explicitly future work; memory/bandwidth overhead may erase savings.",
+      "source_url": "https://arxiv.org/abs/2608.29581",
+      "first_checked_at": "2026-10-05T06:19:27.131889+00:00",
+      "last_checked_at": "2026-10-05T06:19:27.131889+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md",
+        "papers/inference/99-other-inference-systems/2025-2504.20068-jitserve-slo-aware-llm-serving-with-imprecise-request-information.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29605",
+      "identity_tokens": [
+        "arXiv:2608.29605"
+      ],
+      "title": "Hindsight Memory-PRM: Supervising Memory Management with Auditable Hindsight Credit",
+      "reason": "要旨はagent memory managementのhindsight supervisionによる品質改善であり、inferenceコスト削減を評価するものではない。",
+      "source_url": "https://arxiv.org/abs/2608.29605",
+      "first_checked_at": "2026-10-05T06:19:27.131889+00:00",
+      "last_checked_at": "2026-10-05T06:19:27.131889+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    }
+  ]
+}
