@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:12:17+00:00",
-  "record_count": 2175,
+  "updated_at": "2026-10-05T03:14:25+00:00",
+  "record_count": 2188,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -31440,6 +31440,206 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "Can Video World Models Track Unobserved World States?"
+    },
+    "arXiv:2608.25768": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25768",
+      "identity_tokens": [
+        "arXiv:2608.25768"
+      ],
+      "reason": "要旨は「Turkish encoder models have adopted modern architectures while leaving the pretraining objective fixed at masked language modelling. This paper introduces MoganBert-TR, a 149M-parameter Turkish encoder foundation model trained from scratch on a language-specifically filtered corpus, together with an embedding model derived from」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
+      ],
+      "title": "MoganBert-TR: A Turkish Encoder Foundation Model Trained from Scratch with a CLM-to-MLM Curriculum"
+    },
+    "arXiv:2608.26013": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26013",
+      "identity_tokens": [
+        "arXiv:2608.26013"
+      ],
+      "reason": "要旨は「Multimodal instruction-following models require training data that is accurate, diverse, verifiable, and challenging. Existing synthesis pipelines typically follow a one-pass generate-and-filter paradigm, discarding feedback from failed samples, verifier outcomes, and target-model errors. We present VISA (Visual Instruction」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "VISA: Agentic Self-Evolving Data Synthesis for Multimodal Instruction Following"
+    },
+    "arXiv:2608.26021": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.26021",
+      "identity_tokens": [
+        "arXiv:2608.26021"
+      ],
+      "reason": "要旨は「Datacenters consume many megawatts of power, and regularly encounter scenarios that require modulating their power draw. These scenarios include datacenter infrastructure failures, power grid failures, grid services, and more, spanning a diverse range of requirements in terms of the power magnitude, the scope of the reduction,」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Slasher: Power Flexibility for Cloud Datacenters"
+    },
+    "arXiv:2608.24335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24335",
+      "identity_tokens": [
+        "arXiv:2608.24335"
+      ],
+      "reason": "要旨は「Activation steering can change behaviour without establishing that the effect is specific to the intended concept. We introduce SteerCheck, a preregistered attribution audit that matches off-target KL and separates mean, protected-tail, polarity, transfer, and semantic claims. Exact replay of 960 Qwen3-14B interventions reveals」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "SteerCheck: Attribution Specificity and Alignment Leakage in Activation-Steering Audits"
+    },
+    "arXiv:2608.24462": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.24462",
+      "identity_tokens": [
+        "arXiv:2608.24462"
+      ],
+      "reason": "要旨は「In this paper, we propose \\textbf{Mahalanobis-Based Multi-Head Attention} (MHA-CSP), a novel attention mechanism that replaces the standard dot-product with a \\textbf{Mahalanobis distance-based RBF kernel}, which effectively computes attention in an infinite-dimensional feature space without increasing the parameter count.」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Mahalanobis-Based Multi-Head Attention for Complex State Propagation"
+    },
+    "arXiv:2608.25231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25231",
+      "identity_tokens": [
+        "arXiv:2608.25231"
+      ],
+      "reason": "要旨は「Mixture-of-Experts (MoE) models appear to encode moral content as robustly as dense models, yet prove far more fragile in their encoding. In OLMoE-1B-7B, linear probes recover moral valence from nearly every expert-layer combination, with mean peak-layer accuracy above 90%. But these representations collapse under levels of」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:24+00:00",
+      "last_checked_at": "2026-10-05T03:14:24+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Output Dilution: Redundant but Fragile Representations in MoE Models"
+    },
+    "arXiv:2608.22876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22876",
+      "identity_tokens": [
+        "arXiv:2608.22876"
+      ],
+      "reason": "一次要旨はcausality/prefix-invariance auditとbug localizationを扱い、LLM推論・serving効率化手法ではない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "The Mask Is Not the Model: Auditing Prefix Invariance in Attention, State-Space, and Hybrid Sequence Models"
+    },
+    "arXiv:2608.22368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22368",
+      "identity_tokens": [
+        "arXiv:2608.22368"
+      ],
+      "reason": "一次要旨は物体検出用ViT backboneのattention変換であり、LLM/VLM serving workloadではない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "DiD It in 87 Minutes: A Label-Free Softmax-to-Linear Adaptation of Vision Transformers for Object Detection"
+    },
+    "arXiv:2608.22007": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22007",
+      "identity_tokens": [
+        "arXiv:2608.22007"
+      ],
+      "reason": "一次要旨はTransformer内部communication mapによるmechanistic interpretabilityを扱い、推論システム効率化が主題でない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "The Communication Map of a Transformer"
+    },
+    "arXiv:2608.22067": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.22067",
+      "identity_tokens": [
+        "arXiv:2608.22067"
+      ],
+      "reason": "一次要旨はrobot manipulation用world-action modelのaction predictionを扱い、LLM inference/servingではない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "DELE-w0.5: Inferring Action from Future Latent State for Robotic Manipulation"
+    },
+    "arXiv:2608.27287": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27287",
+      "identity_tokens": [
+        "arXiv:2608.27287"
+      ],
+      "reason": "要旨は「Modern AI systems advance through continuous iteration: a loop of proposing evolution directions, implementing code, training, and evaluation. While the latter three stages are increasingly automated, the starting point --- proposing effective evolution directions --- remains a critical bottleneck that still relies heavily on」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Astar: Learning to Propose Evolution Directions for Self-Evolving Industrial AI Systems"
+    },
+    "arXiv:2608.27529": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27529",
+      "identity_tokens": [
+        "arXiv:2608.27529"
+      ],
+      "reason": "要旨は「Streaming 3D reconstruction from extremely long videos requires estimating camera motion and scene geometry online under bounded memory and computation. Early streaming models achieve causal, bounded-cost inference using finite context buffers or compact recurrent states, yet their estimates often deteriorate as sequences grow.」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
+      "title": "Revisiting Local Context for Long-Horizon Streaming 3D Reconstruction"
+    },
+    "arXiv:2608.25683": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.25683",
+      "identity_tokens": [
+        "arXiv:2608.25683"
+      ],
+      "reason": "要旨は「In modern agentic AI training, the system bottleneck is shifting from rollout to update. Emerging sampling strategies such as tree-structured and step-wise RL greatly increase training sample volume while incurring relatively low marginal rollout cost, causing the update phase to dominate the end-to-end execution time.」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "first_checked_at": "2026-10-05T03:14:25+00:00",
+      "last_checked_at": "2026-10-05T03:14:25+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "psRL: Efficient Training for Agentic AI via Training-Time Prefix Sharing"
     }
   }
 }

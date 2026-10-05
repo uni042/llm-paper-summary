@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1be1f17bf94bb77b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.25231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.25231",
+    "identity_tokens": [
+      "arXiv:2608.25231"
+    ],
+    "reason": "要旨は「Mixture-of-Experts (MoE) models appear to encode moral content as robustly as dense models, yet prove far more fragile in their encoding. In OLMoE-1B-7B, linear probes recover moral valence from nearly every expert-layer combination, with mean peak-layer accuracy above 90%. But these representations collapse under levels of」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+    "first_checked_at": "2026-10-05T03:14:24+00:00",
+    "last_checked_at": "2026-10-05T03:14:24+00:00",
+    "linked_from": [
+      "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+    ],
+    "title": "Output Dilution: Redundant but Fragile Representations in MoE Models"
+  },
+  "processed_at": "2026-10-05T03:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1be1f17bf94b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

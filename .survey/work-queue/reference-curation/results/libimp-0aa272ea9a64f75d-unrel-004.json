@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0aa272ea9a64f75d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.24335",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.24335",
+    "identity_tokens": [
+      "arXiv:2608.24335"
+    ],
+    "reason": "要旨は「Activation steering can change behaviour without establishing that the effect is specific to the intended concept. We introduce SteerCheck, a preregistered attribution audit that matches off-target KL and separates mean, protected-tail, polarity, transfer, and semantic claims. Exact replay of 960 Qwen3-14B interventions reveals」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+    "first_checked_at": "2026-10-05T03:14:24+00:00",
+    "last_checked_at": "2026-10-05T03:14:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "SteerCheck: Attribution Specificity and Alignment Leakage in Activation-Steering Audits"
+  },
+  "processed_at": "2026-10-05T03:14:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0aa272ea9a64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
