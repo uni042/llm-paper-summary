@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-52-part-03-55b1fad8d87a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00156",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00156"
+      ],
+      "title": "HiCoSched: Production-Trace-Driven Backtesting for LLM Online-Offline Co-Serving",
+      "reason": "The primary abstract describes a direct LLM inference/serving optimization, but the primary paper body was not retrievable through the available publisher/DOI access path; without checking methods, evaluation conditions, and limitations, this batch cannot make a supported advancement decision.",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00156",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2308.16369-sarathi.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2410.01228-conserve-fine-grained-gpu-harvesting-for-llm-online-and-offline-co-serving.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00157",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00157"
+      ],
+      "title": "Towards Efficient and Reliable On-Device Multi-Agent Systems: Challenges, Technologies and Explorations",
+      "reason": "on-device multi-agent survey and a preliminary framework are relevant only indirectly; concrete LLM inference system results and their scope cannot be established from the abstract alone.",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00157",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2407.05858-fast-on-device-llm-inference-with-npus.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2408.10284-adapmoe.md",
+        "papers/inference/01-offload-hierarchical-memory/2024-2411.01433-hobbit.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2504.05897-hybrimoe-hybrid-cpu-gpu-scheduling-cache-management.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2505.05950-floe-on-the-fly-moe-inference.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2512.12990-slicemoe-bit-sliced-expert-caching.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md",
+        "papers/inference/03-expert-prefetch/2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
+        "papers/inference/07-kv-cache-optimization-compression/2026-2602.01053-lragent-multilora-agent-kv-sharing.md",
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
+        "papers/survey/05-moe-inference-optimization/2024-2412.14219-moe-inference-optimization-survey.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00160",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00160"
+      ],
+      "title": "Optimizing Agentic AI Applications with Reinforcement Learning",
+      "reason": "agent/model orchestration and resource budgets may overlap inference systems, but the abstract centers on simulated workflows and provides no runtime/serving measurements.",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00160",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00165",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00165"
+      ],
+      "title": "Lean Service Catalogs for Agentic Systems: A Study of Schema Compression and Caching Economics",
+      "reason": "prompt catalog compression/caching reduces input-token cost, but the work is about MCP service descriptions and provider billing rather than inference-engine/runtime performance.",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00165",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICWS72778.2026.00166",
+      "identity_tokens": [
+        "DOI:10.1109/ICWS72778.2026.00166"
+      ],
+      "title": "DualTeach: Disagreement-Aware Dual-Teacher Distillation for Reliable Agentic Services",
+      "reason": "要旨の主対象はLLM/MoEの学習・fine-tuning・RL rolloutまたはtraining通信であり、inference-time optimization/servingではない。 Primary abstract: LLM-powered agents are reshaping services computing by enabling goal-oriented reasoning, workflow automation, and autonomous service orchestration. However, deploying such agentic services in practice remains difficult because high-capability reasoning models often violate the memory, latency, and reliability budgets required for dependable service operation",
+      "source_url": "https://doi.org/10.1109/ICWS72778.2026.00166",
+      "first_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "last_checked_at": "2026-10-05T09:54:27.422078+00:00",
+      "linked_from": [
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ]
+    }
+  ]
+}
