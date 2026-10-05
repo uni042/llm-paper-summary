@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-02-part-07-3880d7faac19",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.05374",
+      "identity_tokens": [
+        "arXiv:2308.05374"
+      ],
+      "title": "Trustworthy LLMs: a Survey and Guideline for Evaluating Large Language Models' Alignment",
+      "reason": "Abstract surveys alignment evaluation for trustworthy LLMs; it does not focus on inference-time efficiency or serving.",
+      "source_url": "https://arxiv.org/abs/2308.05374",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.10130",
+      "identity_tokens": [
+        "arXiv:2303.10130"
+      ],
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models",
+      "reason": "Abstract estimates labor-market exposure to language-model capabilities; no inference-efficiency or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2303.10130",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1507.06149",
+      "identity_tokens": [
+        "arXiv:1507.06149"
+      ],
+      "title": "Data-free Parameter Pruning for Deep Neural Networks",
+      "reason": "The paper proposes parameter pruning and reports compression/accuracy on LeNet and AlexNet-like vision models, but does not evaluate Transformer/LLM inference or runtime savings.",
+      "source_url": "https://arxiv.org/abs/1507.06149",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.06349",
+      "identity_tokens": [
+        "arXiv:2303.06349",
+        "DOI:10.48550/arxiv.2303.06349"
+      ],
+      "title": "Resurrecting Recurrent Neural Networks for Long Sequences",
+      "reason": "The paper establishes efficient linear recurrent inference for long sequences, but its experiments are on Long Range Arena tasks rather than language modeling or LLM generation.",
+      "source_url": "https://arxiv.org/abs/2303.06349",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.00089",
+      "identity_tokens": [
+        "arXiv:1903.00089"
+      ],
+      "title": "Massively Multilingual Neural Machine Translation",
+      "reason": "Abstract presents massively multilingual neural machine translation; no LLM inference-efficiency or serving contribution is identified.",
+      "source_url": "https://arxiv.org/abs/1903.00089",
+      "first_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "last_checked_at": "2026-10-05T00:23:16.330806+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ]
+    }
+  ]
+}
