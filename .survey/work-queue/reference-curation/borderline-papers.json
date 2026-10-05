@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:54:30+00:00",
-  "record_count": 1588,
+  "updated_at": "2026-10-05T11:57:09+00:00",
+  "record_count": 1590,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24670,6 +24670,35 @@
         "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md"
       ],
       "title": "Poster: Selective Semantic Cache Transfer for Mobile-Cloud LLM Inference"
+    },
+    "arXiv:2606.21448": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21448",
+      "identity_tokens": [
+        "arXiv:2606.21448"
+      ],
+      "reason": "Retrieval-embedding quantization rather than demonstrated KV-cache/LLM-serving optimization; transfer to KV serving remains unverified.",
+      "first_checked_at": "2026-10-05T11:57:07+00:00",
+      "last_checked_at": "2026-10-05T11:57:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Fast-TurboQuant: A Multiplier-Free Online Vector Quantization Approach"
+    },
+    "arXiv:2606.19913": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19913",
+      "identity_tokens": [
+        "arXiv:2606.19913"
+      ],
+      "reason": "Evidence is specific to Whisper ASR and the described accelerator; applicability to LLM inference kernels/serving is weak and untested.",
+      "first_checked_at": "2026-10-05T11:57:09+00:00",
+      "last_checked_at": "2026-10-05T11:57:09+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Design and Evaluation of Energy‐Efficient Whisper Dot‐Product Kernel Offloading on a CGLA Architecture"
     }
   }
 }
