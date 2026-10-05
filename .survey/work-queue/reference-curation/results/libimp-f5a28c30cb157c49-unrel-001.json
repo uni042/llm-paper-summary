@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f5a28c30cb157c49-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/edge72783.2026.00040",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/edge72783.2026.00040",
+    "identity_tokens": [
+      "DOI:10.1109/edge72783.2026.00040"
+    ],
+    "reason": "一次abstractの主題は小型LLMのtool-call構文正確性をgrammar-constrained decodingで確保するagent framework。inference efficiencyの測定・手法は示されず、edge適用動機だけでは対象外。",
+    "first_checked_at": "2026-10-05T11:01:43+00:00",
+    "last_checked_at": "2026-10-05T11:01:43+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+    ],
+    "title": "Democratizing Autonomous Deep Research: A Neuro-Symbolic Framework for Small Language Models via Grammar-Constrained Decoding"
+  },
+  "processed_at": "2026-10-05T11:01:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f5a28c30cb15",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

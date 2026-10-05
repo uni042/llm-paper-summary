@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T10:58:56+00:00",
-  "record_count": 1477,
+  "updated_at": "2026-10-05T11:01:43+00:00",
+  "record_count": 1485,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -22846,6 +22846,152 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
       ],
       "title": "LFFN: A Locality-Aware Feed-Forward Network for Efficient Transformer Architectures"
+    },
+    "DOI:10.1109/compsac69091.2026.00211": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00211",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00211"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:40+00:00",
+      "last_checked_at": "2026-10-05T11:01:40+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "The Era of 1.58-Bit LLMs: Enabling Low-Carbon Footprint AI for the Industrial Edge"
+    },
+    "DOI:10.1109/compsac69091.2026.00268": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00268",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00268"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:40+00:00",
+      "last_checked_at": "2026-10-05T11:01:40+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "Ecosystem Level Inference Redundancy (ELIR): A Quality-Oriented Cross-Platform Reuse Framework for Sustainable AI Ecosystems"
+    },
+    "DOI:10.1109/compsac69091.2026.00432": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00432",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00432"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:41+00:00",
+      "last_checked_at": "2026-10-05T11:01:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.14351-serverlessllm-low-latency-serverless-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "title": "Congestion-Aware Scheduling for Heterogeneous LLM-Agent Teams"
+    },
+    "DOI:10.1109/compsac69091.2026.00029": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00029",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00029"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; power-control implementation, measurement methodology and SLA statistics could not be reviewed.",
+      "first_checked_at": "2026-10-05T11:01:41+00:00",
+      "last_checked_at": "2026-10-05T11:01:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.16283-andes-qoe-text-streaming-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-slo-aware-gpu-dvfs-for-energy-efficient-llm-inference-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Energy-Efficient LLM Inference with SLA-Constrained Adaptive GPU Power Capping"
+    },
+    "DOI:10.1109/compsac69091.2026.00139": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00139",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00139"
+      ],
+      "reason": "The IEEE primary DOI route was inaccessible via the available web reader; GPU partitioning configuration, workload details, statistical variation and quality results could not be checked.",
+      "first_checked_at": "2026-10-05T11:01:41+00:00",
+      "last_checked_at": "2026-10-05T11:01:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Performance Characterization of LLM Inference under Limited GPU Resources"
+    },
+    "DOI:10.1109/icccn69946.2026.11662646": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccn69946.2026.11662646",
+      "identity_tokens": [
+        "DOI:10.1109/icccn69946.2026.11662646"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:43+00:00",
+      "last_checked_at": "2026-10-05T11:01:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.17312-alisa-accelerating-large-language-model-inference-via-sparsity-aware-kv-caching.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04437-vattention-virtual-memory-kv-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.00588-fairness-in-serving-large-language-models-vtc.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.09526-loongserve-efficiently-serving-long-context-large-language-models-with-e.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md"
+      ],
+      "title": "Managing KV Cache for Coordinated Waiting and Execution Time in LLM Serving"
+    },
+    "DOI:10.1109/icccn69946.2026.11662938": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccn69946.2026.11662938",
+      "identity_tokens": [
+        "DOI:10.1109/icccn69946.2026.11662938"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:43+00:00",
+      "last_checked_at": "2026-10-05T11:01:43+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.06856-aladdin-joint-placement-and-scaling-for-slo-aware-llm-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md"
+      ],
+      "title": "WaSMa: Workflow-Aware Scheduling for Multi-Agent LLM Systems"
+    },
+    "DOI:10.1109/icccn69946.2026.11662939": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icccn69946.2026.11662939",
+      "identity_tokens": [
+        "DOI:10.1109/icccn69946.2026.11662939"
+      ],
+      "reason": "本文の手法・評価・限界を一次資料で検証できず、abstractだけで明確な関連寄与を確定できないためborderline。",
+      "first_checked_at": "2026-10-05T11:01:43+00:00",
+      "last_checked_at": "2026-10-05T11:01:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2405.19888-parrot-efficient-serving-llm-applications-semantic-variable.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.13965-autellix-agent-program-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.06948-kairos-multi-agent-serving.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "FlowGuard: Slack-Aware Overload Control for Multi-Agent LLM Serving"
     }
   }
 }
