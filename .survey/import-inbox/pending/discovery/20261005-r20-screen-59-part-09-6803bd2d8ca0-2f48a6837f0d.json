@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-59-part-09-6803bd2d8ca0",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15569",
+      "identity_tokens": [
+        "arXiv:2606.15569"
+      ],
+      "title": "A Decision-Theoretic View of Test-Time Training: When, How Far, and Which Directions to Adapt",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.15569. Abstract summary: Test-time training (TTT) adapts a pretrained model to each prompt via parameter updates, improving accuracy under pretraining-to-test distribution shifts. Yet, its performance often suffers from instability and sensitivity to hyperparameters such as update steps and subspace. We explain this behavior through a decision-theoretic Out of scope: Test-time training for adaptation/accuracy, not efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.15569",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15625",
+      "identity_tokens": [
+        "arXiv:2606.15625"
+      ],
+      "title": "Conflict-Aware Federated Fine-Tuning of Large Language Models with Mixture-of-Experts",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.15625. Abstract summary: The continuous scaling of large language models (LLMs) incurs prohibitive computational costs, making Mixture-of-Experts (MoE) a scalable alternative for efficient fine-tuning via sparse activation. While federated learning (FL) emerges as the paradigm for privacy-preserving collaborative optimization, integrating MoE into FL un Out of scope: Federated MoE fine-tuning/training.",
+      "source_url": "https://arxiv.org/abs/2606.15625",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.15734",
+      "identity_tokens": [
+        "arXiv:2606.15734"
+      ],
+      "title": "Retrievable Gradients: Continual Post-Training Without Cumulative Weight Drift",
+      "reason": "Post-deployment adaptation relevance but no demonstrated inference-efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2606.15734",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15872",
+      "identity_tokens": [
+        "arXiv:2606.15872"
+      ],
+      "title": "SciOrch: Learning to Orchestrate Expert LLMs for Solving Frontier Multimodal Scientific Reasoning Tasks",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.15872. Abstract summary: Frontier scientific reasoning remains a major challenge for large language models (LLMs), where even the strongest commercial systems fall short of expert-level performance. A closer look at model behavior reveals substantial complementarity that single-model evaluation hides: different frontier models excel on different questio Out of scope: Scientific LLM agent orchestration for reasoning quality.",
+      "source_url": "https://arxiv.org/abs/2606.15872",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15903",
+      "identity_tokens": [
+        "arXiv:2606.15903"
+      ],
+      "title": "Control-Plane Placement Shapes Forgetting: An Architectural Study of Agent Memory Across Thirteen System Configurations",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2606.15903. Abstract summary: Where an LLM sits in an agent memory pipeline -- between the recall plane that retrieves stored facts (extensively benchmarked) and the control plane that mutates them via supersede, release, purge (largely untested) -- shapes which forgetting failure modes the system recovers. Comparing thirteen system configurations on a 385-c Out of scope: Agent memory forgetting/control-plane study; not inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2606.15903",
+      "first_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "last_checked_at": "2026-10-05T10:32:18.414724+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    }
+  ]
+}
