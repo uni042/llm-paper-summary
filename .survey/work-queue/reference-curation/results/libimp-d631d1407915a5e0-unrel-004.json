@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d631d1407915a5e0-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.05980",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.05980",
+    "identity_tokens": [
+      "arXiv:2608.05980"
+    ],
+    "reason": "We investigate whether simple transformations can translate representations across heterogeneous text embedding models. Understanding how independently trained models organize semantic information is an enabler for AI-to-AI latent communication without decoding into human-readable text. Focusing on lightweight translators such as linear mappings, we test the literature hypothesis of latent universality in a realistic text setting beyond simplified benchmarks. Across nine embedding models differing in architecture, pooling strategy, and training objective, we evaluate compatibility using CKA, downstream transfer, fidelity, and retrieval. Simple translators recover meaningful shared structure and support transfer for some compatible pairs, but fail sharply for others. Compatibility depends jointly on architecture, training objective, pooling, and data distribution. Overall, the results show that heterogeneous embedding spaces are not universally related by simple mappings as often suggested in some literature.",
+    "first_checked_at": "2026-10-05T09:00:21+00:00",
+    "last_checked_at": "2026-10-05T09:00:21+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "How Far Do Simple Transformations Translate Across Text Embedding Models?"
+  },
+  "processed_at": "2026-10-05T09:00:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d631d1407915",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

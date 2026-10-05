@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:57:58+00:00",
-  "record_count": 4035,
+  "updated_at": "2026-10-05T09:00:22+00:00",
+  "record_count": 4050,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -58760,6 +58760,225 @@
         "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
       ],
       "title": "Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits"
+    },
+    "arXiv:2608.06167": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06167",
+      "identity_tokens": [
+        "arXiv:2608.06167"
+      ],
+      "reason": "We present a schema-based framework for extracting complex, structured information from unstructured text documents using generative AI, followed by automated semantic evaluation of the extracted information against a gold standard. The schema, serving as an information model encoding domain knowledge, provides a unified, systematic, and consistent framework for extraction of hierarchical, nested information, with attributes of variable cardinality, and subsequent evaluation of the results. Information extraction from a document is performed in a single call to the model, in zero-shot mode. In the evaluation step, we introduce a path-based semantic matching algorithm to align the nested, variable-cardinality attributes in the extracted results with those in the gold standard. We use generative AI for semantic comparison of the extracted and gold standard values of an attribute, and introduce a rubric to classify the result of the comparison, according to domain-specific considerations, as an exact, semantic, useful, or non-match. We were able to extract 12 out of 14 attributes with an F1 score of $>$90\\% from documents published by the health technology assessment organisation NICE, using the generative AI model Claude Opus 3. The time needed to extract the attributes from a document was $\\sim$30 times lower than the time taken by a human domain expert. We further demonstrate generalisability of this framework across different generative AI models and transferability across different HTA organisations and languages.",
+      "first_checked_at": "2026-10-05T09:00:20+00:00",
+      "last_checked_at": "2026-10-05T09:00:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Schema-Guided Hierarchical Information Extraction and Semantic Evaluation Using Generative AI"
+    },
+    "arXiv:2608.06287": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06287",
+      "identity_tokens": [
+        "arXiv:2608.06287"
+      ],
+      "reason": "Automatically translating unstructured natural language requirements into formal specifications remains a challenge in requirements engineering and formal methods, particularly for safety- and mission-critical systems whose verification depends on mathematically precise specifications. This paper evaluates whether contemporary off-the-shelf Large Language Models (LLMs) can help bridge this gap by generating Linear Temporal Logic (LTL) formulas directly from unstructured requirements. The study examines six modern LLMs using a few-shot prompting strategy on a heterogeneous benchmark of 15 structurally varied requirements. Five independent generations were collected for each requirement-model pair, yielding 450 candidate LTL formulas in total. Performance was assessed through manual semantic evaluation, pass@k for k in {1, 3, 5}, and a self-consistency measure capturing syntactic reproducibility across stochastic trials. The results indicate that current general-purpose LLMs can achieve practically significant performance on the unstructured NL-to-LTL task without task-specific fine-tuning. The study also considers understandability for non-experts by pairing generated formulas with model-produced natural language explanations and discussing the complementary use of timeline-based LTL visualization. The findings suggest that modern LLMs are becoming viable front-end assistants for semi-automated formalization workflows.",
+      "first_checked_at": "2026-10-05T09:00:20+00:00",
+      "last_checked_at": "2026-10-05T09:00:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Automatic Translation of Unstructured Requirements into Linear Temporal Logic through Large Language Models"
+    },
+    "arXiv:2608.06521": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06521",
+      "identity_tokens": [
+        "arXiv:2608.06521"
+      ],
+      "reason": "Data center power systems are increasingly exposed to weak-grid conditions due to the rapid growth of converter-dominated networks and highly dynamic artificial intelligence (AI) workloads. In centralized uninterruptible power supply (UPS) architectures, the front-end rectifier continuously processes the incoming facility power, making its dynamic performance critical for ensuring stable operation and reliable power delivery to information technology (IT) equipment. Under weak-grid conditions, conventional phase-locked loop (PLL)-based proportional-integral (PI) rectifier controllers may exhibit instability due to strong interactions between converter control dynamics and grid impedance. This paper investigates the stability of centralized UPS data center systems operating under weak-grid conditions using a detailed switching-level model developed in MATLAB/Simulink and validated in real time using an OPAL-RT platform. To enhance weak-grid stability and improve converter-grid interaction, a voltage-modulated direct power control (VM-DPC) strategy with adaptive reactive power support is applied to the front-end rectifier. The proposed approach directly regulates active and reactive power without PLL synchronization while dynamically supporting the point of common coupling (PCC) voltage during rapid IT load variations. Results demonstrate that conventional PI-based rectifier control becomes unstable under SCR<=2 conditions, leading to dc-link oscillations and degradation of downstream power delivery. In contrast, the proposed VM-DPC strategy restores stable operation, improves system damping, and maintains reliable power transfer to highly dynamic IT loads under weak-grid operation.",
+      "first_checked_at": "2026-10-05T09:00:20+00:00",
+      "last_checked_at": "2026-10-05T09:00:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Keeping Data Centers Online in Weak Grids: PLL-Free VM-DPC With Adaptive Reactive-Power Support for Centralized UPS Systems"
+    },
+    "arXiv:2608.06549": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06549",
+      "identity_tokens": [
+        "arXiv:2608.06549"
+      ],
+      "reason": "LLMs are increasingly being applied to tasks involving institutional and political texts, but existing benchmarks evaluate them on isolated documents or single tasks. In realpolitik, negotiations are longitudinal data, where participating parties can align or argue over multiple iterations and each turn is an outcome of the previous turns, hence, understanding one turn requires tracking everything before it. We introduce TradeVerse, a benchmark built from the World Trade Organisation (WTO) specific trade concerns, where member states challenge one another and exchange arguments over multiple rounds, sometimes for years. We, in TradeVerse, reconstruct minutes of $1170$ meetings, spanning across 5 groups and $89$ product groups and define three tasks: first, the system has to analyze the longitudinal meeting records and predict the harmonized system codes (HS chapters) of the products under discussion in the particular meeting, second, we examine whether the system, upon analyzing the anonymized content of the meeting, can guess the name of the responding country and third, we ask the system to play the role of the responding country and provide the statement for the very last round. All labels are recovered directly from the proceedings, requiring no manual annotation. Our experiments highlight the challenges these tasks pose for current LLMs. To the best of our knowledge, TradeVerseis the first benchmark to investigate potential of LLMs in understanding longitudinal political trade negotiations.",
+      "first_checked_at": "2026-10-05T09:00:20+00:00",
+      "last_checked_at": "2026-10-05T09:00:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "TradeVerse: A Longitudinal Benchmark of Political Negotiation in International Trade"
+    },
+    "arXiv:2608.05735": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05735",
+      "identity_tokens": [
+        "arXiv:2608.05735"
+      ],
+      "reason": "Time-varying cloud workloads often cause resource under-utilization during off-peak periods and resource contention during peak periods. Existing prediction-then-optimization (PTO) frameworks suffer from two-stage decoupling, hindering the balance among violation rate, user satisfaction, and resource utilization. We formulate heterogeneous job scheduling as a multi-objective combinatorial optimization problem (MOCOP) under uncertain constraints and propose a closed-loop decision-focused learning (CL-DFL) framework for cloud orchestration. CL-DFL integrates a Multivariate Time-series Graph Neural Network (MTGNN)-based spatio-temporal predictor with a zeroth-order decision-focused learning (DFL) mechanism based on the tree-structured Parzen estimator (TPE). This integration establishes an end-to-end (E2E) feedback pathway between resource perception and scheduling decisions. Furthermore, we develop the GNeuro-PLS strategy by incorporating group relative policy optimization (GRPO) into cooperative local search to improve robustness under heterogeneous workloads. Extensive experiments on four real-world datasets demonstrate that CL-DFL achieves superior trade-offs among violation rate, user satisfaction, and resource utilization. It effectively controls overload risks under regular workloads and maintains resilience under highly saturated scenarios compared with state-of-the-art baselines.",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.00937-modserve.md"
+      ],
+      "title": "Closed-Loop Decision-Focused Learning for User-Aware Cloud Orchestration under Uncertainty"
+    },
+    "arXiv:2608.05980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05980",
+      "identity_tokens": [
+        "arXiv:2608.05980"
+      ],
+      "reason": "We investigate whether simple transformations can translate representations across heterogeneous text embedding models. Understanding how independently trained models organize semantic information is an enabler for AI-to-AI latent communication without decoding into human-readable text. Focusing on lightweight translators such as linear mappings, we test the literature hypothesis of latent universality in a realistic text setting beyond simplified benchmarks. Across nine embedding models differing in architecture, pooling strategy, and training objective, we evaluate compatibility using CKA, downstream transfer, fidelity, and retrieval. Simple translators recover meaningful shared structure and support transfer for some compatible pairs, but fail sharply for others. Compatibility depends jointly on architecture, training objective, pooling, and data distribution. Overall, the results show that heterogeneous embedding spaces are not universally related by simple mappings as often suggested in some literature.",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ],
+      "title": "How Far Do Simple Transformations Translate Across Text Embedding Models?"
+    },
+    "arXiv:2608.06025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06025",
+      "identity_tokens": [
+        "arXiv:2608.06025"
+      ],
+      "reason": "In simulation-in-the-loop decision-making systems, reinforcement learning (RL) inference is often constrained by simulator-side execution overhead, where workloads are highly dynamic and sensitive to runtime thread configurations. Existing multithreaded strategies struggle to match thread resources before or during execution, causing resource contention, scheduling overhead, and reduced throughput. Through empirical analysis, we identify the ratio of task execution time to scheduling time as the key factor determining the optimal thread count. Building on this insight, we propose AutoThread, a hybrid adaptive thread-tuning method for mitigating simulation bottlenecks in RL inference. AutoThread employs a Physics-Informed Neural Operator (PINO) as a thread-count predictor and incorporates a finite-source M/M/1 queueing model to constrain and guide prediction, enabling fast and accurate estimation under dynamic workloads. It further performs load-aware online fine-tuning to compensate for prediction errors and refine resource allocation. Experiments show that AutoThread improves average speedup by 18.4% over static strategies, achieves average throughput of 1.7× and 1.8× that of XGBoost and Reinforcer, respectively, and reduces execution time by up to 83.8% compared with state-of-the-art methods. Our code and dataset are publicly available at https://github.com/suchenjm/AutoThread.",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md"
+      ],
+      "title": "Hybrid-Adaptive Thread Tuning to Mitigate Simulation Execution Bottlenecks in High-Performance Reinforcement Learning Inference"
+    },
+    "arXiv:2608.06609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.06609",
+      "identity_tokens": [
+        "arXiv:2608.06609"
+      ],
+      "reason": "Automated item evaluation (AIE) refers to the use of computational methods to assess item quality without requiring manual expert review or field testing of the items under evaluation. We aimed to build a near-comprehensive AIE model by predicting item acceptance and rejection from item text using historical rejection data from a large-scale standardized testing program. The dataset contained 52,759 English language arts (ELA) and mathematics items with 34% permanently rejected from future operational use. Rejection reasons included poor psychometric properties, content issues, bias and sensitivity concerns, and non-content issues. We fine-tuned a DeBERTaV3-large classifier on raw item text, a second DeBERTa classifier on Qwen3-generated item critiques, and a fusion model combining representations from both. The fusion model achieved the strongest overall performance (Accuracy = .75, F1 = .64, AUC = .80, Sensitivity = .64, Specificity = .81). Prediction for math (F1 = .73, AUC = .86) was considerably more accurate than ELA (F1 = .51, AUC = .72). Lowering the decision threshold from .5 to .25 raised average sensitivity for ELA and math to .88 and .91, while reducing specificity to .31 and .56, respectively, which may be preferable in automated item generation contexts where generating items is cheaper than evaluating them. Incorporating item critiques alongside raw item text improved performance across most rejection reasons. The model assigned higher rejection probabilities to more difficult items. However, the fusion model struggled to identify items flagged for bias, sensitivity, fairness, or accessibility, especially for ELA. These findings suggest that text-based AIE is feasible in some areas and may offer a practical tool for reducing the burden of manual review and field testing, while also underscoring the importance of human review for items with fairness concerns.",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "Automated item evaluation: Predicting item acceptance and rejection using LLM-generated critiques"
+    },
+    "DOI:10.1145/3838601": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3838601",
+      "identity_tokens": [
+        "DOI:10.1145/3838601"
+      ],
+      "reason": "Parameter-sharded training reduces device-memory use by storing model parameters as shards and reconstructing full parameters only before the computations that consume them. This materialization is implemented through frequent all-gathers, which can become exposed waits in each forward–backward training iteration. Hiding these waits is not only a communication-volume problem. It requires deciding where to launch each all-gather and how long the materialized full-parameter buffer should remain live. All-gather prefetching can overlap communication with earlier computation but extends buffer lifetime. Retaining a buffer after its forward-pass use can eliminate a re-gather before backward-pass reuse, but consumes transient memory headroom needed by other materialization decisions. We present Chorus, a compiler-runtime framework for transient parameter materialization in memory-constrained sharded training. Chorus addresses a limitation of local runtime policies that make decisions at hooks, module boundaries, or configuration thresholds. They can issue individual prefetches or suppress individual releases, but they do not jointly compare future all-gather opportunities, buffer lifetimes, and memory-headroom conflicts across the iteration. Chorus lowers the forward and backward passes into a whole-iteration graph that makes all-gathers, use-site waits, and releases explicit. It then builds a profile-guided block model and solves a mixed-integer scheduling problem that jointly chooses all-gather launch positions and iteration-local retention decisions under time-varying memory headroom. The selected schedule is realized by graph rewriting, which moves communication while preserving use-site waits, fuses compatible prefetch operations, and removes redundant releases and re-gathers. Cross-iteration persistent retention is finalized during warmup using measured runtime memory behavior. We implement Chorus on top of torch.compile and evaluate it on 7B to 13B dense Transformer models and one MoE model across 4 to 16 A100 GPUs. In the ZeRO-style stack, Chorus improves throughput by 1.10 × over DeepCompile across the primary workloads. In the FSDP-style stack, the Chorus implementation on SimpleFSDP improves throughput by 1.14 × over SimpleFSDP across the corresponding dense-model workloads. The benefits are greatest in network-constrained settings, where all-gather stalls are more exposed. Chorus stays within the configured memory budget and achieves a 1.35 × compilation-time speedup over DeepCompile.",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Global Scheduling of Transient Parameter Materialization for Sharded Training"
+    },
+    "DOI:10.1371/journal.pone.0345722": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0345722",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0345722"
+      ],
+      "reason": "Infrared Small Target Detection (ISTD) is crucial for applications such as traffic monitoring and maritime surveillance. However, it remains highly challenging due to weak target signals and the absence of rich texture information, often resulting in low detection accuracy. Existing deep learning-based ISTD methods typically struggle to balance the trade-off between modeling long-range dependencies and avoiding feature oversmoothing. To this end, we propose RSFNet, a retention-based network with spatial–frequency joint enhancement for ISTD. RSFNet introduces a bidirectional 2D decay–retention attention mechanism into the vision Transformer (ViT) framework, which effectively suppresses background noise while capturing long-range dependencies. In addition, we design a Spatial–Frequency Joint Enhancement Module (SFE) to facilitate the transfer of salient target features from the encoder to the decoder. SFE integrates spatial and frequency domain features to facilitate global–local information interaction. Extensive experiments conducted on multiple publicly available ISTD datasets demonstrate that RSFNet significantly outperforms state-of-the-art (SOTA) methods in both detection accuracy and training efficiency, with a nearly 32% reduction in training time.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "RSFNet: A retention-based network with spatial–frequency joint enhancement for infrared small target detection"
+    },
+    "DOI:10.31449/inf.v50i14.10934": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.31449/inf.v50i14.10934",
+      "identity_tokens": [
+        "DOI:10.31449/inf.v50i14.10934"
+      ],
+      "reason": "Large Language Models (LLMs) achieve state-of-the-art performance across natural language processingtasks but remain computationally intensive, limiting their deployment in browser-based environments.This study investigates the feasibility of real-time transformer inference entirely within web browsers usingWebGPU acceleration. We propose a lightweight BERT-inspired architecture optimized for GPUparallelmatrix operations through TensorFlow.js with the WebGPU backend. The model is evaluated ona 4,000-sample IMDB sentiment classification dataset and achieves 65–70% classification accuracy withper-sample inference latency of 8–9 ms in Google Chrome using an NVIDIA T400 GPU (4 GB VRAM).Batch inference throughput reaches approximately 6,600 inferences per minute, while GPU utilization remainsstable between 26–77%. Compared to CPU-based TensorFlow.js execution, WebGPU significantlyreduces inference latency and enables fully client-side training and inference without server dependencies.Although accuracy is lower than full-scale BERT benchmarks, the results demonstrate that simplified transformerarchitectures can operate efficiently in browser environments under resource constraints. This workestablishes a practical framework for deploying real-time edge NLP applications using open web standardsand GPU acceleration.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-6daecc086891-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ],
+      "title": "A Lightweight BERT-Variant Optimized for WebGPU-Based Real-TimeInference in Web Browsers"
+    },
+    "arXiv:2608.05543": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05543",
+      "identity_tokens": [
+        "arXiv:2608.05543"
+      ],
+      "reason": "We present omni-macos, a search engine that embeds text, code, documents, images, audio and video into one representation space and runs its encoder, index and store on the Mac that already holds the files, so no indexed file, no typed query and no vector ever leaves the machine. It keeps a background indexer and an interactive search box inside one memory budget the user sets: it embeds and stores each distinct chunk once, re-encodes only the chunks an edit changes, hands the GPU smaller units while the user is typing, answers queries from a one-bit replica of the index with exact rescoring, and propagates that budget to the allocators that draw on unified memory. We measure on five Macs spanning an eightfold range of accelerator width and a thirty-twofold range of memory, each indexing the files it already holds.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "omni-macos: On-Device Omni-Modal Search on Apple Silicon"
+    },
+    "arXiv:2608.05565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05565",
+      "identity_tokens": [
+        "arXiv:2608.05565"
+      ],
+      "reason": "Video object removal must eliminate not only the target object but also its induced effects while maintaining high-fidelity and spatiotemporally coherent restoration. Existing methods mainly learn object-effect correspondences implicitly from predefined effect categories and fixed data distributions, limiting their generalization to complex real-world scenes involving compositional effects, spatially detached or weakly correlated effects, long-tail physical phenomena, and dynamically evolving interactions. We propose EffectLearner, a semantic-reasoning-enhanced framework that combines a VLM-based Object-Effect Reasoner with a DiT-based Video Eraser. Guided by a structured effect-analysis prompt, the Reasoner performs cross-modal reasoning over a target-highlighted video and extracts compact effect-aware context, which guides the Video Eraser toward comprehensive object-effect removal. Motion-aware mask guidance and motion-consistency supervision further improve removal coverage and spatiotemporal stability under object motion and evolving scene dynamics. To fully exploit the framework in challenging real-world scenarios, we further construct EffectWorld, a paired video dataset specifically designed for complex object-induced effects, and introduce a progressive training curriculum that combines common supervision with complex-effect data. On the standard ROSE-Bench, EffectLearner outperforms existing baselines on most metrics and achieves clear advantages on both EffectWorld-Eval and the challenging EffectWorld-Wild, demonstrating its ability to deliver high-quality video object removal in complex real-world scenes.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "EffectLearner: World-Aware Object-Effect Reasoning for Real-World Video Object Removal"
+    },
+    "arXiv:2608.05727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05727",
+      "identity_tokens": [
+        "arXiv:2608.05727"
+      ],
+      "reason": "Neural Audio Codecs are widely adopted in speech generation and editing. However, existing neural audio codecs are not idempotent: across the paper's twelve baseline systems, every configuration tested rewrites, on average, at least 15% of its tokens in a single decode-re-encode pass. This poses a problem for utilizing Neural Audio Codecs as token interfaces in pipelines where re-encoding decoded outputs can occur. We present LILAC, a fully convolutional 24 kHz speech codec at 9.375 Hz and 0.75 kbit/s that is codec idempotent by construction; re-encoding the decoded audio of any valid token stream returns the identical stream. LILAC achieves idempotency while maintaining competitive quality, reaching UTMOS 4.14 and 4.24 on LibriSpeech and LibriTTS-R test sets, comparable to SOTA sub-1 kbit/s Neural Audio Codecs.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "LILAC: An Idempotent Neural Speech Codec"
+    },
+    "arXiv:2608.05729": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05729",
+      "identity_tokens": [
+        "arXiv:2608.05729"
+      ],
+      "reason": "As capabilities rapidly increase, AI agents can move from running inside one app to acting across a user's devices over time. Yet existing agent systems still fall short in this scenario. This is because observations are scattered across devices and moments, but mainstream systems are not designed around this fact: a single agent that treats devices as tools lacks effective state management for all devices across time, and multi-agent systems coordinate across agents but do not maintain the compact carried state a cross-device, cross-time request needs. We argue that the agent should maintain an effectively designed state that organizes engagement evidence, stated facts, and the standing request in a compact, action-ready form for deciding its action given the current observation. To compare state designs, we construct a benchmark of user-agent interaction across devices and time. We instantiate this principle in Unified Agent, a stateful agent that carries interaction evidence across devices and moments and uses it with the current observation to act. In the default setting, it significantly outperforms our adaptations of four published designs. Across changes in multimodal large language model (MLLM) family, capability, and reasoning effort, it remains ahead of all compared systems, demonstrating that the state-design advantage is robust across MLLM settings. Our code and data will be publicly available on GitHub.",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "Unified Agent: Managing Interactions across Devices"
     }
   }
 }

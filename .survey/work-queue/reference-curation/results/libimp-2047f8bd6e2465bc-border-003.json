@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2047f8bd6e2465bc-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.06434",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.06434",
+    "identity_tokens": [
+      "arXiv:2608.06434"
+    ],
+    "reason": "モデル切替による推論頻度低減は確認できるが、評価範囲がtask-specific VLA controlに狭く、一般LLM推論効率との適合は弱いためborderline。",
+    "first_checked_at": "2026-10-05T09:00:20+00:00",
+    "last_checked_at": "2026-10-05T09:00:20+00:00",
+    "linked_from": [
+      "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+    ],
+    "title": "Fast and Accurate: An Adaptive VLA Inference Framework through Environment-aware Model Selection"
+  },
+  "processed_at": "2026-10-05T09:00:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2047f8bd6e24",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:57:58+00:00",
-  "record_count": 1254,
+  "updated_at": "2026-10-05T09:00:22+00:00",
+  "record_count": 1259,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -19285,6 +19285,82 @@
         "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
       ],
       "title": "Blast Radius"
+    },
+    "arXiv:2608.06434": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.06434",
+      "identity_tokens": [
+        "arXiv:2608.06434"
+      ],
+      "reason": "モデル切替による推論頻度低減は確認できるが、評価範囲がtask-specific VLA controlに狭く、一般LLM推論効率との適合は弱いためborderline。",
+      "first_checked_at": "2026-10-05T09:00:20+00:00",
+      "last_checked_at": "2026-10-05T09:00:20+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Fast and Accurate: An Adaptive VLA Inference Framework through Environment-aware Model Selection"
+    },
+    "arXiv:2608.05806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05806",
+      "identity_tokens": [
+        "arXiv:2608.05806"
+      ],
+      "reason": "speculative decoding効率への関係はあるが、測定はaccepted tokensに留まり、実際の推論速度・費用の改善が本文から確立できないためborderline。",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Hierarchical Latent Prediction for Language Models"
+    },
+    "arXiv:2608.05872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.05872",
+      "identity_tokens": [
+        "arXiv:2608.05872"
+      ],
+      "reason": "推論時のlayer routingと隣接するものの、本文で実証された効率改善はroute探索時間で推論費用の低下ではないためborderline。",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/04-conditional-computation/2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "MACRO: Markov Chain Routing of Transformer Layers"
+    },
+    "arXiv:2608.23582": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.23582",
+      "identity_tokens": [
+        "arXiv:2608.23582"
+      ],
+      "reason": "transformer推論hardwareとして関連するが、現状のprimary evidenceは小型T5のRTLデモと投影に限られ、LLM推論への適用は未実証のためborderline。",
+      "first_checked_at": "2026-10-05T09:00:21+00:00",
+      "last_checked_at": "2026-10-05T09:00:21+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Transformer Accelerator (TFA): A Macro-Op INT8 Hardware Chip for Transformer Inference and Machine Translation"
+    },
+    "DOI:10.3390/app16167903": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app16167903",
+      "identity_tokens": [
+        "DOI:10.3390/app16167903"
+      ],
+      "reason": "長文生成の文脈制御と関連するが、一次本文を取得できず、推論時コスト削減の実測も要旨では確認できないためborderline。",
+      "first_checked_at": "2026-10-05T09:00:22+00:00",
+      "last_checked_at": "2026-10-05T09:00:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Dimension-Constrained Organizational Relay for Long-Context LLMs"
     }
   }
 }
