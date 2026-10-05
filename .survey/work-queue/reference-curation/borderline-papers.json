@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:53:36+00:00",
-  "record_count": 1141,
+  "updated_at": "2026-10-05T07:56:01+00:00",
+  "record_count": 1144,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17450,6 +17450,48 @@
         "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
       ],
       "title": "A Target-Centric Survey of Quantization-Aware Training"
+    },
+    "DOI:10.3390/app16178616": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app16178616",
+      "identity_tokens": [
+        "DOI:10.3390/app16178616"
+      ],
+      "reason": "remote sensing VLMのadaptive token acquisition/NF4 memoryは関連候補だが、本文でmemory測定段階と推論適用を確認できなかったためborderline。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "GeoGATE: Geo-Sensor-Guided Adaptive Token and Evidence Reasoning for High-Resolution Remote Sensing Image Understanding"
+    },
+    "arXiv:2608.27964": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27964",
+      "identity_tokens": [
+        "arXiv:2608.27964"
+      ],
+      "reason": "adaptive computeは対象に近いが、token countのみから運用効率を推定できず、本文も実効latency savingsを未証明としているためborderline。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "AERA: Adaptive Evidence Residual Allocation for Efficient Test-Time Reasoning"
+    },
+    "arXiv:2608.27886": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.27886",
+      "identity_tokens": [
+        "arXiv:2608.27886"
+      ],
+      "reason": "resource evaluationは有用だが、serving methodではなくsystem comparisonであり、構成差も交絡するためborderline。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2506.04301-cost-dynamic-reasoning.md"
+      ],
+      "title": "Resource Constraints and Performance in Agentic AI Systems"
     }
   }
 }

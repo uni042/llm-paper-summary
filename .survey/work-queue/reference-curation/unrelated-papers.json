@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:53:36+00:00",
-  "record_count": 3673,
+  "updated_at": "2026-10-05T07:56:02+00:00",
+  "record_count": 3687,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -53519,6 +53519,210 @@
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
       "title": "REIGN: Refurbished Embeddings with Integrated Guidance Networks for Efficient Context-Length Scaling"
+    },
+    "arXiv:2608.29336": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29336",
+      "identity_tokens": [
+        "arXiv:2608.29336"
+      ],
+      "reason": "plantar-pressure測定とontology-based recommendation serviceで、LLM inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
+      ],
+      "title": "FISICA: A Deployed Service for Plantar-Pressure and Posture Assessment with Ontology-Grounded Recommendation"
+    },
+    "arXiv:2608.29412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29412",
+      "identity_tokens": [
+        "arXiv:2608.29412"
+      ],
+      "reason": "bottom-quark jet物理解析でLLMと無関係。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Evidence for the dead-cone effect in bottom quark initiated jets produced in proton-proton collisions at $\\sqrt{s}$ = 13 TeV"
+    },
+    "arXiv:2609.29652": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29652",
+      "identity_tokens": [
+        "arXiv:2609.29652"
+      ],
+      "reason": "retrieverの小型化/効率化が対象で、生成LLM inferenceではない。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "SmallReason-ColBERT: An Ultra-Small Late-Interaction Retriever for Reasoning Intensive Retrieval"
+    },
+    "DOI:10.1145/3839239": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3839239",
+      "identity_tokens": [
+        "DOI:10.1145/3839239"
+      ],
+      "reason": "LLM fine-tuning時のGPU/CPU memory optimizationで学習専用。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "GPU and CPU Memory Co-Optimization in Heterogeneous Pipeline Parallelism for Efficient Large Language Model Fine-Tuning on Commodity Servers"
+    },
+    "arXiv:2608.27978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27978",
+      "identity_tokens": [
+        "arXiv:2608.27978"
+      ],
+      "reason": "battery prognostics向けMambaでLLMと無関係。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "PhyMamba: Physics-Modulated Mamba for Robust Battery Health Prognostics"
+    },
+    "arXiv:2608.28009": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28009",
+      "identity_tokens": [
+        "arXiv:2608.28009"
+      ],
+      "reason": "AI生成文検出model/benchmarkで、LLM inference efficiencyではない。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection"
+    },
+    "arXiv:2608.28078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28078",
+      "identity_tokens": [
+        "arXiv:2608.28078"
+      ],
+      "reason": "vision dense predictionのmulti-task adaptationでLLMとは別領域。",
+      "first_checked_at": "2026-10-05T07:56:00+00:00",
+      "last_checked_at": "2026-10-05T07:56:00+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Task-State Adaptation with Prototype Memory for Multi-Task Dense Prediction"
+    },
+    "arXiv:2608.28158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28158",
+      "identity_tokens": [
+        "arXiv:2608.28158"
+      ],
+      "reason": "agentic RLのrollout-tree training高速化で学習専用。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "HARTS: Efficient Agentic Reinforcement Learning for Hybrid-Attention Models over Arbitrary Rollout Trees"
+    },
+    "arXiv:2608.27869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27869",
+      "identity_tokens": [
+        "arXiv:2608.27869"
+      ],
+      "reason": "LLMを使うPDE discovery applicationで、LLM serving効率を扱わない。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "See, Hypothesize, Validate: Multimodal Agentic Framework for Discovering Governing PDEs"
+    },
+    "arXiv:2608.27874": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27874",
+      "identity_tokens": [
+        "arXiv:2608.27874"
+      ],
+      "reason": "MoE all-to-allのtraining communication modelで学習専用。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2025-2508.13337-x-moe-enabling-scalable-training-for-emerging-mixture-of-experts-architectures-o.md"
+      ],
+      "title": "TerraceMoE: A Cost Model for Hierarchical MoE All-to-All Communication"
+    },
+    "arXiv:2608.27925": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27925",
+      "identity_tokens": [
+        "arXiv:2608.27925"
+      ],
+      "reason": "entity-memory retrievalのevidence coverageを扱い、resource/serving efficiencyを報告しない。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Entity-Memory Graph Retrieval Improves Evidence Coverage in Long-Conversation Question Answering"
+    },
+    "arXiv:2608.27953": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27953",
+      "identity_tokens": [
+        "arXiv:2608.27953"
+      ],
+      "reason": "counterfactual reasoning benchmarkであり効率化手法ではない。",
+      "first_checked_at": "2026-10-05T07:56:01+00:00",
+      "last_checked_at": "2026-10-05T07:56:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "The Illusion of $\\textit{What If}$: Evaluating the Breakdown of Counterfactual Reasoning in LLMs"
+    },
+    "arXiv:2608.28195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28195",
+      "identity_tokens": [
+        "arXiv:2608.28195"
+      ],
+      "reason": "歴史的Indic manuscript用OCRでLLM inference efficiencyを扱わない。",
+      "first_checked_at": "2026-10-05T07:56:02+00:00",
+      "last_checked_at": "2026-10-05T07:56:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "UniLipi: A Unified Multi-script OCR for Historical Indic Manuscripts"
+    },
+    "arXiv:2608.28262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.28262",
+      "identity_tokens": [
+        "arXiv:2608.28262"
+      ],
+      "reason": "optimal transport solverの高速化でLLMと無関係。",
+      "first_checked_at": "2026-10-05T07:56:02+00:00",
+      "last_checked_at": "2026-10-05T07:56:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "SinkSLOT: Sinkhorn via Sparse Lifted Optimal Transport"
     }
   }
 }
