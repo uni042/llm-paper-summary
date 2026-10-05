@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-0930-scheduled-chat-30/r02",
+  "reference_main_sha": "69927bbc8372df49a8a4a691af073d732ff8d156",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2308.07107",
+      "identity_tokens": [
+        "arXiv:2308.07107"
+      ],
+      "title": "Large Language Models for Information Retrieval: A Survey",
+      "reason": "LLMをquery rewriting、retrieval、reranking、reader、search agentへ利用する情報検索分野の包括survey。IR手法の整理が主題で、LLM推論runtime・memory・servingの新規最適化方式を提案しない。",
+      "source_url": "https://arxiv.org/abs/2308.07107",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1511.02301",
+      "identity_tokens": [
+        "arXiv:1511.02301"
+      ],
+      "title": "The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations",
+      "reason": "children's booksの意味語予測とCNN QAでexplicit memory representationの粒度を評価するlanguage modeling/QA能力研究。推論runtime・serving最適化を目的としない。",
+      "source_url": "https://arxiv.org/abs/1511.02301",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2022.naacl-main.201",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2022.naacl-main.201",
+        "arXiv:2110.15943"
+      ],
+      "title": "MetaICL: Learning to Learn In Context",
+      "reason": "142 NLP datasetでmeta-trainingし、test時のin-context learning能力を改善する学習framework。推論時parameter update不要という性質はあるが、runtime・memory・serving効率化を最終適用先としない。",
+      "source_url": "https://arxiv.org/abs/2110.15943",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.11381",
+      "identity_tokens": [
+        "arXiv:2303.11381"
+      ],
+      "title": "MM-REACT: Prompting ChatGPT for Multimodal Reasoning and Action",
+      "reason": "ChatGPTにvision expert/tool descriptionsをpromptし、必要な外部vision modelを呼び出してmultimodal reasoning/action能力を拡張するagent capability研究。推論systemの速度・memory・throughput最適化は主題ではない。",
+      "source_url": "https://arxiv.org/abs/2303.11381",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.08921",
+      "identity_tokens": [
+        "arXiv:2408.08921"
+      ],
+      "title": "Graph Retrieval-Augmented Generation: A Survey",
+      "reason": "graph dataとretrieval-augmented generationを組み合わせるGraphRAGのtaxonomy、applications、benchmarks、課題を整理するsurvey。LLM inference runtime/serving効率化の新方式ではない。",
+      "source_url": "https://arxiv.org/abs/2408.08921",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.06599",
+      "identity_tokens": [
+        "arXiv:2104.06599"
+      ],
+      "title": "Learning How to Ask: Querying LMs with Mixtures of Soft Prompts",
+      "reason": "複数soft promptを学習・混合してfrozen language modelからknowledgeを引き出すprompt learning研究。最終評価は知識抽出/QA能力で、推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2104.06599",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1992.4.1.131",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1992.4.1.131"
+      ],
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+      "reason": "2つのfeedforward networkを用い、一方が他方のfast weightをcontext依存で更新してsequence learningと短期記憶を実現する1992年の学習方式。後年のlinear attentionとの理論的関連はあるが、LLM/Transformer推論を最終適用先とするsystem評価はない。",
+      "source_url": "https://doi.org/10.1162/neco.1992.4.1.131",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1605.04711",
+      "identity_tokens": [
+        "arXiv:1605.04711"
+      ],
+      "title": "Ternary Weight Networks",
+      "reason": "重みを{-1,0,+1}へternary化してCNN等のstorage/computationを削減する低精度ニューラルネットワーク研究。LLM/Transformer推論への適用・評価がなく、現行LLM推論圧縮範囲外。",
+      "source_url": "https://arxiv.org/abs/1605.04711",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02813",
+      "identity_tokens": [
+        "arXiv:2409.02813"
+      ],
+      "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+      "reason": "MMMUを強化し、選択肢増加・vision-only input等でmultimodal modelの理解・reasoningを厳格評価するbenchmark研究。推論runtime・memory・serving最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/2409.02813",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.12462",
+      "identity_tokens": [
+        "arXiv:2003.12462"
+      ],
+      "title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension",
+      "reason": "画像内textを読んでcaptionを生成するTextCaps datasetとbenchmarkを提案するvision-language能力研究。LLM推論system効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2003.12462",
+      "body_check": "abstract_screen_only: 一次arXivまたは出版社要旨で研究対象・主要手法・最終評価先を論文固有に確認し、現行LLM推論システム調査の対象外であることが明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T09:53:00+09:00",
+      "last_checked_at": "2026-10-05T09:53:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    }
+  ]
+}
