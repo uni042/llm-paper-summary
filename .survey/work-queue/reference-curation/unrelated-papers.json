@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T00:55:44+00:00",
-  "record_count": 1481,
+  "updated_at": "2026-10-05T00:58:26+00:00",
+  "record_count": 1483,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -20213,23 +20213,6 @@
       ],
       "title": "LightGlue: Local Feature Matching at Light Speed"
     },
-    "arXiv:1906.00300": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1906.00300",
-      "identity_tokens": [
-        "DOI:10.18653/v1/p19-1612",
-        "arXiv:1906.00300",
-        "id:arXiv:1906.00300",
-        "url:https://arxiv.org/abs/1906.00300"
-      ],
-      "reason": "retrieverとreaderを弱教師付きで共同学習するopen-domain QA研究で、RAG/LLM推論servingのruntime効率化ではない。",
-      "first_checked_at": "2026-10-04T22:16:24+00:00",
-      "last_checked_at": "2026-10-04T22:53:06+00:00",
-      "linked_from": [
-        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
-      ],
-      "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
-    },
     "arXiv:1904.09925": {
       "classification": "unrelated",
       "canonical_id": "arXiv:1904.09925",
@@ -20312,9 +20295,9 @@
         "id:arXiv:1412.6553",
         "url:https://arxiv.org/abs/1412.6553"
       ],
-      "reason": "CNN畳み込み層のCP分解とfine-tuningでCPU推論を高速化する画像認識研究で、LLM/Transformer推論を最終適用先としない。",
+      "reason": "arXiv要旨はCNN畳み込み層をCP分解で置換して画像分類ネットワークを高速化する。",
       "first_checked_at": "2026-10-04T22:47:25+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
+      "last_checked_at": "2026-10-05T00:58:26+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
       ],
@@ -20361,9 +20344,9 @@
         "id:arXiv:1909.07606",
         "url:https://arxiv.org/abs/1909.07606"
       ],
-      "reason": "knowledge graphをBERT表現へ注入して下流NLP精度を改善する表現学習研究で、推論runtime・serving効率化を扱わない。",
+      "reason": "arXiv要旨はknowledge graphをBERT表現へ注入する言語タスク手法と12 NLP課題の性能を扱う。",
       "first_checked_at": "2026-10-04T22:47:25+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
+      "last_checked_at": "2026-10-05T00:58:26+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
       ],
@@ -20564,9 +20547,9 @@
       "identity_tokens": [
         "arXiv:1910.05316"
       ],
-      "reason": "端末・edge間のDNN分割とearly exitで一般DNN推論を低遅延化する研究。LLM以前の一般DNN/CNN edge inferenceが対象で、LLM推論systemへの適用・評価がない。",
+      "reason": "arXiv要旨はDNNのdevice-edge協調推論を分割・early-exitで低遅延化するEdgentを提案し、Raspberry Pi/PCで評価する。",
       "first_checked_at": "2026-10-04T23:24:23+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
+      "last_checked_at": "2026-10-05T00:58:26+00:00",
       "linked_from": [
         "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
       ],
@@ -20688,41 +20671,19 @@
       ],
       "title": "Looking Beyond the Surface: A Challenge Set for Reading Comprehension over Multiple Sentences"
     },
-    "DOI:10.1109/tbdata.2025.3618474": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1109/tbdata.2025.3618474",
-      "identity_tokens": [
-        "DOI:10.1109/tbdata.2025.3618474"
-      ],
-      "reason": "vector similarity searchの索引・圧縮・検索ライブラリ設計が主題。RAG周辺技術ではあるがLLM推論runtime/serving最適化そのものではない。",
-      "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
-      "title": "The Faiss Library"
-    },
     "arXiv:2309.05519": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2309.05519",
       "identity_tokens": [
         "arXiv:2309.05519"
       ],
-      "reason": "text/image/video/audioを扱うany-to-any multimodal LLMの能力・architecture研究で、推論system効率化を主目的としない。",
+      "reason": "本文の中心は事前学習済みencoder/decoderをadapterで接続するany-to-any multimodal機能と、そのalignment学習である。実験は理解・生成タスクの能力評価で、LLM inference/servingの資源効率改善を測定・提案していない。",
       "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
-      "title": "NExT-GPT: Any-to-Any Multimodal LLM"
-    },
-    "arXiv:1801.10198": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1801.10198",
-      "identity_tokens": [
-        "arXiv:1801.10198"
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.00835-cllms-consistency-large-language-models.md"
       ],
-      "reason": "長文sourceからWikipedia記事を生成するmulti-document summarizationと長系列attention architectureの研究で、LLM推論runtime・serving効率化を最終目的としない。",
-      "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
-      "title": "Generating Wikipedia by Summarizing Long Sequences"
+      "title": "NExT-GPT: Any-to-Any Multimodal LLM"
     },
     "arXiv:1711.09224": {
       "classification": "unrelated",
@@ -20730,10 +20691,15 @@
       "identity_tokens": [
         "arXiv:1711.09224"
       ],
-      "reason": "learned group convolutionでDenseNetを軽量化するcomputer vision/CNN研究で、LLM推論system対象外。",
+      "reason": "arXiv要旨はlearned group convolutionによる効率的DenseNetとMobileNet/ShuffleNetとの画像系比較を扱う。",
       "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2025-2501.01005-flashinfer-attention-engine-serving.md"
+      ],
       "title": "CondenseNet: An Efficient DenseNet Using Learned Group Convolutions"
     },
     "arXiv:2304.14997": {
@@ -20742,10 +20708,12 @@
       "identity_tokens": [
         "arXiv:2304.14997"
       ],
-      "reason": "Transformer内部回路を自動発見するmechanistic interpretability研究で、推論速度・memory・serving最適化を扱わない。",
+      "reason": "arXiv要旨はGPT-2 Small等の計算グラフから解釈可能なcircuitを自動発見する手法を扱う。",
       "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
       "title": "Towards Automated Circuit Discovery for Mechanistic Interpretability"
     },
     "arXiv:2311.03099": {
@@ -20754,10 +20722,12 @@
       "identity_tokens": [
         "arXiv:2311.03099"
       ],
-      "reason": "複数LLMの能力をmodel mergingで統合するモデル合成研究で、推論runtime・serving効率化が主題ではない。",
+      "reason": "DAREはSFT delta parameterをdrop/rescaleして複数モデルをmergeするweight-merging手法。本文はタスク性能を評価するが、sparsified deltaはbase weightsへmergeされ、推論時の疎実行、model footprint、serving latencyの改善を実証していない。",
       "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
+      ],
       "title": "Language Models are Super Mario: Absorbing Abilities from Homologous Models as a Free Lunch"
     },
     "arXiv:2308.08747": {
@@ -20766,10 +20736,12 @@
       "identity_tokens": [
         "arXiv:2308.08747"
       ],
-      "reason": "継続fine-tuning時のcatastrophic forgettingを実証分析する学習研究で、推論system効率化ではない。",
+      "reason": "arXiv要旨はLLM continual instruction tuning中のcatastrophic forgettingを知識・推論・読解観点で評価する。",
       "first_checked_at": "2026-10-04T23:31:08+00:00",
-      "last_checked_at": "2026-10-04T23:31:08+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md"
+      ],
       "title": "An Empirical Study of Catastrophic Forgetting in Large Language Models During Continual Fine-Tuning"
     },
     "DOI:10.18653/v1/2022.findings-acl.146": {
@@ -21352,6 +21324,81 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
       ],
       "title": "Massively Multilingual Neural Machine Translation"
+    },
+    "DOI:10.18653/v1/p19-1424": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1424",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1424"
+      ],
+      "reason": "Abstract presents neural legal judgment prediction in English; no LLM inference-efficiency or serving contribution.",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "Neural Legal Judgment Prediction in English"
+    },
+    "DOI:10.48550/arxiv.2105.03824": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2105.03824",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2105.03824",
+        "arXiv:2105.03824"
+      ],
+      "reason": "FNetはencoderのself-attentionをFourier transform mixingへ置換し、報告する速度・memory比較はencoderのtraining効率である。本文はencoderに限定しgeneration/decoderを対象外としているため、LLM inference/serving範囲外。",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ],
+      "title": "FNet: Mixing Tokens with Fourier Transforms"
+    },
+    "arXiv:2409.18869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.18869",
+      "identity_tokens": [
+        "arXiv:2409.18869"
+      ],
+      "reason": "Emu3は画像・動画・テキストのnext-token予測を統合するmultimodal modelで、本文の実験は理解/生成品質（例: VBench）を中心に報告する。inference costを下げる機構やlatency/memory/throughputの比較は確認できず、能力・architecture論文として対象外。",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md"
+      ],
+      "title": "Emu3: Next-Token Prediction is All You Need"
+    },
+    "arXiv:2304.15010": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2304.15010",
+      "identity_tokens": [
+        "arXiv:2304.15010"
+      ],
+      "reason": "14Mの学習可能parameterによるparameter-efficient visual instruction tuningが主題。本文では推論時にcaption expertを用いてvisual contextを作る構成を説明するが、追加expertによるinference cost削減の測定はなく、parameter効率はtraining側の主張。",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
+      ],
+      "title": "LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model"
+    },
+    "DOI:10.18653/v1/p19-1612": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1612",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1612",
+        "arXiv:1906.00300",
+        "id:arXiv:1906.00300",
+        "url:https://arxiv.org/abs/1906.00300"
+      ],
+      "reason": "arXiv要旨はopen-domain QAのretriever/reader共同学習とデータセット評価を扱い、LLM inference/serving効率を扱わない。",
+      "first_checked_at": "2026-10-04T22:16:24+00:00",
+      "last_checked_at": "2026-10-05T00:58:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2026-2609.09662-pelm-speculative-decoding-dvfs.md"
+      ],
+      "title": "Latent Retrieval for Weakly Supervised Open Domain Question Answering"
     }
   }
 }

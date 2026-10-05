@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T00:55:43+00:00",
-  "record_count": 485,
+  "updated_at": "2026-10-05T00:58:26+00:00",
+  "record_count": 488,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6970,6 +6970,50 @@
         "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
       ],
       "title": "Resurrecting Recurrent Neural Networks for Long Sequences"
+    },
+    "DOI:10.1145/224056.224064": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/224056.224064",
+      "identity_tokens": [
+        "DOI:10.1145/224056.224064"
+      ],
+      "reason": "指定ACM DOIを開いたが、一次出版社ページへのredirect先がこの取得手段から利用不可で、usable abstractを取得できなかった。",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.00528-saga.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18849-ask-the-tool-progress-aware-agent-serving.md"
+      ],
+      "title": "Informed prefetching and caching"
+    },
+    "arXiv:1801.10198": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1801.10198",
+      "identity_tokens": [
+        "arXiv:1801.10198"
+      ],
+      "reason": "decoder生成でlocal attentionとstride-3 convolutionによるmemory-compressed attentionを用い、長い入力（最大約11,000 tokens）で要約品質を評価する。ただし対象は2018年のWikipedia summarizationで、LLM servingの遅延・メモリ・スループット評価はなく、現行LLMへの転用可能性は本文から確定しないためborderline。",
+      "first_checked_at": "2026-10-05T00:58:25+00:00",
+      "last_checked_at": "2026-10-05T00:58:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "Generating Wikipedia by Summarizing Long Sequences"
+    },
+    "DOI:10.1109/tbdata.2025.3618474": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tbdata.2025.3618474",
+      "identity_tokens": [
+        "DOI:10.1109/tbdata.2025.3618474"
+      ],
+      "reason": "本文はFaissをANN index/search用ライブラリとし、feature extractionやservice、load balancing/shardingを担わないと明記する。検索基盤としてRAGに使える隣接性はあるが、LLM serving最適化やLLM workloadの評価は示さないためborderline。",
+      "first_checked_at": "2026-10-05T00:58:26+00:00",
+      "last_checked_at": "2026-10-05T00:58:26+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2026-2607.17538-d-nova-in-storage-retrieval-accelerator-via-dual-bound-3d-nand-optimized-similarity-search-with-vector-adaptation.md"
+      ],
+      "title": "The Faiss Library"
     }
   }
 }
