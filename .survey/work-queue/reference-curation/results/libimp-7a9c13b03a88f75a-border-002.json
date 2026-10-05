@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a9c13b03a88f75a-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.11805",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.11805",
+    "identity_tokens": [
+      "arXiv:2608.11805"
+    ],
+    "reason": "Although the gate changes an attention architecture, the reported efficiency evidence is training-side; relevance to inference/serving efficiency remains unestablished.",
+    "first_checked_at": "2026-10-05T03:19:24+00:00",
+    "last_checked_at": "2026-10-05T03:19:24+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+      "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+      "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+      "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+    ],
+    "title": "Hybrid Gated Attention"
+  },
+  "processed_at": "2026-10-05T03:19:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a9c13b03a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

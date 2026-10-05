@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T03:17:02+00:00",
-  "record_count": 2204,
+  "updated_at": "2026-10-05T03:19:24+00:00",
+  "record_count": 2216,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -31878,6 +31878,186 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
       ],
       "title": "Decomposition Attacks Across Unlinkable Identities: Limits of Stateful Defenses for LLM Services"
+    },
+    "arXiv:2608.12993": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12993",
+      "identity_tokens": [
+        "arXiv:2608.12993"
+      ],
+      "reason": "一次要旨はdata-center battery/power provisioning theoryであり、LLM model inference optimizationではない。",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "A Theory of Probabilistic Power Provisioning for Data Centers with Distributed Energy Storage"
+    },
+    "arXiv:2608.13721": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13721",
+      "identity_tokens": [
+        "arXiv:2608.13721"
+      ],
+      "reason": "一次要旨はreasoning SFTのtraining data selectionで、training duration/capacityの分析が中心。",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Capacity-Dependent Effects of Data Selection for Reasoning"
+    },
+    "DOI:10.1007/s10664-026-10929-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10664-026-10929-w",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-026-10929-w"
+      ],
+      "reason": "一次要旨はhardcoded-secret detection model comparison/security tool評価であり、LLM serving efficiencyではない。",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Learning to detect hardcoded secrets"
+    },
+    "DOI:10.3390/electronics15163591": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electronics15163591",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15163591"
+      ],
+      "reason": "The abstract focuses on recommender quality and personalization using an LLM agent; it provides no inference/serving optimization or cost-efficiency method.",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md"
+      ],
+      "title": "Large Language Model Agents for Recommender Systems: Bridging Behavior and Semantics with Long-Short Term Interest Modeling"
+    },
+    "arXiv:2608.10614": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10614",
+      "identity_tokens": [
+        "arXiv:2608.10614"
+      ],
+      "reason": "The paper describes a router-poisoning attack that intentionally increases TTFT and reduces throughput; this is a serving security/degradation study, not an efficiency improvement.",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Trigger the Straggler: Load Hijack on Mixture-of-Experts LLMs"
+    },
+    "arXiv:2608.10615": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10615",
+      "identity_tokens": [
+        "arXiv:2608.10615"
+      ],
+      "reason": "The work develops a continuous-state augmentation for discrete diffusion generation quality; it does not study LLM serving or inference efficiency.",
+      "first_checked_at": "2026-10-05T03:19:23+00:00",
+      "last_checked_at": "2026-10-05T03:19:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Simplex Relaxation for Discrete Diffusion"
+    },
+    "arXiv:2608.10837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10837",
+      "identity_tokens": [
+        "arXiv:2608.10837"
+      ],
+      "reason": "TACTICL substitutes up to 85% of TabPFNv2.5 transformer layers with task-trained adapters; body measurements show up to 2.83× faster classification inference, but evaluation is explicitly tabular ICL within TabPFNv2.5 pretraining constraints.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "TACTICL: Task-Aware Compression of Tabular ICL Models"
+    },
+    "arXiv:2608.10947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.10947",
+      "identity_tokens": [
+        "arXiv:2608.10947"
+      ],
+      "reason": "The abstract is about learned image compression and rate-distortion metrics, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Mixture-of-Experts-Based Entropy Model for Learned Image Compression"
+    },
+    "arXiv:2608.11758": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11758",
+      "identity_tokens": [
+        "arXiv:2608.11758"
+      ],
+      "reason": "The abstract addresses fine-tuning to mitigate catastrophic forgetting; it proposes parameter-update control and reports downstream quality, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "AWARe: Mitigating Catastrophic Forgetting via Activation-Weighted Adaptive REtention"
+    },
+    "arXiv:2608.11919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.11919",
+      "identity_tokens": [
+        "arXiv:2608.11919"
+      ],
+      "reason": "The abstract optimizes checkpointing, placement, recomputation, and communication during LLM training; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+        "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+        "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md"
+      ],
+      "title": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield Optimization in Large Language Model Training"
+    },
+    "arXiv:2608.12149": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12149",
+      "identity_tokens": [
+        "arXiv:2608.12149"
+      ],
+      "reason": "The abstract studies hybrid-attention activation behavior, training emergence, and retrieval accuracy interventions; it does not propose an inference-efficiency or serving optimization.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2507.23279-super-experts-pruning-sensitivity.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Massive Activations in Hybrid Linear Attention Large Language Models: Pre-Attention Spikes and Inter-Spike Plateaus"
+    },
+    "arXiv:2608.12209": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.12209",
+      "identity_tokens": [
+        "arXiv:2608.12209"
+      ],
+      "reason": "The method is auxiliary supervision during training; the generation branch is discarded and the reported zero inference overhead is a property of training-time enrichment, not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T03:19:24+00:00",
+      "last_checked_at": "2026-10-05T03:19:24+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Generation as Auxiliary Supervision: Enhancing Visual Understanding at Zero Inference Overhead via Decoupled Embedding Prediction"
     }
   }
 }

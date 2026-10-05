@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7a9c13b03a88f75a-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2608.11919",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2608.11919",
+    "identity_tokens": [
+      "arXiv:2608.11919"
+    ],
+    "reason": "The abstract optimizes checkpointing, placement, recomputation, and communication during LLM training; training-only efficiency is outside scope.",
+    "first_checked_at": "2026-10-05T03:19:24+00:00",
+    "last_checked_at": "2026-10-05T03:19:24+00:00",
+    "linked_from": [
+      "papers/survey/04-distributed-training-systems/2024-2407.20018-efficient-training-llms-distributed-infrastructures-survey.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md",
+      "papers/training/01-training-offload-memory-systems/2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md",
+      "papers/training/01-training-offload-memory-systems/2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md"
+    ],
+    "title": "LazyTrain: Limited-resource Allocation toward Zero-waste Yield Optimization in Large Language Model Training"
+  },
+  "processed_at": "2026-10-05T03:19:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7a9c13b03a88",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
