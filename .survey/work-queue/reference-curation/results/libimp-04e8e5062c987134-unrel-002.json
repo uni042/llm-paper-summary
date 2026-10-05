@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-04e8e5062c987134-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2109.04404",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2109.04404",
+    "identity_tokens": [
+      "arXiv:2109.04404"
+    ],
+    "reason": "一次要旨はTransformer言語モデルの内部representationとrogue dimensionsを分析する研究で、推論効率の最適化ではない。",
+    "first_checked_at": "2026-10-05T01:52:17+00:00",
+    "last_checked_at": "2026-10-05T01:52:17+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "All Bark and No Bite: Rogue Dimensions in Transformer Language Models Obscure Representational Quality"
+  },
+  "processed_at": "2026-10-05T01:52:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-04e8e5062c98",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
