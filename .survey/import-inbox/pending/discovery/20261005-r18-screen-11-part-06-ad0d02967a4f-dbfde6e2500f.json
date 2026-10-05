@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-11-part-06-ad0d02967a4f",
+  "reference_main_sha": "0fc5ffbc59c09d4b9c4e4ccf2fb7787ea01be6c6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33282",
+      "identity_tokens": [
+        "arXiv:2609.33282"
+      ],
+      "title": "Multi-Dimensional Comparative Scale Construction for Efficient Personalized Subjective Judgment in High-Traffic Applications",
+      "reason": "Constructs personalized subjective-judgment scales for high-traffic applications; not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.33282",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33296",
+      "identity_tokens": [
+        "arXiv:2609.33296"
+      ],
+      "title": "BaatCheet: A Multilingual Corpus for Dialogue Translation in Indian Languages",
+      "reason": "Introduces a multilingual dialogue-translation corpus; dataset creation is not inference/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2609.33296",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33315",
+      "identity_tokens": [
+        "arXiv:2609.33315"
+      ],
+      "title": "AgentLoop: Runtime Control of Slot-closed Execution Loops for Tool-augmented LLM Agents",
+      "reason": "Controls tool-agent completion loops to stop redundant reasoning, but the abstract contribution concerns runtime task-completion signals and agent workflow control rather than model inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.33315",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33321",
+      "identity_tokens": [
+        "arXiv:2609.33321"
+      ],
+      "title": "Separating Memory and Workflow Effects in Predicting Individual Answers",
+      "reason": "Studies personalized-answer quality effects of memory and workflow choices; it does not propose inference-cost reduction.",
+      "source_url": "https://arxiv.org/abs/2609.33321",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33325",
+      "identity_tokens": [
+        "arXiv:2609.33325"
+      ],
+      "title": "VisionHOPE: Visual Backbones as Self-Modifying Learning Systems",
+      "reason": "Introduces a self-modifying visual backbone with test-time training; the target is visual representation learning, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.33325",
+      "first_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "last_checked_at": "2026-10-05T04:32:17.943880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
