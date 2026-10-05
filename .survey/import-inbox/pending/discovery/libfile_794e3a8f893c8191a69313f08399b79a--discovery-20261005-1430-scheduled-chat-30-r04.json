@@ -1,0 +1,162 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1430-scheduled-chat-30/r04",
+  "reference_main_sha": "20cbcca1a9e1569e8655f45d706b7b623f600776",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1583991.1584053",
+      "identity_tokens": [
+        "DOI:10.1145/1583991.1584053"
+      ],
+      "title": "Parallel sparse matrix-vector and matrix-transpose-vector multiplication using compressed sparse blocks",
+      "reason": "Compressed Sparse Blocksで一般sparse matrix-vector/transpose-vector multiplicationを並列化し、off-chip memory bandwidthまで線形scaleさせるHPC研究。LLM/Transformer推論を最終適用先とするkernel・評価ではない。",
+      "source_url": "https://doi.org/10.1145/1583991.1584053",
+      "body_check": "abstract_screen_only: ACM一次要旨でCSB storage、SpMV/SpM^TV、parallelismとmemory bandwidth scalingが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 52
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.07069",
+      "identity_tokens": [
+        "arXiv:2301.07069"
+      ],
+      "title": "Prompting Large Language Model for Machine Translation: A Case Study",
+      "reason": "GLM-130Bを用い、prompt template・demonstration選択・cross-lingual/domain transferが翻訳品質へ与える影響を評価するprompting/capability研究。推論runtime・memory・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2301.07069",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でmachine translation prompting、example selection、transfer、translation qualityが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 53
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.10853",
+      "identity_tokens": [
+        "arXiv:1809.10853"
+      ],
+      "title": "Adaptive Input Representations for Neural Language Modeling",
+      "reason": "語頻度に応じてinput embedding容量を変えるadaptive representationでparameter数とtraining時間を減らし、WikiText-103等のperplexityを改善するlanguage-model architecture/training研究。報告速度はtraining中心で推論system評価ではない。",
+      "source_url": "https://arxiv.org/abs/1809.10853",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でadaptive input embeddings、training speed、perplexityが主題と確認。推論runtime/serving評価がないため対象外。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.03152",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2007.03152",
+        "arXiv:2007.03152"
+      ],
+      "title": "The gem5 Simulator: Version 20.0+",
+      "reason": "x86/Arm/RISC-V等のhardwareをcycle levelでmodelingする汎用computer architecture simulator gem5の機能・発展をまとめるinfrastructure論文。LLM推論systemを最終適用先とするsimulator/評価ではない。",
+      "source_url": "https://arxiv.org/abs/2007.03152",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgem5 simulator、cycle-level hardware modeling、OS boot、architecture researchが主題と確認。LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 55
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2939672.2945397",
+      "identity_tokens": [
+        "DOI:10.1145/2939672.2945397"
+      ],
+      "title": "CNTK: Microsoft's Open-Source Deep-Learning Toolkit",
+      "reason": "計算graph型deep-learning toolkitで、automatic differentiation、recurrent-loop inference/execution、memory sharing、multi-server parallelization等のruntime機構を扱う。推論runtimeとして関連するが、一般DNN toolkitでLLM/Transformer生成推論への直接評価がないためborderline。",
+      "source_url": "https://www.kdd.org/kdd2016/papers/files/tut204-seide.pdf",
+      "body_check": "full_text_relevance_review: KDD一次tutorial本文でCNTKのcomputation graph、recurrent-loop inference/execution、memory sharing、multi-GPU/server parallelizationを確認。汎用DNN runtimeでLLM固有評価がないためborderline。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 57
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/mm.2024.3373763",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2024.3373763",
+        "arXiv:2403.14123"
+      ],
+      "title": "AI and Memory Wall",
+      "reason": "LLM serving/trainingの主な性能律速がcomputeからmemory bandwidthへ移ることを分析し、encoder/decoder Transformer、とくにdecoder servingでmemory bandwidthが支配的になる条件を論じる。deployment strategy再設計を直接扱うため対象内。",
+      "source_url": "https://arxiv.org/abs/2403.14123",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でFLOPSが3.0x/2yrs、DRAM 1.6x、interconnect 1.4xと乖離し、decoder Transformer servingがmemory-bandwidth bottleneckになる分析とdeployment redesignを確認。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 58
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1503.01007",
+      "identity_tokens": [
+        "arXiv:1503.01007"
+      ],
+      "title": "Inferring Algorithmic Patterns with Stack-Augmented Recurrent Nets",
+      "reason": "trainable stack memoryをRNNへ追加し、counting/memorizationを要するalgorithmic sequence predictionを学習できるか検証するmodel capability研究。推論runtime・serving効率化ではない。",
+      "source_url": "https://arxiv.org/abs/1503.01007",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でstack-augmented recurrent network、algorithmic sequence learning、trainable memoryが主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2110.08387",
+      "identity_tokens": [
+        "arXiv:2110.08387"
+      ],
+      "title": "Generated Knowledge Prompting for Commonsense Reasoning",
+      "reason": "LM自身がknowledgeを生成して追加promptとして与え、commonsense reasoning精度を改善するprompting/capability研究。推論計算量削減やruntime/serving最適化を目的としない。",
+      "source_url": "https://arxiv.org/abs/2110.08387",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でgenerated knowledge promptingとcommonsense benchmark精度向上が主題と確認。推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2012.15828",
+      "identity_tokens": [
+        "arXiv:2012.15828"
+      ],
+      "title": "MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers",
+      "reason": "query/key/value間のmulti-head self-attention relationをstudentへdistillしてpretrained Transformerを圧縮する。小型studentによりdeployment時の計算・latencyを削減するTransformer推論圧縮として直接関連するため対象内。",
+      "source_url": "https://arxiv.org/abs/2012.15828",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でself-attention relation distillation、BERT/RoBERTa/XLM-R圧縮、student architecture自由度、圧縮modelの効率評価を確認。推論配備のmodel compressionが主要目的のためaccept。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 61
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.09577",
+      "identity_tokens": [
+        "arXiv:1909.09577"
+      ],
+      "title": "NeMo: a toolkit for building AI applications using Neural Modules",
+      "reason": "typed neural moduleの再利用・合成でASR/NLP applicationを構築し、distributed trainingとmixed precisionを提供する汎用toolkit論文。LLM推論runtime・serving最適化を提案しない。",
+      "source_url": "https://arxiv.org/abs/1909.09577",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でneural-module composition、ASR/NLP toolkit、distributed training/mixed precisionが主題と確認。現行LLM推論system対象外のため本文未読。",
+      "first_checked_at": "2026-10-05T15:18:00+09:00",
+      "last_checked_at": "2026-10-05T15:18:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62
+    }
+  ]
+}
