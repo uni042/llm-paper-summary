@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T11:57:09+00:00",
-  "record_count": 4791,
+  "updated_at": "2026-10-05T11:59:54+00:00",
+  "record_count": 4807,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -69745,6 +69745,233 @@
         "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
       ],
       "title": "StreamKL: Fast and Memory-Efficient KL Divergence for Boosting Attention Distillation"
+    },
+    "arXiv:2606.18710": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.18710",
+      "identity_tokens": [
+        "arXiv:2606.18710"
+      ],
+      "reason": "Image-prompt reconstruction attack on distributed multimodal inference, a security attack rather than efficiency/serving optimization.",
+      "first_checked_at": "2026-10-05T11:59:51+00:00",
+      "last_checked_at": "2026-10-05T11:59:51+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.11514-hexgen-generative-inference-of-large-language-model-over-heterogeneous-devices.md"
+      ],
+      "title": "Image Prompt Reconstruction Attacks on Distributed MLLM Inference Frameworks"
+    },
+    "arXiv:2606.19088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19088",
+      "identity_tokens": [
+        "arXiv:2606.19088"
+      ],
+      "reason": "Spatially consistent semantics for language-conditioned robotics, focused on task quality rather than inference systems.",
+      "first_checked_at": "2026-10-05T11:59:51+00:00",
+      "last_checked_at": "2026-10-05T11:59:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "ReSiReg: Towards Spatially Consistent Semantics in Language-Conditioned Robotic Tasks"
+    },
+    "arXiv:2606.19150": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19150",
+      "identity_tokens": [
+        "arXiv:2606.19150"
+      ],
+      "reason": "Full text evaluates attention-head pruning on BERT-Base/Large for SST-5 classification. Results concern classification accuracy/head retention, not decoder-LLM inference or serving efficiency.",
+      "first_checked_at": "2026-10-05T11:59:52+00:00",
+      "last_checked_at": "2026-10-05T11:59:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Complementary Attention Head Pruning for Efficient Transformers"
+    },
+    "arXiv:2609.39839": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39839",
+      "identity_tokens": [
+        "arXiv:2609.39839"
+      ],
+      "reason": "LoRA experts for class-incremental learning; evaluated classification accuracy, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T11:59:52+00:00",
+      "last_checked_at": "2026-10-05T11:59:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md"
+      ],
+      "title": "Dynamic LoRA-Experts and Prototype-Ensemble Matching for Class-Incremental Learning"
+    },
+    "DOI:10.1088/1361-6560/ae7eec": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-6560/ae7eec",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6560/ae7eec"
+      ],
+      "reason": "Breathing-phase forecasting for proton therapy, a clinical time-series task unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T11:59:52+00:00",
+      "last_checked_at": "2026-10-05T11:59:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Deep learning based time series analysis for breathing phase prediction in phase-gated proton therapy"
+    },
+    "DOI:10.1145/3814576.3814596": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3814576.3814596",
+      "identity_tokens": [
+        "DOI:10.1145/3814576.3814596"
+      ],
+      "reason": "The abstract explicitly optimizes multi-GPU tensor/sequence parallelism for LLM training iterations, not inference.",
+      "first_checked_at": "2026-10-05T11:59:52+00:00",
+      "last_checked_at": "2026-10-05T11:59:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SmartFuse-LLM: Fusing Computation into Collectives for Efficient Tensor-Parallel LLM Systems"
+    },
+    "DOI:10.3389/fcomp.2026.1817034": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/fcomp.2026.1817034",
+      "identity_tokens": [
+        "DOI:10.3389/fcomp.2026.1817034"
+      ],
+      "reason": "Full text evaluates TinyKGI as a quantized knowledge-gap classifier for VQA, including Jetson Nano CPU inference. INT8 classifier is 3.645 ms vs 6.105 ms and 337.23 KB vs 1325.91 KB, but this measures the small task classifier, not the VQA/LLM generation backbone or serving.",
+      "first_checked_at": "2026-10-05T11:59:53+00:00",
+      "last_checked_at": "2026-10-05T11:59:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Identifying knowledge gaps on the edge for visual question answering"
+    },
+    "arXiv:2606.19195": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19195",
+      "identity_tokens": [
+        "arXiv:2606.19195"
+      ],
+      "reason": "Lightweight image-inpainting model, outside language-model inference.",
+      "first_checked_at": "2026-10-05T11:59:53+00:00",
+      "last_checked_at": "2026-10-05T11:59:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ],
+      "title": "Moebius: 0.2B Lightweight Image Inpainting Framework with 10B-Level Performance"
+    },
+    "arXiv:2606.19315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19315",
+      "identity_tokens": [
+        "arXiv:2606.19315"
+      ],
+      "reason": "Diffusion language models for theorem proving; evaluated contribution is theorem-solving quality, not inference efficiency.",
+      "first_checked_at": "2026-10-05T11:59:53+00:00",
+      "last_checked_at": "2026-10-05T11:59:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Diffusion-Proof: Recipe for Formal Theorem Proving Beyond Auto-Regressive Generation"
+    },
+    "arXiv:2606.19562": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19562",
+      "identity_tokens": [
+        "arXiv:2606.19562"
+      ],
+      "reason": "Scientific-ML surrogates for coupled fluid-flow/transport simulations, not LLM inference.",
+      "first_checked_at": "2026-10-05T11:59:53+00:00",
+      "last_checked_at": "2026-10-05T11:59:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md"
+      ],
+      "title": "Advances in Scientific Machine Learning for Coupled Fluid Flow and Transport"
+    },
+    "arXiv:2606.19594": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19594",
+      "identity_tokens": [
+        "arXiv:2606.19594"
+      ],
+      "reason": "Unsupervised causal-abstraction discovery, not language-model serving.",
+      "first_checked_at": "2026-10-05T11:59:53+00:00",
+      "last_checked_at": "2026-10-05T11:59:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Unsupervised Causal Abstractions Discovery"
+    },
+    "DOI:10.1007/s11831-026-10702-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11831-026-10702-8",
+      "identity_tokens": [
+        "DOI:10.1007/s11831-026-10702-8"
+      ],
+      "reason": "Medical-image domain-adaptation survey, outside language-model inference.",
+      "first_checked_at": "2026-10-05T11:59:54+00:00",
+      "last_checked_at": "2026-10-05T11:59:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ],
+      "title": "From CNNs to Vision Transformers: A Survey on Addressing Domain Shift and Adaptation Concepts in Medical Image Analysis"
+    },
+    "DOI:10.1145/3821220": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3821220",
+      "identity_tokens": [
+        "DOI:10.1145/3821220"
+      ],
+      "reason": "Variational autoencoder for multi-interest recommendation, not LLM serving/inference.",
+      "first_checked_at": "2026-10-05T11:59:54+00:00",
+      "last_checked_at": "2026-10-05T11:59:54+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "VARIUM+: Semantic Expert-Structured Memory-Augmented Variational Autoencoder for Multi-Interest Recommendation"
+    },
+    "DOI:10.3390/electricity7020058": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/electricity7020058",
+      "identity_tokens": [
+        "DOI:10.3390/electricity7020058"
+      ],
+      "reason": "RWKV-CVM for multivariate power-load forecasting; target is forecasting quality, not LLM inference systems.",
+      "first_checked_at": "2026-10-05T11:59:54+00:00",
+      "last_checked_at": "2026-10-05T11:59:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "RWKV-CVM: Gated Cross-Variate Mixing for Multivariate Power Load Forecasting"
+    },
+    "DOI:10.3390/jlpea16020021": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jlpea16020021",
+      "identity_tokens": [
+        "DOI:10.3390/jlpea16020021"
+      ],
+      "reason": "Survey of generic 3D integrated DNN accelerators; no LLM-specific inference contribution.",
+      "first_checked_at": "2026-10-05T11:59:54+00:00",
+      "last_checked_at": "2026-10-05T11:59:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md",
+        "papers/inference/99-other-inference-systems/2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md"
+      ],
+      "title": "3D Integrated DNN Accelerators: Recent Trends and Future Prospects"
+    },
+    "DOI:10.64898/2026.06.15.732138": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.15.732138",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.15.732138"
+      ],
+      "reason": "Tomogram denoising by deconvolution, a medical imaging task outside LLM inference.",
+      "first_checked_at": "2026-10-05T11:59:54+00:00",
+      "last_checked_at": "2026-10-05T11:59:54+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "3dcon: tomogram denoising by deconvolution"
     }
   }
 }
