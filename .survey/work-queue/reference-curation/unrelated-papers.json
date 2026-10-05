@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T07:45:46+00:00",
-  "record_count": 3628,
+  "updated_at": "2026-10-05T07:48:24+00:00",
+  "record_count": 3646,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -52854,6 +52854,285 @@
         "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
       ],
       "title": "Dense Clinical Contrasts Enhance Medical Knowledge Updating in Large Language Models"
+    },
+    "arXiv:2608.30739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30739",
+      "identity_tokens": [
+        "arXiv:2608.30739"
+      ],
+      "reason": "要旨はstreaming speech enhancementの損失関数と音声モデル。",
+      "first_checked_at": "2026-10-05T07:48:22+00:00",
+      "last_checked_at": "2026-10-05T07:48:22+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Towards Balanced Spectral Reconstruction: Spectrally Adaptive Loss for Streaming Speech Enhancement"
+    },
+    "arXiv:2608.30901": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30901",
+      "identity_tokens": [
+        "arXiv:2608.30901"
+      ],
+      "reason": "要旨は電力系統安定化のためのAIデータセンターtraining workload制御。",
+      "first_checked_at": "2026-10-05T07:48:22+00:00",
+      "last_checked_at": "2026-10-05T07:48:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Flexible Training Workloads in Large-Scale AI Data Centers for Transient-Stability Support in Transmission-Constrained Power Systems"
+    },
+    "arXiv:2608.30908": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30908",
+      "identity_tokens": [
+        "arXiv:2608.30908"
+      ],
+      "reason": "要旨の主眼は低bitモデルのfine-tuning最適化。deploymentコスト低減への言及はあるが、推論手法を評価しない。",
+      "first_checked_at": "2026-10-05T07:48:22+00:00",
+      "last_checked_at": "2026-10-05T07:48:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.14852-pv-tuning-beyond-straight-through-estimation-for-extreme-llm-compression.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Fine-Tuning Low-Bit Models with Gradient in Quantized Code Space"
+    },
+    "arXiv:2608.30932": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30932",
+      "identity_tokens": [
+        "arXiv:2608.30932"
+      ],
+      "reason": "要旨はLLM agentを使ったアクセラレータ設計探索であり、LLM inference最適化ではない。",
+      "first_checked_at": "2026-10-05T07:48:22+00:00",
+      "last_checked_at": "2026-10-05T07:48:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Beacon: LLM Multi-Agent Driven Hardware Design Space Exploration for Heterogeneous Multi-Chiplet Deep Learning Accelerators"
+    },
+    "arXiv:2608.30954": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30954",
+      "identity_tokens": [
+        "arXiv:2608.30954"
+      ],
+      "reason": "要旨はMSP430マイクロコントローラのclock-gating回路設計。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2024-2411.01016-moe-i2-compressing-mixture-of-experts-models-through-inter-expert-pruning-and-intra-expert-low-rank-decomposition.md"
+      ],
+      "title": "Clock-Gating Insertion Strategies on an Open-Source MSP430 Core: A Reproducible PPA Study and a Gate-Level Simulation Caveat"
+    },
+    "arXiv:2608.30968": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30968",
+      "identity_tokens": [
+        "arXiv:2608.30968"
+      ],
+      "reason": "要旨は教育用learning environment生成モデルのtrainingと生成アプリケーション。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "CogEvol: Towards Efficient and Reliable Learning Environment Generation"
+    },
+    "arXiv:2608.31036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.31036",
+      "identity_tokens": [
+        "arXiv:2608.31036"
+      ],
+      "reason": "要旨はLoRAの学習安定化・正規化手法。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Normalized Low-Rank Adaptation"
+    },
+    "arXiv:2609.00092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00092",
+      "identity_tokens": [
+        "arXiv:2609.00092"
+      ],
+      "reason": "要旨はmemory-native safety alignmentとstate evolution。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md",
+        "papers/inference/13-sparse-attention/2025-2502.13189-moba.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Safin-1: Safety from Within through Memory-Native State Evolution"
+    },
+    "arXiv:2609.00103": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.00103",
+      "identity_tokens": [
+        "arXiv:2609.00103"
+      ],
+      "reason": "要旨はVLM memoryの効率・圧縮・calibrationを測る評価benchmarkで、inferenceコスト削減手法を提示しない。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Good Memory Has ECC: Evaluating the Memory of Vision-Language Models Beyond Accuracy"
+    },
+    "arXiv:2608.30609": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30609",
+      "identity_tokens": [
+        "arXiv:2608.30609"
+      ],
+      "reason": "要旨はLLMのcontinued pre-trainingとdomain adaptationを評価する。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Reading the News: Adapting Large Language Models to Swedish Journalism Through Continued Pre-Training"
+    },
+    "arXiv:2608.30674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30674",
+      "identity_tokens": [
+        "arXiv:2608.30674"
+      ],
+      "reason": "要旨は分子特性予測におけるGNN/LLM協調アプリケーションを扱い、LLM推論効率化が主題ではない。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "CoMPASS: Collaborative Molecular Property Prediction via Adaptive Small-Large Model Synergy"
+    },
+    "arXiv:2608.30685": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30685",
+      "identity_tokens": [
+        "arXiv:2608.30685"
+      ],
+      "reason": "要旨はindustrial tool-use agentのdiagnostic evaluation framework。",
+      "first_checked_at": "2026-10-05T07:48:23+00:00",
+      "last_checked_at": "2026-10-05T07:48:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "ATLAS: Dual-Horizon Diagnostic Evaluation for Industrial Tool-Use Agents"
+    },
+    "arXiv:2608.30695": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30695",
+      "identity_tokens": [
+        "arXiv:2608.30695"
+      ],
+      "reason": "要旨は時系列向けcontinuous-time attention operatorであり、対象laneのLLM inferenceではない。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Liquid Gated Attention"
+    },
+    "arXiv:2608.30725": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30725",
+      "identity_tokens": [
+        "arXiv:2608.30725"
+      ],
+      "reason": "要旨はmultilingual vision-language encoderの評価・表現解析。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "Where Do Multilingual Vision-Language Encoders Fail on Low-Resource Languages?"
+    },
+    "arXiv:2608.30449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30449",
+      "identity_tokens": [
+        "arXiv:2608.30449"
+      ],
+      "reason": "要旨はCTR top networkの学習時最適化・推薦精度を扱い、LLM inferenceは対象外。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "PRIME: Mitigating Subgroup Optimization Competition in Shared CTR Top Networks with Plug-in Residual Input-Conditioned Mixture of Expert"
+    },
+    "arXiv:2608.30479": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30479",
+      "identity_tokens": [
+        "arXiv:2608.30479"
+      ],
+      "reason": "要旨はlocation-based retrieval向けsemantic IDの表現品質を扱い、inference compute/serving効率化ではない。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "HF-SID: High-Fidelity Semantic IDs for Generative Retrieval in Location-Based Services"
+    },
+    "arXiv:2608.30508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30508",
+      "identity_tokens": [
+        "arXiv:2608.30508"
+      ],
+      "reason": "要旨はlong-term conversational memoryの証拠利用benchmarkであり、推論効率手法の提案ではない。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "UTILMEM: Benchmarking Evidence Utilization in Long-Term Conversational Memory"
+    },
+    "arXiv:2608.30597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.30597",
+      "identity_tokens": [
+        "arXiv:2608.30597"
+      ],
+      "reason": "要旨はnoisy preferenceによるDPO alignmentのtraining手法。",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PLC-DPO: Posterior Label Correction in Noisy and Ambiguous Preference Optimization"
     }
   }
 }

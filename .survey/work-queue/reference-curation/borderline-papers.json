@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:45:46+00:00",
-  "record_count": 1129,
+  "updated_at": "2026-10-05T07:48:24+00:00",
+  "record_count": 1131,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -17249,6 +17249,36 @@
         "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
       ],
       "title": "Ceiling-Clipped Acceptance Histograms Indicate Stranded Speed-up in Block-Diffusion Speculative Decoding"
+    },
+    "arXiv:2608.30785": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30785",
+      "identity_tokens": [
+        "arXiv:2608.30785"
+      ],
+      "reason": "In a content-moderation skill-bundle harness (n=200), the selected configuration removes 38.1% of bundle content and 10.4% of runtime tokens; compressed accuracy is 89% versus 91–92% in uncompressed baselines. The evaluated object is agent skill/prompt content, not model weights or serving infrastructure, and evidence is from one application.",
+      "first_checked_at": "2026-10-05T07:48:22+00:00",
+      "last_checked_at": "2026-10-05T07:48:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "SkillZip Pro: Execution-Aware Dynamic Compression of Progressively Loaded Skills for Self-Evolving Agents"
+    },
+    "arXiv:2608.30510": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.30510",
+      "identity_tokens": [
+        "arXiv:2608.30510"
+      ],
+      "reason": "The paper evaluates a multimodal auction-catalog extraction pipeline across cloud, institutional and local quantized-model deployments, reporting latency and accuracy. It finds CPU-only local execution impractical without constrained decoding. The contribution is an application-specific cultural-heritage workflow rather than a general LLM inference optimization.",
+      "first_checked_at": "2026-10-05T07:48:24+00:00",
+      "last_checked_at": "2026-10-05T07:48:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Lot Machine: Multimodal Lot Extraction from Auction Catalogs"
     }
   }
 }
