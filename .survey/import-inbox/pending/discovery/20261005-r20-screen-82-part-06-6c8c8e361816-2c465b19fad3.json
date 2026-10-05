@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-82-part-06-6c8c8e361816",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.09558",
+      "identity_tokens": [
+        "arXiv:2401.09558"
+      ],
+      "title": "Molecular causality in the advent of foundation models",
+      "reason": "The article is a biomedical perspective on molecular causality and foundation models, not an LLM inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2401.09558",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.00849",
+      "identity_tokens": [
+        "arXiv:2401.00849"
+      ],
+      "title": "COSMO: COntrastive Streamlined MultimOdal Model with Interleaved Pre-Training",
+      "reason": "COSMO proposes contrastive multimodal pretraining/model architecture; the abstract emphasizes training and alignment, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2401.00849",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.11750",
+      "identity_tokens": [
+        "arXiv:2312.11750"
+      ],
+      "title": "A Heterogeneous Chiplet Architecture for Accelerating End-to-End Transformer Models",
+      "reason": "The HTML full-text endpoint returned an internal error; only the primary abstract was accessible. Keep borderline until primary full text can be reviewed.",
+      "source_url": "https://arxiv.org/abs/2312.11750",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md",
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.10609",
+      "identity_tokens": [
+        "arXiv:2311.10609"
+      ],
+      "title": "Scaling TabPFN: Sketching and Feature Selection for Tabular Prior-Data Fitted Networks",
+      "reason": "The work studies scaling TabPFN for tabular classification with sketching and feature selection; it is not an LLM inference/serving paper.",
+      "source_url": "https://arxiv.org/abs/2311.10609",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.16503",
+      "identity_tokens": [
+        "arXiv:2305.16503"
+      ],
+      "title": "IMBERT: Making BERT Immune to Insertion-based Backdoor Attacks",
+      "reason": "IMBERT addresses insertion-based backdoor defenses for BERT; its contribution is model security, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2305.16503",
+      "first_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "last_checked_at": "2026-10-05T11:44:26.346753+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ]
+    }
+  ]
+}
