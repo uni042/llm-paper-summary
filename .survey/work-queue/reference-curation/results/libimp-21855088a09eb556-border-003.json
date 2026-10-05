@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-21855088a09eb556-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "OpenReview:KnqiC0znVF",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "OpenReview:KnqiC0znVF",
+    "identity_tokens": [
+      "OpenReview:KnqiC0znVF",
+      "arXiv:2502.09992"
+    ],
+    "reason": "非自己回帰の拡散型LLMは推論並列化の基盤になり得るが、本論文の主貢献はLLaDAの生成モデル・学習方式と能力検証で、推論システム高速化自体を中心課題としていないため境界扱い。",
+    "first_checked_at": "2026-10-05T13:38:50+00:00",
+    "last_checked_at": "2026-10-05T13:38:50+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2026-2609.17573-groupkv-hierarchical-kv-cache-diffusion-llm.md",
+      "papers/inference/99-other-inference-systems/2026-2606.21633-herald-high-throughput-block-diffusion-llm-serving-via-cpu-gpu-cooperative-kv-cache-retrieval.md"
+    ],
+    "title": "Large Language Diffusion Models"
+  },
+  "processed_at": "2026-10-05T13:38:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-21855088a09e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
