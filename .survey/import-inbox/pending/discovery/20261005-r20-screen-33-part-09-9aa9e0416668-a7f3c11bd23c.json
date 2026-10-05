@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-33-part-09-9aa9e0416668",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03854",
+      "identity_tokens": [
+        "arXiv:2608.03854"
+      ],
+      "title": "When Calibration Depends on the Scoring Rule: Quantized Biomedical LLM Classification",
+      "reason": "Quantized large language models can run on consumer hardware, which motivates interest in on-premises processing of sensitive data. The reliability of their confidence estimates depends on implementation choices (prompt template, label wording, and scoring normalization) that are seldom treated as experimental variables. We evaluate three 7-billion-parameter Mistral variants (a base model, BioMistral, and an instruction-tuned checkpoint evaluated without its chat template) at FP16, INT8, and INT4 on five-class sentence classification in medical abstracts. We test two primary templates on n = 2,000 test sentences and two auxiliary templates on n = 200 validation sentences. Our central observation, made without post-hoc calibration, is that switching from summed to mean-token log-likelihood reverses which model appears better calibrated: BioMistral's mean calibration error across matched conditions nearly triples, while the instruction-tuned model's drops by more than half. Accuracy changes by at most 1.4 percentage points for these two checkpoints. Negative log-likelihood and Brier score show the same reversal. The two primary templates were selected using test-derived examples, so absolute performance with them is exploratory. Between them, prompt choice changes mean accuracy across precisions by 2.9 to 17.8 percentage points. Eight-bit quantization changes accuracy by at most 1.1 percentage points for the adapted checkpoints; four-bit quantization shows mixed but non-catastrophic effects. Post-hoc temperature scaling reduces calibration error under summed scoring but was not fitted under mean-token scoring, so whether the reversal survives per-scorer calibration is unknown. These exploratory results suggest that calibration comparisons of decoder-based classifiers should treat scoring normalization and prompt design as first-order experimental decisions.",
+      "source_url": "https://arxiv.org/abs/2608.03854",
+      "first_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "last_checked_at": "2026-10-05T07:09:30.932673+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    }
+  ]
+}
