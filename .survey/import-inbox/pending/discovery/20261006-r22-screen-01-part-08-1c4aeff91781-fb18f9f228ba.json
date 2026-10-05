@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r22-screen-01-part-08-1c4aeff91781",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.20544",
+      "identity_tokens": [
+        "arXiv:2606.20544"
+      ],
+      "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
+      "reason": "The proposed adversarial reweighting changes the training objective to improve calibration under distribution shift. Experiments use CIFAR-10H, PACS, and CivilComments classifiers with four-expert MoEs; calibration/accuracy is measured, not LLM runtime, serving, memory, or throughput. It addresses prediction reliability rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.20544",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01838",
+      "identity_tokens": [
+        "arXiv:2606.01838"
+      ],
+      "title": "LayerRoute: Input-Conditioned Adaptive Layer Skipping via LoRA Fine-Tuning for Agentic Language Models",
+      "reason": "The primary arXiv abstract describes a plausible layer-skipping method, but the submission is withdrawn and the primary record reports no PDF/full text, so method, evaluation, and limitations cannot be verified.",
+      "source_url": "https://arxiv.org/abs/2606.01838",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.suscom.2026.101313",
+      "identity_tokens": [
+        "DOI:10.1016/j.suscom.2026.101313"
+      ],
+      "title": "Emissions transparency in AI research should be mandatory",
+      "reason": "The publisher abstract is about mandatory disclosure of AI training energy/emissions and policy feasibility, not an LLM inference or serving method. The publisher abstract was retrieved after the packet’s abstract field was empty; it clearly states the scope.",
+      "source_url": "https://doi.org/10.1016/j.suscom.2026.101313",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01047",
+      "identity_tokens": [
+        "arXiv:2606.01047"
+      ],
+      "title": "Learning Multi-Modal Trajectory Policies for Data-Efficient Robotic Manipulation",
+      "reason": "The paper learns data-efficient robotic manipulation trajectory policies; the contribution is policy learning, not LLM inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.01047",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31025",
+      "identity_tokens": [
+        "arXiv:2605.31025"
+      ],
+      "title": "TRACE: Discovering Task-Specific Parameter via Adaptation-Aware Probing for Continual Fine-Tuning",
+      "reason": "The abstract studies task-specific parameters for continual fine-tuning, a training/adaptation contribution outside inference scope.",
+      "source_url": "https://arxiv.org/abs/2605.31025",
+      "first_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "last_checked_at": "2026-10-05T21:54:41.660316+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ]
+    }
+  ]
+}
