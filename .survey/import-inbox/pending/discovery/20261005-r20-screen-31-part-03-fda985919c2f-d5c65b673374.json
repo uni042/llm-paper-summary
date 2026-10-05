@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-31-part-03-fda985919c2f",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817932",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817932"
+      ],
+      "title": "LEAP: Learning-Dynamics-Guided Open-Loop Pricing for LLM Data Acquisition",
+      "reason": "The sustainability of AI-powered Web platforms often relies on a feedback loop: stronger models improve user experience, which can help generate interaction data for further refinement. During Large Language Model (LLM) fine-tuning, however, the marginal utility of additional data can change over time, while many incentive mechanisms are primarily reactive. For example, contextual-bandit approaches treat training as a black box and adjust payments only after observing stochastic feedback, which makes it difficult to plan budgets ex ante or to communicate a stable pricing plan. We introduce LEAP (Learning-dynamics-based Economic Adaptive Pricing), a framework that formulates data acquisition as an open-loop planning problem guided by a simple proxy of learning dynamics. Specifically, LEAP links an analytically motivated approximation of SGD progress to a Stackelberg-style pricing model, and yields a closed-form, deterministic price schedule that can be computed before training starts. The resulting schedule is transparent and easy to interpret, and serves as a structured baseline for aligning economic spending with longer-horizon training objectives in commitment-sensitive settings. Across controlled market-simulator experiments in three domains (Medical, Finance, and Comprehension), LEAP achieves lower evaluated acquisition-cost objectives than representative heuristic and online-learning baselines in many tested settings, with reductions exceeding 30% in representative long-horizon configurations. We further evaluate sensitivity to deviations from idealized assumptions, including non-linear supply curves and heterogeneous noise patterns, and find that the planned schedules remain competitive in the simulated settings considered. Overall, LEAP provides a planning-oriented starting point for integrating coarse learning-curve priors into interpretable pricing design for LLM data collection.",
+      "source_url": "https://doi.org/10.1145/3770855.3817932",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3817942",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817942"
+      ],
+      "title": "Structure Is All You Need to Reuse: Accelerating GraphRAG via Meta-Structure-Aware KV Caching",
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "source_url": "https://doi.org/10.1145/3770855.3817942",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818064",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818064"
+      ],
+      "title": "BRIDGE: Block-Wise Speculative Coordination for Cloud-Edge Retrieval-Augmented Generation",
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "source_url": "https://doi.org/10.1145/3770855.3818064",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2511.21669-dsd-distributed-edge-cloud-speculative-decoding.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.14966-slo-aware-scheduling-for-large-language-model-inferences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3818083",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818083"
+      ],
+      "title": "Aquavit: Ascending Quantization for Communication-Efficient Vast-Scale Distributed Training",
+      "reason": "Training Large Foundation Models (LFMs), including Large Language Models and Vision-Language Models, on massive distributed GPU clusters is increasingly bottlenecked by communication overhead. While frameworks like ZeRO++ employ static quantization to reduce communication volume, they suffer from a rigid trade-off: aggressive low-bit quantization maximizes throughput but introduces a persistent noise floor that impedes late-stage convergence, whereas high-precision quantization preserves accuracy at the cost of diminished training efficiency. In this paper, we propose the Noise Equivalent Hypothesis (Neophyte): the noise inherent to the weight quantization process plays a role functionally analogous to the stochastic gradient variance present in standard SGD optimization. We theoretically prove that just as a decaying learning rate is essential for convergence, an ascending quantization schedule is necessary to maintain optimization stability while maximizing throughput. Building on this hypothesis, we present Aquavit, an adaptive distributed training framework that implements an ascending precision schedule for model weights. To overcome the hardware limitations of discrete bit-widths (e.g., jumping from 4-bit to 6-bit), Aquavit introduces fractional precision via granularity modulation. By dynamically adjusting quantization block sizes, we achieve quasi-continuous transitions in effective bits-per-weight (bpw), preventing ''numerical shocks'' and ensuring a smooth error-reduction curve. We evaluate Aquavit on a 256-GPU cluster across diverse LFMs, including LLaMA-3.3-70B and Qwen-Image. Our results demonstrate that Aquavit achieves up to a 2.15× speedup in time-to-accuracy while maintaining full numerical parity with FP16 baselines, even in sensitive multimodal tasks where static quantization typically fails.",
+      "source_url": "https://doi.org/10.1145/3770855.3818083",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3770855.3818131",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3818131"
+      ],
+      "title": "NumCache: KV Cache Compression and Retrieval for Financial Document QA",
+      "reason": "関連可能性は残るが一次本文を取得できず、評価条件と対象範囲を確認できないため、証拠不足としてborderlineに分類。",
+      "source_url": "https://doi.org/10.1145/3770855.3818131",
+      "first_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "last_checked_at": "2026-10-05T07:01:22.623061+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2502.16002-kvlink.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md"
+      ]
+    }
+  ]
+}
