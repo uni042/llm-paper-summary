@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a41dce75e4681845-unrel-004",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.02674",
+  "reason": "With the widespread deployment of large foundation models (LFMs) in open environments, safety threats are shifting from black-box jailbreaks toward white-box attacks that directly identify and disrupt internal safety neurons or routes. However, existing safety defenses often rely on static safety units or fixed refusal pathways, leaving models highly vulnerable to targeted route-level white-box attacks. For that, we propose dynamic routing adaptive alignment (DRAA), a framework that introduces dynamic compensatory routes to preserve robust refusal behavior when the safety route is compromised. Specifically, we first identify and localize the model's safety route by contrasting internal activations between safe and unsafe calibration samples. DRAA then masks this safety route to induce causal failure cases and selectively mines the resulting defense failures, thereby constructing failure-aware preference pairs. Extensive experiments demonstrate that DRAA effectively restructures the underlying pathway dependence of model safety, substantially improving robustness against route-level white-box attacks, while preserving general utility.",
+  "title": "Moving the Safety Barrier: Dynamic Routing Adaptive Alignment Against White-Box Attacks",
+  "identity_tokens": [
+    "arXiv:2608.02674"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a41dce75e468",
+  "source_precheck_request_id": null
+}
