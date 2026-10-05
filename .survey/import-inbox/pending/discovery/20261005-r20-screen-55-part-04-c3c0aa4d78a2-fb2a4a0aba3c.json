@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-55-part-04-c3c0aa4d78a2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27884",
+      "identity_tokens": [
+        "arXiv:2606.27884"
+      ],
+      "title": "SEADA: An efficient methodology for optimizing mixed-precision DNNs on multi-precision spatial architectures",
+      "reason": "Primary abstract reviewed: Mixed-precision computation has been introduced in deep neural networks (DNNs) as an effective approach to reduce latency, energy consumption, and memory footprint. However, efficiently mapping mixed-precision networks onto multi-precision spatial architectures poses several challenges. These include determining the appropriate precision for each layer, balancing layer-wise accuracy sensitivity to quantization agains… Out of scope: General DNN mixed-precision accelerator mapping without an LLM-specific inference contribution.",
+      "source_url": "https://arxiv.org/abs/2606.27884",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27981",
+      "identity_tokens": [
+        "arXiv:2606.27981"
+      ],
+      "title": "ToxiREX: A Dataset on Toxic REasoning in ConteXt",
+      "reason": "Primary abstract reviewed: We introduce a new, contextual, multilingual dataset called ToxiREX: Toxic REasoning in ConteXt. The dataset consists of threads of Reddit comments and structured characterizations of what the comments imply, following a systematic toxic reasoning schema developed in a previous paper. Using the schema allows us to capture and explain implicit and context-dependent toxicity, while supporting mappings to existing toxic… Out of scope: Toxic-reasoning dataset and capability benchmark, not runtime optimization.",
+      "source_url": "https://arxiv.org/abs/2606.27981",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28127",
+      "identity_tokens": [
+        "arXiv:2606.28127"
+      ],
+      "title": "From Tokens to States: LLMs as a Special Case of World Models and the Continuous Path Beyond",
+      "reason": "Primary abstract reviewed: The AI community has framed the relationship between large language models (LLMs) and world models as a dichotomy: LLMs predict tokens; world models simulate reality. Yann LeCun argues in 2022 that reaching general intelligence requires abandoning autoregressive token prediction in favour of latent-space architectures. This framing is unnecessarily binary. Two claims will be defended. First, LLMs are a degenerate spe… Out of scope: Conceptual world-model discussion without an inference-efficiency method or evaluation.",
+      "source_url": "https://arxiv.org/abs/2606.28127",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28166",
+      "identity_tokens": [
+        "arXiv:2606.28166"
+      ],
+      "title": "Tandem Reinforcement Learning with Verifiable Rewards",
+      "reason": "Primary abstract reviewed: Reinforcement learning with verifiable rewards (RLVR) has driven substantial gains in language-model reasoning. However, models fine-tuned with RLVR need not remain compatible with weaker partners: gains achieved alone may erode under collaboration, while policy drift may place reasoning beyond a weaker model's predictive reach. To address both problems, we introduce Tandem RLVR (TRLVR), bringing the recently propose… Out of scope: Reinforcement-learning training method for reasoning models.",
+      "source_url": "https://arxiv.org/abs/2606.28166",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28516",
+      "identity_tokens": [
+        "arXiv:2606.28516"
+      ],
+      "title": "CLEAR-MoE: Shared-Basis Expert Extraction from Frozen Vision Transformers via Calibration-Driven Layer Selection",
+      "reason": "Primary abstract reviewed: We present CLEAR-MoE, a four-phase post-training pipeline that converts a frozen pretrained Vision Transformer (ViT) into a sparse Mixture-of-Experts (MoE) model without updating backbone weights. The pipeline (i) scores feed-forward network (FFN) layers by sparsity, clusterability, and output sensitivity; (ii) decomposes selected layers into a shared low-rank SVD basis and per-cluster residual experts using k-means … Out of scope: Vision Transformer post-training conversion for image classification.",
+      "source_url": "https://arxiv.org/abs/2606.28516",
+      "first_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "last_checked_at": "2026-10-05T10:09:54.970076+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2024-2404.19429-lancet.md"
+      ]
+    }
+  ]
+}
