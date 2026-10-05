@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:49:37+00:00",
-  "record_count": 3996,
+  "updated_at": "2026-10-05T08:52:15+00:00",
+  "record_count": 4009,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -58187,6 +58187,192 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Gradient Under Microscope: Benchmarking Resource Utilization of Memory-Efficient Gradient Computation Methods"
+    },
+    "DOI:10.1145/3770855.3817661": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817661",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817661"
+      ],
+      "reason": "HeimdaLLM optimizes federated fine-tuning/convergence and client training memory/communication, which is training-only efficiency.",
+      "first_checked_at": "2026-10-05T08:52:13+00:00",
+      "last_checked_at": "2026-10-05T08:52:13+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.18750-hillinfer-smartssd-hierarchical-kv-eviction.md"
+      ],
+      "title": "HeimdaLLM: Efficient Cloud-assisted Federated Fine-tuning with Zeroth-Order Rectification for LLMs"
+    },
+    "arXiv:2608.08224": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08224",
+      "identity_tokens": [
+        "arXiv:2608.08224"
+      ],
+      "reason": "Control-Diverse Reinforcement Fine-Tuning is an RL post-training/interpretability method and does not target inference-time efficiency.",
+      "first_checked_at": "2026-10-05T08:52:13+00:00",
+      "last_checked_at": "2026-10-05T08:52:13+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Control-Diverse Reinforcement Fine-Tuning: Decoupling the Shared Control Bottleneck of RL Post-Training"
+    },
+    "arXiv:2608.08236": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08236",
+      "identity_tokens": [
+        "arXiv:2608.08236"
+      ],
+      "reason": "LatticeMind evaluates conflict-aware persistent memory for multi-agent answer quality, not inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T08:52:13+00:00",
+      "last_checked_at": "2026-10-05T08:52:13+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "LatticeMind: A Conflict-Aware Memory Primitive for Multi-Agent Systems"
+    },
+    "arXiv:2608.08287": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08287",
+      "identity_tokens": [
+        "arXiv:2608.08287"
+      ],
+      "reason": "This benchmarks GPU programming languages on a hash-blocked TSDF workload, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "What Irregularity Costs: CUDA C++, Rust, and Triton on a Hash-Blocked GPU Workload"
+    },
+    "arXiv:2608.08338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.08338",
+      "identity_tokens": [
+        "arXiv:2608.08338"
+      ],
+      "reason": "This is a simulated radio/GPU scheduler for generic progressive edge inference; the abstract does not identify LLM serving or LLM-specific workloads.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.03243-llumnix-dynamic-scheduling-live-migration.md",
+        "papers/inference/15-inference-simulation-emulation/2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md"
+      ],
+      "title": "Split-Gate Pooled-Evidence Stochastic-Rollout Scheduling for Timely Progressive Edge Inference"
+    },
+    "arXiv:2609.12712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.12712",
+      "identity_tokens": [
+        "arXiv:2609.12712"
+      ],
+      "reason": "InRTL is a relational-table learning model for structured-data tasks, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Effective Intra-Inter Interaction Learning for Relational Tables"
+    },
+    "DOI:10.1007/s11280-026-01427-6": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11280-026-01427-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11280-026-01427-6"
+      ],
+      "reason": "Primary Springer abstract: presents a domain-driven framework for constructing enterprise knowledge graphs from business events, evaluates fidelity/schema conformance and a small QA set; no inference-runtime optimization is described.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Knowledge proliferation: a domain-driven framework for multi-faceted knowledge graph generation from business data"
+    },
+    "DOI:10.1145/3770855.3816459": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3816459",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3816459"
+      ],
+      "reason": "This is a finance-oriented generative-AI/LLM tutorial, not an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Generative AI and Large Language Models for Financial Markets: From Behavioral Prediction to Autonomous Trading"
+    },
+    "DOI:10.1145/3770855.3816461": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3816461",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3816461"
+      ],
+      "reason": "This is a tutorial/vision for retrieval, knowledge structuring, and reasoning systems, not a concrete LLM serving-efficiency result.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Structure Shapes the Future of DataxLLM Systems: Retrieval, Structuring, and Reasoning"
+    },
+    "DOI:10.1145/3770855.3816476": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3816476",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3816476"
+      ],
+      "reason": "This is a hands-on tutorial for diffusion language-model tools, not a primary inference-efficiency method or evaluation.",
+      "first_checked_at": "2026-10-05T08:52:14+00:00",
+      "last_checked_at": "2026-10-05T08:52:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md"
+      ],
+      "title": "A Hands-on Tutorial for Diffusion Language Models with dLLM"
+    },
+    "DOI:10.1145/3770855.3817771": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817771",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817771"
+      ],
+      "reason": "The adoption of AI-native cloud infrastructure is reshaping workload behavior in large-scale data centers, moving from stationary, homogeneous patterns to highly dynamic, heterogeneous ones. An empirical analysis of production cloud monitoring data shows that system reliability is increasingly governed by non-linear interactions in the multi-dimensional tail space, including long-range temporal backlogs, spatial resource fragmentation, and irreversible state rigidity. Accurately forecasting these tail-dominated behaviors is essential for capacity planning and reliability management. However, existing forecasting models face two limitations: learning is dominated by abundant normal workloads, leading to rare but critical tail events being underrepresented, and reliance on linear composition assumptions limits the ability to model joint tail anomalies across correlated temporal, spatial, and state dimensions. To address these challenges, we introduce the Factorized Tail-Interaction Framework (FTIF), a data-driven forecasting and risk perception framework explicitly designed for tail-sensitive cloud workloads. Firstly, an adaptive trend decoupler separates dominant workload trends from tail residuals using a gradient detachment mechanism and learnable gating mechanisms. Secondly, a factorized resonance module augments attention mechanisms with hyper-order factorization, injecting multiplicative inductive biases to capture non-linear interactions among multi-dimensional risk factors. Thirdly, a rank-rectified tail-focal optimization employs topology-preserving reweighting to align the learning objective with rare but operationally critical tail events. Experiments on real-world cloud datasets show that FTIF achieves an MSE of 0.0015 on the GenTD26 dataset and captures 94.95% of tail events in Spot scenarios, enabling finer-grained risk perception and robust modeling of joint tail anomalies.",
+      "first_checked_at": "2026-10-05T08:52:15+00:00",
+      "last_checked_at": "2026-10-05T08:52:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md"
+      ],
+      "title": "Taming Multi-Dimensional Tail: A Factorized Tail-Interaction Framework for Hyperscale Cloud Workload Forecasting"
+    },
+    "DOI:10.1145/3770855.3817780": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817780",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817780"
+      ],
+      "reason": "Autonomous multi-modal agents are increasingly important in real-world applications due to their ability to reason about complex environments and orchestrate tool use. However, deploying multi-modal large language models (MLLMs) for tool use is often constrained by computational cost and inference latency, creating a pressing need for compact models that retain strong agentic capabilities. Training small multi-modal agents remains difficult: limited backbone capacity weakens multi-step reasoning, reward signals for tool use are often sparse and brittle, and naive distillation can fail to transfer the procedural knowledge required for reliable tool invocation and grounding. In this paper, we propose a two-stage self-evolutionary knowledge distillation framework that equips small MLLMs with robust and adaptive tool-use behaviors. Our method combines (i) mutual information-guided trajectory distillation, which selectively transfers high-utility segments of agentic trajectories from a larger teacher, and (ii) reinforcement-driven policy evolution with iterative teacher feedback. To stabilize learning and prevent semantic collapse, we introduce weighted semantic objectives and iteratively expand competence through error-driven optimization, hybrid experience replay, and group-relative policy refinement with multi-dimensional rewards over answer correctness, invocation validity, and tool effectiveness. Integrated with interactive tool modules, our approach enables small models to achieve strong performance across diverse tool-use benchmarks. Comprehensive experiments show consistent improvements over single-pass distillation and RL baselines. Overall, our framework provides a practical path to deploy efficient multi-modal agents without sacrificing tool-use reliability.",
+      "first_checked_at": "2026-10-05T08:52:15+00:00",
+      "last_checked_at": "2026-10-05T08:52:15+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md"
+      ],
+      "title": "Self-Evolutionary Reinforced Knowledge Distillation for Multi-Modal Tool-Use Agents"
+    },
+    "DOI:10.1145/3770855.3817799": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3770855.3817799",
+      "identity_tokens": [
+        "DOI:10.1145/3770855.3817799"
+      ],
+      "reason": "Deep learning compilers like torch.compile accelerate GNNs through operator fusion and computation reordering, yet often introduce numerical instability that causes models to diverge under hyperparameters that work in eager mode. We trace this fragility to the interaction between compiler optimizations and GNN structure. Compilers reorder floating-point additions assuming associativity, but rounding errors from different summation orders, though typically negligible, can be catastrophically amplified by ill-conditioned computations. We show that GNN neighbor aggregation is structurally prone to such ill-conditioning: power-law degree distributions create highly variable aggregation lengths, while normalized features induce message cancellation during summation. This yields a long-tailed distribution of condition numbers across nodes, where a critical minority of aggregations amplify rounding differences into macroscopic output deviations. Based on this analysis, we propose Numerics-Aware Graph Compilation (NAGC), which estimates per-aggregation numerical risk through lightweight profiling and selectively applies aggressive optimizations only to well-conditioned operations. Experiments on Open Graph Benchmark datasets show that NAGC preserves over 95% of compilation speedups while reducing numerical deviation by 10 to 100 times and eliminating compilation-induced training failures.",
+      "first_checked_at": "2026-10-05T08:52:15+00:00",
+      "last_checked_at": "2026-10-05T08:52:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "When Compilation Breaks Your GNN: A Numerical Stability Perspective"
     }
   }
 }

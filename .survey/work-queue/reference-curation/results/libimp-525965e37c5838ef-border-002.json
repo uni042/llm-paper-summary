@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-525965e37c5838ef-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3770855.3817650",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3770855.3817650",
+    "identity_tokens": [
+      "DOI:10.1145/3770855.3817650"
+    ],
+    "reason": "The efficiency objective is relevant, but primary full-text evidence is required to establish actual inference savings and accuracy tradeoffs.",
+    "first_checked_at": "2026-10-05T08:52:13+00:00",
+    "last_checked_at": "2026-10-05T08:52:13+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+    ],
+    "title": "Think Less, Act Warranted: Efficient Tool-Integrated Reasoning via Dual-Efficiency Regularization"
+  },
+  "processed_at": "2026-10-05T08:52:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-525965e37c58",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
