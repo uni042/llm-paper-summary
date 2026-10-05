@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-fc01396d67554c16-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2506.13674",
+  "reason": "Parameter-Efficient Fine-Tuning (PEFT) methods have become crucial for rapidly adapting large language models (LLMs) to downstream tasks. Prefix-Tuning, an early and effective PEFT technique, demonstrated the ability to achieve performance comparable to full fine-tuning with significantly reduced computational and memory overhead. However, despite its earlier success, its effectiveness in training modern state-of-the-art LLMs has been very limited. In this work, we demonstrate empirically that prefix-tuning underperforms on LLMs because of an inherent tradeoff between the contribution of the input prompt and the parameterized prefix within the attention head. This motivates us to introduce PrefixMemory-Tuning, an architecture that generalizes the principles of prefix-tuning while addressing its shortcomings by shifting the prefix module out of the attention head itself and improving its expressiveness. Our experiments show that, across diverse benchmarks, PrefixMemory-Tuning consistently outperforms existing prefix-tuning methods. Notably, it achieves competitive performance with modern PEFTs on several general benchmarks, highlighting a potential extension of prefix-tuning approaches to become state-of-the-art. Our findings suggest that by overcoming its inherent limitations, prefix-tuning can remain a competitive and relevant research direction in the landscape of parameter-efficient LLM adaptation.",
+  "title": "PrefixMemory-Tuning: Modernizing Prefix-Tuning by Decoupling the Prefix from Attention",
+  "identity_tokens": [
+    "arXiv:2506.13674"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fc01396d6755",
+  "source_precheck_request_id": null
+}
