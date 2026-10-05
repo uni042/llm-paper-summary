@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9b6ff8d54de99615-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.24763",
+  "reason": "Recent years have witnessed a growing interest in AI-aided Kalman filters. While emerging methodologies, such as KalmanNet, were shown to facilitate tracking in partially known state-space models, they are not directly applicable when the underlying dynamics is unknown. To overcome this limitation, we extend the KalmanNet philosophy to the unknown-dynamics regime by developing blind Kalman filtering frameworks that learn both the predictor and the correction gain from data, assuming that the state-evolution function and the noise statistics are both unavailable. To this end, we first introduce a task-aware neural Kalman filtering framework, Blind-KalmanNet, which carries the learning principle of the Kalman gain into the prediction step through a two-head neural architecture that jointly learns a state-dependent linear surrogate and the Kalman gain from data. Building on this formulation, we then develop our main framework, Koopman-aided Blind-KalmanNet, which incorporates Koopman operator theory to lift the unknown dynamics into a latent space where the state evolves linearly. The lifted linear predictor integrates seamlessly into the Blind-KalmanNet structure: the pre-trained deep Koopman network serves as a globally structured predictor, augmented by the task-aware residual surrogate and the learned Kalman gain inherited from Blind-KalmanNet. Extensive experiments demonstrate that the proposed frameworks achieve competitive performance against baselines, with Koopman-aided Blind-KalmanNet attaining the best accuracy across all considered settings.",
+  "title": "Neural Kalman Filtering for Unknown Dynamics: Task-Aware Learning with a Koopman Backbone",
+  "identity_tokens": [
+    "arXiv:2609.24763"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b6ff8d54de9",
+  "source_precheck_request_id": null
+}
