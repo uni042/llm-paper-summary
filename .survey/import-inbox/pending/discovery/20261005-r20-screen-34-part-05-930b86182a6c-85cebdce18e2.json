@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-34-part-05-930b86182a6c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02050",
+      "identity_tokens": [
+        "arXiv:2608.02050"
+      ],
+      "title": "TextNCA: Neural Cellular Automata for Language Modeling via Hierarchical Local Attention",
+      "reason": "The body reports 53k tokens/s for Hier-TextNCA versus 138k tokens/s for Transformer-6L at batch 32 / length 512, and says TextNCA is not computationally Pareto-superior at this scale. Its test-time iteration knob carries substantial perplexity cost.",
+      "source_url": "https://arxiv.org/abs/2608.02050",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02091",
+      "identity_tokens": [
+        "arXiv:2608.02091"
+      ],
+      "title": "One QK Channel, Many Sources: Tracing Low-Precision Attention Collapse",
+      "reason": "The abstract diagnoses numerical attention collapse during low-precision Transformer training; it does not address inference/serving.",
+      "source_url": "https://arxiv.org/abs/2608.02091",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02100",
+      "identity_tokens": [
+        "arXiv:2608.02100"
+      ],
+      "title": "From Information to Delegation: Mapping Human-AI Financial Decision Making",
+      "reason": "The study measures human delegation in financial AI use from interaction logs, not a model inference optimization.",
+      "source_url": "https://arxiv.org/abs/2608.02100",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02110",
+      "identity_tokens": [
+        "arXiv:2608.02110"
+      ],
+      "title": "IACM-RL: Intent-Aware Context Management and Reinforcement Learning for Complex Tool Invocation under Dynamic Intent Fluctuations",
+      "reason": "IACM-RL focuses on tool-intent robustness and training trajectories for agent API execution, not model-serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2608.02110",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02129",
+      "identity_tokens": [
+        "arXiv:2608.02129"
+      ],
+      "title": "PromptPath: Prompt-Adaptive Computational Pathways for In-Context Learning",
+      "reason": "PromptPath changes computational pathways for in-context learning/interpretability, with no efficiency objective or inference cost result in the abstract.",
+      "source_url": "https://arxiv.org/abs/2608.02129",
+      "first_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "last_checked_at": "2026-10-05T07:13:35.476491+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
