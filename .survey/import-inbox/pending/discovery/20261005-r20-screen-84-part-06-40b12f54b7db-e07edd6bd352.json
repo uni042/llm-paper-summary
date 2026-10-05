@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-84-part-06-40b12f54b7db",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00977",
+      "identity_tokens": [
+        "arXiv:2502.00977"
+      ],
+      "title": "Context-Aware Hierarchical Merging for Long Document Summarization",
+      "reason": "Context-aware hierarchical merging improves factuality in long-document summarization; the reported outcome is summarization quality, not reduced inference cost.",
+      "source_url": "https://arxiv.org/abs/2502.00977",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.18069",
+      "identity_tokens": [
+        "arXiv:2412.18069"
+      ],
+      "title": "Improving Factuality with Explicit Working Memory",
+      "reason": "EWE adds explicit working memory and retrieval feedback to improve factuality in long-form generation; the abstract reports quality gains, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2412.18069",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08970",
+      "identity_tokens": [
+        "arXiv:2410.08970"
+      ],
+      "title": "NoVo: Norm Voting off Hallucinations with Attention Heads in Large Language Models",
+      "reason": "NoVo uses attention-head norms for inference-only factuality voting and reports accuracy gains; it does not establish reduced latency, compute, memory, or serving cost.",
+      "source_url": "https://arxiv.org/abs/2410.08970",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.03865-ffn-skipllm-a-hidden-gem-for-autoregressive-decoding-with-adaptive-feed-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04808",
+      "identity_tokens": [
+        "arXiv:2410.04808"
+      ],
+      "title": "LPZero: Language Model Zero-cost Proxy Search from Zero",
+      "reason": "LPZero searches zero-cost proxies for neural architecture ranking and evaluates downstream ranking quality; its efficiency target is NAS search, not deployed LLM inference.",
+      "source_url": "https://arxiv.org/abs/2410.04808",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/MM.2024.3426478",
+      "identity_tokens": [
+        "DOI:10.1109/MM.2024.3426478"
+      ],
+      "title": "Data Center Power and Energy Management: Past, Present, and Future",
+      "reason": "This article surveys cloud data-center power and energy management broadly; the abstract does not establish a specific LLM inference/serving method or result.",
+      "source_url": "https://doi.org/10.1109/MM.2024.3426478",
+      "first_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "last_checked_at": "2026-10-05T11:52:44.683290+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    }
+  ]
+}
