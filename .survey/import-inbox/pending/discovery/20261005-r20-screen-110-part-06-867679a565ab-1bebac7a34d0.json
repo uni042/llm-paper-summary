@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-110-part-06-867679a565ab",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06043",
+      "identity_tokens": [
+        "arXiv:2602.06043"
+      ],
+      "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+      "reason": "Shared LoRA subspaces target continual adaptation and training efficiency; no inference-serving optimization is evaluated.",
+      "source_url": "https://arxiv.org/abs/2602.06043",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.04101",
+      "identity_tokens": [
+        "arXiv:2602.04101"
+      ],
+      "title": "Interfaze: The Future of AI is built on Task-Specific Small Models",
+      "reason": "The body does not isolate or quantify end-to-end inference-cost/latency savings; the system-level efficiency relevance remains weak.",
+      "source_url": "https://arxiv.org/abs/2602.04101",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.04870",
+      "identity_tokens": [
+        "arXiv:2602.04870"
+      ],
+      "title": "Multi-Head LatentMoE and Head Parallel: Communication-Efficient and Deterministic MoE Parallelism",
+      "reason": "Multi-Head LatentMoE and Head Parallel reduce communication and accelerate distributed MoE training, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2602.04870",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09044",
+      "identity_tokens": [
+        "arXiv:2602.09044"
+      ],
+      "title": "Beyond the Utterance: An Empirical Study of Very Long Context Speech Recognition",
+      "reason": "This work trains and evaluates long-context speech-recognition models for quality gains; it does not present an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2602.09044",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.06591",
+      "identity_tokens": [
+        "arXiv:2603.06591"
+      ],
+      "title": "What Makes Position Zero Special? A Mechanistic Study of Position Zero Attention Sinks in LLMs",
+      "reason": "The mechanistic study accelerates attention-sink formation during pretraining and measures downstream quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.06591",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
