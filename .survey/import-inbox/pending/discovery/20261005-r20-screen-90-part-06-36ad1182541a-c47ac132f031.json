@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-90-part-06-36ad1182541a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20925",
+      "identity_tokens": [
+        "arXiv:2505.20925"
+      ],
+      "title": "Multi-objective Large Language Model Alignment with Hierarchical Experts",
+      "reason": "The paper studies preference alignment/reward optimization using experts and routing; it does not establish inference-time efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.20925",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.14687",
+      "identity_tokens": [
+        "arXiv:2505.14687"
+      ],
+      "title": "Grouping First, Attending Smartly: Training-Free Acceleration for Diffusion Transformers",
+      "reason": "This paper concerns diffusion-transformer image/video generation rather than LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2505.14687",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12200",
+      "identity_tokens": [
+        "arXiv:2505.12200"
+      ],
+      "title": "CompBench: Benchmarking Complex Instruction-guided Image Editing",
+      "reason": "While real-world applications increasingly demand intricate scene manipulation, existing instruction-guided image editing benchmarks often oversimplify task complexity and lack comprehensive, fine-grained instructions. To bridge this gap, we introduce CompBench, a large-scale benchmark specifically …",
+      "source_url": "https://arxiv.org/abs/2505.12200",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.00876-dynamic-llava-efficient-multimodal-large-language-models-via-dynamic-vis.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11783",
+      "identity_tokens": [
+        "arXiv:2505.11783"
+      ],
+      "title": "Efficient Vector Search on Disaggregated Memory with d-HNSW",
+      "reason": "This is adjacent retrieval infrastructure rather than an LLM inference/serving optimization; whether to include such systems is unresolved for this scope.",
+      "source_url": "https://arxiv.org/abs/2505.11783",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.07775",
+      "identity_tokens": [
+        "arXiv:2505.07775"
+      ],
+      "title": "Must Read: A Comprehensive Survey of Computational Persuasion",
+      "reason": "This is a survey of computational persuasion and AI persuasion risks, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2505.07775",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ]
+    }
+  ]
+}
