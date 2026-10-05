@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-91d3d00c4f90cba0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icws72778.2026.00165",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icws72778.2026.00165",
+    "identity_tokens": [
+      "DOI:10.1109/icws72778.2026.00165"
+    ],
+    "reason": "prompt catalog compression/caching reduces input-token cost, but the work is about MCP service descriptions and provider billing rather than inference-engine/runtime performance.",
+    "first_checked_at": "2026-10-05T11:24:46+00:00",
+    "last_checked_at": "2026-10-05T11:24:46+00:00",
+    "linked_from": [
+      "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
+      "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+    ],
+    "title": "Lean Service Catalogs for Agentic Systems: A Study of Schema Compression and Caching Economics"
+  },
+  "processed_at": "2026-10-05T11:24:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-91d3d00c4f90",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

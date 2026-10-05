@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d6ea0d9865ecd992-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/imsa70415.2026.11700297",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/imsa70415.2026.11700297",
+    "identity_tokens": [
+      "DOI:10.1109/imsa70415.2026.11700297"
+    ],
+    "reason": "要旨は教育/RAG/assistant/LLM applicationの利用・機能評価を扱い、inference engine、serving、runtime効率化を研究対象にしていない。 Primary abstract: Access to legal information is critical for equitable justice, yet the volume and technical density of case law create significant barriers for practitioners and researchers. Large language models (LLMs) applied to legal question answering risk generating plausible but unsupported claims—hallucination—particularly without grounding in primary sources. This p",
+    "first_checked_at": "2026-10-05T11:24:47+00:00",
+    "last_checked_at": "2026-10-05T11:24:47+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "Hybrid Sparse-Dense RAG for Citation-Grounded Legal QA Over SCOTUS Case Law"
+  },
+  "processed_at": "2026-10-05T11:24:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d6ea0d9865ec",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
