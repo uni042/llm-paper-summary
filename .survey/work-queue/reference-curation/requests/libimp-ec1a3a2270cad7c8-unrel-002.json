@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ec1a3a2270cad7c8-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.15032",
+  "reason": "Live free-viewpoint visualization of real humans is critical for immersive communication and interactive digital experiences. Existing methods either rely on computationally expensive optimization or require calibrated cameras and low-resolution inputs, making real-time high-resolution deployment impractical. In this work, we present Tele360, the first real-time feed-forward system for dynamic human reconstruction and live free-viewpoint visualization from sparse, unposed RGB streams. Our system jointly estimates camera poses and reconstructs a dynamic 3D Gaussian representation for each time instance in a single forward pass. To achieve this, we start by designing a lightweight sparsity-aware multi-view transformer backbone that tokenizes foreground human regions while preserving global context through a shared scene token. We then employ a fully transformer-based Gaussian decoder to mitigate convolution-induced over-smoothing while keeping decoding sparse and efficient. In addition, we introduce a hybrid feature pyramid that injects multi-scale appearance cues into geometry prediction. We further introduce a lightweight differentiable Levenberg-Marquardt camera refinement layer to enhance multi-view consistency and geometric alignment. Moreover, to stabilize learning under sparse, unposed inputs, we transfer multi-view geometry priors from a large visual-geometry foundation model via teacher-student distillation. Finally, the predicted Gaussian maps are streamed with video codecs to remote devices for interactive free-viewpoint rendering. Extensive experiments show that Tele360 achieves state-of-the-art visual quality on studio benchmarks while supporting real-time 2K input-to-rendering at over 25 FPS on a single consumer GPU. Additional captured sequences illustrate its performance across varied subjects, clothing, and motions under our multi-camera setup.",
+  "title": "Tele360: Real-Time Feed-Forward Human Reconstruction from Sparse Unposed Cameras",
+  "identity_tokens": [
+    "arXiv:2609.15032"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ec1a3a2270ca",
+  "source_precheck_request_id": null
+}

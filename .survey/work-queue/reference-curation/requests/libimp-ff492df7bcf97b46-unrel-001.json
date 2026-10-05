@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ff492df7bcf97b46-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.15433",
+  "reason": "Tokenization determines both the physiological content presented to an ECG Transformer and the sequence over which attention operates. We compare eight tokenization strategies across Transformer, Informer, Reformer, and FEDformer on the nine-label CPSC2018 classification task. The input projection and principal backbone capacity are controlled to isolate the effect of token construction. Median-beat and HeartLang tokenization achieve mean macro-AUCs of 0.893 and 0.889 across the four backbones, compared with 0.822 and 0.824 for point-wise and patch-wise tokenization. Pooling the two physiology-aware representations yields an 8.2% relative improvement in macro-AUC. They also reduce mean sequence length from 1,250 to 158 tokens and mean peak training memory from 5.21 to 0.27 GB. The results show that aligning tokens with ECG morphology can improve both predictive performance and memory efficiency without increasing backbone capacity. The source code is available on https://github.com/LeeJarvis996/ecg_tokenizer.",
+  "title": "On the role of the tokenizer in ECG transformer models",
+  "identity_tokens": [
+    "arXiv:2609.15433"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff492df7bcf9",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-ff492df7bcf97b46-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.15664",
+  "reason": "Amid the rapid advancement of physical-world intelligence, cloud-edge collaborative large language models (LLMs) have emerged as a promising roadmap for practical LLM deployment. However, existing cloud-edge paradigms struggle to balance global consensus with local personalization, which fails to satisfy the need for a unified knowledge foundation on the cloud and domain-specific adaptation at the edge. To address this, we introduce, for the first time, a personalized bilevel optimization framework that formalizes cloud-edge LLM collaboration as a dual structure: the upper level optimizes edge-side personalization, while the lower level governs cloud-side knowledge transfer, reaching cloud-edge evolving in coordination. We then propose CIDERS, an efficient solver that decomposes the model into a learnable backbone and a messenger. While the cloud performs knowledge transfer to the learnable backbone, the key lies in embedding global trajectories into each local personalization step via consensus-variate correction to reconcile personalization with consensus. We provide a comprehensive theoretical analysis, including a geometric characterization of the local trajectory and a full convergence guarantee, revealing an explicit trade-off structure between personalization and global convergence. Extensive experiments demonstrate that CIDERS consistently outperforms competitive baselines on the compressed edge path, with 3.1x and 1.7x gains on mathematical reasoning and code generation, respectively, and a 10\\% relative gain on instruction metrics. Mechanism experiments attribute these gains to early consensus-corrected coordination and task-aware distillation. Overall, CIDERS offers a viable path toward consensus-guided continuous personalization in cloud-edge LLM systems.",
+  "title": "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
+  "identity_tokens": [
+    "arXiv:2609.15664"
+  ],
+  "linked_from": [
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.17052-specedge-edge-assisted-speculative-serving.md",
+    "papers/inference/99-other-inference-systems/2024-2410.10759-splitllm-collaborative-inference-of-llms-for-model-placement-and-through.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff492df7bcf9",
+  "source_precheck_request_id": null
+}
