@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-02ef5da2a38176f5-unrel-010",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2003.12462",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2003.12462",
+    "identity_tokens": [
+      "arXiv:2003.12462"
+    ],
+    "reason": "画像内textを読んでcaptionを生成するTextCaps datasetとbenchmarkを提案するvision-language能力研究。LLM推論system効率化を対象としない。",
+    "first_checked_at": "2026-10-05T01:01:02+00:00",
+    "last_checked_at": "2026-10-05T02:52:34+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+    ],
+    "title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension"
+  },
+  "processed_at": "2026-10-05T02:52:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-02ef5da2a381",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

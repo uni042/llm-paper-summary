@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T02:49:33+00:00",
-  "record_count": 720,
+  "updated_at": "2026-10-05T02:52:35+00:00",
+  "record_count": 717,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -6987,20 +6987,6 @@
       ],
       "title": "Ansor : Generating High-Performance Tensor Programs for Deep Learning"
     },
-    "arXiv:2408.08921": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2408.08921",
-      "identity_tokens": [
-        "arXiv:2408.08921"
-      ],
-      "reason": "GraphRAG surveyはretrieval/generation構成、評価法、効率化の研究課題を整理し、retrieved contextのcompressionによるinference acceleration等をfuture directionとして述べる。既存提案のserving効率を実証する一次研究ではなく、survey自体に具体的な改善測定がないためborderline。",
-      "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md"
-      ],
-      "title": "Graph Retrieval-Augmented Generation: A Survey"
-    },
     "DOI:10.1145/2749469.2749475": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1145/2749469.2749475",
@@ -7057,34 +7043,6 @@
         "papers/inference/14-agentic-inference-serving-runtime/2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md"
       ],
       "title": "Multiple-query optimization"
-    },
-    "DOI:10.1162/neco.1992.4.1.131": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1162/neco.1992.4.1.131",
-      "identity_tokens": [
-        "DOI:10.1162/neco.1992.4.1.131"
-      ],
-      "reason": "指定MIT Press DOIを開いたがprimary sourceを取得できず、usable abstractを確認できなかった。",
-      "first_checked_at": "2026-10-05T01:01:02+00:00",
-      "last_checked_at": "2026-10-05T01:01:02+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
-      ],
-      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks"
-    },
-    "DOI:10.1145/3447579": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1145/3447579",
-      "identity_tokens": [
-        "DOI:10.1145/3447579"
-      ],
-      "reason": "本文はrequest-sequence cachingでmachine-learned adviceを用いるonline eviction strategyの理論保証とBerkeley/CitiBike trace評価を扱う。LLM KV cache、prompt cache、model-serving workloadへの適用や実測はなく、一般cache policyとの概念的隣接に留まるためborderline。",
-      "first_checked_at": "2026-10-05T01:03:25+00:00",
-      "last_checked_at": "2026-10-05T01:03:25+00:00",
-      "linked_from": [
-        "papers/inference/14-agentic-inference-serving-runtime/2026-2606.16824-cachewise-understanding-workloads-and-optimizing-kvcache-management-for-efficiently-serving-llm-coding-agents.md"
-      ],
-      "title": "Competitive caching with machine learned advice"
     },
     "arXiv:2404.09516": {
       "classification": "borderline",

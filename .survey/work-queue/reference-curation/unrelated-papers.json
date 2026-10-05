@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:49:33+00:00",
-  "record_count": 2075,
+  "updated_at": "2026-10-05T02:52:35+00:00",
+  "record_count": 2079,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -21096,9 +21096,9 @@
       "identity_tokens": [
         "arXiv:2308.07107"
       ],
-      "reason": "Abstract surveys LLM methods for information retrieval; the focus is retrieval applications rather than inference efficiency or serving.",
+      "reason": "LLMをquery rewriting、retrieval、reranking、reader、search agentへ利用する情報検索分野の包括survey。IR手法の整理が主題で、LLM推論runtime・memory・servingの新規最適化方式を提案しない。",
       "first_checked_at": "2026-10-05T00:53:14+00:00",
-      "last_checked_at": "2026-10-05T00:53:14+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md",
         "papers/inference/99-other-inference-systems/2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md"
@@ -21167,9 +21167,9 @@
       "identity_tokens": [
         "arXiv:2303.11381"
       ],
-      "reason": "Abstract presents multimodal prompting for reasoning and action with ChatGPT; it does not study inference efficiency or serving.",
+      "reason": "ChatGPTにvision expert/tool descriptionsをpromptし、必要な外部vision modelを呼び出してmultimodal reasoning/action能力を拡張するagent capability研究。推論systemの速度・memory・throughput最適化は主題ではない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.11590-epd-serve-ascend-multimodal-disaggregation.md"
       ],
@@ -21196,9 +21196,9 @@
       "identity_tokens": [
         "arXiv:2104.06599"
       ],
-      "reason": "Abstract studies mixtures of soft prompts for querying language models, with the contribution centered on task adaptation rather than inference-time efficiency or serving.",
+      "reason": "複数soft promptを学習・混合してfrozen language modelからknowledgeを引き出すprompt learning研究。最終評価は知識抽出/QA能力で、推論runtime・serving効率化ではない。",
       "first_checked_at": "2026-10-05T00:55:43+00:00",
-      "last_checked_at": "2026-10-05T00:55:43+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md"
       ],
@@ -21504,9 +21504,9 @@
       "identity_tokens": [
         "arXiv:1511.02301"
       ],
-      "reason": "arXiv要旨はchildren’s books読解時のlanguage model memory representationとsemantic-word prediction性能を比較する。",
+      "reason": "children's booksの意味語予測とCNN QAでexplicit memory representationの粒度を評価するlanguage modeling/QA能力研究。推論runtime・serving最適化を目的としない。",
       "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
       ],
@@ -21516,11 +21516,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.18653/v1/2022.naacl-main.201",
       "identity_tokens": [
-        "DOI:10.18653/v1/2022.naacl-main.201"
+        "DOI:10.18653/v1/2022.naacl-main.201",
+        "arXiv:2110.15943"
       ],
-      "reason": "arXiv要旨はpretrained LMを142 NLP taskでin-context learning向けにmeta-trainするframeworkを提案する。",
+      "reason": "142 NLP datasetでmeta-trainingし、test時のin-context learning能力を改善する学習framework。推論時parameter update不要という性質はあるが、runtime・memory・serving効率化を最終適用先としない。",
       "first_checked_at": "2026-10-05T01:01:01+00:00",
-      "last_checked_at": "2026-10-05T01:01:01+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
       ],
@@ -21532,9 +21533,9 @@
       "identity_tokens": [
         "arXiv:1605.04711"
       ],
-      "reason": "arXiv要旨は+1/0/-1 ternary weightsによるmemory/computation-efficient networkとcompressionを報告するが、評価対象はMNIST/CIFAR-10/ImageNet等のvision tasksである。",
+      "reason": "重みを{-1,0,+1}へternary化してCNN等のstorage/computationを削減する低精度ニューラルネットワーク研究。LLM/Transformer推論への適用・評価がなく、現行LLM推論圧縮範囲外。",
       "first_checked_at": "2026-10-05T01:01:02+00:00",
-      "last_checked_at": "2026-10-05T01:01:02+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
         "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md"
@@ -21547,9 +21548,9 @@
       "identity_tokens": [
         "arXiv:2409.02813"
       ],
-      "reason": "arXiv要旨はmultimodal understanding/reasoning能力を測るMMMU-Pro benchmarkとOCR/CoT評価を紹介する。",
+      "reason": "MMMUを強化し、選択肢増加・vision-only input等でmultimodal modelの理解・reasoningを厳格評価するbenchmark研究。推論runtime・memory・serving最適化を提案しない。",
       "first_checked_at": "2026-10-05T01:01:02+00:00",
-      "last_checked_at": "2026-10-05T01:01:02+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
@@ -21563,9 +21564,9 @@
       "identity_tokens": [
         "arXiv:2003.12462"
       ],
-      "reason": "arXiv要旨はimage captioning with reading comprehension用TextCaps datasetと基準手法を紹介する。",
+      "reason": "画像内textを読んでcaptionを生成するTextCaps datasetとbenchmarkを提案するvision-language能力研究。LLM推論system効率化を対象としない。",
       "first_checked_at": "2026-10-05T01:01:02+00:00",
-      "last_checked_at": "2026-10-05T01:01:02+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
       ],
@@ -21577,9 +21578,9 @@
       "identity_tokens": [
         "arXiv:2212.10071"
       ],
-      "reason": "arXiv要旨は大規模teacherからreasoning例を生成し小型LMをFine-tune-CoTで学習する方法を扱う。",
+      "reason": "大規模teacher LLMが生成したchain-of-thought reasoning sampleで小型modelをfine-tuneするFine-tune-CoT学習法。deployment model size低減の動機はあるが、主要貢献・評価はreasoning distillation/fine-tuningで推論runtime system最適化ではない。",
       "first_checked_at": "2026-10-05T01:01:02+00:00",
-      "last_checked_at": "2026-10-05T01:01:02+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
       ],
@@ -21589,11 +21590,12 @@
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/wacvw60836.2024.00106",
       "identity_tokens": [
-        "DOI:10.1109/wacvw60836.2024.00106"
+        "DOI:10.1109/wacvw60836.2024.00106",
+        "arXiv:2311.12320"
       ],
-      "reason": "arXiv要旨はautonomous driving/transportation/map systems向けmultimodal LLMのsurveyで、tools/datasets/challengesを整理する。",
+      "reason": "MLLMのautonomous driving、transportation、map応用、dataset/benchmark、課題を整理する応用survey。LLM推論runtime・memory・serving効率化の新規方式ではない。",
       "first_checked_at": "2026-10-05T01:03:25+00:00",
-      "last_checked_at": "2026-10-05T01:03:25+00:00",
+      "last_checked_at": "2026-10-05T02:52:35+00:00",
       "linked_from": [
         "papers/inference/07-kv-cache-optimization-compression/2024-2412.19442-a-survey-on-large-language-model-acceleration-based-on-kv-cache-manageme.md"
       ],
@@ -21605,9 +21607,9 @@
       "identity_tokens": [
         "arXiv:1912.10077"
       ],
-      "reason": "arXiv要旨はTransformerのsequence-to-sequence関数に対するuniversal approximation propertyを証明し、簡易attention alternativesを評価する。",
+      "reason": "Transformerがcontinuous sequence-to-sequence functionのuniversal approximatorであることを理論証明しself-attention/FFNの表現力を分析する理論研究。推論system効率化を最終適用先としない。",
       "first_checked_at": "2026-10-05T01:03:25+00:00",
-      "last_checked_at": "2026-10-05T01:03:25+00:00",
+      "last_checked_at": "2026-10-05T02:52:35+00:00",
       "linked_from": [
         "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
       ],
@@ -30006,6 +30008,56 @@
       "last_checked_at": "2026-10-05T02:49:33+00:00",
       "linked_from": [],
       "title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+    },
+    "arXiv:2408.08921": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.08921",
+      "identity_tokens": [
+        "arXiv:2408.08921"
+      ],
+      "reason": "graph dataとretrieval-augmented generationを組み合わせるGraphRAGのtaxonomy、applications、benchmarks、課題を整理するsurvey。LLM inference runtime/serving効率化の新方式ではない。",
+      "first_checked_at": "2026-10-05T02:52:34+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
+      "linked_from": [],
+      "title": "Graph Retrieval-Augmented Generation: A Survey"
+    },
+    "DOI:10.1162/neco.1992.4.1.131": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/neco.1992.4.1.131",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1992.4.1.131"
+      ],
+      "reason": "2つのfeedforward networkを用い、一方が他方のfast weightをcontext依存で更新してsequence learningと短期記憶を実現する1992年の学習方式。後年のlinear attentionとの理論的関連はあるが、LLM/Transformer推論を最終適用先とするsystem評価はない。",
+      "first_checked_at": "2026-10-05T02:52:34+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
+      "linked_from": [],
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks"
+    },
+    "DOI:10.1145/3458817.3476205": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3458817.3476205",
+      "identity_tokens": [
+        "DOI:10.1145/3458817.3476205",
+        "arXiv:2104.07857"
+      ],
+      "reason": "GPU/CPU/NVMeを階層利用して巨大modelのtraining stateをoffloadし、trillion-parameter級の学習を可能にするtraining system。512 V100で25 PFLOPS等、評価はtraining throughput/scalabilityであり推論は対象外。",
+      "first_checked_at": "2026-10-05T02:52:34+00:00",
+      "last_checked_at": "2026-10-05T02:52:34+00:00",
+      "linked_from": [],
+      "title": "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning"
+    },
+    "DOI:10.1145/3447579": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3447579",
+      "identity_tokens": [
+        "DOI:10.1145/3447579",
+        "arXiv:1802.05399"
+      ],
+      "reason": "machine-learned predictionを用いるonline caching algorithmのcompetitive ratioとrobustnessを研究する一般caching理論。後続KV cache管理への基礎的引用はあり得るが、LLM推論を最終適用先とする方式・評価ではない。",
+      "first_checked_at": "2026-10-05T02:52:35+00:00",
+      "last_checked_at": "2026-10-05T02:52:35+00:00",
+      "linked_from": [],
+      "title": "Competitive caching with machine learned advice"
     }
   }
 }
