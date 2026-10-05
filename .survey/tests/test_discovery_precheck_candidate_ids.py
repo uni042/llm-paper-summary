@@ -38,9 +38,9 @@ class DiscoveryPrecheckCandidateIdTests(unittest.TestCase):
     def tearDown(self) -> None:
         self.tmp.cleanup()
 
-    def _request(self, identifiers: list[str]) -> Path:
+    def _request(self, identifiers: list[str], *, reconsider_identifiers: list[str] | None = None) -> Path:
         path = self.root / "request.json"
-        path.write_text(json.dumps({
+        payload = {
             "schema_version": 3,
             "operation": "precheck_discovery_candidates",
             "request_id": "candidate-id-run-1",
@@ -50,7 +50,10 @@ class DiscoveryPrecheckCandidateIdTests(unittest.TestCase):
             "provider": "candidate_id_lookup",
             "source_url": "identifier://approved-public-apis",
             "identifiers": identifiers,
-        }), encoding="utf-8")
+        }
+        if reconsider_identifiers is not None:
+            payload["reconsider_identifiers"] = reconsider_identifiers
+        path.write_text(json.dumps(payload), encoding="utf-8")
         return path
 
     def test_mixed_batch_preserves_per_id_results_and_only_allows_verified_records(self) -> None:
@@ -78,6 +81,26 @@ class DiscoveryPrecheckCandidateIdTests(unittest.TestCase):
         self.assertEqual(result["snapshot_source_commit"], "main-snapshot-abc123")
         self.assertTrue(result["provider_exhausted"])
         self.assertEqual(result["stop_reason"], "EXPLICIT_IDENTIFIERS_PROCESSED")
+
+    def test_reconsidered_id_can_bypass_rejection_history_but_not_snapshot(self) -> None:
+        identity = "arXiv:2407.21028"
+        self.rejections.write_text(json.dumps({
+            "source": "immutable_discovery_submissions.rejected_candidates",
+            "records": {"id:" + identity: {"identity_tokens": ["id:" + identity]}},
+        }), encoding="utf-8")
+        lookup = [{
+            "requested_id": identity,
+            "status": "found",
+            "record": {"canonical_id": identity, "arxiv_id": "2407.21028", "title": "Reconsider"},
+            "lookup_route": "semantic_scholar_batch",
+        }]
+        with patch.object(precheck.discovery_provider_adapter, "lookup_identifiers", return_value=lookup):
+            result = precheck.process_request(
+                self._request([identity], reconsider_identifiers=[identity]),
+                snapshot_dir=self.snapshot, rejection_ledger_path=self.rejections, repo_root=self.root,
+            )
+        self.assertEqual(result["candidate_statuses"][0]["status"], "allowed")
+        self.assertEqual(result["reconsider_identifiers"], [identity])
 
     def test_snapshot_duplicate_is_statused_but_excluded_from_allowed_records(self) -> None:
         ids = ["arXiv:2407.21018"]
