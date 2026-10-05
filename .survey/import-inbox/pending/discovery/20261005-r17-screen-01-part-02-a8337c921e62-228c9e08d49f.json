@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-01-part-02-a8337c921e62",
+  "reference_main_sha": "c4d61b3ff8340bb2e2f1418f1d968365bf3a718c",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29831",
+      "identity_tokens": [
+        "arXiv:2608.29831"
+      ],
+      "title": "A^2Agent: Action-Aware Reinforcement Learning for Repository-Level Code Localization Agents",
+      "reason": "要旨は「Localizing issue-relevant code regions is a critical step in automated software engineering. However, due to their reliance on sparse trajectory-level signals, existing methods cannot identify which per-turn actions are effective and often discover correct code regions during exploration but fail to commit them. To address」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.29831",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29208",
+      "identity_tokens": [
+        "arXiv:2608.29208"
+      ],
+      "title": "AdaVLA: Adaptive Step Flow Matching for Training-free Acceleration of Vision-Language-Action Models",
+      "reason": "要旨は「Vision-Language-Action (VLA) models, built upon Vision-Language Models (VLMs), have significantly enhanced robotic capabilities by leveraging internet-scale knowledge and multimodal reasoning. However, the intensive computational overhead of VLAs constrains on-device deployment, hindering real-time responses to environmental」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.29208",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29296",
+      "identity_tokens": [
+        "arXiv:2608.29296"
+      ],
+      "title": "When Do Larger Batches Help Scale LLM Reinforcement Learning?",
+      "reason": "要旨は「Larger batches reduce the variance of stochastic gradients per update and are therefore often expected to accelerate training. Yet whether this statistical benefit translates into lower wall-clock time-to-target remains unclear, because each update consumes more samples and may take longer to execute. We study this tradeoff in」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.29296",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.29362",
+      "identity_tokens": [
+        "arXiv:2608.29362"
+      ],
+      "title": "Spectral Analysis for Sparse Matrix Computation: Insights and Potential",
+      "reason": "要旨は「Sparse computations are fundamental to scientific computing, graph analytics, and machine learning, yet their performance is highly sensitive to the diverse sparsity and patterns. This is because cache reuse, memory coalescing, and load balancing depend critically on the sparsity patterns. This work gives the first known」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.29362",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.27808",
+      "identity_tokens": [
+        "arXiv:2608.27808"
+      ],
+      "title": "CURA: Certified Runtime Alarms for Computer-Use Agents",
+      "reason": "要旨は「Self-report is the cheapest oversight channel a deployer has, and on capable computer-use agents (CUAs) it fails precisely where oversight matters. On 361 OSWorld tasks our pipeline, a read-only feasibility gate, a planner, and a GUI executor, reaches a mean task score of 82.9, above the 72.4 human reference, yet 64 of its 71」を扱い、対象契約のLLM inference/serving効率・推論時圧縮への寄与を示していない。",
+      "source_url": "https://arxiv.org/abs/2608.27808",
+      "first_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "last_checked_at": "2026-10-05T03:04:09.130341+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
