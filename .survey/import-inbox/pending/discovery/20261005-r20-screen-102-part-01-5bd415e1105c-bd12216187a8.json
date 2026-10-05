@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-102-part-01-5bd415e1105c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.12355",
+      "identity_tokens": [
+        "arXiv:2503.12355"
+      ],
+      "title": "Atlas: Multi-Scale Attention Improves Long Context Image Modeling",
+      "reason": "Primary abstract: Image-only Atlas/Imagenet architecture, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2503.12355",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05029",
+      "identity_tokens": [
+        "arXiv:2503.05029"
+      ],
+      "title": "Continual Pre-training of MoEs: How robust is your router?",
+      "reason": "Primary abstract: MoE continual pretraining/router study; efficiency is training-only.",
+      "source_url": "https://arxiv.org/abs/2503.05029",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04153-mixture-of-a-million-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TPDS.2024.3522781",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2024.3522781"
+      ],
+      "title": "HpT: Hybrid Acceleration of Spatio-Temporal Attention Model Training on Heterogeneous Manycore Architectures",
+      "reason": "Primary abstract: Scientific-attention training accelerator, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/TPDS.2024.3522781",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.20695",
+      "identity_tokens": [
+        "arXiv:2502.20695"
+      ],
+      "title": "Scalable Overload-Aware Graph-Based Index Construction for 10-Billion-Scale Vector Similarity Search",
+      "reason": "Offline vector-index construction is retrieval infrastructure, not LLM execution; no online RAG or end-to-end serving latency is established.",
+      "source_url": "https://arxiv.org/abs/2502.20695",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.05676-piperag-fast-retrieval-augmented-generation-via-algorithm-system-co-desi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13785",
+      "identity_tokens": [
+        "arXiv:2502.13785"
+      ],
+      "title": "Helix-mRNA: A Hybrid Foundation Model For Full Sequence mRNA Therapeutics",
+      "reason": "Primary abstract: mRNA biological sequence model, not LLM deployment.",
+      "source_url": "https://arxiv.org/abs/2502.13785",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ]
+    }
+  ]
+}
