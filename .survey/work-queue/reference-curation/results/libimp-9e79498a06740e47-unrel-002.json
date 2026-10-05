@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9e79498a06740e47-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.38795",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.38795",
+    "identity_tokens": [
+      "arXiv:2609.38795"
+    ],
+    "reason": "Speculative-decoding drafter supervision/accepted-length improvement is a training method; the contribution and efficiency claim concern training compute, not a serving optimization.",
+    "first_checked_at": "2026-10-05T04:21:07+00:00",
+    "last_checked_at": "2026-10-05T04:21:07+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md"
+    ],
+    "title": "Recovering Off-Policy Supervision for Speculative Decoding"
+  },
+  "processed_at": "2026-10-05T04:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9e79498a0674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

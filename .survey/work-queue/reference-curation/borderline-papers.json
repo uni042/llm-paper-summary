@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T04:18:36+00:00",
-  "record_count": 859,
+  "updated_at": "2026-10-05T04:21:08+00:00",
+  "record_count": 863,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -12758,6 +12758,71 @@
         "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
       ],
       "title": "A Fully Sparse Transformer Accelerator With Hybrid-Grained Pipeline for 3-D Object Detection"
+    },
+    "arXiv:2609.38981": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38981",
+      "identity_tokens": [
+        "arXiv:2609.38981"
+      ],
+      "reason": "Primary contribution is reproducibility/correctness, with relative performance parity against a specific invariant mode but not an efficiency improvement over standard production defaults. Keep borderline for inference-scope adjacency.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Vosti: Specifying, Implementing, and Verifying Deterministic LLM Inference"
+    },
+    "arXiv:2609.38806": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38806",
+      "identity_tokens": [
+        "arXiv:2609.38806"
+      ],
+      "reason": "Potentially relevant alternative inference interface, but demonstrated contribution is task quality on constrained structured problems and the authors explicitly do not claim a speed/cost gain. Keep borderline rather than infer efficiency from the inference-time search method.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "title": "Blackboard Intelligence Can Surpass Autoregressive on Globally Constrained Problems"
+    },
+    "arXiv:2609.38699": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38699",
+      "identity_tokens": [
+        "arXiv:2609.38699"
+      ],
+      "reason": "Useful evidence about test-time budget accounting and policy boundary effects, but the paper is an observational controller/replay analysis rather than a demonstrated inference-efficiency optimization; its own results reject strong equal-compute or equivalence claims. Keep borderline for scope/claim strength.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Budget Boundary Effects in Test-Time Mathematical Reasoning"
+    },
+    "arXiv:2609.38757": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38757",
+      "identity_tokens": [
+        "arXiv:2609.38757"
+      ],
+      "reason": "There is a quantified inference-token outcome, but the mechanism is domain-specific policy training and the evidence is total tokens over a fixed 16-rollout algorithm-design process, not general inference/serving optimization or latency/energy. Retain as borderline unless downstream scope accepts training-based domain adaptation as inference-efficiency work.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Self-Evolving Algorithm-Design Agents: Escaping In-Context Evolutionary Stagnation via Population-Curated Policy Optimization"
     }
   }
 }

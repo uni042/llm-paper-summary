@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:18:36+00:00",
-  "record_count": 2499,
+  "updated_at": "2026-10-05T04:21:08+00:00",
+  "record_count": 2515,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -36193,6 +36193,253 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
       ],
       "title": "SWE-PDB: Teaching LLMs to Leverage Debugging Tools via Agentic Training"
+    },
+    "arXiv:2609.39056": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39056",
+      "identity_tokens": [
+        "arXiv:2609.39056"
+      ],
+      "reason": "Quantization targets world-action models/robot control, not LLM inference.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models"
+    },
+    "arXiv:2609.39058": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39058",
+      "identity_tokens": [
+        "arXiv:2609.39058"
+      ],
+      "reason": "RIS wireless benchmark/dataset; not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "A 3GPP-Compliant Benchmark Dataset for RIS-Aided Beyond 5G Networks"
+    },
+    "arXiv:2609.39066": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39066",
+      "identity_tokens": [
+        "arXiv:2609.39066"
+      ],
+      "reason": "Image-forgery-detection agent emphasizes detection/explanation quality; no inference-efficiency result.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Agentic Tool-Augmented Reasoning for Explainable Image Forgery Detection"
+    },
+    "arXiv:2609.39082": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39082",
+      "identity_tokens": [
+        "arXiv:2609.39082"
+      ],
+      "reason": "Adaptive spectral recurrent sequence model is evaluated on control/classification and training latency; not LLM inference.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Shared Phase and Retention Control for Efficient Adaptive Spectral Recurrence"
+    },
+    "arXiv:2609.39096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39096",
+      "identity_tokens": [
+        "arXiv:2609.39096"
+      ],
+      "reason": "KV pruning targets autoregressive video diffusion, not language-model inference.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ],
+      "title": "DeCoPrune: Efficient KV-Cache Pruning for Autoregressive Video Diffusion via Denoising Consistency"
+    },
+    "arXiv:2609.38830": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38830",
+      "identity_tokens": [
+        "arXiv:2609.38830"
+      ],
+      "reason": "Sparse-attention work is a privacy-leakage/security attack study, not an inference optimization.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.19707-infinigen-dynamic-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
+        "papers/inference/13-sparse-attention/2024-2410.13276-seerattention.md",
+        "papers/inference/13-sparse-attention/2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "SparLeak: Privacy Leakage from Sparse Attention in LLM Inference on Shared GPUs"
+    },
+    "arXiv:2609.38980": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38980",
+      "identity_tokens": [
+        "arXiv:2609.38980"
+      ],
+      "reason": "Compact radar fault-diagnosis model plus language interface is a domain-specific classifier; not LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "SCORE-LM: State-Space Radar Representations with Language Models for Fault Diagnosis"
+    },
+    "arXiv:2609.38984": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38984",
+      "identity_tokens": [
+        "arXiv:2609.38984"
+      ],
+      "reason": "Sparse-WAM accelerates embodied world-action/video models, not language model inference/serving.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md"
+      ],
+      "title": "Sparse-WAM: Accelerating World Action Models via Action-Guided Sparse Imagination"
+    },
+    "arXiv:2609.39052": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.39052",
+      "identity_tokens": [
+        "arXiv:2609.39052"
+      ],
+      "reason": "Online transportation/competitive-ratio algorithm, unrelated to LLM inference.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "A Robustified Greedy Algorithm for Online Transportation with Improved Competitive Guarantees"
+    },
+    "arXiv:2609.38792": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38792",
+      "identity_tokens": [
+        "arXiv:2609.38792"
+      ],
+      "reason": "Position-selective self-distillation improves judge training/generalization; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Training LLM Judges from Language Feedback via Position-Selective Self-Distillation"
+    },
+    "arXiv:2609.38795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38795",
+      "identity_tokens": [
+        "arXiv:2609.38795"
+      ],
+      "reason": "Speculative-decoding drafter supervision/accepted-length improvement is a training method; the contribution and efficiency claim concern training compute, not a serving optimization.",
+      "first_checked_at": "2026-10-05T04:21:07+00:00",
+      "last_checked_at": "2026-10-05T04:21:07+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2406.16858-eagle-2.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2408.15766-learning-harmonized-representations-for-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2504.18583-pard-accelerating-llm-inference-with-low-cost-parallel-draft-model-adaptation.md"
+      ],
+      "title": "Recovering Off-Policy Supervision for Speculative Decoding"
+    },
+    "arXiv:2609.38799": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38799",
+      "identity_tokens": [
+        "arXiv:2609.38799"
+      ],
+      "reason": "Benchmark/study of information extraction behavior without an inference-efficiency contribution.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Overlap, Unique and Conflict: Can LLMs Extract What They Can Recognize?"
+    },
+    "arXiv:2609.38809": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.38809",
+      "identity_tokens": [
+        "arXiv:2609.38809"
+      ],
+      "reason": "Reinforcement learning for long-term dialogue reasoning; training method and quality objective, no inference cost result.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "StateTree: Enhancing Long-Term Dialogue Reasoning via Reinforcement Learning"
+    },
+    "DOI:10.1145/3839510": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3839510",
+      "identity_tokens": [
+        "DOI:10.1145/3839510"
+      ],
+      "reason": "Automatic tensor rematerialization targets DNN training memory/efficiency; training-only.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+        "papers/training/01-training-offload-memory-systems/2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md"
+      ],
+      "title": "Bonsai: Efficient and Optimal Automatic Tensor Rematerialization for Memory-Constrained DNN Training"
+    },
+    "DOI:10.1145/3840586.3843212": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3840586.3843212",
+      "identity_tokens": [
+        "DOI:10.1145/3840586.3843212"
+      ],
+      "reason": "Coding-agent context canvas is an interaction/context curation interface, not a measured inference-efficiency method.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "title": "The Developer as Curator: A Canvas for Coding Agent Context"
+    },
+    "DOI:10.3389/frobt.2026.1938840": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frobt.2026.1938840",
+      "identity_tokens": [
+        "DOI:10.3389/frobt.2026.1938840"
+      ],
+      "reason": "Study of social robots’ perceived cognitive abilities, unrelated to LLM inference/serving.",
+      "first_checked_at": "2026-10-05T04:21:08+00:00",
+      "last_checked_at": "2026-10-05T04:21:08+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.05516-pensieve-stateful-large-language-model-serving.md"
+      ],
+      "title": "How to express social presence: a comparison of perceptions of social robots’ cognitive abilities"
     }
   }
 }

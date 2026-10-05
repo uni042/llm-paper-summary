@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47745c0a1260c78a-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39096",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39096",
+    "identity_tokens": [
+      "arXiv:2609.39096"
+    ],
+    "reason": "KV pruning targets autoregressive video diffusion, not language-model inference.",
+    "first_checked_at": "2026-10-05T04:21:07+00:00",
+    "last_checked_at": "2026-10-05T04:21:07+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+    ],
+    "title": "DeCoPrune: Efficient KV-Cache Pruning for Autoregressive Video Diffusion via Denoising Consistency"
+  },
+  "processed_at": "2026-10-05T04:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47745c0a1260",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

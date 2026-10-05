@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-47745c0a1260c78a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.39056",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.39056",
+    "identity_tokens": [
+      "arXiv:2609.39056"
+    ],
+    "reason": "Quantization targets world-action models/robot control, not LLM inference.",
+    "first_checked_at": "2026-10-05T04:21:07+00:00",
+    "last_checked_at": "2026-10-05T04:21:07+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md",
+      "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+      "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+      "papers/inference/16-weight-quantization-compression/2024-2410.09426-flatquant-flatness-matters-for-llm-quantization.md",
+      "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+      "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+    ],
+    "title": "SteerQuant: Steering Quantization Error with Action-Guided Scaling in World-Action Models"
+  },
+  "processed_at": "2026-10-05T04:21:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-47745c0a1260",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
