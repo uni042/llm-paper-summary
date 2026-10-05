@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-2faa9e76b1de2b4a-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:1905.05702",
+  "reason": "Entmaxのsparse output/attentionとfast transformを示し、疎出力ならbeam探索を正確に終えられる場合がある。評価は形態論・機械翻訳で、LLM生成のlatency/throughput向上は示さず、self-attention適用もfuture work。技術接点はあるがLLM inference fitは限定的。",
+  "title": "Sparse Sequence-to-Sequence Models",
+  "identity_tokens": [
+    "arXiv:1905.05702"
+  ],
+  "linked_from": [
+    "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+    "papers/inference/13-sparse-attention/2025-2502.08363-top-theta-attention.md",
+    "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2faa9e76b1de",
+  "source_precheck_request_id": null
+}
