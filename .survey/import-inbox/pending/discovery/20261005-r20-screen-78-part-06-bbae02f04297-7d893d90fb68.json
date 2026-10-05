@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-78-part-06-bbae02f04297",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17892",
+      "identity_tokens": [
+        "arXiv:2510.17892"
+      ],
+      "title": "Advances in Pre-trained Language Models for Domain-Specific Text Classification: A Systematic Review",
+      "reason": "This is a systematic review of domain-specific text-classification models, not an LLM inference or serving optimization contribution.",
+      "source_url": "https://arxiv.org/abs/2510.17892",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TC.2025.3575905",
+      "identity_tokens": [
+        "DOI:10.1109/TC.2025.3575905"
+      ],
+      "title": "Serving MoE Models on Resource-Constrained Edge Devices via Dynamic Expert Swapping",
+      "reason": "The packet abstract describes an inference framework for constrained MoE serving and reports memory/latency benefits, so relevance is clear at abstract stage. The exact IEEE DOI full text was not retrievable; the accessible arXiv page is an earlier differently titled version, so its details cannot safely establish the packet version’s method/evaluation. Retain as borderline until the DOI version can be checked.",
+      "source_url": "https://doi.org/10.1109/TC.2025.3575905",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.17716",
+      "identity_tokens": [
+        "arXiv:2505.17716"
+      ],
+      "title": "Get Experience from Practice: LLM Agents with Record & Replay",
+      "reason": "The paper proposes recording and replaying LLM-agent experiences and states potential deployment-cost reduction, but the checked primary design/case-study sections do not provide measured model-call, token, latency, memory, or energy savings. The contribution is an agent workflow framework with unquantified serving-efficiency implications.",
+      "source_url": "https://arxiv.org/abs/2505.17716",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00778-025-00912-0",
+      "identity_tokens": [
+        "DOI:10.1007/s00778-025-00912-0"
+      ],
+      "title": "prompt4vis: prompting large language models with example mining for tabular data visualization",
+      "reason": "Prompt4Vis filters schema fields and selects examples for a narrow text-to-visualization application, which could reduce prompt tokens. The primary publisher body could not be retrieved, and the abstract emphasizes task accuracy rather than measured token/latency/cost savings; scope fit remains weak.",
+      "source_url": "https://doi.org/10.1007/s00778-025-00912-0",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.08727",
+      "identity_tokens": [
+        "arXiv:2503.08727"
+      ],
+      "title": "Training Plug-n-Play Knowledge Modules with Deep Context Distillation",
+      "reason": "Knowledge Modules are a plausible alternative to long-context ICL/RAG, but the primary experiments compare knowledge/task accuracy and do not establish latency, memory, token, or energy savings in inference. The method also moves work into per-document module training/indexing, so net serving benefit is unresolved.",
+      "source_url": "https://arxiv.org/abs/2503.08727",
+      "first_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "last_checked_at": "2026-10-05T11:29:34.976139+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    }
+  ]
+}
