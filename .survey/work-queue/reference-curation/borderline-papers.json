@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T07:19:38+00:00",
-  "record_count": 1063,
+  "updated_at": "2026-10-05T07:30:12+00:00",
+  "record_count": 1064,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -16203,6 +16203,20 @@
         "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
       ],
       "title": "Scalable Kronecker-Fisher Approximation: Efficient Hessian Analysis for Billion-Parameter Language Models Compression"
+    },
+    "arXiv:2609.01335": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01335",
+      "identity_tokens": [
+        "arXiv:2609.01335"
+      ],
+      "reason": "Weak scope fit: current experiments do not optimize or report inference cost/latency; the paper explicitly leaves cost/latency-constrained objectives for future work.",
+      "first_checked_at": "2026-10-05T07:30:12+00:00",
+      "last_checked_at": "2026-10-05T07:30:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time"
     }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba429d670c39ee57-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.01231",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.01231",
+    "identity_tokens": [
+      "arXiv:2609.01231"
+    ],
+    "reason": "The work studies attention identifiability and notes possible model-size implications, but explicitly provides no evidence for adopting its update intervention or inference efficiency.",
+    "first_checked_at": "2026-10-05T07:30:12+00:00",
+    "last_checked_at": "2026-10-05T07:30:12+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.12981-cross-layer-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Multi-Head Self Attention is a Parameter Identification Mechanism"
+  },
+  "processed_at": "2026-10-05T07:30:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba429d670c39",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
