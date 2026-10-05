@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-98-part-02-044c45426249",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.08028",
+      "identity_tokens": [
+        "arXiv:2511.08028"
+      ],
+      "title": "Generalizable Insights for Graph Transformers in Theory and Practice",
+      "reason": "一次要旨はGraph Transformerの表現力・位置埋め込み・理論を扱っている。",
+      "source_url": "https://arxiv.org/abs/2511.08028",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07198",
+      "identity_tokens": [
+        "arXiv:2511.07198"
+      ],
+      "title": "Synergy over Discrepancy: A Partition-Based Approach to Multi-Domain LLM Fine-Tuning",
+      "reason": "一次要旨はLLMの複数領域へのfine-tuningと領域干渉の低減を扱っている。",
+      "source_url": "https://arxiv.org/abs/2511.07198",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.10377-dern-dropping-experts-recombining-neurons.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.04700",
+      "identity_tokens": [
+        "arXiv:2511.04700"
+      ],
+      "title": "Separate the Wheat from the Chaff: Winnowing Down Divergent Views in Retrieval Augmented Generation",
+      "reason": "The method is RAG-context selection and improves quality, but its own measured latency is higher than the listed baselines; its fit to an efficiency survey is weak.",
+      "source_url": "https://arxiv.org/abs/2511.04700",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25739",
+      "identity_tokens": [
+        "arXiv:2510.25739"
+      ],
+      "title": "Hawk: Leveraging Spatial Context for Faster Autoregressive Text-to-Image Generation",
+      "reason": "一次要旨は自己回帰型text-to-image生成の高速化を扱い、言語モデルではなく画像生成モデルを対象とする。",
+      "source_url": "https://arxiv.org/abs/2510.25739",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00056",
+      "identity_tokens": [
+        "arXiv:2511.00056"
+      ],
+      "title": "MISA: Memory-Efficient LLMs Optimization with Module-wise Importance Sampling",
+      "reason": "一次要旨はLLMのpre-training/fine-tuningにおけるメモリ効率的なoptimization algorithmを提案する。",
+      "source_url": "https://arxiv.org/abs/2511.00056",
+      "first_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "last_checked_at": "2026-10-05T12:52:49.712431+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ]
+    }
+  ]
+}
