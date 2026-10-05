@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce851bdf3987f493-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.27748",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.27748",
+    "identity_tokens": [
+      "arXiv:2606.27748"
+    ],
+    "reason": "The linear-complexity mechanism is relevant, but primary evidence is small-model/sequence-task evaluation and lacks LLM-scale end-to-end serving measurements.",
+    "first_checked_at": "2026-10-05T11:42:01+00:00",
+    "last_checked_at": "2026-10-05T11:42:01+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+    ],
+    "title": "Flexformer: Flexible Linear Transformer with Learnable Attention Kernel"
+  },
+  "processed_at": "2026-10-05T11:42:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce851bdf3987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

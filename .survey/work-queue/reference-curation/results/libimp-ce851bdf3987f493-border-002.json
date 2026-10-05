@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce851bdf3987f493-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.27785",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.27785",
+    "identity_tokens": [
+      "arXiv:2606.27785"
+    ],
+    "reason": "The primary evidence is a compression-allocation accuracy/perplexity tradeoff without a demonstrated runtime-efficiency improvement.",
+    "first_checked_at": "2026-10-05T11:42:01+00:00",
+    "last_checked_at": "2026-10-05T11:42:01+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+    ],
+    "title": "Output-Space Allocation Costs for Calibration-Guided LLM Compression: An Empirical Study"
+  },
+  "processed_at": "2026-10-05T11:42:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce851bdf3987",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

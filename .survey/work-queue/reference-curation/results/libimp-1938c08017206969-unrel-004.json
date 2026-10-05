@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1938c08017206969-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.28166",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.28166",
+    "identity_tokens": [
+      "arXiv:2606.28166"
+    ],
+    "reason": "Primary abstract reviewed: Reinforcement learning with verifiable rewards (RLVR) has driven substantial gains in language-model reasoning. However, models fine-tuned with RLVR need not remain compatible with weaker partners: gains achieved alone may erode under collaboration, while policy drift may place reasoning beyond a weaker model's predictive reach. To address both problems, we introduce Tandem RLVR (TRLVR), bringing the recently propose… Out of scope: Reinforcement-learning training method for reasoning models.",
+    "first_checked_at": "2026-10-05T11:42:00+00:00",
+    "last_checked_at": "2026-10-05T11:42:00+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md"
+    ],
+    "title": "Tandem Reinforcement Learning with Verifiable Rewards"
+  },
+  "processed_at": "2026-10-05T11:42:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1938c0801720",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

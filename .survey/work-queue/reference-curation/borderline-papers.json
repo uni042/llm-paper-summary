@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T11:40:02+00:00",
-  "record_count": 1549,
+  "updated_at": "2026-10-05T11:42:01+00:00",
+  "record_count": 1556,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -24050,6 +24050,112 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00047-qlm-queue-management-slo-oriented-llm-serving.md"
       ],
       "title": "Priority-Based Data Transfer Control for LLM Inference Streaming Leveraging Prompt Importance"
+    },
+    "arXiv:2606.26538": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26538",
+      "identity_tokens": [
+        "arXiv:2606.26538"
+      ],
+      "reason": "The inference results are directly relevant but limited to relatively small from-scratch models and a single benchmark/hardware protocol, so general LLM-serving relevance remains uncertain.",
+      "first_checked_at": "2026-10-05T11:41:59+00:00",
+      "last_checked_at": "2026-10-05T11:41:59+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "CascadeFormer: Depth-Tapered Transformers Motivated by Gradient Fan-in Asymmetry"
+    },
+    "arXiv:2606.28560": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28560",
+      "identity_tokens": [
+        "arXiv:2606.28560"
+      ],
+      "reason": "Although sparse attention is an inference-relevant mechanism, the direct efficiency evidence is negative for the learned variant and the main static result is a small-model quality/extrapolation study without serving-latency gains.",
+      "first_checked_at": "2026-10-05T11:42:00+00:00",
+      "last_checked_at": "2026-10-05T11:42:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Depth-Staggered Fibonacci Spacing for Sparse Attention: Static Schedules Beat Learned Dilation and Extrapolate Where Dense Attention Fails"
+    },
+    "arXiv:2608.26141": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26141",
+      "identity_tokens": [
+        "arXiv:2608.26141"
+      ],
+      "reason": "Adaptive token reduction is an indirect efficiency signal in a narrow multimodal document-reasoning setting; no serving latency/throughput or broad workload evidence is shown.",
+      "first_checked_at": "2026-10-05T11:42:00+00:00",
+      "last_checked_at": "2026-10-05T11:42:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "AdaThinking-E: One-Token Entropy Regulation for Adaptive Thinking"
+    },
+    "arXiv:2608.26142": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26142",
+      "identity_tokens": [
+        "arXiv:2608.26142"
+      ],
+      "reason": "There is measured efficiency, but the application is a specialized vision segmentation task rather than general LLM inference/serving.",
+      "first_checked_at": "2026-10-05T11:42:00+00:00",
+      "last_checked_at": "2026-10-05T11:42:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Position Is All You Need: A Free Lunch Token Compression Strategy for MLLM-based Referring Expression Segmentation"
+    },
+    "arXiv:2606.27748": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27748",
+      "identity_tokens": [
+        "arXiv:2606.27748"
+      ],
+      "reason": "The linear-complexity mechanism is relevant, but primary evidence is small-model/sequence-task evaluation and lacks LLM-scale end-to-end serving measurements.",
+      "first_checked_at": "2026-10-05T11:42:01+00:00",
+      "last_checked_at": "2026-10-05T11:42:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Flexformer: Flexible Linear Transformer with Learnable Attention Kernel"
+    },
+    "arXiv:2606.27785": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27785",
+      "identity_tokens": [
+        "arXiv:2606.27785"
+      ],
+      "reason": "The primary evidence is a compression-allocation accuracy/perplexity tradeoff without a demonstrated runtime-efficiency improvement.",
+      "first_checked_at": "2026-10-05T11:42:01+00:00",
+      "last_checked_at": "2026-10-05T11:42:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "Output-Space Allocation Costs for Calibration-Guided LLM Compression: An Empirical Study"
+    },
+    "arXiv:2606.27793": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.27793",
+      "identity_tokens": [
+        "arXiv:2606.27793"
+      ],
+      "reason": "The method targets document reordering cost in a narrow synthetic RAG QA setup; one-pass quality remains materially below iterative sorting in one condition and end-to-end serving gains are not measured.",
+      "first_checked_at": "2026-10-05T11:42:01+00:00",
+      "last_checked_at": "2026-10-05T11:42:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Position Bias Correction is Insufficient for One-Pass Attention Sorting"
     }
   }
 }
