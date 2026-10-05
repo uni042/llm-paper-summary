@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-9483199c4811166c-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2610.01153",
+  "reason": "LOOMはlooped MoEのresidual stability/loop間expert diversityを訓練し、100M–1.7Bモデルのtraining/near-iso-FLOP quality scalingを評価する。 本文の結果は学習設定でのPPL/zero-shot accuracyであり、looped inference throughput、latency、memory efficiencyの実測を示していない。extra loopsは追加推論FLOPsを要するため対象の効率貢献を確認できない。",
+  "title": "Looping Beyond Twice: A Scalable Recipe for Looped Mixture-of-Experts",
+  "identity_tokens": [
+    "arXiv:2610.01153"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9483199c4811",
+  "source_precheck_request_id": null
+}
