@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-980d797a3f7de56d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.33245",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.33245",
+    "identity_tokens": [
+      "arXiv:2609.33245"
+    ],
+    "reason": "ASR専用のspeculative decodingで本文上の高速化は明確だが、汎用LLMテキスト推論とのscope境界がある。",
+    "first_checked_at": "2026-10-05T05:09:14+00:00",
+    "last_checked_at": "2026-10-05T05:09:14+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+      "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+      "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+    ],
+    "title": "Acoustic Progress Propagation for Long-Horizon Speculative Decoding in ASR"
+  },
+  "processed_at": "2026-10-05T05:09:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-980d797a3f7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

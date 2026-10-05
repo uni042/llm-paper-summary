@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-42af3173d4587847-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.4218/etrij.2026-0180",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.4218/etrij.2026-0180",
+    "identity_tokens": [
+      "DOI:10.4218/etrij.2026-0180"
+    ],
+    "reason": "Evaluates cross-lingual safety alignment behavior in open-weight LLMs; it does not propose inference-efficiency methods.",
+    "first_checked_at": "2026-10-05T05:09:14+00:00",
+    "last_checked_at": "2026-10-05T05:09:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+    ],
+    "title": "Cross‐lingual safety asymmetry in open‐weight LLMs"
+  },
+  "processed_at": "2026-10-05T05:09:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-42af3173d458",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d3bec38a9f2dcfa0-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.33325",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.33325",
+    "identity_tokens": [
+      "arXiv:2609.33325"
+    ],
+    "reason": "Introduces a self-modifying visual backbone with test-time training; the target is visual representation learning, not LLM serving.",
+    "first_checked_at": "2026-10-05T05:09:15+00:00",
+    "last_checked_at": "2026-10-05T05:09:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+    ],
+    "title": "VisionHOPE: Visual Backbones as Self-Modifying Learning Systems"
+  },
+  "processed_at": "2026-10-05T05:09:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d3bec38a9f2d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

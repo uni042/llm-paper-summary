@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T05:06:25+00:00",
-  "record_count": 2774,
+  "updated_at": "2026-10-05T05:09:15+00:00",
+  "record_count": 2791,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -40331,6 +40331,258 @@
         "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
       ],
       "title": "GEM-KMeans: Memory-Efficient and Accurate Clustering on Massive Scale with GPU Optimization"
+    },
+    "DOI:10.1371/journal.pone.0358759": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0358759",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0358759"
+      ],
+      "reason": "Proposes a Wavelet-Mamba model for industrial bearing-fault diagnosis; no LLM inference/serving target.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Robust bearing fault diagnosis for rotating machinery under noisy and variable operating conditions using a Wavelet-Mamba Network"
+    },
+    "DOI:10.3390/app16199626": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/app16199626",
+      "identity_tokens": [
+        "DOI:10.3390/app16199626"
+      ],
+      "reason": "Measures energy of Vision Transformer operators on hybrid SoC hardware; it is not an LLM inference paper.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "Fine-Grained Energy Assessment of Vision Transformer Operators on Hybrid SoC Platforms: A CPU, iGPU, and NPU Case Study"
+    },
+    "DOI:10.4218/etrij.2026-0180": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4218/etrij.2026-0180",
+      "identity_tokens": [
+        "DOI:10.4218/etrij.2026-0180"
+      ],
+      "reason": "Evaluates cross-lingual safety alignment behavior in open-weight LLMs; it does not propose inference-efficiency methods.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "Cross‐lingual safety asymmetry in open‐weight LLMs"
+    },
+    "DOI:10.64898/2026.09.22.753215": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.09.22.753215",
+      "identity_tokens": [
+        "DOI:10.64898/2026.09.22.753215"
+      ],
+      "reason": "Presents a sparse DNA foundation model for microbial genomics; the application is genomic representation learning rather than LLM serving.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "A Taxonomy-Informed Sparse DNA Foundation Model for Microbial Genomics"
+    },
+    "arXiv:2609.33090": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33090",
+      "identity_tokens": [
+        "arXiv:2609.33090"
+      ],
+      "reason": "Unifies sign-language understanding tasks and discusses training/inference fragmentation, but its contribution is task modeling and model consolidation rather than reducing inference resource cost.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "OneSign: Unifying Sign Language Understanding Tasks with One Model"
+    },
+    "arXiv:2609.33247": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33247",
+      "identity_tokens": [
+        "arXiv:2609.33247"
+      ],
+      "reason": "A conceptual/econometric note on threshold autoregression and neural-network connections, outside LLM inference/serving.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "A Note on Threshold Principle, Artificial Neural Network Connections and Econometric Legacy"
+    },
+    "arXiv:2609.33256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33256",
+      "identity_tokens": [
+        "arXiv:2609.33256"
+      ],
+      "reason": "Adds a runtime refinement layer to frozen vision-language-action robot policies; its objective is action correctness and control refinement, not inference efficiency.",
+      "first_checked_at": "2026-10-05T05:09:14+00:00",
+      "last_checked_at": "2026-10-05T05:09:14+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "ActionGround: Training-Free Runtime Refinement of Frozen VLA Policies"
+    },
+    "arXiv:2609.33269": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33269",
+      "identity_tokens": [
+        "arXiv:2609.33269"
+      ],
+      "reason": "Quantizes World Action Models for robotic video/action generation; the target is VLA/WAM deployment rather than LLM inference.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Q-WAM: 4-Bit Quantization of World Action Models with Action-Subspace Protection"
+    },
+    "arXiv:2609.33119": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33119",
+      "identity_tokens": [
+        "arXiv:2609.33119"
+      ],
+      "reason": "Routes medical questions among specialist LLMs to improve reasoning quality; the abstract does not establish a cost/latency optimization contribution.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md",
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "title": "MedRouter: Demystifying Knowledge Differences Across Medical LLMs for Routing-Based Reasoning"
+    },
+    "arXiv:2609.33133": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33133",
+      "identity_tokens": [
+        "arXiv:2609.33133"
+      ],
+      "reason": "Optimizes context-parallel replay computation for long-context LLM post-training, not deployed inference or serving.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Splitting Prompt Prefill from Response Replay for Context-Parallel Long-Context LLM Post-Training"
+    },
+    "arXiv:2609.33202": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33202",
+      "identity_tokens": [
+        "arXiv:2609.33202"
+      ],
+      "reason": "Accelerates image/video flow-matching generation; the models and target application are generative vision, not LLM inference.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "ReAL: Accelerating Flow Matching through Segment Advancement with Shared Lookahead"
+    },
+    "arXiv:2609.33220": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33220",
+      "identity_tokens": [
+        "arXiv:2609.33220"
+      ],
+      "reason": "Studies failure disclosure behavior under reinforcement learning; it is not an inference-efficiency method.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17768-llm42-verified-speculation-deterministic-inference.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ],
+      "title": "When Do Models Admit They Are Wrong? Failure Disclosure Is Unstable Under Reinforcement Learning"
+    },
+    "arXiv:2609.33282": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33282",
+      "identity_tokens": [
+        "arXiv:2609.33282"
+      ],
+      "reason": "Constructs personalized subjective-judgment scales for high-traffic applications; not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Multi-Dimensional Comparative Scale Construction for Efficient Personalized Subjective Judgment in High-Traffic Applications"
+    },
+    "arXiv:2609.33296": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33296",
+      "identity_tokens": [
+        "arXiv:2609.33296"
+      ],
+      "reason": "Introduces a multilingual dialogue-translation corpus; dataset creation is not inference/serving optimization.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "BaatCheet: A Multilingual Corpus for Dialogue Translation in Indian Languages"
+    },
+    "arXiv:2609.33315": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33315",
+      "identity_tokens": [
+        "arXiv:2609.33315"
+      ],
+      "reason": "Controls tool-agent completion loops to stop redundant reasoning, but the abstract contribution concerns runtime task-completion signals and agent workflow control rather than model inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.20982-dopd-dynamic-pd-disaggregation.md"
+      ],
+      "title": "AgentLoop: Runtime Control of Slot-closed Execution Loops for Tool-augmented LLM Agents"
+    },
+    "arXiv:2609.33321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33321",
+      "identity_tokens": [
+        "arXiv:2609.33321"
+      ],
+      "reason": "Studies personalized-answer quality effects of memory and workflow choices; it does not propose inference-cost reduction.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Separating Memory and Workflow Effects in Predicting Individual Answers"
+    },
+    "arXiv:2609.33325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33325",
+      "identity_tokens": [
+        "arXiv:2609.33325"
+      ],
+      "reason": "Introduces a self-modifying visual backbone with test-time training; the target is visual representation learning, not LLM serving.",
+      "first_checked_at": "2026-10-05T05:09:15+00:00",
+      "last_checked_at": "2026-10-05T05:09:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "VisionHOPE: Visual Backbones as Self-Modifying Learning Systems"
     }
   }
 }
