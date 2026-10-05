@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-90-part-01-36ad1182541a",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13074",
+      "identity_tokens": [
+        "arXiv:2501.13074"
+      ],
+      "title": "Autonomy-of-Experts Models",
+      "reason": "The central claim may reduce routing overhead, but the paper’s measured efficiency is training-centric and does not show a clear inference/serving benefit.",
+      "source_url": "https://arxiv.org/abs/2501.13074",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.41",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.naacl-long.41"
+      ],
+      "title": "LLM-Based Explicit Models of Opponents for Multi-Agent Games",
+      "reason": "In multi-agent scenarios, the ability to anticipate and respond to opponents is essential, particularly in environments involving adversarial and collaborative interactions. In this paper, we introduce Explicit Models of Oppo-nents (EMO) based on Large Language Models (LLMs), enabling agents to bett…",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.41",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.04424",
+      "identity_tokens": [
+        "arXiv:2410.04424"
+      ],
+      "title": "DAdEE: Unsupervised Domain Adaptation in Early Exit PLMs",
+      "reason": "The early-exit mechanism is relevant by analogy, but results concern encoder PLMs and classification rather than decoder LLM serving.",
+      "source_url": "https://arxiv.org/abs/2410.04424",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ISCA59077.2024.00046",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA59077.2024.00046"
+      ],
+      "title": "The Dataflow Abstract Machine Simulator Framework",
+      "reason": "This work develops a simulator framework for dataflow architectures; it does not propose an LLM inference or serving optimization.",
+      "source_url": "https://doi.org/10.1109/ISCA59077.2024.00046",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.02529",
+      "identity_tokens": [
+        "arXiv:2406.02529"
+      ],
+      "title": "ReLUs Are Sufficient for Learning Implicit Neural Representations",
+      "reason": "Motivated by the growing theoretical understanding of neural networks that employ the Rectified Linear Unit (ReLU) as their activation function, we revisit the use of ReLU activation functions for learning implicit neural representations (INRs). Inspired by second order B-spline wavelets, we incorpo…",
+      "source_url": "https://arxiv.org/abs/2406.02529",
+      "first_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "last_checked_at": "2026-10-05T12:11:11.878498+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md"
+      ]
+    }
+  ]
+}
