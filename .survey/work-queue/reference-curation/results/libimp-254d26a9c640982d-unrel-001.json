@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-254d26a9c640982d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/comst.2025.3568637",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/comst.2025.3568637",
+    "identity_tokens": [
+      "DOI:10.1109/comst.2025.3568637"
+    ],
+    "reason": "Primary abstract reviewed at https://doi.org/10.1109/COMST.2025.3568637. Abstract summary: With the widespread application of digital twin (DT) technology in network optimization and intelligent management, its integration with large language models (LLMs) presents immense potential. LLMs excel in natural language processing, multimodal analysis, and real-time optimization, enabling innovative solutions for intelligent monitori Out of scope: Survey of LLM-driven digital twins for network optimization applications, not LLM inference optimization.",
+    "first_checked_at": "2026-10-05T12:49:56+00:00",
+    "last_checked_at": "2026-10-05T12:49:56+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+    ],
+    "title": "A Survey on Applications of Large Language Model-Driven Digital Twins for Intelligent Network Optimization"
+  },
+  "processed_at": "2026-10-05T12:49:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-254d26a9c640",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

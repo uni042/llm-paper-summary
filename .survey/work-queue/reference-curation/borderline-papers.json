@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:45:11+00:00",
-  "record_count": 1655,
+  "updated_at": "2026-10-05T12:49:59+00:00",
+  "record_count": 1666,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25693,6 +25693,164 @@
         "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md"
       ],
       "title": "SLAB: Efficient Transformers with Simplified Linear Attention and Progressive Re-parameterized Batch Normalization"
+    },
+    "arXiv:2505.23606": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23606",
+      "identity_tokens": [
+        "arXiv:2505.23606"
+      ],
+      "reason": "There are concrete gains, but they are for specialized short multimodal caption/VQA generation and do not establish general LLM serving gains.",
+      "first_checked_at": "2026-10-05T12:49:56+00:00",
+      "last_checked_at": "2026-10-05T12:49:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md"
+      ],
+      "title": "Muddit: Liberating Generation Beyond Text-to-Image with a Unified Discrete Diffusion Model"
+    },
+    "DOI:10.3390/electronics14071345": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics14071345",
+      "identity_tokens": [
+        "DOI:10.3390/electronics14071345"
+      ],
+      "reason": "General edge inference is adjacent, but the contribution is a broad survey rather than concrete LLM inference evidence.",
+      "first_checked_at": "2026-10-05T12:49:56+00:00",
+      "last_checked_at": "2026-10-05T12:49:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md"
+      ],
+      "title": "Optimization Methods, Challenges, and Opportunities for Edge Inference: A Comprehensive Survey"
+    },
+    "arXiv:2404.00725": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.00725",
+      "identity_tokens": [
+        "arXiv:2404.00725"
+      ],
+      "reason": "Inference budget allocation is adjacent, but the measured benefit is task quality under a fixed budget, not reduced serving cost/latency.",
+      "first_checked_at": "2026-10-05T12:49:56+00:00",
+      "last_checked_at": "2026-10-05T12:49:56+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+      ],
+      "title": "The Larger the Better? Improved LLM Code-Generation via Budget Reallocation"
+    },
+    "arXiv:2405.00467": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.00467",
+      "identity_tokens": [
+        "arXiv:2405.00467"
+      ],
+      "reason": "Routing could reduce resource use, but the paper evaluates accuracy/model choice rather than efficiency.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md"
+      ],
+      "title": "Harnessing the Power of Multiple Minds: Lessons Learned from LLM Routing"
+    },
+    "SemanticScholar:f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9",
+      "identity_tokens": [
+        "SemanticScholar:f504a7ac2e92a0b466e6d6d0ab4fde49e0a35be9"
+      ],
+      "reason": "The provided Semantic Scholar record has only the generic title “Computer Science Review” and no abstract or paper-specific primary citation. Lookup by the supplied record/title did not establish an identifiable article abstract; no subject matter was inferred.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2407.00326-teola.md"
+      ],
+      "title": "Computer Science Review"
+    },
+    "arXiv:2505.15269": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.15269",
+      "identity_tokens": [
+        "arXiv:2505.15269"
+      ],
+      "reason": "Measured gains are relevant but narrowly specialized to online video; broader LLM-serving applicability is uncertain.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md"
+      ],
+      "title": "LiveVLM: Efficient Online Video Understanding via Streaming-Oriented KV Cache and Retrieval"
+    },
+    "arXiv:2404.04566": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.04566",
+      "identity_tokens": [
+        "arXiv:2404.04566"
+      ],
+      "reason": "Relevant survey material is limited to LLM-for-software-engineering and supplies no new measured inference result.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+      ],
+      "title": "Efficient and Green Large Language Models for Software Engineering: Literature Review, Vision, and the Road Ahead"
+    },
+    "arXiv:2504.18851": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.18851",
+      "identity_tokens": [
+        "arXiv:2504.18851"
+      ],
+      "reason": "Potential tool-call cost impact is indirect and unmeasured; this is a behavior benchmark, not an efficiency method.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/training/03-pipeline-parallel-modular-training/2024-2405.01481-nemo-aligner.md"
+      ],
+      "title": "When2Call: When (not) to Call Tools"
+    },
+    "arXiv:2407.04752": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.04752",
+      "identity_tokens": [
+        "arXiv:2407.04752"
+      ],
+      "reason": "Energy motivation is relevant, but concrete serving-efficiency evidence is absent in the reviewed results.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.00034-pb-llm-partially-binarized-large-language-models.md",
+        "papers/inference/16-weight-quantization-compression/2024-2403.12544-affinequant-affine-transformation-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "SpikeLLM: Scaling up Spiking Neural Network to Large Language Models via Saliency-based Spiking"
+    },
+    "arXiv:2310.16450": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.16450",
+      "identity_tokens": [
+        "arXiv:2310.16450"
+      ],
+      "reason": "Context support is adjacent, but the method does not reduce inference cost or latency.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md"
+      ],
+      "title": "CLEX: Continuous Length Extrapolation for Large Language Models"
+    },
+    "arXiv:2602.11451": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11451",
+      "identity_tokens": [
+        "arXiv:2602.11451"
+      ],
+      "reason": "Budget-conditioned compute is relevant, but evidence is small-scale quality/FLOPs without serving latency, and has training overhead.",
+      "first_checked_at": "2026-10-05T12:49:59+00:00",
+      "last_checked_at": "2026-10-05T12:49:59+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md"
+      ],
+      "title": "LoopFormer: Elastic-Depth Looped Transformers for Latent Reasoning via Shortcut Modulation"
     }
   }
 }

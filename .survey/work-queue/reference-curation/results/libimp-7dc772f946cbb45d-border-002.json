@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7dc772f946cbb45d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.04566",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.04566",
+    "identity_tokens": [
+      "arXiv:2404.04566"
+    ],
+    "reason": "Relevant survey material is limited to LLM-for-software-engineering and supplies no new measured inference result.",
+    "first_checked_at": "2026-10-05T12:49:58+00:00",
+    "last_checked_at": "2026-10-05T12:49:58+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md"
+    ],
+    "title": "Efficient and Green Large Language Models for Software Engineering: Literature Review, Vision, and the Road Ahead"
+  },
+  "processed_at": "2026-10-05T12:49:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7dc772f946cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

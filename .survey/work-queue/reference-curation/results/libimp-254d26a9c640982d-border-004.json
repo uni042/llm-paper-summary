@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-254d26a9c640982d-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2404.00725",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2404.00725",
+    "identity_tokens": [
+      "arXiv:2404.00725"
+    ],
+    "reason": "Inference budget allocation is adjacent, but the measured benefit is task quality under a fixed budget, not reduced serving cost/latency.",
+    "first_checked_at": "2026-10-05T12:49:56+00:00",
+    "last_checked_at": "2026-10-05T12:49:56+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+    ],
+    "title": "The Larger the Better? Improved LLM Code-Generation via Budget Reallocation"
+  },
+  "processed_at": "2026-10-05T12:49:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-254d26a9c640",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

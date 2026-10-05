@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:45:11+00:00",
-  "record_count": 5044,
+  "updated_at": "2026-10-05T12:49:59+00:00",
+  "record_count": 5053,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -73369,6 +73369,134 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md"
       ],
       "title": "Advancing Tool-Augmented Large Language Models: Integrating Insights from Errors in Inference Trees"
+    },
+    "DOI:10.1109/comst.2025.3568637": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/comst.2025.3568637",
+      "identity_tokens": [
+        "DOI:10.1109/comst.2025.3568637"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.1109/COMST.2025.3568637. Abstract summary: With the widespread application of digital twin (DT) technology in network optimization and intelligent management, its integration with large language models (LLMs) presents immense potential. LLMs excel in natural language processing, multimodal analysis, and real-time optimization, enabling innovative solutions for intelligent monitori Out of scope: Survey of LLM-driven digital twins for network optimization applications, not LLM inference optimization.",
+      "first_checked_at": "2026-10-05T12:49:56+00:00",
+      "last_checked_at": "2026-10-05T12:49:56+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md"
+      ],
+      "title": "A Survey on Applications of Large Language Model-Driven Digital Twins for Intelligent Network Optimization"
+    },
+    "arXiv:2512.17351": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.17351",
+      "identity_tokens": [
+        "arXiv:2512.17351"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.17351. Abstract summary: Understanding architectural differences in language models is challenging, especially at academic-scale pretraining (e.g., 1.3B parameters, 100B tokens), where results are often dominated by noise and randomness. To overcome this, we introduce controlled synthetic pretraining tasks that isolate and evaluate core model capabilities. Within Out of scope: Controlled synthetic pretraining/architecture study, not serving efficiency.",
+      "first_checked_at": "2026-10-05T12:49:56+00:00",
+      "last_checked_at": "2026-10-05T12:49:56+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "Physics of Language Models: Part 4.1, Architecture Design and the Magic of Canon Layers"
+    },
+    "arXiv:2512.16776": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.16776",
+      "identity_tokens": [
+        "arXiv:2512.16776"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.16776. Abstract summary: We present Kling-Omni, a generalist generative framework designed to synthesize high-fidelity videos directly from multimodal visual language inputs. Adopting an end-to-end perspective, Kling-Omni bridges the functional separation among diverse video generation, editing, and intelligent reasoning tasks, integrating them into a holistic sy Out of scope: Multimodal video generation framework; no LLM inference-optimization contribution.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "Kling-Omni Technical Report"
+    },
+    "arXiv:2310.11113": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.11113",
+      "identity_tokens": [
+        "arXiv:2310.11113"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2310.11113. Abstract summary: Software development involves collaborative interactions where stakeholders express opinions across various platforms. Recognizing the sentiments conveyed in these interactions is crucial for the effective development and ongoing maintenance of software systems. For software products, analyzing the sentiment of user feedback, e.g., review Out of scope: Software sentiment-analysis task study, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02082-glide-with-a-cape-a-low-hassle-method-to-accelerate-speculative-decoding.md"
+      ],
+      "title": "Revisiting Sentiment Analysis for Software Engineering in the Era of Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2306.16902": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2306.16902",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2306.16902",
+        "arXiv:2306.16902"
+      ],
+      "reason": "Primary abstract reviewed at https://doi.org/10.48550/arXiv.2306.16902. Abstract summary: Recovering the structure of causal graphical models from observational data is an essential yet challenging task for causal discovery in scientific scenarios. Domain-specific causal discovery usually relies on expert validation or prior analysis to improve the reliability of recovered causality, which is yet limited by the scarcity of exp Out of scope: LLM use for causal discovery focuses on causal structure recovery, not inference cost.",
+      "first_checked_at": "2026-10-05T12:49:57+00:00",
+      "last_checked_at": "2026-10-05T12:49:57+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ],
+      "title": "From Query Tools to Causal Architects: Harnessing Large Language Models for Advanced Causal Discovery from Data"
+    },
+    "arXiv:2508.18076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.18076",
+      "identity_tokens": [
+        "arXiv:2508.18076"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2508.18076. Abstract summary: Evaluating natural language generation (NLG) systems remains a core challenge of natural language processing (NLP), further complicated by the rise of large language models (LLMs) that aims to be general-purpose. Recently, large language models as judges (LLJs) have emerged as a promising alternative to traditional metrics, but their vali Out of scope: LLM-as-judge validity/reliability position paper, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Neither Valid nor Reliable? Investigating the Use of LLMs as Judges"
+    },
+    "arXiv:2506.09022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.09022",
+      "identity_tokens": [
+        "arXiv:2506.09022"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.09022. Abstract summary: Multiple Instance Learning (MIL) is a cornerstone approach in computational pathology (CPath) for generating clinically meaningful slide-level embeddings from gigapixel tissue images. However, MIL often struggles with small, weakly supervised clinical datasets. In contrast to fields such as NLP and conventional computer vision, where tran Out of scope: Pathology multiple-instance-learning transfer, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Do Multiple Instance Learning Models Transfer?"
+    },
+    "arXiv:2312.17482": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.17482",
+      "identity_tokens": [
+        "arXiv:2312.17482"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2312.17482. Abstract summary: Although BERT-style encoder models are heavily used in NLP research, many researchers do not pretrain their own BERTs from scratch due to the high cost of training. In the past half-decade since BERT first rose to prominence, many advances have been made with other transformer architectures and training configurations that have yet to be  Out of scope: MosaicBERT optimizes encoder pretraining/training cost, not inference.",
+      "first_checked_at": "2026-10-05T12:49:58+00:00",
+      "last_checked_at": "2026-10-05T12:49:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "MosaicBERT: A Bidirectional Encoder Optimized for Fast Pretraining"
+    },
+    "arXiv:2412.06176": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06176",
+      "identity_tokens": [
+        "arXiv:2412.06176"
+      ],
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2412.06176. Abstract summary: Automated code generation with large language models has gained significant traction, but there remains no guarantee on the correctness of generated code. We aim to use formal verification to provide mathematical guarantees that the generated code is correct. However, generating formally verified code with LLMs is hindered by the scarcity Out of scope: Formal verification of generated code, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:49:59+00:00",
+      "last_checked_at": "2026-10-05T12:49:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement"
     }
   }
 }

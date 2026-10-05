@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-757a19e8ca8bcb7b-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.16776",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.16776",
+    "identity_tokens": [
+      "arXiv:2512.16776"
+    ],
+    "reason": "Primary abstract reviewed at https://arxiv.org/abs/2512.16776. Abstract summary: We present Kling-Omni, a generalist generative framework designed to synthesize high-fidelity videos directly from multimodal visual language inputs. Adopting an end-to-end perspective, Kling-Omni bridges the functional separation among diverse video generation, editing, and intelligent reasoning tasks, integrating them into a holistic sy Out of scope: Multimodal video generation framework; no LLM inference-optimization contribution.",
+    "first_checked_at": "2026-10-05T12:49:57+00:00",
+    "last_checked_at": "2026-10-05T12:49:57+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+    ],
+    "title": "Kling-Omni Technical Report"
+  },
+  "processed_at": "2026-10-05T12:49:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-757a19e8ca8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
