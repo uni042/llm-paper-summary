@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-100-part-05-84ba1b8ae17b",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03306",
+      "identity_tokens": [
+        "arXiv:2508.03306"
+      ],
+      "title": "Reliable Evaluation Protocol for Low-Precision Retrieval",
+      "reason": "It is an evaluation-protocol contribution, not a retrieval acceleration or LLM inference optimization; its connection to this survey is limited to evaluating low-precision retrieval components.",
+      "source_url": "https://arxiv.org/abs/2508.03306",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.14200",
+      "identity_tokens": [
+        "arXiv:2507.14200"
+      ],
+      "title": "A Scalable Multi-LLM Collaboration System with Retrieval-based Selection and Exploration-Exploitation-Driven Enhancement",
+      "reason": "The primary optimization target is response quality and system scalability; it does not show reduced aggregate calls, latency, or cost, and aggregation can add inference work.",
+      "source_url": "https://arxiv.org/abs/2507.14200",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.08773-universal-model-routing-for-efficient-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.06795",
+      "identity_tokens": [
+        "arXiv:2507.06795"
+      ],
+      "title": "ixi-GEN: Efficient Industrial sLLMs through Domain Adaptive Continual Pretraining",
+      "reason": "The paper studies domain-adaptive continual pretraining for small industrial LLMs. Its contribution is training/domain adaptation rather than an inference-time efficiency method.",
+      "source_url": "https://arxiv.org/abs/2507.06795",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.17310",
+      "identity_tokens": [
+        "arXiv:2506.17310"
+      ],
+      "title": "PaceLLM: Brain-Inspired Large Language Models for Long-Context Understanding",
+      "reason": "The primary results establish long-context capability, not lower inference compute, memory, or latency; its efficiency fit is therefore uncertain.",
+      "source_url": "https://arxiv.org/abs/2506.17310",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.20214",
+      "identity_tokens": [
+        "arXiv:2505.20214"
+      ],
+      "title": "When Slower Isn't Truer: Inverse Scaling Law of Truthfulness in Multimodal Reasoning",
+      "reason": "The paper studies truthfulness behavior in multimodal reasoning models and does not propose an efficiency method.",
+      "source_url": "https://arxiv.org/abs/2505.20214",
+      "first_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "last_checked_at": "2026-10-05T12:57:21.385572+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2025-2508.15601-efficient-mixed-precision-large-language-model-inference.md"
+      ]
+    }
+  ]
+}
