@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-03-part-06-a30193d93412",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.21960",
+      "identity_tokens": [
+        "arXiv:2609.21960"
+      ],
+      "title": "Schedule optimization for tau-leaping in masked discrete diffusion",
+      "reason": "本文の解析・数値例は固定step数でfactorization errorを最適化し、Markov/exchangeable synthetic targetが中心。masked discrete diffusion推論のcall-cost tradeoffには接点があるが、LLM/text workloadや実生成の品質・速度評価を確認できず、対象適合が弱い。",
+      "source_url": "https://arxiv.org/abs/2609.21960",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22005",
+      "identity_tokens": [
+        "arXiv:2609.22005"
+      ],
+      "title": "Abstention and Noise Filtering: Two Missing Primitives of Softmax Attention",
+      "reason": "一次要旨: Softmax attention has two structural gaps. A head cannot abstain, because its weights sum to one, so it outputs something even when nothing is relevant. Nor can it filter what it reads, because its output is a weighted average of value vectors, passing interference as faithfully as signal. We call these missing primitives abstention and noise filtering. Rece",
+      "source_url": "https://arxiv.org/abs/2609.22005",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22043",
+      "identity_tokens": [
+        "arXiv:2609.22043"
+      ],
+      "title": "An Interpretable Memory Decision Controller for LLM Agents Based on Three-Signal Complementarity: Decoupling Confidence and Consistency",
+      "reason": "一次要旨: Memory systems for large language models have focused predominantly on efficient retrieval, whereas the decision of whether retrieved memories should be trusted has received comparatively little attention. When the memory store contains conflicting positions, standard retrieval-augmented generation (RAG) blindly injects memories and amplifies hallucinations:",
+      "source_url": "https://arxiv.org/abs/2609.22043",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22083",
+      "identity_tokens": [
+        "arXiv:2609.22083"
+      ],
+      "title": "MintAct: A Unified Visual Agent for Digital Environments",
+      "reason": "一次要旨: We present MintAct, a family of vision-language models that unifies UI grounding, multi-step navigation across mobile, desktop, and web, and visual tool use, trained at 2B, 4B, and 8B scales. Through careful design of our environments, data, and training recipes, MintAct models match the performance of per-domain specialists across all of these capabilities.",
+      "source_url": "https://arxiv.org/abs/2609.22083",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22086",
+      "identity_tokens": [
+        "arXiv:2609.22086"
+      ],
+      "title": "Designer-RSI: Evolving Procedural Memory from User Traffic for Agentic Graphic Design",
+      "reason": "一次要旨: Professional graphic design is a long-horizon agentic task in which structured, editable artifacts emerge from many interdependent actions, yet outcomes admit no reliable programmatic oracle. We introduce a continual adaptation framework in which a frozen frontier model operates professional design software through more than 230 tools, while an external proc",
+      "source_url": "https://arxiv.org/abs/2609.22086",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
