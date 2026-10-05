@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90cad98e315e47bd-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.09003",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.09003",
+    "identity_tokens": [
+      "arXiv:2502.09003"
+    ],
+    "reason": "A downstream deployment benefit is plausible but unverified; keep borderline until runtime/memory benefits and deployment compatibility are measured from primary evidence.",
+    "first_checked_at": "2026-10-05T15:15:50+00:00",
+    "last_checked_at": "2026-10-05T15:15:50+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+      "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+      "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+      "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "RoSTE: An Efficient Quantization-Aware Supervised Fine-Tuning Approach for Large Language Models"
+  },
+  "processed_at": "2026-10-05T15:15:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90cad98e315e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:13:01+00:00",
-  "record_count": 1961,
+  "updated_at": "2026-10-05T15:15:53+00:00",
+  "record_count": 1975,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -30331,6 +30331,228 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Demystifying the Roles of LLM Layers in Retrieval, Knowledge, and Reasoning"
+    },
+    "arXiv:2501.13074": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.13074",
+      "identity_tokens": [
+        "arXiv:2501.13074"
+      ],
+      "reason": "The central claim may reduce routing overhead, but the paper’s measured efficiency is training-centric and does not show a clear inference/serving benefit.",
+      "first_checked_at": "2026-10-05T15:15:46+00:00",
+      "last_checked_at": "2026-10-05T15:15:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Autonomy-of-Experts Models"
+    },
+    "arXiv:2410.04424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.04424",
+      "identity_tokens": [
+        "arXiv:2410.04424"
+      ],
+      "reason": "The early-exit mechanism is relevant by analogy, but results concern encoder PLMs and classification rather than decoder LLM serving.",
+      "first_checked_at": "2026-10-05T15:15:46+00:00",
+      "last_checked_at": "2026-10-05T15:15:46+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DAdEE: Unsupervised Domain Adaptation in Early Exit PLMs"
+    },
+    "arXiv:2510.03506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03506",
+      "identity_tokens": [
+        "arXiv:2510.03506"
+      ],
+      "reason": "It is an adjacent non-autoregressive multimodal generation model, but its quantitative efficiency evidence is training-side and the reviewed inference discussion identifies a cost drawback rather than a validated serving optimization.",
+      "first_checked_at": "2026-10-05T15:15:47+00:00",
+      "last_checked_at": "2026-10-05T15:15:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OneFlow: Concurrent Mixed-Modal and Interleaved Generation with Edit Flows"
+    },
+    "arXiv:2110.08323": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.08323",
+      "identity_tokens": [
+        "arXiv:2110.08323"
+      ],
+      "reason": "Could be historical background on efficient attention, but relevance to modern LLM inference is indirect and workload/runtime transfer is unverified.",
+      "first_checked_at": "2026-10-05T15:15:48+00:00",
+      "last_checked_at": "2026-10-05T15:15:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2021-2106.06899-top-k-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning the Transformer Kernel"
+    },
+    "SemanticScholar:205e039ed21a6f4b3ae692ac22f6cb5ed2973b3d": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:205e039ed21a6f4b3ae692ac22f6cb5ed2973b3d",
+      "identity_tokens": [
+        "SemanticScholar:205e039ed21a6f4b3ae692ac22f6cb5ed2973b3d"
+      ],
+      "reason": "Broad survey scope, secondary synthesis, and no targeted inference-system evidence make this a weak fit; packet identity is retained as supplied.",
+      "first_checked_at": "2026-10-05T15:15:48+00:00",
+      "last_checked_at": "2026-10-05T15:15:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2303.01610-smoe-dropout-self-slimmable.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Evolution of Mixture of Experts: A Survey from Basics to Breakthroughs"
+    },
+    "arXiv:2305.02176": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.02176",
+      "identity_tokens": [
+        "arXiv:2305.02176"
+      ],
+      "reason": "It is parameter-efficient MoE research, but its measured tradeoff is not an inference-cost reduction and applicability to LLM serving is unclear.",
+      "first_checked_at": "2026-10-05T15:15:49+00:00",
+      "last_checked_at": "2026-10-05T15:15:49+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Being Parameter-Efficient: A Stratified Sparsely Activated Transformer with Dynamic Capacity"
+    },
+    "arXiv:2502.16249": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.16249",
+      "identity_tokens": [
+        "arXiv:2502.16249"
+      ],
+      "reason": "Potential architecture background is adjacent; no direct autoregressive LLM deployment evidence was established in the checked main sections.",
+      "first_checked_at": "2026-10-05T15:15:50+00:00",
+      "last_checked_at": "2026-10-05T15:15:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linear Attention for Efficient Bidirectional Sequence Modeling"
+    },
+    "arXiv:2502.09003": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.09003",
+      "identity_tokens": [
+        "arXiv:2502.09003"
+      ],
+      "reason": "A downstream deployment benefit is plausible but unverified; keep borderline until runtime/memory benefits and deployment compatibility are measured from primary evidence.",
+      "first_checked_at": "2026-10-05T15:15:50+00:00",
+      "last_checked_at": "2026-10-05T15:15:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.02272-owq-outlier-aware-weight-quantization-for-efficient-fine-tuning-and-infe.md",
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RoSTE: An Efficient Quantization-Aware Supervised Fine-Tuning Approach for Large Language Models"
+    },
+    "arXiv:2502.03678": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.03678",
+      "identity_tokens": [
+        "arXiv:2502.03678"
+      ],
+      "reason": "Keep borderline pending a focused comparison of total generated/processed tokens and end-to-end latency against standard decoding at matched quality.",
+      "first_checked_at": "2026-10-05T15:15:50+00:00",
+      "last_checked_at": "2026-10-05T15:15:50+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reflection-Window Decoding: Text Generation with Selective Refinement"
+    },
+    "arXiv:2502.04358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.04358",
+      "identity_tokens": [
+        "arXiv:2502.04358"
+      ],
+      "reason": "Potential background for agent-system cost modeling is indirect; no concrete measured optimization to move into Research was identified.",
+      "first_checked_at": "2026-10-05T15:15:50+00:00",
+      "last_checked_at": "2026-10-05T15:15:50+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Position: Scaling LLM Agents Requires Asymptotic Analysis with LLM Primitives"
+    },
+    "arXiv:2604.06794": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.06794",
+      "identity_tokens": [
+        "arXiv:2604.06794"
+      ],
+      "reason": "The body-review blocker leaves its decoding mechanism and measured efficiency unclear; classify borderline pending an accessible primary manuscript.",
+      "first_checked_at": "2026-10-05T15:15:51+00:00",
+      "last_checked_at": "2026-10-05T15:15:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2503.15921-spin-heterogeneous-speculative-model-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GCoT-Decoding: Unlocking Deep Reasoning Paths for Universal Question Answering"
+    },
+    "arXiv:2510.12251": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12251",
+      "identity_tokens": [
+        "arXiv:2510.12251"
+      ],
+      "reason": "Attention modification is plausible for efficiency, but efficiency is not demonstrated; retain as borderline rather than infer compute gains from “optimization.”",
+      "first_checked_at": "2026-10-05T15:15:52+00:00",
+      "last_checked_at": "2026-10-05T15:15:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DSAS: A Universal Plug-and-Play Framework for Attention Optimization in Multi-Document Question Answering"
+    },
+    "arXiv:2512.22615": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22615",
+      "identity_tokens": [
+        "arXiv:2512.22615"
+      ],
+      "reason": "The speed result is for low-level robot action chunks in a VLA system rather than general text generation or LLM serving; relevance to the survey scope is adjacent and weak.",
+      "first_checked_at": "2026-10-05T15:15:52+00:00",
+      "last_checked_at": "2026-10-05T15:15:52+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2509.04185-set-block-decoding-is-a-language-model-inference-accelerator.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md",
+        "papers/inference/99-other-inference-systems/2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md",
+        "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dream-VL & Dream-VLA: Open Vision-Language and Vision-Language-Action Models with Diffusion Language Model Backbone"
+    },
+    "arXiv:2510.18871": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.18871",
+      "identity_tokens": [
+        "arXiv:2510.18871"
+      ],
+      "reason": "The analysis motivates possible dynamic-depth inference, but a usable optimization and system-level efficiency result remain future work.",
+      "first_checked_at": "2026-10-05T15:15:53+00:00",
+      "last_checked_at": "2026-10-05T15:15:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Do LLMs Use Their Depth?"
     }
   }
 }
