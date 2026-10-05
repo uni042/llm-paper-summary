@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r13-screen-03-part-07-f9ffdc682d1b",
+  "reference_main_sha": "8bed2e85fb12d18c8421e3388fa246d6eafed4d6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1162/neco.1992.4.1.131",
+      "identity_tokens": [
+        "DOI:10.1162/neco.1992.4.1.131"
+      ],
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+      "reason": "指定MIT Press DOIを開いたがprimary sourceを取得できず、usable abstractを確認できなかった。",
+      "source_url": "https://doi.org/10.1162/neco.1992.4.1.131",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1605.04711",
+      "identity_tokens": [
+        "arXiv:1605.04711"
+      ],
+      "title": "Ternary Weight Networks",
+      "reason": "arXiv要旨は+1/0/-1 ternary weightsによるmemory/computation-efficient networkとcompressionを報告するが、評価対象はMNIST/CIFAR-10/ImageNet等のvision tasksである。",
+      "source_url": "https://arxiv.org/abs/1605.04711",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
+        "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02813",
+      "identity_tokens": [
+        "arXiv:2409.02813"
+      ],
+      "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+      "reason": "arXiv要旨はmultimodal understanding/reasoning能力を測るMMMU-Pro benchmarkとOCR/CoT評価を紹介する。",
+      "source_url": "https://arxiv.org/abs/2409.02813",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2503.18292-jenga-heterogeneous-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.26333-disaggregated-quantization-prefill-decode.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2003.12462",
+      "identity_tokens": [
+        "arXiv:2003.12462"
+      ],
+      "title": "TextCaps: a Dataset for Image Captioning with Reading Comprehension",
+      "reason": "arXiv要旨はimage captioning with reading comprehension用TextCaps datasetと基準手法を紹介する。",
+      "source_url": "https://arxiv.org/abs/2003.12462",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2212.10071",
+      "identity_tokens": [
+        "arXiv:2212.10071"
+      ],
+      "title": "Large Language Models Are Reasoning Teachers",
+      "reason": "arXiv要旨は大規模teacherからreasoning例を生成し小型LMをFine-tune-CoTで学習する方法を扱う。",
+      "source_url": "https://arxiv.org/abs/2212.10071",
+      "first_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "last_checked_at": "2026-10-05T00:21:52.861303+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ]
+    }
+  ]
+}
