@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+      "source_url": "https://arxiv.org/abs/2402.17764",
+      "year": 2024,
+      "published": "2024-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 482,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent research, such as BitNet, is paving the way for a new era of 1-bit Large Language Models (LLMs). In this work, we introduce a 1-bit LLM variant, namely BitNet b1.58, in which every single parameter (or weight) of the LLM is ternary {-1, 0, 1}. It matches the full-precision (i.e., FP16 or BF16) Transformer LLM with the same model size and training tokens in terms of both perplexity and end-task performance, while being significantly more cost-effective in terms of latency, memory, throughput, and energy consumption. More profoundly, the 1.58-bit LLM defines a new scaling law and recipe for training new generations of LLMs that are both high-performance and cost-effective. Furthermore, it enables a new computation paradigm and opens the door for designing specific hardware optimized for 1-bit LLMs.",
+      "identifiers": [
+        "SemanticScholar:63167c30b06aa6c3d76e09065ced0412090d6c3b"
+      ],
+      "semantic_scholar_id": "63167c30b06aa6c3d76e09065ced0412090d6c3b",
+      "canonical_id": "arXiv:2402.17764",
+      "arxiv_id": "2402.17764",
+      "doi": "10.48550/arXiv.2402.17764",
+      "authors": [
+        "Shu-Ming Ma",
+        "Hongyu Wang",
+        "Ling-Xiao Ma",
+        "Lei Wang",
+        "Wen-Hui Wang",
+        "Shao-Han Huang",
+        "Lifeng Dong",
+        "Rui-Ping Wang",
+        "Jilong Xue",
+        "Furu Wei"
+      ],
+      "priority": 482,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 482,
+        "citation_count": 482,
+        "total": 482,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 951,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BitNet b1.58はLLMの全parameterを{-1,0,1}のternary weightにし、同規模FP16 Transformerと同等のperplexity/task性能を保ちながらmemory・latency・throughput・energyを改善する1.58-bit LLM architecture。推論効率を直接目的・評価するため対象内。",
+      "library_body_check": "full_text_checked: 一次arXiv論文情報でternary {-1,0,1} weights、FP16 Transformerとの性能比較、memory/latency/throughput/energy面の推論効率を確認。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7f7e1b838b47",
+    "round": "libimp-7f7e1b838b470768-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7f7e1b838b470768-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7f7e1b838b470768-pre01.json",
+    "receipt": "sha256:fc18b7bb23bd726b84302eb5a618ca9e7c5b405206b9029e5b675339230a3037"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7f7e1b838b47",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261005-1830-scheduled-chat-30/r02::provider-gap",
+  "reference_main_sha": "16e570f7a2b46dcf09fc8443f707129f40008360",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.14905",
+      "identity_tokens": [
+        "arXiv:2402.14905"
+      ],
+      "title": "MobileLLM: Optimizing Sub-billion Parameter Language Models for On-Device Use Cases",
+      "reason": "cloud cost/latencyを避けるon-device LLM deploymentを目的に、sub-billionモデルをdeep-thin architecture、embedding sharing、grouped-query attention、block-wise weight sharingで設計する。モデルサイズを増やさずlatency overheadを小さく抑えた端末推論向け設計を主要目的とするため対象内。",
+      "source_url": "https://arxiv.org/abs/2402.14905",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でmobile deploymentのcost/latency動機、125M/350M規模、deep-thin architecture、embedding sharing、GQA、block-wise weight sharingとon-device use-case評価を確認。",
+      "first_checked_at": "2026-10-05T18:40:00+09:00",
+      "last_checked_at": "2026-10-05T18:40:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.04408",
+      "identity_tokens": [
+        "arXiv:2310.04408"
+      ],
+      "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+      "reason": "RAG推論で長いretrieved documentをそのままcontextへ入れる計算コストを問題化し、extractive/abstractive compressorで短いsummaryへ圧縮、不要時はempty stringを返すselective augmentationを導入する。最小6%まで圧縮し性能損失を小さく抑えるため、RAG推論のcontext/compute削減を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2310.04408",
+      "body_check": "full_text_relevance_review: 一次arXiv本文/要旨でretrieved-context inference cost、extractive/abstractive compressor、selective augmentation、6% compression rate、LM/QA評価を確認。推論時context計算量削減が主要動機。",
+      "first_checked_at": "2026-10-05T18:40:00+09:00",
+      "last_checked_at": "2026-10-05T18:40:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 63
+    }
+  ],
+  "parent_run_key": "20261005-1830-scheduled-chat-30/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_715aa369dd588191a0e3f26ea12f04d3--discovery-20261005-1830-scheduled-chat-30-r02-partial.json",
+  "provider_gap_ids": [
+    "arXiv:2310.04408",
+    "arXiv:2402.14905"
+  ]
+}
