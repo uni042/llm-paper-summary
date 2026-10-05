@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-64-part-05-88aa941f7936",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01031",
+      "identity_tokens": [
+        "arXiv:2512.01031"
+      ],
+      "title": "VLASH: Real-Time VLAs via Future-State-Aware Asynchronous Inference",
+      "reason": "A relevant real-time VLA inference/control result, but task-specific reaction latency does not establish general LLM serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.01031",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.11793",
+      "identity_tokens": [
+        "arXiv:2511.11793"
+      ],
+      "title": "MiroThinker: Pushing the Performance Boundaries of Open-Source Research Agents via Model, Context, and Interactive Scaling",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2511.11793. Abstract summary: We present MiroThinker v1.0, an open-source research agent designed to advance tool-augmented reasoning and information-seeking capabilities. Unlike previous agents that only scale up model size or context length, MiroThinker explores interaction scaling at the model level, systematically training the model to handle deeper and Out of scope: Research-agent capability scaling through more interactions, not efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.11793",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2509.01322-longcat-flash-zero-computation-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13284",
+      "identity_tokens": [
+        "arXiv:2506.13284"
+      ],
+      "title": "AceReason-Nemotron 1.1: Advancing Math and Code Reasoning through SFT and RL Synergy",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2506.13284. Abstract summary: In this work, we investigate the synergy between supervised fine-tuning (SFT) and reinforcement learning (RL) in developing strong reasoning models. We begin by curating the SFT training data through two scaling strategies: increasing the number of collected prompts and the number of generated responses per prompt. Both approach Out of scope: Math/code reasoning model post-training and capability improvement.",
+      "source_url": "https://arxiv.org/abs/2506.13284",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.08586",
+      "identity_tokens": [
+        "arXiv:2309.08586"
+      ],
+      "title": "Replacing softmax with ReLU in Vision Transformers",
+      "reason": "Primary abstract reviewed at https://arxiv.org/abs/2309.08586. Abstract summary: Previous research observed accuracy degradation when replacing the attention softmax with a point-wise activation such as ReLU. In the context of vision transformers, we find that this degradation is mitigated when dividing by sequence length. Our experiments training small to large vision transformers on ImageNet-21k indicate t Out of scope: Softmax replacement for Vision Transformers.",
+      "source_url": "https://arxiv.org/abs/2309.08586",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.16033",
+      "identity_tokens": [
+        "arXiv:2410.16033"
+      ],
+      "title": "TreeBoN: Enhancing Inference-Time Alignment with Speculative Tree-Search and Best-of-N Sampling",
+      "reason": "Compute-aware inference-time alignment is adjacent, but checked results support quality at equal compute rather than an inference-efficiency gain.",
+      "source_url": "https://arxiv.org/abs/2410.16033",
+      "first_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "last_checked_at": "2026-10-05T10:36:13.851042+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md"
+      ]
+    }
+  ]
+}
