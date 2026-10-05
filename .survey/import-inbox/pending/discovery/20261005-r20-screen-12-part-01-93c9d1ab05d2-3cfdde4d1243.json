@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-12-part-01-93c9d1ab05d2",
+  "reference_main_sha": "6244834113a980d44d3be8fc3fc63537f02040f8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22257",
+      "identity_tokens": [
+        "arXiv:2609.22257"
+      ],
+      "title": "Strategy Accumulation and Guided Execution for Automated LLM Fine-Tuning",
+      "reason": "Abstract describes automated fine-tuning search and training-stage strategy accumulation, not inference/serving.",
+      "source_url": "https://arxiv.org/abs/2609.22257",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-026-02641-y",
+      "identity_tokens": [
+        "DOI:10.1007/s00530-026-02641-y"
+      ],
+      "title": "DFC-SA-UNet: dynamic fusion with lightweight self-attention for multi-domain semantic segmentation",
+      "reason": "Publisher abstract describes semantic-segmentation U-Net/dynamic fusion, not LLMs.",
+      "source_url": "https://doi.org/10.1007/s00530-026-02641-y",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44163-026-01750-x",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-01750-x"
+      ],
+      "title": "Systematic review and comparative synthesis of cross lingual question answering systems for low resource Indic languages",
+      "reason": "Systematic review of cross-lingual QA for Indic languages; no efficiency method.",
+      "source_url": "https://doi.org/10.1007/s44163-026-01750-x",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3845987",
+      "identity_tokens": [
+        "DOI:10.1145/3845987"
+      ],
+      "title": "Information-Bottlenecked Variational Autoencoder for Top-N Recommendation via Gating Mechanism",
+      "reason": "VAE for top-N recommendation, not language-model inference.",
+      "source_url": "https://doi.org/10.1145/3845987",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05801",
+      "identity_tokens": [
+        "arXiv:2609.05801"
+      ],
+      "title": "Evidence-Aligned Local Composition of Discrete Experts for Sequence Restoration",
+      "reason": "Discrete-expert sequence restoration, not LLM serving.",
+      "source_url": "https://arxiv.org/abs/2609.05801",
+      "first_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "last_checked_at": "2026-10-05T05:53:11.846874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
