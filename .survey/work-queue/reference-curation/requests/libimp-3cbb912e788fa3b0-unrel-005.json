@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3cbb912e788fa3b0-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.09840",
+  "reason": "Accurate long-term trajectory prediction for maritime vessels is essential for safety and logistical efficiency. While deep learning models, particularly Transformers, have shown promise in processing Automatic Identification System (AIS) data, they often struggle with the quadratic computational complexity of self-attention and the loss of accuracy over extended forecasting horizons. This study proposes TempTPI, a novel prediction framework that integrates an Informer-based encoder with a multi-channel temporal encoding mechanism. The Informer architecture leverages a ProbSparse self-attention mechanism to reduce computational overhead and focus on the most significant dependencies, while the temporal encoder utilizes Fourier-like frequency expansions to capture cyclic patterns (hourly, daily, and seasonal) in vessel behavior. We evaluate our model against the state-of-the-art TPTrans architecture using AIS data from Danish waters. Experimental results demonstrate that TempTPI consistently outperforms existing methods across prediction windows of 1 to 5 hours. Notably, at a 5-hour horizon, the proposed model achieves a 55% improvement in Mean Squared Error (MSE), offering a robust solution for long-range maritime situational awareness.",
+  "title": "TempTPI: Informer-Based trajectory prediction for maritime vessels",
+  "identity_tokens": [
+    "arXiv:2609.09840"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cbb912e788f",
+  "source_precheck_request_id": null
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-692bac37e840ee68-unrel-001",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.10046",
+  "reason": "Large Language Models (LLMs) are increasingly used as interfaces for information retrieval, but they remain prone to hallucinations and faithfulness errors, in which the generated answers diverge from the retrieved evidence. While Retrieval-Augmented Generation (RAG) and recent hybrid or semi-extractive approaches mitigate this issue, they do not guarantee that quoted or extracted spans are verbatim from the retrieved context. This limitation can have severe consequences in safety-critical domains, where answers must exactly match certified documentation. We introduce Constrained Hybrid Decoding (CHyD), a novel faithfulness-first paradigm for speculative RAG. While traditional speculative decoding is optimized for inference speed, CHyD repurposes this architecture to ensure faithful verbatim evidence extraction when the extraction mode is correctly triggered. Our approach enforces hard decoding constraints that restrict generation to continuous spans present in the retrieved documents. This design provides a robust but straightforward guarantee: any explicitly quoted span in the output appears verbatim in the provided context. We evaluate our method across state-of-the-art LLMs on diverse abstractive, extractive, and semi-extractive QA benchmarks, including technical datasets motivated by aircraft maintenance. Results show that existing hybrid methods frequently hallucinate quoted spans, with exact extraction accuracy dropping below 40% in technical domains. In contrast, our approach achieves near-perfect extraction faithfulness regardless of the model used. Although enforcing hard constraints introduces a trade-off with fluency-oriented metrics, our method improves exact answer correctness and remains competitive overall, highlighting its suitability for safety-critical information retrieval applications.",
+  "title": "Guaranteeing Faithful Evidence Extraction in Speculative Retrieval-Augmented Generation",
+  "identity_tokens": [
+    "arXiv:2609.10046"
+  ],
+  "linked_from": [
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+    "papers/inference/05-speculative-decoding-moe/2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-692bac37e840",
+  "source_precheck_request_id": null
+}

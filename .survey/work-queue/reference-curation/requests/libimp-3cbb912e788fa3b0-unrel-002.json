@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-3cbb912e788fa3b0-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2609.09778",
+  "reason": "Long-term language-model agents rely on external memory across interactions. Atomic memories are particularly useful: their fine-grained semantic boundaries enable precise retrieval and direct comparison between observations. Yet accumulating atoms inevitably become redundant, overlapping, or conflicting. Existing methods often ask an LLM manager to add, update, delete, or rewrite memories directly, coupling semantic interpretation, storage decisions, and content generation in one error-prone operation. We introduce ROAM, a relation-guided framework that uses atomicity for management while allowing richer answer-time representations. ROAM classifies incoming--stored atom pairs as independent, equivalent, directionally subsuming, or conflicting, then organizes observations into active Primary and supporting Evidence roles. Fusion subsequently combines complementary details and temporal changes into compact, potentially non-atomic views. Only Primary views are retrieved for answering, preventing redundant or outdated atoms from competing independently. Across models and evaluation settings, ROAM improves answer accuracy by up to 29.8 percentage points. Ablations show complementary benefits from different relations and consistent gains from fusion beyond role organization. Mechanism analysis further finds 15.6-point higher answer-critical source recall and an 11.5-point lower confounder-token share. ROAM remains robust across manager scales.",
+  "title": "ROAM: Robust Organization of Atomic Memories for Agents through Semantic Relations",
+  "identity_tokens": [
+    "arXiv:2609.09778"
+  ],
+  "linked_from": [
+    "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3cbb912e788f",
+  "source_precheck_request_id": null
+}
