@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-102-part-05-5bd415e1105c",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCSS.2024.3423749",
+      "identity_tokens": [
+        "DOI:10.1109/TCSS.2024.3423749"
+      ],
+      "title": "SLoB: Suboptimal Load Balancing Scheduling in Local Heterogeneous GPU Clusters for Large Language Model Inference",
+      "reason": "IEEE full text inaccessible; scheduler details and metric definition unverified.",
+      "source_url": "https://doi.org/10.1109/TCSS.2024.3423749",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.05920-fastserve-iteration-level-preemptive-scheduling.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/FLLM63129.2024.10852431",
+      "identity_tokens": [
+        "DOI:10.1109/FLLM63129.2024.10852431"
+      ],
+      "title": "On Large Language Model Based Joint Source Channel Coding for Semantic Communication",
+      "reason": "It centers on transmission semantics rather than model execution; full text required browser verification.",
+      "source_url": "https://doi.org/10.1109/FLLM63129.2024.10852431",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14592",
+      "identity_tokens": [
+        "arXiv:2411.14592"
+      ],
+      "title": "G-RAG: Knowledge Expansion in Material Science",
+      "reason": "Primary abstract: Material-science G-RAG addresses retrieval quality, not retrieval/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2411.14592",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/SCW63240.2024.00232",
+      "identity_tokens": [
+        "DOI:10.1109/SCW63240.2024.00232"
+      ],
+      "title": "Analysis of Power Consumption and GPU Power Capping for MILC",
+      "reason": "Primary abstract: MILC lattice-QCD GPU power-capping study, not LLM inference.",
+      "source_url": "https://doi.org/10.1109/SCW63240.2024.00232",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01076",
+      "identity_tokens": [
+        "arXiv:2411.01076"
+      ],
+      "title": "When Speculation Spills Secrets: Side Channels via Speculative Decoding In LLMs",
+      "reason": "Primary abstract: Speculative-decoding side-channel/security study, not efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2411.01076",
+      "first_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "last_checked_at": "2026-10-05T13:05:37.536222+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
+      ]
+    }
+  ]
+}
