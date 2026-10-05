@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d63b746a59721ee1-unrel-003",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.13668",
+  "reason": "Linear attention keeps a state of fixed size. At long context, many stored items share this state, and interference between them degrades retrieval. Gated DeltaNet-2 (GDN-2), like every delta-rule model before it, derives its erase vector from the key of the current token. However, the interference in its reads is measured through the query, and the erase step cannot reach it. We introduce the Query-derived Erase Direction (QED). QED adds a second erase direction derived from the query and orthogonal to the key. In the fast-weight view, a key-directed delta edit cannot change the key-orthogonal part of a read. It uses the editable part to cancel old-state content measured along the query. It also improves retrieval at every length past the training window, and it about doubles the usable context length on S-NIAH-1.",
+  "title": "The Query Knows What to Forget: A Second Erase Direction for Linear Attention",
+  "identity_tokens": [
+    "arXiv:2608.13668"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d63b746a5972",
+  "source_precheck_request_id": null
+}

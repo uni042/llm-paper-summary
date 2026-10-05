@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-d63b746a59721ee1-unrel-005",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.13757",
+  "reason": "Multi-engine AI accelerators such as AWS Trainium comprise specialized compute engines that execute in parallel, and the compiler must synchronize the data dependencies between them. For straight-line code this is simple: each dependency reduces to waiting for a threshold count of instruction completions, which the compiler computes statically. Loops admit no such static threshold; a simple solution inserts all-engine barriers at iteration boundaries, resetting synchronization state so each loop body can be treated as straight-line, at the cost of parallelism. We present a barrier-free synchronization algorithm that instead enforces each dependency precisely across structured control flow with arbitrarily nested, dynamically bounded loops. The key idea is to compute dynamic thresholds at runtime from tracked loop iteration counts. We implemented it as a compiler backend pass at the AWS Neuron ISA level. On a suite of ML kernels, it reduces latency 10-45% relative to the barrier-based baseline, achieves a 3.3x speedup on a synchronization-bound microbenchmark, and often matches or exceeds hand-tuned manual allocation. Issuing a consumer too early violates its dependency, while issuing too late unnecessarily stalls execution. We formally characterize the minimum synchronization required for correctness and verify in the Lean proof assistant, via bisimulation, that our algorithm meets this criterion.",
+  "title": "A Barrier-Free Synchronization Algorithm for Multi-Engine AI Accelerators",
+  "identity_tokens": [
+    "arXiv:2608.13757"
+  ],
+  "linked_from": [
+    "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d63b746a5972",
+  "source_precheck_request_id": null
+}
