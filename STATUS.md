@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-05 13:29:40 JST**
+> 自動生成: **2026-10-05 13:30:42 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -35,16 +35,16 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **26809** |
-| 処理済み | **5420** |
-| 未処理Discovery候補 | **21389** |
+| 処理済み | **5440** |
+| 未処理Discovery候補 | **21369** |
 | 収録済み | **1596** |
 | Research / Audit候補へ昇格済み | **513** |
-| 無関係として除外 | **2491** |
-| 微妙として除外 | **820** |
+| 無関係として除外 | **2509** |
+| 微妙として除外 | **822** |
 
-- 消化率: **20.2%**
+- 消化率: **20.3%**
 - 現在の生在庫: 後方references **6355件** / 前方引用 **16227件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **22084件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **22064件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -71,7 +71,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-05 08:50:42 JST（4時間38分前）** |
+| 最終maintenance完了 | **10-05 08:50:42 JST（4時間39分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -92,8 +92,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **22** |
-| 直近6hのDiscovery本文確認・分類 | **183** |
+| 直近6hのDiscovery run | **20** |
+| 直近6hのDiscovery本文確認・分類 | **168** |
 | 最終Research完了 | **10-05 05:02:00 JST** |
 | 最終Discovery完了 | **10-05 12:30:00 JST** |
 
