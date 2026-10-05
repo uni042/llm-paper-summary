@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r15-screen-04-part-02-45a1a30dab6f",
+  "reference_main_sha": "1229695562aa0d7837e3f207557974d6637ab1f4",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.08553",
+      "identity_tokens": [
+        "arXiv:2009.08553"
+      ],
+      "title": "Generation-Augmented Retrieval for Open-Domain Question Answering",
+      "reason": "GAR improves retrieval/QA relevance and accuracy; abstract gives no inference-cost reduction objective.",
+      "source_url": "https://arxiv.org/abs/2009.08553",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.11054",
+      "identity_tokens": [
+        "arXiv:2002.11054"
+      ],
+      "title": "MLIR: A Compiler Infrastructure for the End of Moore's Law",
+      "reason": "MLIR compiler infrastructure for extensible heterogeneous compilation, not LLM-specific serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2002.11054",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1704.05119",
+      "identity_tokens": [
+        "arXiv:1704.05119"
+      ],
+      "title": "Exploring Sparsity in Recurrent Neural Networks",
+      "reason": "RNN pruning during initial training and model-size reduction; no LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/1704.05119",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.17935",
+      "identity_tokens": [
+        "arXiv:2405.17935"
+      ],
+      "title": "Tool learning with large language models: a survey",
+      "reason": "Survey of LLM tool-learning paradigms, not inference/serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2405.17935",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2002.03932",
+      "identity_tokens": [
+        "arXiv:2002.03932"
+      ],
+      "title": "Pre-training Tasks for Embedding-based Large-scale Retrieval",
+      "reason": "Embedding pretraining and large-scale document retrieval, not generative LLM inference.",
+      "source_url": "https://arxiv.org/abs/2002.03932",
+      "first_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "last_checked_at": "2026-10-05T01:40:01.384077+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.01173-efficient-prompt-caching-via-embedding-similarity.md"
+      ]
+    }
+  ]
+}
