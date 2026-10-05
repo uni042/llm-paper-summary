@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-62-part-01-8c1dcf3bbc2e",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09668",
+      "identity_tokens": [
+        "arXiv:2606.09668"
+      ],
+      "title": "Algorithm for Contextual Queueing Bandits with Rate-Optimal Queue Length Regret",
+      "reason": "Contextual queueing-bandit theory with queue-length regret; no LLM/inference workload or serving-system evaluation.",
+      "source_url": "https://arxiv.org/abs/2606.09668",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09951",
+      "identity_tokens": [
+        "arXiv:2606.09951"
+      ],
+      "title": "Hasse Diagrams for Attention: A Partial Order Framework for Designing Transformer Masks",
+      "reason": "Formal attention-mask structure and parallel-training task design; the contribution targets training mask construction, not serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.09951",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09962",
+      "identity_tokens": [
+        "arXiv:2606.09962"
+      ],
+      "title": "Optimality of FSQ Tokens for Continuous Diffusion for Categorical Data with Application to Text-to-Speech",
+      "reason": "Discrete diffusion for categorical/TTS generation; compares speech synthesis models rather than LLM inference systems.",
+      "source_url": "https://arxiv.org/abs/2606.09962",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10254",
+      "identity_tokens": [
+        "arXiv:2606.10254"
+      ],
+      "title": "RealMath-Eval: Why SOTA Judges Struggle with Real Human Reasoning",
+      "reason": "Benchmark of LLM judges for human math reasoning; evaluated judge quality, not model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2606.10254",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11255",
+      "identity_tokens": [
+        "arXiv:2606.11255"
+      ],
+      "title": "Bernstein-Schur Kernels: Random Features by Sketched Modulation and Radial Randomization",
+      "reason": "Random-feature approximation theory for kernel-ridge methods; no LLM or serving workload.",
+      "source_url": "https://arxiv.org/abs/2606.11255",
+      "first_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "last_checked_at": "2026-10-05T10:32:54.644127+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ]
+    }
+  ]
+}
