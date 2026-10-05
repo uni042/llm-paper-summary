@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0bf454fe2fc68756-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.21162",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.21162",
+    "identity_tokens": [
+      "arXiv:2607.21162"
+    ],
+    "reason": "The contribution verifies outsourced HND Transformer execution against substitution/incomplete-computation attacks; it is a security protocol, not an efficiency method.",
+    "first_checked_at": "2026-10-05T10:03:28+00:00",
+    "last_checked_at": "2026-10-05T10:03:28+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+      "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+      "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+    ],
+    "title": "Agree on the Model, Verify the Inference: GKR Protocols for HND-Based Transformer Inference"
+  },
+  "processed_at": "2026-10-05T10:03:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0bf454fe2fc6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

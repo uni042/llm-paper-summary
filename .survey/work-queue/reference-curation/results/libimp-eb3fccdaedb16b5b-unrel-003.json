@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eb3fccdaedb16b5b-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.21467",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.21467",
+    "identity_tokens": [
+      "arXiv:2607.21467"
+    ],
+    "reason": "CLUIE is an underwater-image-enhancement method, outside LLM inference/serving scope.",
+    "first_checked_at": "2026-10-05T10:03:31+00:00",
+    "last_checked_at": "2026-10-05T10:03:31+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "title": "CLUIE: Clustering-Aware Recurrent Propagation with Local Structural Compensation for Underwater Image Enhancement"
+  },
+  "processed_at": "2026-10-05T10:03:31+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eb3fccdaedb1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

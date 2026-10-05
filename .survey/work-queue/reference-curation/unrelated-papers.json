@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T10:01:02+00:00",
-  "record_count": 4301,
+  "updated_at": "2026-10-05T10:03:31+00:00",
+  "record_count": 4315,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -62627,6 +62627,210 @@
         "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
       ],
       "title": "Frustratingly Simple Black-Box Adaptation of Language Models via Logit Bias"
+    },
+    "arXiv:2607.21128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21128",
+      "identity_tokens": [
+        "arXiv:2607.21128"
+      ],
+      "reason": "TF-MossFormer targets monaural speech separation quality, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T10:03:28+00:00",
+      "last_checked_at": "2026-10-05T10:03:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "TF-MossFormer: Integrating Convolution Gated Local-Global Attentions for Enhanced Time-Frequency Domain Monaural Speech Separation"
+    },
+    "arXiv:2607.21162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21162",
+      "identity_tokens": [
+        "arXiv:2607.21162"
+      ],
+      "reason": "The contribution verifies outsourced HND Transformer execution against substitution/incomplete-computation attacks; it is a security protocol, not an efficiency method.",
+      "first_checked_at": "2026-10-05T10:03:28+00:00",
+      "last_checked_at": "2026-10-05T10:03:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md"
+      ],
+      "title": "Agree on the Model, Verify the Inference: GKR Protocols for HND-Based Transformer Inference"
+    },
+    "arXiv:2607.21404": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21404",
+      "identity_tokens": [
+        "arXiv:2607.21404"
+      ],
+      "reason": "MemTools is an interoperability framework and evaluation interface for agent-memory research. The abstract reports integration and coordination evaluations, not reduced LLM inference tokens, latency, memory, energy, or serving cost.",
+      "first_checked_at": "2026-10-05T10:03:28+00:00",
+      "last_checked_at": "2026-10-05T10:03:28+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "MemTools: A Unified Research Framework for Interoperable Agent Memory"
+    },
+    "arXiv:2607.21405": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21405",
+      "identity_tokens": [
+        "arXiv:2607.21405"
+      ],
+      "reason": "Möbius RoPE improves retrieval reliability in 160M/410M pretrained models at unchanged perplexity; its stated contribution is positional encoding/retrieval quality rather than inference-efficiency reduction.",
+      "first_checked_at": "2026-10-05T10:03:28+00:00",
+      "last_checked_at": "2026-10-05T10:03:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Anti-Periodic Positional Encoding: Möbius Boundary Conditions Make In-Context Retrieval Reliable"
+    },
+    "arXiv:2607.20908": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20908",
+      "identity_tokens": [
+        "arXiv:2607.20908"
+      ],
+      "reason": "CudaPerf trains code-generation agents to emit faster CUDA kernels. Its outcome is kernel speedup, not LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md"
+      ],
+      "title": "Multi-turn RL with Structural and Performance Aware Rewards for CUDA Kernel Generation"
+    },
+    "arXiv:2607.20961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20961",
+      "identity_tokens": [
+        "arXiv:2607.20961"
+      ],
+      "reason": "The work optimizes a firm’s cloud-capacity deployment and response-readiness decisions; it does not propose an LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.17644-burstgpt-real-world-llm-serving-workload-dataset.md"
+      ],
+      "title": "Dynamic Cloud Service-Capacity Deployment with Costly Response Readiness"
+    },
+    "arXiv:2607.21674": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21674",
+      "identity_tokens": [
+        "arXiv:2607.21674"
+      ],
+      "reason": "This is a study of coding-agent output-format and model-identity effects on task performance; the abstract makes no inference-cost or serving-efficiency claim.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Output Format x Model Identity: Interaction Effects in Single-Round Coding Agent Performance"
+    },
+    "arXiv:2607.21680": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21680",
+      "identity_tokens": [
+        "arXiv:2607.21680"
+      ],
+      "reason": "The work applies QLoRA fine-tuning for bridge-diagnostic agents; its contribution is domain adaptation/training, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Encoding Invisible Causation for Bridge Diagnostic Agents: Triple-Guided Retrieval-Augmented Fine-Tuning with QLoRA"
+    },
+    "arXiv:2607.21681": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21681",
+      "identity_tokens": [
+        "arXiv:2607.21681"
+      ],
+      "reason": "CARNet is a multivariate time-series forecasting model, outside the LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "CARNet Cycle-Conditioned Core Aggregation and Redistribution for Multivariate Time Series Forecasting"
+    },
+    "arXiv:2607.21686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21686",
+      "identity_tokens": [
+        "arXiv:2607.21686"
+      ],
+      "reason": "Persistent Computational State is a runtime for generative world models, not an LLM inference/serving optimization.",
+      "first_checked_at": "2026-10-05T10:03:30+00:00",
+      "last_checked_at": "2026-10-05T10:03:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.00428-layerkv-optimizing-large-language-model-serving-with-layer-wise-kv-cache.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "title": "Persistent Computational State: A Session-Centric Runtime for Generative World Models"
+    },
+    "arXiv:2607.21446": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21446",
+      "identity_tokens": [
+        "arXiv:2607.21446"
+      ],
+      "reason": "KroQuant targets image-generation Diffusion Transformers (DiTs), not language-model inference/serving.",
+      "first_checked_at": "2026-10-05T10:03:31+00:00",
+      "last_checked_at": "2026-10-05T10:03:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "KroQuant: Kronecker-Structured Block Transforms for Efficient Post-Training Quantization of Diffusion Transformers"
+    },
+    "arXiv:2607.21447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21447",
+      "identity_tokens": [
+        "arXiv:2607.21447"
+      ],
+      "reason": "RUMBA contributes a benchmark for long-term conversational memory and reports no inference-efficiency intervention.",
+      "first_checked_at": "2026-10-05T10:03:31+00:00",
+      "last_checked_at": "2026-10-05T10:03:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "RUMBA: Russian User Memory Benchmark"
+    },
+    "arXiv:2607.21467": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21467",
+      "identity_tokens": [
+        "arXiv:2607.21467"
+      ],
+      "reason": "CLUIE is an underwater-image-enhancement method, outside LLM inference/serving scope.",
+      "first_checked_at": "2026-10-05T10:03:31+00:00",
+      "last_checked_at": "2026-10-05T10:03:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "CLUIE: Clustering-Aware Recurrent Propagation with Local Structural Compensation for Underwater Image Enhancement"
+    },
+    "arXiv:2607.21585": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21585",
+      "identity_tokens": [
+        "arXiv:2607.21585"
+      ],
+      "reason": "Expanding Flow Maps concerns flow-map generative modeling and does not identify an LLM inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T10:03:31+00:00",
+      "last_checked_at": "2026-10-05T10:03:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Expanding Flow Maps"
     }
   }
 }

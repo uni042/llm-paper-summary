@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c724340e09f10781-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.20972",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.20972",
+    "identity_tokens": [
+      "arXiv:2607.20972"
+    ],
+    "reason": "The authors explicitly make no headline speed claim: n=2 versus n=1 for the seeded comparison, large wall-time variance, one task/model/product setup, and roughly 15–20 runs per arm would be needed for a defensible percentage. This is a plausible agent-context cost mechanism but its measured efficiency effect is too preliminary for a firm research handoff.",
+    "first_checked_at": "2026-10-05T10:03:29+00:00",
+    "last_checked_at": "2026-10-05T10:03:29+00:00",
+    "linked_from": [
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+      "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+    ],
+    "title": "Delivery, Not Storage: Cue-Anchored Working Memory as a Harness Property for Coding Agents"
+  },
+  "processed_at": "2026-10-05T10:03:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c724340e09f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
