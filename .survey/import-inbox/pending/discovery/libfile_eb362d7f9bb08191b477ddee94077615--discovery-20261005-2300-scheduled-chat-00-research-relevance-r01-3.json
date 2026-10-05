@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261005-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "a9b6014e1ad4700eb2d53421b56f3fd4ff087459",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1811.06965",
+      "identity_tokens": [
+        "arXiv:1811.06965"
+      ],
+      "title": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+      "reason": "microbatch pipelineで巨大networkを複数acceleratorへ分割するtraining library。評価はAmoebaNetと6B Transformerの学習で、推論system最適化が主目的ではない。",
+      "source_url": "https://arxiv.org/abs/1811.06965",
+      "body_check": "abstract_screen_only: 一次arXiv要旨でpipeline-parallel training libraryとtraining speed/model scalingが主題と明白なため本文深読解を省略。",
+      "first_checked_at": "2026-10-05T23:50:00+09:00",
+      "last_checked_at": "2026-10-05T23:50:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
