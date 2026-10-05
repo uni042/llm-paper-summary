@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3b586d94cf563a69-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.04104",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.04104",
+    "identity_tokens": [
+      "arXiv:2408.04104"
+    ],
+    "reason": "Full text confirms strong general ML-inference systems results, but the work is not LLM-specific and transfer to LLM serving is not established; keep as borderline for scope fit.",
+    "first_checked_at": "2026-10-05T15:01:19+00:00",
+    "last_checked_at": "2026-10-05T15:01:19+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Hardware-Assisted Virtualization of Neural Processing Units for Cloud Platforms"
+  },
+  "processed_at": "2026-10-05T15:01:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3b586d94cf56",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
