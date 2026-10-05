@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a0260679bc257d27-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2108.05542",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2108.05542",
+    "identity_tokens": [
+      "arXiv:2108.05542"
+    ],
+    "reason": "Transformer系事前学習言語モデルのself-supervised learning、pretraining task、embedding、downstream adaptation、benchmarkを整理するsurvey。推論runtime・memory・serving最適化の新規方式を扱わないためunrelated。",
+    "first_checked_at": "2026-10-05T15:43:19+00:00",
+    "last_checked_at": "2026-10-05T15:43:20+00:00",
+    "linked_from": [],
+    "title": "AMMUS : A Survey of Transformer-based Pretrained Models in Natural Language Processing"
+  },
+  "processed_at": "2026-10-05T15:43:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a0260679bc25",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

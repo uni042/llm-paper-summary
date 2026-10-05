@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-936cbc952c4e0f13-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.18653/v1/2021.acl-long.507",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.18653/v1/2021.acl-long.507",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2021.acl-long.507"
+    ],
+    "reason": "Common Crawlから38言語・数十億規模のparallel sentenceを採掘しNMT学習品質を評価するdata mining/training研究。推論runtime・serving最適化ではない。",
+    "first_checked_at": "2026-10-05T15:43:19+00:00",
+    "last_checked_at": "2026-10-05T15:43:19+00:00",
+    "linked_from": [],
+    "title": "CCMatrix: Mining Billions of High-Quality Parallel Sentences on the Web"
+  },
+  "processed_at": "2026-10-05T15:43:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-936cbc952c4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

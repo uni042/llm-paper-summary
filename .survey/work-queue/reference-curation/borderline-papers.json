@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T15:38:29+00:00",
-  "record_count": 2040,
+  "updated_at": "2026-10-05T15:43:22+00:00",
+  "record_count": 2045,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -31594,6 +31594,74 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "SmolVLM: Redefining small and efficient multimodal models"
+    },
+    "arXiv:2005.00743": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2005.00743",
+      "identity_tokens": [
+        "arXiv:2005.00743"
+      ],
+      "reason": "token-token query-key interactionを使わずsynthetic attention weightを生成するTransformer代替attentionを提案し、Random SynthesizerでDynamic Convolution比60%高速化も報告する。効率attentionとして関連するがLLM生成推論・servingを直接評価していないためborderline。",
+      "first_checked_at": "2026-10-05T15:43:17+00:00",
+      "last_checked_at": "2026-10-05T15:43:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Synthesizer: Rethinking Self-Attention in Transformer Models"
+    },
+    "DOI:10.1145/356571.356573": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/356571.356573",
+      "identity_tokens": [
+        "DOI:10.1145/356571.356573"
+      ],
+      "reason": "仮想記憶の概念・実装を扱う古典的memory-system研究。LLMの階層メモリ／オフロード設計の基礎概念に直接つながるが、LLM/Transformer推論を最終適用先としないためborderline。",
+      "first_checked_at": "2026-10-05T15:43:18+00:00",
+      "last_checked_at": "2026-10-05T15:43:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Virtual Memory"
+    },
+    "DOI:10.1109/2.268884": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2.268884",
+      "identity_tokens": [
+        "DOI:10.1109/2.268884"
+      ],
+      "reason": "disk I/Oの機械遅延をcacheで隠蔽し、RR/LRU/SLRU replacementや階層内のcache配置を比較するstorage基礎研究。SSD/NVMe offloadや階層memory設計の基礎には関係するが、LLM/Transformer推論を最終適用先としないためborderline。",
+      "first_checked_at": "2026-10-05T15:43:18+00:00",
+      "last_checked_at": "2026-10-05T15:43:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Caching strategies to improve disk system performance"
+    },
+    "DOI:10.1109/tcad.2004.839485": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2004.839485",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2004.839485"
+      ],
+      "reason": "off-chip access時間とon-chip computation時間の比を使って細粒度DVFSを制御し、energy/performance trade-offを調整するarchitecture研究。LLM推論のpower-aware GPU/NPU制御に機構的に関連するが、LLM/Transformer専用ではないためborderline。",
+      "first_checked_at": "2026-10-05T15:43:20+00:00",
+      "last_checked_at": "2026-10-05T15:43:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fine-grained dynamic voltage and frequency scaling for precise energy and performance trade-off based on the ratio of off-chip access to on-chip computation times"
+    },
+    "DOI:10.1109/mm.2024.3373763": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mm.2024.3373763",
+      "identity_tokens": [
+        "DOI:10.1109/mm.2024.3373763",
+        "arXiv:2403.14123"
+      ],
+      "reason": "LLM servingを含むTransformerでmemory bandwidthが主要bottleneckになることをhardware scalingとencoder/decoder解析から示し、architecture・training・deploymentの再設計を論じる。推論memory hierarchyへ直接関連するが、新規runtime/system方式の実装評価ではないためborderline。",
+      "first_checked_at": "2026-10-05T15:43:22+00:00",
+      "last_checked_at": "2026-10-05T15:43:22+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2407.21255-aqua-network-accelerated-memory-offloading-for-llms-in-scale-up-gpu-domains.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI and Memory Wall"
     }
   }
 }

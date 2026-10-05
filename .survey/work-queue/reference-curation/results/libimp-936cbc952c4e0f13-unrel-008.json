@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-936cbc952c4e0f13-unrel-008",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2107.07566",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2107.07566",
+    "identity_tokens": [
+      "arXiv:2107.07566"
+    ],
+    "reason": "Internet検索等の外部情報を利用してdialogue responseの知識性・品質を改善するretrieval-augmented dialogue研究。推論systemのlatency・memory・serving最適化を主目的としない。",
+    "first_checked_at": "2026-10-05T15:43:19+00:00",
+    "last_checked_at": "2026-10-05T15:43:19+00:00",
+    "linked_from": [],
+    "title": "Internet-Augmented Dialogue Generation"
+  },
+  "processed_at": "2026-10-05T15:43:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-936cbc952c4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

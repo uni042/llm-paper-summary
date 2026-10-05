@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-74049fecd418aa32-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2005.00743",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2005.00743",
+    "identity_tokens": [
+      "arXiv:2005.00743"
+    ],
+    "reason": "token-token query-key interactionを使わずsynthetic attention weightを生成するTransformer代替attentionを提案し、Random SynthesizerでDynamic Convolution比60%高速化も報告する。効率attentionとして関連するがLLM生成推論・servingを直接評価していないためborderline。",
+    "first_checked_at": "2026-10-05T15:43:17+00:00",
+    "last_checked_at": "2026-10-05T15:43:17+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Synthesizer: Rethinking Self-Attention in Transformer Models"
+  },
+  "processed_at": "2026-10-05T15:43:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-74049fecd418",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
