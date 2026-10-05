@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-06-part-02-6496a14d275e",
+  "reference_main_sha": "23000c27e27907a2ac5111227165ab2943bce2a6",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/systems14091160",
+      "identity_tokens": [
+        "DOI:10.3390/systems14091160"
+      ],
+      "title": "TriageRAG: Confidence-Based Triage for Idea-Stage §103-Propensity Screening",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://doi.org/10.3390/systems14091160",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.36948/ijfmr.2026.v08i05.87791",
+      "identity_tokens": [
+        "DOI:10.36948/ijfmr.2026.v08i05.87791"
+      ],
+      "title": "Automatic Model Selection Based on Task Complexity",
+      "reason": "一次PDFのIntroduction、Related Work、設計/評価プロトコル節を確認。モデル/solverをtask complexityに応じてrouterが選ぶ設計は推論費用に隣接するが、論文はconceptual design and protocolのみでrouter実装・benchmark結果なし。範囲適合の実証がないためborderline。",
+      "source_url": "https://doi.org/10.36948/ijfmr.2026.v08i05.87791",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.55730/1300-0632.4275",
+      "identity_tokens": [
+        "DOI:10.55730/1300-0632.4275"
+      ],
+      "title": "Empowering edge intelligence through reparameterized lightweight transformers and distributed inference",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://doi.org/10.55730/1300-0632.4275",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.7554/eLife.101204",
+      "identity_tokens": [
+        "DOI:10.7554/eLife.101204"
+      ],
+      "title": "Larger language models better align with neural representations of natural language",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://doi.org/10.7554/eLife.101204",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.16446",
+      "identity_tokens": [
+        "arXiv:2609.16446"
+      ],
+      "title": "Adaptive Bayesian Partner Selection for Federated Clinical Centers",
+      "reason": "packet内の一次abstract/titleを確認。対象はLLM inference/serving/inference-time efficiencyではなく、上記の別対象または用途である。",
+      "source_url": "https://arxiv.org/abs/2609.16446",
+      "first_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "last_checked_at": "2026-10-05T05:29:39.249880+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    }
+  ]
+}
