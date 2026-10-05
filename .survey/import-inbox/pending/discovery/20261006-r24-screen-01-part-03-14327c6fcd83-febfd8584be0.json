@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r24-screen-01-part-03-14327c6fcd83",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.15674",
+      "identity_tokens": [
+        "arXiv:2501.15674"
+      ],
+      "title": "TensorLLM: Tensorising Multi-Head Attention for Enhanced Reasoning and Compression in LLMs",
+      "reason": "TensorLLM compresses attention weights in LLMs, but inspected full-text evaluation centers on compression and task quality, without established serving latency/throughput or deployed memory gains.",
+      "source_url": "https://arxiv.org/abs/2501.15674",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.12018",
+      "identity_tokens": [
+        "arXiv:1911.12018"
+      ],
+      "title": "Non-Autoregressive Video Captioning with Iterative Refinement",
+      "reason": "Non-autoregressive iterative refinement concerns video-captioning models; it does not target LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/1911.12018",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/O-COCOSDA46868.2019.9060847",
+      "identity_tokens": [
+        "DOI:10.1109/O-COCOSDA46868.2019.9060847"
+      ],
+      "title": "Recognition and translation of code-switching speech utterances",
+      "reason": "Code-switch speech recognition/translation targets ASR and translation quality, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.1109/O-COCOSDA46868.2019.9060847",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07862",
+      "identity_tokens": [
+        "arXiv:2502.07862"
+      ],
+      "title": "ADMN: A Layer-Wise Adaptive Multimodal Network for Dynamic Input Noise and Compute Resources",
+      "reason": "Adaptive multimodal sensor fusion targets variable-noise/resource sensing, without an LLM inference/serving method.",
+      "source_url": "https://arxiv.org/abs/2502.07862",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-025-63453-8",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-025-63453-8"
+      ],
+      "title": "The spatial complexity of optical computing: toward space-efficient design",
+      "reason": "Optical-computing spatial complexity is hardware physics/design analysis, not an LLM inference method.",
+      "source_url": "https://doi.org/10.1038/s41467-025-63453-8",
+      "first_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "last_checked_at": "2026-10-05T23:23:21.976024+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    }
+  ]
+}
