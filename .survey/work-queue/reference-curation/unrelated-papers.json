@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T13:08:16+00:00",
-  "record_count": 5154,
+  "updated_at": "2026-10-05T13:10:52+00:00",
+  "record_count": 5168,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -74942,6 +74942,210 @@
         "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
       ],
       "title": "WTxGRN: Wavelet Transform-Based Extended Gated Recurrent Network for Palm Vein Recognition"
+    },
+    "arXiv:2410.21959": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.21959",
+      "identity_tokens": [
+        "arXiv:2410.21959"
+      ],
+      "reason": "Primary abstract: General floating-point adder hardware, not LLM inference.",
+      "first_checked_at": "2026-10-05T13:10:48+00:00",
+      "last_checked_at": "2026-10-05T13:10:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Online Alignment and Addition in Multiterm Floating-Point Adders"
+    },
+    "DOI:10.1016/j.isci.2025.113495": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.isci.2025.113495",
+      "identity_tokens": [
+        "DOI:10.1016/j.isci.2025.113495"
+      ],
+      "reason": "Primary abstract: Protein-language-model optimization is domain-specific PLM work, outside general LLM inference survey scope.",
+      "first_checked_at": "2026-10-05T13:10:48+00:00",
+      "last_checked_at": "2026-10-05T13:10:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md"
+      ],
+      "title": "Efficient inference, training, and fine-tuning of protein language models"
+    },
+    "arXiv:2410.05684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05684",
+      "identity_tokens": [
+        "arXiv:2410.05684"
+      ],
+      "reason": "Primary abstract: Clinical autism-diagnosis application; evaluates quality rather than efficiency.",
+      "first_checked_at": "2026-10-05T13:10:48+00:00",
+      "last_checked_at": "2026-10-05T13:10:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Copiloting Diagnosis of Autism in Real Clinical Scenarios via LLMs"
+    },
+    "arXiv:2411.10337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.10337",
+      "identity_tokens": [
+        "arXiv:2411.10337"
+      ],
+      "reason": "Full text evaluates generic serving frameworks on malware, time-series, image and sentiment workloads, not LLM inference or LLM-specific serving.",
+      "first_checked_at": "2026-10-05T13:10:49+00:00",
+      "last_checked_at": "2026-10-05T13:10:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.01876-dejavu-kv-cache-streaming-for-fast-fault-tolerant-generative-llm-serving.md"
+      ],
+      "title": "On the Cost of Model-Serving Frameworks: An Experimental Evaluation"
+    },
+    "arXiv:2409.15373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.15373",
+      "identity_tokens": [
+        "arXiv:2409.15373"
+      ],
+      "reason": "Primary abstract: Recommendation-model Jagged Flash Attention, not LLM inference.",
+      "first_checked_at": "2026-10-05T13:10:49+00:00",
+      "last_checked_at": "2026-10-05T13:10:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md"
+      ],
+      "title": "Enhancing Performance and Scalability of Large-Scale Recommendation Systems with Jagged Flash Attention"
+    },
+    "arXiv:2409.03735": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.03735",
+      "identity_tokens": [
+        "arXiv:2409.03735"
+      ],
+      "reason": "Primary abstract: LLM privacy-bias audit metric, not inference efficiency.",
+      "first_checked_at": "2026-10-05T13:10:49+00:00",
+      "last_checked_at": "2026-10-05T13:10:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+      ],
+      "title": "Privacy Bias in Language Models: A Contextual Integrity-based Auditing Metric"
+    },
+    "arXiv:2411.14592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14592",
+      "identity_tokens": [
+        "arXiv:2411.14592"
+      ],
+      "reason": "Primary abstract: Material-science G-RAG addresses retrieval quality, not retrieval/serving efficiency.",
+      "first_checked_at": "2026-10-05T13:10:50+00:00",
+      "last_checked_at": "2026-10-05T13:10:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2406.17565-memserve-context-caching-disaggregated-serving.md"
+      ],
+      "title": "G-RAG: Knowledge Expansion in Material Science"
+    },
+    "DOI:10.1109/scw63240.2024.00232": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/scw63240.2024.00232",
+      "identity_tokens": [
+        "DOI:10.1109/scw63240.2024.00232"
+      ],
+      "reason": "Primary abstract: MILC lattice-QCD GPU power-capping study, not LLM inference.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Analysis of Power Consumption and GPU Power Capping for MILC"
+    },
+    "arXiv:2411.01076": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.01076",
+      "identity_tokens": [
+        "arXiv:2411.01076"
+      ],
+      "reason": "Primary abstract: Speculative-decoding side-channel/security study, not efficiency contribution.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2311.08252-rest-retrieval-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md",
+        "papers/inference/99-other-inference-systems/2024-2402.01528-decoding-speculative-decoding.md"
+      ],
+      "title": "When Speculation Spills Secrets: Side Channels via Speculative Decoding In LLMs"
+    },
+    "DOI:10.48550/arxiv.2505.15674": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2505.15674",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2505.15674",
+        "arXiv:2505.15674"
+      ],
+      "reason": "Primary abstract: Language-model unlearning, not inference/serving/compression efficiency.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.04291-billm-pushing-the-limit-of-post-training-quantization-for-llms.md"
+      ],
+      "title": "UniErase: Unlearning Token as a Universal Erasure Primitive for Language Models"
+    },
+    "SemanticScholar:8ab30b31ea8a5c197bb6e64a4b5a7ef60ed05ad3": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:8ab30b31ea8a5c197bb6e64a4b5a7ef60ed05ad3",
+      "identity_tokens": [
+        "SemanticScholar:8ab30b31ea8a5c197bb6e64a4b5a7ef60ed05ad3"
+      ],
+      "reason": "Primary abstract: Multimodal multitask MoE optimization/training, not LLM inference.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "Sparse MoE as a New Treatment: Addressing Forgetting, Fitting, Learning Issues in Multi-Modal Multi-Task Learning"
+    },
+    "arXiv:2412.18860": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.18860",
+      "identity_tokens": [
+        "arXiv:2412.18860"
+      ],
+      "reason": "Primary abstract: Long-context extension by data synthesis and fine-tuning; no inference-efficiency optimization.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.05254-yoco.md",
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md",
+        "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
+      ],
+      "title": "Bootstrap Your Own Context Length"
+    },
+    "DOI:10.3390/v17010014": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/v17010014",
+      "identity_tokens": [
+        "DOI:10.3390/v17010014"
+      ],
+      "reason": "Primary abstract: Peptide generation/screening application, not inference efficiency.",
+      "first_checked_at": "2026-10-05T13:10:51+00:00",
+      "last_checked_at": "2026-10-05T13:10:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "AVP-GPT2: A Transformer-Powered Platform for De Novo Generation, Screening, and Explanation of Antiviral Peptides"
+    },
+    "arXiv:2412.13281": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.13281",
+      "identity_tokens": [
+        "arXiv:2412.13281"
+      ],
+      "reason": "Primary abstract: Engineering generative-optimization perspective, not LLM inference method.",
+      "first_checked_at": "2026-10-05T13:10:52+00:00",
+      "last_checked_at": "2026-10-05T13:10:52+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md"
+      ],
+      "title": "Generative Optimization: A Perspective on AI-Enhanced Problem Solving in Engineering"
     }
   }
 }

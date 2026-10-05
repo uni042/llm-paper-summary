@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1f6a10284218e061-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.03735",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.03735",
+    "identity_tokens": [
+      "arXiv:2409.03735"
+    ],
+    "reason": "Primary abstract: LLM privacy-bias audit metric, not inference efficiency.",
+    "first_checked_at": "2026-10-05T13:10:49+00:00",
+    "last_checked_at": "2026-10-05T13:10:49+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md"
+    ],
+    "title": "Privacy Bias in Language Models: A Contextual Integrity-based Auditing Metric"
+  },
+  "processed_at": "2026-10-05T13:10:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1f6a10284218",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
