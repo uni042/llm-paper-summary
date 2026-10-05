@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-37-part-07-244c615ed3cf",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2026.3672496",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3672496"
+      ],
+      "title": "FwdLLM+: Accelerating Forward-Only FedLLM With Low-Rank Perturbations",
+      "reason": "The paper accelerates federated LLM fine-tuning through forward-only training; the optimization targets training, outside scope.",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3672496",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TMC.2026.3674545",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2026.3674545"
+      ],
+      "title": "Efficient and Privacy-Preserving Federated Knowledge Learning for Distributed LLM",
+      "reason": "The paper reduces communication/privacy costs for federated LLM knowledge learning and training, not inference serving.",
+      "source_url": "https://doi.org/10.1109/TMC.2026.3674545",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2023-2308.14352-edgemoe.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.14778/3827998.3828020",
+      "identity_tokens": [
+        "DOI:10.14778/3827998.3828020"
+      ],
+      "title": "TQP++: Bridging ML Compilers and Analytical Query Processing on GPUs",
+      "reason": "The paper develops GPU analytical-query processing and an ML-compiler query engine, not LLM inference.",
+      "source_url": "https://doi.org/10.14778/3827998.3828020",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3827998.3828145",
+      "identity_tokens": [
+        "DOI:10.14778/3827998.3828145"
+      ],
+      "title": "Data Management for Agentic Memory: Foundations, Systems, and Challenges",
+      "reason": "The author publication page linked primary PDF https://dbgroup.cs.tsinghua.edu.cn/ligl/papers/VLDB26-AM.pdf, which returned HTTP 404; DOI page was inaccessible. Abstract relevance is plausible, but primary-body scope could not be confirmed.",
+      "source_url": "https://doi.org/10.14778/3827998.3828145",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26599/bdma.2025.9020094",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2025.9020094"
+      ],
+      "title": "DBG-DDA: A Dual-Branch Graph Learning Method for Drug-Disease Associations Prediction",
+      "reason": "The primary abstract describes drug-disease association prediction with heterogeneous graphs and graph attention; no LLM inference is involved.",
+      "source_url": "https://doi.org/10.26599/bdma.2025.9020094",
+      "first_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "last_checked_at": "2026-10-05T07:24:26.920382+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    }
+  ]
+}
