@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c6af0ab76582257a-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.64898/2026.02.19.705033",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.64898/2026.02.19.705033",
+    "identity_tokens": [
+      "DOI:10.64898/2026.02.19.705033"
+    ],
+    "reason": "The paper concerns diffusion generation for single-cell gene-expression modeling, not LLM inference/serving.",
+    "first_checked_at": "2026-10-05T13:32:17+00:00",
+    "last_checked_at": "2026-10-05T13:32:17+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "title": "Discrete Diffusion for Single-Cell Gene Expression Modeling"
+  },
+  "processed_at": "2026-10-05T13:32:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c6af0ab76582",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

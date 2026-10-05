@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81a82591c6b2d8f0-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2412.12426",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2412.12426",
+    "identity_tokens": [
+      "arXiv:2412.12426"
+    ],
+    "reason": "LLM inference optimizationの評価に役立ち得る測定基盤だが、効率化手法そのものではなく対象との適合が弱い。",
+    "first_checked_at": "2026-10-05T13:32:14+00:00",
+    "last_checked_at": "2026-10-05T13:32:14+00:00",
+    "linked_from": [
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md"
+    ],
+    "title": "FinGraV: Methodology for Fine-Grain GPU Power Visibility and Insights"
+  },
+  "processed_at": "2026-10-05T13:32:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81a82591c6b2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

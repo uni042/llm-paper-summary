@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd33ab0d788118f8-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.08570",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.08570",
+    "identity_tokens": [
+      "arXiv:2501.08570"
+    ],
+    "reason": "attentionのlength extrapolationに関するentropy invarianceが主題で、推論計算量・serving効率の改善を示さない。",
+    "first_checked_at": "2026-10-05T13:32:16+00:00",
+    "last_checked_at": "2026-10-05T13:32:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md"
+    ],
+    "title": "Information Entropy Invariance: Enhancing Length Extrapolation in Attention Mechanisms"
+  },
+  "processed_at": "2026-10-05T13:32:16+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd33ab0d7881",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
