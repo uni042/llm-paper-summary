@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-28-part-03-298e0a45cca2",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.18989",
+      "identity_tokens": [
+        "arXiv:2609.18989"
+      ],
+      "title": "Function Lives Where Variance Doesn't: Task-Weighted Charts of a Language Model's Computation",
+      "reason": "Weak fit/evidence: Task-weighted charts outperform variance/linear alternatives under tight dimensional budgets, but next-token prediction needs 70–90% residual width within 5% perplexity; authors find no compact low-dimensional core.",
+      "source_url": "https://arxiv.org/abs/2609.18989",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22101",
+      "identity_tokens": [
+        "arXiv:2609.22101"
+      ],
+      "title": "Context Poisoning as Extreme-Value Attention Interference in Long-Context Language Models",
+      "reason": "Large language models can process increasingly long prompts, yet their ability to locate and use decisive evidence may degrade as irrelevant or confusable context is added. We formulate this phenomenon, which we call context poisoning, as extreme-value interference in attention: the decisive-evidence score is upper-bounded, while the maximum score among effective distractors grows with their number. Under a softmax retrieval abstraction, we derive a finite-sample upper bound showing that maintaining a fixed accuracy target above base rate requires the evidence margin to scale as $\\Omega(\\sqrt{\\log N})$, where N denotes the effective distractor count rather than necessarily the raw context length. The analysis connects long-context degradation to score aliasing, positional aliasing, and softmax dilution. Controlled experiments show that retrieval accuracy decreases as total context grows in the presence of embedded hard negatives, that the same-format condition produces the largest observed accuracy drop among the tested distractor constructions at fixed context length, and that retrieval gating can improve evidence use while its net benefit depends on preserving evidence recall. These results motivate evidence bottlenecks, alias-resistant representations, retrieve-then-reason architectures, verifier-mediated memory, and contrastive anti-poison training.",
+      "source_url": "https://arxiv.org/abs/2609.22101",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30275",
+      "identity_tokens": [
+        "arXiv:2609.30275"
+      ],
+      "title": "Cosine Similarity Is Not Evidence: Measuring the Noise Floor of Interpretability Transfer Under Quantization",
+      "reason": "A statistic reported without the quantity needed to interpret it is not evidence. We develop that thesis for a concrete practice in AI safety. Interpretability artifacts are calibrated on full-precision weights, deployed on quantized ones, and certified as surviving the change by scale-invariant statistics (cosine similarity, correlation, AUROC) that are reported without their noise floor. For the difference-in-means direction estimator, the split-half floor is governed by one dimensionless number, $\\kappa = n\\rho^2/d$. The closed form $\\mathbb{E}[\\cos] \\approx (1+4/\\kappa)^{-1}$ is classical; the missing input is the class separation $\\rho$, which we measure on real activations; no compression-transfer study we know of reports it. On Qwen2.5-1.5B-Instruct, $\\rho = 33$--$61$ across depth, so two independent runs of the estimator agree to $0.978$--$0.994$ by sampling alone. A published cosine of $0.996$ between full-precision and quantized refusal directions therefore cannot be read as preservation without the $n$ it was computed at, which is not reported. Where $n$ is known, we judge each low-bit cosine against the split-half null measured within that quantized model, because a full-precision null assumes the low-bit estimator has the same variance. That assumption is exactly what a null exists to test. The result is plain: at INT4 the direction rotated, and the deficit exceeds the estimator's own noise. At INT8 we detect no movement, which is not an equivalence claim. We also show that a scale-invariant statistic cannot distinguish translation from attenuation of a transferred decision variable, although the two call for opposite remedies. We close with reporting recommendations that cost one forward pass. Code, data, and a one-cell reproduction are released at https://github.com/pvarshh/quantinterp",
+      "source_url": "https://arxiv.org/abs/2609.30275",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/1361-6579/ae98e0",
+      "identity_tokens": [
+        "DOI:10.1088/1361-6579/ae98e0"
+      ],
+      "title": "Reliability-aware hierarchical learning for Chagas disease screening from 12-lead ECGs: tackling label uncertainty and class imbalance",
+      "reason": "Objective. Chagas disease, a neglected tropical disease (NTD) with significant cardiovascular impact, remains underdiagnosed in resource-limited regions. Electrocardiogram (ECG) screening offers a low-cost tool for detecting cardiac involvement, yet algorithm development is challenged by label noise, data scarcity, and the latent nature of infection. This study proposes a robust ECG-based screening framework that explicitly addresses these constraints. Approach. We introduce a Reliability-Aware Hierarchical Learning strategy that calibrates supervision according to data provenance, prioritizing serology-confirmed labels over noisy self-reports. To mitigate data scarcity, we compare a specialized convolutional neural network (CNN) trained from scratch with a transfer learning approach based on a Spatio-Temporal ECG foundation Model (FM). Performance is evaluated across varying data scales, and the representation structure is analyzed to interpret model behavior. Main results. On the official hidden test set of the George B. Moody PhysioNet/Computing in Cardiology Challenge 2025, our approach achieved a Challenge Score of 0.163. We observe that while the specialized CNN performs competitively in data-rich regimes, the FM exhibits superior robustness in extreme low-resource settings. Furthermore, performance reaches a plateau imposed by underlying disease physiology. Bimodal score distributions suggest that models distinguish established cardiomyopathy from indeterminate infection, which remains electrophysiologically indistinguishable from healthy controls. Significance. These findings clarify both the potential and intrinsic limits of ECG-based AI screening for NTD-associated cardiac involvement. Reliability-aware supervision and data-efficient transfer learning provide a practical framework toward scalable and clinically meaningful ECG screening systems in resource-constrained environments.",
+      "source_url": "https://doi.org/10.1088/1361-6579/ae98e0",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/ae98f5",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae98f5"
+      ],
+      "title": "Mamba-driven linear-time sequence learning architecture for efficient power quality disturbance classification",
+      "reason": "The modernization of electrical power systems has accelerated the transition from conventional centralized grids to intelligent, cyber-enabled smart grids characterized by bidirectional energy flow, advanced sensing, and real-time data-driven control. However, the large-scale integration of inverter-interfaced renewable energy sources and nonlinear loads has introduced significant power quality (PQ) challenges, including voltage sag, swell, harmonics, flicker, transients, and composite disturbances under noisy conditions. Accurate and computationally efficient detection of such disturbances is critical for intelligent digital relaying and real-time monitoring applications. To address these challenges, this paper proposes a deep learning framework based on a Mamba-driven state-space model architecture for comprehensive PQ disturbance classification. The proposed approach converts voltage waveforms into structured two-dimensional patches using convolutional operations, which are then transformed into sequential representations for efficient long-sequence modeling via the Mamba module. Spatial feature extraction and temporal dependency learning are jointly achieved, while maintaining linear-time complexity and reduced memory requirements compared to transformer-based architectures. The extracted latent features are subsequently classified using a deep neural network (DNN)followed by softmax classifier. Eighteen PQ disturbance categories, defined in accordance with IEEE standards, are considered, including single and composite disturbances under noisy operating conditions. Experimental evaluation examines feature representations, convergence characteristics, confusion matrix performance, computational time, and memory usage. Comparative results demonstrate that the proposed Mamba-based framework achieves high classification accuracy with significantly lower computational complexity than conventional transformer models. The findings indicate that the proposed method is well-suited for real-time smart grid monitoring and intelligent protection systems.",
+      "source_url": "https://doi.org/10.1088/2631-8695/ae98f5",
+      "first_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "last_checked_at": "2026-10-05T06:55:14.336973+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    }
+  ]
+}
