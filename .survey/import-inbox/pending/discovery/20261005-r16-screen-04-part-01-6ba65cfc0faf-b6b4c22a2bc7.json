@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r16-screen-04-part-01-6ba65cfc0faf",
+  "reference_main_sha": "75a520693e7875c3786d49714fd88431b4b7099d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19181",
+      "identity_tokens": [
+        "arXiv:2608.19181"
+      ],
+      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+      "reason": "長文推論向けon-policy distillation/post-trainingで、servingまたは推論効率法ではない。",
+      "source_url": "https://arxiv.org/abs/2608.19181",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18066",
+      "identity_tokens": [
+        "arXiv:2608.18066"
+      ],
+      "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
+      "reason": "self-improving agentsの評価分散/task order研究で、推論効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2608.18066",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.13129",
+      "identity_tokens": [
+        "arXiv:2608.13129"
+      ],
+      "title": "Numeracy in Large Language Models: Fundamental Limitations and Paths to Improvement",
+      "reason": "LLM numeracy能力・diagnostic/mitigation surveyで、推論serving効率ではない。",
+      "source_url": "https://arxiv.org/abs/2608.13129",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.13756",
+      "identity_tokens": [
+        "arXiv:2608.13756"
+      ],
+      "title": "The Integer Alibi: Localizing Cross-Kernel Divergence in INT8-Quantized LLM Inference",
+      "reason": "LLM inference implementationには関係するが、本文はkernel interchangeabilityの数値diagnosticで、推論/serving効率への貢献を示さない。",
+      "source_url": "https://arxiv.org/abs/2608.13756",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2506.09501-understanding-and-mitigating-numerical-sources-of-nondeterminism-in-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11693",
+      "identity_tokens": [
+        "arXiv:2608.11693"
+      ],
+      "title": "Spec Sheets Are Not Kernels: An ISA- and Source-Level Audit of INT8 Availability on NVIDIA Blackwell Ultra",
+      "reason": "LLM serving stackのdeployment状態には関係するが、performance measurementを除外したstack auditで効率改善評価がない。",
+      "source_url": "https://arxiv.org/abs/2608.11693",
+      "first_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "last_checked_at": "2026-10-05T02:23:11.089309+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/survey/03-inference-engines/2024-2402.16363-llm-inference-unveiled.md"
+      ]
+    }
+  ]
+}
