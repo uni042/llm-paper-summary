@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-110-part-07-867679a565ab",
+  "reference_main_sha": "593dff9945c4839fe7b52b28ec5e40f6b21c6a86",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.01547",
+      "identity_tokens": [
+        "arXiv:2602.01547"
+      ],
+      "title": "Attention-weighted Centered Kernel Alignment for Knowledge Distillation in Large Audio-Language Models Applied to Speech Emotion Recognition",
+      "reason": "Compression is for a specialized SER application and the inspected body does not report general LLM serving latency.",
+      "source_url": "https://arxiv.org/abs/2602.01547",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01609",
+      "identity_tokens": [
+        "arXiv:2602.01609"
+      ],
+      "title": "Token Pruning for In-Context Generation in Diffusion Transformers",
+      "reason": "ToPi prunes tokens for in-context image generation in diffusion transformers; the model/task is image generation, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2602.01609",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.01984",
+      "identity_tokens": [
+        "arXiv:2602.01984"
+      ],
+      "title": "Enhancing Multi-Image Understanding through Delimiter Token Scaling",
+      "reason": "Delimiter-token scaling improves multi-image/document understanding with no added inference cost; it does not reduce serving cost or improve efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.01984",
+      "first_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "last_checked_at": "2026-10-05T13:35:31.393373+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ]
+    }
+  ]
+}
