@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r26-screen-01-part-02-827ac8fcac04",
+  "reference_main_sha": "ed8045f1cb588e57d2f01efca5e60cd9a9d03c74",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32763",
+      "identity_tokens": [
+        "arXiv:2609.32763"
+      ],
+      "title": "Mandela-Bench: Multimodal Models Remember Canonical Images Instead of Seeing Them",
+      "reason": "一次arXiv abstractは既知画像の知識ベース改変を評価するmultimodal benchmarkで、推論性能改善ではない。本文PDF/HTMLは取得を試したが、primary full textを読めず、linked lineageとの関係を本文で確定できない。",
+      "source_url": "https://arxiv.org/abs/2609.32763",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32913",
+      "identity_tokens": [
+        "arXiv:2609.32913"
+      ],
+      "title": "Allspark: Weak to Strong Transfer via Alternating Chain of Thought",
+      "reason": "一次本文はweak teacherとfrozen partnerの交互CoTによるweak-to-strong transfer。複数条件で推論token数が減る一方、同論文のmodeled costはKimiで21.1%増、Nemotron等も条件依存。推論費用改善が一貫せず、主貢献は推論協調による精度向上。",
+      "source_url": "https://arxiv.org/abs/2609.32913",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31600",
+      "identity_tokens": [
+        "arXiv:2609.31600"
+      ],
+      "title": "New LoRA Skills Should Read but Never Write",
+      "reason": "一次本文でscopeとの技術的接点を確認できず、明確に対象外と判断。",
+      "source_url": "https://arxiv.org/abs/2609.31600",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31620",
+      "identity_tokens": [
+        "arXiv:2609.31620"
+      ],
+      "title": "FuseReg: Regularizing Layer Fusion Mitigates the Reconstruction-Generation Gap in Representation Autoencoders",
+      "reason": "visual representation autoencoderとimage diffusion decoderのfeature fusion学習法であり、LLM inference/servingを対象としない。",
+      "source_url": "https://arxiv.org/abs/2609.31620",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.31932",
+      "identity_tokens": [
+        "arXiv:2609.31932"
+      ],
+      "title": "Resource-Aware Federated Mixture-of-Experts with Adaptive Pruning for Onboard Learning in LEO Satellite Constellations",
+      "reason": "衛星搭載federated learningのtraining/resource-aware MoE pruningであり、LLM serving inference最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.31932",
+      "first_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "last_checked_at": "2026-10-05T23:51:54.757896+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md"
+      ]
+    }
+  ]
+}
