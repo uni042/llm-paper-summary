@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a76a7b0091b0c058-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1016/j.asoc.2026.116252",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1016/j.asoc.2026.116252",
+    "identity_tokens": [
+      "DOI:10.1016/j.asoc.2026.116252"
+    ],
+    "reason": "The packet contains no primary abstract. Direct access to the DOI primary-source URL was attempted but did not provide the abstract or full text; no topical inference is made from title or citation context.",
+    "first_checked_at": "2026-10-05T09:20:48+00:00",
+    "last_checked_at": "2026-10-05T09:20:48+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+    ],
+    "title": "DeReFusion: A controlled comparison of soft computing fusion strategies for financial time series forecasting via a decomposition-residual architecture"
+  },
+  "processed_at": "2026-10-05T09:20:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a76a7b0091b0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
