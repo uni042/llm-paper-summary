@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-20f3f68b71cc2603-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/icicc71012.2026.11637729",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/icicc71012.2026.11637729",
+    "identity_tokens": [
+      "DOI:10.1109/icicc71012.2026.11637729"
+    ],
+    "reason": "一次出版社全文を取得できず、抄録に記載された主張を評価条件・実装・限界まで確認できないためborderlineに分類。",
+    "first_checked_at": "2026-10-05T02:43:17+00:00",
+    "last_checked_at": "2026-10-05T02:43:17+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+      "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md",
+      "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+    ],
+    "title": "Difficulty-Aware Hybrid Routing for Cost-Efficient Long-Context LLM Inference"
+  },
+  "processed_at": "2026-10-05T02:43:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-20f3f68b71cc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

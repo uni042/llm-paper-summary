@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T02:41:37+00:00",
-  "record_count": 2041,
+  "updated_at": "2026-10-05T02:43:18+00:00",
+  "record_count": 2052,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -29512,6 +29512,165 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "MoWorld: A Flash World Model"
+    },
+    "DOI:10.1109/tcad.2025.3636442": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcad.2025.3636442",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2025.3636442"
+      ],
+      "reason": "汎用sparse tensor program tuning/compilerの研究で、LLM inferenceの個別手法ではない。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "UniSparTa: A Unified Sparse Tensor Program Tuning Framework"
+    },
+    "arXiv:2606.31382": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31382",
+      "identity_tokens": [
+        "arXiv:2606.31382"
+      ],
+      "reason": "VLA adaptationでpruning耐性/robot task qualityを調べる研究。LLM inference optimization対象ではない。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "Revisiting Parameter Redundancy in Vision-Language-Action Models: Insights from VLM-to-VLA Adaptation"
+    },
+    "arXiv:2606.32033": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.32033",
+      "identity_tokens": [
+        "arXiv:2606.32033"
+      ],
+      "reason": "SpheRoPEは360度panorama画像生成のposition encodingと生成品質に関する論文。LLM inference効率とは異なる。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "SpheRoPE: Zero-Shot Optimization-Free 360 Panorama Generation with Spherical RoPE"
+    },
+    "arXiv:2606.30420": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30420",
+      "identity_tokens": [
+        "arXiv:2606.30420"
+      ],
+      "reason": "LLM reasoningのexperience-augmented policy optimizationというRL post-training手法。inference-time効率ではない。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "title": "Experience Augmented Policy Optimization for LLM Reasoning"
+    },
+    "arXiv:2606.28321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28321",
+      "identity_tokens": [
+        "arXiv:2606.28321"
+      ],
+      "reason": "3D Gaussian Splattingによるview synthesisが対象であり、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "StructSplat: Generalizable 3D Gaussian Splatting from Uncalibrated Sparse Views"
+    },
+    "arXiv:2606.28438": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.28438",
+      "identity_tokens": [
+        "arXiv:2606.28438"
+      ],
+      "reason": "Code LLMのrecursive self-training collapseを検証するtraining-quality研究で、推論最適化ではない。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs"
+    },
+    "arXiv:2606.26801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26801",
+      "identity_tokens": [
+        "arXiv:2606.26801"
+      ],
+      "reason": "VLA fine-tuningのstage/keyframe supervisionでrobot task性能を改善する手法。",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Improving Vision-Language-Action Model Fine-Tuning with Structured Stage and Keyframe Supervision"
+    },
+    "arXiv:2607.03413": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.03413",
+      "identity_tokens": [
+        "arXiv:2607.03413"
+      ],
+      "reason": "The primary abstract develops a geometric multigrid solver for finite-element PDEs on GPUs; it is not an LLM workload.",
+      "first_checked_at": "2026-10-05T02:43:17+00:00",
+      "last_checked_at": "2026-10-05T02:43:17+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Coalesced Matrix-Free Geometric Multigrid on Persistent Cell-Wise Storage"
+    },
+    "arXiv:2607.02335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02335",
+      "identity_tokens": [
+        "arXiv:2607.02335"
+      ],
+      "reason": "高次有限要素法のGPU演算・solver最適化で、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T02:43:18+00:00",
+      "last_checked_at": "2026-10-05T02:43:18+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.19442-triton-distributed.md"
+      ],
+      "title": "Coalesced Matrix-Free Finite Elements in Cell-Wise Storage"
+    },
+    "arXiv:2607.02807": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.02807",
+      "identity_tokens": [
+        "arXiv:2607.02807"
+      ],
+      "reason": "coding agentによるopen-ended discoveryの探索性能・orchestrationが対象で、LLM推論serve効率ではない。",
+      "first_checked_at": "2026-10-05T02:43:18+00:00",
+      "last_checked_at": "2026-10-05T02:43:18+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2405.19715-specdec-boosting-speculative-decoding-via-adaptive-candidate-lengths.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2503.01840-eagle-3.md"
+      ],
+      "title": "SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery"
+    },
+    "arXiv:2607.01433": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.01433",
+      "identity_tokens": [
+        "arXiv:2607.01433"
+      ],
+      "reason": "LLM creative outputのdiversity/originality品質を改善する手法。推論計算の効率化を測定していない。",
+      "first_checked_at": "2026-10-05T02:43:18+00:00",
+      "last_checked_at": "2026-10-05T02:43:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "title": "CreativityNeuro: Steering Language Model Weights to Improve Divergent Thinking and Reduce Mode Collapse"
     }
   }
 }

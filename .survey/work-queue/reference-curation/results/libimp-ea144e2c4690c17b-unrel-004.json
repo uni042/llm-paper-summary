@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea144e2c4690c17b-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2607.01433",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2607.01433",
+    "identity_tokens": [
+      "arXiv:2607.01433"
+    ],
+    "reason": "LLM creative outputのdiversity/originality品質を改善する手法。推論計算の効率化を測定していない。",
+    "first_checked_at": "2026-10-05T02:43:18+00:00",
+    "last_checked_at": "2026-10-05T02:43:18+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+    ],
+    "title": "CreativityNeuro: Steering Language Model Weights to Improve Divergent Thinking and Reduce Mode Collapse"
+  },
+  "processed_at": "2026-10-05T02:43:18+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea144e2c4690",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
