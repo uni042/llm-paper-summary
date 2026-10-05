@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T08:19:07+00:00",
-  "record_count": 3820,
+  "updated_at": "2026-10-05T08:22:02+00:00",
+  "record_count": 3831,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -55655,6 +55655,165 @@
         "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
       ],
       "title": "Model Compression and Hardware-Aware Acceleration for Deep Learning on FPGAs: A Co-Design Taxonomy and Comparative Analysis"
+    },
+    "arXiv:2608.19171": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19171",
+      "identity_tokens": [
+        "arXiv:2608.19171"
+      ],
+      "reason": "Primary abstract studies uncertainty estimates for continuous-time attention in irregularly sampled time-series prediction, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "L\\'evy Attention: Single-Pass Predictive Uncertainty for Continuous-Time Attention"
+    },
+    "arXiv:2608.21447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.21447",
+      "identity_tokens": [
+        "arXiv:2608.21447"
+      ],
+      "reason": "Primary abstract concerns structured scene-program modeling for building-information-model ingestion, not LLM inference.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "BIMScript: Material-Aware Structured Scene Programs for BIM Ingestion"
+    },
+    "arXiv:2608.18988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18988",
+      "identity_tokens": [
+        "arXiv:2608.18988"
+      ],
+      "reason": "Retrieve-then-generate pipelines are commonly used to produce deep-research answers for open-ended questions, but retrieval alone is insufficient: LLMs must organize noisy and fragmented evidence into comprehensive, well-cited answers. We refer to this process as evidence synthesis. However, direct generation often underuses evidence, misaligns citations, and collapses diverse information into shallow summaries, exposing an evidence synthesis gap between retrieval and generation. Thus, we propose DeepWeaver, a novel framework that weaves noisy retrieved evidence into comprehensive answers by maintaining Thought Block Chains (TBCs), a structured representation that groups claims, salient information, keywords, and supporting evidence. DeepWeaver uses subordinate TBCs to inspect residual evidence, commit TBC revisions, and discover new claims before final generation. We evaluate DeepWeaver on open-ended QA over both knowledge bases and the web, and introduce LoQA, a high-density benchmark for evidence synthesis. Across multiple LLMs, DeepWeaver improves content sufficiency, citation grounding, and detail preservation on LoQA, while achieving deeper insights and higher citation quality on DeepResearch Bench. These results show that evidence weaving is an effective mechanism for bridging retrieval and generation in open-ended QA. Our code is available at https://github.com/KlozeWang/DeepWeaver.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "DeepWeaver: Bridging the Evidence Synthesis Gap in Open-Ended Question Answering"
+    },
+    "arXiv:2608.19022": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.19022",
+      "identity_tokens": [
+        "arXiv:2608.19022"
+      ],
+      "reason": "Despite the wide variety of existing Buy-`Til-You-Die (BTYD) models, nearly all rely upon the convenient assumption of transactions following a Poisson process. As modern customer bases grow larger and more diverse, a major gap in the marketing literature is BTYD models that can account for heterogeneity in timing patterns across millions of customers. This paper addresses that gap, introducing a family of models that assume transactions follow a Weibull renewal process and developing a highly scalable scheme for parameter estimation based on an amortized variational inference procedure. The proposed model fits to a proprietary dataset of 5 million online retail customers in 8 minutes which would take the current state-of-the-art an estimated 3-4 days. We show both theoretically and empirically that this dramatic improvement in computational performance comes with no appreciable change to either model interpretation or predictive performance. Beyond scalability, gradient-based variational inference also makes it easy to extend the model to covariates, which we illustrate on a public dataset of 4 million political donors during the 2020 US General election cycle. More generally, this paper demonstrates how to blend recent advances in approximate Bayesian inference and the tools of modern machine learning to dramatically improve the efficiency and expressivity of probabilistic models for customer base analysis.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Scalable Amortized Variational Inference for Non-Poisson Buy-'Til-You-Die Models"
+    },
+    "arXiv:2608.18503": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18503",
+      "identity_tokens": [
+        "arXiv:2608.18503"
+      ],
+      "reason": "The growing demand for AI-driven workloads, particularly from Large Language Models (LLMs), has raised concerns about the significant energy and resource consumption in data centers. This work introduces a novel LLM-based predictive scheduling system designed to enhance operational efficiency while reducing the environmental impact of data centers. Our system utilizes an LLM to predict key metrics such as execution time and energy consumption from source code, and it has the potential to extend to other sustainability-focused metrics like water usage for cooling and carbon emissions, provided the data center can track such data. The predictive model is followed by a real-time scheduling algorithm that allocates GPU resources, aiming to improve sustainability by optimizing both energy consumption and queuing delays. With fast inference times, the ability to generalize across diverse task types, and minimal data requirements for training, our approach offers a practical solution for data center scheduling. This framework demonstrates strong potential for advancing sustainability objectives in AI-driven infrastructure. Through our collaboration with a data center, we achieved a 32% reduction in energy consumption and a 30% decrease in waiting time.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "LLM-Powered Predictive Decision-Making for Sustainable Data Center Operations"
+    },
+    "arXiv:2608.18516": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18516",
+      "identity_tokens": [
+        "arXiv:2608.18516"
+      ],
+      "reason": "Precise segmentation of the optic disc and cup is critical for the early detection and diagnosis of glaucoma. However, achieving consistently high performance across datasets while maintaining low computational requirements remains a significant challenge. In glaucoma detection, low-computation methods are crucial for enabling rapid, large-scale screening and facilitating deployment in resource-limited clinical environments. While deep learning models such as UNets, Vision Transformers (ViTs), and Diffusion models have demonstrated strong segmentation performance but these methods often come with substantial computational overhead. UNets are efficient at capturing local features but are limited in modeling global contextual information. Conversely, ViTs excel at long-range dependency modeling but are computationally intensive. Hybrid architectures, such as UNetR, which combine transformer-based encoders with UNet-style decoders, have shown improved performance but while incurring additional complexity. Considering these, in this work, we propose OptiModNet, a light weight novel hybrid architecture tailored for optic disc and cup segmentation. The model integrates diverse attention mechanisms at multiple stages of the network to enhance both local and global feature representation. We include an Aggregated Pyramid Loss that supervises predictions at multiple decoder depths, to promote better gradient flow and structural consistency. We evaluate OptiModNet on the REFUGE2 dataset for both optic disc and cup segmentation tasks. Our method achieves state-of-the-art performance, exceeding existing approaches by over 2.5\\%, while maintaining high efficiency with only 3.73 GFLOPs and 1.93M parameters. The code is available at https://github.com/SG1947/OptiModNet.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "OptiModNet: A UNet-Transformer Hybrid with Grouped-Query and Channel Attention for Optic Disc and Cup Segmentation"
+    },
+    "arXiv:2608.18565": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18565",
+      "identity_tokens": [
+        "arXiv:2608.18565"
+      ],
+      "reason": "Programmable logic controllers (PLCs) run industrial plants, and large language models can already generate independent program organization units (POUs) for them. Whether such logic integrates into an existing PLC project and then runs correctly has been checked only in limited tests. We present \\textsc{SemaPLC}, a project-grounded and verification-gated agent harness assembled from conventional tools but governed by a strict completion rule. Rather than stopping when the model judges its own output adequate, \\textsc{SemaPLC} declares a task complete only when logged external checks confirm it. Those checks cover the specification, the compilation, and the behavior on a live runtime. On 117 independent-POU tasks matching existing benchmarks, it attains the highest strict verified pass rate on all seven models (72.6\\% mean). On a project-context track of 65 tasks whose generated logic must compile and run inside a real project, it attains the highest mean on integrated compilation, static behavior, and dynamic behavior. Of the three layers, dynamic behavior is the most revealing. We measure it by deploying the generated and the reference logic to a live PLC runtime and comparing their executed traces. All methods fall within 10 static points of one another, whereas dynamic scores separate them sharply, from 22.4 to 31.4 for the baselines against 52.2 for \\textsc{SemaPLC}. Overall, our verification-gated harness raises the mean at every layer and most sharply at runtime. Execution, not static scoring, is the faithful test of whether generated control logic actually works. \\textsc{SemaPLC} is open-sourced at https://github.com/midea-ai/SemaPLC.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "SemaPLC: A Project-Grounded, Verification-Gated Agent Harness for PLC Code Generation"
+    },
+    "arXiv:2608.18581": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.18581",
+      "identity_tokens": [
+        "arXiv:2608.18581"
+      ],
+      "reason": "Although Large Language Models (LLMs) encode rich factual knowledge in their parameters, reliably recalling and verifying such knowledge remains a key bottleneck in factual question answering. Existing end-to-end methods entangle knowledge elicitation with reasoning, making it difficult to determine whether correct answers arise from parametric knowledge or the input context. To address this challenge, we propose VAKE (Verifiable Activation of Parametric KnowledgE), a two-stage reinforcement-learning framework that externalizes latent parametric knowledge through explicit Priming and transfers the acquired elicitation capability to implicit Reasoning. Given a query and an insufficient retrieved subgraph, the Priming policy explicitly inserts bridging triples as verifiable evidence, with supervision provided by rewards derived from answers generated by a separate frozen model over the augmented subgraph. Building on the policy learned during Priming, the Reasoning stage trains the model to answer from the original input, testing whether the capability acquired through explicit knowledge elicitation transfers to implicit reasoning. Experiments across seven benchmarks and models from 3B to 14B show that VAKE consistently outperforms standard baselines, including when transferring directly from HotpotQA to OOD datasets. LLM-based evaluation further shows that over 80% of the inserted triples provide factual bridging knowledge not derivable from the retrieved context, while more than half elicit knowledge inaccessible through direct prompting. These results suggest that VAKE activates latent parametric knowledge rather than copying the input context or memorizing dataset-specific associations.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "From Storage to Access: Verifiable Activation of Parametric Knowledge in LLMs via Explicit Priming and Implicit Reasoning"
+    },
+    "arXiv:2608.17289": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17289",
+      "identity_tokens": [
+        "arXiv:2608.17289"
+      ],
+      "reason": "Primary abstract proposes group-relative policy optimization for training multi-turn LLM agents; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "PlanPO: Group Planning-Aware Policy Optimization for Multi-Turn Agentic LLMs"
+    },
+    "arXiv:2608.17471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17471",
+      "identity_tokens": [
+        "arXiv:2608.17471"
+      ],
+      "reason": "Primary abstract analyzes algorithmic methods designed by LLM agents; it does not propose inference/serving optimization.",
+      "first_checked_at": "2026-10-05T08:22:02+00:00",
+      "last_checked_at": "2026-10-05T08:22:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "When AI Designs AI: Innovation or Imitation?"
+    },
+    "arXiv:2608.17592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.17592",
+      "identity_tokens": [
+        "arXiv:2608.17592"
+      ],
+      "reason": "Primary abstract compresses communications for distributed model-predictive control with LSTMs, not language-model inference.",
+      "first_checked_at": "2026-10-05T08:22:02+00:00",
+      "last_checked_at": "2026-10-05T08:22:02+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Communication Reduction via Semantic-Based Encoding in DMPC Using LSTMs"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T08:19:06+00:00",
-  "record_count": 1182,
+  "updated_at": "2026-10-05T08:22:01+00:00",
+  "record_count": 1188,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -18103,6 +18103,97 @@
         "papers/inference/14-agentic-inference-serving-runtime/2026-2602.09345-agentcgroup-understanding-and-controlling-os-resources-of-ai-agents.md"
       ],
       "title": "AgentDecarbonizer: Carbon-Aware Execution for AI Agents"
+    },
+    "DOI:10.1109/itc-asia71864.2026.11710945": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/itc-asia71864.2026.11710945",
+      "identity_tokens": [
+        "DOI:10.1109/itc-asia71864.2026.11710945"
+      ],
+      "reason": "No primary abstract is in the packet. Direct DOI and IEEE Xplore article retrieval attempts were inaccessible; no secondary-source description was used.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md",
+        "papers/inference/01-offload-hierarchical-memory/2025-2508.06978-ssd-moe-offloading-energy-efficiency.md",
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Energy Modeling and Spatiotemporal Characterization of Offloaded LLM Inference"
+    },
+    "DOI:10.1117/12.3104988": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3104988",
+      "identity_tokens": [
+        "DOI:10.1117/12.3104988"
+      ],
+      "reason": "SPIE full paper/PDF could not be opened from the DOI/publisher access paths attempted, so measurement boundaries, runtime, methods, and baselines could not be checked; application-specific weak fit.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Comparison of natural language models for searches in virtual observatories"
+    },
+    "arXiv:2608.17288": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17288",
+      "identity_tokens": [
+        "arXiv:2608.17288"
+      ],
+      "reason": "No inference-time memory/latency/throughput benefit is demonstrated; quantitative evidence is controlled GPT-style training, so scope fit is weak.",
+      "first_checked_at": "2026-10-05T08:22:00+00:00",
+      "last_checked_at": "2026-10-05T08:22:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Q-Interference: Memory-Efficient Phase-Aware Quantum-Inspired Attention"
+    },
+    "arXiv:2608.18613": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18613",
+      "identity_tokens": [
+        "arXiv:2608.18613"
+      ],
+      "reason": "Call reductions are application-adjacent but do not demonstrate inference-efficiency gains.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "CTIFoundry: An Agent-Native Corpus Scaffold for Cyber Threat Intelligence"
+    },
+    "arXiv:2608.17523": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17523",
+      "identity_tokens": [
+        "arXiv:2608.17523"
+      ],
+      "reason": "Generic interconnect control is evaluated in simulation rather than an LLM-serving stack or end-to-end inference workload; deployment needs calibrated service estimates, so fit is adjacent.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Completion-Path Credits: Multi-Resource Control for Scale-Up Fabrics"
+    },
+    "arXiv:2608.17534": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17534",
+      "identity_tokens": [
+        "arXiv:2608.17534"
+      ],
+      "reason": "Main objective is memory accuracy/continuity; query latency is not full LLM-generation cost, and no inference-cost saving is established across the tested memory workloads.",
+      "first_checked_at": "2026-10-05T08:22:01+00:00",
+      "last_checked_at": "2026-10-05T08:22:01+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ],
+      "title": "ArborMem: Navigating Interaction States with Memory Forests"
     }
   }
 }
