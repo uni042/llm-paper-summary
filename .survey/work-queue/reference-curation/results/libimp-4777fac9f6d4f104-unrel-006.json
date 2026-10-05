@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4777fac9f6d4f104-unrel-006",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2306.14565",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2306.14565",
+    "identity_tokens": [
+      "arXiv:2306.14565"
+    ],
+    "reason": "400k visual instructionのLRV-InstructionとGAVIE評価を提案し、MiniGPT4/mPLUG-Owlのfine-tuningでhallucinationを抑えるtraining/data研究。推論runtime・memory・serving効率化を扱わない。",
+    "first_checked_at": "2026-10-05T00:50:53+00:00",
+    "last_checked_at": "2026-10-05T16:47:49+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2606.26287-gemoe-gating-entropy-adaptive-routing.md"
+    ],
+    "title": "Mitigating Hallucination in Large Multi-Modal Models via Robust Instruction Tuning"
+  },
+  "processed_at": "2026-10-05T16:47:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4777fac9f6d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

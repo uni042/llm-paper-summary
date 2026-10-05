@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6efdc875aa502dff-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.13720",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.13720",
+    "identity_tokens": [
+      "arXiv:2410.13720"
+    ],
+    "reason": "動画・音声生成foundation modelのarchitecture、training、生成品質が主題。推論最適化にも触れるが最終適用先はmedia generationで、LLM推論runtime/servingの効率化研究ではない。",
+    "first_checked_at": "2026-10-05T00:53:14+00:00",
+    "last_checked_at": "2026-10-05T16:47:50+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2025-2502.07578-cent-cxl-pim-gpu-free-llm.md"
+    ],
+    "title": "Movie Gen: A Cast of Media Foundation Models"
+  },
+  "processed_at": "2026-10-05T16:47:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6efdc875aa50",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

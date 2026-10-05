@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T16:43:48+00:00",
+  "updated_at": "2026-10-05T16:47:49+00:00",
   "record_count": 2052,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -6595,20 +6595,6 @@
       ],
       "title": "Better never than late: meeting deadlines in datacenter networks"
     },
-    "DOI:10.1016/j.jml.2019.104047": {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.1016/j.jml.2019.104047",
-      "identity_tokens": [
-        "DOI:10.1016/j.jml.2019.104047"
-      ],
-      "reason": "The official ScienceDirect record could not be retrieved as a usable primary abstract.",
-      "first_checked_at": "2026-10-05T00:50:53+00:00",
-      "last_checked_at": "2026-10-05T00:50:53+00:00",
-      "linked_from": [
-        "papers/inference/05-speculative-decoding-moe/2026-2601.11652-wisp-distributed-speculative-serving-edge.md"
-      ],
-      "title": "How many words do we read per minute? A review and meta-analysis of reading rate"
-    },
     "DOI:10.1109/jproc.2020.2976475": {
       "classification": "borderline",
       "canonical_id": "DOI:10.1109/jproc.2020.2976475",
@@ -9075,12 +9061,13 @@
       "identity_tokens": [
         "arXiv:2309.17179"
       ],
-      "reason": "Tree search guides LLM decoding but adds inference computation and wall time rather than improving efficiency; it is a quality/compute tradeoff.",
+      "reason": "学習済みvalue functionとAlphaZero型tree searchを使い、推論時のLLM decodingを探索で誘導するTS-LLMを提案する。推論経路へ直接介入するが、目的はreasoning/planning/alignment品質の向上で、latency・throughput・memory削減は主評価ではないためborderline。",
       "first_checked_at": "2026-10-05T02:01:50+00:00",
-      "last_checked_at": "2026-10-05T02:01:50+00:00",
+      "last_checked_at": "2026-10-05T16:47:46+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md"
       ],
+      "borderline_recheck_count": 0,
       "title": "Alphazero-like Tree-Search can Guide Large Language Model Decoding and Training"
     },
     "DOI:10.1145/3373376.3378512": {
@@ -31722,6 +31709,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Jockey: guaranteed job latency in data parallel clusters"
+    },
+    "arXiv:2301.12900": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2301.12900",
+      "identity_tokens": [
+        "arXiv:2301.12900"
+      ],
+      "reason": "Dependency Graphでlayer間のstructural couplingを自動解析し、CNN/RNN/GNN/Transformer等をarchitecture非依存に構造pruningしてmodel accelerationを狙う。Transformerも対象だが評価中心はvision/graph/LSTMでLLM生成推論の直接評価がないためborderline。",
+      "first_checked_at": "2026-10-05T16:47:48+00:00",
+      "last_checked_at": "2026-10-05T16:47:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DepGraph: Towards Any Structural Pruning"
     }
   }
 }
