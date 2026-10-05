@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T12:11:28+00:00",
-  "record_count": 4864,
+  "updated_at": "2026-10-05T12:14:21+00:00",
+  "record_count": 4879,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -70783,6 +70783,228 @@
         "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md"
       ],
       "title": "Rigel: Reverse-Engineering the Metal 4.1 Tensor Compute Path on the Apple M4 Max GPU"
+    },
+    "arXiv:2606.12895": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12895",
+      "identity_tokens": [
+        "arXiv:2606.12895"
+      ],
+      "reason": "Fractional-order spiking state-space model for long-sequence learning, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:14:18+00:00",
+      "last_checked_at": "2026-10-05T12:14:18+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md",
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "LongSpike: Fractional Order Spiking State Space Models for Efficient Long Sequence Learning"
+    },
+    "arXiv:2606.12942": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12942",
+      "identity_tokens": [
+        "arXiv:2606.12942"
+      ],
+      "reason": "Parameterized representation for multimodal ranking quality/parse robustness, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:14:18+00:00",
+      "last_checked_at": "2026-10-05T12:14:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "PRISMR: Overcoming Parse Collapse in Multimodal Listwise Ranking via Parameterized Representation Internalization"
+    },
+    "arXiv:2606.12978": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12978",
+      "identity_tokens": [
+        "arXiv:2606.12978"
+      ],
+      "reason": "Trajectory-redirection attack on VLA policies, a safety/security study rather than efficiency.",
+      "first_checked_at": "2026-10-05T12:14:18+00:00",
+      "last_checked_at": "2026-10-05T12:14:18+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Trajectory-Level Redirection Attacks on Vision-Language-Action Models"
+    },
+    "arXiv:2606.13550": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13550",
+      "identity_tokens": [
+        "arXiv:2606.13550"
+      ],
+      "reason": "Uncertainty-aware multi-granularity retrieval improves RAG evidence/answer quality but does not claim inference cost, token, latency, memory or energy savings.",
+      "first_checked_at": "2026-10-05T12:14:18+00:00",
+      "last_checked_at": "2026-10-05T12:14:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "Uncertainty-Aware Hybrid Retrieval for Long-Document RAG"
+    },
+    "arXiv:2606.12364": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12364",
+      "identity_tokens": [
+        "arXiv:2606.12364"
+      ],
+      "reason": "Full text evaluates code-model pretraining, code-model distillation and time-series FM pretraining. It studies quality and architecture; no LLM inference/serving optimization is established.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md",
+        "papers/inference/99-other-inference-systems/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md"
+      ],
+      "title": "On Subquadratic Architectures: From Applications to Principles"
+    },
+    "arXiv:2606.12478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12478",
+      "identity_tokens": [
+        "arXiv:2606.12478"
+      ],
+      "reason": "Attention architecture evaluated on character-level language modeling and synthetic bracket matching; no inference/serving efficiency contribution.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Boltzmann Attention: Learnable Ising Couplings for Cooperative Attention"
+    },
+    "DOI:10.1088/2631-8695/ae7bba": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2631-8695/ae7bba",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae7bba"
+      ],
+      "reason": "Gearbox fault-diagnosis model, not an LLM inference workload.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "MAFormer: a lightweight gearbox fault diagnosis model"
+    },
+    "DOI:10.1145/3815001.3815003": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3815001.3815003",
+      "identity_tokens": [
+        "DOI:10.1145/3815001.3815003"
+      ],
+      "reason": "Triton kernel portability/integration for traditional HPC workloads; no LLM inference/serving evaluation.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Leveraging AI Ecosystem for Portable and Sustainable GPU Kernels in HPC"
+    },
+    "DOI:10.1371/journal.pone.0344915": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1371/journal.pone.0344915",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0344915"
+      ],
+      "reason": "Punjabi sentence simplification is an NLP task-quality study, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2212.09811-nllb-language-specific-expert-pruning.md"
+      ],
+      "title": "Automatic sentence simplification system for Arabic Script Punjabi"
+    },
+    "arXiv:2606.11592": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11592",
+      "identity_tokens": [
+        "arXiv:2606.11592"
+      ],
+      "reason": "Prompt-inversion privacy defense for collaborative inference optimizes privacy/utility, not inference efficiency.",
+      "first_checked_at": "2026-10-05T12:14:20+00:00",
+      "last_checked_at": "2026-10-05T12:14:20+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md"
+      ],
+      "title": "Defense Against Prompt Inversion Attacks: An Information-Theoretic Approach for LLM Collaborative Inference"
+    },
+    "arXiv:2606.11631": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11631",
+      "identity_tokens": [
+        "arXiv:2606.11631"
+      ],
+      "reason": "Neural speech-codec compression/rate-distortion evaluation, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:14:20+00:00",
+      "last_checked_at": "2026-10-05T12:14:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md"
+      ],
+      "title": "Benchmarking Neural Speech Compression from a Rate-Distortion Perspective"
+    },
+    "arXiv:2606.11673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11673",
+      "identity_tokens": [
+        "arXiv:2606.11673"
+      ],
+      "reason": "Quantum attention expressivity/circuit design without an LLM inference-efficiency evaluation.",
+      "first_checked_at": "2026-10-05T12:14:20+00:00",
+      "last_checked_at": "2026-10-05T12:14:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Higher-Order Token Interactions via Quantum Attention"
+    },
+    "arXiv:2606.13795": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13795",
+      "identity_tokens": [
+        "arXiv:2606.13795"
+      ],
+      "reason": "Diffusion-policy gradient optimization is a training/post-training stability method, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:14:20+00:00",
+      "last_checked_at": "2026-10-05T12:14:20+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2602.06036-dflash-block-diffusion-for-flash-speculative-decoding.md"
+      ],
+      "title": "DiPOD: Diffusion Policy Optimization without Drifting Apart"
+    },
+    "arXiv:2606.13886": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.13886",
+      "identity_tokens": [
+        "arXiv:2606.13886"
+      ],
+      "reason": "Physically grounded VLA manipulation framework changes robot control behavior at inference, but does not optimize LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T12:14:20+00:00",
+      "last_checked_at": "2026-10-05T12:14:20+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "PhysVLA: Towards Physically-Grounded VLA for Embodied Robotic Manipulation"
+    },
+    "DOI:10.1038/s41467-026-74209-3": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41467-026-74209-3",
+      "identity_tokens": [
+        "DOI:10.1038/s41467-026-74209-3"
+      ],
+      "reason": "Protein abundance prediction from transcriptomics is a biological prediction task, not LLM inference.",
+      "first_checked_at": "2026-10-05T12:14:21+00:00",
+      "last_checked_at": "2026-10-05T12:14:21+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "T2Pdecoder enables protein-centric analyses from transcriptomic data"
     }
   }
 }

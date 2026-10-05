@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T12:11:27+00:00",
-  "record_count": 1610,
+  "updated_at": "2026-10-05T12:14:19+00:00",
+  "record_count": 1613,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -25013,6 +25013,52 @@
         "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
       ],
       "title": "Semidirect Fourier Delta Attention: Phase-Controlled Delta Memory with Constructive Chunk-WY Kernels"
+    },
+    "arXiv:2606.13355": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13355",
+      "identity_tokens": [
+        "arXiv:2606.13355"
+      ],
+      "reason": "The primary paper supports application-specific real-time VLA inference, but its fit to LLM inference optimization is weak and not transferable without model/runtime-specific measurements.",
+      "first_checked_at": "2026-10-05T12:14:18+00:00",
+      "last_checked_at": "2026-10-05T12:14:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Real-Time Execution with Autoregressive Policies"
+    },
+    "arXiv:2606.12059": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.12059",
+      "identity_tokens": [
+        "arXiv:2606.12059"
+      ],
+      "reason": "Physical implementation and LLM inference efficiency are not demonstrated; causal-LM performance trails softmax at low oscillator dimensions.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2009.14794-rethinking-attention-with-performers.md"
+      ],
+      "title": "Attention by Synchronization in Coupled Oscillator Networks"
+    },
+    "arXiv:2608.19203": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.19203",
+      "identity_tokens": [
+        "arXiv:2608.19203"
+      ],
+      "reason": "No demonstrated inference cost reduction; current implementation can increase compute.",
+      "first_checked_at": "2026-10-05T12:14:19+00:00",
+      "last_checked_at": "2026-10-05T12:14:19+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ],
+      "title": "Asymmetric Attention Heads: Structured Head-Wise Context Allocation for Transformer Attention"
     }
   }
 }
