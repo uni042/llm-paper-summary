@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-15-part-03-9bb60d8dbd83",
+  "reference_main_sha": "3b0c5546288819965a32278794ebf3b45201393d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.32942",
+      "identity_tokens": [
+        "arXiv:2609.32942"
+      ],
+      "title": "The Key Handoff: Retrieval in Hybrid Language Models",
+      "reason": "hybrid LMのretrieval key/mechanistic representation分析であり、retrieval/inference効率改善手法やcost評価を提案しない。",
+      "source_url": "https://arxiv.org/abs/2609.32942",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32960",
+      "identity_tokens": [
+        "arXiv:2609.32960"
+      ],
+      "title": "Environmental Impact of Generative and Agentic AI: An in-Depth Analysis and Green Solutions",
+      "reason": "一次本文は対象範囲（AI lifecycle/energy）に関連するレビューだが、推論の効率手法ではなく、published-data由来の概算とtaxonomy/policy synthesisで新規物理測定はない。",
+      "source_url": "https://arxiv.org/abs/2609.32960",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33010",
+      "identity_tokens": [
+        "arXiv:2609.33010"
+      ],
+      "title": "Model-Aware Data Selection from In-and-Out Information Interplay",
+      "reason": "LLM post-training data selectionとknowledge accessを扱うmodel training研究。",
+      "source_url": "https://arxiv.org/abs/2609.33010",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.33016",
+      "identity_tokens": [
+        "arXiv:2609.33016"
+      ],
+      "title": "Relative Generalization Invariance of LLM Pretraining",
+      "reason": "LLM pretrainingのoptimizer/architecture/data要因分析で、inference/serving効率は扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.33016",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.35875",
+      "identity_tokens": [
+        "arXiv:2609.35875"
+      ],
+      "title": "Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models",
+      "reason": "本文はdebateをmatched self-consistencyより非効率と示す比較研究で、効率化手法やLLM serving/inference mechanismは提案しない。",
+      "source_url": "https://arxiv.org/abs/2609.35875",
+      "first_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "last_checked_at": "2026-10-05T04:42:07.982645+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ]
+    }
+  ]
+}
