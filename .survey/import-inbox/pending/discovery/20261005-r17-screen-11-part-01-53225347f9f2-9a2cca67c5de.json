@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r17-screen-11-part-01-53225347f9f2",
+  "reference_main_sha": "6d500013a9a75faa34205e40b590cfb80817666f",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10861",
+      "identity_tokens": [
+        "arXiv:2606.10861"
+      ],
+      "title": "From Perception to Action: Can UI Interventions Foster Sustainable LLM Chatbot",
+      "reason": "UI表示・エネルギー推定を通じて利用者の選択を変えるヒューマン・コンピュータ相互作用研究であり、LLM inference/serving内部の効率化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2606.10861",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10890",
+      "identity_tokens": [
+        "arXiv:2606.10890"
+      ],
+      "title": "Optimal Post-Training Quantization Scales and Where to Find Them",
+      "reason": "本文の主たる評価はquantization qualityとscale-search法で、inference throughput、resident memory、serving latencyの直接比較を確認できない。低bit PTQへの寄与はあるが効率研究としての証拠が不足。",
+      "source_url": "https://arxiv.org/abs/2606.10890",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3820380",
+      "identity_tokens": [
+        "DOI:10.1145/3820380"
+      ],
+      "title": "NPUMeter: Automatic Operator Optimization for Ascend NPU with Accurate Analytical Performance Models",
+      "reason": "本文評価はLLM model graph・LLM servingではなく一般Ascend C operators。LLM推論実績やend-to-end servingへの接続がなく、適用可能性を確定できない。",
+      "source_url": "https://doi.org/10.1145/3820380",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09150",
+      "identity_tokens": [
+        "arXiv:2606.09150"
+      ],
+      "title": "Ultra Flash: Scaling Real-Time Streaming Video Generation to High Resolutions",
+      "reason": "対象は高解像度streaming video diffusion生成で、LLM inference/servingではない。",
+      "source_url": "https://arxiv.org/abs/2606.09150",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09395",
+      "identity_tokens": [
+        "arXiv:2606.09395"
+      ],
+      "title": "Empirical Study for Structured Output Control in LLMs for Software Engineering",
+      "reason": "ソフトウェア工学タスクでの構造化出力の正確性を比較する研究で、推論効率・servingを扱わない。",
+      "source_url": "https://arxiv.org/abs/2606.09395",
+      "first_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "last_checked_at": "2026-10-05T03:42:25.695664+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
