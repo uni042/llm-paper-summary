@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-05T14:42:32+00:00",
-  "record_count": 1894,
+  "updated_at": "2026-10-05T14:45:36+00:00",
+  "record_count": 1902,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -29259,6 +29259,137 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Edge-First Language Model Inference: Models, Metrics, and Tradeoffs"
+    },
+    "DOI:10.1109/tc.2025.3575905": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.2025.3575905",
+      "identity_tokens": [
+        "DOI:10.1109/tc.2025.3575905"
+      ],
+      "reason": "The packet abstract describes an inference framework for constrained MoE serving and reports memory/latency benefits, so relevance is clear at abstract stage. The exact IEEE DOI full text was not retrievable; the accessible arXiv page is an earlier differently titled version, so its details cannot safely establish the packet version’s method/evaluation. Retain as borderline until the DOI version can be checked.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2206.00277-task-specific-expert-pruning.md",
+        "papers/inference/03-expert-prefetch/2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md",
+        "papers/inference/03-expert-prefetch/2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md",
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md",
+        "papers/inference/12-moe-parallelism-communication/2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Serving MoE Models on Resource-Constrained Edge Devices via Dynamic Expert Swapping"
+    },
+    "arXiv:2505.17716": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.17716",
+      "identity_tokens": [
+        "arXiv:2505.17716"
+      ],
+      "reason": "The paper proposes recording and replaying LLM-agent experiences and states potential deployment-cost reduction, but the checked primary design/case-study sections do not provide measured model-call, token, latency, memory, or energy savings. The contribution is an agent workflow framework with unquantified serving-efficiency implications.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md",
+        "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Get Experience from Practice: LLM Agents with Record & Replay"
+    },
+    "DOI:10.1007/s00778-025-00912-0": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00778-025-00912-0",
+      "identity_tokens": [
+        "DOI:10.1007/s00778-025-00912-0"
+      ],
+      "reason": "Prompt4Vis filters schema fields and selects examples for a narrow text-to-visualization application, which could reduce prompt tokens. The primary publisher body could not be retrieved, and the abstract emphasizes task accuracy rather than measured token/latency/cost savings; scope fit remains weak.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "prompt4vis: prompting large language models with example mining for tabular data visualization"
+    },
+    "arXiv:2503.08727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.08727",
+      "identity_tokens": [
+        "arXiv:2503.08727"
+      ],
+      "reason": "Knowledge Modules are a plausible alternative to long-context ICL/RAG, but the primary experiments compare knowledge/task accuracy and do not establish latency, memory, token, or energy savings in inference. The method also moves work into per-document module training/indexing, so net serving benefit is unresolved.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.11430-l2-kv-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Training Plug-n-Play Knowledge Modules with Deep Context Distillation"
+    },
+    "arXiv:2503.05200": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.05200",
+      "identity_tokens": [
+        "arXiv:2503.05200"
+      ],
+      "reason": "The abstract claims lower computational and energy costs and explicitly evaluates inference/inference-with-RAG, making it potentially relevant. The exact arXiv primary full text was inaccessible during this review, so the models, energy methodology, workload, baselines and limits could not be checked.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ORANSight-2.0: Foundational LLMs for O-RAN"
+    },
+    "DOI:10.18653/v1/2023.findings-acl.889": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2023.findings-acl.889",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2023.findings-acl.889"
+      ],
+      "reason": "The primary paper does provide a real early-exit efficiency method, but its tested backbones are BERT-base, ALBERT-base, and multilingual BERT on classification/regression NLP tasks, not generative LLMs or LLM serving. This is an adjacent PLM-classification result rather than a clear match to the stated scope.",
+      "first_checked_at": "2026-10-05T14:45:33+00:00",
+      "last_checked_at": "2026-10-05T14:45:33+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2021-2111.00230-magic-pyramid-accelerating-inference-with-early-exiting-and-token-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Early Exit with Disentangled Representation and Equiangular Tight Frame"
+    },
+    "DOI:10.1016/j.resconrec.2025.108670": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.resconrec.2025.108670",
+      "identity_tokens": [
+        "DOI:10.1016/j.resconrec.2025.108670"
+      ],
+      "reason": "No abstract was supplied in the candidate packet; the primary DOI landing could not be accessed during screening. The author-affiliated TU Graz publication record contains an abstract, but does not provide the primary article body used for this screen.",
+      "first_checked_at": "2026-10-05T14:45:33+00:00",
+      "last_checked_at": "2026-10-05T14:45:33+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Assessing the carbon footprint of language models: Towards sustainability in AI"
+    },
+    "arXiv:2410.14852": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.14852",
+      "identity_tokens": [
+        "arXiv:2410.14852"
+      ],
+      "reason": "Its connection to the target is indirect: the primary evaluation does not establish practical inference latency, memory, or serving gains from the resulting pruned models.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FedSpaLLM: Federated Pruning of Large Language Models"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f522fa17a2d3ac2b-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2501.13121",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2501.13121",
+    "identity_tokens": [
+      "arXiv:2501.13121"
+    ],
+    "reason": "This paper introduces an episodic-memory generation and evaluation benchmark; it is a capability/benchmark contribution, not an inference efficiency technique.",
+    "first_checked_at": "2026-10-05T14:45:36+00:00",
+    "last_checked_at": "2026-10-05T14:45:36+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+    ],
+    "title": "Episodic Memories Generation and Evaluation Benchmark for Large Language Models"
+  },
+  "processed_at": "2026-10-05T14:45:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f522fa17a2d3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

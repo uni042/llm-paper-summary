@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T14:42:33+00:00",
-  "record_count": 5693,
+  "updated_at": "2026-10-05T14:45:37+00:00",
+  "record_count": 5725,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -82685,6 +82685,469 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2502.05043-ecoserve-carbon-aware-ai-inference.md"
       ],
       "title": "Fair-CO2: Fair Attribution for Cloud Carbon Emissions"
+    },
+    "arXiv:2504.09307": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.09307",
+      "identity_tokens": [
+        "arXiv:2504.09307"
+      ],
+      "reason": "Lumos models distributed LLM training execution and training configurations; training-only efficiency is outside the screening scope.",
+      "first_checked_at": "2026-10-05T14:45:30+00:00",
+      "last_checked_at": "2026-10-05T14:45:30+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md"
+      ],
+      "title": "Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training"
+    },
+    "arXiv:2504.04713": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04713",
+      "identity_tokens": [
+        "arXiv:2504.04713"
+      ],
+      "reason": "Sequential-NIAH is a long-context retrieval benchmark, not an inference-efficiency method or serving study.",
+      "first_checked_at": "2026-10-05T14:45:30+00:00",
+      "last_checked_at": "2026-10-05T14:45:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.11062-scaling-transformer-to-1m-tokens-and-beyond-with-rmt.md",
+        "papers/inference/99-other-inference-systems/2024-2401.03462-long-context-compression-with-activation-beacon.md"
+      ],
+      "title": "Sequential-NIAH: A Needle-In-A-Haystack Benchmark for Extracting Sequential Needles from Long Contexts"
+    },
+    "arXiv:2501.02625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.02625",
+      "identity_tokens": [
+        "arXiv:2501.02625"
+      ],
+      "reason": "HALO addresses low-precision LLM training optimization; training-only efficiency is outside scope.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "HALO: Hadamard-Assisted Lower-Precision Optimization for LLMs"
+    },
+    "SemanticScholar:2e5733efe3902bc6d18650995def127c16c0f65f": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:2e5733efe3902bc6d18650995def127c16c0f65f",
+      "identity_tokens": [
+        "SemanticScholar:2e5733efe3902bc6d18650995def127c16c0f65f"
+      ],
+      "reason": "The primary ICLR abstract describes memory-efficient zeroth-order LLM fine-tuning by sparse parameter updates and quantization on an under-8GB GPU. This is fine-tuning/training efficiency, not inference or serving.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "Zeroth-Order Fine-Tuning of LLMs with Transferable Static Sparsity"
+    },
+    "arXiv:2412.06071": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06071",
+      "identity_tokens": [
+        "arXiv:2412.06071"
+      ],
+      "reason": "KaSA is parameter-efficient adaptation/fine-tuning of LLMs using knowledge-aware singular-value updates; its stated contribution concerns adaptation cost, not inference-time efficiency.",
+      "first_checked_at": "2026-10-05T14:45:31+00:00",
+      "last_checked_at": "2026-10-05T14:45:31+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md",
+        "papers/inference/99-other-inference-systems/2023-2312.05821-asvd-activation-aware-singular-value-decomposition-for-compressing-large.md"
+      ],
+      "title": "KaSA: Knowledge-Aware Singular-Value Adaptation of Large Language Models"
+    },
+    "arXiv:2510.17892": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.17892",
+      "identity_tokens": [
+        "arXiv:2510.17892"
+      ],
+      "reason": "This is a systematic review of domain-specific text-classification models, not an LLM inference or serving optimization contribution.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2308.04623-accelerating-llm-inference-with-staged-speculative-decoding.md"
+      ],
+      "title": "Advances in Pre-trained Language Models for Domain-Specific Text Classification: A Systematic Review"
+    },
+    "arXiv:2502.18934": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.18934",
+      "identity_tokens": [
+        "arXiv:2502.18934"
+      ],
+      "reason": "Kanana's compute savings are attributed to pretraining/data and model-development techniques; the abstract describes training efficiency, outside the inference-focused scope.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Kanana: Compute-efficient Bilingual Language Models"
+    },
+    "arXiv:2501.02497": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.02497",
+      "identity_tokens": [
+        "arXiv:2501.02497"
+      ],
+      "reason": "This is a survey organizing test-time compute research; it does not present a new primary inference optimization method.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-2407.14057-lazyllm-dynamic-token-pruning-for-efficient-long-context-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md"
+      ],
+      "title": "A Survey of Test-Time Compute: From Intuitive Inference to Deliberate Reasoning"
+    },
+    "DOI:10.1017/cfl.2024.16": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/cfl.2024.16",
+      "identity_tokens": [
+        "DOI:10.1017/cfl.2024.16"
+      ],
+      "reason": "This is a general LLM architecture review and reports no original inference/serving efficiency technique.",
+      "first_checked_at": "2026-10-05T14:45:32+00:00",
+      "last_checked_at": "2026-10-05T14:45:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2409.15790-small-language-models-survey-measurements-and-insights.md"
+      ],
+      "title": "The architecture of language: Understanding the mechanics behind LLMs"
+    },
+    "arXiv:2412.08602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.08602",
+      "identity_tokens": [
+        "arXiv:2412.08602"
+      ],
+      "reason": "This paper measures power demand during AI training, including Llama training, rather than inference energy or serving efficiency.",
+      "first_checked_at": "2026-10-05T14:45:33+00:00",
+      "last_checked_at": "2026-10-05T14:45:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
+      ],
+      "title": "Single-Node Power Demand During AI Training: Measurements on an 8-GPU NVIDIA H100 System"
+    },
+    "arXiv:2605.27366": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27366",
+      "identity_tokens": [
+        "arXiv:2605.27366"
+      ],
+      "reason": "MUSE-Autoskill develops a self-evolving skill lifecycle for LLM agents; its abstract focuses on agent capability and management rather than reducing inference cost.",
+      "first_checked_at": "2026-10-05T14:45:33+00:00",
+      "last_checked_at": "2026-10-05T14:45:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md"
+      ],
+      "title": "MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation"
+    },
+    "arXiv:2605.18739": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18739",
+      "identity_tokens": [
+        "arXiv:2605.18739"
+      ],
+      "reason": "LongLive-2.0 is a video-generation system; although it optimizes that workload's inference, its model is a video generator rather than an LLM.",
+      "first_checked_at": "2026-10-05T14:45:33+00:00",
+      "last_checked_at": "2026-10-05T14:45:33+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md",
+        "papers/inference/06-moe-quantization-compression/2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "title": "LongLive-2.0: An NVFP4 Parallel Infrastructure for Long Video Generation"
+    },
+    "arXiv:2511.22625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.22625",
+      "identity_tokens": [
+        "arXiv:2511.22625"
+      ],
+      "reason": "ReasonEdit improves image-editing model reasoning using an MLLM encoder; the abstract describes image-editing quality, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md"
+      ],
+      "title": "ReasonEdit: Towards Reasoning-Enhanced Image Editing Models"
+    },
+    "arXiv:2406.19369": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19369",
+      "identity_tokens": [
+        "arXiv:2406.19369"
+      ],
+      "reason": "The work optimizes image segmentation on high-resolution vision inputs using Mamba/RWKV; it is not LLM inference or language-model serving.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md",
+        "papers/inference/99-other-inference-systems/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md"
+      ],
+      "title": "Mamba or RWKV: Exploring High-Quality and High-Efficiency Segment Anything Model"
+    },
+    "arXiv:2401.15496": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.15496",
+      "identity_tokens": [
+        "arXiv:2401.15496"
+      ],
+      "reason": "This is dialogue summarization instruction fine-tuning and task-quality evaluation; the efficiency discussion is about training technique, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Baichuan2-Sum: Instruction Finetune Baichuan2-7B Model for Dialogue Summarization"
+    },
+    "DOI:10.1109/access.2024.3451660": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/access.2024.3451660",
+      "identity_tokens": [
+        "DOI:10.1109/access.2024.3451660"
+      ],
+      "reason": "The paper classifies heart-sound recordings for cardiovascular diagnosis with conventional/transformer classifiers; it does not concern language-model inference.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+      ],
+      "title": "A Hybrid Framework of Transformer Encoder and Residential Conventional for Cardiovascular Disease Recognition Using Heart Sounds"
+    },
+    "arXiv:2211.13623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.13623",
+      "identity_tokens": [
+        "arXiv:2211.13623"
+      ],
+      "reason": "The work generates particle-physics point clouds using normalizing flows and transformer encoders; it is unrelated to LLM serving efficiency.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "Point Cloud Generation using Transformer Encoders and Normalising Flows"
+    },
+    "DOI:10.1145/3721145.3730420": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3721145.3730420",
+      "identity_tokens": [
+        "DOI:10.1145/3721145.3730420"
+      ],
+      "reason": "Proteus optimizes processing-in-DRAM hardware primitives across general applications; the abstract does not present an LLM inference or serving contribution.",
+      "first_checked_at": "2026-10-05T14:45:34+00:00",
+      "last_checked_at": "2026-10-05T14:45:34+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "title": "Proteus: Achieving High-Performance Processing-Using-DRAM with Dynamic Bit-Precision, Adaptive Data Representation, and Flexible Arithmetic"
+    },
+    "arXiv:2409.14447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14447",
+      "identity_tokens": [
+        "arXiv:2409.14447"
+      ],
+      "reason": "ParvaGPU addresses generic DNN GPU sharing and SLO/resource allocation; the primary abstract does not identify an LLM inference workload or LLM-specific method.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.15566-spotserve-preemptible-instance-serving.md"
+      ],
+      "title": "ParvaGPU: Efficient Spatial GPU Sharing for Large-Scale DNN Inference in Cloud Environments"
+    },
+    "arXiv:2408.12396": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12396",
+      "identity_tokens": [
+        "arXiv:2408.12396"
+      ],
+      "reason": "This paper adapts computer-vision foundation models to geophysical analysis; its cost reduction is for model development/fine-tuning, not LLM inference.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md"
+      ],
+      "title": "Cross-Domain Foundation Model Adaptation: Pioneering Computer Vision Models for Geophysical Data Analysis"
+    },
+    "arXiv:2408.03291": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.03291",
+      "identity_tokens": [
+        "arXiv:2408.03291"
+      ],
+      "reason": "DopQ-ViT is post-training quantization for vision transformers, not language models.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2406.01721-duquant-distributing-outliers-via-dual-transformation-makes-stronger-quantized-llms.md"
+      ],
+      "title": "DopQ-ViT: Towards Distribution-Friendly and Outlier-Aware Post-Training Quantization for Vision Transformers"
+    },
+    "arXiv:2504.04045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04045",
+      "identity_tokens": [
+        "arXiv:2504.04045"
+      ],
+      "reason": "This is a survey of pathology vision foundation models, not LLM inference/serving.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "A Survey of Pathology Foundation Model: Progress and Future Directions"
+    },
+    "DOI:10.1109/tnsm.2024.3419151": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnsm.2024.3419151",
+      "identity_tokens": [
+        "DOI:10.1109/tnsm.2024.3419151"
+      ],
+      "reason": "Meta-Governance applies AI to metaverse behavior governance; no LLM inference-efficiency contribution is described.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-1910.04732-structured-pruning-of-large-language-models.md"
+      ],
+      "title": "Meta-Governance: Blockchain-Driven Metaverse Platform for Mitigating Misbehavior Using Smart Contract and AI"
+    },
+    "arXiv:2502.00919": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.00919",
+      "identity_tokens": [
+        "arXiv:2502.00919"
+      ],
+      "reason": "The work studies attention-sink mechanisms and embedding behavior; it does not propose or evaluate a compression/KV-cache optimization despite discussing those contexts.",
+      "first_checked_at": "2026-10-05T14:45:35+00:00",
+      "last_checked_at": "2026-10-05T14:45:35+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.12335-attention-score-is-not-all-you-need-for-token-importance-indicator-in-kv.md"
+      ],
+      "title": "Attention Sinks: A 'Catch, Tag, Release' Mechanism for Embeddings"
+    },
+    "arXiv:2501.13121": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.13121",
+      "identity_tokens": [
+        "arXiv:2501.13121"
+      ],
+      "reason": "This paper introduces an episodic-memory generation and evaluation benchmark; it is a capability/benchmark contribution, not an inference efficiency technique.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md"
+      ],
+      "title": "Episodic Memories Generation and Evaluation Benchmark for Large Language Models"
+    },
+    "arXiv:2412.11706": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.11706",
+      "identity_tokens": [
+        "arXiv:2412.11706"
+      ],
+      "reason": "AsymRnR accelerates video diffusion transformers, a non-LLM video-generation workload.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md"
+      ],
+      "title": "AsymRnR: Video Diffusion Transformers Acceleration with Asymmetric Reduction and Restoration"
+    },
+    "arXiv:2410.15116": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.15116",
+      "identity_tokens": [
+        "arXiv:2410.15116"
+      ],
+      "reason": "COFT highlights retrieved context to reduce hallucinations; its stated contribution concerns answer reliability rather than resource efficiency.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/inference/06-moe-quantization-compression/2023-2310.16795-qmoe-practical-sub-1-bit-compression-of-trillion-parameter-models.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.15234-towards-efficient-generative-large-language-model-serving-a-survey-from-.md",
+        "papers/inference/13-sparse-attention/2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "Coarse-to-Fine Highlighting: Reducing Knowledge Hallucination in Large Language Models"
+    },
+    "arXiv:2307.02847": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2307.02847",
+      "identity_tokens": [
+        "arXiv:2307.02847"
+      ],
+      "reason": "The paper designs control-flow handling for spatial architectures, not LLM inference or serving.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md"
+      ],
+      "title": "Towards Efficient Control Flow Handling in Spatial Architecture via Architecting the Control Flow Plane"
+    },
+    "arXiv:2411.18797": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.18797",
+      "identity_tokens": [
+        "arXiv:2411.18797"
+      ],
+      "reason": "SEUF studies unlearning/removal of knowledge in MoE LLMs; it does not propose or evaluate inference/serving efficiency.",
+      "first_checked_at": "2026-10-05T14:45:36+00:00",
+      "last_checked_at": "2026-10-05T14:45:36+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2021-2109.10465-scalable-efficient-moe-training.md"
+      ],
+      "title": "SEUF: Is Unlearning One Expert Enough for Mixture-of-Experts LLMs?"
+    },
+    "arXiv:2410.23463": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23463",
+      "identity_tokens": [
+        "arXiv:2410.23463"
+      ],
+      "reason": "MDCure proposes multi-document instruction-following data/modeling for LLM task performance; no inference-cost or serving optimization is the contribution.",
+      "first_checked_at": "2026-10-05T14:45:37+00:00",
+      "last_checked_at": "2026-10-05T14:45:37+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2023-2303.09752-colt5-faster-long-range-transformers-with-conditional-computation.md"
+      ],
+      "title": "MDCure: A Scalable Pipeline for Multi-Document Instruction-Following"
+    },
+    "arXiv:2406.12246": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12246",
+      "identity_tokens": [
+        "arXiv:2406.12246"
+      ],
+      "reason": "TroL traverses/iterates model layers to improve output quality; primary experiments show extra inference computation/latency rather than an inference-efficiency improvement.",
+      "first_checked_at": "2026-10-05T14:45:37+00:00",
+      "last_checked_at": "2026-10-05T14:45:37+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md",
+        "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md"
+      ],
+      "title": "TroL: Traversal of Layers for Large Language and Vision Models"
+    },
+    "arXiv:2406.04801": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04801",
+      "identity_tokens": [
+        "arXiv:2406.04801"
+      ],
+      "reason": "MoE Jetpack is a vision-task model conversion/training approach for adaptive experts, not LLM inference serving.",
+      "first_checked_at": "2026-10-05T14:45:37+00:00",
+      "last_checked_at": "2026-10-05T14:45:37+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2021-2110.01786-moefication.md",
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "MoE Jetpack: From Dense Checkpoints to Adaptive Mixture of Experts for Vision Tasks"
     }
   }
 }

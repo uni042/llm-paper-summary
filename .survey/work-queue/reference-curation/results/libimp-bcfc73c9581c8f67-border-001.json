@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bcfc73c9581c8f67-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.05200",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.05200",
+    "identity_tokens": [
+      "arXiv:2503.05200"
+    ],
+    "reason": "The abstract claims lower computational and energy costs and explicitly evaluates inference/inference-with-RAG, making it potentially relevant. The exact arXiv primary full text was inaccessible during this review, so the models, energy methodology, workload, baselines and limits could not be checked.",
+    "first_checked_at": "2026-10-05T14:45:32+00:00",
+    "last_checked_at": "2026-10-05T14:45:32+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md",
+      "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md",
+      "papers/inference/99-other-inference-systems/2024-2402.05445-accurate-lora-finetuning-quantization-of-llms-via-information-retention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "ORANSight-2.0: Foundational LLMs for O-RAN"
+  },
+  "processed_at": "2026-10-05T14:45:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bcfc73c9581c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
