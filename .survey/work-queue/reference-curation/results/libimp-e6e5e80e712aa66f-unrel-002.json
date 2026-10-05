@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e6e5e80e712aa66f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2609.37107",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2609.37107",
+    "identity_tokens": [
+      "arXiv:2609.37107"
+    ],
+    "reason": "Waypoint-1.5はinteractive video world modelであり、言語モデルの推論/servingが対象ではない。",
+    "first_checked_at": "2026-10-05T04:41:49+00:00",
+    "last_checked_at": "2026-10-05T04:41:49+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+    ],
+    "title": "Waypoint-1.5: A Real-Time Video World Model for Consumer Hardware"
+  },
+  "processed_at": "2026-10-05T04:41:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e6e5e80e712a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

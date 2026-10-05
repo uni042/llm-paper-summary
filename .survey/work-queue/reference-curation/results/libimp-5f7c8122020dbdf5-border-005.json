@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5f7c8122020dbdf5-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37587",
+    "identity_tokens": [
+      "arXiv:2609.37587"
+    ],
+    "reason": "評価は単一center MIMIC-IV retrospective dataset、Qwen/Llama 4B/8B、medication/diagnosis tasksに限定。独立機関/prospective validationなしで、scopeはdomain-specific。",
+    "first_checked_at": "2026-10-05T04:41:48+00:00",
+    "last_checked_at": "2026-10-05T04:41:48+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2505.23416-kvzip.md",
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+      "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+    ],
+    "title": "ReLMem: Learning Recurrent Memory for Longitudinal EHR Modeling"
+  },
+  "processed_at": "2026-10-05T04:41:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5f7c8122020d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

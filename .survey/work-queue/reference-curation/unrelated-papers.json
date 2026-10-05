@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-05T04:39:13+00:00",
-  "record_count": 2603,
+  "updated_at": "2026-10-05T04:41:49+00:00",
+  "record_count": 2619,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -37757,6 +37757,233 @@
         "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
       ],
       "title": "Controlled Decoding Attacks on Black-Box LLMs"
+    },
+    "arXiv:2609.37399": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37399",
+      "identity_tokens": [
+        "arXiv:2609.37399"
+      ],
+      "reason": "MEDEMは一般的なmulti-engine deep-learning acceleratorの設計空間探索を扱う。abstractはLLM inference/servingへの適用やLLM実測を示さず、対象scopeとの接続がない。",
+      "first_checked_at": "2026-10-05T04:41:47+00:00",
+      "last_checked_at": "2026-10-05T04:41:47+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "MEDEM: Multi-Engine DL Accelerator Design Methodology"
+    },
+    "arXiv:2609.37443": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37443",
+      "identity_tokens": [
+        "arXiv:2609.37443"
+      ],
+      "reason": "MERAはlong-term memory QAのretrieval plannerを学習し回答精度を評価する研究。本文でもonline token useは数万token/質問であり、推論効率を改善する寄与は示されていない。",
+      "first_checked_at": "2026-10-05T04:41:47+00:00",
+      "last_checked_at": "2026-10-05T04:41:47+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "Learning to Retrieve Missing Evidence for Long-Term Memory QA"
+    },
+    "arXiv:2609.37509": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37509",
+      "identity_tokens": [
+        "arXiv:2609.37509"
+      ],
+      "reason": "ScaGNNは複数散乱simulationのboundary-element solverを近似するgraph modelであり、LLM推論とは無関係。",
+      "first_checked_at": "2026-10-05T04:41:47+00:00",
+      "last_checked_at": "2026-10-05T04:41:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "title": "ScaGNN: a Graph Neural Network for Multiple Scattering Simulations"
+    },
+    "arXiv:2609.37522": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37522",
+      "identity_tokens": [
+        "arXiv:2609.37522"
+      ],
+      "reason": "GC-OPDはteacher feedbackとexecution graphでlanguage agentを改善するon-policy distillation/training手法で、inference-time optimizationではない。",
+      "first_checked_at": "2026-10-05T04:41:47+00:00",
+      "last_checked_at": "2026-10-05T04:41:47+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Graph-Conditioned On-Policy Agent Distillation from Off-the-Shelf Teachers"
+    },
+    "arXiv:2609.37190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37190",
+      "identity_tokens": [
+        "arXiv:2609.37190"
+      ],
+      "reason": "HaPRLのhuman-anchored process rewardはvisual search agentのreinforcement learning training手法である。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "HaPRL: Human-Anchored Process Reinforcement Learning for Visual Search Agent"
+    },
+    "arXiv:2609.37283": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37283",
+      "identity_tokens": [
+        "arXiv:2609.37283"
+      ],
+      "reason": "SAM Meets VLMは医療VLMとsegmentationのfull-parameter training/curriculumを提案し、推論効率化は扱わない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "SAM Meets VLM: Parameter-Decoupled Full-Parameter Training for Unified Medical Reasoning and Segmentation"
+    },
+    "arXiv:2609.37326": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37326",
+      "identity_tokens": [
+        "arXiv:2609.37326"
+      ],
+      "reason": "On-policy distillation時のreasoning/stop能力移転を分析する研究で、推論実行時の効率化手法ではない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2025-2504.15895-dynamic-early-exit-in-reasoning-models.md"
+      ],
+      "title": "Solving Without Stopping: On-Policy Distillation at Small Scale"
+    },
+    "arXiv:2609.37334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37334",
+      "identity_tokens": [
+        "arXiv:2609.37334"
+      ],
+      "reason": "本研究のVLAは物理robot action executionの誤差補償・stress-testを対象とし、LLM inference/servingの最適化ではない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "title": "Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing"
+    },
+    "arXiv:2609.37379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37379",
+      "identity_tokens": [
+        "arXiv:2609.37379"
+      ],
+      "reason": "OperLoopはlooped Transformerの遷移設計とtraining-time performanceを扱う。比較もmatched training FLOPsで、推論コスト低減は示していない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md"
+      ],
+      "title": "Looped Transformers as Optimizers"
+    },
+    "arXiv:2609.37544": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37544",
+      "identity_tokens": [
+        "arXiv:2609.37544"
+      ],
+      "reason": "TIDEはrecommendation feedbackを用いるcontent-generation agentのexternal memory evolution/quality改善を扱い、LLM推論コストの改善を示していない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md"
+      ],
+      "title": "How Can Recommendation Feedback Evolve Agent Memory?"
+    },
+    "arXiv:2609.37555": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37555",
+      "identity_tokens": [
+        "arXiv:2609.37555"
+      ],
+      "reason": "毒性予測用graph deep-learning modelsのbenchmarkingであり、LLM inference/servingの研究ではない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "Benchmarking graph-based models for in-silico toxicity prediction in drug discovery"
+    },
+    "arXiv:2609.37574": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37574",
+      "identity_tokens": [
+        "arXiv:2609.37574"
+      ],
+      "reason": "MERGEはLLMで検索queryを拡張しIR精度を上げる手法。複数LLMを実行するretrieval applicationで、LLM inference efficiencyを下げる提案ではない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "title": "MERGE: Multi-LLM Ensemble for Retrieval via Generative Enrichment"
+    },
+    "arXiv:2609.37078": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37078",
+      "identity_tokens": [
+        "arXiv:2609.37078"
+      ],
+      "reason": "ZeroDiffは時系列データ再構成のためのdiffusion modelで、LLM推論の効率化ではない。",
+      "first_checked_at": "2026-10-05T04:41:48+00:00",
+      "last_checked_at": "2026-10-05T04:41:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "title": "ZeroDiff: Zero-Shot Time Series Reconstruction via Informed-Prior Diffusion"
+    },
+    "arXiv:2609.37107": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37107",
+      "identity_tokens": [
+        "arXiv:2609.37107"
+      ],
+      "reason": "Waypoint-1.5はinteractive video world modelであり、言語モデルの推論/servingが対象ではない。",
+      "first_checked_at": "2026-10-05T04:41:49+00:00",
+      "last_checked_at": "2026-10-05T04:41:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Waypoint-1.5: A Real-Time Video World Model for Consumer Hardware"
+    },
+    "arXiv:2609.37170": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37170",
+      "identity_tokens": [
+        "arXiv:2609.37170"
+      ],
+      "reason": "Interpolated Policy Distillationはteacher/studentのdistillation trainingを扱い、speculative decodingも学習rolloutの生成効率化に用いる。推論時のLLM効率改善ではない。",
+      "first_checked_at": "2026-10-05T04:41:49+00:00",
+      "last_checked_at": "2026-10-05T04:41:49+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "title": "Interpolated Policy Distillation: A Controllable Continuum Between Off-Policy and On-Policy Distillation"
+    },
+    "arXiv:2609.37183": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.37183",
+      "identity_tokens": [
+        "arXiv:2609.37183"
+      ],
+      "reason": "HELIXは大規模recommendation/ranking systemのarchitectureとonline metricを扱い、LLM inference/servingの最適化ではない。",
+      "first_checked_at": "2026-10-05T04:41:49+00:00",
+      "last_checked_at": "2026-10-05T04:41:49+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "HELIX: Purified and Unified - Rethinking Feature Interaction and Sequence Modeling for Large-Scale Recommendation"
     }
   }
 }
