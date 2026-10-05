@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r18-screen-09-part-01-e8d267ac0881",
+  "reference_main_sha": "187ed02df6502f3f2cf618999c8d3699577a9f7a",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34645",
+      "identity_tokens": [
+        "arXiv:2609.34645"
+      ],
+      "title": "Nereus: Adaptive Parallelism for LLM Post-Training",
+      "reason": "NereusはLLM reinforcement-learning post-trainingにおけるrollout/training resource parallelism最適化を扱い、通常のinference/serving効率化を対象としない。",
+      "source_url": "https://arxiv.org/abs/2609.34645",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.12757-nanoflow.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34652",
+      "identity_tokens": [
+        "arXiv:2609.34652"
+      ],
+      "title": "Revitalizing Medical Time Series with Vision-Informed Retrieval: A Vision-Language Perspective",
+      "reason": "医療時系列分類向けのvision-informed retrieval/representation手法で、LLM推論またはserving効率化の主張がない。",
+      "source_url": "https://arxiv.org/abs/2609.34652",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2001.04451-reformer-the-efficient-transformer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34681",
+      "identity_tokens": [
+        "arXiv:2609.34681"
+      ],
+      "title": "SOLAR: A State-Driven Online Learning Rate Scheduler for LLM Pretraining",
+      "reason": "SOLARはLLM pretrainingのlearning-rate schedulerであり、効率改善対象は学習工程。",
+      "source_url": "https://arxiv.org/abs/2609.34681",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34754",
+      "identity_tokens": [
+        "arXiv:2609.34754"
+      ],
+      "title": "Draft-KV: Learning Useful Latent Communication Between Language Models",
+      "reason": "Draft-KVはLLM間latent communicationがreceiver accuracyへ因果的に使われるかを評価するもので、推論資源・latency・圧縮効率を改善しない。",
+      "source_url": "https://arxiv.org/abs/2609.34754",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2411.02820-droidspeak-kv-cache-sharing-for-cross-llm-communication-and-multi-llm-se.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2510.03215-cache-to-cache-direct-semantic-communication-between-large-language-mode.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2511.20639-latent-collaboration-in-multi-agent-systems.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md",
+        "papers/inference/99-other-inference-systems/2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.34786",
+      "identity_tokens": [
+        "arXiv:2609.34786"
+      ],
+      "title": "Instance-Adaptive Prompts as Context for Time-Series Foundation Models",
+      "reason": "compact learned promptsを用いたtime-series foundation modelのcontext/inference cost削減であり、LLM inference/serving対象ではない。",
+      "source_url": "https://arxiv.org/abs/2609.34786",
+      "first_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "last_checked_at": "2026-10-05T04:21:44.715554+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
