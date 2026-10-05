@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261005-r20-screen-03-part-04-a30193d93412",
+  "reference_main_sha": "5036173bfed3b8b7b8ba5b7815b56899bc896493",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21543",
+      "identity_tokens": [
+        "arXiv:2609.21543"
+      ],
+      "title": "From Retrieval to Recognition:How Vision--Language Models Become OCR Specialists",
+      "reason": "一次要旨: Does a general vision--language model acquire specialized OCR ability by developing a new reading circuit or by reusing an existing mechanism? We address this question in the setting of full-sequence OCR, rather than local-answer retrieval. Using an evidence-grounded protocol with held-out causal interventions, we identify sparse and stable OCR-head sets in ",
+      "source_url": "https://arxiv.org/abs/2609.21543",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21548",
+      "identity_tokens": [
+        "arXiv:2609.21548"
+      ],
+      "title": "Dual-Interest Sequential Product Recommendation With Multi-Granular SSM",
+      "reason": "一次要旨: Sequential recommendation aims to predict the next item a user will interact with based on their historical behavior. Advances in Transformers have significantly improved sequential recommendation but are still limited by cost efficiency. Although State Space Models (SSMs) have recently enabled efficient long-range modeling, most existing methods encode each",
+      "source_url": "https://arxiv.org/abs/2609.21548",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21550",
+      "identity_tokens": [
+        "arXiv:2609.21550"
+      ],
+      "title": "OneBid: A Unified Auto-Bidding Foundation Model for Diverse oCPX Advertising Scenarios",
+      "reason": "一次要旨: Auto-bidding is central to computational advertising, where strategies must maximize advertisers'conversion value under economic constraints. It has evolved from rule-based controllers to reinforcement learning and generative methods such as Decision Transformer (DT). Yet these methods increasingly mismatch the prevailing optimized cost-per-X (oCPX) paradigm",
+      "source_url": "https://arxiv.org/abs/2609.21550",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21594",
+      "identity_tokens": [
+        "arXiv:2609.21594"
+      ],
+      "title": "HyperParallel-FSDP: Topology-Aware Fully Sharded Training with Layout-Driven Muon on Ascend SuperPods",
+      "reason": "一次要旨: Declarative SPMD programming uses tensor sharding descriptions to drive distributed execution, separating parallelization from model code. However, the evaluated PyTorch DTensor stack dispatches every operator below autograd, incurring repeated dispatch and metadata costs, while lacking an inexpensive end-to-end validation path. Existing FSDP and distributed",
+      "source_url": "https://arxiv.org/abs/2609.21594",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md",
+        "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21712",
+      "identity_tokens": [
+        "arXiv:2609.21712"
+      ],
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "reason": "一次要旨: Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low",
+      "source_url": "https://arxiv.org/abs/2609.21712",
+      "first_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "last_checked_at": "2026-10-05T05:14:58.044448+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    }
+  ]
+}
