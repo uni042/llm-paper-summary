@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r135-screen-01-part-02-d5d8b91954e6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28263",
+      "identity_tokens": [
+        "arXiv:2609.28263"
+      ],
+      "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+      "reason": "一次要旨はLLMサービスを動機とするオンライン資源配分LPのSGD最適化だが、LLM自体の推論/serving技術を変更せず、一般的オンライン最適化の理論・計算量を扱う。",
+      "source_url": "https://arxiv.org/abs/2609.28263",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28275",
+      "identity_tokens": [
+        "arXiv:2609.28275"
+      ],
+      "title": "PaperAtlas: an automatically constructed atlas of computational methods and software from 6.4 million open-access articles",
+      "reason": "一次要旨は論文・ソフトウェア情報を抽出して方法のアトラスを構築するデジタルライブラリ研究で、LLM推論効率を対象としていない。",
+      "source_url": "https://arxiv.org/abs/2609.28275",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28724",
+      "identity_tokens": [
+        "arXiv:2609.28724"
+      ],
+      "title": "The Canonical Parallel Form as a Substrate for Parallelizing Compilers and Agentic Optimizers",
+      "reason": "一次要旨の並列化は生成コードをCPU/GPUで高速化するコンパイラ最適化が対象で、LLM推論のtoken・memory・serving改善ではない。agent token削減の記述はコード最適化タスクに限られる。",
+      "source_url": "https://arxiv.org/abs/2609.28724",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25669",
+      "identity_tokens": [
+        "arXiv:2609.25669"
+      ],
+      "title": "From Utterances to Networks: Modelling Slang Adoption and Diffusion Across Subreddits",
+      "reason": "一次要旨はサブレディット間のスラング普及をネットワークモデルで説明する研究で、LLM推論・serving手法を扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.25669",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.23997",
+      "identity_tokens": [
+        "arXiv:2609.23997"
+      ],
+      "title": "RoboTalk: Learning Multi-Robot Communication and Coordination from Multimodal Demonstrations",
+      "reason": "一次要旨はマルチロボット協調用の通信・行動方策学習と実演評価であり、LLM推論資源や推論レイテンシの改善を検証していない。",
+      "source_url": "https://arxiv.org/abs/2609.23997",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    }
+  ]
+}
