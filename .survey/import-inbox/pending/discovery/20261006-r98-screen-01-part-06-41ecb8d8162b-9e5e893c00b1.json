@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r98-screen-01-part-06-41ecb8d8162b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.21712",
+      "identity_tokens": [
+        "arXiv:2602.21712"
+      ],
+      "title": "Innovative tooth segmentation using hierarchical features and bidirectional sequence modeling",
+      "reason": "The paper proposes a tooth-segmentation model using hierarchical features and bidirectional sequence modeling. It does not concern LLM inference/serving.",
+      "source_url": "https://arxiv.org/abs/2602.21712",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12216",
+      "identity_tokens": [
+        "arXiv:2512.12216"
+      ],
+      "title": "Training Versatile Coding Agents in Synthetic Environments",
+      "reason": "Training Versatile Coding Agents in Synthetic Environments develops agent training tasks and capability evaluations, not inference optimization.",
+      "source_url": "https://arxiv.org/abs/2512.12216",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.04504",
+      "identity_tokens": [
+        "arXiv:2512.04504"
+      ],
+      "title": "UltraImage: Rethinking Resolution Extrapolation in Image Diffusion Transformers",
+      "reason": "UltraImage studies resolution extrapolation in image diffusion transformers. It is a generative vision quality/generalization method, not LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.04504",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.23021",
+      "identity_tokens": [
+        "arXiv:2511.23021"
+      ],
+      "title": "Masked Diffusion for Generative Recommendation",
+      "reason": "Masked Diffusion for Generative Recommendation applies discrete diffusion to recommendation outputs. Parallel generation is a possible inference lead, but primary evaluation is recommender quality rather than general LLM efficiency.",
+      "source_url": "https://arxiv.org/abs/2511.23021",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.19221",
+      "identity_tokens": [
+        "arXiv:2511.19221"
+      ],
+      "title": "Percept-WAM: Perception-Enhanced World-Awareness-Action Model for Robust End-to-End Autonomous Driving",
+      "reason": "Percept-WAM is a perception-enhanced world-action model for autonomous driving. It focuses on driving capability and robustness; a cited cached-knowledge serving paper does not establish an efficiency contribution here.",
+      "source_url": "https://arxiv.org/abs/2511.19221",
+      "first_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "last_checked_at": "2026-10-06T13:29:18.505468+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2024-2405.16444-cacheblend-fast-rag-kv-cache-fusion.md"
+      ]
+    }
+  ]
+}
