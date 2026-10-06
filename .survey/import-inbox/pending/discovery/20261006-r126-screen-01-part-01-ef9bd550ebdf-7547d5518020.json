@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r126-screen-01-part-01-ef9bd550ebdf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.11143",
+      "identity_tokens": [
+        "arXiv:2402.11143"
+      ],
+      "title": "Foundation Models for Recommender Systems: A Survey and New Perspectives",
+      "reason": "一次要旨と題名は推薦システム向け基盤モデル研究の分類調査を対象としている。推薦タスクと下流応用の整理が主題で、LLM推論のメモリ・遅延・量子化・servingやGist prompt圧縮の実装課題を扱わないため、系統リンクは主題上の直接性を示さない。",
+      "source_url": "https://arxiv.org/abs/2402.11143",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.00776",
+      "identity_tokens": [
+        "arXiv:2402.00776"
+      ],
+      "title": "Hybrid Quantum Vision Transformers for Event Classification in High Energy Physics",
+      "reason": "一次要旨が扱うのは高エネルギー物理の画像分類向けハイブリッド量子Vision Transformerであり、比較対象も古典ViTである。LLMの重み圧縮・推論システムや実用GPU servingとは対象タスクと計算基盤が異なる。",
+      "source_url": "https://arxiv.org/abs/2402.00776",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10910",
+      "identity_tokens": [
+        "arXiv:2401.10910"
+      ],
+      "title": "Metacognition is all you need? Using Introspection in Generative Agents to Improve Goal-directed Behavior",
+      "reason": "一次要旨の貢献は生成エージェントに内省的な戦略変更モジュールを加えて行動成功を上げること。CPU/GPU offload、活性化疎性、階層メモリの配置・性能機構は扱わず、リンク先のシステム系統とは主題が異なる。",
+      "source_url": "https://arxiv.org/abs/2401.10910",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.12456-powerinfer.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2207.06968",
+      "identity_tokens": [
+        "arXiv:2207.06968"
+      ],
+      "title": "DASS: Differentiable Architecture Search for Sparse Neural Networks",
+      "reason": "一次要旨のDASSはSparseConv/SparseLinearを使った微分可能なCNNアーキテクチャ探索で、CIFAR-10とImageNetの画像分類が評価対象。疎LLM重み・attentionカーネル・言語モデルservingへの適用は示されず、一般CNN探索の報告に留まる。",
+      "source_url": "https://arxiv.org/abs/2207.06968",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00425",
+      "identity_tokens": [
+        "arXiv:2507.00425"
+      ],
+      "title": "Flexible Language Modeling in Continuous Space with Transformer-based Autoregressive Flows",
+      "reason": "一次本文では新しい連続潜在空間の言語モデルとblock-wise生成を構成するが、主張・比較は尤度と生成の柔軟性で、既存LLMの推論速度、メモリ、serving改善を実証していない。アーキテクチャ研究として距離があり、効率系統への直接登録は保留相当のborderlineが妥当。",
+      "source_url": "https://arxiv.org/abs/2507.00425",
+      "first_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "last_checked_at": "2026-10-06T17:50:30.397893+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
