@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a02ad01cd357b7cb-border-004",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.18653/v1/p19-1146",
+  "reason": "alpha-entmaxでattentionとoutput distributionに厳密なzeroを作り、short listだけへ非zero確率を与え、場合によってbeam searchをexactにする。sparsityは推論効率へつながり得るが、主要評価はmorphological inflection/translationの品質・解釈性で、end-to-end latency/memory削減の実証がないため境界扱い。",
+  "title": "Sparse Sequence-to-Sequence Models",
+  "identity_tokens": [
+    "DOI:10.18653/v1/p19-1146",
+    "arXiv:1905.05702"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a02ad01cd357",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
