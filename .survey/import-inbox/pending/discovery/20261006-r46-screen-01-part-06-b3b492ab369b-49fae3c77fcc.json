@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r46-screen-01-part-06-b3b492ab369b",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.07539",
+      "identity_tokens": [
+        "arXiv:2606.07539"
+      ],
+      "title": "Prompt Governance? On Governing Technologies Governed by Natural Language",
+      "reason": "Prompt-governance study, not an inference method.",
+      "source_url": "https://arxiv.org/abs/2606.07539",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14898",
+      "identity_tokens": [
+        "arXiv:2604.14898"
+      ],
+      "title": "Governing Reflective Human-AI Collaboration: A Framework for Epistemic Scaffolding and Traceable Reasoning",
+      "reason": "Human-AI reflection/governance framework; no model inference-efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2604.14898",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11102",
+      "identity_tokens": [
+        "arXiv:2604.11102"
+      ],
+      "title": "OmniScript: Towards Audio-Visual Script Generation for Long-Form Cinematic Video",
+      "reason": "OmniScript introduces hierarchical audio-video script generation and a long-video data/model pipeline; experiments compare script quality across multimodal models. Full text focuses on annotation, temporal grounding and generation quality, not token/KV reduction or inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2604.11102",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104542",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104542"
+      ],
+      "title": "MetaPFS: Memory-efficient node classification on text-attributed graphs via meta-guided progressive feature selection",
+      "reason": "Memory-efficient text-attributed graph node classification; not LLM inference/serving.",
+      "source_url": "https://doi.org/10.1016/j.ipm.2025.104542",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26164",
+      "identity_tokens": [
+        "arXiv:2603.26164"
+      ],
+      "title": "DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models",
+      "reason": "Dynamic LLM data selection/mixture/reweighting targets training, not inference/serving.",
+      "source_url": "https://arxiv.org/abs/2603.26164",
+      "first_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "last_checked_at": "2026-10-06T06:16:10.577253+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ]
+    }
+  ]
+}
