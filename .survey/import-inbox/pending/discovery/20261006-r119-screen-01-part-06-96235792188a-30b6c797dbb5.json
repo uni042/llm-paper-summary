@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r119-screen-01-part-06-96235792188a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.16638",
+      "identity_tokens": [
+        "arXiv:2502.16638"
+      ],
+      "title": "Automatic Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression",
+      "reason": "一次資料abstractおよび本文を確認。The work jointly prunes and quantizes neural networks to improve training/compression behavior. Its evaluated contribution is not an LLM inference/serving method, so relation to inference weight quantization is weak.",
+      "source_url": "https://arxiv.org/abs/2502.16638",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/jcp3020010",
+      "identity_tokens": [
+        "DOI:10.3390/jcp3020010"
+      ],
+      "title": "Cybersecurity for AI Systems: A Survey",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://doi.org/10.3390/jcp3020010",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16431",
+      "identity_tokens": [
+        "arXiv:2504.16431"
+      ],
+      "title": "Target Concrete Score Matching: A Holistic Framework for Discrete Diffusion",
+      "reason": "一次資料abstractを確認。対象はLLM inferenceのcompute/memory/latency/throughput/KV cache/quantization/offload/servingと接続せず、対象外。",
+      "source_url": "https://arxiv.org/abs/2504.16431",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.14269",
+      "identity_tokens": [
+        "arXiv:2503.14269"
+      ],
+      "title": "DARS: Dynamic Action Re-Sampling to Enhance Coding Agent Performance by Adaptive Tree Traversal",
+      "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 ",
+      "source_url": "https://arxiv.org/abs/2503.14269",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.17195",
+      "identity_tokens": [
+        "arXiv:2410.17195"
+      ],
+      "title": "Non-myopic Generation of Language Models for Reasoning and Planning",
+      "reason": "一次本文を確認したが、既存系統との接続または一般化可能なLLM推論効率効果が弱く、具体的な追加検証が必要なためborderlineに残す。 ",
+      "source_url": "https://arxiv.org/abs/2410.17195",
+      "first_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "last_checked_at": "2026-10-06T16:38:24.851874+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ]
+    }
+  ]
+}
