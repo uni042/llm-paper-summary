@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f78443d720c386aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.13148",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.13148",
+    "identity_tokens": [
+      "arXiv:2508.13148"
+    ],
+    "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 MDPO trains masked diffusion language models to close the training/inference gap. The method is focused on diffusion-language-model training and sampling; the reviewed paper does not establish a general autoregressive LLM serving or KV-cache optimization, so the lineage link is weak.",
+    "first_checked_at": "2026-10-06T16:56:13+00:00",
+    "last_checked_at": "2026-10-06T16:56:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MDPO: Overcoming the Training-Inference Divide of Masked Diffusion Language Models"
+  },
+  "processed_at": "2026-10-06T16:56:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f78443d720c3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

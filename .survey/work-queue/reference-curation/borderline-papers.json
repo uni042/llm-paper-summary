@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T16:48:05+00:00",
-  "record_count": 3496,
+  "updated_at": "2026-10-06T16:56:13+00:00",
+  "record_count": 3511,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -53518,6 +53518,231 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Mitigating Lost-in-Retrieval Problems in Retrieval Augmented Multi-Hop Question Answering"
+    },
+    "arXiv:2503.11751": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.11751",
+      "identity_tokens": [
+        "arXiv:2503.11751"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 reWordBench evaluates reward-model robustness under transformed inputs and proposes robustness improvements. Its experiments measure reward robustness rather than model routing, serving, or inference-cost gains; the generic inference-systems lineage is weak after full-text review.",
+      "first_checked_at": "2026-10-06T16:56:00+00:00",
+      "last_checked_at": "2026-10-06T16:56:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "reWordBench: Benchmarking and Improving the Robustness of Reward Models with Transformed Inputs"
+    },
+    "arXiv:2312.07751": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.07751",
+      "identity_tokens": [
+        "arXiv:2312.07751"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 The paper discusses the need and challenges of large human language models, including languages and deployment/resource concerns, but is a broad position/survey-style treatment without a concrete inference optimization evaluated against serving metrics.",
+      "first_checked_at": "2026-10-06T16:56:00+00:00",
+      "last_checked_at": "2026-10-06T16:56:00+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Human Language Models: A Need and the Challenges"
+    },
+    "DOI:10.1109/jssc.2024.3397189": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2024.3397189",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2024.3397189"
+      ],
+      "reason": "一次資料の全文取得に失敗しmethod/evaluation/limitationsを検証できないためborderlineに残す。 The IEEE JSSC DOI page only presented an anti-bot JavaScript interstitial; the publisher full text and abstract could not be read. The available abstract from an alternate bibliographic copy describes sparse Transformer attention and heterogeneous dataflow hardware, but that is insufficient for method/evaluation/limitations review.",
+      "first_checked_at": "2026-10-06T16:56:04+00:00",
+      "last_checked_at": "2026-10-06T16:56:04+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ayaka: A Versatile Transformer Accelerator With Low-Rank Estimation and Heterogeneous Dataflow"
+    },
+    "arXiv:2506.05332": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05332",
+      "identity_tokens": [
+        "arXiv:2506.05332"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 Hour-LLaVA uses a question-conditioned memory augmentation module to integrate semantics from cached full-video context and enable hour-scale video training/inference at 1-FPS sampling. It reports video understanding benchmark gains but no measured inference memory/latency/throughput advantage in the reviewed results; its relevance to distributed attention is plausible but indirect.",
+      "first_checked_at": "2026-10-06T16:56:04+00:00",
+      "last_checked_at": "2026-10-06T16:56:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unleashing Hour-Scale Video Training for Long Video-Language Understanding"
+    },
+    "arXiv:2411.13918": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.13918",
+      "identity_tokens": [
+        "arXiv:2411.13918"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 QwT adds a small linear structure to quantized networks and solves the calibration/accuracy adjustment in closed form in under two minutes. It evaluates vision, language and multimodal tasks; the paper motivates compression/acceleration but the reviewed results do not demonstrate a specific LLM serving latency or throughput gain.",
+      "first_checked_at": "2026-10-06T16:56:05+00:00",
+      "last_checked_at": "2026-10-06T16:56:05+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Quantization without Tears"
+    },
+    "arXiv:2405.12250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.12250",
+      "identity_tokens": [
+        "arXiv:2405.12250"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 The study finds near-linear relationships between selected Transformer decoder blocks and tests deleting or approximating some blocks with limited loss changes. It suggests a possible model-compute reduction, but provides no direct serving latency/throughput or memory evaluation, so it remains a borderline efficiency lead.",
+      "first_checked_at": "2026-10-06T16:56:06+00:00",
+      "last_checked_at": "2026-10-06T16:56:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Your Transformer is Secretly Linear"
+    },
+    "arXiv:2404.04163": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.04163",
+      "identity_tokens": [
+        "arXiv:2404.04163"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 The paper studies positional bias in long-document dense-retrieval embeddings through T5 training stages. It finds that models weight earlier content more after contrastive pretraining/fine-tuning; its method and evaluation concern representation quality, not serving efficiency or inference-system design.",
+      "first_checked_at": "2026-10-06T16:56:06+00:00",
+      "last_checked_at": "2026-10-06T16:56:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dwell in the Beginning: How Language Models Embed Long Documents for Dense Retrieval"
+    },
+    "DOI:10.1109/tpds.2024.3385639": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2024.3385639",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2024.3385639"
+      ],
+      "reason": "一次資料の全文取得に失敗しmethod/evaluation/limitationsを検証できないためborderlineに残す。 The primary IEEE DOI page was inaccessible and the author-hosted PDF retrieval failed in this session. Its publisher abstract describes MPMoE adaptive pipeline parallelism, CPU offload and memory reuse for MoE training, with up to 2.3x training speedup and over 30% less training memory. Because full-text limitations and its relation to the MoE inference lineage could not be checked, retain as borderline.",
+      "first_checked_at": "2026-10-06T16:56:10+00:00",
+      "last_checked_at": "2026-10-06T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MPMoE: Memory Efficient MoE for Pre-Trained Models With Adaptive Pipeline Parallelism"
+    },
+    "arXiv:2510.08790": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.08790",
+      "identity_tokens": [
+        "arXiv:2510.08790"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 COMPASS uses a main agent, meta-thinker and context manager to maintain concise task-stage briefs for long-horizon tool use; it reports accuracy gains and delegates context maintenance to smaller models for efficiency. The plausible follow-up is to quantify actual tokens, API cost, latency and quality against context-compression/routing baselines; the current evidence is agent-task-specific.",
+      "first_checked_at": "2026-10-06T16:56:11+00:00",
+      "last_checked_at": "2026-10-06T16:56:11+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context"
+    },
+    "arXiv:2503.09956": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.09956",
+      "identity_tokens": [
+        "arXiv:2503.09956"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 This is a survey of RL-based LLMs and wireless-network synergy. It discusses resource/edge deployment themes but does not present a specific inference serving method or new cost/latency evaluation relevant to the linked routing family.",
+      "first_checked_at": "2026-10-06T16:56:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeepSeek-Inspired Exploration of RL-Based LLMs and Synergy with Wireless Networks: A Survey"
+    },
+    "arXiv:2412.04782": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.04782",
+      "identity_tokens": [
+        "arXiv:2412.04782"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 This survey covers environmental/economic sustainability of LLMs, energy consumption, deployment and lifecycle practices. It is useful background but synthesizes existing pruning, quantization and deployment strategies rather than adding an evaluated serving optimization.",
+      "first_checked_at": "2026-10-06T16:56:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Sustainability in Large Language Models: Applications, Economics, and Challenges"
+    },
+    "DOI:10.1038/s41598-024-75331-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1038/s41598-024-75331-2",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-024-75331-2"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 CKLE distills LLM text knowledge into a multimodal EHR prediction model and reports prediction improvements on heart-failure/hypertension tasks. It is motivated partly by local deployment constraints and may reduce reliance on running an LLM at serving time, but the paper does not quantify resulting LLM inference compute, latency or memory savings; keep as borderline.",
+      "first_checked_at": "2026-10-06T16:56:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distilling the knowledge from large-language model for health event prediction"
+    },
+    "arXiv:2508.13148": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.13148",
+      "identity_tokens": [
+        "arXiv:2508.13148"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 MDPO trains masked diffusion language models to close the training/inference gap. The method is focused on diffusion-language-model training and sampling; the reviewed paper does not establish a general autoregressive LLM serving or KV-cache optimization, so the lineage link is weak.",
+      "first_checked_at": "2026-10-06T16:56:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MDPO: Overcoming the Training-Inference Divide of Masked Diffusion Language Models"
+    },
+    "DOI:10.1109/tmi.2025.3540809": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tmi.2025.3540809",
+      "identity_tokens": [
+        "DOI:10.1109/tmi.2025.3540809"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 MoME assigns image-modality expertise with hierarchical gating; MoME+ adds soft input routing for missing/combined MRI modalities. It evaluates nine lesion datasets and reports performance comparable to multiple task-specific nnU-Nets with simpler model management/deployment. This is medical segmentation rather than LLM expert parallelism or inference serving, so the MoE-family connection is conceptual.",
+      "first_checked_at": "2026-10-06T16:56:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Foundation Model for Lesion Segmentation on Brain MRI With Mixture of Modality Experts"
+    },
+    "arXiv:2502.04506": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.04506",
+      "identity_tokens": [
+        "arXiv:2502.04506"
+      ],
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 This position paper surveys multi-LLM collaboration across API/text/logit/weight levels and discusses cost-aware model selection and cascade tradeoffs. It contributes taxonomy and directions, not a new measured routing/serving algorithm; API cascades can add cost/latency.",
+      "first_checked_at": "2026-10-06T16:56:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When One LLM Drools, Multi-LLM Collaboration Rules"
     }
   }
 }

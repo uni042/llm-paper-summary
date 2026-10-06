@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T16:48:05+00:00",
-  "record_count": 8964,
+  "updated_at": "2026-10-06T16:56:14+00:00",
+  "record_count": 8990,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -26365,20 +26365,6 @@
       ],
       "title": "An Empirical Model of Large-Batch Training"
     },
-    "arXiv:1905.06566": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1905.06566",
-      "identity_tokens": [
-        "arXiv:1905.06566"
-      ],
-      "reason": "HiBERTは文書レベルのpre-trainingとsummarization qualityが中心で、LLM inference servingを扱わない。",
-      "first_checked_at": "2026-10-05T02:17:26+00:00",
-      "last_checked_at": "2026-10-05T02:17:26+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
-      ],
-      "title": "HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization"
-    },
     "arXiv:2502.16982": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2502.16982",
@@ -26403,20 +26389,6 @@
         "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
       ],
       "title": "Muon is Scalable for LLM Training"
-    },
-    "arXiv:2106.04489": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2106.04489",
-      "identity_tokens": [
-        "arXiv:2106.04489"
-      ],
-      "reason": "shared hypernetworkによるparameter-efficient multi-task fine-tuningが主題であり、inference efficiencyではない。",
-      "first_checked_at": "2026-10-05T02:17:27+00:00",
-      "last_checked_at": "2026-10-05T02:17:27+00:00",
-      "linked_from": [
-        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
-      ],
-      "title": "Parameter-efficient Multi-task Fine-tuning for Transformers via Shared Hypernetworks"
     },
     "arXiv:2310.11454": {
       "classification": "unrelated",
@@ -91990,20 +91962,6 @@
       ],
       "title": "Fast in-memory transaction processing using RDMA and HTM"
     },
-    "arXiv:1908.11775": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:1908.11775",
-      "identity_tokens": [
-        "arXiv:1908.11775"
-      ],
-      "reason": "attentionをkernel smootherとして再解釈し、position embeddingやkernel構成を分析・提案するTransformer理解/architecture研究。計算量低減の例はあるが、評価はNMT/sequence predictionでLLM推論runtime・serving最適化を最終適用先としない。",
-      "first_checked_at": "2026-10-05T16:24:18+00:00",
-      "last_checked_at": "2026-10-05T16:24:18+00:00",
-      "linked_from": [
-        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md"
-      ],
-      "title": "Transformer Dissection: A Unified Understanding of Transformer's Attention via the Lens of Kernel"
-    },
     "DOI:10.1162/153244303321897735": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1162/153244303321897735",
@@ -127986,9 +127944,9 @@
         "DOI:10.18653/v1/d19-1275",
         "arXiv:1909.03368"
       ],
-      "reason": "ELMo等の表現に対するprobeが言語構造ではなくword-type memorizationを学んでいないかをcontrol task/selectivityで検証するinterpretability方法論で、推論効率化を扱わない。",
+      "reason": "NLP表現のprobe classifierが言語構造を測っているか、control task/selectivityで診断するinterpretability方法論。推論runtime・serving・memory効率化を扱わない。",
       "first_checked_at": "2026-10-05T00:50:54+00:00",
-      "last_checked_at": "2026-10-06T16:39:11+00:00",
+      "last_checked_at": "2026-10-06T16:56:07+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2410.01035-embedding-based-scheduling.md",
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
@@ -128001,9 +127959,9 @@
       "identity_tokens": [
         "arXiv:2010.06467"
       ],
-      "reason": "BERT系transformerをreranking/dense retrievalへ適用するinformation retrieval survey。query latencyやindex sizeとのtrade-offも論じるが、LLM inference runtime/servingそのものを体系化するsystems研究ではない。",
+      "reason": "BERT等をreranking/dense retrievalへ適用する情報検索survey。query latency等の効率trade-offも整理するが、最終対象はtext ranking手法の体系化でLLM推論システムそのものではない。",
       "first_checked_at": "2026-10-06T16:39:12+00:00",
-      "last_checked_at": "2026-10-06T16:39:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:08+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
       ],
@@ -128016,9 +127974,9 @@
         "DOI:10.18653/v1/2020.emnlp-demos.7",
         "arXiv:2007.07779"
       ],
-      "reason": "Hugging Face Transformers上でtask/language adapterの学習・共有・再利用を容易にするadaptation frameworkで、推論runtimeやserving効率を主目的としない。",
+      "reason": "task/domain adapterの共有・学習・再利用を支援するadapter frameworkで、parameter-efficient transfer learningが主目的。推論serving/runtime最適化ではない。",
       "first_checked_at": "2026-10-04T21:40:32+00:00",
-      "last_checked_at": "2026-10-06T16:39:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:08+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
       ],
@@ -128031,9 +127989,9 @@
         "DOI:10.18653/v1/p19-3007",
         "arXiv:1906.05714"
       ],
-      "reason": "BERT/GPT-2のattentionをhead/model/neuron scaleで可視化するinterpretability toolで、bias検出やhead挙動理解が主用途。推論効率化ではない。",
+      "reason": "Transformer attentionをhead/model levelで可視化するinteractive visualization tool研究。モデル理解・分析が目的で、推論効率化を扱わない。",
       "first_checked_at": "2026-10-04T19:48:51+00:00",
-      "last_checked_at": "2026-10-06T16:39:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:08+00:00",
       "linked_from": [
         "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md",
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
@@ -128047,9 +128005,9 @@
         "DOI:10.18653/v1/2020.acl-main.653",
         "arXiv:1910.07475"
       ],
-      "reason": "7言語のcross-lingual extractive QA benchmarkを構築しzero-shot transferを評価するdataset/benchmark研究で、推論system効率化を扱わない。",
+      "reason": "7言語のcross-lingual extractive QA benchmarkを構築しtransfer性能を評価するdataset/benchmark研究。推論システム効率は扱わない。",
       "first_checked_at": "2026-10-04T21:54:26+00:00",
-      "last_checked_at": "2026-10-06T16:39:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:08+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
       ],
@@ -128062,9 +128020,9 @@
         "DOI:10.18653/v1/p16-1223",
         "arXiv:1606.02858"
       ],
-      "reason": "CNN/Daily Mail reading comprehension datasetとattention readerの挙動・問題特性を詳細分析するQA研究で、LLM/Transformer推論runtime最適化とは無関係。",
+      "reason": "CNN/Daily Mail reading comprehension datasetの構造・entity anonymization・baseline behaviorを分析するQA研究で、推論runtimeやserving効率化を目的としない。",
       "first_checked_at": "2026-10-04T21:49:40+00:00",
-      "last_checked_at": "2026-10-06T16:39:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:09+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
       ],
@@ -128076,9 +128034,9 @@
       "identity_tokens": [
         "arXiv:2506.18088"
       ],
-      "reason": "dual-arm robotic manipulation向けsimulation data generator、domain randomization、VLA policy benchmarkが主題で、LLM推論systemの効率化を扱わない。",
+      "reason": "bimanual robot manipulation向けのsynthetic data generator、domain randomization、benchmarkが主題で、LLM/言語モデル推論システムを最終適用先としない。",
       "first_checked_at": "2026-10-06T16:39:13+00:00",
-      "last_checked_at": "2026-10-06T16:39:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:09+00:00",
       "linked_from": [
         "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
       ],
@@ -128091,9 +128049,9 @@
         "DOI:10.18653/v1/w19-4808",
         "arXiv:1906.04284"
       ],
-      "reason": "GPT-2 smallのattentionと品詞・dependency・attention distanceの関係を解析するinterpretability研究で、推論速度・memory・servingを改善する方式ではない。",
+      "reason": "GPT-2 smallのattention headを可視化し、品詞・dependency relation・距離との対応を分析するinterpretability研究。推論効率化を扱わない。",
       "first_checked_at": "2026-10-05T01:03:26+00:00",
-      "last_checked_at": "2026-10-06T16:39:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:09+00:00",
       "linked_from": [
         "papers/inference/10-kv-cache-offload-recomputation/2025-2510.10129-cacheclip-rag-kv-cache-reuse.md",
         "papers/inference/13-sparse-attention/2025-2502.08363-top-theta-attention.md",
@@ -128586,6 +128544,420 @@
         "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
       ],
       "title": "SWE-Dev: Building Software Engineering Agents with Training and Inference Scaling"
+    },
+    "arXiv:2509.00190": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.00190",
+      "identity_tokens": [
+        "arXiv:2509.00190"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 The paper uses spectral embeddings, clustering and Markov transitions to interpret chain-of-thought dynamics. Its evaluation is explainability/trajectory analysis, not inference compute, memory or decoding efficiency, so the stated lineage/version relationship does not translate into a technical efficiency link.",
+      "first_checked_at": "2026-10-06T16:56:01+00:00",
+      "last_checked_at": "2026-10-06T16:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "title": "Explainable Chain-of-Thought Reasoning: An Empirical Analysis on State-Aware Reasoning Dynamics"
+    },
+    "arXiv:2506.07903": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07903",
+      "identity_tokens": [
+        "arXiv:2506.07903"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:01+00:00",
+      "last_checked_at": "2026-10-06T16:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Diffuse Everything: Multimodal Diffusion Models on Arbitrary State Spaces"
+    },
+    "arXiv:2405.09285": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.09285",
+      "identity_tokens": [
+        "arXiv:2405.09285"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:01+00:00",
+      "last_checked_at": "2026-10-06T16:56:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "title": "Positional Knowledge is All You Need: Position-induced Transformer (PiT) for Operator Learning"
+    },
+    "arXiv:2408.05517": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.05517",
+      "identity_tokens": [
+        "arXiv:2408.05517"
+      ],
+      "reason": "300+ LLM/50+ MLLMのfine-tuningを中心に統合するtraining infrastructureで、inference/evaluation/quantizationも付随機能として統合するが、論文の主貢献・評価は学習手法とagent fine-tuning品質であり推論systems最適化ではない。",
+      "first_checked_at": "2026-10-06T16:56:01+00:00",
+      "last_checked_at": "2026-10-06T16:56:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md"
+      ],
+      "title": "SWIFT:A Scalable lightWeight Infrastructure for Fine-Tuning"
+    },
+    "DOI:10.18653/v1/p19-1499": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1499",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1499",
+        "arXiv:1905.06566"
+      ],
+      "reason": "hierarchical Transformer encoderをunlabeled documentでpretrainしてextractive summarization品質を改善する学習/モデル研究で、推論runtime・serving・memory効率化を扱わない。",
+      "first_checked_at": "2026-10-05T02:17:26+00:00",
+      "last_checked_at": "2026-10-06T16:56:02+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization"
+    },
+    "DOI:10.1109/jproc.2022.3226481": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/jproc.2022.3226481",
+      "identity_tokens": [
+        "DOI:10.1109/jproc.2022.3226481"
+      ],
+      "reason": "resource-constrained edge device上のdeep learning inference accelerationを広く扱うreviewだが、対象はDNN/CNN等の一般edge AIでありLLM/Transformer推論を中心とするsurveyではない。",
+      "first_checked_at": "2026-10-06T16:56:02+00:00",
+      "last_checked_at": "2026-10-06T16:56:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ],
+      "title": "Efficient Acceleration of Deep Learning Inference on Resource-Constrained Edge Devices: A Review"
+    },
+    "DOI:10.18653/v1/2021.acl-long.47": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.47",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.47",
+        "arXiv:2106.04489"
+      ],
+      "reason": "shared hypernetworkでtask/layer/adapter-position条件付きadapter parameterを生成しmulti-task fine-tuningの追加parameterを0.29%/taskへ抑える学習手法。推論runtime/serving最適化を主目的としない。",
+      "first_checked_at": "2026-10-05T02:17:27+00:00",
+      "last_checked_at": "2026-10-06T16:56:02+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "Parameter-efficient Multi-task Fine-tuning for Transformers via Shared Hypernetworks"
+    },
+    "arXiv:2402.01158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01158",
+      "identity_tokens": [
+        "arXiv:2402.01158"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 LLM-Detector instruction-tunes open LLMs for AI-generated Chinese text detection and evaluates detection accuracy/generalization. The method is fine-tuning/task performance oriented and does not establish memory/offload or inference-serving improvements.",
+      "first_checked_at": "2026-10-06T16:56:03+00:00",
+      "last_checked_at": "2026-10-06T16:56:03+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "LLM-Detector: Improving AI-Generated Chinese Text Detection with Open-Source LLM Instruction Tuning"
+    },
+    "DOI:10.26599/air.2022.9150004": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.26599/air.2022.9150004",
+      "identity_tokens": [
+        "DOI:10.26599/air.2022.9150004"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:03+00:00",
+      "last_checked_at": "2026-10-06T16:56:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Artificial Intelligence for Metaverse: A Framework"
+    },
+    "arXiv:2505.18495": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18495",
+      "identity_tokens": [
+        "arXiv:2505.18495"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:03+00:00",
+      "last_checked_at": "2026-10-06T16:56:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Beyond Masked and Unmasked: Discrete Diffusion Models via Partial Masking"
+    },
+    "arXiv:2411.04168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.04168",
+      "identity_tokens": [
+        "arXiv:2411.04168"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:03+00:00",
+      "last_checked_at": "2026-10-06T16:56:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "DiMSUM: Diffusion Mamba - A Scalable and Unified Spatial-Frequency Method for Image Generation"
+    },
+    "arXiv:2406.12128": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.12128",
+      "identity_tokens": [
+        "arXiv:2406.12128"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:04+00:00",
+      "last_checked_at": "2026-10-06T16:56:04+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "AI \"News\" Content Farms Are Easy to Make and Hard to Detect: A Case Study in Italian"
+    },
+    "DOI:10.48550/arxiv.2408.17355": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2408.17355",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2408.17355",
+        "arXiv:2408.17355"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 BID is a robot-policy test-time sampling method: it selects action chunks using backward coherence and forward likelihood, evaluated on simulation and real robot tasks. It is not speculative decoding of LLM tokens and does not evaluate language-model inference efficiency.",
+      "first_checked_at": "2026-10-06T16:56:04+00:00",
+      "last_checked_at": "2026-10-06T16:56:04+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "title": "Bidirectional Decoding: Improving Action Chunking via Closed-Loop Resampling"
+    },
+    "arXiv:2508.10684": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.10684",
+      "identity_tokens": [
+        "arXiv:2508.10684"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:05+00:00",
+      "last_checked_at": "2026-10-06T16:56:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "MDNS: Masked Diffusion Neural Sampler via Stochastic Optimal Control"
+    },
+    "arXiv:2510.22510": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22510",
+      "identity_tokens": [
+        "arXiv:2510.22510"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:05+00:00",
+      "last_checked_at": "2026-10-06T16:56:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "CANDI: Hybrid Discrete-Continuous Diffusion Models"
+    },
+    "DOI:10.1038/s41598-025-16219-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41598-025-16219-7",
+      "identity_tokens": [
+        "DOI:10.1038/s41598-025-16219-7"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 TCFormer combines CNN features, grouped-query Transformer attention and a temporal-convolution head for EEG motor-imagery classification. It improves task accuracy on EEG datasets, but it is not an LLM/KV-cache inference method and reports no LLM serving efficiency.",
+      "first_checked_at": "2026-10-06T16:56:05+00:00",
+      "last_checked_at": "2026-10-06T16:56:05+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "title": "Temporal convolutional transformer for EEG based motor imagery decoding"
+    },
+    "arXiv:2503.10460": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10460",
+      "identity_tokens": [
+        "arXiv:2503.10460"
+      ],
+      "reason": "長いChain-of-Thought能力をcurriculum SFT、DPO、RLで獲得するpost-training recipeが主題で、推論runtime/serving効率化を最終目的としない。",
+      "first_checked_at": "2026-10-06T16:56:06+00:00",
+      "last_checked_at": "2026-10-06T16:56:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
+      ],
+      "title": "Light-R1: Curriculum SFT, DPO and RL for Long COT from Scratch and Beyond"
+    },
+    "arXiv:2406.09294": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09294",
+      "identity_tokens": [
+        "arXiv:2406.09294"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:07+00:00",
+      "last_checked_at": "2026-10-06T16:56:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "You Don't Need Domain-Specific Data Augmentations When Scaling Self-Supervised Learning"
+    },
+    "arXiv:2401.14447": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.14447",
+      "identity_tokens": [
+        "arXiv:2401.14447"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:07+00:00",
+      "last_checked_at": "2026-10-06T16:56:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Wordflow: Social Prompt Engineering for Large Language Models"
+    },
+    "arXiv:2504.04365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.04365",
+      "identity_tokens": [
+        "arXiv:2504.04365"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:07+00:00",
+      "last_checked_at": "2026-10-06T16:56:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "AutoPDL: Automatic Prompt Optimization for LLM Agents"
+    },
+    "arXiv:2302.07080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.07080",
+      "identity_tokens": [
+        "DOI:10.1145/3581641.3584037",
+        "arXiv:2302.07080"
+      ],
+      "reason": "code-groundedな会話型LLM assistantのprototypeと42名user studyでsoftware development UX/有用性を評価するHCI研究。推論システム効率化を扱わない。",
+      "first_checked_at": "2026-10-06T16:56:09+00:00",
+      "last_checked_at": "2026-10-06T16:56:09+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md"
+      ],
+      "title": "The Programmer’s Assistant: Conversational Interaction with a Large Language Model for Software Development"
+    },
+    "DOI:10.18653/v1/d19-1443": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1443",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1443",
+        "arXiv:1908.11775"
+      ],
+      "reason": "Transformer attentionをkernel methodの観点から理論的に分解・解釈するモデル理解研究。attention計算の意味を分析するが、推論runtime・memory・serving最適化を主要目的としない。",
+      "first_checked_at": "2026-10-05T16:24:18+00:00",
+      "last_checked_at": "2026-10-06T16:56:10+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "title": "Transformer Dissection: An Unified Understanding for Transformer’s Attention via the Lens of Kernel"
+    },
+    "DOI:10.1145/3699767": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3699767",
+      "identity_tokens": [
+        "DOI:10.1145/3699767"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:11+00:00",
+      "last_checked_at": "2026-10-06T16:56:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+      ],
+      "title": "Self-supervised Learning for Accelerometer-based Human Activity Recognition: A Survey"
+    },
+    "arXiv:2405.21068": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.21068",
+      "identity_tokens": [
+        "arXiv:2405.21068"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:11+00:00",
+      "last_checked_at": "2026-10-06T16:56:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Code Pretraining Improves Entity Tracking Abilities of Language Models"
+    },
+    "arXiv:2311.16417": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.16417",
+      "identity_tokens": [
+        "arXiv:2311.16417"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:11+00:00",
+      "last_checked_at": "2026-10-06T16:56:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "title": "Challenges and Opportunities to Enable Large-Scale Computing via Heterogeneous Chiplets"
+    },
+    "arXiv:2504.02211": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.02211",
+      "identity_tokens": [
+        "arXiv:2504.02211"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:12+00:00",
+      "last_checked_at": "2026-10-06T16:56:12+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "title": "FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention"
+    },
+    "arXiv:2412.17986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.17986",
+      "identity_tokens": [
+        "arXiv:2412.17986"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 The article experimentally characterizes microring-modulator phase/intensity dynamics and demonstrates a silicon-chip optical interconnect reaching over 1 Tb/s net rate. It concerns photonic data communications, not LLM training offload/memory or inference serving.",
+      "first_checked_at": "2026-10-06T16:56:13+00:00",
+      "last_checked_at": "2026-10-06T16:56:13+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Ultrafast coherent dynamics of microring modulators"
+    },
+    "arXiv:2409.16182": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.16182",
+      "identity_tokens": [
+        "arXiv:2409.16182"
+      ],
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。",
+      "first_checked_at": "2026-10-06T16:56:14+00:00",
+      "last_checked_at": "2026-10-06T16:56:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "TiM4Rec: An Efficient Sequential Recommendation Model Based on Time-Aware Structured State Space Duality Model"
+    },
+    "arXiv:2401.04810": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.04810",
+      "identity_tokens": [
+        "arXiv:2401.04810"
+      ],
+      "reason": "一次資料abstractおよび全文を確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 Translate-Distill trains a dual-encoder cross-language retrieval student from a relevance-judgment teacher to reduce retrieval deployment burden. It is an information-retrieval training/distillation contribution, not LLM inference offload or serving efficiency.",
+      "first_checked_at": "2026-10-06T16:56:14+00:00",
+      "last_checked_at": "2026-10-06T16:56:14+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Translate-Distill: Learning Cross-Language Dense Retrieval by Translation and Distillation"
     }
   }
 }
