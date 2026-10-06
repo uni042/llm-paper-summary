@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r116-screen-01-part-05-bc6c17a7fecf",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.05990",
+      "identity_tokens": [
+        "arXiv:2411.05990"
+      ],
+      "title": "Game-theoretic LLM: Agent Workflow for Negotiation Games",
+      "reason": "The paper studies negotiation-game strategy with LLM agents, not model routing cost, inference efficiency, or serving systems; the citation link alone does not make it in scope.",
+      "source_url": "https://arxiv.org/abs/2411.05990",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.06072",
+      "identity_tokens": [
+        "arXiv:2206.06072"
+      ],
+      "title": "Rank Diminishing in Deep Neural Networks",
+      "reason": "Title/abstract identifies a domain task or contribution with no plausible LLM inference-system or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2206.06072",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.01877",
+      "identity_tokens": [
+        "arXiv:2203.01877"
+      ],
+      "title": "Query Processing on Tensor Computation Runtimes",
+      "reason": "Title/abstract identifies a domain task or contribution with no plausible LLM inference-system or serving contribution.",
+      "source_url": "https://arxiv.org/abs/2203.01877",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.09756",
+      "identity_tokens": [
+        "arXiv:2409.09756"
+      ],
+      "title": "MesonGS: Post-training Compression of 3D Gaussians via Efficient Attribute Transformation",
+      "reason": "MesonGS compresses 3D Gaussian scene representations, not LLM weights, cache, or serving; overlap is only broad compression terminology.",
+      "source_url": "https://arxiv.org/abs/2409.09756",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md",
+        "papers/inference/99-other-inference-systems/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.06147",
+      "identity_tokens": [
+        "arXiv:2402.06147"
+      ],
+      "title": "DeAL: Decoding-time Alignment for Large Language Models",
+      "reason": "DeAL optimizes decoding-time alignment with search, potentially increasing inference work; it establishes no latency/resource reduction.",
+      "source_url": "https://arxiv.org/abs/2402.06147",
+      "first_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "last_checked_at": "2026-10-06T16:02:14.937599+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    }
+  ]
+}
