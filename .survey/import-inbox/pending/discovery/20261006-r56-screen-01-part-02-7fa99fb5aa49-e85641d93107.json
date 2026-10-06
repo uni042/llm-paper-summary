@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r56-screen-01-part-02-7fa99fb5aa49",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03918",
+      "identity_tokens": [
+        "arXiv:2602.03918"
+      ],
+      "title": "Entropy Reveals Block Importance in Masked Self-Supervised Vision Transformers",
+      "reason": "Entropy-based block-importance estimation and block removal are evaluated on masked self-supervised vision Transformers; the technique is related to generic Transformer pruning but has no LLM decoder evaluation.",
+      "source_url": "https://arxiv.org/abs/2602.03918",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2025.114328",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2025.114328"
+      ],
+      "title": "DualPhysMamba: Efficient end-to-end network based on noise modeling for remote photoplethysmography measurement",
+      "reason": "The primary-source abstract describes remote physiological signal extraction from facial video with a noise-modeling Mamba network; this is an rPPG application, not LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.asoc.2025.114328",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.est.2025.120244",
+      "identity_tokens": [
+        "DOI:10.1016/j.est.2025.120244"
+      ],
+      "title": "A multi-step State of Charge prediction method for lithium-ion batteries based on a Dual-stage framework with modified Bidirectional Long Short-Term Memory",
+      "reason": "The title identifies battery state-of-charge forecasting with a BiLSTM; it is a domain forecasting application, not LLM inference or a transferable LLM efficiency method.",
+      "source_url": "https://doi.org/10.1016/j.est.2025.120244",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.00904",
+      "identity_tokens": [
+        "arXiv:2602.00904"
+      ],
+      "title": "OCTOPUS: Enhancing the Spatial-Awareness of Vision SSMs with Multi-Dimensional Scans and Traversal Selection",
+      "reason": "The full paper’s multi-directional scan and traversal selection are for vision SSM image classification/segmentation; no textual SSM or LLM inference experiment is established.",
+      "source_url": "https://arxiv.org/abs/2602.00904",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22095",
+      "identity_tokens": [
+        "arXiv:2601.22095"
+      ],
+      "title": "GeoNorm: Unify Pre-Norm and Post-Norm with Geodesic Optimization",
+      "reason": "GeoNorm changes normalization/update geometry for Transformer training; the inspected work concerns optimization and model quality, with no concrete inference memory/latency/throughput improvement.",
+      "source_url": "https://arxiv.org/abs/2601.22095",
+      "first_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "last_checked_at": "2026-10-06T07:36:01.010829+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    }
+  ]
+}
