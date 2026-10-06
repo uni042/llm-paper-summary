@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r81-screen-01-part-08-fef9acad6c30",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07679",
+      "identity_tokens": [
+        "arXiv:2602.07679"
+      ],
+      "title": "Spectral Gating Networks",
+      "reason": "Spectral gating is evaluated against spline KAN variants across general MLP/vision/NLP tasks; no direct LLM inference-serving gain is established.",
+      "source_url": "https://arxiv.org/abs/2602.07679",
+      "first_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "last_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IEMENTech202669403.2026.11434122",
+      "identity_tokens": [
+        "DOI:10.1109/IEMENTech202669403.2026.11434122"
+      ],
+      "title": "A Survey on On-Device Small Language Models: Architectures, Compression, Applications, and Open Challenges",
+      "reason": "Survey abstract spans on-device SLM compression and inference-time optimization, but DOI primary full text could not be retrieved to verify scope, coverage, or evidence quality.",
+      "source_url": "https://doi.org/10.1109/IEMENTech202669403.2026.11434122",
+      "first_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "last_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/a19020132",
+      "identity_tokens": [
+        "DOI:10.3390/a19020132"
+      ],
+      "title": "MoE Based Consistency and Complementarity Mining for Multi-View Clustering",
+      "reason": "MoE multi-view clustering embedding method, not LLM inference efficiency.",
+      "source_url": "https://doi.org/10.3390/a19020132",
+      "first_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "last_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.06183",
+      "identity_tokens": [
+        "arXiv:2602.06183"
+      ],
+      "title": "To 2:4 Sparsity and Beyond: Neuron-level Activation Function to Accelerate LLM Pre-Training",
+      "reason": "Primary text is specifically an LLM pretraining acceleration recipe; it evaluates sparse training, not inference or serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2602.06183",
+      "first_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "last_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05100",
+      "identity_tokens": [
+        "arXiv:2602.05100"
+      ],
+      "title": "Rule-Based Spatial Mixture-of-Experts U-Net for Explainable Edge Detection",
+      "reason": "Explainable U-Net edge detection is a computer-vision application, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2602.05100",
+      "first_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "last_checked_at": "2026-10-06T11:03:05.090928+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    }
+  ]
+}
