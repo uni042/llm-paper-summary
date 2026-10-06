@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r136-screen-01-part-07-8170a774eb5c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05755",
+      "identity_tokens": [
+        "arXiv:2609.05755"
+      ],
+      "title": "Emotion as a Distribution: Joint Valence-Arousal Probability Learning for Speaker-Independent Multimodal Emotion Recognition",
+      "reason": "本文は音声・映像から感情分布を推定する認識モデルで、Mamba利用はタスク固有encoderに限られる。LLM inference efficiencyを扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.05755",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.03527",
+      "identity_tokens": [
+        "arXiv:2609.03527"
+      ],
+      "title": "NeoRed: A Knowledge-Logic-Alignment Multimodal Large Language Model for Neonatal Respiratory Disease Diagnosis",
+      "reason": "一次arXiv abstractは新生児疾患診断向けmultimodal LLMの知識・論理alignmentと診断性能を扱う。LLMを含むが推論効率、KV、latency、memory等を改善・測定する手法は見えず対象外。",
+      "source_url": "https://arxiv.org/abs/2609.03527",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04280",
+      "identity_tokens": [
+        "arXiv:2609.04280"
+      ],
+      "title": "EvoHarnessBench: Can Your Agents Keep Pace with an Evolving Harness?",
+      "reason": "一次arXiv abstractは変化するagent harnessに対するbenchmarkを提示する評価研究であり、LLM推論最適化手法ではない。",
+      "source_url": "https://arxiv.org/abs/2609.04280",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04476",
+      "identity_tokens": [
+        "arXiv:2609.04476"
+      ],
+      "title": "PerfReasoning: How Well Do LLMs Reason on Hardware Performance?",
+      "reason": "一次arXiv abstractはhardware-performance reasoning能力を測るLLM benchmarkであり、モデルの推論実装/効率を改善するものではない。",
+      "source_url": "https://arxiv.org/abs/2609.04476",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.05550",
+      "identity_tokens": [
+        "arXiv:2609.05550"
+      ],
+      "title": "Subject-Relative Micro-Motion and Sleep Dynamics for Near-Infrared Video Sleep Staging",
+      "reason": "本文は近赤外動画を用いた睡眠段階分類で、subject-relative motion特徴による認識性能を扱う。LLM推論の効率改善ではない。",
+      "source_url": "https://arxiv.org/abs/2609.05550",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
