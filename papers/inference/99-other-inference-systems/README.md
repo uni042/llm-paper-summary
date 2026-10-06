@@ -932,13 +932,13 @@
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：17  
   通常の自己注意は文脈長に対して計算量とKV保持量が増え、さらにモデルが学習時より極端に長い位置へ遭遇すると品質も不安定になる。長文脈向けに継続事前学習すれば改善できるが、計算費用が大きく、元モデルの能力が変化する危険もある。InfLLMはモデルパラメータを更新せず、現在トークン近傍の局所文脈だけを通常の注意窓へ残し、遠い過去を追加の文脈メモリへ移す。
 
+- **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。
+
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
   BitNet b1.58は、LLMの主要な線形層の重みを-1、0、+1の三値に制約する。三値はlog2(3)≈1.58 bitの情報量で表現でき、通常のFP16/BF16重みよりモデル格納とメモリ転送を大幅に減らせる。さらに行列積では重み側の一般的な浮動小数点乗算を単純化できる。
-
-- **2024-02 · [Decoding Speculative Decoding](2024-2402.01528-decoding-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
-  350件超の投機的デコード実験からドラフト遅延と層深度を主要因と特定し、浅く広いドラフトモデルへ再設計して最大111%のスループット向上を示す。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
   実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：15  
