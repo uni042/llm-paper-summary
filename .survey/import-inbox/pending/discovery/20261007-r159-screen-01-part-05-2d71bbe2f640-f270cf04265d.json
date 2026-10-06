@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r159-screen-01-part-05-2d71bbe2f640",
+  "reference_main_sha": "9851be8d4f698de397ea71ee818efa1c6f5dc5a3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25562",
+      "identity_tokens": [
+        "arXiv:2603.25562"
+      ],
+      "title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes",
+      "reason": "Its primary abstract centers on the training signal for on-policy distillation; it does not propose an inference-time compute, memory, or latency change.",
+      "source_url": "https://arxiv.org/abs/2603.25562",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.06314",
+      "identity_tokens": [
+        "arXiv:2108.06314"
+      ],
+      "title": "A Dataset for Answering Time-Sensitive Questions",
+      "reason": "The paper contributes data and task evaluation. Its use of “inference” describes predicting answer spans within a QA model, not improving LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2108.06314",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2104.05158",
+      "identity_tokens": [
+        "arXiv:2104.05158"
+      ],
+      "title": "Software-hardware co-design for fast and scalable training of deep learning recommendation models",
+      "reason": "The abstract expressly targets distributed training of DLRMs; no LLM inference or serving work is described.",
+      "source_url": "https://arxiv.org/abs/2104.05158",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md",
+        "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.18194",
+      "identity_tokens": [
+        "arXiv:2412.18194"
+      ],
+      "title": "VLABench: A Large-Scale Benchmark for Language-Conditioned Robotics Manipulation with Long-Horizon Reasoning Tasks",
+      "reason": "It contributes evaluation tasks/data for robotics, not an inference-efficiency method.",
+      "source_url": "https://arxiv.org/abs/2412.18194",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.11314",
+      "identity_tokens": [
+        "arXiv:1903.11314"
+      ],
+      "title": "Scalable Deep Learning on Distributed Infrastructures",
+      "reason": "The primary abstract describes distributed infrastructure for deep-learning performance at scale; it does not establish an LLM-serving optimization or inference-specific method.",
+      "source_url": "https://arxiv.org/abs/1903.11314",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    }
+  ]
+}
