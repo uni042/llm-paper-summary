@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T16:24:54+00:00",
-  "record_count": 3442,
+  "updated_at": "2026-10-06T16:32:03+00:00",
+  "record_count": 3468,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -52696,6 +52696,399 @@
       ],
       "borderline_recheck_count": 0,
       "title": "MLLM Is a Strong Reranker: Advancing Multimodal Retrieval-augmented Generation via Knowledge-enhanced Reranking and Noise-injected Training"
+    },
+    "DOI:10.1109/isca59077.2024.00072": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isca59077.2024.00072",
+      "identity_tokens": [
+        "DOI:10.1109/isca59077.2024.00072"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。Primary DOI page was inaccessible and the author-hosted PDF URL returned 404; only the primary abstract was available.",
+      "first_checked_at": "2026-10-06T16:31:46+00:00",
+      "last_checked_at": "2026-10-06T16:31:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Trapezoid: A Versatile Accelerator for Dense and Sparse Matrix Multiplications"
+    },
+    "arXiv:2404.04442": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.04442",
+      "identity_tokens": [
+        "arXiv:2404.04442"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。This survey covers memory systems for agents and discusses memory organization/retrieval, but does not establish a concrete LLM inference-serving optimization with controlled latency/throughput results. Keep as weak lineage background.",
+      "first_checked_at": "2026-10-06T16:31:46+00:00",
+      "last_checked_at": "2026-10-06T16:31:46+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Autonomous Agents through the Lens of Large Language Models: A Review"
+    },
+    "DOI:10.1109/access.2025.3610994": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/access.2025.3610994",
+      "identity_tokens": [
+        "DOI:10.1109/access.2025.3610994"
+      ],
+      "reason": "一次abstractでは効率/lineage上の関係可能性が残るが、full textを取得できず方法・評価・限界を十分確認できないためborderline。IEEE Xplore page loads only a JavaScript anti-bot challenge; the full article could not be retrieved. The publisher abstract was accessible in IEEE Xplore search result.",
+      "first_checked_at": "2026-10-06T16:31:47+00:00",
+      "last_checked_at": "2026-10-06T16:31:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of Large Language Models for Energy Systems: Applications, Challenges, and Future Prospects"
+    },
+    "arXiv:2406.11194": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.11194",
+      "identity_tokens": [
+        "arXiv:2406.11194"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。ICE uses context-conditioned self-generated distributions to regularize knowledge-editing fine-tuning. It evaluates edit success, locality, generalization, language quality and continual edits; it is an editing/training technique and reports no inference-servi",
+      "first_checked_at": "2026-10-06T16:31:48+00:00",
+      "last_checked_at": "2026-10-06T16:31:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "In-Context Editing: Learning Knowledge from Self-Induced Distributions"
+    },
+    "arXiv:2405.16821": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.16821",
+      "identity_tokens": [
+        "arXiv:2405.16821"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。PRISM studies sequential knowledge edits and constrains perturbations to preserve prior behavior. Its evaluation concerns editing effectiveness/locality, not inference memory, latency, throughput or quantization; connection to weight-compression lineage is wea",
+      "first_checked_at": "2026-10-06T16:31:49+00:00",
+      "last_checked_at": "2026-10-06T16:31:49+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.03078-spqr-a-sparse-quantized-representation-for-near-lossless-llm-weight-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Perturbation-Restrained Sequential Model Editing"
+    },
+    "arXiv:2305.10727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2305.10727",
+      "identity_tokens": [
+        "arXiv:2305.10727"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。GPUSQ-ViT combines 2:4 sparsity, quantization-aware training and distillation for GPU-friendly ViT deployment. It reports 1.39–1.79x latency and 3.22–3.43x throughput gains on A100, with additional gains on Orin and small accuracy change. These are vision workloads, so transfer to LLM serving is unverified.",
+      "first_checked_at": "2026-10-06T16:31:50+00:00",
+      "last_checked_at": "2026-10-06T16:31:50+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Boost Vision Transformer with GPU-Friendly Sparsity and Quantization"
+    },
+    "DOI:10.3389/frai.2025.1576992": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/frai.2025.1576992",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2025.1576992"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The review compares DeepSeek and ChatGPT and discusses MoE/resource efficiency at a high level. It is not a new inference-system method and gives no controlled serving benchmark; relation to KV-cache optimization remains weak.",
+      "first_checked_at": "2026-10-06T16:31:51+00:00",
+      "last_checked_at": "2026-10-06T16:31:51+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeepSeek vs. ChatGPT: prospects and challenges"
+    },
+    "DOI:10.1145/3603287.3651205": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3603287.3651205",
+      "identity_tokens": [
+        "DOI:10.1145/3603287.3651205"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。ACM publisher page exposed the abstract, but the full paper was not available from the primary page/searchable author copy.",
+      "first_checked_at": "2026-10-06T16:31:51+00:00",
+      "last_checked_at": "2026-10-06T16:31:51+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Empirical Analysis and Resource Footprint Study of Deploying Large Language Models on Edge Devices"
+    },
+    "DOI:10.1145/3603269.3604830": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3603269.3604830",
+      "identity_tokens": [
+        "DOI:10.1145/3603269.3604830"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。Author-hosted primary PDF exceeded the retrieval length limit (11.7 MB); full-text content could not be inspected.",
+      "first_checked_at": "2026-10-06T16:31:52+00:00",
+      "last_checked_at": "2026-10-06T16:31:52+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AdaInf: Data Drift Adaptive Scheduling for Accurate and SLO-guaranteed Multiple-Model Inference Serving at Edge Servers"
+    },
+    "arXiv:2501.16975": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.16975",
+      "identity_tokens": [
+        "arXiv:2501.16975"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Over-Tokenized Transformer enlarges input vocabularies with multigram embeddings. The paper reports negligible impact on prefill/decode throughput and notes extra embedding parameters and all-to-all communication overhead; it does not demonstrate an inference speed gain.",
+      "first_checked_at": "2026-10-06T16:31:52+00:00",
+      "last_checked_at": "2026-10-06T16:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Over-Tokenized Transformer: Vocabulary is Generally Worth Scaling"
+    },
+    "DOI:10.1109/imw59701.2024.10536972": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/imw59701.2024.10536972",
+      "identity_tokens": [
+        "DOI:10.1109/imw59701.2024.10536972"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。IEEE publisher page exposed the abstract only; full text was not accessible through the primary source.",
+      "first_checked_at": "2026-10-06T16:31:52+00:00",
+      "last_checked_at": "2026-10-06T16:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Present and Future, Challenges of High Bandwith Memory (HBM)"
+    },
+    "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5",
+      "identity_tokens": [
+        "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。OpenReview primary PDF/forum retrieval was blocked by an access challenge; the official abstract and first-page excerpt were available.",
+      "first_checked_at": "2026-10-06T16:31:53+00:00",
+      "last_checked_at": "2026-10-06T16:31:53+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Intervening Anchor Token: Decoding Strategy in Alleviating Hallucinations for MLLMs"
+    },
+    "arXiv:2404.13556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.13556",
+      "identity_tokens": [
+        "arXiv:2404.13556"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。ChatRetriever adapts dense retrieval for conversational context and evaluates retrieval/QA quality. It does not demonstrate a concrete LLM serving memory or inference-cost improvement; relation to inference systems is weak.",
+      "first_checked_at": "2026-10-06T16:31:53+00:00",
+      "last_checked_at": "2026-10-06T16:31:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ChatRetriever: Adapting Large Language Models for Generalized and Robust Conversational Dense Retrieval"
+    },
+    "DOI:10.1148/radiol.241073": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1148/radiol.241073",
+      "identity_tokens": [
+        "DOI:10.1148/radiol.241073"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The tutorial discusses practical open-source LLM deployment in radiology, including quantization and local resource constraints, but is a deployment tutorial rather than a new method or controlled systems benchmark. Keep as weak deployment background.",
+      "first_checked_at": "2026-10-06T16:31:53+00:00",
+      "last_checked_at": "2026-10-06T16:31:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Open-Source Large Language Models in Radiology: A Review and Tutorial for Practical Research and Clinical Deployment."
+    },
+    "DOI:10.1016/j.bspc.2024.107154": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.bspc.2024.107154",
+      "identity_tokens": [
+        "DOI:10.1016/j.bspc.2024.107154"
+      ],
+      "reason": "一次abstractでは効率/lineage上の関係可能性が残るが、full textを取得できず方法・評価・限界を十分確認できないためborderline。ScienceDirect publisher full-text request returned HTTP 403. The publisher abstract and highlights were accessible in the primary ScienceDirect record.",
+      "first_checked_at": "2026-10-06T16:31:54+00:00",
+      "last_checked_at": "2026-10-06T16:31:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PFormer: An efficient CNN-Transformer hybrid network with content-driven P-attention for 3D medical image segmentation"
+    },
+    "DOI:10.1145/3352460.3358260": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3352460.3358260",
+      "identity_tokens": [
+        "DOI:10.1145/3352460.3358260"
+      ],
+      "reason": "市販DRAMを改変せずtiming violationでrow copy・AND・ORを実現するPIM基礎研究で、LLM専用ではない一方、LLM向けPIM/near-data acceleratorの直接的な基盤技術なのでborderline。",
+      "first_checked_at": "2026-10-06T16:31:55+00:00",
+      "last_checked_at": "2026-10-06T16:31:55+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ComputeDRAM: In-Memory Compute Using Off-the-Shelf DRAMs"
+    },
+    "DOI:10.1145/2451116.2451160": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/2451116.2451160",
+      "identity_tokens": [
+        "DOI:10.1145/2451116.2451160"
+      ],
+      "reason": "CUDA kernelをelastic kernelへ変換してGPU資源割当を細粒度制御し、同時kernel実行のthroughputを改善するGPU runtime基礎研究。LLM専用ではないが、推論kernel共存・GPU schedulingの基盤として関連するためborderline。",
+      "first_checked_at": "2026-10-06T16:31:56+00:00",
+      "last_checked_at": "2026-10-06T16:31:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2025-pod-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Improving GPGPU concurrency with elastic kernels"
+    },
+    "DOI:10.1145/3575693.3575754": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3575693.3575754",
+      "identity_tokens": [
+        "DOI:10.1145/3575693.3575754"
+      ],
+      "reason": "renewable energy、battery、workload schedulingを共同最適化するdatacenter carbon設計研究で、LLM専用ではない一方、carbon-aware LLM serving/routingの直接的なsystems基盤として関連するためborderline。",
+      "first_checked_at": "2026-10-06T16:31:56+00:00",
+      "last_checked_at": "2026-10-06T16:31:56+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2605.21427-pals-power-aware-moe-serving.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Carbon Explorer: A Holistic Framework for Designing Carbon Aware Datacenters"
+    },
+    "arXiv:2506.16042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.16042",
+      "identity_tokens": [
+        "arXiv:2506.16042"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。OSWorld-Human measures end-to-end computer-use agent efficiency, identifies large model calls and long step sequences as major latency sources, and reports current agents use 2.7–4.3x more steps than humans. It is a benchmark/diagnostic study, not an inference",
+      "first_checked_at": "2026-10-06T16:31:58+00:00",
+      "last_checked_at": "2026-10-06T16:31:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OSWorld-Human: Benchmarking the Efficiency of Computer-Use Agents"
+    },
+    "arXiv:2506.05233": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.05233",
+      "identity_tokens": [
+        "arXiv:2506.05233"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。MesaNet proposes locally optimal test-time training for sequence modeling. Its paper evaluates sequence-model quality and test-time adaptation; the link to LLM inference efficiency is plausible but not supported by a direct serving-memory/latency result for co",
+      "first_checked_at": "2026-10-06T16:31:58+00:00",
+      "last_checked_at": "2026-10-06T16:31:58+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MesaNet: Sequence Modeling by Locally Optimal Test-Time Training"
+    },
+    "arXiv:2410.02678": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.02678",
+      "identity_tokens": [
+        "arXiv:2410.02678"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。DiVA distills a voice assistant from a text-only LLM without instruction-response labels and reports >100x lower training compute plus a 72% preference win rate. This is training efficiency and voice-task quality, not a demonstrated inference-serving reduction",
+      "first_checked_at": "2026-10-06T16:31:58+00:00",
+      "last_checked_at": "2026-10-06T16:31:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distilling an End-to-End Voice Assistant Without Instruction Training Data"
+    },
+    "arXiv:2508.09968": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.09968",
+      "identity_tokens": [
+        "arXiv:2508.09968"
+      ],
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。Noise Hypernetworks learn reward-tilted initial noise to amortize explicit test-time optimization for distilled diffusion generators. The text reports recovering a substantial portion of quality gains at a fraction of test-time compute across SD-Turbo, SANA-Sp",
+      "first_checked_at": "2026-10-06T16:31:59+00:00",
+      "last_checked_at": "2026-10-06T16:31:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Noise Hypernetworks: Amortizing Test-Time Compute in Diffusion Models"
+    },
+    "arXiv:2502.01384": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.01384",
+      "identity_tokens": [
+        "arXiv:2502.01384"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The paper uses policy-gradient fine-tuning to improve discrete diffusion generation. Experiments are training/alignment focused and do not establish fewer inference steps or lower inference cost; only a weak diffusion-family relation remains.",
+      "first_checked_at": "2026-10-06T16:31:59+00:00",
+      "last_checked_at": "2026-10-06T16:31:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fine-Tuning Discrete Diffusion Models with Policy Gradient Methods"
+    },
+    "arXiv:2309.01507": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.01507",
+      "identity_tokens": [
+        "arXiv:2309.01507"
+      ],
+      "reason": "The 4-bit optimizer reduces training optimizer memory, not inference weights/KV cache; overlap with GPU-memory work is limited to training memory.",
+      "first_checked_at": "2026-10-06T16:32:01+00:00",
+      "last_checked_at": "2026-10-06T16:32:01+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory Efficient Optimizers with 4-bit States"
+    },
+    "arXiv:2406.13892": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.13892",
+      "identity_tokens": [
+        "arXiv:2406.13892"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Adaptable Logical Control uses an HMM approximation to guide an LLM with logical constraints at decoding. The primary text establishes constrained-generation behavior, not lower latency or increased throughput; a systems relation is plausible but unproven.",
+      "first_checked_at": "2026-10-06T16:32:02+00:00",
+      "last_checked_at": "2026-10-06T16:32:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptable Logical Control for Large Language Models"
+    },
+    "arXiv:2502.17437": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.17437",
+      "identity_tokens": [
+        "arXiv:2502.17437"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Fractal Generative Models introduce a visual autoregressive generation architecture. The paper focuses on model/generation quality and does not establish a general LLM inference-systems improvement despite the broad lineage label.",
+      "first_checked_at": "2026-10-06T16:32:03+00:00",
+      "last_checked_at": "2026-10-06T16:32:03+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fractal Generative Models"
     }
   }
 }

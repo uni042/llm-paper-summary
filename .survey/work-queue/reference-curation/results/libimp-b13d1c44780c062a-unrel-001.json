@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b13d1c44780c062a-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.03246",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.03246",
+    "identity_tokens": [
+      "arXiv:2408.03246"
+    ],
+    "reason": "一次資料の要旨・本文が示す対象はLLM推論システムの計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの改善と技術的につながらない。The paper improves multihop reasoning through attribution-oriented training/data. Its evaluation is reasoning quality, not memory/offload or inference performance; the linked training-memory systems relation is unsupported.",
+    "first_checked_at": "2026-10-06T16:32:00+00:00",
+    "last_checked_at": "2026-10-06T16:32:00+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "Making Long-Context Language Models Better Multi-Hop Reasoners"
+  },
+  "processed_at": "2026-10-06T16:32:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b13d1c44780c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

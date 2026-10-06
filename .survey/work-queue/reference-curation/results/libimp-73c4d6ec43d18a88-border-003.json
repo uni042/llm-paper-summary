@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-73c4d6ec43d18a88-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5",
+    "identity_tokens": [
+      "SemanticScholar:07d64f525e478d095bb4b38ec72c1d747fbfebb5"
+    ],
+    "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。OpenReview primary PDF/forum retrieval was blocked by an access challenge; the official abstract and first-page excerpt were available.",
+    "first_checked_at": "2026-10-06T16:31:53+00:00",
+    "last_checked_at": "2026-10-06T16:31:53+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Intervening Anchor Token: Decoding Strategy in Alleviating Hallucinations for MLLMs"
+  },
+  "processed_at": "2026-10-06T16:31:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-73c4d6ec43d1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

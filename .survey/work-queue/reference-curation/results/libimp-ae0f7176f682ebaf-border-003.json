@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae0f7176f682ebaf-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.02678",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.02678",
+    "identity_tokens": [
+      "arXiv:2410.02678"
+    ],
+    "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。DiVA distills a voice assistant from a text-only LLM without instruction-response labels and reports >100x lower training compute plus a 72% preference win rate. This is training efficiency and voice-task quality, not a demonstrated inference-serving reduction",
+    "first_checked_at": "2026-10-06T16:31:58+00:00",
+    "last_checked_at": "2026-10-06T16:31:58+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Distilling an End-to-End Voice Assistant Without Instruction Training Data"
+  },
+  "processed_at": "2026-10-06T16:31:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae0f7176f682",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

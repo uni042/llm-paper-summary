@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8ac5347cd62c3a7c-border-009",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1145/3575693.3575754",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1145/3575693.3575754",
+    "identity_tokens": [
+      "DOI:10.1145/3575693.3575754"
+    ],
+    "reason": "renewable energy、battery、workload schedulingを共同最適化するdatacenter carbon設計研究で、LLM専用ではない一方、carbon-aware LLM serving/routingの直接的なsystems基盤として関連するためborderline。",
+    "first_checked_at": "2026-10-06T16:31:56+00:00",
+    "last_checked_at": "2026-10-06T16:31:56+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2026-2605.21427-pals-power-aware-moe-serving.md",
+      "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.06188-carbon-aware-realtime-inference-routing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Carbon Explorer: A Holistic Framework for Designing Carbon Aware Datacenters"
+  },
+  "processed_at": "2026-10-06T16:31:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8ac5347cd62c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

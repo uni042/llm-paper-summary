@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ae0f7176f682ebaf-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2506.05233",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2506.05233",
+    "identity_tokens": [
+      "arXiv:2506.05233"
+    ],
+    "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。MesaNet proposes locally optimal test-time training for sequence modeling. Its paper evaluates sequence-model quality and test-time adaptation; the link to LLM inference efficiency is plausible but not supported by a direct serving-memory/latency result for co",
+    "first_checked_at": "2026-10-06T16:31:58+00:00",
+    "last_checked_at": "2026-10-06T16:31:58+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "MesaNet: Sequence Modeling by Locally Optimal Test-Time Training"
+  },
+  "processed_at": "2026-10-06T16:31:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ae0f7176f682",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
