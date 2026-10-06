@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r133-screen-01-part-07-2d5a1d4ba74e",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.04140",
+      "identity_tokens": [
+        "arXiv:2610.04140"
+      ],
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "reason": "ExpertMuon-CompassはMoEの専門家別最適化ステップ幅を調整する学習時optimizerであり、serving/inference最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2610.04140",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00848",
+      "identity_tokens": [
+        "arXiv:2610.00848"
+      ],
+      "title": "Geometric Similarity in VLM Low-Level Vision Representations",
+      "reason": "VLMの低レベル視覚表現の幾何学的類似を調べる研究で、生成推論の計算・メモリ効率を改善する方法ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00848",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.00850",
+      "identity_tokens": [
+        "arXiv:2610.00850"
+      ],
+      "title": "AuraForge: Scaling Security Supervision for Training Coding Agents",
+      "reason": "coding agent向けsecurity supervisionの学習データ/手法が対象で、LLM推論効率を改善する目的ではない。",
+      "source_url": "https://arxiv.org/abs/2610.00850",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.01069",
+      "identity_tokens": [
+        "arXiv:2610.01069"
+      ],
+      "title": "Overcoming Kernel Redundancy for Scaling Logic Gate Networks",
+      "reason": "論理ゲートネットワークのスケーリング研究であり、LLM推論システムとは異なる。",
+      "source_url": "https://arxiv.org/abs/2610.01069",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.02150",
+      "identity_tokens": [
+        "arXiv:2610.02150"
+      ],
+      "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence",
+      "reason": "SourceLearnは反復的なsource retrievalを永続的能力へ変えるagent memory手法としてLLMのlong-context/RAG境界に近いが、本文の評価はQA性能であり、KV cacheや推論資源削減を測っていない。",
+      "source_url": "https://arxiv.org/abs/2610.02150",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    }
+  ]
+}
