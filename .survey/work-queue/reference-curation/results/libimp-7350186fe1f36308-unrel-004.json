@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7350186fe1f36308-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.26498",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.26498",
+    "identity_tokens": [
+      "arXiv:2605.26498"
+    ],
+    "reason": "The arXiv abstract improves Verilog generation through feedback and skill evolution; it concerns generated-code quality, not LLM inference execution.",
+    "first_checked_at": "2026-10-06T20:31:47+00:00",
+    "last_checked_at": "2026-10-06T20:31:47+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2025-2512.18337-towards-efficient-agents-a-co-design-of-inference-architecture-and-syste.md"
+    ],
+    "title": "Verilog-Evolve: Feedback-Driven and Skill-Evolving Verilog Generation"
+  },
+  "processed_at": "2026-10-06T20:31:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7350186fe1f3",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

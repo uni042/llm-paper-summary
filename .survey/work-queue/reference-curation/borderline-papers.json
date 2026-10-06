@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T20:27:15+00:00",
-  "record_count": 3923,
+  "updated_at": "2026-10-06T20:31:53+00:00",
+  "record_count": 3959,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -59946,6 +59946,546 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Grouped self-attention and quantum-enhanced knowledge distillation"
+    },
+    "arXiv:2606.00761": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00761",
+      "identity_tokens": [
+        "arXiv:2606.00761"
+      ],
+      "reason": "Confidence-adaptive SwiGLU changes token-dependent MoE expert gate sharpness and improves CORE scores, but the full text reports about 4–7% extra compute from elementwise operations and calls for deployment-metric evaluation. The model-level MoE relation is plausible, while the measured cost overhead and missing serving benefit leave scope relevance unresolved.",
+      "first_checked_at": "2026-10-06T20:31:43+00:00",
+      "last_checked_at": "2026-10-06T20:31:43+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Confidence-Adaptive SwiGLU for Mixture-of-Experts"
+    },
+    "DOI:10.1007/s10882-026-10071-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10882-026-10071-x",
+      "identity_tokens": [
+        "DOI:10.1007/s10882-026-10071-x"
+      ],
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:43+00:00",
+      "last_checked_at": "2026-10-06T20:31:43+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Comparison of Neural Network Methods for Identifying Happiness Indices in Autistic Children"
+    },
+    "DOI:10.1007/s44366-026-0090-2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44366-026-0090-2",
+      "identity_tokens": [
+        "DOI:10.1007/s44366-026-0090-2"
+      ],
+      "reason": "一次資料からabstractを取得・照合できず、packet abstractや題名のみでは対象範囲との関係を一次根拠に基づいて確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:44+00:00",
+      "last_checked_at": "2026-10-06T20:31:44+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploring DeepSeek Adoption in Higher Education in Bangladesh: A UTAUT-Based Approach"
+    },
+    "DOI:10.1109/ignite69592.2026.11706282": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ignite69592.2026.11706282",
+      "identity_tokens": [
+        "DOI:10.1109/ignite69592.2026.11706282"
+      ],
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:44+00:00",
+      "last_checked_at": "2026-10-06T20:31:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cost-Conscious Autonomous Agents for Scalable Intelligence Systems"
+    },
+    "DOI:10.1109/ignite69592.2026.11706594": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ignite69592.2026.11706594",
+      "identity_tokens": [
+        "DOI:10.1109/ignite69592.2026.11706594"
+      ],
+      "reason": "一次本文を取得できず、リンクされた既存系統との技術的接続を確かめられないため。",
+      "first_checked_at": "2026-10-06T20:31:44+00:00",
+      "last_checked_at": "2026-10-06T20:31:44+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Navigating the Edge-Intelligence Frontier: A Comparative Analysis of Quantization Strategies for Sub-1B Parameter Language Models"
+    },
+    "DOI:10.1109/iwcmc69287.2026.11579920": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iwcmc69287.2026.11579920",
+      "identity_tokens": [
+        "DOI:10.1109/iwcmc69287.2026.11579920"
+      ],
+      "reason": "一次本文を取得できず、リンクされた既存系統との技術的接続を確かめられないため。",
+      "first_checked_at": "2026-10-06T20:31:45+00:00",
+      "last_checked_at": "2026-10-06T20:31:45+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UniFlexFlow: A Unified Framework for Scalable Distributed Deep Learning on Heterogeneous Many-Core Supercomputers"
+    },
+    "DOI:10.1109/smirc70459.2026.11706695": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/smirc70459.2026.11706695",
+      "identity_tokens": [
+        "DOI:10.1109/smirc70459.2026.11706695"
+      ],
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:45+00:00",
+      "last_checked_at": "2026-10-06T20:31:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speak MK1: A Multimodal Mamba-Attention Architecture for Articulatory Assessment and Speech Therapy"
+    },
+    "DOI:10.1109/tcds.2025.3642409": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcds.2025.3642409",
+      "identity_tokens": [
+        "DOI:10.1109/tcds.2025.3642409"
+      ],
+      "reason": "一次本文を取得できず、リンクされた既存系統との技術的接続を確かめられないため。",
+      "first_checked_at": "2026-10-06T20:31:45+00:00",
+      "last_checked_at": "2026-10-06T20:31:45+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "State-Dependent Neural Decoding of Complex Handwriting via Mixture of Experts With Recurrent Routing"
+    },
+    "DOI:10.64898/2026.05.25.727730": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.05.25.727730",
+      "identity_tokens": [
+        "DOI:10.64898/2026.05.25.727730"
+      ],
+      "reason": "一次資料からabstractを取得・照合できず、packet abstractや題名のみでは対象範囲との関係を一次根拠に基づいて確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:45+00:00",
+      "last_checked_at": "2026-10-06T20:31:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CARIBOU: Computational AI Research Interface for Bioinformatics, Omics, and Unifying Agents"
+    },
+    "DOI:10.1109/ipdps65963.2026.00107": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ipdps65963.2026.00107",
+      "identity_tokens": [
+        "DOI:10.1109/ipdps65963.2026.00107"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design and Implementation of Casting Compression for GPU-Aware MPI Collectives"
+    },
+    "DOI:10.1109/mipro70003.2026.11591667": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mipro70003.2026.11591667",
+      "identity_tokens": [
+        "DOI:10.1109/mipro70003.2026.11591667"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Syntax Trees to Embeddings: A Comparative Study of AI-Generated Code Detection"
+    },
+    "DOI:10.1109/mipro70003.2026.11591929": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mipro70003.2026.11591929",
+      "identity_tokens": [
+        "DOI:10.1109/mipro70003.2026.11591929"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FEDCODE: A Modular Framework for Evaluating Communication Compression in Federated Learning"
+    },
+    "DOI:10.1109/icc59461.2026.11586799": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icc59461.2026.11586799",
+      "identity_tokens": [
+        "DOI:10.1109/icc59461.2026.11586799"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LB-Decider: Runtime-Adaptive Load Balancing for All-to-All Communication in MoE Training"
+    },
+    "DOI:10.7717/peerj-cs.3882": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.7717/peerj-cs.3882",
+      "identity_tokens": [
+        "DOI:10.7717/peerj-cs.3882"
+      ],
+      "reason": "一次資料からabstractを取得・照合できず、packet abstractや題名のみでは対象範囲との関係を一次根拠に基づいて確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A large language model-driven scientific literature surveys generation framework based on multi-agents and retrieval-augmented generation"
+    },
+    "DOI:10.1109/iscas66217.2026.11562726": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iscas66217.2026.11562726",
+      "identity_tokens": [
+        "DOI:10.1109/iscas66217.2026.11562726"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:48+00:00",
+      "last_checked_at": "2026-10-06T20:31:48+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VERIMLA: A Unified Framework for Verilog Generation via Multi-Level Alignment and Formal Equivalence Verification"
+    },
+    "DOI:10.64898/2026.05.26.723419": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.05.26.723419",
+      "identity_tokens": [
+        "DOI:10.64898/2026.05.26.723419"
+      ],
+      "reason": "一次DOI/publisher pageを取得できず、packet abstractのみでは一次証拠を確認できないため。",
+      "first_checked_at": "2026-10-06T20:31:48+00:00",
+      "last_checked_at": "2026-10-06T20:31:48+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Alignment-free phylogenetic inference via hyperbolic protein language models"
+    },
+    "DOI:10.1145/3774905.3793125": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3774905.3793125",
+      "identity_tokens": [
+        "DOI:10.1145/3774905.3793125"
+      ],
+      "reason": "一次資料からabstractを取得・照合できず、packet abstractや題名のみでは対象範囲との関係を一次根拠に基づいて確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:48+00:00",
+      "last_checked_at": "2026-10-06T20:31:48+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BaiJia: An Open Role-Playing Platform of Chinese Historical Characters"
+    },
+    "DOI:10.1108/ftinr-06-2025-0109": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1108/ftinr-06-2025-0109",
+      "identity_tokens": [
+        "DOI:10.1108/ftinr-06-2025-0109"
+      ],
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Recommendation with generative models"
+    },
+    "DOI:10.1109/tcss.2026.3656122": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcss.2026.3656122",
+      "identity_tokens": [
+        "DOI:10.1109/tcss.2026.3656122"
+      ],
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:50+00:00",
+      "last_checked_at": "2026-10-06T20:31:50+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BiCaution: Bridging Forward–Backward Interventional and Counterfactual Causal Establishment for Event Graph-Based Abductive Reasoning"
+    },
+    "DOI:10.1109/tla.2026.11494749": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tla.2026.11494749",
+      "identity_tokens": [
+        "DOI:10.1109/tla.2026.11494749"
+      ],
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:50+00:00",
+      "last_checked_at": "2026-10-06T20:31:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hybrid Spectral - Gradient Saliency Pruning: A combination of multiple filter scoring criteria"
+    },
+    "DOI:10.3390/electronics15112378": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15112378",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15112378"
+      ],
+      "reason": "一次publisher/DOI abstractを取得できず、packet abstractだけでは対象範囲との関係を一次証拠で確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:50+00:00",
+      "last_checked_at": "2026-10-06T20:31:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DriveTDPA: Trajectory-Decision Preference Alignment for Vision-Language Autonomous Driving Planning"
+    },
+    "DOI:10.3390/electronics15112401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/electronics15112401",
+      "identity_tokens": [
+        "DOI:10.3390/electronics15112401"
+      ],
+      "reason": "一次本文を取得できず、リンクされた既存系統との技術的接続を確かめられないため。",
+      "first_checked_at": "2026-10-06T20:31:50+00:00",
+      "last_checked_at": "2026-10-06T20:31:50+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ILL: A Lightweight Large Language Model for Legal and Courtroom Assistance"
+    },
+    "DOI:10.1109/icadcs70036.2026.11583464": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icadcs70036.2026.11583464",
+      "identity_tokens": [
+        "DOI:10.1109/icadcs70036.2026.11583464"
+      ],
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Model Assisted Policy Simulation Platform for Evidence-Driven Public Decision Making"
+    },
+    "arXiv:2605.24051": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.24051",
+      "identity_tokens": [
+        "arXiv:2605.24051"
+      ],
+      "reason": "The full text describes long-history ad recommendation infrastructure using retrieval, INT8 storage, and asynchronous serving, with low-latency production requests. It is a recommender system rather than an LLM inference/serving method; the Big Bird long-sequence lineage and use of RAG-style retrieval leave a possible but weak transfer connection.",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation"
+    },
+    "DOI:10.1080/10298436.2026.2678484": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/10298436.2026.2678484",
+      "identity_tokens": [
+        "DOI:10.1080/10298436.2026.2678484"
+      ],
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AI-powered design framework for open-graded friction course (OGFC) asphalt mixtures"
+    },
+    "DOI:10.1109/cvippr69607.2026.11604538": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cvippr69607.2026.11604538",
+      "identity_tokens": [
+        "DOI:10.1109/cvippr69607.2026.11604538"
+      ],
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AF-FLA Net: Adaptive Feature Pyramid and Focused Linear Attention for Efficient BEV Perception"
+    },
+    "DOI:10.1109/cando-epe71091.2026.11569440": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cando-epe71091.2026.11569440",
+      "identity_tokens": [
+        "DOI:10.1109/cando-epe71091.2026.11569440"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked inference-energy lineage review.",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Behavior of Energy per Token in LLM Inference on Apple Silicon"
+    },
+    "SemanticScholar:5e5fb4952ac58d5b853e23d5bc1521ab7e4c0b7c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:5e5fb4952ac58d5b853e23d5bc1521ab7e4c0b7c",
+      "identity_tokens": [
+        "SemanticScholar:5e5fb4952ac58d5b853e23d5bc1521ab7e4c0b7c"
+      ],
+      "reason": "The supplied URL is Semantic Scholar rather than a primary paper source; no primary full text could be established from the packet.",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Trajectory Optimization for Cooperative Navigation by solving the HJB Equation using PINNs"
+    },
+    "SemanticScholar:e839d6b216f0266b60126c8ab9fb8c62823512ca": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:e839d6b216f0266b60126c8ab9fb8c62823512ca",
+      "identity_tokens": [
+        "SemanticScholar:e839d6b216f0266b60126c8ab9fb8c62823512ca"
+      ],
+      "reason": "一次資料からabstractを取得・照合できず、packet abstractや題名のみでは対象範囲との関係を一次根拠に基づいて確定できないため。",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Contracting Dynamics Can Be Efficiently Parallelized"
+    },
+    "arXiv:2605.25676": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25676",
+      "identity_tokens": [
+        "arXiv:2605.25676"
+      ],
+      "reason": "Llamion converts Orion-14B into a standardized Llama-family architecture via parameter mapping and distillation. The paper says deployment-friendly architectures can be adopted without pretraining, but does not demonstrate inference latency, throughput, or memory improvements; relevance to inference systems remains weak.",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Llamion Technical Report"
+    },
+    "DOI:10.1109/fg67764.2026.11557024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/fg67764.2026.11557024",
+      "identity_tokens": [
+        "DOI:10.1109/fg67764.2026.11557024"
+      ],
+      "reason": "Primary IEEE DOI page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RGB-TViT: Multimodal RGB-Thermal Transformers for Early Prediction of Vasovagal Reactions in Blood Donation"
+    },
+    "arXiv:2610.00954": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00954",
+      "identity_tokens": [
+        "arXiv:2610.00954"
+      ],
+      "reason": "The primary arXiv abstract page was available, but https://arxiv.org/html/2610.00954 could not be fetched. The abstract suggests an LLM ensemble token-cost/latency study, so full text is needed to judge whether it contributes an actionable inference method.",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Leaderboards: Tokenomics of Agentic Small Language Model Ensembles"
+    },
+    "DOI:10.1109/icsccc69031.2026.11600295": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icsccc69031.2026.11600295",
+      "identity_tokens": [
+        "DOI:10.1109/icsccc69031.2026.11600295"
+      ],
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:52+00:00",
+      "last_checked_at": "2026-10-06T20:31:52+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CAIR-MFMD: Context-Aware Image Relevance Verification for Multi-modal Financial Misinformation Detection and Explanation"
+    },
+    "DOI:10.1145/3805625": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805625",
+      "identity_tokens": [
+        "DOI:10.1145/3805625"
+      ],
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Framework for Online Combinatorial Allocation of Reusable Resources under Endogenous Deterioration"
+    },
+    "DOI:10.3847/1538-4365/ae5d39": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3847/1538-4365/ae5d39",
+      "identity_tokens": [
+        "DOI:10.3847/1538-4365/ae5d39"
+      ],
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Semisupervised Approach Using the Adaptive Threshold Mechanism and Boundary-aware Learning for Radio-frequency Interference Segmentation"
+    },
+    "arXiv:2606.00938": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00938",
+      "identity_tokens": [
+        "arXiv:2606.00938"
+      ],
+      "reason": "arXiv abstract page was available, but its primary HTML full text URL https://arxiv.org/html/2606.00938 returned an internal fetch error; linked lineage requires the full-text connection check.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Machine Learning Surrogate Modeling for Homogenization of Hyperelastic Materials with Boolean Microstructures"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T20:27:16+00:00",
-  "record_count": 9533,
+  "updated_at": "2026-10-06T20:31:54+00:00",
+  "record_count": 9557,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -136574,6 +136574,343 @@
         "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
       ],
       "title": "End-to-End Text Line Detection and Ordering"
+    },
+    "arXiv:2605.30837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30837",
+      "identity_tokens": [
+        "arXiv:2605.30837"
+      ],
+      "reason": "The arXiv abstract allocates prompt-injection detection among detectors for security coverage; it is not an LLM inference execution or serving-efficiency method.",
+      "first_checked_at": "2026-10-06T20:31:44+00:00",
+      "last_checked_at": "2026-10-06T20:31:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Send a SCOUT First: Pre-hoc Reasoning for Adaptive Detector Allocation in Prompt-Injection Defense"
+    },
+    "arXiv:2605.30910": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30910",
+      "identity_tokens": [
+        "arXiv:2605.30910"
+      ],
+      "reason": "The paper studies overfitting and failure modes in physics-informed neural networks for PDEs. It does not present language-model inference or serving optimization; the linked lineage label is not supported by the actual subject.",
+      "first_checked_at": "2026-10-06T20:31:44+00:00",
+      "last_checked_at": "2026-10-06T20:31:44+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "PINNs Failure Modes are Overfitting"
+    },
+    "arXiv:2605.27999": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27999",
+      "identity_tokens": [
+        "arXiv:2605.27999"
+      ],
+      "reason": "The arXiv abstract studies task assignment among prediction agents under capacity constraints; it does not address LLM model execution or serving efficiency.",
+      "first_checked_at": "2026-10-06T20:31:45+00:00",
+      "last_checked_at": "2026-10-06T20:31:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Learning to Assign Prediction Tasks to Agents with Capacity Constraints"
+    },
+    "arXiv:2605.28119": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28119",
+      "identity_tokens": [
+        "arXiv:2605.28119"
+      ],
+      "reason": "The arXiv abstract concerns spatio-temporal colonoscopy image recognition, with no LLM inference-system contribution.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "ST-ColoNet: Spatio-Temporal Colon Segment Recognition via Hybrid Attention and Edge-Guided Feature Learning"
+    },
+    "arXiv:2605.28306": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28306",
+      "identity_tokens": [
+        "arXiv:2605.28306"
+      ],
+      "reason": "The arXiv abstract proposes routing-aligned multilingual fine-tuning of MoE models; its contribution is adaptation/training quality, not inference-time system efficiency.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "RA-MoE: Routing-Aligned Fine-Tuning for Multilingual Adaptation of Mixture-of-Experts Models"
+    },
+    "arXiv:2605.28573": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28573",
+      "identity_tokens": [
+        "arXiv:2605.28573"
+      ],
+      "reason": "The arXiv abstract explicitly targets efficient LLM pre-training; the project’s screening scope excludes training-only efficiency absent an inference contribution.",
+      "first_checked_at": "2026-10-06T20:31:46+00:00",
+      "last_checked_at": "2026-10-06T20:31:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Efficient Pre-Training of LLMs through Truncated SVD Representations"
+    },
+    "arXiv:2605.25115": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25115",
+      "identity_tokens": [
+        "arXiv:2605.25115"
+      ],
+      "reason": "Courant is a state-adaptive Perceiver/NeuralODE surrogate for physical flow fields and scientific benchmarks. It does not concern LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Courant: a State-Adaptive Perceiver-Based Neural Surrogate with Local Support and Interpretable Field Decomposition"
+    },
+    "arXiv:2605.28597": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28597",
+      "identity_tokens": [
+        "arXiv:2605.28597"
+      ],
+      "reason": "This position paper calls for stronger evaluation of secret alignment/backdoor claims; it does not propose an inference efficiency technique.",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Position: Retire the \"Positive Backdoor\" Label - Secret Alignment Requires Strict and Systematic Evaluation"
+    },
+    "arXiv:2605.28896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28896",
+      "identity_tokens": [
+        "arXiv:2605.28896"
+      ],
+      "reason": "The arXiv abstract analyzes LoRA representational geometry and interpretability; it does not propose inference compression, acceleration, or serving.",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Feature Geometry of LoRA Adapters: A Sparse Autoencoder Analysis of Representational Divergence in Fine-Tuned Language Models"
+    },
+    "arXiv:2605.26498": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26498",
+      "identity_tokens": [
+        "arXiv:2605.26498"
+      ],
+      "reason": "The arXiv abstract improves Verilog generation through feedback and skill evolution; it concerns generated-code quality, not LLM inference execution.",
+      "first_checked_at": "2026-10-06T20:31:47+00:00",
+      "last_checked_at": "2026-10-06T20:31:47+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2512.18337-towards-efficient-agents-a-co-design-of-inference-architecture-and-syste.md"
+      ],
+      "title": "Verilog-Evolve: Feedback-Driven and Skill-Evolving Verilog Generation"
+    },
+    "arXiv:2605.26627": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.26627",
+      "identity_tokens": [
+        "arXiv:2605.26627"
+      ],
+      "reason": "The arXiv abstract studies active perception in safety-critical reinforcement learning, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:31:48+00:00",
+      "last_checked_at": "2026-10-06T20:31:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Breaking the Epistemic Trap: Active Perception Under Compound Uncertainty"
+    },
+    "arXiv:2605.29582": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.29582",
+      "identity_tokens": [
+        "arXiv:2605.29582"
+      ],
+      "reason": "PEARL uses simulated student trajectories, pedagogical reward modeling and multi-objective reinforcement learning to train tutoring models. The reported contribution is tutoring quality/training, not inference efficiency or serving.",
+      "first_checked_at": "2026-10-06T20:31:48+00:00",
+      "last_checked_at": "2026-10-06T20:31:48+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "PEARL: Training Socratic Tutors with Pedagogically Aligned Reinforcement Learning"
+    },
+    "arXiv:2605.30155": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30155",
+      "identity_tokens": [
+        "arXiv:2605.30155"
+      ],
+      "reason": "Partial multi-neuron relaxation improves neural-network verification bounds, with runtime overhead trade-offs for verification queries. This is verification methodology and has no LLM inference-system mechanism.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Neural Network Verification using Partial Multi-Neuron Relaxation"
+    },
+    "arXiv:2605.30487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.30487",
+      "identity_tokens": [
+        "arXiv:2605.30487"
+      ],
+      "reason": "The paper proposes configurable safety reward modeling for downstream alignment/policy optimization. It does not reduce LLM inference compute, latency, memory, or serving cost.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Configurable Reward Model for Balanced Safety Alignment"
+    },
+    "arXiv:2605.27290": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27290",
+      "identity_tokens": [
+        "arXiv:2605.27290"
+      ],
+      "reason": "The arXiv abstract is theoretical analysis of linear recurrent networks as time-delay embeddings for dynamical systems; no LLM inference-system contribution is presented.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Linear Recurrent Neural Networks as Time-Delay Embeddings"
+    },
+    "arXiv:2605.27348": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27348",
+      "identity_tokens": [
+        "arXiv:2605.27348"
+      ],
+      "reason": "The work develops social-gaze semantic cues and paired-edit data for AI-generated image detection. Its focus is image-detection accuracy and representation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection"
+    },
+    "arXiv:2605.27524": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27524",
+      "identity_tokens": [
+        "arXiv:2605.27524"
+      ],
+      "reason": "The paper analyzes topological insulating phases in an interacting Haldane model using finite-size exact diagonalization. It is unrelated to language-model inference systems.",
+      "first_checked_at": "2026-10-06T20:31:49+00:00",
+      "last_checked_at": "2026-10-06T20:31:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Emergence of an antiferromagnetic topological Anderson insulator in the interacting Haldane model"
+    },
+    "arXiv:2605.27678": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27678",
+      "identity_tokens": [
+        "arXiv:2605.27678"
+      ],
+      "reason": "The full text explicitly presents heterogeneous parallel layouts and placement for multimodal foundation-model training and reports TFLOPS/GPU and training token throughput. This is a training-system contribution, outside the project’s inference-time scope.",
+      "first_checked_at": "2026-10-06T20:31:50+00:00",
+      "last_checked_at": "2026-10-06T20:31:50+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Heterogeneous Parallelism for Multimodal Large Language Model Training"
+    },
+    "arXiv:2605.23780": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.23780",
+      "identity_tokens": [
+        "arXiv:2605.23780"
+      ],
+      "reason": "The paper studies intrinsic multimodal knowledge editing (latent adversarial variants and low-rank alignment), with experiments on edit reliability/generalization. It does not propose an inference compute, memory, latency, throughput, quantization, or serving optimization; the linked MoE-LLaVA relation is only an MLLM application/architecture context.",
+      "first_checked_at": "2026-10-06T20:31:51+00:00",
+      "last_checked_at": "2026-10-06T20:31:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Beyond Binary Edits Robust Multimodal Knowledge Editing with Adversarial Subspace Alignment"
+    },
+    "arXiv:2605.31126": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31126",
+      "identity_tokens": [
+        "arXiv:2605.31126"
+      ],
+      "reason": "This work studies prompt-free synthetic-text self-training and capability/memorization outcomes. It concerns model training behavior rather than inference-time execution or serving efficiency.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Not All Synthetic Data Is Yours to Learn From"
+    },
+    "arXiv:2606.02623": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02623",
+      "identity_tokens": [
+        "arXiv:2606.02623"
+      ],
+      "reason": "The arXiv abstract concerns oscillatory state-space priors for physics-informed PDE solvers, not language-model inference.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Oscillatory State-Space Models as Inductive Biases for Physics-Informed Neural PDE Solvers"
+    },
+    "arXiv:2606.01401": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01401",
+      "identity_tokens": [
+        "arXiv:2606.01401"
+      ],
+      "reason": "The article uses SOAP descriptors and a neural classifier to study amorphous-ice phase interfaces using molecular-dynamics data. Its subject and contribution are materials physics, not LLM inference; the linked lineage does not create a technical system connection.",
+      "first_checked_at": "2026-10-06T20:31:53+00:00",
+      "last_checked_at": "2026-10-06T20:31:53+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Flat interface between amorphous ices and the role of MDA-like intermediate states in the LDA-HDA transformation."
+    },
+    "arXiv:2606.00651": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00651",
+      "identity_tokens": [
+        "arXiv:2606.00651"
+      ],
+      "reason": "The arXiv abstract is about MoE safety alignment and adversarial robustness, not inference compute, memory, latency, throughput, quantization, or serving efficiency.",
+      "first_checked_at": "2026-10-06T20:31:54+00:00",
+      "last_checked_at": "2026-10-06T20:31:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "MESA: Improving MoE Safety Alignment via Decentralized Expertise"
+    },
+    "arXiv:2606.00686": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.00686",
+      "identity_tokens": [
+        "arXiv:2606.00686"
+      ],
+      "reason": "The arXiv abstract studies safety-alignment routing around unsafe knowledge; it does not propose an inference-efficiency or serving technique.",
+      "first_checked_at": "2026-10-06T20:31:54+00:00",
+      "last_checked_at": "2026-10-06T20:31:54+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Dialectics of Alignment: Harnessing Unsafe Knowledge for Dynamic Safety Routing"
     }
   }
 }

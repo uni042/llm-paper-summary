@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1062dec1f444d06-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.31126",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.31126",
+    "identity_tokens": [
+      "arXiv:2605.31126"
+    ],
+    "reason": "This work studies prompt-free synthetic-text self-training and capability/memorization outcomes. It concerns model training behavior rather than inference-time execution or serving efficiency.",
+    "first_checked_at": "2026-10-06T20:31:53+00:00",
+    "last_checked_at": "2026-10-06T20:31:53+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "Not All Synthetic Data Is Yours to Learn From"
+  },
+  "processed_at": "2026-10-06T20:31:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1062dec1f44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
