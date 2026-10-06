@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T16:19:16+00:00",
-  "record_count": 3420,
+  "updated_at": "2026-10-06T16:24:54+00:00",
+  "record_count": 3442,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -52366,6 +52366,336 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Cross-Modality Feature Aggregation for Cross-Domain Point Cloud Representation Learning"
+    },
+    "arXiv:2505.07176": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.07176",
+      "identity_tokens": [
+        "arXiv:2505.07176"
+      ],
+      "reason": "The survey covers agent infrastructure/routing but offers no focused empirical serving or inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T16:24:39+00:00",
+      "last_checked_at": "2026-10-06T16:24:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Internet of Agents: Fundamentals, Applications, and Challenges"
+    },
+    "arXiv:2405.03279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.03279",
+      "identity_tokens": [
+        "arXiv:2405.03279"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Lifelong knowledge editing uses retrieval-augmented continual prompt learning to incorporate edits. This is a knowledge-update method; no inference-systems optimization or serving-cost evaluation is established, so relation to the linked systems line is weak.",
+      "first_checked_at": "2026-10-06T16:24:40+00:00",
+      "last_checked_at": "2026-10-06T16:24:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lifelong Knowledge Editing for LLMs with Retrieval-Augmented Continuous Prompt Learning"
+    },
+    "arXiv:2505.16652": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.16652",
+      "identity_tokens": [
+        "arXiv:2505.16652"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。FarSight modifies decoding for multimodal hallucination mitigation and reports no additional inference-time cost. The evidence targets factuality on image/video tasks, not a quantified latency/throughput gain; this is a weak but technically plausible decoding-systems relation.",
+      "first_checked_at": "2026-10-06T16:24:40+00:00",
+      "last_checked_at": "2026-10-06T16:24:40+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seeing Far and Clearly: Mitigating Hallucinations in MLLMs with Attention Causal Decoding"
+    },
+    "DOI:10.1145/3663529.3663849": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3663529.3663849",
+      "identity_tokens": [
+        "DOI:10.1145/3663529.3663849"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。ACM DOI page returned HTTP 403/internal error; no primary full text could be retrieved.",
+      "first_checked_at": "2026-10-06T16:24:44+00:00",
+      "last_checked_at": "2026-10-06T16:24:44+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Software Engineering in the Era of Foundation Models: A Curated Catalogue of Challenges in the Development of Trustworthy FMware"
+    },
+    "arXiv:2404.01322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.01322",
+      "identity_tokens": [
+        "arXiv:2404.01322"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The survey reviews multimodal LLM and vision models, including broad architecture/application coverage. It does not give a focused inference optimization method or controlled systems evaluation; retain only as weak background for the linked deployment/efficiency topic.",
+      "first_checked_at": "2026-10-06T16:24:44+00:00",
+      "last_checked_at": "2026-10-06T16:24:44+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Review of Multi-Modal Large Language and Vision Models"
+    },
+    "arXiv:2503.20083": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.20083",
+      "identity_tokens": [
+        "arXiv:2503.20083"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。Universal Cross-Tokenizer Distillation transfers across tokenizer vocabularies and evaluates downstream transfer quality. It does not measure decode throughput, latency, or serving memory, so only a weak tokenization/efficiency connection remains.",
+      "first_checked_at": "2026-10-06T16:24:44+00:00",
+      "last_checked_at": "2026-10-06T16:24:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Universal Cross-Tokenizer Distillation via Approximate Likelihood Matching"
+    },
+    "arXiv:2407.19115": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.19115",
+      "identity_tokens": [
+        "arXiv:2407.19115"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。The paper parallelizes nonlinear RNN evaluation using quasi-Newton methods. Sequence experiments include a case where quasi-ELK takes 221 ms versus 96 ms sequentially; this is architecture-specific and does not show a speedup for transformer/LLM inference.",
+      "first_checked_at": "2026-10-06T16:24:45+00:00",
+      "last_checked_at": "2026-10-06T16:24:45+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Scalable and Stable Parallelization of Nonlinear RNNs"
+    },
+    "DOI:10.1016/j.aei.2024.102786": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2024.102786",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2024.102786"
+      ],
+      "reason": "The transportation/AV survey may discuss efficient LLM deployment but is application-domain synthesis; publisher full text was unavailable for method-level review.",
+      "first_checked_at": "2026-10-06T16:24:45+00:00",
+      "last_checked_at": "2026-10-06T16:24:45+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large models for intelligent transportation systems and autonomous vehicles: A survey"
+    },
+    "arXiv:2402.05140": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.05140",
+      "identity_tokens": [
+        "arXiv:2402.05140"
+      ],
+      "reason": "Tag-based adapters specialize LLMs, but the work focuses on task adaptation/quality rather than inference latency, memory, or serving.",
+      "first_checked_at": "2026-10-06T16:24:45+00:00",
+      "last_checked_at": "2026-10-06T16:24:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Tag-LLM: Repurposing General-Purpose LLMs for Specialized Domains"
+    },
+    "arXiv:2506.06105": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.06105",
+      "identity_tokens": [
+        "arXiv:2506.06105"
+      ],
+      "reason": "Text-to-LoRA compresses and generates task adapters in one hypernetwork pass, but evaluation concerns adaptation quality rather than serving/token-generation efficiency.",
+      "first_checked_at": "2026-10-06T16:24:47+00:00",
+      "last_checked_at": "2026-10-06T16:24:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text-to-LoRA: Instant Transformer Adaption"
+    },
+    "arXiv:2503.06896": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.06896",
+      "identity_tokens": [
+        "arXiv:2503.06896"
+      ],
+      "reason": "CATANet reports nearly 2x inference speed for image super-resolution, but targets a specialized vision-SR architecture rather than LLM inference.",
+      "first_checked_at": "2026-10-06T16:24:47+00:00",
+      "last_checked_at": "2026-10-06T16:24:47+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CATANet: Efficient Content-Aware Token Aggregation for Lightweight Image Super-Resolution"
+    },
+    "arXiv:2302.04869": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.04869",
+      "identity_tokens": [
+        "arXiv:2302.04869"
+      ],
+      "reason": "Reversible ViTs reduce activation memory for visual recognition training; inference memory/latency gains are not established, so relation to the memory-wall lineage is weak.",
+      "first_checked_at": "2026-10-06T16:24:47+00:00",
+      "last_checked_at": "2026-10-06T16:24:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reversible Vision Transformers"
+    },
+    "arXiv:2402.06147": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.06147",
+      "identity_tokens": [
+        "arXiv:2402.06147"
+      ],
+      "reason": "DeAL optimizes decoding-time alignment with search, potentially increasing inference work; it establishes no latency/resource reduction.",
+      "first_checked_at": "2026-10-06T16:24:48+00:00",
+      "last_checked_at": "2026-10-06T16:24:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeAL: Decoding-time Alignment for Large Language Models"
+    },
+    "arXiv:2503.09501": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.09501",
+      "identity_tokens": [
+        "arXiv:2503.09501"
+      ],
+      "reason": "Meta-reasoning/multi-agent policy learning is related to routing lineage, but optimizes task outcomes rather than serving cost, latency, or resources.",
+      "first_checked_at": "2026-10-06T16:24:50+00:00",
+      "last_checked_at": "2026-10-06T16:24:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReMA: Learning to Meta-think for LLMs with Multi-Agent Reinforcement Learning"
+    },
+    "DOI:10.1109/dsd57027.2022.00048": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/dsd57027.2022.00048",
+      "identity_tokens": [
+        "DOI:10.1109/dsd57027.2022.00048"
+      ],
+      "reason": "PipeEdge directly targets pipeline-parallel inference on heterogeneous edge devices, but only primary abstract was accessible and full text retrieval failed.",
+      "first_checked_at": "2026-10-06T16:24:51+00:00",
+      "last_checked_at": "2026-10-06T16:24:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PipeEdge: Pipeline Parallelism for Large-Scale Model Inference on Heterogeneous Edge Devices"
+    },
+    "arXiv:2409.09046": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.09046",
+      "identity_tokens": [
+        "arXiv:2409.09046"
+      ],
+      "reason": "HyPA-RAG adapts retrieval parameters for legal/policy QA, but contribution is application-specific retrieval quality rather than general LLM resource savings.",
+      "first_checked_at": "2026-10-06T16:24:51+00:00",
+      "last_checked_at": "2026-10-06T16:24:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.14618-hybrid-llm-cost-efficient-and-quality-aware-query-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications"
+    },
+    "arXiv:2504.09246": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.09246",
+      "identity_tokens": [
+        "arXiv:2504.09246"
+      ],
+      "reason": "Type-constrained decoding improves code validity but does not target decoding speed; relation to guided-generation work is plausible but efficiency is unshown.",
+      "first_checked_at": "2026-10-06T16:24:52+00:00",
+      "last_checked_at": "2026-10-06T16:24:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Type-Constrained Code Generation with Language Models"
+    },
+    "arXiv:2407.01290": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.01290",
+      "identity_tokens": [
+        "arXiv:2407.01290"
+      ],
+      "reason": "Hypformer proposes linear attention in hyperbolic space, but evaluations concern graph/image/text representation rather than autoregressive LLM serving.",
+      "first_checked_at": "2026-10-06T16:24:53+00:00",
+      "last_checked_at": "2026-10-06T16:24:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hypformer: Exploring Efficient Transformer Fully in Hyperbolic Space"
+    },
+    "arXiv:2403.03129": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.03129",
+      "identity_tokens": [
+        "arXiv:2403.03129"
+      ],
+      "reason": "CoGenesis coordinates hosted large and local small LMs for privacy-aware generation, but evaluates quality/privacy workflow, not speculative-decoding speed or throughput.",
+      "first_checked_at": "2026-10-06T16:24:53+00:00",
+      "last_checked_at": "2026-10-06T16:24:53+00:00",
+      "linked_from": [
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoGenesis: A Framework Collaborating Large and Small Language Models for Secure Context-Aware Instruction Following"
+    },
+    "DOI:10.1109/hpca57654.2024.00024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpca57654.2024.00024",
+      "identity_tokens": [
+        "DOI:10.1109/hpca57654.2024.00024"
+      ],
+      "reason": "MIMDRAM shows general PIM throughput/energy improvements but evaluates general applications rather than LLM/transformer inference, leaving mapping relevance unverified.",
+      "first_checked_at": "2026-10-06T16:24:53+00:00",
+      "last_checked_at": "2026-10-06T16:24:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MIMDRAM: An End-to-End Processing-Using-DRAM System for High-Throughput, Energy-Efficient and Programmer-Transparent Multiple-Instruction Multiple-Data Computing"
+    },
+    "DOI:10.1016/j.inffus.2025.102951": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.102951",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.102951"
+      ],
+      "reason": "一次本文を取得できず方法・評価・限界を確認できないため、除外せずborderlineに残す。ScienceDirect DOI page did not provide retrievable full text in this session; publisher abstract was available.",
+      "first_checked_at": "2026-10-06T16:24:54+00:00",
+      "last_checked_at": "2026-10-06T16:24:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ViTs as backbones: Leveraging vision transformers for feature extraction"
+    },
+    "arXiv:2407.21439": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.21439",
+      "identity_tokens": [
+        "arXiv:2407.21439"
+      ],
+      "reason": "本文を確認したが、対象系統との接続またはLLM推論効率の実証が弱く、一般化可能性を確認できない。RagVL trains an MLLM as an image reranker and adds visual noise during training for multimodal RAG. Evaluation is on two image-retrieval/reasoning datasets; the paper does not report inference compute/latency or KV-cache improvements.",
+      "first_checked_at": "2026-10-06T16:24:54+00:00",
+      "last_checked_at": "2026-10-06T16:24:54+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MLLM Is a Strong Reranker: Advancing Multimodal Retrieval-augmented Generation via Knowledge-enhanced Reranking and Noise-injected Training"
     }
   }
 }
