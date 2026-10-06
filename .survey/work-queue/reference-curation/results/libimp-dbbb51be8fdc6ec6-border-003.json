@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dbbb51be8fdc6ec6-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.11659",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.11659",
+    "identity_tokens": [
+      "arXiv:2601.11659"
+    ],
+    "reason": "Primary arXiv PDF returned Internal Error and HTML full text was unavailable; no primary text could be reviewed.",
+    "first_checked_at": "2026-10-06T04:49:44+00:00",
+    "last_checked_at": "2026-10-06T04:49:44+00:00",
+    "linked_from": [
+      "papers/inference/08-edge-on-device-llm-systems/2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "The Llama 4 Herd: Architecture, Training, Evaluation, and Deployment Notes"
+  },
+  "processed_at": "2026-10-06T04:49:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dbbb51be8fdc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

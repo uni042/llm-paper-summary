@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T04:39:25+00:00",
-  "record_count": 2247,
+  "updated_at": "2026-10-06T04:49:45+00:00",
+  "record_count": 2265,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -34641,6 +34641,279 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Seed1.5-VL Technical Report"
+    },
+    "arXiv:2505.11917": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11917",
+      "identity_tokens": [
+        "arXiv:2505.11917"
+      ],
+      "reason": "OneTwoVLA adaptively invokes reasoning at selected robot steps and matches flat-VLA task time, but is VLA-specific and explicitly leaves action inference unoptimized.",
+      "first_checked_at": "2026-10-06T04:49:40+00:00",
+      "last_checked_at": "2026-10-06T04:49:40+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2602.09725-kvfetcher-gpu-native-media-asic.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OneTwoVLA: A Unified Vision-Language-Action Model with Adaptive Reasoning"
+    },
+    "arXiv:2604.02317": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02317",
+      "identity_tokens": [
+        "arXiv:2604.02317"
+      ],
+      "reason": "Simple streaming-video baseline analyzes perception-memory trade-offs and is latency-competitive, but is a benchmark/analysis rather than a serving optimization.",
+      "first_checked_at": "2026-10-06T04:49:40+00:00",
+      "last_checked_at": "2026-10-06T04:49:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Simple Baseline for Streaming Video Understanding"
+    },
+    "arXiv:2604.11978": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.11978",
+      "identity_tokens": [
+        "arXiv:2604.11978"
+      ],
+      "reason": "HORIZON diagnoses long-horizon agent failures over 3,100+ trajectories; it offers evaluation/directions, not runtime optimization.",
+      "first_checked_at": "2026-10-06T04:49:40+00:00",
+      "last_checked_at": "2026-10-06T04:49:40+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.06068-vibeserve-agent-generated-bespoke-serving-systems.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break"
+    },
+    "arXiv:2603.18815": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18815",
+      "identity_tokens": [
+        "arXiv:2603.18815"
+      ],
+      "reason": "ProRL Agent measures throughput improvements for RL training rollouts; transfer to production inference serving is not demonstrated.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2609.11294-agentzip-memory-compression-high-fanout-agent-sandboxes.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents"
+    },
+    "arXiv:2601.22966": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22966",
+      "identity_tokens": [
+        "arXiv:2601.22966"
+      ],
+      "reason": "Studies outlier-driven transformer training and quantization robustness, not a low-bit inference method or deployment cost.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Unified View of Attention and Residual Sinks: Outlier-Driven Rescaling is Essential for Transformer Training"
+    },
+    "arXiv:2512.13898": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13898",
+      "identity_tokens": [
+        "arXiv:2512.13898"
+      ],
+      "reason": "Test-time training for long-context tasks adds adaptation compute; paper does not establish reduced inference compute, memory, or latency.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Let's (not) just put things in Context: Test-Time Training for Long-Context LLMs"
+    },
+    "DOI:10.1109/eibdct69742.2026.11566699": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/eibdct69742.2026.11566699",
+      "identity_tokens": [
+        "DOI:10.1109/eibdct69742.2026.11566699"
+      ],
+      "reason": "DOI resolver returned Internal Error; searches exposed secondary summaries but not accessible primary full text, so claims could not be verified from the primary source.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Unified Inference Optimization Framework for Qwen3-VL-2B-Instruct"
+    },
+    "arXiv:2604.14362": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14362",
+      "identity_tokens": [
+        "arXiv:2604.14362"
+      ],
+      "reason": "APEX-MEM proposes structured temporal conversational memory; reviewed experiments focus memory/task quality without quantifying inference/KV/latency savings.",
+      "first_checked_at": "2026-10-06T04:49:42+00:00",
+      "last_checked_at": "2026-10-06T04:49:42+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "APEX-MEM: Agentic Semi-Structured Memory with Temporal Reasoning for Long-Term Conversational AI"
+    },
+    "arXiv:2601.20209": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20209",
+      "identity_tokens": [
+        "arXiv:2601.20209"
+      ],
+      "reason": "Spark studies branching/exploration for agentic RL learning, not inference systems or serving efficiency.",
+      "first_checked_at": "2026-10-06T04:49:42+00:00",
+      "last_checked_at": "2026-10-06T04:49:42+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2506.01979-specbranch-speculative-decoding-via-hybrid-drafting-and-rollback-aware-branching.md",
+        "papers/inference/99-other-inference-systems/2026-2601.05524-double-breaking-the-acceleration-limit-via-double-retrieval-speculative-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spark: Strategic Policy-Aware Exploration via Dynamic Branching for Long-Horizon Agentic Learning"
+    },
+    "arXiv:2512.12360": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.12360",
+      "identity_tokens": [
+        "arXiv:2512.12360"
+      ],
+      "reason": "VideoARM uses hierarchical memory and clears tool context to reduce context overflow, but evaluates video reasoning quality without KV/serving latency results.",
+      "first_checked_at": "2026-10-06T04:49:43+00:00",
+      "last_checked_at": "2026-10-06T04:49:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding"
+    },
+    "arXiv:1812.02699": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1812.02699",
+      "identity_tokens": [
+        "arXiv:1812.02699"
+      ],
+      "reason": "Online distillation targets video-model inference, not LLM inference/serving; transfer to LLM systems is unestablished.",
+      "first_checked_at": "2026-10-06T04:49:43+00:00",
+      "last_checked_at": "2026-10-06T04:49:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Online Model Distillation for Efficient Video Inference"
+    },
+    "arXiv:2601.06521": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06521",
+      "identity_tokens": [
+        "arXiv:2601.06521"
+      ],
+      "reason": "BabyVision is a visual-reasoning benchmark/capability evaluation; full text reports no serving, KV, memory, or latency optimization.",
+      "first_checked_at": "2026-10-06T04:49:43+00:00",
+      "last_checked_at": "2026-10-06T04:49:43+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.24653-kimi-k3-open-frontier-intelligence.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BabyVision: Visual Reasoning Beyond Language"
+    },
+    "arXiv:2601.11659": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11659",
+      "identity_tokens": [
+        "arXiv:2601.11659"
+      ],
+      "reason": "Primary arXiv PDF returned Internal Error and HTML full text was unavailable; no primary text could be reviewed.",
+      "first_checked_at": "2026-10-06T04:49:44+00:00",
+      "last_checked_at": "2026-10-06T04:49:44+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2607.10183-atsinfer-automated-tensor-scheduling-hybrid-cpu-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Llama 4 Herd: Architecture, Training, Evaluation, and Deployment Notes"
+    },
+    "arXiv:2511.14460": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.14460",
+      "identity_tokens": [
+        "arXiv:2511.14460"
+      ],
+      "reason": "Agent-R1 is a step-level flexible-context substrate for agentic RL training; no inference-serving optimization or measured serving gains.",
+      "first_checked_at": "2026-10-06T04:49:44+00:00",
+      "last_checked_at": "2026-10-06T04:49:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent-R1: A Unified and Modular Framework for Agentic Reinforcement Learning"
+    },
+    "arXiv:2212.11685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.11685",
+      "identity_tokens": [
+        "arXiv:2212.11685"
+      ],
+      "reason": "GENIE uses an iterative diffusion decoder that generates sequence embeddings in parallel, but the paper’s primary contribution/evaluation is a pretraining objective and downstream generation quality; it gives no inference speed, memory, or throughput results. This leaves a weak possible connection to parallel decoding, not a demonstrated serving improvement.",
+      "first_checked_at": "2026-10-06T04:49:44+00:00",
+      "last_checked_at": "2026-10-06T04:49:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Text Generation with Diffusion Language Models: A Pre-training Approach with Continuous Paragraph Denoise"
+    },
+    "arXiv:2504.02732": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.02732",
+      "identity_tokens": [
+        "arXiv:2504.02732"
+      ],
+      "reason": "Analyzes first-token attention-sink formation and context-length effects, but no cache eviction/reuse or inference acceleration is tested.",
+      "first_checked_at": "2026-10-06T04:49:44+00:00",
+      "last_checked_at": "2026-10-06T04:49:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Why do LLMs attend to the first token?"
+    },
+    "arXiv:2512.04123": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04123",
+      "identity_tokens": [
+        "arXiv:2512.04123"
+      ],
+      "reason": "Production-agent workload study reports many agents tolerate minute-scale latency or have no SLO; useful serving characterization but no scheduling/inference optimization.",
+      "first_checked_at": "2026-10-06T04:49:45+00:00",
+      "last_checked_at": "2026-10-06T04:49:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.13499-opscale-operator-level-autoscaling.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Measuring Agents in Production"
+    },
+    "arXiv:2604.14228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14228",
+      "identity_tokens": [
+        "arXiv:2604.14228"
+      ],
+      "reason": "Claude Code design-space analysis describes agent systems but does not establish a measured LLM inference optimization.",
+      "first_checked_at": "2026-10-06T04:49:45+00:00",
+      "last_checked_at": "2026-10-06T04:49:45+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems"
     }
   }
 }

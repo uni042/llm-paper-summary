@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T04:39:26+00:00",
-  "record_count": 6997,
+  "updated_at": "2026-10-06T04:49:46+00:00",
+  "record_count": 7011,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -100944,6 +100944,203 @@
         "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md"
       ],
       "title": "FinanceBench: A New Benchmark for Financial Question Answering"
+    },
+    "arXiv:2602.05073": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.05073",
+      "identity_tokens": [
+        "arXiv:2602.05073"
+      ],
+      "reason": "Survey of agent uncertainty quantification, not inference performance or serving optimization.",
+      "first_checked_at": "2026-10-06T04:49:40+00:00",
+      "last_checked_at": "2026-10-06T04:49:40+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Uncertainty Quantification in LLM Agents: Foundations, Emerging Challenges, and Opportunities"
+    },
+    "arXiv:2511.01805": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01805",
+      "identity_tokens": [
+        "arXiv:2511.01805"
+      ],
+      "reason": "Studies belief changes with accumulated context, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:49:40+00:00",
+      "last_checked_at": "2026-10-06T04:49:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "title": "Accumulating Context Changes the Beliefs of Language Models"
+    },
+    "arXiv:2512.10046": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10046",
+      "identity_tokens": [
+        "arXiv:2512.10046"
+      ],
+      "reason": "SimWorld-Robotics synthesizes robot-navigation environments, outside LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.00151-smoothagent-lookahead-context-engineering.md"
+      ],
+      "title": "SimWorld-Robotics: Synthesizing Photorealistic and Dynamic Urban Environments for Multimodal Robot Navigation and Collaboration"
+    },
+    "arXiv:2604.24827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24827",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.24827",
+        "arXiv:2604.24827"
+      ],
+      "reason": "Estimates black-box parameter counts via factual capacity; no MoE inference/offload/memory-hierarchy optimization.",
+      "first_checked_at": "2026-10-06T04:49:41+00:00",
+      "last_checked_at": "2026-10-06T04:49:41+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2026-2609.18110-ssd-llama-ssd-native-trillion-parameter-moe.md"
+      ],
+      "title": "Incompressible Knowledge Probes: Estimating Black-Box LLM Parameter Counts via Factual Capacity"
+    },
+    "arXiv:2603.07162": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.07162",
+      "identity_tokens": [
+        "arXiv:2603.07162"
+      ],
+      "reason": "Spectral conditioning studies transformer performance/training rather than serving efficiency.",
+      "first_checked_at": "2026-10-06T04:49:42+00:00",
+      "last_checked_at": "2026-10-06T04:49:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Spectral Conditioning of Attention Improves Transformer Performance"
+    },
+    "arXiv:2605.25979": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.25979",
+      "identity_tokens": [
+        "arXiv:2605.25979"
+      ],
+      "reason": "LLaVA-OneVision-2 is a capability/model report without a concrete inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T04:49:43+00:00",
+      "last_checked_at": "2026-10-06T04:49:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "LLaVA-OneVision-2: Towards Next-Generation Perceptual Intelligence"
+    },
+    "arXiv:2512.12069": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.12069",
+      "identity_tokens": [
+        "arXiv:2512.12069"
+      ],
+      "reason": "Vision-language jailbreak detection is outside inference compute/memory/latency optimization.",
+      "first_checked_at": "2026-10-06T04:49:43+00:00",
+      "last_checked_at": "2026-10-06T04:49:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Rethinking Jailbreak Detection of Large Vision Language Models with Representational Contrastive Scoring"
+    },
+    "arXiv:2602.14849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14849",
+      "identity_tokens": [
+        "arXiv:2602.14849"
+      ],
+      "reason": "Atomix improves transactional correctness for tool effects; wrapper overhead is microseconds against 50ms–10s tool calls and does not optimize LLM inference/KV/scheduling.",
+      "first_checked_at": "2026-10-06T04:49:44+00:00",
+      "last_checked_at": "2026-10-06T04:49:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.03333-spork-self-speculative-forking-agentic-llm.md"
+      ],
+      "title": "Atomix: Timely, Transactional Tool Use for Reliable Agentic Workflows"
+    },
+    "arXiv:2512.20618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.20618",
+      "identity_tokens": [
+        "arXiv:2512.20618"
+      ],
+      "reason": "LongVideoAgent studies multi-agent video reasoning capability, not inference efficiency.",
+      "first_checked_at": "2026-10-06T04:49:45+00:00",
+      "last_checked_at": "2026-10-06T04:49:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "LongVideoAgent: Multi-Agent Reasoning with Long Videos"
+    },
+    "arXiv:2402.03226": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.03226",
+      "identity_tokens": [
+        "arXiv:2402.03226"
+      ],
+      "reason": "FuseMoE studies multimodal fusion architecture, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T04:49:45+00:00",
+      "last_checked_at": "2026-10-06T04:49:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "FuseMoE: Mixture-of-Experts Transformers for Fleximodal Fusion"
+    },
+    "arXiv:2504.19314": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.19314",
+      "identity_tokens": [
+        "arXiv:2504.19314"
+      ],
+      "reason": "BrowseComp-ZH is a web-browsing capability benchmark.",
+      "first_checked_at": "2026-10-06T04:49:45+00:00",
+      "last_checked_at": "2026-10-06T04:49:45+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md"
+      ],
+      "title": "BrowseComp-ZH: Benchmarking Web Browsing Ability of Large Language Models in Chinese"
+    },
+    "arXiv:1802.04924": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1802.04924",
+      "identity_tokens": [
+        "arXiv:1802.04924"
+      ],
+      "reason": "CNN parallelization study is outside LLM inference/serving.",
+      "first_checked_at": "2026-10-06T04:49:46+00:00",
+      "last_checked_at": "2026-10-06T04:49:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Exploring Hidden Dimensions in Parallelizing Convolutional Neural Networks"
+    },
+    "arXiv:1903.07486": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1903.07486",
+      "identity_tokens": [
+        "arXiv:1903.07486"
+      ],
+      "reason": "Generic Turing T4 microbenchmark provides no LLM inference or serving method.",
+      "first_checked_at": "2026-10-06T04:49:46+00:00",
+      "last_checked_at": "2026-10-06T04:49:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Dissecting the NVidia Turing T4 GPU via Microbenchmarking"
+    },
+    "arXiv:2512.01374": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.01374",
+      "identity_tokens": [
+        "arXiv:2512.01374"
+      ],
+      "reason": "Primary text concerns RL training formulation/stability and MoE routing replay, not inference serving.",
+      "first_checked_at": "2026-10-06T04:49:46+00:00",
+      "last_checked_at": "2026-10-06T04:49:46+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "title": "Stabilizing Reinforcement Learning with LLMs: Formulation and Practices"
     }
   }
 }
