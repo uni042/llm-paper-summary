@@ -71,7 +71,7 @@
   単に小型モデル化する研究だけでなく、推論中に思考長を動的に減らす方式や、プロンプト側から必要計算量を制御する方式まで同じ地図に置く。
 
 - **2024-12 · [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](2024-2412.15605-don-t-do-rag-when-cache-augmented-generation-is-all-you-need-for-knowled.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   キャッシュ拡張生成（CAG）は、知識集合が限定され長文脈へ収まる場合、検索拡張生成（RAG）の実時間検索を省き、知識文書を事前にプリフィルしてKVキャッシュを保持する。質問時はこのキャッシュを再利用して検索待ちと検索誤りを除き、複数QAベンチマークでRAGと同等以上の品質と低遅延を示す。
 
 ### 3年前（2023-11〜2024-10）
