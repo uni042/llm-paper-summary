@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r133-screen-01-part-02-2d5a1d4ba74e",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.04369",
+      "identity_tokens": [
+        "arXiv:2507.04369"
+      ],
+      "title": "Height-Fidelity Dense Global Fusion for Multi-Modal 3D Object Detection",
+      "reason": "Mambaによるカメラ・LiDAR融合の3D物体検出が対象で、LLM推論ではない。推論速度は検出器タスク内の指標であり、LLM向け手法ではない。",
+      "source_url": "https://arxiv.org/abs/2507.04369",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00072",
+      "identity_tokens": [
+        "arXiv:2504.00072"
+      ],
+      "title": "Chapter-Llama: Efficient Chaptering in Hour-Long Videos with LLMs",
+      "reason": "論文は音声主導のフレーム選択と字幕化で長尺動画をLLMの文脈窓へ適合させるが、目的は動画章分割の精度。計算削減の推論ベンチマークや一般的な長文LLMの実行効率評価はない。",
+      "source_url": "https://arxiv.org/abs/2504.00072",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.17497",
+      "identity_tokens": [
+        "arXiv:2503.17497"
+      ],
+      "title": "You Only Look Once at Anytime (AnytimeYOLO): Analysis and Optimization of Early-Exits for Object-Detection",
+      "reason": "AnytimeYOLOはCNN系物体検出器に任意時点で出力する早期終了を加える研究で、LLMやTransformer推論の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2503.17497",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.20249",
+      "identity_tokens": [
+        "arXiv:2412.20249"
+      ],
+      "title": "Next-Gen Computing Systems with Compute Express Link: a Comprehensive Survey",
+      "reason": "CXL接続を中心とした計算システムの調査で、LLM推論に対する具体的な手法・評価を扱わない。",
+      "source_url": "https://arxiv.org/abs/2412.20249",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.06787",
+      "identity_tokens": [
+        "arXiv:2412.06787"
+      ],
+      "title": "[MASK] is All You Need",
+      "reason": "離散状態生成モデルを検討する研究だが、一次要旨の評価範囲は視覚生成であり、LLMの推論効率・serving改善が目的ではない。",
+      "source_url": "https://arxiv.org/abs/2412.06787",
+      "first_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "last_checked_at": "2026-10-06T18:44:53.224090+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
