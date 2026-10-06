@@ -1,0 +1,420 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2fbdf18ee6c0b51c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2fbdf18ee6c0",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2004.07320",
+    "arXiv:2006.03236",
+    "arXiv:2302.11665",
+    "arXiv:2408.16725",
+    "arXiv:2502.21074"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "30c444c33870eb4d693dcf311246b3f3df2faa03",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 1,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch",
+      "semantic_scholar_single"
+    ]
+  },
+  "progress_observed_at": "2026-10-06T21:26:35.533499+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2004.07320",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2006.03236",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2302.11665",
+      "status": "provider_unresolved",
+      "lookup_route": "semantic_scholar_single"
+    },
+    {
+      "requested_id": "arXiv:2408.16725",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.21074",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Training with Quantization Noise for Extreme Model Compression",
+      "source_url": "https://arxiv.org/abs/2004.07320",
+      "year": 2020,
+      "published": "2020-04-15",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 273,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We tackle the problem of producing compact models, maximizing their accuracy for a given model size. A standard solution is to train networks with Quantization Aware Training, where the weights are quantized during training and the gradients approximated with the Straight-Through Estimator. In this paper, we extend this approach to work beyond int8 fixed-point quantization with extreme compression methods where the approximations introduced by STE are severe, such as Product Quantization. Our proposal is to only quantize a different random subset of weights during each forward, allowing for unbiased gradients to flow through the other weights. Controlling the amount of noise and its form allows for extreme compression rates while maintaining the performance of the original model. As a result we establish new state-of-the-art compromises between accuracy and model size both in natural language processing and image classification. For example, applying our method to state-of-the-art Transformer and ConvNet architectures, we can achieve 82.5% accuracy on MNLI by compressing RoBERTa to 14MB and 80.0 top-1 accuracy on ImageNet by compressing an EfficientNet-B3 to 3.3MB.",
+      "identifiers": [
+        "SemanticScholar:0171ad4cc87cc7db25b4ec3169e293eed9a13b39"
+      ],
+      "semantic_scholar_id": "0171ad4cc87cc7db25b4ec3169e293eed9a13b39",
+      "canonical_id": "arXiv:2004.07320",
+      "arxiv_id": "2004.07320",
+      "authors": [
+        "Angela Fan",
+        "Pierre Stock",
+        "Benjamin Graham",
+        "E. Grave",
+        "R. Gribonval",
+        "H. Jégou",
+        "A. Joulin"
+      ],
+      "priority": 283,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 273,
+        "citation_count": 273,
+        "total": 283,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2365,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing",
+      "source_url": "https://arxiv.org/abs/2006.03236",
+      "year": 2020,
+      "published": "2020-06-05",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 273,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the success of language pretraining, it is highly desirable to develop more efficient architectures of good scalability that can exploit the abundant unlabeled data at a lower cost. To improve the efficiency, we examine the much-overlooked redundancy in maintaining a full-length token-level presentation, especially for tasks that only require a single-vector presentation of the sequence. With this intuition, we propose Funnel-Transformer which gradually compresses the sequence of hidden states to a shorter one and hence reduces the computation cost. More importantly, by re-investing the saved FLOPs from length reduction in constructing a deeper or wider model, we further improve the model capacity. In addition, to perform token-level predictions as required by common pretraining objectives, Funnel-Transformer is able to recover a deep representation for each token from the reduced hidden sequence via a decoder. Empirically, with comparable or fewer FLOPs, Funnel-Transformer outperforms the standard Transformer on a wide variety of sequence-level prediction tasks, including text classification, language understanding, and reading comprehension. The code and pretrained checkpoints are available at this https URL.",
+      "identifiers": [
+        "SemanticScholar:4ca3b0ea12f02e2dea01a4aa505956bae5500a09"
+      ],
+      "semantic_scholar_id": "4ca3b0ea12f02e2dea01a4aa505956bae5500a09",
+      "canonical_id": "arXiv:2006.03236",
+      "arxiv_id": "2006.03236",
+      "authors": [
+        "Zi-Hang Dai",
+        "Guokun Lai",
+        "Yiming Yang",
+        "Quoc V. Le"
+      ],
+      "priority": 283,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 273,
+        "citation_count": 273,
+        "total": 283,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2314,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation",
+      "source_url": "https://arxiv.org/abs/2502.21074",
+      "year": 2025,
+      "published": "2025-02-28",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 259,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) reasoning enhances Large Language Models (LLMs) by encouraging step-by-step reasoning in natural language. However, leveraging a latent continuous space for reasoning may offer benefits in terms of both efficiency and robustness. Prior implicit CoT methods attempt to bypass language completely by reasoning in continuous space but have consistently underperformed compared to the standard explicit CoT approach. We introduce CODI (Continuous Chain-of-Thought via Self-Distillation), a novel training framework that effectively compresses natural language CoT into continuous space. CODI jointly trains a teacher task (Explicit CoT) and a student task (Implicit CoT), distilling the reasoning ability from language into continuous space by aligning the hidden states of a designated token. Our experiments show that CODI is the first implicit CoT approach to match the performance of explicit CoT on GSM8k at the GPT-2 scale, achieving a 3.1x compression rate and outperforming the previous state-of-the-art by 28.2% in accuracy. CODI also demonstrates robustness, generalizable to complex datasets, and interpretability. These results validate that LLMs can reason effectively not only in natural language, but also in a latent continuous space. Code is available at https://github.com/zhenyi4/codi.",
+      "identifiers": [
+        "SemanticScholar:bf04a4f09c19ec0ebaeadff5f78832626673fc00"
+      ],
+      "semantic_scholar_id": "bf04a4f09c19ec0ebaeadff5f78832626673fc00",
+      "canonical_id": "arXiv:2502.21074",
+      "arxiv_id": "2502.21074",
+      "doi": "10.48550/arXiv.2502.21074",
+      "authors": [
+        "Zhenyi Shen",
+        "Hanqi Yan",
+        "Linhai Zhang",
+        "Zhanghao Hu",
+        "Yali Du",
+        "Yu-Lan He"
+      ],
+      "priority": 269,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 259,
+        "citation_count": 259,
+        "total": 269,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 585,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming",
+      "source_url": "https://arxiv.org/abs/2408.16725",
+      "year": 2024,
+      "published": "2024-08-29",
+      "venue": "arXiv.org",
+      "citation_count": 261,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in language models have achieved significant progress. GPT-4o, as a new milestone, has enabled real-time conversations with humans, demonstrating near-human natural fluency. Such human-computer interaction necessitates models with the capability to perform reasoning directly with the audio modality and generate output in streaming. However, this remains beyond the reach of current academic models, as they typically depend on extra TTS systems for speech synthesis, resulting in undesirable latency. This paper introduces the Mini-Omni, an audio-based end-to-end conversational model, capable of real-time speech interaction. To achieve this capability, we propose a text-instructed speech generation method, along with batch-parallel strategies during inference to further boost the performance. Our method also helps to retain the original model's language capabilities with minimal degradation, enabling other works to establish real-time interaction capabilities. We call this training method\"Any Model Can Talk\". We also introduce the VoiceAssistant-400K dataset to fine-tune models optimized for speech output. To our best knowledge, Mini-Omni is the first fully end-to-end, open-source model for real-time speech interaction, offering valuable potential for future research.",
+      "identifiers": [
+        "SemanticScholar:8625ab06f76caf36ab138bac20a3116ba5b298e6"
+      ],
+      "semantic_scholar_id": "8625ab06f76caf36ab138bac20a3116ba5b298e6",
+      "canonical_id": "arXiv:2408.16725",
+      "arxiv_id": "2408.16725",
+      "doi": "10.48550/arXiv.2408.16725",
+      "authors": [
+        "Zhi-Fei Xie",
+        "Chang-Qiao Wu"
+      ],
+      "priority": 261,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 261,
+        "citation_count": 261,
+        "total": 261,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 768,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2004.07320",
+      "identity_tokens": [
+        "id:SemanticScholar:0171ad4cc87cc7db25b4ec3169e293eed9a13b39",
+        "id:arXiv:2004.07320",
+        "title:training with quantization noise for extreme model compression",
+        "url:https://arxiv.org/abs/2004.07320"
+      ],
+      "record": {
+        "title": "Training with Quantization Noise for Extreme Model Compression",
+        "source_url": "https://arxiv.org/abs/2004.07320",
+        "year": 2020,
+        "published": "2020-04-15",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 273,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We tackle the problem of producing compact models, maximizing their accuracy for a given model size. A standard solution is to train networks with Quantization Aware Training, where the weights are quantized during training and the gradients approximated with the Straight-Through Estimator. In this paper, we extend this approach to work beyond int8 fixed-point quantization with extreme compression methods where the approximations introduced by STE are severe, such as Product Quantization. Our proposal is to only quantize a different random subset of weights during each forward, allowing for unbiased gradients to flow through the other weights. Controlling the amount of noise and its form allows for extreme compression rates while maintaining the performance of the original model. As a result we establish new state-of-the-art compromises between accuracy and model size both in natural language processing and image classification. For example, applying our method to state-of-the-art Transformer and ConvNet architectures, we can achieve 82.5% accuracy on MNLI by compressing RoBERTa to 14MB and 80.0 top-1 accuracy on ImageNet by compressing an EfficientNet-B3 to 3.3MB.",
+        "identifiers": [
+          "SemanticScholar:0171ad4cc87cc7db25b4ec3169e293eed9a13b39"
+        ],
+        "semantic_scholar_id": "0171ad4cc87cc7db25b4ec3169e293eed9a13b39",
+        "canonical_id": "arXiv:2004.07320",
+        "arxiv_id": "2004.07320",
+        "authors": [
+          "Angela Fan",
+          "Pierre Stock",
+          "Benjamin Graham",
+          "E. Grave",
+          "R. Gribonval",
+          "H. Jégou",
+          "A. Joulin"
+        ],
+        "priority": 283,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 273,
+          "citation_count": 273,
+          "total": 283,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2365,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2006.03236",
+      "identity_tokens": [
+        "id:SemanticScholar:4ca3b0ea12f02e2dea01a4aa505956bae5500a09",
+        "id:arXiv:2006.03236",
+        "title:funneltransformer filtering out sequential redundancy for efficient language processing",
+        "url:https://arxiv.org/abs/2006.03236"
+      ],
+      "record": {
+        "title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing",
+        "source_url": "https://arxiv.org/abs/2006.03236",
+        "year": 2020,
+        "published": "2020-06-05",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 273,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the success of language pretraining, it is highly desirable to develop more efficient architectures of good scalability that can exploit the abundant unlabeled data at a lower cost. To improve the efficiency, we examine the much-overlooked redundancy in maintaining a full-length token-level presentation, especially for tasks that only require a single-vector presentation of the sequence. With this intuition, we propose Funnel-Transformer which gradually compresses the sequence of hidden states to a shorter one and hence reduces the computation cost. More importantly, by re-investing the saved FLOPs from length reduction in constructing a deeper or wider model, we further improve the model capacity. In addition, to perform token-level predictions as required by common pretraining objectives, Funnel-Transformer is able to recover a deep representation for each token from the reduced hidden sequence via a decoder. Empirically, with comparable or fewer FLOPs, Funnel-Transformer outperforms the standard Transformer on a wide variety of sequence-level prediction tasks, including text classification, language understanding, and reading comprehension. The code and pretrained checkpoints are available at this https URL.",
+        "identifiers": [
+          "SemanticScholar:4ca3b0ea12f02e2dea01a4aa505956bae5500a09"
+        ],
+        "semantic_scholar_id": "4ca3b0ea12f02e2dea01a4aa505956bae5500a09",
+        "canonical_id": "arXiv:2006.03236",
+        "arxiv_id": "2006.03236",
+        "authors": [
+          "Zi-Hang Dai",
+          "Guokun Lai",
+          "Yiming Yang",
+          "Quoc V. Le"
+        ],
+        "priority": 283,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 273,
+          "citation_count": 273,
+          "total": 283,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 2314,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.21074",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.21074",
+        "id:SemanticScholar:bf04a4f09c19ec0ebaeadff5f78832626673fc00",
+        "id:arXiv:2502.21074",
+        "title:codi compressing chainofthought into continuous space via selfdistillation",
+        "url:https://arxiv.org/abs/2502.21074"
+      ],
+      "record": {
+        "title": "CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation",
+        "source_url": "https://arxiv.org/abs/2502.21074",
+        "year": 2025,
+        "published": "2025-02-28",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 259,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) reasoning enhances Large Language Models (LLMs) by encouraging step-by-step reasoning in natural language. However, leveraging a latent continuous space for reasoning may offer benefits in terms of both efficiency and robustness. Prior implicit CoT methods attempt to bypass language completely by reasoning in continuous space but have consistently underperformed compared to the standard explicit CoT approach. We introduce CODI (Continuous Chain-of-Thought via Self-Distillation), a novel training framework that effectively compresses natural language CoT into continuous space. CODI jointly trains a teacher task (Explicit CoT) and a student task (Implicit CoT), distilling the reasoning ability from language into continuous space by aligning the hidden states of a designated token. Our experiments show that CODI is the first implicit CoT approach to match the performance of explicit CoT on GSM8k at the GPT-2 scale, achieving a 3.1x compression rate and outperforming the previous state-of-the-art by 28.2% in accuracy. CODI also demonstrates robustness, generalizable to complex datasets, and interpretability. These results validate that LLMs can reason effectively not only in natural language, but also in a latent continuous space. Code is available at https://github.com/zhenyi4/codi.",
+        "identifiers": [
+          "SemanticScholar:bf04a4f09c19ec0ebaeadff5f78832626673fc00"
+        ],
+        "semantic_scholar_id": "bf04a4f09c19ec0ebaeadff5f78832626673fc00",
+        "canonical_id": "arXiv:2502.21074",
+        "arxiv_id": "2502.21074",
+        "doi": "10.48550/arXiv.2502.21074",
+        "authors": [
+          "Zhenyi Shen",
+          "Hanqi Yan",
+          "Linhai Zhang",
+          "Zhanghao Hu",
+          "Yali Du",
+          "Yu-Lan He"
+        ],
+        "priority": 269,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 259,
+          "citation_count": 259,
+          "total": 269,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 585,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.16725",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.16725",
+        "id:SemanticScholar:8625ab06f76caf36ab138bac20a3116ba5b298e6",
+        "id:arXiv:2408.16725",
+        "title:miniomni language models can hear talk while thinking in streaming",
+        "url:https://arxiv.org/abs/2408.16725"
+      ],
+      "record": {
+        "title": "Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming",
+        "source_url": "https://arxiv.org/abs/2408.16725",
+        "year": 2024,
+        "published": "2024-08-29",
+        "venue": "arXiv.org",
+        "citation_count": 261,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in language models have achieved significant progress. GPT-4o, as a new milestone, has enabled real-time conversations with humans, demonstrating near-human natural fluency. Such human-computer interaction necessitates models with the capability to perform reasoning directly with the audio modality and generate output in streaming. However, this remains beyond the reach of current academic models, as they typically depend on extra TTS systems for speech synthesis, resulting in undesirable latency. This paper introduces the Mini-Omni, an audio-based end-to-end conversational model, capable of real-time speech interaction. To achieve this capability, we propose a text-instructed speech generation method, along with batch-parallel strategies during inference to further boost the performance. Our method also helps to retain the original model's language capabilities with minimal degradation, enabling other works to establish real-time interaction capabilities. We call this training method\"Any Model Can Talk\". We also introduce the VoiceAssistant-400K dataset to fine-tune models optimized for speech output. To our best knowledge, Mini-Omni is the first fully end-to-end, open-source model for real-time speech interaction, offering valuable potential for future research.",
+        "identifiers": [
+          "SemanticScholar:8625ab06f76caf36ab138bac20a3116ba5b298e6"
+        ],
+        "semantic_scholar_id": "8625ab06f76caf36ab138bac20a3116ba5b298e6",
+        "canonical_id": "arXiv:2408.16725",
+        "arxiv_id": "2408.16725",
+        "doi": "10.48550/arXiv.2408.16725",
+        "authors": [
+          "Zhi-Fei Xie",
+          "Chang-Qiao Wu"
+        ],
+        "priority": 261,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 261,
+          "citation_count": 261,
+          "total": 261,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 768,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0aff911af779f631292de69096ea206cde00d09e47b55a2ccc9165429af1f667",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
