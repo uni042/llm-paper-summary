@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r125-screen-01-part-06-058f9b2c12db",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25502",
+      "identity_tokens": [
+        "arXiv:2510.25502"
+      ],
+      "title": "TempoPFN: Synthetic Pre-training of Linear RNNs for Zero-shot Time Series Forecasting",
+      "reason": "一次要旨のTempoPFNはlinear RNNのsynthetic pretrainingでtime-series forecastingを目的とし、LLM autoregressive generationや推論効率の結果を報告しない。",
+      "source_url": "https://arxiv.org/abs/2510.25502",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21450",
+      "identity_tokens": [
+        "arXiv:2510.21450"
+      ],
+      "title": "ParaRNN: Unlocking Parallel Training of Nonlinear RNNs for Large Language Models",
+      "reason": "本文のParaRNNはnonlinear RNNの大規模language-model training parallelizationが主題で、学習効率と訓練時scaleを検証する。inference serving/latency/memory削減は扱わず、対象スコープ外。",
+      "source_url": "https://arxiv.org/abs/2510.21450",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24365",
+      "identity_tokens": [
+        "arXiv:2509.24365"
+      ],
+      "title": "Uni-X: Mitigating Modality Conflict with a Two-End-Separated Architecture for Unified Multimodal Models",
+      "reason": "一次要旨はunified multimodal modelにおけるmodality conflictをアーキテクチャで解消し、task quality/robustnessを狙う。推論資源の効率改善指標やLLM-serving手法は示さない。",
+      "source_url": "https://arxiv.org/abs/2509.24365",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03320",
+      "identity_tokens": [
+        "arXiv:2508.03320"
+      ],
+      "title": "Skywork UniPic: Unified Autoregressive Modeling for Visual Understanding and Generation",
+      "reason": "本文のSkywork UniPicは1.5B unified autoregressive vision modelで、1024px画像を15GB未満GPU memoryで生成するとするcompact deployment候補。一方、比較は視覚生成/理解のtask quality中心で、既存LLM inference memory系統への再現可能なefficient inference baselineが弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.03320",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05668",
+      "identity_tokens": [
+        "arXiv:2506.05668"
+      ],
+      "title": "RNE: plug-and-play diffusion inference-time control and energy-based training",
+      "reason": "本文のRNEはdiffusion model inference-time control/density estimationであり、sample conditioningやtarget alignmentが目的。sampling step数、latency、memoryを削減する推論高速化ではないため、diffusion inference-controlという表題だけでは対象効率に該当しない。",
+      "source_url": "https://arxiv.org/abs/2506.05668",
+      "first_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "last_checked_at": "2026-10-06T17:41:20.511760+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    }
+  ]
+}
