@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r135-screen-01-part-05-d5d8b91954e6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21208",
+      "identity_tokens": [
+        "arXiv:2609.21208"
+      ],
+      "title": "Information-Gain Rewards over Diversity-Pruned Tests: GT-Anchored Verifier Co-Training for Reliable Code Generation",
+      "reason": "一次要旨はコード生成のverifier co-training/RL報酬設計を扱う学習時品質改善であり、servingや推論時資源削減を測定していない。",
+      "source_url": "https://arxiv.org/abs/2609.21208",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.21879",
+      "identity_tokens": [
+        "arXiv:2609.21879"
+      ],
+      "title": "Benchmarking the Explanatory Quality of Open-Weight Vision-Language Models in Face Recognition",
+      "reason": "一次要旨は顔認識VLMの説明品質ベンチマークを構築するもので、推論効率や serving 改善の主張がない。",
+      "source_url": "https://arxiv.org/abs/2609.21879",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.19555",
+      "identity_tokens": [
+        "arXiv:2609.19555"
+      ],
+      "title": "A Multi-Modal Generative Model for Tomato Disease Leaves Understanding",
+      "reason": "一次要旨はトマト病害葉理解のマルチモーダル生成モデルと分類精度を扱い、LLM推論システム効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/2609.19555",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1177/09544062261480780",
+      "identity_tokens": [
+        "DOI:10.1177/09544062261480780"
+      ],
+      "title": "A survey on large model-driven embodied grasping technologies",
+      "reason": "一次出版社要旨を取得できず、題名は大規模モデル駆動の把持技術surveyで推論効率関連を一次本文から確認できないためborderlineにする。",
+      "source_url": "https://doi.org/10.1177/09544062261480780",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.109632",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.109632"
+      ],
+      "title": "CALM: Fine-grained federated unlearning via CLIP-assisted LoRA-MoE memory editing.",
+      "reason": "一次出版社要旨を取得できず、題名はfederated unlearning向けLoRA-MoE memory editingで、モデル学習/forgettingの話か推論memory最適化か一次確認できないため保留する。",
+      "source_url": "https://doi.org/10.1016/j.neunet.2026.109632",
+      "first_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "last_checked_at": "2026-10-06T19:03:36.421155+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    }
+  ]
+}
