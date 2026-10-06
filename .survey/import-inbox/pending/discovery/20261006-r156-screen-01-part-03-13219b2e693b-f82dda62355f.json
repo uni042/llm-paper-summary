@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r156-screen-01-part-03-13219b2e693b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3797552.3797694",
+      "identity_tokens": [
+        "DOI:10.1145/3797552.3797694"
+      ],
+      "title": "Analysis of the Application of DeepSeek in Reference Consultation Services of University Libraries",
+      "reason": "The ACM/publisher primary page denied retrieval; retain as borderline pending accessible publisher or author primary text.",
+      "source_url": "https://doi.org/10.1145/3797552.3797694",
+      "first_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "last_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16653",
+      "identity_tokens": [
+        "arXiv:2511.16653"
+      ],
+      "title": "Teacher-Guided One-Shot Pruning via Context-Aware Knowledge Distillation",
+      "reason": "The full text evaluates image-classification datasets (CIFAR-10/100 and Tiny ImageNet) and pruning quality; it does not evaluate LLM inference or language-model serving.",
+      "source_url": "https://arxiv.org/abs/2511.16653",
+      "first_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "last_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2402.10631-bitdistiller-unleashing-the-potential-of-sub-4-bit-llms-via-self-distill.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/24751839.2025.2587991",
+      "identity_tokens": [
+        "DOI:10.1080/24751839.2025.2587991"
+      ],
+      "title": "From text to idea embeddings: a review on quintessential information extraction",
+      "reason": "This candidate is linked to an LLM inference/serving lineage, but its primary DOI text was inaccessible; retain as borderline rather than screen it out from secondary metadata.",
+      "source_url": "https://doi.org/10.1080/24751839.2025.2587991",
+      "first_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "last_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ASE63991.2025.00209",
+      "identity_tokens": [
+        "DOI:10.1109/ASE63991.2025.00209"
+      ],
+      "title": "Soleker: Uncovering Vulnerabilities in Solana Smart Contracts",
+      "reason": "This candidate is linked to MoE routing/conditional computation, but its primary DOI text was inaccessible; retain as borderline until primary text can confirm whether the connection is substantive.",
+      "source_url": "https://doi.org/10.1109/ASE63991.2025.00209",
+      "first_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "last_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.12376",
+      "identity_tokens": [
+        "arXiv:2511.12376"
+      ],
+      "title": "BitSnap: Checkpoint Sparsification and Quantization in LLM Training",
+      "reason": "The full text evaluates checkpoint compression/sparsification and quantization in the training checkpoint lifecycle; it does not report reduced model inference latency, serving memory, or decoding cost.",
+      "source_url": "https://arxiv.org/abs/2511.12376",
+      "first_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "last_checked_at": "2026-10-06T21:24:18.964662+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ]
+    }
+  ]
+}
