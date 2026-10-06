@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-06T14:27:29.821352+00:00",
-  "status": "issues_found",
+  "checked_at": "2026-10-06T14:47:41.869338+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 41452,
-  "checked_file_count": 41452,
+  "inventory_file_count": 41658,
+  "checked_file_count": 41658,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -25,17 +25,6 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 3026,
-  "findings": [
-    {
-      "code": "invalid_json",
-      "path": ".survey/import-inbox/blocked/discovery/libfile_c700c12c5bcc819183bebda40f119867--discovery-20261006-2301-scheduled-chat-00-r03-partial.json",
-      "detail": "Expecting value: line 1 column 1 (char 0)"
-    },
-    {
-      "code": "invalid_json",
-      "path": ".survey/import-inbox/blocked/discovery/libfile_f30fa5bd8aec8191b99c7d71fa8fcad0--discovery-20261006-2301-scheduled-chat-00-r02.json",
-      "detail": "Expecting value: line 1 column 1 (char 0)"
-    }
-  ]
+  "external_url_count": 3028,
+  "findings": []
 }
