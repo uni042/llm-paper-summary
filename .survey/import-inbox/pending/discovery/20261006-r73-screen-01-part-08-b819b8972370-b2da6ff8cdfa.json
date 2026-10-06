@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r73-screen-01-part-08-b819b8972370",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14664",
+      "identity_tokens": [
+        "arXiv:2608.14664"
+      ],
+      "title": "Quantifying Depth Sufficiency in Residual Neural Networks: A First-Order Criterion",
+      "reason": "The paper proposes a first-order criterion for whether residual depth growth could improve a network, evaluated on ResNets and GPT-style checkpoints. It is a training-time diagnostic, not demonstrated layer pruning or LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2608.14664",
+      "first_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "last_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.01212",
+      "identity_tokens": [
+        "arXiv:2609.01212"
+      ],
+      "title": "Recent developments in Transformer inference deployment on FPGA platforms: A survey",
+      "reason": "This primary source is a systematic survey of Transformer inference deployment on FPGAs, organizing model/compiler/architecture/runtime trade-offs. It is useful serving background but reports no new method or original deployment result.",
+      "source_url": "https://arxiv.org/abs/2609.01212",
+      "first_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "last_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.116183",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.116183"
+      ],
+      "title": "PhysCISC: A process-credibility weighted self-consistency voting framework for physics reasoning with large language models",
+      "reason": "Input has no abstract. Publisher DOI https://doi.org/10.1016/j.asoc.2026.116183 returned Internal Error; relevance cannot be verified.",
+      "source_url": "https://doi.org/10.1016/j.asoc.2026.116183",
+      "first_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "last_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133801",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133801"
+      ],
+      "title": "Mixture-of-experts enhanced dynamic algorithm configuration for multi-objective flexible job shop scheduling",
+      "reason": "Abstract and metadata in the exact input packet.",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.133801",
+      "first_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "last_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.134149",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.134149"
+      ],
+      "title": "LLM-Driven Location Completion and Test-Time Training for Next Location Prediction",
+      "reason": "Input has no abstract. DOI https://doi.org/10.1016/j.eswa.2026.134149 was inaccessible; direct ScienceDirect fetch returned Cache miss. Title suggests LLM test-time training for location prediction, but relevance is unverified.",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.134149",
+      "first_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "last_checked_at": "2026-10-06T09:42:33.030255+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    }
+  ]
+}
