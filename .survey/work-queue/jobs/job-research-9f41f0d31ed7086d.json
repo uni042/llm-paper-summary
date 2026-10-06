@@ -35,10 +35,15 @@
   "selection_reason": "実LLM推論のenergy/latency/throughputを、vLLM/PyTorch、speculative decoding、continuous batching、CUDA Graph、tensor parallelism、GPU世代、入出力長・batch sizeを横断して測定する。推論最適化の適用でunoptimized baseline比最大73%のenergy削減を報告し、推論評価・serving最適化に直接該当する。",
   "semantic_scholar_id": "fd539b0c6279997a8b8aaf6ff1f2677cc9e011bd",
   "source_url": "https://arxiv.org/abs/2504.17674",
-  "status": "ready",
+  "status": "superseded",
   "title": "Energy Considerations of Large Language Model Inference and Efficiency Optimizations",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-06T14:08:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md",
+  "represented_canonical_id": "arXiv:2504.17674",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
