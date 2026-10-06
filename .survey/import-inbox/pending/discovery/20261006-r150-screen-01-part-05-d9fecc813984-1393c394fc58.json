@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r150-screen-01-part-05-d9fecc813984",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CI2A69097.2026.11576873",
+      "identity_tokens": [
+        "DOI:10.1109/CI2A69097.2026.11576873"
+      ],
+      "title": "Integrating Mamba State-Space Models into Boltz for Enhanced 3D Protein Structure Prediction",
+      "reason": "linked sparse-attention lineageを持つが一次本文未取得。対象範囲と関係を確認できないためborderline。",
+      "source_url": "https://doi.org/10.1109/CI2A69097.2026.11576873",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01851",
+      "identity_tokens": [
+        "arXiv:2604.01851"
+      ],
+      "title": "Can Large Language Models Model Programs Formally?",
+      "reason": "arXiv abstract evaluates whether LLMs model programs formally; the contribution concerns formal reasoning capability rather than inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.01851",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3085134",
+      "identity_tokens": [
+        "DOI:10.1117/12.3085134"
+      ],
+      "title": "SAVI: slope-aware sparse-view sinogram interpolation",
+      "reason": "一次資料取得不能で、対象との関係および将来解決可能性を確定できない。",
+      "source_url": "https://doi.org/10.1117/12.3085134",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1186/s13321-026-01177-7",
+      "identity_tokens": [
+        "DOI:10.1186/s13321-026-01177-7"
+      ],
+      "title": "A pipeline for developing AI-driven models to predict molecular initiating events: a case study on neural tube defects",
+      "reason": "PyTorch compile lineageが付与されているためタイトルだけで除外せず、技術接点未確認としてborderline。",
+      "source_url": "https://doi.org/10.1186/s13321-026-01177-7",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.03.31.715659",
+      "identity_tokens": [
+        "DOI:10.64898/2026.03.31.715659"
+      ],
+      "title": "StrataBionn: a neural network supervised classification method for microbial communities",
+      "reason": "PyTorch compile lineageが付与されているが、同一の実装/最適化手法を使うか確認不能。",
+      "source_url": "https://doi.org/10.64898/2026.03.31.715659",
+      "first_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "last_checked_at": "2026-10-06T20:52:26.809415+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
