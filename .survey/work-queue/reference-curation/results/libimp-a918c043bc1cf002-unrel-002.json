@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a918c043bc1cf002-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2311.13225",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2311.13225",
+    "identity_tokens": [
+      "arXiv:2311.13225"
+    ],
+    "reason": "Methods and evaluation optimize GNN sampling/training and host-device movement; no LLM or inference-serving method.",
+    "first_checked_at": "2026-10-06T17:25:06+00:00",
+    "last_checked_at": "2026-10-06T17:25:06+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
+    "title": "NeutronOrch: Rethinking Sample-based GNN Training under CPU-GPU Heterogeneous Environments"
+  },
+  "processed_at": "2026-10-06T17:25:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a918c043bc1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:15:20+00:00",
-  "record_count": 9022,
+  "updated_at": "2026-10-06T17:25:08+00:00",
+  "record_count": 9046,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -129406,6 +129406,344 @@
         "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
       ],
       "title": "Generative AI: driving productivity and scientific breakthroughs in pharmaceutical R&D."
+    },
+    "arXiv:2506.22712": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22712",
+      "identity_tokens": [
+        "arXiv:2506.22712"
+      ],
+      "reason": "Conclusion and limitations discuss model alignment, interpolation barriers, and model-space geometry; no inference compute, memory, latency, throughput, quantization, or serving intervention is proposed.",
+      "first_checked_at": "2026-10-06T17:24:58+00:00",
+      "last_checked_at": "2026-10-06T17:24:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md"
+      ],
+      "title": "Generalized Linear Mode Connectivity for Transformers"
+    },
+    "arXiv:2504.20168": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.20168",
+      "identity_tokens": [
+        "arXiv:2504.20168"
+      ],
+      "reason": "Methods, experiments, and limitations evaluate calibration and tool-calling utility; it requires access to intermediate model states and offers no inference-resource reduction.",
+      "first_checked_at": "2026-10-06T17:24:58+00:00",
+      "last_checked_at": "2026-10-06T17:24:58+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md"
+      ],
+      "title": "MICE for CATs: Model-Internal Confidence Estimation for Calibrating Agents with Tools"
+    },
+    "arXiv:2410.06617": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06617",
+      "identity_tokens": [
+        "arXiv:2410.06617"
+      ],
+      "reason": "Conclusion confirms tool-variability adaptation and benchmark performance; it does not optimize model memory, compute, latency, or serving.",
+      "first_checked_at": "2026-10-06T17:24:58+00:00",
+      "last_checked_at": "2026-10-06T17:24:58+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Learning Evolving Tools for Large Language Models"
+    },
+    "arXiv:2510.24711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24711",
+      "identity_tokens": [
+        "arXiv:2510.24711"
+      ],
+      "reason": "Methods and experiments target image-token expert specialization and diffusion generation quality, not language-model inference.",
+      "first_checked_at": "2026-10-06T17:24:59+00:00",
+      "last_checked_at": "2026-10-06T17:24:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing Guidance"
+    },
+    "arXiv:2411.16204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.16204",
+      "identity_tokens": [
+        "arXiv:2411.16204"
+      ],
+      "reason": "Scope is national HPC energy operations, not LLM inference algorithms or serving.",
+      "first_checked_at": "2026-10-06T17:25:00+00:00",
+      "last_checked_at": "2026-10-06T17:25:00+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Energy-aware operation of HPC systems in Germany"
+    },
+    "arXiv:2406.14318": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.14318",
+      "identity_tokens": [
+        "arXiv:2406.14318"
+      ],
+      "reason": "Paper addresses prompt design/privacy concerns, not inference efficiency.",
+      "first_checked_at": "2026-10-06T17:25:00+00:00",
+      "last_checked_at": "2026-10-06T17:25:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md"
+      ],
+      "title": "The Fire Thief Is Also the Keeper: Balancing Usability and Privacy in Prompts"
+    },
+    "arXiv:2503.07197": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.07197",
+      "identity_tokens": [
+        "arXiv:2503.07197"
+      ],
+      "reason": "Methods and evaluation concern diffusion/image generation quality and sampling, not LLM serving.",
+      "first_checked_at": "2026-10-06T17:25:00+00:00",
+      "last_checked_at": "2026-10-06T17:25:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Effective and Efficient Masked Image Generation Models"
+    },
+    "arXiv:2410.13111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.13111",
+      "identity_tokens": [
+        "arXiv:2410.13111"
+      ],
+      "reason": "Full text addresses exact constrained sampling and control quality; no demonstrated reduction in LLM compute, memory, latency, or serving cost.",
+      "first_checked_at": "2026-10-06T17:25:01+00:00",
+      "last_checked_at": "2026-10-06T17:25:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ],
+      "title": "Controllable Generation via Locally Constrained Resampling"
+    },
+    "arXiv:2410.06020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06020",
+      "identity_tokens": [
+        "arXiv:2410.06020"
+      ],
+      "reason": "Experiments use computer-vision domain-generalization benchmarks and image classifiers; quantization is incidental to visual robustness, not LLM inference.",
+      "first_checked_at": "2026-10-06T17:25:01+00:00",
+      "last_checked_at": "2026-10-06T17:25:01+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ],
+      "title": "QT-DoG: Quantization-aware Training for Domain Generalization"
+    },
+    "DOI:10.52202/079017-0322": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-0322",
+      "identity_tokens": [
+        "DOI:10.52202/079017-0322"
+      ],
+      "reason": "Full paper evaluates spiking/image or neuromorphic models rather than LLM inference; no LLM serving/quantization intervention.",
+      "first_checked_at": "2026-10-06T17:25:01+00:00",
+      "last_checked_at": "2026-10-06T17:25:01+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Spiking Transformer with Experts Mixture"
+    },
+    "arXiv:2510.03280": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.03280",
+      "identity_tokens": [
+        "arXiv:2510.03280"
+      ],
+      "reason": "Paper is explicitly about training-optimal model/data allocation, not inference-time efficiency.",
+      "first_checked_at": "2026-10-06T17:25:01+00:00",
+      "last_checked_at": "2026-10-06T17:25:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Training Optimal Large Diffusion Language Models"
+    },
+    "arXiv:2509.24322": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24322",
+      "identity_tokens": [
+        "arXiv:2509.24322"
+      ],
+      "reason": "Survey scope is emotion tasks, datasets, model architectures, and benchmarks; no inference-efficiency method is evaluated.",
+      "first_checked_at": "2026-10-06T17:25:02+00:00",
+      "last_checked_at": "2026-10-06T17:25:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Multimodal Large Language Models Meet Multimodal Emotion Recognition and Reasoning: A Survey"
+    },
+    "arXiv:2504.16420": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16420",
+      "identity_tokens": [
+        "arXiv:2504.16420"
+      ],
+      "reason": "Full survey conclusion and taxonomy focus recommendation applications and research opportunities; it does not present a general LLM-serving optimization.",
+      "first_checked_at": "2026-10-06T17:25:02+00:00",
+      "last_checked_at": "2026-10-06T17:25:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "A Survey of Foundation Model-Powered Recommender Systems: From Feature-Based, Generative to Agentic Paradigms"
+    },
+    "arXiv:2411.14519": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14519",
+      "identity_tokens": [
+        "arXiv:2411.14519"
+      ],
+      "reason": "Methods/evaluation concern robot trajectories and policy conditioning; no LLM inference optimization.",
+      "first_checked_at": "2026-10-06T17:25:03+00:00",
+      "last_checked_at": "2026-10-06T17:25:03+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ],
+      "title": "Tra-MoE: Learning Trajectory Prediction Model from Multiple Domains for Adaptive Policy Conditioning"
+    },
+    "arXiv:2506.05320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05320",
+      "identity_tokens": [
+        "arXiv:2506.05320"
+      ],
+      "reason": "Evaluation is neural-signal decoding rather than language-model inference or serving.",
+      "first_checked_at": "2026-10-06T17:25:03+00:00",
+      "last_checked_at": "2026-10-06T17:25:03+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Generalizable, real-time neural decoding with hybrid state-space models"
+    },
+    "arXiv:2505.17741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17741",
+      "identity_tokens": [
+        "arXiv:2505.17741"
+      ],
+      "reason": "Its Transformer parameterization improves sampler training efficiency for non-language applications; no LLM inference result.",
+      "first_checked_at": "2026-10-06T17:25:03+00:00",
+      "last_checked_at": "2026-10-06T17:25:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "Discrete Neural Flow Samplers with Locally Equivariant Transformer"
+    },
+    "arXiv:2510.27186": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.27186",
+      "identity_tokens": [
+        "arXiv:2510.27186"
+      ],
+      "reason": "Evaluation is vision-model inversion, not language-model inference efficiency.",
+      "first_checked_at": "2026-10-06T17:25:05+00:00",
+      "last_checked_at": "2026-10-06T17:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "title": "Sparse Model Inversion: Efficient Inversion of Vision Transformers for Data-Free Applications"
+    },
+    "arXiv:2506.17252": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.17252",
+      "identity_tokens": [
+        "arXiv:2506.17252"
+      ],
+      "reason": "Contribution is training-data scheduling and alignment quality, not inference-serving efficiency.",
+      "first_checked_at": "2026-10-06T17:25:05+00:00",
+      "last_checked_at": "2026-10-06T17:25:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "title": "Adaptive Batch-Wise Sample Scheduling for Direct Preference Optimization"
+    },
+    "arXiv:2311.13225": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.13225",
+      "identity_tokens": [
+        "arXiv:2311.13225"
+      ],
+      "reason": "Methods and evaluation optimize GNN sampling/training and host-device movement; no LLM or inference-serving method.",
+      "first_checked_at": "2026-10-06T17:25:06+00:00",
+      "last_checked_at": "2026-10-06T17:25:06+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "NeutronOrch: Rethinking Sample-based GNN Training under CPU-GPU Heterogeneous Environments"
+    },
+    "arXiv:2310.12821": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.12821",
+      "identity_tokens": [
+        "arXiv:2310.12821"
+      ],
+      "reason": "Full paper evaluates zero-shot hand-gesture interaction; no model-serving efficiency method.",
+      "first_checked_at": "2026-10-06T17:25:06+00:00",
+      "last_checked_at": "2026-10-06T17:25:06+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "GestureGPT: Toward Zero-Shot Free-Form Hand Gesture Understanding with Large Language Model Agents"
+    },
+    "arXiv:2510.24963": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.24963",
+      "identity_tokens": [
+        "arXiv:2510.24963"
+      ],
+      "reason": "Analysis addresses behavior and scaling consistency, not inference efficiency.",
+      "first_checked_at": "2026-10-06T17:25:06+00:00",
+      "last_checked_at": "2026-10-06T17:25:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Language Model Behavioral Phases are Consistent Across Architecture, Training Data, and Scale"
+    },
+    "arXiv:2503.13551": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13551",
+      "identity_tokens": [
+        "arXiv:2503.13551"
+      ],
+      "reason": "Contribution concerns reward-model training and reasoning assessment, not serving-time efficiency.",
+      "first_checked_at": "2026-10-06T17:25:07+00:00",
+      "last_checked_at": "2026-10-06T17:25:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Towards Hierarchical Multi-Step Reward Models for Enhanced Reasoning in Large Language Models"
+    },
+    "arXiv:2410.08703": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.08703",
+      "identity_tokens": [
+        "arXiv:2410.08703"
+      ],
+      "reason": "Analysis focuses positional modeling and context behavior; no efficiency intervention or serving metric is established.",
+      "first_checked_at": "2026-10-06T17:25:07+00:00",
+      "last_checked_at": "2026-10-06T17:25:07+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "On the token distance modeling ability of higher RoPE attention dimension"
+    },
+    "arXiv:2410.02939": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02939",
+      "identity_tokens": [
+        "arXiv:2410.02939"
+      ],
+      "reason": "Full text evaluates candidate drafting and verification for recommender item generation, not general-purpose LLM decoding.",
+      "first_checked_at": "2026-10-06T17:25:08+00:00",
+      "last_checked_at": "2026-10-06T17:25:08+00:00",
+      "linked_from": [
+        "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "title": "Inductive Generative Recommendation via Retrieval-based Speculation"
     }
   }
 }

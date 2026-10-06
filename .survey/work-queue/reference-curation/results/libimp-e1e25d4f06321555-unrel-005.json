@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e1e25d4f06321555-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2410.02939",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2410.02939",
+    "identity_tokens": [
+      "arXiv:2410.02939"
+    ],
+    "reason": "Full text evaluates candidate drafting and verification for recommender item generation, not general-purpose LLM decoding.",
+    "first_checked_at": "2026-10-06T17:25:08+00:00",
+    "last_checked_at": "2026-10-06T17:25:08+00:00",
+    "linked_from": [
+      "papers/inference/04-conditional-computation/2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md",
+      "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+    ],
+    "title": "Inductive Generative Recommendation via Retrieval-based Speculation"
+  },
+  "processed_at": "2026-10-06T17:25:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e1e25d4f0632",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
