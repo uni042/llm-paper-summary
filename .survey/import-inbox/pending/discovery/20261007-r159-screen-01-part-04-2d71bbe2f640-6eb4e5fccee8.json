@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261007-r159-screen-01-part-04-2d71bbe2f640",
+  "reference_main_sha": "9851be8d4f698de397ea71ee818efa1c6f5dc5a3",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/COMST.2024.3393230",
+      "identity_tokens": [
+        "DOI:10.1109/COMST.2024.3393230"
+      ],
+      "title": "End-Edge-Cloud Collaborative Computing for Deep Learning: A Comprehensive Survey",
+      "reason": "Borderline as deployment/offload background: it reviews inference partitioning and compression that could transfer to LLMs, but the paper is a general DL survey and presents no LLM-specific deployment evidence or original method.",
+      "source_url": "https://doi.org/10.1109/COMST.2024.3393230",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20857",
+      "identity_tokens": [
+        "arXiv:2511.20857"
+      ],
+      "title": "Evo-Memory: Benchmarking LLM Agent Test-time Learning with Self-Evolving Memory",
+      "reason": "This is relevant to the persistent-memory lineage, but the source is an evaluation benchmark rather than a proposed efficiency method. It fixes API budgets and measures memory/agent performance, without establishing lower tokens, calls, latency, or compute; retain as borderline background.",
+      "source_url": "https://arxiv.org/abs/2511.20857",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2206.12126",
+      "identity_tokens": [
+        "arXiv:2206.12126"
+      ],
+      "title": "Temporal Attention Unit: Towards Efficient Spatiotemporal Predictive Learning",
+      "reason": "The abstract frames the method around spatial encoders/decoders and temporal prediction for video; no LLM serving improvement is described.",
+      "source_url": "https://arxiv.org/abs/2206.12126",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.11423",
+      "identity_tokens": [
+        "arXiv:2403.11423"
+      ],
+      "title": "VmambaIR: Visual State Space Model for Image Restoration",
+      "reason": "Its target is low-level vision restoration and image-quality benchmarks, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2403.11423",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20540",
+      "identity_tokens": [
+        "arXiv:2601.20540"
+      ],
+      "title": "Advancing Open-source World Models",
+      "reason": "The source’s architecture is a DiT video generator with visual latent/action conditioning. Although it discusses real-time interaction and inference compute, the evaluation and optimizations are video-world generation, not language-model inference.",
+      "source_url": "https://arxiv.org/abs/2601.20540",
+      "first_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "last_checked_at": "2026-10-06T23:45:29.976082+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
