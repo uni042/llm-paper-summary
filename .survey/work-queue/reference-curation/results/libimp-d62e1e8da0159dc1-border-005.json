@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d62e1e8da0159dc1-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.08537",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.08537",
+    "identity_tokens": [
+      "arXiv:2512.08537"
+    ],
+    "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+    "first_checked_at": "2026-10-06T15:50:58+00:00",
+    "last_checked_at": "2026-10-06T15:50:58+00:00",
+    "linked_from": [
+      "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Fast-ARDiff: An Entropy-informed Acceleration Framework for Continuous Space Autoregressive Generation"
+  },
+  "processed_at": "2026-10-06T15:50:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d62e1e8da015",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T15:08:14+00:00",
-  "record_count": 3275,
+  "updated_at": "2026-10-06T15:50:59+00:00",
+  "record_count": 3297,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -50177,6 +50177,339 @@
       ],
       "borderline_recheck_count": 0,
       "title": "The Coupling Within: Flow Matching via Distilled Normalizing Flows"
+    },
+    "arXiv:2609.22978": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.22978",
+      "identity_tokens": [
+        "arXiv:2609.22978"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:47+00:00",
+      "last_checked_at": "2026-10-06T15:50:47+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DeepSeek Elastic Compute (DSec): A Sandbox Infrastructure for Effective Agentic Training at Scale"
+    },
+    "arXiv:2511.17601": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17601",
+      "identity_tokens": [
+        "arXiv:2511.17601"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:48+00:00",
+      "last_checked_at": "2026-10-06T15:50:48+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Generalizable and Efficient Automated Scoring with a Knowledge-Distilled Multi-Task Mixture-of-Experts"
+    },
+    "arXiv:2511.09146": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09146",
+      "identity_tokens": [
+        "arXiv:2511.09146"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:49+00:00",
+      "last_checked_at": "2026-10-06T15:50:49+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DoPE: Denoising Rotary Position Embedding"
+    },
+    "arXiv:2511.18690": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.18690",
+      "identity_tokens": [
+        "arXiv:2511.18690"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:49+00:00",
+      "last_checked_at": "2026-10-06T15:50:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM4AMC: Adapting Large Language Models for Adaptive Modulation and Coding"
+    },
+    "arXiv:2511.17849": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17849",
+      "identity_tokens": [
+        "arXiv:2511.17849"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:49+00:00",
+      "last_checked_at": "2026-10-06T15:50:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pier: Efficient Large Language Model pretraining with Relaxed Global Communication"
+    },
+    "DOI:10.1016/j.jvcir.2025.104704": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jvcir.2025.104704",
+      "identity_tokens": [
+        "DOI:10.1016/j.jvcir.2025.104704"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:50+00:00",
+      "last_checked_at": "2026-10-06T15:50:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LaDeL: Lane detection via multimodal large language model with visual instruction tuning"
+    },
+    "DOI:10.1016/j.neucom.2025.131720": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.131720",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.131720"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:50+00:00",
+      "last_checked_at": "2026-10-06T15:50:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AutoODL: Automated on-device learning via dynamic unfreezing and semi-supervised labeling for edge AI"
+    },
+    "DOI:10.3390/sym18010063": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/sym18010063",
+      "identity_tokens": [
+        "DOI:10.3390/sym18010063"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:51+00:00",
+      "last_checked_at": "2026-10-06T15:50:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "IoT Network Security Threat Detection Algorithm Integrating Symmetric Routing and a Sparse Mixture-of-Experts Model"
+    },
+    "arXiv:2512.07539": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.07539",
+      "identity_tokens": [
+        "arXiv:2512.07539"
+      ],
+      "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+      "first_checked_at": "2026-10-06T15:50:51+00:00",
+      "last_checked_at": "2026-10-06T15:50:51+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FRWKV:Frequency-Domain Linear Attention for Long-Term Time Series Forecasting"
+    },
+    "DOI:10.1109/bigdata66926.2025.11402192": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/bigdata66926.2025.11402192",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata66926.2025.11402192"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:51+00:00",
+      "last_checked_at": "2026-10-06T15:50:51+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Knowledge Graph-Guided Deep Reinforcement Learning with Hierarchical Semantics Transformer for Portfolio Management"
+    },
+    "arXiv:2512.06784": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06784",
+      "identity_tokens": [
+        "arXiv:2512.06784"
+      ],
+      "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+      "first_checked_at": "2026-10-06T15:50:52+00:00",
+      "last_checked_at": "2026-10-06T15:50:52+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Stable-MoE: Lyapunov-Based Token Routing for Distributed Mixture-of-Experts Training Over Edge Networks"
+    },
+    "DOI:10.1016/j.neucom.2025.132447": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.132447",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.132447"
+      ],
+      "reason": "題名・要旨または既存系統リンクには関連可能性が残るが、一次本文の手法・評価・限界を確認できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:50:52+00:00",
+      "last_checked_at": "2026-10-06T15:50:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Retrieving on a topic graph for long document question answering"
+    },
+    "DOI:10.1109/mwc.2025.3599652": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mwc.2025.3599652",
+      "identity_tokens": [
+        "DOI:10.1109/mwc.2025.3599652"
+      ],
+      "reason": "題名・要旨または既存系統リンクには関連可能性が残るが、一次本文の手法・評価・限界を確認できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:50:52+00:00",
+      "last_checked_at": "2026-10-06T15:50:52+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge Intelligence in the Generative Artificial Intelligence Era"
+    },
+    "arXiv:2608.17095": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.17095",
+      "identity_tokens": [
+        "arXiv:2608.17095"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:53+00:00",
+      "last_checked_at": "2026-10-06T15:50:53+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference-Time Attention Steering for Vision-Language-Action Driving Models"
+    },
+    "DOI:10.1016/j.ins.2026.123106": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123106",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123106"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:54+00:00",
+      "last_checked_at": "2026-10-06T15:50:54+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Heuristic-informed mixture of experts for link prediction in multilayer networks"
+    },
+    "arXiv:2609.30706": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30706",
+      "identity_tokens": [
+        "arXiv:2609.30706"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:56+00:00",
+      "last_checked_at": "2026-10-06T15:50:56+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LAVOIR: Teaching a Single-Pass Decision Encoder When and What to Ask with Amortized Value of Information"
+    },
+    "arXiv:2609.25655": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.25655",
+      "identity_tokens": [
+        "arXiv:2609.25655"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:56+00:00",
+      "last_checked_at": "2026-10-06T15:50:56+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Experts to Sub-experts: Fine-grained Parameter-Efficient Fine-Tuning for MoE LLMs"
+    },
+    "arXiv:2609.00744": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.00744",
+      "identity_tokens": [
+        "arXiv:2609.00744"
+      ],
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "first_checked_at": "2026-10-06T15:50:57+00:00",
+      "last_checked_at": "2026-10-06T15:50:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Price of Remembering: A Calibrated Energy Law for Computation"
+    },
+    "arXiv:2512.08537": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08537",
+      "identity_tokens": [
+        "arXiv:2512.08537"
+      ],
+      "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+      "first_checked_at": "2026-10-06T15:50:58+00:00",
+      "last_checked_at": "2026-10-06T15:50:58+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast-ARDiff: An Entropy-informed Acceleration Framework for Continuous Space Autoregressive Generation"
+    },
+    "DOI:10.1007/s41060-025-00943-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s41060-025-00943-4",
+      "identity_tokens": [
+        "DOI:10.1007/s41060-025-00943-4"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:59+00:00",
+      "last_checked_at": "2026-10-06T15:50:59+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Docsentinet: a adaptive architecture for efficient document-level sentiment analysis"
+    },
+    "DOI:10.1016/j.engappai.2025.112765": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.112765",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.112765"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:59+00:00",
+      "last_checked_at": "2026-10-06T15:50:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A structure-aware routing based anomaly detection for industrial multi-sensor time series"
+    },
+    "DOI:10.1016/j.neucom.2025.132252": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.132252",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.132252"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:50:59+00:00",
+      "last_checked_at": "2026-10-06T15:50:59+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A modular deep learning methodology for multi-fault machine health diagnostics from sparse and imbalanced multimodal data"
     }
   }
 }

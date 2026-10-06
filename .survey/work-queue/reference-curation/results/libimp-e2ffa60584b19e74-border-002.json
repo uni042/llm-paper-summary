@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e2ffa60584b19e74-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1007/s41060-025-00943-4",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1007/s41060-025-00943-4",
+    "identity_tokens": [
+      "DOI:10.1007/s41060-025-00943-4"
+    ],
+    "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+    "first_checked_at": "2026-10-06T15:50:59+00:00",
+    "last_checked_at": "2026-10-06T15:50:59+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md",
+      "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Docsentinet: a adaptive architecture for efficient document-level sentiment analysis"
+  },
+  "processed_at": "2026-10-06T15:50:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e2ffa60584b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
