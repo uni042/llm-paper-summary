@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r102-screen-01-part-05-4d872bc2510c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06798",
+      "identity_tokens": [
+        "arXiv:2511.06798"
+      ],
+      "title": "Recursive Dynamics in Fast-Weights Homeostatic Reentry Networks: Toward Reflective Intelligence",
+      "reason": "要旨の主題はLLM推論システムではなく、計算量・メモリ・遅延・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://arxiv.org/abs/2511.06798",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.06804",
+      "identity_tokens": [
+        "arXiv:2511.06804"
+      ],
+      "title": "AgentSUMO: An Agentic Framework for Interactive Simulation Scenario Generation in SUMO via Large Language Models",
+      "reason": "要旨の主題はLLM推論システムではなく、計算量・メモリ・遅延・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://arxiv.org/abs/2511.06804",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.watres.2026.126135",
+      "identity_tokens": [
+        "DOI:10.1016/j.watres.2026.126135"
+      ],
+      "title": "A Transformer-Mamba framework for cross-regional long-term forecasting of key water quality in aquaculture.",
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "source_url": "https://doi.org/10.1016/j.watres.2026.126135",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16347",
+      "identity_tokens": [
+        "arXiv:2608.16347"
+      ],
+      "title": "Architecture-Dependent Causal Transfer of Activation States Across Large Language Models",
+      "reason": "The linked cache theme is indirect; experiments avoid cache reuse and do not optimize inference.",
+      "source_url": "https://arxiv.org/abs/2608.16347",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.16887",
+      "identity_tokens": [
+        "arXiv:2608.16887"
+      ],
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "reason": "Empirical comparisons concern training pixel-space text-to-image diffusion models and generation quality. It does not propose attention-kernel or LLM inference improvements; scope is diffusion training.",
+      "source_url": "https://arxiv.org/abs/2608.16887",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md"
+      ]
+    }
+  ]
+}
