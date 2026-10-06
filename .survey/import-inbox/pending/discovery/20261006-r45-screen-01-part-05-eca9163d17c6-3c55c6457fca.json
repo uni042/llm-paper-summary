@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r45-screen-01-part-05-eca9163d17c6",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18222",
+      "identity_tokens": [
+        "arXiv:2608.18222"
+      ],
+      "title": "Think Shallow, Solve Deep: Controlling Recurrent Dynamics for Reliable Test-Time Depth",
+      "reason": "This paper studies safe recurrent test-time depth on small algorithmic tasks and checks consistency on Huginn-3.5B. It offers a potential basis for deciding when to stop loops, but does not demonstrate reduced inference compute at matched quality on general serving workloads.",
+      "source_url": "https://arxiv.org/abs/2608.18222",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.11233",
+      "identity_tokens": [
+        "arXiv:2608.11233"
+      ],
+      "title": "Retrofitting Recurrent Depth into a Pretrained Language Model: Installation, Extrapolation, Transfer, and Retention at Two Parameter Budgets",
+      "reason": "The retrofit adds a recurrent block to Qwen2.5-0.5B and reports accuracy/depth results on controlled tasks. Its limitations explicitly say inference compute, FLOPs, and latency are not matched; additional loops may raise cost, so direct serving efficiency is unresolved.",
+      "source_url": "https://arxiv.org/abs/2608.11233",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.22925",
+      "identity_tokens": [
+        "arXiv:2607.22925"
+      ],
+      "title": "Not All LLM Reasoning is Visible in the Chain-of-Thought",
+      "reason": "Studies hidden reasoning/filler tokens and safety monitoring, not an efficiency method.",
+      "source_url": "https://arxiv.org/abs/2607.22925",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.20594",
+      "identity_tokens": [
+        "arXiv:2607.20594"
+      ],
+      "title": "When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers",
+      "reason": "Primary text limits its claims to weight-tied loops on algorithmic sequence tasks at ≤25M parameters and explicitly leaves pretrained depth-recurrent LMs out of scope; it provides no applicable LLM serving result.",
+      "source_url": "https://arxiv.org/abs/2607.20594",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24898",
+      "identity_tokens": [
+        "arXiv:2606.24898"
+      ],
+      "title": "Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models",
+      "reason": "This work diagnoses hidden-state scale growth in 44M/129M looped LMs and proposes scale-visible readouts/penalties or scale-removing recurrence. It is primarily a training/stability analysis and reports no direct serving throughput or latency benefit.",
+      "source_url": "https://arxiv.org/abs/2606.24898",
+      "first_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "last_checked_at": "2026-10-06T06:01:56.166205+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    }
+  ]
+}
