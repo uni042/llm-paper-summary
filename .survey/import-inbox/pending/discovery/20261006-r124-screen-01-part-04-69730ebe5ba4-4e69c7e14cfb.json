@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r124-screen-01-part-04-69730ebe5ba4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.09022",
+      "identity_tokens": [
+        "arXiv:2505.09022"
+      ],
+      "title": "Block-Biased Mamba for Long-Range Sequence Processing",
+      "reason": "本文のB2S6はMambaにblock structureとchannel biasを加えて長距離系列処理/accuracyを評価するが、主目的は効率化でなくsequence modelingの表現力・training stability。language modelingは予備評価でfrontier-scale serving latency/memory測定がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2505.09022",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21592",
+      "identity_tokens": [
+        "arXiv:2503.21592"
+      ],
+      "title": "Simple and Critical Iterative Denoising: A Recasting of Discrete Diffusion in Graph Generation",
+      "reason": "一次要旨の対象はgraph generation用のdiscrete diffusion denoisingで、LLM推論やserving効率の手法・測定を含まない。",
+      "source_url": "https://arxiv.org/abs/2503.21592",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.12155",
+      "identity_tokens": [
+        "arXiv:2411.12155"
+      ],
+      "title": "Coarse-to-fine Q-Network with Action Sequence for Data-Efficient Reinforcement Learning",
+      "reason": "一次要旨のcoarse-to-fine Q-networkはrobotic/RL action sequenceを使って探索サンプル効率を上げる研究であり、LLMを用いた推論や生成model効率には関係しない。",
+      "source_url": "https://arxiv.org/abs/2411.12155",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.05395",
+      "identity_tokens": [
+        "arXiv:2409.05395"
+      ],
+      "title": "Shaking Up VLMs: Comparing Transformers and Structured State Space Models for Vision & Language Modeling",
+      "reason": "本文はVLMでTransformerとMambaの品質を比較するモデル研究で、対象自体は隣接するsequence architectureだが、推論latency/throughput/memoryやefficient deploymentを検証していない。効率の根拠がないためborderlineに留める。",
+      "source_url": "https://arxiv.org/abs/2409.05395",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.18508",
+      "identity_tokens": [
+        "arXiv:2402.18508"
+      ],
+      "title": "Orchid: Flexible and Data-Dependent Convolution for Sequence Modeling",
+      "reason": "本文のOrchidはdata-dependent convolutionをsequence modelingに導入するが、結論/将来課題でcausal autoregressive LMへの拡張を今後の作業としている。現評価はautoregressive LLM inferenceやserving効率を示さず、lineageリンクだけでは対象に入らない。",
+      "source_url": "https://arxiv.org/abs/2402.18508",
+      "first_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "last_checked_at": "2026-10-06T17:34:24.690578+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    }
+  ]
+}
