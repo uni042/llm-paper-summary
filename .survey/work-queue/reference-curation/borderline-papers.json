@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:40:16+00:00",
-  "record_count": 2360,
+  "updated_at": "2026-10-06T06:43:21+00:00",
+  "record_count": 2368,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -36346,6 +36346,127 @@
       ],
       "borderline_recheck_count": 0,
       "title": "BiT: Robustly Binarized Multi-distilled Transformer"
+    },
+    "arXiv:2609.11929": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11929",
+      "identity_tokens": [
+        "arXiv:2609.11929"
+      ],
+      "reason": "An architecture with sparse activated parameters is adjacent, but the paper does not isolate or demonstrate a concrete LLM/VLM runtime or resource improvement.",
+      "first_checked_at": "2026-10-06T06:43:20+00:00",
+      "last_checked_at": "2026-10-06T06:43:20+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SenseNova-U1.5: Towards Native Unified Visual Intelligence"
+    },
+    "arXiv:2512.17901": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.17901",
+      "identity_tokens": [
+        "arXiv:2512.17901"
+      ],
+      "reason": "Potential background for efficient-reasoning research, but no actionable inference-efficiency method is evaluated.",
+      "first_checked_at": "2026-10-06T06:43:20+00:00",
+      "last_checked_at": "2026-10-06T06:43:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Reasoning Meets Its Laws"
+    },
+    "arXiv:2512.13492": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13492",
+      "identity_tokens": [
+        "arXiv:2512.13492"
+      ],
+      "reason": "The sparse-attention lineage is adjacent, but primary evaluation concerns diffusion video generation rather than language-model serving.",
+      "first_checked_at": "2026-10-06T06:43:20+00:00",
+      "last_checked_at": "2026-10-06T06:43:20+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Transform Trained Transformer: Accelerating Naive 4K Video Generation Over 10⨉"
+    },
+    "arXiv:2511.21882": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21882",
+      "identity_tokens": [
+        "arXiv:2511.21882"
+      ],
+      "reason": "It is adjacent to recurrent-depth reasoning, but the tested method increases inference computation substantially.",
+      "first_checked_at": "2026-10-06T06:43:21+00:00",
+      "last_checked_at": "2026-10-06T06:43:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Closed-Loop Transformers: Autoregressive Modeling as Iterative Latent Equilibrium"
+    },
+    "arXiv:2511.05476": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.05476",
+      "identity_tokens": [
+        "arXiv:2511.05476"
+      ],
+      "reason": "Relevant to quality auditing of compressed models, but it contributes an evaluation framework rather than an inference optimization.",
+      "first_checked_at": "2026-10-06T06:43:21+00:00",
+      "last_checked_at": "2026-10-06T06:43:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Metamorphic Testing Perspective on Knowledge Distillation for Language Models of Code: Does the Student Deeply Mimic the Teacher?"
+    },
+    "arXiv:2511.03328": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03328",
+      "identity_tokens": [
+        "arXiv:2511.03328"
+      ],
+      "reason": "It is a benchmark related to reasoning cost, but it does not provide an inference-efficiency method or direct cost comparison.",
+      "first_checked_at": "2026-10-06T06:43:21+00:00",
+      "last_checked_at": "2026-10-06T06:43:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Benchmarking the Thinking Mode of Multimodal Large Language Models in Clinical Tasks"
+    },
+    "arXiv:2609.13814": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13814",
+      "identity_tokens": [
+        "arXiv:2609.13814"
+      ],
+      "reason": "System design is relevant to serving, but no verified end-to-end latency/throughput savings are reported.",
+      "first_checked_at": "2026-10-06T06:43:21+00:00",
+      "last_checked_at": "2026-10-06T06:43:21+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Realtime-Venus: A full-duplex interaction system with asynchronous delegation"
+    },
+    "arXiv:2609.11638": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.11638",
+      "identity_tokens": [
+        "arXiv:2609.11638"
+      ],
+      "reason": "Potentially adjacent to the linked generic sparse-attention lineage, but the primary work targets generative video rather than language models.",
+      "first_checked_at": "2026-10-06T06:43:21+00:00",
+      "last_checked_at": "2026-10-06T06:43:21+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vidu S2: Real-Time Interactive, Editable, and Spatial Video Generation"
     }
   }
 }

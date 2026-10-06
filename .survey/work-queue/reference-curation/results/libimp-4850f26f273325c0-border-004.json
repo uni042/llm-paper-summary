@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4850f26f273325c0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2511.05476",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2511.05476",
+    "identity_tokens": [
+      "arXiv:2511.05476"
+    ],
+    "reason": "Relevant to quality auditing of compressed models, but it contributes an evaluation framework rather than an inference optimization.",
+    "first_checked_at": "2026-10-06T06:43:21+00:00",
+    "last_checked_at": "2026-10-06T06:43:21+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Metamorphic Testing Perspective on Knowledge Distillation for Language Models of Code: Does the Student Deeply Mimic the Teacher?"
+  },
+  "processed_at": "2026-10-06T06:43:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4850f26f2733",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
