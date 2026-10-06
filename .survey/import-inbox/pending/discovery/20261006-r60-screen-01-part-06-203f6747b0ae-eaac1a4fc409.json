@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r60-screen-01-part-06-203f6747b0ae",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09973",
+      "identity_tokens": [
+        "arXiv:2609.09973"
+      ],
+      "title": "Putting Captions to the Test: Evaluating Video Caption Quality through Multiple-Choice Question Answering",
+      "reason": "The paper evaluates video-caption quality with multiple-choice questions. It is an evaluation protocol for caption quality, not inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2609.09973",
+      "first_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "last_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11227-026-08783-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-026-08783-0"
+      ],
+      "title": "Multi-model relevance-guided reverse reasoning: improving chain-of-thought with small models",
+      "reason": "Springer primary full text could not be accessed in this session; search surfaced only secondary summaries/metadata. The described reverse-reasoning approach uses smaller auxiliary models and parallel sampling, so relevance to inference-efficiency tradeoffs is plausible but unverified in the primary text.",
+      "source_url": "https://doi.org/10.1007/s11227-026-08783-0",
+      "first_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "last_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00034",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00034"
+      ],
+      "title": "Shining Light on Silicon Photonic DNN Accelerators",
+      "reason": "IEEE full paper was inaccessible; primary conference text was not available in the session (only metadata and author presentation summary). Topic is silicon-photonic DNN acceleration and may inform accelerator efficiency, but no primary full-text method/evaluation review could be completed.",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00034",
+      "first_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "last_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.27960",
+      "identity_tokens": [
+        "arXiv:2604.27960"
+      ],
+      "title": "LLMs as ASP Programmers: Self-Correction Enables Task-Agnostic Nonmonotonic Reasoning",
+      "reason": "The paper studies LLMs as answer-set-programming coders and self-correction for nonmonotonic reasoning. It evaluates task capability rather than model inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.27960",
+      "first_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "last_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3829441.3829500",
+      "identity_tokens": [
+        "DOI:10.1145/3829441.3829500"
+      ],
+      "title": "MedPolicy-KG: A Traceable Clause Logic Graph with Evidence-Tiered Promotion for Chinese Medical Insurance Policy QA",
+      "reason": "ACM publisher full text was not accessible and no author/institution primary full-text copy was found during this screening. The title/abstract describe a traceable knowledge-graph workflow for medical-insurance policy QA, but no direct inference-efficiency method is evident and body-level relevance could not be confirmed.",
+      "source_url": "https://doi.org/10.1145/3829441.3829500",
+      "first_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "last_checked_at": "2026-10-06T08:06:32.779977+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    }
+  ]
+}
