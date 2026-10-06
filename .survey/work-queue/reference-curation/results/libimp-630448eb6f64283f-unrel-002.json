@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-630448eb6f64283f-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.21280",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.21280",
+    "identity_tokens": [
+      "arXiv:2603.21280"
+    ],
+    "reason": "一次本文の手法・評価・限界を確認したが、対象LLM推論効率の具体的改善または既存系統との技術的接続を確認できなかった。",
+    "first_checked_at": "2026-10-06T15:08:07+00:00",
+    "last_checked_at": "2026-10-06T15:08:07+00:00",
+    "linked_from": [
+      "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+    ],
+    "title": "WARBENCH: A Comprehensive Benchmark for Evaluating LLMs in Military Decision-Making"
+  },
+  "processed_at": "2026-10-06T15:08:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-630448eb6f64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

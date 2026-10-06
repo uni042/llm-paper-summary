@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T14:36:26+00:00",
-  "record_count": 3255,
+  "updated_at": "2026-10-06T15:08:14+00:00",
+  "record_count": 3275,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -49874,6 +49874,309 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Battery-Assisted Ramp Rate Control of AI Data Centers: Change-Point Detection and Optimal Algorithm Design"
+    },
+    "DOI:10.1093/bib/bbag234": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1093/bib/bbag234",
+      "identity_tokens": [
+        "DOI:10.1093/bib/bbag234"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:07:59+00:00",
+      "last_checked_at": "2026-10-06T15:07:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QSyncFold: quantum neural network for multidimensional sync-discovery in protein folding"
+    },
+    "DOI:10.1109/jssc.2025.3607826": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/jssc.2025.3607826",
+      "identity_tokens": [
+        "DOI:10.1109/jssc.2025.3607826"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:07:59+00:00",
+      "last_checked_at": "2026-10-06T15:07:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DPIM: A 2T1C eDRAM Transformer-in-Memory Chip With Sparsity-Aware Quantization and Heterogeneous Dense–Sparse Core"
+    },
+    "DOI:10.1088/2631-8695/ae6758": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/2631-8695/ae6758",
+      "identity_tokens": [
+        "DOI:10.1088/2631-8695/ae6758"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:07:59+00:00",
+      "last_checked_at": "2026-10-06T15:07:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CNN-Attention-LSTM with novel LSTM gate mechanism: evaluation on benchmark and brain tumor imaging datasets"
+    },
+    "DOI:10.1145/3767295.3769327": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3767295.3769327",
+      "identity_tokens": [
+        "DOI:10.1145/3767295.3769327"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:00+00:00",
+      "last_checked_at": "2026-10-06T15:08:00+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GeDES: GPU-Driven Discrete Event Network Simulator"
+    },
+    "DOI:10.32996/jcsts.2026.8.2.1": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.32996/jcsts.2026.8.2.1",
+      "identity_tokens": [
+        "DOI:10.32996/jcsts.2026.8.2.1"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:08:00+00:00",
+      "last_checked_at": "2026-10-06T15:08:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Context Filtering for Extractive Question Answering: A Hybrid Approach with Semantic Validation"
+    },
+    "arXiv:2604.19079": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19079",
+      "identity_tokens": [
+        "arXiv:2604.19079"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:01+00:00",
+      "last_checked_at": "2026-10-06T15:08:01+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reducing the Offline-Streaming Gap for Unified ASR Transducer with Consistency Regularization"
+    },
+    "DOI:10.1021/acs.jctc.6c00223": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1021/acs.jctc.6c00223",
+      "identity_tokens": [
+        "DOI:10.1021/acs.jctc.6c00223"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:03+00:00",
+      "last_checked_at": "2026-10-06T15:08:03+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Linear-Scaling and Memory-Efficient Implementation of van-der-Waals Interaction (DFT-D3) for Large Systems."
+    },
+    "arXiv:2602.14445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14445",
+      "identity_tokens": [
+        "arXiv:2602.14445"
+      ],
+      "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+      "first_checked_at": "2026-10-06T15:08:04+00:00",
+      "last_checked_at": "2026-10-06T15:08:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Selective Synchronization Attention"
+    },
+    "arXiv:2602.09001": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.09001",
+      "identity_tokens": [
+        "arXiv:2602.09001"
+      ],
+      "reason": "既存系統への接続または隣接技術はあるが、LLM inferenceへの直接的な性能改善や評価条件が限定的で、追加比較後に優先度を判断する。",
+      "first_checked_at": "2026-10-06T15:08:04+00:00",
+      "last_checked_at": "2026-10-06T15:08:04+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DirMoE: Dirichlet-routed Mixture of Experts"
+    },
+    "DOI:10.3390/jmse14030319": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/jmse14030319",
+      "identity_tokens": [
+        "DOI:10.3390/jmse14030319"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:08:05+00:00",
+      "last_checked_at": "2026-10-06T15:08:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Predictive Modeling of Maritime Radar Data Using Transformers: A Survey and Research Agenda"
+    },
+    "DOI:10.1109/cgo68049.2026.11395207": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cgo68049.2026.11395207",
+      "identity_tokens": [
+        "DOI:10.1109/cgo68049.2026.11395207"
+      ],
+      "reason": "題名・要旨または既存系統リンクに関連可能性が残るが、出版社一次本文を取得できず手法・評価・限界を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T15:08:06+00:00",
+      "last_checked_at": "2026-10-06T15:08:06+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Proton: Towards Multi-level, Adaptive Profiling for Triton"
+    },
+    "arXiv:2604.03420": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03420",
+      "identity_tokens": [
+        "arXiv:2604.03420"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:08+00:00",
+      "last_checked_at": "2026-10-06T15:08:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zero-Shot Quantization via Weight-Space Arithmetic"
+    },
+    "arXiv:2604.01302": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01302",
+      "identity_tokens": [
+        "arXiv:2604.01302"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:08+00:00",
+      "last_checked_at": "2026-10-06T15:08:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Scaling Reasoning Tokens via RL and Parallel Thinking: Evidence From Competitive Programming"
+    },
+    "arXiv:2604.01341": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.01341",
+      "identity_tokens": [
+        "arXiv:2604.01341"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:11+00:00",
+      "last_checked_at": "2026-10-06T15:08:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Perceptual misalignment of texture representations in convolutional neural networks"
+    },
+    "DOI:10.1016/j.aei.2025.104302": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.aei.2025.104302",
+      "identity_tokens": [
+        "DOI:10.1016/j.aei.2025.104302"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:11+00:00",
+      "last_checked_at": "2026-10-06T15:08:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Guided generation of strut-and-tie models for reinforced concrete structures with parametric graph grammatical evolution"
+    },
+    "DOI:10.1016/j.artint.2026.104502": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.artint.2026.104502",
+      "identity_tokens": [
+        "DOI:10.1016/j.artint.2026.104502"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:11+00:00",
+      "last_checked_at": "2026-10-06T15:08:11+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Global and local context in short text neural topic model"
+    },
+    "DOI:10.1145/3761803": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3761803",
+      "identity_tokens": [
+        "DOI:10.1145/3761803"
+      ],
+      "reason": "既存系統リンクまたは推論効率との関連可能性があるが、一次本文を取得できず最終選別不能のためborderline。",
+      "first_checked_at": "2026-10-06T15:08:12+00:00",
+      "last_checked_at": "2026-10-06T15:08:12+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Decade of Docker Containers"
+    },
+    "arXiv:2602.20040": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.20040",
+      "identity_tokens": [
+        "arXiv:2602.20040"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:12+00:00",
+      "last_checked_at": "2026-10-06T15:08:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AgenticSum: An Agentic Inference-Time Framework for Faithful Clinical Text Summarization"
+    },
+    "arXiv:2603.11441": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.11441",
+      "identity_tokens": [
+        "arXiv:2603.11441"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:14+00:00",
+      "last_checked_at": "2026-10-06T15:08:14+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Detect Anything in Real Time: From Single-Prompt Segmentation to Multi-Class Detection"
+    },
+    "arXiv:2603.09014": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09014",
+      "identity_tokens": [
+        "arXiv:2603.09014"
+      ],
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "first_checked_at": "2026-10-06T15:08:14+00:00",
+      "last_checked_at": "2026-10-06T15:08:14+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Coupling Within: Flow Matching via Distilled Normalizing Flows"
     }
   }
 }

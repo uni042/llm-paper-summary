@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ba5ab5ffcf960a2c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2602.22073",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2602.22073",
+    "identity_tokens": [
+      "arXiv:2602.22073"
+    ],
+    "reason": "一次本文の手法・評価・限界を確認したが、対象LLM推論効率の具体的改善または既存系統との技術的接続を確認できなかった。",
+    "first_checked_at": "2026-10-06T15:08:13+00:00",
+    "last_checked_at": "2026-10-06T15:08:13+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+    ],
+    "title": "AdaSpot: Spend Resolution Where It Matters for Precise Event Spotting"
+  },
+  "processed_at": "2026-10-06T15:08:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ba5ab5ffcf96",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
