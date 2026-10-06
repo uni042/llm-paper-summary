@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r40-screen-01-part-06-818e19ad3a80",
+  "reference_main_sha": "b05a032087f45ed87d2608bca644099ed8cb0933",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.inffus.2025.103991",
+      "identity_tokens": [
+        "DOI:10.1016/j.inffus.2025.103991"
+      ],
+      "title": "Multimodal recommender systems: A survey of representation, modeling, and optimization",
+      "reason": "Title/abstract and linked lineage do not indicate a concrete LLM inference systems contribution in the task scope.",
+      "source_url": "https://doi.org/10.1016/j.inffus.2025.103991",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20527",
+      "identity_tokens": [
+        "arXiv:2603.20527"
+      ],
+      "title": "RMNP: Row-Momentum Normalized Preconditioning for Scalable Matrix-Based Optimization",
+      "reason": "RMNP is an optimizer/preconditioner evaluated on model training and optimization; it reports no inference-time or KV-cache improvement, so the linked inference lineage is not supported by the primary text.",
+      "source_url": "https://arxiv.org/abs/2603.20527",
+      "first_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "last_checked_at": "2026-10-06T04:54:44.216360+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    }
+  ]
+}
