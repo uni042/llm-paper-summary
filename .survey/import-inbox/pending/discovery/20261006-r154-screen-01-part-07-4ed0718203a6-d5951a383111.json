@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r154-screen-01-part-07-4ed0718203a6",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1737",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1737"
+      ],
+      "title": "From TDMA to CDMA: A Multi-bit Watermark for Diffusion Language Models",
+      "reason": "ACL全文はdiffusion language model向けwatermarkingの検出性/不可視性を扱い、LLM inference efficiencyやservingを改善しない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1737",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.57",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.57"
+      ],
+      "title": "CoreGaze: Core Subgraph-Driven Visual Gaze Diffusion for Training-Free Referring Multimodal Large Language Models",
+      "reason": "ACL publisher pageへ到達したが一次PDFはcontent-length error (17,960,988 bytes)。packet abstractも空でfull text確認ができない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.57",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-demo.44",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.eacl-demo.44"
+      ],
+      "title": "BanSuite: A Unified Toolkit and Software Platform for Low-Resource NLP in Bangla",
+      "reason": "ACL一次ページは低resource Bangla NLP toolkit/platformと特定。LLM推論効率やserving手法ではない。全文PDF fetchはtimeoutだが一次abstract/pageで用途を判断できる。",
+      "source_url": "https://doi.org/10.18653/v1/2026.eacl-demo.44",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1238",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1238"
+      ],
+      "title": "RATION: Entropy-Driven Task-Adaptive Visual Attention Allocation Framework for Multimodal Reasoning",
+      "reason": "ACL全文はtask-routingとvisual-attention entropyでMLLMのvisual K/V statesを選択的に抑える。reasoning qualityを示す一方、latency/FLOPs/KV-memory savingsの測定がなく効率寄与が確定しない。",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1238",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.63646/jtis.2025.030401",
+      "identity_tokens": [
+        "DOI:10.63646/jtis.2025.030401"
+      ],
+      "title": "Rethinking AI Innovation Through Computational Accountability: From Accuracy-Centered Evaluation to Cost-Aware Intelligence",
+      "reason": "出版社一次本文取得失敗。packet abstract上はcost-accountabilityの概念枠組みでruntime techniqueでないが、linked lineageあり本文未確認のためborderline。",
+      "source_url": "https://doi.org/10.63646/jtis.2025.030401",
+      "first_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "last_checked_at": "2026-10-06T21:13:50.255519+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
