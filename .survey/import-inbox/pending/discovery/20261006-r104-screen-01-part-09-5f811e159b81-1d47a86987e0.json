@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r104-screen-01-part-09-5f811e159b81",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.04068",
+      "identity_tokens": [
+        "arXiv:2607.04068"
+      ],
+      "title": "UniSGR: Unified Framework for Semantic ID Generation and Ranking",
+      "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+      "source_url": "https://arxiv.org/abs/2607.04068",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.03964",
+      "identity_tokens": [
+        "arXiv:2607.03964"
+      ],
+      "title": "Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control",
+      "reason": "MoE routing is for diffusion world models, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2607.03964",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.03502",
+      "identity_tokens": [
+        "arXiv:2607.03502"
+      ],
+      "title": "Reading Between the Dots: Decoding Hidden Computation across Filler Tokens",
+      "reason": "KV-cache analysis is explanatory rather than an efficiency method.",
+      "source_url": "https://arxiv.org/abs/2607.03502",
+      "first_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "last_checked_at": "2026-10-06T14:21:42.696649+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    }
+  ]
+}
