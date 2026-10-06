@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r58-screen-01-part-04-fcd3bffba90a",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.15213",
+      "identity_tokens": [
+        "arXiv:2412.15213"
+      ],
+      "title": "Flowing from Words to Pixels: A Noise-Free Framework for Cross-Modality Evolution",
+      "reason": "Noise-free text-image flow generation has no demonstrated compute/memory/latency improvement.",
+      "source_url": "https://arxiv.org/abs/2412.15213",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.02068",
+      "identity_tokens": [
+        "arXiv:2407.02068"
+      ],
+      "title": "LPViT: Low-Power Semi-structured Pruning for Vision Transformers",
+      "reason": "Low-power structured pruning targets ViT vision workloads; language-model transfer is untested.",
+      "source_url": "https://arxiv.org/abs/2407.02068",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.17505",
+      "identity_tokens": [
+        "arXiv:2401.17505"
+      ],
+      "title": "Arrows of Time for Large Language Models",
+      "reason": "Primary-text findings do not support a concrete inference-efficiency connection to the target family.",
+      "source_url": "https://arxiv.org/abs/2401.17505",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.09053",
+      "identity_tokens": [
+        "arXiv:2203.09053"
+      ],
+      "title": "Reducing Position Bias in Simultaneous Machine Translation with Length-Aware Framework",
+      "reason": "Simultaneous translation is latency-sensitive, but this work addresses position bias/quality rather than measured speed reduction.",
+      "source_url": "https://arxiv.org/abs/2203.09053",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.17465",
+      "identity_tokens": [
+        "arXiv:2407.17465"
+      ],
+      "title": "u-μP: The Unit-Scaled Maximal Update Parametrization",
+      "reason": "u-μP concerns hyperparameter scaling and low-precision training rather than inference.",
+      "source_url": "https://arxiv.org/abs/2407.17465",
+      "first_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "last_checked_at": "2026-10-06T07:50:39.124995+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    }
+  ]
+}
