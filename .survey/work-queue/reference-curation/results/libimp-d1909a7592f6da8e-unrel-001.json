@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1909a7592f6da8e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.14350",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.14350",
+    "identity_tokens": [
+      "arXiv:2605.14350"
+    ],
+    "reason": "Adaptive task sampling is a multi-task reinforcement-learning training method outside LLM inference efficiency.",
+    "first_checked_at": "2026-10-06T10:35:15+00:00",
+    "last_checked_at": "2026-10-06T10:35:15+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+    ],
+    "title": "Distributionally Robust Multi-Task Reinforcement Learning via Adaptive Task Sampling"
+  },
+  "processed_at": "2026-10-06T10:35:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1909a7592f6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

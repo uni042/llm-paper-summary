@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f049453bb393735c-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05113",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05113",
+    "identity_tokens": [
+      "arXiv:2605.05113"
+    ],
+    "reason": "Signal-propagation theory for linear recurrent models does not propose an inference-efficiency technique or concrete LLM deployment improvement.",
+    "first_checked_at": "2026-10-06T10:35:16+00:00",
+    "last_checked_at": "2026-10-06T10:35:16+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+    ],
+    "title": "How Long Does Infinite Width Last? Signal Propagation in Long-Range Linear Recurrences"
+  },
+  "processed_at": "2026-10-06T10:35:17+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f049453bb393",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

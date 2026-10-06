@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-82c04bd80d0f28fd-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/isctis70043.2026.11571992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/isctis70043.2026.11571992",
+    "identity_tokens": [
+      "DOI:10.1109/isctis70043.2026.11571992"
+    ],
+    "reason": "Layer-importance analysis is for LLM fine-tuning cost/parameter efficiency; abstract gives no inference-time compute, memory, latency, KV-cache, quantization, offload, or serving improvement.",
+    "first_checked_at": "2026-10-06T10:35:11+00:00",
+    "last_checked_at": "2026-10-06T10:35:11+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+    ],
+    "title": "Large Language Model Fine-Tuning via Layer Importance Analysis Based on Extreme Values"
+  },
+  "processed_at": "2026-10-06T10:35:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-82c04bd80d0f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

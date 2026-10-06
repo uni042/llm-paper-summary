@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:31:47+00:00",
-  "record_count": 2780,
+  "updated_at": "2026-10-06T10:35:16+00:00",
+  "record_count": 2794,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -42683,6 +42683,216 @@
       ],
       "borderline_recheck_count": 0,
       "title": "On the Cost and Benefit of Chain of Thought: A Learning-Theoretic Perspective"
+    },
+    "arXiv:2605.10537": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.10537",
+      "identity_tokens": [
+        "arXiv:2605.10537"
+      ],
+      "reason": "Primary arXiv HTML, sections 2–5: Mela combines high-/low-frequency test-time memory modules and injects intermediate memory states into a language decoder. Experiments train 400M–1.2B language models on FineWeb-Edu and claim extended effective context beyond fixed pretrained context. Memory occupies about 18–29% of parameters; the paper does not demonstrate reduced inference latency or memory/KV cost and may add memory computation. Plausible sequence-model memory lineage, but efficiency direction is unresolved.",
+      "first_checked_at": "2026-10-06T10:35:06+00:00",
+      "last_checked_at": "2026-10-06T10:35:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mela: Test-Time Memory Consolidation based on Transformation Hypothesis"
+    },
+    "arXiv:2605.11262": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11262",
+      "identity_tokens": [
+        "arXiv:2605.11262"
+      ],
+      "reason": "Primary arXiv HTML, method and evaluation sections: latent chain-of-thought is tested for structured-data transformers, with depth/looping and latent representations for structured tasks. It draws motivation from language-model test-time compute but does not establish direct language-model serving/inference efficiency or a clear existing LLM efficiency lineage. Relation remains weak.",
+      "first_checked_at": "2026-10-06T10:35:07+00:00",
+      "last_checked_at": "2026-10-06T10:35:07+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent Chain-of-Thought Improves Structured-Data Transformers"
+    },
+    "DOI:10.1109/infocom59046.2026.11571404": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/infocom59046.2026.11571404",
+      "identity_tokens": [
+        "DOI:10.1109/infocom59046.2026.11571404"
+      ],
+      "reason": "Publisher DOI page could not be retrieved by the available browser; author/institution search surfaced only abstract-level description, not primary full text. The programmable-network MoE inference topic has a plausible serving/low-latency deployment connection, but its method, evaluation, and limitations could not be verified.",
+      "first_checked_at": "2026-10-06T10:35:07+00:00",
+      "last_checked_at": "2026-10-06T10:35:07+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Monic: In-Network Mixture-of-Experts Inference on Programmable Data Planes"
+    },
+    "arXiv:2605.16048": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16048",
+      "identity_tokens": [
+        "arXiv:2605.16048"
+      ],
+      "reason": "Primary arXiv HTML, sections 1, 3–5: depth recurrence and input reshaping for SSMs are evaluated on time-series classification datasets; parameter-shared depth variants use up to 1/L parameters and input reshaping adds 1–6% accuracy. The paper notes SSM efficiency motivation but evaluates time-series classifiers, not language-model inference, and supplies no LLM serving/latency result. Transfer to language SSM architecture is plausible but unestablished.",
+      "first_checked_at": "2026-10-06T10:35:10+00:00",
+      "last_checked_at": "2026-10-06T10:35:10+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reshape and Recur: Improving SSMs with Input Reshaping and Depth Recurrence"
+    },
+    "arXiv:2605.16350": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16350",
+      "identity_tokens": [
+        "arXiv:2605.16350"
+      ],
+      "reason": "Primary arXiv HTML, sections 1–4: FedNL learns client-local test-time memory adaptation rules using a fixed-size Titans-style memory state, Delta Rule updates, and federated aggregation. The paper frames adaptation/accuracy under non-IID data, not inference efficiency; no LLM deployment latency/KV-memory result is presented. Potential memory architecture adjacency is weak and compute overhead remains unquantified.",
+      "first_checked_at": "2026-10-06T10:35:11+00:00",
+      "last_checked_at": "2026-10-06T10:35:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Federated Nested Learning: Collaborative Training of Self-Referential Memories for Test-Time Adaptation"
+    },
+    "arXiv:2605.06322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06322",
+      "identity_tokens": [
+        "arXiv:2605.06322"
+      ],
+      "reason": "Primary arXiv HTML, method and experiments: SMolLM is a 53K-parameter weight-shared transformer for SMILES molecular grammar, reporting 95% validity and molecular-design evaluation. Its small parameter count is notable, but the domain-specific task and quality objective do not establish general LLM inference efficiency, nor report serving latency/memory comparisons. Keep as weak compact-language-model architecture adjacency.",
+      "first_checked_at": "2026-10-06T10:35:11+00:00",
+      "last_checked_at": "2026-10-06T10:35:11+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SMolLM: Small Language Models Learn Small Molecular Grammar"
+    },
+    "arXiv:2605.08300": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08300",
+      "identity_tokens": [
+        "arXiv:2605.08300"
+      ],
+      "reason": "Primary arXiv HTML URL was attempted but returned an internal retrieval error; arXiv abstract page is not primary full text. Title/abstract identify state-space language models and residual hyperconnections/adapters, a plausible architecture-lineage connection, but method, inference evaluation, and limitations remain unverified.",
+      "first_checked_at": "2026-10-06T10:35:12+00:00",
+      "last_checked_at": "2026-10-06T10:35:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "mHC-SSM: Manifold-Constrained Hyper-Connections for State Space Language Models with Stream-Specialized Adapters"
+    },
+    "DOI:10.1109/icassp55912.2026.11461683": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461683",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461683"
+      ],
+      "reason": "Primary publisher DOI URL was attempted, but the available fetch returned an internal error and the supplied abstract is empty. The title suggests LLM exploration under truncation constraints, plausibly related to reasoning-token budgets, but it describes training and no primary method/evaluation/limitations could be verified.",
+      "first_checked_at": "2026-10-06T10:35:13+00:00",
+      "last_checked_at": "2026-10-06T10:35:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploration Beyond Budget: Training Large Language Models to Explore Under Truncation Constraints"
+    },
+    "DOI:10.1109/icassp55912.2026.11462183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462183",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462183"
+      ],
+      "reason": "Primary IEEE Xplore DOI page was opened but blocked at the verification/JavaScript gate; conference listing confirms only title/authors. Full primary manuscript was unavailable. Title suggests semantic frame selection for long-form video MLLMs, a plausible visual-token/inference-compute relation, but method and evaluation are unverified.",
+      "first_checked_at": "2026-10-06T10:35:14+00:00",
+      "last_checked_at": "2026-10-06T10:35:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seaf: Semantic-Aware Frame Selection for Long-form Video Understanding"
+    },
+    "DOI:10.1109/icassp55912.2026.11462414": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462414",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462414"
+      ],
+      "reason": "Primary IEEE Xplore DOI page was attempted but blocked at the verification/JavaScript gate; conference listing exposes title/authors only. A distinct older arXiv paper with a similar title was not substituted for this DOI record. The title suggests VLM video compression, but primary method/evaluation could not be reviewed.",
+      "first_checked_at": "2026-10-06T10:35:14+00:00",
+      "last_checked_at": "2026-10-06T10:35:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LVC: A Lightweight Compression Framework for Enhancing VLMS in Long Video Understanding"
+    },
+    "DOI:10.1109/icassp55912.2026.11462653": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462653",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462653"
+      ],
+      "reason": "Primary IEEE Xplore DOI page was attempted but blocked at the verification/JavaScript gate; no primary full text was available. Title indicates model quantization, but task/model scope, inference metrics, and results cannot be verified.",
+      "first_checked_at": "2026-10-06T10:35:14+00:00",
+      "last_checked_at": "2026-10-06T10:35:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding the Improvement in Model Quantization"
+    },
+    "arXiv:2605.15054": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.15054",
+      "identity_tokens": [
+        "arXiv:2605.15054"
+      ],
+      "reason": "Primary arXiv HTML, sections 1, method, experiments/ablations: LATERN uses gated historical summaries and recursive event-window aggregation for VLM video anomaly detection; InternVL2-8B UCF-Crime AUC is reported as 87.63 vs 86.42 baseline, and ungated summaries degrade results. The tested contribution is temporal context/reasoning quality, not measured inference-cost reduction or compression; memory/token overhead is not shown. Weak VLM context-management adjacency only.",
+      "first_checked_at": "2026-10-06T10:35:15+00:00",
+      "last_checked_at": "2026-10-06T10:35:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LATERN: Test-Time Context-Aware Explainable Video Anomaly Detection"
+    },
+    "arXiv:2605.13538": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13538",
+      "identity_tokens": [
+        "arXiv:2605.13538"
+      ],
+      "reason": "Primary arXiv HTML, sections 1 and 4: a fully on-device PII substitution pipeline combines a 1.5B MoE classifier, 1-bit 1.7B SLM, and rule-based substitutions; on x86-64 CPU with 31 GB RAM, hybrid mode reports 41.2 s average latency versus 1.6–1.7 s for non-generative alternatives. Locale-conditioned rotating examples address demonstration regurgitation. The target is privacy substitution and latency is high; no general LLM efficiency improvement is claimed. Weak on-device SLM deployment adjacency only.",
+      "first_checked_at": "2026-10-06T10:35:15+00:00",
+      "last_checked_at": "2026-10-06T10:35:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Locale-Conditioned Few-Shot Prompting Mitigates Demonstration Regurgitation in On-Device PII Substitution with Small Language Models"
+    },
+    "DOI:10.1109/icassp55912.2026.11460504": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460504",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460504"
+      ],
+      "reason": "Primary publisher DOI URL was attempted, but the available fetch returned an internal error and the supplied abstract is empty. The title indicates a probabilistic selective SSM for sequence classification, but without primary text it is not possible to determine whether there is a relevant LLM architecture/inference-efficiency connection.",
+      "first_checked_at": "2026-10-06T10:35:16+00:00",
+      "last_checked_at": "2026-10-06T10:35:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Uncertainty-Aware Sequence Classification with Probabilistic Selective State-Space Models"
     }
   }
 }
