@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r103-screen-01-part-04-ced388fc627a",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.xinn.2026.101391",
+      "identity_tokens": [
+        "DOI:10.1016/j.xinn.2026.101391"
+      ],
+      "title": "Quinex: Quantitative information extraction from text using open and lightweight LLMs",
+      "reason": "一次本文を取得できず、既存lineageとの関連を本文根拠で解決できない。",
+      "source_url": "https://doi.org/10.1016/j.xinn.2026.101391",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26049",
+      "identity_tokens": [
+        "arXiv:2603.26049"
+      ],
+      "title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays",
+      "reason": "Context- and gaze-guided vision-language pretraining is evaluated on chest X-ray tasks. It improves medical multimodal representation rather than LLM deployment efficiency; quantization linkage is incidental.",
+      "source_url": "https://arxiv.org/abs/2603.26049",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24984",
+      "identity_tokens": [
+        "arXiv:2603.24984"
+      ],
+      "title": "MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models",
+      "reason": "MoE-GRPO applies reinforcement-learning optimization to vision-language MoE model behavior and evaluates task/reward outcomes. It is training/alignment work and reports no inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2603.24984",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25398",
+      "identity_tokens": [
+        "arXiv:2603.25398"
+      ],
+      "title": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders",
+      "reason": "Plain Mask Transformer evaluates image/video segmentation with frozen vision encoders. It is a segmentation architecture and not a PyTorch compilation/inference-systems advance.",
+      "source_url": "https://arxiv.org/abs/2603.25398",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.celrep.2026.117159",
+      "identity_tokens": [
+        "DOI:10.1016/j.celrep.2026.117159"
+      ],
+      "title": "Cellular and subcellular specialization enables biology-constrained deep learning",
+      "reason": "一次本文を取得できず、既存lineageとの関連を本文根拠で解決できない。",
+      "source_url": "https://doi.org/10.1016/j.celrep.2026.117159",
+      "first_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "last_checked_at": "2026-10-06T14:14:21.137506+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    }
+  ]
+}
