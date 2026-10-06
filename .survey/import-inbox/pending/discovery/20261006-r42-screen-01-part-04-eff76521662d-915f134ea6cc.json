@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r42-screen-01-part-04-eff76521662d",
+  "reference_main_sha": "b51fec906cc4dd62833c250358d6c822db85a0b9",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.11786",
+      "identity_tokens": [
+        "arXiv:2204.11786"
+      ],
+      "title": "Enable Deep Learning on Mobile Devices: Methods, Systems, and Applications",
+      "reason": "This survey covers mobile deep-learning systems broadly and predates current LLM serving; it supplies no concrete LLM inference method.",
+      "source_url": "https://arxiv.org/abs/2204.11786",
+      "first_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "last_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746252.3761254",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761254"
+      ],
+      "title": "Improving Text Embedding Models with Positive-aware Hard-negative Mining",
+      "reason": "The paper improves text-embedding training through hard-negative mining; it does not optimize LLM generation or serving.",
+      "source_url": "https://doi.org/10.1145/3746252.3761254",
+      "first_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "last_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.17397",
+      "identity_tokens": [
+        "arXiv:2511.17397"
+      ],
+      "title": "MCMoE: Completing Missing Modalities with Mixture of Experts for Incomplete Multimodal Action Quality Assessment",
+      "reason": "MCMoE addresses missing modalities in action-quality assessment, not LLM inference resource use.",
+      "source_url": "https://arxiv.org/abs/2511.17397",
+      "first_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "last_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774655",
+      "identity_tokens": [
+        "DOI:10.1145/3774655"
+      ],
+      "title": "LLM-based UAV Path Planning for Autonomous and Adaptive Industry Systems",
+      "reason": "The LLM is applied to UAV path planning; the contribution is an application/planning method, not LLM inference systems.",
+      "source_url": "https://doi.org/10.1145/3774655",
+      "first_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "last_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08343",
+      "identity_tokens": [
+        "arXiv:2601.08343"
+      ],
+      "title": "When KV Cache Reuse Fails in Multi-Agent Systems: Cross-Candidate Interaction is Crucial for LLM Judges",
+      "reason": "The paper documents when KV reuse changes LLM-judge decisions and offers PAL-KV as a diagnostic probe; it does not validate an interaction-preserving acceleration solution.",
+      "source_url": "https://arxiv.org/abs/2601.08343",
+      "first_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "last_checked_at": "2026-10-06T05:13:45.511551+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.10266-kvsharearena-cross-context-checkpoint-reuse.md"
+      ]
+    }
+  ]
+}
