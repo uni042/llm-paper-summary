@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r53-screen-01-part-04-27949fe41327",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07193",
+      "identity_tokens": [
+        "arXiv:2605.07193"
+      ],
+      "title": "Coupling Models for One-Step Discrete Generation",
+      "reason": "The one-step generation idea could reduce iterative inference, but task/model scope is not shown to be LLM reasoning or serving; verify applicability before follow-up.",
+      "source_url": "https://arxiv.org/abs/2605.07193",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06270",
+      "identity_tokens": [
+        "arXiv:2605.06270"
+      ],
+      "title": "Spark3R: Asymmetric Token Reduction Makes Fast Feed-Forward 3D Reconstruction",
+      "reason": "Title and abstract identify a domain/task-specific model or general theory with no concrete LLM/VLM inference efficiency method or actionable connection to the linked inference lineage.",
+      "source_url": "https://arxiv.org/abs/2605.06270",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2602.16284-fast-kv-compaction-via-attention-matching.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06809",
+      "identity_tokens": [
+        "arXiv:2605.06809"
+      ],
+      "title": "LookWhen? Fast Video Recognition by Learning When, Where, and What to Compute",
+      "reason": "Despite a visual computation theme, the target is a standalone recognition model rather than the linked LLM inference-acceleration lineage.",
+      "source_url": "https://arxiv.org/abs/2605.06809",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.27378",
+      "identity_tokens": [
+        "arXiv:2606.27378"
+      ],
+      "title": "Formalizing Latent Thoughts: Four Axioms of Thought Representation in LLMs",
+      "reason": "Thematic relation to latent reasoning is insufficient for the target efficiency scope; no concrete inference-cost contribution.",
+      "source_url": "https://arxiv.org/abs/2606.27378",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11263-026-02848-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11263-026-02848-6"
+      ],
+      "title": "Uncertainty-Aware Source-Free Adaptive Image Restoration with State Space Augmentation",
+      "reason": "Title and abstract identify a domain/task-specific model or general theory with no concrete LLM/VLM inference efficiency method or actionable connection to the linked inference lineage.",
+      "source_url": "https://doi.org/10.1007/s11263-026-02848-6",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ]
+    }
+  ]
+}
