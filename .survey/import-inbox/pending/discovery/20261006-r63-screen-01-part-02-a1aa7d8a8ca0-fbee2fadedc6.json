@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r63-screen-01-part-02-a1aa7d8a8ca0",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.20314",
+      "identity_tokens": [
+        "arXiv:2504.20314"
+      ],
+      "title": "Perturbation-efficient Zeroth-order Optimization for Hardware-friendly On-device Training",
+      "reason": "PeZO reduces random-perturbation generation resources for zeroth-order on-device model training using an efficient perturbation scheme; evaluation reports lower hardware resource/power costs for training. It is explicitly training-time optimization and does not address inference/serving. The link to an FPGA inference paper is insufficient for a direct lineage connection.",
+      "source_url": "https://arxiv.org/abs/2504.20314",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.19323",
+      "identity_tokens": [
+        "arXiv:2504.19323"
+      ],
+      "title": "NSFlow: An End-to-End FPGA Framework with Scalable Dataflow Architecture for Neuro-Symbolic AI",
+      "reason": "NSFlow maps neuro-symbolic workloads to a scalable FPGA dataflow architecture and evaluates end-to-end framework performance on neuro-symbolic AI tasks. Its hardware flow is not evaluated on transformer/LLM inference and does not provide an LLM-specific operator or serving result. FPGA is shared with linked works, but relation remains broad architectural adjacency.",
+      "source_url": "https://arxiv.org/abs/2504.19323",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md",
+        "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.jpdc.2025.105042",
+      "identity_tokens": [
+        "DOI:10.1016/j.jpdc.2025.105042"
+      ],
+      "title": "DRViT: A dynamic redundancy-aware vision transformer accelerator via algorithm and architecture co-design on FPGA",
+      "reason": "DRViT co-designs token merging/pruning and INT8 with an FPGA ViT accelerator; reported evaluation runs ViT-Tiny on ImageNet and compares FPGA resources/performance. Limitations note hardware/model differences require adaptation. The contribution is specifically vision-transformer acceleration, with no language model or LLM inference experiment; FTRANS connection is hardware-family-level only.",
+      "source_url": "https://doi.org/10.1016/j.jpdc.2025.105042",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.06899",
+      "identity_tokens": [
+        "arXiv:2411.06899"
+      ],
+      "title": "LongSafety: Enhance Safety for Long-Context LLMs",
+      "reason": "LongSafety proposes safety evaluation/mitigation for long-context LLM behavior and evaluates safety under long inputs. The measured goal is reducing unsafe responses, not reducing compute, memory, latency, or serving overhead. Its cited long-context lineage overlap is topical only, without a technical efficiency connection.",
+      "source_url": "https://arxiv.org/abs/2411.06899",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.10746",
+      "identity_tokens": [
+        "arXiv:2408.10746"
+      ],
+      "title": "Resource-Efficient Personal Large Language Models Fine-Tuning With Collaborative Edge Computing",
+      "reason": "This work partitions personal LLM fine-tuning across collaborative edge devices to reduce fine-tuning resource burden, with experiments on edge collaboration and model quality/communication. Its objective is training, not generation/inference serving, and it does not establish inference-time memory/latency improvement. Linked 4-bit inference work is only adjacent.",
+      "source_url": "https://arxiv.org/abs/2408.10746",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
