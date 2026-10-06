@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e5266fffedd130b1-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.32932",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.32932",
+    "identity_tokens": [
+      "arXiv:2609.32932"
+    ],
+    "reason": "This paper studies how language models integrate evidence while spending extra inference-time computation, using sequential counting experiments and reasoning-token measures. Its scope is analysis of reasoning behavior, not a proposed method to lower inference resource use; it also cautions that reasoning-token count is distinct from FLOPs/latency and that task experience/feedback/context co-vary.",
+    "first_checked_at": "2026-10-06T09:01:06+00:00",
+    "last_checked_at": "2026-10-06T09:01:06+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Counting on Thinking: Tracing Evidence Integration in Language Models"
+  },
+  "processed_at": "2026-10-06T09:01:06+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e5266fffedd1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T08:50:30+00:00",
-  "record_count": 2635,
+  "updated_at": "2026-10-06T09:01:06+00:00",
+  "record_count": 2650,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -40495,6 +40495,233 @@
       ],
       "borderline_recheck_count": 0,
       "title": "OmniSeek: Native Tool Integration for Multi-turn Audio-Visual Reasoning"
+    },
+    "arXiv:2609.33134": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33134",
+      "identity_tokens": [
+        "arXiv:2609.33134"
+      ],
+      "reason": "The paper treats CoT as serial computation and tests when Transformers cannot solve tasks without it, including MATH-500/AIME; erasing chains hurts serial-task accuracy. Relevant to reasoning-token cost decisions, but establishes limits rather than a resource-reduction method.",
+      "first_checked_at": "2026-10-06T09:00:53+00:00",
+      "last_checked_at": "2026-10-06T09:00:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ceiling of a Task: When Can a Transformer Succeed Without Its Chain of Thought?"
+    },
+    "arXiv:2609.33144": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33144",
+      "identity_tokens": [
+        "arXiv:2609.33144"
+      ],
+      "reason": "Mechanistic study of two looped-Transformer variants on iteration, finite-state composition and graph traversal; it finds distinct recurrence algorithms and reliability degradation with depth. It informs looped reasoning but offers no compute/memory/latency optimization.",
+      "first_checked_at": "2026-10-06T09:00:53+00:00",
+      "last_checked_at": "2026-10-06T09:00:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond the Training Horizon: Mechanisms and Limits of Length Generalization in Looped Transformers"
+    },
+    "arXiv:2609.38057": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.38057",
+      "identity_tokens": [
+        "arXiv:2609.38057"
+      ],
+      "reason": "EVO-WAM filters generated video/action/state rollouts using VLM completion and inverse-dynamics consistency checks, then self-trains; full text reports unseen-task simulation and real-robot gains. The linked Qwen3.8 model is a verifier, not optimized. This is robotics adaptation/training, not inference efficiency.",
+      "first_checked_at": "2026-10-06T09:00:54+00:00",
+      "last_checked_at": "2026-10-06T09:00:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EVO-WAM: Evolving World Action Models through Video-Action Verification"
+    },
+    "arXiv:2609.32492": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32492",
+      "identity_tokens": [
+        "arXiv:2609.32492"
+      ],
+      "reason": "Attribution-guided optimization adjusts modular LLM programs using module-level attribution and memory selection. The full text evaluates task performance and parameter sensitivity, but does not establish a direct model-inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving improvement. Runtime-cost comparison against closest inference optimization work is a concrete follow-up if retained.",
+      "first_checked_at": "2026-10-06T09:00:55+00:00",
+      "last_checked_at": "2026-10-06T09:00:55+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Prompt or Skill? Attribution-Guided Optimization of Modular LLM Programs"
+    },
+    "arXiv:2609.37712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37712",
+      "identity_tokens": [
+        "arXiv:2609.37712"
+      ],
+      "reason": "PolyOCR-Venus unifies OCR foundation-model tasks and discusses compact OCR systems/distillation. Packet links to multimodal expert-compute/compression lineages, so the primary text was checked. It focuses on OCR capability/training recipes, not measured inference-cost reduction; lineage connection remains indirect.",
+      "first_checked_at": "2026-10-06T09:00:56+00:00",
+      "last_checked_at": "2026-10-06T09:00:56+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2608.08627-unimomo-expert-merging.md",
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PolyOCR-Venus: Unified OCR Foundation Models for Text-Centric Visual Intelligence"
+    },
+    "arXiv:2609.37432": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37432",
+      "identity_tokens": [
+        "arXiv:2609.37432"
+      ],
+      "reason": "Looped Actor shares policy computation and adaptively exits for RL decisions. Full text covers 22 tasks and reports fewer inference FLOPs than an Iso-FLOPs fixed-depth baseline; fixed variants with fewer than 16 loops lose performance. This is embodied/RL adaptive computation rather than LLM inference; authors note the policy is not guaranteed compute-optimal.",
+      "first_checked_at": "2026-10-06T09:00:59+00:00",
+      "last_checked_at": "2026-10-06T09:00:59+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Looped Actor: Depth-Recurrent Reasoning Models for Reinforcement Learning"
+    },
+    "arXiv:2609.33727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33727",
+      "identity_tokens": [
+        "arXiv:2609.33727"
+      ],
+      "reason": "Review presents a statistical view of distillation and surveys LLM extensions and efficiency evaluation. Useful compression background, but no new primary inference-efficiency mechanism or measured improvement.",
+      "first_checked_at": "2026-10-06T09:01:00+00:00",
+      "last_checked_at": "2026-10-06T09:01:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Statistical Perspective on Knowledge Distillation: Foundations, Classical Methods, and Large Language Model Extensions"
+    },
+    "arXiv:2609.33998": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33998",
+      "identity_tokens": [
+        "arXiv:2609.33998"
+      ],
+      "reason": "arXiv HTML primary text returned Cache miss on two attempts; arXiv abstract endpoint was available through the input packet, but that is not full-text evidence. A full-text review is required because the abstract proposes dynamic frame sampling for MLLM video QA.",
+      "first_checked_at": "2026-10-06T09:01:01+00:00",
+      "last_checked_at": "2026-10-06T09:01:01+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MetaSampling: Making Frame Samplers Efficient for Long-Video Question Answering"
+    },
+    "DOI:10.1145/3773078.3831944": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3773078.3831944",
+      "identity_tokens": [
+        "DOI:10.1145/3773078.3831944"
+      ],
+      "reason": "The DOI landing page could not be fetched by the browsing tool. A search located the author archive record and downloadable published-version PDF, but opening the source record/PDF timed out or returned inaccessible, so the primary body could not be verified. Abstract remains plausible because it explicitly studies accuracy per inference-time compute budget.",
+      "first_checked_at": "2026-10-06T09:01:01+00:00",
+      "last_checked_at": "2026-10-06T09:01:01+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Reasoning Should a Recommender Have? Designing Reasoning for Inference-Time Scaling in Recommendation"
+    },
+    "arXiv:2609.33409": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33409",
+      "identity_tokens": [
+        "arXiv:2609.33409"
+      ],
+      "reason": "LENS-OPD allocates teacher supervision hierarchically across student trajectories and improves agent task performance. Full text describes a training method, not deployment cost/compression/serving evidence; an efficient deployed student is only a possible later application.",
+      "first_checked_at": "2026-10-06T09:01:02+00:00",
+      "last_checked_at": "2026-10-06T09:01:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dense Is Not Enough: Hierarchical Supervision Allocation for Long-Horizon On-Policy Distillation"
+    },
+    "arXiv:2609.33540": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33540",
+      "identity_tokens": [
+        "arXiv:2609.33540"
+      ],
+      "reason": "GFPR iterates categorical belief states; full text covers puzzles/sequences and a 201M language model using 24 Picard steps. It proposes recurrent reasoning but does not demonstrate reduced inference compute; adjacent test-time-compute architecture work.",
+      "first_checked_at": "2026-10-06T09:01:02+00:00",
+      "last_checked_at": "2026-10-06T09:01:02+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reasoning on the Simplex: Geometric Fixed-Point Models"
+    },
+    "arXiv:2609.33620": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33620",
+      "identity_tokens": [
+        "arXiv:2609.33620"
+      ],
+      "reason": "Primary text analyzes token/layer-wise continual-learning update effects and future plasticity. Packet links to recurrent-state/Qwen architecture lineages, so the body was checked; contribution is training dynamics/diagnostics, not inference-time efficiency.",
+      "first_checked_at": "2026-10-06T09:01:02+00:00",
+      "last_checked_at": "2026-10-06T09:01:02+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md",
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Dynamics of Continual Learning: A Unified View of Data Attribution, Forgetting, and Plasticity Loss"
+    },
+    "arXiv:2609.32312": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32312",
+      "identity_tokens": [
+        "arXiv:2609.32312"
+      ],
+      "reason": "Delayed supervision trains test-time language-model memory to answer later questions from accumulated streams. The body reports comparisons against original/event-next-token-prediction baselines, but explicitly says it does not isolate delay's causal effect and makes no universal superiority claim; no inference-latency/throughput gain is established, so relevance to runtime-efficiency literature is weak.",
+      "first_checked_at": "2026-10-06T09:01:03+00:00",
+      "last_checked_at": "2026-10-06T09:01:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Delayed Supervision for Test-Time Language Models"
+    },
+    "arXiv:2609.36136": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36136",
+      "identity_tokens": [
+        "arXiv:2609.36136"
+      ],
+      "reason": "Xiaomi-OCR-0 combines parsing and OCR understanding in a 0.8B VLM with strong OCR benchmark results. Full text discusses training transfer and future robustness but gives no measured latency, throughput, KV-cache or serving comparison. Compact-model lineage neighbor, not demonstrated inference gain.",
+      "first_checked_at": "2026-10-06T09:01:04+00:00",
+      "last_checked_at": "2026-10-06T09:01:04+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Xiaomi-OCR-0 Technical Report"
+    },
+    "arXiv:2609.32932": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.32932",
+      "identity_tokens": [
+        "arXiv:2609.32932"
+      ],
+      "reason": "This paper studies how language models integrate evidence while spending extra inference-time computation, using sequential counting experiments and reasoning-token measures. Its scope is analysis of reasoning behavior, not a proposed method to lower inference resource use; it also cautions that reasoning-token count is distinct from FLOPs/latency and that task experience/feedback/context co-vary.",
+      "first_checked_at": "2026-10-06T09:01:06+00:00",
+      "last_checked_at": "2026-10-06T09:01:06+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Counting on Thinking: Tracing Evidence Integration in Language Models"
     }
   }
 }
