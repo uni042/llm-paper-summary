@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r145-screen-01-part-07-a654c30b8687",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27290",
+      "identity_tokens": [
+        "arXiv:2605.27290"
+      ],
+      "title": "Linear Recurrent Neural Networks as Time-Delay Embeddings",
+      "reason": "The arXiv abstract is theoretical analysis of linear recurrent networks as time-delay embeddings for dynamical systems; no LLM inference-system contribution is presented.",
+      "source_url": "https://arxiv.org/abs/2605.27290",
+      "first_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "last_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27348",
+      "identity_tokens": [
+        "arXiv:2605.27348"
+      ],
+      "title": "When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection",
+      "reason": "The work develops social-gaze semantic cues and paired-edit data for AI-generated image detection. Its focus is image-detection accuracy and representation, not LLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2605.27348",
+      "first_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "last_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27524",
+      "identity_tokens": [
+        "arXiv:2605.27524"
+      ],
+      "title": "Emergence of an antiferromagnetic topological Anderson insulator in the interacting Haldane model",
+      "reason": "The paper analyzes topological insulating phases in an interacting Haldane model using finite-size exact diagonalization. It is unrelated to language-model inference systems.",
+      "source_url": "https://arxiv.org/abs/2605.27524",
+      "first_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "last_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27678",
+      "identity_tokens": [
+        "arXiv:2605.27678"
+      ],
+      "title": "Heterogeneous Parallelism for Multimodal Large Language Model Training",
+      "reason": "The full text explicitly presents heterogeneous parallel layouts and placement for multimodal foundation-model training and reports TFLOPS/GPU and training token throughput. This is a training-system contribution, outside the project’s inference-time scope.",
+      "source_url": "https://arxiv.org/abs/2605.27678",
+      "first_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "last_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1108/ftinr-06-2025-0109",
+      "identity_tokens": [
+        "DOI:10.1108/ftinr-06-2025-0109"
+      ],
+      "title": "Recommendation with generative models",
+      "reason": "Primary DOI/publisher page could not be fetched; full text unavailable for linked-lineage review.",
+      "source_url": "https://doi.org/10.1108/ftinr-06-2025-0109",
+      "first_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "last_checked_at": "2026-10-06T20:23:59.317898+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ]
+    }
+  ]
+}
