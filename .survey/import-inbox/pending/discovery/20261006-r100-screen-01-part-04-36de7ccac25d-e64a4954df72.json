@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r100-screen-01-part-04-36de7ccac25d",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.23163",
+      "identity_tokens": [
+        "arXiv:2601.23163"
+      ],
+      "title": "Probing the Trajectories of Reasoning Traces in Large Language Models",
+      "reason": "Title and abstract describe a different application domain, benchmark, or training contribution without a plausible direct LLM inference-systems improvement or relevant existing inference-lineage connection.",
+      "source_url": "https://arxiv.org/abs/2601.23163",
+      "first_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "last_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07462",
+      "identity_tokens": [
+        "arXiv:2601.07462"
+      ],
+      "title": "From Sketch to Fresco: Efficient Diffusion Transformer with Progressive Resolution",
+      "reason": "Progressive-resolution diffusion transformer targets image-generation sampling cost; relation to sparse/long-context transformer lineage is architectural only, no LLM inference results.",
+      "source_url": "https://arxiv.org/abs/2601.07462",
+      "first_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "last_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.06793",
+      "identity_tokens": [
+        "arXiv:2601.06793"
+      ],
+      "title": "CliffordNet: All You Need is Geometric Algebra",
+      "reason": "Title and abstract describe a different application domain, benchmark, or training contribution without a plausible direct LLM inference-systems improvement or relevant existing inference-lineage connection.",
+      "source_url": "https://arxiv.org/abs/2601.06793",
+      "first_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "last_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10462-025-11466-6",
+      "identity_tokens": [
+        "DOI:10.1007/s10462-025-11466-6"
+      ],
+      "title": "Cryptography-based privacy-preserving large language models: a lifecycle survey of frameworks, methods, and future directions",
+      "reason": "Title and abstract describe a different application domain, benchmark, or training contribution without a plausible direct LLM inference-systems improvement or relevant existing inference-lineage connection.",
+      "source_url": "https://doi.org/10.1007/s10462-025-11466-6",
+      "first_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "last_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16891",
+      "identity_tokens": [
+        "arXiv:2512.16891"
+      ],
+      "title": "LinkedOut: Linking World Knowledge Representation Out of Video LLM for Next-Generation Video Recommendation",
+      "reason": "VLLM-derived video knowledge tokens are cached into compact representations for fast recommendation serving; reduces online video-model processing but is not direct LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2512.16891",
+      "first_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "last_checked_at": "2026-10-06T13:46:26.727131+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    }
+  ]
+}
