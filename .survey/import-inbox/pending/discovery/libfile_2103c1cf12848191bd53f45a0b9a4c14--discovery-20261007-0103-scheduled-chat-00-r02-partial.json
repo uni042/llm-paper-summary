@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261007-0103-scheduled-chat-00/r02-partial",
+  "reference_main_sha": "a234d93ef689c3565b688f75da1ac9642b3d219d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00434",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00434",
+        "arXiv:2103.00453"
+      ],
+      "title": "Self-Diagnosis and Self-Debiasing: A Proposal for Reducing Corpus-Based Bias in NLP",
+      "reason": "pretrained LM自身でbias/toxicityを診断し、textual descriptionに基づくself-debiasing decodingで有害生成確率を下げる安全性研究。推論時アルゴリズムではあるが、目的はbias mitigationでありシステム効率・serving最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2103.00453",
+      "body_check": "fulltext_relevance_review: arXiv一次本文Introductionを確認。self-diagnosisとparameter更新不要のself-debiasing decodingが中心で、評価目的はundesired behaviorの生成抑制。latency/memory/throughput等の推論システム効率を最終目的としていない。",
+      "first_checked_at": "2026-10-07T01:03:45+09:00",
+      "last_checked_at": "2026-10-07T01:03:45+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/lra.2025.3544909",
+      "identity_tokens": [
+        "DOI:10.1109/lra.2025.3544909",
+        "arXiv:2409.12514"
+      ],
+      "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+      "reason": "compact vision-language-action modelでrobot manipulationの推論速度とdata efficiencyを改善するが、最終適用先はroboticsのvisuomotor policyであり、LLM/言語モデル推論システムの対象範囲外。",
+      "source_url": "https://arxiv.org/abs/2409.12514",
+      "body_check": "fulltext_relevance_review: arXiv一次本文/abstractでhigh-speed multimodal policy backboneとdiffusion policy decoder、simulation/real robotでOpenVLAとの速度・操作性能比較を確認。高速推論は扱うが最終workloadがrobot action policyのためunrelated。",
+      "first_checked_at": "2026-10-07T01:03:45+09:00",
+      "last_checked_at": "2026-10-07T01:03:45+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2026-2609.25376-vlaquantbench.md"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p17-1105",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p17-1105",
+        "arXiv:1704.07535"
+      ],
+      "title": "Abstract Syntax Networks for Code Generation and Semantic Parsing",
+      "reason": "AST構造に沿う動的modular decoderでcode generation/semantic parsing品質を改善するモデル研究。Hearthstone/ATIS/Jobs/Geoの生成精度が主評価で、推論システム効率を扱わない。",
+      "source_url": "https://arxiv.org/abs/1704.07535",
+      "body_check": "abstract_screen_only: arXiv一次abstractでAST decoder、code generation/semantic parsingのBLEU・exact matchが主貢献と確認。本文未読。",
+      "first_checked_at": "2026-10-07T01:03:45+09:00",
+      "last_checked_at": "2026-10-07T01:03:45+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2020.repl4nlp-1.18",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2020.repl4nlp-1.18",
+        "arXiv:2002.08307"
+      ],
+      "title": "Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning",
+      "reason": "deployment時に大きすぎるBERTをweight pruningで圧縮し、どのpruning率までdownstream性能を保てるかを体系評価する。30–40% pruningではpre-training lossとtransfer性能を維持でき、taskごとの再pruning不要というdeployment向け圧縮知見を与えるため対象。",
+      "source_url": "https://aclanthology.org/2020.repl4nlp-1.18/",
+      "body_check": "fulltext_relevance_review: ACL一次資料本文/authoritative PDF metadataを確認。BERTをpre-training中にpruneし、低pruning 30–40%はtransfer性能を維持、中程度以上で劣化する3 regimeを評価。fine-tuning後のtask-specific pruningでprunabilityは改善せず、単一圧縮modelをdownstreamへ展開可能と結論。",
+      "first_checked_at": "2026-10-07T01:03:45+09:00",
+      "last_checked_at": "2026-10-07T01:03:45+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/p19-1146",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1146",
+        "arXiv:1905.05702"
+      ],
+      "title": "Sparse Sequence-to-Sequence Models",
+      "reason": "alpha-entmaxでattentionとoutput distributionに厳密なzeroを作り、short listだけへ非zero確率を与え、場合によってbeam searchをexactにする。sparsityは推論効率へつながり得るが、主要評価はmorphological inflection/translationの品質・解釈性で、end-to-end latency/memory削減の実証がないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/1905.05702",
+      "body_check": "fulltext_relevance_review: arXiv一次本文を確認。alpha-entmaxの高速評価アルゴリズムとsparse alignments/output distributionsを導入し、beam searchがexactになる条件も論じる。一方、実験の中心はMT/inflection品質で、疎性を利用した推論kernelやserving speedupの主要実測がない。",
+      "first_checked_at": "2026-10-07T01:03:45+09:00",
+      "last_checked_at": "2026-10-07T01:03:45+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 29
+    }
+  ]
+}
