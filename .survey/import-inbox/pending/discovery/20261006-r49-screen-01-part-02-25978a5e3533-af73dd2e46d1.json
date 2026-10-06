@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r49-screen-01-part-02-25978a5e3533",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.26253",
+      "identity_tokens": [
+        "arXiv:2607.26253"
+      ],
+      "title": "Early Verdicts, Better Budgets: Sequential Adaptive Rollout Allocation for Compute-Efficient RLVR",
+      "reason": "The resource savings concern RLVR training rollouts rather than deployed inference/serving.",
+      "source_url": "https://arxiv.org/abs/2607.26253",
+      "first_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "last_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.18150",
+      "identity_tokens": [
+        "arXiv:2607.18150"
+      ],
+      "title": "Lossless-INR: Lossless Volumetric Implicit Neural Representations",
+      "reason": "Volumetric implicit neural representations, outside LLM/VLM inference.",
+      "source_url": "https://arxiv.org/abs/2607.18150",
+      "first_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "last_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09520",
+      "identity_tokens": [
+        "arXiv:2607.09520"
+      ],
+      "title": "Seeing is Free, Speaking is Not: Uncovering the True Energy Bottleneck in Edge VLM Inference",
+      "reason": "Direct energy evidence, but this is a bottleneck analysis rather than a validated optimization.",
+      "source_url": "https://arxiv.org/abs/2607.09520",
+      "first_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "last_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04163",
+      "identity_tokens": [
+        "arXiv:2607.04163"
+      ],
+      "title": "SeeMe: Mitigating Hallucinations in Large Vision-Language Models through Effective Visual Token Engineering",
+      "reason": "The objective is hallucination control; no inference-cost savings are measured.",
+      "source_url": "https://arxiv.org/abs/2607.04163",
+      "first_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "last_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.04277",
+      "identity_tokens": [
+        "arXiv:2607.04277"
+      ],
+      "title": "Self-Reference in Large Language Models: The Introspection Threshold for Recursive Self-Improvement",
+      "reason": "The paper analyzes self-improvement behavior and proposes no inference-cost improvement.",
+      "source_url": "https://arxiv.org/abs/2607.04277",
+      "first_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "last_checked_at": "2026-10-06T06:44:57.565588+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    }
+  ]
+}
