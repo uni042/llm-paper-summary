@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-53f4a4692375d6ee-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2502.05610",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2502.05610",
+    "identity_tokens": [
+      "arXiv:2502.05610"
+    ],
+    "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。The paper benchmarks inference energy across models/tasks/prompts/system factors and reports token length/time correlations and interactions with batch size/quantization. It is measurement/recommendation work rather than a new serving mechanism; quantization m",
+    "first_checked_at": "2026-10-06T16:39:08+00:00",
+    "last_checked_at": "2026-10-06T16:39:08+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards Sustainable NLP: Insights from Benchmarking Inference Energy in Large Language Models"
+  },
+  "processed_at": "2026-10-06T16:39:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-53f4a4692375",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
