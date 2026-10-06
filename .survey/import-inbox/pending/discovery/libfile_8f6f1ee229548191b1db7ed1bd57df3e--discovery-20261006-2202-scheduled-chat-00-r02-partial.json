@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261006-2202-scheduled-chat-00/r02-partial",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 6,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2012.03112",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2012.03112",
+        "arXiv:2012.03112"
+      ],
+      "title": "A Modern Primer on Processing in Memory",
+      "reason": "processing-in-memory (PIM)のprocessing-using-memory/processing-near-memory、3D-stacked memory、compiler/programming modelまでを整理する基盤surveyで、LLM推論のmemory bandwidth問題と強く関係する。一方、LLM/Transformer推論を最終適用先として評価する論文ではないため現行サーベイへの直接収録は境界的。",
+      "source_url": "https://arxiv.org/abs/2012.03112",
+      "body_check": "fulltext_relevance_review: PIMをdata movement削減のためmemory内/近傍へcomputeを置く体系として整理し、data-intensive application全般を対象にすることを確認。LLM固有評価がないためborderline。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md"
+      ],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.07863",
+      "identity_tokens": [
+        "arXiv:2405.07863"
+      ],
+      "title": "RLHF Workflow: From Reward Modeling to Online RLHF",
+      "reason": "online iterative RLHFのreward model構築、理論、学習recipe、open-source実装を提供する学習workflow論文。AlpacaEval/Arena-Hard/MT-Bench等の能力評価が主で、推論サービングや推論時メモリ・カーネル効率は扱わない。",
+      "source_url": "https://arxiv.org/abs/2405.07863",
+      "body_check": "abstract_screen_only: arXiv abstractでonline iterative RLHFの再現可能なtraining recipe、preference model、SFT/RLHF性能が主題と確認。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2407.21018-think-thinner-key-cache-by-query-driven-pruning.md"
+      ],
+      "worklist_rank": 26
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1809.00732",
+      "identity_tokens": [
+        "arXiv:1809.00732"
+      ],
+      "title": "emrQA: A Large Corpus for Question Answering on Electronic Medical Records",
+      "reason": "既存clinical NLP annotationを再利用して電子カルテQA corpusを生成するdataset論文。1M question-logical-form、400K超のQA evidence pairとbaseline学習を扱い、LLM推論システム効率とは無関係。",
+      "source_url": "https://arxiv.org/abs/1809.00732",
+      "body_check": "abstract_screen_only: arXiv abstractでclinical QA dataset生成法、corpus規模、baseline model評価が主題と確認。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2512.16822-mepic-position-independent-chunk-kv-sharing.md"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3466752.3480125",
+      "identity_tokens": [
+        "DOI:10.1145/3466752.3480125"
+      ],
+      "title": "Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture",
+      "reason": "低bitでattention matrixを予測してdynamic sparse maskを作り、structured blockへ再配置し、reconfigurable systolic arrayでSDDMM/SpMMを統合実行するsoftware-hardware co-design。BERTでaccuracyを維持しながらV100比4.64倍等の推論高速化を評価しており、sparse attention acceleratorとして直接対象。",
+      "source_url": "https://doi.org/10.1145/3466752.3480125",
+      "body_check": "fulltext_relevance_review: 論文/公式実装の方式説明と評価を確認。quantized attention prediction→dynamic sparsification→structured blocks→score-stationary reconfigurable systolic arrayという推論経路を持ち、BERTでV100 4.64x、A3 2.39x、SpAtten 1.47xのspeedupを報告。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md"
+      ],
+      "worklist_rank": 28
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3768165",
+      "identity_tokens": [
+        "DOI:10.1145/3768165",
+        "arXiv:2411.03350"
+      ],
+      "title": "A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness",
+      "reason": "small language modelの定義、獲得、enhancement、application、LLM collaboration、trustworthinessを広く整理する総合survey。低latency/resource-constrained deploymentを動機に含むが、推論サービング/カーネル/メモリ階層のシステム技術を中心に体系化する論文ではない。",
+      "source_url": "https://arxiv.org/abs/2411.03350",
+      "body_check": "abstract_screen_only: arXiv abstractでSLMのdefinition/acquisition/application/enhancement/reliabilityのtaxonomyが主題と確認。推論systems surveyではない。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md"
+      ],
+      "worklist_rank": 29
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1508244.1508270",
+      "identity_tokens": [
+        "DOI:10.1145/1508244.1508270"
+      ],
+      "title": "Gordon: using flash memory to build fast, power-efficient clusters for data-intensive applications",
+      "reason": "low-power processorとflash memoryを組み合わせた2009年のdata-centric cluster architectureで、disk cluster比の性能/電力効率を評価する。階層memory研究の背景としては関連するが、LLM/Transformerのtrainingまたはinferenceへ適用・評価していない。",
+      "source_url": "https://doi.org/10.1145/1508244.1508270",
+      "body_check": "abstract_screen_only: 出版元一次ページでdata-centric applications向けflash cluster、flash translation layer、disk-based cluster比1.5x performance/2.5x performance-per-wattが主題と確認。LLM最終適用なし。",
+      "first_checked_at": "2026-10-06T22:02:24+09:00",
+      "last_checked_at": "2026-10-06T22:02:24+09:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md"
+      ],
+      "worklist_rank": 30
+    }
+  ]
+}
