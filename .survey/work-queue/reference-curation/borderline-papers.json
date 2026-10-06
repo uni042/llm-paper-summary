@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T11:21:53+00:00",
-  "record_count": 2848,
+  "updated_at": "2026-10-06T11:31:28+00:00",
+  "record_count": 2862,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -43708,6 +43708,216 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Optimization of SmoothQuant Methods for Large Language Models"
+    },
+    "DOI:10.1109/tcsii.2023.3344681": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcsii.2023.3344681",
+      "identity_tokens": [
+        "DOI:10.1109/tcsii.2023.3344681"
+      ],
+      "reason": "Potentially relevant hardware tutorial, but primary-text evidence is unavailable; retain as borderline rather than making a detailed claim.",
+      "first_checked_at": "2026-10-06T11:31:22+00:00",
+      "last_checked_at": "2026-10-06T11:31:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Accelerator Design for Sparse DNN Inference and Training: A Tutorial"
+    },
+    "DOI:10.1109/asp-dac58780.2024.10473976": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/asp-dac58780.2024.10473976",
+      "identity_tokens": [
+        "DOI:10.1109/asp-dac58780.2024.10473976"
+      ],
+      "reason": "Potentially relevant Transformer hardware work, but primary-text claims could not be verified; retain as borderline.",
+      "first_checked_at": "2026-10-06T11:31:23+00:00",
+      "last_checked_at": "2026-10-06T11:31:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TransFRU: Efficient Deployment of Transformers on FPGA with Full Resource Utilization"
+    },
+    "arXiv:2309.13445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2309.13445",
+      "identity_tokens": [
+        "arXiv:2309.13445"
+      ],
+      "reason": "Generic approximate hardware is a weak transfer possibility, with no direct LLM result or tested language model.",
+      "first_checked_at": "2026-10-06T11:31:24+00:00",
+      "last_checked_at": "2026-10-06T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AxOMaP: Designing FPGA-based Approximate Arithmetic Operators using Mathematical Programming"
+    },
+    "arXiv:2303.07665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.07665",
+      "identity_tokens": [
+        "arXiv:2303.07665"
+      ],
+      "reason": "Adjacent non-autoregressive sequence generation, but no general LLM or serving efficiency result.",
+      "first_checked_at": "2026-10-06T11:31:24+00:00",
+      "last_checked_at": "2026-10-06T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RenewNAT: Renewing Potential Translation for Non-Autoregressive Transformer"
+    },
+    "DOI:10.1109/icdmw58026.2022.00062": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icdmw58026.2022.00062",
+      "identity_tokens": [
+        "DOI:10.1109/icdmw58026.2022.00062"
+      ],
+      "reason": "Plausible NLP compression transfer but publisher evidence is unavailable; keep as borderline.",
+      "first_checked_at": "2026-10-06T11:31:24+00:00",
+      "last_checked_at": "2026-10-06T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Compression Methods for Transformers in Multidomain Sentiment Analysis"
+    },
+    "arXiv:2508.02977": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.02977",
+      "identity_tokens": [
+        "arXiv:2508.02977"
+      ],
+      "reason": "Hardware/SSM architectural transfer is possible but the evaluated system is vision-specific, with no LLM workload.",
+      "first_checked_at": "2026-10-06T11:31:24+00:00",
+      "last_checked_at": "2026-10-06T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-X: An End-to-End Vision Mamba Accelerator for Edge Computing Devices"
+    },
+    "arXiv:2507.21420": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.21420",
+      "identity_tokens": [
+        "arXiv:2507.21420"
+      ],
+      "reason": "Adjacent MLLM token-efficiency technique, but no inference-time method or serving result is demonstrated.",
+      "first_checked_at": "2026-10-06T11:31:24+00:00",
+      "last_checked_at": "2026-10-06T11:31:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ReGATE: Learning Faster and Better with Fewer Tokens in MLLMs"
+    },
+    "arXiv:2409.09689": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.09689",
+      "identity_tokens": [
+        "arXiv:2409.09689"
+      ],
+      "reason": "Transformer hardware evidence but encoder-only and legacy cross-platform comparisons make relevance to modern LLM serving weak.",
+      "first_checked_at": "2026-10-06T11:31:25+00:00",
+      "last_checked_at": "2026-10-06T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CAT: Customized Transformer Accelerator Framework on Versal ACAP"
+    },
+    "arXiv:2408.14528": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.14528",
+      "identity_tokens": [
+        "arXiv:2408.14528"
+      ],
+      "reason": "Potential early-exit transfer, but tested models and measurements are small classifiers rather than LLM inference.",
+      "first_checked_at": "2026-10-06T11:31:25+00:00",
+      "last_checked_at": "2026-10-06T11:31:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Resolution Inference (ARI): Energy-Efficient Machine Learning for Internet of Things"
+    },
+    "DOI:10.1016/j.asoc.2024.111421": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.asoc.2024.111421",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2024.111421"
+      ],
+      "reason": "Potentially relevant Transformer hardware, but evidence is limited to metadata/abstract because the primary text was unavailable.",
+      "first_checked_at": "2026-10-06T11:31:26+00:00",
+      "last_checked_at": "2026-10-06T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vision Transformer-based overlay processor for Edge Computing"
+    },
+    "arXiv:2510.03358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03358",
+      "identity_tokens": [
+        "arXiv:2510.03358"
+      ],
+      "reason": "Only a weak transferable low-rank analysis link to LLM efficiency; the evaluated models and task are time-series forecasting.",
+      "first_checked_at": "2026-10-06T11:31:26+00:00",
+      "last_checked_at": "2026-10-06T11:31:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Understanding Transformers for Time Series: Rank Structure, Flow-of-ranks, and Compressibility"
+    },
+    "arXiv:2505.08992": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.08992",
+      "identity_tokens": [
+        "arXiv:2505.08992"
+      ],
+      "reason": "Useful background for the linked FPGA/LLM accelerator line, but a survey without a concrete new result is weak as a standalone addition.",
+      "first_checked_at": "2026-10-06T11:31:27+00:00",
+      "last_checked_at": "2026-10-06T11:31:27+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dataflow & Tiling Strategies in Edge-AI FPGA Accelerators: A Comprehensive Literature Review"
+    },
+    "arXiv:2504.08398": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.08398",
+      "identity_tokens": [
+        "arXiv:2504.08398"
+      ],
+      "reason": "Microscaling/quantization could transfer, but the work evaluates diffusion image generation, not language models.",
+      "first_checked_at": "2026-10-06T11:31:27+00:00",
+      "last_checked_at": "2026-10-06T11:31:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MixDiT: Accelerating Image Diffusion Transformer Inference With Mixed-Precision MX Quantization"
+    },
+    "DOI:10.1109/tcad.2024.3524356": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2024.3524356",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3524356"
+      ],
+      "reason": "Potentially direct sparse-LLM hardware evidence, but source-text retrieval failed; keep borderline for later evidence recovery.",
+      "first_checked_at": "2026-10-06T11:31:28+00:00",
+      "last_checked_at": "2026-10-06T11:31:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fine-Grained Structured Sparse Computing for FPGA-Based AI Inference"
     }
   }
 }

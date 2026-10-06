@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8da55e0adc57eaa9-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.03358",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.03358",
+    "identity_tokens": [
+      "arXiv:2510.03358"
+    ],
+    "reason": "Only a weak transferable low-rank analysis link to LLM efficiency; the evaluated models and task are time-series forecasting.",
+    "first_checked_at": "2026-10-06T11:31:26+00:00",
+    "last_checked_at": "2026-10-06T11:31:26+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Understanding Transformers for Time Series: Rank Structure, Flow-of-ranks, and Compressibility"
+  },
+  "processed_at": "2026-10-06T11:31:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8da55e0adc57",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
