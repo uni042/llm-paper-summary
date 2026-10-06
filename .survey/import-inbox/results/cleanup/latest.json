@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T10:20:20+00:00",
+  "updated_at": "2026-10-06T11:00:38+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3052,6 +3052,16 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-646945fecdc9--libfile_a0a3d63606408191bcf4b24c78333a12--2609.25916-casa.md",
       "processed_at": "2026-10-06T10:20:20+00:00",
       "canonical_id": "arXiv:2609.25916"
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/1802.05799-horovod.md",
+      "processed_at": "2026-10-06T11:00:38+00:00",
+      "canonical_id": "arXiv:1802.05799",
+      "failures": [
+        "list_summary",
+        "summary"
+      ]
     }
   ]
 }
