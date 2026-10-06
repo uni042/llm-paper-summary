@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r36-screen-01-part-01-7d72fd721ab8",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04259",
+      "identity_tokens": [
+        "arXiv:2509.04259"
+      ],
+      "title": "RL's Razor: Why Online Reinforcement Learning Forgets Less",
+      "reason": "The methods compare fine-tuning objectives and prior-task retention; evaluation is learning/forgetting tradeoffs. The serving-runtime lineage link does not reflect a technical runtime contribution.",
+      "source_url": "https://arxiv.org/abs/2509.04259",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1904.13377",
+      "identity_tokens": [
+        "arXiv:1904.13377"
+      ],
+      "title": "Very Deep Self-Attention Networks for End-to-End Speech Recognition",
+      "reason": "The work is a speech-recognition architecture from 2019; it tests deep self-attention ASR and training regularization, while retaining the full network at inference. Transfer to current LLM inference efficiency is weak.",
+      "source_url": "https://arxiv.org/abs/1904.13377",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.00906",
+      "identity_tokens": [
+        "arXiv:2504.00906"
+      ],
+      "title": "Agent S2: A Compositional Generalist-Specialist Framework for Computer Use Agents",
+      "reason": "The paper concerns computer-use agent architecture and task performance. It does not provide a concrete LLM inference-serving optimization, so its connection to inference-system lineages is indirect.",
+      "source_url": "https://arxiv.org/abs/2504.00906",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2026-2604.16007-memexplorer-navigating-the-heterogeneous-memory-design-space-for-agentic-inference-npus.md",
+        "papers/inference/17-pim-near-data-acceleration/2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.17453",
+      "identity_tokens": [
+        "arXiv:2402.17453"
+      ],
+      "title": "DS-Agent: Automated Data Science by Empowering Large Language Models with Case-Based Reasoning",
+      "reason": "Case-based reasoning is used to improve data-science agent task solving, but the reported contribution does not establish inference-system savings or reusable context/KV mechanisms.",
+      "source_url": "https://arxiv.org/abs/2402.17453",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/ai4010004",
+      "identity_tokens": [
+        "DOI:10.3390/ai4010004"
+      ],
+      "title": "End-to-End Transformer-Based Models in Textual-Based NLP",
+      "reason": "This is a broad survey of transformer-based textual NLP tasks and architectures. It notes attention complexity but does not focus on inference optimization methods or serving measurements.",
+      "source_url": "https://doi.org/10.3390/ai4010004",
+      "first_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "last_checked_at": "2026-10-06T04:06:17.015015+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ]
+    }
+  ]
+}
