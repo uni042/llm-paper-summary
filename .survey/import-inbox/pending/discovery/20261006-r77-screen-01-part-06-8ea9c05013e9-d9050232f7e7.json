@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r77-screen-01-part-06-8ea9c05013e9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICC59461.2026.11587317",
+      "identity_tokens": [
+        "DOI:10.1109/ICC59461.2026.11587317"
+      ],
+      "title": "Heterogeneous Personalized Federated Learning with Mixture-of-Experts for Intrusion Detection in the Internet of Vehicles",
+      "reason": "IoV intrusion detection向けpersonalized federated MoEは分散学習・分類応用で、LLM inference costを扱わない。",
+      "source_url": "https://doi.org/10.1109/ICC59461.2026.11587317",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11561964",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11561964"
+      ],
+      "title": "Energy-Efficient Acceleration of Fourier-based Transformers on RRAM-CIM via Mixed-Precision and DFT Symmetry",
+      "reason": "RRAM-CIMでFourier-based Transformerをmixed precision/DFT symmetryで高速・省電力化するhardware方式として関連するが、LLM servingへの転用と実測評価を本文で確認できない。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11561964",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562594",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562594"
+      ],
+      "title": "A Synthesizable Mixed-Precision DCIM Macro with Parallel Write and Compute",
+      "reason": "公式ISCAS paper recordのabstractはFP8×INT2/4/6 DCIM、double-buffering、LLaMA3.2で最大4–6x throughput/energy改善・area最大5x低減を報告し直接関連する。ただしfull textに到達できず、比較条件/限界が検証できない。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562594",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562903",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562903"
+      ],
+      "title": "MX-SE: Microscaling Data Format with Super Exponent for AI edge computing",
+      "reason": "MX-SE super-exponent形式はAI edge向け量子化誤差改善としてlow-bit model圧縮系譜に接点があるが、LLMでの方法・評価を示す本文が取得できない。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562903",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.24755",
+      "identity_tokens": [
+        "arXiv:2605.24755"
+      ],
+      "title": "Automated Detection and Classification of Delusion-related Content in Naturalistic Audio Diaries Using Multi-Agent Language Models",
+      "reason": "multimodal audio diariesからdelusion-related contentを分類する応用で、LLM推論効率の改善方式がない。",
+      "source_url": "https://arxiv.org/abs/2605.24755",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
