@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r96-screen-01-part-07-905db4a0d74b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03276",
+      "identity_tokens": [
+        "arXiv:2511.03276"
+      ],
+      "title": "Diffusion Language Models are Super Data Learners",
+      "reason": "Diffusion-LM scaling paper finds data-constrained training benefits and discusses multi-token parallel generation, but explicitly reports higher train/test FLOPs, latency and memory pressure than AR+KV cache; no serving gain is evaluated.",
+      "source_url": "https://arxiv.org/abs/2511.03276",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03422",
+      "identity_tokens": [
+        "arXiv:2512.03422"
+      ],
+      "title": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models",
+      "reason": "In this paper, we provide a comprehensive overview of existing scene representation methods for robotics, covering traditional representations such as point clouds, voxels, signed distance functions (SDF), and scene graphs, as well as more recent neural representations like Neural Radiance Fields (NeRF), 3D Gaussian Splatting (3DGS), and the emerging Foundation Models. While current SLAM and localization systems predominantly rely on sparse representations like point clouds and voxels, dense scene representations are expected to play a critical role in downstream tasks such as navigation and obstacle avoidance. Moreover, neural representations such as NeRF, 3DGS, and foundation models are well-suited for integrating high-level semantic features and language-based priors, enabling more comprehensive 3D scene understanding and embodied intelligence. In this paper, we categorized the core modules of robotics into five parts (Perception, Mapping, Localization, Navigation, Manipulation). We start by presenting the standard formulation of different scene representation methods and comparing the advantages and disadvantages of scene representation across different modules. This survey is ",
+      "source_url": "https://arxiv.org/abs/2512.03422",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01658",
+      "identity_tokens": [
+        "arXiv:2604.01658"
+      ],
+      "title": "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery",
+      "reason": "Large language model (LLM)-based evolution is a promising approach for open-ended discovery, where progress requires sustained search and knowledge accumulation. Existing methods still rely heavily on fixed heuristics and hard-coded exploration rules, which limit the autonomy of LLM agents. We present CORAL, the first framework for autonomous multi-agent evolution on open-ended problems. CORAL replaces rigid control with long-running agents that explore, reflect, and collaborate through shared persistent memory, asynchronous multi-agent execution, and heartbeat-based interventions. It also provides practical safeguards, including isolated workspaces, evaluator separation, resource management, and agent session and health management. Evaluated on diverse mathematical, algorithmic, and systems optimization tasks, CORAL sets new state-of-the-art results on 10 tasks, achieving 3-10 times higher improvement rates with far fewer evaluations than fixed evolutionary search baselines across tasks. On Anthropic's kernel engineering task, four co-evolving agents improve the best known score from 1363 to 1103 cycles. Mechanistic analyses further show how these gains arise from knowledge reuse ",
+      "source_url": "https://arxiv.org/abs/2604.01658",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.26645",
+      "identity_tokens": [
+        "arXiv:2509.26645"
+      ],
+      "title": "TTT3R: 3D Reconstruction as Test-Time Training",
+      "reason": "TTT3R uses test-time state updates for fixed-memory 3D reconstruction; reports 20 FPS and 6GB GPU on thousands of images. Limitations include state forgetting and lower accuracy than slower full attention; task is vision, not language.",
+      "source_url": "https://arxiv.org/abs/2509.26645",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2208.10658",
+      "identity_tokens": [
+        "arXiv:2208.10658"
+      ],
+      "title": "Survey on Evolutionary Deep Learning: Principles, Algorithms, Applications, and Open Issues",
+      "reason": "Over recent years, there has been a rapid development of deep learning (DL) in both industry and academia fields. However, finding the optimal hyperparameters of a DL model often needs high computational cost and human expertise. To mitigate the above issue, evolutionary computation (EC) as a powerful heuristic search approach has shown significant merits in the automated design of DL models, so-called evolutionary deep learning (EDL). This article aims to analyze EDL from the perspective of automated machine learning (AutoML). Specifically, we first illuminate EDL from DL and EC and regard EDL as an optimization problem. According to the DL pipeline, we systematically introduce EDL methods ranging from data preparation, model generation, to model deployment with a new taxonomy (i.e., what and how to evolve/optimize), and focus on the discussions of solution representation and search paradigm in handling the optimization problem by EC. Finally, key applications, open issues, and potentially promising lines of future research are suggested. This survey has reviewed recent developments of EDL and offers insightful guidelines for the development of EDL.",
+      "source_url": "https://arxiv.org/abs/2208.10658",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/08-edge-on-device-llm-systems/2022-2207.00112-language-model-compression-with-weighted-low-rank-factorization.md"
+      ]
+    }
+  ]
+}
