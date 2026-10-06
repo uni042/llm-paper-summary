@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r153-screen-01-part-03-d2e0a5d11b31",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/JBHI.2026.3662787",
+      "identity_tokens": [
+        "DOI:10.1109/JBHI.2026.3662787"
+      ],
+      "title": "SSF-SET: A Discrete EEG Token-Based Framework for Sleep Stage Forecasting",
+      "reason": "EEG tokenを使う睡眠ステージ予測でsequence modelに隣接するが、IEEE JBHI一次資料を取得できず、言語モデルとの関係/効率を確認できない。",
+      "source_url": "https://doi.org/10.1109/JBHI.2026.3662787",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48084/etasr.15977",
+      "identity_tokens": [
+        "DOI:10.48084/etasr.15977"
+      ],
+      "title": "A Differentiable Gating Mechanism for DETR: Improving Attention Efficiency in Real-Time Road Anomaly Detection",
+      "reason": "DETRのattention efficiencyを道路異常検出で改善する内容は一般attention lineageに隣接するが、指定ETASR一次資料を取得できず、実際の効率効果とLLM移転可能性を確かめられない。",
+      "source_url": "https://doi.org/10.48084/etasr.15977",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.13290",
+      "identity_tokens": [
+        "arXiv:2602.13290"
+      ],
+      "title": "AGORA: Agentic Green Orchestration Architecture for Beyond 5G Networks",
+      "reason": "一次資料の要旨を確認。Effective management and operational decision-making for complex mobile network systems present significant challenges, particularly when addressing conflicting requirements such as efficiency, user satisfaction, and energy-efficient traffic steering. The literature presents various approaches aimed at enhancing network management, including the Zero-Touch Network (ZTN) and Self-Organizing Network",
+      "source_url": "https://arxiv.org/abs/2602.13290",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.03310",
+      "identity_tokens": [
+        "arXiv:2603.03310"
+      ],
+      "title": "Entropic-Time Inference: Self-Organizing Large Language Model Decoding Beyond Attention",
+      "reason": "本文はuncertainty flowに基づくLLM decoding scheduling/attention pruningを提案する一方、実証はablation/design寄りで推論gainと品質tradeoffの強い検証が不足しているため、追加再現が必要。",
+      "source_url": "https://arxiv.org/abs/2603.03310",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07547",
+      "identity_tokens": [
+        "arXiv:2602.07547"
+      ],
+      "title": "Linguistic properties and model scale in brain encoding: from small to compressed language models",
+      "reason": "一次資料の要旨を確認。Recent work has shown that scaling large language models (LLMs) improves their alignment with human brain activity, yet it remains unclear what drives these gains and which representational properties are responsible. Although larger models often yield better task performance and brain alignment, they are increasingly difficult to analyze mechanistically. This raises a fundamental question: what i",
+      "source_url": "https://arxiv.org/abs/2602.07547",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.02750-kivi.md"
+      ]
+    }
+  ]
+}
