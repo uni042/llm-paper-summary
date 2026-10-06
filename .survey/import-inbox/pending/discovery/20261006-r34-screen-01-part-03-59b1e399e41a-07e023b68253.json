@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r34-screen-01-part-03-59b1e399e41a",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.07973",
+      "identity_tokens": [
+        "arXiv:2404.07973"
+      ],
+      "title": "Ferret-v2: An Improved Baseline for Referring and Grounding with Large Language Models",
+      "reason": "Visual referring/grounding capability, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2404.07973",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.07398",
+      "identity_tokens": [
+        "arXiv:2506.07398"
+      ],
+      "title": "G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems",
+      "reason": "G-Memory improves multi-agent task outcomes and analyzes token cost but reports no latency/KV/serving gain.",
+      "source_url": "https://arxiv.org/abs/2506.07398",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.21477-pancake-hierarchical-agentic-memory.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.02604",
+      "identity_tokens": [
+        "arXiv:2603.02604"
+      ],
+      "title": "Heterogeneous Agent Collaborative Reinforcement Learning",
+      "reason": "Collaborative agent RL training, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2603.02604",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.21008",
+      "identity_tokens": [
+        "arXiv:2512.21008"
+      ],
+      "title": "GateBreaker: Gate-Guided Attacks on Mixture-of-Expert LLMs",
+      "reason": "Security attack study on MoE gates, not serving efficiency.",
+      "source_url": "https://arxiv.org/abs/2512.21008",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01644",
+      "identity_tokens": [
+        "arXiv:2512.01644"
+      ],
+      "title": "A Systematic Characterization of LLM Inference on GPUs",
+      "reason": "Broad GPU inference characterization and guidelines, not a single new serving method; conclusions depend on evaluated hardware/workloads.",
+      "source_url": "https://arxiv.org/abs/2512.01644",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.22774-characterizing-cpu-induced-slowdowns-multi-gpu-llm-inference.md",
+        "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md"
+      ]
+    }
+  ]
+}
