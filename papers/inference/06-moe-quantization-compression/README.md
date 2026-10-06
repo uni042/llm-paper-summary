@@ -44,13 +44,13 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：11  
   MxMoEは、専門家内の各線形ブロックを量子化誤差・利用頻度・GPU実測時間で比較し、メモリ予算内のビット配置を品質と実速度の両面で選ぶ。
 
+- **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
+  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：9  
+  MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
+
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
   実装：[✓](https://github.com/chenzx921020/MoEQuant) ・ リポジトリ内被引用：8  
   MoEQuantは、較正例を低頻度専門家へ補い、ルータ寄与の大きいトークンを重く量子化評価して、同じ低ビットでも専門家出力の品質劣化を抑える。
-
-- **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
-  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：8  
-  MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
   実装：[✓](https://github.com/darren-fzq1/EAQuant) ・ リポジトリ内被引用：5  
