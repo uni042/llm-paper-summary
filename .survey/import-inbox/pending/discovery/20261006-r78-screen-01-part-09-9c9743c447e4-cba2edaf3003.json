@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r78-screen-01-part-09-9c9743c447e4",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461683",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461683"
+      ],
+      "title": "Exploration Beyond Budget: Training Large Language Models to Explore Under Truncation Constraints",
+      "reason": "Primary publisher DOI URL was attempted, but the available fetch returned an internal error and the supplied abstract is empty. The title suggests LLM exploration under truncation constraints, plausibly related to reasoning-token budgets, but it describes training and no primary method/evaluation/limitations could be verified.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11461683",
+      "first_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "last_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462183",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462183"
+      ],
+      "title": "Seaf: Semantic-Aware Frame Selection for Long-form Video Understanding",
+      "reason": "Primary IEEE Xplore DOI page was opened but blocked at the verification/JavaScript gate; conference listing confirms only title/authors. Full primary manuscript was unavailable. Title suggests semantic frame selection for long-form video MLLMs, a plausible visual-token/inference-compute relation, but method and evaluation are unverified.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11462183",
+      "first_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "last_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462414",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462414"
+      ],
+      "title": "LVC: A Lightweight Compression Framework for Enhancing VLMS in Long Video Understanding",
+      "reason": "Primary IEEE Xplore DOI page was attempted but blocked at the verification/JavaScript gate; conference listing exposes title/authors only. A distinct older arXiv paper with a similar title was not substituted for this DOI record. The title suggests VLM video compression, but primary method/evaluation could not be reviewed.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11462414",
+      "first_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "last_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11462653",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11462653"
+      ],
+      "title": "Understanding the Improvement in Model Quantization",
+      "reason": "Primary IEEE Xplore DOI page was attempted but blocked at the verification/JavaScript gate; no primary full text was available. Title indicates model quantization, but task/model scope, inference metrics, and results cannot be verified.",
+      "source_url": "https://doi.org/10.1109/icassp55912.2026.11462653",
+      "first_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "last_checked_at": "2026-10-06T10:32:35.291232+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ]
+    }
+  ]
+}
