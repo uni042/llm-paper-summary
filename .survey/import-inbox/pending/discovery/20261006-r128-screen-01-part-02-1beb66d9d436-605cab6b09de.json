@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r128-screen-01-part-02-1beb66d9d436",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3689031.3717462",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717462"
+      ],
+      "title": "Chrono: Meticulous Hotness Measurement and Flexible Page Migration for Memory Tiering",
+      "reason": "タイトル/系統情報上の関連可能性を否定できない一方、指定primary publisher sourceが取得不能で根拠を確認できないため、未検証のabstractキャッシュで除外しない。",
+      "source_url": "https://doi.org/10.1145/3689031.3717462",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12218",
+      "identity_tokens": [
+        "arXiv:2501.12218"
+      ],
+      "title": "Exploring Temporally-Aware Features for Point Tracking",
+      "reason": "一次要旨は映像中の点追跡とtemporal visual featuresを扱うcomputer vision研究で、LLM推論処理の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2501.12218",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.05899",
+      "identity_tokens": [
+        "arXiv:2501.05899"
+      ],
+      "title": "Prompt engineering and its implications on the energy consumption of Large Language Models",
+      "reason": "本文はLlama 3のcode-generation taskでprompt方式とenergy/execution time/accuracyを比較する実測研究で、効率改善策としてpromptの違いを評価する点は近い。一方で一般的なserving手法やsystem改善を提案しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2501.05899",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/1.AP.7.1.016007",
+      "identity_tokens": [
+        "DOI:10.1117/1.AP.7.1.016007"
+      ],
+      "title": "Microcomb-driven photonic chip for solving partial differential equations",
+      "reason": "タイトル/系統情報上の関連可能性を否定できない一方、指定primary publisher sourceが取得不能で根拠を確認できないため、未検証のabstractキャッシュで除外しない。",
+      "source_url": "https://doi.org/10.1117/1.AP.7.1.016007",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.14112",
+      "identity_tokens": [
+        "arXiv:2412.14112"
+      ],
+      "title": "Starting a synthetic biological intelligence lab from scratch",
+      "reason": "一次要旨はin-vitro neuronを使うsynthetic biological intelligence研究室の構築・実験基盤の解説で、LLM software servingとは無関係。",
+      "source_url": "https://arxiv.org/abs/2412.14112",
+      "first_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "last_checked_at": "2026-10-06T18:02:23.348763+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    }
+  ]
+}
