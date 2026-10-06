@@ -64,6 +64,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/Intelligent-Microsystems-Lab/SplitZip) ・ リポジトリ内被引用：4  
   BF16の指数が少数値へ集中する性質を使い、頻出指数を4ビット化し例外だけ位置付きで別保存することで、KVキャッシュを無損失かつGPU上で高速圧縮し、分離LLM配信の転送待ちを削減する方式。
 
+- **2025-11 · [SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation](2025-swiftkv.md)**  
+  実装：[✓](https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference) ・ リポジトリ内被引用：4  
+  後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。
+
 - **2025-11 · [SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs](2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   蒸留言語モデルの注意分布を「本体LLMがどの過去トークンを見るか」の安価な予測器として使い、重要KVを推論前に選択する。これによりKV検索とCPU-GPU転送を本体計算から切り離し、非同期先読み・差分更新・適応オフロードまで一体化する。
@@ -99,10 +103,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-01 · [Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference](2026-2601.12967-sutradhara-an-intelligent-orchestrator-engine-co-design-for-tool-based-a.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   次のプロンプトのうちツール結果を待たずに確定できる部分を先にプレフィルし、生成ストリームから完成したツール呼出しを即時実行し、さらにKVブロックへ意味カテゴリを付けて退避優先度を変える。
-
-- **2025-11 · [SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation](2025-swiftkv.md)**  
-  実装：[✓](https://github.com/snowflakedb/arctictraining ; https://github.com/snowflakedb/arcticinference) ・ リポジトリ内被引用：3  
-  後半層の入力トークン計算を省き中間層出力からKVだけを生成する軽量蒸留方式で、プリフィル計算を25〜50%削減し処理量を最大2倍にする。
 
 - **2025-11 · [Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA](2025-2512.17910-activated-lora-cross-model-kv-reuse.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：3  
