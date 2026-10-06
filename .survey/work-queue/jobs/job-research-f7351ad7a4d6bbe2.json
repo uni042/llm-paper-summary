@@ -32,10 +32,15 @@
   "selection_reason": "The method quantizes LLM weights, activations, and KV cache for deployment; the KV-cache component is directly relevant to inference throughput and long-context memory efficiency and is linked from multiple existing inference-system lineages.",
   "semantic_scholar_id": "6bd3ee1ca608bc66a490f63f2fb107d79b44f3e2",
   "source_url": "https://arxiv.org/abs/2305.17888",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLM-QAT: Data-Free Quantization Aware Training for Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-06T12:30:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md",
+  "represented_canonical_id": "arXiv:2305.17888",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "LoRAのweight/gradientだけでimportanceを推定し、attention headとFFN channelを構造的に削除するLLM圧縮方式。LLaMAで50% compression時にLLM-Prunerより低perplexityを保ちつつmemory usageを52.6%削減し、構造化pruningにより通常hardware上でdeployment計算量を削減できるため対象内。",
   "semantic_scholar_id": "b463f5dd8ed6871ddeac03754c1c2d99547b08fe",
   "source_url": "https://arxiv.org/abs/2305.18403",
-  "status": "ready",
+  "status": "superseded",
   "title": "LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2023
+  "year": 2023,
+  "superseded_at": "2026-10-06T12:30:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md",
+  "represented_canonical_id": "arXiv:2305.18403",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

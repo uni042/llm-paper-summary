@@ -35,10 +35,15 @@
   "selection_reason": "KV cacheを使うautoregressive inferenceで数値的非決定性・実装差を分析し、推論runtime互換性に直接関係する。",
   "semantic_scholar_id": "7c0fee06f5201a8734202e198e2625f996721e39",
   "source_url": "https://arxiv.org/abs/2604.15409",
-  "status": "ready",
+  "status": "superseded",
   "title": "The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-06T12:30:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.15409-the-illusion-of-equivalence-systematic-fp16-divergence-in-kv-cached-auto.md",
+  "represented_canonical_id": "arXiv:2604.15409",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
