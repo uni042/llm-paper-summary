@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r149-screen-01-part-04-6d82462a9ac5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.16067",
+      "identity_tokens": [
+        "arXiv:2604.16067"
+      ],
+      "title": "AEGIS: Anchor-Enforced Gradient Isolation for Knowledge-Preserving Vision-Language-Action Fine-Tuning",
+      "reason": "arXiv本文はrobotic VLA modelのknowledge-preserving fine-tuningにおけるgradient isolationを扱う。主寄与はtraining中の忘却抑制であり、LLM inference efficiencyではない。",
+      "source_url": "https://arxiv.org/abs/2604.16067",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1021/acs.est.6c00079",
+      "identity_tokens": [
+        "DOI:10.1021/acs.est.6c00079"
+      ],
+      "title": "Tracking Seamless All-Hour PM2.5 in China Using a Gridded Surface Visibility-Based Transformer Model.",
+      "reason": "Direct DOI/publisher URL returned inaccessible URL or Internal Error, so the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.1021/acs.est.6c00079",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5194/amt-19-2575-2026",
+      "identity_tokens": [
+        "DOI:10.5194/amt-19-2575-2026"
+      ],
+      "title": "Leveraging machine learning to enhance aerosol classification using Single-Particle Mass Spectrometry",
+      "reason": "Direct DOI/publisher URL returned inaccessible URL or Internal Error, so the primary abstract and full text could not be verified. primary-source evidence is needed to distinguish scope/lineage and contribution; retain as borderline until the source can be accessed.",
+      "source_url": "https://doi.org/10.5194/amt-19-2575-2026",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.14500",
+      "identity_tokens": [
+        "arXiv:2604.14500"
+      ],
+      "title": "Geometric Metrics for MoE Specialization: From Fisher Information to Early Failure Detection",
+      "reason": "arXiv本文はMoE expert specializationのFisher metricとtraining failure early-detectionを扱い、10% training時点のfailure予測で計算cyclesを削る。削減対象はtraining computeであり、inference routing/latency/throughputの改善ではない。",
+      "source_url": "https://arxiv.org/abs/2604.14500",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14828",
+      "identity_tokens": [
+        "arXiv:2604.14828"
+      ],
+      "title": "Pangu-ACE: Adaptive Cascaded Experts for Educational Response Generation on EduBench",
+      "reason": "arXiv要旨では1B tutor-routerと7B specialistを使う教育応答のsample-level cascadeを確認した。本文HTMLはInternal Errorで取得できず、archived evaluationとrouting/quality tradeoffを一次本文から検証できないためborderlineに残す。",
+      "source_url": "https://arxiv.org/abs/2604.14828",
+      "first_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "last_checked_at": "2026-10-06T20:45:44.185773+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md"
+      ]
+    }
+  ]
+}
