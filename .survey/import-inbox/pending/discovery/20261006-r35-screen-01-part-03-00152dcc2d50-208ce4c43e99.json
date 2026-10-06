@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r35-screen-01-part-03-00152dcc2d50",
+  "reference_main_sha": "397be2032fe3468d3c1716428605a7a23dc9e070",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d19-1441",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1441"
+      ],
+      "title": "Patient Knowledge Distillation for BERT Model Compression",
+      "reason": "Patient-KD compresses BERT into a shallow student and evaluates model efficiency, but the paper frames its main efficiency result around training resources rather than modern LLM inference or serving. The model-compression connection remains plausible but indirect.",
+      "source_url": "https://arxiv.org/abs/1908.09355",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d18-1241",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d18-1241"
+      ],
+      "title": "QuAC: Question Answering in Context",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/1808.07036",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3383313.3412236",
+      "identity_tokens": [
+        "DOI:10.1145/3383313.3412236"
+      ],
+      "title": "Progressive Layered Extraction (PLE): A Novel Multi-Task Learning (MTL) Model for Personalized Recommendations",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://doi.org/10.1145/3383313.3412236",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2603.13281-icarus-identical-cache-reuse-for-efficient-multi-model-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n19-1063",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n19-1063"
+      ],
+      "title": "On Measuring Social Biases in Sentence Encoders",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/1903.10561",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1910.01442",
+      "identity_tokens": [
+        "arXiv:1910.01442"
+      ],
+      "title": "CLEVRER: CoLlision Events for Video REpresentation and Reasoning",
+      "reason": "Primary-source title/abstract identifies a dataset, benchmark, bias/evaluation study, application-domain model, training-only method, or non-LLM task without a concrete link to the defined LLM inference compute, memory, latency, throughput, KV-cache, quantization, offload, or serving scope.",
+      "source_url": "https://arxiv.org/abs/1910.01442",
+      "first_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "last_checked_at": "2026-10-06T03:52:35.142873+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ]
+    }
+  ]
+}
