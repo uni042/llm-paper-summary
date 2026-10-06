@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r109-screen-01-part-03-108d3643dfff",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.14005",
+      "identity_tokens": [
+        "arXiv:2607.14005"
+      ],
+      "title": "M4World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming",
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2607.14005",
+      "first_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "last_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11875",
+      "identity_tokens": [
+        "arXiv:2607.11875"
+      ],
+      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "source_url": "https://arxiv.org/abs/2607.11875",
+      "first_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "last_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11944",
+      "identity_tokens": [
+        "arXiv:2607.11944"
+      ],
+      "title": "MAGE: Understanding Stability-Performance Trade-offs in Multi-component Prompt Optimization",
+      "reason": "題名・要旨・既存論文リンクの文脈から、LLM推論効率または既存の推論系統に加わる具体的な技術接続がないと判断。",
+      "source_url": "https://arxiv.org/abs/2607.11944",
+      "first_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "last_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09279",
+      "identity_tokens": [
+        "arXiv:2607.09279"
+      ],
+      "title": "Transient Reserves, Sink Dampers, and the Failure of Eigenvalue Reasoning in the Attention Propagator",
+      "reason": "一次本文で関連する技術接点を確認したが、LLM推論/servingへの直接的な効率改善または汎用性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2607.09279",
+      "first_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "last_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09908",
+      "identity_tokens": [
+        "arXiv:2607.09908"
+      ],
+      "title": "RouteRec: Strict Evaluation of Recommender-Agent Selection and Aggregation",
+      "reason": "関連するコスト・推論効率課題を扱うが、対象が特定アプリケーション/分析または効果が限定的で、一般LLM servingへの具体的な移行先がまだ弱い。",
+      "source_url": "https://arxiv.org/abs/2607.09908",
+      "first_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "last_checked_at": "2026-10-06T15:01:39.503797+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    }
+  ]
+}
