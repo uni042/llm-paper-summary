@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r142-screen-01-part-05-539096a0ad24",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/NetSoft70012.2026.11603451",
+      "identity_tokens": [
+        "DOI:10.1109/NetSoft70012.2026.11603451"
+      ],
+      "title": "LLM-Assisted Design and Analytics of Next-Generation Optical Transport Networks",
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/NetSoft70012.2026.11603451 was not accessible; primary text unavailable.",
+      "source_url": "https://doi.org/10.1109/NetSoft70012.2026.11603451",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29337",
+      "identity_tokens": [
+        "arXiv:2606.29337"
+      ],
+      "title": "W4A4 Quantization for Inference on Wan2.2-I2V-A14B",
+      "reason": "W4A4 is applied to Wan2.2 image-to-video diffusion generation, not an LLM inference model or an existing LLM quantization lineage.",
+      "source_url": "https://arxiv.org/abs/2606.29337",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29083",
+      "identity_tokens": [
+        "arXiv:2606.29083"
+      ],
+      "title": "Residual-Guided Dictionary Learning for Spectrally Accurate Koopman Approximation",
+      "reason": "Primary arXiv text concerns residual-guided dictionary learning for Koopman-operator spectral approximation, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2606.29083",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28070",
+      "identity_tokens": [
+        "arXiv:2606.28070"
+      ],
+      "title": "JD Oxygen AI Item Center (Oxygen AIIC) V1: An Industrial-Scale LLM/VLM-Centric Solution for Item Understanding, Management, and Applications",
+      "reason": "Oxygen AIIC is an industrial LLM/VLM item-knowledge and service infrastructure; it describes production pipelines but does not isolate an LLM inference optimization. Keep as a serving-system adjacency.",
+      "source_url": "https://arxiv.org/abs/2606.28070",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28529",
+      "identity_tokens": [
+        "arXiv:2606.28529"
+      ],
+      "title": "The Speedup Paradox: Rethinking Inference Speed-Quality Trade-off in Embodied Tasks",
+      "reason": "TISED measures inference speed-quality trade-offs for embodied policies, but those robotics policies are outside the LLM inference target; retain as adjacent deployment evidence.",
+      "source_url": "https://arxiv.org/abs/2606.28529",
+      "first_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "last_checked_at": "2026-10-06T20:06:44.192108+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    }
+  ]
+}
