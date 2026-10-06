@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T20:06:18+00:00",
-  "record_count": 3858,
+  "updated_at": "2026-10-06T20:11:37+00:00",
+  "record_count": 3888,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -58967,6 +58967,460 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A human-centric decision support framework for edge-based cold chain transportation monitoring with Small Language Models"
+    },
+    "arXiv:2606.23546": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23546",
+      "identity_tokens": [
+        "arXiv:2606.23546"
+      ],
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.23546 returned an internal error; linked fine-tuning-energy text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:24+00:00",
+      "last_checked_at": "2026-10-06T20:11:24+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Energy Consumption of Transformer Fine-Tuning: A Roofline-Inspired Scaling Model"
+    },
+    "arXiv:2607.00032": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00032",
+      "identity_tokens": [
+        "arXiv:2607.00032"
+      ],
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2607.00032 returned an internal error; primary abstract/text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:24+00:00",
+      "last_checked_at": "2026-10-06T20:11:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The MMM Data Model - A Normative Specification for Knowledge Interoperability in a Decentralisable Knowledge Commons"
+    },
+    "DOI:10.1145/3787109.3815216": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3787109.3815216",
+      "identity_tokens": [
+        "DOI:10.1145/3787109.3815216"
+      ],
+      "reason": "ACM DOI landing page https://doi.org/10.1145/3787109.3815216 was not accessible; linked MoE inference-security candidate retained.",
+      "first_checked_at": "2026-10-06T20:11:24+00:00",
+      "last_checked_at": "2026-10-06T20:11:24+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Control-Flow Collapse: Exploiting Gating Logic in MoE Accelerators via Instruction-Level Fault Injection"
+    },
+    "DOI:10.1109/netsoft70012.2026.11603451": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/netsoft70012.2026.11603451",
+      "identity_tokens": [
+        "DOI:10.1109/netsoft70012.2026.11603451"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/NetSoft70012.2026.11603451 was not accessible; primary text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:25+00:00",
+      "last_checked_at": "2026-10-06T20:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-Assisted Design and Analytics of Next-Generation Optical Transport Networks"
+    },
+    "arXiv:2606.28070": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28070",
+      "identity_tokens": [
+        "arXiv:2606.28070"
+      ],
+      "reason": "Oxygen AIIC is an industrial LLM/VLM item-knowledge and service infrastructure; it describes production pipelines but does not isolate an LLM inference optimization. Keep as a serving-system adjacency.",
+      "first_checked_at": "2026-10-06T20:11:26+00:00",
+      "last_checked_at": "2026-10-06T20:11:26+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "JD Oxygen AI Item Center (Oxygen AIIC) V1: An Industrial-Scale LLM/VLM-Centric Solution for Item Understanding, Management, and Applications"
+    },
+    "arXiv:2606.28529": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.28529",
+      "identity_tokens": [
+        "arXiv:2606.28529"
+      ],
+      "reason": "TISED measures inference speed-quality trade-offs for embodied policies, but those robotics policies are outside the LLM inference target; retain as adjacent deployment evidence.",
+      "first_checked_at": "2026-10-06T20:11:26+00:00",
+      "last_checked_at": "2026-10-06T20:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Speedup Paradox: Rethinking Inference Speed-Quality Trade-off in Embodied Tasks"
+    },
+    "DOI:10.1109/prml71097.2026.11687251": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/prml71097.2026.11687251",
+      "identity_tokens": [
+        "DOI:10.1109/prml71097.2026.11687251"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/PRML71097.2026.11687251 was not accessible; primary text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:27+00:00",
+      "last_checked_at": "2026-10-06T20:11:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Performance Optimization of Mllm-Based 3D Spatial Perception Tasks Via Sam"
+    },
+    "DOI:10.23919/ituk70038.2026.11632990": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/ituk70038.2026.11632990",
+      "identity_tokens": [
+        "DOI:10.23919/ituk70038.2026.11632990"
+      ],
+      "reason": "DOI landing page https://doi.org/10.23919/ITUK70038.2026.11632990 was not accessible; linked quantized edge-SLM candidate retained.",
+      "first_checked_at": "2026-10-06T20:11:27+00:00",
+      "last_checked_at": "2026-10-06T20:11:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Edge-Native LLMs: a Sustainable Architecture for Offline-First Education in Rural 6G Networks"
+    },
+    "DOI:10.1109/cloud72782.2026.00038": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cloud72782.2026.00038",
+      "identity_tokens": [
+        "DOI:10.1109/cloud72782.2026.00038"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/CLOUD72782.2026.00038 was not accessible; linked model-compression candidate retained pending primary evidence.",
+      "first_checked_at": "2026-10-06T20:11:29+00:00",
+      "last_checked_at": "2026-10-06T20:11:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Can Byte-Level and Bit-Level Optimizations Enhance The Parameter Lossless Compression of Large Language Models?"
+    },
+    "DOI:10.1109/compsac69091.2026.00282": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/compsac69091.2026.00282",
+      "identity_tokens": [
+        "DOI:10.1109/compsac69091.2026.00282"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/COMPSAC69091.2026.00282 was not accessible; LLM allocation/routing relevance remains unverified.",
+      "first_checked_at": "2026-10-06T20:11:29+00:00",
+      "last_checked_at": "2026-10-06T20:11:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Decision-Support Framework for LLM Allocation in Multi-Agent Service Composition Systems"
+    },
+    "DOI:10.1109/icecet65726.2026.11632566": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icecet65726.2026.11632566",
+      "identity_tokens": [
+        "DOI:10.1109/icecet65726.2026.11632566"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/ICECET65726.2026.11632566 was not accessible; primary text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:29+00:00",
+      "last_checked_at": "2026-10-06T20:11:29+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dependency-Aware Reliable Orchestration for Smart-IoT Control with Reasoning-Aligned LLMs"
+    },
+    "DOI:10.1109/icecet65726.2026.11632784": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icecet65726.2026.11632784",
+      "identity_tokens": [
+        "DOI:10.1109/icecet65726.2026.11632784"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/ICECET65726.2026.11632784 was not accessible; LLM energy/inference relevance cannot be verified.",
+      "first_checked_at": "2026-10-06T20:11:30+00:00",
+      "last_checked_at": "2026-10-06T20:11:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Greener AI: Evaluating Carbon Emissions and Energy Efficiency in Large Language Models"
+    },
+    "DOI:10.1109/icpsasia70813.2026.11692219": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icpsasia70813.2026.11692219",
+      "identity_tokens": [
+        "DOI:10.1109/icpsasia70813.2026.11692219"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/ICPSAsia70813.2026.11692219 was not accessible; linked data-center lineage must not be excluded without primary text.",
+      "first_checked_at": "2026-10-06T20:11:30+00:00",
+      "last_checked_at": "2026-10-06T20:11:30+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Periodicity-Aware AI Data Center IT Load Forecasting Across Heterogeneous Cluster Scenarios"
+    },
+    "arXiv:2606.26595": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.26595",
+      "identity_tokens": [
+        "arXiv:2606.26595"
+      ],
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.26595 returned an internal error; linked candidate retained pending source access.",
+      "first_checked_at": "2026-10-06T20:11:30+00:00",
+      "last_checked_at": "2026-10-06T20:11:30+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-based Models for Detecting Emerging Topics in Service Feedback"
+    },
+    "arXiv:2607.22643": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22643",
+      "identity_tokens": [
+        "arXiv:2607.22643"
+      ],
+      "reason": "MM-R2 improves multimodal RAG planning/retrieval, a possible context/retrieval-cost adjacency, but its demonstrated contribution is answer quality and trace interpretability rather than inference efficiency.",
+      "first_checked_at": "2026-10-06T20:11:31+00:00",
+      "last_checked_at": "2026-10-06T20:11:31+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reason Before You Retrieve: Agentic Planning for Multi-modal RAG"
+    },
+    "arXiv:2606.24320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24320",
+      "identity_tokens": [
+        "arXiv:2606.24320"
+      ],
+      "reason": "ZONOS2 is an 8B TTS MoE with 900M active parameters, plausibly relevant to sparse inference, but the report does not establish a serving-efficiency gain.",
+      "first_checked_at": "2026-10-06T20:11:31+00:00",
+      "last_checked_at": "2026-10-06T20:11:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ZONOS2 Technical Report"
+    },
+    "arXiv:2606.30442": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.30442",
+      "identity_tokens": [
+        "arXiv:2606.30442"
+      ],
+      "reason": "The paper applies inductive-bias prompting to LLM-generated GPU kernels, which is adjacent to kernel optimization, but improves kernel-writing workflow rather than the LLM inference runtime itself.",
+      "first_checked_at": "2026-10-06T20:11:32+00:00",
+      "last_checked_at": "2026-10-06T20:11:32+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The FIL Hypothesis: Inductive Biases Help with Kernel Engineering"
+    },
+    "DOI:10.1145/3797248.3815401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3797248.3815401",
+      "identity_tokens": [
+        "DOI:10.1145/3797248.3815401"
+      ],
+      "reason": "ACM DOI landing page https://doi.org/10.1145/3797248.3815401 was not accessible; linked fine-tuning candidate retained pending source evidence.",
+      "first_checked_at": "2026-10-06T20:11:33+00:00",
+      "last_checked_at": "2026-10-06T20:11:33+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hyperparameter Auto-tuning for Sustainable LLM Fine-tuning"
+    },
+    "DOI:10.1007/s44163-026-01413-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44163-026-01413-x",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-01413-x"
+      ],
+      "reason": "Springer DOI landing page https://doi.org/10.1007/s44163-026-01413-x was not accessible; lightweight-LM relevance cannot be verified.",
+      "first_checked_at": "2026-10-06T20:11:33+00:00",
+      "last_checked_at": "2026-10-06T20:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A lightweight transformer based language model inspired by the Qwen architecture for resource constrained environments"
+    },
+    "arXiv:2606.22249": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.22249",
+      "identity_tokens": [
+        "arXiv:2606.22249"
+      ],
+      "reason": "This is theoretical work on expressive power under LLM weight quantization, directly adjacent to quantization lineage, but it does not propose a deployable optimization or empirical serving gain.",
+      "first_checked_at": "2026-10-06T20:11:34+00:00",
+      "last_checked_at": "2026-10-06T20:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Expressive Power of Weight Quantization in Large Language Models"
+    },
+    "arXiv:2606.24369": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24369",
+      "identity_tokens": [
+        "arXiv:2606.24369"
+      ],
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.24369 returned an internal error; linked paper text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:35+00:00",
+      "last_checked_at": "2026-10-06T20:11:35+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating Disaggregated RL for Visual Generative LLMs with Diffusion-Based Parallelism and Trainer-Assisted Generation"
+    },
+    "arXiv:2606.25087": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.25087",
+      "identity_tokens": [
+        "arXiv:2606.25087"
+      ],
+      "reason": "QLS is directly a weight-quantization method and is linked to AWQ, but the full paper does not test LLMs; transfer to LLM inference remains unestablished.",
+      "first_checked_at": "2026-10-06T20:11:35+00:00",
+      "last_checked_at": "2026-10-06T20:11:35+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Network Quantization by Learning Low-Loss Subspaces"
+    },
+    "DOI:10.21437/odyssey.2026-31": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21437/odyssey.2026-31",
+      "identity_tokens": [
+        "DOI:10.21437/odyssey.2026-31"
+      ],
+      "reason": "DOI landing page https://doi.org/10.21437/odyssey.2026-31 was not accessible; linked paper text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:35+00:00",
+      "last_checked_at": "2026-10-06T20:11:35+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LLM-Based Language Verification and Multimodal Ensemble for Spoken Language Recognition"
+    },
+    "arXiv:2606.23159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.23159",
+      "identity_tokens": [
+        "arXiv:2606.23159"
+      ],
+      "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.23159 returned an internal error; cannot verify photonic inference acceleration relevance.",
+      "first_checked_at": "2026-10-06T20:11:35+00:00",
+      "last_checked_at": "2026-10-06T20:11:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "General-Purpose Nonlinear Function Approximation via Linear Integrated Photonics"
+    },
+    "DOI:10.1109/icws72778.2026.00048": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00048",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00048"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/ICWS72778.2026.00048 was not accessible; 3D asset-cache relevance unverified.",
+      "first_checked_at": "2026-10-06T20:11:36+00:00",
+      "last_checked_at": "2026-10-06T20:11:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "K3AS: QoS-Aware Kinematic 3D Asset Service with Cache-Adaptive Progressive Asset Evolution"
+    },
+    "DOI:10.1109/icws72778.2026.00079": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icws72778.2026.00079",
+      "identity_tokens": [
+        "DOI:10.1109/icws72778.2026.00079"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/ICWS72778.2026.00079 was not accessible; AoI-aware RAG service efficiency cannot be verified.",
+      "first_checked_at": "2026-10-06T20:11:36+00:00",
+      "last_checked_at": "2026-10-06T20:11:36+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Ensuring Efficiency and Timeliness in Real-Time Rag Services: an AoI-Aware Approach"
+    },
+    "DOI:10.1109/iisa71656.2026.11705452": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iisa71656.2026.11705452",
+      "identity_tokens": [
+        "DOI:10.1109/iisa71656.2026.11705452"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/IISA71656.2026.11705452 was not accessible; primary text unavailable.",
+      "first_checked_at": "2026-10-06T20:11:37+00:00",
+      "last_checked_at": "2026-10-06T20:11:37+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2512.18337-towards-efficient-agents-a-co-design-of-inference-architecture-and-syste.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evaluation of the Performance Limits of Agentic AI Using Cognitive Stress Tests"
+    },
+    "DOI:10.1109/imsa70415.2026.11700363": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/imsa70415.2026.11700363",
+      "identity_tokens": [
+        "DOI:10.1109/imsa70415.2026.11700363"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/IMSA70415.2026.11700363 was not accessible; linked progressive-model/checkpoint candidate retained.",
+      "first_checked_at": "2026-10-06T20:11:37+00:00",
+      "last_checked_at": "2026-10-06T20:11:37+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Perplexity: Checkpoint Selection for PG-19 Story Generation with Progressive Transformer Expansion"
+    },
+    "DOI:10.1109/ines69513.2026.11661120": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ines69513.2026.11661120",
+      "identity_tokens": [
+        "DOI:10.1109/ines69513.2026.11661120"
+      ],
+      "reason": "IEEE DOI landing page https://doi.org/10.1109/INES69513.2026.11661120 was not accessible; linked candidate retained pending source evidence.",
+      "first_checked_at": "2026-10-06T20:11:37+00:00",
+      "last_checked_at": "2026-10-06T20:11:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Zero-Shot and Few-Shot Synthetic Question–Answer Generation with a Hungarian Large Language Model on Consumer Complaint Data"
+    },
+    "DOI:10.18041/1900-3803/entramado.2.13645": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18041/1900-3803/entramado.2.13645",
+      "identity_tokens": [
+        "DOI:10.18041/1900-3803/entramado.2.13645"
+      ],
+      "reason": "DOI landing page https://doi.org/10.18041/1900-3803/entramado.2.13645 was not accessible; linked offline RAG deployment candidate retained.",
+      "first_checked_at": "2026-10-06T20:11:37+00:00",
+      "last_checked_at": "2026-10-06T20:11:37+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Design of a Portable Retrieval-Augmented Generation Architecture for Offline Intelligent Tutoring on Resource-Constrained Hardware"
     }
   }
 }

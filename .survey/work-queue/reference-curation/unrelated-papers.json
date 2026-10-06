@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T20:06:19+00:00",
-  "record_count": 9492,
+  "updated_at": "2026-10-06T20:11:36+00:00",
+  "record_count": 9508,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -136000,6 +136000,230 @@
         "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
       ],
       "title": "LUMA: Benchmarking Segmentation via a Lightweight Universal Mask Adapter"
+    },
+    "arXiv:2606.23911": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23911",
+      "identity_tokens": [
+        "arXiv:2606.23911"
+      ],
+      "reason": "Primary arXiv paper uses LLMs to annotate dense-retrieval training data; its contribution is search-model training data/curriculum, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T20:11:25+00:00",
+      "last_checked_at": "2026-10-06T20:11:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ],
+      "title": "Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search"
+    },
+    "arXiv:2609.22087": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.22087",
+      "identity_tokens": [
+        "arXiv:2609.22087"
+      ],
+      "reason": "This is availability-aware training/checkpoint-resume optimization, not inference or serving; the linked DeepSpeed lineage is training-only.",
+      "first_checked_at": "2026-10-06T20:11:25+00:00",
+      "last_checked_at": "2026-10-06T20:11:25+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "When Is Availability-Aware Training Worth It? A Benchmark and Empirical Study of Interruption-Resilient Optimization Under Predictable Compute Schedules"
+    },
+    "arXiv:2606.29337": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29337",
+      "identity_tokens": [
+        "arXiv:2606.29337"
+      ],
+      "reason": "W4A4 is applied to Wan2.2 image-to-video diffusion generation, not an LLM inference model or an existing LLM quantization lineage.",
+      "first_checked_at": "2026-10-06T20:11:26+00:00",
+      "last_checked_at": "2026-10-06T20:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "title": "W4A4 Quantization for Inference on Wan2.2-I2V-A14B"
+    },
+    "arXiv:2606.29083": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.29083",
+      "identity_tokens": [
+        "arXiv:2606.29083"
+      ],
+      "reason": "Primary arXiv text concerns residual-guided dictionary learning for Koopman-operator spectral approximation, not LLM inference.",
+      "first_checked_at": "2026-10-06T20:11:26+00:00",
+      "last_checked_at": "2026-10-06T20:11:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Residual-Guided Dictionary Learning for Spectrally Accurate Koopman Approximation"
+    },
+    "arXiv:2606.31213": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31213",
+      "identity_tokens": [
+        "arXiv:2606.31213"
+      ],
+      "reason": "The linked quantization lineage is generic: this paper studies moral-alternative generation/judgment, not quantization or inference efficiency.",
+      "first_checked_at": "2026-10-06T20:11:27+00:00",
+      "last_checked_at": "2026-10-06T20:11:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "title": "Can LLMs Imagine Moral Alternatives Beyond Binary Dilemmas?"
+    },
+    "arXiv:2606.31397": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31397",
+      "identity_tokens": [
+        "arXiv:2606.31397"
+      ],
+      "reason": "MoC is a state-based fine-tuning/PEFT method. The linked MoE lineage is generic and the method optimizes training adaptation, not inference.",
+      "first_checked_at": "2026-10-06T20:11:28+00:00",
+      "last_checked_at": "2026-10-06T20:11:28+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "Mixture-of-Control: State-Aware Fine-Tuning for Transformer-based Models"
+    },
+    "arXiv:2606.31767": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31767",
+      "identity_tokens": [
+        "arXiv:2606.31767"
+      ],
+      "reason": "Primary arXiv abstract/full text describes a Java benchmark and tool for execution-time-improvement patches; the LLM is used as a coding agent, not improved by the work.",
+      "first_checked_at": "2026-10-06T20:11:28+00:00",
+      "last_checked_at": "2026-10-06T20:11:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "JETO-Bench: A Reproducible Benchmark for Execution Time Improvement Patches in Java"
+    },
+    "arXiv:2606.26466": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.26466",
+      "identity_tokens": [
+        "arXiv:2606.26466"
+      ],
+      "reason": "SOLAR is a multilingual reasoning training objective, not inference efficiency despite its DeepSpeed training lineage.",
+      "first_checked_at": "2026-10-06T20:11:31+00:00",
+      "last_checked_at": "2026-10-06T20:11:31+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Soft Token Alignment for Cross-Lingual Reasoning"
+    },
+    "arXiv:2606.24361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.24361",
+      "identity_tokens": [
+        "arXiv:2606.24361"
+      ],
+      "reason": "SignNet-1M is a sign-language video dataset/robustness benchmark; DeepSpeed lineage is not a technical connection.",
+      "first_checked_at": "2026-10-06T20:11:31+00:00",
+      "last_checked_at": "2026-10-06T20:11:31+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "SignNet-1M: Large-Scale Multilingual Sign Language Video Dataset with Downstream Benchmarks"
+    },
+    "arXiv:2606.32036": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.32036",
+      "identity_tokens": [
+        "arXiv:2606.32036"
+      ],
+      "reason": "PointSplat is a compact 3D human Gaussian-splatting reconstruction method, unrelated to LLM inference despite FlashAttention lineage.",
+      "first_checked_at": "2026-10-06T20:11:32+00:00",
+      "last_checked_at": "2026-10-06T20:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "title": "PointSplat: Compact Gaussian Splatting via Human-Centric Prediction"
+    },
+    "arXiv:2606.32040": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.32040",
+      "identity_tokens": [
+        "arXiv:2606.32040"
+      ],
+      "reason": "FaceMoE uses routed experts for low-resolution face recognition; the generic MoE lineage does not make it LLM inference work.",
+      "first_checked_at": "2026-10-06T20:11:32+00:00",
+      "last_checked_at": "2026-10-06T20:11:32+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "FaceMoE: Mixture of Experts for Low-Resolution Face Recognition"
+    },
+    "arXiv:2606.30054": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30054",
+      "identity_tokens": [
+        "arXiv:2606.30054"
+      ],
+      "reason": "Primary arXiv abstract describes interleaved text-image generation quality/modeling and contains no LLM inference efficiency contribution.",
+      "first_checked_at": "2026-10-06T20:11:32+00:00",
+      "last_checked_at": "2026-10-06T20:11:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "Illuminating Unified Multimodal Model for Free-form Interleaved Text-Image Generation"
+    },
+    "arXiv:2606.30189": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.30189",
+      "identity_tokens": [
+        "arXiv:2606.30189"
+      ],
+      "reason": "DAIN is a multimodal classification/regression fusion model; it does not optimize LLM inference or generative serving.",
+      "first_checked_at": "2026-10-06T20:11:33+00:00",
+      "last_checked_at": "2026-10-06T20:11:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "DAIN: Dynamic Agent-Based Interaction Network for Efficient and Collaborative Multimodal Reasoning"
+    },
+    "arXiv:2606.21935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21935",
+      "identity_tokens": [
+        "arXiv:2606.21935"
+      ],
+      "reason": "CoRDE routes diffusion experts for robot manipulation; its MoE is a robotics policy architecture, not LLM inference.",
+      "first_checked_at": "2026-10-06T20:11:34+00:00",
+      "last_checked_at": "2026-10-06T20:11:34+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "CoRDE: Concept-Prior Routed Diffusion Experts for Structural Generalization in Robot Manipulation"
+    },
+    "arXiv:2607.21624": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.21624",
+      "identity_tokens": [
+        "arXiv:2607.21624"
+      ],
+      "reason": "FBLayout optimizes on-device LLM fine-tuning, which is training-only and outside inference scope.",
+      "first_checked_at": "2026-10-06T20:11:34+00:00",
+      "last_checked_at": "2026-10-06T20:11:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "FBLayout: Optimizing Memory Layout for Efficient LLM Finetuning on Mobile GPUs"
+    },
+    "arXiv:2606.23332": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.23332",
+      "identity_tokens": [
+        "arXiv:2606.23332"
+      ],
+      "reason": "Primary arXiv paper is a low-latency speech-enhancement/own-voice-cancellation model, not an LLM or language-model serving method.",
+      "first_checked_at": "2026-10-06T20:11:36+00:00",
+      "last_checked_at": "2026-10-06T20:11:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Don't Listen to Me: A Lightweight, Low-Latency Model for Own-Voice Cancellation in Far-Field Speech Enhancement"
     }
   }
 }

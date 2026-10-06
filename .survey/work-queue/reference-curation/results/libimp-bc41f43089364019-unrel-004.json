@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bc41f43089364019-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.30189",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.30189",
+    "identity_tokens": [
+      "arXiv:2606.30189"
+    ],
+    "reason": "DAIN is a multimodal classification/regression fusion model; it does not optimize LLM inference or generative serving.",
+    "first_checked_at": "2026-10-06T20:11:33+00:00",
+    "last_checked_at": "2026-10-06T20:11:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+    ],
+    "title": "DAIN: Dynamic Agent-Based Interaction Network for Efficient and Collaborative Multimodal Reasoning"
+  },
+  "processed_at": "2026-10-06T20:11:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bc41f4308936",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

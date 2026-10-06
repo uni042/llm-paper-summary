@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dcc7788b68095a2e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.24369",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.24369",
+    "identity_tokens": [
+      "arXiv:2606.24369"
+    ],
+    "reason": "Primary arXiv HTML page https://arxiv.org/html/2606.24369 returned an internal error; linked paper text unavailable.",
+    "first_checked_at": "2026-10-06T20:11:35+00:00",
+    "last_checked_at": "2026-10-06T20:11:35+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Disaggregated RL for Visual Generative LLMs with Diffusion-Based Parallelism and Trainer-Assisted Generation"
+  },
+  "processed_at": "2026-10-06T20:11:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dcc7788b6809",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
