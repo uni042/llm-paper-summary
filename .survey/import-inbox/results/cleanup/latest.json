@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T14:27:30+00:00",
+  "updated_at": "2026-10-06T14:33:35+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3349,6 +3349,27 @@
       "source_path": ".survey/import-inbox/blocked/discovery/libfile_f30fa5bd8aec8191b99c7d71fa8fcad0--discovery-20261006-2301-scheduled-chat-00-r02.json",
       "processed_at": "2026-10-06T14:27:30+00:00",
       "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-5ec8a6fb776c--libfile_6b4fdc93bcb08191baf2ab2f5abba2c3--2412.04468-nvila.md",
+      "processed_at": "2026-10-06T14:33:35+00:00",
+      "canonical_id": "arXiv:2412.04468",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-5ec8a6fb776c--libfile_6b4fdc93bcb08191baf2ab2f5abba2c3--2412.04468-nvila.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-105345b9454a--libfile_6e30e3a4c1008191b843d92e2269351d--2202.10447-flash.md",
+      "processed_at": "2026-10-06T14:33:35+00:00",
+      "canonical_id": "arXiv:2202.10447",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-105345b9454a--libfile_6e30e3a4c1008191b843d92e2269351d--2202.10447-flash.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-d5df85b9f997--libfile_72c16e6431488191bedae1a1719ed845--2305.16300-landmark-attention.md",
+      "processed_at": "2026-10-06T14:33:35+00:00",
+      "canonical_id": "arXiv:2305.16300",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-d5df85b9f997--libfile_72c16e6431488191bedae1a1719ed845--2305.16300-landmark-attention.md"
     }
   ]
 }
