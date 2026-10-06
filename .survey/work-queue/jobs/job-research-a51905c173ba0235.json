@@ -35,10 +35,15 @@
   "selection_reason": "VLM推論時にtext-guided self-attentionからvisual token重要度を求め、layerごとのrank-based sparsificationとtoken recyclingで不要visual tokenをtraining-freeに削減する。LLaVAでFLOPs 54%削減、CUDA latency 37%削減、元精度97%維持を報告し、VLM/LLM decoder推論効率を直接改善するため対象内。",
   "semantic_scholar_id": "a05c0dd5a8bc70814517fb424cf55e94b4208e67",
   "source_url": "https://arxiv.org/abs/2410.04417",
-  "status": "ready",
+  "status": "superseded",
   "title": "SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference",
   "type": "research",
   "venue": "International Conference on Machine Learning",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-06T14:14:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+  "represented_canonical_id": "arXiv:2410.04417",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
