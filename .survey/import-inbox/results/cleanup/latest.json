@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T16:08:05+00:00",
+  "updated_at": "2026-10-06T16:13:05+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3440,6 +3440,38 @@
       "processed_at": "2026-10-06T16:08:05+00:00",
       "canonical_id": "arXiv:2406.11816",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-f2c9bec8de1b--libfile_f1932cebc31081918c7f8c1568e943a0--2406.11816-videollm-online.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-3a10c924655e--libfile_f50698d7f78c8191b958f74063ebdeff--2609.22098-treespark.md",
+      "processed_at": "2026-10-06T16:13:05+00:00",
+      "canonical_id": "arXiv:2609.22098",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-3a10c924655e--libfile_f50698d7f78c8191b958f74063ebdeff--2609.22098-treespark.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md",
+      "processed_at": "2026-10-06T16:13:05+00:00",
+      "canonical_id": "arXiv:2603.10087",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-badc1b7216ea--libfile_f5702b865c4c8191a71c1d4bd74d9d59--2603.10087-cxl-engram.md"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-00dda5d36d91--libfile_0dca008279cc819185c8fbbcf094a81b--2602.22603-sidequest.md",
+      "processed_at": "2026-10-06T16:13:05+00:00",
+      "canonical_id": "arXiv:2602.22603"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-105345b9454a--libfile_6e30e3a4c1008191b843d92e2269351d--2202.10447-flash.md",
+      "processed_at": "2026-10-06T16:13:05+00:00",
+      "canonical_id": "arXiv:2202.10447"
+    },
+    {
+      "status": "discarded_research_after_retry",
+      "source_path": ".survey/import-inbox/blocked/research/retry-research-10a7202db378--libfile_c5cebc769e48819186ae2805c2ae1100--2502.04463-efficient-reasoning.md",
+      "processed_at": "2026-10-06T16:13:05+00:00",
+      "canonical_id": "arXiv:2502.04463"
     }
   ]
 }
