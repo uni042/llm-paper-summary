@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r112-screen-01-part-04-7a32c43cc2a5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.00965",
+      "identity_tokens": [
+        "arXiv:2604.00965"
+      ],
+      "title": "Understanding Transformers and Attention Mechanisms: An Introduction for Applied Mathematicians",
+      "reason": "Transformer/attention introduction has no new efficiency method.",
+      "source_url": "https://arxiv.org/abs/2604.00965",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01106",
+      "identity_tokens": [
+        "arXiv:2604.01106"
+      ],
+      "title": "Inverse Design of Optical Multilayer Thin Films using Robust Masked Diffusion Models",
+      "reason": "OptoLlama applies masked diffusion language modeling to inverse optical thin-film design; a specialized design application, not general LLM inference efficiency.",
+      "source_url": "https://arxiv.org/abs/2604.01106",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.cma.2026.118789",
+      "identity_tokens": [
+        "DOI:10.1016/j.cma.2026.118789"
+      ],
+      "title": "Efficiently training SciML models with derivative-informed training data using order truncated imaginary numbers",
+      "reason": "Derivative-informed SciML training is not LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.cma.2026.118789",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.compchemeng.2026.109657",
+      "identity_tokens": [
+        "DOI:10.1016/j.compchemeng.2026.109657"
+      ],
+      "title": "Hybrid machine learning models for predictions of mammalian cell culture: a comparison of model structures and training approaches",
+      "reason": "Cell-culture model/training comparison is outside LLM inference.",
+      "source_url": "https://doi.org/10.1016/j.compchemeng.2026.109657",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.displa.2026.103360",
+      "identity_tokens": [
+        "DOI:10.1016/j.displa.2026.103360"
+      ],
+      "title": "Ctp2Fic: From coarse-grained token pruning to fine-grained token clustering for LVLM inference acceleration",
+      "reason": "Title describes LVLM inference acceleration by token pruning/clustering, but direct publisher DOI access did not yield primary article/full text; method, evaluation and limitations remain unverified.",
+      "source_url": "https://doi.org/10.1016/j.displa.2026.103360",
+      "first_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "last_checked_at": "2026-10-06T15:22:21.456407+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    }
+  ]
+}
