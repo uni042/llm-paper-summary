@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-41c18d3f192c9cb3-border-005",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2506.17639",
+  "reason": "RLRC reports pruning/quantization, up to 8x memory reduction and 2.3x inference speedup, but its evaluated system is a vision-language-action robot policy whose objective and action-generation stack are VLA-specific. It is adjacent to the cited LLM quantization lineage, so retained as borderline for possible transfer; the paper does not establish an LLM text-serving result.",
+  "title": "RLRC: Reinforcement Learning-Based Recovery for Compressed Vision-Language-Action Models",
+  "identity_tokens": [
+    "arXiv:2506.17639"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-41c18d3f192c",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
