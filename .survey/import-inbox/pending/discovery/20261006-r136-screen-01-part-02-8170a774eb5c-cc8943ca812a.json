@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r136-screen-01-part-02-8170a774eb5c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11553",
+      "identity_tokens": [
+        "arXiv:2609.11553"
+      ],
+      "title": "CAP: Continuously Adaptive Perception-Blind Humanoid Locomotion via Learned Denoising",
+      "reason": "本文は壊れた深度観測を補うhumanoid locomotion policyの学習・制御を扱う。状態空間モデルを使うが、LLM推論・servingの計算、メモリ、遅延を改善する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2609.11553",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11580",
+      "identity_tokens": [
+        "arXiv:2609.11580"
+      ],
+      "title": "A Dataset and Model for Imputing Water Surface Elevation on a Large and Extremely Sparse Spatiotemporal Graph",
+      "reason": "本文は河川水位の疎な時空間graphを補完するデータセットとモデルであり、Mamba/graph modelingをLLM推論へ適用する手法ではない。対象効率指標との技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2609.11580",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/advs.77238",
+      "identity_tokens": [
+        "DOI:10.1002/advs.77238"
+      ],
+      "title": "A Site‐Aware Representation Learning Framework For Unified Molecular Interaction Modeling and Generative Design",
+      "reason": "一次出版社ページのabstract/titleは分子相互作用モデリングと生成設計を示し、候補にLLM推論の計算・メモリ・遅延・serving最適化を示す記述がない。既存LLM推論系統とも結び付かない。",
+      "source_url": "https://doi.org/10.1002/advs.77238",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.isci.2026.116669",
+      "identity_tokens": [
+        "DOI:10.1016/j.isci.2026.116669"
+      ],
+      "title": "From pixels to conservation: Deep learning for automated monitoring of rare and endangered wildlife",
+      "reason": "一次DOI/publisher全文をこの実行で取得できなかった。題名はrare-wildlife monitoringのdeep-learning reviewで、SSM系統から関連付けられているが、対象LLM推論効率への具体的接続は一次本文で確認できず、結論を保留せずborderlineに置く。",
+      "source_url": "https://doi.org/10.1016/j.isci.2026.116669",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1088/1741-2552/aea59e",
+      "identity_tokens": [
+        "DOI:10.1088/1741-2552/aea59e"
+      ],
+      "title": "An open-set learning framework for EEG-based sleep stage classification",
+      "reason": "一次DOI/publisher全文を取得できなかった。題名上はEEG sleep-stage classificationのopen-set frameworkでありSSM系統に関連づけられるが、LLM推論/serving効率の内容は一次本文で確認できないためborderline。",
+      "source_url": "https://doi.org/10.1088/1741-2552/aea59e",
+      "first_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "last_checked_at": "2026-10-06T19:13:14.046673+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ]
+    }
+  ]
+}
