@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6bc8a3020c7db2cc-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2505.17685",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2505.17685",
+    "identity_tokens": [
+      "arXiv:2505.17685"
+    ],
+    "reason": "The primary text is a visual world-model/CoT system for autonomous-driving trajectory planning, future-frame generation, and scene understanding. It does not evaluate an LLM KV-cache or serving improvement.",
+    "first_checked_at": "2026-10-06T03:18:35+00:00",
+    "last_checked_at": "2026-10-06T03:18:35+00:00",
+    "linked_from": [
+      "papers/survey/01-kv-cache-systems/2026-2607.08057-system-aware-kv-cache-optimization-survey.md"
+    ],
+    "title": "FutureSightDrive: Thinking Visually with Spatio-Temporal CoT for Autonomous Driving"
+  },
+  "processed_at": "2026-10-06T03:18:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6bc8a3020c7d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

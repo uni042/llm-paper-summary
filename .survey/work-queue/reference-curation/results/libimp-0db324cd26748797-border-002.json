@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0db324cd26748797-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.12216",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.12216",
+    "identity_tokens": [
+      "arXiv:2504.12216"
+    ],
+    "reason": "The primary text trains diffusion LLMs with reinforcement learning for reasoning quality. It is in the linked diffusion-LLM family, but its measured contribution is post-training capability rather than inference speed, memory, or serving.",
+    "first_checked_at": "2026-10-06T03:18:30+00:00",
+    "last_checked_at": "2026-10-06T03:18:30+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+      "papers/inference/05-speculative-decoding-moe/2026-2606.18394-jetspec-breaking-the-scaling-ceiling-of-speculative-decoding-with-parall.md",
+      "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+      "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning"
+  },
+  "processed_at": "2026-10-06T03:18:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0db324cd2674",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

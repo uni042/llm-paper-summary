@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T03:08:49+00:00",
-  "record_count": 2151,
+  "updated_at": "2026-10-06T03:18:37+00:00",
+  "record_count": 2164,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33177,6 +33177,207 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Deep Equilibrium Models"
+    },
+    "arXiv:2504.12216": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.12216",
+      "identity_tokens": [
+        "arXiv:2504.12216"
+      ],
+      "reason": "The primary text trains diffusion LLMs with reinforcement learning for reasoning quality. It is in the linked diffusion-LLM family, but its measured contribution is post-training capability rather than inference speed, memory, or serving.",
+      "first_checked_at": "2026-10-06T03:18:30+00:00",
+      "last_checked_at": "2026-10-06T03:18:30+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2606.18394-jetspec-breaking-the-scaling-ceiling-of-speculative-decoding-with-parall.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning"
+    },
+    "DOI:10.1109/sp54263.2024.00130": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/sp54263.2024.00130",
+      "identity_tokens": [
+        "DOI:10.1109/sp54263.2024.00130"
+      ],
+      "reason": "Primary IEEE DOI page was attempted but was inaccessible through the available retrieval path; the packet abstract is empty and full-text method/evaluation cannot be verified.",
+      "first_checked_at": "2026-10-06T03:18:30+00:00",
+      "last_checked_at": "2026-10-06T03:18:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BOLT: Privacy-Preserving, Accurate and Efficient Inference for Transformers"
+    },
+    "arXiv:2504.07139": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.07139",
+      "identity_tokens": [
+        "arXiv:2504.07139"
+      ],
+      "reason": "The primary arXiv record identifies a large AI Index report, but full report text/PDF retrieval failed through the available parser; with empty packet abstract and a potentially relevant broad lineage, its inference/serving coverage cannot be resolved.",
+      "first_checked_at": "2026-10-06T03:18:31+00:00",
+      "last_checked_at": "2026-10-06T03:18:31+00:00",
+      "linked_from": [
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2604.15186-scepsy-serving-agentic-workflows-using-aggregate-llm-pipelines.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Artificial Intelligence Index Report 2025"
+    },
+    "arXiv:1612.01543": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1612.01543",
+      "identity_tokens": [
+        "arXiv:1612.01543"
+      ],
+      "reason": "The primary work develops Hessian-weighted quantization and entropy coding, but validates compression on LeNet, ResNet, and AlexNet image classifiers only. Quantization is adjacent to the target, while applicability to modern transformer LLM inference is unverified.",
+      "first_checked_at": "2026-10-06T03:18:32+00:00",
+      "last_checked_at": "2026-10-06T03:18:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards the Limit of Network Quantization"
+    },
+    "DOI:10.1016/j.engappai.2025.111279": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.engappai.2025.111279",
+      "identity_tokens": [
+        "DOI:10.1016/j.engappai.2025.111279"
+      ],
+      "reason": "The primary ScienceDirect DOI/publisher URL was attempted but could not be retrieved; the packet abstract is empty and full review contents/method coverage are unavailable.",
+      "first_checked_at": "2026-10-06T03:18:33+00:00",
+      "last_checked_at": "2026-10-06T03:18:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mamba-360: Survey of state space models as transformer alternative for long sequence modelling: Methods, Applications, and Challenges"
+    },
+    "arXiv:2504.13914": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.13914",
+      "identity_tokens": [
+        "arXiv:2504.13914"
+      ],
+      "reason": "The primary text reports a reasoning model trained with large-scale RL and strong benchmark results, but does not establish inference-time compute, MoE routing, serving, or latency improvements relevant to the linked lineages.",
+      "first_checked_at": "2026-10-06T03:18:33+00:00",
+      "last_checked_at": "2026-10-06T03:18:33+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2025-2510.13079-gatepro-parameter-free-expert-selection.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2510.18672-reasoning-language-model-inference-serving-unveiled.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Seed1.5-Thinking: Advancing Superb Reasoning Models with Reinforcement Learning"
+    },
+    "DOI:10.1109/tvlsi.2019.2913958": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tvlsi.2019.2913958",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2019.2913958"
+      ],
+      "reason": "Primary IEEE DOI page was attempted but was inaccessible through the available retrieval path; the packet abstract is empty and the reported accelerator evaluation cannot be verified.",
+      "first_checked_at": "2026-10-06T03:18:33+00:00",
+      "last_checked_at": "2026-10-06T03:18:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic"
+    },
+    "arXiv:2511.16108": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.16108",
+      "identity_tokens": [
+        "arXiv:2511.16108"
+      ],
+      "reason": "The primary system improves asynchronous multi-turn agent RL training/rollout throughput and has an adjacent agent-serving-runtime lineage, but the measured speedup is for a training pipeline rather than online inference serving.",
+      "first_checked_at": "2026-10-06T03:18:33+00:00",
+      "last_checked_at": "2026-10-06T03:18:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md",
+        "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SkyRL-Agent: Efficient RL Training for Multi-turn LLM Agent"
+    },
+    "DOI:10.1109/tcad.2022.3197489": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2022.3197489",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2022.3197489"
+      ],
+      "reason": "The primary IEEE DOI redirected to a JavaScript/robot-verification page, preventing access to the article abstract/full text; no primary evaluation details could be read.",
+      "first_checked_at": "2026-10-06T03:18:33+00:00",
+      "last_checked_at": "2026-10-06T03:18:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "ViA: A Novel Vision-Transformer Accelerator Based on FPGA"
+    },
+    "DOI:10.1109/tc.1976.1674569": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tc.1976.1674569",
+      "identity_tokens": [
+        "DOI:10.1109/tc.1976.1674569"
+      ],
+      "reason": "Primary publisher/DOI URL was attempted but the IEEE source could not be opened through the available retrieval path; the record provides no abstract, so method and evaluation cannot be verified.",
+      "first_checked_at": "2026-10-06T03:18:35+00:00",
+      "last_checked_at": "2026-10-06T03:18:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Unified Matrix Treatment of the Fast Walsh-Hadamard Transform"
+    },
+    "DOI:10.1214/aos/1176344370": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1214/aos/1176344370",
+      "identity_tokens": [
+        "DOI:10.1214/aos/1176344370"
+      ],
+      "reason": "Primary DOI/publisher URL was attempted but was not accessible through the available retrieval path; the candidate packet has no abstract, leaving primary method and evaluation unverified.",
+      "first_checked_at": "2026-10-06T03:18:35+00:00",
+      "last_checked_at": "2026-10-06T03:18:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hadamard Matrices and Their Applications"
+    },
+    "arXiv:2506.06326": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.06326",
+      "identity_tokens": [
+        "arXiv:2506.06326"
+      ],
+      "reason": "The primary text presents a hierarchical external-memory system for conversational agents, adjacent to long-context/KV-memory lineages. Its evaluations measure response coherence and personalization, not KV-cache footprint or inference-resource savings.",
+      "first_checked_at": "2026-10-06T03:18:36+00:00",
+      "last_checked_at": "2026-10-06T03:18:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.31395-actkv-efficient-llm-agents-through-action-guided-kv-cache-management.md",
+        "papers/inference/10-kv-cache-offload-recomputation/2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Memory OS of AI Agent"
+    },
+    "arXiv:1709.05027": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1709.05027",
+      "identity_tokens": [
+        "arXiv:1709.05027"
+      ],
+      "reason": "The primary full text shows structured LSTM compression with same-perplexity Penn Treebank language modeling and a large CPU speedup. It is a concrete recurrent-LM inference result, but its gate/hidden-state mechanism does not directly transfer to current Transformer LLMs.",
+      "first_checked_at": "2026-10-06T03:18:37+00:00",
+      "last_checked_at": "2026-10-06T03:18:37+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Learning Intrinsic Sparse Structures within Long Short-term Memory"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40f6a5bb67dfbfaf-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tvlsi.2019.2913958",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tvlsi.2019.2913958",
+    "identity_tokens": [
+      "DOI:10.1109/tvlsi.2019.2913958"
+    ],
+    "reason": "Primary IEEE DOI page was attempted but was inaccessible through the available retrieval path; the packet abstract is empty and the reported accelerator evaluation cannot be verified.",
+    "first_checked_at": "2026-10-06T03:18:33+00:00",
+    "last_checked_at": "2026-10-06T03:18:33+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "High-Performance FPGA-Based CNN Accelerator With Block-Floating-Point Arithmetic"
+  },
+  "processed_at": "2026-10-06T03:18:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40f6a5bb67df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

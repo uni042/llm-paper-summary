@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-36783fbf694a768a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1612.01543",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1612.01543",
+    "identity_tokens": [
+      "arXiv:1612.01543"
+    ],
+    "reason": "The primary work develops Hessian-weighted quantization and entropy coding, but validates compression on LeNet, ResNet, and AlexNet image classifiers only. Quantization is adjacent to the target, while applicability to modern transformer LLM inference is unverified.",
+    "first_checked_at": "2026-10-06T03:18:32+00:00",
+    "last_checked_at": "2026-10-06T03:18:32+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Towards the Limit of Network Quantization"
+  },
+  "processed_at": "2026-10-06T03:18:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-36783fbf694a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
