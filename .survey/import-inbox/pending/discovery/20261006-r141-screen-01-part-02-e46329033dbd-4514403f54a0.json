@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r141-screen-01-part-02-e46329033dbd",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11030",
+      "identity_tokens": [
+        "arXiv:2607.11030"
+      ],
+      "title": "MMRM: A Multiplex Multimodal Representation Model for Product Ranking in E-commerce Search",
+      "reason": "MLLM-derived product representations improve e-commerce ranking, but ranking quality rather than LLM runtime is evaluated; FlashAttention is only a lineage label.",
+      "source_url": "https://arxiv.org/abs/2607.11030",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.11288",
+      "identity_tokens": [
+        "arXiv:2607.11288"
+      ],
+      "title": "Mako: A Self-Evolving Agentic Operating System (SE-AOS) for Autonomous Web Exploitation",
+      "reason": "Autonomous web-exploitation agent OS reports cybersecurity-task success and API/token cost, not an LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2607.11288",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s10664-026-10927-y",
+      "identity_tokens": [
+        "DOI:10.1007/s10664-026-10927-y"
+      ],
+      "title": "Empirical benchmarking of large language models for data science coding: a multidimensional evaluation",
+      "reason": "DOI page https://doi.org/10.1007/s10664-026-10927-y returned internal error; primary evidence unavailable.",
+      "source_url": "https://doi.org/10.1007/s10664-026-10927-y",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s13755-026-00473-8",
+      "identity_tokens": [
+        "DOI:10.1007/s13755-026-00473-8"
+      ],
+      "title": "BioRENLI: enhancing large language models for biomedical relation extraction through preference-aligned natural language inference",
+      "reason": "DOI page https://doi.org/10.1007/s13755-026-00473-8 returned internal error; packet abstract is empty and primary text unavailable.",
+      "source_url": "https://doi.org/10.1007/s13755-026-00473-8",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3806645.3807591",
+      "identity_tokens": [
+        "DOI:10.1145/3806645.3807591"
+      ],
+      "title": "PowerQuant: Architecture-Agnostic GPU Power Estimation via Quantile Regression",
+      "reason": "ACM DOI https://doi.org/10.1145/3806645.3807591 returned internal error; primary evidence unavailable.",
+      "source_url": "https://doi.org/10.1145/3806645.3807591",
+      "first_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "last_checked_at": "2026-10-06T19:57:55.863882+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    }
+  ]
+}
