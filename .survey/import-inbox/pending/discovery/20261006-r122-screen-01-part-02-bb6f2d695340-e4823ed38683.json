@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r122-screen-01-part-02-bb6f2d695340",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24322",
+      "identity_tokens": [
+        "arXiv:2509.24322"
+      ],
+      "title": "Multimodal Large Language Models Meet Multimodal Emotion Recognition and Reasoning: A Survey",
+      "reason": "Survey scope is emotion tasks, datasets, model architectures, and benchmarks; no inference-efficiency method is evaluated.",
+      "source_url": "https://arxiv.org/abs/2509.24322",
+      "first_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "last_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.16420",
+      "identity_tokens": [
+        "arXiv:2504.16420"
+      ],
+      "title": "A Survey of Foundation Model-Powered Recommender Systems: From Feature-Based, Generative to Agentic Paradigms",
+      "reason": "Full survey conclusion and taxonomy focus recommendation applications and research opportunities; it does not present a general LLM-serving optimization.",
+      "source_url": "https://arxiv.org/abs/2504.16420",
+      "first_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "last_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.14519",
+      "identity_tokens": [
+        "arXiv:2411.14519"
+      ],
+      "title": "Tra-MoE: Learning Trajectory Prediction Model from Multiple Domains for Adaptive Policy Conditioning",
+      "reason": "Methods/evaluation concern robot trajectories and policy conditioning; no LLM inference optimization.",
+      "source_url": "https://arxiv.org/abs/2411.14519",
+      "first_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "last_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.19409",
+      "identity_tokens": [
+        "arXiv:2407.19409"
+      ],
+      "title": "LLAVADI: What Matters For Multimodal Large Language Models Distillation",
+      "reason": "Experiments analyze distillation components and student quality; smaller model scale may help deployment, but the main contribution is training/distillation and no direct serving-cost benchmark establishes an efficiency intervention.",
+      "source_url": "https://arxiv.org/abs/2407.19409",
+      "first_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "last_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05320",
+      "identity_tokens": [
+        "arXiv:2506.05320"
+      ],
+      "title": "Generalizable, real-time neural decoding with hybrid state-space models",
+      "reason": "Evaluation is neural-signal decoding rather than language-model inference or serving.",
+      "source_url": "https://arxiv.org/abs/2506.05320",
+      "first_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "last_checked_at": "2026-10-06T17:17:21.879750+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
