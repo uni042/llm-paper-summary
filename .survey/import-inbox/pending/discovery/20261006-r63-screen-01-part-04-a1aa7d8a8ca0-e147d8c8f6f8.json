@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r63-screen-01-part-04-a1aa7d8a8ca0",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20353",
+      "identity_tokens": [
+        "arXiv:2508.20353"
+      ],
+      "title": "DFAMS: Dynamic-flow guided Federated Alignment based Multi-prototype Search",
+      "reason": "DFAMS is a dynamic-flow federated alignment/multi-prototype search method evaluated for retrieval/alignment performance. It is not transformer compression, LLM inference, or model serving, and the linked MiniLM distillation item is not methodologically connected.",
+      "source_url": "https://arxiv.org/abs/2508.20353",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.22049",
+      "identity_tokens": [
+        "arXiv:2506.22049"
+      ],
+      "title": "GPAS: Accelerating Convergence of LLM Pretraining via Gradient-Preserving Activation Scaling",
+      "reason": "GPAS rescales activations while preserving gradients to accelerate LLM pretraining convergence; evaluations concern training stability/convergence and model quality. No inference latency, memory, throughput or serving optimization is demonstrated. Relatedness to a general transformer-training lineage is plausible, but it is outside the requested inference-efficiency focus.",
+      "source_url": "https://arxiv.org/abs/2506.22049",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.19024",
+      "identity_tokens": [
+        "arXiv:2504.19024"
+      ],
+      "title": "KETCHUP: K-Step Return Estimation for Sequential Knowledge Distillation",
+      "reason": "KETCHUP changes sequential knowledge-distillation target estimation using k-step returns and evaluates student task quality/training behavior. It may improve the training process but does not establish smaller deployed model or inference resource savings. Relation to MiniLM distillation is real at the training-method level but weak for inference systems.",
+      "source_url": "https://arxiv.org/abs/2504.19024",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.13305",
+      "identity_tokens": [
+        "arXiv:2503.13305"
+      ],
+      "title": "Computation Mechanism Behind LLM Position Generalization",
+      "reason": "The paper analyzes why LLMs generalize to unseen positions and tests mechanistic hypotheses with controlled model/intervention experiments. Its focus is explanatory position generalization, not extending context with reduced KV memory or lowering inference cost; link to InfLLM is conceptual only.",
+      "source_url": "https://arxiv.org/abs/2503.13305",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.02922",
+      "identity_tokens": [
+        "arXiv:2502.02922"
+      ],
+      "title": "Elucidating the Preconditioning in Consistency Distillation",
+      "reason": "This work studies preconditioning in consistency distillation for diffusion/generative models and evaluates convergence/sample quality. It is not transformer LLM inference, compression or sparse attention; linked SpargeAttn overlap is not a technical connection.",
+      "source_url": "https://arxiv.org/abs/2502.02922",
+      "first_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "last_checked_at": "2026-10-06T08:29:01.787222+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ]
+    }
+  ]
+}
