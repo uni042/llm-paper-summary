@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f66e12d1880ec0c3-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:1706.03741",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:1706.03741",
+    "identity_tokens": [
+      "arXiv:1706.03741"
+    ],
+    "reason": "人間の軌跡選好から報酬モデルを学習して強化学習エージェントを訓練する研究で、LLM推論・サービング・推論時メモリ/カーネル最適化を最終適用先としない。",
+    "first_checked_at": "2026-10-06T13:09:29+00:00",
+    "last_checked_at": "2026-10-06T13:09:29+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+    ],
+    "title": "Deep Reinforcement Learning from Human Preferences"
+  },
+  "processed_at": "2026-10-06T13:09:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f66e12d1880e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

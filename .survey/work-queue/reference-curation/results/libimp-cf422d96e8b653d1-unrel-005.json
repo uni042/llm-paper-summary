@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cf422d96e8b653d1-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.3390/app152111610",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.3390/app152111610",
+    "identity_tokens": [
+      "DOI:10.3390/app152111610"
+    ],
+    "reason": "Binary code similarity detection serves as a critical front-line defense mechanism in cybersecurity, playing an indispensable role in identifying known vulnerabilities, detecting emergent malware families, and preventing intellectual property theft via code plagiarism. However, existing methods based on Control Flow Graphs (CFGs) often suffer from two major limitations: the inadequate capture of deep semantic information within CFG nodes, and the neglect of structural relationships across different functions. To address these issues, we propose Breg, a novel framework that synergistically inte",
+    "first_checked_at": "2026-10-06T13:09:25+00:00",
+    "last_checked_at": "2026-10-06T13:09:25+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+    ],
+    "title": "Enhancing Binary Security Analysis Through Pre-Trained Semantic and Structural Feature Matching"
+  },
+  "processed_at": "2026-10-06T13:09:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cf422d96e8b6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
