@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r32-screen-01-part-04-bf20838a1106",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.09411",
+      "identity_tokens": [
+        "arXiv:2406.09411"
+      ],
+      "title": "MuirBench: A Comprehensive Benchmark for Robust Multi-image Understanding",
+      "reason": "一次資料の要旨・主題はLLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善を示さず、対象系統との妥当な技術接続も確認できない。",
+      "source_url": "https://arxiv.org/abs/2406.09411",
+      "first_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "last_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.12216",
+      "identity_tokens": [
+        "arXiv:2504.12216"
+      ],
+      "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning",
+      "reason": "The primary text trains diffusion LLMs with reinforcement learning for reasoning quality. It is in the linked diffusion-LLM family, but its measured contribution is post-training capability rather than inference speed, memory, or serving.",
+      "source_url": "https://arxiv.org/abs/2504.12216",
+      "first_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "last_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.30876-dmoe-block-level-experts.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2606.18394-jetspec-breaking-the-scaling-ceiling-of-speculative-decoding-with-parall.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SP54263.2024.00130",
+      "identity_tokens": [
+        "DOI:10.1109/SP54263.2024.00130"
+      ],
+      "title": "BOLT: Privacy-Preserving, Accurate and Efficient Inference for Transformers",
+      "reason": "Primary IEEE DOI page was attempted but was inaccessible through the available retrieval path; the packet abstract is empty and full-text method/evaluation cannot be verified.",
+      "source_url": "https://doi.org/10.1109/SP54263.2024.00130",
+      "first_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "last_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.02864",
+      "identity_tokens": [
+        "arXiv:2511.02864"
+      ],
+      "title": "Mathematical exploration and discovery at scale",
+      "reason": "The primary text evaluates AlphaEvolve as an evolutionary coding agent for mathematical discovery. It does not present LLM inference kernels, runtime compilation, or serving optimization.",
+      "source_url": "https://arxiv.org/abs/2511.02864",
+      "first_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "last_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2605.31464-gpu-forecasters-kernel-runtime-surrogates.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16421",
+      "identity_tokens": [
+        "arXiv:2505.16421"
+      ],
+      "title": "WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning",
+      "reason": "The primary paper trains web agents using end-to-end multi-turn reinforcement learning and evaluates task success; it does not improve LLM serving/scheduling.",
+      "source_url": "https://arxiv.org/abs/2505.16421",
+      "first_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "last_checked_at": "2026-10-06T03:11:34.042721+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.18112-fairinference-token-latency-fairness-multitenant.md"
+      ]
+    }
+  ]
+}
