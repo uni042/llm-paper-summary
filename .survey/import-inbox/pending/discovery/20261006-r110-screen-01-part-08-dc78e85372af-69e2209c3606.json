@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r110-screen-01-part-08-dc78e85372af",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20808",
+      "identity_tokens": [
+        "arXiv:2605.20808"
+      ],
+      "title": "Spatial Gram Alignment for Ultra-High-Resolution Image Synthesis",
+      "reason": "Spatial Gram alignment improves ultra-high-resolution image synthesis; no LLM serving or inference efficiency contribution.",
+      "source_url": "https://arxiv.org/abs/2605.20808",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21433",
+      "identity_tokens": [
+        "arXiv:2605.21433"
+      ],
+      "title": "Instrumental Text-to-Music Generation with Auxiliary Conditioning Branches",
+      "reason": "Text-to-music generation quality/conditioning, no resource reduction method.",
+      "source_url": "https://arxiv.org/abs/2605.21433",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22870",
+      "identity_tokens": [
+        "arXiv:2605.22870"
+      ],
+      "title": "The Readout Shortcut: Positional Number Copying Dominates Arithmetic CoT Readout in Small Language Models",
+      "reason": "Studies positional-number copying as an arithmetic readout shortcut in small language models, adjacent to reasoning compute, but does not report a method to reduce inference compute/latency or serving cost.",
+      "source_url": "https://arxiv.org/abs/2605.22870",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19410",
+      "identity_tokens": [
+        "arXiv:2605.19410"
+      ],
+      "title": "Vision Harnessing Agent for Open Ad-hoc Segmentation",
+      "reason": "Vision agent for open-vocabulary segmentation is a task/application paper; KV-cache lineage is not supported by a cache optimization in the work.",
+      "source_url": "https://arxiv.org/abs/2605.19410",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2609.19969-deepseek-v4.1-flash-kv-cache-compression.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.19762",
+      "identity_tokens": [
+        "arXiv:2605.19762"
+      ],
+      "title": "What Really Improves Mathematical Reasoning: Structured Reasoning Signals Beyond Pure Code",
+      "reason": "Examines training data/reasoning signals and expert activation patterns for mathematical reasoning; no inference efficiency improvement.",
+      "source_url": "https://arxiv.org/abs/2605.19762",
+      "first_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "last_checked_at": "2026-10-06T15:10:01.789270+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md",
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ]
+    }
+  ]
+}
