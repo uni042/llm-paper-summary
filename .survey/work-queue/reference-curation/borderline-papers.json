@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T03:49:13+00:00",
-  "record_count": 2204,
+  "updated_at": "2026-10-06T03:59:14+00:00",
+  "record_count": 2210,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33985,6 +33985,96 @@
       ],
       "borderline_recheck_count": 0,
       "title": "LoongFlow: Directed Evolutionary Search via a Cognitive Plan-Execute-Summarize Paradigm"
+    },
+    "arXiv:1906.09777": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1906.09777",
+      "identity_tokens": [
+        "arXiv:1906.09777"
+      ],
+      "reason": "Tensorized Transformer compresses self-attention parameters and evaluates language modeling and translation, making it relevant to model-size/memory reduction. It does not establish modern decoder-only serving latency, KV-cache behavior, or throughput.",
+      "first_checked_at": "2026-10-06T03:59:05+00:00",
+      "last_checked_at": "2026-10-06T03:59:05+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Tensorized Transformer for Language Modeling"
+    },
+    "arXiv:2401.04925": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2401.04925",
+      "identity_tokens": [
+        "arXiv:2401.04925"
+      ],
+      "reason": "This is an empirical study of how Chain-of-Thought demonstration length affects reasoning accuracy; it finds task-dependent effects but does not propose an inference optimization. Shorter demonstrations could affect token cost, but net serving benefit is unmeasured.",
+      "first_checked_at": "2026-10-06T03:59:05+00:00",
+      "last_checked_at": "2026-10-06T03:59:05+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Impact of Reasoning Step Length on Large Language Models"
+    },
+    "DOI:10.18653/v1/d19-1441": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/d19-1441",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1441"
+      ],
+      "reason": "Patient-KD compresses BERT into a shallow student and evaluates model efficiency, but the paper frames its main efficiency result around training resources rather than modern LLM inference or serving. The model-compression connection remains plausible but indirect.",
+      "first_checked_at": "2026-10-06T03:59:06+00:00",
+      "last_checked_at": "2026-10-06T03:59:06+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Patient Knowledge Distillation for BERT Model Compression"
+    },
+    "arXiv:2112.13890": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2112.13890",
+      "identity_tokens": [
+        "arXiv:2112.13890"
+      ],
+      "reason": "SPViT uses latency-aware soft token pruning and measures hardware latency, but specifically for image-classification Vision Transformers. The transfer to token pruning in language-model inference is unestablished.",
+      "first_checked_at": "2026-10-06T03:59:09+00:00",
+      "last_checked_at": "2026-10-06T03:59:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SPViT: Enabling Faster Vision Transformers via Latency-Aware Soft Token Pruning"
+    },
+    "arXiv:1510.03009": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1510.03009",
+      "identity_tokens": [
+        "arXiv:1510.03009"
+      ],
+      "reason": "The paper studies reducing multiplication counts in general neural networks, not transformer/LLM serving, KV state, or deployment-level latency. The generic arithmetic-efficiency connection to the linked FPGA work is weak.",
+      "first_checked_at": "2026-10-06T03:59:11+00:00",
+      "last_checked_at": "2026-10-06T03:59:11+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Networks with Few Multiplications"
+    },
+    "arXiv:2211.01910": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2211.01910",
+      "identity_tokens": [
+        "arXiv:2211.01910"
+      ],
+      "reason": "APE optimizes instruction quality by LLM proposal and scoring, not inference compute, memory, latency, throughput, or serving. Its linked KV-cache paper is only a weak thematic association.",
+      "first_checked_at": "2026-10-06T03:59:14+00:00",
+      "last_checked_at": "2026-10-06T03:59:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Models Are Human-Level Prompt Engineers"
     }
   }
 }
