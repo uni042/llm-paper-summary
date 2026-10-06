@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r130-screen-01-part-02-39c6674bff67",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.05911",
+      "identity_tokens": [
+        "arXiv:2410.05911"
+      ],
+      "title": "Accelerating Error Correction Code Transformers",
+      "reason": "Error-correction-code transformer workloads are the target, rather than LLM generation or language-model serving.",
+      "source_url": "https://arxiv.org/abs/2410.05911",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.17428",
+      "identity_tokens": [
+        "arXiv:2408.17428"
+      ],
+      "title": "CLOCR-C: Context Leveraging OCR Correction with Pre-trained Language Models",
+      "reason": "The pretrained language model is used for OCR text correction; the paper does not optimize LLM inference or report serving gains.",
+      "source_url": "https://arxiv.org/abs/2408.17428",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.12267",
+      "identity_tokens": [
+        "arXiv:2407.12267"
+      ],
+      "title": "Generating 3D House Wireframes with Semantics",
+      "reason": "The work generates semantic 3D house wireframes; its 3D scene-generation objective is outside language-model inference.",
+      "source_url": "https://arxiv.org/abs/2407.12267",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08756",
+      "identity_tokens": [
+        "arXiv:2406.08756"
+      ],
+      "title": "Optimizing Large Model Training through Overlapped Activation Recomputation",
+      "reason": "This activation-recomputation method targets large-model training memory/time, not inference serving.",
+      "source_url": "https://arxiv.org/abs/2406.08756",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.03714",
+      "identity_tokens": [
+        "arXiv:2404.03714"
+      ],
+      "title": "SpikeExplorer: hardware-oriented Design Space Exploration for Spiking Neural Networks on FPGA",
+      "reason": "SpikeExplorer explores FPGA designs for spiking neural networks; the model/workload is not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2404.03714",
+      "first_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "last_checked_at": "2026-10-06T18:25:52.541652+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    }
+  ]
+}
