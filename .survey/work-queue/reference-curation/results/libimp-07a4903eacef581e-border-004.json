@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-07a4903eacef581e-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.16685",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.16685",
+    "identity_tokens": [
+      "arXiv:2603.16685"
+    ],
+    "reason": "本文はmobile robot vision workloadをedge/cloud間でoffloadし、透明性とresource制約を扱う。offloadingはserving lineageに隣接する一方、LLMではなく視覚推論固有の結果である。",
+    "first_checked_at": "2026-10-06T21:00:50+00:00",
+    "last_checked_at": "2026-10-06T21:00:50+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "vAccSOL: Efficient and Transparent AI Vision Offloading for Mobile Robots"
+  },
+  "processed_at": "2026-10-06T21:00:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-07a4903eacef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

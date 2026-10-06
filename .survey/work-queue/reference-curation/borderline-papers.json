@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T20:56:40+00:00",
-  "record_count": 4080,
+  "updated_at": "2026-10-06T21:00:59+00:00",
+  "record_count": 4111,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -62310,6 +62310,472 @@
       ],
       "borderline_recheck_count": 0,
       "title": "CELLM: Confidential and Efficient Lightweight LLM Inference in TEEs"
+    },
+    "arXiv:2604.03048": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03048",
+      "identity_tokens": [
+        "arXiv:2604.03048"
+      ],
+      "reason": "要旨はstatic code analysisとLLMによるalgorithm recognitionの正確性/性能評価であり、LLM自体の推論最適化ではない。linked compiler lineageとの具体的重複を本文で確認したかったがHTML取得に失敗。",
+      "first_checked_at": "2026-10-06T21:00:47+00:00",
+      "last_checked_at": "2026-10-06T21:00:47+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Combining Static Code Analysis and Large Language Models Improves Correctness and Performance of Algorithm Recognition"
+    },
+    "arXiv:2604.08556": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08556",
+      "identity_tokens": [
+        "arXiv:2604.08556"
+      ],
+      "reason": "本文はEMA traceを用いるrecurrent-context representationの能力境界を分析するが、LLM servingにおけるKV/context memory削減やlatency改善は実証していない。recurrent context lineageへの転用根拠は弱い。",
+      "first_checked_at": "2026-10-06T21:00:48+00:00",
+      "last_checked_at": "2026-10-06T21:00:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EMA Is Not All You Need: Mapping the Boundary Between Structure and Content in Recurrent Context"
+    },
+    "DOI:10.1186/s13321-026-01178-6": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1186/s13321-026-01178-6",
+      "identity_tokens": [
+        "DOI:10.1186/s13321-026-01178-6"
+      ],
+      "reason": "lightweight GNNによるNMR shift予測で用途は化学特性推定だが、指定BMC出版社の一次本文を取得できず、linked compilerとの関係を検証できない。",
+      "first_checked_at": "2026-10-06T21:00:48+00:00",
+      "last_checked_at": "2026-10-06T21:00:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A light-weight Graph Neural Network for the prediction of 31P Nuclear Magnetic Resonance signals"
+    },
+    "arXiv:2603.14818": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14818",
+      "identity_tokens": [
+        "arXiv:2603.14818"
+      ],
+      "reason": "本文はquantization/pruning後のモデルが元モデルと近い挙動を保つか確率的に証明するcertification手法で、圧縮自体の改善ではない。quality verificationとして隣接するが、LLM inference効率の直接改善は未提示。",
+      "first_checked_at": "2026-10-06T21:00:48+00:00",
+      "last_checked_at": "2026-10-06T21:00:48+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SimCert: Probabilistic Certification for Behavioral Similarity in Deep Neural Network Compression"
+    },
+    "DOI:10.1007/s42514-025-00271-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s42514-025-00271-w",
+      "identity_tokens": [
+        "DOI:10.1007/s42514-025-00271-w"
+      ],
+      "reason": "distributed deep-learning simulatorはserving systemsの隣接領域だが、指定Springer DOI本文を取得できず、LLM inferenceのsimulator適用範囲を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:48+00:00",
+      "last_checked_at": "2026-10-06T21:00:48+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Parallelsim: an accurate, generic, and efficient simulator for distributed deep learning"
+    },
+    "arXiv:2603.21810": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.21810",
+      "identity_tokens": [
+        "arXiv:2603.21810"
+      ],
+      "reason": "本文は安全なmulti-agent vehicle control向けpartial attentionを扱う。attention計算を絞る着想は隣接するが、LLM workloadの測定や推論効率への移植可能性は示されない。",
+      "first_checked_at": "2026-10-06T21:00:49+00:00",
+      "last_checked_at": "2026-10-06T21:00:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Partial Attention in Deep Reinforcement Learning for Safe Multi-Agent Control"
+    },
+    "DOI:10.1145/3748522.3779809": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3748522.3779809",
+      "identity_tokens": [
+        "DOI:10.1145/3748522.3779809"
+      ],
+      "reason": "入力長によるtransformer misinformation detectorの効率評価という内容は隣接するが、指定ACM DOIの一次資料を取得できず、LLMとの関係および推論効率の実測を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:49+00:00",
+      "last_checked_at": "2026-10-06T21:00:49+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Input-Length Effects on Transformer-based Misinformation Detection: An Empirical Study"
+    },
+    "DOI:10.21105/joss.08027": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.21105/joss.08027",
+      "identity_tokens": [
+        "DOI:10.21105/joss.08027"
+      ],
+      "reason": "SciPyの数値積分/最適化API実装とvectorizationの題名のみではLLM compilerとの技術的接点を判断できず、指定JOSS一次資料を取得できない。",
+      "first_checked_at": "2026-10-06T21:00:50+00:00",
+      "last_checked_at": "2026-10-06T21:00:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vectorized, Python Array API Standard Compatible Functions for Quadrature, Series Summation, Differentiation, Optimization, and Root Finding in SciPy"
+    },
+    "DOI:10.54097/qqsv1d58": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.54097/qqsv1d58",
+      "identity_tokens": [
+        "DOI:10.54097/qqsv1d58"
+      ],
+      "reason": "本文はbrain-tumor segmentation向けにquantization, pruning, compiled runtime, hardware-aware inferenceを整理するreview。推論効率の評価設計は隣接するが、医療vision固有の整理でLLM servingへの直接的な結果はなく、転用可能性は限定的。",
+      "first_checked_at": "2026-10-06T21:00:50+00:00",
+      "last_checked_at": "2026-10-06T21:00:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating Deep Learning Inference for Brain Tumor Segmentation: A Review of Architectures, Frameworks, and Clinical Translation"
+    },
+    "arXiv:2603.16685": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.16685",
+      "identity_tokens": [
+        "arXiv:2603.16685"
+      ],
+      "reason": "本文はmobile robot vision workloadをedge/cloud間でoffloadし、透明性とresource制約を扱う。offloadingはserving lineageに隣接する一方、LLMではなく視覚推論固有の結果である。",
+      "first_checked_at": "2026-10-06T21:00:50+00:00",
+      "last_checked_at": "2026-10-06T21:00:50+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "vAccSOL: Efficient and Transparent AI Vision Offloading for Mobile Robots"
+    },
+    "arXiv:2603.18712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18712",
+      "identity_tokens": [
+        "arXiv:2603.18712"
+      ],
+      "reason": "要旨はmulti-channel時系列予測向けsparse attentionで、attention系統との接点はあるもののLLM inferenceを評価していない。本文HTML取得失敗のため、実装上再利用できる推論効率手法の有無が未確定。",
+      "first_checked_at": "2026-10-06T21:00:51+00:00",
+      "last_checked_at": "2026-10-06T21:00:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accurate and Efficient Multi-Channel Time Series Forecasting via Sparse Attention Mechanism"
+    },
+    "arXiv:2603.19096": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.19096",
+      "identity_tokens": [
+        "arXiv:2603.19096"
+      ],
+      "reason": "要旨はGinzburg-Landau energy minimizerのneural finite-element solverで、compiler系統とは題材上離れている。本文取得失敗のため、stand-alone solverによる再利用可能なruntime最適化があるか確認できない。",
+      "first_checked_at": "2026-10-06T21:00:51+00:00",
+      "last_checked_at": "2026-10-06T21:00:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GLENN: Neural network-enhanced computation of Ginzburg-Landau energy minimizers"
+    },
+    "arXiv:2604.09631": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.09631",
+      "identity_tokens": [
+        "arXiv:2604.09631"
+      ],
+      "reason": "要旨はJetson上のTensorRT物体検出でCPU/GPU/RAM/throughput等をfault injection下で測定する。edge inference測定は隣接するがLLMではなく、本文取得に失敗して再利用性を判断できない。",
+      "first_checked_at": "2026-10-06T21:00:51+00:00",
+      "last_checked_at": "2026-10-06T21:00:51+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hardware Utilization and Inference Performance of Edge Object Detection Under Fault Injection"
+    },
+    "DOI:10.1101/2025.11.03.685842": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1101/2025.11.03.685842",
+      "identity_tokens": [
+        "DOI:10.1101/2025.11.03.685842"
+      ],
+      "reason": "PubMed abstractから自己調節biological networkを抽出するtransformerで用途は非LLMの生物学的分類だが、指定bioRxiv一次資料に接続できず詳細を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:51+00:00",
+      "last_checked_at": "2026-10-06T21:00:51+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SOORENA: Self-lOOp containing or autoREgulatory Nodes in biological network Analysis"
+    },
+    "DOI:10.1109/ievc69170.2026.11506525": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ievc69170.2026.11506525",
+      "identity_tokens": [
+        "DOI:10.1109/ievc69170.2026.11506525"
+      ],
+      "reason": "ViT向けpruning-aware CUR approximationはmodel reductionに隣接するが、指定IEEE一次資料を取得できず、LLMへ応用できるcompression/推論結果を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:52+00:00",
+      "last_checked_at": "2026-10-06T21:00:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pruning-Aware CUR Decomposition for ViT Model Approximation"
+    },
+    "DOI:10.64898/2026.03.12.711165": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.03.12.711165",
+      "identity_tokens": [
+        "DOI:10.64898/2026.03.12.711165"
+      ],
+      "reason": "computable phenotype関連原稿をtransformerで検出する分類タスクで、LLM inference効率とは異なる可能性が高いが、指定DOI一次資料を取得できず要旨を直接確認できない。",
+      "first_checked_at": "2026-10-06T21:00:52+00:00",
+      "last_checked_at": "2026-10-06T21:00:52+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Detecting Manuscripts Related to Computable Phenotypes Using a Transformer-based Language Model"
+    },
+    "DOI:10.1109/scse70081.2026.11499856": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/scse70081.2026.11499856",
+      "identity_tokens": [
+        "DOI:10.1109/scse70081.2026.11499856"
+      ],
+      "reason": "長文文書のevidence localizationとNLI verifierは関連し得るが、指定IEEE出版社の一次資料を取得できず、LLM推論コストや長文処理効率への実証を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:53+00:00",
+      "last_checked_at": "2026-10-06T21:00:53+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DocEviTrace: Faithful Explainability Through Verifiable Evidence Localization in Long Documents"
+    },
+    "DOI:10.64898/2026.03.26.714501": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.03.26.714501",
+      "identity_tokens": [
+        "DOI:10.64898/2026.03.26.714501"
+      ],
+      "reason": "genomic language modelのbenchmarkとして隣接性はあるが、指定DOIの一次資料ページを取得できず、モデル/推論効率への具体的寄与を検証できない。",
+      "first_checked_at": "2026-10-06T21:00:54+00:00",
+      "last_checked_at": "2026-10-06T21:00:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LAMBDA: A Prophage Detection Benchmark for Genomic Language Models"
+    },
+    "arXiv:2603.24226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.24226",
+      "identity_tokens": [
+        "arXiv:2603.24226"
+      ],
+      "reason": "本文は検索rankingのデータ/モデル scaling と検索品質を扱う。LLMから着想を得ているが、LLM inference servingの具体的な計算・メモリ・latency改善ではなく、既存 inference 系統への転用根拠は弱い。",
+      "first_checked_at": "2026-10-06T21:00:54+00:00",
+      "last_checked_at": "2026-10-06T21:00:54+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UniScale: Synergistic Entire Space Data and Model Scaling for Search Ranking"
+    },
+    "DOI:10.1371/journal.pone.0345538": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1371/journal.pone.0345538",
+      "identity_tokens": [
+        "DOI:10.1371/journal.pone.0345538"
+      ],
+      "reason": "医療画像segmentationのattention/fusion手法で明らかに用途は異なるが、指定PLOS DOIの一次本文を取得できず、linked attention lineageとの技術的重複を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:54+00:00",
+      "last_checked_at": "2026-10-06T21:00:54+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SCEAF-UNet: Medical image segmentation based on spatial-channel feature enhancement and adaptive fusion"
+    },
+    "DOI:10.1109/icnlp69856.2026.11527736": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icnlp69856.2026.11527736",
+      "identity_tokens": [
+        "DOI:10.1109/icnlp69856.2026.11527736"
+      ],
+      "reason": "LLM long-to-long生成benchmarkは対象領域に近いが、指定IEEE DOIの一次資料を取得できず、生成効率の評価や測定結果を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:54+00:00",
+      "last_checked_at": "2026-10-06T21:00:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SciLong2LongEval: Evaluating Large Language Models for Long-to-Long Scientific Text Generation"
+    },
+    "DOI:10.1109/icnlp69856.2026.11528064": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icnlp69856.2026.11528064",
+      "identity_tokens": [
+        "DOI:10.1109/icnlp69856.2026.11528064"
+      ],
+      "reason": "頭頸部癌の医療画像segmentationでLLM inferenceとは異なるが、指定IEEE一次資料に接続できず、linked attention lineageとの方法重複を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:55+00:00",
+      "last_checked_at": "2026-10-06T21:00:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HNC-SegMedNet: A Medical Image Segmentation Model Based on Multi-Attention Fusion"
+    },
+    "DOI:10.1109/icnlp69856.2026.11528163": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icnlp69856.2026.11528163",
+      "identity_tokens": [
+        "DOI:10.1109/icnlp69856.2026.11528163"
+      ],
+      "reason": "乳児cryのcross-site federated audio transformerで対象は音声分類。指定IEEE一次資料を取得できず、linked sparse-attention lineageとの技術的重複も確認できない。",
+      "first_checked_at": "2026-10-06T21:00:55+00:00",
+      "last_checked_at": "2026-10-06T21:00:55+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Federated Causal-Aware Audio Transformer for Cross-Site Infant Cry Paralinguistic Classification"
+    },
+    "DOI:10.2196/95883": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.2196/95883",
+      "identity_tokens": [
+        "DOI:10.2196/95883"
+      ],
+      "reason": "患者教育におけるLLM利用評価であり関連領域だが、指定JMIR DOIの一次本文を取得できず、推論効率を扱うか検証できない。",
+      "first_checked_at": "2026-10-06T21:00:56+00:00",
+      "last_checked_at": "2026-10-06T21:00:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Language Models for Patient Education in Cardiovascular Imaging: Prospective Observational Comparative Study"
+    },
+    "DOI:10.1109/aetcse69203.2026.11503963": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/aetcse69203.2026.11503963",
+      "identity_tokens": [
+        "DOI:10.1109/aetcse69203.2026.11503963"
+      ],
+      "reason": "要旨キャッシュ上はTriton compilerのNPU shared-memory最適化を扱い、compiler lineageとの関連が強いが、指定IEEE DOI一次資料を取得できず実装/性能根拠を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:56+00:00",
+      "last_checked_at": "2026-10-06T21:00:56+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Shared Memory Optimization of the Triton Compiler for Domestic NPU"
+    },
+    "DOI:10.5815/ijitcs.2026.02.09": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.5815/ijitcs.2026.02.09",
+      "identity_tokens": [
+        "DOI:10.5815/ijitcs.2026.02.09"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T21:00:57+00:00",
+      "last_checked_at": "2026-10-06T21:00:57+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight and Explainable Neural Models for Multilingual Movie Script Certification"
+    },
+    "DOI:10.1109/icct-pacific69083.2026.11518659": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icct-pacific69083.2026.11518659",
+      "identity_tokens": [
+        "DOI:10.1109/icct-pacific69083.2026.11518659"
+      ],
+      "reason": "候補は分散ユーザー資源でLLMを構築する inference platform とされ、既存serving系統への関連が強そうだが、指定IEEE DOIの一次本文/要旨ページを取得できず、内容と性能根拠を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:58+00:00",
+      "last_checked_at": "2026-10-06T21:00:58+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Routing for Constructing LLMs Using Geographically Distributed User Resources"
+    },
+    "DOI:10.1109/gaiis69281.2026.11519303": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/gaiis69281.2026.11519303",
+      "identity_tokens": [
+        "DOI:10.1109/gaiis69281.2026.11519303"
+      ],
+      "reason": "カードゲームのTransformer/RLエージェントで、既存routing系統との接点はあり得るが、指定IEEE DOIの一次資料を取得できず、モデル構成や実測した計算・推論効率を確認できない。",
+      "first_checked_at": "2026-10-06T21:00:58+00:00",
+      "last_checked_at": "2026-10-06T21:00:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GtDou: Using Transformer and opponent’s hand card guessing model to enhance the Agent of DouDizhu"
+    },
+    "arXiv:2603.24904": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.24904",
+      "identity_tokens": [
+        "arXiv:2603.24904"
+      ],
+      "reason": "要旨はtrustworthy AIの決定論的推論を主題とし、LLM inference engineに言及するが、一次本文取得に失敗したため推論速度/メモリと信頼性の関係や実装可能な改善を判断できない。",
+      "first_checked_at": "2026-10-06T21:00:58+00:00",
+      "last_checked_at": "2026-10-06T21:00:58+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Foundations of Trustworthy Artificial Intelligence"
+    },
+    "DOI:10.1007/s12530-026-09815-z": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s12530-026-09815-z",
+      "identity_tokens": [
+        "DOI:10.1007/s12530-026-09815-z"
+      ],
+      "reason": "推論時quantization/edge efficiencyの機構は直接的だが、MLP TinyMLの結果がLLM weight compressionへ移るかは未検証。",
+      "first_checked_at": "2026-10-06T21:00:59+00:00",
+      "last_checked_at": "2026-10-06T21:00:59+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Evolving vector quantization-aware training: an adaptive method for compressing machine learning models"
+    },
+    "DOI:10.1109/icetes68504.2026.11518898": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icetes68504.2026.11518898",
+      "identity_tokens": [
+        "DOI:10.1109/icetes68504.2026.11518898"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T21:00:59+00:00",
+      "last_checked_at": "2026-10-06T21:00:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Hybrid-Attention Transformer for Efficient Automated Essay Scoring"
     }
   }
 }

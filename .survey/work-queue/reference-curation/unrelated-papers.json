@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T20:56:40+00:00",
-  "record_count": 9679,
+  "updated_at": "2026-10-06T21:01:00+00:00",
+  "record_count": 9702,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -138632,6 +138632,330 @@
         "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
       ],
       "title": "A comparative study of prognostic strategies for battery SoH: Cycle-level estimation vs. sequential forecasting"
+    },
+    "arXiv:2603.23319": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.23319",
+      "identity_tokens": [
+        "arXiv:2603.23319"
+      ],
+      "reason": "本文はevent pair条件付きattentionによるtemporal relation extractionの精度/解釈性を扱い、対象は情報抽出であってLLM inference最適化を提示しない。",
+      "first_checked_at": "2026-10-06T21:00:49+00:00",
+      "last_checked_at": "2026-10-06T21:00:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "WISTERIA: Weak Implicit Signal-based Temporal Relation Extraction with Attention"
+    },
+    "arXiv:2605.16266": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16266",
+      "identity_tokens": [
+        "arXiv:2605.16266"
+      ],
+      "reason": "本文は2D/3D polygonal shapeを少数parameterで表現する幾何学的表現・最適化であり、LLMやその推論実行には関係しない。",
+      "first_checked_at": "2026-10-06T21:00:49+00:00",
+      "last_checked_at": "2026-10-06T21:00:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Patchwork: A compact representation for 3D polygonal shapes"
+    },
+    "arXiv:2603.21851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.21851",
+      "identity_tokens": [
+        "arXiv:2603.21851"
+      ],
+      "reason": "本文は大規模モデル実装間の計算グラフ等価性検証を扱う。fused kernelも検査対象に含むが、検証手法であり推論性能を改善するものではない。",
+      "first_checked_at": "2026-10-06T21:00:49+00:00",
+      "last_checked_at": "2026-10-06T21:00:49+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Verify Implementation Equivalence of Large Models"
+    },
+    "arXiv:2603.17353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.17353",
+      "identity_tokens": [
+        "arXiv:2603.17353"
+      ],
+      "reason": "本文はpermutation空間上のprobability distributionを学ぶdiffusion手法で、attention/KV cacheやLLM inference runtimeの改善を扱わない。",
+      "first_checked_at": "2026-10-06T21:00:50+00:00",
+      "last_checked_at": "2026-10-06T21:00:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "title": "Learning Permutation Distributions via Reflected Diffusion on Ranks"
+    },
+    "arXiv:2603.16974": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.16974",
+      "identity_tokens": [
+        "arXiv:2603.16974"
+      ],
+      "reason": "一次資料の要旨を確認。Multi-Modal Knowledge Graphs (MMKGs) benefit from visual information, yet large-scale image collection is hard to curate and often excludes ambiguous but relevant visuals (e.g., logos, symbols, abstract scenes). We present Beyond Images, an automatic data-centric enrichment pipeline with optional human auditing. This pipeline operates in three stages: (1) large-scale retrieval of additional entity-related images, (2)",
+      "first_checked_at": "2026-10-06T21:00:50+00:00",
+      "last_checked_at": "2026-10-06T21:00:50+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Are a Thousand Words Better Than a Single Picture? Beyond Images - A Framework for Multi-modal Knowledge Graph Dataset Enrichment"
+    },
+    "arXiv:2603.19361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19361",
+      "identity_tokens": [
+        "arXiv:2603.19361"
+      ],
+      "reason": "一次資料の要旨を確認。We study a control architecture for nonlinear constrained systems that integrates a performance-boosting (PB) controller with a scheduled Predictive Safety Filter (PSF). The PSF acts as a pre-stabilizing base controller that enforces state and input constraints. The PB controller, parameterized as a causal operator, influences the PSF in two ways: it proposes a performance input to be filtered, and it provides a sche",
+      "first_checked_at": "2026-10-06T21:00:52+00:00",
+      "last_checked_at": "2026-10-06T21:00:52+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Safety-Aware Performance Boosting for Constrained Nonlinear Systems"
+    },
+    "arXiv:2603.13719": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13719",
+      "identity_tokens": [
+        "arXiv:2603.13719"
+      ],
+      "reason": "一次資料の要旨を確認。Parameter-efficient fine-tuning (PEFT) techniques, such as prompts and adapters, are widely used in multi-modal tracking because they alleviate issues of full-model fine-tuning, including time inefficiency, high resource consumption, parameter storage burden, and catastrophic forgetting. However, due to cross-modal heterogeneity, most existing PEFT-based methods struggle to effectively represent multi-modal features",
+      "first_checked_at": "2026-10-06T21:00:52+00:00",
+      "last_checked_at": "2026-10-06T21:00:52+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Sparse-Dense Mixture of Experts Adapter for Multi-Modal Tracking"
+    },
+    "arXiv:2603.14377": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14377",
+      "identity_tokens": [
+        "arXiv:2603.14377"
+      ],
+      "reason": "一次資料の要旨を確認。Prevailing High Dynamic Range (HDR) video reconstruction methods are fundamentally trapped in a fragile alignment-and-fusion paradigm. While explicit spatial alignment can successfully recover fine details in controlled environments, it becomes a severe bottleneck in unconstrained dynamic scenes. By forcing rigid alignment across unpredictable motions and varying exposures, these methods inevitably translate registra",
+      "first_checked_at": "2026-10-06T21:00:53+00:00",
+      "last_checked_at": "2026-10-06T21:00:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "LoCAtion: Long-time Collaborative Attention Framework for High Dynamic Range Video Reconstruction"
+    },
+    "arXiv:2603.14461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14461",
+      "identity_tokens": [
+        "arXiv:2603.14461"
+      ],
+      "reason": "本文はtransformer/畳み込み融合によるmedical image segmentationで、医療visionの精度向上が目的でありLLM inferenceの高速化や省メモリ化は扱わない。",
+      "first_checked_at": "2026-10-06T21:00:53+00:00",
+      "last_checked_at": "2026-10-06T21:00:53+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "title": "CATFA-Net: A Trans-Convolutional Approach for Accurate Medical Image Segmentation"
+    },
+    "arXiv:2603.14501": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14501",
+      "identity_tokens": [
+        "arXiv:2603.14501"
+      ],
+      "reason": "一次資料の要旨を確認。Large Language Models excel in high-resource programming languages but struggle with low-resource ones. Existing research related to low-resource programming languages primarily focuses on Domain-Specific Languages (DSLs), leaving general-purpose languages that suffer from data scarcity underexplored. To address this gap, we introduce CangjieBench, a contamination-free benchmark for Cangjie, a representative low-reso",
+      "first_checked_at": "2026-10-06T21:00:53+00:00",
+      "last_checked_at": "2026-10-06T21:00:53+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CangjieBench: Benchmarking LLMs on a Low-Resource General-Purpose Programming Language"
+    },
+    "arXiv:2603.22858": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.22858",
+      "identity_tokens": [
+        "arXiv:2603.22858"
+      ],
+      "reason": "一次資料の要旨を確認。We introduce the Dual-View Pheromone Pathway Network (DPPN), an architecture that routes sparse attention through a persistent pheromone field over latent slot transitions, and use it to discover two independent requirements for persistent structural memory in neural networks. Through five progressively refined experiments using up to 10 seeds per condition across 5 model variants and 4 transfer targets, we identify",
+      "first_checked_at": "2026-10-06T21:00:54+00:00",
+      "last_checked_at": "2026-10-06T21:00:54+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "The Coordinate System Problem in Persistent Structural Memory for Neural Architectures"
+    },
+    "arXiv:2603.18372": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18372",
+      "identity_tokens": [
+        "arXiv:2603.18372"
+      ],
+      "reason": "本文はsparse tensor compilerの正しさを見つけるfuzzing/registered reportであり、compilerの高速化やLLM inference改善を提案・測定していない。",
+      "first_checked_at": "2026-10-06T21:00:55+00:00",
+      "last_checked_at": "2026-10-06T21:00:55+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "TENSURE: Fuzzing Sparse Tensor Compilers (Registered Report)"
+    },
+    "arXiv:2603.18449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.18449",
+      "identity_tokens": [
+        "arXiv:2603.18449"
+      ],
+      "reason": "一次資料の要旨を確認。The widespread deployment of large language models (LLMs) calls for post-hoc methods that can flexibly adapt models to evolving safety requirements. Meanwhile, the rapidly expanding open-source LLM ecosystem has produced a diverse collection of models that already exhibit various safety-related functionalities. This motivates a shift from constructing safety functionality from scratch to reusing existing functionalit",
+      "first_checked_at": "2026-10-06T21:00:55+00:00",
+      "last_checked_at": "2026-10-06T21:00:55+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "CNT: Safety-oriented Function Reuse across LLMs via Cross-Model Neuron Transfer"
+    },
+    "arXiv:2603.20654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.20654",
+      "identity_tokens": [
+        "arXiv:2603.20654"
+      ],
+      "reason": "一次資料の要旨を確認。Classical Amdahl's Law conceptualized the limit of speedup for an era of fixed serial-parallel decomposition and homogeneous replication. Modern heterogeneous systems need a different conceptual framework: constrained resources must be allocated across heterogeneous hardware while workloads themselves change, with some stages becoming effectively bounded and others continuing to absorb additional effective compute. T",
+      "first_checked_at": "2026-10-06T21:00:56+00:00",
+      "last_checked_at": "2026-10-06T21:00:56+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Modernizing Amdahl's Law: How AI Scaling Laws Shape Computer Architecture"
+    },
+    "arXiv:2603.19637": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19637",
+      "identity_tokens": [
+        "arXiv:2603.19637"
+      ],
+      "reason": "一次資料の要旨を確認。Deepface generation has traditionally followed a task-driven paradigm, where distinct tasks (e.g., face transfer and hair transfer) are addressed by task-specific models. Nevertheless, this single-task setting severely limits model generalization and scalability. A unified model capable of solving multiple deepface generation tasks in a single pass represents a promising and practical direction, yet remains challengi",
+      "first_checked_at": "2026-10-06T21:00:57+00:00",
+      "last_checked_at": "2026-10-06T21:00:57+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "UniBioTransfer: A Unified Framework for Multiple Biometrics Transfer"
+    },
+    "arXiv:2603.19899": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.19899",
+      "identity_tokens": [
+        "arXiv:2603.19899"
+      ],
+      "reason": "一次資料の要旨を確認。Autocorrelation is a defining characteristic of time-series data, where each observation is statistically dependent on its predecessors. In the context of deep time-series forecasting, autocorrelation arises in both the input history and the label sequences, presenting two central research challenges: (1) designing neural architectures that model autocorrelation in history sequences, and (2) devising learning objecti",
+      "first_checked_at": "2026-10-06T21:00:57+00:00",
+      "last_checked_at": "2026-10-06T21:00:57+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Deep Autocorrelation Modeling for Time-Series Forecasting: Progress and Prospects"
+    },
+    "arXiv:2604.08603": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08603",
+      "identity_tokens": [
+        "arXiv:2604.08603"
+      ],
+      "reason": "本文のapproach/evaluationを確認。enterprise eventをontology governed graph simulationと監査可能decisionへ変換する業務意思決定系。",
+      "first_checked_at": "2026-10-06T21:00:57+00:00",
+      "last_checked_at": "2026-10-06T21:00:57+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md"
+      ],
+      "title": "From Business Events to Auditable Decisions: Ontology-Governed Graph Simulation for Enterprise AI"
+    },
+    "arXiv:2604.05316": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.05316",
+      "identity_tokens": [
+        "arXiv:2604.05316"
+      ],
+      "reason": "本文のmethod/resultsを確認。360度ドローン画像から3D Gaussian Splattingと検出器で室内資産を抽出。",
+      "first_checked_at": "2026-10-06T21:00:57+00:00",
+      "last_checked_at": "2026-10-06T21:00:57+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Indoor Asset Detection in Large Scale 360° Drone-Captured Imagery via 3D Gaussian Splatting"
+    },
+    "arXiv:2603.26348": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26348",
+      "identity_tokens": [
+        "arXiv:2603.26348"
+      ],
+      "reason": "一次資料の要旨を確認。Multimodal Large Language Models (MLLMs) achieve strong multimodal reasoning performance, yet we identify a recurring failure mode in long-form generation: as outputs grow longer, models progressively drift away from image evidence and fall back on textual priors, resulting in ungrounded reasoning and hallucinations. Interestingly, Based on attention analysis, we find that MLLMs have a latent capability for late-stag",
+      "first_checked_at": "2026-10-06T21:00:58+00:00",
+      "last_checked_at": "2026-10-06T21:00:58+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "title": "Reflect to Inform: Boosting Multimodal Reasoning via Information-Gain-Driven Verification"
+    },
+    "arXiv:2603.24897": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.24897",
+      "identity_tokens": [
+        "arXiv:2603.24897"
+      ],
+      "reason": "本文は下垂体腫瘍手術動画のphase recognitionと注釈/ temporal modelingを扱う医療ビジョン用途で、LLM inferenceの改善や再利用可能なserving手法を提示しない。",
+      "first_checked_at": "2026-10-06T21:00:59+00:00",
+      "last_checked_at": "2026-10-06T21:00:59+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SurgPhase: Time efficient pituitary tumor surgery phase recognition via an interactive web platform"
+    },
+    "arXiv:2604.06416": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06416",
+      "identity_tokens": [
+        "arXiv:2604.06416"
+      ],
+      "reason": "arXiv abstract studies attention-flow interpretation from story summaries; it analyzes model conceptual engagement and does not propose an inference-efficiency mechanism.",
+      "first_checked_at": "2026-10-06T21:00:59+00:00",
+      "last_checked_at": "2026-10-06T21:00:59+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Attention Flows: Tracing LLM Conceptual Engagement via Story Summaries"
+    },
+    "DOI:10.1016/j.esmorw.2026.100703": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.esmorw.2026.100703",
+      "identity_tokens": [
+        "DOI:10.1016/j.esmorw.2026.100703"
+      ],
+      "reason": "本文のzero-shot/fine-tuning/resultsを確認。59,800件の臨床記録でLLM survival predictionを比較。",
+      "first_checked_at": "2026-10-06T21:00:59+00:00",
+      "last_checked_at": "2026-10-06T21:00:59+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Investigating fine-tuning versus zero-shot learning for general large language models when predicting cancer survival from initial oncology consultation documents"
+    },
+    "arXiv:2604.04756": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04756",
+      "identity_tokens": [
+        "arXiv:2604.04756"
+      ],
+      "reason": "本文のmethod/evaluationを確認。language modelのexception behaviorとmemorization/uncertainty的兆候を分析する診断研究。",
+      "first_checked_at": "2026-10-06T21:01:00+00:00",
+      "last_checked_at": "2026-10-06T21:01:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Darkness Visible: Reading the Exception Handler of a Language Model"
     }
   }
 }

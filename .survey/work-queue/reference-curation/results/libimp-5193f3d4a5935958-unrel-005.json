@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5193f3d4a5935958-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.14501",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.14501",
+    "identity_tokens": [
+      "arXiv:2603.14501"
+    ],
+    "reason": "一次資料の要旨を確認。Large Language Models excel in high-resource programming languages but struggle with low-resource ones. Existing research related to low-resource programming languages primarily focuses on Domain-Specific Languages (DSLs), leaving general-purpose languages that suffer from data scarcity underexplored. To address this gap, we introduce CangjieBench, a contamination-free benchmark for Cangjie, a representative low-reso",
+    "first_checked_at": "2026-10-06T21:00:53+00:00",
+    "last_checked_at": "2026-10-06T21:00:53+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+    ],
+    "title": "CangjieBench: Benchmarking LLMs on a Low-Resource General-Purpose Programming Language"
+  },
+  "processed_at": "2026-10-06T21:00:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5193f3d4a593",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

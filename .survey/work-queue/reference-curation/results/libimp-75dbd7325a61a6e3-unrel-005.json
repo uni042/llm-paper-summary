@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-75dbd7325a61a6e3-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2603.18449",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2603.18449",
+    "identity_tokens": [
+      "arXiv:2603.18449"
+    ],
+    "reason": "一次資料の要旨を確認。The widespread deployment of large language models (LLMs) calls for post-hoc methods that can flexibly adapt models to evolving safety requirements. Meanwhile, the rapidly expanding open-source LLM ecosystem has produced a diverse collection of models that already exhibit various safety-related functionalities. This motivates a shift from constructing safety functionality from scratch to reusing existing functionalit",
+    "first_checked_at": "2026-10-06T21:00:55+00:00",
+    "last_checked_at": "2026-10-06T21:00:55+00:00",
+    "linked_from": [
+      "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+    ],
+    "title": "CNT: Safety-oriented Function Reuse across LLMs via Cross-Model Neuron Transfer"
+  },
+  "processed_at": "2026-10-06T21:00:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-75dbd7325a61",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

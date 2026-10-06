@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-07a4903eacef581e-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.54097/qqsv1d58",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.54097/qqsv1d58",
+    "identity_tokens": [
+      "DOI:10.54097/qqsv1d58"
+    ],
+    "reason": "本文はbrain-tumor segmentation向けにquantization, pruning, compiled runtime, hardware-aware inferenceを整理するreview。推論効率の評価設計は隣接するが、医療vision固有の整理でLLM servingへの直接的な結果はなく、転用可能性は限定的。",
+    "first_checked_at": "2026-10-06T21:00:50+00:00",
+    "last_checked_at": "2026-10-06T21:00:50+00:00",
+    "linked_from": [
+      "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Accelerating Deep Learning Inference for Brain Tumor Segmentation: A Review of Architectures, Frameworks, and Clinical Translation"
+  },
+  "processed_at": "2026-10-06T21:00:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-07a4903eacef",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
