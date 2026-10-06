@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r152-screen-01-part-09-ae678aed1fe1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.16640",
+      "identity_tokens": [
+        "arXiv:2602.16640"
+      ],
+      "title": "Quecto-V1: Empirical Analysis of 8-bit Quantized Small Language Models for On-Device Legal Retrieval",
+      "reason": "要旨は8-bit quantized small language modelによるon-device legal retrievalで直接関連するが、arXiv full-text HTMLは404となり、latency/memory/accuracyの測定とquantization効果を本文確認できない。",
+      "source_url": "https://arxiv.org/abs/2602.16640",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.18508",
+      "identity_tokens": [
+        "arXiv:2602.18508"
+      ],
+      "title": "Parallelizable Neural Turing Machines",
+      "reason": "本文はscan-based parallel executionのNeural Turing Machineを提案し、autoregressive decoding上のsynthetic algorithm tasksとcompute-efficiencyを評価する。LLM language modelingではなく汎用モデルのtransfer evidenceが未提示。",
+      "source_url": "https://arxiv.org/abs/2602.18508",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ICARC68737.2026.11453838",
+      "identity_tokens": [
+        "DOI:10.1109/ICARC68737.2026.11453838"
+      ],
+      "title": "Personalizing University Support: Benchmarking Lightweight RAG Systems Against Commercial LLMs in Higher Education Administration",
+      "reason": "大学管理向けlightweight RAGのLLM比較で関連領域ではあるが、IEEE一次資料を取得できず、cost/latencyやモデルサイズを評価しているか確認できない。",
+      "source_url": "https://doi.org/10.1109/ICARC68737.2026.11453838",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.14024",
+      "identity_tokens": [
+        "arXiv:2602.14024"
+      ],
+      "title": "EIDOS: Latent-Space Predictive Learning for Time Series Foundation Models",
+      "reason": "一次資料の要旨を確認。Most time series foundation models are pretrained by directly predicting future observations, which often yields weakly structured latent representations that capture surface noise rather than coherent and predictable temporal dynamics. In this work, we introduce EIDOS, a foundation model family that shifts pretraining from future value prediction to latent-",
+      "source_url": "https://arxiv.org/abs/2602.14024",
+      "first_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "last_checked_at": "2026-10-06T21:03:40.898311+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    }
+  ]
+}
