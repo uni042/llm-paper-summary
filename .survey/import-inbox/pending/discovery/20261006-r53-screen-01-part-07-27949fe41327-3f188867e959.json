@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r53-screen-01-part-07-27949fe41327",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11197",
+      "identity_tokens": [
+        "arXiv:2606.11197"
+      ],
+      "title": "MA-DLE: Speech-Based Automatic Depression Level Estimation via Memory Augmentation",
+      "reason": "Title and abstract identify a domain/task-specific model or general theory with no concrete LLM/VLM inference efficiency method or actionable connection to the linked inference lineage.",
+      "source_url": "https://arxiv.org/abs/2606.11197",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539457",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539457"
+      ],
+      "title": "SSR: Sparse Segment Reduction for Ternary GEMM Acceleration",
+      "reason": "Plausible inference/efficiency lineage candidate, but primary full text was unavailable; do not infer its method or results from metadata/secondary snippets.",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539457",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14692",
+      "identity_tokens": [
+        "arXiv:2604.14692"
+      ],
+      "title": "Chain-of-Glimpse: Search-Guided Progressive Object-Grounded Reasoning for Video Understanding",
+      "reason": "Relevant video reasoning lineage but it may add sequential search work rather than reduce it; retain pending cost accounting and comparison with linked token compression.",
+      "source_url": "https://arxiv.org/abs/2604.14692",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14922",
+      "identity_tokens": [
+        "arXiv:2604.14922"
+      ],
+      "title": "LongAct: Harnessing Intrinsic Activation Patterns for Long-Context Reinforcement Learning",
+      "reason": "Related to long-context activation and quantization, but its main effect is training-time optimization, not demonstrated inference improvement.",
+      "source_url": "https://arxiv.org/abs/2604.14922",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44443-026-00754-y",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-026-00754-y"
+      ],
+      "title": "Balancing speed and executability in interactive text-to-CAD code generation for early-stage parametric CAD ideation",
+      "reason": "A generation-speed method but for CAD-domain diffusion code generation, not LLM inference/serving; retain only as an adjacent non-autoregressive-generation comparison.",
+      "source_url": "https://doi.org/10.1007/s44443-026-00754-y",
+      "first_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "last_checked_at": "2026-10-06T07:09:44.467103+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    }
+  ]
+}
