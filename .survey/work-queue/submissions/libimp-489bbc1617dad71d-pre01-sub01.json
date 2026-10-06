@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction",
+      "source_url": "https://arxiv.org/abs/2410.17247",
+      "year": 2024,
+      "published": "2024-10-22",
+      "venue": "arXiv.org",
+      "citation_count": 322,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In large vision-language models (LVLMs), images serve as inputs that carry a wealth of information. As the idiom\"A picture is worth a thousand words\"implies, representing a single image in current LVLMs can require hundreds or even thousands of tokens. This results in significant computational costs, which grow quadratically as input image resolution increases, thereby severely impacting the efficiency of both training and inference. Previous approaches have attempted to reduce the number of image tokens either before or within the early layers of LVLMs. However, these strategies inevitably result in the loss of crucial image information, ultimately diminishing model performance. To address this challenge, we conduct an empirical study revealing that all visual tokens are necessary for LVLMs in the shallow layers, and token redundancy progressively increases in the deeper layers of the model. To this end, we propose PyramidDrop, a visual redundancy reduction strategy for LVLMs to boost their efficiency in both training and inference with neglectable performance loss. Specifically, we partition the LVLM into several stages and drop part of the image tokens at the end of each stage with a pre-defined ratio, creating pyramid-like visual tokens across model layers. The dropping is based on a lightweight similarity calculation with a negligible time overhead. Extensive experiments demonstrate that PyramidDrop can achieve a 40% training time and 55% inference FLOPs acceleration of LLaVA-NeXT with comparable performance. Besides, the PyramidDrop could also serve as a plug-and-play strategy for inference acceleration without training, with better performance and lower inference cost than counterparts. Code is available at https://github.com/Cooperx521/PyramidDrop.",
+      "identifiers": [
+        "SemanticScholar:260f54bc42934cb85c71318863b5f3b2c042d92f"
+      ],
+      "semantic_scholar_id": "260f54bc42934cb85c71318863b5f3b2c042d92f",
+      "canonical_id": "arXiv:2410.17247",
+      "arxiv_id": "2410.17247",
+      "doi": "10.48550/arXiv.2410.17247",
+      "authors": [
+        "Long Xing",
+        "Qidong Huang",
+        "Xiao-Wen Dong",
+        "Jia-Jie Lu",
+        "Pan Zhang",
+        "Yuhang Zang",
+        "Yu-Hang Cao",
+        "Cong-Hui He",
+        "Jiaqi Wang",
+        "Feng Wu",
+        "Da-Hua Lin"
+      ],
+      "priority": 322,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 322,
+        "citation_count": 322,
+        "total": 322,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 714,
+        "matched_prestigious_venue": null
+      },
+      "reason": "大規模視覚言語モデルの深層ほど増えるvisual token冗長性を利用し、stageごとに類似度でimage tokenを段階的にdropする。LLaVA-NeXTで推論FLOPsを55%削減し、training-free inference accelerationとしても機能するためMLLM推論効率化の対象。",
+      "library_body_check": "fulltext_relevance_review: arXiv一次本文/abstractでLVLMを複数stageへ分割し、各stage末尾で軽量similarityに基づきvisual tokenを所定比率でdropしてpyramid状に減らす方式を確認。LLaVA-NeXTでtraining time 40%、inference FLOPs 55%削減、plug-and-play推論利用を報告する。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-489bbc1617da",
+    "round": "libimp-489bbc1617dad71d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-489bbc1617dad71d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-489bbc1617dad71d-pre01.json",
+    "receipt": "sha256:202fe8bf3272df7b6cd4a1f9821eba8192bfdcd4fe97c31477d3c5150e546c00"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-489bbc1617da",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
