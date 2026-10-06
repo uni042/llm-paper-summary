@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b33227b120cb7618-unrel-002",
+  "operation": "mark_unrelated",
+  "canonical_id": "arXiv:2608.14403",
+  "reason": "CRAFTはreference-aware diffusion transformerのsubject personalization training。FlashAttention由来で候補入りしたが、寄与はattention rewardとtraining data削減でLLM serving/inference高速化でない。",
+  "title": "CRAFT: Constrained Reward via Attention Fine-Tuning for Subject Personalization without Composed Targets",
+  "identity_tokens": [
+    "arXiv:2608.14403"
+  ],
+  "linked_from": [
+    "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
+    "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b33227b120cb",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
