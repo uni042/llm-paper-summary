@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d173166d2b4dcc08-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.ymssp.2025.113220",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.ymssp.2025.113220",
+    "identity_tokens": [
+      "DOI:10.1016/j.ymssp.2025.113220"
+    ],
+    "reason": "要旨からLLM推論の計算量・メモリ・遅延・スループット・量子化・offload/servingへの具体的寄与が確認できない。",
+    "first_checked_at": "2026-10-06T14:30:54+00:00",
+    "last_checked_at": "2026-10-06T14:30:54+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+    ],
+    "title": "Real-time structural dynamics estimation in hydraulically actuated systems using 3D flexible multibody simulation and SLIDE networks"
+  },
+  "processed_at": "2026-10-06T14:30:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d173166d2b4d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
