@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r151-screen-01-part-09-9eab99a323a5",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/IEVC69170.2026.11506525",
+      "identity_tokens": [
+        "DOI:10.1109/IEVC69170.2026.11506525"
+      ],
+      "title": "Pruning-Aware CUR Decomposition for ViT Model Approximation",
+      "reason": "ViT向けpruning-aware CUR approximationはmodel reductionに隣接するが、指定IEEE一次資料を取得できず、LLMへ応用できるcompression/推論結果を確認できない。",
+      "source_url": "https://doi.org/10.1109/IEVC69170.2026.11506525",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.03.12.711165",
+      "identity_tokens": [
+        "DOI:10.64898/2026.03.12.711165"
+      ],
+      "title": "Detecting Manuscripts Related to Computable Phenotypes Using a Transformer-based Language Model",
+      "reason": "computable phenotype関連原稿をtransformerで検出する分類タスクで、LLM inference効率とは異なる可能性が高いが、指定DOI一次資料を取得できず要旨を直接確認できない。",
+      "source_url": "https://doi.org/10.64898/2026.03.12.711165",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14377",
+      "identity_tokens": [
+        "arXiv:2603.14377"
+      ],
+      "title": "LoCAtion: Long-time Collaborative Attention Framework for High Dynamic Range Video Reconstruction",
+      "reason": "一次資料の要旨を確認。Prevailing High Dynamic Range (HDR) video reconstruction methods are fundamentally trapped in a fragile alignment-and-fusion paradigm. While explicit spatial alignment can successfully recover fine details in controlled environments, it becomes a severe bottleneck in unconstrained dynamic scenes. By forcing rigid alignment across unpredictable motions and varying exposures, these methods inevitably translate registra",
+      "source_url": "https://arxiv.org/abs/2603.14377",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14461",
+      "identity_tokens": [
+        "arXiv:2603.14461"
+      ],
+      "title": "CATFA-Net: A Trans-Convolutional Approach for Accurate Medical Image Segmentation",
+      "reason": "本文はtransformer/畳み込み融合によるmedical image segmentationで、医療visionの精度向上が目的でありLLM inferenceの高速化や省メモリ化は扱わない。",
+      "source_url": "https://arxiv.org/abs/2603.14461",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.14501",
+      "identity_tokens": [
+        "arXiv:2603.14501"
+      ],
+      "title": "CangjieBench: Benchmarking LLMs on a Low-Resource General-Purpose Programming Language",
+      "reason": "一次資料の要旨を確認。Large Language Models excel in high-resource programming languages but struggle with low-resource ones. Existing research related to low-resource programming languages primarily focuses on Domain-Specific Languages (DSLs), leaving general-purpose languages that suffer from data scarcity underexplored. To address this gap, we introduce CangjieBench, a contamination-free benchmark for Cangjie, a representative low-reso",
+      "source_url": "https://arxiv.org/abs/2603.14501",
+      "first_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "last_checked_at": "2026-10-06T20:58:22.018683+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    }
+  ]
+}
