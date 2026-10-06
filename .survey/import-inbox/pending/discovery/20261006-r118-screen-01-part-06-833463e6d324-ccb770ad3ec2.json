@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r118-screen-01-part-06-833463e6d324",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.16293",
+      "identity_tokens": [
+        "arXiv:2509.16293"
+      ],
+      "title": "Robust LLM Training Infrastructure at ByteDance",
+      "reason": "一次本文を確認した。ByteRobust analyzes a production LLM training platform and checkpoint/failure recovery; its results concern training uptime and checkpoint overhead, not inference systems.",
+      "source_url": "https://arxiv.org/abs/2509.16293",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.05979",
+      "identity_tokens": [
+        "arXiv:2503.05979"
+      ],
+      "title": "Learning-Order Autoregressive Models with Application to Molecular Graph Generation",
+      "reason": "一次資料abstractはAutoregressive models (ARMs) have become the workhorse for sequence generation tasks, since many problems can be modeled as next-token prediction. While there appears to be a natural ordering for text (i.e., left-to-righを対象とする。LLM推論の計算量、メモリ、latency、throughput、KV cache、quantization、offload、servingへの具体的な技術接続がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2503.05979",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.05610",
+      "identity_tokens": [
+        "arXiv:2502.05610"
+      ],
+      "title": "Towards Sustainable NLP: Insights from Benchmarking Inference Energy in Large Language Models",
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。The paper benchmarks inference energy across models/tasks/prompts/system factors and reports token length/time correlations and interactions with batch size/quantization. It is measurement/recommendation work rather than a new serving mechanism; quantization m",
+      "source_url": "https://arxiv.org/abs/2502.05610",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.03719",
+      "identity_tokens": [
+        "arXiv:2412.03719"
+      ],
+      "title": "From Language Models over Tokens to Language Models over Characters",
+      "reason": "一次本文を確認したが、LLM inference efficiencyとの接続、効果の一般性または技術的な新規性が弱く、理由を付してborderlineに残す。The paper converts token-level LMs to character-level distributions with exact/approximate algorithms and measures runtime, quality and bits/byte. Runtime falls as beam budget shrinks, with corresponding approximation-quality effects; it is an alternative samp",
+      "source_url": "https://arxiv.org/abs/2412.03719",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.12318",
+      "identity_tokens": [
+        "arXiv:2404.12318"
+      ],
+      "title": "Reuse Your Rewards: Reward Model Transfer for Zero-Shot Cross-Lingual Alignment",
+      "reason": "一次本文を確認した。Reward-model transfer supports zero-shot cross-lingual alignment, trained/evaluated on reward and preference quality. It does not present an inference speed, memory, or serving method.",
+      "source_url": "https://arxiv.org/abs/2404.12318",
+      "first_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "last_checked_at": "2026-10-06T16:28:16.596208+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    }
+  ]
+}
