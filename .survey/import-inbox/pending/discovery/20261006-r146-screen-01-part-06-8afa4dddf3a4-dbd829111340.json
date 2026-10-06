@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r146-screen-01-part-06-8afa4dddf3a4",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17806",
+      "identity_tokens": [
+        "arXiv:2605.17806"
+      ],
+      "title": "AMO: Operator-level Adaptive Muon Orthogonalization",
+      "reason": "AMO proposes adaptive Muon orthogonalization for parameter optimization. The paper is an optimizer/training contribution, not an LLM inference or serving technique.",
+      "source_url": "https://arxiv.org/abs/2605.17806",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.17821",
+      "identity_tokens": [
+        "arXiv:2605.17821"
+      ],
+      "title": "TierCheck: Tiered Checkpointing for Fault Tolerance in Large Language Model Training",
+      "reason": "TierCheck is a tiered checkpointing system for fault tolerance in large-scale LLM training. Full text explicitly scopes checkpoint states and recovery to training; it does not optimize inference/serving.",
+      "source_url": "https://arxiv.org/abs/2605.17821",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.18163",
+      "identity_tokens": [
+        "arXiv:2605.18163"
+      ],
+      "title": "TRACE: Trajectory Correction from Cross-layer Evidence for Hallucination Reduction",
+      "reason": "TRACE is a training-free inference-time hallucination correction algorithm, but its primary full text reports substantial added inference cost: extra intermediate-layer output projections and mean 2.27x wall-clock latency versus baseline. It has a possible connection to inference-time decoding/correction lineages, but it is not an efficiency improvement and the measured overhead weakens scope fit.",
+      "source_url": "https://arxiv.org/abs/2605.18163",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18404",
+      "identity_tokens": [
+        "arXiv:2605.18404"
+      ],
+      "title": "JanusPipe: Efficient Pipeline Parallel Training for Machine Learning Interatomic Potentials",
+      "reason": "JanusPipe optimizes pipeline-parallel training for machine-learning interatomic potentials, including recomputation and pipeline bubbles. It is neither an LLM method nor inference/serving work.",
+      "source_url": "https://arxiv.org/abs/2605.18404",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1080/23249935.2026.2673457",
+      "identity_tokens": [
+        "DOI:10.1080/23249935.2026.2673457"
+      ],
+      "title": "Queuing-model informed neural network for predicting confidence intervals of parking availability",
+      "reason": "linked lineageがある候補だが、一次出版社本文を取得できず、対象系統との関係を一次証拠で確定できない。二次ページやpacket要旨だけでunrelated/followupと断定できないためborderline。一次資料へのアクセスが得られた場合に再判定する。",
+      "source_url": "https://doi.org/10.1080/23249935.2026.2673457",
+      "first_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "last_checked_at": "2026-10-06T20:29:00.902570+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    }
+  ]
+}
