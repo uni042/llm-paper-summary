@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r102-screen-01-part-04-4d872bc2510c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TITS.2025.3612201",
+      "identity_tokens": [
+        "DOI:10.1109/TITS.2025.3612201"
+      ],
+      "title": "Enhanced Multi-Vehicle Trajectory Prediction via an Extended Temporal Sequence Fusion Attention Network",
+      "reason": "要旨の主題はLLM推論システムではなく、計算量・メモリ・遅延・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://doi.org/10.1109/TITS.2025.3612201",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20426",
+      "identity_tokens": [
+        "arXiv:2511.20426"
+      ],
+      "title": "Block Cascading: Training Free Acceleration of Block-Causal Video Models",
+      "reason": "KV sharing improves video diffusion generation but does not establish language-model serving benefit.",
+      "source_url": "https://arxiv.org/abs/2511.20426",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19152",
+      "identity_tokens": [
+        "arXiv:2511.19152"
+      ],
+      "title": "Masked Diffusion Models are Secretly Learned-Order Autoregressive Models",
+      "reason": "要旨の主題はLLM推論システムではなく、計算量・メモリ・遅延・量子化・offload/servingへの具体的寄与がない。",
+      "source_url": "https://arxiv.org/abs/2511.19152",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17127",
+      "identity_tokens": [
+        "arXiv:2511.17127"
+      ],
+      "title": "Training Foundation Models on a Full-Stack AMD Platform: Compute, Networking, and System Design",
+      "reason": "Inference architecture is discussed but most evidence concerns a specific AMD training/system setup.",
+      "source_url": "https://arxiv.org/abs/2511.17127",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12428",
+      "identity_tokens": [
+        "arXiv:2511.12428"
+      ],
+      "title": "RedVTP: Training-Free Acceleration of Diffusion Vision-Language Models Inference via Masked Token-Guided Visual Token Pruning",
+      "reason": "Concrete diffusion-VLM inference pruning, but not autoregressive LLM serving.",
+      "source_url": "https://arxiv.org/abs/2511.12428",
+      "first_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "last_checked_at": "2026-10-06T14:07:58.093622+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    }
+  ]
+}
