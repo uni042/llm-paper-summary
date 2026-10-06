@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d036eb971f34a3d3-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:1909.01377",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:1909.01377",
+    "identity_tokens": [
+      "arXiv:1909.01377"
+    ],
+    "reason": "The primary text demonstrates constant activation-memory behavior and language-model training-memory savings, but also slower runtime; it does not establish serving/KV-cache/weight-memory improvements for LLM inference, so relevance to the target is weak.",
+    "first_checked_at": "2026-10-06T03:08:49+00:00",
+    "last_checked_at": "2026-10-06T03:08:49+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Deep Equilibrium Models"
+  },
+  "processed_at": "2026-10-06T03:08:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d036eb971f34",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

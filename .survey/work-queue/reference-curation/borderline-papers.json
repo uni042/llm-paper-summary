@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T02:48:24+00:00",
-  "record_count": 2147,
+  "updated_at": "2026-10-06T03:08:49+00:00",
+  "record_count": 2151,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33117,6 +33117,66 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Privacy-enhanced deep learning inference acceleration towards third-party cloud based on trusted execution environment"
+    },
+    "DOI:10.1109/icassp.2011.5947611": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icassp.2011.5947611",
+      "identity_tokens": [
+        "DOI:10.1109/icassp.2011.5947611"
+      ],
+      "reason": "The candidate packet abstract is empty. The primary source could not be retrieved in accessible full text; the topic is adjacent enough that method, evaluation, and limitations cannot be resolved from title/metadata alone.",
+      "first_checked_at": "2026-10-06T03:08:41+00:00",
+      "last_checked_at": "2026-10-06T03:08:41+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Extensions of recurrent neural network language model"
+    },
+    "DOI:10.1016/j.neucom.2024.128096": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2024.128096",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2024.128096"
+      ],
+      "reason": "The candidate packet abstract is empty. The primary publisher page identifies a broad Green AI review, but accessible full text was unavailable; its treatment of concrete LLM-serving methods could not be checked.",
+      "first_checked_at": "2026-10-06T03:08:46+00:00",
+      "last_checked_at": "2026-10-06T03:08:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A review of green artificial intelligence: Towards a more sustainable future"
+    },
+    "arXiv:2601.03233": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.03233",
+      "identity_tokens": [
+        "arXiv:2601.03233"
+      ],
+      "reason": "Although this candidate is linked to the inference-systems lineage, the primary work targets joint audio-video diffusion generation rather than language-model serving. Its speed comparison is not controlled for equivalent modality/model size, so applicability to the target lineage remains weak.",
+      "first_checked_at": "2026-10-06T03:08:47+00:00",
+      "last_checked_at": "2026-10-06T03:08:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2512.14098-cornserve-efficiently-serving-any-to-any-multimodal-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "LTX-2: Efficient Joint Audio-Visual Foundation Model"
+    },
+    "arXiv:1909.01377": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:1909.01377",
+      "identity_tokens": [
+        "arXiv:1909.01377"
+      ],
+      "reason": "The primary text demonstrates constant activation-memory behavior and language-model training-memory savings, but also slower runtime; it does not establish serving/KV-cache/weight-memory improvements for LLM inference, so relevance to the target is weak.",
+      "first_checked_at": "2026-10-06T03:08:49+00:00",
+      "last_checked_at": "2026-10-06T03:08:49+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Deep Equilibrium Models"
     }
   }
 }

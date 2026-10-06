@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T02:48:24+00:00",
-  "record_count": 6784,
+  "updated_at": "2026-10-06T03:08:50+00:00",
+  "record_count": 6829,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -97948,6 +97948,639 @@
         "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
       ],
       "title": "On the Effect of Uncertainty on Layer-wise Inference Dynamics"
+    },
+    "arXiv:1312.5602": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1312.5602",
+      "identity_tokens": [
+        "arXiv:1312.5602"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:39+00:00",
+      "last_checked_at": "2026-10-06T03:08:39+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Playing Atari with Deep Reinforcement Learning"
+    },
+    "arXiv:2205.11487": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2205.11487",
+      "identity_tokens": [
+        "arXiv:2205.11487"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:40+00:00",
+      "last_checked_at": "2026-10-06T03:08:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ],
+      "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding"
+    },
+    "arXiv:1803.01271": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1803.01271",
+      "identity_tokens": [
+        "arXiv:1803.01271"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:40+00:00",
+      "last_checked_at": "2026-10-06T03:08:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2605.06472-efficient-serving-for-dynamic-agent-workflows-with-prediction-based-kv-c.md",
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling"
+    },
+    "DOI:10.1007/978-3-319-46493-0_32": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/978-3-319-46493-0_32",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-319-46493-0_32"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:40+00:00",
+      "last_checked_at": "2026-10-06T03:08:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "XNOR-Net: ImageNet Classification Using Binary Convolutional Neural Networks"
+    },
+    "DOI:10.1145/2988450.2988454": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/2988450.2988454",
+      "identity_tokens": [
+        "DOI:10.1145/2988450.2988454"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:40+00:00",
+      "last_checked_at": "2026-10-06T03:08:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Wide & Deep Learning for Recommender Systems"
+    },
+    "arXiv:1707.09870": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1707.09870",
+      "identity_tokens": [
+        "arXiv:1707.09870"
+      ],
+      "reason": "The primary full text evaluates ADMM-based extreme low-bit quantization on image-classification/detection CNN workloads only; it provides no language-model or LLM-serving evidence.",
+      "first_checked_at": "2026-10-06T03:08:40+00:00",
+      "last_checked_at": "2026-10-06T03:08:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Extremely Low Bit Neural Network: Squeeze the Last Bit Out with ADMM"
+    },
+    "arXiv:1909.12673": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1909.12673",
+      "identity_tokens": [
+        "arXiv:1909.12673"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:41+00:00",
+      "last_checked_at": "2026-10-06T03:08:41+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "A Constructive Prediction of the Generalization Error Across Scales"
+    },
+    "arXiv:2412.04454": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.04454",
+      "identity_tokens": [
+        "arXiv:2412.04454"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:41+00:00",
+      "last_checked_at": "2026-10-06T03:08:41+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Aguvis: Unified Pure Vision Agents for Autonomous GUI Interaction"
+    },
+    "arXiv:2309.15402": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.15402",
+      "identity_tokens": [
+        "arXiv:2309.15402"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:41+00:00",
+      "last_checked_at": "2026-10-06T03:08:41+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2402.15220-chunkattention-efficient-self-attention-with-prefix-aware-kv-cache-and-t.md"
+      ],
+      "title": "Navigate through Enigmatic Labyrinth A Survey of Chain of Thought Reasoning: Advances, Frontiers and Future"
+    },
+    "DOI:10.1126/science.aal4230": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1126/science.aal4230",
+      "identity_tokens": [
+        "DOI:10.1126/science.aal4230"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:42+00:00",
+      "last_checked_at": "2026-10-06T03:08:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Semantics derived automatically from language corpora contain human-like biases"
+    },
+    "DOI:10.1145/1669112.1669172": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1669112.1669172",
+      "identity_tokens": [
+        "DOI:10.1145/1669112.1669172"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:42+00:00",
+      "last_checked_at": "2026-10-06T03:08:42+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "McPAT: An integrated power, area, and timing modeling framework for multicore and manycore architectures"
+    },
+    "DOI:10.18653/v1/2021.acl-long.416": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/2021.acl-long.416",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2021.acl-long.416"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:42+00:00",
+      "last_checked_at": "2026-10-06T03:08:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "StereoSet: Measuring stereotypical bias in pretrained language models"
+    },
+    "arXiv:2305.17926": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.17926",
+      "identity_tokens": [
+        "arXiv:2305.17926"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:42+00:00",
+      "last_checked_at": "2026-10-06T03:08:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Large Language Models are not Fair Evaluators"
+    },
+    "arXiv:1710.11041": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1710.11041",
+      "identity_tokens": [
+        "arXiv:1710.11041"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:42+00:00",
+      "last_checked_at": "2026-10-06T03:08:42+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "title": "Unsupervised Neural Machine Translation"
+    },
+    "DOI:10.18653/v1/p19-1176": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/p19-1176",
+      "identity_tokens": [
+        "DOI:10.18653/v1/p19-1176"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:43+00:00",
+      "last_checked_at": "2026-10-06T03:08:43+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Learning Deep Transformer Models for Machine Translation"
+    },
+    "arXiv:1504.00941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1504.00941",
+      "identity_tokens": [
+        "arXiv:1504.00941"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:43+00:00",
+      "last_checked_at": "2026-10-06T03:08:43+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "A Simple Way to Initialize Recurrent Networks of Rectified Linear Units"
+    },
+    "arXiv:2402.14804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.14804",
+      "identity_tokens": [
+        "arXiv:2402.14804"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:43+00:00",
+      "last_checked_at": "2026-10-06T03:08:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Measuring Multimodal Mathematical Reasoning with MATH-Vision Dataset"
+    },
+    "arXiv:2310.14566": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.14566",
+      "identity_tokens": [
+        "arXiv:2310.14566"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:43+00:00",
+      "last_checked_at": "2026-10-06T03:08:43+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Hallusionbench: An Advanced Diagnostic Suite for Entangled Language Hallucination and Visual Illusion in Large Vision-Language Models"
+    },
+    "DOI:10.1145/320941.320947": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/320941.320947",
+      "identity_tokens": [
+        "DOI:10.1145/320941.320947"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:44+00:00",
+      "last_checked_at": "2026-10-06T03:08:44+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Unitary Triangularization of a Nonsymmetric Matrix"
+    },
+    "arXiv:1312.5851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1312.5851",
+      "identity_tokens": [
+        "arXiv:1312.5851"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:44+00:00",
+      "last_checked_at": "2026-10-06T03:08:44+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Fast Training of Convolutional Networks through FFTs"
+    },
+    "arXiv:2401.10935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.10935",
+      "identity_tokens": [
+        "arXiv:2401.10935"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:44+00:00",
+      "last_checked_at": "2026-10-06T03:08:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents"
+    },
+    "arXiv:2404.12390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.12390",
+      "identity_tokens": [
+        "arXiv:2404.12390"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:44+00:00",
+      "last_checked_at": "2026-10-06T03:08:44+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "BLINK: Multimodal Large Language Models Can See but Not Perceive"
+    },
+    "DOI:10.1109/tcsi.2009.2027626": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsi.2009.2027626",
+      "identity_tokens": [
+        "DOI:10.1109/tcsi.2009.2027626"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:44+00:00",
+      "last_checked_at": "2026-10-06T03:08:44+00:00",
+      "linked_from": [
+        "papers/inference/17-pim-near-data-acceleration/2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md"
+      ],
+      "title": "Bio-Inspired Imprecise Computational Blocks for Efficient VLSI Implementation of Soft-Computing Applications"
+    },
+    "arXiv:2501.04227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.04227",
+      "identity_tokens": [
+        "arXiv:2501.04227"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:45+00:00",
+      "last_checked_at": "2026-10-06T03:08:45+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11812-predicting-llm-output-length-via-entropy-guided-representations.md"
+      ],
+      "title": "Agent Laboratory: Using LLM Agents as Research Assistants"
+    },
+    "DOI:10.1109/t-c.1972.223477": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/t-c.1972.223477",
+      "identity_tokens": [
+        "DOI:10.1109/t-c.1972.223477"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:45+00:00",
+      "last_checked_at": "2026-10-06T03:08:45+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "Learning Patterns and Pattern Sequences by Self-Organizing Nets of Threshold Elements"
+    },
+    "arXiv:2406.04325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04325",
+      "identity_tokens": [
+        "arXiv:2406.04325"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:45+00:00",
+      "last_checked_at": "2026-10-06T03:08:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "ShareGPT4Video: Improving Video Understanding and Generation with Better Captions"
+    },
+    "DOI:10.1109/proc.1967.5957": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/proc.1967.5957",
+      "identity_tokens": [
+        "DOI:10.1109/proc.1967.5957"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:45+00:00",
+      "last_checked_at": "2026-10-06T03:08:45+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "title": "What is the fast Fourier transform?"
+    },
+    "arXiv:2305.10429": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10429",
+      "identity_tokens": [
+        "arXiv:2305.10429"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:46+00:00",
+      "last_checked_at": "2026-10-06T03:08:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining"
+    },
+    "arXiv:2410.23218": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.23218",
+      "identity_tokens": [
+        "arXiv:2410.23218"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:46+00:00",
+      "last_checked_at": "2026-10-06T03:08:46+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents"
+    },
+    "DOI:10.4007/annals.2017.185.3.7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4007/annals.2017.185.3.7",
+      "identity_tokens": [
+        "DOI:10.4007/annals.2017.185.3.7"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:46+00:00",
+      "last_checked_at": "2026-10-06T03:08:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md"
+      ],
+      "title": "The sphere packing problem in dimension 8The sphere packing problem in dimension 8"
+    },
+    "arXiv:2601.20802": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.20802",
+      "identity_tokens": [
+        "arXiv:2601.20802"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:46+00:00",
+      "last_checked_at": "2026-10-06T03:08:46+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "Reinforcement Learning via Self-Distillation"
+    },
+    "arXiv:1412.7580": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1412.7580",
+      "identity_tokens": [
+        "arXiv:1412.7580"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:47+00:00",
+      "last_checked_at": "2026-10-06T03:08:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2007.08563-ftrans-energy-efficient-acceleration-of-transformers-using-fpga.md"
+      ],
+      "title": "Fast Convolutional Nets With fbfft: A GPU Performance Evaluation"
+    },
+    "arXiv:2504.08837": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.08837",
+      "identity_tokens": [
+        "arXiv:2504.08837"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:47+00:00",
+      "last_checked_at": "2026-10-06T03:08:47+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "VL-Rethinker: Incentivizing Self-Reflection of Vision-Language Models with Reinforcement Learning"
+    },
+    "arXiv:2305.14342": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14342",
+      "identity_tokens": [
+        "arXiv:2305.14342"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:47+00:00",
+      "last_checked_at": "2026-10-06T03:08:47+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training"
+    },
+    "arXiv:2412.00131": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00131",
+      "identity_tokens": [
+        "arXiv:2412.00131"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:47+00:00",
+      "last_checked_at": "2026-10-06T03:08:47+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2025-2502.18137-spargeattn-accurate-sparse-attention-accelerating-any-model-inference.md"
+      ],
+      "title": "Open-Sora Plan: Open-Source Large Video Generation Model"
+    },
+    "arXiv:1812.00090": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1812.00090",
+      "identity_tokens": [
+        "arXiv:1812.00090"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:48+00:00",
+      "last_checked_at": "2026-10-06T03:08:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Mixed Precision Quantization of ConvNets via Differentiable Neural Architecture Search"
+    },
+    "arXiv:2505.22617": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.22617",
+      "identity_tokens": [
+        "arXiv:2505.22617"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:48+00:00",
+      "last_checked_at": "2026-10-06T03:08:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "The Entropy Mechanism of Reinforcement Learning for Reasoning Language Models"
+    },
+    "arXiv:1901.09321": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1901.09321",
+      "identity_tokens": [
+        "arXiv:1901.09321"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:48+00:00",
+      "last_checked_at": "2026-10-06T03:08:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "title": "Fixup Initialization: Residual Learning Without Normalization"
+    },
+    "arXiv:1911.13299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1911.13299",
+      "identity_tokens": [
+        "arXiv:1911.13299"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:48+00:00",
+      "last_checked_at": "2026-10-06T03:08:48+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ],
+      "title": "What’s Hidden in a Randomly Weighted Neural Network?"
+    },
+    "arXiv:2503.10615": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.10615",
+      "identity_tokens": [
+        "arXiv:2503.10615"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:48+00:00",
+      "last_checked_at": "2026-10-06T03:08:48+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "R1-Onevision: Advancing Generalized Multimodal Reasoning Through Cross-Modal Formalization"
+    },
+    "DOI:10.1007/s10579-012-9211-2": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10579-012-9211-2",
+      "identity_tokens": [
+        "DOI:10.1007/s10579-012-9211-2"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:49+00:00",
+      "last_checked_at": "2026-10-06T03:08:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "The ACL anthology network corpus"
+    },
+    "DOI:10.18653/v1/n18-2003": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/n18-2003",
+      "identity_tokens": [
+        "DOI:10.18653/v1/n18-2003"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:49+00:00",
+      "last_checked_at": "2026-10-06T03:08:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Gender Bias in Coreference Resolution: Evaluation and Debiasing Methods"
+    },
+    "DOI:10.1162/tacl_a_00041": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl_a_00041",
+      "identity_tokens": [
+        "DOI:10.1162/tacl_a_00041"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:49+00:00",
+      "last_checked_at": "2026-10-06T03:08:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "title": "Data Statements for Natural Language Processing: Toward Mitigating System Bias and Enabling Better Science"
+    },
+    "arXiv:1712.00409": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1712.00409",
+      "identity_tokens": [
+        "arXiv:1712.00409"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:49+00:00",
+      "last_checked_at": "2026-10-06T03:08:49+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md",
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "Deep Learning Scaling is Predictable, Empirically"
+    },
+    "arXiv:2311.03079": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.03079",
+      "identity_tokens": [
+        "arXiv:2311.03079"
+      ],
+      "reason": "一次資料の題名/要旨が示す主題・評価対象は、LLM推論の計算量、メモリ、レイテンシ、スループット、KV cache、量子化、offload、servingの具体的改善ではなく、対象系統への妥当な技術接続も確認できない。",
+      "first_checked_at": "2026-10-06T03:08:50+00:00",
+      "last_checked_at": "2026-10-06T03:08:50+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "CogVLM: Visual Expert for Pretrained Language Models"
     }
   }
 }
