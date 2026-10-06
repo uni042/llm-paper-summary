@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adaptive Attention Span in Transformers",
+      "source_url": "https://arxiv.org/abs/1905.07799",
+      "year": 2019,
+      "published": "2019-05-19",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 335,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose a novel self-attention mechanism that can learn its optimal attention span. This allows us to extend significantly the maximum context size used in Transformer, while maintaining control over their memory footprint and computational time. We show the effectiveness of our approach on the task of character level language modeling, where we achieve state-of-the-art performances on text8 and enwiki8 by using a maximum context of 8k characters.",
+      "identifiers": [
+        "SemanticScholar:f4238bd2385a52413ccbacfd9e409a650235bd13"
+      ],
+      "semantic_scholar_id": "f4238bd2385a52413ccbacfd9e409a650235bd13",
+      "canonical_id": "arXiv:1905.07799",
+      "arxiv_id": "1905.07799",
+      "doi": "10.18653/v1/P19-1032",
+      "authors": [
+        "Sainbayar Sukhbaatar",
+        "E. Grave",
+        "P. Bojanowski",
+        "A. Joulin"
+      ],
+      "priority": 345,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 335,
+        "citation_count": 335,
+        "total": 345,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2697,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "各attention headが必要なcontext spanを学習し、長い最大contextを許しつつ実際のFLOPsとmemoryを削減するconditional attention方式であり対象。",
+      "library_body_check": "fulltext_review: arXiv本文§2-3を確認。headごとのlearnable soft maskとL1 span penalty、dynamic span拡張、8K contextでのcharacter LM評価を確認。大きなspanで推論FLOPsを最大70%削減し、memory増加も抑える結果を本文で確認した。",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A^3: Accelerating Attention Mechanisms in Neural Networks with Approximation",
+      "source_url": "https://arxiv.org/abs/2002.10941",
+      "year": 2020,
+      "published": "2020-02-01",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 322,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the increasing computational demands of the neural networks, many hardware accelerators for the neural networks have been proposed. Such existing neural network accelerators often focus on popular neural network types such as convolutional neural networks (CNNs) and recurrent neural networks (RNNs); however, not much attention has been paid to attention mechanisms, an emerging neural network primitive that enables neural networks to retrieve most relevant information from a knowledge-base, external memory, or past states. The attention mechanism is widely adopted by many state-of-the-art neural networks for computer vision, natural language processing, and machine translation, and accounts for a large portion of total execution time. We observe today's practice of implementing this mechanism using matrix-vector multiplication is suboptimal as the attention mechanism is semantically a content-based search where a large portion of computations ends up not being used. Based on this observation, we design and architect A3, which accelerates attention mechanisms in neural networks with algorithmic approximation and hardware specialization. Our proposed accelerator achieves multiple orders of magnitude improvement in energy efficiency (performance/watt) as well as substantial speedup over the state-of-the-art conventional hardware.",
+      "identifiers": [
+        "SemanticScholar:d3c6c635b9cfd8890c7244d3db4be53d45944963"
+      ],
+      "semantic_scholar_id": "d3c6c635b9cfd8890c7244d3db4be53d45944963",
+      "canonical_id": "arXiv:2002.10941",
+      "arxiv_id": "2002.10941",
+      "doi": "10.1109/HPCA47549.2020.00035",
+      "authors": [
+        "Tae Jun Ham",
+        "Sungjun Jung",
+        "Seonghak Kim",
+        "Young H. Oh",
+        "Yeonhong Park",
+        "Yoonho Song",
+        "Jung-Hun Park",
+        "Sanghee Lee",
+        "Kyoung Park",
+        "Jae W. Lee",
+        "D. Jeong"
+      ],
+      "priority": 332,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 322,
+        "citation_count": 322,
+        "total": 332,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2439,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "attentionをcontent searchとして近似し、専用ASICで不要候補計算を削減して速度・energy efficiencyを高めるattention accelerator研究であり推論hardware最適化として対象。",
+      "library_body_check": "fulltext_review: arXiv本文を確認。dense matrix-vector attentionの不要計算をcandidate selectionとpost-scoring approximationで削減し、quantizationと専用pipelineを組み合わせるA^3 hardwareを設計。HPCA評価で性能、accuracy、area、power、energyを実機/RTL系に基づき比較している。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-27c9182db840",
+    "round": "libimp-27c9182db8409aad-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-27c9182db8409aad-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-27c9182db8409aad-pre01.json",
+    "receipt": "sha256:dc0163fc2658bf67aa50ac51b0d53f3d6338423c5f520f1610b9fa5e83f1c921"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-27c9182db840",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
