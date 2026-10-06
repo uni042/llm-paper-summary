@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r106-screen-01-part-07-64745d208032",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.15339",
+      "identity_tokens": [
+        "arXiv:2603.15339"
+      ],
+      "title": "The Neuroscience of Transformers",
+      "reason": "一次本文の手法・評価・限界を確認したが、対象LLM推論効率の具体的改善または既存系統との技術的接続を確認できなかった。",
+      "source_url": "https://arxiv.org/abs/2603.15339",
+      "first_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "last_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/3050-2454/ae524c",
+      "identity_tokens": [
+        "DOI:10.1088/3050-2454/ae524c"
+      ],
+      "title": "ChatGPT-like large language models for testing and verification of autonomous intelligent systems: a systematic review",
+      "reason": "要旨・題名から対象外領域と確認。関連するLLM推論効率改善または既存論文系統との技術的接続がない。",
+      "source_url": "https://doi.org/10.1088/3050-2454/ae524c",
+      "first_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "last_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.11441",
+      "identity_tokens": [
+        "arXiv:2603.11441"
+      ],
+      "title": "Detect Anything in Real Time: From Single-Prompt Segmentation to Multi-Class Detection",
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "source_url": "https://arxiv.org/abs/2603.11441",
+      "first_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "last_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.09014",
+      "identity_tokens": [
+        "arXiv:2603.09014"
+      ],
+      "title": "The Coupling Within: Flow Matching via Distilled Normalizing Flows",
+      "reason": "一次本文を確認したが、対象モデル/serving条件への転用可能性または既存系統との接続が限定的で、境界候補として扱う。",
+      "source_url": "https://arxiv.org/abs/2603.09014",
+      "first_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "last_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.04212",
+      "identity_tokens": [
+        "arXiv:2603.04212"
+      ],
+      "title": "Code Fingerprints: Disentangled Attribution of LLM-Generated Code",
+      "reason": "要旨・題名から対象外領域と確認。関連するLLM推論効率改善または既存論文系統との技術的接続がない。",
+      "source_url": "https://arxiv.org/abs/2603.04212",
+      "first_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "last_checked_at": "2026-10-06T14:38:39.535393+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ]
+    }
+  ]
+}
