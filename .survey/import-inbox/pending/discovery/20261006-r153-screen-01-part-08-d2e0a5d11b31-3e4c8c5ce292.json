@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r153-screen-01-part-08-d2e0a5d11b31",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TMC.2025.3611135",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3611135"
+      ],
+      "title": "A Hybrid Model With Bayesian Nonparametric Inference for RF Fingerprint Identification",
+      "reason": "RF fingerprint identification向けhybrid Bayesian modelでLLM inferenceとの関連は薄いが、IEEE一次資料を取得できず要旨を直接確認できない。",
+      "source_url": "https://doi.org/10.1109/TMC.2025.3611135",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21407",
+      "identity_tokens": [
+        "arXiv:2601.21407"
+      ],
+      "title": "BrainFuse: a unified infrastructure integrating realistic biological modeling and core AI methodology",
+      "reason": "一次資料の要旨を確認。Neuroscience and artificial intelligence represent distinct yet complementary pathways to general intelligence. However, amid the ongoing boom in AI research and applications, the translational synergy between these two fields has grown increasingly elusive-hampered by a widening infrastructural incompatibility: modern AI frameworks lack native support for biophysical realism, while neural simulat",
+      "source_url": "https://arxiv.org/abs/2601.21407",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.22296",
+      "identity_tokens": [
+        "arXiv:2601.22296"
+      ],
+      "title": "ParalESN: Enabling parallel information processing in Reservoir Computing",
+      "reason": "一次資料の要旨を確認。Reservoir Computing (RC) has established itself as an efficient paradigm for temporal processing. However, its scalability remains severely constrained by the need to process temporal data sequentially and the prohibitive memory footprint of high-dimensional reservoirs. To address these limitations, we revisit RC through the lens of structured operators and state space modeling, introducing Parall",
+      "source_url": "https://arxiv.org/abs/2601.22296",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md",
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.09030",
+      "identity_tokens": [
+        "arXiv:2602.09030"
+      ],
+      "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
+      "reason": "一次資料の要旨を確認。While data-driven weather models have achieved remarkable deterministic accuracy, they fundamentally rely on discrete-time mappings and closed-system assumptions, failing to capture the multi-scale continuous dynamics and thermodynamic openness of the atmosphere. To address these limitations, we propose UniPhy, a continuous-time non-Hermitian neural stochastic partial differential equation (SPDE) ",
+      "source_url": "https://arxiv.org/abs/2602.09030",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.19085",
+      "identity_tokens": [
+        "arXiv:2601.19085"
+      ],
+      "title": "Speed is Confidence",
+      "reason": "本文はTiny Recursive Model ensembles向けhalt-first adaptive test-time computeとspeed/accuracy tradeoffを測定するが、LLM token inferenceではなくpuzzle reasoningモデルであり転用の実証が残る。",
+      "source_url": "https://arxiv.org/abs/2601.19085",
+      "first_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "last_checked_at": "2026-10-06T21:07:56.409091+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ]
+    }
+  ]
+}
