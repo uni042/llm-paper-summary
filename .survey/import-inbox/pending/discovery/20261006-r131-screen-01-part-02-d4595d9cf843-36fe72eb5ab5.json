@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r131-screen-01-part-02-d4595d9cf843",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.13385",
+      "identity_tokens": [
+        "arXiv:2409.13385"
+      ],
+      "title": "Contextual Compression in Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "reason": "This is a survey, not a new evaluated method. It catalogs context compression, efficient attention and long-context approaches but provides no original controlled LLM-serving result; cited techniques must be screened individually.",
+      "source_url": "https://arxiv.org/abs/2409.13385",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.11919",
+      "identity_tokens": [
+        "arXiv:2408.11919"
+      ],
+      "title": "PAL: A Variability-Aware Policy for Scheduling ML Workloads in GPU Clusters",
+      "reason": "The primary abstract centers on GPU-cluster scheduling for variable ML jobs; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://arxiv.org/abs/2408.11919",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.02795",
+      "identity_tokens": [
+        "arXiv:2408.02795"
+      ],
+      "title": "Entity Retrieval for Answering Entity-Centric Questions",
+      "reason": "The primary abstract centers on entity-centric document retrieval; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://arxiv.org/abs/2408.02795",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3655038.3665953",
+      "identity_tokens": [
+        "DOI:10.1145/3655038.3665953"
+      ],
+      "title": "Breaking Barriers: Expanding GPU Memory with Sub-Two Digit Nanosecond Latency CXL Controller",
+      "reason": "Author-affiliated KAIST record describes a CXL GPU-memory controller with two-digit-nanosecond round-trip latency and speculative-read/deterministic-store mechanisms. Full ACM text was inaccessible and the abstract gives no LLM/KV-cache workload.",
+      "source_url": "https://doi.org/10.1145/3655038.3665953",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.03243",
+      "identity_tokens": [
+        "arXiv:2407.03243"
+      ],
+      "title": "Visual Grounding with Attention-Driven Constraint Balancing",
+      "reason": "The primary abstract centers on visual grounding and object localization; it does not propose or evaluate a direct LLM inference improvement in compute, memory, latency, throughput, quantization, offload, or serving.",
+      "source_url": "https://arxiv.org/abs/2407.03243",
+      "first_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "last_checked_at": "2026-10-06T18:32:28.287886+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    }
+  ]
+}
