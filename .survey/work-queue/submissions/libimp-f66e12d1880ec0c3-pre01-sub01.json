@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MovieChat: From Dense Token to Sparse Memory for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2307.16449",
+      "year": 2023,
+      "published": "2023-07-31",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 680,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, integrating video foundation models and large language models to build a video understanding system can overcome the limitations of specific pre-defined vision tasks. Yet, existing systems can only handle videos with very few frames. For long videos, the computation complexity, memory cost, and long-term temporal connection impose additional challenges. Taking advantage of the Atkinson-Shiffrin memory model, with tokens in Transformers being employed as the carriers of memory in combination with our specially designed memory mechanism, we propose the MovieChat to overcome these challenges. MovieChat achieves state-of-the-art performance in long video understanding, along with the released MovieChat-1K benchmark with 1K long video and 14K manual annotations for validation of the effectiveness of our method. The code, models and data can be found in https://reself.github.io/MovieChat.",
+      "identifiers": [
+        "SemanticScholar:6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d"
+      ],
+      "semantic_scholar_id": "6f9b7c8cde1be2e62a503c31cac883c6d44c9d0d",
+      "canonical_id": "arXiv:2307.16449",
+      "arxiv_id": "2307.16449",
+      "doi": "10.1109/CVPR52733.2024.01725",
+      "authors": [
+        "En-Xin Song",
+        "Wenhao Chai",
+        "Guan-Hong Wang",
+        "Yu-Chen Zhang",
+        "Haoyang Zhou",
+        "Feiyang Wu",
+        "Hao-Zhe Chi",
+        "Xun Guo",
+        "Tianbo Ye",
+        "Yan-Ting Zhang",
+        "Yang Lu",
+        "Jenq-Neng Hwang",
+        "Gao-Ang Wang"
+      ],
+      "priority": 680,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 680,
+        "citation_count": 680,
+        "total": 680,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1163,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長時間動画MLLMでdense visual tokenを短期/長期メモリへ圧縮し、VRAM・計算量を削減して10K超frame推論を可能にする推論時メモリ管理方式であり対象。",
+      "library_body_check": "fulltext_review: CVPR一次論文本文を確認。fixed-length short-term memory、FIFO更新、隣接frame tokenのsimilarityに基づくmemory consolidation、sparse long-term memory、global/breakpoint inference modeを確認。長時間動画でGPU memory/computation costを抑えることが方式の主要目的。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f66e12d1880e",
+    "round": "libimp-f66e12d1880ec0c3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f66e12d1880ec0c3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f66e12d1880ec0c3-pre01.json",
+    "receipt": "sha256:64c07a9323507c3ad104abb5e716330e88fb7e8eccd28778b36baeb84de10e42"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f66e12d1880e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

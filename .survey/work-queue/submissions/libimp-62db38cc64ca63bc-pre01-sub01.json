@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Generative Representational Instruction Tuning",
+      "source_url": "https://arxiv.org/abs/2402.09906",
+      "year": 2024,
+      "published": "2024-02-15",
+      "venue": "arXiv.org",
+      "citation_count": 299,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "All text-based language problems can be reduced to either generation or embedding. Current models only perform well at one or the other. We introduce generative representational instruction tuning (GRIT) whereby a large language model is trained to handle both generative and embedding tasks by distinguishing between them through instructions. Compared to other open models, our resulting GritLM 7B sets a new state of the art on the Massive Text Embedding Benchmark (MTEB) and outperforms all models up to its size on a range of generative tasks. By scaling up further, GritLM 8x7B outperforms all open generative language models that we tried while still being among the best embedding models. Notably, we find that GRIT matches training on only generative or embedding data, thus we can unify both at no performance loss. Among other benefits, the unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by>60% for long documents, by no longer requiring separate retrieval and generation models. Models, code, etc. are freely available at https://github.com/ContextualAI/gritlm.",
+      "identifiers": [
+        "SemanticScholar:e310707f28c60e1f56820ab12272affe71818d17"
+      ],
+      "semantic_scholar_id": "e310707f28c60e1f56820ab12272affe71818d17",
+      "canonical_id": "arXiv:2402.09906",
+      "arxiv_id": "2402.09906",
+      "doi": "10.48550/arXiv.2402.09906",
+      "authors": [
+        "Niklas Muennighoff",
+        "Hongjin Su",
+        "Liang Wang",
+        "Nan Yang",
+        "Furu Wei",
+        "Tao Yu",
+        "Amanpreet Singh",
+        "D. Kiela"
+      ],
+      "priority": 299,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 299,
+        "citation_count": 299,
+        "total": 299,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 964,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GritLMはembeddingとgenerationを単一LLMへ統合し、RAGで別retriever/generatorへ重複して通すforward passを再利用・半減して長文書RAGを60%以上高速化するため、RAG推論経路の効率化として対象。",
+      "library_body_check": "fulltext_review: arXiv本文§1、§4 RAG with GRITを確認。単一modelでquery/contextのembeddingとgenerationを兼用して計算をcacheし、4 forward passes相当を削減する構成、latency/storage評価、長文書で>60% faster RAGを確認した。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-62db38cc64ca",
+    "round": "libimp-62db38cc64ca63bc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-62db38cc64ca63bc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-62db38cc64ca63bc-pre01.json",
+    "receipt": "sha256:ed20dd40be8f73d8a022f5ee672ae0bb2a4da8b1648ff1d25a9a4295d43b5759"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-62db38cc64ca",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
