@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r43-screen-01-part-05-84df744c25c5",
+  "reference_main_sha": "b9f5ba2efd293e62612217d6834a4475daa40ec2",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.20453",
+      "identity_tokens": [
+        "arXiv:2508.20453"
+      ],
+      "title": "MCP-Bench: Benchmarking Tool-Using LLM Agents with Complex Real-World Tasks via MCP Servers",
+      "reason": "MCP-Bench is a benchmark for tool-using agents; its planning/concurrency metrics evaluate agent task behavior rather than improving LLM inference runtime.",
+      "source_url": "https://arxiv.org/abs/2508.20453",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.17862",
+      "identity_tokens": [
+        "arXiv:2505.17862"
+      ],
+      "title": "Daily-Omni: Towards Audio-Visual Reasoning with Temporal Alignment across Modalities",
+      "reason": "Daily-Omni introduces an audio-visual reasoning model and temporal alignment; no concrete inference efficiency mechanism or runtime result is presented.",
+      "source_url": "https://arxiv.org/abs/2505.17862",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.19474",
+      "identity_tokens": [
+        "arXiv:2402.19474"
+      ],
+      "title": "The All-Seeing Project V2: Towards General Relation Comprehension of the Open World",
+      "reason": "All-Seeing V2 focuses on open-world visual relation comprehension, not a direct inference-efficiency or serving technique.",
+      "source_url": "https://arxiv.org/abs/2402.19474",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06988",
+      "identity_tokens": [
+        "arXiv:2607.06988"
+      ],
+      "title": "WAM-TTT: Steering World-Action Models by Watching Human Play at Test Time",
+      "reason": "WAM-TTT studies test-time steering of world-action models from human play; it is not a concrete LLM inference-serving optimization.",
+      "source_url": "https://arxiv.org/abs/2607.06988",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18555",
+      "identity_tokens": [
+        "arXiv:2604.18555"
+      ],
+      "title": "A Note on TurboQuant and the Earlier DRIVE/EDEN Line of Work",
+      "reason": "The note compares TurboQuant-style product estimation with DRIVE/EDEN on error/recall and explicitly does not compare runtime; relevance is limited to cache quantization quality.",
+      "source_url": "https://arxiv.org/abs/2604.18555",
+      "first_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "last_checked_at": "2026-10-06T05:25:42.564172+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md"
+      ]
+    }
+  ]
+}
