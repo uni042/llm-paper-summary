@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r34-screen-01-part-07-59b1e399e41a",
+  "reference_main_sha": "66f6b4a22138ddb5a743e0f79ce8916ca41c111d",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09681",
+      "identity_tokens": [
+        "arXiv:2605.09681"
+      ],
+      "title": "Forcing-KV: Hybrid KV Cache Compression for Efficient Autoregressive Video Diffusion Models",
+      "reason": "Forcing-KV compresses video-diffusion caches; transfer to LLM KV-cache serving is uncertain.",
+      "source_url": "https://arxiv.org/abs/2605.09681",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05806",
+      "identity_tokens": [
+        "arXiv:2603.05806"
+      ],
+      "title": "MoE Lens - An Expert Is All You Need",
+      "reason": "MoE Lens studies expert specialization/selective deployment, but does not directly evaluate inference acceleration.",
+      "source_url": "https://arxiv.org/abs/2603.05806",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2026-2605.06663-emo-emergent-modularity.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.15727",
+      "identity_tokens": [
+        "arXiv:2601.15727"
+      ],
+      "title": "Towards Automated Kernel Generation in the Era of LLMs",
+      "reason": "Survey of LLM-assisted kernel generation is adjacent to compilation research but not a measured inference optimization.",
+      "source_url": "https://arxiv.org/abs/2601.15727",
+      "first_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "last_checked_at": "2026-10-06T03:45:33.257296+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2026-2607.17979-harness-engineering-llm-gpu-kernels.md"
+      ]
+    }
+  ]
+}
