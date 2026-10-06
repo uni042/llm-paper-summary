@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r139-screen-01-part-07-1b2c0ab1bb17",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.05416",
+      "identity_tokens": [
+        "arXiv:2608.05416"
+      ],
+      "title": "Spectral Distillation: From Nonlinear Dynamics to Linear State-Space Models",
+      "reason": "一次本文はMuJoCoのSAC policyをlinear state-space studentへdistillする研究。LLMではなく連続制御の小型policyで、LLM推論対象ラインとの接続がない。",
+      "source_url": "https://arxiv.org/abs/2608.05416",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03028",
+      "identity_tokens": [
+        "arXiv:2608.03028"
+      ],
+      "title": "Evaluating Counterfactual Sensitivity to Patient Information in Medication-Safety Reasoning",
+      "reason": "一次要旨は医薬品安全性reasoningに対するcounterfactual sensitivity評価で、患者情報による回答変化を測る。inference costを改善しない。",
+      "source_url": "https://arxiv.org/abs/2608.03028",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03138",
+      "identity_tokens": [
+        "arXiv:2608.03138"
+      ],
+      "title": "Internalizing Academic Writing Workflows for Introduction Generation via Struct-Aware Policy Learning",
+      "reason": "一次要旨は学術intro生成のworkflowをpolicy learningでinternalizeする研究。目的は生成品質/手順学習で、serving compute効率ではない。",
+      "source_url": "https://arxiv.org/abs/2608.03138",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03983",
+      "identity_tokens": [
+        "arXiv:2608.03983"
+      ],
+      "title": "Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?",
+      "reason": "一次要旨はLLMがcompiler missed semantic optimizationを提案できるかを測る。最適化対象は生成プログラムの実行であり、LLM inference自体ではない。",
+      "source_url": "https://arxiv.org/abs/2608.03983",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03994",
+      "identity_tokens": [
+        "arXiv:2608.03994"
+      ],
+      "title": "When Attention Goes Blind: Numerical Failure in ALiBi Positional Encodings",
+      "reason": "一次要旨はALiBi positional encodingの数値的失敗とtraining-time mitigationを分析する。長文脈表現の問題だが、推論システムの効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.03994",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ]
+    }
+  ]
+}
