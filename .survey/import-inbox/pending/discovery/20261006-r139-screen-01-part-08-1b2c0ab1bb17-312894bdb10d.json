@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r139-screen-01-part-08-1b2c0ab1bb17",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.01804",
+      "identity_tokens": [
+        "arXiv:2608.01804"
+      ],
+      "title": "LEAP: Lean Environment-Feedback via Adaptive Pruning for Code RL in GPU Kernel Generation",
+      "reason": "一次要旨はGPU kernel generationのcode RLにおけるtraining-time environment feedback/rollout pruningを効率化する。LLM推論servingではない。",
+      "source_url": "https://arxiv.org/abs/2608.01804",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02486",
+      "identity_tokens": [
+        "arXiv:2608.02486"
+      ],
+      "title": "Cultural Awareness is Represented but Not Decoded: Tracing Mythological Knowledge across 18 Open-Source LLMs",
+      "reason": "一次要旨はLLMの文化的知識の内部表現とreadoutを分析する。精度・表現解釈が対象で、推論効率の改善なし。",
+      "source_url": "https://arxiv.org/abs/2608.02486",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02681",
+      "identity_tokens": [
+        "arXiv:2608.02681"
+      ],
+      "title": "Safety in Batches? Understanding and Mitigating Safety Failures in Batch Prompting",
+      "reason": "一次要旨はbatch promptingにおける安全失敗とbatch-aware preference optimizationを扱う。batch promptingはserving文脈だが、安全性改善でありthroughput/latency効率向上を示さない。",
+      "source_url": "https://arxiv.org/abs/2608.02681",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02709",
+      "identity_tokens": [
+        "arXiv:2608.02709"
+      ],
+      "title": "Escaping Oversquashing: Addressable and Support-Aware Global Memory for Message Passing Networks",
+      "reason": "一次要旨はmessage-passing graph networkのoversquashing向けaddressable global memory。LLM KV cacheやserving memoryとは対象アーキテクチャ/課題が異なる。",
+      "source_url": "https://arxiv.org/abs/2608.02709",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.02668",
+      "identity_tokens": [
+        "arXiv:2608.02668"
+      ],
+      "title": "Sphere Retraction Normalizations",
+      "reason": "一次要旨はTransformer residual normalizationの幾何学的定式化とnanoGPT validation lossを比較する。学習安定性/表現法であり推論効率改善を測らない。",
+      "source_url": "https://arxiv.org/abs/2608.02668",
+      "first_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "last_checked_at": "2026-10-06T19:35:25.817023+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ]
+    }
+  ]
+}
