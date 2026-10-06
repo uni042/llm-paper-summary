@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r88-screen-01-part-04-8093ef7072b5",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.130832",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.130832"
+      ],
+      "title": "PhraseBT: A phrase-level back-translation data augmentation method for neural machine translation",
+      "reason": "Phrase-level back-translation is NMT training-data augmentation, with no inference efficiency method indicated.",
+      "source_url": "https://doi.org/10.1016/j.neucom.2025.130832",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.22376",
+      "identity_tokens": [
+        "arXiv:2506.22376"
+      ],
+      "title": "Probabilistic Optimality for Inference-time Scaling",
+      "reason": "A plausible inference-efficiency, quantization, transformer-accelerator, or existing-lineage connection remains, but the primary full text could not be verified to assess method, evidence, and transferability.",
+      "source_url": "https://arxiv.org/abs/2506.22376",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11132989",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11132989"
+      ],
+      "title": "Finding the Pareto Frontier of Low-Precision Data Formats and MAC Architecture for LLM Inference",
+      "reason": "A plausible inference-efficiency, quantization, transformer-accelerator, or existing-lineage connection remains, but the primary full text could not be verified to assess method, evidence, and transferability.",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11132989",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/DAC63849.2025.11133418",
+      "identity_tokens": [
+        "DOI:10.1109/DAC63849.2025.11133418"
+      ],
+      "title": "UniCoS: A Unified Neural and Accelerator Co-Search Framework for CNNs and ViTs",
+      "reason": "A plausible inference-efficiency, quantization, transformer-accelerator, or existing-lineage connection remains, but the primary full text could not be verified to assess method, evidence, and transferability.",
+      "source_url": "https://doi.org/10.1109/DAC63849.2025.11133418",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.07833",
+      "identity_tokens": [
+        "arXiv:2506.07833"
+      ],
+      "title": "Improving Large Language Models with Concept-Aware Fine-Tuning",
+      "reason": "Concept-aware fine-tuning improves LLM task capability/training, rather than reducing inference compute, memory, latency, or serving cost.",
+      "source_url": "https://arxiv.org/abs/2506.07833",
+      "first_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "last_checked_at": "2026-10-06T12:07:43.008020+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    }
+  ]
+}
