@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r86-screen-01-part-05-99ce8426ba4c",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.03349",
+      "identity_tokens": [
+        "arXiv:2504.03349"
+      ],
+      "title": "Meta-DAN: towards an efficient prediction strategy for page-level handwritten text recognition",
+      "reason": "本文はページ画像のhandwritten-text recognitionでautoregressive character decodingが遅い問題を対象にする。 画像文字認識の専用モデルで、LLM text generationへの直接適用は示していない。",
+      "source_url": "https://arxiv.org/abs/2504.03349",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2024.126356",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2024.126356"
+      ],
+      "title": "A non-autoregressive Chinese-Braille translation approach with CTC loss optimization",
+      "reason": "出版社一次本文へのアクセスはHTTP 403。要旨は中国語Braille翻訳向けnon-autoregressive CTC-loss調整であり、対象タスク固有。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "source_url": "https://doi.org/10.1016/j.eswa.2024.126356",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08051",
+      "identity_tokens": [
+        "arXiv:2503.08051"
+      ],
+      "title": "Neutralizing Popularity Bias in LLM-based Recommendation via Counterfactual Reasoning Guidelines",
+      "reason": "LLM recommendationのpopularity biasを是正する研究で、system/inference efficiency改善を扱わない。",
+      "source_url": "https://arxiv.org/abs/2503.08051",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3446718",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3446718"
+      ],
+      "title": "SpMMPlu-Pro: An Enhanced Compiler Plug-In for Efficient SpMM and Sparsity Propagation Algorithm",
+      "reason": "IEEE本文へアクセスできず。要旨からSpMM compiler plug-inとsparsity propagationの一般的DNN/HPC最適化と確認したが、Transformer/LLMの直接評価は不明。 一次本文取得不能のため最終的にborderlineへ記録。",
+      "source_url": "https://doi.org/10.1109/TCAD.2024.3446718",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2024.11.18.24317510",
+      "identity_tokens": [
+        "DOI:10.1101/2024.11.18.24317510"
+      ],
+      "title": "Advancing Question-Answering in Ophthalmology with Retrieval Augmented Generations (RAG): Benchmarking Open-source and Proprietary Large Language Models",
+      "reason": "眼科問診のRAG品質benchmarkで、推論資源を改善する方法を提示しない。",
+      "source_url": "https://doi.org/10.1101/2024.11.18.24317510",
+      "first_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "last_checked_at": "2026-10-06T11:53:23.852505+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    }
+  ]
+}
