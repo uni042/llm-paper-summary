@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T21:49:44+00:00",
-  "record_count": 9850,
+  "updated_at": "2026-10-06T22:57:14+00:00",
+  "record_count": 9859,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -141064,6 +141064,115 @@
         "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
       ],
       "title": "Aya Dataset: An Open-Access Collection for Multilingual Instruction Tuning"
+    },
+    "arXiv:2010.05478": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2010.05478",
+      "identity_tokens": [
+        "arXiv:2010.05478"
+      ],
+      "reason": "生成要約のfactualityをdependency-level entailmentで評価するmetric研究。推論systems効率化を扱わない。",
+      "first_checked_at": "2026-10-06T22:57:12+00:00",
+      "last_checked_at": "2026-10-06T22:57:12+00:00",
+      "linked_from": [],
+      "title": "Evaluating Factuality in Generation with Dependency-level Entailment"
+    },
+    "DOI:10.1109/isscc42613.2021.9365862": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/isscc42613.2021.9365862",
+      "identity_tokens": [
+        "DOI:10.1109/isscc42613.2021.9365862"
+      ],
+      "reason": "HBM2-based function-in-memory DRAMの一般ML accelerator hardwareで、LLM/Transformer推論を最終workloadとしていない。",
+      "first_checked_at": "2026-10-06T22:57:12+00:00",
+      "last_checked_at": "2026-10-06T22:57:12+00:00",
+      "linked_from": [],
+      "title": "25.4 A 20nm 6GB Function-In-Memory DRAM, Based on HBM2 with a 1.2TFLOPS Programmable Computing Unit Using Bank-Level Parallelism, for Machine Learning Applications"
+    },
+    "DOI:10.18653/v1/d19-1298": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.18653/v1/d19-1298",
+      "identity_tokens": [
+        "DOI:10.18653/v1/d19-1298",
+        "arXiv:1909.08089"
+      ],
+      "reason": "長文scientific documentのextractive summarization品質をglobal/local contextで改善するtask/model研究。推論runtimeやmemory効率を目的としない。",
+      "first_checked_at": "2026-10-06T22:57:13+00:00",
+      "last_checked_at": "2026-10-06T22:57:13+00:00",
+      "linked_from": [],
+      "title": "Extractive Summarization of Long Documents by Combining Global and Local Context"
+    },
+    "arXiv:2401.06080": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.06080",
+      "identity_tokens": [
+        "arXiv:2401.06080"
+      ],
+      "reason": "reward modelのdata quality、contrastive/meta-learningによるgeneralizationを扱うRLHF training研究。推論systems効率化ではない。",
+      "first_checked_at": "2026-10-06T22:57:13+00:00",
+      "last_checked_at": "2026-10-06T22:57:13+00:00",
+      "linked_from": [],
+      "title": "Secrets of RLHF in Large Language Models Part II: Reward Modeling"
+    },
+    "arXiv:2405.11273": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.11273",
+      "identity_tokens": [
+        "arXiv:2405.11273"
+      ],
+      "reason": "multimodal LLMをMoE化して複数modality/taskの能力を統合するarchitecture/training研究。推論serving・runtime効率を主要評価としない。",
+      "first_checked_at": "2026-10-06T22:57:13+00:00",
+      "last_checked_at": "2026-10-06T22:57:13+00:00",
+      "linked_from": [],
+      "title": "Uni-MoE: Scaling Unified Multimodal LLMs With Mixture of Experts"
+    },
+    "arXiv:2310.06786": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.06786",
+      "identity_tokens": [
+        "arXiv:2310.06786"
+      ],
+      "reason": "14.7B tokenの数学web datasetを構築し1.4B LMのtraining効果を評価するdata/training研究。推論systemsではない。",
+      "first_checked_at": "2026-10-06T22:57:14+00:00",
+      "last_checked_at": "2026-10-06T22:57:14+00:00",
+      "linked_from": [],
+      "title": "OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text"
+    },
+    "arXiv:2306.11227": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.11227",
+      "identity_tokens": [
+        "arXiv:2306.11227"
+      ],
+      "reason": "CXL 1.0–3.0、memory expansion/resource pooling等を概説する一般interconnect survey。LLM推論を最終適用先としない。",
+      "first_checked_at": "2026-10-06T22:57:14+00:00",
+      "last_checked_at": "2026-10-06T22:57:14+00:00",
+      "linked_from": [],
+      "title": "An Introduction to the Compute Express Link (CXL) Interconnect"
+    },
+    "arXiv:2301.13823": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.13823",
+      "identity_tokens": [
+        "arXiv:2301.13823"
+      ],
+      "reason": "frozen LMへvision入出力層を追加しmultimodal retrieval/dialogue能力を与える研究。主目的はmultimodal能力で、推論systems効率化ではない。",
+      "first_checked_at": "2026-10-06T22:57:14+00:00",
+      "last_checked_at": "2026-10-06T22:57:14+00:00",
+      "linked_from": [],
+      "title": "Grounding Language Models to Images for Multimodal Inputs and Outputs"
+    },
+    "arXiv:2410.02660": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.02660",
+      "identity_tokens": [
+        "arXiv:2410.02660"
+      ],
+      "reason": "continued pre-trainingとSFTのdata mix/sequence lengthを研究するlong-context training recipe。推論runtime・memory最適化を提案しない。",
+      "first_checked_at": "2026-10-06T22:57:14+00:00",
+      "last_checked_at": "2026-10-06T22:57:14+00:00",
+      "linked_from": [],
+      "title": "How to Train Long-Context Language Models (Effectively)"
     }
   }
 }
