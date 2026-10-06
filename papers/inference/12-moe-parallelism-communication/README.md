@@ -196,6 +196,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：✓ ・ リポジトリ内被引用：47  
+  実装：✓ ・ リポジトリ内被引用：48  
   Switch Transformerは、通常のTransformerのフィードフォワードネットワーク（FFN）を多数の専門家FFNへ置き換え、各トークンについてルータが1つの専門家だけを選ぶ疎な混合専門家モデルである。従来MoEのtop-kルーティングは複数専門家を同時に活性化するため、専門家間通信と各専門家のバッチ容量が増えやすい。
 <!-- survey:auto:end -->
