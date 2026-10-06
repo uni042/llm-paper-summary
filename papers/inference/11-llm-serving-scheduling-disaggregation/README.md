@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（317本）
+## 自動生成の論文一覧（318本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -93,6 +93,10 @@
 - **2026-04 · [Cascadia: An Efficient Cascade Serving System for Large Language Models](2025-2506.04203-cascadia-cascade-serving-routing-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   モデルカスケードの経路選択、GPU資源配分、並列構成を二段階最適化で共同設計し、品質維持下で遅延SLOと処理性能を改善する。
+
+- **2026-02 · [Revealing the Challenges of Attention-FFN Disaggregation for Modern MoE Models and Hardware Systems](2026-2602.09721-revealing-the-challenges-of-attention-ffn-disaggregation-for-modern-moe-.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  混合専門家（Mixture-of-Experts; MoE）推論では注意機構側と専門家FFN側の資源特性が異なるため、両者を別GPU群へ置く注意機構-FFN分離（注意機構-FFN Disaggregation; AFD）が注目される。
 
 - **2026-02 · [BOute: Cost-Efficient LLM Serving with Heterogeneous LLMs and GPUs via Multi-Objective Bayesian Optimization](2026-2602.10729-boute-heterogeneous-model-gpu-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

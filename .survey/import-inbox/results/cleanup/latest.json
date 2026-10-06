@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T12:20:16+00:00",
+  "updated_at": "2026-10-06T12:25:37+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3097,6 +3097,20 @@
       "processed_at": "2026-10-06T12:20:16+00:00",
       "canonical_id": "arXiv:2603.13606",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-ca6cd7ebb9a1--libfile_9a928512ec008191be8ccbbdf4746aca--2603.13606-nccl-ep.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-da694f3b32a8--libfile_9f1df2a99d388191a8f3703ecda6456a--2606.15652-mosaicquant.md",
+      "processed_at": "2026-10-06T12:25:37+00:00",
+      "canonical_id": "arXiv:2606.15652",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-da694f3b32a8--libfile_9f1df2a99d388191a8f3703ecda6456a--2606.15652-mosaicquant.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-82ca7ca7554c--libfile_b2985d9c7ba08191be26e0df7bf84b82--2608.13524-dartree.md",
+      "processed_at": "2026-10-06T12:25:37+00:00",
+      "canonical_id": "arXiv:2608.13524",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-82ca7ca7554c--libfile_b2985d9c7ba08191be26e0df7bf84b82--2608.13524-dartree.md"
     }
   ]
 }
