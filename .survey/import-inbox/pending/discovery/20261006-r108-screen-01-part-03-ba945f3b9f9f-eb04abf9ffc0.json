@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r108-screen-01-part-03-ba945f3b9f9f",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.14917",
+      "identity_tokens": [
+        "arXiv:2511.14917"
+      ],
+      "title": "Teaching signal synchronization in deep neural networks with prospective neurons",
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "source_url": "https://arxiv.org/abs/2511.14917",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17601",
+      "identity_tokens": [
+        "arXiv:2511.17601"
+      ],
+      "title": "Generalizable and Efficient Automated Scoring with a Knowledge-Distilled Multi-Task Mixture-of-Experts",
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2511.17601",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.11460",
+      "identity_tokens": [
+        "arXiv:2511.11460"
+      ],
+      "title": "Rethinking Efficient Mixture-of-Experts for Remote Sensing Modality-Missing Classification",
+      "reason": "一次本文を確認した結果、LLM推論の計算・メモリ・遅延・スループット・KV cache・量子化・offload・servingに対する具体的な改善や強い既存系統接続はない。",
+      "source_url": "https://arxiv.org/abs/2511.11460",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09146",
+      "identity_tokens": [
+        "arXiv:2511.09146"
+      ],
+      "title": "DoPE: Denoising Rotary Position Embedding",
+      "reason": "一次本文で確認した結果、既存系統への接続または隣接する効率課題はあるが、LLM推論の直接的な改善・一般化可能性は限定的で、優先度は追加比較後に判断する。",
+      "source_url": "https://arxiv.org/abs/2511.09146",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2024-2406.10774-quest.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3746252.3761564",
+      "identity_tokens": [
+        "DOI:10.1145/3746252.3761564"
+      ],
+      "title": "Taming Ultra-Long Behavior Sequence in Session-wise Generative Recommendation",
+      "reason": "題名・要旨および既存系統リンクの文脈を確認し、LLM推論効率または関連する推論系統への具体的な技術貢献がないと判断。",
+      "source_url": "https://doi.org/10.1145/3746252.3761564",
+      "first_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "last_checked_at": "2026-10-06T14:54:00.544696+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ]
+    }
+  ]
+}
