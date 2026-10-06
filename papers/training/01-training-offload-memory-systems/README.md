@@ -36,6 +36,10 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：✓ ・ リポジトリ内被引用：3  
   テンソルごとの次回利用までの空き時間を測り、長く不要な重み・勾配・活性値をNVMe SSDへ退避し、先読みをGPU計算に重ねて固定的な層単位方式のI/O待ちを減らす学習方式。
 
+- **2025-09 · [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)**  
+  実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：2  
+  最適化状態をGPU、CPU DRAM、ローカルNVMe、共有ストレージへ分散し、複数の読み書き経路を同時利用して、LLM事前学習の容量制約とI/O待ちを緩和する方式。
+
 - **2025-05 · [ZenFlow: Enabling Stall-Free Offloading Training via Asynchronous Updates](2025-2505.12242-zenflow-enabling-stall-free-offloading-training-via-asynchronous-updates.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeedExamples/tree/master/training/DeepSpeed-ZenFlow) ・ リポジトリ内被引用：2  
   影響の大きい勾配だけをGPUで毎ステップ更新し、残りをCPUで蓄積して遅延更新する二経路に分け、CPUオフロード学習のGPU待ち時間を減らす方式。
@@ -43,10 +47,6 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 - **2025-05 · [MemAscend: System Memory Optimization for SSD-Offloaded LLM Fine-Tuning](2025-2505.23254-memascend-system-memory-optimization-for-ssd-offloaded-llm-fine-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   SSDオフロード時にCPU側で過剰確保する転送バッファや検査用一時領域を必要量へ縮め、余分なRAM消費とNVMeのコピーを減らしてLLM微調整を支える方式。
-
-- **2025-09 · [MLP-Offload: Multi-Level, Multi-Path Offloading for LLM Pre-training to Break the GPU Memory Wall](2025-2509.02480-mlp-offload-multi-level-multi-path-offloading-for-llm-pre-training-to-break-the-.md)**  
-  実装：[✓](https://github.com/DataStates/artifacts/blob/main/MLP-Offload) ・ リポジトリ内被引用：1  
-  最適化状態をGPU、CPU DRAM、ローカルNVMe、共有ストレージへ分散し、複数の読み書き経路を同時利用して、LLM事前学習の容量制約とI/O待ちを緩和する方式。
 
 ### 3年前（2023-11〜2024-10）
 
