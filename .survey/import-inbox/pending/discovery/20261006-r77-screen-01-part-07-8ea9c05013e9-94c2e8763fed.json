@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r77-screen-01-part-07-8ea9c05013e9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.23259",
+      "identity_tokens": [
+        "arXiv:2605.23259"
+      ],
+      "title": "Multi-Gate Residuals",
+      "reason": "一次本文のMGRはLLM residual streamにmulti-gate/attention poolingを導入し、深層activationの安定性と通信負荷を改善するarchitectureを提案する。0.12B/0.35B/0.77BモデルをFineWebでscratch trainingしloss/activation/gradientを比較するが、主な計算はtrain-time communicationで、推論latency/throughputの実測はなく、小規模学習評価に限られる。",
+      "source_url": "https://arxiv.org/abs/2605.23259",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22814",
+      "identity_tokens": [
+        "arXiv:2605.22814"
+      ],
+      "title": "Remember to be Curious: Episodic Context and Persistent Worlds for 3D Exploration",
+      "reason": "3D環境探索向けcuriosity-driven reinforcement learningの論文で、LLM推論を効率化するものではない。",
+      "source_url": "https://arxiv.org/abs/2605.22814",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.22984",
+      "identity_tokens": [
+        "arXiv:2605.22984"
+      ],
+      "title": "Test-Time Training Undermines Safety Guardrails",
+      "reason": "一次本文はtest-time trainingによるLLM安全alignmentの劣化/jailbreakを複数モデルで評価し、dynamic alignmentやprovider-side detectorを提案する。TTT/serving運用系譜には関連するが、主題はsecurityで推論compute/memory/latency改善を測らず、効率候補としては直接性が弱い。",
+      "source_url": "https://arxiv.org/abs/2605.22984",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20916",
+      "identity_tokens": [
+        "arXiv:2605.20916"
+      ],
+      "title": "Task-Routed Mixture-of-Experts with Cognitive Appraisal for Implicit Sentiment Analysis",
+      "reason": "implicit sentiment detectionにcognitive-appraisal multi-task modelを適用する分類研究で、LLM/MoE推論費用削減の証拠がない。",
+      "source_url": "https://arxiv.org/abs/2605.20916",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.21171",
+      "identity_tokens": [
+        "arXiv:2605.21171"
+      ],
+      "title": "FTerViT: Fully Ternary Vision Transformer",
+      "reason": "一次本文はDeiT/ViTを全重みternarizationし、ImageNet精度・ESP32-S3 memory/latencyを評価する。1.58-bit LLM量子化系譜には技術的類似性があるが、対象は視覚分類モデルで言語/LLM性能・KV/decode costはなく、適用先の違いが大きい。",
+      "source_url": "https://arxiv.org/abs/2605.21171",
+      "first_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "last_checked_at": "2026-10-06T10:23:36.188814+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    }
+  ]
+}
