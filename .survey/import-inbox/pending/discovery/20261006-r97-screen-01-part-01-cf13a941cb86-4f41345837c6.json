@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r97-screen-01-part-01-cf13a941cb86",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.09675",
+      "identity_tokens": [
+        "arXiv:2512.09675"
+      ],
+      "title": "d-TreeRPO: Towards More Reliable Policy Optimization for Diffusion Language Models",
+      "reason": "Tree-structured rollout and verifiable rewards improve diffusion-LM reasoning benchmarks; this is policy optimization/training and reports no inference cost reduction. Related diffusion-LM lineage is a weak transfer lead.",
+      "source_url": "https://arxiv.org/abs/2512.09675",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02454",
+      "identity_tokens": [
+        "arXiv:2602.02454"
+      ],
+      "title": "World-Gymnast: Training Robots with Reinforcement Learning in a World Model",
+      "reason": "World-Gymnast uses temporal KV caching to avoid recomputing full history and reports 10x lower rollout time for 20 parallel 40-frame trajectories. This is robot world-model training throughput, not LLM serving; investigate whether the cache technique transfers.",
+      "source_url": "https://arxiv.org/abs/2602.02454",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20130",
+      "identity_tokens": [
+        "arXiv:2601.20130"
+      ],
+      "title": "Real-Time Robot Execution with Masked Action Chunking",
+      "reason": "Masked action chunking maintains real-time robot execution and adapts chunks under delay, with no extra inference latency. The measured domain is robot control and the linked multimodal token-pruning relation is indirect.",
+      "source_url": "https://arxiv.org/abs/2601.20130",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01027",
+      "identity_tokens": [
+        "arXiv:2606.01027"
+      ],
+      "title": "τ0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+      "reason": "Robot video-action model reports 220 ms/query, 180 ms with cached text representations, and 140 ms after torch.compile. Concrete inference optimization, but robotics-specific and tied to a PyTorch compilation link rather than LLM serving.",
+      "source_url": "https://arxiv.org/abs/2606.01027",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21384",
+      "identity_tokens": [
+        "arXiv:2605.21384"
+      ],
+      "title": "SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents",
+      "reason": "SpecBench audits reward hacking in long-horizon coding agents; its contribution is benchmark design and agent evaluation, not inference compute, memory, latency, throughput, cache, quantization, or serving.",
+      "source_url": "https://arxiv.org/abs/2605.21384",
+      "first_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "last_checked_at": "2026-10-06T13:23:14.404344+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ]
+    }
+  ]
+}
