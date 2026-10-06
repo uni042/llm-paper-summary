@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T09:01:06+00:00",
-  "record_count": 2650,
+  "updated_at": "2026-10-06T09:04:15+00:00",
+  "record_count": 2655,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -40722,6 +40722,82 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Counting on Thinking: Tracing Evidence Integration in Language Models"
+    },
+    "arXiv:2609.29768": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29768",
+      "identity_tokens": [
+        "arXiv:2609.29768"
+      ],
+      "reason": "The work shares Transformer weights through recurrence for flow-matching text-to-speech and compares seven depth layouts at a fixed 18 block calls per network evaluation. It is adjacent evidence on compute/parameter tradeoffs in a generative Transformer, but is TTS rather than LLM inference and the fixed call count does not itself demonstrate lower inference compute/latency; retain only as borderline.",
+      "first_checked_at": "2026-10-06T09:04:12+00:00",
+      "last_checked_at": "2026-10-06T09:04:12+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Depth through recurrence: Looped transformers for flow-matching TTS"
+    },
+    "DOI:10.1145/3844511": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3844511",
+      "identity_tokens": [
+        "DOI:10.1145/3844511"
+      ],
+      "reason": "The publisher's ACM Digital Library full-text URL returned 403 Forbidden. A search surfaced only a secondary aggregator snippet, which was not treated as primary-text evidence. Abstract strongly indicates direct sparse ternary LLM inference acceleration, but full-text review remains required.",
+      "first_checked_at": "2026-10-06T09:04:12+00:00",
+      "last_checked_at": "2026-10-06T09:04:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2109.04838-block-pruning-for-faster-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SATLLM: A Sparsity-aware Accelerator for Ternary-Weight Large Language Models"
+    },
+    "arXiv:2609.28250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.28250",
+      "identity_tokens": [
+        "arXiv:2609.28250"
+      ],
+      "reason": "This study compares activation memory (KV cache) with parametric memory in few-shot learning and tests when information stored in either form is effective. It is directly related to memory representation but does not propose a runtime memory/KV-cache reduction or serving optimization; evidence is explanatory and the practical inference-efficiency connection remains weak.",
+      "first_checked_at": "2026-10-06T09:04:14+00:00",
+      "last_checked_at": "2026-10-06T09:04:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Complementary Roles of Activation and Parametric Memory in Few-Shot Learning"
+    },
+    "arXiv:2609.26487": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26487",
+      "identity_tokens": [
+        "arXiv:2609.26487"
+      ],
+      "reason": "The study extends recurrent-model inference beyond nominal step budgets and measures exact-solve completion on hard Sudoku, with latent-state stability analysis. It shows additional computation can rescue some nominal-budget failures, but does not propose an efficiency improvement or general LLM serving method; the benchmark is narrow and model-specific.",
+      "first_checked_at": "2026-10-06T09:04:15+00:00",
+      "last_checked_at": "2026-10-06T09:04:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Recursive Models Finish Computing"
+    },
+    "arXiv:2609.26551": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26551",
+      "identity_tokens": [
+        "arXiv:2609.26551"
+      ],
+      "reason": "Toki is a profiling framework for HBM performance with RISC-V FPGA soft cores and PCIe DMA, measuring memory access patterns, locality, contention and host traffic. Its primary full text makes it plausibly adjacent to the linked FPGA LLM-inference/offload lineage, but it evaluates general workloads/microbenchmarks rather than LLM inference directly, so retain as borderline for a concrete workload-fit check.",
+      "first_checked_at": "2026-10-06T09:04:15+00:00",
+      "last_checked_at": "2026-10-06T09:04:15+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Toki: Profiling HBM Performance on FPGA Systems with RISC-V Soft Cores and PCIe Host DMA Traffic"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T09:01:07+00:00",
-  "record_count": 7539,
+  "updated_at": "2026-10-06T09:04:16+00:00",
+  "record_count": 7556,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -108544,6 +108544,244 @@
         "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
       ],
       "title": "DriveHierarchy: A Benchmark for Diagnosing VLM Driving Capabilities from Open-Loop Understanding to Closed-Loop Execution"
+    },
+    "arXiv:2609.28949": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28949",
+      "identity_tokens": [
+        "arXiv:2609.28949"
+      ],
+      "reason": "Few-shot image segmentation capability method using MLLM target knowledge; no inference cost reduction.",
+      "first_checked_at": "2026-10-06T09:04:12+00:00",
+      "last_checked_at": "2026-10-06T09:04:12+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Exploiting Target Knowledge from MLLMs for Robust Few-Shot Segmentation"
+    },
+    "arXiv:2609.29180": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.29180",
+      "identity_tokens": [
+        "arXiv:2609.29180"
+      ],
+      "reason": "Generative recommender technical report; the abstract concerns recommendation architecture rather than direct LLM inference resources.",
+      "first_checked_at": "2026-10-06T09:04:13+00:00",
+      "last_checked_at": "2026-10-06T09:04:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "title": "X-Rec Technical Report"
+    },
+    "arXiv:2609.30340": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.30340",
+      "identity_tokens": [
+        "arXiv:2609.30340"
+      ],
+      "reason": "Air-quality time-series imputation method; outside LLM inference scope.",
+      "first_checked_at": "2026-10-06T09:04:13+00:00",
+      "last_checked_at": "2026-10-06T09:04:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "GAUDI: Geometry-Aware Diffusion for Calibrated Air-Quality Time-Series Imputation"
+    },
+    "arXiv:2609.27175": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27175",
+      "identity_tokens": [
+        "arXiv:2609.27175"
+      ],
+      "reason": "Multimedia verification memory consolidation for evidence handling; no direct LLM inference/serving resource optimization.",
+      "first_checked_at": "2026-10-06T09:04:13+00:00",
+      "last_checked_at": "2026-10-06T09:04:13+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Self-Evolving Multimedia Verification through Memory Consolidation of Contestation Experiences"
+    },
+    "arXiv:2609.27303": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27303",
+      "identity_tokens": [
+        "arXiv:2609.27303"
+      ],
+      "reason": "Live social-stream assistant policy; no concrete inference resource reduction in abstract.",
+      "first_checked_at": "2026-10-06T09:04:13+00:00",
+      "last_checked_at": "2026-10-06T09:04:13+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Live Assistant: Learning Whether, When, and Whom to Assist in Real-World Live Social Streams"
+    },
+    "arXiv:2609.27441": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27441",
+      "identity_tokens": [
+        "arXiv:2609.27441"
+      ],
+      "reason": "Brain-machine interface neural decoding; outside LLM inference scope.",
+      "first_checked_at": "2026-10-06T09:04:13+00:00",
+      "last_checked_at": "2026-10-06T09:04:13+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "Stable Neural Decoding Across Sessions via Task-Conditioned Latent Alignment for Brain-Machine Interfaces"
+    },
+    "arXiv:2609.27590": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27590",
+      "identity_tokens": [
+        "arXiv:2609.27590"
+      ],
+      "reason": "Studies lexical priors in long-context behavior; no concrete inference resource optimization.",
+      "first_checked_at": "2026-10-06T09:04:14+00:00",
+      "last_checked_at": "2026-10-06T09:04:14+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "title": "MWE-ECL: Recoverable Long-Range Context Does Not Always Override Local Lexical Priors"
+    },
+    "arXiv:2609.27620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.27620",
+      "identity_tokens": [
+        "arXiv:2609.27620"
+      ],
+      "reason": "Text-to-image safety guardrail method; outside LLM inference/serving efficiency scope.",
+      "first_checked_at": "2026-10-06T09:04:14+00:00",
+      "last_checked_at": "2026-10-06T09:04:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "InGuard: Towards Generalized Inner Guardrail for Safe Text-to-Image Generation"
+    },
+    "arXiv:2609.28262": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28262",
+      "identity_tokens": [
+        "arXiv:2609.28262"
+      ],
+      "reason": "Mixed-precision quantization evaluates vision models on edge CPUs, not LLM/VLM inference; no in-scope lineage link is recorded.",
+      "first_checked_at": "2026-10-06T09:04:14+00:00",
+      "last_checked_at": "2026-10-06T09:04:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md"
+      ],
+      "title": "RAMP: Robust Adaptive Mixed-Precision Quantization for Edge CPU Vision Models"
+    },
+    "arXiv:2609.28554": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28554",
+      "identity_tokens": [
+        "arXiv:2609.28554"
+      ],
+      "reason": "Multimodal model-family post-training report; model sizes alone do not constitute a direct inference efficiency method.",
+      "first_checked_at": "2026-10-06T09:04:14+00:00",
+      "last_checked_at": "2026-10-06T09:04:14+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Pistis Technical Report"
+    },
+    "arXiv:2609.28813": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.28813",
+      "identity_tokens": [
+        "arXiv:2609.28813"
+      ],
+      "reason": "Film-grammar VLM benchmark; no inference optimization method.",
+      "first_checked_at": "2026-10-06T09:04:15+00:00",
+      "last_checked_at": "2026-10-06T09:04:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "CinematicVQA: Benchmarking Film-Grammar Reasoning in Large Vision-Language Models"
+    },
+    "arXiv:2609.25738": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25738",
+      "identity_tokens": [
+        "arXiv:2609.25738"
+      ],
+      "reason": "Omni-modal physical-world understanding model report; abstract describes capabilities/training rather than inference-resource reduction.",
+      "first_checked_at": "2026-10-06T09:04:15+00:00",
+      "last_checked_at": "2026-10-06T09:04:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "OmniFysics-Nano-V2 Technical Report: Understanding the Physical World Across Modalities"
+    },
+    "arXiv:2609.25770": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25770",
+      "identity_tokens": [
+        "arXiv:2609.25770"
+      ],
+      "reason": "Studies visual configuration effects on evidence use; no inference efficiency method.",
+      "first_checked_at": "2026-10-06T09:04:15+00:00",
+      "last_checked_at": "2026-10-06T09:04:15+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Reading Right, Answering Wrong: How Visual Configuration Changes Affect Evidence Use in VLMs"
+    },
+    "arXiv:2609.25841": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25841",
+      "identity_tokens": [
+        "arXiv:2609.25841"
+      ],
+      "reason": "Indoor-scene spatial reasoning benchmark; no inference optimization method.",
+      "first_checked_at": "2026-10-06T09:04:16+00:00",
+      "last_checked_at": "2026-10-06T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Metric-Bench: Exploring In-context Spatial Metric Reasoning in VLMs for Indoor Scenes"
+    },
+    "arXiv:2609.25961": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.25961",
+      "identity_tokens": [
+        "arXiv:2609.25961"
+      ],
+      "reason": "Unified world-action modeling for robotics; not an LLM inference-resource improvement.",
+      "first_checked_at": "2026-10-06T09:04:16+00:00",
+      "last_checked_at": "2026-10-06T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "An Action Is Worth One Patch: Unified World-Action Modeling with PatchWAM"
+    },
+    "DOI:10.3389/frai.2026.1857281": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3389/frai.2026.1857281",
+      "identity_tokens": [
+        "DOI:10.3389/frai.2026.1857281"
+      ],
+      "reason": "Mamba-inspired signal model for rotating-machinery lifetime prediction; outside LLM inference scope.",
+      "first_checked_at": "2026-10-06T09:04:16+00:00",
+      "last_checked_at": "2026-10-06T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ],
+      "title": "DST-SGR: a Mamba-inspired dual-stream spectro-temporal network for remaining useful life prediction of rotating machinery"
+    },
+    "arXiv:2609.24071": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.24071",
+      "identity_tokens": [
+        "arXiv:2609.24071"
+      ],
+      "reason": "Chart-agent process-reward training and monitorability; no direct inference-resource reduction.",
+      "first_checked_at": "2026-10-06T09:04:16+00:00",
+      "last_checked_at": "2026-10-06T09:04:16+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ],
+      "title": "Monitorable Chart Reasoning Agents via Verifiable Process Rewards"
     }
   }
 }
