@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T20:36:07+00:00",
-  "record_count": 9575,
+  "updated_at": "2026-10-06T20:40:38+00:00",
+  "record_count": 9605,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -137163,6 +137163,426 @@
         "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
       ],
       "title": "Transitivity Meets Cyclicity: Explicit Preference Decomposition for Dynamic Large Language Model Alignment"
+    },
+    "DOI:10.1007/s10207-026-01249-7": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10207-026-01249-7",
+      "identity_tokens": [
+        "DOI:10.1007/s10207-026-01249-7"
+      ],
+      "reason": "The Springer full text studies text-based user profiling and privacy implications in cloud/IoC deployments using authorship/depression datasets. The LLM use is an application for profiling, not a model inference efficiency or serving contribution.",
+      "first_checked_at": "2026-10-06T20:40:27+00:00",
+      "last_checked_at": "2026-10-06T20:40:27+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "title": "Unmasking Users in IoC: LLMs, Text Profiling, and Privacy Implications"
+    },
+    "arXiv:2605.09853": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09853",
+      "identity_tokens": [
+        "arXiv:2605.09853"
+      ],
+      "reason": "EDO is an RL post-training objective that promotes response diversity and improves the quality of test-time scaling (self-consistency/BoN/tree search). The paper does not reduce test-time compute or resource use; its stated gains are accuracy under added inference-time sampling, so it is outside the efficiency target.",
+      "first_checked_at": "2026-10-06T20:40:28+00:00",
+      "last_checked_at": "2026-10-06T20:40:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Exploration-Driven Optimization for Test-Time Large Language Model Reasoning"
+    },
+    "arXiv:2605.10288": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10288",
+      "identity_tokens": [
+        "arXiv:2605.10288"
+      ],
+      "reason": "BROS is a memory-efficient single-loop bilevel optimization method for training/hyperparameter learning. Its memory savings apply to optimization/backpropagation, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:28+00:00",
+      "last_checked_at": "2026-10-06T20:40:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md"
+      ],
+      "title": "BROS: Bias-Corrected Randomized Subspaces for Memory-Efficient Single-Loop Bilevel Optimization"
+    },
+    "arXiv:2605.10335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10335",
+      "identity_tokens": [
+        "arXiv:2605.10335"
+      ],
+      "reason": "PowerStep reduces optimizer-state memory during model training by replacing second-moment statistics with a single momentum buffer; the paper reports training-memory/throughput tradeoffs. It does not optimize inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:28+00:00",
+      "last_checked_at": "2026-10-06T20:40:28+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "PowerStep: Memory-Efficient Adaptive Optimization via ℓp-Norm Steepest Descent"
+    },
+    "arXiv:2605.10741": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10741",
+      "identity_tokens": [
+        "arXiv:2605.10741"
+      ],
+      "reason": "AdaPaD is a parallel deflation algorithm for training PEFT adapters and discovering LoRA ranks. Its reported parameter-budget and adapter-size improvements concern training/adaptation, with no measured base-model inference or serving benefit.",
+      "first_checked_at": "2026-10-06T20:40:28+00:00",
+      "last_checked_at": "2026-10-06T20:40:28+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "AdaPaD: Adaptive Parallel Deflation for PEFT with Self-Correcting Rank Discovery"
+    },
+    "arXiv:2605.08455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08455",
+      "identity_tokens": [
+        "arXiv:2605.08455"
+      ],
+      "reason": "CUDABeaver is an evaluation benchmark for LLM-based CUDA debugging and exposes correctness/repair-by-degeneration issues. It evaluates code-debugging agents, not the runtime or efficiency of LLM inference.",
+      "first_checked_at": "2026-10-06T20:40:29+00:00",
+      "last_checked_at": "2026-10-06T20:40:29+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "CUDABeaver: Benchmarking LLM-Based Automated CUDA Debugging"
+    },
+    "arXiv:2605.08539": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08539",
+      "identity_tokens": [
+        "arXiv:2605.08539"
+      ],
+      "reason": "Continuity Laws studies temporal continuity as an inductive bias in sequential models and evaluates task prediction behavior. It does not address LLM inference resources or serving.",
+      "first_checked_at": "2026-10-06T20:40:29+00:00",
+      "last_checked_at": "2026-10-06T20:40:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Continuity Laws for Sequential Models"
+    },
+    "arXiv:2605.05882": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05882",
+      "identity_tokens": [
+        "arXiv:2605.05882"
+      ],
+      "reason": "The arXiv PDF develops path-specific derivative fairness definitions and predictor tuning for continuous protected attributes. It is a causal fairness method, unrelated to LLM inference/serving efficiency.",
+      "first_checked_at": "2026-10-06T20:40:30+00:00",
+      "last_checked_at": "2026-10-06T20:40:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Tuning Derivatives for Causal Fairness in Machine Learning"
+    },
+    "arXiv:2605.05912": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05912",
+      "identity_tokens": [
+        "arXiv:2605.05912"
+      ],
+      "reason": "DropsToGrid is a neural-process method for rainfall densification from radar/station data. It targets weather-field prediction, not LLM inference.",
+      "first_checked_at": "2026-10-06T20:40:30+00:00",
+      "last_checked_at": "2026-10-06T20:40:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "From Drops to Grid: Noise-Aware Spatio-Temporal Neural Process for Rainfall Estimation"
+    },
+    "arXiv:2605.05913": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05913",
+      "identity_tokens": [
+        "arXiv:2605.05913"
+      ],
+      "reason": "Wisteria is a genomic/DNA language model for sequence analysis. Its tokenization and multi-scale feature work is for biological sequences, not natural-language LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:30+00:00",
+      "last_checked_at": "2026-10-06T20:40:30+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Wisteria: A Unified Multi-Scale Feature Learning Framework for DNA Language Model"
+    },
+    "arXiv:2605.06169": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.06169",
+      "identity_tokens": [
+        "arXiv:2605.06169"
+      ],
+      "reason": "Mean-Variance Split Residuals addresses training collapse in very deep Diffusion Transformers and demonstrates stable training at extreme depth. It concerns diffusion-model training dynamics, not LLM inference.",
+      "first_checked_at": "2026-10-06T20:40:30+00:00",
+      "last_checked_at": "2026-10-06T20:40:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "Mean Mode Screaming: Mean-Variance Split Residuals for 1000-Layer Diffusion Transformers"
+    },
+    "arXiv:2605.05373": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05373",
+      "identity_tokens": [
+        "arXiv:2605.05373"
+      ],
+      "reason": "This paper gives a control-theoretic interpretation of recurrent-policy hidden states and action readout. Its subject is recurrent reinforcement-learning policies, not language-model inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:31+00:00",
+      "last_checked_at": "2026-10-06T20:40:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "Hidden States as Value Gradients: The Pontryagin Structure of Recurrent Policies"
+    },
+    "arXiv:2605.15024": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15024",
+      "identity_tokens": [
+        "arXiv:2605.15024"
+      ],
+      "reason": "HiSem addresses remote-sensing image change captioning with cross-temporal attention and hierarchical MoE routing; its experiments optimize visual change-description quality. The routing is task architecture, not a method for lowering LLM inference cost, memory, or latency.",
+      "first_checked_at": "2026-10-06T20:40:31+00:00",
+      "last_checked_at": "2026-10-06T20:40:31+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "HiSem: Hierarchical Semantic Disentangling for Remote Sensing Image Change Captioning"
+    },
+    "arXiv:2605.12916": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12916",
+      "identity_tokens": [
+        "arXiv:2605.12916"
+      ],
+      "reason": "SHM-Agents combines generalist/specialist LLM agents for structural-health-monitoring analysis. Its case studies evaluate engineering task completion and agent coordination, not model inference efficiency or serving.",
+      "first_checked_at": "2026-10-06T20:40:32+00:00",
+      "last_checked_at": "2026-10-06T20:40:32+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "SHM-Agents: A Generalist-Specialist Integrated Agent System for Structural Health Monitoring"
+    },
+    "DOI:10.5194/gmd-19-3953-2026": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5194/gmd-19-3953-2026",
+      "identity_tokens": [
+        "DOI:10.5194/gmd-19-3953-2026"
+      ],
+      "reason": "The publisher full text describes SWEpy, a GPU-accelerated shallow-water-equation solver for tsunami/flood simulation. Its speedups concern numerical hydrodynamic simulation rather than language-model inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:32+00:00",
+      "last_checked_at": "2026-10-06T20:40:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SWEpy: an open-source GPU-accelerated solver for near-field inundation and far-field tsunami modeling"
+    },
+    "arXiv:2605.12335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12335",
+      "identity_tokens": [
+        "arXiv:2605.12335"
+      ],
+      "reason": "EHR-RAGp retrieves prototype-guided patient-history evidence for clinical prediction. The full text centers on longitudinal EHR representation and prediction quality; it is a clinical retrieval/prediction method, not LLM inference or serving optimization.",
+      "first_checked_at": "2026-10-06T20:40:33+00:00",
+      "last_checked_at": "2026-10-06T20:40:33+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "EHR-RAGp: Prototype-Guided Retrieval of Longitudinal Electronic Health Records for Clinical Prediction Models"
+    },
+    "arXiv:2605.12427": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.12427",
+      "identity_tokens": [
+        "arXiv:2605.12427"
+      ],
+      "reason": "This paper uses reinforcement learning to find minimally rigid graphs with many realizations. The mathematical graph-construction problem and evaluation are unrelated to LLM inference, serving, or model-runtime efficiency.",
+      "first_checked_at": "2026-10-06T20:40:33+00:00",
+      "last_checked_at": "2026-10-06T20:40:33+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Learning Minimally Rigid Graphs with High Realization Counts"
+    },
+    "arXiv:2605.22843": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.22843",
+      "identity_tokens": [
+        "arXiv:2605.22843"
+      ],
+      "reason": "The full text improves Text-to-SQL reasoning through task-specific knowledge construction, synthetic fine-tuning data, and inference-time retrieval. Its reported contribution is semantic grounding/accuracy; it does not reduce LLM compute, memory, latency, or serving cost, and retrieval adds inference context.",
+      "first_checked_at": "2026-10-06T20:40:34+00:00",
+      "last_checked_at": "2026-10-06T20:40:34+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Knowledge Distillation for Low-Resource Open-source Text-to-SQL Model"
+    },
+    "arXiv:2605.07494": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07494",
+      "identity_tokens": [
+        "arXiv:2605.07494"
+      ],
+      "reason": "DIMoE-Adapters evolves adapter experts for continual learning in vision-language models. Its experiments concern adaptation/generalization across tasks, not reduced inference compute, memory, latency, or serving.",
+      "first_checked_at": "2026-10-06T20:40:34+00:00",
+      "last_checked_at": "2026-10-06T20:40:34+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "DIMoE-Adapters: Dynamic Expert Evolution for Continual Learning in Vision-Language Models"
+    },
+    "arXiv:2605.07726": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07726",
+      "identity_tokens": [
+        "arXiv:2605.07726"
+      ],
+      "reason": "This work evaluates tensor, pipeline, and data parallelism for large-scale LLM training on SuperMUC-NG. The studied throughput and scaling are training throughput, not inference/serving.",
+      "first_checked_at": "2026-10-06T20:40:35+00:00",
+      "last_checked_at": "2026-10-06T20:40:35+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "A Scalable Recipe on SuperMUC-NG Phase 2: Efficient Large-Scale Training of Language Models"
+    },
+    "arXiv:2605.07881": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07881",
+      "identity_tokens": [
+        "arXiv:2605.07881"
+      ],
+      "reason": "AccelSync formalizes and verifies synchronization coverage in accelerator pipeline programs to detect races. It is a correctness/verification tool; the primary text does not present a method improving LLM inference performance or serving.",
+      "first_checked_at": "2026-10-06T20:40:35+00:00",
+      "last_checked_at": "2026-10-06T20:40:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "title": "AccelSync: Verifying Synchronization Coverage in Accelerator Pipeline Programs"
+    },
+    "arXiv:2605.08325": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08325",
+      "identity_tokens": [
+        "arXiv:2605.08325"
+      ],
+      "reason": "CAMAL uses segmentation masks for attention supervision in vision-model training and evaluates attention alignment/faithfulness. It is a training/interpretability contribution, not LLM inference efficiency.",
+      "first_checked_at": "2026-10-06T20:40:35+00:00",
+      "last_checked_at": "2026-10-06T20:40:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "CAMAL: Improving Attention Alignment and Faithfulness with Segmentation Masks"
+    },
+    "arXiv:2605.08421": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08421",
+      "identity_tokens": [
+        "arXiv:2605.08421"
+      ],
+      "reason": "This work improves global-layout representation for visual-document retrieval with a late-interaction retriever. Its evaluation concerns retrieval quality and visual document layout, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:35+00:00",
+      "last_checked_at": "2026-10-06T20:40:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Beyond Bag-of-Patches: Learning Global Layout via Textual Supervision for Late-Interaction Visual Document Retrieval"
+    },
+    "arXiv:2605.09146": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09146",
+      "identity_tokens": [
+        "arXiv:2605.09146"
+      ],
+      "reason": "The paper decomposes humanoid visual search into Imaginator/Actor agent roles and evaluates search task behavior. Its focus is embodied task planning and trajectory reasoning, not LLM inference-system efficiency.",
+      "first_checked_at": "2026-10-06T20:40:36+00:00",
+      "last_checked_at": "2026-10-06T20:40:36+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Beyond Thinking: Imagining in 360$^\\circ$ for Humanoid Visual Search"
+    },
+    "arXiv:2605.09204": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09204",
+      "identity_tokens": [
+        "arXiv:2605.09204"
+      ],
+      "reason": "LBI accelerates parallel-scan backpropagation for sequential models by reducing training dependency depth and Jacobian composition cost. This is training/backpropagation efficiency, not inference.",
+      "first_checked_at": "2026-10-06T20:40:36+00:00",
+      "last_checked_at": "2026-10-06T20:40:36+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "LBI: Parallel Scan Backpropagation via Latent Bounded Interfaces"
+    },
+    "arXiv:2605.07256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07256",
+      "identity_tokens": [
+        "arXiv:2605.07256"
+      ],
+      "reason": "TAS-LoRA searches ViT architectures using LoRA experts to improve subnet training and architecture selection. The primary text concerns vision-transformer training/search, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:37+00:00",
+      "last_checked_at": "2026-10-06T20:40:37+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "title": "TAS-LoRA: Transformer Architecture Search with Mixture-of-LoRA Experts"
+    },
+    "arXiv:2605.10777": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.10777",
+      "identity_tokens": [
+        "arXiv:2605.10777"
+      ],
+      "reason": "DLR-Lock replaces MLPs with deep low-rank residual networks to make fine-tuning attacks more expensive; the paper explicitly exploits training-versus-inference asymmetry and targets backward-pass cost. It is a model-security/anti-fine-tuning method, not inference optimization.",
+      "first_checked_at": "2026-10-06T20:40:37+00:00",
+      "last_checked_at": "2026-10-06T20:40:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Locking Pretrained Weights via Deep Low-Rank Residual Distillation"
+    },
+    "arXiv:2605.16379": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.16379",
+      "identity_tokens": [
+        "arXiv:2605.16379"
+      ],
+      "reason": "This paper selects data for synthetic-data generation using information-theoretic criteria. Its target is data synthesis efficiency and training-data quality, not LLM inference or serving.",
+      "first_checked_at": "2026-10-06T20:40:37+00:00",
+      "last_checked_at": "2026-10-06T20:40:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "title": "An Information-Theoretic Criterion for Efficient Data Synthesis"
+    },
+    "arXiv:2605.09370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09370",
+      "identity_tokens": [
+        "arXiv:2605.09370"
+      ],
+      "reason": "The arXiv report analyzes failure monitoring, checkpoint I/O, and recovery during LLM pre-training on a GPU cluster. All performance measurements are for training operations and recovery, not inference.",
+      "first_checked_at": "2026-10-06T20:40:38+00:00",
+      "last_checked_at": "2026-10-06T20:40:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "From Detection to Recovery: Operational Analysis on LLM Pre-training with 504 GPUs"
+    },
+    "arXiv:2605.09737": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09737",
+      "identity_tokens": [
+        "arXiv:2605.09737"
+      ],
+      "reason": "System-Prompt Anchoring adds cross-attention blocks to inject privileged system-prompt content. The paper measures added parameters, memory, prefill, TTFT, and decode overhead (for the 1.5B setting these increase); its contribution concerns instruction/security behavior and prompt injection, not reducing inference cost.",
+      "first_checked_at": "2026-10-06T20:40:38+00:00",
+      "last_checked_at": "2026-10-06T20:40:38+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "System-Prompt Anchoring with Cross-Attention Layers"
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d770c8516cb0ec29-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.09370",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.09370",
+    "identity_tokens": [
+      "arXiv:2605.09370"
+    ],
+    "reason": "The arXiv report analyzes failure monitoring, checkpoint I/O, and recovery during LLM pre-training on a GPU cluster. All performance measurements are for training operations and recovery, not inference.",
+    "first_checked_at": "2026-10-06T20:40:38+00:00",
+    "last_checked_at": "2026-10-06T20:40:38+00:00",
+    "linked_from": [
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+    ],
+    "title": "From Detection to Recovery: Operational Analysis on LLM Pre-training with 504 GPUs"
+  },
+  "processed_at": "2026-10-06T20:40:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d770c8516cb0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

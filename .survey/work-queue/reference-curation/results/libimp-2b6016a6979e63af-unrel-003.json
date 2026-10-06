@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2b6016a6979e63af-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.05913",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.05913",
+    "identity_tokens": [
+      "arXiv:2605.05913"
+    ],
+    "reason": "Wisteria is a genomic/DNA language model for sequence analysis. Its tokenization and multi-scale feature work is for biological sequences, not natural-language LLM inference or serving.",
+    "first_checked_at": "2026-10-06T20:40:30+00:00",
+    "last_checked_at": "2026-10-06T20:40:30+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Wisteria: A Unified Multi-Scale Feature Learning Framework for DNA Language Model"
+  },
+  "processed_at": "2026-10-06T20:40:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2b6016a6979e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
