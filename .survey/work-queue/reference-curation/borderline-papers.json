@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T16:14:37+00:00",
-  "record_count": 3387,
+  "updated_at": "2026-10-06T16:19:16+00:00",
+  "record_count": 3420,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -51869,6 +51869,503 @@
       ],
       "borderline_recheck_count": 0,
       "title": "RuleFlow : Generating Reusable Program Optimizations with LLMs"
+    },
+    "arXiv:2601.20115": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.20115",
+      "identity_tokens": [
+        "arXiv:2601.20115"
+      ],
+      "reason": "This empirical survey quantifies datacenter-GPU performance, off-chip bandwidth, capacity, price and power trends, with explicit metric/data-selection methods. It documents compute growing faster than memory bandwidth and discusses data/method limitations, but does not propose an LLM optimization; relevance to quantization/inference is contextual only.",
+      "first_checked_at": "2026-10-06T16:19:00+00:00",
+      "last_checked_at": "2026-10-06T16:19:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "How Much Progress Has There Been in NVIDIA Datacenter GPUs?"
+    },
+    "arXiv:2601.18702": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.18702",
+      "identity_tokens": [
+        "arXiv:2601.18702"
+      ],
+      "reason": "Halo proposes an exact-arithmetic reasoning architecture and specialized exact-integer hardware concept. The full text notes 1024-bit rational operations exceed ordinary per-thread GPU register budgets and cause severe spilling; it proposes lazy reduction and asynchronous reduction pipelines. This highly specialized design is not validated as a practical LLM inference optimization, so its architecture link is speculative.",
+      "first_checked_at": "2026-10-06T16:19:00+00:00",
+      "last_checked_at": "2026-10-06T16:19:00+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From Fuzzy to Exact: The Halo Architecture for Infinite-Depth Reasoning via Rational Arithmetic"
+    },
+    "arXiv:2601.07293": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.07293",
+      "identity_tokens": [
+        "arXiv:2601.07293"
+      ],
+      "reason": "VAR-Scaling allocates inference-time compute by searching representative samples for vector-quantized visual autoregressive generation and evaluates quality versus additional sampling/search. This is a visual generation method rather than an LLM method; its connection to general inference-time scaling is adjacent, but transfer is unshown.",
+      "first_checked_at": "2026-10-06T16:19:00+00:00",
+      "last_checked_at": "2026-10-06T16:19:00+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples"
+    },
+    "arXiv:2512.16723": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16723",
+      "identity_tokens": [
+        "arXiv:2512.16723"
+      ],
+      "reason": "KOSS formulates state selection via Kalman gain and uses spectral differentiation plus segment-wise scans; it reports copying and long-horizon forecasting gains, including near-linear hardware-oriented processing. Its evaluations are time-series/radar rather than LLMs; the SSM alternative is a plausible architecture relation but LLM inference benefit is not tested.",
+      "first_checked_at": "2026-10-06T16:19:01+00:00",
+      "last_checked_at": "2026-10-06T16:19:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "KOSS: Kalman-Optimal Selective State Spaces for Long-Term Sequence Modeling"
+    },
+    "arXiv:2512.12889": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.12889",
+      "identity_tokens": [
+        "arXiv:2512.12889"
+      ],
+      "reason": "The method distills discrete diffusion samplers by matching conditional distributions to one- or few-step students, targeting fewer function evaluations. It is a plausible text-generation acceleration method if applied to language diffusion, but the paper’s scope/evaluation does not establish an LLM-serving improvement.",
+      "first_checked_at": "2026-10-06T16:19:01+00:00",
+      "last_checked_at": "2026-10-06T16:19:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Distillation of Discrete Diffusion by Exact Conditional Distribution Matching"
+    },
+    "arXiv:2512.13478": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.13478",
+      "identity_tokens": [
+        "arXiv:2512.13478"
+      ],
+      "reason": "NRR-Core specifies contextual retention and non-resolution operators and tests one gated multi-vector embedding on a synthetic two-turn ambiguity task. The paper proposes non-collapsing attention as an implementation direction but does not evaluate long-context LLM memory, sparse attention, or serving costs.",
+      "first_checked_at": "2026-10-06T16:19:01+00:00",
+      "last_checked_at": "2026-10-06T16:19:01+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NRR-Core: Non-Resolution Reasoning as a Computational Framework for Contextual Identity and Ambiguity Preservation"
+    },
+    "DOI:10.1109/tip.2025.3639925": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tip.2025.3639925",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2025.3639925"
+      ],
+      "reason": "IEEE DOI https://doi.org/10.1109/TIP.2025.3639925 opened only a robot-verification/JavaScript page. Abstract describes continual-learning MoE for visual-language models; primary methods/evaluation and inference efficiency are unavailable.",
+      "first_checked_at": "2026-10-06T16:19:02+00:00",
+      "last_checked_at": "2026-10-06T16:19:02+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md",
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Large Visual Language Models Continual Learning With Dynamic Mixture of Experts"
+    },
+    "DOI:10.1021/acs.analchem.5c02375": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1021/acs.analchem.5c02375",
+      "identity_tokens": [
+        "DOI:10.1021/acs.analchem.5c02375"
+      ],
+      "reason": "Primary ACS DOI https://doi.org/10.1021/acs.analchem.5c02375 was inaccessible. Abstract concerns glycopeptide MS/MS prediction by Graphormer; the speculative-decoding lineage relation could not be checked in full text.",
+      "first_checked_at": "2026-10-06T16:19:02+00:00",
+      "last_checked_at": "2026-10-06T16:19:02+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GPMassSimulator: A Graphormer-Based Method for Glycopeptide MS/MS Spectra Prediction."
+    },
+    "DOI:10.1007/s11760-025-04940-9": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11760-025-04940-9",
+      "identity_tokens": [
+        "DOI:10.1007/s11760-025-04940-9"
+      ],
+      "reason": "Springer publisher provides an abstract preview but gates the article body behind subscription; only the abstract was accessible. It describes RWKV-based low-light image enhancement with reported parameters/FLOPs, not LLM inference; RWKV lineage remains a weak plausible connection.",
+      "first_checked_at": "2026-10-06T16:19:02+00:00",
+      "last_checked_at": "2026-10-06T16:19:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RawRWKV : An efficient raw image enhancement framework via RWKV architecture"
+    },
+    "DOI:10.1145/3731599.3767395": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3731599.3767395",
+      "identity_tokens": [
+        "DOI:10.1145/3731599.3767395"
+      ],
+      "reason": "ACM Digital Library full-text request returned HTTP 403; the institutional publication page provided metadata but not article body. Title suggests sparse fine-tuning/inference on wafer-scale hardware, a strong candidate, but method/evaluation/limits cannot be verified.",
+      "first_checked_at": "2026-10-06T16:19:02+00:00",
+      "last_checked_at": "2026-10-06T16:19:02+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enabling Unstructured Sparse Fine-Tuning and Inference for Foundation Models on Wafer-Scale Engine"
+    },
+    "arXiv:2511.11177": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.11177",
+      "identity_tokens": [
+        "arXiv:2511.11177"
+      ],
+      "reason": "Both arXiv HTML and PDF primary-text retrieval attempts failed. Abstract describes fast multimodal understanding with cross-modal state-space modulation, but full method and evaluation could not be checked; borderline pending primary text.",
+      "first_checked_at": "2026-10-06T16:19:03+00:00",
+      "last_checked_at": "2026-10-06T16:19:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Viper-F1: Fast and Fine-Grained Multimodal Understanding with Cross-Modal State-Space Modulation"
+    },
+    "arXiv:2511.09837": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.09837",
+      "identity_tokens": [
+        "arXiv:2511.09837"
+      ],
+      "reason": "MoFa models LLM pretraining performance and evaluates predictive fit against training measurements; it is a useful training performance model but not an inference/serving technique. Its sequence-parallel lineage is relevant, while applying it to inference would require substantial adaptation.",
+      "first_checked_at": "2026-10-06T16:19:03+00:00",
+      "last_checked_at": "2026-10-06T16:19:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MoFa: A Unified Performance Modeling Framework for LLM Pretraining"
+    },
+    "DOI:10.1109/cogmi67134.2025.00033": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cogmi67134.2025.00033",
+      "identity_tokens": [
+        "DOI:10.1109/cogmi67134.2025.00033"
+      ],
+      "reason": "Author publication page links a PDF, but the primary PDF retrieval failed with a cache-miss error. Available abstract/metadata indicate an MoE action transformer for robotic-arm control; full evaluation and its relationship to language-model MoE systems remain unreviewed.",
+      "first_checked_at": "2026-10-06T16:19:03+00:00",
+      "last_checked_at": "2026-10-06T16:19:03+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MEAT: Mixture of Experts in Action Transformer for Robotic Arm Control"
+    },
+    "DOI:10.1109/tsc.2025.3612401": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tsc.2025.3612401",
+      "identity_tokens": [
+        "DOI:10.1109/tsc.2025.3612401"
+      ],
+      "reason": "IEEE Xplore access required JavaScript/bot verification; exact DOI/publisher full text was not retrievable. Search/author metadata describes cooperative task programming for edge inference, but full method and evaluation remain unavailable.",
+      "first_checked_at": "2026-10-06T16:19:03+00:00",
+      "last_checked_at": "2026-10-06T16:19:03+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TaCo: Tasks Co-Programming for Accelerating Inference in Scaling Edge Computing"
+    },
+    "DOI:10.3390/genes16111358": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/genes16111358",
+      "identity_tokens": [
+        "DOI:10.3390/genes16111358"
+      ],
+      "reason": "The study applies layer-wise pruning to genomic language models and evaluates non-coding variant-effect prediction; reduced DNABERT-2 models retain near-SOTA task performance with fewer than half the parameters, while technical constraints prevented testing the strongest baseline. The application is specialized encoder genomics, so general LLM inference transfer remains uncertain.",
+      "first_checked_at": "2026-10-06T16:19:04+00:00",
+      "last_checked_at": "2026-10-06T16:19:04+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reaping the Fruits of LLM Pruning: Towards Small Language Models for Efficient Non-Coding Variant Effect Prediction"
+    },
+    "arXiv:2504.06263": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.06263",
+      "identity_tokens": [
+        "arXiv:2504.06263"
+      ],
+      "reason": "OmniSVG is a scalable autoregressive SVG generation model; the paper evaluates vector-generation quality and scaling. KV-cache appears as a related lineage, but no new KV-cache compression or LLM-serving mechanism is demonstrated.",
+      "first_checked_at": "2026-10-06T16:19:04+00:00",
+      "last_checked_at": "2026-10-06T16:19:04+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "OmniSVG: A Unified Scalable Vector Graphics Generation Model"
+    },
+    "arXiv:2512.23448": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23448",
+      "identity_tokens": [
+        "arXiv:2512.23448"
+      ],
+      "reason": "DSC approximates context-dependent adapter weights using a shared sparse basis and claims O(Md) parameter and O(Kd) memory-traffic scaling versus retrieving independent LoRA experts. On a single T4 it reports language-model/perplexity comparisons and reduced routing latency penalties relative to MoE. It is an adaptation/training method, with no decode-time serving results.",
+      "first_checked_at": "2026-10-06T16:19:05+00:00",
+      "last_checked_at": "2026-10-06T16:19:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Subspace Composition: Efficient Adaptation via Contractive Basis Expansion"
+    },
+    "DOI:10.1109/icvrv67992.2025.00097": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/icvrv67992.2025.00097",
+      "identity_tokens": [
+        "DOI:10.1109/icvrv67992.2025.00097"
+      ],
+      "reason": "IEEE DOI https://doi.org/10.1109/ICVRV67992.2025.00097 could not be opened. Abstract describes continual test-time adaptation using dual-path LoRA experts, but full-text evaluation and inference-cost effects could not be checked.",
+      "first_checked_at": "2026-10-06T16:19:05+00:00",
+      "last_checked_at": "2026-10-06T16:19:05+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Mitigating Negative Transfer in Continual Test-Time Adaptation Via Orthogonal Dual-Path Mixture of LoRa Experts"
+    },
+    "DOI:10.1016/j.eswa.2025.130239": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.130239",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.130239"
+      ],
+      "reason": "Publisher search record exposes an abstract and selected article text, but opening the ScienceDirect full-text page returned HTTP 403. The abstract explicitly claims token aggregation to reduce MLLM generation latency, so this is promising but needs a readable primary full text.",
+      "first_checked_at": "2026-10-06T16:19:08+00:00",
+      "last_checked_at": "2026-10-06T16:19:08+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "GFMLLM: Enhance multi-modal large language model for global and fine-grained visual spatial perception"
+    },
+    "arXiv:2501.09655": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.09655",
+      "identity_tokens": [
+        "arXiv:2501.09655"
+      ],
+      "reason": "This survey reviews LLM use and research in electronic design automation, including system/inference context, but proposes no concrete inference optimization. It can support domain scouting but its relation to prompt-compression systems is indirect.",
+      "first_checked_at": "2026-10-06T16:19:09+00:00",
+      "last_checked_at": "2026-10-06T16:19:09+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey of Research in Large Language Models for Electronic Design Automation"
+    },
+    "DOI:10.1016/j.future.2025.108338": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2025.108338",
+      "identity_tokens": [
+        "DOI:10.1016/j.future.2025.108338"
+      ],
+      "reason": "Primary ScienceDirect page returned HTTP 403 when opened; DOI URL also inaccessible. Search output exposed publisher abstract only, not the full article. Device-cloud partitioning and batch scheduling are plausibly relevant, but methods/evaluation could not be reviewed.",
+      "first_checked_at": "2026-10-06T16:19:11+00:00",
+      "last_checked_at": "2026-10-06T16:19:11+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Model partitioning and batch scheduling: Leveraging local resources for cost-efficient device-cloud collaborative serverless inference"
+    },
+    "DOI:10.1016/j.neunet.2025.108369": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108369",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.108369"
+      ],
+      "reason": "Primary PubMed record supplies an abstract describing sparse MoE prompt tuning for vision-language open-set recognition, but no full-text article was available from the record; full-text access through Elsevier was not obtained. The MoE lineage is plausible but applicability to LLM inference is unresolved.",
+      "first_checked_at": "2026-10-06T16:19:11+00:00",
+      "last_checked_at": "2026-10-06T16:19:11+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Full-spectrum prompt tuning with sparse MoE for open-set recognition"
+    },
+    "DOI:10.1109/mdat.2025.3600328": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/mdat.2025.3600328",
+      "identity_tokens": [
+        "DOI:10.1109/mdat.2025.3600328"
+      ],
+      "reason": "The IEEE publisher full text was not retrievable through the available page; accessible author/institutional metadata and abstract discuss broad AI hardware co-design, not an inspected full paper. The offload/hardware lineage keeps it plausible, but detailed LLM efficiency evidence is unavailable.",
+      "first_checked_at": "2026-10-06T16:19:11+00:00",
+      "last_checked_at": "2026-10-06T16:19:11+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Circuits to Systems: Codesigning Efficient AI Hardware"
+    },
+    "arXiv:2511.21613": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.21613",
+      "identity_tokens": [
+        "arXiv:2511.21613"
+      ],
+      "reason": "The paper studies metadata diversity and position in LLM pretraining inputs and measures downstream pretraining behavior; it changes data composition/order, not decoding, serving, KV-cache, or inference resource use. Its linked KV-cache relation is weak and the evidence does not connect the method to inference systems.",
+      "first_checked_at": "2026-10-06T16:19:11+00:00",
+      "last_checked_at": "2026-10-06T16:19:11+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond URLs: Metadata Diversity and Position for Efficient LLM Pretraining"
+    },
+    "DOI:10.3390/computers15010036": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/computers15010036",
+      "identity_tokens": [
+        "DOI:10.3390/computers15010036"
+      ],
+      "reason": "Primary MDPI article https://doi.org/10.3390/computers15010036 could not be opened. Abstract describes coarse screening/refined verification for efficient zero-shot NER, but detailed latency/quality trade-offs and limitations are unavailable.",
+      "first_checked_at": "2026-10-06T16:19:12+00:00",
+      "last_checked_at": "2026-10-06T16:19:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Breaking the Speed-Accuracy Trade-Off: A Novel Embedding-Based Framework with Coarse Screening-Refined Verification for Zero-Shot Named Entity Recognition"
+    },
+    "DOI:10.1109/tpami.2026.3650761": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2026.3650761",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3650761"
+      ],
+      "reason": "Primary IEEE DOI https://doi.org/10.1109/TPAMI.2026.3650761 was inaccessible. Abstract describes reducing visual tokens and computation in high-resolution MLLMs, but the full method, evaluation, and limitations could not be checked.",
+      "first_checked_at": "2026-10-06T16:19:12+00:00",
+      "last_checked_at": "2026-10-06T16:19:12+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond LLaVA-HD: Diving Into High-Resolution Multimodal Large Language Models"
+    },
+    "arXiv:2512.07612": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.07612",
+      "identity_tokens": [
+        "arXiv:2512.07612"
+      ],
+      "reason": "PCMind proposes data benchmarking, selective repetition and curriculum ordering for resource-constrained pretraining; evaluations compare model quality, but the mechanism is a training recipe and reports no inference-system optimization, leaving only an indirect OLMoE-family connection.",
+      "first_checked_at": "2026-10-06T16:19:13+00:00",
+      "last_checked_at": "2026-10-06T16:19:13+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PCMind-2.1-Kaiyuan-2B Technical Report"
+    },
+    "DOI:10.1002/cpe.70456": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/cpe.70456",
+      "identity_tokens": [
+        "DOI:10.1002/cpe.70456"
+      ],
+      "reason": "Wiley publisher page exposed abstract and references, but its full-text host returned a technical-unavailability notice; no complete methods/evaluation text was accessible. The abstract describes distributed large-model training load balancing only, so it remains borderline for this inference-focused scope.",
+      "first_checked_at": "2026-10-06T16:19:14+00:00",
+      "last_checked_at": "2026-10-06T16:19:14+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Dynamic Load Balancing for Distributed Large Model Training: A Hybrid Framework of Gray Markov Chain and MDP"
+    },
+    "DOI:10.1016/j.neucom.2026.132779": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.132779",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.132779"
+      ],
+      "reason": "No abstract is present. The publisher DOI https://doi.org/10.1016/j.neucom.2026.132779 returned 403/internal error; publisher/author-portal excerpts describe training-free structured LLM pruning with Aggregator layers, but do not expose sufficient full evaluation and limitations for a primary-text disposition.",
+      "first_checked_at": "2026-10-06T16:19:15+00:00",
+      "last_checked_at": "2026-10-06T16:19:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "AEMC: Aggregator-efficient model compression for streamlining LLMs"
+    },
+    "DOI:10.1016/j.neunet.2026.108541": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2026.108541",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2026.108541"
+      ],
+      "reason": "Publisher DOI https://doi.org/10.1016/j.neunet.2026.108541 was inaccessible. Abstract describes multi-task information decoupling for lymph-node metastasis detection, while the linked MoE lineage cannot be checked against the full text.",
+      "first_checked_at": "2026-10-06T16:19:15+00:00",
+      "last_checked_at": "2026-10-06T16:19:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MT-IDS: A multi-task information decoupling strategy for identifying lymph node metastasis in the mediastinal region"
+    },
+    "DOI:10.1016/j.physa.2025.131077": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.physa.2025.131077",
+      "identity_tokens": [
+        "DOI:10.1016/j.physa.2025.131077"
+      ],
+      "reason": "No abstract is present. Direct publisher DOI https://doi.org/10.1016/j.physa.2025.131077 was inaccessible, so the sequence-model/entropy-variance method and its scope cannot be determined from primary text.",
+      "first_checked_at": "2026-10-06T16:19:15+00:00",
+      "last_checked_at": "2026-10-06T16:19:15+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Blind identification of collective motion criticality using sequence model predictive entropy variance"
+    },
+    "arXiv:2512.24750": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.24750",
+      "identity_tokens": [
+        "arXiv:2512.24750"
+      ],
+      "reason": "The paper models predictable communication patterns in hybrid-parallel LLM training and offers configuration tuning to reduce communication overhead. It concerns distributed training rather than inference/serving; the linked expert-parallel systems relationship is adjacent but not the target inference stage.",
+      "first_checked_at": "2026-10-06T16:19:15+00:00",
+      "last_checked_at": "2026-10-06T16:19:15+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Analyzing Communication Predictability in LLM Training"
+    },
+    "DOI:10.1109/tip.2025.3646890": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tip.2025.3646890",
+      "identity_tokens": [
+        "DOI:10.1109/tip.2025.3646890"
+      ],
+      "reason": "IEEE DOI https://doi.org/10.1109/TIP.2025.3646890 could not be opened. Abstract concerns cross-domain point-cloud representation; primary review was required due the KV-cache lineage entry but is unavailable.",
+      "first_checked_at": "2026-10-06T16:19:16+00:00",
+      "last_checked_at": "2026-10-06T16:19:16+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cross-Modality Feature Aggregation for Cross-Domain Point Cloud Representation Learning"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9c339574f580ca9c-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/mdat.2025.3600328",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/mdat.2025.3600328",
+    "identity_tokens": [
+      "DOI:10.1109/mdat.2025.3600328"
+    ],
+    "reason": "The IEEE publisher full text was not retrievable through the available page; accessible author/institutional metadata and abstract discuss broad AI hardware co-design, not an inspected full paper. The offload/hardware lineage keeps it plausible, but detailed LLM efficiency evidence is unavailable.",
+    "first_checked_at": "2026-10-06T16:19:11+00:00",
+    "last_checked_at": "2026-10-06T16:19:11+00:00",
+    "linked_from": [
+      "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Circuits to Systems: Codesigning Efficient AI Hardware"
+  },
+  "processed_at": "2026-10-06T16:19:11+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9c339574f580",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
