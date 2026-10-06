@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "On the effect of dropping layers of pre-trained transformer models",
+      "source_url": "https://arxiv.org/abs/2004.03844",
+      "year": 2020,
+      "published": "2020-04-08",
+      "venue": "Computer Speech and Language",
+      "citation_count": 205,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based NLP models are trained using billions of parameters, lim-iting their applicability in computationally constrained environments. While the number of parameters generally correlates with performance, it is not clear whether the entire network is required for a downstream task. Motivated by the recent work on pruning and distilling pre-trained models, we explore strategies to drop layers in pre-trained models, and observe the eﬀect of pruning on downstream GLUE tasks. We were able to prune BERT, RoBERTa and XLNet models up to 40%, while maintaining up to 98% of their original performance. Additionally we show that our pruned models are at par with those built using knowledge distillation, both in terms of size and performance. Our experiments yield interesting observations such as: (i) the lower layers are most critical to maintain downstream task performance, (ii) some tasks such as paraphrase de-tection and sentence similarity are more robust to the dropping of layers, and (iii) models trained using diﬀerent objective function exhibit diﬀerent learning patterns and w.r.t the layer dropping. 1",
+      "identifiers": [
+        "SemanticScholar:39f8cc684f09ea2b43767f5b9590896774802759"
+      ],
+      "semantic_scholar_id": "39f8cc684f09ea2b43767f5b9590896774802759",
+      "canonical_id": "arXiv:2004.03844",
+      "arxiv_id": "2004.03844",
+      "doi": "10.1016/j.csl.2022.101429",
+      "authors": [
+        "Hassan Sajjad",
+        "Fahim Dalvi",
+        "Nadir Durrani",
+        "Preslav Nakov"
+      ],
+      "priority": 205,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 205,
+        "citation_count": 205,
+        "total": 205,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 2372,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習Transformerから上位層等を削除してモデルサイズと推論時間・メモリを削減し、BERT/RoBERTa/XLNetで最大40%削減時にも元性能の最大98.2%を維持するため、推論向け構造pruningとして対象。",
+      "library_body_check": "fulltext_review: arXiv PDF本文の§1–5を確認。top/bottom/alternate/parameter/contribution/symmetricのlayer-dropping戦略、BERT/RoBERTa/XLNet/ALBERT/DistilBERTとGLUE評価、上位層削除が一貫して有効で40% size reduction時に最大98.2%性能維持、knowledge distillation相当のsize/performance/inference speedを追加trainingなしで得る結果を確認した。",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-7d09c94605e5",
+    "round": "libimp-7d09c94605e5d082-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-7d09c94605e5d082-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-7d09c94605e5d082-pre01.json",
+    "receipt": "sha256:b7300df3f47176448a590e57618b4f07f790eb62b0f89662e3caa1840b9e0f7a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-7d09c94605e5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
