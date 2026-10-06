@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r72-screen-01-part-09-8086483b5585",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14511",
+      "identity_tokens": [
+        "arXiv:2608.14511"
+      ],
+      "title": "Learning-to-Transition for Large-scale and High-Order MIMO Detection",
+      "reason": "Abstract in the exact input packet.",
+      "source_url": "https://arxiv.org/abs/2608.14511",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.14757",
+      "identity_tokens": [
+        "arXiv:2608.14757"
+      ],
+      "title": "KHiM-Mamba: Injecting Pathology Knowledge into Mamba via Hidden-State Modulation for Whole Slide Image Analysis",
+      "reason": "Abstract in the exact input packet.",
+      "source_url": "https://arxiv.org/abs/2608.14757",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14774",
+      "identity_tokens": [
+        "arXiv:2608.14774"
+      ],
+      "title": "p-Spin Glass Network Efficient Single-Batch Continual Learning",
+      "reason": "The p-Spin Glass model uses ternary internal projections and implicit gradients, reporting 8x compression for selected internal parameters and bounded activation memory, with language-token and byte-stream experiments. It does not report LLM serving latency/throughput or establish end-to-end deployment gains; recurrent sequence-model transfer remains uncertain.",
+      "source_url": "https://arxiv.org/abs/2608.14774",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md",
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.14854",
+      "identity_tokens": [
+        "arXiv:2608.14854"
+      ],
+      "title": "Zero-MELO: Test-Time Evidence Calibration with Multimodal LLMs for Zero-Shot Micro-Gesture Recognition",
+      "reason": "Zero-MELO uses test-time tree search for localized evidence and score calibration, improving micro-gesture accuracy over Qwen2.5-VL on two datasets. The full text describes additional iterative inference and does not establish a compute/latency reduction; task-specific robustness is a weak efficiency-lineage link.",
+      "source_url": "https://arxiv.org/abs/2608.14854",
+      "first_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "last_checked_at": "2026-10-06T09:35:45.463820+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    }
+  ]
+}
