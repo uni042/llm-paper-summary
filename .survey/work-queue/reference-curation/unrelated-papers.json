@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T20:51:11+00:00",
-  "record_count": 9643,
+  "updated_at": "2026-10-06T20:56:40+00:00",
+  "record_count": 9679,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -138122,6 +138122,516 @@
         "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
       ],
       "title": "Geometric Metrics for MoE Specialization: From Fisher Information to Early Failure Detection"
+    },
+    "arXiv:2412.07772": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.07772",
+      "identity_tokens": [
+        "arXiv:2412.07772"
+      ],
+      "reason": "KV cacheと4-step distillationで9.4 FPSの高速streamingを実現するが、最終適用先はvideo diffusion generationでありLLM/言語モデル推論システムではない。",
+      "first_checked_at": "2026-10-06T20:56:27+00:00",
+      "last_checked_at": "2026-10-06T20:56:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "From Slow Bidirectional to Fast Autoregressive Video Diffusion Models"
+    },
+    "DOI:10.1109/tpami.2024.3506283": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tpami.2024.3506283",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2024.3506283"
+      ],
+      "reason": "vision foundation modelsを中心にarchitecture・pretraining・vision applicationsを整理するsurveyで、LLM推論systems効率を最終対象としない。",
+      "first_checked_at": "2026-10-06T20:56:27+00:00",
+      "last_checked_at": "2026-10-06T20:56:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md"
+      ],
+      "title": "Foundation Models Defining a New Era in Vision: A Survey and Outlook"
+    },
+    "arXiv:2402.01613": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.01613",
+      "identity_tokens": [
+        "arXiv:2402.01613"
+      ],
+      "reason": "8192-context text embedding modelの再現可能なtraining pipeline・data・MTEB/LoCo品質が主題。FlashAttention等を用いるが、推論runtime/serving効率を主要貢献として評価しない。",
+      "first_checked_at": "2026-10-06T20:56:27+00:00",
+      "last_checked_at": "2026-10-06T20:56:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ],
+      "title": "Nomic Embed: Training a Reproducible Long Context Text Embedder"
+    },
+    "arXiv:2211.15736": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15736",
+      "identity_tokens": [
+        "arXiv:2211.15736"
+      ],
+      "reason": "post-training quantizationでdiffusion modelのnoise-estimation networkを8-bit化して生成を高速化する研究だが、最終適用先はdiffusion image generationでありLLM推論ではない。",
+      "first_checked_at": "2026-10-06T20:56:27+00:00",
+      "last_checked_at": "2026-10-06T20:56:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "title": "Post-Training Quantization on Diffusion Models"
+    },
+    "arXiv:2604.01851": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01851",
+      "identity_tokens": [
+        "arXiv:2604.01851"
+      ],
+      "reason": "arXiv abstract evaluates whether LLMs model programs formally; the contribution concerns formal reasoning capability rather than inference efficiency.",
+      "first_checked_at": "2026-10-06T20:56:30+00:00",
+      "last_checked_at": "2026-10-06T20:56:30+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Can Large Language Models Model Programs Formally?"
+    },
+    "arXiv:2302.12173": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2302.12173",
+      "identity_tokens": [
+        "arXiv:2302.12173"
+      ],
+      "reason": "LLM統合アプリへの間接プロンプトインジェクション攻撃、脅威分類、実攻撃成立性を扱うセキュリティ研究であり、推論速度・メモリ・サービング資源効率の最適化を目的としない。",
+      "first_checked_at": "2026-10-06T20:56:30+00:00",
+      "last_checked_at": "2026-10-06T20:56:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection"
+    },
+    "SemanticScholar:942bb109cfcaef46e2d2e5573bed0db764be657b": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:942bb109cfcaef46e2d2e5573bed0db764be657b",
+      "identity_tokens": [
+        "SemanticScholar:942bb109cfcaef46e2d2e5573bed0db764be657b"
+      ],
+      "reason": "人間選好とのモデル整合をプロスペクト理論として定式化するalignment/optimization研究で、LLM推論基盤の速度・メモリ・サービング最適化を最終目的としない。",
+      "first_checked_at": "2026-10-06T20:56:30+00:00",
+      "last_checked_at": "2026-10-06T20:56:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "title": "Model Alignment as Prospect Theoretic Optimization"
+    },
+    "arXiv:1711.09485": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1711.09485",
+      "identity_tokens": [
+        "arXiv:1711.09485"
+      ],
+      "reason": "入力ごとに畳み込みブロックをskipする動的CNNで計算量を30–90%削減する研究だが、最終適用先は画像認識用convolutional networkでありLLM/Transformer推論ではない。",
+      "first_checked_at": "2026-10-06T20:56:30+00:00",
+      "last_checked_at": "2026-10-06T20:56:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md"
+      ],
+      "title": "SkipNet: Learning Dynamic Routing in Convolutional Networks"
+    },
+    "arXiv:1905.11006": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1905.11006",
+      "identity_tokens": [
+        "arXiv:1905.11006"
+      ],
+      "reason": "挿入・削除操作による部分自己回帰sequence generationで翻訳・要約・post-editingを高速化するが、LLM推論サービングや資源管理を最終適用先とする研究ではない。",
+      "first_checked_at": "2026-10-06T20:56:31+00:00",
+      "last_checked_at": "2026-10-06T20:56:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md",
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+        "papers/inference/99-other-inference-systems/2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md"
+      ],
+      "title": "Levenshtein Transformer"
+    },
+    "arXiv:2211.11031": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.11031",
+      "identity_tokens": [
+        "arXiv:2211.11031"
+      ],
+      "reason": "展開済み言語モデルへ逐次的な知識・挙動編集を加えるmodel editing研究であり、離散key-value codebookは使うもののKV cacheや推論メモリ階層の効率化ではない。",
+      "first_checked_at": "2026-10-06T20:56:31+00:00",
+      "last_checked_at": "2026-10-06T20:56:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "title": "Aging with GRACE: Lifelong Model Editing with Discrete Key-Value Adaptors"
+    },
+    "arXiv:2303.16854": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.16854",
+      "identity_tokens": [
+        "arXiv:2303.16854"
+      ],
+      "reason": "LLMをcrowdsourced annotatorとして使い、explain-then-annotateでラベル品質とデータ構築を改善する研究で、推論runtime/serving効率化を目的としない。",
+      "first_checked_at": "2026-10-06T20:56:31+00:00",
+      "last_checked_at": "2026-10-06T20:56:31+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.07203-prefillonly-an-inference-engine-for-prefill-only-workloads-in-large-language-model-applications.md"
+      ],
+      "title": "AnnoLLM: Making Large Language Models to Be Better Crowdsourced Annotators"
+    },
+    "arXiv:1906.08101": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:1906.08101",
+      "identity_tokens": [
+        "arXiv:1906.08101"
+      ],
+      "reason": "中国語BERTのwhole-word masking、MacBERT、事前学習モデル構築と下流NLP精度が主題で、推論システム効率化を扱わない。",
+      "first_checked_at": "2026-10-06T20:56:31+00:00",
+      "last_checked_at": "2026-10-06T20:56:31+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Pre-Training With Whole Word Masking for Chinese BERT"
+    },
+    "DOI:10.1038/s41586-026-10176-5": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s41586-026-10176-5",
+      "identity_tokens": [
+        "DOI:10.1038/s41586-026-10176-5"
+      ],
+      "reason": "DNA配列を対象とする生物学的foundation modelで、1M contextや高速architectureを含むものの最終適用先は遺伝変異予測・ゲノム生成・生物設計でありLLM推論システムではない。",
+      "first_checked_at": "2026-10-06T20:56:31+00:00",
+      "last_checked_at": "2026-10-06T20:56:31+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "title": "Genome modelling and design across all domains of life with Evo 2"
+    },
+    "arXiv:2601.05242": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.05242",
+      "identity_tokens": [
+        "arXiv:2601.05242"
+      ],
+      "reason": "複数rewardを用いるLLM強化学習でGRPOの正規化崩壊を改善するpolicy optimization手法であり、学習安定性・alignment性能が主目的で推論効率化ではない。",
+      "first_checked_at": "2026-10-06T20:56:32+00:00",
+      "last_checked_at": "2026-10-06T20:56:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization"
+    },
+    "arXiv:2108.13461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.13461",
+      "identity_tokens": [
+        "arXiv:2108.13461"
+      ],
+      "reason": "患者の構造化時系列データに対するdeep learning予測研究のsystematic reviewで、医療予測が最終適用先でありLLM推論基盤を扱わない。",
+      "first_checked_at": "2026-10-06T20:56:32+00:00",
+      "last_checked_at": "2026-10-06T20:56:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md"
+      ],
+      "title": "Time Series Prediction Using Deep Learning Methods in Healthcare"
+    },
+    "arXiv:2604.03765": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03765",
+      "identity_tokens": [
+        "arXiv:2604.03765"
+      ],
+      "reason": "arXiv abstract proposes an image-text-image rating framework to evaluate MLLM image-caption ability; it is an evaluation framework, not an inference optimization.",
+      "first_checked_at": "2026-10-06T20:56:33+00:00",
+      "last_checked_at": "2026-10-06T20:56:33+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "ITIScore: An Image-to-Text-to-Image Rating Framework for the Image Captioning Ability of MLLMs"
+    },
+    "arXiv:2604.03199": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.03199",
+      "identity_tokens": [
+        "arXiv:2604.03199"
+      ],
+      "reason": "arXiv abstract analyzes memorization signatures in autoregressive language models; it is model behavior analysis without inference efficiency changes.",
+      "first_checked_at": "2026-10-06T20:56:33+00:00",
+      "last_checked_at": "2026-10-06T20:56:33+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "Learning the Signature of Memorization in Autoregressive Language Models"
+    },
+    "DOI:10.1145/1594233.1594268": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1594233.1594268",
+      "identity_tokens": [
+        "DOI:10.1145/1594233.1594268"
+      ],
+      "reason": "データセンター全般の冷却・サーバ電力コストを共同最小化する電力管理研究で、LLM推論・推論サービングを最終適用先としない。",
+      "first_checked_at": "2026-10-06T20:56:33+00:00",
+      "last_checked_at": "2026-10-06T20:56:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.15230-etcinfer-thermal-aware-cooling-joint-scheduler.md"
+      ],
+      "title": "Minimizing data center cooling and server power costs"
+    },
+    "DOI:10.1017/9781108637435": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1017/9781108637435",
+      "identity_tokens": [
+        "DOI:10.1017/9781108637435"
+      ],
+      "reason": "最悪計算量解析を補完するアルゴリズム解析理論を体系化した書籍で、LLM推論サービングやメモリ・カーネル最適化を扱う研究ではない。",
+      "first_checked_at": "2026-10-06T20:56:33+00:00",
+      "last_checked_at": "2026-10-06T20:56:33+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2601.17855-universal-load-balancing-principle-llm-serving.md"
+      ],
+      "title": "Beyond the Worst-Case Analysis of Algorithms"
+    },
+    "DOI:10.1137/s0097539797327180": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1137/s0097539797327180",
+      "identity_tokens": [
+        "DOI:10.1137/s0097539797327180"
+      ],
+      "reason": "release date・parallel machine・precedence constraint下の平均完了時間最小化に対する近似アルゴリズム理論で、LLM servingを最終適用先としない。",
+      "first_checked_at": "2026-10-06T20:56:34+00:00",
+      "last_checked_at": "2026-10-06T20:56:34+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md"
+      ],
+      "title": "Approximation techniques for average completion time scheduling"
+    },
+    "arXiv:2112.10508": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2112.10508",
+      "identity_tokens": [
+        "arXiv:2112.10508"
+      ],
+      "reason": "bytes・文字・subword・word等のtokenizationとopen-vocabulary modelingを歴史的に整理するsurveyで、推論システム効率化を主目的としない。",
+      "first_checked_at": "2026-10-06T20:56:34+00:00",
+      "last_checked_at": "2026-10-06T20:56:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Between words and characters: A Brief History of Open-Vocabulary Modeling and Tokenization in NLP"
+    },
+    "DOI:10.1145/1555754.1555790": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/1555754.1555790",
+      "identity_tokens": [
+        "DOI:10.1145/1555754.1555790"
+      ],
+      "reason": "NAND Flash SSDの帯域・並行性・デバイス構成を一般PC workloadで評価するstorage architecture研究で、LLM推論のmemory/storage階層を最終適用先としない。",
+      "first_checked_at": "2026-10-06T20:56:34+00:00",
+      "last_checked_at": "2026-10-06T20:56:34+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2609.18675-hbflex.md"
+      ],
+      "title": "The performance of PC solid-state disks (SSDs) as a function of bandwidth, concurrency, device architecture, and system organization"
+    },
+    "arXiv:2211.15089": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.15089",
+      "identity_tokens": [
+        "arXiv:2211.15089"
+      ],
+      "reason": "categorical data向けcontinuous diffusion生成モデルの定式化が主題で、LLM推論・言語モデルservingの効率化を最終適用先としない。",
+      "first_checked_at": "2026-10-06T20:56:34+00:00",
+      "last_checked_at": "2026-10-06T20:56:34+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2026-2607.01775-set-diffusion-interpolating-token-orderings-between-autoregression-and-d.md",
+        "papers/inference/99-other-inference-systems/2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md",
+        "papers/inference/99-other-inference-systems/2025-2508.15487-dream-7b-diffusion-large-language-models.md"
+      ],
+      "title": "Continuous diffusion for categorical data"
+    },
+    "arXiv:2005.00628": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2005.00628",
+      "identity_tokens": [
+        "arXiv:2005.00628"
+      ],
+      "reason": "事前学習言語モデルのintermediate-task transfer learningが下流精度へ与える影響を分析する学習・転移研究で、推論効率化を扱わない。",
+      "first_checked_at": "2026-10-06T20:56:35+00:00",
+      "last_checked_at": "2026-10-06T20:56:35+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+      ],
+      "title": "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?"
+    },
+    "arXiv:2501.12386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.12386",
+      "identity_tokens": [
+        "arXiv:2501.12386"
+      ],
+      "reason": "adaptive hierarchical token compressionを用いるが、主目的・評価はvideo MLLMの長時間動画理解・追跡・segmentation能力向上であり、推論runtime/serving効率化を最終目的としない。",
+      "first_checked_at": "2026-10-06T20:56:35+00:00",
+      "last_checked_at": "2026-10-06T20:56:35+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "InternVideo2.5: Empowering Video MLLMs with Long and Rich Context Modeling"
+    },
+    "DOI:10.1016/j.asoc.2026.115251": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.asoc.2026.115251",
+      "identity_tokens": [
+        "DOI:10.1016/j.asoc.2026.115251"
+      ],
+      "reason": "ScienceDirect本文のFALC method/complexity/experimentsを確認。予測logit空間類似度によりactive learningの再学習計算を近似し、学習データの選択を高速化。",
+      "first_checked_at": "2026-10-06T20:56:35+00:00",
+      "last_checked_at": "2026-10-06T20:56:35+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Fast approximate loss change for active learning on imbalanced data"
+    },
+    "DOI:10.1016/j.eswa.2025.131048": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2025.131048",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2025.131048"
+      ],
+      "reason": "ScienceDirect本文のframework/methods/resultsを確認。雨天時の道路網 resilience評価のためSTAAE交通速度予測とネットワーク指標を統合。",
+      "first_checked_at": "2026-10-06T20:56:36+00:00",
+      "last_checked_at": "2026-10-06T20:56:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Real-time resilience assessment of urban road network under rainfall based on adaptive multi-expert spatio-temporal learning"
+    },
+    "DOI:10.1016/j.eswa.2026.132361": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.132361",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.132361"
+      ],
+      "reason": "ScienceDirect本文のmethod/experimentsを確認。多言語just-in-time software defect predictionのラベル統一、contrastive learning、semantic alignmentを評価。",
+      "first_checked_at": "2026-10-06T20:56:36+00:00",
+      "last_checked_at": "2026-10-06T20:56:36+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Discriminative and semantic-aligned representation learning for just-in-time defect prediction"
+    },
+    "DOI:10.1016/j.fishres.2026.107683": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.fishres.2026.107683",
+      "identity_tokens": [
+        "DOI:10.1016/j.fishres.2026.107683"
+      ],
+      "reason": "ScienceDirect本文のmethods/resultsを確認。80種超のsmall-scale fisheries catchをMixture-of-Expertsで予測し、気候シナリオを評価。",
+      "first_checked_at": "2026-10-06T20:56:36+00:00",
+      "last_checked_at": "2026-10-06T20:56:36+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ],
+      "title": "Assessing climate change impacts for small-scale fisheries in the Gulf of California using deep learning"
+    },
+    "arXiv:2603.29658": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.29658",
+      "identity_tokens": [
+        "arXiv:2603.29658"
+      ],
+      "reason": "arXiv本文の§I–IVを確認。Extreme Value Theoryとprojected Langevin samplingで非線形力学系のregion-of-attractionを統計的にcertifyする。",
+      "first_checked_at": "2026-10-06T20:56:37+00:00",
+      "last_checked_at": "2026-10-06T20:56:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory"
+    },
+    "DOI:10.34133/csbj.0076": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.34133/csbj.0076",
+      "identity_tokens": [
+        "DOI:10.34133/csbj.0076"
+      ],
+      "reason": "本文のMethods/Resultsを確認。残基中心の球面voxel表現をタンパク質構造分類へ適用し、化学/幾何特徴と可視化を扱う。",
+      "first_checked_at": "2026-10-06T20:56:37+00:00",
+      "last_checked_at": "2026-10-06T20:56:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "SpheronizaTor: Spherical Voxelization for Interpretable Protein Microenvironment Modeling"
+    },
+    "arXiv:2604.08720": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.08720",
+      "identity_tokens": [
+        "arXiv:2604.08720"
+      ],
+      "reason": "本文のstudy/evaluationを確認。torch.compileのcorrectness bugsを分類し、fuzz testing/LLM-based test mutationで不具合検出する研究。",
+      "first_checked_at": "2026-10-06T20:56:38+00:00",
+      "last_checked_at": "2026-10-06T20:56:38+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "title": "Demystifying the Silence of Correctness Bugs in PyTorch Compiler"
+    },
+    "arXiv:2604.06723": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06723",
+      "identity_tokens": [
+        "arXiv:2604.06723"
+      ],
+      "reason": "arXiv abstract describes fine-grained calibration of LLM confidence for automated code revision; contribution is prediction confidence calibration, not inference compute/memory/latency/serving.",
+      "first_checked_at": "2026-10-06T20:56:38+00:00",
+      "last_checked_at": "2026-10-06T20:56:38+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2405.04434-deepseek-v2-mla.md"
+      ],
+      "title": "Fine-grained Approaches for Confidence Calibration of LLMs in Automated Code Revision"
+    },
+    "arXiv:2604.07298": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.07298",
+      "identity_tokens": [
+        "arXiv:2604.07298"
+      ],
+      "reason": "本文のMethods/Experimentsを確認。病理whole-slide画像のMILでregion-to-expert optimal-transport routingを用い、WSI分類AUCを評価。",
+      "first_checked_at": "2026-10-06T20:56:38+00:00",
+      "last_checked_at": "2026-10-06T20:56:38+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "title": "Region-Graph Optimal Transport Routing for Mixture-of-Experts Whole-Slide Image Classification"
+    },
+    "DOI:10.1016/j.infsof.2026.108013": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.infsof.2026.108013",
+      "identity_tokens": [
+        "DOI:10.1016/j.infsof.2026.108013"
+      ],
+      "reason": "ScienceDirect本文のmethod/resultsを確認。LongCoder/StarCoder2/BigBird embeddingsを用いたSOLID compliance分類で、pretrained transformerは特徴抽出器として使用。",
+      "first_checked_at": "2026-10-06T20:56:39+00:00",
+      "last_checked_at": "2026-10-06T20:56:39+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "title": "Automatic multi-language analysis of SOLID compliance via machine learning algorithms"
+    },
+    "DOI:10.1016/j.jestch.2026.102322": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jestch.2026.102322",
+      "identity_tokens": [
+        "DOI:10.1016/j.jestch.2026.102322"
+      ],
+      "reason": "ScienceDirect本文のcomparison/resultsを確認。battery SoH/RUL予測でRWKVを含む7種モデルを比較し、RWKVのlinear complexityとcross-battery generalizationを評価。",
+      "first_checked_at": "2026-10-06T20:56:40+00:00",
+      "last_checked_at": "2026-10-06T20:56:40+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "A comparative study of prognostic strategies for battery SoH: Cycle-level estimation vs. sequential forecasting"
     }
   }
 }

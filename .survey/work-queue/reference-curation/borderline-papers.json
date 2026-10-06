@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T20:51:10+00:00",
-  "record_count": 4056,
+  "updated_at": "2026-10-06T20:56:40+00:00",
+  "record_count": 4080,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -61949,6 +61949,367 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Pangu-ACE: Adaptive Cascaded Experts for Educational Response Generation on EduBench"
+    },
+    "DOI:10.1109/tai.2025.3614214": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tai.2025.3614214",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3614214"
+      ],
+      "reason": "MoE lineageだけではLLM inference routerとの接続を断定できず、取得不能としてborderline。",
+      "first_checked_at": "2026-10-06T20:56:28+00:00",
+      "last_checked_at": "2026-10-06T20:56:28+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Instance-Wise Joint Feature and Expert Decision Acquisition for Classification"
+    },
+    "DOI:10.1109/tcasai.2025.3625517": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcasai.2025.3625517",
+      "identity_tokens": [
+        "DOI:10.1109/tcasai.2025.3625517"
+      ],
+      "reason": "embedded inference hardwareとの接点はあり得るが、LLMまたはLLM inference kernelの適用有無を確定できない。",
+      "first_checked_at": "2026-10-06T20:56:28+00:00",
+      "last_checked_at": "2026-10-06T20:56:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BnnRV: Hardware and Software Optimizations for Weight Sampling in Bayesian Neural Networks on Edge RISC-V Cores"
+    },
+    "DOI:10.1109/tcc.2026.3688965": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcc.2026.3688965",
+      "identity_tokens": [
+        "DOI:10.1109/tcc.2026.3688965"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T20:56:28+00:00",
+      "last_checked_at": "2026-10-06T20:56:28+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "PhishBERT: Phishing Detection Using Certificate Transparency Logs"
+    },
+    "DOI:10.1109/tits.2025.3612879": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tits.2025.3612879",
+      "identity_tokens": [
+        "DOI:10.1109/tits.2025.3612879"
+      ],
+      "reason": "heterogeneous graph attentionのlineageとの技術接続が一次証拠から確認できずborderline。",
+      "first_checked_at": "2026-10-06T20:56:28+00:00",
+      "last_checked_at": "2026-10-06T20:56:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CENH: Co-Enhancement of Edges and Nodes in Heterogeneous Graph Attention for Pedestrian Crossing Intention Recognition"
+    },
+    "DOI:10.1109/tpds.2026.3658162": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2026.3658162",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2026.3658162"
+      ],
+      "reason": "GPU tensor-contraction kernel optimizationはinference-systems lineageに近いが、LLM operators/servingでの効果は不明。",
+      "first_checked_at": "2026-10-06T20:56:28+00:00",
+      "last_checked_at": "2026-10-06T20:56:28+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Flexible Performant Tensor Contractions on GPUs"
+    },
+    "DOI:10.1109/ci2a69097.2026.11576873": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ci2a69097.2026.11576873",
+      "identity_tokens": [
+        "DOI:10.1109/ci2a69097.2026.11576873"
+      ],
+      "reason": "linked sparse-attention lineageを持つが一次本文未取得。対象範囲と関係を確認できないためborderline。",
+      "first_checked_at": "2026-10-06T20:56:29+00:00",
+      "last_checked_at": "2026-10-06T20:56:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integrating Mamba State-Space Models into Boltz for Enhanced 3D Protein Structure Prediction"
+    },
+    "DOI:10.1117/12.3085134": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1117/12.3085134",
+      "identity_tokens": [
+        "DOI:10.1117/12.3085134"
+      ],
+      "reason": "一次資料取得不能で、対象との関係および将来解決可能性を確定できない。",
+      "first_checked_at": "2026-10-06T20:56:29+00:00",
+      "last_checked_at": "2026-10-06T20:56:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SAVI: slope-aware sparse-view sinogram interpolation"
+    },
+    "DOI:10.1186/s13321-026-01177-7": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1186/s13321-026-01177-7",
+      "identity_tokens": [
+        "DOI:10.1186/s13321-026-01177-7"
+      ],
+      "reason": "PyTorch compile lineageが付与されているためタイトルだけで除外せず、技術接点未確認としてborderline。",
+      "first_checked_at": "2026-10-06T20:56:29+00:00",
+      "last_checked_at": "2026-10-06T20:56:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A pipeline for developing AI-driven models to predict molecular initiating events: a case study on neural tube defects"
+    },
+    "DOI:10.64898/2026.03.31.715659": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.64898/2026.03.31.715659",
+      "identity_tokens": [
+        "DOI:10.64898/2026.03.31.715659"
+      ],
+      "reason": "PyTorch compile lineageが付与されているが、同一の実装/最適化手法を使うか確認不能。",
+      "first_checked_at": "2026-10-06T20:56:29+00:00",
+      "last_checked_at": "2026-10-06T20:56:29+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StrataBionn: a neural network supervised classification method for microbial communities"
+    },
+    "DOI:10.1007/s44163-026-01204-4": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s44163-026-01204-4",
+      "identity_tokens": [
+        "DOI:10.1007/s44163-026-01204-4"
+      ],
+      "reason": "sparse attention/long-contextの仕組みに近いが、評価は時系列需要予測でLLM inferenceではない。LLMへの移植可能性は未確認。",
+      "first_checked_at": "2026-10-06T20:56:32+00:00",
+      "last_checked_at": "2026-10-06T20:56:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An autoregressive lag aware sparse transformer framework for demand forecasting"
+    },
+    "DOI:10.1109/iceci69159.2026.11519412": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iceci69159.2026.11519412",
+      "identity_tokens": [
+        "DOI:10.1109/iceci69159.2026.11519412"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T20:56:32+00:00",
+      "last_checked_at": "2026-10-06T20:56:32+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MineBot: AI-Powered Mining Laws and Regulations Chatbot"
+    },
+    "DOI:10.1186/s40623-026-02409-8": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1186/s40623-026-02409-8",
+      "identity_tokens": [
+        "DOI:10.1186/s40623-026-02409-8"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T20:56:32+00:00",
+      "last_checked_at": "2026-10-06T20:56:32+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Effective phase velocity as an indicator for identifying frequency ranges affected by higher Rayleigh modes"
+    },
+    "arXiv:2604.00812": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.00812",
+      "identity_tokens": [
+        "arXiv:2604.00812"
+      ],
+      "reason": "MoE routing系統と語は重なるが、要旨だけではLLM inference routing/latencyとの接続を示せず、本文取得不能を理由にborderline。",
+      "first_checked_at": "2026-10-06T20:56:35+00:00",
+      "last_checked_at": "2026-10-06T20:56:35+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Cost-Penalized Fitness in FMA-Orchestrated Mixture of Experts: Experimental Evidence for Molecular Memory in Domain Adaptation"
+    },
+    "DOI:10.1109/tpds.2026.3660379": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2026.3660379",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2026.3660379"
+      ],
+      "reason": "PyTorch compile lineageがあるが、タイトルはtrainingおよびgraph neural networkのcachingでありLLM inferenceとの接続未確認。",
+      "first_checked_at": "2026-10-06T20:56:36+00:00",
+      "last_checked_at": "2026-10-06T20:56:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FLARE: Efficient Distributed Large-Scale Graph Neural Networks Training With Adaptive Latency-Aware Probabilistic Caching"
+    },
+    "DOI:10.23919/eucap68105.2026.11612380": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.23919/eucap68105.2026.11612380",
+      "identity_tokens": [
+        "DOI:10.23919/eucap68105.2026.11612380"
+      ],
+      "reason": "compile lineage文字列のみでLLM推論効率との技術接続は確定できず、一次資料未取得のためborderline。",
+      "first_checked_at": "2026-10-06T20:56:36+00:00",
+      "last_checked_at": "2026-10-06T20:56:36+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Neural Beamforming of Large and Highly Coupled Antenna Arrays"
+    },
+    "DOI:10.22630/mibe.2026.27.1.2": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.22630/mibe.2026.27.1.2",
+      "identity_tokens": [
+        "DOI:10.22630/mibe.2026.27.1.2"
+      ],
+      "reason": "候補cacheのabstractは一次証拠として使用せず、PyTorch lineageとの接続も判断不能。",
+      "first_checked_at": "2026-10-06T20:56:37+00:00",
+      "last_checked_at": "2026-10-06T20:56:37+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Proximal Policy Optimisation Versus Ant Colony Optimisation For The Three-Dimensional Bin Packing Problem: A Comparative Study"
+    },
+    "DOI:10.53469/jerp.2026.08(03).10": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.53469/jerp.2026.08(03).10",
+      "identity_tokens": [
+        "DOI:10.53469/jerp.2026.08(03).10"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T20:56:37+00:00",
+      "last_checked_at": "2026-10-06T20:56:37+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automated Essay Scoring: Deep Reinforcement Learning and BigBird-BiLSTM Model Evaluation"
+    },
+    "DOI:10.1145/3798244": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3798244",
+      "identity_tokens": [
+        "DOI:10.1145/3798244"
+      ],
+      "reason": "GPU memory managementとKernelBench系統には技術的近接性がある一方、LLM推論の具体評価やserving機構は示さず、適用可能性が未確定。",
+      "first_checked_at": "2026-10-06T20:56:37+00:00",
+      "last_checked_at": "2026-10-06T20:56:37+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Designing GPU Data Structures for Efficient Memory Oversubscription"
+    },
+    "DOI:10.1007/s00330-026-12451-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s00330-026-12451-5",
+      "identity_tokens": [
+        "DOI:10.1007/s00330-026-12451-5"
+      ],
+      "reason": "PyTorch compile lineageが付与されているのでタイトルだけで除外せず、対象接続未確認を理由にborderline。",
+      "first_checked_at": "2026-10-06T20:56:38+00:00",
+      "last_checked_at": "2026-10-06T20:56:38+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Combination of quantitative MRI and laboratory markers for the detection and staging of metabolic dysfunction-associated steatotic liver disease"
+    },
+    "DOI:10.1016/j.knosys.2026.116047": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.116047",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.116047"
+      ],
+      "reason": "文章選択により過剰なparameter accumulationを避ける主張があるが、LLM inferenceではなくcompact classifier。LLM向け実効性は未確認。",
+      "first_checked_at": "2026-10-06T20:56:39+00:00",
+      "last_checked_at": "2026-10-06T20:56:39+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "IBIS-Net: An iterative bio-inspired selection network for interpretable text classification"
+    },
+    "DOI:10.1016/j.neucom.2026.133644": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133644",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133644"
+      ],
+      "reason": "KV cachingとmemory/compute削減の機構は関連するが、キャッシュする対象は画像復元モデルのfeatureで、LLM token KV cacheとは区別が必要。",
+      "first_checked_at": "2026-10-06T20:56:39+00:00",
+      "last_checked_at": "2026-10-06T20:56:39+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UHD image dehazing via anDehazeFormer with atmospheric-aware KV cache"
+    },
+    "DOI:10.1063/5.0320929": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1063/5.0320929",
+      "identity_tokens": [
+        "DOI:10.1063/5.0320929"
+      ],
+      "reason": "compiler lineageが付与されるが、タイトルからは制御最適化でLLM inferenceとの関係は不明。一次証拠不足としてborderline。",
+      "first_checked_at": "2026-10-06T20:56:39+00:00",
+      "last_checked_at": "2026-10-06T20:56:39+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reinforcement learning of robust active flow control strategy with surrogate-based hybrid environment"
+    },
+    "DOI:10.1109/isqed69900.2026.11534658": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isqed69900.2026.11534658",
+      "identity_tokens": [
+        "DOI:10.1109/isqed69900.2026.11534658"
+      ],
+      "reason": "Primary abstract/full text could not be verified at its DOI/publisher source during this review. Retain as borderline rather than infer scope from the cached candidate record.",
+      "first_checked_at": "2026-10-06T20:56:40+00:00",
+      "last_checked_at": "2026-10-06T20:56:40+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "POSEIDON: A Posit-Optimized Out-of-Order Processor with Transformer Acceleration for Edge Devices"
+    },
+    "DOI:10.1109/isqed69900.2026.11534707": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/isqed69900.2026.11534707",
+      "identity_tokens": [
+        "DOI:10.1109/isqed69900.2026.11534707"
+      ],
+      "reason": "要旨上は最大7B LLMのTEE inference、CPU/GPU比較、INT4 throughput改善を報告するが、一次本文未取得のため数値/方法を確定せずborderline。",
+      "first_checked_at": "2026-10-06T20:56:40+00:00",
+      "last_checked_at": "2026-10-06T20:56:40+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CELLM: Confidential and Efficient Lightweight LLM Inference in TEEs"
     }
   }
 }

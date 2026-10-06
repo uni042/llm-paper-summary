@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-60c82a077d2b5b9a-unrel-007",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2005.00628",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2005.00628",
+    "identity_tokens": [
+      "arXiv:2005.00628"
+    ],
+    "reason": "事前学習言語モデルのintermediate-task transfer learningが下流精度へ与える影響を分析する学習・転移研究で、推論効率化を扱わない。",
+    "first_checked_at": "2026-10-06T20:56:35+00:00",
+    "last_checked_at": "2026-10-06T20:56:35+00:00",
+    "linked_from": [
+      "papers/inference/02-adaptive-expert-computation-compression/2023-2306.03745-smear-soft-merging-adaptive-routing.md"
+    ],
+    "title": "Intermediate-Task Transfer Learning with Pretrained Language Models: When and Why Does It Work?"
+  },
+  "processed_at": "2026-10-06T20:56:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-60c82a077d2b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
