@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T06:59:32+00:00",
-  "record_count": 2405,
+  "updated_at": "2026-10-06T07:10:20+00:00",
+  "record_count": 2417,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -37029,6 +37029,186 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Enhancing local attention with global information interaction via progressive cluster propagation"
+    },
+    "arXiv:2608.01593": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01593",
+      "identity_tokens": [
+        "arXiv:2608.01593"
+      ],
+      "reason": "Latent-thought credit assignment is a training signal for latent reasoning, not a demonstrated inference-cost reduction.",
+      "first_checked_at": "2026-10-06T07:10:14+00:00",
+      "last_checked_at": "2026-10-06T07:10:14+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Latent Thought Credit: Multi-Answer Credit Assignment for Latent Reasoning"
+    },
+    "arXiv:2607.00461": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00461",
+      "identity_tokens": [
+        "arXiv:2607.00461"
+      ],
+      "reason": "Continuous multimodal latent reasoning may avoid language-space token bottlenecks, but the paper’s main contribution is reasoning representation/training rather than a proven inference-cost improvement.",
+      "first_checked_at": "2026-10-06T07:10:15+00:00",
+      "last_checked_at": "2026-10-06T07:10:15+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multimodal Continuous Reasoning via Asymmetric Mutual Variational Learning"
+    },
+    "arXiv:2607.12503": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.12503",
+      "identity_tokens": [
+        "arXiv:2607.12503"
+      ],
+      "reason": "Dynamic evidence tracking for 4D MLLM reasoning is adjacent to long-video understanding, but no inference-efficiency contribution is established.",
+      "first_checked_at": "2026-10-06T07:10:16+00:00",
+      "last_checked_at": "2026-10-06T07:10:16+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs"
+    },
+    "arXiv:2607.06648": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.06648",
+      "identity_tokens": [
+        "arXiv:2607.06648"
+      ],
+      "reason": "Latent reasoning faithfulness analysis is relevant to reasoning research but does not improve inference efficiency.",
+      "first_checked_at": "2026-10-06T07:10:16+00:00",
+      "last_checked_at": "2026-10-06T07:10:16+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Final Checkpoints Are Not Enough: Analyzing Latent Reasoning Faithfulness Along Training Trajectories"
+    },
+    "DOI:10.1016/j.patrec.2026.06.028": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.patrec.2026.06.028",
+      "identity_tokens": [
+        "DOI:10.1016/j.patrec.2026.06.028"
+      ],
+      "reason": "The title suggests direct visual-token compression for MLLMs, but primary text could not be retrieved for method/evaluation review.",
+      "first_checked_at": "2026-10-06T07:10:17+00:00",
+      "last_checked_at": "2026-10-06T07:10:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Visual token compression via run-length pruning in multimodal large language models"
+    },
+    "arXiv:2606.09064": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.09064",
+      "identity_tokens": [
+        "arXiv:2606.09064"
+      ],
+      "reason": "CoVER improves evidence search/reflection for long-video understanding, but does not establish a concrete inference-efficiency gain.",
+      "first_checked_at": "2026-10-06T07:10:18+00:00",
+      "last_checked_at": "2026-10-06T07:10:18+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "See More, Think Deeper: Query-Expanded Visual Evidence and Answer-Clue Guided Reflection for Long Video Understanding"
+    },
+    "arXiv:2606.05271": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.05271",
+      "identity_tokens": [
+        "arXiv:2606.05271"
+      ],
+      "reason": "BIDENT maps heterogeneous operators across edge SoC units, but evidence is generic edge neural inference rather than LLM workload serving.",
+      "first_checked_at": "2026-10-06T07:10:19+00:00",
+      "last_checked_at": "2026-10-06T07:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BIDENT: Heterogeneous Operator-level Mapping for Efficient Edge Inference"
+    },
+    "arXiv:2606.01933": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01933",
+      "identity_tokens": [
+        "arXiv:2606.01933"
+      ],
+      "reason": "CASTLE challenge submission addresses multi-view long-context video understanding quality, not an explicit inference-efficiency contribution.",
+      "first_checked_at": "2026-10-06T07:10:19+00:00",
+      "last_checked_at": "2026-10-06T07:10:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "3rd Place at CVPR 2026 CASTLE Challenge: Agentic Multi-View Long-Context Video Understanding via Hierarchical Knowledge Graph Retrieval"
+    },
+    "arXiv:2605.31561": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31561",
+      "identity_tokens": [
+        "arXiv:2605.31561"
+      ],
+      "reason": "Hidden-state probing through question-asking is an inference-time reasoning intervention, but the evidence is about reasoning behavior rather than efficiency.",
+      "first_checked_at": "2026-10-06T07:10:19+00:00",
+      "last_checked_at": "2026-10-06T07:10:19+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "What Am I Missing? Question-Answering as Hidden State Probing"
+    },
+    "arXiv:2606.00376": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.00376",
+      "identity_tokens": [
+        "arXiv:2606.00376"
+      ],
+      "reason": "The paper analyzes deterministic-task limits and recommends tool delegation, but does not establish a concrete inference-efficiency system.",
+      "first_checked_at": "2026-10-06T07:10:20+00:00",
+      "last_checked_at": "2026-10-06T07:10:20+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Deterministic Horizon: When Extended Reasoning Fails and Tool Delegation Becomes Necessary"
+    },
+    "arXiv:2606.19706": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.19706",
+      "identity_tokens": [
+        "arXiv:2606.19706"
+      ],
+      "reason": "NEST evaluates narrative event structure in long video; it is benchmark work, not a memory/compression or serving improvement.",
+      "first_checked_at": "2026-10-06T07:10:20+00:00",
+      "last_checked_at": "2026-10-06T07:10:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "NEST: Narrative Event Structures in Time for Long Video Understanding"
+    },
+    "arXiv:2606.10401": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.10401",
+      "identity_tokens": [
+        "arXiv:2606.10401"
+      ],
+      "reason": "Collaborative cognitive maps support MLLM spatial reasoning but do not clearly reduce inference cost or memory.",
+      "first_checked_at": "2026-10-06T07:10:20+00:00",
+      "last_checked_at": "2026-10-06T07:10:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoCoSI: Collaborative Cognitive Map Construction for Spatial Intelligence"
     }
   }
 }
