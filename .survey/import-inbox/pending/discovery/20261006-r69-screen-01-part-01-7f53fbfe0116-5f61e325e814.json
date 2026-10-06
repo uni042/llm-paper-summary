@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r69-screen-01-part-01-7f53fbfe0116",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11110",
+      "identity_tokens": [
+        "arXiv:2609.11110"
+      ],
+      "title": "Low-Latency State Space Voice Activity Detection with Robust Onset Time Evaluation",
+      "reason": "State-space voice activity detection evaluates onset/latency for audio VAD, not LLM/VLM inference or serving.",
+      "source_url": "https://arxiv.org/abs/2609.11110",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11154",
+      "identity_tokens": [
+        "arXiv:2609.11154"
+      ],
+      "title": "Multi-Faceted Evaluation and Mitigation of Emotion Hallucinations in MLLMs",
+      "reason": "Evaluates and mitigates emotion hallucinations in MLLMs; abstract offers quality/reliability work, not resource optimization.",
+      "source_url": "https://arxiv.org/abs/2609.11154",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18265-internvl3-5-advancing-open-source-multimodal-models-in-versatility-reaso.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11516",
+      "identity_tokens": [
+        "arXiv:2609.11516"
+      ],
+      "title": "LoopVAE: Recurrent Depth Across Scales for Visual Tokenization",
+      "reason": "LoopVAE shares recurrent visual-autoencoder/tokenizer weights across scales for latent diffusion. Primary full text reports that parameter sharing stores 65.3% fewer parameters but uses 1.57x estimated MACs and 2.85x batch latency versus its local reference; the fixed recurrence is not an inference shortcut and is not evaluated as an LLM/VLM inference method. It is outside this batch's LLM inference/serving scope.",
+      "source_url": "https://arxiv.org/abs/2609.11516",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.11911",
+      "identity_tokens": [
+        "arXiv:2609.11911"
+      ],
+      "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
+      "reason": "Conceptual agentic-AI identity/persistent-alignment proposal, not a concrete model inference efficiency method.",
+      "source_url": "https://arxiv.org/abs/2609.11911",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09711",
+      "identity_tokens": [
+        "arXiv:2609.09711"
+      ],
+      "title": "VFNet: Multi-View Spatio-Temporal Model for Void Fraction Estimation in Gas-Liquid Two-Phase Flow",
+      "reason": "Void-fraction estimation for two-phase fluid flow, outside LLM inference scope.",
+      "source_url": "https://arxiv.org/abs/2609.09711",
+      "first_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "last_checked_at": "2026-10-06T09:09:51.795855+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2021-2111.00396-efficiently-modeling-long-sequences-with-structured-state-spaces.md"
+      ]
+    }
+  ]
+}
