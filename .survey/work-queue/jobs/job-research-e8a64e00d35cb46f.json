@@ -35,10 +35,15 @@
   "selection_reason": "Length Controlled Policy Optimization (LCPO)で指定長に従うreasoning modelを学習し、推論時のChain-of-Thought長を直接制御して計算コストと精度を連続的に配分する。短い推論モデル（SRM）も導出し、同じ推論長で1.5B L1がGPT-4oを上回る例を報告しており、test-time compute削減を直接扱うため対象内。",
   "semantic_scholar_id": "0681d80cd58b6135534cf279a69f5f999f47ebca",
   "source_url": "https://arxiv.org/abs/2503.04697",
-  "status": "ready",
+  "status": "superseded",
   "title": "L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-06T15:06:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md",
+  "represented_canonical_id": "arXiv:2503.04697",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
