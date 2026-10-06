@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f49e3dce14fda569-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.02794",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.02794",
+    "identity_tokens": [
+      "arXiv:2605.02794"
+    ],
+    "reason": "arXiv要旨は画像復元モデルのTransformerから状態空間モデルへの蒸留とedge実行時間を扱う。画像復元向けモデル設計でありLLM推論またはservingの技術ではない。",
+    "first_checked_at": "2026-10-06T20:45:27+00:00",
+    "last_checked_at": "2026-10-06T20:45:27+00:00",
+    "linked_from": [
+      "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+    ],
+    "title": "Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models"
+  },
+  "processed_at": "2026-10-06T20:45:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f49e3dce14fd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
