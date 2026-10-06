@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T10:11:34+00:00",
-  "record_count": 7803,
+  "updated_at": "2026-10-06T10:21:30+00:00",
+  "record_count": 7829,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -112243,6 +112243,370 @@
         "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
       ],
       "title": "Epistemic Edge: Subjective Logic Guardrails for LLM-Driven IoT Actuation"
+    },
+    "arXiv:2606.21059": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21059",
+      "identity_tokens": [
+        "arXiv:2606.21059"
+      ],
+      "reason": "摘要に示されるのは知識グラフ検索・文脈フィルタ・再ランキングによるサイバー防御タスク精度改善で、推論資源削減や効率化の主張はない。",
+      "first_checked_at": "2026-10-06T10:21:21+00:00",
+      "last_checked_at": "2026-10-06T10:21:21+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "DEFENGRAPH: Knowledge Graph-Enhanced LLMs for Blue Team Cyber Defense"
+    },
+    "arXiv:2606.21329": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21329",
+      "identity_tokens": [
+        "arXiv:2606.21329"
+      ],
+      "reason": "医療時系列分類のtest-time trainingが対象で、LLM推論効率や関連するLLM方式を扱わない。",
+      "first_checked_at": "2026-10-06T10:21:21+00:00",
+      "last_checked_at": "2026-10-06T10:21:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "MedTS-TTT: Test-Time Training for Medical Time Series Classification"
+    },
+    "arXiv:2606.21787": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.21787",
+      "identity_tokens": [
+        "arXiv:2606.21787"
+      ],
+      "reason": "SemFinは事前学習モデルのメタデータ欠落補完と系譜推定が主題で、推論時の計算・メモリ効率を改善するものではない。",
+      "first_checked_at": "2026-10-06T10:21:21+00:00",
+      "last_checked_at": "2026-10-06T10:21:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Towards Imputation of Pre-Trained Language Model Metadata using Semantic Fingerprinting"
+    },
+    "arXiv:2606.19888": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19888",
+      "identity_tokens": [
+        "arXiv:2606.19888"
+      ],
+      "reason": "S4による生理波形の自己教師あり表現学習が対象で、LLM推論効率との技術的接続を示さない。",
+      "first_checked_at": "2026-10-06T10:21:21+00:00",
+      "last_checked_at": "2026-10-06T10:21:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "SL-S4Wave: Self-Supervised Learning of Physiological Waveforms with Structured State Space Models"
+    },
+    "DOI:10.1007/s00371-026-04517-8": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00371-026-04517-8",
+      "identity_tokens": [
+        "DOI:10.1007/s00371-026-04517-8"
+      ],
+      "reason": "Mamba画像超解像の手法で、LLM推論効率との接続を示さない。",
+      "first_checked_at": "2026-10-06T10:21:22+00:00",
+      "last_checked_at": "2026-10-06T10:21:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Enhancing lightweight image super-resolution through frequency-enhanced mamba networks"
+    },
+    "DOI:10.1007/s00799-026-00445-z": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00799-026-00445-z",
+      "identity_tokens": [
+        "DOI:10.1007/s00799-026-00445-z"
+      ],
+      "reason": "会話検索の明確化質問用PEFTとprompt engineeringを比較するfine-tuning研究で、推論時の計算/メモリ/latency効率は扱わない。",
+      "first_checked_at": "2026-10-06T10:21:22+00:00",
+      "last_checked_at": "2026-10-06T10:21:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ],
+      "title": "From “people also ask” to clarifying questions for conversational search using parameter-efficient fine-tuning and prompt engineering"
+    },
+    "DOI:10.1016/j.ins.2026.123853": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ins.2026.123853",
+      "identity_tokens": [
+        "DOI:10.1016/j.ins.2026.123853"
+      ],
+      "reason": "event-based motion deblurring用Mamba fusion networkであり、LLM推論効率への具体的接続がない。",
+      "first_checked_at": "2026-10-06T10:21:22+00:00",
+      "last_checked_at": "2026-10-06T10:21:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md"
+      ],
+      "title": "MAFNet: Mamba-based asymmetric fusion network for event-based motion deblurring"
+    },
+    "DOI:10.1016/j.ipm.2025.104593": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104593",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104593"
+      ],
+      "reason": "マルチモーダルstance detectionの分類・個性条件付けが対象で、推論効率の改善を示さない。",
+      "first_checked_at": "2026-10-06T10:21:22+00:00",
+      "last_checked_at": "2026-10-06T10:21:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "PERStance: Personality-guided enhanced multimodal stance detection"
+    },
+    "arXiv:2606.03727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.03727",
+      "identity_tokens": [
+        "arXiv:2606.03727"
+      ],
+      "reason": "MeRaはGETNext等による位置予測でmetric-space biasを評価し、LLM推論効率とは関係しない。",
+      "first_checked_at": "2026-10-06T10:21:24+00:00",
+      "last_checked_at": "2026-10-06T10:21:24+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "When Does Latent Reasoning Help? MeRa: Metric-Space Bias for Spatial Prediction"
+    },
+    "arXiv:2606.06338": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06338",
+      "identity_tokens": [
+        "arXiv:2606.06338"
+      ],
+      "reason": "StoryVideoQAは動画理解用データセットの構築が主題で、効率改善方式ではない。",
+      "first_checked_at": "2026-10-06T10:21:24+00:00",
+      "last_checked_at": "2026-10-06T10:21:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "StoryVideoQA: Scaling Deep Video Understanding with a Large-Scale, Multi-Genre and Auto-Generated Dataset"
+    },
+    "DOI:10.64898/2026.06.15.732470": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.64898/2026.06.15.732470",
+      "identity_tokens": [
+        "DOI:10.64898/2026.06.15.732470"
+      ],
+      "reason": "網膜画像ViTのattention解釈可能性の忠実度評価であり、LLM推論効率の改善を扱わない。",
+      "first_checked_at": "2026-10-06T10:21:25+00:00",
+      "last_checked_at": "2026-10-06T10:21:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Benchmarking attention-based methods for vision transformers’ interpretability in retinal fundus imaging"
+    },
+    "arXiv:2606.17449": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.17449",
+      "identity_tokens": [
+        "arXiv:2606.17449"
+      ],
+      "reason": "MODE-RAGはマルチモーダルRAGの幻覚検出・抑制精度を扱い、効率改善が主題ではない。",
+      "first_checked_at": "2026-10-06T10:21:25+00:00",
+      "last_checked_at": "2026-10-06T10:21:25+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "title": "MODE-RAG: Manifold Outlier Diagnosis and Energy-based Retrieval-Augmented Generation Evaluation"
+    },
+    "DOI:10.1145/3785353.3815084": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3785353.3815084",
+      "identity_tokens": [
+        "DOI:10.1145/3785353.3815084"
+      ],
+      "reason": "CREFはLLMの概念応答fingerprintによるモデル識別を目的とし、推論効率を改善しない。",
+      "first_checked_at": "2026-10-06T10:21:25+00:00",
+      "last_checked_at": "2026-10-06T10:21:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      ],
+      "title": "CREF: Concept Response Fingerprints for Large Language Models"
+    },
+    "arXiv:2606.14391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.14391",
+      "identity_tokens": [
+        "arXiv:2606.14391"
+      ],
+      "reason": "音声のdisfluency認識の継続学習であり、対象のLLM推論効率ではない。",
+      "first_checked_at": "2026-10-06T10:21:26+00:00",
+      "last_checked_at": "2026-10-06T10:21:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md"
+      ],
+      "title": "Learning to Hear Hesitation: Continual Learning for Disfluency-Aware ASR"
+    },
+    "DOI:10.1117/12.3097614": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1117/12.3097614",
+      "identity_tokens": [
+        "DOI:10.1117/12.3097614"
+      ],
+      "reason": "信号変調認識のmulti-expert分類器で、LLM inferenceとの具体的技術接続がない。",
+      "first_checked_at": "2026-10-06T10:21:26+00:00",
+      "last_checked_at": "2026-10-06T10:21:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Family-guided multi-expert attachment framework for enhanced class-wise modulation recognition"
+    },
+    "arXiv:2606.10359": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10359",
+      "identity_tokens": [
+        "arXiv:2606.10359"
+      ],
+      "reason": "サプライチェーン向けLLM world modelの信頼性/頑健性が対象で、推論効率改善を示さない。",
+      "first_checked_at": "2026-10-06T10:21:26+00:00",
+      "last_checked_at": "2026-10-06T10:21:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "ReflectiChain: Epistemic Grounding in LLM-Driven World Models for Supply Chain Resilience"
+    },
+    "arXiv:2606.10692": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.10692",
+      "identity_tokens": [
+        "arXiv:2606.10692"
+      ],
+      "reason": "暗号識別タスクへのLLM適用評価が対象で、推論効率の改善を扱わない。",
+      "first_checked_at": "2026-10-06T10:21:27+00:00",
+      "last_checked_at": "2026-10-06T10:21:27+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md"
+      ],
+      "title": "Do LLMsMakeNeural Distinguishers Wise?"
+    },
+    "arXiv:2606.11032": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.11032",
+      "identity_tokens": [
+        "arXiv:2606.11032"
+      ],
+      "reason": "PET画像denoisingのtest-time trainingであり、LLM推論効率との技術的関連がない。",
+      "first_checked_at": "2026-10-06T10:21:27+00:00",
+      "last_checked_at": "2026-10-06T10:21:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md"
+      ],
+      "title": "U-TTT: Towards Generalizable PET Image Denoising via Test-Time Training"
+    },
+    "arXiv:2606.09085": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.09085",
+      "identity_tokens": [
+        "arXiv:2606.09085"
+      ],
+      "reason": "無線変調認識用MoE Transformerの分類方式であり、LLM推論効率への接続がない。",
+      "first_checked_at": "2026-10-06T10:21:28+00:00",
+      "last_checked_at": "2026-10-06T10:21:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "Mixture-of-Experts Transformer for Automatic Modulation Recognition"
+    },
+    "arXiv:2606.06871": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06871",
+      "identity_tokens": [
+        "arXiv:2606.06871"
+      ],
+      "reason": "パケット診断のensemble pipelineと決定論的信頼度算出が対象で、LLM推論効率を改善する具体方式ではない。",
+      "first_checked_at": "2026-10-06T10:21:28+00:00",
+      "last_checked_at": "2026-10-06T10:21:28+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md"
+      ],
+      "title": "Evidence-Grounded Ensemble Diagnosis of 802.11 Packet Captures: A Multi-Stage Pipeline with Deterministic Reliability Scoring"
+    },
+    "arXiv:2606.16256": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16256",
+      "identity_tokens": [
+        "arXiv:2606.16256"
+      ],
+      "reason": "KeepLoRA++は継続学習時のパラメータ更新方式であり、対象の推論時効率ではない。",
+      "first_checked_at": "2026-10-06T10:21:28+00:00",
+      "last_checked_at": "2026-10-06T10:21:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "title": "KeepLoRA++: Continual Learning with Layer-Scaled Residual Gradient Adaptation"
+    },
+    "arXiv:2606.16368": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16368",
+      "identity_tokens": [
+        "arXiv:2606.16368"
+      ],
+      "reason": "LLMの個人化評価用制約検証ベンチマークで、推論資源低減方式を提案しない。",
+      "first_checked_at": "2026-10-06T10:21:29+00:00",
+      "last_checked_at": "2026-10-06T10:21:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Evaluating LLM Personalization via Semantic Constraint Verification"
+    },
+    "arXiv:2606.15045": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15045",
+      "identity_tokens": [
+        "arXiv:2606.15045"
+      ],
+      "reason": "CXL low-bit gradient aggregationは分散学習時の勾配通信が対象で、LLM推論時quantization/serving効率ではない。",
+      "first_checked_at": "2026-10-06T10:21:29+00:00",
+      "last_checked_at": "2026-10-06T10:21:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "title": "NEURON-Fabric: CXL-Side Low-Bit Gradient Aggregation for Distributed Training"
+    },
+    "arXiv:2606.15320": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15320",
+      "identity_tokens": [
+        "arXiv:2606.15320"
+      ],
+      "reason": "長尺動画のtemporal groundingタスクが対象で、LLM推論コスト削減方式を扱わない。",
+      "first_checked_at": "2026-10-06T10:21:29+00:00",
+      "last_checked_at": "2026-10-06T10:21:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "title": "Conditional Multi-Event Temporal Grounding in Long-Form Video"
+    },
+    "DOI:10.1016/j.jvcir.2026.104867": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.jvcir.2026.104867",
+      "identity_tokens": [
+        "DOI:10.1016/j.jvcir.2026.104867"
+      ],
+      "reason": "映像品質/JND分布予測用linear transformerであり、LLM推論効率系譜との実質的接続がない。",
+      "first_checked_at": "2026-10-06T10:21:29+00:00",
+      "last_checked_at": "2026-10-06T10:21:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "title": "Trans-SURNet: A linear transformer approach to model picture-wise JND distribution for SUR curve prediction"
+    },
+    "DOI:10.1016/j.neucom.2026.134145": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134145",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134145"
+      ],
+      "reason": "出版社一次資料の要旨・方法抜粋ではMIM事前学習ViTへのmodular knowledge distillationが対象で、視覚表現学習の圧縮であってLLMまたはLLM推論を扱わない。",
+      "first_checked_at": "2026-10-06T10:21:30+00:00",
+      "last_checked_at": "2026-10-06T10:21:30+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md"
+      ],
+      "title": "Modular knowledge distillation for MIM pre-trained models"
     }
   }
 }

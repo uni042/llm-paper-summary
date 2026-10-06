@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bd48a61772f94c38-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.11245",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.11245",
+    "identity_tokens": [
+      "arXiv:2606.11245"
+    ],
+    "reason": "一次本文全体を確認したが、これは明示的記憶をLLMへ統合すべきというposition paperであり、計算方式・実装・効率評価はない。InfLLMとの主題上の隣接はあるが、既存効率系譜への具体的技術接続は弱い。",
+    "first_checked_at": "2026-10-06T10:21:27+00:00",
+    "last_checked_at": "2026-10-06T10:21:27+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Position: Hippocampal Explicit Memory Is the Cornerstone for AGI"
+  },
+  "processed_at": "2026-10-06T10:21:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bd48a61772f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

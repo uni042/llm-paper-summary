@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T10:11:34+00:00",
-  "record_count": 2753,
+  "updated_at": "2026-10-06T10:21:28+00:00",
+  "record_count": 2764,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -42276,6 +42276,172 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Energy-Efficient FPGA Accelerator for Vision Transformers via Integer Streaming Attention and Asymmetric Mixed Precision"
+    },
+    "arXiv:2606.21802": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21802",
+      "identity_tokens": [
+        "arXiv:2606.21802"
+      ],
+      "reason": "一次本文ではノイズ段階に応じて学習露出と推論時のトークン確定粒度を変えるNDGCを提案し、合成タスクと文章生成で生成品質を評価している。デノイジングstep数、レイテンシ、計算量の削減は示されず、効率系譜との関係は間接的。",
+      "first_checked_at": "2026-10-06T10:21:20+00:00",
+      "last_checked_at": "2026-10-06T10:21:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When to Plan, When to Polish: Noise Level as a Granularity Axis for Diffusion Language Models"
+    },
+    "DOI:10.1016/j.imavis.2026.105962": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.imavis.2026.105962",
+      "identity_tokens": [
+        "DOI:10.1016/j.imavis.2026.105962"
+      ],
+      "reason": "出版社の一次資料検索結果では軽量VQAをJetson Orin Nanoへ展開しlatency/throughput/powerを扱うと確認できるが、ScienceDirect本文は空応答で取得不能。本文ベースの手法・評価条件・限界を確認できないため保留せずborderlineに確定。",
+      "first_checked_at": "2026-10-06T10:21:22+00:00",
+      "last_checked_at": "2026-10-06T10:21:22+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Lightweight Visual Question Answering system for assistive vision on edge device"
+    },
+    "arXiv:2606.03217": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03217",
+      "identity_tokens": [
+        "arXiv:2606.03217"
+      ],
+      "reason": "一次本文の理論対象は線形回帰のin-context weight predictionで、CoT深度に伴う精度とoverthinkingの理論限界を解析する。一般LLMでの推論方式・計算削減の実証はなく、test-time depth系譜との概念的つながりに留まる。",
+      "first_checked_at": "2026-10-06T10:21:23+00:00",
+      "last_checked_at": "2026-10-06T10:21:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "An Asymptotic Theory of Chain-of-Thought in In-Context Learning"
+    },
+    "arXiv:2606.03712": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03712",
+      "identity_tokens": [
+        "arXiv:2606.03712"
+      ],
+      "reason": "一次本文はgraph-tokenのattention/saliency挙動をmechanisticに分析する。tokenの介入・pruning検討はあるが、推論コスト削減/serving評価はなく、DuoAttentionとの技術接続は弱い。",
+      "first_checked_at": "2026-10-06T10:21:23+00:00",
+      "last_checked_at": "2026-10-06T10:21:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Graph Tokens Sink: A Mechanistic Analysis of Graph Language Models"
+    },
+    "DOI:10.1002/aisy.70438": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/aisy.70438",
+      "identity_tokens": [
+        "DOI:10.1002/aisy.70438"
+      ],
+      "reason": "一次出版社本文はferroelectric/spintronic deviceによるanalog in-memory computingのreviewで、機械学習向けVMMやspiking/reservoir computingを整理するがLLM評価・LLM serving計測はない。1-bit LLMとのハードウェア系譜に間接接点があるに留まる。",
+      "first_checked_at": "2026-10-06T10:21:24+00:00",
+      "last_checked_at": "2026-10-06T10:21:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploiting Ferroelectric and Spintronic Dynamics for Neural Network Computation"
+    },
+    "arXiv:2606.20077": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.20077",
+      "identity_tokens": [
+        "arXiv:2606.20077"
+      ],
+      "reason": "一次本文はVLMにおける視覚tokenの注入位置と表現変化を比較する分析で、提案されたhybrid設定は視覚token数を増やし計算上不利と記述する。既存token圧縮研究との関連はあるが、効率改善候補としての根拠は弱い。",
+      "first_checked_at": "2026-10-06T10:21:24+00:00",
+      "last_checked_at": "2026-10-06T10:21:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Hidden Evolution of Disguised Visual Context inside the VLM"
+    },
+    "arXiv:2606.20714": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.20714",
+      "identity_tokens": [
+        "arXiv:2606.20714"
+      ],
+      "reason": "一次本文は音声処理における自己回帰探索を分類する一般化formalismで、実験は探索方式の記述/比較に重点があり、新たな高速化方式の効果を示さない。blockwise decoding系統との評価上の接点はあるが、対象は音声モデルである。",
+      "first_checked_at": "2026-10-06T10:21:25+00:00",
+      "last_checked_at": "2026-10-06T10:21:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Generalized Formalism of Auto-Regressive Decoding for Speech Processing"
+    },
+    "arXiv:2606.13016": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.13016",
+      "identity_tokens": [
+        "arXiv:2606.13016"
+      ],
+      "reason": "一次本文は実デバイス由来の光シナプス減衰をspiking transformerへ適用し、GLUEと合成エネルギー推算を示す。ただしLLMでの評価や実運用LLM serving計測はなく、エネルギー値も回路合成と既報値を組み合わせたモデル推算。ハードウェア効率系譜との接点は弱い。",
+      "first_checked_at": "2026-10-06T10:21:26+00:00",
+      "last_checked_at": "2026-10-06T10:21:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Otters++: A Time-to-first-spike Based Energy Efficient Optical Spiking Transformer"
+    },
+    "arXiv:2606.11609": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11609",
+      "identity_tokens": [
+        "arXiv:2606.11609"
+      ],
+      "reason": "一次本文ではstance detection向けmulti-agent worker数を難易度適応で割当て、固定多数workerに近い性能をより低い計算費用で達成する。追加workerのtoken費用は線形増加し、レイテンシ測定はなく、単一の分類応用に限られるため一般的serving効率との接続は限定的。",
+      "first_checked_at": "2026-10-06T10:21:26+00:00",
+      "last_checked_at": "2026-10-06T10:21:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Agent Reasoning with Adaptive Worker Allocation for Stance Detection"
+    },
+    "arXiv:2606.11245": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11245",
+      "identity_tokens": [
+        "arXiv:2606.11245"
+      ],
+      "reason": "一次本文全体を確認したが、これは明示的記憶をLLMへ統合すべきというposition paperであり、計算方式・実装・効率評価はない。InfLLMとの主題上の隣接はあるが、既存効率系譜への具体的技術接続は弱い。",
+      "first_checked_at": "2026-10-06T10:21:27+00:00",
+      "last_checked_at": "2026-10-06T10:21:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Position: Hippocampal Explicit Memory Is the Cornerstone for AGI"
+    },
+    "DOI:10.1145/3805622.3810717": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3805622.3810717",
+      "identity_tokens": [
+        "DOI:10.1145/3805622.3810717"
+      ],
+      "reason": "出版社の一次本文URLを試したが本文を取得できず、ローカル要旨だけではLongVU系との精度・token効率の実測や制約を確認できない。",
+      "first_checked_at": "2026-10-06T10:21:28+00:00",
+      "last_checked_at": "2026-10-06T10:21:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Reflective Cross-Granularity Grounding with Preference Optimization for Long Video Understanding"
     }
   }
 }

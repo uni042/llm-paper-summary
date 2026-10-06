@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8720e54fa16e4f82-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.03727",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.03727",
+    "identity_tokens": [
+      "arXiv:2606.03727"
+    ],
+    "reason": "MeRaはGETNext等による位置予測でmetric-space biasを評価し、LLM推論効率とは関係しない。",
+    "first_checked_at": "2026-10-06T10:21:24+00:00",
+    "last_checked_at": "2026-10-06T10:21:24+00:00",
+    "linked_from": [
+      "papers/inference/19-inference-evaluation-benchmarking/2025-2502.05171-scaling-up-test-time-compute-with-latent-reasoning-a-recurrent-depth-app.md"
+    ],
+    "title": "When Does Latent Reasoning Help? MeRa: Metric-Space Bias for Spatial Prediction"
+  },
+  "processed_at": "2026-10-06T10:21:24+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8720e54fa16e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
