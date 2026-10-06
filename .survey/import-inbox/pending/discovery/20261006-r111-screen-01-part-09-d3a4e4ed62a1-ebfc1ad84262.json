@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r111-screen-01-part-09-d3a4e4ed62a1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18476",
+      "identity_tokens": [
+        "arXiv:2604.18476"
+      ],
+      "title": "SemLT3D: Semantic-Guided Expert Distillation for Camera-only Long-Tailed 3D Object Detection",
+      "reason": "Semantic expert distillation for 3D object detection, not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2604.18476",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17360",
+      "identity_tokens": [
+        "arXiv:2604.17360"
+      ],
+      "title": "T-DuMpRa: Teacher-guided Dual-path Multi-prototype Retrieval Augmented framework for fine-grained medical image classification",
+      "reason": "Medical-image retrieval/classification framework, outside language-model inference.",
+      "source_url": "https://arxiv.org/abs/2604.17360",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2202.09368-expert-choice-routing.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1088/2632-2153/ae601d",
+      "identity_tokens": [
+        "DOI:10.1088/2632-2153/ae601d"
+      ],
+      "title": "A fully quantum-native recurrent neural network for end-to-end sequential learning on NISQ hardware",
+      "reason": "Quantum-native recurrent neural-network learning, outside the target inference/serving scope.",
+      "source_url": "https://doi.org/10.1088/2632-2153/ae601d",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ]
+    }
+  ]
+}
