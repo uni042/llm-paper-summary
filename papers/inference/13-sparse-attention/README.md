@@ -31,20 +31,24 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：25  
   そこでモデルは混合専門家（MoE）構成に加えてDeepSeek Sparse 注意機構（DSA）を採用し、長文脈で参照するキー・値を絞る。
 
 - **2026-03 · [IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse](2026-2603.12201-indexcache-cross-layer-index-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   各層で繰り返す疎注意のトークン選択を一部の層だけで計算し、後続層に再利用する。30B DSAモデルの200K文脈でインデクサ計算を75%削減し、プリフィルを1.82倍、デコードを1.48倍高速化した。
 
 - **2025-12 · [Kascade: A Practical Sparse Attention Method for Long-Context LLM Inference](2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md)**  
-  実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：6  
   長文脈の注意を10%だけ計算すれば理論上は大きく速くなるが、「どの10%を残すか」を毎層正確に探す処理が高い。Kascadeは、高い注意重みを持つキー集合が近接層でかなり似るという性質を利用し、少数のアンカー層だけでTop-k探索をやり直す。残りの層ではそのインデックスを再利用するため、疎化の選択費用を層間で償却できる。
 
 - **2026-03 · [HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention](2026-2603.28458-hisa-efficient-hierarchical-indexing-for-fine-grained-sparse-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   DeepSeek Sparse 注意機構（DSA）のような細粒度疎注意機構は、軽量indexerで全過去トークンをスコアし、上位keyだけへ本注意機構を計算する。
+
+- **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  疎注意機構は長文脈の計算量を減らせるが、「どのトークンを残すか」を推定する代理指標が必要になり、その代理指標自体の費用と選択誤差が生じる。
 
 - **2026-07 · [Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling](2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md)**  
   実装：[✓](https://github.com/Tencent-Hunyuan/HiLS-Attention) ・ リポジトリ内被引用：3  
@@ -61,10 +65,6 @@
 - **2026-04 · [Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation](2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   長文脈の疎注意では、注意機構本体が読むKVをK件へ減らしても、N件のindexer スコアから正確なTop-Kを毎デコード 段階選ぶ必要がある。
-
-- **2026-02 · [HySparse: A Hybrid Sparse Attention Architecture with Oracle Token Selection and KV Cache Sharing](2026-2602.03560-hysparse-a-hybrid-sparse-attention-architecture-with-oracle-token-select.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  疎注意機構は長文脈の計算量を減らせるが、「どのトークンを残すか」を推定する代理指標が必要になり、その代理指標自体の費用と選択誤差が生じる。
 
 - **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
   実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：2  
@@ -127,11 +127,11 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：39  
+  実装：✓ ・ リポジトリ内被引用：40  
   完全注意は文脈長に対して二乗の注意機構計算を必要とし、長文脈では事前充填だけでなく復号時のKV読出し量も大きくなる。64K文脈では完全注意に対し順伝播最大9.0倍、逆伝播最大6.0倍、デコード最大11.6倍を報告し、品質も完全注意と同等以上を示す。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：34  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：36  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -139,7 +139,7 @@
   要点: FlexPrefillは、長文プリフィルの注意計算を一律の疎パターンへ置き換えるのではなく、入力と注意ヘッドごとに「クエリごとに見る場所が違う多様型」か「多くのクエリが似た場所を見る構造型」かを判定し、その型に合う索引だけを累積注意量の閾値まで選ぶ。これにより、必要なヘッドには多く、簡単なヘッドには少ない計算予算を割り当てる。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   共有長文脈を複数ターンで再利用する12タスクを用い、KV生成・圧縮・検索・読み込みの各方式が初回だけでなく後続要求でどう崩れるかを比較する。
 
 - **2025-02 · [Twilight: Adaptive Attention Sparsity with Hierarchical Top-p Pruning](2025-2502.02770-twilight-adaptive-attention-sparsity-with-hierarchical-top-p-pruning.md)**  
@@ -212,13 +212,13 @@
   実装：[✓](https://github.com/thu-nics/MoA) ・ リポジトリ内被引用：10  
   ヘッドごとの局所性と入力長への伸び方を勾配で測り、異種sliding-window規則を自動探索して静的KV maskへ落とすMoA。
 
+- **2024-10 · [TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention](2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  系列長に比例してKVが増えるため、演算量だけでなく高帯域メモリからの読み出しが支配的になる。選択型疎注意は重要トークンだけを読むが、従来方式では各層で重要度を推定し直す費用と、近似選択の誤りが問題になる。
+
 - **2024-09 · [Block-Attention for Efficient Prefilling](2024-2409.15355-block-attention-for-efficient-prefilling.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Block-Attention) ・ リポジトリ内被引用：7  
   検索拡張生成（Retrieval-Augmented Generation; RAG）で取得した各文書を互いに独立した注意ブロックとして事前計算し、同じ文書が別質問で再利用されたらKVキャッシュを再計算しない。
-
-- **2024-10 · [TidalDecode: Fast and Accurate LLM Decoding with Position Persistent Sparse Attention](2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
-  系列長に比例してKVが増えるため、演算量だけでなく高帯域メモリからの読み出しが支配的になる。選択型疎注意は重要トークンだけを読むが、従来方式では各層で重要度を推定し直す費用と、近似選択の誤りが問題になる。
 
 ### 4年前（2022-11〜2023-10）
 
@@ -243,7 +243,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：54  
+  実装：✓ ・ リポジトリ内被引用：55  
   標準Transformerの自己注意は、長さnの系列で全トークン対の注意得点を作るため、計算・メモリが概ねn²で増える。長文書、複数段落QA、ゲノム配列では入力長を増やしたくても、注意行列がGPUメモリを急速に消費する。1トークン当たりの接続数を系列長に対して定数に保つことで、注意の計算・メモリ依存を線形へ落とす。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  

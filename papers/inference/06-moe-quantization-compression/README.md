@@ -41,11 +41,11 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   EAC-MoEは、量子化でルータが選ぶ専門家がずれる誤差を重点補正し、プリフィルで低頻度専門家を入力単位に枝刈りして、品質と容量を両立する。
 
 - **2025-05 · [MxMoE: Mixed-precision Quantization for MoE with Accuracy and Performance Co-Design](2025-2505.05799-mxmoe-mixed-precision-quantization-for-moe-with-accuracy-and-performance-co-desi.md)**  
-  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/cat538/MxMoE) ・ リポジトリ内被引用：12  
   MxMoEは、専門家内の各線形ブロックを量子化誤差・利用頻度・GPU実測時間で比較し、メモリ予算内のビット配置を品質と実速度の両面で選ぶ。
 
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
-  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：10  
   MoEの専門家同士は完全に別物ではなく、大きな共通知識と比較的小さな専門家固有差分を持つ。D²-MoEはこの構造を「共有基底＋低ランク差分」として明示し、全専門家を保存するコストを減らしながら専門家ごとの特化を残す。
 
 - **2025-05 · [MoEQuant: Enhancing Quantization for Mixture-of-Experts Large Language Models via Expert-Balanced Sampling and Affinity Guidance](2025-2505.03804-moequant-enhancing-quantization-for-mixture-of-experts-large-language-models-via.md)**  
@@ -71,7 +71,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：36  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：37  
   MC-MoEは、専門家ごとの混合精度で保存重みを圧縮し、トークンごとに寄与の小さい専門家を動的枝刈りして、容量と実行FLOPsを別々に減らす。
 
 - **2024-06 · [Examining Post-Training Quantization for Mixture-of-Experts: A Benchmark](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  

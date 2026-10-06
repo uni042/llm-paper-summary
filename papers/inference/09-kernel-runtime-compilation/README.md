@@ -223,7 +223,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   しかし推論では、巨大な専門家重みをGPUへ置く容量問題、ルータ出力に従ってトークンを専門家別に並べ替える費用、専門家ごとの小さく不均一な行列積によるGPU利用率低下が生じる。本論文はこれらを一つの推論エンジンで処理し、専門家の重みを4ビット整数へ量子化して容量・帯域を減らす。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：5  
   固定枝刈りでパラメータを削れば帯域を減らせるが、全入力に共通の小ネットワークへ固定すると精度やin-文脈 learningを損なう。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
@@ -237,7 +237,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：30  
   重みのみを3～4ビットへ量子化するとメモリ転送量は減るが、多くの既存GPU実装は行列積の直前に低ビット重みをFP16へ戻す逆量子化を行う。OPT-175Bの3ビット量子化では、逆量子化を行うOPTQ実装に対して生成遅延を約2.1倍高速化した。
 
 ### 6年前（2020-11〜2021-10）
