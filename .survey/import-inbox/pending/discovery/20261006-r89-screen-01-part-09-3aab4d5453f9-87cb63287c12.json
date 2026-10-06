@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r89-screen-01-part-09-3aab4d5453f9",
+  "reference_main_sha": "4a86ae5fc004467ce8f48552ad9f1448a0db53e8",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1167/tvst.14.9.18",
+      "identity_tokens": [
+        "DOI:10.1167/tvst.14.9.18"
+      ],
+      "title": "Advancing Question-Answering in Ophthalmology With Retrieval-Augmented Generation: Benchmarking Open-Source and Proprietary Large Language Models",
+      "reason": "Plausible adjacent model compression/LLM deployment topic, but primary full text was unavailable; no stronger inclusion claim is supported.",
+      "source_url": "https://doi.org/10.1167/tvst.14.9.18",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.19806",
+      "identity_tokens": [
+        "arXiv:2508.19806"
+      ],
+      "title": "Context-aware Sparse Spatiotemporal Learning for Event-based Vision",
+      "reason": "Event-camera vision sparsity for object detection/flow; not LLM inference.",
+      "source_url": "https://arxiv.org/abs/2508.19806",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.16516",
+      "identity_tokens": [
+        "arXiv:2508.16516"
+      ],
+      "title": "A Node-Aware Dynamic Quantization Approach for Graph Collaborative Filtering",
+      "reason": "Dynamic quantization for graph collaborative filtering; non-language recommender model.",
+      "source_url": "https://arxiv.org/abs/2508.16516",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.12727",
+      "identity_tokens": [
+        "arXiv:2508.12727"
+      ],
+      "title": "FedSODA: Federated Fine-tuning of LLMs via Similarity Group Pruning and Orchestrated Distillation Alignment",
+      "reason": "FedSODA prunes similar/redundant layers into a sub-LLM (SGP), uses partial/intermittent distillation alignment (ODA), and QLoRA for federated fine-tuning of LLaMA3-8B, Qwen2-7B and Mistral-7B. Experiments report lower client storage/communication and comparable fine-tuning accuracy. The measured goal is training/client adaptation, not inference latency, cache, or serving, so relation to the current scope is weak and borderline.",
+      "source_url": "https://arxiv.org/abs/2508.12727",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1080/0305215X.2025.2544215",
+      "identity_tokens": [
+        "DOI:10.1080/0305215X.2025.2544215"
+      ],
+      "title": "Leveraging large language models for the automatic implementation of problems in optimization frameworks",
+      "reason": "LLM-generated optimization-framework code, an application rather than inference/serving optimization.",
+      "source_url": "https://doi.org/10.1080/0305215X.2025.2544215",
+      "first_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "last_checked_at": "2026-10-06T12:14:09.632843+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md"
+      ]
+    }
+  ]
+}
