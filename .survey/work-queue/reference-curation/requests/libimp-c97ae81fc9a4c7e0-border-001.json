@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-c97ae81fc9a4c7e0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2605.23259",
+  "reason": "一次本文のMGRはLLM residual streamにmulti-gate/attention poolingを導入し、深層activationの安定性と通信負荷を改善するarchitectureを提案する。0.12B/0.35B/0.77BモデルをFineWebでscratch trainingしloss/activation/gradientを比較するが、主な計算はtrain-time communicationで、推論latency/throughputの実測はなく、小規模学習評価に限られる。",
+  "title": "Multi-Gate Residuals",
+  "identity_tokens": [
+    "arXiv:2605.23259"
+  ],
+  "linked_from": [
+    "papers/inference/19-inference-evaluation-benchmarking/2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c97ae81fc9a4",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
