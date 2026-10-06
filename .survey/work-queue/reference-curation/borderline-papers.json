@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T14:09:48+00:00",
-  "record_count": 3178,
+  "updated_at": "2026-10-06T14:15:29+00:00",
+  "record_count": 3200,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48707,6 +48707,341 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Transformer++: a long sequence modeling method based on direction-aware dual attention and multi-head sampling"
+    },
+    "arXiv:2606.21661": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.21661",
+      "identity_tokens": [
+        "arXiv:2606.21661"
+      ],
+      "reason": "Audiovisual generation memory is not general LLM serving.",
+      "first_checked_at": "2026-10-06T14:15:19+00:00",
+      "last_checked_at": "2026-10-06T14:15:19+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "UnityShots: Memory-Driven Multi-Shot Audio-Video Generation with Boundary-Aware Gating"
+    },
+    "arXiv:2606.01621": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.01621",
+      "identity_tokens": [
+        "arXiv:2606.01621"
+      ],
+      "reason": "Specialized VLN grounding is not an inference-system optimization.",
+      "first_checked_at": "2026-10-06T14:15:19+00:00",
+      "last_checked_at": "2026-10-06T14:15:19+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Goal2Pixel: Grounding Goals to Pixels for Vision-Language Navigation"
+    },
+    "arXiv:2606.07639": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07639",
+      "identity_tokens": [
+        "arXiv:2606.07639"
+      ],
+      "reason": "Real-time video-VLM results are application-specific.",
+      "first_checked_at": "2026-10-06T14:15:19+00:00",
+      "last_checked_at": "2026-10-06T14:15:19+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MOSS-Video-Preview: Toward Real-Time Video Understanding via Cross-Attention"
+    },
+    "DOI:10.1109/tcss.2025.3603087": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcss.2025.3603087",
+      "identity_tokens": [
+        "DOI:10.1109/tcss.2025.3603087"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:20+00:00",
+      "last_checked_at": "2026-10-06T14:15:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Explainable Sequential Recommendation With Disentangled Representations and Auxiliary Review Explanations"
+    },
+    "DOI:10.1109/tpami.2026.3656169": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpami.2026.3656169",
+      "identity_tokens": [
+        "DOI:10.1109/tpami.2026.3656169"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:20+00:00",
+      "last_checked_at": "2026-10-06T14:15:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Momentor++: Advancing Video Large Language Models With Fine-Grained Long Video Reasoning"
+    },
+    "arXiv:2605.31518": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31518",
+      "identity_tokens": [
+        "arXiv:2605.31518"
+      ],
+      "reason": "Outlier/feature-death findings inform quantization but add no deployment method.",
+      "first_checked_at": "2026-10-06T14:15:22+00:00",
+      "last_checked_at": "2026-10-06T14:15:22+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Relationship Between Activation Outliers and Feature Death in Sparse Autoencoders"
+    },
+    "arXiv:2607.03693": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.03693",
+      "identity_tokens": [
+        "arXiv:2607.03693"
+      ],
+      "reason": "Expert routing is plausible adjacent work, but evaluation is VLA-specific.",
+      "first_checked_at": "2026-10-06T14:15:22+00:00",
+      "last_checked_at": "2026-10-06T14:15:22+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "CoRE-VLA: Towards Scalable and Robust Vision-Language-Action Modeling via Conditional Routing of Experts"
+    },
+    "DOI:10.1016/j.trc.2026.105672": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.trc.2026.105672",
+      "identity_tokens": [
+        "DOI:10.1016/j.trc.2026.105672"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:23+00:00",
+      "last_checked_at": "2026-10-06T14:15:23+00:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A dynamic prompting and scenario generation method for autonomous driving perception via large-model optimization"
+    },
+    "arXiv:2607.00162": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.00162",
+      "identity_tokens": [
+        "arXiv:2607.00162"
+      ],
+      "reason": "MoE adaptation lacks an inference-efficiency result.",
+      "first_checked_at": "2026-10-06T14:15:23+00:00",
+      "last_checked_at": "2026-10-06T14:15:23+00:00",
+      "linked_from": [
+        "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FRAME: Learning the Adaptation Domain with a Mixture of Fractional-Fourier Experts"
+    },
+    "arXiv:2606.24470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24470",
+      "identity_tokens": [
+        "arXiv:2606.24470"
+      ],
+      "reason": "Real-time game-agent channels only loosely resemble speculative decoding.",
+      "first_checked_at": "2026-10-06T14:15:23+00:00",
+      "last_checked_at": "2026-10-06T14:15:23+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The Latent Bridge: A Continuous Slow-Fast Channel for Real-Time Game Agents"
+    },
+    "arXiv:2607.16228": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.16228",
+      "identity_tokens": [
+        "arXiv:2607.16228"
+      ],
+      "reason": "Kernel correctness validation, not kernel performance optimization.",
+      "first_checked_at": "2026-10-06T14:15:23+00:00",
+      "last_checked_at": "2026-10-06T14:15:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Operator-Aware Mixed-Precision Tolerance Calibration for Tensor Kernels"
+    },
+    "arXiv:2601.12042": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.12042",
+      "identity_tokens": [
+        "arXiv:2601.12042"
+      ],
+      "reason": "Visual-token compression safety analysis, not a proposed compression optimization.",
+      "first_checked_at": "2026-10-06T14:15:24+00:00",
+      "last_checked_at": "2026-10-06T14:15:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Less Is More - Until It Breaks: Security Pitfalls of Vision Token Compression in Large Vision-Language Models"
+    },
+    "arXiv:2601.06118": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.06118",
+      "identity_tokens": [
+        "arXiv:2601.06118"
+      ],
+      "reason": "Reproducibility/nondeterminism is only tangential to the linked offload lineage.",
+      "first_checked_at": "2026-10-06T14:15:24+00:00",
+      "last_checked_at": "2026-10-06T14:15:24+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Reproducibility: Token Probabilities Expose Large Language Model Nondeterminism"
+    },
+    "DOI:10.1016/j.knosys.2026.115405": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2026.115405",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2026.115405"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:24+00:00",
+      "last_checked_at": "2026-10-06T14:15:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Bridging language models and knowledge graphs with controlled natural languages"
+    },
+    "arXiv:2512.16279": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.16279",
+      "identity_tokens": [
+        "arXiv:2512.16279"
+      ],
+      "reason": "Hierarchical LLM use is for safety; only analytic cost, no serving optimization.",
+      "first_checked_at": "2026-10-06T14:15:24+00:00",
+      "last_checked_at": "2026-10-06T14:15:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "QuadSentinel: Sequent Safety for Machine-Checkable Control in Multi-agent Systems"
+    },
+    "arXiv:2511.20426": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.20426",
+      "identity_tokens": [
+        "arXiv:2511.20426"
+      ],
+      "reason": "KV sharing improves video diffusion generation but does not establish language-model serving benefit.",
+      "first_checked_at": "2026-10-06T14:15:25+00:00",
+      "last_checked_at": "2026-10-06T14:15:25+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Block Cascading: Training Free Acceleration of Block-Causal Video Models"
+    },
+    "arXiv:2511.17127": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.17127",
+      "identity_tokens": [
+        "arXiv:2511.17127"
+      ],
+      "reason": "Inference architecture is discussed but most evidence concerns a specific AMD training/system setup.",
+      "first_checked_at": "2026-10-06T14:15:25+00:00",
+      "last_checked_at": "2026-10-06T14:15:25+00:00",
+      "linked_from": [
+        "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+        "papers/inference/99-other-inference-systems/2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Training Foundation Models on a Full-Stack AMD Platform: Compute, Networking, and System Design"
+    },
+    "arXiv:2511.12428": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12428",
+      "identity_tokens": [
+        "arXiv:2511.12428"
+      ],
+      "reason": "Concrete diffusion-VLM inference pruning, but not autoregressive LLM serving.",
+      "first_checked_at": "2026-10-06T14:15:25+00:00",
+      "last_checked_at": "2026-10-06T14:15:25+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "RedVTP: Training-Free Acceleration of Diffusion Vision-Language Models Inference via Masked Token-Guided Visual Token Pruning"
+    },
+    "DOI:10.1016/j.watres.2026.126135": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.watres.2026.126135",
+      "identity_tokens": [
+        "DOI:10.1016/j.watres.2026.126135"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:26+00:00",
+      "last_checked_at": "2026-10-06T14:15:26+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Transformer-Mamba framework for cross-regional long-term forecasting of key water quality in aquaculture."
+    },
+    "arXiv:2608.16347": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16347",
+      "identity_tokens": [
+        "arXiv:2608.16347"
+      ],
+      "reason": "The linked cache theme is indirect; experiments avoid cache reuse and do not optimize inference.",
+      "first_checked_at": "2026-10-06T14:15:26+00:00",
+      "last_checked_at": "2026-10-06T14:15:26+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Architecture-Dependent Causal Transfer of Activation States Across Large Language Models"
+    },
+    "arXiv:2603.00980": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.00980",
+      "identity_tokens": [
+        "arXiv:2603.00980"
+      ],
+      "reason": "Adjacent sequence generation, without LLM serving or inference-efficiency results.",
+      "first_checked_at": "2026-10-06T14:15:27+00:00",
+      "last_checked_at": "2026-10-06T14:15:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations"
+    },
+    "DOI:10.1016/j.cell.2026.07.052": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.cell.2026.07.052",
+      "identity_tokens": [
+        "DOI:10.1016/j.cell.2026.07.052"
+      ],
+      "reason": "一次本文を取得できず、既存lineageとの関係を本文根拠で解決できない。",
+      "first_checked_at": "2026-10-06T14:15:29+00:00",
+      "last_checked_at": "2026-10-06T14:15:29+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Predicting cellular responses to perturbation across diverse contexts with State."
     }
   }
 }
