@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r111-screen-01-part-03-d3a4e4ed62a1",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08811",
+      "identity_tokens": [
+        "arXiv:2605.08811"
+      ],
+      "title": "Learning Theory of Transformers: Local-to-Global Approximation via Softmax Partition of Unity",
+      "reason": "Approximation/learning theory for transformer regression, without an inference optimization.",
+      "source_url": "https://arxiv.org/abs/2605.08811",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2007.14062-big-bird-transformers-for-longer-sequences.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07247",
+      "identity_tokens": [
+        "arXiv:2605.07247"
+      ],
+      "title": "EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation",
+      "reason": "EnvSimBench evaluates LLM-based environment simulation and proposes a constrained 4B simulator that cuts environment-synthesis cost by over 90% while improving yield; this is cost efficiency for a specialized agent-training simulator, not a general inference/serving optimization.",
+      "source_url": "https://arxiv.org/abs/2605.07247",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s42452-026-08793-w",
+      "identity_tokens": [
+        "DOI:10.1007/s42452-026-08793-w"
+      ],
+      "title": "Quantifying modality imbalance and visual jailbreak robustness in LLaVA via projected gradient descent",
+      "reason": "Visual jailbreak robustness/attack evaluation for LLaVA; no inference-efficiency contribution.",
+      "source_url": "https://doi.org/10.1007/s42452-026-08793-w",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05657",
+      "identity_tokens": [
+        "arXiv:2605.05657"
+      ],
+      "title": "Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation",
+      "reason": "RGAO routes multi-agent code tasks to topologies using a retrieval-derived complexity vector and enforces budget conservation; it reports proxy misrouting reduction from 30.1% to 8.2% and sub-millisecond DAG construction, but end-to-end inference cost/latency savings are not established in the reviewed evaluation.",
+      "source_url": "https://arxiv.org/abs/2605.05657",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05769",
+      "identity_tokens": [
+        "arXiv:2605.05769"
+      ],
+      "title": "Adaptive Selection of LoRA Components in Privacy-Preserving Federated Learning",
+      "reason": "Privacy-preserving federated LoRA training component selection, not deployment-time inference optimization.",
+      "source_url": "https://arxiv.org/abs/2605.05769",
+      "first_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "last_checked_at": "2026-10-06T15:16:03.675187+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ]
+    }
+  ]
+}
