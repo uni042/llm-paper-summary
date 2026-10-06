@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r96-screen-01-part-03-905db4a0d74b",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.10505",
+      "identity_tokens": [
+        "arXiv:2310.10505"
+      ],
+      "title": "ReMax: A Simple, Effective, and Efficient Reinforcement Learning Method for Aligning Large Language Models",
+      "reason": "Reinforcement Learning from Human Feedback (RLHF) is key to aligning Large Language Models (LLMs), typically paired with the Proximal Policy Optimization (PPO) algorithm. While PPO is a powerful method designed for general reinforcement learning tasks, it is overly sophisticated for LLMs, leading to laborious hyper-parameter tuning and significant computation burdens. To make RLHF efficient, we present ReMax, which leverages 3 properties of RLHF: fast simulation, deterministic transitions, and trajectory-level rewards. These properties are not exploited in PPO, making it less suitable for RLHF. Building on the renowned REINFORCE algorithm, ReMax does not require training an additional value model as in PPO and is further enhanced with a new variance reduction technique. ReMax offers several benefits over PPO: it is simpler to implement, eliminates more than 4 hyper-parameters in PPO, reduces GPU memory usage, and shortens training time. ReMax can save about 46% GPU memory than PPO when training a 7B model and enables training on A800-80GB GPUs without the memory-saving offloading technique needed by PPO. Applying ReMax to a Mistral-7B model resulted in a 94.78% win rate on the Alpa",
+      "source_url": "https://arxiv.org/abs/2310.10505",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.19878",
+      "identity_tokens": [
+        "arXiv:2410.19878"
+      ],
+      "title": "Parameter-efficient fine-tuning in large language models: a survey of methodologies",
+      "reason": "Survey covers PEFT families across NLP/vision/multimodal/diffusion and discusses memory, compute and inference overhead in prior methods. It contributes no new inference evaluation; emphasis is adaptation/training and LoRAPrune connection is indirect.",
+      "source_url": "https://arxiv.org/abs/2410.19878",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.07648",
+      "identity_tokens": [
+        "arXiv:2403.07648"
+      ],
+      "title": "Characterization of Large Language Model Development in the Datacenter",
+      "reason": "Datacenter study reports asynchronous fault-tolerant pretraining/checkpointing (3.6–58.7x faster) and decoupled evaluation (up to 1.8x makespan reduction). It explicitly excludes serving/deployment jobs, so relation is training operations only.",
+      "source_url": "https://arxiv.org/abs/2403.07648",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.00062",
+      "identity_tokens": [
+        "arXiv:2511.00062"
+      ],
+      "title": "World Simulation with Video Foundation Models for Physical AI",
+      "reason": "We introduce [Cosmos-Predict2.5], the latest generation of the Cosmos World Foundation Models for Physical AI. Built on a flow-based architecture, [Cosmos-Predict2.5] unifies Text2World, Image2World, and Video2World generation in a single model and leverages [Cosmos-Reason1], a Physical AI vision-language model, to provide richer text grounding and finer control of world simulation. Trained on 200M curated video clips and refined with reinforcement learning-based post-training, [Cosmos-Predict2.5] achieves substantial improvements over [Cosmos-Predict1] in video quality and instruction alignment, with models released at 2B and 14B scales. These capabilities enable more reliable synthetic data generation, policy evaluation, and closed-loop simulation for robotics and autonomous systems. We further extend the family with [Cosmos-Transfer2.5], a control-net style framework for Sim2Real and Real2Real world translation. Despite being 3.5$\\times$ smaller than [Cosmos-Transfer1], it delivers higher fidelity and robust long-horizon video generation. Together, these advances establish [Cosmos-Predict2.5] and [Cosmos-Transfer2.5] as versatile tools for scaling embodied intelligence. To accel",
+      "source_url": "https://arxiv.org/abs/2511.00062",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.05746",
+      "identity_tokens": [
+        "arXiv:2409.05746"
+      ],
+      "title": "LLMs Will Always Hallucinate, and We Need to Live With This",
+      "reason": "As Large Language Models become more ubiquitous across domains, it becomes important to examine their inherent limitations critically. This work argues that hallucinations in language models are not just occasional errors but an inevitable feature of these systems. We demonstrate that hallucinations stem from the fundamental mathematical and logical structure of LLMs. It is, therefore, impossible to eliminate them through architectural improvements, dataset enhancements, or fact-checking mechanisms. Our analysis draws on computational theory and Godel's First Incompleteness Theorem, which references the undecidability of problems like the Halting, Emptiness, and Acceptance Problems. We demonstrate that every stage of the LLM process-from training data compilation to fact retrieval, intent classification, and text generation-will have a non-zero probability of producing hallucinations. This work introduces the concept of Structural Hallucination as an intrinsic nature of these systems. By establishing the mathematical certainty of hallucinations, we challenge the prevailing notion that they can be fully mitigated.",
+      "source_url": "https://arxiv.org/abs/2409.05746",
+      "first_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "last_checked_at": "2026-10-06T13:12:35.888307+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ]
+    }
+  ]
+}
