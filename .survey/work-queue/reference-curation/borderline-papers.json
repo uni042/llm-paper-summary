@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T21:42:58+00:00",
-  "record_count": 4233,
+  "updated_at": "2026-10-06T23:27:32+00:00",
+  "record_count": 4247,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -64619,6 +64619,217 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Pipeline parallelism with reduced network communication for efficient compute-intensive neural network training"
+    },
+    "arXiv:2307.01694": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2307.01694",
+      "identity_tokens": [
+        "arXiv:2307.01694"
+      ],
+      "reason": "Spiking-transformer energy efficiency is a plausible systems connection, but the architecture is neuromorphic and tested on vision rather than autoregressive LLMs.",
+      "first_checked_at": "2026-10-06T23:27:19+00:00",
+      "last_checked_at": "2026-10-06T23:27:19+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Spike-driven Transformer"
+    },
+    "arXiv:2502.19417": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.19417",
+      "identity_tokens": [
+        "arXiv:2502.19417"
+      ],
+      "reason": "Hi Robot measures VLM latency in a hierarchical robot policy, but hierarchy serves action/control capability and lacks an isolated inference-efficiency comparison.",
+      "first_checked_at": "2026-10-06T23:27:21+00:00",
+      "last_checked_at": "2026-10-06T23:27:21+00:00",
+      "linked_from": [
+        "papers/inference/15-inference-simulation-emulation/2024-2409.12514-tinyvla-towards-fast-data-efficient-vision-language-action-models-for-ro.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models"
+    },
+    "arXiv:2106.04533": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.04533",
+      "identity_tokens": [
+        "arXiv:2106.04533"
+      ],
+      "reason": "ViT sparsity/pruning is a concrete efficiency mechanism linked to inference work, but the paper has no causal LLM/runtime evaluation.",
+      "first_checked_at": "2026-10-06T23:27:23+00:00",
+      "last_checked_at": "2026-10-06T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chasing Sparsity in Vision Transformers: An End-to-End Exploration"
+    },
+    "arXiv:2404.15155": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.15155",
+      "identity_tokens": [
+        "arXiv:2404.15155"
+      ],
+      "reason": "Adaptive LLM collaboration may manage call count, but the article focuses on medical decision quality and does not demonstrate efficiency over single-agent CoT.",
+      "first_checked_at": "2026-10-06T23:27:23+00:00",
+      "last_checked_at": "2026-10-06T23:27:23+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2310.02170-a-dynamic-llm-powered-agent-network-for-task-oriented-agent-collaboratio.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MDAgents: An Adaptive Collaboration of LLMs for Medical Decision-Making"
+    },
+    "arXiv:2308.00088": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.00088",
+      "identity_tokens": [
+        "arXiv:2308.00088"
+      ],
+      "reason": "Optics perspective discusses possible neural-network compute speed/energy but gives no LLM workload or measured serving result; connection to linked inference hardware remains weak.",
+      "first_checked_at": "2026-10-06T23:27:24+00:00",
+      "last_checked_at": "2026-10-06T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The physics of optical computing"
+    },
+    "arXiv:2308.00442": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.00442",
+      "identity_tokens": [
+        "arXiv:2308.00442"
+      ],
+      "reason": "Focused linear attention is evaluated in vision Transformers; causal LLM quality and serving cost are not established.",
+      "first_checked_at": "2026-10-06T23:27:24+00:00",
+      "last_checked_at": "2026-10-06T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FLatten Transformer: Vision Transformer using Focused Linear Attention"
+    },
+    "arXiv:2111.13587": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.13587",
+      "identity_tokens": [
+        "arXiv:2111.13587"
+      ],
+      "reason": "AFNO is linked to inference systems and has efficient token mixing, but its demonstrated results are vision segmentation, not language generation.",
+      "first_checked_at": "2026-10-06T23:27:24+00:00",
+      "last_checked_at": "2026-10-06T23:27:24+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md",
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Fourier Neural Operators: Efficient Token Mixers for Transformers"
+    },
+    "arXiv:2103.15358": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2103.15358",
+      "identity_tokens": [
+        "arXiv:2103.15358"
+      ],
+      "reason": "Vision Longformer has global tokens potentially usable for VL, but the paper evaluates visual encoding, not LLM decoder inference.",
+      "first_checked_at": "2026-10-06T23:27:26+00:00",
+      "last_checked_at": "2026-10-06T23:27:26+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Scale Vision Longformer: A New Vision Transformer for High-Resolution Image Encoding"
+    },
+    "DOI:10.1016/j.eng.2022.04.024": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.eng.2022.04.024",
+      "identity_tokens": [
+        "DOI:10.1016/j.eng.2022.04.024"
+      ],
+      "reason": "Publisher abstract characterizes a broad review of pretrained language models and NLP applications, without a concrete efficiency contribution.",
+      "first_checked_at": "2026-10-06T23:27:27+00:00",
+      "last_checked_at": "2026-10-06T23:27:27+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Pre-Trained Language Models and Their Applications"
+    },
+    "arXiv:2111.13824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.13824",
+      "identity_tokens": [
+        "arXiv:2111.13824"
+      ],
+      "reason": "FQ-ViT provides post-training low-bit quantization for vision transformers; applicability to LLM inference remains unverified.",
+      "first_checked_at": "2026-10-06T23:27:28+00:00",
+      "last_checked_at": "2026-10-06T23:27:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer"
+    },
+    "arXiv:2312.08874": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2312.08874",
+      "identity_tokens": [
+        "arXiv:2312.08874"
+      ],
+      "reason": "Agent Attention has reduced-complexity attention with possible decoder transfer, but its primary experiments are vision oriented.",
+      "first_checked_at": "2026-10-06T23:27:28+00:00",
+      "last_checked_at": "2026-10-06T23:27:28+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Agent Attention: On the Integration of Softmax and Linear Attention"
+    },
+    "arXiv:2111.15667": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2111.15667",
+      "identity_tokens": [
+        "arXiv:2111.15667"
+      ],
+      "reason": "Adaptive token sampling could reduce visual-prefix work, but the paper is specific to vision transformers and has no LLM inference evaluation.",
+      "first_checked_at": "2026-10-06T23:27:29+00:00",
+      "last_checked_at": "2026-10-06T23:27:29+00:00",
+      "linked_from": [
+        "papers/inference/13-sparse-attention/2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Token Sampling for Efficient Vision Transformers"
+    },
+    "arXiv:2205.13213": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.13213",
+      "identity_tokens": [
+        "arXiv:2205.13213"
+      ],
+      "reason": "HiLo is an efficient ViT attention method with a conceivable decoder transfer, but has no autoregressive LM evidence.",
+      "first_checked_at": "2026-10-06T23:27:30+00:00",
+      "last_checked_at": "2026-10-06T23:27:30+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2021-2103.02143-random-feature-attention.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Fast Vision Transformers with HiLo Attention"
+    },
+    "arXiv:2212.08059": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2212.08059",
+      "identity_tokens": [
+        "arXiv:2212.08059"
+      ],
+      "reason": "EfficientFormerV2 has latency-driven mobile ViT design, but no LLM decoder or serving evidence; architecture transfer remains speculative.",
+      "first_checked_at": "2026-10-06T23:27:32+00:00",
+      "last_checked_at": "2026-10-06T23:27:32+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2021-2101.01321-i-bert-integer-only-bert-quantization.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Vision Transformers for MobileNet Size and Speed"
     }
   }
 }
