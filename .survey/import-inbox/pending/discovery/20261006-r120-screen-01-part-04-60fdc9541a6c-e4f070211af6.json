@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "codex-local-screen-watcher",
+  "run_key": "20261006-r120-screen-01-part-04-60fdc9541a6c",
+  "reference_main_sha": "f379e00150f9b5be369aa72549c8cdf254003d8e",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3699767",
+      "identity_tokens": [
+        "DOI:10.1145/3699767"
+      ],
+      "title": "Self-supervised Learning for Accelerometer-based Human Activity Recognition: A Survey",
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 ",
+      "source_url": "https://doi.org/10.1145/3699767",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/TPDS.2024.3385639",
+      "identity_tokens": [
+        "DOI:10.1109/TPDS.2024.3385639"
+      ],
+      "title": "MPMoE: Memory Efficient MoE for Pre-Trained Models With Adaptive Pipeline Parallelism",
+      "reason": "一次資料の全文取得に失敗しmethod/evaluation/limitationsを検証できないためborderlineに残す。 The primary IEEE DOI page was inaccessible and the author-hosted PDF retrieval failed in this session. Its publisher abstract describes MPMoE adaptive pipeline parallelism, CPU offload and memory reuse for MoE training, with up to 2.3x training speedup and over 30% less training memory. Because full-text limitations and its relation to the MoE inference lineage could not be checked, retain as borderline.",
+      "source_url": "https://doi.org/10.1109/TPDS.2024.3385639",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/12-moe-parallelism-communication/2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.21068",
+      "identity_tokens": [
+        "arXiv:2405.21068"
+      ],
+      "title": "Code Pretraining Improves Entity Tracking Abilities of Language Models",
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 ",
+      "source_url": "https://arxiv.org/abs/2405.21068",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2307.09702-efficient-guided-generation-for-large-language-models.md"
+      ]
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.16417",
+      "identity_tokens": [
+        "arXiv:2311.16417"
+      ],
+      "title": "Challenges and Opportunities to Enable Large-Scale Computing via Heterogeneous Chiplets",
+      "reason": "一次資料abstractを確認。対象分野との技術的接続がなく、compute/memory/latency/throughput/KV-cache/quantization/offload/serving改善を扱わないためunrelated。 ",
+      "source_url": "https://arxiv.org/abs/2311.16417",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.14123-ai-and-memory-wall.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.08790",
+      "identity_tokens": [
+        "arXiv:2510.08790"
+      ],
+      "title": "COMPASS: Enhancing Agent Long-Horizon Reasoning with Evolving Context",
+      "reason": "一次本文を確認したが、既存系統との関連またはLLM推論効率への効果が弱い/間接的で、追加の具体的検証が必要なためborderlineに残す。 COMPASS uses a main agent, meta-thinker and context manager to maintain concise task-stage briefs for long-horizon tool use; it reports accuracy gains and delegates context maintenance to smaller models for efficiency. The plausible follow-up is to quantify actual tokens, API cost, latency and quality against context-compression/routing baselines; the current evidence is agent-task-specific.",
+      "source_url": "https://arxiv.org/abs/2510.08790",
+      "first_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "last_checked_at": "2026-10-06T16:50:22.586466+00:00",
+      "linked_from": [
+        "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md"
+      ]
+    }
+  ]
+}
