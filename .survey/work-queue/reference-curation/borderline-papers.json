@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T17:45:42+00:00",
-  "record_count": 3581,
+  "updated_at": "2026-10-06T17:50:23+00:00",
+  "record_count": 3586,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -54800,6 +54800,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Diagonal Structured State Space Model on Loihi 2 for Efficient Streaming Sequence Processing"
+    },
+    "arXiv:2508.03320": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03320",
+      "identity_tokens": [
+        "arXiv:2508.03320"
+      ],
+      "reason": "本文のSkywork UniPicは1.5B unified autoregressive vision modelで、1024px画像を15GB未満GPU memoryで生成するとするcompact deployment候補。一方、比較は視覚生成/理解のtask quality中心で、既存LLM inference memory系統への再現可能なefficient inference baselineが弱いためborderline。",
+      "first_checked_at": "2026-10-06T17:50:20+00:00",
+      "last_checked_at": "2026-10-06T17:50:20+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Skywork UniPic: Unified Autoregressive Modeling for Visual Understanding and Generation"
+    },
+    "arXiv:2409.09337": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.09337",
+      "identity_tokens": [
+        "arXiv:2409.09337"
+      ],
+      "reason": "本文のWave-U-Mambaはspeech waveform super-resolutionをA100で高速化し、AudioSR比536.3倍の測定を報告するが、音声signal restoration taskでlanguage model decodingではない。Jamba系統とMamba共通性の範囲に留めborderlineとする。",
+      "first_checked_at": "2026-10-06T17:50:22+00:00",
+      "last_checked_at": "2026-10-06T17:50:22+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Wave-U-Mamba: An End-To-End Framework For High-Quality And Efficient Speech Super Resolution"
+    },
+    "DOI:10.1109/iccae59995.2024.10569285": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/iccae59995.2024.10569285",
+      "identity_tokens": [
+        "DOI:10.1109/iccae59995.2024.10569285"
+      ],
+      "reason": "IEEE DOI一次資料でabstract/full textを取得できなかった。題名とlineageはedge LLM deployment/階層memory調査を示すため関連可能性を否定せず、surveyのcoverageや具体的な運用知見を本文で確認できない旨を理由としてborderlineにする。",
+      "first_checked_at": "2026-10-06T17:50:22+00:00",
+      "last_checked_at": "2026-10-06T17:50:22+00:00",
+      "linked_from": [
+        "papers/inference/01-offload-hierarchical-memory/2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on the Integration and Optimization of Large Language Models in Edge Computing Environments"
+    },
+    "DOI:10.1145/3641554.3701844": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3641554.3701844",
+      "identity_tokens": [
+        "DOI:10.1145/3641554.3701844"
+      ],
+      "reason": "ACM DOI一次ページを開けずabstract/full textを取得できなかった。題名はcomputing educationでSLM+RAG integration insightsを扱う実用報告で、LLM inference serving efficiencyが技術貢献か確認できないため、一次根拠欠如を明記してborderlineに残す。",
+      "first_checked_at": "2026-10-06T17:50:22+00:00",
+      "last_checked_at": "2026-10-06T17:50:22+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Integrating Small Language Models with Retrieval-Augmented Generation in Computing Education: Key Takeaways, Setup, and Practical Insights"
+    },
+    "arXiv:2409.18654": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.18654",
+      "identity_tokens": [
+        "arXiv:2409.18654"
+      ],
+      "reason": "本文のSpeech-MambaはTransformerとselective SSMを組み合わせ長い音声列を扱い、near-linear sequence scalingを狙う。Jamba系統に使うMamba/long-context architectureとの接点はあるが対象はspeech recognitionで、LLM servingの性能測定はないためborderline。",
+      "first_checked_at": "2026-10-06T17:50:23+00:00",
+      "last_checked_at": "2026-10-06T17:50:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Speech-Mamba: Long-Context Speech Recognition with Selective State Spaces Models"
     }
   }
 }

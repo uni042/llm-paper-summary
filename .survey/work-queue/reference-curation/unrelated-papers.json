@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-06T17:45:42+00:00",
-  "record_count": 9093,
+  "updated_at": "2026-10-06T17:50:23+00:00",
+  "record_count": 9100,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -130403,6 +130403,104 @@
         "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
       ],
       "title": "MAP: Unleashing Hybrid Mamba-Transformer Vision Backbone’s Potential with Masked Autoregressive Pretraining"
+    },
+    "arXiv:2510.25502": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.25502",
+      "identity_tokens": [
+        "arXiv:2510.25502"
+      ],
+      "reason": "一次要旨のTempoPFNはlinear RNNのsynthetic pretrainingでtime-series forecastingを目的とし、LLM autoregressive generationや推論効率の結果を報告しない。",
+      "first_checked_at": "2026-10-06T17:50:21+00:00",
+      "last_checked_at": "2026-10-06T17:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md"
+      ],
+      "title": "TempoPFN: Synthetic Pre-training of Linear RNNs for Zero-shot Time Series Forecasting"
+    },
+    "arXiv:2510.21450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.21450",
+      "identity_tokens": [
+        "arXiv:2510.21450"
+      ],
+      "reason": "本文のParaRNNはnonlinear RNNの大規模language-model training parallelizationが主題で、学習効率と訓練時scaleを検証する。inference serving/latency/memory削減は扱わず、対象スコープ外。",
+      "first_checked_at": "2026-10-06T17:50:21+00:00",
+      "last_checked_at": "2026-10-06T17:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2023-2303.06349-resurrecting-recurrent-neural-networks-for-long-sequences.md"
+      ],
+      "title": "ParaRNN: Unlocking Parallel Training of Nonlinear RNNs for Large Language Models"
+    },
+    "arXiv:2509.24365": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24365",
+      "identity_tokens": [
+        "arXiv:2509.24365"
+      ],
+      "reason": "一次要旨はunified multimodal modelにおけるmodality conflictをアーキテクチャで解消し、task quality/robustnessを狙う。推論資源の効率改善指標やLLM-serving手法は示さない。",
+      "first_checked_at": "2026-10-06T17:50:21+00:00",
+      "last_checked_at": "2026-10-06T17:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md"
+      ],
+      "title": "Uni-X: Mitigating Modality Conflict with a Two-End-Separated Architecture for Unified Multimodal Models"
+    },
+    "arXiv:2506.05668": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05668",
+      "identity_tokens": [
+        "arXiv:2506.05668"
+      ],
+      "reason": "本文のRNEはdiffusion model inference-time control/density estimationであり、sample conditioningやtarget alignmentが目的。sampling step数、latency、memoryを削減する推論高速化ではないため、diffusion inference-controlという表題だけでは対象効率に該当しない。",
+      "first_checked_at": "2026-10-06T17:50:21+00:00",
+      "last_checked_at": "2026-10-06T17:50:21+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "title": "RNE: plug-and-play diffusion inference-time control and energy-based training"
+    },
+    "arXiv:2505.16811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16811",
+      "identity_tokens": [
+        "arXiv:2505.16811"
+      ],
+      "reason": "一次要旨のdynamic stacking state-space modelはreal-world video derainingの品質改善手法であり、LLM/言語model inferenceやefficiency measurementを扱わない。",
+      "first_checked_at": "2026-10-06T17:50:23+00:00",
+      "last_checked_at": "2026-10-06T17:50:23+00:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md"
+      ],
+      "title": "Semi-Supervised State-Space Model with Dynamic Stacking Filter for Real-World Video Deraining"
+    },
+    "arXiv:2501.06699": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.06699",
+      "identity_tokens": [
+        "arXiv:2501.06699"
+      ],
+      "reason": "一次要旨はLLM/Knowledge Graph/Search Engineをユーザー情報ニーズに組み合わせるsurvey/taxonomyで、実行系の推論効率改善や測定ではない。",
+      "first_checked_at": "2026-10-06T17:50:23+00:00",
+      "last_checked_at": "2026-10-06T17:50:23+00:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2023-2310.03003-from-words-to-watts-benchmarking-the-energy-costs-of-large-language-mode.md"
+      ],
+      "title": "Large Language Models, Knowledge Graphs and Search Engines: A Crossroads for Answering Users' Questions"
+    },
+    "arXiv:2410.10735": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.10735",
+      "identity_tokens": [
+        "arXiv:2410.10735"
+      ],
+      "reason": "本文のCoSCは数学LLMのself-correctionをfine-tuningで教え、multi-round inferenceでaccuracyを高める。ZeRO-Infinity training-memory系統との技術的接続や推論コスト削減は確認されず、反復修正は追加推論を要するため対象外。",
+      "first_checked_at": "2026-10-06T17:50:23+00:00",
+      "last_checked_at": "2026-10-06T17:50:23+00:00",
+      "linked_from": [
+        "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+      ],
+      "title": "Embedding Self-Correction as an Inherent Ability in Large Language Models for Enhanced Mathematical Reasoning"
     }
   }
 }
