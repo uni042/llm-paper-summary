@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-06T12:32:51+00:00",
+  "updated_at": "2026-10-06T12:40:50+00:00",
   "events": [
     {
       "status": "discarded_pending_research_junk",
@@ -3132,6 +3132,23 @@
       "processed_at": "2026-10-06T12:32:51+00:00",
       "canonical_id": "arXiv:2005.14187",
       "retry_path": ".survey/import-inbox/pending/research/retry-research-03b486988612--libfile_d4cfc3f13cc48191bcad23d3263db2ef--2005.14187-hat.md"
+    },
+    {
+      "status": "requeued_blocked_research",
+      "source_path": ".survey/import-inbox/pending/research/retry-research-e1abd90fb246--libfile_ec184df894648191ae4dfb6fb559b059--2605.06675-ratequant.md",
+      "processed_at": "2026-10-06T12:40:50+00:00",
+      "canonical_id": "arXiv:2605.06675",
+      "retry_path": ".survey/import-inbox/pending/research/retry-research-e1abd90fb246--libfile_ec184df894648191ae4dfb6fb559b059--2605.06675-ratequant.md"
+    },
+    {
+      "status": "discarded_blocked_research_metadata",
+      "source_path": ".survey/import-inbox/blocked/research/libfile_f1b0b03755c481918951ecdbb1e97020--2402.11295-onebit.md",
+      "processed_at": "2026-10-06T12:40:50+00:00",
+      "canonical_id": "arXiv:2402.11295",
+      "failures": [
+        "arxiv_categories.cross_list",
+        "arxiv_categories.primary"
+      ]
     }
   ]
 }
