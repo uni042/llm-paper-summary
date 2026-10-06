@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-06T02:28:58+00:00",
-  "record_count": 2142,
+  "updated_at": "2026-10-06T02:48:24+00:00",
+  "record_count": 2147,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -33042,6 +33042,81 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Energy efficiency improvement method for multi-hop semantic communication based on quality threshold mechanism"
+    },
+    "DOI:10.1016/j.neucom.2025.131504": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2025.131504",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2025.131504"
+      ],
+      "reason": "The candidate packet abstract is empty. The publisher landing page was discoverable, but full primary text was inaccessible; a title/abstract-level description is insufficient to verify method, evaluation, and limitations.",
+      "first_checked_at": "2026-10-06T02:48:17+00:00",
+      "last_checked_at": "2026-10-06T02:48:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Layer-wise contrastive learning BERT for sentence representation of GitHub"
+    },
+    "DOI:10.1007/s11042-025-21057-w": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11042-025-21057-w",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-025-21057-w"
+      ],
+      "reason": "The candidate packet abstract is empty and the primary DOI/full text could not be retrieved; method, evaluation, and limitations are unverified.",
+      "first_checked_at": "2026-10-06T02:48:17+00:00",
+      "last_checked_at": "2026-10-06T02:48:17+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficient compression of wav2vec 2.0 for edge deployment in speech emotion & speaker recognition"
+    },
+    "DOI:10.1109/tpds.2025.3527649": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tpds.2025.3527649",
+      "identity_tokens": [
+        "DOI:10.1109/tpds.2025.3527649"
+      ],
+      "reason": "IEEE DOI/full text could not be accessed in the available reader; only secondary abstract metadata described MEC model placement/parameter sharing, so methods, experiments, and limitations could not be verified.",
+      "first_checked_at": "2026-10-06T02:48:19+00:00",
+      "last_checked_at": "2026-10-06T02:48:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Chasing Common Knowledge: Joint Large Model Selection and Pulling in MEC With Parameter Sharing"
+    },
+    "DOI:10.1016/j.knosys.2025.113002": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.knosys.2025.113002",
+      "identity_tokens": [
+        "DOI:10.1016/j.knosys.2025.113002"
+      ],
+      "reason": "The candidate packet abstract is empty and the primary DOI request returned an internal retrieval error; without the article body its channel-pruning method, evaluation, and limitations cannot be assessed.",
+      "first_checked_at": "2026-10-06T02:48:19+00:00",
+      "last_checked_at": "2026-10-06T02:48:19+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Automatic channel pruning by neural network based on improved poplar optimisation algorithm"
+    },
+    "DOI:10.1007/s12083-025-01978-x": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s12083-025-01978-x",
+      "identity_tokens": [
+        "DOI:10.1007/s12083-025-01978-x"
+      ],
+      "reason": "The packet abstract is empty. The Springer primary page identifies a paywalled article; full text was not accessible, and secondary abstract material cannot establish its method, evaluation, or limitations.",
+      "first_checked_at": "2026-10-06T02:48:24+00:00",
+      "last_checked_at": "2026-10-06T02:48:24+00:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Privacy-enhanced deep learning inference acceleration towards third-party cloud based on trusted execution environment"
     }
   }
 }
